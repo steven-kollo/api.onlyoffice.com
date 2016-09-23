@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B3A9A14-F4CC-4F01-9525-37C87880BA4B}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASC.Api.Web.Help</RootNamespace>
+    <AssemblyName>ASC.Api.Web.Help</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>true</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Info|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'COM|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ASC.ActiveDirectory">
+      <HintPath>..\references\ASC.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api">
+      <HintPath>..\references\ASC.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Calendar">
+      <HintPath>..\references\ASC.Api.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Community">
+      <HintPath>..\references\ASC.Api.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.CRM">
+      <HintPath>..\references\ASC.Api.CRM.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Documents">
+      <HintPath>..\references\ASC.Api.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Employee">
+      <HintPath>..\references\ASC.Api.Employee.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Feed">
+      <HintPath>..\references\ASC.Api.Feed.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Mail">
+      <HintPath>..\references\ASC.Api.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Portal">
+      <HintPath>..\references\ASC.Api.Portal.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Projects">
+      <HintPath>..\references\ASC.Api.Projects.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Api.Settings">
+      <HintPath>..\references\ASC.Api.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Common">
+      <HintPath>..\references\ASC.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Core.Common">
+      <HintPath>..\references\ASC.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.IPSecurity">
+      <HintPath>..\references\ASC.IPSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Mail.Aggregator">
+      <HintPath>..\references\ASC.Mail.Aggregator.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Mail.Aggregator.Common">
+      <HintPath>..\references\ASC.Mail.Aggregator.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.SingleSignOn">
+      <HintPath>..\references\ASC.SingleSignOn.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Specific">
+      <HintPath>..\references\ASC.Specific.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.VoipService">
+      <HintPath>..\references\ASC.VoipService.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.Community">
+      <HintPath>..\references\ASC.Web.Community.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.Core">
+      <HintPath>..\references\ASC.Web.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.CRM">
+      <HintPath>..\references\ASC.Web.CRM.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.Files">
+      <HintPath>..\references\ASC.Web.Files.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.Projects">
+      <HintPath>..\references\ASC.Web.Projects.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.Studio">
+      <HintPath>..\references\ASC.Web.Studio.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Web.UserControls.SocialMedia">
+      <HintPath>..\references\ASC.Web.UserControls.SocialMedia.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.3.9.2\lib\net20\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.0.1304.0\lib\Net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.7\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheManifest.cs" />
+    <Compile Include="Controllers\CacheManifestController.cs" />
+    <Compile Include="Controllers\ApiSystemController.cs" />
+    <Compile Include="Controllers\PluginController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartnersController.cs" />
+    <Compile Include="Controllers\EditorsController.cs" />
+    <Compile Include="Controllers\PortalsController.cs" />
+    <Compile Include="Documentation.cs" />
+    <Compile Include="DocumentGenerator\IApiDocumentGenerator.cs" />
+    <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\BreadCrumbsBuilder.cs" />
+    <Compile Include="Helpers\ClassNamePluralizer.cs" />
+    <Compile Include="Helpers\SearchResult.cs" />
+    <Compile Include="Helpers\Html.cs" />
+    <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
+    <Compile Include="Helpers\Highliter.cs" />
+    <Compile Include="Helpers\RedirectAttribute.cs" />
+    <Compile Include="Helpers\Url.cs" />
+    <Compile Include="Models\SectionViewModel.cs" />
+    <Compile Include="Models\MethodViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="403.htm" />
+    <Content Include="404.htm" />
+    <Content Include="500.htm" />
+    <Content Include="Content\hightlight\default.css" />
+    <Content Include="Content\img\Editor\changeshistory.png" />
+    <Content Include="Content\img\Editor\changesurl.png" />
+    <Content Include="Content\img\Editor\coedit-view.png" />
+    <Content Include="Content\img\Editor\coedit.jpg" />
+    <Content Include="Content\img\Editor\conversion.jpg" />
+    <Content Include="Content\img\csharp\add.png" />
+    <Content Include="Content\img\editors.png" />
+    <Content Include="Content\img\Editor\create.png" />
+    <Content Include="Content\img\Editor\customization.png" />
+    <Content Include="Content\img\Editor\e-coedit.png" />
+    <Content Include="Content\img\Editor\e-download.png" />
+    <Content Include="Content\img\Editor\e-error0.png" />
+    <Content Include="Content\img\Editor\e-key.png" />
+    <Content Include="Content\img\Editor\embedded.png" />
+    <Content Include="Content\img\Editor\info.png" />
+    <Content Include="Content\img\Editor\permissions.png" />
+    <Content Include="Content\img\Editor\plugins.png" />
+    <Content Include="Content\img\Editor\rebranding\logo-big.png" />
+    <Content Include="Content\img\Editor\rebranding\logo.png" />
+    <Content Include="Content\img\Editor\recent.png" />
+    <Content Include="Content\img\Editor\review.png" />
+    <Content Include="Content\img\Editor\export.jpg" />
+    <Content Include="Content\img\java\author.jpg" />
+    <Content Include="Content\img\java\make-var.png" />
+    <Content Include="Content\img\java\manager-app.jpg" />
+    <Content Include="Content\img\java\manager.jpg" />
+    <Content Include="Content\img\java\tomcat-cmd.jpg" />
+    <Content Include="Content\img\java\upload-app.jpg" />
+    <Content Include="Content\img\java\war-file.jpg" />
+    <Content Include="Content\img\Editor\opening.jpg" />
+    <Content Include="Content\img\partners.png" />
+    <Content Include="Content\img\php\add.png" />
+    <Content Include="Content\img\php\browse.png" />
+    <Content Include="Content\img\php\handler-add.png" />
+    <Content Include="Content\img\php\handlerclick.png" />
+    <Content Include="Content\img\php\manager.png" />
+    <Content Include="Content\img\php\php-version-1.jpg" />
+    <Content Include="Content\img\php\php-version-2.jpg" />
+    <Content Include="Content\img\plugin.png" />
+    <Content Include="Content\img\portals.png" />
+    <Content Include="Content\img\Editor\saving.jpg" />
+    <Content Include="Content\img\csharp\browse.png" />
+    <Content Include="Content\img\csharp\platform.png" />
+    <Content Include="Content\img\csharp\sitename.png" />
+    <Content Include="Content\img\sprite.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Scripts\clipboard.js" />
+    <Content Include="Scripts\highlight\highlight.pack.js" />
+    <Content Include="Scripts\init.js" />
+    <Content Include="Scripts\jquery\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery\jquery.js" />
+    <Content Include="Scripts\modernizr\modernizr-1.7.min.js" />
+    <Content Include="Scripts\treeview\jquery.treeview.js" />
+    <Content Include="Views\ApiSystem\Authentication.aspx" />
+    <Content Include="Views\ApiSystem\Basic.aspx" />
+    <Content Include="Views\ApiSystem\GetTariff.aspx" />
+    <Content Include="Views\ApiSystem\SetTariff.aspx" />
+    <Content Include="Views\ApiSystem\StatusPortal.aspx" />
+    <Content Include="Views\ApiSystem\RemovePortal.aspx" />
+    <Content Include="Views\ApiSystem\GetPortals.aspx" />
+    <Content Include="Views\ApiSystem\RegisterPortal.aspx" />
+    <Content Include="Views\ApiSystem\ValidatePortalName.aspx" />
+    <Content Include="Views\ApiSystem\Index.aspx" />
+    <Content Include="Views\ApiSystem\Navigation.ascx" />
+    <Content Include="Views\Plugin\Basic.aspx" />
+    <Content Include="Views\Plugin\Config.aspx" />
+    <Content Include="Views\Plugin\Code.aspx" />
+    <Content Include="Views\Plugin\Button.aspx" />
+    <Content Include="Views\Plugin\Info\Recalculate.ascx" />
+    <Content Include="Views\Plugin\Info\ImgSrc.ascx" />
+    <Content Include="Views\Plugin\Info\Data.ascx" />
+    <Content Include="Views\Plugin\Info\Width.ascx" />
+    <Content Include="Views\Plugin\Info\Resize.ascx" />
+    <Content Include="Views\Plugin\Info\ObjectId.ascx" />
+    <Content Include="Views\Plugin\Info\MmToPx.ascx" />
+    <Content Include="Views\Plugin\Info\Height.ascx" />
+    <Content Include="Views\Plugin\Info\Guid.ascx" />
+    <Content Include="Views\Plugin\Info\EditorType.ascx" />
+    <Content Include="Views\Plugin\Info\Default.ascx" />
+    <Content Include="Views\Plugin\OnExternalMouseUp.aspx" />
+    <Content Include="Views\Plugin\Info.aspx" />
+    <Content Include="Views\Plugin\Init.aspx" />
+    <Content Include="Views\Plugin\ExecuteCommand.aspx" />
+    <Content Include="Views\Plugin\Plugin.aspx" />
+    <Content Include="Views\Plugin\IndexHtml.aspx" />
+    <Content Include="Views\Plugin\Structure.aspx" />
+    <Content Include="Views\Plugin\Installation.aspx" />
+    <Content Include="Views\Plugin\Navigation.ascx" />
+    <Content Include="Views\Editors\Callback.aspx" />
+    <Content Include="Views\Editors\Config\Default.ascx" />
+    <Content Include="Views\Editors\Conversion.aspx" />
+    <Content Include="Views\Editors\ConversionApi.aspx" />
+    <Content Include="Views\Editors\Alfresco.aspx" />
+    <Content Include="Views\Editors\Advanced.aspx" />
+    <Content Include="Views\Editors\Confluence.aspx" />
+    <Content Include="Views\Editors\Command.aspx" />
+    <Content Include="Views\Editors\Coedit.aspx" />
+    <Content Include="Views\Editors\Editor.aspx" />
+    <Content Include="Views\Editors\Try.aspx" />
+    <Content Include="Views\Editors\Troubleshooting.aspx" />
+    <Content Include="Views\Editors\History.aspx" />
+    <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\Example.aspx" />
+    <Content Include="Views\Editors\Example\Java.ascx" />
+    <Content Include="Views\Editors\Example\Nodejs.ascx" />
+    <Content Include="Views\Editors\Example\Php.ascx" />
+    <Content Include="Views\Editors\Example\Ruby.ascx" />
+    <Content Include="Views\Editors\Example\Csharp.ascx" />
+    <Content Include="Views\Editors\Methods.aspx" />
+    <Content Include="Views\Editors\Config\Editor\Customization.ascx" />
+    <Content Include="Views\Editors\Config\Editor\Embedded.ascx" />
+    <Content Include="Views\Editors\Config\Editor\Plugins.ascx" />
+    <Content Include="Views\Editors\DemoPreview.aspx" />
+    <Content Include="Views\Editors\Save.aspx" />
+    <Content Include="Views\Editors\Open.aspx" />
+    <Content Include="Views\Editors\Config\Document\Permissions.ascx" />
+    <Content Include="Views\Editors\Config.aspx" />
+    <Content Include="Views\Editors\Config\Document\Info.ascx" />
+    <Content Include="Views\Editors\Config\Document.ascx" />
+    <Content Include="Views\Editors\Config\Editor.ascx" />
+    <Content Include="Views\Editors\Config\Events.ascx" />
+    <Content Include="Views\Editors\Basic.aspx" />
+    <Content Include="Views\Editors\HowItWorks.aspx" />
+    <Content Include="Views\Editors\Navigation.ascx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Partners\ActivateKey.aspx" />
+    <Content Include="Views\Partners\Authentication.aspx" />
+    <Content Include="Views\Partners\Basic.aspx" />
+    <Content Include="Views\Partners\ChangeInvoiceStatus.aspx" />
+    <Content Include="Views\Partners\ChangePortalStatus.aspx" />
+    <Content Include="Views\Partners\GetPartnerTariffs.aspx" />
+    <Content Include="Views\Partners\GetPartnerInvoices.aspx" />
+    <Content Include="Views\Partners\GetPartner.aspx" />
+    <Content Include="Views\Partners\GetInvoiceKeys.aspx" />
+    <Content Include="Views\Partners\GetCurrentPartner.aspx" />
+    <Content Include="Views\Partners\GenerateKeysMin.aspx" />
+    <Content Include="Views\Partners\GenerateKeys.aspx" />
+    <Content Include="Views\Partners\CreateClient.aspx" />
+    <Content Include="Views\Partners\CreateButton.aspx" />
+    <Content Include="Views\Partners\RequestClientPayment.aspx" />
+    <Content Include="Views\Partners\RegisterPortal.aspx" />
+    <Content Include="Views\Partners\Index.aspx" />
+    <Content Include="Views\Partners\Navigation.ascx" />
+    <Content Include="Views\Portals\Basic.aspx" />
+    <Content Include="Views\Portals\Batch.aspx" />
+    <Content Include="Views\Portals\Faq.aspx" />
+    <Content Include="Views\Portals\Filters.aspx" />
+    <Content Include="Views\Portals\Navigation.ascx" />
+    <Content Include="Views\Shared\TopNavigation.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\treeview\jquery.treeview.css" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Views\Shared\Method.aspx" />
+    <Content Include="Views\Shared\MethodNotFound.aspx" />
+    <Content Include="Views\Shared\Section.aspx" />
+    <Content Include="Views\Shared\SectionNotFound.aspx" />
+    <Content Include="Views\Shared\BreadCrumbs.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\class_descriptions.xml" />
+    <Content Include="App_Data\.Net %28C# MVC%29 Example.zip" />
+    <Content Include="App_Data\.Net %28C#%29 Example.zip" />
+    <Content Include="App_Data\Java Example.zip" />
+    <Content Include="App_Data\Node.js Example.zip" />
+    <Content Include="App_Data\PHP Example.zip" />
+    <Content Include="App_Data\Ruby Example.zip" />
+    <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
+    <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
+    <Content Include="Views\Shared\Search.aspx" />
+    <Content Include="Views\Shared\SearchForm.ascx" />
+    <Content Include="Views\Portals\Auth.aspx" />
+    <None Include="Web.COM.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Views\Shared\Analytic.ascx" />
+    <Content Include="web.unity.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62109</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+</Project>

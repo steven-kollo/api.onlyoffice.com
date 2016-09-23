@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Api.Settings</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Api.Settings.SettingsApi">
+            <summary>
+             Portal settings
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSettings">
+            <summary>
+            Get ldap settings
+            </summary>
+            <returns>LDAPSupportSettings</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveLdapSettings(System.String,System.Boolean)">
+            <summary>
+            save ldap settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSettingsStatus">
+            <summary>
+            read ldap settings status
+            </summary>
+            <returns>LDAPSupportSettingsResult</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetDefaultLdapSettings">
+            <summary>
+            read default ldap settings
+            </summary>
+            <returns>LDAPSupportSettings</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSettings">
+            <summary>
+             Returns the list of all available portal settings with the current values for each one
+            </summary>
+            <short>
+             Portal settings
+            </short>
+            <returns>Settings</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetQuotaUsed">
+            <summary>
+             Returns space usage quota for portal with the space usage of each module
+            </summary>
+            <short>
+             Space usage
+            </short>
+            <returns>Space usage and limits for upload</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetBuildVersions">
+            <summary>
+            Get build version
+            </summary>
+            <visible>false</visible>
+            <returns>Current onlyoffice, editor, mailserver versions</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetVersions">
+            <summary>
+            Get list of availibe portal versions including current version
+            </summary>
+            <short>
+            Portal versions
+            </short>
+            <visible>false</visible>
+            <returns>List of availibe portal versions including current version</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetVersion(System.Int32)">
+            <summary>
+            Set current portal version to the one with the ID specified in the request
+            </summary>
+            <short>
+            Change portal version
+            </short>
+            <param name="versionId">Version ID</param>
+            <visible>false</visible>
+            <returns>List of availibe portal versions including current version</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWebItemSecurityInfo(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Returns security settings about product, module or addons
+            </summary>
+            <short>
+            Get security settings
+            </short>
+            <param name="ids">Module ID list</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetWebItemSecurity(System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
+            <summary>
+            Set security settings for product, module or addons
+            </summary>
+            <short>
+            Set security settings
+            </short>
+            <param name="id">Module ID</param>
+            <param name="enabled">Enabled</param>
+            <param name="subjects">User (Group) ID list</param>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SetAccessToWebItems(System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.Boolean}})">
+            <summary>
+            Set access to products, modules or addons
+            </summary>
+            <short>
+            Set access
+            </short>
+            <param name="items"></param>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLogo">
+            <summary>
+            Get portal logo image URL
+            </summary>
+            <short>
+            Portal logo
+            </short>
+            <returns>Portal logo image URL</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettings(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}})">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettingsFromFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelSizes">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogos(System.Boolean)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelOptions">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetIpRestrictions">
+            <summary>
+            Get portal ip restrictions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveIpRestrictions(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            save new portal ip restrictions
+            </summary>
+            <param name="ips">ip restrictions</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateIpRestrictionsSettings(System.Boolean)">
+            <summary>
+            update ip restrictions settings
+            </summary>
+            <param name="enable">enable ip restrictions settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateTipsSettings(System.Boolean)">
+            <summary>
+            update tips settings
+            </summary>
+            <param name="show">show tips for user</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CompleteWizard">
+            <summary>
+            Complete Wizard
+            </summary>
+            <returns>WizardSettings</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SmsSettings(System.Boolean)">
+            <summary>
+            Update two-factor authentication settings
+            </summary>
+            <param name="enable">Enable two-factor authentication</param>
+            <returns>Setting value</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CloseWelcomePopup">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SendCongratulations(System.Guid,System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveColorTheme(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveDefaultPageSettings(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.RefreshLicense">
+            <summary>
+            Refresh license
+            </summary>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettings">
+            <summary>
+            Get sso settings
+            </summary>
+            <returns>SsotSettings</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.IsStandalone">
+            <summary>
+            check that server is standalone
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveSettings(System.String)">
+            <summary>
+            save sso settings
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

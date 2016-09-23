@@ -1,0 +1,1139 @@
+﻿<%@ Page
+    Title=""
+    Language="C#"
+    MasterPageFile="~/Views/Shared/Site.Master"
+    Inherits="System.Web.Mvc.ViewPage"
+    ContentType="text/html" %>
+
+<%@ Import Namespace="ASC.Web.Core.Files" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Try now
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    <h1>
+        <span class="hdr">Try now</span>
+    </h1>
+
+    <p class="dscr">Use the buttons below to try the main functionality of ONLYOFFICE™ Document Server. You can open various file types for editing, viewing, co-editing, review or see how the rebranding works.</p>
+
+    <table class="try-now-table">
+        <tbody>
+            <tr>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=docxEditor" class="button button-upper" target="blank">Open docx for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="docxEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=xlsxEditor" class="button button-upper" target="blank">Open xlsx for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="xlsxEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=pptxEditor" class="button button-upper" target="blank">Open pptx for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="pptxEditorCode">source code</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=docEditor" class="button button-upper" target="blank">Open doc for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="docEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=xlsEditor" class="button button-upper" target="blank">Open xls for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="xlsEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=pptEditor" class="button button-upper" target="blank">Open ppt for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="pptEditorCode">source code</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper" target="blank">Open odt for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="odtEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=odsEditor" class="button button-upper" target="blank">Open ods for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="odsEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=odpEditor" class="button button-upper" target="blank">Open odp for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="odpEditorCode">source code</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=txtEditor" class="button button-upper" target="blank">Open txt for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="txtEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=csvEditor" class="button button-upper" target="blank">Open csv for editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="csvEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=pdfViewer" class="button button-upper" target="blank">Open pdf for viewing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="pdfViewerCode">source code</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=docxViewer" class="button button-upper" target="blank">Open docx for viewing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="docxViewerCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=xlsxViewer" class="button button-upper" target="blank">Open xlsx for viewing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="xlsxViewerCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=pptxViewer" class="button button-upper" target="blank">Open pptx for viewing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="pptxViewerCode">source code</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="button button-upper button-coediting" data-type="docx">Open docx for co-editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="docxCoeditorCode">source code</a>
+                </td>
+                <td>
+                    <a class="button button-upper button-coediting" data-type="xlsx">Open xlsx for co-editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="xlsxCoeditorCode">source code</a>
+                </td>
+                <td>
+                    <a class="button button-upper button-coediting" data-type="pptx">Open pptx for co-editing</a>
+                    <br />
+                    <a class="button-popap-try" data-code="pptxCoeditorCode">source code</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=rebrandingDocxEditor" class="button button-upper" target="blank">Open docx with rebranding</a>
+                    <br />
+                    <a class="button-popap-try" data-code="rebrandingDocxEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=rebrandingXlsxEditor" class="button button-upper" target="blank">Open xlsx with rebranding</a>
+                    <br />
+                    <a class="button-popap-try" data-code="rebrandingXlsxEditorCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper" target="blank">Open pptx with rebranding</a>
+                    <br />
+                    <a class="button-popap-try" data-code="rebrandingPptxEditorCode">source code</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=docxReview" class="button button-upper" target="blank">Open docx for review</a>
+                    <br />
+                    <a class="button-popap-try" data-code="docxReviewCode">source code</a>
+                </td>
+                <td>
+                    <a href="<%= Url.Action("editor") %>?method=docxPlugins" class="button button-upper" target="blank">Open docx with plugins</a>
+                    <br />
+                    <a class="button-popap-try" data-code="docxPlugins">source code</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="trySourceCodeDialog" class="popap-dialog">
+        <div class="popap-container">
+            <div id="docxEditorCode">
+                <div class="popap-header">Open docx for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "docx",
+                    "key": "E7FAFC9C22A8",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="xlsxEditorCode">
+                <div class="popap-header">Open xlsx for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "spreadsheet",
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "53500B46FCA9",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://example.com/url-to-example-spreadsheet.xlsx",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pptxEditorCode">
+                <div class="popap-header">Open pptx for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "presentation",
+                "document": {
+                    "fileType": "pptx",
+                    "key": "9E2BDFCD1D75",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://example.com/url-to-example-presentation.pptx",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docEditorCode">
+                <div class="popap-header">Open doc for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "doc",
+                    "key": "D21889C484E9",
+                    "title": "Example Document Title.doc",
+                    "url": "http://example.com/url-to-example-document.doc",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="xlsEditorCode">
+                <div class="popap-header">Open xls for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "spreadsheet",
+                "document": {
+                    "fileType": "xls",
+                    "key": "D01A6B57CD96",
+                    "title": "Example Spreadsheet Title.xls",
+                    "url": "http://example.com/url-to-example-spreadsheet.xls",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pptEditorCode">
+                <div class="popap-header">Open ppt for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "presentation",
+                "document": {
+                    "fileType": "ppt",
+                    "key": "EEE93333E5F3",
+                    "title": "Example Presentation Title.ppt",
+                    "url": "http://example.com/url-to-example-presentation.ppt",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="odtEditorCode">
+                <div class="popap-header">Open odt for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "odt",
+                    "key": "B95B853D3B1E",
+                    "title": "Example Document Title.odt",
+                    "url": "http://example.com/url-to-example-document.odt",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="odsEditorCode">
+                <div class="popap-header">Open ods for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "spreadsheet",
+                "document": {
+                    "fileType": "ods",
+                    "key": "000C2F39D5A4",
+                    "title": "Example Spreadsheet Title.ods",
+                    "url": "http://example.com/url-to-example-spreadsheet.ods",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="odpEditorCode">
+                <div class="popap-header">Open odp for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "presentation",
+                "document": {
+                    "fileType": "odp",
+                    "key": "47BAE2E8A54F",
+                    "title": "Example Presentation Title.odp",
+                    "url": "http://example.com/url-to-example-presentation.odp",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="txtEditorCode">
+                <div class="popap-header">Open txt for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "txt",
+                    "key": "B2D7ACF65806",
+                    "title": "Example Document Title.txt",
+                    "url": "http://example.com/url-to-example-document.txt",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="csvEditorCode">
+                <div class="popap-header">Open csv for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "spreadsheet",
+                "document": {
+                    "fileType": "csv",
+                    "key": "B04E56B18519",
+                    "title": "Example Spreadsheet Title.csv",
+                    "url": "http://example.com/url-to-example-spreadsheet.csv",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pdfViewerCode">
+                <div class="popap-header">Open pdf for viewing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "pdf",
+                    "key": "9B9F6EFE8937",
+                    "title": "Example Document Title.pdf",
+                    "url": "http://example.com/url-to-example-document.pdf",
+                },
+                "editorConfig": {
+                    "mode": "view",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxViewerCode">
+                <div class="popap-header">Open docx for viewing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "docx",
+                    "key": "D24A86BDE9A2",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx",
+                },
+                "editorConfig": {
+                    "mode": "view",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="xlsxViewerCode">
+                <div class="popap-header">Open xlsx for viewing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "spreadsheet",
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "138E9734B413",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://example.com/url-to-example-spreadsheet.xlsx",
+                },
+                "editorConfig": {
+                    "mode": "view",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pptxViewerCode">
+                <div class="popap-header">Open pptx for viewing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "presentation",
+                "document": {
+                    "fileType": "pptx",
+                    "key": "37195B2B9BF4",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://example.com/url-to-example-presentation.pptx",
+                },
+                "editorConfig": {
+                    "mode": "view",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxCoeditorCode">
+                <div class="popap-header">Open docx for co-editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "docx",
+                    "key": "B143195F47A0",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx",
+                },
+                "editorConfig": {
+                    "user": {
+                        "firstname": "John",
+                        "id": "78e1e841",
+                        "lastname": "Smith",
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "docx",
+                    "key": "B143195F47A0",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx",
+                },
+                "editorConfig": {
+                    "user": {
+                        "firstname": "Kate",
+                        "id": "F89d8069ba2b",
+                        "lastname": "Cage",
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="xlsxCoeditorCode">
+                <div class="popap-header">Open xlsx for co-editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "spreadsheet",
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "6FB60FE9E548",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://example.com/url-to-example-spreadsheet.xlsx",
+                },
+                "editorConfig": {
+                    "user": {
+                        "firstname": "John",
+                        "id": "78e1e841",
+                        "lastname": "Smith",
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "spreadsheet",
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "6FB60FE9E548",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://example.com/url-to-example-spreadsheet.xlsx",
+                },
+                "editorConfig": {
+                    "user": {
+                        "firstname": "Kate",
+                        "id": "F89d8069ba2b",
+                        "lastname": "Cage",
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pptxCoeditorCode">
+                <div class="popap-header">Open pptx for co-editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "presentation",
+                "document": {
+                    "fileType": "pptx",
+                    "key": "B6C57F1FC447",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://example.com/url-to-example-presentation.pptx",
+                },
+                "editorConfig": {
+                    "user": {
+                        "firstname": "John",
+                        "id": "78e1e841",
+                        "lastname": "Smith",
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "presentation",
+                "document": {
+                    "fileType": "pptx",
+                    "key": "B6C57F1FC447",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://example.com/url-to-example-presentation.pptx",
+                },
+                "editorConfig": {
+                    "user": {
+                        "firstname": "Kate",
+                        "id": "F89d8069ba2b",
+                        "lastname": "Cage",
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="rebrandingDocxEditorCode">
+                <div class="popap-header">Open docx with rebranding</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "docx",
+                    "key": "D97815D69205",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx",
+                },
+                "editorConfig": {
+                    "customization": {
+                        "customer": {
+                            "address": "My City, 123a-45",
+                            "info": "Some additional information",
+                            "logo": "http://example.com/logo-big.png",
+                            "mail": "john@example.com",
+                            "name": "John Smith and Co.",
+                            "www": "example.com",
+                        },
+                        "logo": {
+                            "image": "http://example.com/logo.png",
+                            "url": "http://example.com",
+                        },
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="rebrandingXlsxEditorCode">
+                <div class="popap-header">Open xlsx with rebranding</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "spreadsheet",
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "6CDE57CAF31F",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://example.com/url-to-example-spreadsheet.xlsx",
+                },
+                "editorConfig": {
+                    "customization": {
+                        "customer": {
+                            "address": "My City, 123a-45",
+                            "info": "Some additional information",
+                            "logo": "http://example.com/logo-big.png",
+                            "mail": "john@example.com",
+                            "name": "John Smith and Co.",
+                            "www": "example.com",
+                        },
+                        "logo": {
+                            "image": "http://example.com/logo.png",
+                            "url": "http://example.com",
+                        },
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="rebrandingPptxEditorCode">
+                <div class="popap-header">Open pptx with rebranding</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "presentation",
+                "document": {
+                    "fileType": "pptx",
+                    "key": "E9B24523F469",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://example.com/url-to-example-presentation.pptx",
+                },
+                "editorConfig": {
+                    "customization": {
+                        "customer": {
+                            "address": "My City, 123a-45",
+                            "info": "Some additional information",
+                            "logo": "http://example.com/logo-big.png",
+                            "mail": "john@example.com",
+                            "name": "John Smith and Co.",
+                            "www": "example.com",
+                        },
+                        "logo": {
+                            "image": "http://example.com/logo.png",
+                            "url": "http://example.com",
+                        },
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxReviewCode">
+                <div class="popap-header">Open docx for review</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "docx",
+                    "key": "9B5D4A67A9A9",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx",
+                    "permissions": {
+                        "edit": false,
+                        "review": true,
+                    },
+                },
+                "editorConfig": {
+                    "mode": "edit",
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxPlugins">
+                <div class="popap-header">Open docx with plugins</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "documentType": "text",
+                "document": {
+                    "fileType": "docx",
+                    "key": "A0B7F5CBFB24",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx",
+                },
+                "editorConfig": {
+                    "plugins": {
+                         "pluginsData": [
+                             "plugin1/config.json",
+                         ],
+                         "url": "http://example.com/plugins/",
+                    },
+                },
+                "height": "100%",
+                "width": "100%",
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+
+            <a class="button-close button">Close</a>
+        </div>
+        <div class="button-close popap-close" title="Close">&times;</div>
+    </div>
+</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceholder" runat="server">
+    <script type="text/javascript">
+        $(".button-coediting").click(function () {
+            var documentType = $(this).attr("data-type");
+            <% var key = DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()); %>
+            var documentCoediting1 = window.open("<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&firstname=John&lastname=Smith", "_blank");
+            var documentCoediting2 = window.open("<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&firstname=Kate&lastname=Cage", "_blank");
+        });
+    </script>
+</asp:Content>

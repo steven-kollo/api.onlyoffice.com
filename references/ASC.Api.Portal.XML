@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Api.Portal</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Api.Portal.PortalApi">
+            <summary>
+             Portal info access
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.Get">
+            <summary>
+            Returns the current portal
+            </summary>
+            <short>
+            Current portal
+            </short>
+             <category>Portal info</category>
+            <returns>Portal</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetUser(System.Guid)">
+            <summary>
+            Returns the user with specified userID from the current portal
+            </summary>
+            <short>
+            User with specified userID
+            </short>
+             <category>Portal info</category>
+            <returns>User</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GeInviteLink(ASC.Core.Users.EmployeeType)">
+            <summary>
+             Returns invitational link to the portal
+            </summary>
+            <short>
+             Returns invitational link to the portal
+            </short>
+             <param name="employeeType">
+              User or Visitor
+             </param>
+            <category>
+             Portal info
+            </category>
+            <returns>
+             Invite link
+            </returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetShortenLink(System.String)">
+             <summary>
+             Returns shorten link
+             </summary>
+             <param name="link">Link for shortening</param>
+            <returns>link</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetUsedSpace">
+            <summary>
+            Returns the used space of the current portal
+            </summary>
+            <short>
+            Used space of the current portal
+            </short>
+             <category>Portal info</category>
+            <returns>Used space</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetUsersCount">
+            <summary>
+            Returns the users count of the current portal
+            </summary>
+            <short>
+            Users count of the current portal
+            </short>
+             <category>Portal info</category>
+            <returns>Users count</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetTariff">
+            <summary>
+            Returns the current tariff of the current portal
+            </summary>
+            <short>
+            Tariff of the current portal
+            </short>
+             <category>Portal info</category>
+            <returns>Tariff</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetQuota">
+            <summary>
+            Returns the current quota of the current portal
+            </summary>
+            <short>
+            Quota of the current portal
+            </short>
+             <category>Portal info</category>
+            <returns>Quota</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetRightQuota">
+            <summary>
+            Returns the recommended quota of the current portal
+            </summary>
+            <short>
+            Quota of the current portal
+            </short>
+             <category>Portal info</category>
+            <returns>Quota</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetFullAbsolutePath(System.String)">
+            <summary>
+            Returns path
+            </summary>
+            <short>
+            path
+            </short>
+            <category>Portal info</category>
+            <returns>path</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetMessageCount">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetBackupSchedule">
+            <summary>
+            Returns the backup schedule of the current portal
+            </summary>
+            <returns>Backup Schedule</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.CreateBackupSchedule(ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Int32,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.CronParams,System.Boolean)">
+            <summary>
+            Create the backup schedule of the current portal
+            </summary>
+            <param name="storageType">Storage type</param>
+            <param name="storageParams">Storage parameters</param>
+            <param name="backupsStored">Max of the backup's stored copies</param>
+            <param name="cronParams">Cron parameters</param>
+            <param name="backupMail">Include mail in the backup</param>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.DeleteBackupSchedule">
+            <summary>
+            Delete the backup schedule of the current portal
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.StartBackup(ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Boolean)">
+            <summary>
+            Start a backup of the current portal
+            </summary>
+            <param name="storageType">Storage Type</param>
+            <param name="storageParams">Storage Params</param>
+            <param name="backupMail">Include mail in the backup</param>
+            <returns>Backup Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetBackupProgress">
+            <summary>
+            Returns the progress of the started backup
+            </summary>
+            <returns>Backup Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetBackupHistory">
+            <summary>
+            Returns the backup history of the started backup
+            </summary>
+            <returns>Backup History</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.DeleteBackup(System.Guid)">
+            <summary>
+            Delete the backup with the specified id
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.DeleteBackupHistory">
+            <summary>
+            Delete all backups of the current portal
+            </summary>
+            <returns>Backup History</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.StartBackupRestore(System.String,ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Boolean)">
+            <summary>
+            Start a data restore of the current portal
+            </summary>
+            <param name="backupId">Backup Id</param>
+            <param name="storageType">Storage Type</param>
+            <param name="storageParams">Storage Params</param>
+            <param name="notify">Notify about backup to users</param>
+            <returns>Restore Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetRestoreProgress">
+            <summary>
+            Returns the progress of the started restore
+            </summary>
+            <returns>Restore Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalName(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.RemoveCommentComplete(System.String,System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.CancelCommentComplete(System.String,System.String,System.Boolean)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.EditCommentComplete(System.String,System.String,System.String,System.Boolean)">
+            <visible>false</visible>
+        </member>
+        <member name="P:ASC.Api.Portal.PortalApi.Name">
+            <summary>
+             Api name entry
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,7 @@
+*.suo
+/web/obj
+/web/bin
+/packages
+/build/*.log
+/Logs
+/web/*.user
