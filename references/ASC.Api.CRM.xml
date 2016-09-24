@@ -1349,6 +1349,27 @@
                Contact list
             </returns>
         </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetUserTweets(System.Int32,System.Int32)">
+            <category>Contacts</category>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.FindTwitterProfiles(System.String)">
+            <category>Contacts</category>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.FindFacebookProfiles(System.String,System.Boolean)">
+            <category>Contacts</category>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.DeleteContactAvatar(System.Int32,System.String,System.Boolean)">
+            <category>Contacts</category>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImages(System.Int32)">
+            <category>Contacts</category>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImagesByNetworks(System.Collections.Generic.List{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
+            <category>Contacts</category>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.SocialMedia.SocialNetworks,System.String,System.Boolean)">
+            <category>Contacts</category>
+        </member>
         <member name="M:ASC.Api.CRM.CRMApi.SendMailSMTPToContacts(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String,System.String,System.Boolean)">
             <visible>false</visible>
         </member>

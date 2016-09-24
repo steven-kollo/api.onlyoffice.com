@@ -539,6 +539,7 @@
             <param name="fileId">File ID</param>
             <param name="version">Version of history</param>
             <param name="continueVersion">Mark as version or revision</param>
+            <category>Files</category>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetFileSecurityInfo(System.String)">
@@ -608,6 +609,7 @@
             </summary>
             <param name="fileId">File ID</param>
             <param name="share">Access right</param>
+            <category>Files</category>
             <returns>Shared file link</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.SaveThirdParty(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">

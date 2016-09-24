@@ -84,6 +84,7 @@
             <param name="postid">post ID to delete</param>
             <returns>Nothing</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <category>Blogs</category>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetMyPosts">
             <summary>

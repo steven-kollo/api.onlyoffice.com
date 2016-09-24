@@ -16,7 +16,6 @@
             <short>
             Current portal
             </short>
-             <category>Portal info</category>
             <returns>Portal</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetUser(System.Guid)">
@@ -26,7 +25,7 @@
             <short>
             User with specified userID
             </short>
-             <category>Portal info</category>
+             <category>Users</category>
             <returns>User</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GeInviteLink(ASC.Core.Users.EmployeeType)">
@@ -39,9 +38,7 @@
              <param name="employeeType">
               User or Visitor
              </param>
-            <category>
-             Portal info
-            </category>
+            <category>Users</category>
             <returns>
              Invite link
             </returns>
@@ -61,7 +58,7 @@
             <short>
             Used space of the current portal
             </short>
-             <category>Portal info</category>
+             <category>Quota</category>
             <returns>Used space</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetUsersCount">
@@ -71,7 +68,7 @@
             <short>
             Users count of the current portal
             </short>
-             <category>Portal info</category>
+             <category>Users</category>
             <returns>Users count</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetTariff">
@@ -81,7 +78,7 @@
             <short>
             Tariff of the current portal
             </short>
-             <category>Portal info</category>
+             <category>Quota</category>
             <returns>Tariff</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetQuota">
@@ -91,7 +88,7 @@
             <short>
             Quota of the current portal
             </short>
-             <category>Portal info</category>
+             <category>Quota</category>
             <returns>Quota</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetRightQuota">
@@ -101,7 +98,7 @@
             <short>
             Quota of the current portal
             </short>
-             <category>Portal info</category>
+             <category>Quota</category>
             <returns>Quota</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetFullAbsolutePath(System.String)">
@@ -111,17 +108,20 @@
             <short>
             path
             </short>
-            <category>Portal info</category>
             <returns>path</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetMessageCount">
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Portal.PortalApi.RegisterMobileAppInstall(ASC.Core.Common.Notify.Push.MobileAppType)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetBackupSchedule">
             <summary>
             Returns the backup schedule of the current portal
             </summary>
+            <category>Backup</category>
             <returns>Backup Schedule</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.CreateBackupSchedule(ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Int32,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.CronParams,System.Boolean)">
@@ -133,11 +133,13 @@
             <param name="backupsStored">Max of the backup's stored copies</param>
             <param name="cronParams">Cron parameters</param>
             <param name="backupMail">Include mail in the backup</param>
+            <category>Backup</category>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBackupSchedule">
             <summary>
             Delete the backup schedule of the current portal
             </summary>
+            <category>Backup</category>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.StartBackup(ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Boolean)">
             <summary>
@@ -146,29 +148,34 @@
             <param name="storageType">Storage Type</param>
             <param name="storageParams">Storage Params</param>
             <param name="backupMail">Include mail in the backup</param>
+            <category>Backup</category>
             <returns>Backup Progress</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetBackupProgress">
             <summary>
             Returns the progress of the started backup
             </summary>
+            <category>Backup</category>
             <returns>Backup Progress</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetBackupHistory">
             <summary>
             Returns the backup history of the started backup
             </summary>
+            <category>Backup</category>
             <returns>Backup History</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBackup(System.Guid)">
             <summary>
             Delete the backup with the specified id
             </summary>
+            <category>Backup</category>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBackupHistory">
             <summary>
             Delete all backups of the current portal
             </summary>
+            <category>Backup</category>
             <returns>Backup History</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.StartBackupRestore(System.String,ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Boolean)">
@@ -179,12 +186,14 @@
             <param name="storageType">Storage Type</param>
             <param name="storageParams">Storage Params</param>
             <param name="notify">Notify about backup to users</param>
+            <category>Backup</category>
             <returns>Restore Progress</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetRestoreProgress">
             <summary>
             Returns the progress of the started restore
             </summary>
+            <category>Backup</category>
             <returns>Restore Progress</returns>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalName(System.String)">
