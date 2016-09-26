@@ -508,7 +508,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static string MakeParamName(Type parameterType)
         {
-            var name = parameterType.Namespace + "." + parameterType.Name;
+            var name = parameterType.FullName.Replace('+', '.');
+            name = Regex.Replace(name, @"\[.+\]", "");
             if (parameterType.IsGenericType)
             {
                 name = Regex.Replace(name, @"`\d+", "");
