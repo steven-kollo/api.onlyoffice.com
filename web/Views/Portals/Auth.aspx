@@ -17,13 +17,14 @@
     <p>One needs to perform several easy steps to pass authentication:</p>
     <p>1. Send POST request, containing two parameters: <b>userName</b> and <b>password</b>, to the <a href="<%= Url.DocUrl("authentication", null, "post", "api/2.0/authentication", "portals") %>">api/2.0/authentication</a> address</p>
 
-    <div class="header-gray">Request</div>
+    <div class="header-gray">Authentication Request</div>
     <pre>
 POST /api/2.0/authentication.json HTTP/1.1
 Host: yourportal.onlyoffice.com
-Accept: application/json,application/xml
-Accept-Encoding: gzip, deflate
-userName=yourusername&amp;password=yourpassword
+Content-Type: application/json
+Accept: application/json
+
+{"userName":"yourusername","password":"yourpassword"}
 </pre>
     <div class="note">Please note, that you have to enter your own portal address to the 'Host: yourportal.onlyoffice.com' line instead of yourportal.onlyoffice.com address.</div>
 
@@ -46,12 +47,11 @@ Content-Type: application/json; charset=utf-8
     <p>2. In case authentication is successful, a token which will look like <b>sdjhfskjdhkqy739459234</b> will be received</p>
     <p>3. Use this token every time you call API methods inserting it to the HTTP Header: Authorization</p>
 
-    <div class="header-gray">Sample Request</div>
+    <div class="header-gray">Sample API Request</div>
     <pre>
 GET api/2.0/people/@self.json HTTP/1.1
 Host: yourportal.onlyoffice.com
-Accept: application/json,application/xml
-Accept-Encoding: gzip, deflate
+Accept: application/json
 Authorization:sdjhfskjdhkqy739459234
 </pre>
     <div class="note">Please note, that you have to enter your own portal address to the 'Host: yourportal.onlyoffice.com' line instead of yourportal.onlyoffice.com address.</div>
