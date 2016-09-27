@@ -44,6 +44,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Code",
                 "Config",
                 "ExecuteCommand",
+                "Example",
                 "IndexHtml",
                 "Info",
                 "Info/data",
@@ -122,6 +123,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult ExecuteCommand()
+        {
+            return View();
+        }
+
+        public ActionResult Example()
         {
             return View();
         }
