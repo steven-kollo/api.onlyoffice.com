@@ -64,6 +64,22 @@ CreateAuthToken() {
 }
 </pre>
 
+    <div id="powershell" class="header-gray">PowerShell generating token example</div>
+    <pre>
+function CreateAuthToken([string]$pkey, [string]$machinekey){
+    $hmacsha = New-Object System.Security.Cryptography.HMACSHA1
+    $hmacsha.Key = [System.Text.Encoding]::UTF8.GetBytes($machinekey)
+
+    [string]$now=(Get-Date -format "yyyyMMddHHmmss")
+    [string]$hash = [System.Convert]::ToBase64String([byte[]]$hmacsha.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($now + "`n" + $pkey)))
+   
+    $hash = $hash.Replace('+', '-')
+    $hash = $hash.Replace('/', '_')
+
+    return "ASC {0}:{1}:{2}" -f $pkey, $now, $hash
+}
+</pre>
+
 </asp:Content>
 
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>
