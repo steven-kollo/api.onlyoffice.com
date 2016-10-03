@@ -38,19 +38,6 @@ public string CreateAuthToken(string pkey, string machinekey)
 }
 </pre>
 
-    <div id="php" class="header-gray">PHP generating token example</div>
-    <pre>
-function apisystem_authToken($pkey, $machinekey) {
-    $now=gmdate('YmdHis');
-
-    $authkey=hash_hmac('sha1', $now."\n".$pkey, $machinekey, true);
-    $authkey=base64_encode($authkey);
-    $authkey=str_replace(array("+", "/"), array("-", "_"), substr($authkey, 0, -1)).'1';
-
-    return 'ASC '.$pkey.':'.$now.':'.$authkey;
-}
-</pre>
-
     <div id="bash" class="header-gray">Bash generating token example</div>
     <pre>
 CreateAuthToken() {
@@ -61,6 +48,19 @@ CreateAuthToken() {
     authkey=$(echo -n "${authkey}" | base64);
 
     echo "ASC ${pkey}:${now}:${authkey}";
+}
+</pre>
+
+    <div id="php" class="header-gray">PHP generating token example</div>
+    <pre>
+function CreateAuthToken($pkey, $machinekey) {
+    $now=gmdate('YmdHis');
+
+    $authkey=hash_hmac('sha1', $now."\n".$pkey, $machinekey, true);
+    $authkey=base64_encode($authkey);
+    $authkey=str_replace(array("+", "/"), array("-", "_"), substr($authkey, 0, -1)).'1';
+
+    return 'ASC '.$pkey.':'.$now.':'.$authkey;
 }
 </pre>
 
@@ -78,6 +78,15 @@ function CreateAuthToken([string]$pkey, [string]$machinekey){
 
     return "ASC {0}:{1}:{2}" -f $pkey, $now, $hash
 }
+</pre>
+
+    <div id="ruby" class="header-gray">Ruby generating token example</div>
+    <pre>
+def create_auth_token(pkey, machine_key)
+    now = Time.now.strftime('%Y%m%d%H%M%S')
+    hash = Base64.strict_encode64(OpenSSL::HMAC.digest('sha1', machine_key, [now, pkey].join("\n")))
+    "ASC #{pkey}:#{now}:#{hash.tr('+', '-').tr('/', '_').chop}1"
+end
 </pre>
 
 </asp:Content>
