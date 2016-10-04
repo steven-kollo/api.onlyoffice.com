@@ -15,10 +15,10 @@
 <div class="treeheader">Methods</div>
 <ul class="side-nav treeview root">
     <li>
-        <%= Html.ActionLink("Portals", "index", new {url = "portals"}) %>
+        <%= Html.ActionLink("Portals", "index", new {url = "portal"}) %>
     </li>
     <li>
-        <%= Html.ActionLink("Billing", "index", new {url = "billing"}) %>
+        <%= Html.ActionLink("Billing", "index", new {url = "tariff"}) %>
     </li>
 </ul>
 

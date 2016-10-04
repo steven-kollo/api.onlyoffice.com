@@ -6,18 +6,18 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Get portals
+    Portal deletion
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <%= Html.ActionLink(" ", "index", new {url = "portals"}, new {@class = "up"}) %>
-        <span class="hdr">GET /api/registration/getportals</span>
+        <%= Html.ActionLink(" ", "index", new {url = "portal"}, new {@class = "up"}) %>
+        <span class="hdr">DELETE /api/portal/remove</span>
         <span class="comment">This function requires authentication</span>
     </h1>
 
     <div class="header-gray">Description</div>
-    <p class="dscr">Get the list of all the portals registered to the user with the email address specified in the request.</p>
+    <p class="dscr">Portal deletion.</p>
 
     <div class="header-gray">Parameters</div>
     <table class="table">
@@ -37,12 +37,12 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td>email<span class="required">*</span>
+                <td>portalName<span class="required">*</span>
                     <div class="infotext">sent in Query</div>
                 </td>
-                <td>portal owner email address</td>
+                <td>the name of a portal</td>
                 <td>string</td>
-                <td>test@example.com</td>
+                <td>example</td>
             </tr>
         </tbody>
     </table>
@@ -53,12 +53,21 @@
         <span id="clipLink">Get link to this headline</span>
         <a id="returns"></a>
     </div>
-    <p>Returns the list of all the portals registered to the user with the email address specified in the request.</p>
+    <p>Returns the description of the portal to be deleted.</p>
 
     <div class="header-gray">Example Response</div>
     <pre>
 {
-    "portals" : [ "http://example" ],
+    "tenant": {
+        "created": "2010-07-07T15:46:00",
+        "domain": "example.com",
+        "language": "en-US",
+        "ownerId": "78e1e841-8314-48465-8fc0-e7d6451b6475",
+        "portalName": "example",
+        "status": "Active",
+        "tenantId": 1,
+        "timeZoneName": "UTC",
+    },
 }
 </pre>
 

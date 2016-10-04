@@ -6,18 +6,18 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Get tariff
+    Get portals
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <%= Html.ActionLink(" ", "index", new {url = "billing"}, new {@class = "up"}) %>
-        <span class="hdr">GET /api/registration/tariff</span>
+        <%= Html.ActionLink(" ", "index", new {url = "portal"}, new {@class = "up"}) %>
+        <span class="hdr">GET /api/portal/get</span>
         <span class="comment">This function requires authentication</span>
     </h1>
 
     <div class="header-gray">Description</div>
-    <p class="dscr">Get the portal pricing plan.</p>
+    <p class="dscr">Get the list of all the portals registered to the user with the email address specified in the request.</p>
 
     <div class="header-gray">Parameters</div>
     <table class="table">
@@ -37,42 +37,49 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td>portalName<span class="required">*</span>
+                <td>email
                     <div class="infotext">sent in Query</div>
                 </td>
-                <td>portal name</td>
+                <td>portal owner email address</td>
                 <td>string</td>
-                <td>example</td>
+                <td>test@example.com</td>
             </tr>
         </tbody>
     </table>
-    <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
     <div class="header-gray">
         Returns
         <span id="clipLink">Get link to this headline</span>
         <a id="returns"></a>
     </div>
-    <p>Returns the description of the portal and the portal pricing plan.</p>
+    <p>Returns the list of all the portals registered to the user with the email address specified in the request.</p>
 
     <div class="header-gray">Example Response</div>
     <pre>
 {
-    "tariff" : 
-    {
-        "ActiveUsers" : 50,
-        "DueDate" : "2016-07-13",
-        "Features" : "whitelabel",
-        "MaxFileSize" : 104857600,
-        "MaxTotalSize" : 1073741824
-    },
-    "tenant" :
-    {
-        "ownerId" : "78e1e841-8314-48465-8fc0-e7d6451b6475",
-        "status" : 1,
-        "tenantDomain" : "example",
-        "tenantId" : 1,
-    },
+    "tenants": [
+        {
+            "created": "2010-07-07T15:46:00",
+            "domain": "example.com",
+            "language": "en-US",
+            "ownerId": "78e1e841-8314-48465-8fc0-e7d6451b6475",
+            "portalName": "example",
+            "status": "Active",
+            "tenantId": 1,
+            "timeZoneName": "UTC",
+        },
+        {
+            "created": "2014-02-07T20:14:00",
+            "domain": "example2014.com",
+            "language": "ru-RU",
+            "ownerId": "be7bc931-b966-493e-a8b5-56fc7d21f9c8",
+            "portalName": "example2014",
+            "status": "Active",
+            "tenantId": 2,
+            "timeZoneName": "(UTC+03:00) Moscow, St. Petersburg, Volgograd",
+        },
+        ...
+    ],
 }
 </pre>
 

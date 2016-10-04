@@ -11,8 +11,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <%= Html.ActionLink(" ", "index", new {url = "portals"}, new {@class = "up"}) %>
-        <span class="hdr">POST /api/registration/validateportalname</span>
+        <%= Html.ActionLink(" ", "index", new {url = "portal"}, new {@class = "up"}) %>
+        <span class="hdr">POST /api/portal/validateportalname</span>
     </h1>
 
     <div class="header-gray">Description</div>
@@ -87,8 +87,8 @@
     </table>
     <pre>
 {
-    "errors" : [ "portalNameExist" ],
-    "variants" : [ "example", "example2016" ],
+    "errors": [ "portalNameExist" ],
+    "variants": [ "example", "example2014" ],
 }
 </pre>
 

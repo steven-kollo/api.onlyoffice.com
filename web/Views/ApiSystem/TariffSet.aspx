@@ -11,8 +11,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <%= Html.ActionLink(" ", "index", new {url = "billing"}, new {@class = "up"}) %>
-        <span class="hdr">PUT /api/registration/tariff</span>
+        <%= Html.ActionLink(" ", "index", new {url = "tariff"}, new {@class = "up"}) %>
+        <span class="hdr">PUT /api/tariff/set</span>
         <span class="comment">This function requires authentication</span>
     </h1>
 
@@ -37,12 +37,12 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td>portalName<span class="required">*</span>
+                <td>activeUsers
                     <div class="infotext">sent in Body</div>
                 </td>
-                <td>portal name</td>
-                <td>string</td>
-                <td>example</td>
+                <td>number of active users</td>
+                <td>integer</td>
+                <td>50</td>
             </tr>
             <tr class="tablerow">
                 <td>dueDate
@@ -53,12 +53,12 @@
                 <td>2016-07-13</td>
             </tr>
             <tr class="tablerow">
-                <td>ActiveUsers
+                <td>features
                     <div class="infotext">sent in Body</div>
                 </td>
-                <td>number of active users</td>
-                <td>integer</td>
-                <td>50</td>
+                <td>available functions list</td>
+                <td>string</td>
+                <td>whitelabel</td>
             </tr>
             <tr class="tablerow">
                 <td>maxTotalSize
@@ -77,17 +77,17 @@
                 <td>104857600</td>
             </tr>
             <tr class="tablerow">
-                <td>features
+                <td>portalName<span class="required">*</span>
                     <div class="infotext">sent in Body</div>
                 </td>
-                <td>available functions list</td>
+                <td>portal name</td>
                 <td>string</td>
-                <td>whitelabel</td>
+                <td>example</td>
             </tr>
         </tbody>
     </table>
     <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
-    <span class="required-descr">**<em> - please keep in mind that the sent value will be converted into megabytes and stored that way, so it is not recommended to use values not multiple of 1048576 (1 megabyte) as they will be truncated to the integer resulting from the division by 1048576, or values less than 1048576 bytes as zero value will be returned in that case both in response to this and <a class="underline" href="<%= Url.Action("gettariff") %>"><em>get tariff</em></a> requests.</em></span>
+    <span class="required-descr">**<em> - please keep in mind that the sent value will be converted into megabytes and stored that way, so it is not recommended to use values not multiple of 1048576 (1 megabyte) as they will be truncated to the integer resulting from the division by 1048576, or values less than 1048576 bytes as zero value will be returned in that case both in response to this and <a class="underline" href="<%= Url.Action("tariffget") %>"><em>get tariff</em></a> requests.</em></span>
 
     <div class="header-gray">
         Returns
@@ -99,20 +99,22 @@
     <div class="header-gray">Example Response</div>
     <pre>
 {
-    "tariff" : 
-    {
-        "ActiveUsers" : 50,
-        "DueDate" : "2016-07-13",
-        "Features" : "whitelabel",
-        "MaxFileSize" : 104857600,
-        "MaxTotalSize" : 1073741824
+    "tariff": {
+        "activeUsers": 50,
+        "dueDate": "2016-07-13",
+        "features": "whitelabel",
+        "maxFileSize": 104857600,
+        "maxTotalSize": 1073741824,
     },
-    "tenant" :
-    {
-        "ownerId" : "78e1e841-8314-48465-8fc0-e7d6451b6475",
-        "status" : 1,
-        "tenantDomain" : "example",
-        "tenantId" : 1,
+    "tenant": {
+        "created": "2010-07-07T15:46:00",
+        "domain": "example.com",
+        "language": "en-US",
+        "ownerId": "78e1e841-8314-48465-8fc0-e7d6451b6475",
+        "portalName": "example",
+        "status": "Active",
+        "tenantId": 1,
+        "timeZoneName": "UTC",
     },
 }
 </pre>

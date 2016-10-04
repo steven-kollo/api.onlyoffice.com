@@ -6,18 +6,18 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Status portal
+    Get tariff
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <%= Html.ActionLink(" ", "index", new {url = "portals"}, new {@class = "up"}) %>
-        <span class="hdr">PUT /api/registration/statusportal</span>
+        <%= Html.ActionLink(" ", "index", new {url = "tariff"}, new {@class = "up"}) %>
+        <span class="hdr">GET /api/tariff/get</span>
         <span class="comment">This function requires authentication</span>
     </h1>
 
     <div class="header-gray">Description</div>
-    <p class="dscr">Portal activation status change.</p>
+    <p class="dscr">Get the portal pricing plan.</p>
 
     <div class="header-gray">Parameters</div>
     <table class="table">
@@ -38,19 +38,11 @@
         <tbody>
             <tr class="tablerow">
                 <td>portalName<span class="required">*</span>
-                    <div class="infotext">sent in Body</div>
-                </td>
-                <td>the name of a portal</td>
-                <td>string</td>
-                <td>example</td>
-            </tr>
-            <tr class="tablerow">
-                <td>active<span class="required">*</span>
                     <div class="infotext">sent in Query</div>
                 </td>
-                <td>portal status</td>
-                <td>boolean</td>
-                <td>true</td>
+                <td>portal name</td>
+                <td>string</td>
+                <td>example</td>
             </tr>
         </tbody>
     </table>
@@ -61,17 +53,27 @@
         <span id="clipLink">Get link to this headline</span>
         <a id="returns"></a>
     </div>
-    <p>Returns the portal description.</p>
+    <p>Returns the description of the portal and the portal pricing plan.</p>
 
     <div class="header-gray">Example Response</div>
     <pre>
 {
-    "tenant" :
-    {
-        "ownerId" : "78e1e841-8314-48465-8fc0-e7d6451b6475",
-        "status" : 1,
-        "tenantDomain" : "example",
-        "tenantId" : 1,
+    "tariff": {
+        "activeUsers": 50,
+        "dueDate": "2016-07-13",
+        "features": "whitelabel",
+        "maxFileSize": 104857600,
+        "maxTotalSize": 1073741824,
+    },
+    "tenant": {
+        "created": "2010-07-07T15:46:00",
+        "domain": "example.com",
+        "language": "en-US",
+        "ownerId": "78e1e841-8314-48465-8fc0-e7d6451b6475",
+        "portalName": "example",
+        "status": "Active",
+        "tenantId": 1,
+        "timeZoneName": "UTC",
     },
 }
 </pre>

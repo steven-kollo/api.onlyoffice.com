@@ -38,20 +38,20 @@ namespace ASC.Api.Web.Help.Controllers
     {
         private enum SectionType
         {
-            Billing,
-            Portals,
+            Portal,
+            Tariff,
         }
 
         private enum ActionType
         {
             Authentication,
             Basic,
-            GetPortals,
-            GetTariff,
-            RegisterPortal,
-            RemovePortal,
-            SetTariff,
-            StatusPortal,
+            PortalGet,
+            PortalRegister,
+            PortalRemove,
+            PortalStatus,
+            TariffGet,
+            TariffSet,
             ValidatePortalName,
         }
 
@@ -113,32 +113,32 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
 
-        public ActionResult GetPortals()
+        public ActionResult PortalGet()
         {
             return View();
         }
 
-        public ActionResult GetTariff()
+        public ActionResult PortalRegister()
         {
             return View();
         }
 
-        public ActionResult RegisterPortal()
+        public ActionResult PortalRemove()
         {
             return View();
         }
 
-        public ActionResult RemovePortal()
+        public ActionResult PortalStatus()
         {
             return View();
         }
 
-        public ActionResult SetTariff()
+        public ActionResult TariffGet()
         {
             return View();
         }
 
-        public ActionResult StatusPortal()
+        public ActionResult TariffSet()
         {
             return View();
         }
