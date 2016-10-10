@@ -17,12 +17,16 @@
     <p class="dscr">An http header is required to pass the authentication when performing the API request. The authentication requires the token to be used in the <em>Authorization</em> header of the http request.</p>
     <p><b>Authentication Token</b> is a string sequence in the following format: "ASC <em>pkey</em>:<em>datetime</em>:<em>hash</em>", where</p>
     <ul>
-        <li><b>pkey</b> - random string (may be empty string),</li>
-        <li><b>datetime</b> - current date and time in the "<em>yyyyMMddHHmmss</em>" format,</li>
+        <li><b>pkey</b> - random string,</li>
+        <li><b>datetime</b> - current UTC date and time in the "<em>yyyyMMddHHmmss</em>" format,</li>
         <li><b>hash</b> - hash value for the string in "<em>datetime</em>\n<em>pkey</em>" format.</li>
     </ul>
     <p>The hash value is calculated using the HMAC-SHA1 function with the key from the <em>core.machinekey</em> value of the Hosted Solution site <em>appSettings</em> configuration.</p>
 
+	<div class="note">
+		Please note, that the token is valid for <b>5</b> minutes only, starting with the <b>datetime</b>.
+	</div>
+	
     <p>Example Authentication Token will look like this: "<em>ASC abc:20160708120000:D94XPcnZ_y6uSx2jgUcgNdk4dro1</em>"</p>
 
     <div id="csharp" class="header-gray">.Net(C#) generating token example</div>
