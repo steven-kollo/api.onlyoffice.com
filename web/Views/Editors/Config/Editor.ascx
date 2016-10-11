@@ -40,7 +40,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/Content/img/Editor/create.png" alt="" />
+                <img src="/content/img/editor/create.png" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -91,7 +91,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/Content/img/Editor/recent.png" alt="" />
+                <img src="/content/img/editor/recent.png" alt="" />
             </td>
         </tr>
         <tr class="tablerow">

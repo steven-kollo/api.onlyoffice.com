@@ -59,7 +59,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/Content/img/Editor/embedded.png" alt="" />
+                <img src="/content/img/editor/embedded.png" alt="" />
             </td>
         </tr>
     </tbody>

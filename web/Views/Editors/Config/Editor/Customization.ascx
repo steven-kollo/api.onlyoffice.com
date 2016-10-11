@@ -153,7 +153,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/Content/img/Editor/customization.png" alt="" />
+                <img src="/content/img/editor/customization.png" alt="" />
             </td>
         </tr>
     </tbody>
