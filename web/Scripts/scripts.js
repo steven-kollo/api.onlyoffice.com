@@ -104,6 +104,12 @@ $(function() {
         displayModalPanel("#trySourceCodeDialog", 825, 650, 0, "absolute");
     });
 
+    $(".video-link").click(function () {
+        var poapDialog = $(this).find(".popap-dialog");
+
+        displayModalPanel(poapDialog, 680, 500, 0, "absolute");
+    });
+
     $("body").on("click", ".button-close, .blockOverlay", $.unblockUI);
 
     $(document).keyup(function (event) {
