@@ -304,6 +304,8 @@ body, html
 a, a:hover, a:visited
 {
     color: #333;
+}
+a:hover {
     text-decoration: none;
 }
 
@@ -312,17 +314,7 @@ a, a:hover, a:visited
     border-bottom: 1px dotted;
 }
 
-.underline, .fakelink
-{
-    text-decoration: underline;
-}
-
-.underline:hover
-{
-    text-decoration: none;
-}
-
-.fakelink:hover
+.fakelink
 {
     text-decoration: underline;
 }
@@ -446,30 +438,28 @@ p
     margin: 0;
 }
 
-    .top-nav li
-    {
-        display: block;
-        float: left;
-        padding: 0 20px;
-    }
+.top-nav li
+{
+    display: block;
+    float: left;
+    padding: 0 20px;
+}
 
-        .top-nav li.active
-        {
-            background-color: #333f5b;
-        }
+.top-nav li.active {
+    background-color: #333f5b;
+}
 
-    .top-nav a
-    {
-        color: #cbcbcc;
-        font-size: 14px;
-        line-height: 50px;
-        text-decoration: none;
-    }
+.top-nav a {
+    color: #cbcbcc;
+    font-size: 14px;
+    line-height: 50px;
+    outline: none;
+    text-decoration: none;
+}
 
-        .top-nav a:hover
-        {
-            color: #999999;
-        }
+.top-nav a:hover {
+    color: #999999;
+}
 
 /*search form*/
 .search-box
@@ -577,6 +567,10 @@ p
     text-align: center;
     vertical-align: top;
 }
+.product a {
+    outline: none;
+    text-decoration: none;
+}
 
 /*code example*/
 pre,.commandline
@@ -666,12 +660,8 @@ pre.hljs {
 {
     background: url("img/sprite.png") no-repeat scroll -4px -113px;
     padding-left: 20px;
+    text-decoration: none;
 }
-
-    .forum:hover
-    {
-        text-decoration: underline;
-    }
 
 #embeddedEditor
 {
@@ -704,6 +694,10 @@ pre.hljs {
     margin-right: 8px;
     margin-top: 8px;
     padding: 2px 12px;
+    text-decoration: none;
+}
+.button:hover {
+    text-decoration: none;
 }
 
 .button-upper {
