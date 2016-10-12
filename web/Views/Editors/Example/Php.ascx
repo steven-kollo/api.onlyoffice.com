@@ -5,15 +5,15 @@
 </h1>
 
 <h2>Introduction</h2>
-<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>PHP</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a class="underline" href="<%= Url.Action("demopreview") %>">PHP Example</a> for their integration.</p>
+<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>PHP</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> for their integration.</p>
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
 <h2 id="wind-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a class="underline" href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a class="underline" href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a class="underline" href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="wind-2"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
-<p>Download the <a class="underline" href="<%= Url.Action("demopreview") %>">PHP Example</a> from our site.</p>
+<p>Download the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config.php</em> file:</p>
 <pre>
 $GLOBALS['DOC_SERV_STORAGE_URL'] = "http://documentserver/FileUploader.ashx";
@@ -23,15 +23,15 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
 </pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
-<p>If you want to experiment with the editor configuration, modify the <a class="underline" href="<%= Url.Action("advanced") %>">parameters</a> it the <em>doceditor.php</em> file.</p>
+<p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>doceditor.php</em> file.</p>
 
 <h2 id="wind-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>You can use any web server capable of runnig PHP code to run the sample. We will demonstrate how to run the PHP sample using <b>Internet Information Services (IIS)</b> web server. To set up and configure PHP on IIS <b>PHP Manager for IIS</b> will be used.</p>
 
 <ul>
-    <li><b>IIS: version 7</b> or later (refer to <a class="underline " href="http://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
-    <li><b>PHP</b> (download it from the <a class="underline" href="http://php.net/downloads.php">http://php.net</a> site);</li>
-    <li><b>PHP Manager for IIS</b> (download it from the <a class="underline" href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site)</a>.</li>
+    <li><b>IIS: version 7</b> or later (refer to <a href="http://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
+    <li><b>PHP</b> (download it from the <a href="http://php.net/downloads.php">http://php.net</a> site);</li>
+    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site)</a>.</li>
 </ul>
 
 <h2 id="wind-4"><span class="style_step">Step 4. </span>IIS configuration</h2>
@@ -91,4 +91,4 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
         <img alt="" src="/content/img/php/browse.png" />
     </li>
 </ol>
-<p>If you integrated the editors successfully the result should look like the <a class="underline" href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
+<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

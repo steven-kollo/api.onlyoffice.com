@@ -27,7 +27,7 @@
     <ol>
         <li>The users selects a file on the computer hard disk drive that is to be uploaded to the <b>document manager</b>.</li>
         <li>The <b>document manager</b> uploads the selected file to the <b>document storage service</b>.</li>
-        <li>The <b>document storage service</b> sends the uploaded file to ONLYOFFICE™ Document Server <b>document conversion service</b> for conversion into the Office Open XML format using the <a class="underline" href="<%= Url.Action("conversionapi") %>">conversion API</a>.</li>
+        <li>The <b>document storage service</b> sends the uploaded file to ONLYOFFICE™ Document Server <b>document conversion service</b> for conversion into the Office Open XML format using the <a href="<%= Url.Action("conversionapi") %>">conversion API</a>.</li>
         <li>The <b>document conversion service</b> converts the selected file to the Office Open XML format.</li>
         <li>The <b>document storage service</b> downloads the converted document file.</li>
     </ol>
@@ -38,7 +38,7 @@
     <ol>
         <li>The user selects the file in the <b>document manager</b> and the format the file must be downloaded in.</li>
         <li>The <b>document manager</b> transforms this user action into a request to the <b>document storage service</b>.</li>
-        <li>The <b>document storage service</b> sends the uploaded file to ONLYOFFICE™ Document Server <b>document conversion service</b> for conversion into the appropriate format using the <a class="underline" href="<%= Url.Action("conversionapi") %>">conversion API</a>.</li>
+        <li>The <b>document storage service</b> sends the uploaded file to ONLYOFFICE™ Document Server <b>document conversion service</b> for conversion into the appropriate format using the <a href="<%= Url.Action("conversionapi") %>">conversion API</a>.</li>
         <li>The <b>document conversion service</b> converts the selected file to the appropriate format.</li>
         <li>When the conversion is finished the <b>document storage service</b> downloads the converted file.</li>
         <li>The <b>document storage service</b> notifies the <b>document manager</b> that the conversion is successfully performed.</li>

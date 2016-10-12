@@ -8,7 +8,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">The OLE object data which need to be sent to the <a class="underline" href="<%= Url.Action("info/") %>">window.Asc.plugin.info object</a> and used by the plugin.</p>
+<p class="dscr">The OLE object data which need to be sent to the <a href="<%= Url.Action("info/") %>">window.Asc.plugin.info object</a> and used by the plugin.</p>
 
 <div class="header-gray">Returns</div>
 

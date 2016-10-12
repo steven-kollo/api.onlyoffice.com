@@ -5,16 +5,16 @@
 </h1>
 
 <h2>Introduction</h2>
-<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a class="underline" href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
+<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
 <p>You can choose any appropriate way how to run the Java example code. We will show how to run the Java code using the <b>Apache Tomcat</b> web server.</p>
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
 <h2 id="wind-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a class="underline" href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a class="underline" href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a class="underline" href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="wind-2"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
-<p>Download the <a class="underline" href="<%= Url.Action("demopreview") %>">Java Example</a> from our site.</p>
+<p>Download the <a href="<%= Url.Action("demopreview") %>">Java Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
 
 <span class="commandline">files.docservice.url.storage=http://documentserver.com/FileUploader.ashx
@@ -25,14 +25,14 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
 </span>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
-<p>If you want to experiment with the editor configuration, modify the <a class="underline" href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\src\main\webapp\editor.jsp</em> file.</p>
+<p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\src\main\webapp\editor.jsp</em> file.</p>
 
 <h2 id="wind-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>To run the Java example code you will need to install the Java version appropriate for your OS and web server <b>Apache Tomcat</b>.</p>
 
 <ul>
-    <li>Java (download from  <a class="underline" href="https://www.java.com/en/download/manual.jsp">the Oracle official web site</a>)</li>
-    <li>Apache Tomcat (download from <a class="underline" href="http://tomcat.apache.org/">the official website</a>)</li>
+    <li>Java (download from  <a href="https://www.java.com/en/download/manual.jsp">the Oracle official web site</a>)</li>
+    <li>Apache Tomcat (download from <a href="http://tomcat.apache.org/">the official website</a>)</li>
 </ul>
 
 <h2 id="wind-4"><span class="style_step">Step 4. </span>Running Apache Tomcat</h2>
@@ -102,6 +102,6 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
     </li>
     <li>
         <p>Click the link with the application name to run it.</p>
-        <p>If you integrated the editors successfully the result should look like the <a class="underline" href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
+        <p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
     </li>
 </ol>

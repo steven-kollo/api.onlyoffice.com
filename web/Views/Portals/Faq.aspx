@@ -27,12 +27,12 @@
     <p>
         You can get json or xml format adding '.json' or '.xml' to the request or pointing the request content-type in application/json or text/xml.
         <br />E.g.:
-        <a class="underline" href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "portals") %>">api/2.0/people.json</a> 
+        <a href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "portals") %>">api/2.0/people.json</a> 
     </p>
 
     <div class="header-gray">Is the response data pagination supported?</div>
     <p>
-        Yes. see the <%= Html.ActionLink("Request Filtering", "filters", null, new {@class = "underline"}) %> section.
+        Yes. see the <a href="<%= Url.Action("filters") %>">Request Filtering</a> section.
     </p>
 
 </asp:Content>

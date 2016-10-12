@@ -5,12 +5,12 @@
 </h1>
 
 <h2>Introduction</h2>
-<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Ruby</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a class="underline" href="<%= Url.Action("demopreview") %>">Ruby Example</a> for their integration. We will show how to run the Ruby example on Linux OS.</p>
+<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Ruby</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Ruby Example</a> for their integration. We will show how to run the Ruby example on Linux OS.</p>
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
 <h2 id="linux-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a class="underline" href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a class="underline" href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a class="underline" href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="linux-2"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
@@ -46,6 +46,6 @@ Rails.configuration.urlPreloader="http://documentserver/web-apps/apps/api/docume
     </li>
     <li>See the result in your browser using the address:
         <div class="commandline">http://localhost</div>
-        <p>If you want to experiment with the editor configuration, modify the <a class="underline" href="<%= Url.Action("advanced") %>">parameters</a> it the <em>views\home\editor.html.erb</em> file.</p>
+        <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>views\home\editor.html.erb</em> file.</p>
     </li>
 </ol>

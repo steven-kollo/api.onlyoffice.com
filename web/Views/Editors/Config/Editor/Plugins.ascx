@@ -27,7 +27,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="pluginsData">pluginsData</td>
-            <td>The list of relative paths to the plugin configuration files (<a class="underline" href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
+            <td>The list of relative paths to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
             <td>Collection of string
                 <div class="infotext">Collection</div></td>
             <td></td>
@@ -66,6 +66,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
 <p>
     If you have any further questions, please contact us at
-    <a href="mailto:integration@onlyoffice.com" class="underline" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
 </p>
 

@@ -55,16 +55,16 @@ Search - <%= ViewData["query"] %>
                 <td>
                     <% if (!string.IsNullOrEmpty(methodGroup.Key.Name))
                        { %>
-                    <a class="underline" href="<%= groupUrl %>"><%= methodGroup.Key.Name %></a>
+                    <a href="<%= groupUrl %>"><%= methodGroup.Key.Name %></a>
                     <% } %>
                 </td>
                 <td>
-                    <a class="underline" href="<%= methodUrl %>">
+                    <a href="<%= methodUrl %>">
                         <%= !string.IsNullOrEmpty(method.Key.FunctionName) ? method.Key.FunctionName : method.Key.ShortName %>
                     </a>
                 </td>
                 <td>
-                    <a class="underline" href="<%= methodUrl %>">
+                    <a href="<%= methodUrl %>">
                         <span class="uppercase"><%= method.Key.HttpMethod %></span>&nbsp;<%= method.Key.Path %>
                     </a>
                 </td>
@@ -87,10 +87,10 @@ Search - <%= ViewData["query"] %>
             <tr class="tablerow">
                 <td><%= res.Module %></td>
                 <td>
-                    <a class="underline" href="<%= res.Url %>"><%= res.Name %></a>
+                    <a href="<%= res.Url %>"><%= res.Name %></a>
                 </td>
                 <td>
-                    <a class="underline" href="<%= res.Url %>"><%= res.Resource %></a>
+                    <a href="<%= res.Url %>"><%= res.Resource %></a>
                 </td>
                 <td><%= res.Description %></td>
             </tr>

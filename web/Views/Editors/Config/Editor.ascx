@@ -27,7 +27,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="callbackUrl">callbackUrl<span class="required">*</span></td>
-            <td>specifies URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>" class="underline">must be implemented</a> by the software integrators who use ONLYOFFICE™ Document Server on their own server)</td>
+            <td>specifies URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE™ Document Server on their own server)</td>
             <td>string</td>
             <td>"http://example.com/url-to-callback.ashx"</td>
         </tr>

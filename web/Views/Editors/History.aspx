@@ -19,11 +19,11 @@
     <p>After editing in Document Editor the information about the changes during the editing session is sent together with the changed document:</p>
     <ul>
         <li>
-            <p><a href="<%= Url.Action("callback") %>#changeshistory" class="underline">changeshistory</a> - this information allows to display the time and the author for each document version when you view the document history in the side panel. Must be sent as a property changes of the object sent as the argument to the <a class="underline" href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory" class="underline">onRequestHistory</a> events.</p>
+            <p><a href="<%= Url.Action("callback") %>#changeshistory">changeshistory</a> - this information allows to display the time and the author for each document version when you view the document history in the side panel. Must be sent as a property changes of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events.</p>
             <img alt="changeshistory" src="<%= Url.Content("~/content/img/editor/changeshistory.png") %>" />
         </li>
         <li>
-            <p><a href="<%= Url.Action("callback") %>#changesurl" class="underline">changesurl</a> - the link to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the <a class="underline" href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData" class="underline">onRequestHistoryData</a> events.</p>
+            <p><a href="<%= Url.Action("callback") %>#changesurl">changesurl</a> - the link to the file with the document editing data used to show the changes corresponding to the specific document version. The file must be saved and its address must be sent as changesUrl parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.</p>
             <img alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
         </li>
     </ul>
@@ -31,8 +31,8 @@
     <br />
     <p>This way the following events must be added to the config file to enable the document changes history display:</p>
     <ul>
-        <li><a href="<%= Url.Action("config/events") %>#onRequestHistoryData" class="underline">onRequestHistoryData</a> with <a href="<%= Url.Action("methods") %>#refreshHistory" class="underline">refreshHistory</a> which contains document history for each document version if the changeshistory parameter has been present for each version.</li>
-        <li><a href="<%= Url.Action("config/events") %>#onRequestHistory" class="underline">onRequestHistory</a> with <a class="underline" href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> which contains the link to the file of the corresponding version or with the link to the previous version and the link to the file received using the changesUrl.</li>
+        <li><a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> with <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> which contains document history for each document version if the changeshistory parameter has been present for each version.</li>
+        <li><a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> with <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> which contains the link to the file of the corresponding version or with the link to the previous version and the link to the file received using the changesUrl.</li>
     </ul>
 </asp:Content>
 

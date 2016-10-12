@@ -56,13 +56,13 @@ config = {
 };
 </pre>
 
-    <p>From now the objetct <i>docEditor</i> can be used for calling <a class="underline" href="<%= Url.Action("methods") %>">Methods</a> <b>document editor</b>.</p>
+    <p>From now the objetct <i>docEditor</i> can be used for calling <a href="<%= Url.Action("methods") %>">Methods</a> <b>document editor</b>.</p>
 
-    <p>The example above includes all the parameters necessary for Document Server correct startup. There are additional non-obligatory parameters though which can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.) See the <a href="<%= Url.Action("advanced") %>" class="underline">Advanced parameters</a> section to find out what these parameters are and how you can change them.</p>
+    <p>The example above includes all the parameters necessary for Document Server correct startup. There are additional non-obligatory parameters though which can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.) See the <a href="<%= Url.Action("advanced") %>">Advanced parameters</a> section to find out what these parameters are and how you can change them.</p>
 
     <h2>Support</h2>
     <p>
-        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank" class="underline">dev.onlyoffice.org</a> (registration required).
+        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
     </p>
 </asp:Content>
 

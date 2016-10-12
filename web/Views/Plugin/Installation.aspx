@@ -18,7 +18,7 @@
 
     <h2>Adding a plugin to the desktop editors</h2>
 
-    <p>You need to take the plugin folder (it <b>must</b> contain the <a class="underline" href="<%= Url.Action("config") %>">config.json</a>, <a class="underline" href="<%= Url.Action("indexhtml") %>">index.html</a> and the <a class="underline" href="<%= Url.Action("code") %>">pluginCode.js</a> files), archive it, change the file extension to <em>.plugin</em> and drag-and-drop this archived file to the desktop editor main page. It will be added immediately to the opened editors and all the editors you will open afterwards.</p>
+    <p>You need to take the plugin folder (it <b>must</b> contain the <a href="<%= Url.Action("config") %>">config.json</a>, <a href="<%= Url.Action("indexhtml") %>">index.html</a> and the <a href="<%= Url.Action("code") %>">pluginCode.js</a> files), archive it, change the file extension to <em>.plugin</em> and drag-and-drop this archived file to the desktop editor main page. It will be added immediately to the opened editors and all the editors you will open afterwards.</p>
 
 
     <h2>Adding a plugin to the server editors</h2>
@@ -42,7 +42,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 
-    <p>See the <a class="underline" href="<%= Url.Action("config/editor/plugins", "editors") %>">Document Server API</a> documentation for more information on where to find the config and what and how can be changed there.</p>
+    <p>See the <a href="<%= Url.Action("config/editor/plugins", "editors") %>">Document Server API</a> documentation for more information on where to find the config and what and how can be changed there.</p>
 
 
     <h2>Uninstalling plugins from document editors</h2>

@@ -13,7 +13,7 @@
             <b>onDocumentStateChange</b> - the function called when the document is modified. It is called with the parameter: <em>{"data" : true}</em> when the current user is editing the document and with the parameter: <em>{"data" : false}</em> when the current user's changes are sent to the <b>document editing service</b>;
         </li>
         <li id="onDownloadAs">
-            <b>onDownloadAs</b> - the function called with the link on the edited file when the method <a href="<%= Url.Action("methods") %>#downloadAs" class="underline">downloadAs</a> is being called;
+            <b>onDownloadAs</b> - the function called with the link on the edited file when the method <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> is being called;
         </li>
         <li id="onError">
             <b>onError</b> - the function called when an error or some other specific event occurs;
@@ -24,14 +24,14 @@
         <li id="onRequestEditRights">
             <b>onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Edit</em> button will not be displayed.
             <div class="note">
-                <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode" class="underline">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit" class="underline">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.
+                <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.
             </div>
         </li>
         <li id="onRequestHistory">
-            <b>onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button. To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory" class="underline">refreshHistory</a> method.
+            <b>onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button. To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
         </li>
         <li id="onRequestHistoryData">
-            <b>onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history. To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData" class="underline">setHistoryData</a> method.
+            <b>onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history. To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
         </li>
         <li id="onRequestHistoryClose">
             <b>onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Back to Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Back to Document</em> button will not be displayed.
@@ -74,7 +74,7 @@ var onRequestHistory = function() {
         "error": null,
         "history": [
             {
-                "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory" class="underline">the JSON object</a> returned after saving the document
+                "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
                 "user": {
@@ -84,7 +84,7 @@ var onRequestHistory = function() {
                 "version": "1",
             },
             {
-                "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory" class="underline">the JSON object</a> returned after saving the document
+                "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
                 "created": "2010-07-07 3:46 PM",
                 "key": "Khirz6zTPdfd7",
                 "user": {
@@ -101,7 +101,7 @@ var onRequestHistory = function() {
 var onRequestHistoryData = function(event) {
     var version = event.data;
     docEditor.setHistoryData({
-        "changesUrl": "http://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl" class="underline">the JSON object</a> returned after saving the document
+        "changesUrl": "http://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
         "error": null,
         "url": "http://example.com/url-to-example-document.docx",
         "version": version,

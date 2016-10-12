@@ -19,7 +19,7 @@
     </h1>
     
     <div class="header-gray">Description</div>
-    <p class="dscr">Partner information method is used to get the specific information (generated key amount, paid invoices number, etc.) together with the <%= Html.ActionLink("general information", "getpartner") %> about the partner.</p>
+    <p class="dscr">Partner information method is used to get the specific information (generated key amount, paid invoices number, etc.) together with the <a href="<%= Html.Action("getpartner") %>">general information</a> about the partner.</p>
 
     <div class="header-gray">Parameters</div>
     <p>This method has not got any parameters.</p>
@@ -140,7 +140,7 @@
     {"generatedAmount":175.00, "debtor":false, "activated":5, "generated":6, "clients":25, "activeClients":11, "lastPayment":"2014-05-22T12:38:42", "debt":0.0, "paid":568.000000000, "lastPaymentAmount":568.000000000, "invoicesNotPayed":3.0, "id":"00000000-c2fb-4de6-a8ae-e59a834a3cc7", "domain":"myportal", "email":"email@gmail.com", "firstName":"John", "lastName":"Smith", "url":"onlyoffice.com", "phone":"+1 (555) 555 2379", "language":"en-US", "companyName":"My Company", "country":"United States (United States)", "countryCode":"US", "countryHasVat":false, "address":"Lubanas st. 125a-25, Riga, Latvia, EU, LV-1021", "vatId":"LV40125269408", "creationDate":"2013-07-08T14:03:21", "status":1, "comment":"Here is the comment", "portal":"myportal.onlyoffice.com", "portalConfirmed":false, "isAdmin":false, "limit":1500.00, "discount":50, "payPalAccount":"email@gmail.com", "payPalAccess":true, "deposit":1500.00, "removed":false, "currency":"US", "logoUrl":"/partners/Data/partners/logo/00000000-c2fb-4de6-a8ae-e59a834a3cc7/logo.jpg", "displayName":"This is John Smith Company", "displayType":0, "supportPhone":"+1 (555) 555 2380", "supportEmail":"support@onlyoffice.com", "salesEmail":"sales@onlyoffice.com", "termsUrl":"https://partners.onlyoffice.com/terms", "theme":"wild-pink", "ruAccount":"64664643906846741582", "ruBank":"Bank of Russia", "ruKs":"30101810600000000957", "ruKpp":"345452345", "ruBik":"049923790", "ruInn":"345452345675", "partnerType":0, "paymentMethod":2, "paymentUrl":"paymenturl.com", "adminId":"11111111-c2fb-4de6-a8ae-e59a834a3cc7", "activationDate":"2014-01-01T14:45:34", "availableCredit":1325.0, "timeZone":"(UTC+01:00) Europe/Berlin", "contractNumber":"#345643", "taxNumber":"34545234567562", "taxFileUrl":"/partners/Data/partners/tax/00000000-c2fb-4de6-a8ae-e59a834a3cc7/taxfile.txt", "helpTourStatus":-1, "customEmailSignature":true}
     </pre>
 		
-    <div class="note">Please note that some of the response information will not be displayed (the response will be "null") to ease the load on the server. Use the <a  href="<%= Url.Action("getpartner") %>" class="underline">Partner Information</a> request to retrieve this information.</div>
+    <div class="note">Please note that some of the response information will not be displayed (the response will be "null") to ease the load on the server. Use the <a  href="<%= Url.Action("getpartner") %>">Partner Information</a> request to retrieve this information.</div>
 </asp:Content>
 
 <asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

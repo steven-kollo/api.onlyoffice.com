@@ -134,7 +134,7 @@
                         <br />
                         <b>example</b>: "http://example.com/logo.png"
                     </li>
-                    <li><b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type" class="underline">config</a> section to find out how to define the <b>embedded</b> document type). The image must have the following size: 248x40.
+                    <li><b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type). The image must have the following size: 248x40.
                         <br />
                         <b>type</b>: string
                         <br />
@@ -197,6 +197,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
 <p>
     If you have any further questions, please contact us at
-    <a href="mailto:integration@onlyoffice.com" class="underline" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
 </p>
 

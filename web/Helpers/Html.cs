@@ -25,8 +25,6 @@
 
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
@@ -52,7 +50,6 @@ namespace ASC.Api.Web.Help.Helpers
             {
                 InnerHtml = spanMethod.ToString(TagRenderMode.Normal) + "&nbsp;" + HttpUtility.HtmlEncode(path)
             };
-            tagBuilder.AddCssClass("underline");
             tagBuilder.MergeAttribute("href", Url.GetDocUrl(section, method, controller, context));
             return MvcHtmlString.Create(tagBuilder.ToString(TagRenderMode.Normal));
         }

@@ -15,13 +15,13 @@
         <span class="hdr">Confluence ONLYOFFICE™ integration plugin</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" class="underline" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.atlassian.com/software/confluence/" class="underline" target="_blank">Confluence</a> using ONLYOFFICE™ Document Server. Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</p>
+    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.atlassian.com/software/confluence/" target="_blank">Confluence</a> using ONLYOFFICE™ Document Server. Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</p>
     <p>The plugin will create a new <b>Edit in ONLYOFFICE</b> action within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Confluence.</p>
 
 
     <h2>Installing ONLYOFFICE™ Document Server</h2>
-    <p>You will need an instance of ONLYOFFICE™ Document Server that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin). If that is not the case, use the official ONLYOFFICE™ Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" class="underline">Document Server for Linux</a>. ONLYOFFICE™ Document Server must also be able to POST to Confluence directly.</p>
-    <p>The easiest way to start an instance of ONLYOFFICE™ Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" class="underline" target="_blank">Docker</a>.</p>
+    <p>You will need an instance of ONLYOFFICE™ Document Server that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin). If that is not the case, use the official ONLYOFFICE™ Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">Document Server for Linux</a>. ONLYOFFICE™ Document Server must also be able to POST to Confluence directly.</p>
+    <p>The easiest way to start an instance of ONLYOFFICE™ Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
     <h2>Configuring Confluence CONLYOFFICE™ integration plugin</h2>
@@ -36,7 +36,7 @@
     <p>You will need:</p>
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
-        <li>Atlassian Plugin SDK (<a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" class="underline" target="_blank">official instructions</a>),</li>
+        <li>Atlassian Plugin SDK (<a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" target="_blank">official instructions</a>),</li>
         <li>Compile package
             <span class="commandline">atlas-package</span>
         </li>
@@ -64,7 +64,7 @@
     <p>Confluence downloads the new version of the document, replacing the old one.</p>
 
     <br />
-    <p>Download the Confluence ONLYOFFICE™ integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" class="underline" target="_blank">here</a>.</p>
+    <p>Download the Confluence ONLYOFFICE™ integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
 
 </asp:Content>
 

@@ -41,7 +41,7 @@
         </li>
         <% } %>
 
-        <li><a href="<%= Url.Action("advanced") %>" class="underline">Edit the configuration files</a> in the sample changing the default path for the one to the editors installed at step 1 and other advanced parameters available for editor configuration.</li>
+        <li><a href="<%= Url.Action("advanced") %>">Edit the configuration files</a> in the sample changing the default path for the one to the editors installed at step 1 and other advanced parameters available for editor configuration.</li>
     </ol>
 
     <p>The result should look like the demo preview below.</p>
@@ -67,7 +67,7 @@
 
     <p>
         If you have any further questions, please contact us at
-        <a href="mailto:integration@onlyoffice.com" class="underline" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+        <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
     </p>
 
 </asp:Content>

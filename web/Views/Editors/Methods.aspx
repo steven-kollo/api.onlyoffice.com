@@ -51,21 +51,21 @@ docEditor.denyEditingRights(message);
 
     <br />
 
-    <p id="downloadAs">Download the edited file. This method can be called only when the existence of the <a href="<%= Url.Action("config/events") %>#onDownloadAs" class="underline">onDownloadAs</a> events. <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter:</p>
+    <p id="downloadAs">Download the edited file. This method can be called only when the existence of the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a> events. <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter:</p>
     <pre>
 docEditor.downloadAs();
 </pre>
 
     <br />
 
-    <p id="refreshHistory">Show the document version history or the error message explaining why the version history can not be displayed. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory" class="underline">onRequestHistory</a> events:</p>
+    <p id="refreshHistory">Show the document version history or the error message explaining why the version history can not be displayed. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events:</p>
     <pre>
 docEditor.refreshHistory({
     "currentVersion": 2,
     "error": null,
     "history": [
         {
-            "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory" class="underline">the JSON object</a> returned after saving the document
+            "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
             "user": {
@@ -125,7 +125,7 @@ docEditor.refreshHistory({
             </tr>
             <tr class="tablerow">
                 <td>history.changes</td>
-                <td>defines the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory" class="underline">the JSON object</a> returned after saving the document</td>
+                <td>defines the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document</td>
                 <td>Object</td>
                 <td>optional</td>
             </tr>
@@ -164,7 +164,7 @@ docEditor.refreshHistory({
 
     <br />
 
-    <p id="setHistoryData">Send the link to the document for viewing the version history or the error message explaining why the document version can not be displayed. This method must be called after the  <a href="<%= Url.Action("config/events") %>#onRequestHistoryData" class="underline">onRequestHistoryData</a> events.</p>
+    <p id="setHistoryData">Send the link to the document for viewing the version history or the error message explaining why the document version can not be displayed. This method must be called after the  <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.</p>
     <pre>
 docEditor.setHistoryData({
     "error": null,
@@ -199,7 +199,7 @@ docEditor.setHistoryData({
         <tbody>
             <tr class="tablerow">
                 <td>changesUrl</td>
-                <td>defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl" class="underline">the JSON object</a> returned after saving the document</td>
+                <td>defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
@@ -211,7 +211,7 @@ docEditor.setHistoryData({
             </tr>
             <tr class="tablerow">
                 <td>url</td>
-                <td>defines the url address of the current version of the document if <em>changesUrl</em> address is absent or the url address of the previous version of the document if <em>changesUrl</em> address was returned after saving the document. Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url" class="underline">the JSON object</a> returned after saving the document</td>
+                <td>defines the url address of the current version of the document if <em>changesUrl</em> address is absent or the url address of the previous version of the document if <em>changesUrl</em> address was returned after saving the document. Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
@@ -226,7 +226,7 @@ docEditor.setHistoryData({
 
     <br />
 
-    <p id="showMessage">Display dialog with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onReady" class="underline">onReady</a> events:</p>
+    <p id="showMessage">Display dialog with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onReady">onReady</a> events:</p>
     <pre>
 docEditor.showMessage(title, message, type);
 </pre>

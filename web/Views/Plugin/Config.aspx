@@ -74,7 +74,7 @@
             </tr>
             <tr class="tablerow">
                 <td>variations</td>
-                <td>Plugin variations or "subplugins" - see the <a class="underline" href="#pluginVariations">Plugin variations</a> section below.</td>
+                <td>Plugin variations or "subplugins" - see the <a href="#pluginVariations">Plugin variations</a> section below.</td>
                 <td>array</td>
             </tr>
             <tr class="tablerow">
@@ -139,7 +139,7 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.url</td>
-                <td>Plugin entry point, i.e. HTML file which connects the <em>pluginBase.js</em> (the base file needed for work with plugins) file and launches the plugin code. See the <a class="underline" href="<%= Url.Action("indexhtml") %>">index.html</a> section for the detailed information.</td>
+                <td>Plugin entry point, i.e. HTML file which connects the <em>pluginBase.js</em> (the base file needed for work with plugins) file and launches the plugin code. See the <a href="<%= Url.Action("indexhtml") %>">index.html</a> section for the detailed information.</td>
                 <td>string</td>
             </tr>
         </tbody>

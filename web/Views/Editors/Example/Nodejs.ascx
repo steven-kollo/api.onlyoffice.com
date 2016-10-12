@@ -5,16 +5,16 @@
 </h1>
 
 <h2>Introduction</h2>
-<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Node.js</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a class="underline" href="<%= Url.Action("demopreview") %>">Node.js Example</a> for their integration. We will show you how to run the  Node.js example on <a class="underline" href="<%= Url.Action("NodeExample") %>#Windows">Windows OS</a> and <a class="underline" href="<%= Url.Action("NodeExample") %>#Linux">Linux OS</a>.</p>
+<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Node.js</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> for their integration. We will show you how to run the  Node.js example on <a href="<%= Url.Action("NodeExample") %>#Windows">Windows OS</a> and <a href="<%= Url.Action("NodeExample") %>#Linux">Linux OS</a>.</p>
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
 <h2 id="windows">Running the example on Windows OS</h2>
 <h2 id="wind-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a class="underline" href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
-<p>See the detailed guide to learn how to <a class="underline" href="http://helpcenter.onlyoffice.com/server/windows/document/index.aspx">install Document Server for Windows</a>.</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/windows/document/index.aspx">install Document Server for Windows</a>.</p>
 
 <h2 id="wind-2"><span class="style_step">Step 2. </span>Download the Node.js code for the editors integration</h2>
-<p>Download the <a class="underline" href="<%= Url.Action("demopreview") %>">Node.js Example</a> from our site.</p>
+<p>Download the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config.js</em> file:</p>
 <pre class="commandline">
 config.converterUrl = "http://<b>documentserver</b>/ConvertService.ashx";
@@ -24,10 +24,10 @@ config.preloaderUrl = "http://<b>documentserver</b>/web-apps/apps/api/documents/
 </pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
-<p>If you want to experiment with the editor configuration, modify the <a class="underline" href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\views\editor.ejs</em> file.</p>
+<p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\views\editor.ejs</em> file.</p>
 
 <h2 id="wind-3"><span class="style_step">Step 3. </span>System requirements</h2>
-<p>Download and install the <b>node.js</b> enviroment which is going to be used to run the Node.js project. Please follow the link at the oficial website: <a class="underline" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>, choosing the correct version for your Windows OS (32-bit or 64-bit).</p>
+<p>Download and install the <b>node.js</b> enviroment which is going to be used to run the Node.js project. Please follow the link at the oficial website: <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>, choosing the correct version for your Windows OS (32-bit or 64-bit).</p>
 
 <h2 id="wind-4"><span class="style_step">Step 4. </span>Running the Node.js code</h2>
 <p>We will run the code in Node.js runtime environment and will interact with it using the command line interface (cmd).</p>
@@ -50,8 +50,8 @@ config.preloaderUrl = "http://<b>documentserver</b>/web-apps/apps/api/documents/
 
 <h2 id="Linux">Running the example on Linux OS</h2>
 <h2 id="linux-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a class="underline" href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
-<p>See the detailed guide to learn how to <a class="underline" href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">install Document Server for Linux</a>.</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">install Document Server for Linux</a>.</p>
 
 <h2 id="linux-2"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>

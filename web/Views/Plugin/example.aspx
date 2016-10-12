@@ -34,10 +34,10 @@
 
     <p>It is the easiest plugin that will insert the 'Hello world!' phrase into your document whenever you press the plugin button.</p>
 
-    <p>This plugin and all the other currently existing open source plugin examples are available here: <a class="underline" href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>. Feel free to fork them, use them with your editors and create your own plugins.</p>
+    <p>This plugin and all the other currently existing open source plugin examples are available here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>. Feel free to fork them, use them with your editors and create your own plugins.</p>
 
     <h2>Support</h2>
     <p>
-        If you have any questions, you can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank" class="underline">dev.onlyoffice.org</a> (registration required).
+        If you have any questions, you can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
     </p>
 </asp:Content>

@@ -5,15 +5,15 @@
 </h1>
 
 <h2>Introduction</h2>
-<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>.Net (C#)</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a class="underline" href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> for their integration.</p>
+<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>.Net (C#)</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> for their integration.</p>
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
 <h2 id="wind-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a class="underline" href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a class="underline" href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a class="underline" href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="wind-2"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
-<p>Download the <a class="underline" href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> from our site.</p>
+<p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>settings.config</em> file:</p>
 <pre>
 &lt;add key="files.docservice.url.storage" value="http://documentserver/FileUploader.ashx" /&gt;
@@ -23,12 +23,12 @@
 </pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
-<p>If you want to experiment with the editor configuration, modify the <a class="underline" href="<%= Url.Action("advanced") %>">parameters</a> it the <em>DocEditor.aspx</em> file.</p>
+<p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>DocEditor.aspx</em> file.</p>
 
 <h2 id="wind-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>To run your website with the editors successfully, check if your system meets the necessary system requirements:</p>
 <ul>
-    <li>Microsoft .NET Framework: version 4.5 (download it from the <a class="underline" href="https://www.microsoft.com/en-US/download/details.aspx?id=30653">official Microsoft website</a>);</li>
+    <li>Microsoft .NET Framework: version 4.5 (download it from the <a href="https://www.microsoft.com/en-US/download/details.aspx?id=30653">official Microsoft website</a>);</li>
     <li>Internet Information Services: version 7 or later;</li>
 </ul>
 
@@ -60,4 +60,4 @@
         <img alt="" src="/content/img/csharp/browse.png" />
     </li>
 </ol>
-<p>If you integrated the editors successfully the result should look like the <a class="underline" href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
+<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

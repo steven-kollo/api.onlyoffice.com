@@ -17,35 +17,35 @@
 
     <p>The parameters, which can be changed for ONLYOFFICE™ Document Server, can be subdivided into the following main sections:</p>
 
-    <a href="<%= Url.Action("config/") %>" class="underline"><b>config</b></a> - allows to change the platform type used, document display size (width and height) and type of the document opened;
+    <a href="<%= Url.Action("config/") %>"><b>config</b></a> - allows to change the platform type used, document display size (width and height) and type of the document opened;
     <ul>
         <li>
-            <a href="<%= Url.Action("config/document") %>" class="underline"><b>document</b></a> - contains all the parameters pertaining to the document (title, url, file type, etc.);
+            <a href="<%= Url.Action("config/document") %>"><b>document</b></a> - contains all the parameters pertaining to the document (title, url, file type, etc.);
             <ul>
                 <li>
-                    <a href="<%= Url.Action("config/document/info") %>" class="underline"><b>info</b></a> - contains additional parameters for the document (document author, folder where the document is stored, creation date, sharing settings);
+                    <a href="<%= Url.Action("config/document/info") %>"><b>info</b></a> - contains additional parameters for the document (document author, folder where the document is stored, creation date, sharing settings);
                 </li>
                 <li>
-                    <a href="<%= Url.Action("config/document/permissions") %>" class="underline"><b>permissions</b></a> - defines whether the document can be edited and downloaded or not;
+                    <a href="<%= Url.Action("config/document/permissions") %>"><b>permissions</b></a> - defines whether the document can be edited and downloaded or not;
                 </li>
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("config/editor") %>" class="underline"><b>editor</b></a> - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.);
+            <a href="<%= Url.Action("config/editor") %>"><b>editor</b></a> - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.);
             <ul>
                 <li>
-                    <a href="<%= Url.Action("config/editor/customization") %>" class="underline"><b>customization</b></a> - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
+                    <a href="<%= Url.Action("config/editor/customization") %>"><b>customization</b></a> - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
                 </li>
                 <li>
-                    <a href="<%= Url.Action("config/editor/embedded") %>" class="underline"><b>embedded</b></a> - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
+                    <a href="<%= Url.Action("config/editor/embedded") %>"><b>embedded</b></a> - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
                 </li>
                 <li>
-                    <a href="<%= Url.Action("config/editor/plugins") %>" class="underline"><b>plugins</b></a> - is used to connect the necessary <a class="underline" href="<%= Url.Action("basic", "plugin") %>">plugins</a> to your Document Server, so that they become visible to all document editor users;
+                    <a href="<%= Url.Action("config/editor/plugins") %>"><b>plugins</b></a> - is used to connect the necessary <a href="<%= Url.Action("basic", "plugin") %>">plugins</a> to your Document Server, so that they become visible to all document editor users;
                 </li>
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("config/events") %>" class="underline"><b>events</b></a> - is the list of special events called when some action is applied to the document (when it is loaded, modified, etc.).
+            <a href="<%= Url.Action("config/events") %>"><b>events</b></a> - is the list of special events called when some action is applied to the document (when it is loaded, modified, etc.).
         </li>
     </ul>
 

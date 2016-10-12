@@ -33,7 +33,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="edit">edit</td>
-                <td>defines if the document can be edited or only viewed. In case the editing permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Edit Document</b> menu option; please note that if the editing permission is set to <b>"false"</b> the document will be opened in viewer and you will <b>not</b> be able to switch it to the editor even if the <a href="<%= Url.Action("config/editor") %>#mode" class="underline">mode</a> parameter is set to <b>edit</b></td>
+                <td>defines if the document can be edited or only viewed. In case the editing permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Edit Document</b> menu option; please note that if the editing permission is set to <b>"false"</b> the document will be opened in viewer and you will <b>not</b> be able to switch it to the editor even if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b></td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -50,7 +50,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="review">review</td>
-                <td>defines if the document can be reviewed or not. In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available if the <a href="<%= Url.Action("config/editor") %>#mode" class="underline">mode</a> parameter is set to <b>edit</b></td>
+                <td>defines if the document can be reviewed or not. In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b></td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>

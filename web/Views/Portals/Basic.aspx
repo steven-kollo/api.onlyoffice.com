@@ -23,7 +23,7 @@
     </h2>
     <p>
         Authentication in the ONLYOFFICE™ Community Server API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
-            For information and examples please visit the <a href="<%= Url.Action("auth") %>" class="underline">Authentication</a> section.
+            For information and examples please visit the <a href="<%= Url.Action("auth") %>">Authentication</a> section.
     </p>
     <h2>Making requests
     </h2>
@@ -67,6 +67,6 @@
     <h2>Support
     </h2>
     <p>
-        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank" class="underline">dev.onlyoffice.org</a> (registration required).
+        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
     </p>
 </asp:Content>

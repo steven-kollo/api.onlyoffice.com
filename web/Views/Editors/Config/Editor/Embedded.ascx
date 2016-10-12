@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 <p class="dscr">
-    The embedded section is for the <b>embedded</b> document type only (see the <a href="<%= Url.Action("config/") %>#type" class="underline">config</a> section to find out how to define the <b>embedded</b> document type). It allows to change the settings which define the behavior of the buttons in the embedded mode
+    The embedded section is for the <b>embedded</b> document type only (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type). It allows to change the settings which define the behavior of the buttons in the embedded mode
 </p>
 
 <div class="header-gray">Parameters</div>

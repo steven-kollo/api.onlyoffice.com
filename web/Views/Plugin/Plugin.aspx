@@ -36,31 +36,31 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td><a class="underline" href="<%= Url.Action("button") %>">button</a></td>
+                <td><a href="<%= Url.Action("button") %>">button</a></td>
                 <td>The buttons used with the plugin and the plugin behavior when these buttons are clicked. The method is called when any of the plugin buttons is clicked.</td>
                 <td>function</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td><a class="underline" href="<%= Url.Action("executecommand") %>">executeCommand</a></td>
+                <td><a href="<%= Url.Action("executecommand") %>">executeCommand</a></td>
                 <td>Used to send the data back to the editor.</td>
                 <td>function</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td><a class="underline" href="<%= Url.Action("info") %>">info</a></td>
+                <td><a href="<%= Url.Action("info") %>">info</a></td>
                 <td>It stores all the information about the editor where the plugin is used.</td>
                 <td>object</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td><a class="underline" href="<%= Url.Action("init") %>">init</a></td>
+                <td><a href="<%= Url.Action("init") %>">init</a></td>
                 <td>The data sent to the plugin and what is to be done with it and how. This method is called when the plugin is started.</td>
                 <td>function</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td><a class="underline" href="<%= Url.Action("onexternalmouseup") %>">onExternalMouseUp</a></td>
+                <td><a href="<%= Url.Action("onexternalmouseup") %>">onExternalMouseUp</a></td>
                 <td>Specify the action that is to be performed when the mouse button is released outside the plugin iframe.</td>
                 <td>function</td>
                 <td>optional</td>

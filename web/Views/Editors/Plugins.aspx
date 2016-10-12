@@ -19,14 +19,14 @@
 
     <p>Currently the following plugins are available:</p>
     <ul>
-        <li><a href="<%= Url.Action("alfresco") %>" class="underline">Alfresco ONLYOFFICE™ integration plugin</a></li>
-        <li><a href="<%= Url.Action("confluence") %>" class="underline">Confluence ONLYOFFICE™ integration plugin</a></li>
+        <li><a href="<%= Url.Action("alfresco") %>">Alfresco ONLYOFFICE™ integration plugin</a></li>
+        <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE™ integration plugin</a></li>
     </ul>
     
     <br />
     <p>
         If you have any further questions, please contact us at
-        <a href="mailto:integration@onlyoffice.com" class="underline" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+        <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
     </p>
 
 </asp:Content>

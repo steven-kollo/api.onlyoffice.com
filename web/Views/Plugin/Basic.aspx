@@ -23,14 +23,14 @@
     <p>The plugins can be added to any document editor (text document, spreadsheet or presentation). Please see the sections below to find out what the plugin contents must be and how it is added to the editors:</p>
 
     <ul>
-        <li><a class="underline" href="<%= Url.Action("structure") %>">Plugin structure</a></li>
-        <li><a class="underline" href="<%= Url.Action("installation") %>">Plugin installation</a></li>
+        <li><a href="<%= Url.Action("structure") %>">Plugin structure</a></li>
+        <li><a href="<%= Url.Action("installation") %>">Plugin installation</a></li>
     </ul>
 
-    <p>All the currently existing open source plugin examples are available here: <a class="underline" href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>. Feel free to fork them, use them with your editors and create your own plugins.</p>
+    <p>All the currently existing open source plugin examples are available here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>. Feel free to fork them, use them with your editors and create your own plugins.</p>
 
     <h2>Support</h2>
     <p>
-        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank" class="underline">dev.onlyoffice.org</a> (registration required).
+        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
     </p>
 </asp:Content>
