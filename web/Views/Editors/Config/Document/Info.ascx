@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <%= Html.ActionLink(" ", "config/document", null, new {@class = "up"}) %>
+    <a class="up" href="<%= Url.Action("config/document") %>"></a>
     <span class="hdr">Document Info</span>
 </h1>
 

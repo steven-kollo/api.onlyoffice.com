@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <%= Html.ActionLink(" ", "plugin", null, new {@class = "up"}) %>
+        <a class="up" href="<%= Url.Action("plugin") %>"></a>
     <span class="hdr">window.Asc.plugin.info</span>
 </h1>
 

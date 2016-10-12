@@ -8,12 +8,12 @@
 <% var entryPoints = Model as List<MsDocEntryPoint>; %>
 
 <div class="treeheader">Get Started</div>
-<ul class="treeview root">
+<ul class="side-nav treeview root">
     <li>
-        <%= Html.MenuActionLink("Basic concepts", "basic", "portals", "selected") %>
+        <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Passing authentication", "auth", "portals", "selected") %>
+        <a href="<%= Url.Action("auth") %>">Passing authentication</a>
     </li>
 </ul>
 
@@ -44,12 +44,12 @@
 <div class="treeheader">Help</div>
 <ul class="treeview root">
     <li>
-        <%= Html.MenuActionLink("F.A.Q.", "faq", "portals", "selected") %>
+        <a href="<%= Url.Action("faq") %>">F.A.Q.</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Filtering", "filters", "portals", "selected") %>
+        <a href="<%= Url.Action("filters") %>">Filtering</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Batching", "batch", "portals", "selected") %>
+        <a href="<%= Url.Action("batch") %>">Batching</a>
     </li>
 </ul>

@@ -5,30 +5,30 @@
 %>
 
 <div class="treeheader">Get Started</div>
-<ul class="treeview root">
+<ul class="side-nav treeview root">
     <li>
-        <%= Html.MenuActionLink("Basic concepts", "basic", "partners", "selected") %>
+        <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Authentication", "authentication", "partners", "selected") %>
+        <a href="<%= Url.Action("authentication", "partners") %>">Authentication</a>
     </li>
 </ul>
 
 <div class="treeheader">Methods</div>
 <ul class="side-nav treeview root">
     <li>
-        <%= Html.ActionLink("Partners", "index", new {id = "partners"}) %>
+        <a href="<%= Url.Action("index", "partners", new {id = "partners"}) %>">Partners</a>
     </li>
     <li>
-        <%= Html.ActionLink("Clients and payments", "index", new {id = "clients"}) %>
+        <a href="<%= Url.Action("index", "partners", new {id = "clients"}) %>">Clients and payments</a>
     </li>
     <li>
-        <%= Html.ActionLink("Portals", "index", new {id = "portals"}) %>
+        <a href="<%= Url.Action("index", "partners", new {id = "portals"}) %>">Portals</a>
     </li>
     <li>
-        <%= Html.ActionLink("Keys", "index", new {id = "keys"}) %>
+        <a href="<%= Url.Action("index", "partners", new {id = "keys"}) %>">Keys</a>
     </li>
     <li>
-        <%= Html.ActionLink("Invoices", "index", new {id = "invoices"}) %>
+        <a href="<%= Url.Action("index", "partners", new {id = "invoices"}) %>">Invoices</a>
     </li>
 </ul>

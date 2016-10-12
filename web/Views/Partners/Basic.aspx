@@ -23,7 +23,7 @@
             Authentication
         </h2>
         <p>
-            Authentication in the ONLYOFFICE™ Partners API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the <a href="<%= Html.Action("authentication") %>">Authentication</a> section.
+            Authentication in the ONLYOFFICE™ Partners API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the <a href="<%= Url.Action("authentication") %>">Authentication</a> section.
         </p>
         <h2>
             Making requests

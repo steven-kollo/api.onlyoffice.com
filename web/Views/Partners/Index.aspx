@@ -33,18 +33,18 @@
         </thead>
         <tbody>
 		    <tr class="tablerow">
-			    <td><%= Html.ActionLink("Partner Information", "getpartner") %></td>
-			    <td><%= Html.ActionLink("GET /api/partnerapi/partner", "getpartner") %></td>
+			    <td><a href="<%= Url.Action("getpartner") %>">Partner Information</a></td>
+			    <td><a href="<%= Url.Action("getpartner") %>">GET /api/partnerapi/partner</a></td>
 			    <td>Partner information method is used to get the general information (first name, last name, email, domain, etc.) about the partner.</td>
 		    </tr>
 		    <tr class="tablerow">
-			    <td><%= Html.ActionLink("Partner Detailed Information", "getcurrentpartner") %></td>
-			    <td><%= Html.ActionLink("GET /api/partnerapi/getcurrentpartner", "getcurrentpartner") %></td>
-			    <td>Partner information method is used to get the specific information (generated key amount, paid invoices number, etc.) together with the <%= Html.ActionLink("general information", "getpartner") %> about the partner.</td>
+			    <td><a href="<%= Url.Action("getcurrentpartner") %>">Partner Detailed Information</a></td>
+			    <td><a href="<%= Url.Action("getcurrentpartner") %>">GET /api/partnerapi/getcurrentpartner</a></td>
+			    <td>Partner information method is used to get the specific information (generated key amount, paid invoices number, etc.) together with the <a href="<%= Url.Action("") %>">general information", "getpartner") %> about the partner.</td>
 		    </tr>
 		    <tr class="tablerow">
-			    <td><%= Html.ActionLink("Partner Pricing Plans", "getpartnertariffs") %></td>
-			    <td><%= Html.ActionLink("GET /api/partnerapi/tariffs", "getpartnertariffs") %></td>
+			    <td><a href="<%= Url.Action("getpartnertariffs") %>">Partner Pricing Plans</a></td>
+			    <td><a href="<%= Url.Action("getpartnertariffs") %>">GET /api/partnerapi/tariffs</a></td>
 			    <td>Partner information method is used to get the partner pricing plans.</td>
 		    </tr>
         </tbody>
@@ -70,18 +70,18 @@
         </thead>
         <tbody>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Client Creation", "createclient") %></td>
-				<td><%= Html.ActionLink("POST /api/partnerapi/client", "createclient") %></td>
+				<td><a href="<%= Url.Action("createclient") %>">Client Creation</a></td>
+				<td><a href="<%= Url.Action("createclient") %>">POST /api/partnerapi/client</a></td>
 				<td>Client creation method is used to create a client using the parameters (pricing plan, portal address, user email address, etc.) specified in the request.</td>
 			</tr>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Request Client Payment", "requestclientpayment") %></td>
-				<td><%= Html.ActionLink("GET /api/partnerapi/requestclientpayment", "requestclientpayment") %></td>
+				<td><a href="<%= Url.Action("requestclientpayment") %>">Request Client Payment</a></td>
+				<td><a href="<%= Url.Action("requestclientpayment") %>">GET /api/partnerapi/requestclientpayment</a></td>
 				<td>Notification on an attempt to get a key from the partner or to buy a portal pricing plan via PayPal payment system.</td>
 			</tr>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Button Creation", "createbutton") %></td>
-				<td><%= Html.ActionLink("POST /api/partnerapi/button", "createbutton") %></td>
+				<td><a href="<%= Url.Action("createbutton") %>">Button Creation</a></td>
+				<td><a href="<%= Url.Action("createbutton") %>">POST /api/partnerapi/button</a></td>
 				<td>Create the button to be able to buy a portal pricing plan via PayPal payment system.</td>
 			</tr>
         </tbody>
@@ -107,13 +107,13 @@
         </thead>
         <tbody>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Portal Registration", "registerportal") %></td>
-				<td><%= Html.ActionLink("POST /api/partnerapi/registerportal", "registerportal") %></td>
+				<td><a href="<%= Url.Action("registerportal") %>">Portal Registration</a></td>
+				<td><a href="<%= Url.Action("registerportal") %>">POST /api/partnerapi/registerportal</a></td>
 				<td>Portal registration method is used to register a new portal with the parameters specified in the request.</td>
 			</tr>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Portal Status Change", "changeportalstatus") %></td>
-				<td><%= Html.ActionLink("GET /api/partnerapi/changeportalstatus", "changeportalstatus") %></td>
+				<td><a href="<%= Url.Action("changeportalstatus") %>">Portal Status Change</a></td>
+				<td><a href="<%= Url.Action("changeportalstatus") %>">GET /api/partnerapi/changeportalstatus</a></td>
 				<td>Portal status change method is used to change the current portal status for the status specified in the request.</td>
 			</tr>
         </tbody>
@@ -139,18 +139,18 @@
         </thead>
         <tbody>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Minimal Pricing Plan Key Generation", "generatekeysmin") %></td>
-				<td><%= Html.ActionLink("GET /api/partnerapi/generatekeys", "generatekeysmin") %></td>
+				<td><a href="<%= Url.Action("generatekeysmin") %>">Minimal Pricing Plan Key Generation</a></td>
+				<td><a href="<%= Url.Action("generatekeysmin") %>">GET /api/partnerapi/generatekeys</a></td>
 				<td>Minimal pricing plan key generation method is used to create the number of keys specified in the request for the minimal pricing plan.</td>
 			</tr>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Key Generation", "generatekeys") %></td>
-				<td><%= Html.ActionLink("GET /api/partnerapi/generatekeys", "generatekeys") %></td>
+				<td><a href="<%= Url.Action("generatekeys") %>">Key Generation</a></td>
+				<td><a href="<%= Url.Action("generatekeys") %>">GET /api/partnerapi/generatekeys</a></td>
 				<td>Key generation method is used to generate new keys for the partner with the ID and the number of keys specified in the request.</td>
 			</tr>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Key Activation", "activatekey") %></td>
-				<td><%= Html.ActionLink("GET /api/partnerapi/activatekey", "activatekey") %></td>
+				<td><a href="<%= Url.Action("activatekey") %>">Key Activation</a></td>
+				<td><a href="<%= Url.Action("activatekey") %>">GET /api/partnerapi/activatekey</a></td>
 				<td>Key activation method is used to activate the key provided for the portal payment with the key code specified in the request.</td>
 			</tr>
         </tbody>
@@ -176,18 +176,18 @@
         </thead>
         <tbody>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Invoice List", "getpartnerinvoices") %></td>
-				<td><%= Html.ActionLink("GET /api/partnerapi/getpartnerinvoices", "getpartnerinvoices") %></td>
+				<td><a href="<%= Url.Action("getpartnerinvoices") %>">Invoice List</a></td>
+				<td><a href="<%= Url.Action("getpartnerinvoices") %>">GET /api/partnerapi/getpartnerinvoices</a></td>
 				<td>Invoice list method returns the list of all invoices for the current partner.</td>
 			</tr>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Invoice Keys", "getinvoicekeys") %></td>
-				<td><%= Html.ActionLink("GET /api/partnerapi/getinvoicekeys", "getinvoicekeys") %></td>
+				<td><a href="<%= Url.Action("getinvoicekeys") %>">Invoice Keys</a></td>
+				<td><a href="<%= Url.Action("getinvoicekeys") %>">GET /api/partnerapi/getinvoicekeys</a></td>
 				<td>Invoice keys method is used to get the list of all the keys generated for the invoice with the ID specified in the request.</td>
 			</tr>
 			<tr class="tablerow">
-				<td><%= Html.ActionLink("Invoice Status Change", "changeinvoicestatus") %></td>
-				<td><%= Html.ActionLink("POST /api/partnerapi/changeinvoicestatus", "changeinvoicestatus") %></td>
+				<td><a href="<%= Url.Action("changeinvoicestatus") %>">Invoice Status Change</a></td>
+				<td><a href="<%= Url.Action("changeinvoicestatus") %>">POST /api/partnerapi/changeinvoicestatus</a></td>
 				<td>Invoice status change method is used to change the status of the invoice with the selected ID for the status specified in the request.</td>
 			</tr>
         </tbody>

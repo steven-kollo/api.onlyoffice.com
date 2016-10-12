@@ -13,13 +13,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <%= Html.ActionLink(" ", "index", new {id = "partners"}, new {@class = "up"}) %>
+        <a class="up" href="<%= Url.Action("index/partners") %>"></a>
         <span class="hdr">GET /api/partnerapi/getcurrentpartner</span>
         <span class="comment">This function requires authentication</span>
     </h1>
     
     <div class="header-gray">Description</div>
-    <p class="dscr">Partner information method is used to get the specific information (generated key amount, paid invoices number, etc.) together with the <a href="<%= Html.Action("getpartner") %>">general information</a> about the partner.</p>
+    <p class="dscr">Partner information method is used to get the specific information (generated key amount, paid invoices number, etc.) together with the <a href="<%= Url.Action("getpartner") %>">general information</a> about the partner.</p>
 
     <div class="header-gray">Parameters</div>
     <p>This method has not got any parameters.</p>

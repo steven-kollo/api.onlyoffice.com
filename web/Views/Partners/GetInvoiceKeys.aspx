@@ -13,7 +13,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <%= Html.ActionLink(" ", "index", new {id = "invoices"}, new {@class = "up"}) %>
+        <a class="up" href="<%= Url.Action("index/invoices") %>"></a>
         <span class="hdr">GET /api/partnerapi/getinvoicekeys</span>
         <span class="comment">This function requires authentication</span>
     </h1>

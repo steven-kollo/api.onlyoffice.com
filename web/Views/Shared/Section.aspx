@@ -30,7 +30,7 @@
         else
         { %>
     <h1>
-        <a class="up" href="<%= Url.DocUrl(model.Section, null, Html.GetCurrentController()) %>"></a>
+        <a href="<%= Url.DocUrl(model.Section, null, Html.GetCurrentController()) %>" class="up"></a>
         <span class="hdr"><%= model.Category %></span>
     </h1>
     <% } %>

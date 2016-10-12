@@ -5,82 +5,82 @@
 <div class="treeheader">Get Started</div>
 <ul class="side-nav treeview root">
     <li>
-        <%= Html.MenuActionLink("Introduction", "basic", "plugin", "selected") %>
+        <a href="<%= Url.Action("basic") %>">Introduction</a>
     </li>
 </ul>
 
 <div class="treeheader">Documentation</div>
 <ul class="side-nav treeview root">
     <li>
-        <%= Html.MenuActionLink("Plugin structure", "structure", "plugin", "selected") %>
+        <a href="<%= Url.Action("structure") %>">Plugin structure</a>
         <ul class="treeview">
             <li>
-                <%= Html.MenuActionLink("config.json", "config", "plugin", "selected") %>
+                <a href="<%= Url.Action("config") %>">config.json</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("index.html", "indexhtml", "plugin", "selected") %>
+                <a href="<%= Url.Action("indexhtml") %>">index.html</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Plugin code", "code", "plugin", "selected") %>
+                <a href="<%= Url.Action("code") %>">Plugin code</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("window.Asc.plugin object", "plugin", "plugin", "selected") %>
+                <a href="<%= Url.Action("plugin") %>">window.Asc.plugin object</a>
                 <ul class="treeview">
                     <li>
-                        <%= Html.MenuActionLink("button", "button", "plugin", "selected") %>
+                        <a href="<%= Url.Action("button") %>">button</a>
                     </li>
                     <li>
-                        <%= Html.MenuActionLink("executeCommand", "executecommand", "plugin", "selected") %>
+                        <a href="<%= Url.Action("executecommand") %>">executeCommand</a>
                     </li>
                     <li>
-                        <%= Html.MenuActionLink("info object", "info/", "plugin", "selected") %>
+                        <a href="<%= Url.Action("info/") %>">info object</a>
                         <ul class="treeview">
                             <li>
-                                <%= Html.MenuActionLink("data", "info/data", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/data") %>">data</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("editorType", "info/editorType", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/editorType") %>">editorType</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("guid", "info/guid", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/guid") %>">guid</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("height", "info/height", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/height") %>">height</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("imgSrc", "info/imgsrc", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/imgsrc") %>">imgSrc</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("mmToPx", "info/mmToPx", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/mmtopx") %>">mmToPx</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("objectId", "info/objectId", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/objectId") %>">objectId</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("recalculate", "info/recalculate", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/recalculate") %>">recalculate</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("resize", "info/resize", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/resize") %>">resize</a>
                             </li>
                             <li>
-                                <%= Html.MenuActionLink("width", "info/width", "plugin", "selected") %>
+                                <a href="<%= Url.Action("info/width") %>">width</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <%= Html.MenuActionLink("init", "init", "plugin", "selected") %>
+                        <a href="<%= Url.Action("init") %>">init</a>
                     </li>
                     <li>
-                        <%= Html.MenuActionLink("onExternalMouseUp", "onExternalMouseUp", "plugin", "selected") %>
+                        <a href="<%= Url.Action("onExternalMouseUp") %>">onExternalMouseUp</a>
                     </li>
                 </ul>
             </li>
         </ul>
     </li>
     <li>
-        <%= Html.MenuActionLink("Plugin installation", "installation", "plugin", "selected") %>
+        <a href="<%= Url.Action("installation") %>">Plugin installation</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Plugin example", "example", "plugin", "selected") %>
+        <a href="<%= Url.Action("example") %>">Plugin example</a>
     </li>
 </ul>

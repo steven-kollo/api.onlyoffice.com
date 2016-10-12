@@ -17,7 +17,7 @@
     <% var model = Model as MethodViewModel;
        var method = model.Method; %>
     <h1>
-        <a class="up" href="<%= Url.DocUrl(model.Section.Name, string.IsNullOrEmpty(method.Category) ? null : method.Category, null, null, Html.GetCurrentController()) %>"></a>
+        <a href="<%= Url.DocUrl(model.Section.Name, string.IsNullOrEmpty(method.Category) ? null : method.Category, null, null, Html.GetCurrentController()) %>" class="up"></a>
         <span class="hdr"><%= method.HttpMethod + " " + method.Path %></span>
         <% if (method.Authentification)
           { %>

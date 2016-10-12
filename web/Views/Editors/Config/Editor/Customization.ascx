@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <%= Html.ActionLink(" ", "config/editor", null, new {@class = "up"}) %>
+    <a class="up" href="<%= Url.Action("config/editor") %>"></a>
     <span class="hdr">Customization<span class="required">*</span></span>
 </h1>
 

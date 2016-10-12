@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <%= Html.ActionLink(" ", "plugin", null, new {@class = "up"}) %>
+        <a class="up" href="<%= Url.Action("plugin") %>"></a>
         <span class="hdr">window.Asc.plugin.init.onExternalMouseUp(fMouseUp)</span>
     </h1>
 

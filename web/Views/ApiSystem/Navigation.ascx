@@ -3,21 +3,21 @@
     Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <div class="treeheader">Get Started</div>
-<ul class="treeview root">
+<ul class="side-nav treeview root">
     <li>
-        <%= Html.MenuActionLink("Basic concepts", "basic", "apisystem", "selected") %>
+        <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Authentication", "authentication", "apisystem", "selected") %>
+        <a href="<%= Url.Action("authentication") %>">Authentication</a>
     </li>
 </ul>
 
 <div class="treeheader">Methods</div>
 <ul class="side-nav treeview root">
     <li>
-        <%= Html.ActionLink("Portals", "index", new {url = "portal"}) %>
+        <a href="<%= Url.Action("index", "apisystem", new {url = "portal"}) %>">Portals</a>
     </li>
     <li>
-        <%= Html.ActionLink("Billing", "index", new {url = "tariff"}) %>
+        <a href="<%= Url.Action("index", "apisystem", new {url = "tariff"}) %>">Billing</a>
     </li>
 </ul>

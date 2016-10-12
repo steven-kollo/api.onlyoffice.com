@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <%= Html.ActionLink(" ", "info/", null, new {@class = "up"}) %>
+    <a class="up" href="<%= Url.Action("info/") %>"></a>
     <span class="hdr">window.Asc.plugin.info.height</span>
     <span class="comment">read-only</span>
 </h1>

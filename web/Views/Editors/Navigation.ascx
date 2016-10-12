@@ -5,59 +5,59 @@
 <div class="treeheader">Get Started</div>
 <ul class="side-nav treeview root">
     <li>
-        <%= Html.MenuActionLink("Basic concepts", "basic", "editors", "selected") %>
+        <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Try now", "try", "editors", "selected") %>
+        <a href="<%= Url.Action("try") %>">Try now</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Integration Examples", "demopreview", "editors", "selected") %>
+        <a href="<%= Url.Action("demopreview") %>">Integration Examples</a>
         <ul class="treeview">
             <li>
-                <%= Html.MenuActionLink(".Net (C#) Example", "example/csharp", "editors", "selected") %>
+                <a href="<%= Url.Action("example/csharp") %>">.Net (C#) Example</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Java Example", "example/java", "editors", "selected") %>
+                <a href="<%= Url.Action("example/java") %>">Java Example</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Node.js Example", "example/nodejs", "editors", "selected") %>
+                <a href="<%= Url.Action("example/nodejs") %>">Node.js Example</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("PHP Example", "example/php", "editors", "selected") %>
+                <a href="<%= Url.Action("example/php") %>">PHP Example</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Ruby Example", "example/ruby", "editors", "selected") %>
+                <a href="<%= Url.Action("example/ruby") %>">Ruby Example</a>
             </li>
         </ul>
     </li>
     <li>
-        <%= Html.MenuActionLink("Integration Connectors", "plugins", "editors", "selected") %>
+        <a href="<%= Url.Action("plugins") %>">Integration Connectors</a>
         <ul class="treeview">
             <li>
-                <%= Html.MenuActionLink("Alfresco integration", "alfresco", "editors", "selected") %>
+                <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Confluence integration", "confluence", "editors", "selected") %>
+                <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
             </li>
         </ul>
     </li>
     <li>
-        <%= Html.MenuActionLink("How It Works", "howitworks", "editors", "selected") %>
+        <a href="<%= Url.Action("howitworks") %>">How It Works</a>
         <ul class="treeview">
             <li>
-                <%= Html.MenuActionLink("Opening File", "open", "editors", "selected") %>
+                <a href="<%= Url.Action("open") %>">Opening File</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Saving File", "save", "editors", "selected") %>
+                <a href="<%= Url.Action("save") %>">Saving File</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Co-editing", "coedit", "editors", "selected") %>
+                <a href="<%= Url.Action("coedit") %>">Co-editing</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Converting and Downloading File", "conversion", "editors", "selected") %>
+                <a href="<%= Url.Action("conversion") %>">Converting and Downloading File</a>
             </li>
             <li>
-                <%= Html.MenuActionLink("Document History", "history", "editors", "selected") %>
+                <a href="<%= Url.Action("history") %>">Document History</a>
             </li>
         </ul>
     </li>
@@ -66,54 +66,54 @@
 <div class="treeheader">Documentation</div>
 <ul class="side-nav treeview root">
     <li>
-        <%= Html.MenuActionLink("Advanced parameters", "advanced", "editors", "selected") %>
+        <a href="<%= Url.Action("advanced") %>">Advanced parameters</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Config", "config/", "editors", "selected") %>
+        <a href="<%= Url.Action("config/") %>">Config</a>
         <ul class="treeview">
             <li>
-                <%= Html.MenuActionLink("Document", "config/document", "editors", "selected") %>
+                <a href="<%= Url.Action("config/document") %>">Document</a>
                 <ul class="treeview">
                     <li>
-                        <%= Html.MenuActionLink("Info", "config/document/info", "editors", "selected") %>
+                        <a href="<%= Url.Action("config/document/info") %>">Info</a>
                     </li>
                     <li>
-                        <%= Html.MenuActionLink("Permissions", "config/document/permissions", "editors", "selected") %>
+                        <a href="<%= Url.Action("config/document/permissions") %>">Permissions</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <%= Html.MenuActionLink("Editor", "config/editor", "editors", "selected") %>
+                <a href="<%= Url.Action("config/editor") %>">Editor</a>
                 <ul class="treeview">
                     <li>
-                        <%= Html.MenuActionLink("Customization", "config/editor/customization", "editors", "selected") %>
+                        <a href="<%= Url.Action("config/editor/customization") %>">Customization</a>
                     </li>
                     <li>
-                        <%= Html.MenuActionLink("Embedded", "config/editor/embedded", "editors", "selected") %>
+                        <a href="<%= Url.Action("config/editor/embedded") %>">Embedded</a>
                     </li>
                     <li>
-                        <%= Html.MenuActionLink("Plugins", "config/editor/plugins", "editors", "selected") %>
+                        <a href="<%= Url.Action("config/editor/plugins") %>">Plugins</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <%= Html.MenuActionLink("Events", "config/events", "editors", "selected") %>
+                <a href="<%= Url.Action("config/events") %>">Events</a>
             </li>
         </ul>
     </li>
     <li>
-        <%= Html.MenuActionLink("Methods", "methods", "editors", "selected") %>
+        <a href="<%= Url.Action("methods") %>">Methods</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Callback handler", "callback", "editors", "selected") %>
+        <a href="<%= Url.Action("callback") %>">Callback handler</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Command service", "command", "editors", "selected") %>
+        <a href="<%= Url.Action("command") %>">Command service</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Conversion API", "conversionapi", "editors", "selected") %>
+        <a href="<%= Url.Action("conversionapi") %>">Conversion API</a>
     </li>
     <li>
-        <%= Html.MenuActionLink("Troubleshooting", "troubleshooting", "editors", "selected") %>
+        <a href="<%= Url.Action("troubleshooting") %>">Troubleshooting</a>
     </li>
 </ul>

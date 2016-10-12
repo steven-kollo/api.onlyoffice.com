@@ -32,28 +32,28 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td><%= Html.ActionLink("Get portals", "portalget") %></td>
-                <td><%= Html.ActionLink("GET /api/portal/get", "portalget") %></td>
+                <td><a href="<%= Url.Action("portalget") %>">Get portals</a></td>
+                <td><a href="<%= Url.Action("portalget") %>">GET /api/portal/get</a></td>
                 <td>Get the list of registered portals.</td>
             </tr>
             <tr class="tablerow">
-                <td><%= Html.ActionLink("Register portal", "portalregister") %></td>
-                <td><%= Html.ActionLink("POST /api/portal/register", "portalregister") %></td>
+                <td><a href="<%= Url.Action("portalregister") %>">Register portal</a></td>
+                <td><a href="<%= Url.Action("portalregister") %>">POST /api/portal/register</a></td>
                 <td>Checks if the name is available to create a portal.</td>
             </tr>
             <tr class="tablerow">
-                <td><%= Html.ActionLink("Portal deletion", "portalremove") %></td>
-                <td><%= Html.ActionLink("DELETE /api/portal/remove", "portalremove") %></td>
+                <td><a href="<%= Url.Action("portalremove") %>">Portal deletion</a></td>
+                <td><a href="<%= Url.Action("portalremove") %>">DELETE /api/portal/remove</a></td>
                 <td>Portal deletion.</td>
             </tr>
             <tr class="tablerow">
-                <td><%= Html.ActionLink("Status portal", "portalstatus") %></td>
-                <td><%= Html.ActionLink("PUT /api/portal/status", "portalstatus") %></td>
+                <td><a href="<%= Url.Action("portalstatus") %>">Status portal</a></td>
+                <td><a href="<%= Url.Action("portalstatus") %>">PUT /api/portal/status</a></td>
                 <td>Portal activation status change.</td>
             </tr>
             <tr class="tablerow">
-                <td><%= Html.ActionLink("Validate portal name", "validateportalname") %></td>
-                <td><%= Html.ActionLink("POST /api/portal/validateportalname", "validateportalname") %></td>
+                <td><a href="<%= Url.Action("validateportalname") %>">Validate portal name</a></td>
+                <td><a href="<%= Url.Action("validateportalname") %>">POST /api/portal/validateportalname</a></td>
                 <td>Checks if the name is available to create a portal.</td>
             </tr>
         </tbody>
@@ -79,13 +79,13 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td><%= Html.ActionLink("Get tariff", "tariffget") %></td>
-                <td><%= Html.ActionLink("GET /api/tariff/get", "tariffget") %></td>
+                <td><a href="<%= Url.Action("tariffget") %>">Get tariff</a></td>
+                <td><a href="<%= Url.Action("tariffget") %>">GET /api/tariff/get</a></td>
                 <td>Portal pricing plan change.</td>
             </tr>
             <tr class="tablerow">
-                <td><%= Html.ActionLink("Set tariff", "tariffset") %></td>
-                <td><%= Html.ActionLink("PUT /api/tariff/set", "tariffset") %></td>
+                <td><a href="<%= Url.Action("tariffset") %>">Set tariff</a></td>
+                <td><a href="<%= Url.Action("tariffset") %>">PUT /api/tariff/set</a></td>
                 <td>Portal pricing plan change.</td>
             </tr>
         </tbody>
