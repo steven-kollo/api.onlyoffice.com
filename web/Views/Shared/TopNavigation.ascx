@@ -38,11 +38,5 @@
         <a href="<%= Url.Action("basic", "plugin") %>">Document Server Plugins</a>
     </li>
     <% } %>
-    <% if (products.Contains("partners"))
-       { %>
-    <li class="<%= Html.IfController("partners") || subControllerStr.Equals("partners", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-        <a href="<%= Url.Action("basic", "partners") %>">Partners</a>
-    </li>
-    <% } %>
 </ul>
 <% } %>
