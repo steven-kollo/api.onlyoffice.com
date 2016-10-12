@@ -29,6 +29,15 @@
                 </a>
             </div>
             <% } %>
+            <% if (products.Contains("apisystem"))
+                { %>
+            <div class="product">
+                <a href="<%= Url.Action("basic", "apisystem") %>">
+                    <img src="<%= Url.Content("~/content/img/partners.png") %>" alt="Hosted Solution">
+                    Hosted Solution
+                </a>
+            </div>
+            <% } %>
             <% if (products.Contains("editors"))
                 { %>
             <div class="product">
@@ -53,15 +62,6 @@
                 <a href="<%= Url.Action("basic", "partners") %>">
                     <img src="<%= Url.Content("~/content/img/partners.png") %>" alt="Partners">
                     Partners
-                </a>
-            </div>
-            <% } %>
-            <% if (products.Contains("apisystem"))
-                { %>
-            <div class="product">
-                <a href="<%= Url.Action("basic", "apisystem") %>">
-                    <img src="<%= Url.Content("~/content/img/partners.png") %>" alt="Hosted Solution">
-                    Hosted Solution
                 </a>
             </div>
             <% } %>

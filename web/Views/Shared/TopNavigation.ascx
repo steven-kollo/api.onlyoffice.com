@@ -20,6 +20,12 @@
         <a href="<%= Url.Action("basic", "portals") %>">Community Server</a>
     </li>
     <% } %>
+    <% if (products.Contains("apisystem"))
+       { %>
+    <li class="<%= Html.IfController("apisystem") || subControllerStr.Equals("apisystem", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+        <a href="<%= Url.Action("basic", "apisystem") %>">Hosted Solution</a>
+    </li>
+    <% } %>
     <% if (products.Contains("editors"))
        { %>
     <li class="<%= Html.IfController("editors") || subControllerStr.Equals("editors", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
@@ -36,12 +42,6 @@
        { %>
     <li class="<%= Html.IfController("partners") || subControllerStr.Equals("partners", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
         <a href="<%= Url.Action("basic", "partners") %>">Partners</a>
-    </li>
-    <% } %>
-    <% if (products.Contains("apisystem"))
-       { %>
-    <li class="<%= Html.IfController("apisystem") || subControllerStr.Equals("apisystem", StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-        <a href="<%= Url.Action("basic", "apisystem") %>">Hosted Solution</a>
     </li>
     <% } %>
 </ul>
