@@ -84,5 +84,3 @@
         <%= Html.MenuActionLink("Plugin example", "example", "plugin", "selected") %>
     </li>
 </ul>
-
-<a class="forum" href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">Forum</a>

@@ -117,5 +117,3 @@
         <%= Html.MenuActionLink("Troubleshooting", "troubleshooting", "editors", "selected") %>
     </li>
 </ul>
-
-<a class="forum" href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">Forum</a>
