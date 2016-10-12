@@ -56,6 +56,15 @@
                 </a>
             </div>
             <% } %>
+            <% if (products.Contains("docbuilder"))
+                { %>
+            <div class="product">
+                <a href="<%= Url.Action("basic", "docbuilder") %>">
+                    <img src="<%= Url.Content("~/content/img/docbuilder.png") %>" alt="Document Builder">
+                    Document Builder
+                </a>
+            </div>
+            <% } %>
             <% if (products.Contains("partners"))
                 { %>
             <div class="product">
