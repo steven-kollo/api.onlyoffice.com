@@ -103,11 +103,10 @@ em
 }
 
 /*logo*/
-.logo
-{
+.logo {
     background: url("img/sprite.png") no-repeat 0 -16px transparent;
     height: 50px;
-    width: 261px;
+    width: 194px;
     display: inline-block;
     float: left;
 }
@@ -131,6 +130,7 @@ body, html
     border: medium none;
     height: 100%;
     margin: 0;
+    min-width: 1000px;
     padding: 0;
     width: 100%;
 }
@@ -442,7 +442,7 @@ p
 {
     display: block;
     float: left;
-    padding: 0 20px;
+    padding: 0 30px 0 0;
 }
 
 .top-nav li.active {
@@ -451,7 +451,7 @@ p
 
 .top-nav a {
     color: #cbcbcc;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 50px;
     outline: none;
     text-decoration: none;
