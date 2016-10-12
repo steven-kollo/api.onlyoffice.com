@@ -555,6 +555,7 @@ p
 {
     margin: 140px auto 0;
     text-align: center;
+    vertical-align: top;
 }
 
 .products-info
@@ -574,6 +575,7 @@ p
     width: 212px;
     margin-right: 23px;
     text-align: center;
+    vertical-align: top;
 }
 
 /*code example*/
