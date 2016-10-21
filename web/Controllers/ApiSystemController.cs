@@ -55,13 +55,13 @@ namespace ASC.Api.Web.Help.Controllers
             ValidatePortalName,
         }
 
-        public ActionResult Index(string url)
+        public ActionResult Index(string catchall)
         {
-            if (string.IsNullOrEmpty(url))
+            if (string.IsNullOrEmpty(catchall))
                 return View("basic");
 
             SectionType section;
-            return Enum.TryParse(url, true, out section) ? View("index", (object) url) : View("sectionnotfound");
+            return Enum.TryParse(catchall, true, out section) ? View("index", (object) catchall) : View("sectionnotfound");
         }
 
         public ActionResult Navigation()

@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <a class="up" href="<%= Url.Action("index", new {url = "portal"}) %>"></a>
+        <a class="up" href="<%= Url.Action("index", new {catchall = "portal"}) %>"></a>
         <span class="hdr">PUT /api/portal/status</span>
         <span class="comment">This function requires authentication</span>
     </h1>
