@@ -64,6 +64,11 @@ namespace ASC.Api.Web.Help.Controllers
                 "Structure",
             };
 
+        public ActionResult Index()
+        {
+            return View("basic");
+        }
+
         public ActionResult Navigation()
         {
             return View();
@@ -144,7 +149,7 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 catchall = null;
             }
-            return View("Info", (object) catchall);
+            return View("Info", (object)catchall);
         }
 
         public ActionResult Init()
