@@ -55,13 +55,9 @@ namespace ASC.Api.Web.Help.Controllers
             ValidatePortalName,
         }
 
-        public ActionResult Index(string catchall)
+        public ActionResult Index()
         {
-            if (string.IsNullOrEmpty(catchall))
-                return View("basic");
-
-            SectionType section;
-            return Enum.TryParse(catchall, true, out section) ? View("index", (object) catchall) : View("sectionnotfound");
+            return View("basic");
         }
 
         public ActionResult Navigation()
@@ -72,6 +68,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Basic()
         {
             return View();
+        }
+
+        public ActionResult Section(string section, string category)
+        {
+            if (string.IsNullOrEmpty(section))
+                return View("sectionnotfound");
+
+            SectionType sectionType;
+            return Enum.TryParse(section, true, out sectionType) ? View("section", (object) section) : View("sectionnotfound");
         }
 
         [ValidateInput(false)]

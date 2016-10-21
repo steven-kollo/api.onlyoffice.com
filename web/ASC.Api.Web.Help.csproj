@@ -301,7 +301,7 @@
     <Content Include="Views\ApiSystem\PortalGet.aspx" />
     <Content Include="Views\ApiSystem\PortalRegister.aspx" />
     <Content Include="Views\ApiSystem\ValidatePortalName.aspx" />
-    <Content Include="Views\ApiSystem\Index.aspx" />
+    <Content Include="Views\ApiSystem\Section.aspx" />
     <Content Include="Views\ApiSystem\Navigation.ascx" />
     <Content Include="Views\Plugin\Basic.aspx" />
     <Content Include="Views\Plugin\Config.aspx" />

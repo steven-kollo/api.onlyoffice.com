@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <a class="up" href="<%= Url.Action("index", new {catchall = "tariff"}) %>"></a>
+        <a class="up" href="<%= Url.Action("section", new {section = "tariff"}) %>"></a>
         <span class="hdr">PUT /api/tariff/set</span>
         <span class="comment">This function requires authentication</span>
     </h1>

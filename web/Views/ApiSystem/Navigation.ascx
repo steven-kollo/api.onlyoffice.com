@@ -15,9 +15,9 @@
 <div class="treeheader">Methods</div>
 <ul class="side-nav treeview root">
     <li>
-        <a href="<%= Url.Action("index", "apisystem", new {catchall = "portal"}) %>">Portals</a>
+        <a href="<%= Url.Action("section", new {section = "portal"}) %>">Portals</a>
     </li>
     <li>
-        <a href="<%= Url.Action("index", "apisystem", new {catchall = "tariff"}) %>">Billing</a>
+        <a href="<%= Url.Action("section", new {section = "tariff"}) %>">Billing</a>
     </li>
 </ul>

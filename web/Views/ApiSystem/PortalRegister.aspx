@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <a class="up" href="<%= Url.Action("index", new {catchall = "portal"}) %>"></a>
+        <a class="up" href="<%= Url.Action("section", new {section = "portal"}) %>"></a>
         <span class="hdr">POST /api/portal/register</span>
     </h1>
 
