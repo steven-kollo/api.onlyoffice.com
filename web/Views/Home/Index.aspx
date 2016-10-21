@@ -1,11 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" ContentType="text/html"%>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Welcome
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <% var products = (ConfigurationManager.AppSettings["enabled_products"] ?? "").Split('|'); %>
     <div class="products">
         <div class="products-info">
             <h1>
@@ -17,47 +16,19 @@
                 Please select the necessary section below to learn more about which API methods are available for it.
             </p>
         </div>
-        <% if (products.Length > 0) 
-           { %>
+
         <div class="product-list clearfix">
-            <% if (products.Contains("portals"))
-                { %>
+            <% var products = Products.EnabledProducts();
+               foreach (var product in products)
+               { %>
             <div class="product">
-                <a href="<%= Url.Action("basic", "portals") %>">
-                    <img src="<%= Url.Content("~/content/img/portals.png") %>" alt="Community Server">
-                    Community Server
-                </a>
-            </div>
-            <% } %>
-            <% if (products.Contains("apisystem"))
-                { %>
-            <div class="product">
-                <a href="<%= Url.Action("basic", "apisystem") %>">
-                    <img src="<%= Url.Content("~/content/img/apisystem.png") %>" alt="Hosted Solution">
-                    Hosted Solution
-                </a>
-            </div>
-            <% } %>
-            <% if (products.Contains("editors"))
-                { %>
-            <div class="product">
-                <a href="<%= Url.Action("basic", "editors") %>">
-                    <img src="<%= Url.Content("~/content/img/editors.png") %>" alt="Document Server">
-                    Document Server
-                </a>
-            </div>
-            <% } %>
-            <% if (products.Contains("plugin"))
-                { %>
-            <div class="product">
-                <a href="<%= Url.Action("basic", "plugin") %>">
-                    <img src="<%= Url.Content("~/content/img/plugin.png") %>" alt="Document Server Plugins">
-                    Document Server Plugins
+                <a href="<%= Url.Action("basic", product.Id) %>">
+                    <img src="<%= Url.Content("~/content/img/" + product.Id + ".png") %>" alt="<%= product.Title %>">
+                    <%= product.Title %>
                 </a>
             </div>
             <% } %>
         </div>
-        <% } %>
     </div>
 </asp:Content>
 

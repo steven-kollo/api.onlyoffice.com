@@ -222,6 +222,7 @@
     </Compile>
     <Compile Include="Helpers\BreadCrumbsBuilder.cs" />
     <Compile Include="Helpers\ClassNamePluralizer.cs" />
+    <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
