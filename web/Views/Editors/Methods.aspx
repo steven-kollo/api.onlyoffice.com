@@ -58,11 +58,10 @@ docEditor.downloadAs();
 
     <br />
 
-    <p id="refreshHistory">Show the document version history or the error message explaining why the version history can not be displayed. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events:</p>
+    <p id="refreshHistory">Show the document version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events:</p>
     <pre>
 docEditor.refreshHistory({
     "currentVersion": 2,
-    "error": null,
     "history": [
         {
             "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
@@ -87,7 +86,12 @@ docEditor.refreshHistory({
         ...
     ],
 });
-
+</pre>
+    <p>Show the error message explaining why the version history can not be displayed.</p>
+    <pre>
+docEditor.refreshHistory({
+    "error": "Exception",
+});
 </pre>
     <table class="table">
         <colgroup>
@@ -164,10 +168,9 @@ docEditor.refreshHistory({
 
     <br />
 
-    <p id="setHistoryData">Send the link to the document for viewing the version history or the error message explaining why the document version can not be displayed. This method must be called after the  <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.</p>
+    <p id="setHistoryData">Send the link to the document for viewing the version history. This method must be called after the  <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events:</p>
     <pre>
 docEditor.setHistoryData({
-    "error": null,
     "url": "http://example.com/url-to-example-document.docx",
     "version": 1,
 });
@@ -176,8 +179,14 @@ docEditor.setHistoryData({
     <pre>
 docEditor.setHistoryData({
     "changesUrl": "http://example.com/url-to-changes.zip",
-    "error": null,
     "url": "http://example.com/url-to-the-previous-version-of-the-document.docx",
+    "version": 1,
+});
+</pre>
+    <p>Send the error message explaining why the document version can not be displayed.</p>
+    <pre>
+docEditor.setHistoryData({
+    "error": "Exception",
     "version": 1,
 });
 </pre>

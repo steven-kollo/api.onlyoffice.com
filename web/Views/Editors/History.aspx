@@ -31,8 +31,8 @@
     <br />
     <p>This way the following events must be added to the config file to enable the document changes history display:</p>
     <ul>
-        <li><a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> with <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> which contains document history for each document version if the changeshistory parameter has been present for each version.</li>
-        <li><a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> with <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> which contains the link to the file of the corresponding version or with the link to the previous version and the link to the file received using the changesUrl.</li>
+        <li><a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> with <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> which contains document history for each document version if the changeshistory parameter has been present for each version.</li>
+        <li><a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> with <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> which contains the link to the file of the corresponding version or with the link to the previous version and the link to the file received using the changesUrl.</li>
     </ul>
 </asp:Content>
 

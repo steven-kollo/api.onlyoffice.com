@@ -71,7 +71,6 @@ var onRequestEditRights = function () {
 var onRequestHistory = function() {
     docEditor.refreshHistory({
         "currentVersion": 2,
-        "error": null,
         "history": [
             {
                 "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
@@ -102,7 +101,6 @@ var onRequestHistoryData = function(event) {
     var version = event.data;
     docEditor.setHistoryData({
         "changesUrl": "http://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
-        "error": null,
         "url": "http://example.com/url-to-example-document.docx",
         "version": version,
     })
