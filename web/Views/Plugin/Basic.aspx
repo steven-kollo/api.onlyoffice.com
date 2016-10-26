@@ -20,7 +20,7 @@
         <div class="popap-dialog">
             <div class="popap-container">
                 <div class="popap-header">Document Server Plugins</div>
-                <iframe src="http://www.youtube.com/embed/n_s5Tg6_ov0?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/n_s5Tg6_ov0?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
                 <a class="button-close button">Close</a>
             </div>
             <div class="button-close popap-close" title="Close">&times;</div>
