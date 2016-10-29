@@ -64,11 +64,17 @@ namespace ASC.Api.Web.Help.Controllers
                 "Structure",
             };
 
+        public ActionResult Index()
+        {
+            return View("basic");
+        }
+
         public ActionResult Navigation()
         {
             return View();
         }
 
+        [ValidateInput(false)]
         public ActionResult Search(string query)
         {
             var result = new List<SearchResult>();
@@ -143,7 +149,7 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 catchall = null;
             }
-            return View("Info", (object) catchall);
+            return View("Info", (object)catchall);
         }
 
         public ActionResult Init()

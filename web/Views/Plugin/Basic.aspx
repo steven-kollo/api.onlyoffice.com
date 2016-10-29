@@ -14,6 +14,19 @@
         <span class="hdr">Introduction</span>
     </h1>
 
+    <div class="video-link" title="Show video">
+        <img src="/content/img/video/plugin.png" alt="Show video" />
+
+        <div class="popap-dialog">
+            <div class="popap-container">
+                <div class="popap-header">Document Server Plugins</div>
+                <iframe src="https://www.youtube.com/embed/n_s5Tg6_ov0?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
+                <a class="button-close button">Close</a>
+            </div>
+            <div class="button-close popap-close" title="Close">&times;</div>
+        </div>
+    </div>
+
     <p class="dscr">The new version of Document Server and desktop document editors introduced support for plugins: both visual and non-visual. These plugins can be used for the developers to add specific functions to the editors which are not directly related to the OOXML format. This is a first version which provides the developers with some API for the interaction with the document editors.</p>
 
     <p>The plugins can be both visual and non-visual. The visual plugins will open a window for some action, or introduce some additions to the editor panel interface. The non-visual plugins will provide a button (or buttons) which is going to apply some transformations or manipulations to the document.</p>

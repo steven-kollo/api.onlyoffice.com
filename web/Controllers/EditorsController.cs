@@ -74,6 +74,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Try",
             };
 
+        [ValidateInput(false)]
         public ActionResult Search(string query)
         {
             var result = new List<SearchResult>();

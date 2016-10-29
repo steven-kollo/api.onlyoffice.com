@@ -79,6 +79,7 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
 
+        [ValidateInput(false)]
         public ActionResult Search(string query)
         {
             ViewData["query"] = query ?? string.Empty;

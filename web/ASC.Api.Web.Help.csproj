@@ -213,7 +213,6 @@
     <Compile Include="Controllers\DocBuilderController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PartnersController.cs" />
     <Compile Include="Controllers\EditorsController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
     <Compile Include="Documentation.cs" />
@@ -224,6 +223,7 @@
     </Compile>
     <Compile Include="Helpers\BreadCrumbsBuilder.cs" />
     <Compile Include="Helpers\ClassNamePluralizer.cs" />
+    <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
@@ -270,7 +270,7 @@
     <Content Include="Content\img\java\upload-app.jpg" />
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\Editor\opening.jpg" />
-    <Content Include="Content\img\partners.png" />
+    <Content Include="Content\img\apisystem.png" />
     <Content Include="Content\img\php\add.png" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
@@ -285,6 +285,7 @@
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\sitename.png" />
     <Content Include="Content\img\sprite.png" />
+    <Content Include="Content\img\Video\plugin.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
     <Content Include="Scripts\clipboard.js" />
@@ -303,7 +304,7 @@
     <Content Include="Views\ApiSystem\PortalGet.aspx" />
     <Content Include="Views\ApiSystem\PortalRegister.aspx" />
     <Content Include="Views\ApiSystem\ValidatePortalName.aspx" />
-    <Content Include="Views\ApiSystem\Index.aspx" />
+    <Content Include="Views\ApiSystem\Section.aspx" />
     <Content Include="Views\ApiSystem\Navigation.ascx" />
     <Content Include="Views\DocBuilder\Basic.aspx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
@@ -369,24 +370,6 @@
     <Content Include="Views\Editors\HowItWorks.aspx" />
     <Content Include="Views\Editors\Navigation.ascx" />
     <Content Include="Views\Home\Index.aspx" />
-    <Content Include="Views\Partners\ActivateKey.aspx" />
-    <Content Include="Views\Partners\Authentication.aspx" />
-    <Content Include="Views\Partners\Basic.aspx" />
-    <Content Include="Views\Partners\ChangeInvoiceStatus.aspx" />
-    <Content Include="Views\Partners\ChangePortalStatus.aspx" />
-    <Content Include="Views\Partners\GetPartnerTariffs.aspx" />
-    <Content Include="Views\Partners\GetPartnerInvoices.aspx" />
-    <Content Include="Views\Partners\GetPartner.aspx" />
-    <Content Include="Views\Partners\GetInvoiceKeys.aspx" />
-    <Content Include="Views\Partners\GetCurrentPartner.aspx" />
-    <Content Include="Views\Partners\GenerateKeysMin.aspx" />
-    <Content Include="Views\Partners\GenerateKeys.aspx" />
-    <Content Include="Views\Partners\CreateClient.aspx" />
-    <Content Include="Views\Partners\CreateButton.aspx" />
-    <Content Include="Views\Partners\RequestClientPayment.aspx" />
-    <Content Include="Views\Partners\RegisterPortal.aspx" />
-    <Content Include="Views\Partners\Index.aspx" />
-    <Content Include="Views\Partners\Navigation.ascx" />
     <Content Include="Views\Portals\Basic.aspx" />
     <Content Include="Views\Portals\Batch.aspx" />
     <Content Include="Views\Portals\Faq.aspx" />

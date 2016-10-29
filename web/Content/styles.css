@@ -103,11 +103,10 @@ em
 }
 
 /*logo*/
-.logo
-{
+.logo {
     background: url("img/sprite.png") no-repeat 0 -16px transparent;
     height: 50px;
-    width: 261px;
+    width: 194px;
     display: inline-block;
     float: left;
 }
@@ -131,6 +130,7 @@ body, html
     border: medium none;
     height: 100%;
     margin: 0;
+    min-width: 1000px;
     padding: 0;
     width: 100%;
 }
@@ -442,7 +442,7 @@ p
 {
     display: block;
     float: left;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .top-nav li.active {
@@ -451,7 +451,7 @@ p
 
 .top-nav a {
     color: #cbcbcc;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 50px;
     outline: none;
     text-decoration: none;
@@ -784,6 +784,9 @@ span.style_step
     cursor: pointer;
 }
 
+/********************
+    popap
+******************/
 .popap-dialog {
     background-color: #fff;
     border: 0 none;
@@ -814,6 +817,48 @@ span.style_step
     right: 8px;
     top: 0;
     width: 16px;
+}
+
+/******************
+    video
+******************/
+.video-link {
+    cursor: pointer;
+    float: right;
+    height: 150px;
+    margin: 0 0 20px 20px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+.video-link:before,
+.video-link:after {
+    color: white;
+    line-height: 1px;
+    position: absolute;
+}
+.video-link:before {
+    content: "\25CF";
+    font-size: 215px;
+    left: 85px;
+    opacity: 0.3;
+    top: 51px;
+}
+.video-link:after {
+    content: "\25b6";
+    font-size: 70px;
+    left: 125px;
+    opacity: 0.8;
+    top: 71px;
+}
+.video-link:hover:after {
+    opacity: 1;
+}
+.video-frame {
+    height: 365px;
+    margin: 18px 0 24px;
+    width: 650px;
+}
 }
 
 

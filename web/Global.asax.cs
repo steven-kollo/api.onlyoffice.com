@@ -76,28 +76,6 @@ namespace ASC.Api.Web.Help
                 );
 
             routes.MapRoute(
-                "Partners", // Route name
-                "partners/{action}/{id}", // URL with parameters
-                new
-                    {
-                        controller = "partners",
-                        action = "index",
-                        id = UrlParameter.Optional
-                    } // Parameter defaults
-                );
-
-            routes.MapRoute(
-                "ApiSystem", // Route name
-                "apisystem/{action}/{url}", // URL with parameters
-                new
-                    {
-                        controller = "apisystem",
-                        action = "index",
-                        id = UrlParameter.Optional
-                    } // Parameter defaults
-                );
-
-            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{*catchall}", // URL with parameters
                 new
