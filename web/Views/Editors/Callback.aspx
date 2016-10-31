@@ -28,7 +28,7 @@
             <b>changesurl</b> - the link to the file with the document editing data used to track and display the document changes history. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
         </li>
         <li id="history">
-            <b>history</b> - the object with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>changes</em>, which must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+            <b>history</b> - the object with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
         </li>
         <li>
             <b>key</b> - identifier of the edited document
@@ -75,6 +75,7 @@
     "changesurl": "http://documentserver/url-to-changes.zip",
     "history": {
         "changes": changes,
+        "severVersion": severVersion,
     },
     "key": "Khirz6zTPdfd7",
     "status": 2,
@@ -96,7 +97,8 @@
 {
     "changesurl": "http://documentserver/url-to-changes.zip",
     "history": {
-        "changes": changes
+        "changes": changes,
+        "severVersion": severVersion,
     },
     "key": "Khirz6zTPdfd7",
     "status": 6,

@@ -128,6 +128,7 @@ var onRequestHistory = function() {
                 "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
+                "severVersion": severVersion, //the <em>severVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage",
