@@ -22,10 +22,13 @@
             <b>actions</b> - is an object received if the new user connected the document co-editing or disconnected from it. In the first case the <em>type</em> field value is <b>1</b> , in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected or disconnected from the document co-editing.
         </li>
         <li id="changeshistory">
-            <b>changeshistory</b> - the array of objects with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+            <b>changeshistory</b> - the array of objects with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. Deprecated since v.4.2.
         </li>
         <li id="changesurl">
             <b>changesurl</b> - the link to the file with the document editing data used to track and display the document changes history. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
+        </li>
+        <li id="history">
+            <b>history</b> - the object with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>changes</em>, which must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
         </li>
         <li>
             <b>key</b> - identifier of the edited document
@@ -69,8 +72,10 @@
     <pre>
 {
     "actions": [{"type": 0, "userid": "78e1e841"}],
-    "changeshistory": changeshistory,
     "changesurl": "http://documentserver/url-to-changes.zip",
+    "history": {
+        "changes": changes,
+    },
     "key": "Khirz6zTPdfd7",
     "status": 2,
     "url": "http://documentserver/url-to-edited-document.docx",
@@ -89,8 +94,10 @@
     <div id="status-6" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command") %>">forcesave</a> command had been received.</div>
     <pre>
 {
-    "changeshistory": changeshistory,
     "changesurl": "http://documentserver/url-to-changes.zip",
+    "history": {
+        "changes": changes
+    },
     "key": "Khirz6zTPdfd7",
     "status": 6,
     "url": "http://documentserver/url-to-edited-document.docx",

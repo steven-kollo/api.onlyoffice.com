@@ -125,7 +125,7 @@ var onRequestHistory = function() {
         "currentVersion": 2,
         "history": [
             {
-                "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
+                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
                 "user": {
@@ -135,7 +135,7 @@ var onRequestHistory = function() {
                 "version": 1,
             },
             {
-                "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
+                "changes": changes,
                 "created": "2010-07-07 3:46 PM",
                 "key": "Khirz6zTPdfd7",
                 "user": {
