@@ -132,7 +132,7 @@ var onRequestHistory = function() {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage",
                 },
-                "version": "1",
+                "version": 1,
             },
             {
                 "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
@@ -142,7 +142,7 @@ var onRequestHistory = function() {
                     "id": "78e1e841",
                     "name": "John Smith",
                 },
-                "version": "2",
+                "version": 2,
             },
             ...
         ],

@@ -38,7 +38,7 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
 <h2 id="wind-4"><span class="style_step">Step 4. </span>Running Apache Tomcat</h2>
 <ol>
     <li>
-        <p>After you have installed Java in Windows, you must set the  <b>JAVA_HOME</b>  environment variable to point to the Java installation directory.</p>
+        <p>After you have installed Java in Windows, you must set the <b>JAVA_HOME</b> environment variable to point to the Java installation directory.</p>
         <p>Find out where Java is installed. If you didn't change the path during installation, it will be something like this:</p>
 
         <pre>C:\Program Files\Java\jdk1.8.0_65</pre>
@@ -92,7 +92,7 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
 
     </li>
     <li>
-        <p>Upload the Java project in Tomcat Web Application Manager. For that click <b>Choose File</b> in the  <b>WAR file to deploy</b> section  and find the <b>.war</b> file in the Java project folder, then click <b>Deploy</b>.</p>
+        <p>Upload the Java project in Tomcat Web Application Manager. For that click <b>Choose File</b> in the <b>WAR file to deploy</b> section  and find the <b>.war</b> file in the Java project folder, then click <b>Deploy</b>.</p>
         <img src="/content/img/java/upload-app.jpg" width="800" alt="" />
         <img src="/content/img/java/war-file.jpg" width="600" alt="" />
     </li>

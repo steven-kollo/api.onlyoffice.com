@@ -71,7 +71,7 @@ docEditor.refreshHistory({
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage",
             },
-            "version": "1",
+            "version": 1,
         },
         {
             "changes": changeshistory,
@@ -130,7 +130,7 @@ docEditor.refreshHistory({
             <tr class="tablerow">
                 <td>history.changes</td>
                 <td>defines the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document</td>
-                <td>Object</td>
+                <td>object</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
@@ -147,7 +147,7 @@ docEditor.refreshHistory({
             </tr>
             <tr class="tablerow">
                 <td>history.user.id</td>
-                <td>defines the identifier of the user who is the author of the document version </td>
+                <td>defines the identifier of the user who is the author of the document version</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
@@ -168,26 +168,26 @@ docEditor.refreshHistory({
 
     <br />
 
-    <p id="setHistoryData">Send the link to the document for viewing the version history. This method must be called after the  <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events:</p>
+    <p id="setHistoryData">Send the link to the document for viewing the version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events:</p>
     <pre>
 docEditor.setHistoryData({
     "url": "http://example.com/url-to-example-document.docx",
-    "version": 1,
+    "version": 2,
 });
 </pre>
-    <p>If after editing and saving the document the link <em>changesurl</em> to the file with changes data is returned, download the file by this link and send the file url in <em>changesUrl</em> parameter. The url address of the document previous version must be sent in <em>url</em> parameter.</p>
+    <p>If after editing and saving the document the link <em>changesurl</em> to the file with changes data is returned, download the file by this link and send the file url in <em>changesUrl</em> parameter. The url address of the document previous version must be sent in <em>previous.url</em> parameter.</p>
     <pre>
 docEditor.setHistoryData({
     "changesUrl": "http://example.com/url-to-changes.zip",
     "url": "http://example.com/url-to-the-previous-version-of-the-document.docx",
-    "version": 1,
+    "version": 2,
 });
 </pre>
     <p>Send the error message explaining why the document version can not be displayed.</p>
     <pre>
 docEditor.setHistoryData({
     "error": "Exception",
-    "version": 1,
+    "version": 2,
 });
 </pre>
     <table class="table">
