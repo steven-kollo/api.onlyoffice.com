@@ -167,6 +167,11 @@ var onRequestHistoryData = function(event) {
     var version = event.data;
     docEditor.setHistoryData({
         "changesUrl": "http://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
+        "key": "Khirz6zTPdfd7",
+        "previous": {
+            "key": "af86C7e71Ca8",
+            "url": "http://example.com/url-to-the-previous-version-of-the-document.docx",
+        },
         "url": "http://example.com/url-to-example-document.docx",
         "version": version,
     })
