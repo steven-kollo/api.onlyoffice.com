@@ -146,6 +146,12 @@ docEditor.refreshHistory({
                 <td>required</td>
             </tr>
             <tr class="tablerow">
+                <td>history.user</td>
+                <td>defines the user who is the author of the document version </td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td>history.user.id</td>
                 <td>defines the identifier of the user who is the author of the document version</td>
                 <td>string</td>
