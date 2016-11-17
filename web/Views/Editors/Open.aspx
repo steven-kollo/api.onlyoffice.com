@@ -40,13 +40,13 @@
         <li>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
             <pre>
 new DocsAPI.DocEditor("placeholder", {
-    "documentType": "text",
     "document": {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
         "url": "http://example.com/url-to-example-document.docx",
     },
+    "documentType": "text",
 });
 </pre>
         </li>

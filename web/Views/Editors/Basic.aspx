@@ -43,13 +43,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 
     <pre>
 config = {
-    "documentType": "text",
     "document": {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
         "url": "http://example.com/url-to-example-document.docx",
     },
+    "documentType": "text",
     "editorConfig": {
         "callbackUrl": "http://example.com/url-to-callback.ashx",
     },

@@ -138,7 +138,6 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "editorConfig": {
         "callbackUrl": "http://example.com/url-to-callback.ashx",
         "createUrl": "http://example.com/url-to-create-document/",
@@ -163,5 +162,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "lastname": "Smith",
         },
     },
+    ...
 });
 </pre>

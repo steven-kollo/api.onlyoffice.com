@@ -64,11 +64,11 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "documentType": "text",
     "height": "100%",
     "type": "desktop",
     "width": "100%",
+    ...
 });
 </pre>
 

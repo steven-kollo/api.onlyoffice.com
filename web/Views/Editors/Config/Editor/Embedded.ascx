@@ -68,9 +68,7 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "editorConfig": {
-        ...
         "embedded": {
             "embedUrl": "http://example.com/embedded?doc=exampledocument1.docx",
             "fullscreenUrl": "http://example.com/embedded?doc=exampledocument1.docx#fullscreen",
@@ -78,6 +76,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "shareUrl": "http://example.com/view?doc=exampledocument1.docx",
             "toolbarDocked": "top",
         },
+        ...
     },
+    ...
 });
 </pre>

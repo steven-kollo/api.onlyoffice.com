@@ -79,9 +79,7 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "document": {
-        ...
         "info": {
             "author": "John Smith",
             "created": "2010-07-07 3:46 PM",
@@ -98,6 +96,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 ...
             ],
         },
+        ...
     },
+    ...
 });
 </pre>

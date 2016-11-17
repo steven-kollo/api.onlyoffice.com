@@ -163,9 +163,7 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "editorConfig": {
-        ...
         "customization": {
             "chat": true,
             "comments": true,
@@ -191,7 +189,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "http://www.onlyoffice.com",
             },
         },
+        ...
     },
+    ...
 });
 </pre>
 

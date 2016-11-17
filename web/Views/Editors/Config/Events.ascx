@@ -15,11 +15,11 @@ var onCollaborativeChanges = function () {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onCollaborativeChanges": onCollaborativeChanges,
         ...
     },
+    ...
 });
 </pre>
     </li>
@@ -36,11 +36,11 @@ var onDocumentStateChange = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onDocumentStateChange": onDocumentStateChange,
         ...
     },
+    ...
 });
 </pre>
     </li>
@@ -53,11 +53,11 @@ var onDownloadAs = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onDownloadAs": onDownloadAs,
         ...
     },
+    ...
 });
 </pre>
     </li>
@@ -70,11 +70,11 @@ var onError = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onError": onError,
         ...
     },
+    ...
 });
 </pre>
     </li>
@@ -87,11 +87,11 @@ var onReady = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onReady": onReady,
         ...
     },
+    ...
 });
 </pre>
     </li>
@@ -108,11 +108,11 @@ var onRequestEditRights = function () {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onRequestEditRights": onRequestEditRights,
         ...
     },
+    ...
 });
 </pre>
     </li>
@@ -150,11 +150,11 @@ var onRequestHistory = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onRequestHistory": onRequestHistory,
         ...
     },
+    ...
 });
 </pre>
     </li>
@@ -172,11 +172,11 @@ var onRequestHistoryData = function(event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onRequestHistoryData": onRequestHistoryData,
         ...
     },
+    ...
 });
 </pre>
     </li>
@@ -189,11 +189,11 @@ var onRequestHistoryClose = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     events: {
         "onRequestHistoryClose": onRequestHistoryClose,
         ...
     },
+    ...
 });
 </pre>
     </li>

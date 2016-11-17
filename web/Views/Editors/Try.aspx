@@ -173,13 +173,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "E7FAFC9C22A8",
                     "title": "Example Document Title.docx",
                     "url": "http://example.com/url-to-example-document.docx",
                 },
+                "documentType": "text",
                 "height": "100%",
                 "width": "100%",
             });
@@ -206,13 +206,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "53500B46FCA9",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "height": "100%",
                 "width": "100%",
             });
@@ -239,13 +239,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "9E2BDFCD1D75",
                     "title": "Example Presentation Title.pptx",
                     "url": "http://example.com/url-to-example-presentation.pptx",
                 },
+                "documentType": "presentation",
                 "height": "100%",
                 "width": "100%",
             });
@@ -272,13 +272,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "doc",
                     "key": "D21889C484E9",
                     "title": "Example Document Title.doc",
                     "url": "http://example.com/url-to-example-document.doc",
                 },
+                "documentType": "text",
                 "height": "100%",
                 "width": "100%",
             });
@@ -305,13 +305,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xls",
                     "key": "D01A6B57CD96",
                     "title": "Example Spreadsheet Title.xls",
                     "url": "http://example.com/url-to-example-spreadsheet.xls",
                 },
+                "documentType": "spreadsheet",
                 "height": "100%",
                 "width": "100%",
             });
@@ -338,13 +338,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "ppt",
                     "key": "EEE93333E5F3",
                     "title": "Example Presentation Title.ppt",
                     "url": "http://example.com/url-to-example-presentation.ppt",
                 },
+                "documentType": "presentation",
                 "height": "100%",
                 "width": "100%",
             });
@@ -371,13 +371,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "odt",
                     "key": "B95B853D3B1E",
                     "title": "Example Document Title.odt",
                     "url": "http://example.com/url-to-example-document.odt",
                 },
+                "documentType": "text",
                 "height": "100%",
                 "width": "100%",
             });
@@ -404,13 +404,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "ods",
                     "key": "000C2F39D5A4",
                     "title": "Example Spreadsheet Title.ods",
                     "url": "http://example.com/url-to-example-spreadsheet.ods",
                 },
+                "documentType": "spreadsheet",
                 "height": "100%",
                 "width": "100%",
             });
@@ -437,13 +437,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "odp",
                     "key": "47BAE2E8A54F",
                     "title": "Example Presentation Title.odp",
                     "url": "http://example.com/url-to-example-presentation.odp",
                 },
+                "documentType": "presentation",
                 "height": "100%",
                 "width": "100%",
             });
@@ -470,13 +470,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "txt",
                     "key": "B2D7ACF65806",
                     "title": "Example Document Title.txt",
                     "url": "http://example.com/url-to-example-document.txt",
                 },
+                "documentType": "text",
                 "height": "100%",
                 "width": "100%",
             });
@@ -503,13 +503,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "csv",
                     "key": "B04E56B18519",
                     "title": "Example Spreadsheet Title.csv",
                     "url": "http://example.com/url-to-example-spreadsheet.csv",
                 },
+                "documentType": "spreadsheet",
                 "height": "100%",
                 "width": "100%",
             });
@@ -536,13 +536,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "pdf",
                     "key": "9B9F6EFE8937",
                     "title": "Example Document Title.pdf",
                     "url": "http://example.com/url-to-example-document.pdf",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "mode": "view",
                 },
@@ -572,13 +572,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "D24A86BDE9A2",
                     "title": "Example Document Title.docx",
                     "url": "http://example.com/url-to-example-document.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "mode": "view",
                 },
@@ -608,13 +608,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "138E9734B413",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "editorConfig": {
                     "mode": "view",
                 },
@@ -644,13 +644,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "37195B2B9BF4",
                     "title": "Example Presentation Title.pptx",
                     "url": "http://example.com/url-to-example-presentation.pptx",
                 },
+                "documentType": "presentation",
                 "editorConfig": {
                     "mode": "view",
                 },
@@ -680,13 +680,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "B143195F47A0",
                     "title": "Example Document Title.docx",
                     "url": "http://example.com/url-to-example-document.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "user": {
                         "firstname": "John",
@@ -716,13 +716,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "B143195F47A0",
                     "title": "Example Document Title.docx",
                     "url": "http://example.com/url-to-example-document.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "user": {
                         "firstname": "Kate",
@@ -756,13 +756,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "6FB60FE9E548",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "editorConfig": {
                     "user": {
                         "firstname": "John",
@@ -792,13 +792,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "6FB60FE9E548",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "editorConfig": {
                     "user": {
                         "firstname": "Kate",
@@ -832,13 +832,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "B6C57F1FC447",
                     "title": "Example Presentation Title.pptx",
                     "url": "http://example.com/url-to-example-presentation.pptx",
                 },
+                "documentType": "presentation",
                 "editorConfig": {
                     "user": {
                         "firstname": "John",
@@ -868,13 +868,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "B6C57F1FC447",
                     "title": "Example Presentation Title.pptx",
                     "url": "http://example.com/url-to-example-presentation.pptx",
                 },
+                "documentType": "presentation",
                 "editorConfig": {
                     "user": {
                         "firstname": "Kate",
@@ -908,13 +908,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "D97815D69205",
                     "title": "Example Document Title.docx",
                     "url": "http://example.com/url-to-example-document.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "customization": {
                         "customer": {
@@ -957,13 +957,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "6CDE57CAF31F",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "editorConfig": {
                     "customization": {
                         "customer": {
@@ -1006,13 +1006,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "E9B24523F469",
                     "title": "Example Presentation Title.pptx",
                     "url": "http://example.com/url-to-example-presentation.pptx",
                 },
+                "documentType": "presentation",
                 "editorConfig": {
                     "customization": {
                         "customer": {
@@ -1055,7 +1055,6 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "9B5D4A67A9A9",
@@ -1066,6 +1065,7 @@
                         "review": true,
                     },
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "mode": "edit",
                 },
@@ -1095,13 +1095,13 @@
 
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "A0B7F5CBFB24",
                     "title": "Example Document Title.docx",
                     "url": "http://example.com/url-to-example-document.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "plugins": {
                          "pluginsData": [
