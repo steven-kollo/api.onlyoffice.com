@@ -268,9 +268,8 @@
                 "documentType": "text",
                 "editorConfig": {
                     "user": {
-                        "firstname": "<%= Request["firstname"] %>",
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "lastname": "<%= Request["lastname"] %>",
+                        "name": "<%= Request["name"] %>",
                     },
                 },
                 "height": "100%",
@@ -290,9 +289,8 @@
                 "documentType": "spreadsheet",
                 "editorConfig": {
                     "user": {
-                        "firstname": "<%= Request["firstname"] %>",
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "lastname": "<%= Request["lastname"] %>",
+                        "name": "<%= Request["name"] %>",
                     },
                 },
                 "height": "100%",
@@ -312,9 +310,8 @@
                 "documentType": "presentation",
                 "editorConfig": {
                     "user": {
-                        "firstname": "<%= Request["firstname"] %>",
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "lastname": "<%= Request["lastname"] %>",
+                        "name": "<%= Request["name"] %>",
                     },
                 },
                 "height": "100%",

@@ -46,9 +46,8 @@ new DocsAPI.DocEditor("placeholder", {
     "documentType": "text",
     "editorConfig": {
         "user": {
-            "firstname": "John",
             "id": "78e1e841",
-            "lastname": "Smith",
+            "name": "John Smith",
         },
     },
 });
@@ -68,9 +67,8 @@ new DocsAPI.DocEditor("placeholder", {
     "documentType": "text",
     "editorConfig": {
         "user": {
-            "firstname": "Kate",
             "id": "F89d8069ba2b",
-            "lastname": "Cage",
+            "name": "Kate Cage",
         },
     },
 });

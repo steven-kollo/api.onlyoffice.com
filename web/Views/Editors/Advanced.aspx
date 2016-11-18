@@ -141,9 +141,8 @@ config = {
             ...
         ],
         "user": {
-            "firstname": "John",
             "id": "78e1e841",
-            "lastname": "Smith",
+            "name": "John Smith",
         },
     },
     "events": {
