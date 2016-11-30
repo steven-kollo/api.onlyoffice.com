@@ -21,8 +21,8 @@
         <colgroup>
             <col style="width: 100px;" />
             <col />
-            <col style="width: 100px;" />
             <col style="width: 150px;" />
+            <col style="width: 100px;" />
         </colgroup>
         <thead>
             <tr class="tablerow">
@@ -38,6 +38,7 @@
                 <td>Type of command.<br />
                     Supported values:
                     <ul>
+                        <li><b>drop</b> - disconnect the users with the identifiers present in the <em>users</em> parameter from the <b>document editing service</b> (these users will be able to view the document, but will not be allowed to make changes to it);</li>
                         <li><b>forcesave</b> - force saving the document being edited without closing it (the document editing might be continued after this command, so this will not be the final saved document version);</li>
                         <li><b>info</b> - receive a document status.</li>
                     </ul>
@@ -57,8 +58,23 @@
                 <td>string</td>
                 <td>optional</td>
             </tr>
+            <tr class="tablerow">
+                <td>users</td>
+                <td>the list of the user identifiers (used for the <em>c=drop</em> parameter value).</td>
+                <td>array of strings</td>
+                <td>optional</td>
+            </tr>
         </tbody>
     </table>
+
+    <div id="drop" class="header-gray">Sample of request address used to disconnect the user with the <em>6d5a81d0</em> identifier from the document editing service.</div>
+    <p><b>http://documentserver/coauthoring/CommandService.ashx?c=drop&amp;key=Khirz6zTPdfd7&amp;users=%5B6d5a81d0%5D</b></p>
+
+    <div id="forcesave" class="header-gray">Sample of request address used for force saving the document with the <em>Khirz6zTPdfd7</em> identifier being edited without closing it.</div>
+    <p><b>http://documentserver/coauthoring/CommandService.ashx?c=forcesave&amp;key=Khirz6zTPdfd7</b></p>
+
+    <div id="info" class="header-gray">Sample of request address used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier.</div>
+    <p><b>http://documentserver/coauthoring/CommandService.ashx?c=info&amp;key=Khirz6zTPdfd7</b></p>
 
     <p>The request result is returned in JSON form.</p>
     <div class="header-gray">Reply format</div>
