@@ -75,6 +75,7 @@ gradle amp</span>
         <li>Run the <em>bin/apply_amps.sh</em> script in Alfresco installation. You will see the two new modules being installed during the installation process. Press Enter to continue the installation.</li>
         <li>Add the <b>onlyoffice.url</b> property to <em>alfresco-global.properties</em>:
             <span class="commandline">onlyoffice.url=http://documentserver/</span>
+            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.
         </li>
         <li>Restart Alfresco:
             <span class="commandline">./alfresco.sh stop
