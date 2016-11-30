@@ -3,10 +3,37 @@
 <h1>
    <span class="hdr">RemoveElement</span>
 </h1>
+
+<h4 class="header-gray" id="RemoveElement">RemoveElement(nPos)</h4>
 <p class="dscr">
-        Remove the element using the position specified.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+Remove the element using the position specified.
+</p>
+
+<h2>Parameters:</h2>
+<table class="table">
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td><em>nPos</em></td>
+            <td>
+                <em>number</em>
+            </td>
+            <td>The position of the element which we want to remove in the paragraph.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oRun;
 oParagraph = oDocument.GetElement(0);
@@ -30,4 +57,7 @@ oRun.AddText("Please note that line breaks are not counted into paragraph elemen
 oParagraph.AddElement(oRun);
 oParagraph.RemoveElement(2);
 builder.SaveFile("docx", "RemoveElement.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889062&doc=M2tHbkdSQ2NrbzNMOWkzN2JZbk1YRGJOR29NTEtEK2c1Yms2TXJrZndmQT0_IjQ4ODkwNjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

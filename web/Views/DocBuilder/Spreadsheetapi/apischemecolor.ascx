@@ -3,8 +3,30 @@
 <h1>
    <span class="hdr">ApiSchemeColor</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+<h4 class="header-gray" id="ApiSchemeColor">new ApiSchemeColor()</h4>
+<p class="dscr">Class representing a color scheme.</p>
+
+<h2>Methods</h2>
+<table class="table table-classlist">
+                <thead>
+                    <tr class="tablerow">
+                        <td class="table-classlist-name">Name</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apischemecolor/getclasstype") %>">GetClassType</a></td>
+                        <td>Get the type of this class.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oGs1, oGs2, oFill, oStroke, oSchemeColor;
 oSchemeColor = Api.CreateSchemeColor("accent6");
@@ -19,4 +41,7 @@ oWorksheet.SetColumnWidth(1, 10);
 oWorksheet.GetRange('A1').SetValue('Class Type = ');
 oWorksheet.GetRange('B1').SetValue(oClassType);
 builder.SaveFile("xlsx", "ApiSchemeColor.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004574&doc=Q1BrTC9NbE1abTJ5MGpCaUpUK2FwWlBzdHRWd245WGtGZ1RqQkQ5dGdSVT0_IjUwMDQ1NzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

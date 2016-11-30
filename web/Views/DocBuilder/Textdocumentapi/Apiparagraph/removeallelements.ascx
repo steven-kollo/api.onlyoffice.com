@@ -3,10 +3,16 @@
 <h1>
    <span class="hdr">RemoveAllElements</span>
 </h1>
+<h4 class="header-gray" id="RemoveAllElements">RemoveAllElements()</h4>
 <p class="dscr">
-        Remove all elements from the current paragraph.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+Remove all elements from the current paragraph.
+</p>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oRun;
 oParagraph = oDocument.GetElement(0);
@@ -22,4 +28,7 @@ oRun.AddText("" + oParagraph.GetElementsCount() + ". It is '0' and should be tha
 oParagraph.AddElement(oRun);
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "RemoveAllElements.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889044&doc=VHNQd2J5ZVJaSTlUL2p1Y04yeUlvMFdhSXE0TWFrNG1FV1Nrb2llcm5wOD0_IjQ4ODkwNDQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

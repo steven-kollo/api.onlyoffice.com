@@ -3,10 +3,24 @@
 <h1>
    <span class="hdr">GetParaPr</span>
 </h1>
+<h4 class="header-gray" id="GetParaPr">GetParaPr() &rarr; {<a href="<%= Url.Action("spreadsheetapi/apiparapr") %>">ApiParaPr</a>}</h4>
 <p class="dscr">
-        Get paragraph properties.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Get paragraph properties.
+</p>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <a href="<%= Url.Action("spreadsheetapi/apiparapr") %>">ApiParaPr</a>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill, oParagraph, oParaPr;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -23,4 +37,7 @@ oParagraph = Api.CreateParagraph();
 oParagraph.AddText("This is the second paragraph and it is one inch away from the first paragraph.");
 oDocContent.Push(oParagraph);
 builder.SaveFile("xlsx", "GetParaPr.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006308&doc=eDc0WUhBQ1U3cGg4SXkyNVVaQ2ZMK2pPZFYzMGJtV3JNQjMwRTRUeWEwQT0_IjUwMDYzMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -3,8 +3,42 @@
 <h1>
    <span class="hdr">SetEqualColumns</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="SetEqualColumns">SetEqualColumns(nCount, nSpace)</h4>
+<p class="dscr">Specify that all text columns in the current section are of equal width.</p>
+
+            <h2>Parameters:</h2>
+                <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>nCount</em></td>
+                        <td>
+                        <em>number</em>
+                        </td>
+                        <td>Number of columns.</td>
+                    </tr>
+                        <tr class="tablerow">
+                        <td><em>nSpace</em></td>
+                        <td>
+                        <a href="<%= Url.Action("global") %>#twips">twips</a>
+                        </td>
+                        <td>Distance between columns measured in twentieths of a point (1/1440 of an inch).</td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph;
 oParagraph = oDocument.GetElement(0);
@@ -19,4 +53,7 @@ oParagraph.AddColumnBreak();
 oParagraph.AddText("This text starts from column #3. ");
 oParagraph.AddText("This sentence is used to add lines for demonstrative purposes.");
 builder.SaveFile("docx", "SetEqualColumns.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892336&doc=enErSFV3TU9tZENjSVM3NjlJeC9FclRaUlhOVnA0cFNoOUpyY2hjV20zMD0_IjQ4OTIzMzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -859,11 +859,241 @@ span.style_step
     margin: 18px 0 24px;
     width: 650px;
 }
-}
 
 
 /********
     docbuilder
 **************/
+.details {
+    border-left: 2px solid #ddd;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 6px;
+}
+.details dt {
+        float: left;
+        padding-left: 10px;
+        width: 120px;
+    }
+.details dd {
+        margin-bottom: 6px;
+        margin-left: 70px;
+        margin-top: 6px;
+    }
+.details ul {
+        list-style-type: none;
+        margin: 0;
+    }
+
+.param-type {
+    margin: 14px 0;
+    }
+.param-type dd {
+        display: inline-block;
+    }
+.param-type dt {
+        display: inline-block;
+    }
+
+
+.copy_code {
+    float: right;
+    margin: -50px 0 0;
+    }
+
+.docnote {
+    background-color: #efefef;
+    font-size: 13px;
+    line-height: 1.5em;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+.document_structure {
+    border: 1px solid #d9d9d9;
+    margin: 15px 0 0;
+    padding: 10px 20px 20px;
+    text-align: left;
+    vertical-align: top;
+}
+.document_structure.tablecell_node {
+    display: inline-block;
+    width: 44%;
+    }
+    .document_structure.tablecell_node .document_structure.image_node {
+        width: 23%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .document_structure.tablecell_node .document_structure.shape_node {
+        width: 23%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .document_structure.tablecell_node .document_structure.chart_node {
+        width: 23%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+.document_structure.image_node {
+    display: inline-block;
+    width: 27%;
+}
+.document_structure.shape_node {
+    display: inline-block;
+    width: 27%;
+}
+.document_structure.chart_node {
+    display: inline-block;
+    width: 27%;
+}
+
+.spreadsheet_document .document_structure.image_node, .spreadsheet_document .document_structure.chart_node {
+   display: inline-block;
+   width: 44.9%;
+}
+.spreadsheet_document .document_structure.shape_node {
+   display: block;
+   width: auto;
+}
+
+.presentation_document .document_structure.image_node, .presentation_document .document_structure.chart_node {
+   display: inline-block;
+   width: 44.6%;
+}
+.presentation_document .document_structure.shape_node {
+   display: block;
+   width: auto;
+}
+
+.node_description {
+    margin: 0;
+    padding: 5px 0 0;
+}
+
+p.node_label {
+color: #5891d0;
+font-size: 18px;
+margin: 0;
+padding: 0;
+}
+
+.global-list ul li{
+    list-style-type: none;
+}
+
+h5{
+    color: #333;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 25px 0 5px;
+    text-transform: none;
+}
+
+.table-classlist{
+    table-layout: fixed;
+    width: 100%;
+}
+.table-classlist .table-classlist-name{
+    width: 20%;
+}
+.builder_page_class{
+    color: #5891d0;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 25px 0 5px;
+    text-transform: none;
+}
+
+ul.buider_page_methods_list, .buider_page_methods_list{
+    -webkit-columns: 3 200px;
+    -moz-columns: 3 200px;
+        columns: 3 200px;
+     column-gap: 0;
+     padding-bottom: 30px;
+}
+
+.buider_page_methods_list li{
+     list-style-type: none !important;
+}
+
+.kb_index_page{
+     display: inline-block;
+     vertical-align: top;
+     min-width: 100%;
+}
+.kb_index_page h5{
+     margin-bottom: 10px;
+}
+.kb_index_page ul{
+     margin-left: 0;
+}
+.kb_index_page li{
+     position: relative;
+}
+.kb_index_page li:before {
+     content: '- ';
+     color: #5891d0;
+}
+
+.tags_content{
+    line-height: 1;
+}
+.tags_content h5{
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 0 20px;
+    text-transform: none;
+}
+
+.tag_name{
+    background-color: #999;
+    color: #fff;
+    display: inline-block;
+    padding: 1px 5px 3px;
+    font-weight: 600;
+}
+
+.tags_content ul {
+    margin: 20px 40px 30px;
+}
+
+.tags_content li {
+    list-style-type: none;
+}
+
+.global-type-definitions{
+    position: relative;
+}
+
+.global-type-definitions .anchor-position{
+    position: absolute;
+    top: -72px;
+}
+
+.docbuilder_examples_list {
+    margin: 10px 0 20px;
+}
+.docbuilder_examples_list .docbuilder_examples_blocks {
+    margin: 0;
+}
+.docbuilder_examples_list .docbuilder_examples_blocks li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 20px 0 0;
+    padding: 0;
+    text-align: center;
+}
+.docbuilder_examples_list .docbuilder_examples_blocks a.db_examples {
+    display: block;
+    margin: 5px 0 0;
+}
+                   
+iframe.docbuilder_resulting_docs{
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;       
+}
+
 
 

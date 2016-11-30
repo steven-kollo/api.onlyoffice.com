@@ -3,10 +3,24 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
+<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"paraPr"}</h4>
 <p class="dscr">
         Get the type of this class.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+</p>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <em>"paraPr"</em>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -30,4 +44,7 @@ oParagraph.AddText("Class Type = " + oClassType);
 oDocContent.Push(oParagraph);
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "GetClassType.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009985&doc=UVZmZ1REVE5UTTdxYVRGcVlpb0FOMjlad2cvZXorYk9sM25KQjB0QVBNND0_IjUwMDk5ODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

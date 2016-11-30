@@ -3,8 +3,43 @@
 <h1>
    <span class="hdr">SetTextDirection</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");var oDocument = Api.GetDocument();
+
+<h4 class="header-gray" id="SetTextDirection">SetTextDirection(sType)</h4>
+                <dl class="details">
+                <dt>Inherited From:</dt>
+                <dd><ul><li>
+                <a href="<%= Url.Action("textdocumentapi/apitablecellpr/settextdirection") %>">ApiTableCellPr.SetTextDirection</a>
+                </li></ul></dd>
+                </dl>
+<p class="dscr">Specify the direction of the text flow for this table cell.</p>
+
+            <h2>Parameters:</h2>
+            <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>sType</em></td>
+                        <td>                
+<em>"lrtb"</em>
+|
+<em>"tbrl"</em>
+|
+<em>"btlr"</em>
+                        </td>
+                        <td>The available types of the text direction in the table cell: <em>"lrtb"</em> - text direction left-to-right moving from top to bottom, <em>"tbrl"</em> - text direction top-to-bottom moving from right to left, <em>"btlr"</em> - text direction bottom-to-top moving from left to right.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Example</h2><div class="copy_code">
+<span class="button">Copy code</span>
+</div><pre>builder.CreateFile("docx");var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle, oCell;
 oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
 oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
@@ -27,4 +62,7 @@ oParagraph.AddText("lrtb");
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
 builder.SaveFile("docx", "SetTextDirection.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896391&doc=ZHpjbXF5OUtVYVJCQWU1dDJFbFByeDRhUUdNU2xoUHh5dldlOWZ1blRjcz0_IjQ4OTYzOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

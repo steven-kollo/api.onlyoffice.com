@@ -3,8 +3,56 @@
 <h1>
    <span class="hdr">SetDistances</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="SetDistances">SetDistances(nLeft, nTop, nRight, nBottom)</h4>
+<p class="dscr">Specify the minimum distance which will be maintained between the edges of this drawing object and any subsequent text.</p>
+                
+<h2>Parameters:</h2>
+            <table class="table">
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Type</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><em>nLeft</em></td>
+                        <td>
+                            <a href="<%= Url.Action("global") %>#EMU">EMU</a>
+                        </td>
+                        <td>The distance from the left side of the current object and the subsequent text run measured in English measure units.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><em>nTop</em></td>
+                        <td>
+                            <a href="<%= Url.Action("global") %>#EMU">EMU</a>
+                        </td>
+                        <td>The distance from the top side of the current object and the preceding text run measured in English measure units.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><em>nRight</em></td>
+                        <td>
+                            <a href="<%= Url.Action("global") %>#EMU">EMU</a>
+                        </td>
+                        <td>The distance from the right side of the current object and the subsequent text run measured in English measure units.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><em>nBottom</em></td>
+                        <td>
+                            <a href="<%= Url.Action("global") %>#EMU">EMU</a>
+                        </td>
+                        <td>The distance from the bottom side of the current object and the subsequent text run measured in English measure units.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oGs1, oGs2, oFill, oStroke, oDrawing, oParagraph;
 oParagraph = oDocument.GetElement(0);
@@ -23,4 +71,7 @@ oParagraph = Api.CreateParagraph();
 oParagraph.AddText("This is another paragraph.");
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "SetDistances.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887427&doc=UVJ6alFrdkxnS3V5OTBQZk1ua2g5R0E0MmJjYkdTWENSSlFhRnRxd1A5ND0_IjQ4ODc0Mjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

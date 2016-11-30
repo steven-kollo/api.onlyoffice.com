@@ -3,10 +3,24 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
+<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"chart"}</h4>
 <p class="dscr">
-        Get the type of this class.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Get the type of this class.
+</p>  
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <em>"chart"</em>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.SetName("sheet 1");
 oWorksheet.GetRange("B1").SetValue("Row 1");
@@ -40,4 +54,7 @@ oWorksheet.SetColumnWidth(6, 10);
 oWorksheet.GetRange('F1').SetValue('Class Type = ');
 oWorksheet.GetRange('G1').SetValue(oClassType);
 builder.SaveFile("xlsx", "GetClassType.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004527&doc=TkhVTURkZktWZi9qV09lblVWYmhaMWZhcmhXN01McUx6V3dwMFVKVEV5Yz0_IjUwMDQ1Mjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

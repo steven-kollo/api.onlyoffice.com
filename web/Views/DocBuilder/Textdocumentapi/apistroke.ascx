@@ -3,8 +3,30 @@
 <h1>
    <span class="hdr">ApiStroke</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="ApiStroke">new ApiStroke()</h4>
+<p class="dscr">Class representing a stroke.</p>
+<h2>Methods</h2>
+<table class="table table-classlist">
+                <thead>
+                    <tr class="tablerow">
+                        <td class="table-classlist-name">Name</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apistroke/getclasstype") %>">GetClassType</a></td>
+                        <td>Get the type of this class.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oFill, oStroke, oDrawing, oParagraph, oRGBColor;
 oParagraph = oDocument.GetElement(0);
@@ -18,4 +40,7 @@ oParagraph = Api.CreateParagraph();
 oParagraph.AddText("Class Type = " + oClassType);
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "GetClassType.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896253&doc=MHVyMWQ2eVhiRDFOU3BiSkNZKzR1RFZIZDg3dnA2L01QeHlhQkJjMzVIWT0_IjQ4OTYyNTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

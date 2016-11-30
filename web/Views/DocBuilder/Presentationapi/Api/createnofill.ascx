@@ -3,10 +3,24 @@
 <h1>
    <span class="hdr">CreateNoFill</span>
 </h1>
+<h4 class="header-gray" id="CreateNoFill">CreateNoFill() &rarr; {<a href="<%= Url.Action("presentationapi/apifill") %>">ApiFill</a>}</h4>
 <p class="dscr">
-        Create no fill and remove the fill from the element.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+Create no fill and remove the fill from the element.
+</p>
+    
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <a href="<%= Url.Action("presentationapi/apifill") %>">ApiFill</a>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -21,4 +35,7 @@ oParagraph.SetBullet(oBullet);
 oParagraph.AddText(" This is an example of the bulleted paragraph.");
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "CreateBullet.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007659&doc=RUk2TmpFdWpTK3lUb0h4c1FCOGlTYnNseFQxdzJ5S21yeVFubldkN05TYz0_IjUwMDc2NTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

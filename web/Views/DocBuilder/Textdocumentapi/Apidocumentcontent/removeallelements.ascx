@@ -3,10 +3,18 @@
 <h1>
    <span class="hdr">RemoveAllElements</span>
 </h1>
+
+<h4 class="header-gray" id="RemoveAllElements">RemoveAllElements()</h4>
 <p class="dscr">
-        Remove all elements from the current document or from the current document element.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+Remove all elements from the current document or from the current document element.
+</p>
+<div class="note">When all elements are removed, a new empty paragraph is automatically created. If you want to add content to this paragraph, use the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getelement") %>">ApiDocumentContent.GetElement</a> method.</div>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oStroke, oFill, oDocContent;
 oParagraph = oDocument.GetElement(0);
@@ -21,4 +29,7 @@ oParagraph.SetJc("left");
 oParagraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 oDocContent.Push(oParagraph);
 builder.SaveFile("docx", "RemoveAllElements.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4911012&doc=cFdPdXFmK2w3aENMaDB3NU1ZRTh2enJ2UTFDdDRlRURISStuYTRrb01IWT0_IjQ5MTEwMTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

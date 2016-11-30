@@ -3,8 +3,24 @@
 <h1>
    <span class="hdr">GetTableCellPr</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="GetTableCellPr">GetTableCellPr() &rarr; {<a href="<%= Url.Action("textdocumentapi/apitablecellpr") %>">ApiTableCellPr</a>}</h4>
+<p class="dscr">Get the set of the table cell properties which will be applied to all the cells within a table which match the conditional formatting type.</p>
+
+            <h2>Returns:</h2>
+            <dl class="param-type">
+                <dt>Type
+                </dt>
+                <dd>
+                    <a href="<%= Url.Action("textdocumentapi/apitablecellpr") %>">ApiTableCellPr</a>
+                </dd>
+            </dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle, oTableStylePr, oParaPr;
 oParagraph = oDocument.GetElement(0);
@@ -19,4 +35,7 @@ oTableStylePr.GetTableCellPr().SetShd("clear", 0xEE, 0xEE, 0xEE);
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
 builder.SaveFile("docx", "GetTableCellPr.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898069&doc=VWNGcHovS1VOaFVjd2UzK2RGVURpbXF3a1ZMZWtBWUZyK0ZnMG9LNjNsVT0_IjQ4OTgwNjki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

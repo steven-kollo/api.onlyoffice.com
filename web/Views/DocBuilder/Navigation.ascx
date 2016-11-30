@@ -353,6 +353,9 @@
                         <a href="<%= Url.Action("textdocumentapi/apiparagraph/addpagebreak") %>">AddPageBreak</a>
                     </li>
                     <li>
+                        <a href="<%= Url.Action("textdocumentapi/apiparagraph/addpagenumber") %>">AddPageNumber</a>
+                    </li>
+                    <li>
                         <a href="<%= Url.Action("textdocumentapi/apiparagraph/addpagescount") %>">AddPagesCount</a>
                     </li>
                     <li>

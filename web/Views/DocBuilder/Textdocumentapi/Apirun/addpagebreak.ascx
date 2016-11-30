@@ -3,8 +3,15 @@
 <h1>
    <span class="hdr">AddPageBreak</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="AddPageBreak">AddPageBreak()</h4>
+<p class="dscr">Add a page break and start the next element from a new page.</p>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oRun;
 oParagraph = oDocument.GetElement(0);
@@ -15,4 +22,7 @@ oRun.AddText("This is the text which starts from the beginning of the second pag
 oRun.AddText("It is written in two text runs, you need a space at the end of the first run sentence to separate them.");
 oParagraph.AddElement(oRun);
 builder.SaveFile("docx", "AddPageBreak.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891436&doc=bFpOdCtqTmJ0NWxrZUtxbnc5Ty9kOEJEaVVQQm9WQnE3dXVNK1RJUWZMRT0_IjQ4OTE0MzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

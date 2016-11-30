@@ -3,10 +3,16 @@
 <h1>
    <span class="hdr">RemoveAllElements</span>
 </h1>
+<h4 class="header-gray" id="RemoveAllElements">RemoveAllElements()</h4>
 <p class="dscr">
-        Remove all elements from the current paragraph.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+Remove all elements from the current paragraph.
+</p>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -31,4 +37,7 @@ oParagraph.AddElement(oRun);
 oDocContent.Push(oParagraph);
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "RemoveAllElements.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009942&doc=L1U2cVEwLy9sVzRJVDVqT2ZHMFhEbXFHZXdaM1NyVjJCSlpLQ011YkdOTT0_IjUwMDk5NDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -3,8 +3,22 @@
 <h1>
    <span class="hdr">RemoveAllElements</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="RemoveAllElements">RemoveAllElements()</h4>
+
+<dl class="details">
+                    <dt>Inherited From:</dt>
+                    <dd><ul><li>
+                    <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/removeallelements") %>">ApiDocumentContent.RemoveAllElements</a>
+                    </li></ul></dd>
+</dl>
+<p class="dscr">Remove all elements from the current document or from the current document element.</p>
+                                    
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph;
 oDocument.RemoveAllElements();
@@ -14,4 +28,7 @@ oParagraph.AddText("We removed all document elements (including the first paragr
 oParagraph.AddText("This paragraph now took its place.");
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "RemoveAllElements.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887294&doc=ZHBFa1B2TjRGZTR6cjJFKytxbWZzd01CYm42R0oyQ3B1VXNPUEFmNVFOcz0_IjQ4ODcyOTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

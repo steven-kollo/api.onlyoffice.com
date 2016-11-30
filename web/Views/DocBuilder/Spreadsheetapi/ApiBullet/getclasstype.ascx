@@ -3,10 +3,25 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
+
+<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"bullet"}</h4>
 <p class="dscr">
-        Class representing a bulleted or numbered list.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Class representing a bulleted or numbered list.
+</p>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <em>bullet</em>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -27,4 +42,7 @@ oParagraph.SetJc("left");
 oParagraph.AddText("Class Type = " + oClassType);
 oDocContent.Push(oParagraph);
 builder.SaveFile("xlsx", "GetClassType.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006578&doc=MkQrbkQ1YjgzV3lzcmhEb3hVNVZZRUkrWDQxOTBFQi9XVTJuUHEzOHAzZz0_IjUwMDY1Nzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

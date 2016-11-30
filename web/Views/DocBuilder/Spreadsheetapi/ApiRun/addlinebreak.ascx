@@ -3,10 +3,17 @@
 <h1>
    <span class="hdr">AddLineBreak</span>
 </h1>
+<h4 class="header-gray" id="AddLineBreak">AddLineBreak()</h4>
+    
 <p class="dscr">
-        Add a line break to the current run position and start the next element from a new line.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Add a line break to the current run position and start the next element from a new line.
+</p>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill, oParagraph, oRun;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -21,4 +28,7 @@ oRun.AddText("This is the text which starts from the beginning of the second lin
 oRun.AddText("It is written in two text runs, you need a space at the end of the first run sentence to separate them.");
 oParagraph.AddElement(oRun);
 builder.SaveFile("xlsx", "AddLineBreak.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006298&doc=TldQanlISDBUaXFNTFJ5OWtCQnZ4ZThsdFBMMlFYczh0VHU1UlVVdHdrRT0_IjUwMDYyOTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

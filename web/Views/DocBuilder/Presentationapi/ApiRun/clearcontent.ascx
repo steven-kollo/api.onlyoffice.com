@@ -3,10 +3,16 @@
 <h1>
    <span class="hdr">ClearContent</span>
 </h1>
+<h4 class="header-gray" id="ClearContent">ClearContent()</h4>
 <p class="dscr">
-        Remove all content from the current run.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+Remove all content from the current run.
+</p>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -29,4 +35,7 @@ oParagraph.AddElement(oRun);
 oDocContent.Push(oParagraph);
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "ClearContent.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011299&doc=YmdDd1loelV4dTZFUkJDL0tGMFhXQk5iMjY3ZWJFc0JoRTJmMEttWTBvRT0_IjUwMTEyOTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

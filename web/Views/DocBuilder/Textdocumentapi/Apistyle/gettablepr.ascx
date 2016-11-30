@@ -3,8 +3,27 @@
 <h1>
    <span class="hdr">GetTablePr</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="GetTablePr">GetTablePr() &rarr; (nullable) {<a href="<%= Url.Action("textdocumentapi/apitablepr") %>">ApiTablePr</a>}</h4>
+<p class="dscr">Get the table properties of the current style.</p>
+
+            <h2>Returns:</h2>
+<p>
+If the type of this style is not a <em>"table"</em> then it will return <em>"null"</em>.
+</p>
+            <dl class="param-type">
+                <dt>Type
+                </dt>
+                <dd>
+                    <a href="<%= Url.Action("textdocumentapi/apitablepr") %>">ApiTablePr</a>
+                </dd>
+            </dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oTable, oTableStyle;
 oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
@@ -24,4 +43,7 @@ oTableStyle.GetConditionalTableStyle("topRightCell").GetTableCellPr().SetShd("cl
 oTableStyle.GetConditionalTableStyle("bottomLeftCell").GetTableCellPr().SetShd("clear", 0, 0, 255);
 oTableStyle.GetConditionalTableStyle("bottomRightCell").GetTableCellPr().SetShd("clear", 255, 255, 0); 
 builder.SaveFile("docx", "GetTablePr.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892928&doc=VGhoNDZRbU5QajFyNWtYNXNiZ0t2ak5zQXQzUjREQTkvRFlHVTRpNXc5dz0_IjQ4OTI5Mjgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

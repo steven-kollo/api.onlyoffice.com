@@ -3,8 +3,31 @@
 <h1>
    <span class="hdr">ApiBullet</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+
+<h4 class="header-gray" id="ApiBullet">new ApiBullet()</h4>
+<p class="dscr">Class representing a base bullet class.</p>
+
+<h2>Methods</h2>
+<table class="table table-classlist">
+                <thead>
+                    <tr class="tablerow">
+                        <td class="table-classlist-name">Name</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apibullet/getclasstype") %>">GetClassType</a></td>
+                        <td>Get the type of this class.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -25,4 +48,7 @@ oParagraph.SetJc("left");
 oParagraph.AddText("Class Type = " + oClassType);
 oDocContent.Push(oParagraph);
 builder.SaveFile("xlsx", "ApiBullet.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006578&doc=MkQrbkQ1YjgzV3lzcmhEb3hVNVZZRUkrWDQxOTBFQi9XVTJuUHEzOHAzZz0_IjUwMDY1Nzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

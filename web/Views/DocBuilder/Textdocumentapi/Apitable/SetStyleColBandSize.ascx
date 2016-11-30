@@ -3,8 +3,41 @@
 <h1>
    <span class="hdr">SetStyleColBandSize</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="SetStyleColBandSize">SetStyleColBandSize(nCount)</h4>
+                <dl class="details">
+                <dt>Inherited From:</dt>
+                <dd><ul><li>
+                <a href="<%= Url.Action("textdocumentapi/apitablepr/setstylecolbandsize") %>">ApiTablePr.SetStyleColBandSize</a>
+                </li></ul></dd>
+                </dl>
+<p class="dscr">Specify the number of columns which will comprise each table column band for this table style.</p>
+
+            <h2>Parameters:</h2>
+            <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>nCount</em></td>
+                        <td>
+                        <em>number</em>
+                        </td>
+                        <td>The number of columns measured in positive integers.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle;
 oDocument.RemoveAllElements();
@@ -25,4 +58,7 @@ oTable.GetRow(1).GetCell(2).GetContent().GetElement(0).AddText("Normal");
 oTable.GetRow(1).GetCell(3).GetContent().GetElement(0).AddText("Normal");
 oDocument.Push(oTable);
 builder.SaveFile("docx", "SetStyleColBandSize.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912861&doc=MU9yU1JFSGVSTlFBNXVDcnZsMUoxWFBqbEE0TE9EK1JPWUtjQXpRVVRlYz0_IjQ5MTI4NjEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

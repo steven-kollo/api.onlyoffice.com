@@ -3,10 +3,44 @@
 <h1>
    <span class="hdr">SetSize</span>
 </h1>
+
+<h4 class="header-gray" id="SetSize">SetSize(nWidth, nHeight)</h4>
 <p class="dscr">
-        Set the size of the object (image, shape, chart) bounding box.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+Set the size of the object (image, shape, chart) bounding box.
+</p>
+
+<h2>Parameters:</h2>
+<table class="table">
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td><em>nWidth</em></td>
+            <td>
+                <a href="<%= Url.Action("global") %>#EMU">EMU</a>
+            </td>
+            <td>The object width measured in English measure units.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><em>nHeight</em></td>
+            <td>
+                <a href="<%= Url.Action("global") %>#EMU">EMU</a>
+            </td>
+            <td>The object height measured in English measure units.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oGs1, oGs2, oFill, oStroke, oDrawing, oParagraph;
 oParagraph = oDocument.GetElement(0);
@@ -26,4 +60,7 @@ oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The shape was created with a size of 53x39 millimeters, then resized to the size of 2x2 inches.");
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "SetSize.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887486&doc=UDdjbGNiM3l3K3cxUkFyU0pZV3hvOWM3K0dxeElLbWlsU3JXLy9vWHQ1QT0_IjQ4ODc0ODYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

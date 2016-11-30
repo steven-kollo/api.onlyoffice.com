@@ -3,8 +3,43 @@
 <h1>
    <span class="hdr">CreateSection</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="CreateSection">CreateSection(oParagraph) &rarr; {<a href="<%= Url.Action("textdocumentapi/apisection") %>">ApiSection</a>}</h4>
+<p class="dscr">Create a new document section which ends at the specified paragraph. Allows to set local parameters for the current section - page size, footer, header, columns, etc.</p>
+                
+<h2>Parameters:</h2>
+                <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>oParagraph</em></td>
+                        <td>
+                            <a href="<%= Url.Action("textdocumentapi/apiparagraph") %>">ApiParagraph</a>
+                        </td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <a href="<%= Url.Action("textdocumentapi/apisection") %>">ApiSection</a>
+    </dd>
+</dl>
+            
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph;
 oParagraph = oDocument.GetElement(0);
@@ -23,4 +58,7 @@ oParagraph.SetSpacingAfter(360);
 oParagraph.AddText("This is a paragraph in a new section");
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "CreateSection.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887121&doc=M21IRlhrL0UrVTIrV1JDamxkSXNsbmpJUC9OcVRSL05wS2xObEpUZ3MvND0_IjQ4ODcxMjEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

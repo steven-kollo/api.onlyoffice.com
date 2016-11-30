@@ -3,8 +3,38 @@
 <h1>
    <span class="hdr">ApiDrawing</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+<h4 class="header-gray" id="ApiDrawing">new ApiDrawing()</h4>
+<p class="dscr">Class representing a graphical object.</p>
+
+<h2>Methods</h2>
+<table class="table table-classlist">
+    <thead>
+        <tr class="tablerow">
+            <td class="table-classlist-name">Name</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("presentationapi/apidrawing/getclasstype") %>">GetClassType</a></td>
+            <td>Get the type of the class based on this base class.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("presentationapi/apidrawing/setposition") %>">SetPosition</a></td>
+            <td>Set the position of the drawing on the slide.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("presentationapi/apidrawing/setsize") %>">SetSize</a></td>
+            <td>Set the size of the object (image, shape, chart) bounding box.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -21,4 +51,7 @@ oParagraph.AddText("This is an example of a paragraph inside a shape. Nothing sp
 oDocContent.Push(oParagraph);
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "ApiDrawing.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007743&doc=OE56eU5URGh1cTc0cGhzUVl0eTFpOVpUVGhxS2h0SHV3NG1yS0p3T1Z4OD0_IjUwMDc3NDMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

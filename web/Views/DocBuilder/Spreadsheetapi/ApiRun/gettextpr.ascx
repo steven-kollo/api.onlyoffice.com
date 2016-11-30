@@ -3,10 +3,24 @@
 <h1>
    <span class="hdr">GetTextPr</span>
 </h1>
+<h4 class="header-gray" id="GetTextPr">GetTextPr() &rarr; {<a href="<%= Url.Action("spreadsheetapi/apitextpr") %>">ApiTextPr</a>}</h4>
 <p class="dscr">
-        Get the text properties of the current run.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Get the text properties of the current run.
+</p>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <a href="<%= Url.Action("spreadsheetapi/apitextpr") %>">ApiTextPr</a>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -21,4 +35,7 @@ oParagraph.SetJc("left");
 oRun.AddText("This is a sample text inside the shape with the font size set to 15 points using the text properties.");
 oParagraph.AddElement(oRun);
 builder.SaveFile("xlsx", "GetTextPr.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006256&doc=Wk12YzJhcEJLMnM5YWZ3dldXdUozTHM0bFhCTUc4TlhJL2pFbzVydUtwQT0_IjUwMDYyNTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

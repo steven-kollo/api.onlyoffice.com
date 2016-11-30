@@ -3,10 +3,24 @@
 <h1>
    <span class="hdr">GetElementsCount</span>
 </h1>
-<p class="dscr">
+<h4 class="header-gray" id="GetElementsCount">GetElementsCount() &rarr; {number}</h4>
+    <p class="dscr">
         Get the number of elements in the current document.
     </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <em>number</em>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -23,4 +37,7 @@ oParagraph.AddLineBreak();
 oParagraph.AddText("Line breaks are NOT counted into the number of elements.");
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "GetElementsCount.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007735&doc=bHdmeTdFQVFybFdISllYKzA3bFpVRVg3RE92NDVqd2ZRc3huYk8xOTFJWT0_IjUwMDc3MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

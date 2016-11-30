@@ -62,5 +62,5 @@ builder.CloseFile();
     <h2>Or create a new file from a sample script with your own data</h2>
     <p>Fill the data into the text areas below so that it could appear in the output document. When done use the buttons to the right of the fields to create the appropriate document type with your entered data.</p>
     <h2>Want to learn how it works?</h2>
-    <p>Get started here and find out the main principles of <b>ONLYOFFICE Document Builder</b> work, or read the Integration API, Text document API, Spreadsheet API or Presentation API articles to find out how to automate your document creation using <b>ONLYOFFICE Document Builder</b>.</p>
+    <p><a href="<%= Url.Action("gettingstarted") %>">Get started here</a> and find out the main principles of <b>ONLYOFFICE Document Builder</b> work, or read the <a href="<%= Url.Action("integrationapi") %>">Integration API</a>, <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>, <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a> or <a href="<%= Url.Action("presentationapi") %>">Presentation API</a> articles to find out how to automate your document creation using <b>ONLYOFFICE Document Builder</b>.</p>
 </asp:Content>

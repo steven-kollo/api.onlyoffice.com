@@ -3,10 +3,37 @@
 <h1>
    <span class="hdr">SetFill</span>
 </h1>
+<h4 class="header-gray" id="SetFill">SetFill(oFill)</h4>
+    
 <p class="dscr">
-        Set the text color for the current text run.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Set the text color for the current text run.
+</p>
+
+<h2>Parameters:</h2>
+<table class="table">
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td><em>oFill</em></td>
+            <td>
+                <a href="<%= Url.Action("spreadsheetapi/apifill") %>">ApiFill</a>
+            </td>
+            <td>The color or pattern used to fill the text color.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -21,4 +48,7 @@ oTextPr.SetFill(oFill);
 oRun.AddText("This is a text run with the font color set to yellow.");
 oParagraph.AddElement(oRun);
 builder.SaveFile("xlsx", "SetFill.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006466&doc=RFJZZ0JRYnVDUFZkN090dXBvK3dwaGZZSXJkVWRJS0d2ejNyeHdVNWNPaz0_IjUwMDY0NjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

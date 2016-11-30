@@ -3,12 +3,30 @@
 <h1>
    <span class="hdr">GetActiveSheet</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+
+<h4 class="header-gray" id="GetActiveSheet">GetActiveSheet() &rarr; {<a href="<%= Url.Action("spreadsheetapi/apiworksheet") %>">ApiWorksheet</a>}</h4>
+<p class="dscr">Get the object that represents the active sheet.</p>
+
+            <h2>Returns:</h2>
+            <dl class="param-type">
+                <dt>Type</dt>
+                <dd>
+                    <a href="<%= Url.Action("spreadsheetapi/apiworksheet") %>">ApiWorksheet</a>
+                </dd>
+            </dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange('B1').SetValue('2');
 oWorksheet.GetRange('B2').SetValue('2');
 oWorksheet.GetRange('A3').SetValue('2x2=');
 oWorksheet.GetRange('B3').SetValue('=B1*B2');
 builder.SaveFile("xlsx", "GetActiveSheet.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882026&doc=M3ZjUVlCZE11Z09QVi9MV0tSeEVKbTRwRmVqTit4LzFWMGkxRFA4SkJnRT0_IjQ4ODIwMjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

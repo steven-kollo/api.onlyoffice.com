@@ -3,8 +3,107 @@
 <h1>
    <span class="hdr">ApiDocument</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+                <h4 class="header-gray" id="ApiDocument">new ApiDocument()</h4>
+                <p class="dscr">Class representing a document.</p>
+                                    
+            <h2>Extends</h2>
+<table class="table table-classlist">
+    <thead>
+        <tr class="tablerow">
+             <td class="table-classlist-name">Name</td>
+             <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+           <td><a href="<%= Url.Action("textdocumentapi/apidocumentcontent") %>">ApiDocumentContent</a></td>
+           <td>Class representing a container for paragraphs and tables.</td>
+        </tr>
+    </tbody>
+</table>
+            <h2>Methods</h2>
+            
+<table class="table table-classlist">
+                <thead>
+                    <tr class="tablerow">
+                        <td class="table-classlist-name">Name</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/addelement") %>">AddElement</a></td>
+                        <td>Add paragraph or table using its position in the document.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/createnumbering") %>">CreateNumbering</a></td>
+                        <td>Create an abstract multilevel numbering with a specified type.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/createsection") %>">CreateSection</a></td>
+                        <td>Create a new document section which ends at the specified paragraph. Allows to set local parameters for the current section - page size, footer, header, columns, etc.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/createstyle") %>">CreateStyle</a></td>
+                        <td>Create a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getclasstype") %>">GetClassType</a></td>
+                        <td>Get this class type.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getdefaultparapr") %>">GetDefaultParaPr</a></td>
+                        <td>Get a set of default paragraph properties in the current document.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getdefaultstyle") %>">GetDefaultStyle</a></td>
+                        <td>Get the default style parameters for the specified document element.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getdefaulttextpr") %>">GetDefaultTextPr</a></td>
+                        <td>Get a set of default properties for the text run in the current document.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getelement") %>">GetElement</a></td>
+                        <td>Get the element by its position in the document.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getelementscount") %>">GetElementsCount</a></td>
+                        <td>Get the number of elements in the current document.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getfinalsection") %>">GetFinalSection</a></td>
+                        <td>Get the document final section.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getstyle") %>">GetStyle</a></td>
+                        <td>Get a style by the style name.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/push") %>">Push</a></td>
+                        <td>Push a paragraph or a table to actually add it to the document.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/removeallelements") %>">RemoveAllElements</a></td>
+                        <td>Remove all elements from the current document or from the current document element.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/removeelement") %>">RemoveElement</a></td>
+                        <td>Remove element using the position specified.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/setevenandoddhdrftr") %>">SetEvenAndOddHdrFtr</a></td>
+                        <td>Specify whether sections in this document will have different headers and footers for even and odd pages (one header/footer for odd pages and another header/footer for even pages).</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oParaPr, oTextPr, oRun;
 var oNoSpacingStyle = oDocument.GetStyle("No Spacing");
@@ -60,4 +159,7 @@ for (var nLvl = 0; nLvl < 8; ++nLvl)
   oDocument.Push(oParagraph);
 }
 builder.SaveFile("docx", "ApiDocument.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887066&doc=S1ZKd2JGRmNIUWFDeU8reTBlVGJrTDNqKzJweW1BSEZWQkZ4Mi9hRnE5dz0_IjQ4ODcwNjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

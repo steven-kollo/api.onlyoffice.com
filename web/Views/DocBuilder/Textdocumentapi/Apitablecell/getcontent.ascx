@@ -3,8 +3,24 @@
 <h1>
    <span class="hdr">GetContent</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="GetContent">GetContent() &rarr; {<a href="<%= Url.Action("textdocumentapi/apidocumentcontent") %>">ApiDocumentContent</a>}</h4>
+<p class="dscr">Get the cell content.</p>
+
+            <h2>Returns:</h2>
+            <dl class="param-type">
+                <dt>Type
+                </dt>
+                <dd>
+                    <a href="<%= Url.Action("textdocumentapi/apidocumentcontent") %>">ApiDocumentContent</a>
+                </dd>
+            </dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle, oCell;
 oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
@@ -16,4 +32,7 @@ oCell.GetContent().GetElement(0).AddText("Cell #1");
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
 builder.SaveFile("docx", "GetContent.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896289&doc=eUM2R2g2czRibUd1MkpUODY0ODNXL1cray95UW9LVGphYnhXL1J0UTVjOD0_IjQ4OTYyODki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

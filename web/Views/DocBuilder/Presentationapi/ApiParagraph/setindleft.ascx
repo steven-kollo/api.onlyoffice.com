@@ -3,10 +3,48 @@
 <h1>
    <span class="hdr">SetIndLeft</span>
 </h1>
+<h4 class="header-gray" id="SetIndLeft">SetIndLeft(nValue)</h4>
+    
+<dl class="details">
+        <dt>Inherited From:</dt>
+        <dd>
+            <ul>
+                <li>
+                    <a href="<%= Url.Action("presentationapi/apiparapr/setindleft") %>">ApiParaPr.SetIndLeft</a>
+                </li>
+            </ul>
+        </dd>
+</dl>
+
 <p class="dscr">
-        Set the paragraph left side indentation.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+Set the paragraph left side indentation.
+</p>
+
+<h2>Parameters:</h2>
+<table class="table">
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td><em>nValue</em></td>
+            <td>
+                <a href="<%= Url.Action("global") %>#twips">twips</a>
+            </td>
+            <td>The paragraph left side indentation value measured in twentieths of a point (1/1440 of an inch).</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -29,4 +67,7 @@ oParagraph.AddText("These sentences are used to add lines for demonstrative purp
 oDocContent.Push(oParagraph);
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "SetIndLeft.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009949&doc=UUJpY3JqblpmS2c0ZldhK0U0ejZuenM5Q0l2RlNhRWpLQlV2NE51dlNZMD0_IjUwMDk5NDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

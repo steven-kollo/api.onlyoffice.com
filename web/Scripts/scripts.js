@@ -1,4 +1,4 @@
-/*
+﻿/*
  *
  * (c) Copyright Ascensio System Limited 2010-2016
  *
@@ -102,6 +102,14 @@ $(function() {
         $("#" + codeId).show();
         
         displayModalPanel("#trySourceCodeDialog", 825, 650, 0, "absolute");
+    });
+    
+    $(".button-popap-open").click(function () {
+        $("#containerDialog .popap-container>div").hide();
+        var codeId = $(this).attr("data-body");
+        $("#" + codeId).show();
+
+        displayModalPanel("#containerDialog", 800, 650, 0);
     });
 
     $(".video-link").click(function () {

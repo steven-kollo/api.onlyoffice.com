@@ -3,10 +3,43 @@
 <h1>
    <span class="hdr">SetJc</span>
 </h1>
+
+<h4 class="header-gray" id="SetJc">SetJc(sJc)</h4>
 <p class="dscr">
-        Set paragraph contents justification.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+Set paragraph contents justification.
+</p>
+
+<h2>Parameters:</h2>
+<table class="table">
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td><em>sJc</em></td>
+            <td>
+                <em>"left"</em>
+                |
+                <em>"right"</em>
+                |
+                <em>"both"</em>
+                |
+                <em>"center"</em>
+            </td>
+            <td>The parameters will define the justification type that will be applied to the paragraph contents.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oParaPr;
 var oMyStyleLeft = oDocument.CreateStyle("My style with left text alignment");
@@ -49,4 +82,7 @@ oParagraph.AddText("These sentences are used to add lines for demonstrative purp
 oParagraph.SetStyle(oMyStyleBoth);
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "SetJc.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891347&doc=SVV0aDYraDNsZjYwU0gyTzdBbmRxVDRwMXVNYWlNT3pEK3FQbkhpVFpzND0_IjQ4OTEzNDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

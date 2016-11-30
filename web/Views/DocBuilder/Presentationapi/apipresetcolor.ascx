@@ -3,8 +3,30 @@
 <h1>
    <span class="hdr">ApiPresetColor</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+<h4 class="header-gray" id="ApiPresetColor">new ApiPresetColor()</h4>
+<p class="dscr">Class representing a preset color.</p>
+
+<h2>Methods</h2>
+<table class="table table-classlist">
+                <thead>
+                    <tr class="tablerow">
+                        <td class="table-classlist-name">Name</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("presentationapi/apipresetcolor/getclasstype") %>">GetClassType</a></td>
+                        <td>Get the type of this class.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -23,4 +45,7 @@ oParagraph.SetJc("left");
 oParagraph.AddText("Class Type = " + oClassType);
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "ApiPresetColor.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007765&doc=dUhXUVNsWHU5UXlIcjhzdHRsbGlYcFBoTjgwVVJkV2VWOXh3ZDd6SkNqTT0_IjUwMDc3NjUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

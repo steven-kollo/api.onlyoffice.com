@@ -3,8 +3,48 @@
 <h1>
    <span class="hdr">RemoveColumn</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="RemoveColumn">RemoveColumn(oCell) &rarr; {boolean}</h4>
+<p class="dscr">Remove the table column with a specified cell.</p>
+
+            <h2>Parameters:</h2>
+            <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>oCell</em></td>
+                        <td>
+                        <a href="<%= Url.Action("textdocumentapi/apitablecell") %>">ApiTableCell</a>
+                        </td>
+                        <td>The cell which is present in the column that will be removed.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+            <h2>Returns:</h2>
+            <p>
+            Whether the table is empty after the column removal or there are any columns left.
+            </p>
+            <dl class="param-type">
+            <dt>
+            Type
+            </dt>
+            <dd>
+            <em>boolean</em>
+            </dd>
+            </dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle, oCell;
 oParagraph = oDocument.GetElement(0);
@@ -18,4 +58,7 @@ oCell = oTable.GetRow(2).GetCell(1);
 oTable.RemoveColumn(oCell);
 oDocument.Push(oTable);
 builder.SaveFile("docx", "RemoveColumn.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894835&doc=WXZjN2Q1RDByS2hPc2V4UUk1eFVwUGhVcmtIVmkya2FNL1RZd2VyNnl0ST0_IjQ4OTQ4MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

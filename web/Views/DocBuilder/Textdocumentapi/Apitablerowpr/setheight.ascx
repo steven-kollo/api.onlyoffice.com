@@ -3,8 +3,47 @@
 <h1>
    <span class="hdr">SetHeight</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+<h4 class="header-gray" id="SetHeight">SetHeight(sHRule, nValue<sub>opt</sub>)</h4>
+                
+<p class="dscr">Set the height of the current table row within the current table.</p>
+
+            <h2>Parameters:</h2>
+            <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Attributes</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>sHRule</em></td>
+                        <td>                
+<em>"auto"</em>
+|
+<em>"atLeast"</em>
+                        </td>
+                        <td></td>
+                        <td>The rule to either apply or ignore the height value to the current table row. Use the <em>"atLeast"</em> value to enable the <em>SetHeight</em> method use.</td>
+                    </tr>
+                        <tr class="tablerow">
+                        <td><em>nValue</em></td>
+                        <td>
+                        <a href="<%= Url.Action("global") %>#twips">twips</a>
+                        </td>
+                        <td>&lt;optional><br></td>
+                        <td>The height for the current table row measured in twentieths of a point (1/1440 of an inch). This value will be ignored if <em>sHRule="auto"</em>.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle, oCell, oTableRowPr;
 oParagraph = oDocument.GetElement(0);
@@ -19,4 +58,7 @@ oTableRowPr.SetHeight("atLeast", 720);
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
 builder.SaveFile("docx", "SetHeight.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896884&doc=Y2NoRWJGaVBPYjlvV1pscFVmOW01WVpkSVdhYjVHYjZsWnU3anArbkYvbz0_IjQ4OTY4ODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

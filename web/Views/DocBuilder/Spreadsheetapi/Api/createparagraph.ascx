@@ -3,10 +3,25 @@
 <h1>
    <span class="hdr">CreateParagraph</span>
 </h1>
+<h4 class="header-gray" id="CreateParagraph">CreateParagraph() &rarr; {<a href="<%= Url.Action("spreadsheetapi/apiparagraph") %>">ApiParagraph</a>}</h4>
 <p class="dscr">
-        Create a new paragraph.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Create a new paragraph.
+</p>
+    
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <a href="<%= Url.Action("spreadsheetapi/apiparagraph") %>">ApiParagraph</a>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oParagraph, oStroke, oFill, oDocContent;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -19,4 +34,7 @@ oParagraph.SetJc("left");
 oParagraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 oDocContent.Push(oParagraph);
 builder.SaveFile("xlsx", "CreateParagraph.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004831&doc=KzlLSjF5d0JrK1hMa0hWd1pXWUxqalNxZENJVG9UdUdRZXF5eE1JMjJtZz0_IjUwMDQ4MzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

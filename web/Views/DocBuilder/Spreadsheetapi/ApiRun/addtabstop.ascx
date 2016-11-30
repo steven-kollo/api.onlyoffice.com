@@ -3,10 +3,16 @@
 <h1>
    <span class="hdr">AddTabStop</span>
 </h1>
+<h4 class="header-gray" id="AddTabStop">AddTabStop()</h4>
 <p class="dscr">
-        Add a tab stop to the current run.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Add a tab stop to the current run.
+</p>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill, oParagraph, oRun;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -23,4 +29,7 @@ oRun.AddTabStop();
 oRun.AddText("This is the text which starts after the tab stops.");
 oParagraph.AddElement(oRun);
 builder.SaveFile("xlsx", "AddTabStop.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006295&doc=eENGVWNMcERwTDBCQm1TYTNIYjRCZHdUa2hrOEtNbitpZzZDaFdGTW9sMD0_IjUwMDYyOTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

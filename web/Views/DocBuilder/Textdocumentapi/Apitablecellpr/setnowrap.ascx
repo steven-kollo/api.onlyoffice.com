@@ -3,8 +3,35 @@
 <h1>
    <span class="hdr">SetNoWrap</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+<h4 class="header-gray" id="SetNoWrap">SetNoWrap(isNoWrap)</h4>
+                
+<p class="dscr">Specify how this table cell is laid out when the parent table is displayed in a document. This settingonly affects the behavior of the cell when the <a href="<%= Url.Action("textdocumentapi/apitablepr/settablelayout") %>">SetTableLayout</a> table layout for this table isset to use the <em>"autofit"</em> algorithm.</p>
+
+            <h2>Parameters:</h2>
+            <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>isNoWrap</em></td>
+                        <td>
+                        <em>boolean</em>
+                        </td>
+                        <td>The <em>true</em> value will enable the <em>SetNoWrap</em> method use.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle, oCell, oTableCellPr;
 oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
@@ -19,4 +46,7 @@ oParagraph.AddText("The text within the cells is set not to wrap.");
 oTable.SetStyle(oTableStyle);
 oDocument.Push(oTable);
 builder.SaveFile("docx", "SetNoWrap.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896478&doc=L3lLNzdweEFwTzVjVUEwTDFxVWF0RWdwc2FqQ0xKZkkyQ2NtR05QVThuND0_IjQ4OTY0Nzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

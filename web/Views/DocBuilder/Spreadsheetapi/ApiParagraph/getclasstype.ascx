@@ -3,10 +3,35 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
+<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"document"}</h4>
+
+<dl class="details">
+        <dt>Overrides:</dt>
+        <dd>
+            <ul>
+                <li>
+                    <a href="<%= Url.Action("spreadsheetapi/apiparapr/getclasstype") %>">ApiParaPr.GetClassType</a>
+                </li>
+            </ul>
+        </dd>
+</dl>         
 <p class="dscr">
-        Get the type of this class.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Get the type of this class.
+</p>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <em>"document"</em>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill, oParagraph, oRun;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -17,4 +42,7 @@ oParagraph = oDocContent.GetElement(0);
 var oClassType = oParagraph.GetClassType();
 oParagraph.AddText("Class Type = " + oClassType);
 builder.SaveFile("xlsx", "GetClassType.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006365&doc=dFVsOVZCL0FXQVJIRUVUQjNNRjQrKzBkcDFjVU9VM1FNMmRpUGRXRFp1ST0_IjUwMDYzNjUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

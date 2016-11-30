@@ -3,8 +3,50 @@
 <h1>
    <span class="hdr">CreateTable</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="CreateTable">CreateTable(nCols, nRows) &rarr; {<a href="<%= Url.Action("textdocumentapi/apitable") %>">ApiTable</a>}</h4>
+<p class="dscr">Create a new table with a specified number of rows and columns.</p>                    
+                
+<h2>Parameters:</h2>
+            <table class="table">
+                <thead>
+                    <tr class="tablerow">
+                        <td>Name</td>
+                        <td>Type</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><em>nCols</em></td>
+                        <td>
+                            <em>number</em>
+                        </td>
+                        <td>Number of columns.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><em>nRows</em></td>
+                        <td>
+                            <em>number</em>
+                        </td>
+                        <td>Number of rows.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <a href="<%= Url.Action("textdocumentapi/apitable") %>">ApiTable</a>
+    </dd>
+</dl>
+            
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oTable;
 oTable = Api.CreateTable(3, 3);
@@ -17,4 +59,7 @@ oTable.SetTableBorderInsideV("single", 32, 0, 255, 0, 0);
 oTable.SetTableBorderInsideH("single", 32, 0, 255, 0, 0);
 oTable.SetWidth("percent", 100);
 builder.SaveFile("docx", "CreateTable.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+            
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883401&doc=TmhqOUxkU1hQSkJUOUtkSGFycEdXZDJVaDhyQTZnWkNEU2hQbWRLQkIrWT0_IjQ4ODM0MDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

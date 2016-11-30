@@ -3,10 +3,24 @@
 <h1>
    <span class="hdr">GetParaPr</span>
 </h1>
+<h4 class="header-gray" id="GetParaPr">GetParaPr() &rarr; {<a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>}</h4>
 <p class="dscr">
-        Get paragraph properties.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+Get paragraph properties.
+</p>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -28,4 +42,7 @@ oParagraph.AddText("This is the second paragraph and it is one inch away from th
 oDocContent.Push(oParagraph);
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "GetParaPr.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5010016&doc=UG9NVVYxWmZZNDJ3NmdlZ2pBT0QyZkRPOTdhc3pJQlltREtXeHJtVWtTbz0_IjUwMTAwMTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

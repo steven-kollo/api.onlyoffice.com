@@ -3,10 +3,16 @@
 <h1>
    <span class="hdr">ClearContent</span>
 </h1>
+<h4 class="header-gray" id="ClearContent">ClearContent()</h4>
 <p class="dscr">
-        Remove all content from the current run.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Remove all content from the current run.
+</p>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill, oParagraph, oRun;
 oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
@@ -26,4 +32,7 @@ oRun.AddText("The text in the previous paragraph cannot be seen, as it has been 
 oParagraph.AddElement(oRun);
 oDocContent.Push(oParagraph);
 builder.SaveFile("xlsx", "ClearContent.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006293&doc=NnhtODlSWGgvM1I3aGxzNEE5dVBaYXBrUEdpM2hrazNzRkVSUHBlZkFiYz0_IjUwMDYyOTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

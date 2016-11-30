@@ -13,1362 +13,1404 @@
     <h1>
         <span class="hdr">Global type definitions</span>
     </h1>
-
-    <p class="dscr"></p>
-
-        <h4 class="name" id="BlipFillType">BlipFillType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The type of a fill which uses an image as a background.
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="BlipFillType">&nbsp;</span>
+    <h4 class="header-gray">BlipFillType</h4>    
+    <p>The type of a fill which uses an image as a background.</p>
         <ul>
             <li><b>"tile"</b> - if the image is smaller than the shaped which is filled, the image will be tiled all over the created shape surface.</li>
             <li><b>"stretch"</b> - if the image is smaller than the shape which is filled, the image will be stretched to fit the created shape surface.</li>
         </ul>
-    </div>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"tile"</span>
+            <em>"tile"</em>
             |
-            <span class="param-type">"stretch"</span>
+            <em>"stretch"</em>
         </li>
     </ul>
+    </div>
     <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Create a blip fill with an image which is tiled all over the created shape:oFill = Api.CreateBlipFill("http://mywebsite.com/myimage.png", "tile");</code></pre>
-    <h4 class="name" id="BorderType">BorderType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        A border type which will be added to the document element.
+<pre>// Create a blip fill with an image which is tiled all over the created shape:oFill = Api.CreateBlipFill("http://mywebsite.com/myimage.png", "tile");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="BorderType">&nbsp;</span>
+    <h4 class="header-gray">BorderType</h4>    
+    <p>A border type which will be added to the document element.</p>
         <ul>
             <li><b>"none"</b> - no border will be added to the created element or the selected element side.</li>
             <li><b>"single"</b> - a single border will be added to the created element or the selected element side.</li>
         </ul>
-    </div>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"none"</span>
+            <em>"none"</em>
             |
-            <span class="param-type">"single"</span>
+            <em>"single"</em>
         </li>
     </ul>
+    </div>
     <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The paragraph will have a single 3 point wide green bottom border with a zero offset from the bottom paragraph edge:
-oParaPr.SetBottomBorder("single", 24, 0, 0, 255, 0);</code></pre>
+    <pre>// The paragraph will have a single 3 point wide green bottom border with a zero offset from the bottom paragraph edge:
+oParaPr.SetBottomBorder("single", 24, 0, 0, 255, 0);</pre>
+    </div>
 
-    <h4 class="name" id="BulletType">BulletType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        A bullet type which will be added to the paragraph in spreadsheet or presentation.
-    </div>
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="BulletType">&nbsp;</span>
+    <h4 class="header-gray">BulletType</h4>    
+    <p>A bullet type which will be added to the paragraph in spreadsheet or presentation.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"ArabicPeriod"</span>
+            <em>"ArabicPeriod"</em>
             |
-            <span class="param-type">"ArabicParenR"</span>
+            <em>"ArabicParenR"</em>
             |
-            <span class="param-type">"RomanUcPeriod"</span>
+            <em>"RomanUcPeriod"</em>
             |
-            <span class="param-type">"RomanLcPeriod"</span>
+            <em>"RomanLcPeriod"</em>
             |
-            <span class="param-type">"AlphaLcParenR"</span>
+            <em>"AlphaLcParenR"</em>
             |
-            <span class="param-type">"AlphaLcPeriod"</span>
+            <em>"AlphaLcPeriod"</em>
             |
-            <span class="param-type">"AlphaUcParenR"</span>
+            <em>"AlphaUcParenR"</em>
             |
-            <span class="param-type">"AlphaUcPeriod"</span>
+            <em>"AlphaUcPeriod"</em>
             |
-            <span class="param-type">"None"</span>
+            <em>"None"</em>
         </li>
     </ul>
+    </div>
     <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The paragraph will be starting with the Arabic numeral which has parenthesis:
-oBullet = Api.CreateNumbering("ArabicParenR");</code></pre>
+    <pre>// The paragraph will be starting with the Arabic numeral which has parenthesis:
+oBullet = Api.CreateNumbering("ArabicParenR");</pre>
+    </div>
 
-    <h4 class="name" id="byte">byte</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        A numeric value from 0 to 255.
-    </div>
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="byte">&nbsp;</span>
+    <h4 class="header-gray">byte</h4>    
+    <p>A numeric value from 0 to 255.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
+    </div>
     <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The resulting color is green, the bytes are measured in decimal numbers:oRGBColor = Api.CreateRGBColor(0, 255, 0);// The resulting color is green, the bytes are measured in hexadecimal numbers:oRGBColor = Api.CreateRGBColor(0, 0xff, 0);</code></pre>
-    <h4 class="name" id="ChartType">ChartType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        This type specifies the available chart types which can be used to create a new chart.
+    <pre>// The resulting color is green, the bytes are measured in decimal numbers:oRGBColor = Api.CreateRGBColor(0, 255, 0);// The resulting color is green, the bytes are measured in hexadecimal numbers:oRGBColor = Api.CreateRGBColor(0, 0xff, 0);</pre>
     </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="ChartType">&nbsp;</span>
+    <h4 class="header-gray">ChartType</h4>    
+    <p>This type specifies the available chart types which can be used to create a new chart.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"area"</span>
+            <em>"area"</em>
             |
-            <span class="param-type">"areaStacked"</span>
+            <em>"areaStacked"</em>
             |
-            <span class="param-type">"areaStackedPercent"</span>
+            <em>"areaStackedPercent"</em>
             |
-            <span class="param-type">"bar"</span>
+            <em>"bar"</em>
             |
-            <span class="param-type">"bar3D"</span>
+            <em>"bar3D"</em>
             |
-            <span class="param-type">"barStacked"</span>
+            <em>"barStacked"</em>
             |
-            <span class="param-type">"barStacked3D"</span>
+            <em>"barStacked3D"</em>
             |
-            <span class="param-type">"barStackedPercent"</span>
+            <em>"barStackedPercent"</em>
             |
-            <span class="param-type">"barStackedPercent3D"</span>
+            <em>"barStackedPercent3D"</em>
             |
-            <span class="param-type">"barStackedPercent3DPerspective"</span>
+            <em>"barStackedPercent3DPerspective"</em>
             |
-            <span class="param-type">"doughnut"</span>
+            <em>"doughnut"</em>
             |
-            <span class="param-type">"horizontalBar"</span>
+            <em>"horizontalBar"</em>
             |
-            <span class="param-type">"horizontalBar3D"</span>
+            <em>"horizontalBar3D"</em>
             |
-            <span class="param-type">"horizontalBarStacked"</span>
+            <em>"horizontalBarStacked"</em>
             |
-            <span class="param-type">"horizontalBarStacked3D"</span>
+            <em>"horizontalBarStacked3D"</em>
             |
-            <span class="param-type">"horizontalBarStackedPercent"</span>
+            <em>"horizontalBarStackedPercent"</em>
             |
-            <span class="param-type">"horizontalBarStackedPercent3D"</span>
+            <em>"horizontalBarStackedPercent3D"</em>
             |
-            <span class="param-type">"line3D"</span>
+            <em>"line3D"</em>
             |
-            <span class="param-type">"lineNormal"</span>
+            <em>"lineNormal"</em>
             |
-            <span class="param-type">"lineStacked"</span>
+            <em>"lineStacked"</em>
             |
-            <span class="param-type">"lineStackedPercent"</span>
+            <em>"lineStackedPercent"</em>
             |
-            <span class="param-type">"pie"</span>
+            <em>"pie"</em>
             |
-            <span class="param-type">"pie3D"</span>
+            <em>"pie3D"</em>
             |
-            <span class="param-type">"scatter"</span>
+            <em>"scatter"</em>
             |
-            <span class="param-type">"stock"</span>
+            <em>"stock"</em>
         </li>
     </ul>
+    </div>
     <h5>Examples</h5>
     <p class="code-caption">ChartType used in text documents</p>
-    <pre class="prettyprint source linenums"><code>// The resulting chart will have a 'bar3D' type:oDrawing = Api.CreateChart("bar3D", [[200, 240, 280],[250, 260, 280]], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);</code></pre>
+    <pre>// The resulting chart will have a 'bar3D' type:oDrawing = Api.CreateChart("bar3D", [[200, 240, 280],[250, 260, 280]], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);</pre>
     <p class="code-caption">ChartType used in spreadsheets</p>
-    <pre class="prettyprint source linenums"><code>// The resulting chart will have a 'bar' type:oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 2, 10, 7, 20);</code></pre>
-    <h4 class="name" id="DocumentElement">DocumentElement</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        Any valid element which can be added to the document structure.
+    <pre>// The resulting chart will have a 'bar' type:oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 2, 10, 7, 20);</pre>
     </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="DocumentElement">&nbsp;</span>
+    <h4 class="header-gray">DocumentElement</h4>    
+    <p>Any valid element which can be added to the document structure.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type"><a href="<%=VirtualPathUtility.ToAbsolute("~/developers/document-builder/ApiParagraph.aspx")%>">ApiParagraph</a></span>
+            <em><a href="<%= Url.Action("textdocumentapi/apiparagraph") %>">ApiParagraph</a></em>
             |
-            <span class="param-type"><a href="<%=VirtualPathUtility.ToAbsolute("~/developers/document-builder/ApiTable.aspx")%>">ApiTable</a></span>
+            <em><a href="<%= Url.Action("textdocumentapi/apitable") %>">ApiTable</a></em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Add a document element called 'paragraph' to the document:oDocument.AddElement(oParagraph);</code></pre>
-    <h4 class="name" id="EMU">EMU</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        English measure unit. 1 mm = 36000 EMUs, 1 inch = 914400 EMUs
     </div>
+    <h5>Example</h5>
+    <pre>// Add a document element called 'paragraph' to the document:oDocument.AddElement(oParagraph);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="EMU">&nbsp;</span>
+    <h4 class="header-gray">EMU</h4>    
+    <p>English measure unit. 1 mm = 36000 EMUs, 1 inch = 914400 EMUs</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
+    </div>
     <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Set the size of the drawing to be created as 100 mm (10 cm) in width and 100 mm (10 cm) in height:oDrawing.SetSize(100 * 36000, 100 * 36000);</code></pre>
-    <h4 class="name" id="HdrFtrType">HdrFtrType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        Header and footer types which can be applied to the document sections.
+    <pre>// Set the size of the drawing to be created as 100 mm (10 cm) in width and 100 mm (10 cm) in height:oDrawing.SetSize(100 * 36000, 100 * 36000);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="HdrFtrType">&nbsp;</span>
+    <h4 class="header-gray">HdrFtrType</h4>    
+    <p>Header and footer types which can be applied to the document sections.</p>
         <ul>
             <li><b>"default"</b> - a header or footer which can be applied to any default page.</li>
             <li><b>"title"</b> - a header or footer which is applied to the title page.</li>
             <li><b>"even"</b> - a header or footer which can be applied to even pages to distinguish them from the odd ones (which will be considered default).</li>
         </ul>
-    </div>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"default"</span>
+            <em>"default"</em>
             |
-            <span class="param-type">"title"</span>
+            <em>"title"</em>
             |
-            <span class="param-type">"even"</span>
+            <em>"even"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Remove the header of the 'title' type from the final document section:var oDocContent = oFinalSection.RemoveHeader("title");</code></pre>
-    <h4 class="name" id="hps">hps</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        Half-points (2 half-points = 1 point).
     </div>
+    <h5>Example</h5>
+    <pre>// Remove the header of the 'title' type from the final document section:var oDocContent = oFinalSection.RemoveHeader("title");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="hps">&nbsp;</span>
+    <h4 class="header-gray">hps</h4>    
+    <p>Half-points (2 half-points = 1 point).</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Set the text font size to 11 points:oTextPr.SetFontSize(22);</code></pre>
-    <h4 class="name" id="line240">line240</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        240ths of a line.
     </div>
+    <h5>Example</h5>
+    <pre>// Set the text font size to 11 points:oTextPr.SetFontSize(22);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="line240">&nbsp;</span>
+    <h4 class="header-gray">line240</h4>    
+    <p>240ths of a line.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The paragraph line spacing is set to 1 line:oParaPr.SetSpacingLine(240, "auto");</code></pre>
-    <h4 class="name" id="ParagraphContent">ParagraphContent</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The types of elements that can be added to the paragraph structure.
     </div>
+    <h5>Example</h5>
+    <pre>// The paragraph line spacing is set to 1 line:oParaPr.SetSpacingLine(240, "auto");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="ParagraphContent">&nbsp;</span>
+    <h4 class="header-gray">ParagraphContent</h4>    
+    <p>The types of elements that can be added to the paragraph structure.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type"><a href="<%=VirtualPathUtility.ToAbsolute("~/developers/document-builder/ApiUnsupported.aspx")%>">ApiUnsupported</a></span>
+            <em><a href="<%= Url.Action("textdocumentapi/apiunsupported") %>">ApiUnsupported</a></em>
             |
-            <span class="param-type"><a href="<%=VirtualPathUtility.ToAbsolute("~/developers/document-builder/ApiRun.aspx")%>">ApiRun</a></span>
+            <em><a href="<%= Url.Action("textdocumentapi/apirun") %>">ApiRun</a></em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Add an element called 'text run' to the paragraph:oParagraph.AddElement(oRun,0);</code></pre>
-    <h4 class="name" id="PatternType">PatternType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The available preset patterns which can be used for the fill.
     </div>
+    <h5>Example</h5>
+    <pre>// Add an element called 'text run' to the paragraph:oParagraph.AddElement(oRun,0);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="PatternType">&nbsp;</span>
+    <h4 class="header-gray">PatternType</h4>    
+    <p>The available preset patterns which can be used for the fill.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"cross"</span>
+            <em>"cross"</em>
             |
-            <span class="param-type">"dashDnDiag"</span>
+            <em>"dashDnDiag"</em>
             |
-            <span class="param-type">"dashHorz"</span>
+            <em>"dashHorz"</em>
             |
-            <span class="param-type">"dashUpDiag"</span>
+            <em>"dashUpDiag"</em>
             |
-            <span class="param-type">"dashVert"</span>
+            <em>"dashVert"</em>
             |
-            <span class="param-type">"diagBrick"</span>
+            <em>"diagBrick"</em>
             |
-            <span class="param-type">"diagCross"</span>
+            <em>"diagCross"</em>
             |
-            <span class="param-type">"divot"</span>
+            <em>"divot"</em>
             |
-            <span class="param-type">"dkDnDiag"</span>
+            <em>"dkDnDiag"</em>
             |
-            <span class="param-type">"dkHorz"</span>
+            <em>"dkHorz"</em>
             |
-            <span class="param-type">"dkUpDiag"</span>
+            <em>"dkUpDiag"</em>
             |
-            <span class="param-type">"dkVert"</span>
+            <em>"dkVert"</em>
             |
-            <span class="param-type">"dnDiag"</span>
+            <em>"dnDiag"</em>
             |
-            <span class="param-type">"dotDmnd"</span>
+            <em>"dotDmnd"</em>
             |
-            <span class="param-type">"dotGrid"</span>
+            <em>"dotGrid"</em>
             |
-            <span class="param-type">"horz"</span>
+            <em>"horz"</em>
             |
-            <span class="param-type">"horzBrick"</span>
+            <em>"horzBrick"</em>
             |
-            <span class="param-type">"lgCheck"</span>
+            <em>"lgCheck"</em>
             |
-            <span class="param-type">"lgConfetti"</span>
+            <em>"lgConfetti"</em>
             |
-            <span class="param-type">"lgGrid"</span>
+            <em>"lgGrid"</em>
             |
-            <span class="param-type">"ltDnDiag"</span>
+            <em>"ltDnDiag"</em>
             |
-            <span class="param-type">"ltHorz"</span>
+            <em>"ltHorz"</em>
             |
-            <span class="param-type">"ltUpDiag"</span>
+            <em>"ltUpDiag"</em>
             |
-            <span class="param-type">"ltVert"</span>
+            <em>"ltVert"</em>
             |
-            <span class="param-type">"narHorz"</span>
+            <em>"narHorz"</em>
             |
-            <span class="param-type">"narVert"</span>
+            <em>"narVert"</em>
             |
-            <span class="param-type">"openDmnd"</span>
+            <em>"openDmnd"</em>
             |
-            <span class="param-type">"pct10"</span>
+            <em>"pct10"</em>
             |
-            <span class="param-type">"pct20"</span>
+            <em>"pct20"</em>
             |
-            <span class="param-type">"pct25"</span>
+            <em>"pct25"</em>
             |
-            <span class="param-type">"pct30"</span>
+            <em>"pct30"</em>
             |
-            <span class="param-type">"pct40"</span>
+            <em>"pct40"</em>
             |
-            <span class="param-type">"pct5"</span>
+            <em>"pct5"</em>
             |
-            <span class="param-type">"pct50"</span>
+            <em>"pct50"</em>
             |
-            <span class="param-type">"pct60"</span>
+            <em>"pct60"</em>
             |
-            <span class="param-type">"pct70"</span>
+            <em>"pct70"</em>
             |
-            <span class="param-type">"pct75"</span>
+            <em>"pct75"</em>
             |
-            <span class="param-type">"pct80"</span>
+            <em>"pct80"</em>
             |
-            <span class="param-type">"pct90"</span>
+            <em>"pct90"</em>
             |
-            <span class="param-type">"plaid"</span>
+            <em>"plaid"</em>
             |
-            <span class="param-type">"shingle"</span>
+            <em>"shingle"</em>
             |
-            <span class="param-type">"smCheck"</span>
+            <em>"smCheck"</em>
             |
-            <span class="param-type">"smConfetti"</span>
+            <em>"smConfetti"</em>
             |
-            <span class="param-type">"smGrid"</span>
+            <em>"smGrid"</em>
             |
-            <span class="param-type">"solidDmnd"</span>
+            <em>"solidDmnd"</em>
             |
-            <span class="param-type">"sphere"</span>
+            <em>"sphere"</em>
             |
-            <span class="param-type">"trellis"</span>
+            <em>"trellis"</em>
             |
-            <span class="param-type">"upDiag"</span>
+            <em>"upDiag"</em>
             |
-            <span class="param-type">"vert"</span>
+            <em>"vert"</em>
             |
-            <span class="param-type">"wave"</span>
+            <em>"wave"</em>
             |
-            <span class="param-type">"wdDnDiag"</span>
+            <em>"wdDnDiag"</em>
             |
-            <span class="param-type">"wdUpDiag"</span>
+            <em>"wdUpDiag"</em>
             |
-            <span class="param-type">"weave"</span>
+            <em>"weave"</em>
             |
-            <span class="param-type">"zigZag"</span>
+            <em>"zigZag"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Create a fill with a 'dashDnDiag' pattern which has two colors - green and red:oFill = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(0, 225, 0), Api.CreateRGBColor(255, 0, 0));</code></pre>
-    <h4 class="name" id="PositiveFixedAngle">PositiveFixedAngle</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        A 60000th of a degree (5400000 = 90 degrees).
     </div>
+    <h5>Example</h5>
+    <pre>// Create a fill with a 'dashDnDiag' pattern which has two colors - green and red:oFill = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(0, 225, 0), Api.CreateRGBColor(255, 0, 0));</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="PositiveFixedAngle">&nbsp;</span>
+    <h4 class="header-gray">PositiveFixedAngle</h4>    
+    <p>A 60000th of a degree (5400000 = 90 degrees).</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The resulting gradient direction angle is 90 degrees:oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);</code></pre>
-    <h4 class="name" id="PositivePercentage">PositivePercentage</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The 1000th of a percent (100000 = 100%).
     </div>
+    <h5>Example</h5>
+    <pre>// The resulting gradient direction angle is 90 degrees:oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="PositivePercentage">&nbsp;</span>
+    <h4 class="header-gray">PositivePercentage</h4>    
+    <p>The 1000th of a percent (100000 = 100%).</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The resulting gradient stop position is 100%:var oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);</code></pre>
-    <h4 class="name" id="PresetColor">PresetColor</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The available preset color names.
     </div>
+    <h5>Example</h5>
+    <pre>// The resulting gradient stop position is 100%:var oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="PresetColor">&nbsp;</span>
+    <h4 class="header-gray">PresetColor</h4>    
+    <p>The available preset color names.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"aliceBlue"</span>
+            <em>"aliceBlue"</em>
             |
-            <span class="param-type">"antiqueWhite"</span>
+            <em>"antiqueWhite"</em>
             |
-            <span class="param-type">"aqua"</span>
+            <em>"aqua"</em>
             |
-            <span class="param-type">"aquamarine"</span>
+            <em>"aquamarine"</em>
             |
-            <span class="param-type">"azure"</span>
+            <em>"azure"</em>
             |
-            <span class="param-type">"beige"</span>
+            <em>"beige"</em>
             |
-            <span class="param-type">"bisque"</span>
+            <em>"bisque"</em>
             |
-            <span class="param-type">"black"</span>
+            <em>"black"</em>
             |
-            <span class="param-type">"blanchedAlmond"</span>
+            <em>"blanchedAlmond"</em>
             |
-            <span class="param-type">"blue"</span>
+            <em>"blue"</em>
             |
-            <span class="param-type">"blueViolet"</span>
+            <em>"blueViolet"</em>
             |
-            <span class="param-type">"brown"</span>
+            <em>"brown"</em>
             |
-            <span class="param-type">"burlyWood"</span>
+            <em>"burlyWood"</em>
             |
-            <span class="param-type">"cadetBlue"</span>
+            <em>"cadetBlue"</em>
             |
-            <span class="param-type">"chartreuse"</span>
+            <em>"chartreuse"</em>
             |
-            <span class="param-type">"chocolate"</span>
+            <em>"chocolate"</em>
             |
-            <span class="param-type">"coral"</span>
+            <em>"coral"</em>
             |
-            <span class="param-type">"cornflowerBlue"</span>
+            <em>"cornflowerBlue"</em>
             |
-            <span class="param-type">"cornsilk"</span>
+            <em>"cornsilk"</em>
             |
-            <span class="param-type">"crimson"</span>
+            <em>"crimson"</em>
             |
-            <span class="param-type">"cyan"</span>
+            <em>"cyan"</em>
             |
-            <span class="param-type">"darkBlue"</span>
+            <em>"darkBlue"</em>
             |
-            <span class="param-type">"darkCyan"</span>
+            <em>"darkCyan"</em>
             |
-            <span class="param-type">"darkGoldenrod"</span>
+            <em>"darkGoldenrod"</em>
             |
-            <span class="param-type">"darkGray"</span>
+            <em>"darkGray"</em>
             |
-            <span class="param-type">"darkGreen"</span>
+            <em>"darkGreen"</em>
             |
-            <span class="param-type">"darkGrey"</span>
+            <em>"darkGrey"</em>
             |
-            <span class="param-type">"darkKhaki"</span>
+            <em>"darkKhaki"</em>
             |
-            <span class="param-type">"darkMagenta"</span>
+            <em>"darkMagenta"</em>
             |
-            <span class="param-type">"darkOliveGreen"</span>
+            <em>"darkOliveGreen"</em>
             |
-            <span class="param-type">"darkOrange"</span>
+            <em>"darkOrange"</em>
             |
-            <span class="param-type">"darkOrchid"</span>
+            <em>"darkOrchid"</em>
             |
-            <span class="param-type">"darkRed"</span>
+            <em>"darkRed"</em>
             |
-            <span class="param-type">"darkSalmon"</span>
+            <em>"darkSalmon"</em>
             |
-            <span class="param-type">"darkSeaGreen"</span>
+            <em>"darkSeaGreen"</em>
             |
-            <span class="param-type">"darkSlateBlue"</span>
+            <em>"darkSlateBlue"</em>
             |
-            <span class="param-type">"darkSlateGray"</span>
+            <em>"darkSlateGray"</em>
             |
-            <span class="param-type">"darkSlateGrey"</span>
+            <em>"darkSlateGrey"</em>
             |
-            <span class="param-type">"darkTurquoise"</span>
+            <em>"darkTurquoise"</em>
             |
-            <span class="param-type">"darkViolet"</span>
+            <em>"darkViolet"</em>
             |
-            <span class="param-type">"deepPink"</span>
+            <em>"deepPink"</em>
             |
-            <span class="param-type">"deepSkyBlue"</span>
+            <em>"deepSkyBlue"</em>
             |
-            <span class="param-type">"dimGray"</span>
+            <em>"dimGray"</em>
             |
-            <span class="param-type">"dimGrey"</span>
+            <em>"dimGrey"</em>
             |
-            <span class="param-type">"dkBlue"</span>
+            <em>"dkBlue"</em>
             |
-            <span class="param-type">"dkCyan"</span>
+            <em>"dkCyan"</em>
             |
-            <span class="param-type">"dkGoldenrod"</span>
+            <em>"dkGoldenrod"</em>
             |
-            <span class="param-type">"dkGray"</span>
+            <em>"dkGray"</em>
             |
-            <span class="param-type">"dkGreen"</span>
+            <em>"dkGreen"</em>
             |
-            <span class="param-type">"dkGrey"</span>
+            <em>"dkGrey"</em>
             |
-            <span class="param-type">"dkKhaki"</span>
+            <em>"dkKhaki"</em>
             |
-            <span class="param-type">"dkMagenta"</span>
+            <em>"dkMagenta"</em>
             |
-            <span class="param-type">"dkOliveGreen"</span>
+            <em>"dkOliveGreen"</em>
             |
-            <span class="param-type">"dkOrange"</span>
+            <em>"dkOrange"</em>
             |
-            <span class="param-type">"dkOrchid"</span>
+            <em>"dkOrchid"</em>
             |
-            <span class="param-type">"dkRed"</span>
+            <em>"dkRed"</em>
             |
-            <span class="param-type">"dkSalmon"</span>
+            <em>"dkSalmon"</em>
             |
-            <span class="param-type">"dkSeaGreen"</span>
+            <em>"dkSeaGreen"</em>
             |
-            <span class="param-type">"dkSlateBlue"</span>
+            <em>"dkSlateBlue"</em>
             |
-            <span class="param-type">"dkSlateGray"</span>
+            <em>"dkSlateGray"</em>
             |
-            <span class="param-type">"dkSlateGrey"</span>
+            <em>"dkSlateGrey"</em>
             |
-            <span class="param-type">"dkTurquoise"</span>
+            <em>"dkTurquoise"</em>
             |
-            <span class="param-type">"dkViolet"</span>
+            <em>"dkViolet"</em>
             |
-            <span class="param-type">"dodgerBlue"</span>
+            <em>"dodgerBlue"</em>
             |
-            <span class="param-type">"firebrick"</span>
+            <em>"firebrick"</em>
             |
-            <span class="param-type">"floralWhite"</span>
+            <em>"floralWhite"</em>
             |
-            <span class="param-type">"forestGreen"</span>
+            <em>"forestGreen"</em>
             |
-            <span class="param-type">"fuchsia"</span>
+            <em>"fuchsia"</em>
             |
-            <span class="param-type">"gainsboro"</span>
+            <em>"gainsboro"</em>
             |
-            <span class="param-type">"ghostWhite"</span>
+            <em>"ghostWhite"</em>
             |
-            <span class="param-type">"gold"</span>
+            <em>"gold"</em>
             |
-            <span class="param-type">"goldenrod"</span>
+            <em>"goldenrod"</em>
             |
-            <span class="param-type">"gray"</span>
+            <em>"gray"</em>
             |
-            <span class="param-type">"green"</span>
+            <em>"green"</em>
             |
-            <span class="param-type">"greenYellow"</span>
+            <em>"greenYellow"</em>
             |
-            <span class="param-type">"grey"</span>
+            <em>"grey"</em>
             |
-            <span class="param-type">"honeydew"</span>
+            <em>"honeydew"</em>
             |
-            <span class="param-type">"hotPink"</span>
+            <em>"hotPink"</em>
             |
-            <span class="param-type">"indianRed"</span>
+            <em>"indianRed"</em>
             |
-            <span class="param-type">"indigo"</span>
+            <em>"indigo"</em>
             |
-            <span class="param-type">"ivory"</span>
+            <em>"ivory"</em>
             |
-            <span class="param-type">"khaki"</span>
+            <em>"khaki"</em>
             |
-            <span class="param-type">"lavender"</span>
+            <em>"lavender"</em>
             |
-            <span class="param-type">"lavenderBlush"</span>
+            <em>"lavenderBlush"</em>
             |
-            <span class="param-type">"lawnGreen"</span>
+            <em>"lawnGreen"</em>
             |
-            <span class="param-type">"lemonChiffon"</span>
+            <em>"lemonChiffon"</em>
             |
-            <span class="param-type">"lightBlue"</span>
+            <em>"lightBlue"</em>
             |
-            <span class="param-type">"lightCoral"</span>
+            <em>"lightCoral"</em>
             |
-            <span class="param-type">"lightCyan"</span>
+            <em>"lightCyan"</em>
             |
-            <span class="param-type">"lightGoldenrodYellow"</span>
+            <em>"lightGoldenrodYellow"</em>
             |
-            <span class="param-type">"lightGray"</span>
+            <em>"lightGray"</em>
             |
-            <span class="param-type">"lightGreen"</span>
+            <em>"lightGreen"</em>
             |
-            <span class="param-type">"lightGrey"</span>
+            <em>"lightGrey"</em>
             |
-            <span class="param-type">"lightPink"</span>
+            <em>"lightPink"</em>
             |
-            <span class="param-type">"lightSalmon"</span>
+            <em>"lightSalmon"</em>
             |
-            <span class="param-type">"lightSeaGreen"</span>
+            <em>"lightSeaGreen"</em>
             |
-            <span class="param-type">"lightSkyBlue"</span>
+            <em>"lightSkyBlue"</em>
             |
-            <span class="param-type">"lightSlateGray"</span>
+            <em>"lightSlateGray"</em>
             |
-            <span class="param-type">"lightSlateGrey"</span>
+            <em>"lightSlateGrey"</em>
             |
-            <span class="param-type">"lightSteelBlue"</span>
+            <em>"lightSteelBlue"</em>
             |
-            <span class="param-type">"lightYellow"</span>
+            <em>"lightYellow"</em>
             |
-            <span class="param-type">"lime"</span>
+            <em>"lime"</em>
             |
-            <span class="param-type">"limeGreen"</span>
+            <em>"limeGreen"</em>
             |
-            <span class="param-type">"linen"</span>
+            <em>"linen"</em>
             |
-            <span class="param-type">"ltBlue"</span>
+            <em>"ltBlue"</em>
             |
-            <span class="param-type">"ltCoral"</span>
+            <em>"ltCoral"</em>
             |
-            <span class="param-type">"ltCyan"</span>
+            <em>"ltCyan"</em>
             |
-            <span class="param-type">"ltGoldenrodYellow"</span>
+            <em>"ltGoldenrodYellow"</em>
             |
-            <span class="param-type">"ltGray"</span>
+            <em>"ltGray"</em>
             |
-            <span class="param-type">"ltGreen"</span>
+            <em>"ltGreen"</em>
             |
-            <span class="param-type">"ltGrey"</span>
+            <em>"ltGrey"</em>
             |
-            <span class="param-type">"ltPink"</span>
+            <em>"ltPink"</em>
             |
-            <span class="param-type">"ltSalmon"</span>
+            <em>"ltSalmon"</em>
             |
-            <span class="param-type">"ltSeaGreen"</span>
+            <em>"ltSeaGreen"</em>
             |
-            <span class="param-type">"ltSkyBlue"</span>
+            <em>"ltSkyBlue"</em>
             |
-            <span class="param-type">"ltSlateGray"</span>
+            <em>"ltSlateGray"</em>
             |
-            <span class="param-type">"ltSlateGrey"</span>
+            <em>"ltSlateGrey"</em>
             |
-            <span class="param-type">"ltSteelBlue"</span>
+            <em>"ltSteelBlue"</em>
             |
-            <span class="param-type">"ltYellow"</span>
+            <em>"ltYellow"</em>
             |
-            <span class="param-type">"magenta"</span>
+            <em>"magenta"</em>
             |
-            <span class="param-type">"maroon"</span>
+            <em>"maroon"</em>
             |
-            <span class="param-type">"medAquamarine"</span>
+            <em>"medAquamarine"</em>
             |
-            <span class="param-type">"medBlue"</span>
+            <em>"medBlue"</em>
             |
-            <span class="param-type">"mediumAquamarine"</span>
+            <em>"mediumAquamarine"</em>
             |
-            <span class="param-type">"mediumBlue"</span>
+            <em>"mediumBlue"</em>
             |
-            <span class="param-type">"mediumOrchid"</span>
+            <em>"mediumOrchid"</em>
             |
-            <span class="param-type">"mediumPurple"</span>
+            <em>"mediumPurple"</em>
             |
-            <span class="param-type">"mediumSeaGreen"</span>
+            <em>"mediumSeaGreen"</em>
             |
-            <span class="param-type">"mediumSlateBlue"</span>
+            <em>"mediumSlateBlue"</em>
             |
-            <span class="param-type">"mediumSpringGreen"</span>
+            <em>"mediumSpringGreen"</em>
             |
-            <span class="param-type">"mediumTurquoise"</span>
+            <em>"mediumTurquoise"</em>
             |
-            <span class="param-type">"mediumVioletRed"</span>
+            <em>"mediumVioletRed"</em>
             |
-            <span class="param-type">"medOrchid"</span>
+            <em>"medOrchid"</em>
             |
-            <span class="param-type">"medPurple"</span>
+            <em>"medPurple"</em>
             |
-            <span class="param-type">"medSeaGreen"</span>
+            <em>"medSeaGreen"</em>
             |
-            <span class="param-type">"medSlateBlue"</span>
+            <em>"medSlateBlue"</em>
             |
-            <span class="param-type">"medSpringGreen"</span>
+            <em>"medSpringGreen"</em>
             |
-            <span class="param-type">"medTurquoise"</span>
+            <em>"medTurquoise"</em>
             |
-            <span class="param-type">"medVioletRed"</span>
+            <em>"medVioletRed"</em>
             |
-            <span class="param-type">"midnightBlue"</span>
+            <em>"midnightBlue"</em>
             |
-            <span class="param-type">"mintCream"</span>
+            <em>"mintCream"</em>
             |
-            <span class="param-type">"mistyRose"</span>
+            <em>"mistyRose"</em>
             |
-            <span class="param-type">"moccasin"</span>
+            <em>"moccasin"</em>
             |
-            <span class="param-type">"navajoWhite"</span>
+            <em>"navajoWhite"</em>
             |
-            <span class="param-type">"navy"</span>
+            <em>"navy"</em>
             |
-            <span class="param-type">"oldLace"</span>
+            <em>"oldLace"</em>
             |
-            <span class="param-type">"olive"</span>
+            <em>"olive"</em>
             |
-            <span class="param-type">"oliveDrab"</span>
+            <em>"oliveDrab"</em>
             |
-            <span class="param-type">"orange"</span>
+            <em>"orange"</em>
             |
-            <span class="param-type">"orangeRed"</span>
+            <em>"orangeRed"</em>
             |
-            <span class="param-type">"orchid"</span>
+            <em>"orchid"</em>
             |
-            <span class="param-type">"paleGoldenrod"</span>
+            <em>"paleGoldenrod"</em>
             |
-            <span class="param-type">"paleGreen"</span>
+            <em>"paleGreen"</em>
             |
-            <span class="param-type">"paleTurquoise"</span>
+            <em>"paleTurquoise"</em>
             |
-            <span class="param-type">"paleVioletRed"</span>
+            <em>"paleVioletRed"</em>
             |
-            <span class="param-type">"papayaWhip"</span>
+            <em>"papayaWhip"</em>
             |
-            <span class="param-type">"peachPuff"</span>
+            <em>"peachPuff"</em>
             |
-            <span class="param-type">"peru"</span>
+            <em>"peru"</em>
             |
-            <span class="param-type">"pink"</span>
+            <em>"pink"</em>
             |
-            <span class="param-type">"plum"</span>
+            <em>"plum"</em>
             |
-            <span class="param-type">"powderBlue"</span>
+            <em>"powderBlue"</em>
             |
-            <span class="param-type">"purple"</span>
+            <em>"purple"</em>
             |
-            <span class="param-type">"red"</span>
+            <em>"red"</em>
             |
-            <span class="param-type">"rosyBrown"</span>
+            <em>"rosyBrown"</em>
             |
-            <span class="param-type">"royalBlue"</span>
+            <em>"royalBlue"</em>
             |
-            <span class="param-type">"saddleBrown"</span>
+            <em>"saddleBrown"</em>
             |
-            <span class="param-type">"salmon"</span>
+            <em>"salmon"</em>
             |
-            <span class="param-type">"sandyBrown"</span>
+            <em>"sandyBrown"</em>
             |
-            <span class="param-type">"seaGreen"</span>
+            <em>"seaGreen"</em>
             |
-            <span class="param-type">"seaShell"</span>
+            <em>"seaShell"</em>
             |
-            <span class="param-type">"sienna"</span>
+            <em>"sienna"</em>
             |
-            <span class="param-type">"silver"</span>
+            <em>"silver"</em>
             |
-            <span class="param-type">"skyBlue"</span>
+            <em>"skyBlue"</em>
             |
-            <span class="param-type">"slateBlue"</span>
+            <em>"slateBlue"</em>
             |
-            <span class="param-type">"slateGray"</span>
+            <em>"slateGray"</em>
             |
-            <span class="param-type">"slateGrey"</span>
+            <em>"slateGrey"</em>
             |
-            <span class="param-type">"snow"</span>
+            <em>"snow"</em>
             |
-            <span class="param-type">"springGreen"</span>
+            <em>"springGreen"</em>
             |
-            <span class="param-type">"steelBlue"</span>
+            <em>"steelBlue"</em>
             |
-            <span class="param-type">"tan"</span>
+            <em>"tan"</em>
             |
-            <span class="param-type">"teal"</span>
+            <em>"teal"</em>
             |
-            <span class="param-type">"thistle"</span>
+            <em>"thistle"</em>
             |
-            <span class="param-type">"tomato"</span>
+            <em>"tomato"</em>
             |
-            <span class="param-type">"turquoise"</span>
+            <em>"turquoise"</em>
             |
-            <span class="param-type">"violet"</span>
+            <em>"violet"</em>
             |
-            <span class="param-type">"wheat"</span>
+            <em>"wheat"</em>
             |
-            <span class="param-type">"white"</span>
+            <em>"white"</em>
             |
-            <span class="param-type">"whiteSmoke"</span>
+            <em>"whiteSmoke"</em>
             |
-            <span class="param-type">"yellow"</span>
+            <em>"yellow"</em>
             |
-            <span class="param-type">"yellowGreen"</span>
+            <em>"yellowGreen"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Create a scheme color using the 'lightYellow' color preset:oSchemeColor = Api.CreatePresetColor("lightYellow");</code></pre>
-    <h4 class="name" id="pt">pt</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        A point.
     </div>
+    <h5>Example</h5>
+    <pre>// Create a scheme color using the 'lightYellow' color preset:oSchemeColor = Api.CreatePresetColor("lightYellow");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="pt">&nbsp;</span>
+    <h4 class="header-gray">pt</h4>    
+    <p>A point.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The paragraph will have a single 3 point wide green bottom border with a 1 point offset from the bottom paragraph edge:oParaPr.SetBottomBorder("single", 24, 1, 0, 255, 0);</code></pre>
-    <h4 class="name" id="pt_8">pt_8</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        Eighths of a point (24 eighths of a point = 3 points).
     </div>
+    <h5>Example</h5>
+    <pre>// The paragraph will have a single 3 point wide green bottom border with a 1 point offset from the bottom paragraph edge:oParaPr.SetBottomBorder("single", 24, 1, 0, 255, 0);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="pt_8">&nbsp;</span>
+    <h4 class="header-gray">pt_8</h4>    
+    <p>Eighths of a point (24 eighths of a point = 3 points).</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The paragraph will have a single 6 point wide green bottom border with a zero offset from the bottom paragraph edge:oParaPr.SetBottomBorder("single", 48, 0, 0, 255, 0);</code></pre>
-    <h4 class="name" id="RelFromH">RelFromH</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The possible values for the base which the relative horizontal positioning of an object will be calculated from.
     </div>
+    <h5>Example</h5>
+    <pre>// The paragraph will have a single 6 point wide green bottom border with a zero offset from the bottom paragraph edge:oParaPr.SetBottomBorder("single", 48, 0, 0, 255, 0);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="RelFromH">&nbsp;</span>
+    <h4 class="header-gray">RelFromH</h4>    
+    <p>The possible values for the base which the relative horizontal positioning of an object will be calculated from.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"character"</span>
+            <em>"character"</em>
             |
-            <span class="param-type">"column"</span>
+            <em>"column"</em>
             |
-            <span class="param-type">"leftMargin"</span>
+            <em>"leftMargin"</em>
             |
-            <span class="param-type">"rightMargin"</span>
+            <em>"rightMargin"</em>
             |
-            <span class="param-type">"margin"</span>
+            <em>"margin"</em>
             |
-            <span class="param-type">"page"</span>
+            <em>"page"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The created drawing will be centered horizontally relative to the page width:oDrawing.SetHorAlign("page", "center");</code></pre>
-    <h4 class="name" id="RelFromV">RelFromV</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The possible values for the base which the relative vertical positioning of an object will be calculated from.
     </div>
+    <h5>Example</h5>
+    <pre>// The created drawing will be centered horizontally relative to the page width:oDrawing.SetHorAlign("page", "center");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="RelFromV">&nbsp;</span>
+    <h4 class="header-gray">RelFromV</h4>    
+    <p>The possible values for the base which the relative vertical positioning of an object will be calculated from.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"bottomMargin"</span>
+            <em>"bottomMargin"</em>
             |
-            <span class="param-type">"topMargin"</span>
+            <em>"topMargin"</em>
             |
-            <span class="param-type">"margin"</span>
+            <em>"margin"</em>
             |
-            <span class="param-type">"page"</span>
+            <em>"page"</em>
             |
-            <span class="param-type">"line"</span>
+            <em>"line"</em>
             |
-            <span class="param-type">"paragraph"</span>
+            <em>"paragraph"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The created drawing will be centered vertically relative to the paragraph height:oDrawing.SetHorAlign("paragraph", "center");</code></pre>
-    <h4 class="name" id="SchemeColorId">SchemeColorId</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The available color scheme identifiers.
     </div>
+    <h5>Example</h5>
+    <pre>// The created drawing will be centered vertically relative to the paragraph height:oDrawing.SetHorAlign("paragraph", "center");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="SchemeColorId">&nbsp;</span>
+    <h4 class="header-gray">SchemeColorId</h4>    
+    <p>The available color scheme identifiers.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"accent1"</span>
+            <em>"accent1"</em>
             |
-            <span class="param-type">"accent2"</span>
+            <em>"accent2"</em>
             |
-            <span class="param-type">"accent3"</span>
+            <em>"accent3"</em>
             |
-            <span class="param-type">"accent4"</span>
+            <em>"accent4"</em>
             |
-            <span class="param-type">"accent5"</span>
+            <em>"accent5"</em>
             |
-            <span class="param-type">"accent6"</span>
+            <em>"accent6"</em>
             |
-            <span class="param-type">"bg1"</span>
+            <em>"bg1"</em>
             |
-            <span class="param-type">"bg2"</span>
+            <em>"bg2"</em>
             |
-            <span class="param-type">"dk1"</span>
+            <em>"dk1"</em>
             |
-            <span class="param-type">"dk2"</span>
+            <em>"dk2"</em>
             |
-            <span class="param-type">"lt1"</span>
+            <em>"lt1"</em>
             |
-            <span class="param-type">"lt2"</span>
+            <em>"lt2"</em>
             |
-            <span class="param-type">"tx1"</span>
+            <em>"tx1"</em>
             |
-            <span class="param-type">"tx2"</span>
+            <em>"tx2"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Create a scheme color with the 'accent2' identifier:oSchemeColor = Api.CreateSchemeColor("accent2");</code></pre>
-    <h4 class="name" id="ShapeType">ShapeType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        This type specifies the preset shape geometry that will be used for a shape.
     </div>
+    <h5>Example</h5>
+    <pre>// Create a scheme color with the 'accent2' identifier:oSchemeColor = Api.CreateSchemeColor("accent2");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="ShapeType">&nbsp;</span>
+    <h4 class="header-gray">ShapeType</h4>    
+    <p>This type specifies the preset shape geometry that will be used for a shape.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"accentBorderCallout1"</span>
+            <em>"accentBorderCallout1"</em>
             |
-            <span class="param-type">"accentBorderCallout2"</span>
+            <em>"accentBorderCallout2"</em>
             |
-            <span class="param-type">"accentBorderCallout3"</span>
+            <em>"accentBorderCallout3"</em>
             |
-            <span class="param-type">"accentCallout1"</span>
+            <em>"accentCallout1"</em>
             |
-            <span class="param-type">"accentCallout2"</span>
+            <em>"accentCallout2"</em>
             |
-            <span class="param-type">"accentCallout3"</span>
+            <em>"accentCallout3"</em>
             |
-            <span class="param-type">"actionButtonBackPrevious"</span>
+            <em>"actionButtonBackPrevious"</em>
             |
-            <span class="param-type">"actionButtonBeginning"</span>
+            <em>"actionButtonBeginning"</em>
             |
-            <span class="param-type">"actionButtonBlank"</span>
+            <em>"actionButtonBlank"</em>
             |
-            <span class="param-type">"actionButtonDocument"</span>
+            <em>"actionButtonDocument"</em>
             |
-            <span class="param-type">"actionButtonEnd"</span>
+            <em>"actionButtonEnd"</em>
             |
-            <span class="param-type">"actionButtonForwardNext"</span>
+            <em>"actionButtonForwardNext"</em>
             |
-            <span class="param-type">"actionButtonHelp"</span>
+            <em>"actionButtonHelp"</em>
             |
-            <span class="param-type">"actionButtonHome"</span>
+            <em>"actionButtonHome"</em>
             |
-            <span class="param-type">"actionButtonInformation"</span>
+            <em>"actionButtonInformation"</em>
             |
-            <span class="param-type">"actionButtonMovie"</span>
+            <em>"actionButtonMovie"</em>
             |
-            <span class="param-type">"actionButtonReturn"</span>
+            <em>"actionButtonReturn"</em>
             |
-            <span class="param-type">"actionButtonSound"</span>
+            <em>"actionButtonSound"</em>
             |
-            <span class="param-type">"arc"</span>
+            <em>"arc"</em>
             |
-            <span class="param-type">"bentArrow"</span>
+            <em>"bentArrow"</em>
             |
-            <span class="param-type">"bentConnector2"</span>
+            <em>"bentConnector2"</em>
             |
-            <span class="param-type">"bentConnector3"</span>
+            <em>"bentConnector3"</em>
             |
-            <span class="param-type">"bentConnector4"</span>
+            <em>"bentConnector4"</em>
             |
-            <span class="param-type">"bentConnector5"</span>
+            <em>"bentConnector5"</em>
             |
-            <span class="param-type">"bentUpArrow"</span>
+            <em>"bentUpArrow"</em>
             |
-            <span class="param-type">"bevel"</span>
+            <em>"bevel"</em>
             |
-            <span class="param-type">"blockArc"</span>
+            <em>"blockArc"</em>
             |
-            <span class="param-type">"borderCallout1"</span>
+            <em>"borderCallout1"</em>
             |
-            <span class="param-type">"borderCallout2"</span>
+            <em>"borderCallout2"</em>
             |
-            <span class="param-type">"borderCallout3"</span>
+            <em>"borderCallout3"</em>
             |
-            <span class="param-type">"bracePair"</span>
+            <em>"bracePair"</em>
             |
-            <span class="param-type">"bracketPair"</span>
+            <em>"bracketPair"</em>
             |
-            <span class="param-type">"callout1"</span>
+            <em>"callout1"</em>
             |
-            <span class="param-type">"callout2"</span>
+            <em>"callout2"</em>
             |
-            <span class="param-type">"callout3"</span>
+            <em>"callout3"</em>
             |
-            <span class="param-type">"can"</span>
+            <em>"can"</em>
             |
-            <span class="param-type">"chartPlus"</span>
+            <em>"chartPlus"</em>
             |
-            <span class="param-type">"chartStar"</span>
+            <em>"chartStar"</em>
             |
-            <span class="param-type">"chartX"</span>
+            <em>"chartX"</em>
             |
-            <span class="param-type">"chevron"</span>
+            <em>"chevron"</em>
             |
-            <span class="param-type">"chord"</span>
+            <em>"chord"</em>
             |
-            <span class="param-type">"circularArrow"</span>
+            <em>"circularArrow"</em>
             |
-            <span class="param-type">"cloud"</span>
+            <em>"cloud"</em>
             |
-            <span class="param-type">"cloudCallout"</span>
+            <em>"cloudCallout"</em>
             |
-            <span class="param-type">"corner"</span>
+            <em>"corner"</em>
             |
-            <span class="param-type">"cornerTabs"</span>
+            <em>"cornerTabs"</em>
             |
-            <span class="param-type">"cube"</span>
+            <em>"cube"</em>
             |
-            <span class="param-type">"curvedConnector2"</span>
+            <em>"curvedConnector2"</em>
             |
-            <span class="param-type">"curvedConnector3"</span>
+            <em>"curvedConnector3"</em>
             |
-            <span class="param-type">"curvedConnector4"</span>
+            <em>"curvedConnector4"</em>
             |
-            <span class="param-type">"curvedConnector5"</span>
+            <em>"curvedConnector5"</em>
             |
-            <span class="param-type">"curvedDownArrow"</span>
+            <em>"curvedDownArrow"</em>
             |
-            <span class="param-type">"curvedLeftArrow"</span>
+            <em>"curvedLeftArrow"</em>
             |
-            <span class="param-type">"curvedRightArrow"</span>
+            <em>"curvedRightArrow"</em>
             |
-            <span class="param-type">"curvedUpArrow"</span>
+            <em>"curvedUpArrow"</em>
             |
-            <span class="param-type">"decagon"</span>
+            <em>"decagon"</em>
             |
-            <span class="param-type">"diagStripe"</span>
+            <em>"diagStripe"</em>
             |
-            <span class="param-type">"diamond"</span>
+            <em>"diamond"</em>
             |
-            <span class="param-type">"dodecagon"</span>
+            <em>"dodecagon"</em>
             |
-            <span class="param-type">"donut"</span>
+            <em>"donut"</em>
             |
-            <span class="param-type">"doubleWave"</span>
+            <em>"doubleWave"</em>
             |
-            <span class="param-type">"downArrow"</span>
+            <em>"downArrow"</em>
             |
-            <span class="param-type">"downArrowCallout"</span>
+            <em>"downArrowCallout"</em>
             |
-            <span class="param-type">"ellipse"</span>
+            <em>"ellipse"</em>
             |
-            <span class="param-type">"ellipseRibbon"</span>
+            <em>"ellipseRibbon"</em>
             |
-            <span class="param-type">"ellipseRibbon2"</span>
+            <em>"ellipseRibbon2"</em>
             |
-            <span class="param-type">"flowChartAlternateProcess"</span>
+            <em>"flowChartAlternateProcess"</em>
             |
-            <span class="param-type">"flowChartCollate"</span>
+            <em>"flowChartCollate"</em>
             |
-            <span class="param-type">"flowChartConnector"</span>
+            <em>"flowChartConnector"</em>
             |
-            <span class="param-type">"flowChartDecision"</span>
+            <em>"flowChartDecision"</em>
             |
-            <span class="param-type">"flowChartDelay"</span>
+            <em>"flowChartDelay"</em>
             |
-            <span class="param-type">"flowChartDisplay"</span>
+            <em>"flowChartDisplay"</em>
             |
-            <span class="param-type">"flowChartDocument"</span>
+            <em>"flowChartDocument"</em>
             |
-            <span class="param-type">"flowChartExtract"</span>
+            <em>"flowChartExtract"</em>
             |
-            <span class="param-type">"flowChartInputOutput"</span>
+            <em>"flowChartInputOutput"</em>
             |
-            <span class="param-type">"flowChartInternalStorage"</span>
+            <em>"flowChartInternalStorage"</em>
             |
-            <span class="param-type">"flowChartMagneticDisk"</span>
+            <em>"flowChartMagneticDisk"</em>
             |
-            <span class="param-type">"flowChartMagneticDrum"</span>
+            <em>"flowChartMagneticDrum"</em>
             |
-            <span class="param-type">"flowChartMagneticTape"</span>
+            <em>"flowChartMagneticTape"</em>
             |
-            <span class="param-type">"flowChartManualInput"</span>
+            <em>"flowChartManualInput"</em>
             |
-            <span class="param-type">"flowChartManualOperation"</span>
+            <em>"flowChartManualOperation"</em>
             |
-            <span class="param-type">"flowChartMerge"</span>
+            <em>"flowChartMerge"</em>
             |
-            <span class="param-type">"flowChartMultidocument"</span>
+            <em>"flowChartMultidocument"</em>
             |
-            <span class="param-type">"flowChartOfflineStorage"</span>
+            <em>"flowChartOfflineStorage"</em>
             |
-            <span class="param-type">"flowChartOffpageConnector"</span>
+            <em>"flowChartOffpageConnector"</em>
             |
-            <span class="param-type">"flowChartOnlineStorage"</span>
+            <em>"flowChartOnlineStorage"</em>
             |
-            <span class="param-type">"flowChartOr"</span>
+            <em>"flowChartOr"</em>
             |
-            <span class="param-type">"flowChartPredefinedProcess"</span>
+            <em>"flowChartPredefinedProcess"</em>
             |
-            <span class="param-type">"flowChartPreparation"</span>
+            <em>"flowChartPreparation"</em>
             |
-            <span class="param-type">"flowChartProcess"</span>
+            <em>"flowChartProcess"</em>
             |
-            <span class="param-type">"flowChartPunchedCard"</span>
+            <em>"flowChartPunchedCard"</em>
             |
-            <span class="param-type">"flowChartPunchedTape"</span>
+            <em>"flowChartPunchedTape"</em>
             |
-            <span class="param-type">"flowChartSort"</span>
+            <em>"flowChartSort"</em>
             |
-            <span class="param-type">"flowChartSummingJunction"</span>
+            <em>"flowChartSummingJunction"</em>
             |
-            <span class="param-type">"flowChartTerminator"</span>
+            <em>"flowChartTerminator"</em>
             |
-            <span class="param-type">"foldedCorner"</span>
+            <em>"foldedCorner"</em>
             |
-            <span class="param-type">"frame"</span>
+            <em>"frame"</em>
             |
-            <span class="param-type">"funnel"</span>
+            <em>"funnel"</em>
             |
-            <span class="param-type">"gear6"</span>
+            <em>"gear6"</em>
             |
-            <span class="param-type">"gear9"</span>
+            <em>"gear9"</em>
             |
-            <span class="param-type">"halfFrame"</span>
+            <em>"halfFrame"</em>
             |
-            <span class="param-type">"heart"</span>
+            <em>"heart"</em>
             |
-            <span class="param-type">"heptagon"</span>
+            <em>"heptagon"</em>
             |
-            <span class="param-type">"hexagon"</span>
+            <em>"hexagon"</em>
             |
-            <span class="param-type">"homePlate"</span>
+            <em>"homePlate"</em>
             |
-            <span class="param-type">"horizontalScroll"</span>
+            <em>"horizontalScroll"</em>
             |
-            <span class="param-type">"irregularSeal1"</span>
+            <em>"irregularSeal1"</em>
             |
-            <span class="param-type">"irregularSeal2"</span>
+            <em>"irregularSeal2"</em>
             |
-            <span class="param-type">"leftArrow"</span>
+            <em>"leftArrow"</em>
             |
-            <span class="param-type">"leftArrowCallout"</span>
+            <em>"leftArrowCallout"</em>
             |
-            <span class="param-type">"leftBrace"</span>
+            <em>"leftBrace"</em>
             |
-            <span class="param-type">"leftBracket"</span>
+            <em>"leftBracket"</em>
             |
-            <span class="param-type">"leftCircularArrow"</span>
+            <em>"leftCircularArrow"</em>
             |
-            <span class="param-type">"leftRightArrow"</span>
+            <em>"leftRightArrow"</em>
             |
-            <span class="param-type">"leftRightArrowCallout"</span>
+            <em>"leftRightArrowCallout"</em>
             |
-            <span class="param-type">"leftRightCircularArrow"</span>
+            <em>"leftRightCircularArrow"</em>
             |
-            <span class="param-type">"leftRightRibbon"</span>
+            <em>"leftRightRibbon"</em>
             |
-            <span class="param-type">"leftRightUpArrow"</span>
+            <em>"leftRightUpArrow"</em>
             |
-            <span class="param-type">"leftUpArrow"</span>
+            <em>"leftUpArrow"</em>
             |
-            <span class="param-type">"lightningBolt"</span>
+            <em>"lightningBolt"</em>
             |
-            <span class="param-type">"line"</span>
+            <em>"line"</em>
             |
-            <span class="param-type">"lineInv"</span>
+            <em>"lineInv"</em>
             |
-            <span class="param-type">"mathDivide"</span>
+            <em>"mathDivide"</em>
             |
-            <span class="param-type">"mathEqual"</span>
+            <em>"mathEqual"</em>
             |
-            <span class="param-type">"mathMinus"</span>
+            <em>"mathMinus"</em>
             |
-            <span class="param-type">"mathMultiply"</span>
+            <em>"mathMultiply"</em>
             |
-            <span class="param-type">"mathNotEqual"</span>
+            <em>"mathNotEqual"</em>
             |
-            <span class="param-type">"mathPlus"</span>
+            <em>"mathPlus"</em>
             |
-            <span class="param-type">"moon"</span>
+            <em>"moon"</em>
             |
-            <span class="param-type">"nonIsoscelesTrapezoid"</span>
+            <em>"nonIsoscelesTrapezoid"</em>
             |
-            <span class="param-type">"noSmoking"</span>
+            <em>"noSmoking"</em>
             |
-            <span class="param-type">"notchedRightArrow"</span>
+            <em>"notchedRightArrow"</em>
             |
-            <span class="param-type">"octagon"</span>
+            <em>"octagon"</em>
             |
-            <span class="param-type">"parallelogram"</span>
+            <em>"parallelogram"</em>
             |
-            <span class="param-type">"pentagon"</span>
+            <em>"pentagon"</em>
             |
-            <span class="param-type">"pie"</span>
+            <em>"pie"</em>
             |
-            <span class="param-type">"pieWedge"</span>
+            <em>"pieWedge"</em>
             |
-            <span class="param-type">"plaque"</span>
+            <em>"plaque"</em>
             |
-            <span class="param-type">"plaqueTabs"</span>
+            <em>"plaqueTabs"</em>
             |
-            <span class="param-type">"plus"</span>
+            <em>"plus"</em>
             |
-            <span class="param-type">"quadArrow"</span>
+            <em>"quadArrow"</em>
             |
-            <span class="param-type">"quadArrowCallout"</span>
+            <em>"quadArrowCallout"</em>
             |
-            <span class="param-type">"rect"</span>
+            <em>"rect"</em>
             |
-            <span class="param-type">"ribbon"</span>
+            <em>"ribbon"</em>
             |
-            <span class="param-type">"ribbon2"</span>
+            <em>"ribbon2"</em>
             |
-            <span class="param-type">"rightArrow"</span>
+            <em>"rightArrow"</em>
             |
-            <span class="param-type">"rightArrowCallout"</span>
+            <em>"rightArrowCallout"</em>
             |
-            <span class="param-type">"rightBrace"</span>
+            <em>"rightBrace"</em>
             |
-            <span class="param-type">"rightBracket"</span>
+            <em>"rightBracket"</em>
             |
-            <span class="param-type">"round1Rect"</span>
+            <em>"round1Rect"</em>
             |
-            <span class="param-type">"round2DiagRect"</span>
+            <em>"round2DiagRect"</em>
             |
-            <span class="param-type">"round2SameRect"</span>
+            <em>"round2SameRect"</em>
             |
-            <span class="param-type">"roundRect"</span>
+            <em>"roundRect"</em>
             |
-            <span class="param-type">"rtTriangle"</span>
+            <em>"rtTriangle"</em>
             |
-            <span class="param-type">"smileyFace"</span>
+            <em>"smileyFace"</em>
             |
-            <span class="param-type">"snip1Rect"</span>
+            <em>"snip1Rect"</em>
             |
-            <span class="param-type">"snip2DiagRect"</span>
+            <em>"snip2DiagRect"</em>
             |
-            <span class="param-type">"snip2SameRect"</span>
+            <em>"snip2SameRect"</em>
             |
-            <span class="param-type">"snipRoundRect"</span>
+            <em>"snipRoundRect"</em>
             |
-            <span class="param-type">"squareTabs"</span>
+            <em>"squareTabs"</em>
             |
-            <span class="param-type">"star10"</span>
+            <em>"star10"</em>
             |
-            <span class="param-type">"star12"</span>
+            <em>"star12"</em>
             |
-            <span class="param-type">"star16"</span>
+            <em>"star16"</em>
             |
-            <span class="param-type">"star24"</span>
+            <em>"star24"</em>
             |
-            <span class="param-type">"star32"</span>
+            <em>"star32"</em>
             |
-            <span class="param-type">"star4"</span>
+            <em>"star4"</em>
             |
-            <span class="param-type">"star5"</span>
+            <em>"star5"</em>
             |
-            <span class="param-type">"star6"</span>
+            <em>"star6"</em>
             |
-            <span class="param-type">"star7"</span>
+            <em>"star7"</em>
             |
-            <span class="param-type">"star8"</span>
+            <em>"star8"</em>
             |
-            <span class="param-type">"straightConnector1"</span>
+            <em>"straightConnector1"</em>
             |
-            <span class="param-type">"stripedRightArrow"</span>
+            <em>"stripedRightArrow"</em>
             |
-            <span class="param-type">"sun"</span>
+            <em>"sun"</em>
             |
-            <span class="param-type">"swooshArrow"</span>
+            <em>"swooshArrow"</em>
             |
-            <span class="param-type">"teardrop"</span>
+            <em>"teardrop"</em>
             |
-            <span class="param-type">"trapezoid"</span>
+            <em>"trapezoid"</em>
             |
-            <span class="param-type">"triangle"</span>
+            <em>"triangle"</em>
             |
-            <span class="param-type">"upArrowCallout"</span>
+            <em>"upArrowCallout"</em>
             |
-            <span class="param-type">"upDownArrow"</span>
+            <em>"upDownArrow"</em>
             |
-            <span class="param-type">"upDownArrow"</span>
+            <em>"upDownArrow"</em>
             |
-            <span class="param-type">"upDownArrowCallout"</span>
+            <em>"upDownArrowCallout"</em>
             |
-            <span class="param-type">"uturnArrow"</span>
+            <em>"uturnArrow"</em>
             |
-            <span class="param-type">"verticalScroll"</span>
+            <em>"verticalScroll"</em>
             |
-            <span class="param-type">"wave"</span>
+            <em>"wave"</em>
             |
-            <span class="param-type">"wedgeEllipseCallout"</span>
+            <em>"wedgeEllipseCallout"</em>
             |
-            <span class="param-type">"wedgeRectCallout"</span>
+            <em>"wedgeRectCallout"</em>
             |
-            <span class="param-type">"wedgeRoundRectCallout"</span>
+            <em>"wedgeRoundRectCallout"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Create a shape using the 'diamond' preset:oDrawing = Api.CreateShape("diamond", 100 * 36000, 100 * 36000, oFill, oStroke);</code></pre>
-    <h4 class="name" id="ShdType">ShdType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        A shade type which can be added to the document element.
     </div>
+    <h5>Example</h5>
+    <pre>// Create a shape using the 'diamond' preset:oDrawing = Api.CreateShape("diamond", 100 * 36000, 100 * 36000, oFill, oStroke);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="ShdType">&nbsp;</span>
+    <h4 class="header-gray">ShdType</h4>    
+    <p>A shade type which can be added to the document element.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"nil"</span>
+            <em>"nil"</em>
             |
-            <span class="param-type">"clear"</span>
+            <em>"clear"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Add a green shadow to the table:oTablePr.SetShd("clear", 0, 255, 0, false);</code></pre>
-    <h4 class="name" id="StyleType">StyleType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The style type used for the document element.
     </div>
+    <h5>Example</h5>
+    <pre>// Add a green shadow to the table:oTablePr.SetShd("clear", 0, 255, 0, false);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="StyleType">&nbsp;</span>
+    <h4 class="header-gray">StyleType</h4>    
+    <p>The style type used for the document element.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"paragraph"</span>
+            <em>"paragraph"</em>
             |
-            <span class="param-type">"table"</span>
+            <em>"table"</em>
             |
-            <span class="param-type">"run"</span>
+            <em>"run"</em>
             |
-            <span class="param-type">"numbering"</span>
+            <em>"numbering"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Assign the default document paragraph style to the 'oNormalStyle' variable:var oNormalStyle = oDocument.GetDefaultStyle("paragraph");</code></pre>
-    <h4 class="name" id="TabJc">TabJc</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        Types of custom tab.
     </div>
+    <h5>Example</h5>
+    <pre>// Assign the default document paragraph style to the 'oNormalStyle' variable:var oNormalStyle = oDocument.GetDefaultStyle("paragraph");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="TabJc">&nbsp;</span>
+    <h4 class="header-gray">TabJc</h4>
+    <p>Types of custom tab.</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"clear"</span>
+            <em>"clear"</em>
             |
-            <span class="param-type">"left"</span>
+            <em>"left"</em>
             |
-            <span class="param-type">"right"</span>
+            <em>"right"</em>
             |
-            <span class="param-type">"center"</span>
+            <em>"center"</em>
         </li>
     </ul>
+    </div>
     <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Set tab positions at 50, 75 and 150 points with the text aligned center, left and right at each tab stop accordingly:oParaPr.SetTabs([1000, 1500, 3000], ["center", "left", "right"]);</code></pre>
-    <h4 class="name" id="TableStyleOverrideType">TableStyleOverrideType</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        This simple type specifies possible values for the table sections to which the current conditionalformatting properties will be applied when this selected table style is used.
+    <pre>// Set tab positions at 50, 75 and 150 points with the text aligned center, left and right at each tab stop accordingly:oParaPr.SetTabs([1000, 1500, 3000], ["center", "left", "right"]);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="TableStyleOverrideType">&nbsp;</span>
+    <h4 class="header-gray">TableStyleOverrideType</h4>
+    <p>This simple type specifies possible values for the table sections to which the current conditionalformatting properties will be applied when this selected table style is used.</p>
         <ul>
             <li><b>"topLeftCell"</b> - specifies that the table formatting applies to the top left cell.</li>
             <li><b>"topRightCell"</b> - specifies that the table formatting applies to the top right cell.</li>
@@ -1376,7 +1418,7 @@ oBullet = Api.CreateNumbering("ArabicParenR");</code></pre>
             <li><b>"bottomRightCell"</b> - specifies that the table formatting applies to the bottom right cell.</li>
             <li><b>"firstRow"</b> - specifies that the table formatting applies to the first row.</li>
             <li><b>"lastRow"</b> - specifies that the table formatting applies to the last row.</li>
-            <li><b>"firstColumn"</b> - specifies that the table formatting applies to the first column. Any subsequent row which is in <i>table header</i> <span class="param-type"><a href="<%=VirtualPathUtility.ToAbsolute("~/developers/document-builder/ApiTableRowPr/SetTableHeader.aspx")%>">ApiTableRowPr.SetTableHeader</a></span> will also use this conditional format.</li>
+            <li><b>"firstColumn"</b> - specifies that the table formatting applies to the first column. Any subsequent row which is in <i>table header</i> <em><a href="<%= Url.Action("textdocumentapi/apitablerowpr/settableheader") %>">ApiTableRowPr.SetTableHeader</a></em> will also use this conditional format.</li>
             <li><b>"lastColumn"</b> - specifies that the table formatting applies to the last column.</li>
             <li><b>"bandedColumn"</b> - specifies that the table formatting applies to odd numbered groupings of rows.</li>
             <li><b>"bandedColumnEven"</b> - specifies that the table formatting applies to even numbered groupings of rows.</li>
@@ -1384,96 +1426,103 @@ oBullet = Api.CreateNumbering("ArabicParenR");</code></pre>
             <li><b>"bandedRowEven"</b> - specifies that the table formatting applies to even numbered groupings of columns.</li>
             <li><b>"wholeTable"</b> - specifies that the conditional formatting applies to the whole table.</li>
         </ul>
-    </div>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"topLeftCell"</span>
+            <em>"topLeftCell"</em>
             |
-            <span class="param-type">"topRightCell"</span>
+            <em>"topRightCell"</em>
             |
-            <span class="param-type">"bottomLeftCell"</span>
+            <em>"bottomLeftCell"</em>
             |
-            <span class="param-type">"bottomRightCell"</span>
+            <em>"bottomRightCell"</em>
             |
-            <span class="param-type">"firstRow"</span>
+            <em>"firstRow"</em>
             |
-            <span class="param-type">"lastRow"</span>
+            <em>"lastRow"</em>
             |
-            <span class="param-type">"firstColumn"</span>
+            <em>"firstColumn"</em>
             |
-            <span class="param-type">"lastColumn"</span>
+            <em>"lastColumn"</em>
             |
-            <span class="param-type">"bandedColumn"</span>
+            <em>"bandedColumn"</em>
             |
-            <span class="param-type">"bandedColumnEven"</span>
+            <em>"bandedColumnEven"</em>
             |
-            <span class="param-type">"bandedRow"</span>
+            <em>"bandedRow"</em>
             |
-            <span class="param-type">"bandedRowEven"</span>
+            <em>"bandedRowEven"</em>
             |
-            <span class="param-type">"wholeTable"</span>
+            <em>"wholeTable"</em>
         </li>
     </ul>
+    </div>
     <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Apply the created style (set shadow) to the top left cell of the table:oTableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 0, 0);</code></pre>
-    <h4 class="name" id="TableWidth">TableWidth</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The possible values for the units of the width property are defined by a specific table or table cell width property.
+    <pre>// Apply the created style (set shadow) to the top left cell of the table:oTableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 0, 0);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="TableWidth">&nbsp;</span>
+    <h4 class="header-gray">TableWidth</h4>    
+    <p>The possible values for the units of the width property are defined by a specific table or table cell width property.</p>
         <ul>
             <li><b>"auto"</b> - set the table or table cell width to auto width.</li>
             <li><b>"twips"</b> - set the table or table cell width to be measured in twentieths of a point.</li>
             <li><b>"nul"</b> - set the table or table cell width to be of a zero value.</li>
             <li><b>"percent"</b> - set the table or table cell width to be measured in percent to the parent container.</li>
         </ul>
-    </div>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"auto"</span>
+            <em>"auto"</em>
             |
-            <span class="param-type">"twips"</span>
+            <em>"twips"</em>
             |
-            <span class="param-type">"nul"</span>
+            <em>"nul"</em>
             |
-            <span class="param-type">"percent"</span>
+            <em>"percent"</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Set the width of the table cell equal to 100 points (2000 twips):oTableCell.SetWidth("twips", 2000);</code></pre>
-    <h4 class="name" id="twips">twips</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        Twentieths of a point (equivalent to 1/1440th of an inch).
     </div>
+    <h5>Example</h5>
+    <pre>// Set the width of the table cell equal to 100 points (2000 twips):oTableCell.SetWidth("twips", 2000);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="twips">&nbsp;</span>
+    <h4 class="header-gray">twips</h4>    
+    <p>Twentieths of a point (equivalent to 1/1440th of an inch).</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">number</span>
+            <em>number</em>
         </li>
     </ul>
-    <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// Set the distance between columns equal to 36 points:oParagraph.SetEqualColumns(2, 720);</code></pre>
-    <h4 class="name" id="VerticalTextAlign">VerticalTextAlign</h4>
-    <dl class="details">
-    </dl>
-    <div class="builder_description">
-        The available text vertical alignment (used to align text in a shape with a placement for text inside it).
     </div>
+    <h5>Example</h5>
+    <pre>// Set the distance between columns equal to 36 points:oParagraph.SetEqualColumns(2, 720);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+    <span class="anchor-position" id="VerticalTextAlign">&nbsp;</span>
+    <h4 class="header-gray">VerticalTextAlign</h4>    
+    <p>The available text vertical alignment (used to align text in a shape with a placement for text inside it).</p>
+    <div class="global-list">
     <h5>Type:</h5>
     <ul>
         <li>
-            <span class="param-type">"top"</span>
+            <em>"top"</em>
             |
-            <span class="param-type">"center"</span>
+            <em>"center"</em>
             |
-            <span class="param-type">"bottom"</span>
+            <em>"bottom"</em>
         </li>
     </ul>
+    </div>
     <h5>Example</h5>
-    <pre class="prettyprint source linenums"><code>// The inner text for the created shape will be added aligned vertically closer to the shape upper part:oDrawing.SetVerticalTextAlign("top");</code></pre>
-</div>
+    <pre>// The inner text for the created shape will be added aligned vertically closer to the shape upper part:oDrawing.SetVerticalTextAlign("top");</pre>
+    </div>
 </asp:Content>

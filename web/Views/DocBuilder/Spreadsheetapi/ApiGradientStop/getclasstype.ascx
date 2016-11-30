@@ -3,10 +3,24 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
+<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"gradientStop"}</h4>
 <p class="dscr">
-        Get the type of this class.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+Get the type of this class.
+</p>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <em>"gradientStop"</em>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oGs1, oGs2, oFill, oStroke;
 oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);
@@ -20,4 +34,7 @@ oWorksheet.SetColumnWidth(1, 10);
 oWorksheet.GetRange('A1').SetValue('Class Type = ');
 oWorksheet.GetRange('B1').SetValue(oClassType);
 builder.SaveFile("xlsx", "GetClassType.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004569&doc=VWxCM1l1bXF6V1F4QWk2eW11U3czWGxhZktuaEdhMHduN2JROHJuem02QT0_IjUwMDQ1Njki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

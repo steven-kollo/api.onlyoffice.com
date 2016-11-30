@@ -3,10 +3,47 @@
 <h1>
    <span class="hdr">SetDoubleStrikeout</span>
 </h1>
+<h4 class="header-gray" id="SetDoubleStrikeout">SetDoubleStrikeout(isDoubleStrikeout)</h4>
+    <dl class="details">
+        <dt>Inherited From:</dt>
+        <dd>
+            <ul>
+                <li>
+                    <a href="<%= Url.Action("presentationapi/apitextpr/setdoublestrikeout") %>">ApiTextPr.SetDoubleStrikeout</a>
+                </li>
+            </ul>
+        </dd>
+    </dl>
+
 <p class="dscr">
-        Specify that the contents of this run is displayed with two horizontal lines through each character displayed on the line.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("pptx");
+Specify that the contents of this run is displayed with two horizontal lines through each character displayed on the line.
+</p>
+
+<h2>Parameters:</h2>
+<table class="table">
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td><em>isDoubleStrikeout</em></td>
+            <td>
+                <em>boolean</em>
+            </td>
+            <td>Specifies that the contents of the current run are displayed double struck through.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 var oSlide = oPresentation.GetSlideByIndex(0);
 oSlide.RemoveAllObjects();
@@ -25,4 +62,7 @@ oRun.AddText("This is a text run with the text struck out with two lines.");
 oParagraph.AddElement(oRun);
 oSlide.AddObject(oShape);
 builder.SaveFile("pptx", "SetDoubleStrikeout.pptx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011305&doc=bFRZQzJjeTRURlRTSWNTNCtFN0hVaW02N25GSE5zb3ZCZkZjaDhFY0h0VT0_IjUwMTEzMDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

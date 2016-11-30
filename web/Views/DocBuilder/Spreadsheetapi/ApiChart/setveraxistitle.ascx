@@ -3,10 +3,43 @@
 <h1>
    <span class="hdr">SetVerAxisTitle</span>
 </h1>
-<p class="dscr">
+<h4 class="header-gray" id="SetVerAxisTitle">SetVerAxisTitle(sTitle, nSize)</h4>
+ <p class="dscr">
         Specify the vertical axis chart title.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("xlsx");
+</p>
+
+<h2>Parameters:</h2>
+<table class="table">
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Type</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td><em>sTitle</em></td>
+            <td>
+                <em>string</em>
+            </td>
+            <td>The title which will be displayed for the vertical axis of the current chart.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><em>nSize</em></td>
+            <td>
+                <a href="<%= Url.Action("global") %>#pt">pt</a>
+            </td>
+            <td>The text size value measured in points.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.SetName("sheet 1");
 oWorksheet.GetRange("B1").SetValue("Row 1");
@@ -35,4 +68,7 @@ oChart.SetLegendPos("right");
 oChart.SetShowDataLabels(false, false, true);
 oChart.SetTitle("Main Chart Title", 13);
 builder.SaveFile("xlsx", "SetVerAxisTitle.xlsx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4942918&doc=REFPcmdVU1RzTU96Z2Y4ZEtCOGp2bURxS3FTU21NMUN4YWpDK2d3b0Z5TT0_IjQ5NDI5MTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

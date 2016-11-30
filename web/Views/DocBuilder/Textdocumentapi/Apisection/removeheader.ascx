@@ -3,8 +3,35 @@
 <h1>
    <span class="hdr">RemoveHeader</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="RemoveHeader">RemoveHeader(sType)</h4>
+<p class="dscr">Remove the header of the specified type from the current section. After removal the header will be inherited fromthe previous section or, if this is the first section in the document, no header of the specifiedtype will be present.</p>
+
+            <h2>Parameters:</h2>
+                <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>sType</em></td>
+                        <td>
+                        <a href="<%= Url.Action("global") %>#HdrFtrType">HdrFtrType</a>
+                        </td>
+                        <td>Type of header to be removed.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oHeader;
 oParagraph = oDocument.GetElement(0);
@@ -26,4 +53,7 @@ oParagraph.AddText("This is page header #2. ");
 oParagraph.AddText("Only this header can be seen, as the first one has been removed.");
 oSection.RemoveHeader("default");
 builder.SaveFile("docx", "RemoveHeader.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892308&doc=bmZGZ3ZBc3dyWWE4c2FEUUNNU3FKaTJzbVVVOGR1REQwa3FpNnlLNEJWWT0_IjQ4OTIzMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

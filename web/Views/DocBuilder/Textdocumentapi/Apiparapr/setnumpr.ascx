@@ -3,8 +3,51 @@
 <h1>
    <span class="hdr">SetNumPr</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+
+<h4 class="header-gray" id="SetNumPr">SetNumPr(oNumPr, nLvl<sub>opt</sub>)</h4>
+<p class="dscr">Specify that the current paragraph references a numbering definition instance in the current document.</p>
+
+<h2>Parameters:</h2>
+                <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Attributes</td>
+                            <td>Default</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>oNumPr</em></td>
+                        <td>                
+                        <a href="<%= Url.Action("textdocumentapi/apinumbering") %>">ApiNumbering</a>
+                        </td>
+                        <td><br>
+                        </td>
+                        <td></td>
+                        <td>Specifies a numbering definition.</td>
+                    </tr>
+                        <tr class="tablerow">
+                        <td><em>nLvl</em></td>
+                        <td>                
+                        <em>number</em>
+                        </td>
+                        <td>&lt;optional><br>
+                        </td>
+                        <td>0</td>
+                        <td>Specifies a numbering level reference. If the current instance of the <em>ApiParaPr</em> class is direct formatting of a paragraph, then this parameter <b>MUST BE</b> specified. Otherwise if the current instance of the <em>ApiParaPr</em> class is the part of <em>ApiStyle</em> properties, this parameter will be ignored.</td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oParaPr, oNumbering;
 var oMyStyle = oDocument.CreateStyle("My document style");
@@ -26,4 +69,7 @@ oParagraph.SetStyle(oMyStyle);
 oParagraph.AddText("This is a paragraph styled as a bulleted list.");
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "SetNumPr.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891384&doc=enF4VGh1QldyUldpc1duZk5BUy8rY2dqZWQrbWJXdGdjN20vTFgzK0IxND0_IjQ4OTEzODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

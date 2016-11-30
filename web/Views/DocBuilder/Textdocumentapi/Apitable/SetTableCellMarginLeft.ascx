@@ -3,8 +3,41 @@
 <h1>
    <span class="hdr">SetTableCellMarginLeft</span>
 </h1>
-<p class="dscr"></p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+
+<h4 class="header-gray" id="SetTableCellMarginLeft">SetTableCellMarginLeft(nValue)</h4>
+                <dl class="details">
+                <dt>Inherited From:</dt>
+                <dd><ul><li>
+                <a href="<%= Url.Action("textdocumentapi/apitablepr/settablecellmarginleft") %>">ApiTablePr.SetTableCellMarginLeft</a>
+                </li></ul></dd>
+                </dl>
+<p class="dscr">Specify the amount of space which will be present between the left extent of the cell contents and the leftborder of all table cells within the parent table (or table row).</p>
+
+            <h2>Parameters:</h2>
+            <table class="table">
+                    <thead>
+                        <tr class="tablerow">
+                            <td>Name</td>
+                            <td>Type</td>
+                            <td>Description</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="tablerow">
+                        <td><em>nValue</em></td>
+                        <td>
+                        <a href="<%= Url.Action("global") %>#twips">twips</a>
+                        </td>
+                        <td>The value for the amount of space to the left extent of the cell measured in twentieths of a point (1/1440 of an inch).</td>
+                    </tr>
+                </tbody>
+                </table>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle;
 oParagraph = oDocument.GetElement(0);
@@ -17,4 +50,7 @@ oTable.SetStyle(oTableStyle);
 oTable.SetTableCellMarginLeft(720);
 oDocument.Push(oTable);
 builder.SaveFile("docx", "SetTableCellMarginLeft.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895034&doc=Ym9Tdm9mTUcyY3F6OWJ6bXJWVTQ2NFNsbFBaTERTSmd5bWk3ZXk4aFJjZz0_IjQ4OTUwMzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

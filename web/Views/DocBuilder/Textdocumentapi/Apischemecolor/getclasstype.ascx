@@ -3,10 +3,25 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
+
+<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"schemeColor"}</h4>
 <p class="dscr">
-        Get the type of this class.
-    </p>
-  <h5>Example</h5><pre class="prettyprint source linenums"><code>builder.CreateFile("docx");
+Get the type of this class.
+</p>
+
+<h2>Returns:</h2>
+<dl class="param-type">
+    <dt>Type</dt>
+    <dd>
+        <em>"schemeColor"</em>
+    </dd>
+</dl>
+
+<h2>Example</h2>
+<div class="copy_code">
+<span class="button">Copy code</span>
+</div>
+<pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oFill, oStroke, oDrawing, oParagraph, oSchemeColor;
 oParagraph = oDocument.GetElement(0);
@@ -20,4 +35,7 @@ oParagraph = Api.CreateParagraph();
 oParagraph.AddText("Class Type = " + oClassType);
 oDocument.Push(oParagraph);
 builder.SaveFile("docx", "GetClassType.docx");
-builder.CloseFile();</code></pre><h5>Resulting document</h5>
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896250&doc=d08xMjdxc2xzd2VudFduUGcwY05tRW1IZ2RmZjZMNlhBOFErdlVMRnVUST0_IjQ4OTYyNTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
