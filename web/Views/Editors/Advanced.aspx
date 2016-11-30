@@ -88,6 +88,7 @@ config = {
         "customization": {
             "chat": true,
             "comments": true,
+            "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
@@ -109,6 +110,7 @@ config = {
                 "imageEmbedded": "http://example.com/logo_em.png",
                 "url": "http://example.com",
             },
+            "zoom": 100,
         },
         "embedded": {
             "embedUrl": "http://example.com/embedded?doc=exampledocument1.docx",

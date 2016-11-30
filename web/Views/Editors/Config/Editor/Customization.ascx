@@ -38,6 +38,12 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td id="compactToolbar">compactToolbar</td>
+            <td>defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>. The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
             <td id="customer">customer</td>
             <td>Contains the information for the editor <b>About</b> section. The object has the following parameters:
                 <ul>
@@ -156,6 +162,12 @@
                 <img src="/content/img/editor/customization.png" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="zoom">zoom</td>
+            <td>defines the document display zoom value measured in percent. Can take values larger than <b>0</b>. For text documents and presentations it is possible to set this parameter to <b>-1</b> (fitting the document to page option) or to <b>-2</b> (fitting the document page width to the editor page). The default value is <b>100</b>.</td>
+            <td>integer</td>
+            <td>100</td>
+        </tr>
     </tbody>
 </table>
 <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE™ Document Server Integration Edition</em></span>
@@ -167,6 +179,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "customization": {
             "chat": true,
             "comments": true,
+            "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
@@ -188,6 +201,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "http://example.com/logo_em.png",
                 "url": "http://www.onlyoffice.com",
             },
+            "zoom": 100,
         },
         ...
     },
