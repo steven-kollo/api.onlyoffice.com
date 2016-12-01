@@ -304,6 +304,11 @@
     <Content Include="Views\ApiSystem\ValidatePortalName.aspx" />
     <Content Include="Views\ApiSystem\Section.aspx" />
     <Content Include="Views\ApiSystem\Navigation.ascx" />
+    <Content Include="Views\Editors\Security.aspx" />
+    <Content Include="Views\Editors\Signature.aspx" />
+    <Content Include="Views\Editors\Signature\Request.ascx" />
+    <Content Include="Views\Editors\Signature\Config.ascx" />
+    <Content Include="Views\Editors\Signature\Default.ascx" />
     <Content Include="Views\Plugin\Basic.aspx" />
     <Content Include="Views\Plugin\Config.aspx" />
     <Content Include="Views\Plugin\Code.aspx" />

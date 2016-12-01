@@ -41,6 +41,12 @@
             <td>"100%"</td>
         </tr>
         <tr class="tablerow">
+            <td id="token">token</td>
+            <td class="todo">defines the <a href="<%= Url.Action("signature/config")%>">signature token</a></td>
+            <td>string</td>
+            <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M"</td>
+        </tr>
+        <tr class="tablerow">
             <td id="type">type</td>
             <td>defines the platform type used to access the document. Can be:
                 <em>optimized to access the document from a desktop or laptop computer</em> - <b>desktop</b>,
@@ -66,9 +72,9 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "documentType": "text",
     "height": "100%",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M",
     "type": "desktop",
     "width": "100%",
     ...
 });
 </pre>
-
