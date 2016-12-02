@@ -31,7 +31,7 @@
             <b>history</b> - the object with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
         </li>
         <li>
-            <b>key</b> - the edited document identifier
+            <b>key</b> - the edited document identifier.
         </li>
         <li>
             <b>status</b> - status of the document. Can have the following values:
@@ -75,7 +75,7 @@
     "changesurl": "http://documentserver/url-to-changes.zip",
     "history": {
         "changes": changes,
-        "severVersion": severVersion,
+        "serverVersion": serverVersion,
     },
     "key": "Khirz6zTPdfd7",
     "status": 2,
@@ -98,7 +98,7 @@
     "changesurl": "http://documentserver/url-to-changes.zip",
     "history": {
         "changes": changes,
-        "severVersion": severVersion,
+        "serverVersion": serverVersion,
     },
     "key": "Khirz6zTPdfd7",
     "status": 6,
