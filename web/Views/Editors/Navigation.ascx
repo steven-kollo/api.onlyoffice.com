@@ -59,6 +59,9 @@
             <li>
                 <a href="<%= Url.Action("history") %>">Document History</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("security") %>">Security</a>
+            </li>
         </ul>
     </li>
 </ul>
@@ -112,6 +115,17 @@
     </li>
     <li>
         <a href="<%= Url.Action("conversionapi") %>">Conversion API</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("signature/") %>">Signature</a>
+        <ul class="treeview">
+            <li>
+                <a href="<%= Url.Action("signature/config") %>">config</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("signature/request") %>">request</a>
+            </li>
+        </ul>
     </li>
     <li>
         <a href="<%= Url.Action("troubleshooting") %>">Troubleshooting</a>

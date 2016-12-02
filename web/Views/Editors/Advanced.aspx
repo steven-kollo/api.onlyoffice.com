@@ -158,6 +158,7 @@ config = {
         "onRequestHistoryClose": onRequestHistoryClose,
     },
     "height": "100%",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M",
     "type": "desktop",
     "width": "100%",
 };
