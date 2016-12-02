@@ -28,6 +28,7 @@
     <ol>
         <li>Change the <b>files.docservice.url.domain</b> properties in <em>src/main/resources/onlyoffice-config.properties</em> to the name of the server with the ONLYOFFICE™ Document Server installed:
             <span class="commandline">files.docservice.url.domain=http://documentserver/</span>
+            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.
         </li>
     </ol>
 

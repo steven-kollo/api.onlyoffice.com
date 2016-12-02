@@ -44,6 +44,8 @@
         <li><a href="<%= Url.Action("advanced") %>">Edit the configuration files</a> in the sample changing the default path for the one to the editors installed at step 1 and other advanced parameters available for editor configuration.</li>
     </ol>
 
+    <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
+
     <p>The result should look like the demo preview below.</p>
 
     <h2 id="DemoPreview">Demo Preview</h2>

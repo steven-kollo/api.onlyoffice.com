@@ -70,6 +70,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "Open",
                 "Plugins",
                 "Save",
+                "Security",
+                "Signature",
+                "Signature/Config",
+                "Signature/Request",
                 "Troubleshooting",
                 "Try",
             };
@@ -226,6 +230,20 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Save()
         {
             return View();
+        }
+
+        public ActionResult Security()
+        {
+            return View();
+        }
+
+        public ActionResult Signature(string catchall)
+        {
+            if (!_actionMap.Contains("signature/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Signature", (object)catchall);
         }
 
         public ActionResult Troubleshooting()

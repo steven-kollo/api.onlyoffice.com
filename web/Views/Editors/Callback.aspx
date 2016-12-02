@@ -19,7 +19,7 @@
     <p>The <b>document editing service</b> will send POST request with the following information in body:</p>
     <ul>
         <li>
-            <b>actions</b> - is an object received if the new user connected the document co-editing or disconnected from it. In the first case the <em>type</em> field value is <b>1</b> , in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected or disconnected from the document co-editing.
+            <b>actions</b> - an object received if the new user connected to the document co-editing or disconnected from it. In the first case the <em>type</em> field value is <b>1</b> , in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected to or disconnected from the document co-editing.
         </li>
         <li id="changeshistory">
             <b>changeshistory</b> - the array of objects with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
@@ -28,7 +28,7 @@
             <b>changesurl</b> - the link to the file with the document editing data used to track and display the document changes history. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
         </li>
         <li>
-            <b>key</b> - identifier of the edited document
+            <b>key</b> - the edited document identifier
         </li>
         <li>
             <b>status</b> - status of the document. Can have the following values:
@@ -44,10 +44,10 @@
             <b>url</b> - the link to the edited document to be saved with the document storage service. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only.
         </li>
         <li>
-            <b>userdata</b> - the identifier sent to the <a href="<%= Url.Action("command") %>">command service</a> in case it was present in the request.
+            <b>userdata</b> - the custom information sent to the <a href="<%= Url.Action("command") %>">command service</a> in case it was present in the request.
         </li>
         <li>
-            <b>users</b> - identifier of the user who opened the document for editing; when the document has been changed the <b>users</b> will return the identifier of the user who was the last to edit the document (for status <b>2</b> and status <b>6</b> replies).
+            <b>users</b> - the list of the identifiers of the users who opened the document for editing; when the document has been changed the <b>users</b> will return the identifier of the user who was the last to edit the document (for status <b>2</b> and status <b>6</b> replies).
         </li>
     </ul>
 

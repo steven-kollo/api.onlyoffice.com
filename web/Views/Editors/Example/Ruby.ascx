@@ -6,6 +6,9 @@
 
 <h2>Introduction</h2>
 <p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Ruby</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Ruby Example</a> for their integration. We will show how to run the Ruby example on Linux OS.</p>
+
+<div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
+
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
 <h2 id="linux-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
