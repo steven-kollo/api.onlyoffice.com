@@ -689,9 +689,8 @@
                 "documentType": "text",
                 "editorConfig": {
                     "user": {
-                        "firstname": "John",
                         "id": "78e1e841",
-                        "lastname": "Smith",
+                        "name": "John Smith",
                     },
                 },
                 "height": "100%",
@@ -725,9 +724,8 @@
                 "documentType": "text",
                 "editorConfig": {
                     "user": {
-                        "firstname": "Kate",
                         "id": "F89d8069ba2b",
-                        "lastname": "Cage",
+                        "name": "Kate Cage",
                     },
                 },
                 "height": "100%",
@@ -765,9 +763,8 @@
                 "documentType": "spreadsheet",
                 "editorConfig": {
                     "user": {
-                        "firstname": "John",
                         "id": "78e1e841",
-                        "lastname": "Smith",
+                        "name": "John Smith",
                     },
                 },
                 "height": "100%",
@@ -801,9 +798,8 @@
                 "documentType": "spreadsheet",
                 "editorConfig": {
                     "user": {
-                        "firstname": "Kate",
                         "id": "F89d8069ba2b",
-                        "lastname": "Cage",
+                        "name": "Kate Cage",
                     },
                 },
                 "height": "100%",
@@ -841,9 +837,8 @@
                 "documentType": "presentation",
                 "editorConfig": {
                     "user": {
-                        "firstname": "John",
                         "id": "78e1e841",
-                        "lastname": "Smith",
+                        "name": "John Smith",
                     },
                 },
                 "height": "100%",
@@ -877,9 +872,8 @@
                 "documentType": "presentation",
                 "editorConfig": {
                     "user": {
-                        "firstname": "Kate",
                         "id": "F89d8069ba2b",
-                        "lastname": "Cage",
+                        "name": "Kate Cage",
                     },
                 },
                 "height": "100%",
@@ -1132,8 +1126,8 @@
         $(".button-coediting").click(function () {
             var documentType = $(this).attr("data-type");
             <% var key = DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()); %>
-            var documentCoediting1 = window.open("<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&firstname=John&lastname=Smith", "_blank");
-            var documentCoediting2 = window.open("<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&firstname=Kate&lastname=Cage", "_blank");
+            var documentCoediting1 = window.open("<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&name=John%20Smith", "_blank");
+            var documentCoediting2 = window.open("<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&name=Kate%20Cage", "_blank");
         });
     </script>
 </asp:Content>
