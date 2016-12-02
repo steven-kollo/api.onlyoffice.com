@@ -238,7 +238,7 @@
     <Content Include="404.htm" />
     <Content Include="500.htm" />
     <Content Include="Content\hightlight\default.css" />
-    <Content Include="Content\img\Editor\changeshistory.png" />
+    <Content Include="Content\img\Editor\history.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
     <Content Include="Content\img\Editor\coedit.jpg" />

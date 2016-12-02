@@ -125,9 +125,10 @@ var onRequestHistory = function() {
         "currentVersion": 2,
         "history": [
             {
-                "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
+                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
+                "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage",
@@ -135,7 +136,7 @@ var onRequestHistory = function() {
                 "version": 1,
             },
             {
-                "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
+                "changes": changes,
                 "created": "2010-07-07 3:46 PM",
                 "key": "Khirz6zTPdfd7",
                 "user": {
@@ -166,6 +167,11 @@ var onRequestHistoryData = function(event) {
     var version = event.data;
     docEditor.setHistoryData({
         "changesUrl": "http://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
+        "key": "Khirz6zTPdfd7",
+        "previous": {
+            "key": "af86C7e71Ca8",
+            "url": "http://example.com/url-to-the-previous-version-of-the-document.docx",
+        },
         "url": "http://example.com/url-to-example-document.docx",
         "version": version,
     })
