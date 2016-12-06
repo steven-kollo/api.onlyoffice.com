@@ -5,6 +5,8 @@
 </h1>
 <p class="dscr">ONLYOFFICE™ Document Server <a href="<%= Url.Action("security") %>">uses</a> <b>tokens</b> generated using the JSON Web Tokens standard.</p>
 
+<div class="note">This feature is used in <b>Document Server</b> starting with version 4.2</div>
+
 <p>For the validation setup it is necessary to edit the configuration file which can be found at the following path:</p>
 <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em></div>
 <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em></div>
