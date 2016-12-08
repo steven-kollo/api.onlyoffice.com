@@ -124,7 +124,7 @@
             </tr>
             <tr class="tablerow">
                 <td>1</td>
-                <td>Document key not correct</td>
+                <td>Document key is missing or no document with such key could be found</td>
             </tr>
             <tr class="tablerow">
                 <td>2</td>
@@ -140,7 +140,7 @@
             </tr>
             <tr class="tablerow">
                 <td>5</td>
-                <td>Command not corrcet</td>
+                <td>Command not correсt</td>
             </tr>
         </tbody>
     </table>
