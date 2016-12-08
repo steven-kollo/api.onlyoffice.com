@@ -14,9 +14,11 @@
         <span class="hdr">Command service</span>
     </h1>
 
-    <p class="dscr">For the interaction with the <b>document command service</b> the GET requests with the parameter set are used. The requests are sent to the <span class="fakelink">http://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.</p>
+    <p>For the interaction with the <b>document command service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">http://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.</p>
 
-    <h2>Request parameters and their description:</h2>
+    <div class="note">In <b>ONLYOFFICE™ Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
+
+    <h2>Parameters and their description:</h2>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -67,14 +69,30 @@
         </tbody>
     </table>
 
-    <div id="drop" class="header-gray">Sample of request address used to disconnect the user with the <em>6d5a81d0</em> identifier from the document editing service.</div>
-    <p><b>http://documentserver/coauthoring/CommandService.ashx?c=drop&amp;key=Khirz6zTPdfd7&amp;users=%5B6d5a81d0%5D</b></p>
+    <div id="drop" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to disconnect the user with the <em>6d5a81d0</em> identifier from the document editing service.</div>
+    <pre>
+{
+    "c": "drop",
+    "key": "Khirz6zTPdfd7",
+    "users": [ "6d5a81d0" ],
+}
+</pre>
 
-    <div id="forcesave" class="header-gray">Sample of request address used for force saving the document with the <em>Khirz6zTPdfd7</em> identifier being edited without closing it.</div>
-    <p><b>http://documentserver/coauthoring/CommandService.ashx?c=forcesave&amp;key=Khirz6zTPdfd7</b></p>
+    <div id="forcesave" class="header-gray">Sample of JSON object sent to <b>document command service</b> used for force saving the document with the <em>6d5a81d0</em> identifier being edited without closing it.</div>
+    <pre>
+{
+    "c": "forcesave",
+    "key": "Khirz6zTPdfd7",
+}
+</pre>
 
-    <div id="info" class="header-gray">Sample of request address used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier.</div>
-    <p><b>http://documentserver/coauthoring/CommandService.ashx?c=info&amp;key=Khirz6zTPdfd7</b></p>
+    <div id="info" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier.</div>
+    <pre>
+{
+    "c": "info",
+    "key": "Khirz6zTPdfd7",
+}
+</pre>
 
     <p>The request result is returned in JSON form.</p>
     <div class="header-gray">Reply format</div>
