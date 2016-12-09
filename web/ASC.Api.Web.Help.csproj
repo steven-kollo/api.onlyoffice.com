@@ -83,6 +83,9 @@
     <Reference Include="ASC.Api.Mail">
       <HintPath>..\references\ASC.Api.Mail.dll</HintPath>
     </Reference>
+    <Reference Include="ASC.Api.MailServer">
+      <HintPath>..\references\ASC.Api.MailServer.dll</HintPath>
+    </Reference>
     <Reference Include="ASC.Api.Portal">
       <HintPath>..\references\ASC.Api.Portal.dll</HintPath>
     </Reference>
