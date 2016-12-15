@@ -80,6 +80,39 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
+                <td>thumbnail</td>
+                <td>The option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
+                    <ul>
+                        <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed. Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image
+                            <br />
+                            <b>type</b>: integer
+                            <br />
+                            <b>example</b>: 1
+                        </li>
+                        <li><b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages. If false, the zip archive containing thumbnails for all the pages will be created. The default value is <em>true</em>.
+                            <br />
+                            <b>type</b>: boolean
+                            <br />
+                            <b>example</b>: true
+                        </li>
+                        <li><b>height</b> - the thumbnail height in pixels (default: 100)
+                            <br />
+                            <b>type</b>: integer
+                            <br />
+                            <b>example</b>: 100
+                        </li>
+                        <li><b>width</b> - the thumbnail width in pixels (default: 100)
+                            <br />
+                            <b>type</b>: integer
+                            <br />
+                            <b>example</b>: 100
+                        </li>
+                    </ul>
+                </td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td>title</td>
                 <td>Converted file name.</td>
                 <td>string</td>
@@ -95,192 +128,298 @@
     </table>
     <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
 
-    <table id="formats" class="table-conversion-matrix-container">
-        <tr>
-            <td width="37%">
-                <p class="blue-color-text">Text document file formats</p>
-                <table class="table-conversion-matrix-text">
-                    <tbody>
-                        <tr>
-                            <th rowspan="2">Input format</th>
-                            <th colspan="5">Output format</th>
-                        </tr>
-                        <tr>
-                            <td>docx</td>
-                            <td>odt</td>
-                            <td>pdf</td>
-                            <td>rtf</td>
-                            <td>txt</td>
-                        </tr>
-                        <tr>
-                            <td>doc</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>docx</td>
-                            <td></td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>epub</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>html</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>mht</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>odt</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td></td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>rtf</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td></td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>txt</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>xps</td>
-                            <td></td>
-                            <td></td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td width="31%">
-                <p class="blue-color-text">Spreadsheet file formats</p>
-                <table class="table-conversion-matrix-spreadsheet">
-                    <tbody>
-                        <tr>
-                            <th rowspan="2">Input format</th>
-                            <th colspan="4">Output format</th>
-                        </tr>
-                        <tr>
-                            <td>csv</td>
-                            <td>ods</td>
-                            <td>pdf</td>
-                            <td>xlsx</td>
-                        </tr>
-                        <tr>
-                            <td>csv</td>
-                            <td></td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>ods</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td></td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>xls</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>xlsx</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td width="18%">
-                <p class="blue-color-text">Presentation file formats</p>
-                <table class="table-conversion-matrix-presentation">
-                    <tbody>
-                        <tr>
-                            <th rowspan="2">Input format</th>
-                            <th colspan="2">Output format</th>
-                        </tr>
-                        <tr>
-                            <td>pptx</td>
-                            <td>pdf</td>
-                        </tr>
-                        <tr>
-                            <td>odp</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>pps</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>ppsx</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>ppt</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                        <tr>
-                            <td>pptx</td>
-                            <td></td>
-                            <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
+    <h2 id="text-matrix">Text document file formats</h2>
+    <table class="table-conversion-matrix-text">
+        <tbody>
+            <tr>
+                <th rowspan="2">Input format</th>
+                <th colspan="9">Output format</th>
+            </tr>
+            <tr>
+                <td>bmp</td>
+                <td>docx</td>
+                <td>gif</td>
+                <td>jpg</td>
+                <td>odt</td>
+                <td>pdf</td>
+                <td>png</td>
+                <td>rtf</td>
+                <td>txt</td>
+            </tr>
+            <tr>
+                <td>doc</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>docx</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>epub</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>html</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>mht</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>odt</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>pdf</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>rtf</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>txt</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>xps</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+                
+    <h2 id="spreadsheet-matrix">Spreadsheet file formats</h2>
+    <table class="table-conversion-matrix-spreadsheet">
+        <tbody>
+            <tr>
+                <th rowspan="2">Input format</th>
+                <th colspan="8">Output format</th>
+            </tr>
+            <tr>
+                <td>bmp</td>
+                <td>csv</td>
+                <td>gif</td>
+                <td>jpg</td>
+                <td>ods</td>
+                <td>pdf</td>
+                <td>png</td>
+                <td>xlsx</td>
+            </tr>
+            <tr>
+                <td>csv</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>ods</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>xls</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>xlsx</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+            </tr>
+        </tbody>
     </table>
 
-    <div class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format.</div>
+    <h2 id="presentation-matrix">Presentation file formats</h2>
+    <table class="table-conversion-matrix-presentation">
+        <tbody>
+            <tr>
+                <th rowspan="2">Input format</th>
+                <th colspan="6">Output format</th>
+            </tr>
+            <tr>
+                <td>bmp</td>
+                <td>gif</td>
+                <td>jpg</td>
+                <td>pdf</td>
+                <td>png</td>
+                <td>pptx</td>
+            </tr>
+            <tr>
+                <td>odp</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>pps</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>ppsx</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>ppt</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>pptx</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="sample-conversion" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format.</div>
+    <pre>
+{
+    "async": false,
+    "filetype": "docx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "title": "Example Document Title.docx",
+    "url": "http://example.com/url-to-example-document.docx",
+}
+</pre>
+
+    <div id="sample-thumbnail" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format.</div>
     <pre>
 {
     "filetype": "docx",
     "key": "Khirz6zTPdfd7",
-    "outputtype": "pdf",
+    "outputtype": "png",
+    "thumbnail": {
+        "aspect": 0,
+        "first": true,
+        "height": 150,
+        "width": 100,
+    },
     "title": "Example Document Title.docx",
     "url": "http://example.com/url-to-example-document.docx",
 }
