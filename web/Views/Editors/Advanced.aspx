@@ -53,7 +53,6 @@
 
     <pre>
 config = {
-    "documentType": "text",
     "document": {
         "fileType": "docx",
         "info": {
@@ -82,12 +81,14 @@ config = {
         "title": "Example Document Title.docx",
         "url": "http://example.com/url-to-example-document.docx",
     },
+    "documentType": "text",
     "editorConfig": {
         "callbackUrl": "http://example.com/url-to-callback.ashx",
         "createUrl": "http://example.com/url-to-create-document/",
         "customization": {
             "chat": true,
             "comments": true,
+            "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
@@ -109,6 +110,7 @@ config = {
                 "imageEmbedded": "http://example.com/logo_em.png",
                 "url": "http://example.com",
             },
+            "zoom": 100,
         },
         "embedded": {
             "embedUrl": "http://example.com/embedded?doc=exampledocument1.docx",
@@ -141,9 +143,8 @@ config = {
             ...
         ],
         "user": {
-            "firstname": "John",
             "id": "78e1e841",
-            "lastname": "Smith",
+            "name": "John Smith",
         },
     },
     "events": {
@@ -158,6 +159,7 @@ config = {
         "onRequestHistoryClose": onRequestHistoryClose,
     },
     "height": "100%",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M",
     "type": "desktop",
     "width": "100%",
 };

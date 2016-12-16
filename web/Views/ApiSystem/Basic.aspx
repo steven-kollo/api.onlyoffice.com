@@ -73,7 +73,7 @@
             </tr>
             <tr class="tablerow">
                 <td>400</td>
-                <td>portalsCountTooMush</td>
+                <td>portalsCountTooMuch</td>
                 <td>The limit for the number of portals has been reached</td>
             </tr>
             <tr class="tablerow">

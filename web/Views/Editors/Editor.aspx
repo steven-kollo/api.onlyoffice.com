@@ -22,13 +22,13 @@
         <% case "docxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.docx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
                 },
+                "documentType": "text",
                 "height": "100%",
                 "width": "100%",
             });
@@ -37,13 +37,13 @@
         <% case "xlsxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "height": "100%",
                 "width": "100%",
             });
@@ -52,13 +52,13 @@
         <% case "pptxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.pptx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
                 },
+                "documentType": "presentation",
                 "height": "100%",
                 "width": "100%",
             });
@@ -67,13 +67,13 @@
         <% case "docEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "doc",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.doc",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.doc",
                 },
+                "documentType": "text",
                 "height": "100%",
                 "width": "100%",
             });
@@ -82,13 +82,13 @@
         <% case "xlsEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xls",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.xls",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xls",
                 },
+                "documentType": "spreadsheet",
                 "height": "100%",
                 "width": "100%",
             });
@@ -97,13 +97,13 @@
         <% case "pptEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "ppt",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.ppt",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.ppt",
                 },
+                "documentType": "presentation",
                 "height": "100%",
                 "width": "100%",
             });
@@ -112,13 +112,13 @@
         <% case "odtEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "odt",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.odt",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.odt",
                 },
+                "documentType": "text",
                 "height": "100%",
                 "width": "100%",
             });
@@ -127,13 +127,13 @@
         <% case "odsEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "ods",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.ods",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.ods",
                 },
+                "documentType": "spreadsheet",
                 "height": "100%",
                 "width": "100%",
             });
@@ -142,13 +142,13 @@
         <% case "odpEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "odp",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.odp",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.odp",
                 },
+                "documentType": "presentation",
                 "height": "100%",
                 "width": "100%",
             });
@@ -157,13 +157,13 @@
         <% case "txtEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "txt",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.txt",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.txt",
                 },
+                "documentType": "text",
                 "height": "100%",
                 "width": "100%",
             });
@@ -172,13 +172,13 @@
         <% case "csvEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "csv",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.csv",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.csv",
                 },
+                "documentType": "spreadsheet",
                 "height": "100%",
                 "width": "100%",
             });
@@ -187,13 +187,13 @@
         <% case "pdfViewer": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "pdf",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.pdf",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pdf",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "mode": "view",
                 },
@@ -205,13 +205,13 @@
         <% case "docxViewer": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.docx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "mode": "view",
                 },
@@ -223,13 +223,13 @@
         <% case "xlsxViewer": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "editorConfig": {
                     "mode": "view",
                 },
@@ -241,13 +241,13 @@
         <% case "pptxViewer": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.pptx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
                 },
+                "documentType": "presentation",
                 "editorConfig": {
                     "mode": "view",
                 },
@@ -259,18 +259,17 @@
         <% case "docxCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "apiwh<%= Request["key"] %>",
                     "title": "Example Document Title.docx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "user": {
-                        "firstname": "<%= Request["firstname"] %>",
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "lastname": "<%= Request["lastname"] %>",
+                        "name": "<%= Request["name"] %>",
                     },
                 },
                 "height": "100%",
@@ -281,18 +280,17 @@
         <% case "xlsxCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "apiwh<%= Request["key"] %>",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "editorConfig": {
                     "user": {
-                        "firstname": "<%= Request["firstname"] %>",
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "lastname": "<%= Request["lastname"] %>",
+                        "name": "<%= Request["name"] %>",
                     },
                 },
                 "height": "100%",
@@ -303,18 +301,17 @@
         <% case "pptxCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "apiwh<%= Request["key"] %>",
                     "title": "Example Presentation Title.pptx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
                 },
+                "documentType": "presentation",
                 "editorConfig": {
                     "user": {
-                        "firstname": "<%= Request["firstname"] %>",
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "lastname": "<%= Request["lastname"] %>",
+                        "name": "<%= Request["name"] %>",
                     },
                 },
                 "height": "100%",
@@ -325,13 +322,13 @@
         <% case "rebrandingDocxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.docx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "customization": {
                         "customer": {
@@ -356,13 +353,13 @@
         <% case "rebrandingXlsxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "spreadsheet",
                 "document": {
                     "fileType": "xlsx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
                 },
+                "documentType": "spreadsheet",
                 "editorConfig": {
                     "customization": {
                         "customer": {
@@ -387,13 +384,13 @@
         <% case "rebrandingPptxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "presentation",
                 "document": {
                     "fileType": "pptx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.pptx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
                 },
+                "documentType": "presentation",
                 "editorConfig": {
                     "customization": {
                         "customer": {
@@ -418,7 +415,6 @@
         <% case "docxReview": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
@@ -429,6 +425,7 @@
                         "review": true,
                     },
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "mode": "edit",
                 },
@@ -440,13 +437,13 @@
         <% case "docxPlugins": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
-                "documentType": "text",
                 "document": {
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.docx",
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
                 },
+                "documentType": "text",
                 "editorConfig": {
                     "plugins": {
                         "pluginsData": [

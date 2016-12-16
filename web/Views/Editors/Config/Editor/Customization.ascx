@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("config/editor") %>"></a>
-    <span class="hdr">Customization<span class="required">*</span></span>
+    <span class="hdr">Customization</span>
 </h1>
 
 <div class="header-gray">Description</div>
@@ -26,19 +26,25 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td id="chat">chat</td>
+            <td id="chat">chat<span class="required">*</span></td>
             <td>defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
-            <td id="comments">comments</td>
+            <td id="comments">comments<span class="required">*</span></td>
             <td>defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
-            <td id="customer">customer</td>
+            <td id="compactToolbar">compactToolbar</td>
+            <td>defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>. The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="customer">customer<span class="required">*</span></td>
             <td>Contains the information for the editor <b>About</b> section. The object has the following parameters:
                 <ul>
                     <li><b>address</b> - postal address of the above company or person
@@ -125,7 +131,7 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
-            <td id="logo">logo</td>
+            <td id="logo">logo<span class="required">*</span></td>
             <td>Changes the image file at the top left corner of the Editor header. The recommended image height is 20 pixels. The object has the following parameters:
                 <ul>
                     <li><b>image</b> - path to the image file used to show in common work mode (i.e. in view and edit modes for all editors). The image must have the following size: 172x40.
@@ -152,6 +158,12 @@
             <td></td>
         </tr>
         <tr class="tablerow">
+            <td id="zoom">zoom</td>
+            <td>defines the document display zoom value measured in percent. Can take values larger than <b>0</b>. For text documents and presentations it is possible to set this parameter to <b>-1</b> (fitting the document to page option) or to <b>-2</b> (fitting the document page width to the editor page). The default value is <b>100</b>.</td>
+            <td>integer</td>
+            <td>100</td>
+        </tr>
+        <tr class="tablerow">
             <td colspan="4">
                 <img src="/content/img/editor/customization.png" alt="" />
             </td>
@@ -163,12 +175,11 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "editorConfig": {
-        ...
         "customization": {
             "chat": true,
             "comments": true,
+            "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
@@ -190,8 +201,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "http://example.com/logo_em.png",
                 "url": "http://www.onlyoffice.com",
             },
+            "zoom": 100,
         },
+        ...
     },
+    ...
 });
 </pre>
 

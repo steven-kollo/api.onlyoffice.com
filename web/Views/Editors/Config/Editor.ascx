@@ -99,7 +99,7 @@
             <td>the user currently viewing or editing the document:
                 <ul>
                     <li>
-                        <b>firstname</b> - the first name of the user
+                        <b>firstname</b> - the first name of the user. Deprecated since v.4.2
                         <br />
                         <b>type</b>: string
                         <br />
@@ -113,14 +113,14 @@
                         <b>example</b>: "78e1e841"
                     </li>
                     <li>
-                        <b>lastname</b> - the last name of the user
+                        <b>lastname</b> - the last name of the user. Deprecated since v.4.2
                         <br />
                         <b>type</b>: string
                         <br />
                         <b>example</b>: "Smith"
                     </li>
                     <li>
-                        <b>name</b> - the full name of the user. Deprecated since v.3.5
+                        <b>name</b> - the full name of the user. Used since v.4.2
                         <br />
                         <b>type</b>: string
                         <br />
@@ -138,7 +138,6 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "editorConfig": {
         "callbackUrl": "http://example.com/url-to-callback.ashx",
         "createUrl": "http://example.com/url-to-create-document/",
@@ -158,10 +157,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             ...
         ],
         "user": {
-            "firstname": "John",
             "id": "78e1e841",
-            "lastname": "Smith",
+            "name": "John Smith",
         },
     },
+    ...
 });
 </pre>

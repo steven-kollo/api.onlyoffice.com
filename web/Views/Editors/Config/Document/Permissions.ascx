@@ -70,15 +70,15 @@
     <div class="header-gray">Example</div>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "document": {
-        ...
         "permissions": {
             "download": true,
             "edit": true,
             "print": true,
             "review": true,
         },
+        ...
+    ...
     },
 });
 </pre>

@@ -62,13 +62,13 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "document": {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
         "url": "http://example.com/url-to-example-document.docx",
     },
+    ...
 });
 </pre>
 

@@ -240,7 +240,7 @@
     <Content Include="500.htm" />
     <Content Include="Content\hightlight\default.css" />
     <Content Include="Content\img\docbuilder.png" />
-    <Content Include="Content\img\Editor\changeshistory.png" />
+    <Content Include="Content\img\Editor\history.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
     <Content Include="Content\img\Editor\coedit.jpg" />
@@ -945,6 +945,11 @@
     <Content Include="Views\DocBuilder\Textdocumentapi\Api\createtable.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Api\getdocument.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\Security.aspx" />
+    <Content Include="Views\Editors\Signature.aspx" />
+    <Content Include="Views\Editors\Signature\Request.ascx" />
+    <Content Include="Views\Editors\Signature\Config.ascx" />
+    <Content Include="Views\Editors\Signature\Default.ascx" />
     <Content Include="Views\Plugin\Basic.aspx" />
     <Content Include="Views\Plugin\Config.aspx" />
     <Content Include="Views\Plugin\Code.aspx" />

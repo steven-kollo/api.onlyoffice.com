@@ -37,18 +37,17 @@
         <li>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
             <pre>
 new DocsAPI.DocEditor("placeholder", {
-    "documentType": "text",
     "document": {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
         "url": "http://example.com/url-to-example-document.docx",
     },
+    "documentType": "text",
     "editorConfig": {
         "user": {
-            "firstname": "John",
             "id": "78e1e841",
-            "lastname": "Smith",
+            "name": "John Smith",
         },
     },
 });
@@ -59,18 +58,17 @@ new DocsAPI.DocEditor("placeholder", {
         <li>Change the script initializing the <b>Document Editor</b> in the copied <em>html</em> file.
             <pre>
 new DocsAPI.DocEditor("placeholder", {
-    "documentType": "text",
     "document": {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
         "url": "http://example.com/url-to-example-document.docx",
     },
+    "documentType": "text",
     "editorConfig": {
         "user": {
-            "firstname": "Kate",
             "id": "F89d8069ba2b",
-            "lastname": "Cage",
+            "name": "Kate Cage",
         },
     },
 });

@@ -49,9 +49,7 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "editorConfig": {
-        ...
         "plugins": {
              "pluginsData": [
                  "plugin1/config.json",
@@ -60,7 +58,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
              ],
              "url": "http://example.com/plugins/",
         },
+        ...
     },
+    ...
 });
 </pre>
 

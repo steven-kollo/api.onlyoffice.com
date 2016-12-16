@@ -34,9 +34,6 @@ function initEditor(docKey) {
     //creating object editing
     window.docEditor = new DocsAPI.DocEditor("placeholder",
         {
-            width: "100%",
-            height: "550px",
-            documentType: documentType,
             document: {
                 title: "Demo." + docType,
                 url: docUrl,
@@ -46,6 +43,9 @@ function initEditor(docKey) {
                     print: false,
                 }
             },
+            documentType: documentType,
+            height: "550px",
+            width: "100%",
         });
 }
 

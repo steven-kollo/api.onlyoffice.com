@@ -14,8 +14,11 @@
         <span class="hdr">Conversion API</span>
     </h1>
 
-    <p class="dscr">For the interaction with the <b>document conversion service</b> the GET requests with the parameter set are used. The requests are sent to the <span class="fakelink">http://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.</p>
-    <h2>Request parameters and their description:</h2>
+    <p class="dscr">For the interaction with the <b>document conversion service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">http://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.</p>
+
+    <div class="note">In <b>ONLYOFFICE™ Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
+
+    <h2>Parameters and their description:</h2>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -90,7 +93,7 @@
             </tr>
         </tbody>
     </table>
-    <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the  <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
+    <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
 
     <table id="formats" class="table-conversion-matrix-container">
         <tr>
@@ -271,6 +274,17 @@
             </td>
         </tr>
     </table>
+
+    <div class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format.</div>
+    <pre>
+{
+    "filetype": "docx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "title": "Example Document Title.docx",
+    "url": "http://example.com/url-to-example-document.docx",
+}
+</pre>
 
     <p>The request result is returned in XML form.</p>
     <div class="header-gray">Reply format</div>
