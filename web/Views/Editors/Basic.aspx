@@ -56,7 +56,7 @@ config = {
 };
 </pre>
 
-    <p>From now the objetct <i>docEditor</i> can be used for calling <a href="<%= Url.Action("methods") %>">Methods</a> <b>document editor</b>.</p>
+    <p>From now the <i>docEditor</i> object can be used to call the <b>document editor</b> <a href="<%= Url.Action("methods") %>">Methods</a>.</p>
 
     <p>The example above includes all the parameters necessary for Document Server correct startup. There are additional non-obligatory parameters though which can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.) See the <a href="<%= Url.Action("advanced") %>">Advanced parameters</a> section to find out what these parameters are and how you can change them.</p>
 

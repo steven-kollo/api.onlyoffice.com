@@ -43,7 +43,7 @@ namespace ASC.Api.Web.Help.Helpers
                 new Product {Id = "portals", Title = "Community Server"},
                 new Product {Id = "apisystem", Title = "Hosted Solution"},
                 new Product {Id = "editors", Title = "Document Server"},
-                new Product {Id = "plugin", Title = "Document Server Plugin"},
+                new Product {Id = "plugin", Title = "Document Server Plugins"},
             };
 
         public static List<Product> EnabledProducts()
