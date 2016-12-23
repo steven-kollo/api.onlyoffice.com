@@ -6,7 +6,7 @@
 
 <h4 class="header-gray" id="SetStyle">SetStyle(oStyle)</h4>
 <p class="dscr">The paragraph style base method.</p>               
-<div class="note">This method is not used by itself, as it only forms the basis for the <a href="<%= Url.Action("textdocumentapi/apiparapr/setstyle") %>">ApiParagraph.SetStyle</a> method which sets the selected or created style for the paragraph.</div>
+<div class="note">This method is not used by itself, as it only forms the basis for the <a href="<%= Url.Action("textdocumentapi/apiparagraph/setstyle") %>">ApiParagraph.SetStyle</a> method which sets the selected or created style for the paragraph.</div>
 
 <h2>Parameters:</h2>
                 <table class="table">

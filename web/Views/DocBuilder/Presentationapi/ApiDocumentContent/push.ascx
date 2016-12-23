@@ -3,30 +3,8 @@
 <h1>
    <span class="hdr">Push</span>
 </h1>
-<h4 class="header-gray" id="Push">Push(oElement)</h4>
-    <p class="dscr">
-        Push a paragraph or a table to actually add it to the document.
-    </p>
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>oElement</em></td>
-            <td>
-                <a href="<%= Url.Action("global") %>#DocumentElement">DocumentElement</a>
-            </td>
-            <td>The type of the element which will be pushed to the document.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiDocumentContent/Push", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

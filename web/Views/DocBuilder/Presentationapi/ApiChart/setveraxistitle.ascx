@@ -3,37 +3,8 @@
 <h1>
    <span class="hdr">SetVerAxisTitle</span>
 </h1>
-<h4 class="header-gray" id="SetVerAxisTitle">SetVerAxisTitle(sTitle, nSize)</h4>
-<p class="dscr">
-Specify the vertical axis chart title.
-</p>
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>sTitle</em></td>
-            <td>
-                <em>string</em>
-            </td>
-            <td>The title which will be displayed for the vertical axis of the current chart.</td>
-        </tr>
-        <tr class="tablerow">
-            <td><em>nSize</em></td>
-            <td>
-                <a href="<%= Url.Action("global") %>#pt">pt</a>
-            </td>
-            <td>The text size value measured in points.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiChart/SetVerAxisTitle", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
@@ -47,7 +18,7 @@ oChart = Api.CreateChart("bar3D", [[200, 240, 280],[250, 260, 280]], ["Projected
 oChart.SetVerAxisTitle("USD In Hundred Thousands", 10);
 oChart.SetHorAxisTitle("Year", 11);
 oChart.SetLegendPos("bottom");
-oChart.SetShowDataLabels(false, false, true);
+oChart.SetShowDataLabels(false, false, true, false);
 oChart.SetTitle("Financial Overview", 13);
 oChart.SetSize(300 * 36000, 130 * 36000);
 oChart.SetPosition(608400, 1267200);

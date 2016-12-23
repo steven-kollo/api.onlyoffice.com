@@ -3,38 +3,8 @@
 <h1>
    <span class="hdr">SetLegendPos</span>
 </h1>
-<h4 class="header-gray" id="SetLegendPos">SetLegendPos(sLegendPos)</h4>
-<p class="dscr">
-Specify the chart legend position.
-</p>
-    
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>sLegendPos</em></td>
-            <td>
-                <em>"left"</em>
-                |
-                <em>"top"</em>
-                |
-                <em>"right"</em>
-                |
-                <em>"bottom"</em>
-                |
-                <em>"none"</em>
-            </td>
-            <td>The position of the chart legend inside the chart window.</td>
-        </tr>
-    </tbody>
-</table>
+
+<% Html.RenderPartial("DocBuilderShared/ApiChart/SetLegendPos", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
@@ -48,7 +18,7 @@ oDrawing = Api.CreateChart("bar3D", [[200, 240, 280],[250, 260, 280]], ["Project
 oDrawing.SetVerAxisTitle("USD In Hundred Thousands", 10);
 oDrawing.SetHorAxisTitle("Year", 11);
 oDrawing.SetLegendPos("bottom");
-oDrawing.SetShowDataLabels(false, false, true);
+oDrawing.SetShowDataLabels(false, false, true, false);
 oDrawing.SetTitle("Financial Overview", 13);
 oParagraph.AddDrawing(oDrawing);
 builder.SaveFile("docx", "ApiChart.docx");

@@ -4,10 +4,7 @@
    <span class="hdr">AddTabStop</span>
 </h1>
 
-<h4 class="header-gray" id="AddTabStop">AddTabStop()</h4>
-<p class="dscr">
-Add a tab stop to the current run.
-</p>
+<% Html.RenderPartial("DocBuilderShared/ApiRun/AddTabStop", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

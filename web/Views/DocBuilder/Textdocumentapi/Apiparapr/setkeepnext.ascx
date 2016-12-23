@@ -4,7 +4,7 @@
    <span class="hdr">SetKeepNext</span>
 </h1>
 
-<h4 class="name" id="SetKeepNext">SetKeepNext(isKeepNext)</h4>
+<h4 class="header-gray" id="SetKeepNext">SetKeepNext(isKeepNext)</h4>
 <p class="dscr">Specify that when rendering this document using a paginated view, the contents of this paragraph are at least partly rendered on the same page as the following paragraph whenever possible.</p>
 
 <h2>Parameters:</h2>

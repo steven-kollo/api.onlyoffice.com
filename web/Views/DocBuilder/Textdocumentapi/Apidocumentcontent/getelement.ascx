@@ -4,18 +4,7 @@
    <span class="hdr">GetElement</span>
 </h1>
 
-<h4 class="header-gray" id="GetElement">GetElement() &rarr; (nullable) {<a href="<%= Url.Action("global") %>#DocumentElement">DocumentElement</a>}</h4>
-<p class="dscr">
-Get the element by its position in the document.
-</p>
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <a href="<%= Url.Action("global") %>#DocumentElement">DocumentElement</a>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiDocumentContent/GetElement", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

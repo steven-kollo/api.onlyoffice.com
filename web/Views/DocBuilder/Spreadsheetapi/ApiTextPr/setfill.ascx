@@ -3,31 +3,8 @@
 <h1>
    <span class="hdr">SetFill</span>
 </h1>
-<h4 class="header-gray" id="SetFill">SetFill(oFill)</h4>
-    
-<p class="dscr">
-Set the text color for the current text run.
-</p>
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>oFill</em></td>
-            <td>
-                <a href="<%= Url.Action("spreadsheetapi/apifill") %>">ApiFill</a>
-            </td>
-            <td>The color or pattern used to fill the text color.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiTextPr/SetFill", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

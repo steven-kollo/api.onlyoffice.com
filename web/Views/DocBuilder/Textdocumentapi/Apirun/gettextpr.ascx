@@ -4,18 +4,7 @@
    <span class="hdr">GetTextPr</span>
 </h1>
 
-<h4 class="header-gray" id="GetTextPr">GetTextPr() &rarr; {<a href="<%= Url.Action("textdocumentapi/apitextpr") %>">ApiTextPr</a>}</h4>
-<p class="dscr">
-Get the text properties of the current run.
-</p>
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <a href="<%= Url.Action("textdocumentapi/apitextpr") %>">ApiTextPr</a>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiRun/GetTextPr", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

@@ -38,4 +38,4 @@ builder.SaveFile("docx", "AddPagesCount.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<p>The resulting sample document will be available here with the nearest ONLYOFFICE Document Builder API documentation website update.</p>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115589&doc=a2I3ZEMvcXNEMERHV2crWXUrbVBnT1BNYUkyMThiSnBmU2lFVmVKUXJBRT0_IjUxMTU1ODki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

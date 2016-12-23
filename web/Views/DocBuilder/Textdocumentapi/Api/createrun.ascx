@@ -4,18 +4,7 @@
    <span class="hdr">CreateRun</span>
 </h1>
 
-<h4 class="header-gray" id="CreateRun">CreateRun() &rarr; {<a href="<%= Url.Action("textdocumentapi/apirun") %>">ApiRun</a>}</h4>
-<p class="dscr">
-Create a new smaller text block to be inserted to the current paragraph or table.
-</p>
-    
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <a href="<%= Url.Action("textdocumentapi/apirun") %>">ApiRun</a>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/Api/CreateRun", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

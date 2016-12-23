@@ -3,42 +3,8 @@
 <h1>
    <span class="hdr">SetIndRight</span>
 </h1>
-<h4 class="header-gray" id="SetIndRight">SetIndRight(nValue)</h4>
 
-<dl class="details">
-        <dt>Inherited From:</dt>
-        <dd>
-            <ul>
-                <li>
-                    <a href="<%= Url.Action("presentationapi/apiparapr/setindright") %>">ApiParaPr.SetIndRight</a>
-                </li>
-            </ul>
-        </dd>
-    </dl>
-
-<p class="dscr">
-Set the paragraph right side indentation.
-</p>
-
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>nValue</em></td>
-            <td>
-                <a href="<%= Url.Action("global") %>#twips">twips</a>
-            </td>
-            <td>The paragraph right side indentation value measured in twentieths of a point (1/1440 of an inch).</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiParagraph/SetIndRight", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

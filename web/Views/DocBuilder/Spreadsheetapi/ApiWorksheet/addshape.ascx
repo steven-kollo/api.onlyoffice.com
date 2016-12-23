@@ -13,6 +13,8 @@
                     <tr class="tablerow">
                         <td>Name</td>
                         <td>Type</td>
+                        <td>Attributes</td>
+                        <td>Default</td>
                         <td>Description</td>
                     </tr>
                 </thead>

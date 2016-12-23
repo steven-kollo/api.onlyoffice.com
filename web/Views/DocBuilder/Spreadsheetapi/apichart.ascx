@@ -21,6 +21,14 @@
                         <td>Get the type of this class.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apichart/sethoraxisorientation") %>">SetHorAxisOrientation</a></td>
+                        <td>Specifies the direction of the data displayed on the horizontal axis.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apichart/sethoraxisticklabelposition") %>">SetHorAxisTickLabelPosition</a></td>
+                        <td>Set the possible values for the position of the chart tick labels in relation to the main horizontal label or the values of the chart data.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("spreadsheetapi/apichart/sethoraxistitle") %>">SetHorAxisTitle</a></td>
                         <td>Specify the horizontal axis chart title.</td>
                     </tr>
@@ -37,8 +45,16 @@
                         <td>Specify a chart title.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apichart/setveraxisorientation") %>">SetVerAxisOrientation</a></td>
+                        <td>Specifies the direction of the data displayed on the vertical axis.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("spreadsheetapi/apichart/setveraxistitle") %>">SetVerAxisTitle</a></td>
                         <td>Specify the vertical axis chart title.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apichart/setvertaxisticklabelposition") %>">SetVertAxisTickLabelPosition</a></td>
+                        <td>Set the possible values for the position of the chart tick labels in relation to the main vertical label or the values of the chart data.</td>
                     </tr>
                 </tbody>
             </table>
@@ -73,7 +89,7 @@ var oChart = oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 100 * 36
 oChart.SetVerAxisTitle("Vertical Title", 10);
 oChart.SetHorAxisTitle("Horizontal Title", 11);
 oChart.SetLegendPos("right");
-oChart.SetShowDataLabels(false, false, true);
+oChart.SetShowDataLabels(false, false, true, false);
 oChart.SetTitle("Main Chart Title", 13);
 builder.SaveFile("xlsx", "ApiChart.xlsx");
 builder.CloseFile();</pre>

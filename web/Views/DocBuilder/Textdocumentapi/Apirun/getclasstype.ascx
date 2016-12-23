@@ -4,29 +4,7 @@
    <span class="hdr">GetClassType</span>
 </h1>
 
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"run"}</h4>
-    <dl class="details">
-        <dt>Overrides:</dt>
-        <dd>
-            <ul>
-                <li>
-                    <a href="<%= Url.Action("textdocumentapi/apitextpr/getclasstype") %>">ApiTextPr.GetClassType</a>
-                </li>
-            </ul>
-        </dd>
-    </dl>
-
-<p class="dscr">
-Get the type of this class.
-</p>
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"run"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiRun/GetClassType", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

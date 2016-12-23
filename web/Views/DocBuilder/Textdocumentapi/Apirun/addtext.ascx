@@ -4,30 +4,7 @@
    <span class="hdr">AddText</span>
 </h1>
 
-<h4 class="header-gray" id="AddText">AddText(sText)</h4>
-<p class="dscr">
-Add some text to this run.
-</p>
-
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>sText</em></td>
-            <td>
-                <em>string</em>
-            </td>
-            <td>The text which will be added to the current run.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiRun/AddText", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

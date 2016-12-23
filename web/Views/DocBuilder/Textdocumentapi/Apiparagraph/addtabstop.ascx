@@ -4,18 +4,7 @@
    <span class="hdr">AddTabStop</span>
 </h1>
 
-<h4 class="header-gray" id="AddTabStop">AddTabStop() &rarr; {<a href="<%= Url.Action("textdocumentapi/apirun") %>">ApiRun</a>}</h4>
-<p class="dscr">
-Add a tab stop to the current paragraph.
-</p>
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <a href="<%= Url.Action("textdocumentapi/apirun") %>">ApiRun</a>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiParagraph/AddTabStop", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

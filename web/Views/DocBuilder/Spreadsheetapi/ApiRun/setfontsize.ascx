@@ -3,41 +3,8 @@
 <h1>
    <span class="hdr">SetFontSize</span>
 </h1>
-<h4 class="header-gray" id="SetFontSize">SetFontSize(nSize)</h4>
-    <dl class="details">
-        <dt>Inherited From:</dt>
-        <dd>
-            <ul>
-                <li>
-                    <a href="<%= Url.Action("spreadsheetapi/apitextpr/setfontsize") %>">ApiTextPr.SetFontSize</a>
-                </li>
-            </ul>
-        </dd>
-    </dl>
 
-<p class="dscr">
-Set the font size for the characters of the current text run.
-</p>
-
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>nSize</em></td>
-            <td>
-                <a href="<%= Url.Action("global") %>#hps">hps</a>
-            </td>
-            <td>The text size value measured in half-points (1/144 of an inch).</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiRun/SetFontSize", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

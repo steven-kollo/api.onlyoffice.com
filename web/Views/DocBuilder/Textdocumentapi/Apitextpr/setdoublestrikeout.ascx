@@ -4,30 +4,7 @@
    <span class="hdr">SetDoubleStrikeout</span>
 </h1>
 
-<h4 class="header-gray" id="SetDoubleStrikeout">SetDoubleStrikeout(isDoubleStrikeout)</h4>
-<p class="dscr">
-Specify that the contents of this run is displayed with two horizontal lines through each character displayed on the line.
-</p>
-
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>isDoubleStrikeout</em></td>
-            <td>
-                <em>boolean</em>
-            </td>
-            <td>Specifies that the contents of the current run are displayed double struck through.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiTextPr/SetDoubleStrikeout", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

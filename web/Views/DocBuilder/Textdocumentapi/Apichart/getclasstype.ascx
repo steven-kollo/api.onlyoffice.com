@@ -4,18 +4,7 @@
    <span class="hdr">GetClassType</span>
 </h1>
 
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"chart"}</h4>
-<p class="dscr">
-Get the type of this class.
-</p>  
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"chart"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiChart/GetClassType", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
@@ -29,7 +18,7 @@ oDrawing = Api.CreateChart("bar3D", [[200, 240, 280],[250, 260, 280]], ["Project
 oDrawing.SetVerAxisTitle("USD In Hundred Thousands", 10);
 oDrawing.SetHorAxisTitle("Year", 11);
 oDrawing.SetLegendPos("bottom");
-oDrawing.SetShowDataLabels(false, false, true);
+oDrawing.SetShowDataLabels(false, false, true, false);
 oDrawing.SetTitle("Financial Overview", 13);
 oParagraph.AddDrawing(oDrawing);
 var oClassType = oDrawing.GetClassType();

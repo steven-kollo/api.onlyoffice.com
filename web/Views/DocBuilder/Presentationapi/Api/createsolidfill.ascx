@@ -3,38 +3,8 @@
 <h1>
    <span class="hdr">CreateSolidFill</span>
 </h1>
-<h4 class="header-gray" id="CreateSolidFill">CreateSolidFill(oUniColor) &rarr; {<a href="<%= Url.Action("presentationapi/apifill") %>">ApiFill</a>}</h4>
-    <p class="dscr">
-        Create a solid fill which allows to fill the object using a selected solid color as the object background.
-    </p>
-    
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>oUniColor</em></td>
-            <td>
-                <a href="<%= Url.Action("presentationapi/apiunicolor") %>">ApiUniColor</a>
-            </td>
-            <td>The color used for the element fill.</td>
-        </tr>
-    </tbody>
-</table>
 
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <a href="<%= Url.Action("presentationapi/apifill") %>">ApiFill</a>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/Api/CreateSolidFill", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

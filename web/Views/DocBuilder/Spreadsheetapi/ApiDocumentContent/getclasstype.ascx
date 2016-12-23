@@ -3,18 +3,8 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"documentContent"}</h4>
-    <p class="dscr">
-        Get the type of the current class.
-    </p>
 
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"documentContent"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiDocumentContent/GetClassType", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

@@ -3,18 +3,8 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"chart"}</h4>
-<p class="dscr">
-Get the type of this class.
-</p>  
 
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"chart"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiChart/GetClassType", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
@@ -46,7 +36,7 @@ var oChart = oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 100 * 36
 oChart.SetVerAxisTitle("Vertical Title", 10);
 oChart.SetHorAxisTitle("Horizontal Title", 11);
 oChart.SetLegendPos("right");
-oChart.SetShowDataLabels(false, false, true);
+oChart.SetShowDataLabels(false, false, true, false);
 oChart.SetTitle("Main Chart Title", 13);
 var oClassType = oChart.GetClassType();
 oWorksheet.SetColumnWidth(5, 15);

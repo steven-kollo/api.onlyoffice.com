@@ -3,30 +3,8 @@
 <h1>
    <span class="hdr">SetItalic</span>
 </h1>
-<h4 class="header-gray" id="SetItalic">SetItalic(isItalic)</h4>
-<p class="dscr">
-Set the italic property to the text character.
-</p>
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <th>Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>isItalic</em></td>
-            <td>
-                <em>boolean</em>
-            </td>
-            <td>Specifies that the contents of the current run are displayed italicized.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiTextPr/SetItalic", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

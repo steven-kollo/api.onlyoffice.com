@@ -3,30 +3,8 @@
 <h1>
    <span class="hdr">RemoveElement</span>
 </h1>
-<h4 class="header-gray" id="RemoveElement">RemoveElement(nPos)</h4>
-<p class="dscr">
-Remove the element using the position specified.
-</p>
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>nPos</em></td>
-            <td>
-                <em>number</em>
-            </td>
-            <td>The position of the element which we want to remove in the paragraph.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiParagraph/RemoveElement", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

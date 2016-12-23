@@ -4,18 +4,7 @@
    <span class="hdr">GetElementsCount</span>
 </h1>
 
-<h4 class="header-gray" id="GetElementsCount">GetElementsCount() &rarr; {number}</h4>
-<p class="dscr">
-Get the number of elements in the current paragraph.
-</p>
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>number</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiParagraph/GetElementsCount", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

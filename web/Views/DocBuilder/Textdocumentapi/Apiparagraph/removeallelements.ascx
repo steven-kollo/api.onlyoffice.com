@@ -3,10 +3,8 @@
 <h1>
    <span class="hdr">RemoveAllElements</span>
 </h1>
-<h4 class="header-gray" id="RemoveAllElements">RemoveAllElements()</h4>
-<p class="dscr">
-Remove all elements from the current paragraph.
-</p>
+
+<% Html.RenderPartial("DocBuilderShared/ApiParagraph/RemoveAllElements", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

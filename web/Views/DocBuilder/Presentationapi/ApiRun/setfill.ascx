@@ -3,40 +3,8 @@
 <h1>
    <span class="hdr">SetFill</span>
 </h1>
-<h4 class="header-gray" id="SetFill">SetFill(oFill)</h4>
-    <dl class="details">
-        <dt>Inherited From:</dt>
-        <dd>
-            <ul>
-                <li>
-                    <a href="<%= Url.Action("presentationapi/apitextpr/setfill") %>">ApiTextPr.SetFill</a>
-                </li>
-            </ul>
-        </dd>
-    </dl>
-<p class="dscr">
-Set the text color for the current text run.
-</p>
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>oFill</em></td>
-            <td>
-                <a href="<%= Url.Action("presentationapi/apifill") %>">ApiFill</a>
-            </td>
-            <td>The color or pattern used to fill the text color.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiRun/SetFill", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

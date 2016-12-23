@@ -3,40 +3,8 @@
 <h1>
    <span class="hdr">SetBullet</span>
 </h1>
-<h4 class="header-gray" id="SetBullet">SetBullet(oBullet)</h4>
-    <dl class="details">
-        <dt>Inherited From:</dt>
-        <dd>
-            <ul>
-                <li>
-                    <a href="<%= Url.Action("spreadsheetapi/apiparapr/setbullet") %>">ApiParaPr.SetBullet</a>
-                </li>
-            </ul>
-        </dd>
-    </dl>
-    
-<p class="dscr">
-Set the bullet or numbering to the current paragraph.
-</p>
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>oBullet</em></td>
-            <td>
-                <a href="<%= Url.Action("spreadsheetapi/apibullet") %>">ApiBullet</a>
-            </td>
-            <td>The bullet object created using either the <a href="<%= Url.Action("spreadsheetapi/api/createbullet") %>">Api.CreateBullet</a> or <a href="<%= Url.Action("spreadsheetapi/api/createnumbering") %>">Api.CreateNumbering</a> method.</td>
-        </tr>
-    </tbody>
-</table>
+
+<% Html.RenderPartial("DocBuilderShared/ApiParagraph/SetBullet", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

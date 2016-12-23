@@ -7,7 +7,7 @@
 <h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"tableStylePr"}</h4>
 <p class="dscr">Get the type of this class.</p>
 
-            <h5>Returns:</h5>
+            <h2>Returns:</h2>
             <dl class="param-type">
                 <dt>Type
                 </dt>

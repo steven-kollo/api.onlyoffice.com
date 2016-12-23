@@ -4,24 +4,12 @@
    <span class="hdr">GetClassType</span>
 </h1>
 
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"uniColor"}</h4>
-<p class="dscr">
-Get the type of the class based on this base class.
-</p>
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"presetColor"</em> | <em>"rgbColor"</em> | <em>"schemeColor"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiUniColor/GetClassType", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
 <span class="button">Copy code</span>
 </div>
-<span class="button docbuilder">Copy code</span>
 <pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oGs1, oGs2, oFill, oStroke, oDrawing, oParagraph, oPresetColor;

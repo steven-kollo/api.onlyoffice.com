@@ -4,18 +4,7 @@
    <span class="hdr">GetClassType</span>
 </h1>
 
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"bullet"}</h4>
-<p class="dscr">
-Class representing a bulleted or numbered list.
-</p>
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>bullet</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiBullet/GetClassType", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

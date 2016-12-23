@@ -3,50 +3,8 @@
 <h1>
    <span class="hdr">SetVertAlign</span>
 </h1>
-<h4 class="header-gray" id="SetVertAlign">SetVertAlign(sType)</h4>
-    <dl class="details">
-        <dt>Inherited From:</dt>
-        <dd>
-            <ul>
-                <li>
-                    <a href="<%= Url.Action("presentationapi/apitextpr/setvertalign") %>">ApiTextPr.SetVertAlign</a>
-                </li>
-            </ul>
-        </dd>
-    </dl>
 
-<p class="dscr">
-Specify the alignment which will be applied to the contents of this run in relation to the defaultappearance of the run text:
-</p>
-        <ul>
-            <li><b>"baseline"</b> - the characters in the current text run will be aligned by the default text baseline.</li>
-            <li><b>"subscript"</b> - the characters in the current text run will be aligned below the default text baseline.</li>
-            <li><b>"superscript"</b> - the characters in the current text run will be aligned above the default text baseline.</li>
-        </ul>
-
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>sType</em></td>
-            <td>
-                <em>"baseline"</em>
-                |
-                <em>"subscript"</em>
-                |
-                <em>"superscript"</em>
-            </td>
-            <td>The vertical alignment type applied to the text contents.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiRun/SetVertAlign", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

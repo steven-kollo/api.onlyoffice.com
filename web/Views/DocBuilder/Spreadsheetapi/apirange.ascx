@@ -25,12 +25,28 @@
             <td>Get the number of the row for the selected cell.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/merge") %>">Merge</a></td>
+            <td>Merge the selected cell range into a single cell or a cell row.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apirange/setalignhorizontal") %>">SetAlignHorizontal</a></td>
             <td>Set the horizontal alignment of the text in the current cell range.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apirange/setalignvertical") %>">SetAlignVertical</a></td>
             <td>Set the vertical alignment of the text in the current cell range.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setbold") %>">SetBold</a></td>
+            <td>Set the bold property to the text characters in the current cell or cell range.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setborders") %>">SetBorders</a></td>
+            <td>Set the border to the cell/cell range with the parameters specified.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setfillcolor") %>">SetFillColor</a></td>
+            <td>Set the background color for the current cell range with the previously created color object.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apirange/setfontcolor") %>">SetFontColor</a></td>
@@ -45,8 +61,32 @@
             <td>Set the font size for the characters of the current cell range.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setitalic") %>">SetItalic</a></td>
+            <td>Set the italic property to the text characters in the current cell or cell range.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setnumberformat") %>">SetNumberFormat</a></td>
+            <td>Specifies whether the number in the cell should be treated like number, currency, date, time, etc. or just like text.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setstrikeout") %>">SetStrikeout</a></td>
+            <td>Specify that the contents of the cell/cell range are displayed with a single horizontal line through the center of the line.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setunderline") %>">SetUnderline</a></td>
+            <td>Specify that the contents of this cell/cell range are displayed along with a line appearing directly below the character.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apirange/setvalue") %>">SetValue</a></td>
             <td>Set the value for the current cell or a cell range.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setwrap") %>">SetWrap</a></td>
+            <td>Specifies whether the words in the cell must be wrapped to fit the cell size or not.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/unmerge") %>">UnMerge</a></td>
+            <td>Split the selected merged cell range into single cells.</td>
         </tr>
     </tbody>
 </table>

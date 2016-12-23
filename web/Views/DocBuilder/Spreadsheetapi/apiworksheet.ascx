@@ -45,6 +45,14 @@
             <td>Set the width to the selected column of the current active sheet. The width is equal to the set number multiplied by 7 pixels - so if you set the width to 10 it will be equal to 70 pixels.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apiworksheet/setdisplaygridlines") %>">SetDisplayGridlines</a></td>
+            <td>Specifies whether the current sheet gridlines must be displayed or not.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apiworksheet/setdisplayheadings") %>">SetDisplayHeadings</a></td>
+            <td>Specifies whether the current sheet row/column headers must be displayed or not.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apiworksheet/setname") %>">SetName</a></td>
             <td>Set a name to the current active sheet.</td>
         </tr>
@@ -81,7 +89,7 @@ var oChart = oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 5, 0, 12
 oChart.SetVerAxisTitle("Vertical Title", 10);
 oChart.SetHorAxisTitle("Horizontal Title", 11);
 oChart.SetLegendPos("right");
-oChart.SetShowDataLabels(false, false, true);
+oChart.SetShowDataLabels(false, false, true, false);
 oChart.SetTitle("Main Chart Title", 13);
 builder.SaveFile("xlsx", "AddChart.xlsx");
 builder.CloseFile();</pre>

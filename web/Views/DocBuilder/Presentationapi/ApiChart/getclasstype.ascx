@@ -3,18 +3,8 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"chart"}</h4>
-<p class="dscr">
-Get the type of this class.
-</p>  
 
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"chart"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiChart/GetClassType", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
@@ -29,7 +19,7 @@ var oClassType = oChart.GetClassType();
 oChart.SetVerAxisTitle("USD In Hundred Thousands", 10);
 oChart.SetHorAxisTitle("Year", 11);
 oChart.SetLegendPos("bottom");
-oChart.SetShowDataLabels(false, false, true);
+oChart.SetShowDataLabels(false, false, true, false);
 oChart.SetTitle("Financial Overview: Class Type = " + oClassType, 20);
 oChart.SetSize(300 * 36000, 130 * 36000);
 oChart.SetPosition(608400, 1267200);

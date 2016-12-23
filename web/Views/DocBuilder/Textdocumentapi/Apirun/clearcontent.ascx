@@ -4,10 +4,7 @@
    <span class="hdr">ClearContent</span>
 </h1>
 
-<h4 class="header-gray" id="ClearContent">ClearContent()</h4>
-<p class="dscr">
-Remove all content from the current run.
-</p>
+<% Html.RenderPartial("DocBuilderShared/ApiRun/ClearContent", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

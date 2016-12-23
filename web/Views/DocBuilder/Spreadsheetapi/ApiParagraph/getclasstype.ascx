@@ -3,29 +3,8 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"document"}</h4>
 
-<dl class="details">
-        <dt>Overrides:</dt>
-        <dd>
-            <ul>
-                <li>
-                    <a href="<%= Url.Action("spreadsheetapi/apiparapr/getclasstype") %>">ApiParaPr.GetClassType</a>
-                </li>
-            </ul>
-        </dd>
-</dl>         
-<p class="dscr">
-Get the type of this class.
-</p>
-
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"document"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiParagraph/GetClassType", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

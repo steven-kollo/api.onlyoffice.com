@@ -4,18 +4,7 @@
    <span class="hdr">CreateNoFill</span>
 </h1>
 
-<h4 class="header-gray" id="CreateNoFill">CreateNoFill() &rarr; {<a href="<%= Url.Action("textdocumentapi/apifill") %>">ApiFill</a>}</h4>
-<p class="dscr">
-Create no fill and remove the fill from the element.
-</p>
-    
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <a href="<%= Url.Action("textdocumentapi/apifill") %>">ApiFill</a>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/Api/CreateNoFill", "textdocumentapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

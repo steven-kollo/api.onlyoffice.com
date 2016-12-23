@@ -3,18 +3,8 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"image"}</h4>
-<p class="dscr">
-Get the type of this class.
-</p>
 
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"image"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiImage/GetClassType", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

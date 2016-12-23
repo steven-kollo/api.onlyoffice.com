@@ -25,6 +25,14 @@
                         <td>Create a bullet for a paragraph with the character or symbol specified with the <em>sBullet</em> parameter.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/api/createcolorbyname") %>">CreateColorByName</a></td>
+                        <td>Create a color selecting it from one of the available color presets.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/api/createcolorfromrgb") %>">CreateColorFromRGB</a></td>
+                        <td>Create an RGB color setting the appropriate values for the red, green and blue color components.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("spreadsheetapi/api/creategradientstop") %>">CreateGradientStop</a></td>
                         <td>Create a gradient stop used for different types of gradients.</td>
                     </tr>
@@ -79,6 +87,14 @@
                     <tr class="tablerow">
                         <td><a href="<%= Url.Action("spreadsheetapi/api/getactivesheet") %>">GetActiveSheet</a></td>
                         <td>Get the object that represents the active sheet.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirange/getthemescolors") %>">GetThemesColors</a></td>
+                        <td>Get the list of all available theme colors for the spreadsheet.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirange/setthemecolors") %>">SetThemeColors</a></td>
+                        <td>Set the theme colors to the current spreadsheet.</td>
                     </tr>
                 </tbody>
             </table>

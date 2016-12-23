@@ -3,38 +3,8 @@
 <h1>
    <span class="hdr">SetLegendPos</span>
 </h1>
-<h4 class="header-gray" id="SetLegendPos">SetLegendPos(sLegendPos)</h4>
- <p class="dscr">
-        Specify the chart legend position.
-</p>
-    
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>sLegendPos</em></td>
-            <td>
-                <em>"left"</em>
-                |
-                <em>"top"</em>
-                |
-                <em>"right"</em>
-                |
-                <em>"bottom"</em>
-                |
-                <em>"none"</em>
-            </td>
-            <td>The position of the chart legend inside the chart window.</td>
-        </tr>
-    </tbody>
-</table>
+
+<% Html.RenderPartial("DocBuilderShared/ApiChart/SetLegendPos", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
@@ -66,7 +36,7 @@ var oChart = oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 100 * 36
 oChart.SetVerAxisTitle("Vertical Title", 10);
 oChart.SetHorAxisTitle("Horizontal Title", 11);
 oChart.SetLegendPos("right");
-oChart.SetShowDataLabels(false, false, true);
+oChart.SetShowDataLabels(false, false, true, false);
 oChart.SetTitle("Main Chart Title", 13);
 builder.SaveFile("xlsx", "SetLegendPos.xlsx");
 builder.CloseFile();</pre>

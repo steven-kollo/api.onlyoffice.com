@@ -3,44 +3,8 @@
 <h1>
    <span class="hdr">SetShowDataLabels</span>
 </h1>
-<h4 class="header-gray" id="SetShowDataLabels">SetShowDataLabels(bShowSerName, bShowCatName, bShowVal)</h4>
-<p class="dscr">
-Specifies which chart data labels are shown for the chart.
-</p>   
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>bShowSerName</em></td>
-            <td>
-                <em>boolean</em>
-            </td>
-            <td>Whether to show or hide the source table column names used for the data which the chart will be build from.</td>
-        </tr>
-        <tr class="tablerow">
-            <td><em>bShowCatName</em></td>
-            <td>
-                <em>boolean</em>
-            </td>
-            <td>Whether to show or hide the source table row names used for the data which the chart will be build from.</td>
-        </tr>
-        <tr class="tablerow">
-            <td><em>bShowVal</em></td>
-            <td>
-                <em>boolean</em>
-            </td>
-            <td>Whether to show or hide the chart data values.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiChart/SetShowDataLabels", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
@@ -54,7 +18,7 @@ oChart = Api.CreateChart("bar3D", [[200, 240, 280],[250, 260, 280]], ["Projected
 oChart.SetVerAxisTitle("USD In Hundred Thousands", 10);
 oChart.SetHorAxisTitle("Year", 11);
 oChart.SetLegendPos("bottom");
-oChart.SetShowDataLabels(false, false, true);
+oChart.SetShowDataLabels(false, false, true, false);
 oChart.SetTitle("Financial Overview", 13);
 oChart.SetSize(300 * 36000, 130 * 36000);
 oChart.SetPosition(608400, 1267200);

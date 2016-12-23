@@ -3,19 +3,8 @@
 <h1>
    <span class="hdr">CreateParagraph</span>
 </h1>
-<h4 class="header-gray" id="CreateParagraph">CreateParagraph() &rarr; {<a href="<%= Url.Action("spreadsheetapi/apiparagraph") %>">ApiParagraph</a>}</h4>
-<p class="dscr">
-Create a new paragraph.
-</p>
-    
 
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <a href="<%= Url.Action("spreadsheetapi/apiparagraph") %>">ApiParagraph</a>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/Api/CreateParagraph", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

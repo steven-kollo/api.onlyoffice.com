@@ -36,6 +36,37 @@
     </div>
 
     <div class="global-type-definitions">
+        <span class="anchor-position" id="BordersIndex">&nbsp;</span>
+        <h4 class="header-gray">BordersIndex</h4>
+        <p>Specifies the cell border position.</p>
+        <div class="global-list">
+            <h5>Type:</h5>
+            <ul>
+                <li>
+                    <em>"DiagonalDown"</em>
+                    |
+            <em>"DiagonalUp"</em>
+                    |
+            <em>"Bottom"</em>
+                    |
+            <em>"Left"</em>
+                    |
+            <em>"Right"</em>
+                    |
+            <em>"Top"</em>
+                    |
+            <em>"InsideHorizontal"</em>
+                    |
+            <em>"InsideVertical"</em>
+                </li>
+            </ul>
+        </div>
+        <h5>Example</h5>
+        <pre>// The cell will have a bottom black dotted border:
+oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(0, 0, 0));</pre>
+    </div>
+
+    <div class="global-type-definitions">
     <span class="anchor-position" id="BorderType">&nbsp;</span>
     <h4 class="header-gray">BorderType</h4>    
     <p>A border type which will be added to the document element.</p>
@@ -263,6 +294,49 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </div>
     <h5>Example</h5>
     <pre>// The paragraph line spacing is set to 1 line:oParaPr.SetSpacingLine(240, "auto");</pre>
+    </div>
+
+    <div class="global-type-definitions">
+        <span class="anchor-position" id="LineStyle">&nbsp;</span>
+        <h4 class="header-gray">LineStyle</h4>
+        <p>Specifies the line style used to form the cell border.</p>
+        <div class="global-list">
+            <h5>Type:</h5>
+            <ul>
+                <li>
+                    <em>"None"</em>
+                    |
+            <em>"Double"</em>
+                    |
+            <em>"Hair"</em>
+                    |
+            <em>"DashDotDot"</em>
+                    |
+            <em>"DashDot"</em>
+                    |
+            <em>"Dotted"</em>
+                    |
+            <em>"Dashed"</em>
+                    |
+            <em>"Thin"</em>
+                    |
+            <em>"MediumDashDotDot"</em>
+                    |
+            <em>"SlantDashDot"</em>
+                    |
+            <em>"MediumDashDot"</em>
+                    |
+            <em>"MediumDashed"</em>
+                    |
+            <em>"Medium"</em>
+                    |
+            <em>"Thick"</em>
+                </li>
+            </ul>
+        </div>
+        <h5>Example</h5>
+        <pre>// The cell will have a bottom black dotted border:
+oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(0, 0, 0));</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1488,6 +1562,34 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </div>
     <h5>Example</h5>
     <pre>// Set the width of the table cell equal to 100 points (2000 twips):oTableCell.SetWidth("twips", 2000);</pre>
+    </div>
+
+    <div class="global-type-definitions">
+        <span class="anchor-position" id="TickLabelPosition">&nbsp;</span>
+        <h4 class="header-gray">TickLabelPosition</h4>
+        <p>Possible values for the position of chart tick labels (either horizontal or vertical).</p>
+        <ul>
+            <li><b>"none"</b> - not display the selected tick labels.</li>
+            <li><b>"nextTo"</b> - set the position of the selected tick labels next to the main label.</li>
+            <li><b>"low"</b> - set the position of the selected tick labels in the part of the chart with lower values.</li>
+            <li><b>"high"</b> - set the position of the selected tick labels in the part of the chart with higher values.</li>
+        </ul>
+        <div class="global-list">
+            <h5>Type:</h5>
+            <ul>
+                <li>
+                    <em>"none"</em>
+                    |
+            <em>"nextTo"</em>
+                    |
+            <em>"low"</em>
+                    |
+            <em>"high"</em>
+                </li>
+            </ul>
+        </div>
+        <h5>Example</h5>
+        <pre>// Set the position of the vertical tick labels next to the main vertical label:oChart.SetVertAxisTickLabelPosition("nextTo");</pre>
     </div>
 
     <div class="global-type-definitions">

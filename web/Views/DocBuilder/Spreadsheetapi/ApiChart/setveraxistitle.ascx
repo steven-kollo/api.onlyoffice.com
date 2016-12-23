@@ -3,37 +3,8 @@
 <h1>
    <span class="hdr">SetVerAxisTitle</span>
 </h1>
-<h4 class="header-gray" id="SetVerAxisTitle">SetVerAxisTitle(sTitle, nSize)</h4>
- <p class="dscr">
-        Specify the vertical axis chart title.
-</p>
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>sTitle</em></td>
-            <td>
-                <em>string</em>
-            </td>
-            <td>The title which will be displayed for the vertical axis of the current chart.</td>
-        </tr>
-        <tr class="tablerow">
-            <td><em>nSize</em></td>
-            <td>
-                <a href="<%= Url.Action("global") %>#pt">pt</a>
-            </td>
-            <td>The text size value measured in points.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiChart/SetVerAxisTitle", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">
@@ -65,7 +36,7 @@ var oChart = oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 100 * 36
 oChart.SetVerAxisTitle("Vertical Title", 10);
 oChart.SetHorAxisTitle("Horizontal Title", 11);
 oChart.SetLegendPos("right");
-oChart.SetShowDataLabels(false, false, true);
+oChart.SetShowDataLabels(false, false, true, false);
 oChart.SetTitle("Main Chart Title", 13);
 builder.SaveFile("xlsx", "SetVerAxisTitle.xlsx");
 builder.CloseFile();</pre>

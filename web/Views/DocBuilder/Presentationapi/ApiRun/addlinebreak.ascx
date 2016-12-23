@@ -3,11 +3,8 @@
 <h1>
    <span class="hdr">AddLineBreak</span>
 </h1>
-<h4 class="header-gray" id="AddLineBreak">AddLineBreak()</h4>
-    
-<p class="dscr">
-Add a line break to the current run position and start the next element from a new line.
-</p>
+
+<% Html.RenderPartial("DocBuilderShared/ApiRun/AddLineBreak", "presentationapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

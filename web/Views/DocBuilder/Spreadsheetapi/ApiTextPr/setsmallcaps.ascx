@@ -3,30 +3,8 @@
 <h1>
    <span class="hdr">SetSmallCaps</span>
 </h1>
-<h4 class="header-gray" id="SetSmallCaps">SetSmallCaps(isSmallCaps)</h4>
-<p class="dscr">
-Specify that all small letter characters in this text run are formatted for display only as their capital letter character equivalents in a font size two points smaller than the actual font size specified for this text.
-</p>
 
-<h2>Parameters:</h2>
-<table class="table">
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Type</td>
-            <td>Description</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td><em>isSmallCaps</em></td>
-            <td>
-                <em>boolean</em>
-            </td>
-            <td>Specifies that the contents of the current run are displayed capitalized two points smaller.</td>
-        </tr>
-    </tbody>
-</table>
+<% Html.RenderPartial("DocBuilderShared/ApiTextPr/SetSmallCaps", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

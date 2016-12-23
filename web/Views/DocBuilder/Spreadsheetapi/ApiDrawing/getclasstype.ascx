@@ -3,18 +3,8 @@
 <h1>
    <span class="hdr">GetClassType</span>
 </h1>
-<h4 class="header-gray" id="GetClassType">GetClassType() &rarr; {"drawing"}</h4>
-<p class="dscr">
-Get the type of the class based on this base class.
-</p>
 
-<h2>Returns:</h2>
-<dl class="param-type">
-    <dt>Type</dt>
-    <dd>
-        <em>"chart"</em> | <em>"image"</em> | <em>"shape"</em>
-    </dd>
-</dl>
+<% Html.RenderPartial("DocBuilderShared/ApiDrawing/GetClassType", "spreadsheetapi");%>
 
 <h2>Example</h2>
 <div class="copy_code">

@@ -1711,6 +1711,14 @@
                         <td>Create a bullet for a paragraph with the character or symbol specified with the <em>sBullet</em> parameter.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/api/createcolorbyname") %>">CreateColorByName</a></td>
+                        <td>Create a color selecting it from one of the available color presets.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/api/createcolorfromrgb") %>">CreateColorFromRGB</a></td>
+                        <td>Create an RGB color setting the appropriate values for the red, green and blue color components.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("spreadsheetapi/api/creategradientstop") %>">CreateGradientStop</a></td>
                         <td>Create a gradient stop used for different types of gradients.</td>
                     </tr>
@@ -1766,6 +1774,14 @@
                         <td><a href="<%= Url.Action("spreadsheetapi/api/getactivesheet") %>">GetActiveSheet</a></td>
                         <td>Get the object that represents the active sheet.</td>
                     </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirange/getthemescolors") %>">GetThemesColors</a></td>
+                        <td>Get the list of all available theme colors for the spreadsheet.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirange/setthemecolors") %>">SetThemeColors</a></td>
+                        <td>Set the theme colors to the current spreadsheet.</td>
+                    </tr>
                 </tbody>
             </table>
 
@@ -1803,6 +1819,14 @@
                         <td>Get the type of this class.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apichart/sethoraxisorientation") %>">SetHorAxisOrientation</a></td>
+                        <td>Specifies the direction of the data displayed on the horizontal axis.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apichart/sethoraxisticklabelposition") %>">SetHorAxisTickLabelPosition</a></td>
+                        <td>Set the possible values for the position of the chart tick labels in relation to the main horizontal label or the values of the chart data.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("spreadsheetapi/apichart/sethoraxistitle") %>">SetHorAxisTitle</a></td>
                         <td>Specify the horizontal axis chart title.</td>
                     </tr>
@@ -1819,11 +1843,37 @@
                         <td>Specify a chart title.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apichart/setveraxisorientation") %>">SetVerAxisOrientation</a></td>
+                        <td>Specifies the direction of the data displayed on the vertical axis.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("spreadsheetapi/apichart/setveraxistitle") %>">SetVerAxisTitle</a></td>
                         <td>Specify the vertical axis chart title.</td>
                     </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apichart/setvertaxisticklabelposition") %>">SetVertAxisTickLabelPosition</a></td>
+                        <td>Set the possible values for the position of the chart tick labels in relation to the main vertical label or the values of the chart data.</td>
+                    </tr>
                 </tbody>
             </table>
+
+    <h5 class="builder_page_class">
+        <a href="<%= Url.Action("spreadsheetapi/apicolor") %>">ApiColor</a>
+    </h5>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("spreadsheetapi/apicolor/getclasstype") %>">GetClassType</a></td>
+                <td>Get the type of this class.</td>
+            </tr>
+        </tbody>
+    </table>
 
     <h5 class="builder_page_class">
         <a href="<%= Url.Action("spreadsheetapi/apidocumentcontent") %>">ApiDocumentContent</a>
@@ -2129,12 +2179,28 @@
             <td>Get the number of the row for the selected cell.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/merge") %>">Merge</a></td>
+            <td>Merge the selected cell range into a single cell or a cell row.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apirange/setalignhorizontal") %>">SetAlignHorizontal</a></td>
             <td>Set the horizontal alignment of the text in the current cell range.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apirange/setalignvertical") %>">SetAlignVertical</a></td>
             <td>Set the vertical alignment of the text in the current cell range.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setbold") %>">SetBold</a></td>
+            <td>Set the bold property to the text characters in the current cell or cell range.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setborders") %>">SetBorders</a></td>
+            <td>Set the border to the cell/cell range with the parameters specified.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setfillcolor") %>">SetFillColor</a></td>
+            <td>Set the background color for the current cell range with the previously created color object.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apirange/setfontcolor") %>">SetFontColor</a></td>
@@ -2149,8 +2215,32 @@
             <td>Set the font size for the characters of the current cell range.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setitalic") %>">SetItalic</a></td>
+            <td>Set the italic property to the text characters in the current cell or cell range.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setnumberformat") %>">SetNumberFormat</a></td>
+            <td>Specifies whether the number in the cell should be treated like number, currency, date, time, etc. or just like text.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setstrikeout") %>">SetStrikeout</a></td>
+            <td>Specify that the contents of the cell/cell range are displayed with a single horizontal line through the center of the line.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setunderline") %>">SetUnderline</a></td>
+            <td>Specify that the contents of this cell/cell range are displayed along with a line appearing directly below the character.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apirange/setvalue") %>">SetValue</a></td>
             <td>Set the value for the current cell or a cell range.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/setwrap") %>">SetWrap</a></td>
+            <td>Specifies whether the words in the cell must be wrapped to fit the cell size or not.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apirange/unmerge") %>">UnMerge</a></td>
+            <td>Split the selected merged cell range into single cells.</td>
         </tr>
     </tbody>
 </table>
@@ -2443,6 +2533,14 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apiworksheet/setcolumnwidth") %>">SetColumnWidth</a></td>
             <td>Set the width to the selected column of the current active sheet. The width is equal to the set number multiplied by 7 pixels - so if you set the width to 10 it will be equal to 70 pixels.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apiworksheet/setdisplaygridlines") %>">SetDisplayGridlines</a></td>
+            <td>Specifies whether the current sheet gridlines must be displayed or not.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("spreadsheetapi/apiworksheet/setdisplayheadings") %>">SetDisplayHeadings</a></td>
+            <td>Specifies whether the current sheet row/column headers must be displayed or not.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("spreadsheetapi/apiworksheet/setname") %>">SetName</a></td>
