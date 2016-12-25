@@ -89,10 +89,9 @@
     <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
     <span class="required-descr">**<em> - please keep in mind that the sent value will be converted into megabytes and stored that way, so it is not recommended to use values not multiple of 1048576 (1 megabyte) as they will be truncated to the integer resulting from the division by 1048576, or values less than 1048576 bytes as zero value will be returned in that case both in response to this and <a href="<%= Url.Action("tariffget") %>"><em>get tariff</em></a> requests.</em></span>
 
-    <div class="header-gray">
+    <div id="returns" class="header-gray">
         Returns
-        <span id="clipLink">Get link to this headline</span>
-        <a id="returns"></a>
+        <a id="clipLink" href="#returns" onclick="return false;">Get link to this headline</a>
     </div>
     <p>Returns the description of the portal and the portal pricing plan.</p>
 
