@@ -33,7 +33,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Configuring Confluence CONLYOFFICE™ integration plugin</h2>
+    <h2>Configuring Confluence ONLYOFFICE integration plugin</h2>
     <ol>
         <li>Change the <b>files.docservice.url.domain</b> properties in <em>src/main/resources/onlyoffice-config.properties</em> to the name of the server with the ONLYOFFICE Document Server installed:
             <span class="commandline">files.docservice.url.domain=http://documentserver/</span>
@@ -43,7 +43,7 @@
 
 
     <h2>Installing Confluence ONLYOFFICE integration plugin</h2>
-    <p>You will need:</p>
+    <p>To start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
         <li>Atlassian Plugin SDK (<a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" target="_blank">official instructions</a>),</li>

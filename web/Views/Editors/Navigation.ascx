@@ -39,6 +39,9 @@
             <li>
                 <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("owncloud") %>">OwnCloud integration</a>
+            </li>
         </ul>
     </li>
     <li>

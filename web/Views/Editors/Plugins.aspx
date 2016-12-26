@@ -21,6 +21,7 @@
     <ul>
         <li><a href="<%= Url.Action("alfresco") %>">Alfresco ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE integration plugin</a></li>
+        <li><a href="<%= Url.Action("owncloud") %>">OwnCloud ONLYOFFICE integration app</a></li>
     </ul>
     
     <br />
