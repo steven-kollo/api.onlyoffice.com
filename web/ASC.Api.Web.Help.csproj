@@ -422,6 +422,7 @@
     <Content Include="Views\DocBuilder\DocBuilderShared\Api\CreateShape.ascx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\Api\CreateSolidFill.ascx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\Api\CreateStroke.ascx" />
+    <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
     <Content Include="Views\DocBuilder\gettingstarted.aspx" />
     <Content Include="Views\DocBuilder\global.aspx" />
     <Content Include="Views\DocBuilder\integratingdocumentbuilder.aspx" />
