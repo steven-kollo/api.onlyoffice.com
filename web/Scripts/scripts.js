@@ -173,5 +173,11 @@ $(function() {
             alert("Link was copied to clipboard");
         });
 
+    var clipboard = new Clipboard(".copy-code", {
+        target: function () {
+            return $("pre:visible")[0];
+        }
+    });
+
     initDemo();
 });

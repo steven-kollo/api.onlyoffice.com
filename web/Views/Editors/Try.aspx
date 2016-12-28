@@ -1115,6 +1115,7 @@
             </div>
 
 
+            <a class="button copy-code">Copy code</a>
             <a class="button-close button">Close</a>
         </div>
         <div class="button-close popap-close" title="Close">&times;</div>
