@@ -909,10 +909,11 @@ span.style_step
     }
 
 
-.copy_code {
+h2 + .copy-code,
+h2 + .copy-code:active {
     float: right;
-    margin: -50px 0 0;
-    }
+    margin-top: -32px;
+}
 
 .docnote {
     background-color: #efefef;

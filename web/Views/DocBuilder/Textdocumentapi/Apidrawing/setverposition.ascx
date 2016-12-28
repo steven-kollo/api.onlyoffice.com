@@ -35,9 +35,7 @@
             </table>
 
 <h2>Example</h2>
-<div class="copy_code">
-<span class="button">Copy code</span>
-</div>
+<div class="button copy-code">Copy code</div>
 <pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oGs1, oGs2, oFill, oStroke, oDrawing, oParagraph;

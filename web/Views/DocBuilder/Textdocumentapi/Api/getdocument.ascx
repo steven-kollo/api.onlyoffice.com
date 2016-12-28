@@ -17,9 +17,7 @@
 </dl>
             
 <h2>Example</h2>
-<div class="copy_code">
-<span class="button">Copy code</span>
-</div>
+<div class="button copy-code">Copy code</div>
 <pre>var oDocument = Api.GetDocument();</pre>
 
 <%--<h2>Resulting document</h2>

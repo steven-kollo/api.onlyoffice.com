@@ -7,9 +7,7 @@
 <% Html.RenderPartial("DocBuilderShared/ApiImage/GetClassType", "spreadsheetapi");%>
 
 <h2>Example</h2>
-<div class="copy_code">
-<span class="button">Copy code</span>
-</div>
+<div class="button copy-code">Copy code</div>
 <pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oImage = oWorksheet.AddImage("https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png", 60 * 36000, 35 * 36000, 0, 2 * 36000, 2, 3 * 36000);

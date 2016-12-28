@@ -28,9 +28,7 @@
             </table>
 
 <h2>Example</h2>
-<div class="copy_code">
-<span class="button">Copy code</span>
-</div>
+<div class="button copy-code">Copy code</div>
 <pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 oWorksheet.GetRange('B1').SetValue('2');

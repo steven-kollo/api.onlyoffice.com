@@ -8,9 +8,7 @@
 <p class="dscr">Remove all the objects from the current slide.</p>
 
 <h2>Example</h2>
-<div class="copy_code">
-<span class="button">Copy code</span>
-</div>
+<div class="button copy-code">Copy code</div>
 <pre>builder.CreateFile("pptx");
 var oPresentation = Api.GetPresentation();
 oPresentation.SetSizes(254 * 36000, 190 * 36000);

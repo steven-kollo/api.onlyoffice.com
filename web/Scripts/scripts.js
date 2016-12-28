@@ -170,5 +170,11 @@ $(function() {
 
     clipboard.on('success', function () { alert("Link was copied to clipboard"); });
 
+    clipboard = new Clipboard(".copy-code", {
+        target: function () {
+            return $("pre:visible")[0];
+        }
+    });
+
     initDemo();
 });

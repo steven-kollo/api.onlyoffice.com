@@ -20,9 +20,7 @@ If the type of this style is not a <em>"table"</em> then it will return <em>"nul
             </dl>
 
 <h2>Example</h2>
-<div class="copy_code">
-<span class="button">Copy code</span>
-</div>
+<div class="button copy-code">Copy code</div>
 <pre>builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oTable, oTableStyle;

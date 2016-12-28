@@ -49,9 +49,7 @@
             <div class="note">Please note, that the horizontal <em>nColOffset</em> and vertical <em>nRowOffset</em> offsets are calculated within the limits of the specified <em>nFromCol</em> column and <em>nFromRow</em> row cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</div>
 
 <h2>Example</h2>
-<div class="copy_code">
-<span class="button">Copy code</span>
-</div>
+<div class="button copy-code">Copy code</div>
 <pre>builder.CreateFile("xlsx");
 var oWorksheet = Api.GetActiveSheet();
 var oStroke, oFill;
