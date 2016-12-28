@@ -47,7 +47,7 @@ oParagraph = Api.CreateParagraph();
 oParagraph.SetJc("left");
 oParagraph.AddText("We removed all elements from the shape and added a new paragraph inside it.");
 oDocContent.Push(oParagraph);
-builder.SaveFile("docx", "GetDocContent.docx");
+builder.SaveFile("docx", "ApiShape.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
