@@ -93,8 +93,9 @@ namespace ASC.Api.Web.Help.Controllers
                 var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
                 var header = headerNode != null ? headerNode.InnerText : string.Empty;
                 var descr = descrNode != null ? descrNode.InnerText : string.Empty;
+                var content = doc.DocumentNode.SelectSingleNode("//div[contains(@class,'layout-content')]");
 
-                if (!string.IsNullOrEmpty(query) && doc.DocumentNode.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
+                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
                 {
                     result.Add(new SearchResult
                         {
