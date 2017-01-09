@@ -102,13 +102,19 @@ em
     font-style: italic;
 }
 
+p {
+    font-size: 14px;
+    margin: 9px 0 18px;
+}
+
 /*logo*/
 .logo {
-    background: url("img/sprite.png") no-repeat 0 -16px transparent;
-    height: 50px;
-    width: 194px;
+    background: url("img/sprite.png") no-repeat 0 16px transparent;
     display: inline-block;
     float: left;
+    height: 71px;
+    outline: none;
+    width: 260px;
 }
 
 /*layout*/
@@ -144,12 +150,20 @@ body, html
 
 .layout-table-header
 {
-    background-color: #3d4a6b;
-    height: 50px;
+    background-color: rgba(255,255,255,0.95);
+    height: 71px;
     margin: 0;
+    min-width: 976px;
     padding: 0 24px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 600;
+    width: 100%;
 }
-
+.layout-table td.layout-table-header {
+    border-bottom: 1px solid #d9d9d9;
+}
 .layout-header
 {
     width: 100%;
@@ -159,7 +173,7 @@ body, html
 {
     height: 100%;
     margin: 0;
-    padding: 30px 0 30px 24px;
+    padding: 100px 0 30px 24px;
     width: 261px;
 }
 
@@ -176,7 +190,7 @@ body, html
 .layout-table-content
 {
     margin: 0;
-    padding: 30px 24px;
+    padding: 80px 24px;
 }
 
 .layout-content
@@ -205,7 +219,7 @@ body, html
     border: medium none;
     vertical-align: middle;
     padding: 15px 16px 22px;
-    font-size: 12px;
+    font-size: 13px;
 }
 .table-conversion-matrix-container
 {
@@ -285,9 +299,10 @@ body, html
 
 .table thead td
 {
-    font-weight: bold;
+    font-weight: 400;
     padding-top: 0;
     padding-bottom: 4px;
+    font-size: 16px;
 }
 
 .table.hover tbody .tablerow:hover
@@ -303,7 +318,7 @@ body, html
 /*links*/
 a, a:hover, a:visited
 {
-    color: #333;
+    color: #5891d0;
 }
 a:hover {
     text-decoration: none;
@@ -327,38 +342,32 @@ a:hover {
 /*headers*/
 h1
 {
-    color: #333333;
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 24px;
-    position: relative;
+    font-size: 35px;
+    font-weight: 300;
+    margin: 10px 0 20px;
+    line-height: 1.3em;
+    color: #f94a0c;
 }
 
-h1 .up, h1 .up:hover
+h1 .up,
+h1 .up:hover
 {
-    background-color: #dedede;
-    background-image: linear-gradient(to bottom, #f3f3f3 0, #dedede 100%);
-    background-repeat: repeat-x;
+    background-color: #f9f9f9;
     border: 1px solid #bfbfbf;
     border-radius: 2px;
     float: left;
-    margin: 0 8px 0 0;
+    margin: 12px 8px 0 0;
     padding: 4px;
     text-decoration: none;
 }
 
 h1 .up:after
 {
-    background: url("img/sprite.png") no-repeat scroll -6px -180px transparent;
+    background: url("img/sprite.png") no-repeat scroll 0 -150px transparent;
     content: "";
     display: block;
     height: 12px;
     width: 12px;
-}
-
-h1 .hdr
-{
-    text-transform: uppercase;
 }
 
 h1 .comment
@@ -371,14 +380,12 @@ h1 .comment
     text-transform: none;
     top: 28px;
 }
-
 h2
 {
-    color: #3d4a6b;
-    font-size: 18px;
-    line-height: 18px;
-    margin-bottom: 12px;
-    margin-top: 30px;
+    color: #333;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 1.5em 0 .3em;
 }
 
 .header-gray
@@ -391,7 +398,7 @@ h2
 
 #clipLink
 {
-    background: url("img/sprite.png") no-repeat scroll 0 -132px transparent;
+    background: url("img/sprite.png") no-repeat scroll 0 -122px transparent;
     color: #333;
     cursor: pointer;
     float: right;
@@ -405,31 +412,6 @@ h2
 .list-header
 {
     margin: 32px 0 16px;
-}
-
-.plus {
-    display: inline-block;
-    margin-left: 16px;
-    padding: 0;
-    position: relative;
-    text-align: center;
-    vertical-align: middle;
-}
-.plus:after {
-    background: url('img/sprite.png') no-repeat 0 -249px transparent;
-    content: " ";
-    cursor: pointer;
-    display: block; /* reduce the damage in FF3.0 */
-    height: 12px;
-    left: -16px;
-    margin-top: -6px;
-    position: absolute;
-    top: 50%;
-    width: 12px;
-}
-p {
-    font-size: 14px;
-    margin: 9px 0 18px;
 }
 
 .todo {
@@ -448,25 +430,63 @@ p {
 {
     display: block;
     float: left;
-    padding: 0 15px;
+    padding: 0;
 }
 
-.top-nav li.active {
-    background-color: #333f5b;
+.top-nav li.active a {
+    color: #f94a0c;
+    border-color: #f94a0c;
 }
 
 .top-nav a {
-    color: #cbcbcc;
-    font-size: 13px;
-    line-height: 50px;
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 71px;
     outline: none;
     text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0 15px;
 }
 
 .top-nav a:hover {
-    color: #999999;
+    color: #333f5b;
+    border-color: #f94a0c;
 }
 
+/*footer*/
+.layout-table-footer {
+height: 50px;
+vertical-align: top;
+}
+.bottommenu {
+    float: left;
+    font-size: 13px;
+    margin: 0 0 0 24px;
+    padding: 0;
+}
+.bottommenu ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.bottommenu ul li {
+    display: inline-block;
+    margin: 0 12px 0 0;
+    padding: 0;
+}
+.bottommenu a {
+    color: #666;
+    text-decoration: none;
+}
+.copyReserved {
+    float: right;
+    margin: 0 24px 0 0;
+    font-size: 13px;
+    color: #333;
+}
 /*search form*/
 .search-box
 {
@@ -479,14 +499,15 @@ p {
 
 .search-input
 {
-    border: 1px solid #cccccc;
+    border: 1px solid #c2c2c2;
     display: inline-block;
-    padding: 2px;
+    padding: 2px 2px 2px 4px;
     float: left;
     width: 186px;
-    height: 18px;
+    height: 23px;
     line-height: 18px;
     position: relative;
+    border-radius: 4px;
 }
 
 .search-box input,
@@ -497,54 +518,45 @@ p {
     box-shadow: none;
     color: #666;
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     outline: none;
     width: 166px;
     padding: 0;
     top: 2px;
-    height: 18px;
-    line-height: 18px;
+    height: 23px;
+    line-height: 23px;
     position: absolute;
 }
 
 .search-clear
 {
     display: inline-block;
-    background: url("img/sprite.png") no-repeat scroll -4px -204px;
+    background: url("img/sprite.png") no-repeat scroll 0 -168px transparent;
     width: 16px;
-    height: 16px;
+    height: 22px;
     position: absolute;
     right: 4px;
     display: none;
 }
-
-    .search-clear:hover
-    {
-        background: url("img/sprite.png") no-repeat scroll -4px -220px;
-    }
+.search-clear:hover
+{
+    background-position: 0 -188px;
+}
 
 .search-box .btn
 {
-    background: url("img/sprite.png") no-repeat scroll 8px -152px, #1a76a6;
-    background: url("img/sprite.png") no-repeat scroll 8px -152px, linear-gradient(to bottom, #59b1e2, #1a76a6);
-    border: medium none;
-    border-radius: 2px;
-    height: 24px;
-    margin-left: 4px;
+    background: url("img/sprite.png") no-repeat scroll 0 -59px transparent;
+    border: 0 none;
+    height: 23px;
+    margin: 2px 0 0 10px;
     padding: 0;
-    width: 40px;
+    width: 23px;
     color: #333333;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
     line-height: normal;
 }
-
-    .search-box .btn:hover
-    {
-        background: url("img/sprite.png") no-repeat scroll 8px -152px, #3f96c3;
-        background: url("img/sprite.png") no-repeat scroll 8px -152px, linear-gradient(to bottom, #78bfe8, #3f96c3);
-    }
 
 /*start page*/
 .products
@@ -610,7 +622,10 @@ pre.hljs {
     background: #F4F4F4;
     min-height: 22px;
     position: relative;
-    font-size: 12px;
+    font-size: 13px;
+    border-radius: 2px;
+    border-left: 5px solid #5891d0;
+    border-right: 5px solid #5891d0;
 }
 
 .note:before
@@ -654,19 +669,12 @@ pre.hljs {
 /*treeview*/
 .treeview .collapsable-hitarea
 {
-    background: url("img/sprite.png") no-repeat -4px -92px transparent;
+    background: url("img/sprite.png") no-repeat 0 -102px transparent;
 }
 
 .treeview .expandable-hitarea
 {
-    background: url("img/sprite.png") no-repeat -4px -72px transparent;
-}
-
-.forum, .forum:visited
-{
-    background: url("img/sprite.png") no-repeat scroll -4px -113px;
-    padding-left: 20px;
-    text-decoration: none;
+    background: url("img/sprite.png") no-repeat 0 -82px transparent;
 }
 
 #embeddedEditor
@@ -676,34 +684,28 @@ pre.hljs {
     border: 1px solid #cccccc;
 }
 
-.button:hover
-{
-    background-color: #ebebeb;
-    background-image: linear-gradient(to bottom, #f3f3f3 0, #ebebeb 100%);
-    border-color: #bfbfbf;
-    color: #666666;
-}
-
 .button, .button:visited, .button:active
 {
-    background-color: #dedede;
-    background-image: linear-gradient(to bottom, #f3f3f3, #dedede);
-    background-repeat: repeat-x;
-    border-color: #bfbfbf;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
-    color: #666666;
+    border: 0 none;
     cursor: pointer;
     display: inline-block;
-    font-size: 12px;
-    margin-right: 8px;
-    margin-top: 8px;
-    padding: 2px 12px;
-    text-decoration: none;
+    font-size: 14px;
+    vertical-align: middle;
+    padding: 17px 22px;
+    text-align: center;
+    text-decoration: none !important;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1em;
+    color: #fff;
+    background: #444;
+
 }
 .button:hover {
     text-decoration: none;
+    background: #565656;
+    color: #fff;
 }
 
 .button-upper {
@@ -774,20 +776,75 @@ pre.hljs {
     width: 200px;
 }
 
-span.style_step
-{
-    color: #065A8F;
-}
-
-.try-now-table td {
-    padding: 10px 60px 10px 0;
-}
-.try-now-table .button {
-    white-space: nowrap;
-}
 .button-popap-try {
     border-bottom: 1px dotted;
     cursor: pointer;
+}
+
+.language-example-table td {
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.try-now-table {
+width: 100%;
+}
+    .try-now-table th {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 30px;
+    vertical-align: top;
+    }
+
+    .try-now-table tbody th {
+        text-align: left;
+        padding: 10px 30px 10px 10px;
+        vertical-align: top;
+    }
+
+    .try-now-table tr {
+    border-bottom: 1px solid #d7d8dc;
+    }
+
+    .try-now-table td {
+    padding: 10px 30px;
+    vertical-align: top;
+    text-align: center;
+    }
+
+    .try-now-table .button {
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #b2b2b2;
+    padding: 5px 0;
+    width: 80px;
+    margin: 0 0 10px;
+    border-radius: 3px 0 0 3px;
+    vertical-align: top;
+    }
+    .try-now-table .button:hover {
+    color: #f94a0c;
+    border-color: #f94a0c;
+    }
+    .try-now-table .button-popap-try {
+    background-color: #444;
+    color: #fff;
+    border: 1px solid #444;
+    border-left: 0 none;
+    padding: 5px;
+    /*font-weight: 700;*/
+    font-size: 14px;
+    border-radius: 0 3px 3px 0;
+    margin: 0 0 10px;
+    line-height: 1em;
+    display: inline-block;
+    vertical-align: top;
+    }
+.try-now-table .button-popap-try:hover {
+    text-decoration: none;
+    background: #565656;
+    color: #fff;
 }
 
 /********************
