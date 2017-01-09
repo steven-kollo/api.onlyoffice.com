@@ -15,12 +15,21 @@
         <span class="hdr">Confluence ONLYOFFICE™ integration plugin</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.atlassian.com/software/confluence/" target="_blank">Confluence</a> using ONLYOFFICE™ Document Server. Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</p>
-    <p>The plugin will create a new <b>Edit in ONLYOFFICE</b> action within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Confluence.</p>
+    <p class="dscr">
+        This <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.atlassian.com/software/confluence/" target="_blank">Confluence</a> using ONLYOFFICE™ Document Server.
+        Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
+    </p>
+    <p>
+        The plugin will create a new <b>Edit in ONLYOFFICE</b> action within the document library for Office documents.
+        This allows multiple users to collaborate in real time and to save back those changes to Confluence.
+    </p>
 
 
     <h2>Installing ONLYOFFICE™ Document Server</h2>
-    <p>You will need an instance of ONLYOFFICE™ Document Server that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin). If that is not the case, use the official ONLYOFFICE™ Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">Document Server for Linux</a>. ONLYOFFICE™ Document Server must also be able to POST to Confluence directly.</p>
+    <p>
+        You will need an instance of ONLYOFFICE™ Document Server that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin).
+        If that is not the case, use the official ONLYOFFICE™ Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">Document Server for Linux</a>. ONLYOFFICE™ Document Server must also be able to POST to Confluence directly.
+    </p>
     <p>The easiest way to start an instance of ONLYOFFICE™ Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
@@ -58,7 +67,7 @@
         <li><b>fileName</b> - the document Title (name).</li>
     </ul>
     <p>Confluence takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.</p>
-    <p>The client browser makes a request for the javascript library from ONLYOFFICE™ Document Server and sends ONLYOFFICE™ Document Server the docEditor configuration with the above properties.</p>
+    <p>The client browser makes a request for the javascript library from ONLYOFFICE™ Document Server and sends ONLYOFFICE™ Document Server the DocEditor configuration with the above properties.</p>
     <p>Then ONLYOFFICE™ Document Server downloads the document from Confluence and the user begins editing.</p>
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
     <p>After 10 seconds of inactivity, ONLYOFFICE™ Document Server sends a POST to the <em>callback</em> URL letting Confluence know that the clients have finished editing the document and closed it.</p>

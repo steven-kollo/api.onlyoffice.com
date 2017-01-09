@@ -1,4 +1,4 @@
-﻿/*
+/*
  *
  * (c) Copyright Ascensio System Limited 2010-2016
  *
@@ -162,15 +162,27 @@ $(function() {
         hljs.highlightBlock(block);
     });
 
-    var clipboard = new Clipboard("#clipLink", {
-        text: function () {
-            return location.href + "#returns";
+    new Clipboard("#clipLink", {
+        text: function (obj) {
+            var href = $(obj).attr("href");
+            if (href.indexOf("#") == 0) {
+                var current = location.href;
+                if (current.indexOf("#") > 0) {
+                    current = current.substring(0, Math.max(current.indexOf("#")));
+                }
+                location.hash = href;
+
+                href = current + href;
+            }
+            return href;
         }
-    });
+    }).on("success",
+        function () {
+            alert("Link was copied to clipboard");
+        });
 
-    clipboard.on('success', function () { alert("Link was copied to clipboard"); });
 
-    clipboard = new Clipboard(".copy-code", {
+    var clipboard = new Clipboard(".copy-code", {
         target: function () {
             return $("pre:visible")[0];
         }

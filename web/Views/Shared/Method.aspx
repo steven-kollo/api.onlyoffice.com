@@ -99,10 +99,9 @@
     <pre><%= method.Example%></pre>
     <% } %>
 
-    <div class="header-gray">
+    <div id="returns" class="header-gray">
         Returns
-        <span id="clipLink">Get link to this headline</span>
-        <a id="returns"></a>
+        <a id="clipLink" href="#returns" onclick="return false;">Get link to this headline</a>
     </div>
     <p><%= method.Returns %></p>
     
