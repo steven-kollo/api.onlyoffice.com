@@ -286,6 +286,7 @@
     <Content Include="Content\img\Video\plugin.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
+    <Content Include="robots.txt" />
     <Content Include="Scripts\clipboard.js" />
     <Content Include="Scripts\highlight\highlight.pack.js" />
     <Content Include="Scripts\init.js" />
