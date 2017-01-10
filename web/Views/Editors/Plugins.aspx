@@ -15,7 +15,7 @@
         <span class="hdr">Integration Connectors</span>
     </h1>
 
-    <p>ONLYOFFICE™ Document Editors can be integrated into some of the existing document management systems using plugins. These plugins will add the document editing functions into the document management system you use quickly and easily without the need of writing the code by yourselves.</p>
+    <p class="dscr">ONLYOFFICE™ Document Editors can be integrated into some of the existing document management systems using plugins. These plugins will add the document editing functions into the document management system you use quickly and easily without the need of writing the code by yourselves.</p>
 
     <p>Currently the following plugins are available:</p>
     <ul>

@@ -15,7 +15,7 @@
         <span class="hdr">Methods</span>
     </h1>
 
-    <p>After initializing <b>document editor</b> you will get the object that can be used to call the methods.</p>
+    <p class="dscr">After initializing <b>document editor</b> you will get the object that can be used to call the methods.</p>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>

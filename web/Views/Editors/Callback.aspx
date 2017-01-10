@@ -15,7 +15,7 @@
         <span class="hdr">Callback handler</span>
     </h1>
 
-    <p>The <b>document editing service</b> informs the <b>document storage service</b> about status of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a>.</p>
+    <p class="dscr">The <b>document editing service</b> informs the <b>document storage service</b> about status of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a>.</p>
     <p>The <b>document editing service</b> will send POST request with the following information in body:</p>
     <ul>
         <li>

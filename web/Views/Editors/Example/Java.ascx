@@ -5,7 +5,7 @@
 </h1>
 
 <h2>Introduction</h2>
-<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
 <p>You can choose any appropriate way how to run the Java example code. We will show how to run the Java code using the <b>Apache Tomcat</b> web server.</p>
 
 <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
