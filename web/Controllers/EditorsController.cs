@@ -58,7 +58,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Confluence",
                 "Conversion",
                 "ConversionApi",
-                "Example",
                 "Example/Java",
                 "Example/Nodejs",
                 "Example/Php",
@@ -89,7 +88,11 @@ namespace ASC.Api.Web.Help.Controllers
                 var doc = new HtmlDocument();
                 var html = this.RenderView(actionString, new ViewDataDictionary());
                 doc.LoadHtml(html);
-                var content = doc.DocumentNode.SelectSingleNode("//div[contains(@class,'layout-content')]");
+                var content = doc.DocumentNode;
+                if (content.SelectSingleNode("html") != null)
+                {
+                    content = content.SelectSingleNode("//div[contains(@class, 'layout-content')]");
+                }
 
                 if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
                 {
@@ -100,8 +103,8 @@ namespace ASC.Api.Web.Help.Controllers
                     result.Add(new SearchResult
                         {
                             Module = "editors",
-                            Name = Highliter.HighliteString(header, query).ToHtmlString(),
-                            Resource = string.Empty,
+                            Name = actionString,
+                            Resource = Highliter.HighliteString(header, query).ToHtmlString(),
                             Description = Highliter.HighliteString(descr, query).ToHtmlString(),
                             Url = Url.Action(actionString, "editors")
                         });

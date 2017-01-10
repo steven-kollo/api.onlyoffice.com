@@ -85,7 +85,11 @@ namespace ASC.Api.Web.Help.Controllers
                 var doc = new HtmlDocument();
                 var html = this.RenderView(actionString, new ViewDataDictionary());
                 doc.LoadHtml(html);
-                var content = doc.DocumentNode.SelectSingleNode("//div[contains(@class,'layout-content')]");
+                var content = doc.DocumentNode;
+                if (content.SelectSingleNode("html") != null)
+                {
+                    content = content.SelectSingleNode("//div[contains(@class,'layout-content')]");
+                }
 
                 if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
                 {
