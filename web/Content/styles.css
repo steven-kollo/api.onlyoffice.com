@@ -636,6 +636,21 @@ pre.hljs {
     top: 10px;
 }
 
+.note-important {
+    border-color: red;
+    padding-left: 30px;
+}
+.note-important:before,
+.note-important:after {
+    display: none;
+}
+.note-important-label {
+    color: #f94a0c;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 6px;
+}
+
 /*Highliter*/
 .bracket {
     color: #090;

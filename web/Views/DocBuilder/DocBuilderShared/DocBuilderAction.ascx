@@ -10,6 +10,16 @@
 
 <p>Use the script in the textarea below as is to generate the document or you edit it in the textarea window. Or, in case you have a script of your own, use the button under the textarea to upload it.</p>
 
+<%
+    var error = Request["error"];
+    if (!string.IsNullOrEmpty(error))
+    { %>
+<div class="note note-important">
+    <div class="note-important-label">An error has occurred.</div>
+    <%= HttpUtility.HtmlEncode(error) %>
+</div>
+<% } %>
+
 
 <% Html.BeginForm("DocBuilderGenerate", "docbuilder", new { actionName = Html.GetCurrentAction() }, FormMethod.Post); %>
 
