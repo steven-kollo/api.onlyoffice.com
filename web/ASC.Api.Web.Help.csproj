@@ -226,6 +226,7 @@
     </Compile>
     <Compile Include="Helpers\BreadCrumbsBuilder.cs" />
     <Compile Include="Helpers\ClassNamePluralizer.cs" />
+    <Compile Include="Helpers\DocBuilderHelper.cs" />
     <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
     <Compile Include="Helpers\Html.cs" />
@@ -251,6 +252,10 @@
     <Content Include="Content\img\docbuilder\examples\coordinate_aspects.png" />
     <Content Include="Content\img\docbuilder\examples\icon_DocumentEditors.png" />
     <Content Include="Content\img\docbuilder\examples\step2_1.png" />
+    <Content Include="Content\img\docbuilder\download.png" />
+    <Content Include="Content\img\docbuilder\file_docx.png" />
+    <Content Include="Content\img\docbuilder\file_pdf.png" />
+    <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\Editor\history.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
@@ -1189,6 +1194,9 @@
     <Content Include="App_Data\docbuilder-net-asp-example.zip" />
     <Content Include="App_Data\docbuilder-net-mvc-example.zip" />
     <Content Include="App_Data\rails-docbuilder-example-master.zip" />
+    <Content Include="App_Data\Templates\docx.docbuilder" />
+    <Content Include="App_Data\Templates\pdf.docbuilder" />
+    <Content Include="App_Data\Templates\xlsx.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
