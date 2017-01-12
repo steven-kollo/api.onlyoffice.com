@@ -26,17 +26,22 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
 using HtmlAgilityPack;
+using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
 {
     [Redirect]
     public class DocBuilderController : AsyncController
     {
+        #region actions
+
         private readonly string[] _actionMap = new[]
             {
                 "Basic",
@@ -697,6 +702,8 @@ namespace ASC.Api.Web.Help.Controllers
                 "classlist",
             };
 
+        #endregion
+
         public ActionResult Navigation()
         {
             return View();
@@ -809,6 +816,64 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Classlist()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult DocBuilderGenerate(string actionName, string builderScript)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(DocBuilderHelper.BuilderPath))
+                    throw new Exception("DocBuilder not configured");
+
+                builderScript = (builderScript ?? "").Trim();
+                if (string.IsNullOrEmpty(builderScript))
+                    throw new Exception("Empty Script");
+
+                var filePath = DocBuilderHelper.GenerateDocument(DocBuilderHelper.BuilderPath, builderScript);
+
+                var fileName = Path.GetFileName(filePath) ?? "output..tmp.docx";
+                fileName = fileName.Substring(1 + fileName.IndexOf('.', 7));
+                return File(filePath, MimeMapping.GetMimeMapping(fileName), fileName);
+            }
+            catch (Exception ex)
+            {
+                LogManager.GetLogger("ASC.DocumentBuilder").Error(ex);
+                return RedirectToAction(actionName, new { error = ex.Message });
+            }
+        }
+
+        [HttpPost]
+        public ActionResult DocBuilderCreate(string actionName, string name, string company, string title, string format)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(DocBuilderHelper.BuilderPath))
+                    throw new Exception("DocBuilder not configured");
+
+                name = (name ?? "").Trim();
+                if (string.IsNullOrEmpty(name))
+                    throw new Exception("Empty Name");
+
+                company = (company ?? "").Trim();
+                if (string.IsNullOrEmpty(company))
+                    throw new Exception("Empty Company");
+
+                title = (title ?? "").Trim();
+                if (string.IsNullOrEmpty(title))
+                    throw new Exception("Empty Title");
+
+                var filePath = DocBuilderHelper.CreateDocument(DocBuilderHelper.BuilderPath, name, company, title, format);
+
+                var fileName = Path.GetFileName(filePath) ?? "output..docx";
+                fileName = "Sample" + fileName.Substring(fileName.IndexOf('.', 7));
+                return File(filePath, MimeMapping.GetMimeMapping(fileName), fileName);
+            }
+            catch (Exception ex)
+            {
+                LogManager.GetLogger("ASC.DocumentBuilder").Error(ex);
+                return RedirectToAction(actionName, new { error = ex.Message });
+            }
         }
     }
 }

@@ -24,7 +24,7 @@
         <p>To launch <b>ONLYOFFICE Document Builder</b> using the second option run the following command:</p>
         <pre>
 docbuilder.exe mydocument.docbuilder
-        </pre>
+</pre>
         <p>Visit the <a href="<%= Url.Action("integrationapi/usingdocbuilderfile") %>">.docbuilder</a> file section for more information about the file structure and rules used when creating it.</p>
     </li>
 </ol>

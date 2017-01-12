@@ -95,6 +95,26 @@ p {
     font-size: 14px;
     margin: 9px 0 18px;
 }
+textarea {
+    background: #f4f4f4;
+    border: 1px solid #bfbfbf;
+    height: 300px;
+    padding: 5px;
+    resize: none;
+}
+
+input[type="text"] {
+    border: 1px solid #DCDCDC;
+    font-size: 14px;
+    height: 25px;
+    padding: 3px 5px;
+    margin: 2px 0 8px;
+    width: 100%;
+
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
 
 /*logo*/
 .logo {
@@ -356,6 +376,14 @@ h2 {
     margin: 1.5em 0 .3em;
 }
 
+h5 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 25px 0 5px;
+    text-transform: none;
+}
+
 .header-gray {
     background-color: #ebebeb;
     font-size: 14px;
@@ -606,6 +634,21 @@ pre.hljs {
     left: 22px;
     color: #808080;
     top: 10px;
+}
+
+.note-important {
+    border-color: red;
+    padding-left: 30px;
+}
+.note-important:before,
+.note-important:after {
+    display: none;
+}
+.note-important-label {
+    color: #f94a0c;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 6px;
 }
 
 /*Highliter*/
@@ -1040,13 +1083,6 @@ p.node_label {
     list-style-type: none;
 }
 
-h5 {
-    color: #333;
-    font-size: 22px;
-    font-weight: 300;
-    margin: 25px 0 5px;
-    text-transform: none;
-}
 
 .table-classlist {
     table-layout: fixed;
@@ -1163,4 +1199,53 @@ iframe.docbuilder_resulting_docs {
     width: 100%;
     height: 500px;
     margin-top: 10px;
+}
+
+/********************************
+    docbuilder action
+********************************/
+.builder-code {
+    width: 75%;
+}
+
+.builder-run {
+    background: no-repeat center 0 transparent;
+    color: #5891d0;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-weight: bold;
+    padding-top: 100px;
+    text-align: center;
+    width: 100px;
+}
+
+#generateButton {
+    background-image: url("img/docbuilder/download.png");
+    margin: 80px 50px 0 0;
+}
+
+#createDocx,
+#createXlsx,
+#createPdf {
+    margin: 32px 8px 0 0;
+}
+#createDocx {
+    background-image: url("img/docbuilder/file_docx.png");
+}
+#createXlsx {
+    background-image: url("img/docbuilder/file_xlsx.png");
+}
+#createPdf {
+    background-image: url("img/docbuilder/file_pdf.png");
+}
+
+#builderFile {
+    width: 0;
+    height: 0;
+}
+
+.own-data {
+    float: left;
+    width: 50%;
 }
