@@ -1205,6 +1205,9 @@
     <None Include="Web.COM.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <None Include="Web.Info.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
