@@ -5,6 +5,9 @@
     <span class="hdr">Events</span>
 </h1>
 
+<div class="header-gray">Description</div>
+<p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
+
 <ul>
     <li id="onCollaborativeChanges">
         <p><b>onCollaborativeChanges</b> - the function called when the document is co-edited by the other user in the <em>strict</em> co-editing mode.</p>
