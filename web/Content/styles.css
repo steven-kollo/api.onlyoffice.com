@@ -1,4 +1,4 @@
-/*
+﻿/*
  *
  * (c) Copyright Ascensio System Limited 2010-2016
  *
@@ -94,6 +94,26 @@ em {
 p {
     font-size: 14px;
     margin: 9px 0 18px;
+}
+textarea {
+    background: #f4f4f4;
+    border: 1px solid #bfbfbf;
+    height: 300px;
+    padding: 5px;
+    resize: none;
+}
+
+input[type="text"] {
+    border: 1px solid #DCDCDC;
+    font-size: 14px;
+    height: 25px;
+    padding: 3px 5px;
+    margin: 2px 0 8px;
+    width: 100%;
+
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
 }
 
 /*logo*/
@@ -356,6 +376,14 @@ h2 {
     margin: 1.5em 0 .3em;
 }
 
+h5 {
+    color: #333;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 25px 0 5px;
+    text-transform: none;
+}
+
 .header-gray {
     background-color: #ebebeb;
     font-size: 14px;
@@ -606,6 +634,21 @@ pre.hljs {
     left: 22px;
     color: #808080;
     top: 10px;
+}
+
+.note-important {
+    border-color: red;
+    padding-left: 30px;
+}
+.note-important:before,
+.note-important:after {
+    display: none;
+}
+.note-important-label {
+    color: #f94a0c;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 6px;
 }
 
 /*Highliter*/
@@ -899,4 +942,310 @@ pre.hljs {
     height: 365px;
     margin: 18px 0 24px;
     width: 650px;
+}
+
+
+/********
+    docbuilder
+**************/
+.details {
+    border-left: 2px solid #ddd;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 6px;
+}
+
+.details dt {
+    float: left;
+    padding-left: 10px;
+    width: 120px;
+}
+
+.details dd {
+    margin-bottom: 6px;
+    margin-left: 70px;
+    margin-top: 6px;
+}
+
+.details ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.param-type {
+    margin: 14px 0;
+}
+
+.param-type dd {
+    display: inline-block;
+}
+
+.param-type dt {
+    display: inline-block;
+}
+
+
+h2 + .copy-code,
+h2 + .copy-code:active {
+    float: right;
+    margin-top: -50px;
+}
+
+.docnote {
+    background-color: #efefef;
+    font-size: 13px;
+    line-height: 1.5em;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
+.document_structure {
+    border: 1px solid #d9d9d9;
+    margin: 15px 0 0;
+    padding: 10px 20px 20px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.document_structure.tablecell_node {
+    display: inline-block;
+    width: 44%;
+}
+
+.document_structure.tablecell_node .document_structure.image_node {
+    width: 23%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.document_structure.tablecell_node .document_structure.shape_node {
+    width: 23%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.document_structure.tablecell_node .document_structure.chart_node {
+    width: 23%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.document_structure.image_node {
+    display: inline-block;
+    width: 27%;
+}
+
+.document_structure.shape_node {
+    display: inline-block;
+    width: 27%;
+}
+
+.document_structure.chart_node {
+    display: inline-block;
+    width: 27%;
+}
+
+.spreadsheet_document .document_structure.image_node,
+.spreadsheet_document .document_structure.chart_node {
+    display: inline-block;
+    width: 44.9%;
+}
+
+.spreadsheet_document .document_structure.shape_node {
+    display: block;
+    width: auto;
+}
+
+.presentation_document .document_structure.image_node,
+.presentation_document .document_structure.chart_node {
+    display: inline-block;
+    width: 44.6%;
+}
+
+.presentation_document .document_structure.shape_node {
+    display: block;
+    width: auto;
+}
+
+.node_description {
+    margin: 0;
+    padding: 5px 0 0;
+}
+
+p.node_label {
+    color: #5891d0;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.global-list ul li {
+    list-style-type: none;
+}
+
+
+.table-classlist {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table-classlist .table-classlist-name {
+    width: 20%;
+}
+
+.builder_page_class {
+    color: #5891d0;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 25px 0 5px;
+    text-transform: none;
+}
+
+ul.buider_page_methods_list,
+.buider_page_methods_list {
+    -webkit-columns: 3 200px;
+    -moz-columns: 3 200px;
+    columns: 3 200px;
+    column-gap: 0;
+    padding-bottom: 30px;
+}
+
+.buider_page_methods_list li {
+    list-style-type: none !important;
+}
+
+.kb_index_page {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 100%;
+}
+
+.kb_index_page h5 {
+    margin-bottom: 10px;
+}
+
+.kb_index_page ul {
+    margin-left: 0;
+}
+
+.kb_index_page li {
+    position: relative;
+}
+
+.kb_index_page li:before {
+    content: '- ';
+    color: #5891d0;
+}
+
+.tags_content {
+    line-height: 1;
+}
+
+.tags_content h5 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 0 20px;
+    text-transform: none;
+}
+
+.tag_name {
+    background-color: #999;
+    color: #fff;
+    display: inline-block;
+    padding: 1px 5px 3px;
+    font-weight: 600;
+}
+
+.tags_content ul {
+    margin: 20px 40px 30px;
+}
+
+.tags_content li {
+    list-style-type: none;
+}
+
+.global-type-definitions {
+    position: relative;
+}
+
+.global-type-definitions .anchor-position {
+    position: absolute;
+    top: -72px;
+}
+
+.docbuilder_examples_list {
+    margin: 10px 0 20px;
+}
+
+.docbuilder_examples_list .docbuilder_examples_blocks {
+    margin: 0;
+}
+
+.docbuilder_examples_list .docbuilder_examples_blocks li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 20px 0 0;
+    padding: 0;
+    text-align: center;
+}
+
+.docbuilder_examples_list .docbuilder_examples_blocks a.db_examples {
+    display: block;
+    margin: 5px 0 0;
+}
+
+iframe.docbuilder_resulting_docs {
+    width: 100%;
+    height: 500px;
+    margin-top: 10px;
+}
+
+/********************************
+    docbuilder action
+********************************/
+.builder-code {
+    width: 75%;
+}
+
+.builder-run {
+    background: no-repeat center 0 transparent;
+    color: #5891d0;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-weight: bold;
+    padding-top: 100px;
+    text-align: center;
+    width: 100px;
+}
+
+#generateButton {
+    background-image: url("img/docbuilder/download.png");
+    margin: 80px 50px 0 0;
+}
+
+#createDocx,
+#createXlsx,
+#createPdf {
+    margin: 32px 8px 0 0;
+}
+#createDocx {
+    background-image: url("img/docbuilder/file_docx.png");
+}
+#createXlsx {
+    background-image: url("img/docbuilder/file_xlsx.png");
+}
+#createPdf {
+    background-image: url("img/docbuilder/file_pdf.png");
+}
+
+#builderFile {
+    width: 0;
+    height: 0;
+}
+
+.own-data {
+    float: left;
+    width: 50%;
 }

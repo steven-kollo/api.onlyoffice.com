@@ -1,0 +1,127 @@
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+
+<h1>
+   <span class="hdr">ApiRun</span>
+</h1>
+<h4 class="header-gray" id="ApiRun">new ApiRun()</h4>
+<p class="dscr">Class representing a small text block called 'run'.</p>
+
+<h2>Extends</h2>
+<table class="table table-classlist">
+                <thead>
+                    <tr class="tablerow">
+                        <td class="table-classlist-name">Name</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apitextpr") %>">ApiTextPr</a></td>
+                        <td>Class representing text properties.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Methods</h2>
+<table class="table table-classlist">
+                <thead>
+                    <tr class="tablerow">
+                        <td class="table-classlist-name">Name</td>
+                        <td>Description</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/addlinebreak") %>">AddLineBreak</a></td>
+                        <td>Add a line break to the current run position and start the next element from a new line.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/addtabstop") %>">AddTabStop</a></td>
+                        <td>Add a tab stop to the current run.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/addtext") %>">AddText</a></td>
+                        <td>Add some text to this run.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/clearcontent") %>">ClearContent</a></td>
+                        <td>Remove all content from the current run.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/getclasstype") %>">GetClassType</a></td>
+                        <td>Get the type of this class.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/gettextpr") %>">GetTextPr</a></td>
+                        <td>Get the text properties of the current run.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setbold") %>">SetBold</a></td>
+                        <td>Set the bold property to the text character.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setcaps") %>">SetCaps</a></td>
+                        <td>Specify that any lowercase characters in this text run are formatted for display only as their capital letter character equivalents.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setdoublestrikeout") %>">SetDoubleStrikeout</a></td>
+                        <td>Specify that the contents of this run is displayed with two horizontal lines through each character displayed on the line.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setfill") %>">SetFill</a></td>
+                        <td>Set the text color for the current text run.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setfontfamily") %>">SetFontFamily</a></td>
+                        <td>Set all 4 font slots with the specified font family.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setfontsize") %>">SetFontSize</a></td>
+                        <td>Set the font size for the characters of the current text run.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setitalic") %>">SetItalic</a></td>
+                        <td>Set the italic property to the text character.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setsmallcaps") %>">SetSmallCaps</a></td>
+                        <td>Specify that all small letter characters in this text run are formatted for display only as their capital letter character equivalents in a font size two points smaller than the actual font size specified for this text.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setspacing") %>">SetSpacing</a></td>
+                        <td>Set text spacing measured in twentieths of a point.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setstrikeout") %>">SetStrikeout</a></td>
+                        <td>Specify that the contents of this run are displayed with a single horizontal line through the center of the line.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setunderline") %>">SetUnderline</a></td>
+                        <td>Specify that the contents of this run are displayed along with a line appearing directly below the character (less than all the spacing above and below the characters on the line).</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("spreadsheetapi/apirun/setvertalign") %>">SetVertAlign</a></td>
+                        <td>Specify the alignment which will be applied to the contents of this run in relation to the default appearance of the run text.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+<h2>Example</h2>
+<div class="button copy-code">Copy code</div>
+<pre>builder.CreateFile("xlsx");
+var oWorksheet = Api.GetActiveSheet();
+var oStroke, oFill, oParagraph, oRun;
+oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
+oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+var oShape = oWorksheet.AddShape("flowChartOnlineStorage", 120 * 36000, 70 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);
+oDocContent = oShape.GetDocContent();
+oParagraph = oDocContent.GetElement(0);
+oRun = Api.CreateRun();
+oRun.SetFontSize(30);
+oRun.AddText("This is just a sample text. Nothing special.");
+oParagraph.AddElement(oRun);
+builder.SaveFile("xlsx", "ApiRun.xlsx");
+builder.CloseFile();</pre>
+
+<h2>Resulting document</h2>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006294&doc=MVNYRjYyck9NVVR2Z1l6anJsTmh5RDVKemk0aTFSVXBmYXZrdWl6bmRzRT0_IjUwMDYyOTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

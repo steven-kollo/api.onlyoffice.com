@@ -103,6 +103,14 @@ $(function() {
         
         displayModalPanel("#trySourceCodeDialog", 825, 650, 0, "absolute");
     });
+    
+    $(".button-popap-open").click(function () {
+        $("#containerDialog .popap-container>div").hide();
+        var codeId = $(this).attr("data-body");
+        $("#" + codeId).show();
+
+        displayModalPanel("#containerDialog", 800, 650, 0);
+    });
 
     $(".video-link").click(function () {
         var poapDialog = $(this).find(".popap-dialog");
@@ -154,6 +162,23 @@ $(function() {
         hljs.highlightBlock(block);
     });
 
+
+    $("#builderFileLink").on("click", function (e) {
+        e.preventDefault();
+        $("#builderFile").click();
+    });
+
+    $("#builderFile").on("change", function (e) {
+        var input = e.target;
+
+        var reader = new FileReader();
+        reader.onload = function () {
+            var text = reader.result;
+            $("#builderScript").text(text);
+        };
+        reader.readAsText(input.files[0]);
+    });
+
     new Clipboard("#clipLink", {
         text: function (obj) {
             var href = $(obj).attr("href");
@@ -172,6 +197,7 @@ $(function() {
         function () {
             alert("Link was copied to clipboard");
         });
+
 
     var clipboard = new Clipboard(".copy-code", {
         target: function () {
