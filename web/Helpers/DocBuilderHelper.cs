@@ -140,26 +140,44 @@ namespace ASC.Api.Web.Help.Helpers
             return outputFilePath;
         }
 
+
+        private static int _run;
+        private const int Max = 10;
+
         private static void BuildFile(string builderFilePath, string inputFilePath, string outputFilePath)
         {
-            var startInfo = new ProcessStartInfo
+            try
+            {
+                if (++_run > Max)
                 {
-                    WindowStyle = ProcessWindowStyle.Hidden,
-                    WorkingDirectory = Path.GetDirectoryName(builderFilePath) ?? string.Empty,
-                    FileName = builderFilePath,
-                    Arguments = inputFilePath,
-                    UseShellExecute = false
-                };
+                    throw new Exception("Not available. Try later");
+                }
 
-            using (var process = Process.Start(startInfo))
-            {
-                process.WaitForExit();
-            }
+                var startInfo = new ProcessStartInfo
+                    {
+                        WindowStyle = ProcessWindowStyle.Hidden,
+                        WorkingDirectory = Path.GetDirectoryName(builderFilePath) ?? string.Empty,
+                        FileName = builderFilePath,
+                        Arguments = inputFilePath,
+                        UseShellExecute = false
+                    };
 
-            if (!File.Exists(outputFilePath))
-            {
-                throw new Exception("An error has occurred. Result File not found");
+                using (var process = Process.Start(startInfo))
+                {
+                    process.WaitForExit();
+                }
+
+                if (!File.Exists(outputFilePath))
+                {
+                    throw new Exception("An error has occurred. Result File not found");
+                }
             }
+            catch (Exception)
+            {
+                _run--;
+                throw;
+            }
+            _run--;
         }
     }
 }
