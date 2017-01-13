@@ -22,8 +22,6 @@
     <link rel="icon" href="<%= Url.Content("~/favicon.ico") %>" type="image/x-icon" />
 
     <%= Styles.Render("~/content/styles") %>
-
-    <script type="text/javascript" src="<%= Url.Content("~/scripts/modernizr/modernizr-1.7.min.js") %>"></script>
 </head>
 <body>
     <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">

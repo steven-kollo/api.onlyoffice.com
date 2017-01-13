@@ -136,7 +136,6 @@ namespace ASC.Api.Web.Help
                         {
                             //Register cache
                             CacheManifest.AddServerFolder(new HttpContextWrapper(HttpContext.Current), "~/content/img", "*.*");
-                            CacheManifest.AddServerFile(new HttpContextWrapper(HttpContext.Current), "~/scripts/modernizr/modernizr-1.7.min.js");
                             CacheManifest.AddCached(new Uri("/", UriKind.Relative));
                             CacheManifest.AddCached(new Uri("/portals/basic", UriKind.Relative));
                             CacheManifest.AddCached(new Uri("/portals/auth", UriKind.Relative));
