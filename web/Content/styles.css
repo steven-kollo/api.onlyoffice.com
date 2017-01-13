@@ -69,7 +69,7 @@ ol {
     margin: 8px 0 8px 20px;
 }
 
-ol li {
+ol>li {
     margin-bottom: 18px;
 }
 
@@ -753,8 +753,12 @@ pre.hljs {
     padding: 20px 9px 9px;
 }
 
-.demo-info-buttons {
-    margin-bottom: 30px;
+.list-buttons {
+    margin: 0 0 30px;
+}
+.list-buttons li {
+    display: inline-block;
+    margin-right: 16px;
 }
 
 .required {
