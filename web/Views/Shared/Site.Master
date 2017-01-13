@@ -26,7 +26,10 @@
 
     <%= Styles.Render("~/content/styles") %>
 
+    <% if (!Html.IfController("Home"))
+       { %>
     <%= Scripts.Render("~/bundles/scripts") %>
+    <% } %>
 </head>
 <body>
     <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
