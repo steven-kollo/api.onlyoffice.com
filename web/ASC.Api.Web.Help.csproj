@@ -242,7 +242,7 @@
     <Content Include="403.htm" />
     <Content Include="404.htm" />
     <Content Include="500.htm" />
-    <Content Include="Content\hightlight\default.css" />
+    <Content Include="Content\hightlight.css" />
     <Content Include="Content\img\docbuilder.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
@@ -306,11 +306,11 @@
     <Content Include="Content\styles.css" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\clipboard.js" />
-    <Content Include="Scripts\highlight\highlight.pack.js" />
+    <Content Include="Scripts\highlight.pack.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\jquery\jquery.blockUI.js" />
     <Content Include="Scripts\jquery\jquery.js" />
-    <Content Include="Scripts\treeview\jquery.treeview.js" />
+    <Content Include="Scripts\jquery\jquery.treeview.js" />
     <Content Include="Views\ApiSystem\Authentication.aspx" />
     <Content Include="Views\ApiSystem\Basic.aspx" />
     <Content Include="Views\ApiSystem\TariffGet.aspx" />
@@ -1173,7 +1173,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\treeview\jquery.treeview.css" />
+    <Content Include="Content\jquery.treeview.css" />
     <Content Include="Scripts\scripts.js" />
     <Content Include="Views\Shared\Method.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />

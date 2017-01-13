@@ -94,16 +94,16 @@ namespace ASC.Api.Web.Help
                             .Include(
                                 "~/scripts/jquery/jquery.js",
                                 "~/scripts/jquery/jquery.blockUI.js",
-                                "~/scripts/highlight/highlight.pack.js",
-                                "~/scripts/treeview/jquery.treeview.js",
+                                "~/scripts/jquery/jquery.treeview.js",
+                                "~/scripts/highlight.pack.js",
                                 "~/scripts/clipboard.js",
                                 "~/scripts/scripts.js"));
 
             bundles.Add(new Bundle("~/content/styles", new CssMinify())
                             .Include(
-                                "~/content/hightlight/default.css",
-                                "~/content/treeview/jquery.treeview.css",
-                                "~/content/styles.css"));
+                                "~/content/styles.css",
+                                "~/content/jquery.treeview.css",
+                                "~/content/hightlight.css"));
         }
 
         protected void Application_Start()
