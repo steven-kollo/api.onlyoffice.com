@@ -3,7 +3,7 @@
     Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <div class="treeheader">Get Started</div>
-<ul class="side-nav treeview root">
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("basic") %>">Introduction</a>
     </li>
@@ -13,10 +13,10 @@
 </ul>
 
 <div class="treeheader">Documentation</div>
-<ul class="side-nav treeview root">
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("integratingdocumentbuilder") %>">Integrating Document Builder</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("rubyexample") %>">Ruby example</a>
             </li>
@@ -27,13 +27,13 @@
     </li>
     <li>
         <a href="<%= Url.Action("integrationapi") %>">Integration API</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("integrationapi/usingdocbuilderfile") %>">Using .docbuilder file</a>
             </li>
             <li>
                 <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">CDocBuilder class</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("integrationapi/cdocbuilder/closefile") %>">CloseFile</a>
                     </li>
@@ -73,10 +73,10 @@
     </li>
     <li>
         <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/api") %>">Api</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/api/createblipfill") %>">CreateBlipFill</a>
                     </li>
@@ -135,7 +135,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apichart") %>">ApiChart</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apichart/getclasstype") %>">GetClassType</a>
                     </li>
@@ -158,7 +158,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apidocument") %>">ApiDocument</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apidocument/addelement") %>">AddElement</a>
                     </li>
@@ -211,7 +211,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apidocumentcontent") %>">ApiDocumentContent</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/addelement") %>">AddElement</a>
                     </li>
@@ -237,7 +237,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apidrawing") %>">ApiDrawing</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apidrawing/getclasstype") %>">GetClassType</a>
                     </li>
@@ -266,7 +266,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apifill") %>">ApiFill</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apifill/getclasstype") %>">GetClassType</a>
                     </li>
@@ -274,7 +274,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apigradientstop") %>">ApiGradientStop</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apigradientstop/getclasstype") %>">GetClassType</a>
                     </li>
@@ -282,7 +282,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apiimage") %>">ApiImage</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apiimage/getclasstype") %>">GetClassType</a>
                     </li>
@@ -290,7 +290,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apinumbering") %>">ApiNumbering</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apinumbering/getclasstype") %>">GetClassType</a>
                     </li>
@@ -301,7 +301,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apinumberinglevel") %>">ApiNumberingLevel</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apinumberinglevel/getclasstype") %>">GetClassType</a>
                     </li>
@@ -336,7 +336,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apiparagraph") %>">ApiParagraph</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apiparagraph/addcolumnbreak") %>">AddColumnBreak</a>
                     </li>
@@ -458,7 +458,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apiparapr") %>">ApiParaPr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apiparapr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -529,7 +529,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apipresetcolor") %>">ApiPresetColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apipresetcolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -537,7 +537,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apirgbcolor") %>">ApiRGBColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apirgbcolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -545,7 +545,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apirun") %>">ApiRun</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apirun/addcolumnbreak") %>">AddColumnBreak</a>
                     </li>
@@ -628,7 +628,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apischemecolor") %>">ApiSchemeColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apischemecolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -636,7 +636,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apisection") %>">ApiSection</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apisection/getclasstype") %>">GetClassType</a>
                     </li>  
@@ -680,7 +680,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apishape") %>">ApiShape</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apishape/getclasstype") %>">GetClassType</a>
                     </li>
@@ -694,7 +694,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apistroke") %>">ApiStroke</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apistroke/getclasstype") %>">GetClassType</a>
                     </li>
@@ -702,7 +702,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apistyle") %>">ApiStyle</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apistyle/getclasstype") %>">GetClassType</a>
                     </li>
@@ -740,7 +740,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apitable") %>">ApiTable</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apitable/addcolumn") %>">AddColumn</a>
                     </li>
@@ -829,7 +829,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apitablecell") %>">ApiTableCell</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apitablecell/getclasstype") %>">GetClassType</a>
                     </li>
@@ -879,7 +879,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apitablecellpr") %>">ApiTableCellPr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apitablecellpr/getclasstype") %>">GetClassType</a>
                     </li> 
@@ -926,7 +926,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apitablepr") %>">ApiTablePr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apitablepr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -988,7 +988,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apitablerow") %>">ApiTableRow</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apitablerow/getcell") %>">GetCell</a>
                     </li>
@@ -1008,7 +1008,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apitablerowpr") %>">ApiTableRowPr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apitablerowpr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1022,7 +1022,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apitablestylepr") %>">ApiTableStylePr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apitablestylepr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1048,7 +1048,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apitextpr") %>">ApiTextPr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apitextpr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1107,7 +1107,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apiunicolor") %>">ApiUniColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apiunicolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1115,7 +1115,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("textdocumentapi/apiunsupported") %>">ApiUnsupported</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apiunsupported/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1125,10 +1125,10 @@
     </li>
     <li>
         <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/api/createblipfill") %>">CreateBlipFill</a>
                     </li>
@@ -1193,7 +1193,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apibullet") %>">ApiBullet</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apibullet/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1201,7 +1201,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apichart") %>">ApiChart</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apichart/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1236,7 +1236,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apicolor") %>">ApiColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apicolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1244,7 +1244,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apidocumentcontent") %>">ApiDocumentContent</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apidocumentcontent/addelement") %>">AddElement</a>
                     </li>
@@ -1270,7 +1270,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apidrawing") %>">ApiDrawing</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apidrawing/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1284,7 +1284,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apifill") %>">ApiFill</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apifill/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1292,7 +1292,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apigradientstop") %>">ApiGradientStop</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apigradientstop/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1300,7 +1300,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apiimage") %>">ApiImage</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apiimage/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1308,7 +1308,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apiparagraph") %>">ApiParagraph</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apiparagraph/addelement") %>">AddElement</a>
                     </li>
@@ -1370,7 +1370,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apiparapr") %>">ApiParaPr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apiparapr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1405,7 +1405,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apipresetcolor") %>">ApiPresetColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apipresetcolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1413,7 +1413,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apirange") %>">ApiRange</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apirange/getcol") %>">GetCol</a>
                     </li>
@@ -1472,7 +1472,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apirgbcolor") %>">ApiRGBColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apirgbcolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1480,7 +1480,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apirun") %>">ApiRun</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apirun/addlinebreak") %>">AddLineBreak</a>
                     </li>
@@ -1539,7 +1539,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apischemecolor") %>">ApiSchemeColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apischemecolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1547,7 +1547,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apishape") %>">ApiShape</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apishape/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1561,7 +1561,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apistroke") %>">ApiStroke</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apistroke/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1569,7 +1569,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apitextpr") %>">ApiTextPr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apitextpr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1613,7 +1613,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apiunicolor") %>">ApiUniColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apiunicolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1621,7 +1621,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("spreadsheetapi/apiworksheet") %>">ApiWorksheet</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("spreadsheetapi/apiworksheet/addchart") %>">AddChart</a>
                     </li>
@@ -1658,10 +1658,10 @@
     </li>
     <li>
         <a href="<%= Url.Action("presentationapi") %>">Presentation API</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("presentationapi/api") %>">Api</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/api/createblipfill") %>">CreateBlipFill</a>
                     </li>
@@ -1726,7 +1726,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apibullet") %>">ApiBullet</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apibullet/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1734,7 +1734,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apichart") %>">ApiChart</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apichart/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1757,7 +1757,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apidocumentcontent") %>">ApiDocumentContent</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apidocumentcontent/addelement") %>">AddElement</a>
                     </li>
@@ -1783,7 +1783,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apidrawing/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1797,7 +1797,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apifill") %>">ApiFill</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apifill/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1805,7 +1805,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apigradientstop") %>">ApiGradientStop</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apigradientstop/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1813,7 +1813,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apiimage") %>">ApiImage</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apiimage/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1821,7 +1821,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apiparagraph") %>">ApiParagraph</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apiparagraph/addelement") %>">AddElement</a>
                     </li>
@@ -1883,7 +1883,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apiparapr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1918,7 +1918,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apipresentation") %>">ApiPresentation</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apipresentation/addslide") %>">AddSlide</a>
                     </li>
@@ -1941,7 +1941,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apipresetcolor") %>">ApiPresetColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apipresetcolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1949,7 +1949,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apirgbcolor") %>">ApiRGBColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apirgbcolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -1957,7 +1957,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apirun") %>">ApiRun</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apirun/addlinebreak") %>">AddLineBreak</a>
                     </li>
@@ -2016,7 +2016,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apischemecolor") %>">ApiSchemeColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apischemecolor/getclasstype") %>">GetClassType</a>
                     </li>
@@ -2024,7 +2024,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apishape") %>">ApiShape</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apishape/getclasstype") %>">GetClassType</a>
                     </li> 
@@ -2038,7 +2038,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apislide") %>">ApiSlide</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apislide/addobject") %>">AddObject</a>
                     </li>
@@ -2061,7 +2061,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apistroke") %>">ApiStroke</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apistroke/getclasstype") %>">GetClassType</a>
                     </li>
@@ -2069,7 +2069,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apitextpr") %>">ApiTextPr</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apitextpr/getclasstype") %>">GetClassType</a>
                     </li>
@@ -2113,7 +2113,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("presentationapi/apiunicolor") %>">ApiUniColor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("presentationapi/apiunicolor/getclasstype") %>">GetClassType</a>
                     </li>

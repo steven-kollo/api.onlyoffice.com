@@ -666,15 +666,6 @@ pre.hljs {
     color: #e34603;
 }
 
-/*treeview*/
-.treeview .collapsable-hitarea {
-    background: url("img/sprite.png") no-repeat 0 -102px transparent;
-}
-
-.treeview .expandable-hitarea {
-    background: url("img/sprite.png") no-repeat 0 -82px transparent;
-}
-
 #embeddedEditor {
     min-height: 550px;
     background: #f1f1f1;

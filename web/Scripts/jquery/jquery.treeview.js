@@ -69,7 +69,7 @@
 				// don't handle click events on children, eg. checkboxes
 				if ( this == event.target )
 					toggler.apply($(this).next());
-			}).add( $("a", this) ).hoverClass();
+			}).add( $("a", this) )/*.hoverClass()*/;
 			
 			if (!settings.prerendered) {
 				// handle closed ones first
