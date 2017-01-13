@@ -116,6 +116,3 @@
        } %>
 
 </asp:Content>
-
-<asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceholder" runat="server">
-</asp:Content>

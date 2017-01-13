@@ -285,5 +285,3 @@ end
 
 </asp:Content>
 
-<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>
-

@@ -44,5 +44,3 @@
     <p>The <b>document editing service</b> opens <b>two different</b> files for editing.</p>
     <p>Check if the <a href="<%= Url.Action("config/document") %>#key">document.key</a> values coincide to be able to co-edit the same document. The <em>key</em> value must change after the save, must differ for different documents and coincide when co-editing one and the same document.</p>
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

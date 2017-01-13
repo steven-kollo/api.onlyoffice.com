@@ -35,5 +35,3 @@
         <li><a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> with <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> which contains the link to the file of the corresponding version, the link to the previous version and the link to the file received using the <em>changesUrl</em>.</li>
     </ul>
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

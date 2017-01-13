@@ -119,5 +119,3 @@ gradle amp</span>
     <p>Download the Alfresco ONLYOFFICE™ integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco">here</a>.</p>
 
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

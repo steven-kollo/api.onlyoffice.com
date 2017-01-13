@@ -77,5 +77,3 @@
     <p>Download the Confluence ONLYOFFICE™ integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
 
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

@@ -12,5 +12,3 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <%= Html.Partial("Spreadsheetapi/"+ (Model ?? "Default")) %>
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>
