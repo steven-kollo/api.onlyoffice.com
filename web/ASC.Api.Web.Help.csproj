@@ -310,7 +310,6 @@
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\jquery\jquery.blockUI.js" />
     <Content Include="Scripts\jquery\jquery.js" />
-    <Content Include="Scripts\modernizr\modernizr-1.7.min.js" />
     <Content Include="Scripts\treeview\jquery.treeview.js" />
     <Content Include="Views\ApiSystem\Authentication.aspx" />
     <Content Include="Views\ApiSystem\Basic.aspx" />

@@ -204,9 +204,6 @@ html {
     width: 100%;
 }
 
-.layout-content.center {
-    margin: 20px auto 0;
-}
 
 /*table*/
 .table {
@@ -450,9 +447,7 @@ h5 {
 /*footer*/
 .layout-table-footer {
     height: 50px;
-    vertical-align: top;
 }
-
 .bottommenu {
     float: left;
     font-size: 13px;
@@ -512,13 +507,14 @@ h5 {
     color: #666;
     display: inline-block;
     font-size: 14px;
-    outline: none;
-    width: 166px;
-    padding: 0;
-    top: 2px;
     height: 23px;
     line-height: 23px;
+    margin: 0;
+    outline: none;
+    padding: 0;
     position: absolute;
+    top: 2px;
+    width: 166px;
 }
 
 .search-clear {
@@ -550,10 +546,15 @@ h5 {
 }
 
 /*start page*/
-.products {
-    margin: 140px auto 0;
+
+.home .layout-content {
+    margin: 0 auto 0;
     text-align: center;
-    vertical-align: top;
+}
+.home .layout-table-content {
+    vertical-align: middle;
+    padding-top: 100px;
+    padding-bottom: 180px;
 }
 
 .products-info {
@@ -574,6 +575,7 @@ h5 {
 }
 
 .product a {
+    color: #333;
     outline: none;
     text-decoration: none;
 }
