@@ -31,7 +31,7 @@
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("config/editor") %>"><b>editor</b></a> - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.);
+            <a href="<%= Url.Action("config/editor") %>"><b>editorConfig</b></a> - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.);
             <ul>
                 <li>
                     <a href="<%= Url.Action("config/editor/customization") %>"><b>customization</b></a> - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
