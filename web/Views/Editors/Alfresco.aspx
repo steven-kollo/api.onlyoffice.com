@@ -15,8 +15,14 @@
         <span class="hdr">Alfresco ONLYOFFICE™ integration plugin</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from Alfresco Share using ONLYOFFICE™ Document Server. Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</p>
-    <p>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents. This allows multiple users to collaborate in real time and to save back those changes to Alfresco.</p>
+    <p class="dscr">
+        This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE™ Document Server.
+        Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
+    </p>
+    <p>
+        The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents.
+        This allows multiple users to collaborate in real time and to save back those changes to Alfresco.
+    </p>
     <p>Tested with Enterprise 5.0.* and Community 5.1.*</p>
 
 
@@ -31,7 +37,11 @@
 
 
     <h2>Installing ONLYOFFICE™ Document Server</h2>
-    <p>You will need an instance of ONLYOFFICE™ Document Server that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin). If that is not the case, use the official ONLYOFFICE™ Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">Document Server for Linux</a>. ONLYOFFICE™ Document Server must also be able to POST to Alfresco directly.</p>
+    <p>
+        You will need an instance of ONLYOFFICE™ Document Server that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin).
+        If that is not the case, use the official ONLYOFFICE™ Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">Document Server for Linux</a>.
+        ONLYOFFICE™ Document Server must also be able to POST to Alfresco directly.
+    </p>
     <p>The easiest way to start an instance of ONLYOFFICE™ Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer">Docker</a>.</p>
 
 
@@ -97,7 +107,7 @@ gradle amp</span>
         <li><b>docTitle</b> - the document Title (name).</li>
     </ul>
     <p>Alfresco Share takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.</p>
-    <p>The client browser makes a request for the javascript library from ONLYOFFICE™ Document Server and sends ONLYOFFICE™ Document Server the docEditor configuration with the above properties.</p>
+    <p>The client browser makes a request for the javascript library from ONLYOFFICE™ Document Server and sends ONLYOFFICE™ Document Server the DocEditor configuration with the above properties.</p>
     <p>Then ONLYOFFICE™ Document Server downloads the document from Alfresco and the user begins editing.</p>
     <p>ONLYOFFICE™ Document Server sends a POST request to the <em>callback</em> URL to inform Alfresco that a user is editing the document.</p>
     <p>Alfresco locks the document, but still allows other users with write access the ability to collaborate in real time with ONLYOFFICE™ Document Server by leaving the Action present.</p>
@@ -109,5 +119,3 @@ gradle amp</span>
     <p>Download the Alfresco ONLYOFFICE™ integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco">here</a>.</p>
 
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

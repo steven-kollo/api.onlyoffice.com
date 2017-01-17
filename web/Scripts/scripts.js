@@ -103,6 +103,14 @@ $(function() {
         
         displayModalPanel("#trySourceCodeDialog", 825, 650, 0, "absolute");
     });
+    
+    $(".button-popap-open").click(function () {
+        $("#containerDialog .popap-container>div").hide();
+        var codeId = $(this).attr("data-body");
+        $("#" + codeId).show();
+
+        displayModalPanel("#containerDialog", 800, 650, 0);
+    });
 
     $(".video-link").click(function () {
         var poapDialog = $(this).find(".popap-dialog");
@@ -154,13 +162,48 @@ $(function() {
         hljs.highlightBlock(block);
     });
 
-    var clipboard = new Clipboard("#clipLink", {
-        text: function () {
-            return location.href + "#returns";
-        }
+
+    $("#builderFileLink").on("click", function (e) {
+        e.preventDefault();
+        $("#builderFile").click();
     });
 
-    clipboard.on('success', function () { alert("Link was copied to clipboard"); });
+    $("#builderFile").on("change", function (e) {
+        var input = e.target;
+
+        var reader = new FileReader();
+        reader.onload = function () {
+            var text = reader.result;
+            $("#builderScript").text(text);
+        };
+        reader.readAsText(input.files[0]);
+    });
+
+    new Clipboard("#clipLink", {
+        text: function (obj) {
+            var href = $(obj).attr("href");
+            if (href.indexOf("#") == 0) {
+                var current = location.href;
+                if (current.indexOf("#") > 0) {
+                    current = current.substring(0, Math.max(current.indexOf("#")));
+                }
+                location.hash = href;
+
+                href = current + href;
+            }
+            return href;
+        }
+    }).on("success",
+        function () {
+            alert("Link was copied to clipboard");
+        });
+
+
+    var clipboard = new Clipboard(".copy-code", {
+        target: function () {
+            return $("pre:visible")[0];
+        }
+    });
 
     initDemo();
 });

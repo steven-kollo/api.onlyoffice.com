@@ -13,5 +13,3 @@
 
     <%= Html.Partial("Example/"+ (Model ?? "Csharp")) %>
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

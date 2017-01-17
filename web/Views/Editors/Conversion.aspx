@@ -45,5 +45,3 @@
         <li>The <b>document manager</b> downloads the converted file.</li>
     </ol>
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

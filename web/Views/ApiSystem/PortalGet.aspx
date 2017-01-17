@@ -47,10 +47,9 @@
         </tbody>
     </table>
 
-    <div class="header-gray">
+    <div id="returns" class="header-gray">
         Returns
-        <span id="clipLink">Get link to this headline</span>
-        <a id="returns"></a>
+        <a id="clipLink" href="#returns" onclick="return false;">Get link to this headline</a>
     </div>
     <p>Returns the list of all the portals registered to the user with the email address specified in the request.</p>
 
@@ -84,5 +83,3 @@
 </pre>
 
 </asp:Content>
-
-<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

@@ -21,7 +21,7 @@
 
     <ol>
         <li>Download Document Server installation and set it up on your local server:
-            <div class="demo-info-buttons">
+            <div class="list-buttons">
                 <a class="button" href="https://sourceforge.net/projects/teamlab/files/ONLYOFFICE_DocumentServer/v4.0/binaries/" target="_blank">Download Editors
                 </a>
             </div>
@@ -30,14 +30,16 @@
         <% if (Model.Count > 0)
            { %>
         <li>Select the programming language and download the code for the sample of online editors integration into your web site:
-            <div class="demo-info-buttons">
+            <ul class="list-buttons">
                 <% foreach (var example in Model)
                    { %>
-                <a class="button" href="<%= Url.Content("~/app_data/" + example.Replace("#", "%23")) %>" target="_blank">
-                    <%= example.TrimEnd(".zip".ToCharArray()) %>
-                </a>
+                <li>
+                    <a class="button" href="<%= Url.Content("~/app_data/" + example.Replace("#", "%23")) %>" target="_blank">
+                        <%= example.TrimEnd(".zip".ToCharArray()) %>
+                    </a>
+                </li>
                 <% } %>
-            </div>
+            </ul>
         </li>
         <% } %>
 

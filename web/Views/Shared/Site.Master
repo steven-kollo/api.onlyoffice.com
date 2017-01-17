@@ -1,11 +1,15 @@
 ﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<%@ Import Namespace="System.Web.Optimization" %>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en" class="no-js" <% if (string.Equals(ConfigurationManager.AppSettings["offline_cache"], bool.TrueString, StringComparison.OrdinalIgnoreCase)) { %>manifest="<%= Url.RouteUrl("Cache") %>"<% } %>>
+<html lang="en" class="no-js" <% if (string.Equals(ConfigurationManager.AppSettings["offline_cache"], bool.TrueString, StringComparison.OrdinalIgnoreCase))
+                                 { %>manifest="<%= Url.RouteUrl("Cache") %>"
+<% } %>>
 <!--<![endif]-->
 <head>
     <meta charset="UTF-8" />
@@ -13,19 +17,22 @@
     <meta name="author" content="Ascensio System SIA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-        ONLYOFFICE™ Api Documentation - <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    <title>ONLYOFFICE™ Api Documentation -
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
     </title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css" />
     <link rel="icon" href="<%= Url.Content("~/favicon.ico") %>" type="image/x-icon" />
 
-    <%= System.Web.Optimization.Styles.Render("~/content/styles") %>
+    <%= Styles.Render("~/content/styles") %>
 
-    <script type="text/javascript" src="<%= Url.Content("~/scripts/modernizr/modernizr-1.7.min.js") %>"></script>
+    <% if (!Html.IfController("Home"))
+       { %>
+    <%= Scripts.Render("~/bundles/scripts") %>
+    <% } %>
 </head>
 <body>
-    <table class="layout-table">
+    <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
         <tr>
             <td class="layout-table-header" colspan="2">
                 <div class="layout-header">
@@ -40,31 +47,37 @@
                 <div class="layout-side">
                     <% Html.RenderPartial("SearchForm"); %>
                     <% Html.RenderAction("Navigation"); %>
-
-                    <a class="forum" href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">Forum</a>
                 </div>
             </td>
             <% } %>
 
             <td class="layout-table-content">
-                <div class="layout-content <%= Html.IfController("Home") ? "center" : string.Empty %>">
+                <div class="layout-content">
                     <%--<% Html.RenderPartial("BreadCrumbs");%>--%>
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
                 </div>
             </td>
         </tr>
+        <tr>
+            <td class="layout-table-footer" colspan="2">
+                <div class="bottommenu">
+                    <ul>
+                        <li><a target="_blank" href="http://www.onlyoffice.com/">Home site</a></li>
+                        <li><a target="_blank" href="http://www.onlyoffice.com/integration-edition.aspx">For integrators</a></li>
+                        <li><a target="_blank" href="http://www.onlyoffice.com/document-builder.aspx">Document Builder</a></li>
+                        <li><a target="_blank" href="http://dev.onlyoffice.org/">Server Forum</a></li>
+                        <li><a target="_blank" href="http://cloud.onlyoffice.org/">SaaS Forum</a></li>
+                        <li><a target="_blank" href="http://helpcenter.onlyoffice.com/">Help Center</a></li>
+                        <li><a target="_blank" href="http://www.onlyoffice.com/legalterms.aspx">Legal notice</a></li>
+                    </ul>
+                </div>
+                <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>
+            </td>
+        </tr>
     </table>
 
-    <script type="text/javascript">
-        var Config = {
-            BaseUrl: "<%= string.Format("{0}://{1}{2}", Request.Url.Scheme, Request.Url.Authority, Url.Content("~")) %>",
-        };
-    </script>
-
-    <%= System.Web.Optimization.Scripts.Render("~/bundles/scripts") %>
-
     <asp:ContentPlaceHolder ID="ScriptPlaceholder" runat="server"></asp:ContentPlaceHolder>
-    
+
     <% if (string.Equals(ConfigurationManager.AppSettings["analitics"], bool.TrueString, StringComparison.OrdinalIgnoreCase))
        { %>
     <% Html.RenderPartial("Analytic"); %>

@@ -53,5 +53,3 @@ new DocsAPI.DocEditor("placeholder", {
         <li>Open your <em>html</em> file in the browser.</li>
     </ol>
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

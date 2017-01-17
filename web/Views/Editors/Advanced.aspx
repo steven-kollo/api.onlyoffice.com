@@ -15,7 +15,7 @@
         <span class="hdr">Advanced parameters</span>
     </h1>
 
-    <p>The parameters, which can be changed for ONLYOFFICE™ Document Server, can be subdivided into the following main sections:</p>
+    <p class="dscr">The parameters, which can be changed for ONLYOFFICE™ Document Server, can be subdivided into the following main sections:</p>
 
     <a href="<%= Url.Action("config/") %>"><b>config</b></a> - allows to change the platform type used, document display size (width and height) and type of the document opened;
     <ul>
@@ -31,7 +31,7 @@
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("config/editor") %>"><b>editor</b></a> - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.);
+            <a href="<%= Url.Action("config/editor") %>"><b>editorConfig</b></a> - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.);
             <ul>
                 <li>
                     <a href="<%= Url.Action("config/editor/customization") %>"><b>customization</b></a> - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
@@ -165,5 +165,3 @@ config = {
 };
 </pre>
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

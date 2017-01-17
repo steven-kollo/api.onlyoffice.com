@@ -3,7 +3,7 @@
     Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <div class="treeheader">Get Started</div>
-<ul class="side-nav treeview root">
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
@@ -12,7 +12,7 @@
     </li>
     <li>
         <a href="<%= Url.Action("demopreview") %>">Integration Examples</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("example/csharp") %>">.Net (C#) Example</a>
             </li>
@@ -32,7 +32,7 @@
     </li>
     <li>
         <a href="<%= Url.Action("plugins") %>">Integration Connectors</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
             </li>
@@ -43,7 +43,7 @@
     </li>
     <li>
         <a href="<%= Url.Action("howitworks") %>">How It Works</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("open") %>">Opening File</a>
             </li>
@@ -67,16 +67,16 @@
 </ul>
 
 <div class="treeheader">Documentation</div>
-<ul class="side-nav treeview root">
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("advanced") %>">Advanced parameters</a>
     </li>
     <li>
         <a href="<%= Url.Action("config/") %>">Config</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("config/document") %>">Document</a>
-                <ul class="treeview">
+                <ul class="">
                     <li>
                         <a href="<%= Url.Action("config/document/info") %>">Info</a>
                     </li>
@@ -87,7 +87,7 @@
             </li>
             <li>
                 <a href="<%= Url.Action("config/editor") %>">Editor</a>
-                <ul class="treeview">
+                <ul>
                     <li>
                         <a href="<%= Url.Action("config/editor/customization") %>">Customization</a>
                     </li>
@@ -118,7 +118,7 @@
     </li>
     <li>
         <a href="<%= Url.Action("signature/") %>">Signature</a>
-        <ul class="treeview">
+        <ul>
             <li>
                 <a href="<%= Url.Action("signature/config") %>">config</a>
             </li>

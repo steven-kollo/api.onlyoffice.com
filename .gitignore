@@ -5,3 +5,4 @@
 /build/*.log
 /Logs
 /web/*.user
+/.vs/config/applicationhost.config

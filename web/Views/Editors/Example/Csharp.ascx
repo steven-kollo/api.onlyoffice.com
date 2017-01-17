@@ -5,7 +5,7 @@
 </h1>
 
 <h2>Introduction</h2>
-<p>To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>.Net (C#)</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> for their integration.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>.Net (C#)</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> for their integration.</p>
 
 <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
 

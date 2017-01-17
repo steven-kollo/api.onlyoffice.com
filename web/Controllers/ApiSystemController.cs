@@ -84,19 +84,20 @@ namespace ASC.Api.Web.Help.Controllers
         {
             var result = new List<SearchResult>();
 
-            foreach (var action in (ActionType[]) Enum.GetValues(typeof (ActionType)))
+            foreach (var action in (ActionType[])Enum.GetValues(typeof (ActionType)))
             {
                 var actionString = action.ToString().ToLower();
                 var doc = new HtmlDocument();
                 var html = this.RenderView(actionString, new ViewDataDictionary());
                 doc.LoadHtml(html);
-                var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
-                var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
-                var header = headerNode != null ? headerNode.InnerText : string.Empty;
-                var descr = descrNode != null ? descrNode.InnerText : string.Empty;
+                var content = doc.DocumentNode.SelectSingleNode("//div[contains(@class,'layout-content')]");
 
-                if (!string.IsNullOrEmpty(query) && doc.DocumentNode.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
+                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
                 {
+                    var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
+                    var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
+                    var header = headerNode != null ? headerNode.InnerText : string.Empty;
+                    var descr = descrNode != null ? descrNode.InnerText : string.Empty;
                     result.Add(new SearchResult
                         {
                             Module = "apisystem",

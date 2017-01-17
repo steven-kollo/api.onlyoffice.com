@@ -85,13 +85,18 @@ namespace ASC.Api.Web.Help.Controllers
                 var doc = new HtmlDocument();
                 var html = this.RenderView(actionString, new ViewDataDictionary());
                 doc.LoadHtml(html);
-                var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
-                var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
-                var header = headerNode != null ? headerNode.InnerText : string.Empty;
-                var descr = descrNode != null ? descrNode.InnerText : string.Empty;
-
-                if (!string.IsNullOrEmpty(query) && doc.DocumentNode.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
+                var content = doc.DocumentNode;
+                if (content.SelectSingleNode("html") != null)
                 {
+                    content = content.SelectSingleNode("//div[contains(@class,'layout-content')]");
+                }
+
+                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
+                {
+                    var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
+                    var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
+                    var header = headerNode != null ? headerNode.InnerText : string.Empty;
+                    var descr = descrNode != null ? descrNode.InnerText : string.Empty;
                     result.Add(new SearchResult
                         {
                             Module = "plugin",

@@ -48,10 +48,9 @@
     </table>
     <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-    <div class="header-gray">
+    <div id="returns" class="header-gray">
         Returns
-        <span id="clipLink">Get link to this headline</span>
-        <a id="returns"></a>
+        <a id="clipLink" href="#returns" onclick="return false;">Get link to this headline</a>
     </div>
     <p>Returns the description of the portal and the portal pricing plan.</p>
 
@@ -79,5 +78,3 @@
 </pre>
 
 </asp:Content>
-
-<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

@@ -35,5 +35,3 @@
 
     <p>See the <a href="<%= Url.Action("signature/") %>">Signature</a> configuration section to find more.</p>
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>
