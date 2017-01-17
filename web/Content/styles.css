@@ -1,4 +1,4 @@
-﻿/*
+/*
  *
  * (c) Copyright Ascensio System Limited 2010-2016
  *
@@ -71,11 +71,6 @@ ol {
 
 ol>li {
     margin-bottom: 18px;
-}
-
-.blue-color-text {
-    color: #3d4a6b;
-    white-space: nowrap;
 }
 
 table {
@@ -220,18 +215,6 @@ html {
     font-size: 13px;
 }
 
-.table-conversion-matrix-container {
-    border: medium none;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.table-conversion-matrix-container td {
-    border: medium none;
-    padding: 15px 16px 22px;
-    font-size: 12px;
-}
-
 .table-conversion-matrix-text,
 .table-conversion-matrix-spreadsheet,
 .table-conversion-matrix-presentation {
@@ -243,8 +226,8 @@ html {
 }
 
 .table-conversion-matrix-text td,
-.table-conversion-matrix-spreadsheet td {
-    width: 16%;
+.table-conversion-matrix-spreadsheet td,
+.table-conversion-matrix-presentation td {
     border: medium none;
     text-align: center;
     vertical-align: middle;
@@ -252,15 +235,14 @@ html {
     font-size: 12px;
     border: 1px solid #d7d8dc;
 }
-
+.table-conversion-matrix-text td {
+    width: 10%;
+}
+.table-conversion-matrix-spreadsheet td {
+    width: 11%;
+}
 .table-conversion-matrix-presentation td {
-    width: 33%;
-    border: medium none;
-    text-align: center;
-    vertical-align: middle;
-    padding: 5px;
-    font-size: 12px;
-    border: 1px solid #d7d8dc;
+    width: 14%;
 }
 
 .table-conversion-matrix-text th,
