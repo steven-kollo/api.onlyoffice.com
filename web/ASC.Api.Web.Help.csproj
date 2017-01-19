@@ -307,7 +307,7 @@
     <Content Include="robots.txt" />
     <Content Include="Scripts\clipboard.js" />
     <Content Include="Scripts\highlight.pack.js" />
-    <Content Include="Scripts\init.js" />
+    <Content Include="Scripts\editor.js" />
     <Content Include="Scripts\jquery\jquery.blockUI.js" />
     <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery.treeview.js" />

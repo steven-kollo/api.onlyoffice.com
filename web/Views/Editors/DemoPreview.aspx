@@ -66,7 +66,7 @@
     </table>
 
     <div class="demo-block">
-        <div id="embeddedEditor"></div>
+        <div id="placeholder"></div>
     </div>
 
     <p>
@@ -78,11 +78,13 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceholder" runat="server">
     <script type="text/javascript">
-        Config.EditorKey = "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>";
-        Config.DemoUrl = "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>";
+        window.Config = {
+            EditorKey: "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
+            DemoUrl: "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>"
+        };
     </script>
 
     <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_api_url"] ?? "" %>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/scripts/init.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/scripts/editor.js") %>"></script>
 
 </asp:Content>
