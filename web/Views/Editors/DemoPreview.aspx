@@ -66,7 +66,7 @@
     </table>
 
     <div class="demo-block">
-        <div id="embeddedEditor"></div>
+        <div id="placeholder"></div>
     </div>
 
     <p>
@@ -85,6 +85,6 @@
     </script>
 
     <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_api_url"] ?? "" %>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/scripts/init.js") %>"></script>
+    <script type="text/javascript" src="<%= Url.Content("~/scripts/editor.js") %>"></script>
 
 </asp:Content>
