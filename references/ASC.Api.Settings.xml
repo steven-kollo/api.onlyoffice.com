@@ -11,27 +11,48 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSettings">
             <summary>
-            Get ldap settings
+            Returns current portal LDAP settings
             </summary>
-            <returns>LDAPSupportSettings</returns>
+            <short>
+            Get LDAP settings
+            </short>
+            <returns>LDAPSupportSettings object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SyncLdap">
+            <summary>
+            Start sync users and groups process by LDAP
+            </summary>
+            <short>
+            Sync LDAP
+            </short>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveLdapSettings(System.String,System.Boolean)">
             <summary>
-            save ldap settings
+            Save LDAP settings and start import/sync users and groups process by LDAP
             </summary>
-            <returns></returns>
+            <short>
+            Save LDAP settings
+            </short>
+            <param name="settings">LDAPSupportSettings serialized string</param>
+            <param name="acceptCertificate">Flag permits errors of checking certificates</param>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSettingsStatus">
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSyncStatus">
             <summary>
-            read ldap settings status
+            Returns LDAP sync process status
             </summary>
-            <returns>LDAPSupportSettingsResult</returns>
+            <short>
+            Get LDAP sync process status
+            </short>
+            <returns>LDAPSupportSettingsResult object</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetDefaultLdapSettings">
             <summary>
-            read default ldap settings
+            Returns LDAP default settings
             </summary>
-            <returns>LDAPSupportSettings</returns>
+            <short>
+            Get LDAP default settings
+            </short>
+            <returns>LDAPSupportSettings object</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSettings">
             <summary>
@@ -195,23 +216,72 @@
             </summary>
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CheckHttpsCertificate">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UploadHttpsCertificate(System.String,System.String)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettings">
             <summary>
-            Get sso settings
+            Returns current portal SSO settings
             </summary>
-            <returns>SsotSettings</returns>
+            <short>
+            Get SSO settings
+            </short>
+            <returns>SsoSettings object</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.IsStandalone">
             <summary>
-            check that server is standalone
+            Check that server is standalone (Obsolete)
             </summary>
             <returns>bool</returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveSettings(System.String)">
             <summary>
-            save sso settings
+            Save SSO settings for current portal
             </summary>
-            <returns></returns>
+            <short>
+            Save SSO settings
+            </short>
+            <param name="serializeSettings">SsoSettings serialized string</param>
+            <returns>SaveSettingsResult object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CheckSsoCertificate">
+            <summary>
+            Check SSO certificate existance
+            </summary>
+            <returns>object like {success: true, exist: true}</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UploadSsoCertificate(System.String,System.Collections.Generic.List{System.Web.HttpPostedFileBase})">
+            <summary>
+            Upload SSO certificate
+            </summary>
+            <param name="certPassword">Certificate password</param>
+            <param name="files">List of HttpPostedFileBase objects with Certificate file</param>
+            <returns>object like {success: true} or {success: false, message: "some error"}</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSsoCertificateKey">
+            <summary>
+            Get SSO certificate public key
+            </summary>
+            <short>
+            Get SSO certificate key
+            </short>
+            <returns>object like {success: true, publicKey: "[key string]"} or {success: false, message: "some error"}</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.ResetSettings">
+            <summary>
+            Reset SSO settings for current portal
+            </summary>
+            <short>
+            Reset SSO settings
+            </short>
+            <returns>object like {success: true} or {success: false, message: "some error"}</returns>
         </member>
     </members>
 </doc>
