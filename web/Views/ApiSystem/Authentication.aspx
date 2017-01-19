@@ -23,11 +23,11 @@
     </ul>
     <p>The hash value is calculated using the HMAC-SHA1 function with the key from the <em>core.machinekey</em> value of the Hosted Solution site <em>appSettings</em> configuration.</p>
 
-	<div class="note">
-		Please note, that the token is valid for <b>5</b> minutes only, starting with the <b>datetime</b>.
-	</div>
-	
-    <p>Example Authentication Token will look like this: "<em>ASC abc:20160708120000:D94XPcnZ_y6uSx2jgUcgNdk4dro1</em>"</p>
+    <div class="note">
+        Please note, that the token is valid for <b>5</b> minutes only, starting with the <b>datetime</b>.
+    </div>
+
+    <p>Example Authentication Token will look like this: "<em>ASC abc:20100707140603:E7lwEXOplYS-0lbnV1XQnDSbi3w</em>"</p>
 
     <div id="csharp" class="header-gray">.Net(C#) generating token example</div>
     <pre>
@@ -37,6 +37,7 @@ public string CreateAuthToken(string pkey, string machinekey)
     {
         var now = DateTime.UtcNow.ToString("yyyyMMddHHmmss");
         var hash = System.Web.HttpServerUtility.UrlTokenEncode(hasher.ComputeHash(Encoding.UTF8.GetBytes(string.Join("\n", now, pkey))));
+
         return string.Format("ASC {0}:{1}:{2}", pkey, now, hash);
     }
 }
@@ -48,11 +49,30 @@ CreateAuthToken() {
     pkey="$1";
     machinekey=$(echo -n "$2");
     now=$(date +"%Y%m%d%H%M%S");
+
     authkey=$(echo -n -e "${now}\n${pkey}" | openssl dgst -sha1 -binary -mac HMAC -macopt key:$machinekey | sed -e 's/^.* //');
     authkey=$(echo -n "${authkey}" | base64);
 
     echo "ASC ${pkey}:${now}:${authkey}";
 }
+</pre>
+
+    <div id="nodejs" class="header-gray">Node.js generating token example</div>
+    <pre>
+var moment = require("moment");
+var crypto = require("crypto");
+
+var createToken = function (pkey, machinekey) {
+    var now = moment.utc().format("YYYYMMDDHHmmss");
+
+    var authkey = crypto.createHmac("sha1", machinekey).update(now + "\n" + pkey).digest("base64");
+
+    authkey = authkey.replace(/\+/g, "-").replace(/\//g, "_");
+    authkey = authkey.substr(0, authkey.length - 1);
+    var hash = "ASC " + pkey + ":" + now + ":" + authkey;
+
+    return hash;
+};
 </pre>
 
     <div id="php" class="header-gray">PHP generating token example</div>
@@ -89,7 +109,7 @@ function CreateAuthToken([string]$pkey, [string]$machinekey){
 def create_auth_token(pkey, machine_key)
     now = Time.now.strftime('%Y%m%d%H%M%S')
     hash = Base64.strict_encode64(OpenSSL::HMAC.digest('sha1', machine_key, [now, pkey].join("\n")))
-    "ASC #{pkey}:#{now}:#{hash.tr('+', '-').tr('/', '_').chop}1"
+    "ASC #{pkey}:#{now}:#{hash.tr('+', '-').tr('/', '_').chop}"
 end
 </pre>
 
