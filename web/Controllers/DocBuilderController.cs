@@ -853,15 +853,15 @@ namespace ASC.Api.Web.Help.Controllers
 
                 name = (name ?? "").Trim();
                 if (string.IsNullOrEmpty(name))
-                    throw new Exception("Empty Name");
+                    name = "John Smith";
 
                 company = (company ?? "").Trim();
                 if (string.IsNullOrEmpty(company))
-                    throw new Exception("Empty Company");
+                    company = "ONLYOFFICE";
 
                 title = (title ?? "").Trim();
                 if (string.IsNullOrEmpty(title))
-                    throw new Exception("Empty Title");
+                    title = "Commercial director";
 
                 var filePath = DocBuilderHelper.CreateDocument(DocBuilderHelper.BuilderPath, name, company, title, format);
 

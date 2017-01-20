@@ -46,13 +46,17 @@ namespace ASC.Api.Web.Help.Helpers
         private static string CutBuilderScript(string builderScript)
         {
             const string openFunction = "builder.OpenFile";
+            const string createFunction = "builder.CreateFile";
             const string saveFunction = "builder.SaveFile";
 
             if (builderScript.IndexOf(openFunction, StringComparison.InvariantCulture) != -1)
             {
                 throw new Exception("OpenFile not available there");
             }
-
+            if (builderScript.IndexOf(createFunction, StringComparison.InvariantCulture) == -1)
+            {
+                throw new Exception("CreateFile not found");
+            }
             var saveStartIndex = builderScript.IndexOf(saveFunction, StringComparison.InvariantCulture);
             if (saveStartIndex == -1)
             {

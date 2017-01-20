@@ -25,23 +25,6 @@
 
 
 $(function() {
-    function initDemo () {
-        if (!!window.docEditor) {
-            location.reload();
-            return;
-        }
-        if (location.href.indexOf("demopreview") > -1 && $("#embeddedEditor").length) {
-            $(".layout-content").css("max-width", "1085px");
-            var hash = location.hash.replace("#", "") || "text";
-            $(".demo-tab-panel a").removeClass("active");
-            $("#" + hash + "Demo").addClass("active");
-            $("#embeddedEditor").html("<div id=\"placeholder\"></div>");
-            window.docKey = null;
-            var docKey = window.Config.EditorKey;
-            initEditor(docKey);
-        }
-    }
-
     function displayModalPanel (obj, width, height, top, position) {
         try {
             width = parseInt(width || 0);
@@ -134,10 +117,6 @@ $(function() {
         }
     });
 
-    $(window).on("hashchange", function () {
-        initDemo();
-    });
-
     $(".search-box .btn").click(function () {
         $(this).parent().submit();
     });
@@ -204,6 +183,4 @@ $(function() {
             return $("pre:visible")[0];
         }
     });
-
-    initDemo();
 });
