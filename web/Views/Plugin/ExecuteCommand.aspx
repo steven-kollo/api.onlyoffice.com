@@ -19,7 +19,7 @@
 
     <p class="dscr">Used to send the data back to the editor.</p>
 
-    <p>The second parameter is the JavaScript code for work with <b>ONLYOFFICE Document Builder</b> <a href="https://helpcenter.onlyoffice.com/developers/document-builder/index.aspx">API</a>, which allows the plugin to send structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.).</p>
+    <p>The second parameter is the JavaScript code for work with <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a>, which allows the plugin to send structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.).</p>
 
     <div class="note"><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation is made due to the co-editing possibility in online editors. If you create a plugin for desktop editors working with local files, no such limitation is applied.</div>
 
@@ -46,7 +46,7 @@
             </tr>
             <tr class="tablerow">
                 <td>command</td>
-                <td>The command JavaScript code, which forms the structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.) to be sent to the editors. Must be compatible with <a href="https://helpcenter.onlyoffice.com/developers/document-builder/index.aspx">ONLYOFFICE Document Builder</a> syntax.</td>
+                <td>The command JavaScript code, which forms the structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.) to be sent to the editors. Must be compatible with <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> syntax.</td>
                 <td>string</td>
             </tr>
         </tbody>

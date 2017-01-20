@@ -20,7 +20,7 @@
 
     <p>Any plugin has <a href="<%= Url.Action("plugin") %>">window.Asc.plugin</a> object which in its turn has several methods for it to interact with ONLYOFFICE document, spreadsheet and presentation editors.</p>
 
-    <p>For the plugin to work the developer must specify two obligatory methods for the <a href="<%= Url.Action("plugin") %>">window.Asc.plugin</a> object: <a href="<%= Url.Action("init") %>">window.Asc.plugin.init</a> and <a href="<%= Url.Action("button") %>">window.Asc.plugin.button</a>. After that the <a href="<%= Url.Action("executecommand") %>">window.Asc.plugin.executeCommand</a> method is used to send data to the editors using the in-built <b>ONLYOFFICE Document Builder</b> <a href="https://helpcenter.onlyoffice.com/developers/document-builder/integration/CDocBuilder/ExecuteCommand.aspx">API</a> features.</p>
+    <p>For the plugin to work the developer must specify two obligatory methods for the <a href="<%= Url.Action("plugin") %>">window.Asc.plugin</a> object: <a href="<%= Url.Action("init") %>">window.Asc.plugin.init</a> and <a href="<%= Url.Action("button") %>">window.Asc.plugin.button</a>. After that the <a href="<%= Url.Action("executecommand") %>">window.Asc.plugin.executeCommand</a> method is used to send data to the editors using the in-built <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand", "docbuilder") %>">API</a> features.</p>
 
     <p>Let's see how this is done in the <em>helloworld.js</em> plugin:</p>
 
@@ -40,9 +40,9 @@
 })(window, undefined);
 </pre>
 
-    <p>When the plugin object is being initialized (<em>window.Asc.plugin.init = function (text) {...}</em>), the editor forms a paragraph with the 'Hello World' phrase and then uses <b>ONLYOFFICE Document Builder</b> <a href="https://helpcenter.onlyoffice.com/developers/document-builder/index.aspx">API</a> to create the document with this text in it (with the help of the <a href="<%= Url.Action("executecommand") %>">window.Asc.plugin.executeCommand</a> method - <em>this.executeCommand("close", sScript);</em>).</p>
+    <p>When the plugin object is being initialized (<em>window.Asc.plugin.init = function (text) {...}</em>), the editor forms a paragraph with the 'Hello World' phrase and then uses <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a> to create the document with this text in it (with the help of the <a href="<%= Url.Action("executecommand") %>">window.Asc.plugin.executeCommand</a> method - <em>this.executeCommand("close", sScript);</em>).</p>
 
-    <div class="note">Please note, that all <a href="https://helpcenter.onlyoffice.com/developers/document-builder/index.aspx">ONLYOFFICE Document Builder</a> features are already included into all the versions (including the open source one) of ONLYOFFICE document editors, this is how the plugins interact with the editors. The standalone <b>ONLYOFFICE Document Builder</b> version is required, however, in case you want to create documents without any document editors.</div>
+    <div class="note">Please note, that all <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> features are already included into all the versions (including the open source one) of ONLYOFFICE document editors, this is how the plugins interact with the editors. The standalone <b>ONLYOFFICE Document Builder</b> version is required, however, in case you want to create documents without any document editors.</div>
 
     <p>The only 'OK' button (<em>window.Asc.plugin.button = function (id) {...}</em>) is used to create the text and finish the work with the plugin.</p>
 
