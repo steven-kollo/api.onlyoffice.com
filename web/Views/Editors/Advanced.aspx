@@ -15,7 +15,7 @@
         <span class="hdr">Advanced parameters</span>
     </h1>
 
-    <p class="dscr">The parameters, which can be changed for ONLYOFFICE™ Document Server, can be subdivided into the following main sections:</p>
+    <p class="dscr">The parameters, which can be changed for ONLYOFFICE Document Server, can be subdivided into the following main sections:</p>
 
     <a href="<%= Url.Action("config/") %>"><b>config</b></a> - allows to change the platform type used, document display size (width and height) and type of the document opened;
     <ul>

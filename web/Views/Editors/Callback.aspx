@@ -117,7 +117,7 @@
 }
 </pre>
 
-    <p id="implement">The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators who use ONLYOFFICE™ Document Server on their own server.</p>
+    <p id="implement">The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators who use ONLYOFFICE Document Server on their own server.</p>
 
     <div id="csharp" class="header-gray">.Net (C#) document save example</div>
     <pre>

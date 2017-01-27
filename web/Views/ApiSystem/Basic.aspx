@@ -14,11 +14,11 @@
         <span class="hdr">Basic concepts</span>
     </h1>
     <p class="dscr">
-        The ONLYOFFICE™ Hosted Solution is implemented as REST over HTTP using GET/POST. All the resources, like client creation, portal registration, etc, have their own URLs and are designed to be manipulated in isolation.
+        The ONLYOFFICE Hosted Solution is implemented as REST over HTTP using GET/POST. All the resources, like client creation, portal registration, etc, have their own URLs and are designed to be manipulated in isolation.
     </p>
     <h2>Authentication</h2>
     <p>
-        Authentication in the ONLYOFFICE™ Hosted Solution is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the <a href="<%= Url.Action("authentication") %>">Authentication</a> section.
+        Authentication in the ONLYOFFICE Hosted Solution is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header. For information and examples please visit the <a href="<%= Url.Action("authentication") %>">Authentication</a> section.
     </p>
     <h2>Making requests</h2>
     <p>

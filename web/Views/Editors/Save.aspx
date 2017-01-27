@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Saving File</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of saving the document in ONLYOFFICE™ Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of saving the document in ONLYOFFICE Document Server.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/saving.jpg") %>" />
     <ol>
         <li>The user edits the document in the <b>document editor</b>.</li>

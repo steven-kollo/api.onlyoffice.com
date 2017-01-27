@@ -5,7 +5,7 @@
     <span class="hdr">Config</span>
 </h1>
 
-<p class="dscr">When a file is <a href="<%= Url.Action("open")%>">opened</a> for editing in ONLYOFFICE™ Document Server, the <a href="<%= Url.Action("config/") %>#token">token</a> is added to the configuration to validate the parameters.</p>
+<p class="dscr">When a file is <a href="<%= Url.Action("open")%>">opened</a> for editing in ONLYOFFICE Document Server, the <a href="<%= Url.Action("config/") %>#token">token</a> is added to the configuration to validate the parameters.</p>
 
 <p>
     The <em>payload</em> for the JWT token in the JSON format must have the same structure as the <a href="<%= Url.Action("advanced") %>">config</a>.

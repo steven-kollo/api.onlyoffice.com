@@ -10,7 +10,7 @@
             <span class="hdr">Welcome to onlyoffice api</span>
         </h1>
         <p>
-            ONLYOFFICE™ API describes the main methods that allow you to interact with different ONLYOFFICE™ components.
+            ONLYOFFICE API describes the main methods that allow you to interact with different ONLYOFFICE components.
                 <br />
             Please select the necessary section below to learn more about which API methods are available for it.
         </p>

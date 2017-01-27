@@ -16,13 +16,13 @@
     <h2>Introduction
     </h2>
     <p>
-        The ONLYOFFICE™ Community Server API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
+        The ONLYOFFICE Community Server API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
             All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.
     </p>
     <h2>Authentication
     </h2>
     <p>
-        Authentication in the ONLYOFFICE™ Community Server API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
+        Authentication in the ONLYOFFICE Community Server API is managed via the HTTP authentication, i.e. every request must include the Authorization HTTP header.
             For information and examples please visit the <a href="<%= Url.Action("auth") %>">Authentication</a> section.
     </p>
     <h2>Making requests

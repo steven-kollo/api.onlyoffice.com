@@ -54,7 +54,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onDownloadAs = function (event) {
-    console.log("ONLYOFFICE™ Document Editor create file: " + event.data);
+    console.log("ONLYOFFICE Document Editor create file: " + event.data);
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -72,7 +72,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onError = function (event) {
-    console.log("ONLYOFFICE™ Document Editor reports an error: " + event.data);
+    console.log("ONLYOFFICE Document Editor reports an error: " + event.data);
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -90,7 +90,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onReady = function() {
-    console.log("ONLYOFFICE™ Document Editor is ready");
+    console.log("ONLYOFFICE Document Editor is ready");
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -111,7 +111,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onRequestEditRights = function () {
-    console.log("ONLYOFFICE™ Document Editor requests editing rights");
+    console.log("ONLYOFFICE Document Editor requests editing rights");
     document.location.reload();
 };
 

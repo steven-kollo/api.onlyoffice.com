@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html style="height: 100%;">
 <head>
-    <title>ONLYOFFICE™ Api Documentation</title>
+    <title>ONLYOFFICE Api Documentation</title>
 </head>
 <body style="height: 100%; margin: 0;">
     <div id="placeholder" style="height: 100%"></div>
