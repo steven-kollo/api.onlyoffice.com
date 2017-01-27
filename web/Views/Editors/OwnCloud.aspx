@@ -32,16 +32,16 @@
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from ownCloud and any end clients (version 3.0 and later are supported for use with the app).
-        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">Document Server for Linux</a>.
+        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
         ONLYOFFICE Document Server must also be able to POST to ownCloud directly.
     </p>
-    <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer">Docker</a>.</p>
+    <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
     <h2>Installing ownCloud ONLYOFFICE integration app</h2>
     <p>To start using ONLYOFFICE Document Server with ownCloud, the following steps must be performed:</p>
     <ol>
-        <li>Place ownCloud ONLYOFFICE integration app to your ownCloud server into the <em>/apps</em> (or some other) directory, <a href="https://doc.owncloud.org/server/9.0/admin_manual/installation/apps_management_installation.html#using-custom-app-directories">used</a> to connect applications:
+        <li>Place ownCloud ONLYOFFICE integration app to your ownCloud server into the <em>/apps</em> (or some other) directory, <a href="https://doc.owncloud.org/server/9.0/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications:
             <span class="commandline">cd apps/
 git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span>
         </li>
@@ -83,7 +83,7 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span
     <p>ownCloud downloads the new version of the document, replacing the old one.</p>
 
     <br />
-    <p>Download the ownCloud ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud">here</a>.</p>
+    <p>Download the ownCloud ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">here</a>.</p>
 
 </asp:Content>
 
