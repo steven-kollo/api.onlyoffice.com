@@ -49,19 +49,6 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>embeddedfonts</td>
-                <td>Whether or not embed the fonts into the document file.<br />
-                    Supported values:
-                    <ul>
-                        <li>true</li>
-                        <li>false</li>
-                    </ul>
-                    This parameter is applied not to all formats.
-                </td>
-                <td>boolean</td>
-                <td>optional</td>
-            </tr>
-            <tr class="tablerow">
                 <td>filetype<span class="required">*</span></td>
                 <td>Type of the document file to be converted.</td>
                 <td>string</td>
