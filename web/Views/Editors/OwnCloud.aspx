@@ -26,7 +26,7 @@
         It will also create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to ownCloud.
     </p>
-    <p>Tested with ownCloud 9.*</p>
+    <p>Tested with ownCloud 9.0.3 and 9.1.3</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
