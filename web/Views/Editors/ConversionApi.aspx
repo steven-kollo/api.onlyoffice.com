@@ -49,6 +49,38 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td>codePage</td>
+                <td>The file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
+                    Main supported values:
+                    <ul>
+                        <li><b>932</b> - Japanese (Shift-JIS)</li>
+                        <li><b>950</b> - Chinese Traditional (Big5)</li>
+                        <li><b>1250</b> - Central European (Windows)</li>
+                        <li><b>1251</b> - Cyrillic (Windows)</li>
+                        <li><b>65001</b> - Unicode (UTF-8)</li>
+                    </ul>
+                    You can find all the supported values <a target="_blank" href="https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js">in this file</a>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td>delimiter</td>
+                <td>Delimiter characters for separating values when converting from <em>csv</em> format.<br />
+                    Supported values:
+                    <ul>
+                        <li><b>0</b> - no delimiter</li>
+                        <li><b>1</b> - tab</li>
+                        <li><b>2</b> - semicolon</li>
+                        <li><b>3</b> - colon</li>
+                        <li><b>4</b> - comma</li>
+                        <li><b>5</b> - space</li>
+                    </ul>
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td>filetype<span class="required">*</span></td>
                 <td>Type of the document file to be converted.</td>
                 <td>string</td>
