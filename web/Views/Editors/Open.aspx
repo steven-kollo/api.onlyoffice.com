@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Opening File</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of opening the document in ONLYOFFICE™ Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of opening the document in ONLYOFFICE Document Server.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/opening.jpg") %>" />
     <ol>
         <li>The user uses the <b>document manager</b> (found in his/her browser) to open the document for viewing or editing.
@@ -33,9 +33,9 @@
         <li>Add the <em>div</em> element as shown below.
             <pre>&lt;div id=&quot;placeholder&quot;&gt;&lt;/div&gt;</pre>
         </li>
-        <li>Specify your ONLYOFFICE™ Document Server link with the JavaScript API that will be used for your website.
+        <li>Specify your ONLYOFFICE Document Server link with the JavaScript API that will be used for your website.
             <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;http://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre>
-            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.
+            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
             <pre>

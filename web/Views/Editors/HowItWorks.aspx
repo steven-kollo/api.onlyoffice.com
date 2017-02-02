@@ -16,7 +16,7 @@
     </h1>
 
     <p class="dscr">
-        The work with document files in ONLYOFFICE™ Document Server is quite a simple process but it requires some understanding of what is going on when you click your document link to <a href="<%= Url.Action("open") %>">open</a> it in the browser, or <a href="<%= Url.Action("save") %>">save</a> the document or <a href="<%= Url.Action("conversion") %>">upload</a> it from your computer to the document server.
+        The work with document files in ONLYOFFICE Document Server is quite a simple process but it requires some understanding of what is going on when you click your document link to <a href="<%= Url.Action("open") %>">open</a> it in the browser, or <a href="<%= Url.Action("save") %>">save</a> the document or <a href="<%= Url.Action("conversion") %>">upload</a> it from your computer to the document server.
     </p>
     <p>The user-document interaction is done both at the client side and at the server side.</p>
     <p>Below the main notions used throughout the current documentation are explained.</p>
@@ -47,8 +47,8 @@
     </ul>
 
     <p class="list-header">
-        Please note, that ONLYOFFICE™ Document Server includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b> and <b>document conversion service</b>.
-        The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators who use ONLYOFFICE™ Document Server on their own server.
+        Please note, that ONLYOFFICE Document Server includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b> and <b>document conversion service</b>.
+        The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators who use ONLYOFFICE Document Server on their own server.
     </p>
 
 </asp:Content>

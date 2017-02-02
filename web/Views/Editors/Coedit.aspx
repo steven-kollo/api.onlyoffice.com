@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Coediting</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of co-editing the document in ONLYOFFICE™ Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of co-editing the document in ONLYOFFICE Document Server.</p>
     <img alt="Co-editing" src="<%= Url.Content("~/content/img/editor/coedit.jpg") %>" />
     <ol>
         <li>User 1 and user 2 open one and the same document in <b>document editor</b>, i.e. when opening the file one and the same <a href="<%= Url.Action("config/document") %>#key">key</a> has been used.</li>
@@ -30,9 +30,9 @@
         <li>Add the <em>div</em> element as shown below.
             <pre>&lt;div id=&quot;placeholder&quot;&gt;&lt;/div&gt;</pre>
         </li>
-        <li>Specify your ONLYOFFICE™ Document Server link with the JavaScript API that will be used for your website.
+        <li>Specify your ONLYOFFICE Document Server link with the JavaScript API that will be used for your website.
             <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;http://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre>
-            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.
+            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
             <pre>

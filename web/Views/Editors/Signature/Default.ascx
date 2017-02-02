@@ -3,7 +3,7 @@
 <h1>
     <span class="hdr">Signature</span>
 </h1>
-<p class="dscr">ONLYOFFICE™ Document Server <a href="<%= Url.Action("security") %>">uses</a> <b>tokens</b> generated using the JSON Web Tokens standard.</p>
+<p class="dscr">ONLYOFFICE Document Server <a href="<%= Url.Action("security") %>">uses</a> <b>tokens</b> generated using the JSON Web Tokens standard.</p>
 
 <div class="note">This feature is used in <b>Document Server</b> starting with version 4.2</div>
 

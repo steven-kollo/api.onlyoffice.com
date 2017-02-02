@@ -3127,6 +3127,7 @@
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetExistingPhoneNumbers">
             <summary>
@@ -3136,6 +3137,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.BuyNumber(System.String)">
             <summary>
@@ -3145,6 +3147,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteNumber(System.String)">
             <summary>
@@ -3154,6 +3157,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetNumber(System.String)">
             <summary>
@@ -3163,6 +3167,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCurrentNumber">
             <summary>
@@ -3171,6 +3176,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetToken">
             <summary>
@@ -3179,6 +3185,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateSettings(System.String,System.String,System.String,System.String,ASC.VoipService.VoiceMail,ASC.VoipService.WorkingHours,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String)">
             <summary>
@@ -3188,6 +3195,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateSettings(ASC.VoipService.Queue,System.Boolean)">
             <summary>
@@ -3197,6 +3205,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetVoipSettings">
             <summary>
@@ -3206,6 +3215,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetUploadedFilesUri">
             <summary>
@@ -3215,6 +3225,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteUploadedFile(ASC.VoipService.AudioType,System.String)">
             <summary>
@@ -3225,6 +3236,7 @@
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetOperators(System.String)">
             <summary>
@@ -3234,6 +3246,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddOperators(System.String,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -3244,6 +3257,7 @@
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteOperator(System.String,System.Guid)">
             <summary>
@@ -3253,6 +3267,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOperator(System.Guid,System.Nullable{ASC.VoipService.AgentStatus},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.VoipService.AnswerType},System.String)">
             <summary>
@@ -3262,6 +3277,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.MakeCall(System.String,System.String)">
             <summary>
@@ -3271,6 +3287,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AnswerCall(System.String)">
             <summary>
@@ -3279,6 +3296,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.RejectCall(System.String)">
             <summary>
@@ -3287,6 +3305,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ReditectCall(System.String,System.String)">
             <summary>
@@ -3295,6 +3314,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SaveCall(System.String,System.String,System.String,System.Guid,System.Nullable{ASC.VoipService.VoipCallStatus},System.String,System.Nullable{System.Decimal})">
             <summary>
@@ -3303,6 +3323,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SaveCallHistory(System.String,System.String,System.Nullable{System.Guid},System.String,System.Int32,System.Nullable{System.Decimal},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
             <summary>
@@ -3311,6 +3332,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCalls(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Int32})">
             <summary>
@@ -3319,6 +3341,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetMissedCalls">
             <summary>
@@ -3327,6 +3350,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCall(System.String)">
             <summary>
@@ -3335,6 +3359,7 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <visible>false</visible>
         </member>
         <member name="P:ASC.Api.CRM.CRMApi.Name">
             <summary>

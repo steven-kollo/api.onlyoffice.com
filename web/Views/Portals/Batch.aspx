@@ -10,7 +10,7 @@
     </h1>
 
     <p>
-        The standard version of the ONLYOFFICE™ API is designed to make it really
+        The standard version of the ONLYOFFICE API is designed to make it really
         easy to get data for an individual object and to browse connections between objects.
         It also includes a limited ability to retrieve data for several objects in a single request.
     </p>
@@ -20,9 +20,9 @@
         more efficient to batch your queries rather than make multiple individual HTTP requests.
     </p>
     <p>
-        To enable this, the ONLYOFFICE™ API supports request batching which allows you to pass instructions
+        To enable this, the ONLYOFFICE API supports request batching which allows you to pass instructions
         for several operations in a single HTTP request. You can also specify dependencies
-        between related operations (described in the <b>Batch requests containing multiple methods</b> section below). ONLYOFFICE™ will process
+        between related operations (described in the <b>Batch requests containing multiple methods</b> section below). ONLYOFFICE will process
         each of your independent operations in parallel and will process your dependent
         operations sequentially. Once all operations have been completed, a consolidated
         response will be passed back to you and the HTTP connection will be closed.
@@ -41,7 +41,7 @@
     </p>
     <p>
         To make batched requests, you build a JSON object which describes each individual
-        operation you'd like to perform and <b>POST</b> this to the ONLYOFFICE™ API endpoint
+        operation you'd like to perform and <b>POST</b> this to the ONLYOFFICE API endpoint
         at <b>/api/2.0/batch</b>. The following example gets the current
         user's profile information and the user group in a single request:
     </p>
@@ -54,10 +54,10 @@ batch = [
 </pre>
 
     <p>
-        Once both operations have been completed, ONLYOFFICE™ sends a response which encapsulates
+        Once both operations have been completed, ONLYOFFICE sends a response which encapsulates
         the result of all the operations. For each operation, the response includes a status
         code, header information, and the body. These are equivalent to the response you
-        could expect from each operation if performed as raw requests against the ONLYOFFICE™
+        could expect from each operation if performed as raw requests against the ONLYOFFICE
         API. The body field contains a string encoded JSON object:
     </p>
     <p>

@@ -67,6 +67,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "Methods",
                 "Open",
+                "OwnCloud",
                 "Plugins",
                 "Save",
                 "Security",
@@ -222,6 +223,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Open()
+        {
+            return View();
+        }
+
+        public ActionResult OwnCloud()
         {
             return View();
         }

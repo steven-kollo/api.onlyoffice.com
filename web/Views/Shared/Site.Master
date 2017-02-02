@@ -13,11 +13,11 @@
 <!--<![endif]-->
 <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="ONLYOFFICE™ Developer API" />
+    <meta name="description" content="ONLYOFFICE Developer API" />
     <meta name="author" content="Ascensio System SIA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>ONLYOFFICE™ Api Documentation -
+    <title>ONLYOFFICE Api Documentation -
         <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
     </title>
 

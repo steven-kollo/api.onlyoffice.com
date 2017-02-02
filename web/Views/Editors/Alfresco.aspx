@@ -6,17 +6,17 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Alfresco ONLYOFFICE™ integration plugin
+    Alfresco ONLYOFFICE integration plugin
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Alfresco ONLYOFFICE™ integration plugin</span>
+        <span class="hdr">Alfresco ONLYOFFICE integration plugin</span>
     </h1>
 
     <p class="dscr">
-        This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE™ Document Server.
+        This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE Document Server.
         Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
     </p>
     <p>
@@ -36,17 +36,17 @@
     </ul>
 
 
-    <h2>Installing ONLYOFFICE™ Document Server</h2>
+    <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
-        You will need an instance of ONLYOFFICE™ Document Server that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin).
-        If that is not the case, use the official ONLYOFFICE™ Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">Document Server for Linux</a>.
-        ONLYOFFICE™ Document Server must also be able to POST to Alfresco directly.
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin).
+        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
+        ONLYOFFICE Document Server must also be able to POST to Alfresco directly.
     </p>
-    <p>The easiest way to start an instance of ONLYOFFICE™ Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer">Docker</a>.</p>
+    <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Installing Alfresco ONLYOFFICE™ integration plugin</h2>
-    <p>To start using ONLYOFFICE™ Document Server with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
+    <h2>Installing Alfresco ONLYOFFICE integration plugin</h2>
+    <p>To start using ONLYOFFICE Document Server with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
     <ol>
         <li>Remove gradle in case it has already been installed (it is needed to install the latest available version later at the next step):
             <span class="commandline">sudo apt-get remove gradle</span>
@@ -71,7 +71,7 @@ sudo update-alternatives --config javaws</span>
 cd alfresco-amp-plugin
 gradle publish</span>
         </li>
-        <li>Download the Alfresco ONLYOFFICE™ integration plugin source code:
+        <li>Download the Alfresco ONLYOFFICE integration plugin source code:
             <span class="commandline">cd ..
 git clone https://github.com/ONLYOFFICE/onlyoffice-alfresco.git</span>
         </li>
@@ -85,7 +85,7 @@ gradle amp</span>
         <li>Run the <em>bin/apply_amps.sh</em> script in Alfresco installation. You will see the two new modules being installed during the installation process. Press Enter to continue the installation.</li>
         <li>Add the <b>onlyoffice.url</b> property to <em>alfresco-global.properties</em>:
             <span class="commandline">onlyoffice.url=http://documentserver/</span>
-            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.
+            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Restart Alfresco:
             <span class="commandline">./alfresco.sh stop
@@ -100,22 +100,22 @@ gradle amp</span>
     <p>Alfresco Share makes a request to the repo end (URL of the form: <em>/parashift/onlyoffice/prepare?nodeRef={nodeRef}</em>).</p>
     <p>Alfresco Repo end prepares a JSON object for the Share with the following properties:</p>
     <ul>
-        <li><b>docUrl</b> - the URL that ONLYOFFICE™ Document Server uses to download the document (includes the <em>alf_ticket</em> of the current user);</li>
-        <li><b>callbackUrl</b> - the URL that ONLYOFFICE™ Document Server informs about status of the document editing;</li>
-        <li><b>onlyofficeUrl</b> - the URL that the client needs to reply to ONLYOFFICE™ Document Server (provided by the onlyoffice.url property);</li>
-        <li><b>key</b> - the UUID+Modified Timestamp to instruct ONLYOFFICE™ Document Server whether to download the document again or not;</li>
+        <li><b>docUrl</b> - the URL that ONLYOFFICE Document Server uses to download the document (includes the <em>alf_ticket</em> of the current user);</li>
+        <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
+        <li><b>onlyofficeUrl</b> - the URL that the client needs to reply to ONLYOFFICE Document Server (provided by the onlyoffice.url property);</li>
+        <li><b>key</b> - the UUID+Modified Timestamp to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
         <li><b>docTitle</b> - the document Title (name).</li>
     </ul>
     <p>Alfresco Share takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.</p>
-    <p>The client browser makes a request for the javascript library from ONLYOFFICE™ Document Server and sends ONLYOFFICE™ Document Server the DocEditor configuration with the above properties.</p>
-    <p>Then ONLYOFFICE™ Document Server downloads the document from Alfresco and the user begins editing.</p>
-    <p>ONLYOFFICE™ Document Server sends a POST request to the <em>callback</em> URL to inform Alfresco that a user is editing the document.</p>
-    <p>Alfresco locks the document, but still allows other users with write access the ability to collaborate in real time with ONLYOFFICE™ Document Server by leaving the Action present.</p>
+    <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the DocEditor configuration with the above properties.</p>
+    <p>Then ONLYOFFICE Document Server downloads the document from Alfresco and the user begins editing.</p>
+    <p>ONLYOFFICE Document Server sends a POST request to the <em>callback</em> URL to inform Alfresco that a user is editing the document.</p>
+    <p>Alfresco locks the document, but still allows other users with write access the ability to collaborate in real time with ONLYOFFICE Document Server by leaving the Action present.</p>
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
-    <p>After 10 seconds of inactivity, ONLYOFFICE™ Document Server sends a POST to the <em>callback</em> URL letting Alfresco know that the clients have finished editing the document and closed it.</p>
+    <p>After 10 seconds of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Alfresco know that the clients have finished editing the document and closed it.</p>
     <p>Alfresco downloads the new version of the document, replacing the old one.</p>
 
     <br />
-    <p>Download the Alfresco ONLYOFFICE™ integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco">here</a>.</p>
+    <p>Download the Alfresco ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">here</a>.</p>
 
 </asp:Content>

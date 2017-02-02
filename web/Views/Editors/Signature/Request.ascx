@@ -5,7 +5,7 @@
     <span class="hdr">Request</span>
 </h1>
 
-<p class="dscr">When performing the HTTP requests with ONLYOFFICE™ Document Server an authorization header with the <em>token</em> is added to validate the request.</p>
+<p class="dscr">When performing the HTTP requests with ONLYOFFICE Document Server an authorization header with the <em>token</em> is added to validate the request.</p>
 
 <p>The <em>payload</em> for the JSON Web Token contains the following fields:</p>
 <ul>

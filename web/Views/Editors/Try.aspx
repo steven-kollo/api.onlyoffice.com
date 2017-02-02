@@ -17,7 +17,7 @@
         <span class="hdr">Try now</span>
     </h1>
 
-    <p class="dscr">Click the buttons with the format names below to try the main functionality of ONLYOFFICE™ Document Server. You can open various file types for editing, viewing, co-editing, review or see how the rebranding works. Use the <b>&lt;/&gt;</b> buttons to view the corresponding example source code.</p>
+    <p class="dscr">Click the buttons with the format names below to try the main functionality of ONLYOFFICE Document Server. You can open various file types for editing, viewing, co-editing, review or see how the rebranding works. Use the <b>&lt;/&gt;</b> buttons to view the corresponding example source code.</p>
 
     <table class="try-now-table">
         <thead>
@@ -109,7 +109,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -142,7 +142,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -175,7 +175,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -208,7 +208,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -241,7 +241,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -274,7 +274,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -307,7 +307,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -340,7 +340,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -373,7 +373,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -406,7 +406,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -439,7 +439,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -472,7 +472,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -508,7 +508,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -544,7 +544,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -580,7 +580,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -616,7 +616,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -651,7 +651,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -690,7 +690,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -725,7 +725,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -764,7 +764,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -799,7 +799,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -838,7 +838,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -887,7 +887,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -936,7 +936,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -985,7 +985,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
@@ -1025,7 +1025,7 @@
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
 &lt;head&gt;
-    &lt;title&gt;ONLYOFFICE™ Api Documentation&lt;/title&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;

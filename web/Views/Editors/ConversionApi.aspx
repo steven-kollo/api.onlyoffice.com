@@ -14,9 +14,9 @@
         <span class="hdr">Conversion API</span>
     </h1>
 
-    <p class="dscr">For the interaction with the <b>document conversion service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">http://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.</p>
+    <p class="dscr">For the interaction with the <b>document conversion service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">http://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 
-    <div class="note">In <b>ONLYOFFICE™ Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
+    <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
     <h2>Parameters and their description:</h2>
     <table class="table">
@@ -49,16 +49,35 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>embeddedfonts</td>
-                <td>Whether or not embed the fonts into the document file.<br />
+                <td>codePage</td>
+                <td>The file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
+                    Main supported values:
+                    <ul>
+                        <li><b>932</b> - Japanese (Shift-JIS)</li>
+                        <li><b>950</b> - Chinese Traditional (Big5)</li>
+                        <li><b>1250</b> - Central European (Windows)</li>
+                        <li><b>1251</b> - Cyrillic (Windows)</li>
+                        <li><b>65001</b> - Unicode (UTF-8)</li>
+                    </ul>
+                    You can find all the supported values <a target="_blank" href="https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js">in this file</a>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td>delimiter</td>
+                <td>Delimiter characters for separating values when converting from <em>csv</em> format.<br />
                     Supported values:
                     <ul>
-                        <li>true</li>
-                        <li>false</li>
+                        <li><b>0</b> - no delimiter</li>
+                        <li><b>1</b> - tab</li>
+                        <li><b>2</b> - semicolon</li>
+                        <li><b>3</b> - colon</li>
+                        <li><b>4</b> - comma</li>
+                        <li><b>5</b> - space</li>
                     </ul>
-                    This parameter is applied not to all formats.
                 </td>
-                <td>boolean</td>
+                <td>integer</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">

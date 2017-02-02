@@ -15,11 +15,11 @@
         <span class="hdr">Basic concepts</span>
     </h1>
 
-    <p class="dscr">ONLYOFFICE™ Document Server API is used to let the developers integrate the ONLYOFFICE™ Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
+    <p class="dscr">ONLYOFFICE Document Server API is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
 
     <p>The API JavaScript file can normally be found in the following editors folder:</p>
     <p><b>http://documentserver/web-apps/apps/api/documents/api.js</b></p>
-    <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE™ Document Server installed.</p>
+    <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
     <div class="note">
         For <b>Document Server</b> versions prior to 4.0 the path to the API JavaScript file will look like this:
         <br />
