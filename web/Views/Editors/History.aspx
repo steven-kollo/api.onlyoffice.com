@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Document History</span>
+        <span class="hdr">Document history</span>
     </h1>
     <p class="dscr">If the document has been previously edited using Document Editor, you can view the document history.</p>
     <div class="note">The history is currently available for text document files only.</div>

@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Opening File</span>
+        <span class="hdr">Opening file</span>
     </h1>
     <p class="dscr">The reference figure and the steps below explain the process of opening the document in ONLYOFFICE Document Server.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/opening.jpg") %>" />
@@ -49,6 +49,7 @@ new DocsAPI.DocEditor("placeholder", {
     "documentType": "text",
 });
 </pre>
+    Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser.</li>
     </ol>

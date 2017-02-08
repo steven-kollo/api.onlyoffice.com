@@ -12,7 +12,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Integration Connectors</span>
+        <span class="hdr">Integration connectors</span>
     </h1>
 
     <p class="dscr">ONLYOFFICE Document Editors can be integrated into some of the existing document management systems using plugins. These plugins will add the document editing functions into the document management system you use quickly and easily without the need of writing the code by yourselves.</p>

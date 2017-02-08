@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Converting and Downloading File</span>
+        <span class="hdr">Converting and downloading file</span>
     </h1>
     <p class="dscr">Document conversion service is a part of ONLYOFFICE Document Server. It lets the user convert files from one format into another to open them later in <b>document editors</b> or for their export.</p>
     <p>There are two main situations when document conversion is necessary:</p>

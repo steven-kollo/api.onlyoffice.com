@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Saving File</span>
+        <span class="hdr">Saving file</span>
     </h1>
     <p class="dscr">The reference figure and the steps below explain the process of saving the document in ONLYOFFICE Document Server.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/saving.jpg") %>" />
@@ -43,6 +43,7 @@ new DocsAPI.DocEditor("placeholder", {
     },
 });
 </pre>
+            Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser and edit your document.</li>
         <li>Close the <b>Document Editor</b>. Check out your document in about 10 seconds. All changes should be saved, meaning the configuration is correct.</li>

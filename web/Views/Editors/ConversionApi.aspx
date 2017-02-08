@@ -426,6 +426,7 @@
     "url": "http://example.com/url-to-example-document.docx",
 }
 </pre>
+    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
     <div id="sample-thumbnail" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format.</div>
     <pre>
@@ -443,6 +444,7 @@
     "url": "http://example.com/url-to-example-document.docx",
 }
 </pre>
+    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
     <p>The request result is returned in XML form.</p>
     <div class="header-gray">Reply format</div>

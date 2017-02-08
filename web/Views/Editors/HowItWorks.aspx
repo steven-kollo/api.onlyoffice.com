@@ -12,7 +12,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">How It Works</span>
+        <span class="hdr">How it works</span>
     </h1>
 
     <p class="dscr">
