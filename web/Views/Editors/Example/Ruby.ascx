@@ -52,3 +52,11 @@ Rails.configuration.urlPreloader="http://documentserver/web-apps/apps/api/docume
         <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>views\home\editor.html.erb</em> file.</p>
     </li>
 </ol>
+
+<h2 id="linux-3"><span class="style_step">Step 3. </span>Checking accessibility</h2>
+<p>
+    In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
+    And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+</p>
+
+<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
