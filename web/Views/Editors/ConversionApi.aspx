@@ -523,6 +523,14 @@
                 <td>-6</td>
                 <td>Error while accessing the conversion result database</td>
             </tr>
+            <tr class="tablerow">
+                <td>-8</td>
+                <td>Invalid token</td>
+            </tr>
+            <%--<tr class="tablerow">
+                <td>-21</td>
+                <td>Token signature is expired</td>
+            </tr>--%>
         </tbody>
     </table>
 </asp:Content>

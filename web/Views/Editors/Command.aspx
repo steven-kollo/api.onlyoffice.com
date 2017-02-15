@@ -142,6 +142,14 @@
                 <td>5</td>
                 <td>Command not correсt</td>
             </tr>
+            <tr class="tablerow">
+                <td>6</td>
+                <td>Invalid token</td>
+            </tr>
+            <%--<tr class="tablerow">
+                <td>7</td>
+                <td>Token signature is expired</td>
+            </tr>--%>
         </tbody>
     </table>
 

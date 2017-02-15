@@ -256,6 +256,7 @@
     <Content Include="Content\img\docbuilder\file_docx.png" />
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
+    <Content Include="Content\img\Editor\e-token.png" />
     <Content Include="Content\img\Editor\history.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
