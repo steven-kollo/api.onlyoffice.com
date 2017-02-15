@@ -5,13 +5,13 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Node.js</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> for their integration. We will show you how to run the  Node.js example on <a href="<%= Url.Action("NodeExample") %>#Windows">Windows OS</a> and <a href="<%= Url.Action("NodeExample") %>#Linux">Linux OS</a>.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Node.js</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> for their integration. We will show you how to run the  Node.js example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.</p>
 
 <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
-<h2 id="windows">Running the example on Windows OS</h2>
+<h2 id="Windows">Running the example on Windows OS</h2>
 <h2 id="wind-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
 <p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/windows/document/index.aspx">install Document Server for Windows</a>.</p>
