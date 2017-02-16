@@ -15,6 +15,19 @@
         <span class="hdr">OwnCloud ONLYOFFICE integration app</span>
     </h1>
 
+    <div class="video-link" title="Show video">
+        <img src="/content/img/video/owncloud_integration.png" alt="Show video" />
+
+        <div class="popap-dialog">
+            <div class="popap-container">
+                <div class="popap-header">How to integrate ONLYOFFICE Document Server with ownCloud</div>
+                <iframe src="https://www.youtube.com/embed/IAjhUxBWKkQ?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
+                <a class="button-close button">Close</a>
+            </div>
+            <div class="button-close popap-close" title="Close">&times;</div>
+        </div>
+    </div>
+
     <p>
         This <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">app</a> enables users to edit office documents from <a href="https://owncloud.com" target="_blank">ownCloud</a> using ONLYOFFICE Document Server.
         Currently the following document formats can be edited with this app: DOCX, XLSX, PPTX, TXT.

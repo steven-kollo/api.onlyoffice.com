@@ -302,6 +302,7 @@
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\sitename.png" />
     <Content Include="Content\img\sprite.png" />
+    <Content Include="Content\img\Video\owncloud_integration.png" />
     <Content Include="Content\img\Video\plugin.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
