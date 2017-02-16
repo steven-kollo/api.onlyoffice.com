@@ -5,7 +5,7 @@
     <span class="hdr">Config</span>
 </h1>
 
-<p class="dscr">When a file is <a href="<%= Url.Action("open")%>">opened</a> for editing in ONLYOFFICE Document Server, the <a href="<%= Url.Action("config/") %>#token">token</a> is added to the configuration to validate the parameters.</p>
+<p class="dscr">When a file is <a href="<%= Url.Action("open") %>">opened</a> for editing in ONLYOFFICE Document Server, the <a href="<%= Url.Action("config/") %>#token">token</a> is added to the configuration to validate the parameters.</p>
 
 <p>
     The <em>payload</em> for the JWT token in the JSON format must have the same structure as the <a href="<%= Url.Action("advanced") %>">config</a>.
@@ -21,19 +21,19 @@
             "download": true,
             "edit": true,
             "print": true,
-            "review": true,
+            "review": true
         },
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
     "editorConfig": {
         "callbackUrl": "http://example.com/url-to-callback.ashx",
         "mode": "edit",
         "user": {
             "id": "78e1e841",
-            "name": "Smith",
-        },
-    },
+            "name": "Smith"
+        }
+    }
 }
 </pre>
 <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>

@@ -26,9 +26,9 @@
 
     <h2 id="apply">How this can be done in practice</h2>
     <ol>
-        <li>Create a <a href="<%= Url.Action("callback")%>">callback handler</a> to save the document from <b>document editing service</b>.</li>
-        <li>Create an <em>html</em> file to <a href="<%= Url.Action("open")%>#apply">Open the document</a>.</li>
-        <li>In the configuration script for Document Editor initialization specify the URL to the file with the <em>Callback handler</em> in the <a href="<%= Url.Action("config/editor")%>#callbackUrl">parameter line</a>.
+        <li>Create a <a href="<%= Url.Action("callback") %>">callback handler</a> to save the document from <b>document editing service</b>.</li>
+        <li>Create an <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
+        <li>In the configuration script for Document Editor initialization specify the URL to the file with the <em>Callback handler</em> in the <a href="<%= Url.Action("config/editor") %>#callbackUrl">parameter line</a>.
             <pre>
 new DocsAPI.DocEditor("placeholder", {
     "document": {
