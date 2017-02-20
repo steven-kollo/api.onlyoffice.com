@@ -58,6 +58,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Confluence",
                 "Conversion",
                 "ConversionApi",
+                "DemoPreview",
                 "Example/Java",
                 "Example/Nodejs",
                 "Example/Php",
@@ -195,7 +196,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult DemoPreview()
         {
-            var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data"));
+            var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/editor"));
 
             var examples = directoryInfo.GetFiles("*.zip", SearchOption.TopDirectoryOnly).Select(fileInfo => fileInfo.Name).ToList();
 

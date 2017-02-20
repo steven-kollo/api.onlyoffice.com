@@ -34,7 +34,7 @@
                 <% foreach (var example in Model)
                    { %>
                 <li>
-                    <a class="button" href="<%= Url.Content("~/app_data/" + example.Replace("#", "%23")) %>" target="_blank">
+                    <a class="button" href="<%= Url.Content("~/app_data/editor/" + example.Replace("#", "%23")) %>" target="_blank">
                         <%= example.TrimEnd(".zip".ToCharArray()) %>
                     </a>
                 </li>

@@ -1187,12 +1187,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\class_descriptions.xml" />
-    <Content Include="App_Data\.Net %28C# MVC%29 Example.zip" />
-    <Content Include="App_Data\.Net %28C#%29 Example.zip" />
-    <Content Include="App_Data\Java Example.zip" />
-    <Content Include="App_Data\Node.js Example.zip" />
-    <Content Include="App_Data\PHP Example.zip" />
-    <Content Include="App_Data\Ruby Example.zip" />
+    <Content Include="App_Data\editor\.Net %28C# MVC%29 Example.zip" />
+    <Content Include="App_Data\editor\.Net %28C#%29 Example.zip" />
+    <Content Include="App_Data\editor\Java Example.zip" />
+    <Content Include="App_Data\editor\Node.js Example.zip" />
+    <Content Include="App_Data\editor\PHP Example.zip" />
+    <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\docbuilder-net-asp-example.zip" />
     <Content Include="App_Data\docbuilder-net-mvc-example.zip" />
     <Content Include="App_Data\rails-docbuilder-example-master.zip" />
