@@ -35,7 +35,7 @@ git clone https://github.com/onlyoffice/rails-docbuilder-example.git</code></pre
 unzip rails-docbuilder-example-master.zip</pre>
                 </li>
                 <li>Change the current directory for the project directory:
-<pre>cd ~/rails-docbuilder-example</pre>
+<pre>cd ~/rails-docbuilder-example-master</pre>
                 </li>
                 <li>Install the dependencies:
 <pre>bundle install</pre>
