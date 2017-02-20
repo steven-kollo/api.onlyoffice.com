@@ -123,7 +123,7 @@
         <a href="<%= Url.Action("signature/") %>">Signature</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("signature/config") %>">config</a>
+                <a href="<%= Url.Action("signature/browser") %>">browser</a>
             </li>
             <li>
                 <a href="<%= Url.Action("signature/request") %>">request</a>

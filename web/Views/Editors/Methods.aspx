@@ -188,6 +188,7 @@ docEditor.refreshHistory({
             <pre>
 docEditor.setHistoryData({
     "key": "Khirz6zTPdfd7",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3giLCJ2ZXJzaW9uIjoyfQ.N9N9IMwX5e6kdfx4wssAPrGMnzPAZCd4PwDf2D8mJ8s",
     "url": "http://example.com/url-to-example-document.docx",
     "version": 2,
 });
@@ -202,6 +203,7 @@ docEditor.setHistoryData({
         "key": "af86C7e71Ca8",
         "url": "http://example.com/url-to-the-previous-version-of-the-document.docx",
     },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1jaGFuZ2VzLnppcCIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJwcmV2aW91cyI6eyJrZXkiOiJhZjg2QzdlNzFDYTgiLCJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLXRoZS1wcmV2aW91cy12ZXJzaW9uLW9mLXRoZS1kb2N1bWVudC5kb2N4In0sInVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.9dgDsaVLFQ6RtoX_1s2pBVJHGnyMjxDXKC2TpC2nXb4",
     "url": "http://example.com/url-to-example-document.docx",
     "version": 2,
 });
@@ -265,6 +267,12 @@ docEditor.setHistoryData({
                         <td>defines the url address of the previous version of the document</td>
                         <td>string</td>
                         <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="token">token</td>
+                        <td>defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setHistoryData">token</a></td>
+                        <td>string</td>
+                        <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>

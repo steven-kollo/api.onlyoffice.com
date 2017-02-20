@@ -72,7 +72,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Save",
                 "Security",
                 "Signature",
-                "Signature/Config",
+                "Signature/Browser",
                 "Signature/Request",
                 "Troubleshooting",
                 "Try",

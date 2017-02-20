@@ -31,7 +31,7 @@
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
-            <td><em>secret key</em> to generate the token in the <a href="<%= Url.Action("signature/config") %>">config</a> for the <b>document editor</b> opening and the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b> and <b>document conversion service</b></td>
+            <td><em>secret key</em> to generate the token in the <a href="<%= Url.Action("signature/browser") %>">browser</a> for the <b>document editor</b> opening and calling the methods and the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b> and <b>document conversion service</b></td>
             <td>string</td>
             <td>secret</td>
         </tr>
@@ -43,7 +43,7 @@
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.browser</td>
-            <td>specifies the enabling the token validation in the <a href="<%= Url.Action("signature/config") %>">config</a> for the <b>document editor</b> opening</td>
+            <td>specifies the enabling the token validation in the <a href="<%= Url.Action("signature/browser") %>">config</a> for the <b>document editor</b> opening and calling the methods</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
