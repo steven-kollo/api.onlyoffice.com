@@ -26,16 +26,19 @@
             <div class="docbuilder_examples_list">
                 <ul class="docbuilder_examples_blocks">
                     <li>
-                        <a class="button" href="<%= Url.Content("~/app_data/docbuilder/rails-docbuilder-example-master.zip") %>">Ruby example</a>
-                        <a class="db_examples" target="_blank" href="<%= Url.Action("rubyexample") %>">Read instructions</a>
-                    </li>
-                    <li>
                         <a class="button" href="<%= Url.Content("~/app_data/docbuilder/docbuilder-net-mvc-example.zip") %>">.Net (C# MVC) example</a>
                         <a class="db_examples" target="_blank" href="<%= Url.Action("csharpexample") %>">Read instructions</a>
                     </li>
                     <li>
                         <a class="button" href="<%= Url.Content("~/app_data/docbuilder/docbuilder-net-asp-example.zip") %>">.Net (C#) example</a>
                         <a class="db_examples" target="_blank" href="<%= Url.Action("csharpexample") %>">Read instructions</a>
+                    </li>
+                    <li>
+                        <a class="button" href="<%= Url.Content("~/app_data/docbuilder/docbuilder-node-js-example.zip") %>">Node.js example</a>
+                    </li>
+                    <li>
+                        <a class="button" href="<%= Url.Content("~/app_data/docbuilder/rails-docbuilder-example-master.zip") %>">Ruby example</a>
+                        <a class="db_examples" target="_blank" href="<%= Url.Action("rubyexample") %>">Read instructions</a>
                     </li>
                 </ul>
             </div>

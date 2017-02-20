@@ -1199,6 +1199,7 @@
     <Content Include="App_Data\Templates\docx.docbuilder" />
     <Content Include="App_Data\Templates\pdf.docbuilder" />
     <Content Include="App_Data\Templates\xlsx.docbuilder" />
+    <Content Include="App_Data\docbuilder\docbuilder-node-js-example.zip" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
