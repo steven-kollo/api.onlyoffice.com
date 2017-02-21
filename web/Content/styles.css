@@ -1153,27 +1153,6 @@ ul.buider_page_methods_list,
     top: -72px;
 }
 
-.docbuilder_examples_list {
-    margin: 10px 0 20px;
-}
-
-.docbuilder_examples_list .docbuilder_examples_blocks {
-    margin: 0;
-}
-
-.docbuilder_examples_list .docbuilder_examples_blocks li {
-    display: inline-block;
-    list-style-type: none;
-    margin: 0 20px 0 0;
-    padding: 0;
-    text-align: center;
-}
-
-.docbuilder_examples_list .docbuilder_examples_blocks a.db_examples {
-    display: block;
-    margin: 5px 0 0;
-}
-
 iframe.docbuilder_resulting_docs {
     width: 100%;
     height: 500px;

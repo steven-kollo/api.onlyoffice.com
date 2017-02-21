@@ -20,7 +20,8 @@
     <h2>To start integrating document editors into your own website you need to do the following:</h2>
 
     <ol>
-        <li>Download Document Server installation and set it up on your local server:
+        <li>
+            <p>Download Document Server installation and set it up on your local server:</p>
             <div class="list-buttons">
                 <a class="button" href="https://sourceforge.net/projects/teamlab/files/ONLYOFFICE_DocumentServer/v4.0/binaries/" target="_blank">Download Editors
                 </a>
@@ -29,7 +30,8 @@
 
         <% if (Model.Count > 0)
            { %>
-        <li>Select the programming language and download the code for the sample of online editors integration into your web site:
+        <li>
+            <p>Select the programming language and download the code for the sample of online editors integration into your web site:</p>
             <ul class="list-buttons">
                 <% foreach (var example in Model)
                    { %>

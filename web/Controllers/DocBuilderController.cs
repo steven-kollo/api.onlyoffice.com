@@ -769,7 +769,11 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Integratingdocumentbuilder()
         {
-            return View();
+            var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/docbuilder"));
+
+            var examples = directoryInfo.GetFiles("*.zip", SearchOption.TopDirectoryOnly).Select(fileInfo => fileInfo.Name).ToList();
+
+            return View(examples);
         }
 
         public ActionResult Integrationapi(string catchall)

@@ -2,7 +2,7 @@
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
-    Inherits="System.Web.Mvc.ViewPage"
+    Inherits="System.Web.Mvc.ViewPage<List<string>>"
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
@@ -20,29 +20,23 @@
             <p>Download <b>ONLYOFFICE Document Builder</b> application and install it to your computer</p>
             <a href="http://www.onlyoffice.com/document-builder.aspx" class="button" target="blank">Download</a>
         </li>
+
+        <% if (Model.Count > 0)
+           { %>
         <li>
             <p>Select the programming language and download the code for the sample of <b>ONLYOFFICE Document Builder</b> integration into your application</p>
-
-            <div class="docbuilder_examples_list">
-                <ul class="docbuilder_examples_blocks">
-                    <li>
-                        <a class="button" href="<%= Url.Content("~/app_data/docbuilder/docbuilder-net-mvc-example.zip") %>">.Net (C# MVC) example</a>
-                        <a class="db_examples" target="_blank" href="<%= Url.Action("csharpexample") %>">Read instructions</a>
-                    </li>
-                    <li>
-                        <a class="button" href="<%= Url.Content("~/app_data/docbuilder/docbuilder-net-asp-example.zip") %>">.Net (C#) example</a>
-                        <a class="db_examples" target="_blank" href="<%= Url.Action("csharpexample") %>">Read instructions</a>
-                    </li>
-                    <li>
-                        <a class="button" href="<%= Url.Content("~/app_data/docbuilder/docbuilder-node-js-example.zip") %>">Node.js example</a>
-                    </li>
-                    <li>
-                        <a class="button" href="<%= Url.Content("~/app_data/docbuilder/rails-docbuilder-example-master.zip") %>">Ruby example</a>
-                        <a class="db_examples" target="_blank" href="<%= Url.Action("rubyexample") %>">Read instructions</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="list-buttons">
+                <% foreach (var example in Model)
+                   { %>
+                <li>
+                    <a class="button" href="<%= Url.Content("~/app_data/docbuilder/" + example.Replace("#", "%23")) %>" target="_blank">
+                        <%= example.TrimEnd(".zip".ToCharArray()) %>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
         </li>
+        <% } %>
         <li>
             <p>Run the example on your computer to get acquainted with the basic <b>ONLYOFFICE Document Builder</b> features before you start creating your own application. If everything is alright you will see the example website page with the form elements like the ones below.</p>
         </li>
