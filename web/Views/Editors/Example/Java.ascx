@@ -5,7 +5,7 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
 <p>You can choose any appropriate way how to run the Java example code. We will show how to run the Java code using the <b>Apache Tomcat</b> web server.</p>
 
 <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
@@ -13,7 +13,7 @@
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
 <h2 id="win-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="win-2"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
@@ -27,7 +27,7 @@ files.docservice.url.api=http://documentserver.com/web-apps/apps/api/documents/a
 files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/documents/cache-scripts.html
 </span>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\src\main\webapp\editor.jsp</em> file.</p>
 
 <h2 id="win-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>

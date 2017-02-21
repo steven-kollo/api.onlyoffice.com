@@ -5,7 +5,7 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Node.js</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> for their integration. We will show you how to run the  Node.js example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Node.js</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> for their integration. We will show you how to run the  Node.js example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.</p>
 
 <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
 
@@ -13,7 +13,7 @@
 
 <h2 id="Windows">Running the example on Windows OS</h2>
 <h2 id="win-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/windows/document/index.aspx">install Document Server for Windows</a>.</p>
 
 <h2 id="win-2"><span class="style_step">Step 2. </span>Download the Node.js code for the editors integration</h2>
@@ -23,7 +23,7 @@
 "siteUrl": "http://documentserver/"
 </pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\views\editor.ejs</em> file.</p>
 
 <h2 id="win-3"><span class="style_step">Step 3. </span>System requirements</h2>
@@ -56,7 +56,7 @@
 
 <h2 id="Linux">Running the example on Linux OS</h2>
 <h2 id="linux-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">install Document Server for Linux</a>.</p>
 
 <h2 id="linux-2"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
@@ -75,7 +75,7 @@
     <li>Install the dependencies:
         <div class="commandline">npm install</div>
     </li>
-    <li>Edit the <em>config/default.js</em> configuration file. Specify the name of your local server with the ONLYOFFICE&trade; Document Server installed.
+    <li>Edit the <em>config/default.js</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/default.js</div>
         <p>Edit the following lines:</p>
         
@@ -83,7 +83,7 @@
 "siteUrl": "http://documentserver/"
 </pre>
 
-        <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
+        <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
     </li>
     <li>Run the project with Node.js:
         <div class="commandline">nodejs bin/www</div>
