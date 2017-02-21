@@ -22,7 +22,7 @@
         <div class="commandline">\curl -sSL https://get.rvm.io | bash -s stable --ruby</div>
     </li>
     <li>Download the archive with the Ruby Example and unpack the archive:
-        <div class="commandline">wget "http://api.onlyoffice.com/app_data/Ruby%20Example.zip"</div>
+        <div class="commandline">wget "http://api.onlyoffice.com/app_data/editor/Ruby%20Example.zip"</div>
         <div class="commandline">unzip Ruby\ Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
