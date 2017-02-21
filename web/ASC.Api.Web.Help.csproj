@@ -1194,13 +1194,13 @@
     <Content Include="App_Data\editor\Node.js Example.zip" />
     <Content Include="App_Data\editor\PHP Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
-    <Content Include="App_Data\docbuilder\docbuilder-net-asp-example.zip" />
-    <Content Include="App_Data\docbuilder\docbuilder-net-mvc-example.zip" />
-    <Content Include="App_Data\docbuilder\rails-docbuilder-example-master.zip" />
+    <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
+    <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
+    <Content Include="App_Data\docbuilder\Node.js Example.zip" />
+    <Content Include="App_Data\docbuilder\Ruby Example.zip" />
     <Content Include="App_Data\Templates\docx.docbuilder" />
     <Content Include="App_Data\Templates\pdf.docbuilder" />
     <Content Include="App_Data\Templates\xlsx.docbuilder" />
-    <Content Include="App_Data\docbuilder\docbuilder-node-js-example.zip" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
