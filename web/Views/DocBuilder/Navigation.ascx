@@ -18,10 +18,13 @@
         <a href="<%= Url.Action("integratingdocumentbuilder") %>">Integrating Document Builder</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("rubyexample") %>">Ruby example</a>
+                <a href="<%= Url.Action("csharpexample") %>">.Net (C#) example</a>
             </li>
             <li>
-                <a href="<%= Url.Action("csharpexample") %>">.Net (C#) example</a>
+                <a href="<%= Url.Action("nodejsexample") %>">Node.js example</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("rubyexample") %>">Ruby example</a>
             </li>
         </ul>
     </li>

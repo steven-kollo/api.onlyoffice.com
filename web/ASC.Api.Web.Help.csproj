@@ -326,6 +326,7 @@
     <Content Include="Views\ApiSystem\Navigation.ascx" />
     <Content Include="Views\DocBuilder\Basic.aspx" />
     <Content Include="Views\DocBuilder\classlist.aspx" />
+    <Content Include="Views\DocBuilder\nodejsexample.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\ApiBullet\GetClassType.ascx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\ApiChart\GetClassType.ascx" />
