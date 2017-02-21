@@ -1193,9 +1193,9 @@
     <Content Include="App_Data\editor\Node.js Example.zip" />
     <Content Include="App_Data\editor\PHP Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
-    <Content Include="App_Data\docbuilder-net-asp-example.zip" />
-    <Content Include="App_Data\docbuilder-net-mvc-example.zip" />
-    <Content Include="App_Data\rails-docbuilder-example-master.zip" />
+    <Content Include="App_Data\docbuilder\docbuilder-net-asp-example.zip" />
+    <Content Include="App_Data\docbuilder\docbuilder-net-mvc-example.zip" />
+    <Content Include="App_Data\docbuilder\rails-docbuilder-example-master.zip" />
     <Content Include="App_Data\Templates\docx.docbuilder" />
     <Content Include="App_Data\Templates\pdf.docbuilder" />
     <Content Include="App_Data\Templates\xlsx.docbuilder" />
