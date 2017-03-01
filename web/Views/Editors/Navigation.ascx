@@ -40,7 +40,7 @@
                 <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
             </li>
             <li>
-                <a href="<%= Url.Action("owncloud") %>">OwnCloud integration</a>
+                <a href="<%= Url.Action("owncloud") %>">ownCloud/Nextcloud integration</a>
             </li>
         </ul>
     </li>
