@@ -45,15 +45,13 @@
         </tr>
         <tr class="tablerow">
             <td id="lang">lang</td>
-            <td>defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) or four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes
-            </td>
+            <td>defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) or four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes. The default value is <b>"en-US"</b>.</td>
             <td>string</td>
             <td>"en-US"</td>
         </tr>
         <tr class="tablerow">
             <td id="mode">mode</td>
-            <td>defines the editor opening mode. Can be either <b>view</b> to open the document for viewing, or <b>edit</b> to open the document in the editing mode allowing to apply changes to the document data
-            </td>
+            <td>defines the editor opening mode. Can be either <b>view</b> to open the document for viewing, or <b>edit</b> to open the document in the editing mode allowing to apply changes to the document data. The default value is <b>"edit"</b>.</td>
             <td>string</td>
             <td>"edit"</td>
         </tr>
