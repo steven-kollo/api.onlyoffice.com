@@ -25,7 +25,7 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td id="documentType">documentType<span class="required">*</span></td>
+            <td id="documentType">documentType</td>
             <td>defines the document type to be opened:
                 <em>open a text document (.docx, .doc, .odt, .txt, .rtf, .html, .htm, .mht, .epub, .pdf, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
                 <em>open a spreadsheet (.xlsx, .xls, .ods, .csv) for viewing or editing</em> - <b>spreadsheet</b>,
@@ -65,8 +65,6 @@
         </tr>
     </tbody>
 </table>
-
-<span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
 <div class="header-gray">Example</div>
 <pre>
