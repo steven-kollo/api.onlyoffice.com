@@ -44,7 +44,7 @@
 
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
-        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from ownCloud/Nextcloud and any end clients (version 3.0 and later are supported for use with the app).
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from ownCloud/Nextcloud and any end clients (version 4.2 and later are supported for use with the app).
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
         ONLYOFFICE Document Server must also be able to POST to ownCloud/Nextcloud directly.
     </p>
