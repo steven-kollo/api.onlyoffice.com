@@ -153,7 +153,7 @@ $(function() {
         var reader = new FileReader();
         reader.onload = function () {
             var text = reader.result;
-            $("#builderScript").text(text);
+            $("#builderScript").val(text);
         };
         reader.readAsText(input.files[0]);
     });
