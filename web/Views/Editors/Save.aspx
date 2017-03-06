@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Saving File</span>
+        <span class="hdr">Saving file</span>
     </h1>
     <p class="dscr">The reference figure and the steps below explain the process of saving the document in ONLYOFFICE Document Server.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/saving.jpg") %>" />
@@ -26,23 +26,24 @@
 
     <h2 id="apply">How this can be done in practice</h2>
     <ol>
-        <li>Create a <a href="<%= Url.Action("callback")%>">callback handler</a> to save the document from <b>document editing service</b>.</li>
-        <li>Create an <em>html</em> file to <a href="<%= Url.Action("open")%>#apply">Open the document</a>.</li>
-        <li>In the configuration script for Document Editor initialization specify the URL to the file with the <em>Callback handler</em> in the <a href="<%= Url.Action("config/editor")%>#callbackUrl">parameter line</a>.
+        <li>Create a <a href="<%= Url.Action("callback") %>">callback handler</a> to save the document from <b>document editing service</b>.</li>
+        <li>Create an <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
+        <li>In the configuration script for Document Editor initialization specify the URL to the file with the <em>Callback handler</em> in the <a href="<%= Url.Action("config/editor") %>#callbackUrl">parameter line</a>.
             <pre>
 new DocsAPI.DocEditor("placeholder", {
     "document": {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
-        "callbackUrl": "http://example.com/url-to-callback.ashx",
-    },
+        "callbackUrl": "http://example.com/url-to-callback.ashx"
+    }
 });
 </pre>
+            Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser and edit your document.</li>
         <li>Close the <b>Document Editor</b>. Check out your document in about 10 seconds. All changes should be saved, meaning the configuration is correct.</li>

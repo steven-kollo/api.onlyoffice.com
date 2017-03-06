@@ -16,7 +16,7 @@
     <p class="dscr">The reference figure and the steps below explain the process of co-editing the document in ONLYOFFICE Document Server.</p>
     <img alt="Co-editing" src="<%= Url.Content("~/content/img/editor/coedit.jpg") %>" />
     <ol>
-        <li>User 1 and user 2 open one and the same document in <b>document editor</b>, i.e. when opening the file one and the same <a href="<%= Url.Action("config/document") %>#key">key</a> has been used.</li>
+        <li>User 1 and user 2 open one and the same document in <b>document editor</b>, i.e. when opening the file one and the same <a href="<%= Url.Action("config/document") %>#key">document.key</a> has been used.</li>
         <li>User 1 makes changes to the opened document.</li>
         <li>The <b>document editor</b> sends changes made by user 1 to the <b>document editing service</b>.</li>
         <li>The <b>document editing service</b> sends the changes made by user 1 to the user 2 <b>document editor</b>.</li>
@@ -41,17 +41,18 @@ new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
         "user": {
             "id": "78e1e841",
-            "name": "John Smith",
-        },
-    },
+            "name": "John Smith"
+        }
+    }
 });
 </pre>
+            Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser.</li>
         <li>Now make a copy of your <em>html</em> file created above.</li>
@@ -62,17 +63,18 @@ new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
         "user": {
             "id": "F89d8069ba2b",
-            "name": "Kate Cage",
-        },
-    },
+            "name": "Kate Cage"
+        }
+    }
 });
 </pre>
+            Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your copied and edited <em>html</em> file in the browser.</li>
     </ol>

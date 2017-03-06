@@ -12,7 +12,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Integration Connectors</span>
+        <span class="hdr">Integration connectors</span>
     </h1>
 
     <p class="dscr">ONLYOFFICE Document Editors can be integrated into some of the existing document management systems using plugins. These plugins will add the document editing functions into the document management system you use quickly and easily without the need of writing the code by yourselves.</p>
@@ -21,7 +21,7 @@
     <ul>
         <li><a href="<%= Url.Action("alfresco") %>">Alfresco ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE integration plugin</a></li>
-        <li><a href="<%= Url.Action("owncloud") %>">OwnCloud ONLYOFFICE integration app</a></li>
+        <li><a href="<%= Url.Action("owncloud") %>">ownCloud/Nextcloud ONLYOFFICE integration app</a></li>
     </ul>
     
     <br />

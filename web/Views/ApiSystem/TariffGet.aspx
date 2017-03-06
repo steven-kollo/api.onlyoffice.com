@@ -62,7 +62,7 @@
         "dueDate": "2016-07-13",
         "features": "whitelabel",
         "maxFileSize": 104857600,
-        "maxTotalSize": 1073741824,
+        "maxTotalSize": 1073741824
     },
     "tenant": {
         "created": "2010-07-07T15:46:00",
@@ -72,8 +72,8 @@
         "portalName": "example",
         "status": "Active",
         "tenantId": 1,
-        "timeZoneName": "UTC",
-    },
+        "timeZoneName": "UTC"
+    }
 }
 </pre>
 

@@ -5,14 +5,14 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Ruby</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Ruby Example</a> for their integration. We will show how to run the Ruby example on Linux OS.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Ruby</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Ruby Example</a> for their integration. We will show how to run the Ruby example on Linux OS.</p>
 
 <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
 <h2 id="linux-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="linux-2"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
@@ -22,7 +22,7 @@
         <div class="commandline">\curl -sSL https://get.rvm.io | bash -s stable --ruby</div>
     </li>
     <li>Download the archive with the Ruby Example and unpack the archive:
-        <div class="commandline">wget "http://api.onlyoffice.com/app_data/Ruby%20Example.zip"</div>
+        <div class="commandline">wget "http://api.onlyoffice.com/app_data/editor/Ruby%20Example.zip"</div>
         <div class="commandline">unzip Ruby\ Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
@@ -31,7 +31,7 @@
     <li>Install the dependencies:
         <div class="commandline">bundle install</div>
     </li>
-    <li>Edit the <em>application.rb</em> configuration file. Specify the name of your local server with the ONLYOFFICE&trade; Document Server installed.
+    <li>Edit the <em>application.rb</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/application.rb</div>
         <p>Edit the following lines:</p>
 
@@ -42,7 +42,7 @@ Rails.configuration.urlApi="http://documentserver/web-apps/apps/api/documents/ap
 Rails.configuration.urlPreloader="http://documentserver/web-apps/apps/api/documents/cache-scripts.html"
 </pre>
 
-        <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
+        <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
     </li>
     <li>Run the <b>Rails</b> application:
         <div class="commandline">rails s -b 0.0.0.0 -p 80</div>
@@ -52,3 +52,11 @@ Rails.configuration.urlPreloader="http://documentserver/web-apps/apps/api/docume
         <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>views\home\editor.html.erb</em> file.</p>
     </li>
 </ol>
+
+<h2 id="linux-3"><span class="style_step">Step 3. </span>Checking accessibility</h2>
+<p>
+    In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
+    And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+</p>
+
+<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

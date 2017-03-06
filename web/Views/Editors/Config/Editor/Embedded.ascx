@@ -74,10 +74,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "fullscreenUrl": "http://example.com/embedded?doc=exampledocument1.docx#fullscreen",
             "saveUrl": "http://example.com/download?doc=exampledocument1.docx",
             "shareUrl": "http://example.com/view?doc=exampledocument1.docx",
-            "toolbarDocked": "top",
+            "toolbarDocked": "top"
         },
         ...
     },
     ...
 });
 </pre>
+    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>

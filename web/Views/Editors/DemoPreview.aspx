@@ -14,13 +14,14 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Integration Examples</span>
+        <span class="hdr">Integration examples</span>
     </h1>
 
     <h2>To start integrating document editors into your own website you need to do the following:</h2>
 
     <ol>
-        <li>Download Document Server installation and set it up on your local server:
+        <li>
+            <p>Download Document Server installation and set it up on your local server:</p>
             <div class="list-buttons">
                 <a class="button" href="https://sourceforge.net/projects/teamlab/files/ONLYOFFICE_DocumentServer/v4.0/binaries/" target="_blank">Download Editors
                 </a>
@@ -29,12 +30,13 @@
 
         <% if (Model.Count > 0)
            { %>
-        <li>Select the programming language and download the code for the sample of online editors integration into your web site:
+        <li>
+            <p>Select the programming language and download the code for the sample of online editors integration into your web site:</p>
             <ul class="list-buttons">
                 <% foreach (var example in Model)
                    { %>
                 <li>
-                    <a class="button" href="<%= Url.Content("~/app_data/" + example.Replace("#", "%23")) %>" target="_blank">
+                    <a class="button" href="<%= Url.Content("~/app_data/editor/" + example.Replace("#", "%23")) %>" target="_blank">
                         <%= example.TrimEnd(".zip".ToCharArray()) %>
                     </a>
                 </li>
@@ -44,6 +46,10 @@
         <% } %>
 
         <li><a href="<%= Url.Action("advanced") %>">Edit the configuration files</a> in the sample changing the default path for the one to the editors installed at step 1 and other advanced parameters available for editor configuration.</li>
+
+        <li>In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
+            And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+        </li>
     </ol>
 
     <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>

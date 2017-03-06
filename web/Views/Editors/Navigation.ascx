@@ -11,27 +11,27 @@
         <a href="<%= Url.Action("try") %>">Try now</a>
     </li>
     <li>
-        <a href="<%= Url.Action("demopreview") %>">Integration Examples</a>
+        <a href="<%= Url.Action("demopreview") %>">Integration examples</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("example/csharp") %>">.Net (C#) Example</a>
+                <a href="<%= Url.Action("example/csharp") %>">.Net (C#) example</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/java") %>">Java Example</a>
+                <a href="<%= Url.Action("example/java") %>">Java example</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/nodejs") %>">Node.js Example</a>
+                <a href="<%= Url.Action("example/nodejs") %>">Node.js example</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/php") %>">PHP Example</a>
+                <a href="<%= Url.Action("example/php") %>">PHP example</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/ruby") %>">Ruby Example</a>
+                <a href="<%= Url.Action("example/ruby") %>">Ruby example</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("plugins") %>">Integration Connectors</a>
+        <a href="<%= Url.Action("plugins") %>">Integration connectors</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
@@ -40,27 +40,27 @@
                 <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
             </li>
             <li>
-                <a href="<%= Url.Action("owncloud") %>">OwnCloud integration</a>
+                <a href="<%= Url.Action("owncloud") %>">ownCloud/Nextcloud integration</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("howitworks") %>">How It Works</a>
+        <a href="<%= Url.Action("howitworks") %>">How it works</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("open") %>">Opening File</a>
+                <a href="<%= Url.Action("open") %>">Opening file</a>
             </li>
             <li>
-                <a href="<%= Url.Action("save") %>">Saving File</a>
+                <a href="<%= Url.Action("save") %>">Saving file</a>
             </li>
             <li>
                 <a href="<%= Url.Action("coedit") %>">Co-editing</a>
             </li>
             <li>
-                <a href="<%= Url.Action("conversion") %>">Converting and Downloading File</a>
+                <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
             </li>
             <li>
-                <a href="<%= Url.Action("history") %>">Document History</a>
+                <a href="<%= Url.Action("history") %>">Document history</a>
             </li>
             <li>
                 <a href="<%= Url.Action("security") %>">Security</a>
@@ -123,7 +123,7 @@
         <a href="<%= Url.Action("signature/") %>">Signature</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("signature/config") %>">config</a>
+                <a href="<%= Url.Action("signature/browser") %>">browser</a>
             </li>
             <li>
                 <a href="<%= Url.Action("signature/request") %>">request</a>

@@ -26,11 +26,11 @@
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
                 },
                 "documentType": "text",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -41,11 +41,11 @@
                     "fileType": "xlsx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -56,11 +56,11 @@
                     "fileType": "pptx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
                 },
                 "documentType": "presentation",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -71,11 +71,11 @@
                     "fileType": "doc",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.doc",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.doc",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.doc"
                 },
                 "documentType": "text",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -86,11 +86,11 @@
                     "fileType": "xls",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.xls",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xls",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xls"
                 },
                 "documentType": "spreadsheet",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -101,11 +101,11 @@
                     "fileType": "ppt",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.ppt",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.ppt",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.ppt"
                 },
                 "documentType": "presentation",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -116,11 +116,11 @@
                     "fileType": "odt",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.odt",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.odt",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.odt"
                 },
                 "documentType": "text",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -131,11 +131,11 @@
                     "fileType": "ods",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.ods",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.ods",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.ods"
                 },
                 "documentType": "spreadsheet",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -146,11 +146,11 @@
                     "fileType": "odp",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.odp",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.odp",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.odp"
                 },
                 "documentType": "presentation",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -161,11 +161,11 @@
                     "fileType": "txt",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.txt",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.txt",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.txt"
                 },
                 "documentType": "text",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -176,11 +176,11 @@
                     "fileType": "csv",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.csv",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.csv",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.csv"
                 },
                 "documentType": "spreadsheet",
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -191,14 +191,14 @@
                     "fileType": "pdf",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.pdf",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pdf",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pdf"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "mode": "view",
+                    "mode": "view"
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -209,14 +209,14 @@
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "mode": "view",
+                    "mode": "view"
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -227,14 +227,14 @@
                     "fileType": "xlsx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "mode": "view",
+                    "mode": "view"
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -245,14 +245,14 @@
                     "fileType": "pptx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "mode": "view",
+                    "mode": "view"
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -263,17 +263,17 @@
                     "fileType": "docx",
                     "key": "apiwh<%= Request["key"] %>",
                     "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
                     "user": {
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>",
-                    },
+                        "name": "<%= Request["name"] %>"
+                    }
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -284,17 +284,17 @@
                     "fileType": "xlsx",
                     "key": "apiwh<%= Request["key"] %>",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
                     "user": {
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>",
-                    },
+                        "name": "<%= Request["name"] %>"
+                    }
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -305,17 +305,17 @@
                     "fileType": "pptx",
                     "key": "apiwh<%= Request["key"] %>",
                     "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
                     "user": {
                         "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>",
-                    },
+                        "name": "<%= Request["name"] %>"
+                    }
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -326,7 +326,7 @@
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
@@ -337,16 +337,16 @@
                             "logo": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString() %>",
                             "mail": "john@example.com",
                             "name": "John Smith and Co.",
-                            "www": "example.com",
+                            "www": "example.com"
                         },
                         "logo": {
                             "image": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString() %>",
-                            "url": "http://example.com",
-                        },
-                    },
+                            "url": "http://example.com"
+                        }
+                    }
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -357,7 +357,7 @@
                     "fileType": "xlsx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
@@ -368,16 +368,16 @@
                             "logo": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString() %>",
                             "mail": "john@example.com",
                             "name": "John Smith and Co.",
-                            "www": "example.com",
+                            "www": "example.com"
                         },
                         "logo": {
                             "image": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString() %>",
-                            "url": "http://example.com",
-                        },
-                    },
+                            "url": "http://example.com"
+                        }
+                    }
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -388,7 +388,7 @@
                     "fileType": "pptx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
@@ -399,16 +399,16 @@
                             "logo": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString() %>",
                             "mail": "john@example.com",
                             "name": "John Smith and Co.",
-                            "www": "example.com",
+                            "www": "example.com"
                         },
                         "logo": {
                             "image": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString() %>",
-                            "url": "http://example.com",
-                        },
-                    },
+                            "url": "http://example.com"
+                        }
+                    }
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -422,15 +422,15 @@
                     "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
                     "permissions": {
                         "edit": false,
-                        "review": true,
-                    },
+                        "review": true
+                    }
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "mode": "edit",
+                    "mode": "edit"
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 
@@ -441,7 +441,7 @@
                     "fileType": "docx",
                     "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
                     "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
@@ -453,11 +453,11 @@
                             "speech/config.json",
                             "youtube/config.json"
                         ],
-                        "url": "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/",
-                    },
+                        "url": "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/"
+                    }
                 },
                 "height": "100%",
-                "width": "100%",
+                "width": "100%"
             });
         <% break; %>
 

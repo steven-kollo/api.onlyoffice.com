@@ -256,6 +256,7 @@
     <Content Include="Content\img\docbuilder\file_docx.png" />
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
+    <Content Include="Content\img\Editor\e-token.png" />
     <Content Include="Content\img\Editor\history.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
@@ -301,6 +302,7 @@
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\sitename.png" />
     <Content Include="Content\img\sprite.png" />
+    <Content Include="Content\img\Video\owncloud_integration.png" />
     <Content Include="Content\img\Video\plugin.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
@@ -324,6 +326,7 @@
     <Content Include="Views\ApiSystem\Navigation.ascx" />
     <Content Include="Views\DocBuilder\Basic.aspx" />
     <Content Include="Views\DocBuilder\classlist.aspx" />
+    <Content Include="Views\DocBuilder\nodejsexample.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\ApiBullet\GetClassType.ascx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\ApiChart\GetClassType.ascx" />
@@ -1096,7 +1099,7 @@
     <Content Include="Views\Editors\Security.aspx" />
     <Content Include="Views\Editors\Signature.aspx" />
     <Content Include="Views\Editors\Signature\Request.ascx" />
-    <Content Include="Views\Editors\Signature\Config.ascx" />
+    <Content Include="Views\Editors\Signature\Browser.ascx" />
     <Content Include="Views\Editors\Signature\Default.ascx" />
     <Content Include="Views\Plugin\Basic.aspx" />
     <Content Include="Views\Plugin\Config.aspx" />
@@ -1185,15 +1188,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\class_descriptions.xml" />
-    <Content Include="App_Data\.Net %28C# MVC%29 Example.zip" />
-    <Content Include="App_Data\.Net %28C#%29 Example.zip" />
-    <Content Include="App_Data\Java Example.zip" />
-    <Content Include="App_Data\Node.js Example.zip" />
-    <Content Include="App_Data\PHP Example.zip" />
-    <Content Include="App_Data\Ruby Example.zip" />
-    <Content Include="App_Data\docbuilder-net-asp-example.zip" />
-    <Content Include="App_Data\docbuilder-net-mvc-example.zip" />
-    <Content Include="App_Data\rails-docbuilder-example-master.zip" />
+    <Content Include="App_Data\editor\.Net %28C# MVC%29 Example.zip" />
+    <Content Include="App_Data\editor\.Net %28C#%29 Example.zip" />
+    <Content Include="App_Data\editor\Java Example.zip" />
+    <Content Include="App_Data\editor\Node.js Example.zip" />
+    <Content Include="App_Data\editor\PHP Example.zip" />
+    <Content Include="App_Data\editor\Ruby Example.zip" />
+    <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
+    <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
+    <Content Include="App_Data\docbuilder\Node.js Example.zip" />
+    <Content Include="App_Data\docbuilder\Ruby Example.zip" />
     <Content Include="App_Data\Templates\docx.docbuilder" />
     <Content Include="App_Data\Templates\pdf.docbuilder" />
     <Content Include="App_Data\Templates\xlsx.docbuilder" />

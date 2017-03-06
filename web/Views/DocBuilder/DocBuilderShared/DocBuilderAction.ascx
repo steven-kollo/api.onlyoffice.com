@@ -1,6 +1,6 @@
 <%@ Control
     Language="C#"
-    Inherits="System.Web.Mvc.ViewUserControl<string>" %>
+    Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>ONLYOFFICE Document Builder in action</h1>
 

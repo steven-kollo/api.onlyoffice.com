@@ -87,14 +87,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "sharingSettings": [
                 {
                     "permissions": "Full Access",
-                    "user": "John Smith",
+                    "user": "John Smith"
                 },
                 {
                     "permissions": "Read Only",
-                    "user": "Kate Cage",
+                    "user": "Kate Cage"
                 },
                 ...
-            ],
+            ]
         },
         ...
     },

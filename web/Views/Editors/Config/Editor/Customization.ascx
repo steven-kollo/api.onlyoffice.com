@@ -26,14 +26,14 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td id="chat">chat<span class="required">*</span></td>
-            <td>defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled.</td>
+            <td id="chat">chat</td>
+            <td>defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled. The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
-            <td id="comments">comments<span class="required">*</span></td>
-            <td>defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable.</td>
+            <td id="comments">comments</td>
+            <td>defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -105,6 +105,7 @@
                         <b>example</b>: true
                     </li>
                 </ul>
+                The default value is <b>false</b>.
             </td>
             <td>boolean or object</td>
             <td>true</td>
@@ -186,28 +187,29 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "logo": "http://example.com/logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
-                "www": "example.com",
+                "www": "example.com"
             },
             "feedback": {
                 "url": "http://example.com",
-                "visible": true,
+                "visible": true
             },
             "goback": {
                 "text": "Go to Documents",
-                "url": "http://example.com",
+                "url": "http://example.com"
             },
             "logo": {
                 "image": "http://example.com/logo.png",
                 "imageEmbedded": "http://example.com/logo_em.png",
-                "url": "http://www.onlyoffice.com",
+                "url": "http://www.onlyoffice.com"
             },
-            "zoom": 100,
+            "zoom": 100
         },
         ...
     },
     ...
 });
 </pre>
+    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
 <p>
     If you have any further questions, please contact us at

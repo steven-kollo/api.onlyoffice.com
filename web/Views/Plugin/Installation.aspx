@@ -27,20 +27,22 @@
 
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "editorConfig": {
-        ...
         "plugins": {
              "pluginsData": [
                  "plugin1/config.json",
                  "plugin2/config.json",
                  ...
              ],
-             "url": "http://example.com/plugins/",
+             "url": "http://example.com/plugins/"
         },
+        ...
     },
+    ...
 });
 </pre>
+
+    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
     <p>See the <a href="<%= Url.Action("config/editor/plugins", "editors") %>">Document Server API</a> documentation for more information on where to find the config and what and how can be changed there.</p>
 

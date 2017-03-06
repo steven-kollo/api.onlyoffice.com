@@ -27,7 +27,7 @@
                 </ul>
             </div>
             <h2 id="CSharp3"><span class="style_step">Step 3. </span>Download the .Net (C#) example code and build your application</h2>
-            <p>Download the <a href="<%= Url.Content("~/app_data/docbuilder-net-asp-example.zip") %>">.Net (C#)</a> or <a href="<%= Url.Content("~/app_data/docbuilder-net-mvc-example.zip") %>">.Net (C# MVC)</a> example from our site and unpack it somewhere to your computer.</p>
+            <p><a href="<%= Url.Action("integratingdocumentbuilder") %>">Download</a> the .Net (C#) or .Net (C# MVC) example from our site and unpack it somewhere to your computer.</p>
             <p>Open the <b>DocumentBuilder.sln</b> solution file from the unpacked project folder using the <b>Visual Studio</b> application. Wait while the project loads.</p>
             <p>Once the project is completely loaded, go to the <b>Visual Studio</b> top menu and choose <b>Project</b> -&gt; <b>Rebuild Solution</b>. The project will be rebuilt, after that you can run it in your browser using the green triangle button with the browser name at the top panel.</p>
             <h2 id="CSharp4"><span class="style_step">Step 4. </span>Running your website with the ONLYOFFICE Document Builder</h2>

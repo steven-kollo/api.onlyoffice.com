@@ -5,18 +5,18 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
 <p>You can choose any appropriate way how to run the Java example code. We will show how to run the Java code using the <b>Apache Tomcat</b> web server.</p>
 
 <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
-<h2 id="wind-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<h2 id="win-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
-<h2 id="wind-2"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
+<h2 id="win-2"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
 
@@ -27,10 +27,10 @@ files.docservice.url.api=http://documentserver.com/web-apps/apps/api/documents/a
 files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/documents/cache-scripts.html
 </span>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\src\main\webapp\editor.jsp</em> file.</p>
 
-<h2 id="wind-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
+<h2 id="win-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>To run the Java example code you will need to install the Java version appropriate for your OS and web server <b>Apache Tomcat</b>.</p>
 
 <ul>
@@ -38,7 +38,7 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
     <li>Apache Tomcat (download from <a href="http://tomcat.apache.org/">the official website</a>)</li>
 </ul>
 
-<h2 id="wind-4"><span class="style_step">Step 4. </span>Running Apache Tomcat</h2>
+<h2 id="win-4"><span class="style_step">Step 4. </span>Running Apache Tomcat</h2>
 <ol>
     <li>
         <p>After you have installed Java in Windows, you must set the <b>JAVA_HOME</b> environment variable to point to the Java installation directory.</p>
@@ -74,7 +74,7 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
     </li>
 </ol>
 
-<h2 id="wind-5"><span class="style_step">Step 5 . </span>Running the Java code</h2>
+<h2 id="win-5"><span class="style_step">Step 5 . </span>Running the Java code</h2>
 <ol>
     <li>
         <p>Open Tomcat Web Application Manager by clicking <b>Manager App:</b></p>
@@ -105,6 +105,13 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
     </li>
     <li>
         <p>Click the link with the application name to run it.</p>
-        <p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
     </li>
 </ol>
+
+<h2 id="win-6"><span class="style_step">Step 6. </span>Checking accessibility</h2>
+<p>
+    In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
+    And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+</p>
+
+<p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

@@ -60,6 +60,11 @@ $(function () {
                         print: false,
                     }
                 },
+                editorConfig: {
+                    customization: {
+                        feedback: true,
+                    },
+                },
                 documentType: documentType,
                 height: "550px",
                 width: "100%",

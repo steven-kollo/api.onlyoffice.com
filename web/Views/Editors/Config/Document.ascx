@@ -71,5 +71,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
+    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
 <div class="note">The key characters can be used: <b>0-9</b>, <b>a-z</b>, <b>A-Z</b>, <b>-._=</b>. The maximal key length is <b>20</b> characters.</div>

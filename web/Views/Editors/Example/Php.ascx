@@ -5,17 +5,18 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE&trade; online editors</b> into your own website on <b>PHP</b> you need to download and install ONLYOFFICE&trade; editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> for their integration.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>PHP</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> for their integration. We will show you how to run the PHP example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.</p>
 
 <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
-<h2 id="wind-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
-<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE&trade; Editors</b></a> (the ONLYOFFICE&trade; Document Server).</p>
+<h2 id="Windows">Running the example on Windows OS</h2>
+<h2 id="win-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
-<h2 id="wind-2"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
+<h2 id="win-2"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config.php</em> file:</p>
 <pre>
@@ -25,10 +26,10 @@ $GLOBALS['DOC_SERV_API_URL'] = "http://documentserver/web-apps/apps/api/document
 $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/documents/cache-scripts.html";
 </pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE&trade; Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>doceditor.php</em> file.</p>
 
-<h2 id="wind-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
+<h2 id="win-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>You can use any web server capable of runnig PHP code to run the sample. We will demonstrate how to run the PHP sample using <b>Internet Information Services (IIS)</b> web server. To set up and configure PHP on IIS <b>PHP Manager for IIS</b> will be used.</p>
 
 <ul>
@@ -37,7 +38,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
     <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site)</a>.</li>
 </ul>
 
-<h2 id="wind-4"><span class="style_step">Step 4. </span>IIS configuration</h2>
+<h2 id="win-4"><span class="style_step">Step 4. </span>IIS configuration</h2>
 <ol>
     <li>
         <p><b>PHP Manager for IIS</b> configuration:</p>
@@ -75,7 +76,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
 </ol>
 <p>After IIS manager configuration is complete everything is ready for running the <b>PHP</b> example.</p>
 
-<h2 id="wind-5"><span class="style_step">Step 5. </span>Running your web site with the editors</h2>
+<h2 id="win-5"><span class="style_step">Step 5. </span>Running your web site with the editors</h2>
 <ol>
     <li>
         <p>Add your web site in the IIS Manager</p>
@@ -94,4 +95,57 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
         <img alt="" src="/content/img/php/browse.png" />
     </li>
 </ol>
+
+<h2 id="win-6"><span class="style_step">Step 6. </span>Checking accessibility</h2>
+<p>
+    In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
+    And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+</p>
+
+
+<h2 id="Linux">Running the example on Linux OS</h2>
+<h2 id="linux-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
+<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
+<p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">install Document Server for Linux</a>.</p>
+
+<h2 id="linux-2"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
+<ol>
+    <li>Install <b>Apache</b> and <b>PHP</b>:
+        <div class="commandline">apt-get install apache2 php7.0 libapache2-mod-php7.0</div>
+    </li>
+    <li>Download the archive with the PHP Example and unpack the archive:
+        <div class="commandline">cd /var/www/html</div>
+        <div class="commandline">wget http://api.onlyoffice.com/app_data/editor/PHP%20Example.zip</div>
+        <div class="commandline">unzip PHP\ Example.zip</div>
+    </li>
+    <li>Edit the <em>config.php</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
+        <div class="commandline">nano config.php</div>
+        <p>Edit the following lines:</p>
+
+        <pre>
+$GLOBALS['DOC_SERV_STORAGE_URL'] = "http://documentserver/FileUploader.ashx";
+$GLOBALS['DOC_SERV_CONVERTER_URL'] = "http://documentserver/ConvertService.ashx";
+$GLOBALS['DOC_SERV_API_URL'] = "http://documentserver/web-apps/apps/api/documents/api.js";
+$GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/documents/cache-scripts.html";
+</pre>
+
+        <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+    </li>
+    <li>Set permission for site:
+        <div class="commandline">chown -R www-data:www-data /var/www/html</div>
+    </li>
+    <li>Restart apache:
+        <div class="commandline">service apache2 restart</div>
+    </li>
+    <li>See the result in your browser using the address:
+        <div class="commandline">http://localhost</div>
+    </li>
+</ol>
+
+<h2 id="linux-3"><span class="style_step">Step 3. </span>Checking accessibility</h2>
+<p>
+    In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
+    And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+</p>
+
 <p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>

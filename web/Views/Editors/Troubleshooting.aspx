@@ -43,4 +43,10 @@
     <p>No co-editing is available when the document is opened for editing by different users.</p>
     <p>The <b>document editing service</b> opens <b>two different</b> files for editing.</p>
     <p>Check if the <a href="<%= Url.Action("config/document") %>#key">document.key</a> values coincide to be able to co-edit the same document. The <em>key</em> value must change after the save, must differ for different documents and coincide when co-editing one and the same document.</p>
+
+    <h2 id="token">Invalid token</h2>
+    <img alt="Invalid token" src="<%= Url.Content("~/content/img/editor/e-token.png") %>" />
+    <p>The editor is loaded with the "The document security token is not correctly formed. Please contact your Document Server administrator" message.</p>
+    <p>The <b>document editing service</b> requests an encrypted <b>signature</b>.</p>
+    <p>Check if the <a href="<%= Url.Action("config/") %>#token">token</a> is correct. The token must be generated in accordance with the <a href="<%= Url.Action("security") %>">JWT (JSON Web Tokens) standard</a> and present in <b>ONLYOFFICE Document Server</b> config.</p>
 </asp:Content>

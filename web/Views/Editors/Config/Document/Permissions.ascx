@@ -27,19 +27,19 @@
         <tbody>
             <tr class="tablerow">
                 <td id="download">download</td>
-                <td>defines if the document can be downloaded or only viewed or edited online. In case the downloading permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Download as...</b> menu option</td>
+                <td>defines if the document can be downloaded or only viewed or edited online. In case the downloading permission is set to <b>"false"</b> the <b>Download as...</b> menu option will be absent from the <b>File</b> menu. The default value is <b>true</b>.</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
             <tr class="tablerow">
                 <td id="edit">edit</td>
-                <td>defines if the document can be edited or only viewed. In case the editing permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Edit Document</b> menu option; please note that if the editing permission is set to <b>"false"</b> the document will be opened in viewer and you will <b>not</b> be able to switch it to the editor even if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b></td>
+                <td>defines if the document can be edited or only viewed. In case the editing permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Edit Document</b> menu option; please note that if the editing permission is set to <b>"false"</b> the document will be opened in viewer and you will <b>not</b> be able to switch it to the editor even if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value is <b>true</b>.</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
             <tr class="tablerow">
                 <td id="print">print</td>
-                <td>defines if the document can be printed or not. In case the printing permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Print</b> menu option</td>
+                <td>defines if the document can be printed or not. In case the printing permission is set to <b>"false"</b> the <b>Print</b> menu option will be absent from the <b>File</b> menu. The default value is <b>true</b>.</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -75,10 +75,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "download": true,
             "edit": true,
             "print": true,
-            "review": true,
+            "review": true
         },
         ...
-    ...
     },
 });
 </pre>

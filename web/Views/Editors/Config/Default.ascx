@@ -25,7 +25,7 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td id="documentType">documentType<span class="required">*</span></td>
+            <td id="documentType">documentType</td>
             <td>defines the document type to be opened:
                 <em>open a text document (.docx, .doc, .odt, .txt, .rtf, .html, .htm, .mht, .epub, .pdf, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
                 <em>open a spreadsheet (.xlsx, .xls, .ods, .csv) for viewing or editing</em> - <b>spreadsheet</b>,
@@ -42,7 +42,7 @@
         </tr>
         <tr class="tablerow">
             <td id="token">token</td>
-            <td>defines the encrypted signature added to the <b>Document Server</b> config in the form of <a href="<%= Url.Action("signature/config")%>">token</a></td>
+            <td>defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a></td>
             <td>string</td>
             <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M"</td>
         </tr>
@@ -51,7 +51,8 @@
             <td>defines the platform type used to access the document. Can be:
                 <em>optimized to access the document from a desktop or laptop computer</em> - <b>desktop</b>,
                 <em>optimized to access the document from a tablet or a smartphone</em> - <b>mobile</b>,
-                <em>specifically formed to be easily embedded into a web page</em> - <b>embedded</b>
+                <em>specifically formed to be easily embedded into a web page</em> - <b>embedded</b>.
+                The default value is <b>"desktop"</b>.
             </td>
             <td>string</td>
             <td>"desktop"</td>
@@ -64,8 +65,6 @@
         </tr>
     </tbody>
 </table>
-
-<span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
 <div class="header-gray">Example</div>
 <pre>

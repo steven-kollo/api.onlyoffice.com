@@ -72,24 +72,26 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changeshistory, //the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document
+            "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
+            "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
             "user": {
                 "id": "F89d8069ba2b",
-                "name": "Kate Cage",
+                "name": "Kate Cage"
             },
-            "version": 1,
+            "version": 1
         },
         {
-            "changes": changeshistory,
+            "changes": changes,
             "created": "2010-07-07 3:46 PM",
             "key": "Khirz6zTPdfd7",
+            "serverVersion": serverVersion,
             "user": {
                 "id": "78e1e841",
-                "name": "John Smith",
+                "name": "John Smith"
             },
-            "version": 2,
+            "version": 2
         },
         ...
     ],
@@ -137,7 +139,7 @@ docEditor.refreshHistory({
                     </tr>
                     <tr class="tablerow">
                         <td>history.changes</td>
-                        <td>defines the <em>changeshistory</em> from <a href="<%= Url.Action("callback") %>#changeshistory">the JSON object</a> returned after saving the document</td>
+                        <td>defines the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document</td>
                         <td>object</td>
                         <td>optional</td>
                     </tr>
@@ -185,23 +187,33 @@ docEditor.refreshHistory({
             <p><b>setHistoryData</b> - send the link to the document for viewing the version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.</p>
             <pre>
 docEditor.setHistoryData({
+    "key": "Khirz6zTPdfd7",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3giLCJ2ZXJzaW9uIjoyfQ.N9N9IMwX5e6kdfx4wssAPrGMnzPAZCd4PwDf2D8mJ8s",
     "url": "http://example.com/url-to-example-document.docx",
-    "version": 2,
+    "version": 2
 });
 </pre>
+            <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
             <p>If after editing and saving the document the link <em>changesurl</em> to the file with changes data is returned, download the file by this link and send the file url in <em>changesUrl</em> parameter. The url address of the document previous version must be sent in <em>previous.url</em> parameter.</p>
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "http://example.com/url-to-changes.zip",
-    "url": "http://example.com/url-to-the-previous-version-of-the-document.docx",
-    "version": 2,
+    "key": "Khirz6zTPdfd7",
+    "previous": {
+        "key": "af86C7e71Ca8",
+        "url": "http://example.com/url-to-the-previous-version-of-the-document.docx"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1jaGFuZ2VzLnppcCIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJwcmV2aW91cyI6eyJrZXkiOiJhZjg2QzdlNzFDYTgiLCJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLXRoZS1wcmV2aW91cy12ZXJzaW9uLW9mLXRoZS1kb2N1bWVudC5kb2N4In0sInVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.9dgDsaVLFQ6RtoX_1s2pBVJHGnyMjxDXKC2TpC2nXb4",
+    "url": "http://example.com/url-to-example-document.docx",
+    "version": 2
 });
 </pre>
+            <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
             <p>Send the error message explaining why the document version can not be displayed.</p>
             <pre>
 docEditor.setHistoryData({
     "error": "Exception",
-    "version": 2,
+    "version": 2
 });
 </pre>
             <table class="table">
@@ -233,8 +245,38 @@ docEditor.setHistoryData({
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
+                        <td>key</td>
+                        <td>defines the document identifier used to unambiguously identify the document file.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>previous</td>
+                        <td>defines the object of the previous version of the document if <em>changesUrl</em> address was returned after saving the document</td>
+                        <td>object</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>previous.key</td>
+                        <td>defines the document identifier of the previous version of the document</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>previous.url</td>
+                        <td>defines the url address of the previous version of the document</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td id="token">token</td>
+                        <td>defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setHistoryData">token</a></td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>url</td>
-                        <td>defines the url address of the current version of the document if <em>changesUrl</em> address is absent or the url address of the previous version of the document if <em>changesUrl</em> address was returned after saving the document. Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document</td>
+                        <td>defines the url address of the current version of the document. Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>

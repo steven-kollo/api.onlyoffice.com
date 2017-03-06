@@ -121,8 +121,8 @@
         "portalName": "example",
         "status": "Active",
         "tenantId": 1,
-        "timeZoneName": "UTC",
-    },
+        "timeZoneName": "UTC"
+    }
 }
 </pre>
 

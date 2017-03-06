@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("config/") %>"></a>
-    <span class="hdr">Editor Config</span>
+    <span class="hdr">Editor config</span>
 </h1>
 
 <div class="header-gray">Description</div>
@@ -45,15 +45,13 @@
         </tr>
         <tr class="tablerow">
             <td id="lang">lang</td>
-            <td>defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) or four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes
-            </td>
+            <td>defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) or four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes. The default value is <b>"en-US"</b>.</td>
             <td>string</td>
             <td>"en-US"</td>
         </tr>
         <tr class="tablerow">
             <td id="mode">mode</td>
-            <td>defines the editor opening mode. Can be either <b>view</b> to open the document for viewing, or <b>edit</b> to open the document in the editing mode allowing to apply changes to the document data
-            </td>
+            <td>defines the editor opening mode. Can be either <b>view</b> to open the document for viewing, or <b>edit</b> to open the document in the editing mode allowing to apply changes to the document data. The default value is <b>"edit"</b>.</td>
             <td>string</td>
             <td>"edit"</td>
         </tr>
@@ -147,20 +145,21 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             {
                 "folder": "Example Files",
                 "title": "exampledocument1.docx",
-                "url": "http://example.com/exampledocument1.docx",
+                "url": "http://example.com/exampledocument1.docx"
             },
             {
                 "folder": "Example Files",
                 "title": "exampledocument2.docx",
-                "url": "http://example.com/exampledocument2.docx",
+                "url": "http://example.com/exampledocument2.docx"
             },
             ...
         ],
         "user": {
             "id": "78e1e841",
-            "name": "John Smith",
-        },
+            "name": "John Smith"
+        }
     },
     ...
 });
 </pre>
+    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>

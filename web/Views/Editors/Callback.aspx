@@ -64,7 +64,7 @@
     "actions": [{"type": 1, "userid": "78e1e841"}],
     "key": "Khirz6zTPdfd7",
     "status": 1,
-    "users": ["6d5a81d0", "78e1e841"],
+    "users": ["6d5a81d0", "78e1e841"]
 }
 </pre>
 
@@ -75,12 +75,12 @@
     "changesurl": "http://documentserver/url-to-changes.zip",
     "history": {
         "changes": changes,
-        "serverVersion": serverVersion,
+        "serverVersion": serverVersion
     },
     "key": "Khirz6zTPdfd7",
     "status": 2,
     "url": "http://documentserver/url-to-edited-document.docx",
-    "users": ["6d5a81d0"],
+    "users": ["6d5a81d0"]
 }
 </pre>
 
@@ -88,7 +88,7 @@
     <pre>
 {
     "key": "Khirz6zTPdfd7",
-    "status": 4,
+    "status": 4
 }
 </pre>
 
@@ -98,13 +98,13 @@
     "changesurl": "http://documentserver/url-to-changes.zip",
     "history": {
         "changes": changes,
-        "serverVersion": serverVersion,
+        "serverVersion": serverVersion
     },
     "key": "Khirz6zTPdfd7",
     "status": 6,
     "url": "http://documentserver/url-to-edited-document.docx",
     "users": ["6d5a81d0"],
-    "userdata": "sample userdata",
+    "userdata": "sample userdata"
 }
 </pre>
 
