@@ -53,6 +53,10 @@
                         <td>Get this class type.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getcommentsreport") %>">GetCommentsReport</a></td>
+                        <td>Get a report about all the comments added to the document.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("textdocumentapi/apidocument/getdefaultparapr") %>">GetDefaultParaPr</a></td>
                         <td>Get a set of default paragraph properties in the current document.</td>
                     </tr>
@@ -75,6 +79,10 @@
                     <tr class="tablerow">
                         <td><a href="<%= Url.Action("textdocumentapi/apidocument/getfinalsection") %>">GetFinalSection</a></td>
                         <td>Get the document final section.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getreviewreport") %>">GetReviewReport</a></td>
+                        <td>Get a report about every change which was made to the document in the review mode.</td>
                     </tr>
                     <tr class="tablerow">
                         <td><a href="<%= Url.Action("textdocumentapi/apidocument/getstyle") %>">GetStyle</a></td>
