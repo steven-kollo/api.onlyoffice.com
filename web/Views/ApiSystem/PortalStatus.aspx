@@ -73,8 +73,8 @@
         "portalName": "example",
         "status": "Suspended",
         "tenantId": 1,
-        "timeZoneName": "UTC",
-    },
+        "timeZoneName": "UTC"
+    }
 }
 </pre>
 

@@ -41,15 +41,15 @@ new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
         "user": {
             "id": "78e1e841",
-            "name": "John Smith",
-        },
-    },
+            "name": "John Smith"
+        }
+    }
 });
 </pre>
             Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
@@ -63,15 +63,15 @@ new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
         "user": {
             "id": "F89d8069ba2b",
-            "name": "Kate Cage",
-        },
-    },
+            "name": "Kate Cage"
+        }
+    }
 });
 </pre>
             Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.

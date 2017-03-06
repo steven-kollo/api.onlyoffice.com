@@ -62,24 +62,24 @@ config = {
             "sharingSettings": [
                 {
                     "permissions": "Full Access",
-                    "user": "John Smith",
+                    "user": "John Smith"
                 },
                 {
                     "permissions": "Read Only",
-                    "user": "Kate Cage",
+                    "user": "Kate Cage"
                 },
                 ...
-            ],
+            ]
         },
         "key": "Khirz6zTPdfd7",
         "permissions": {
             "download": true,
             "edit": true,
             "print": true,
-            "review": true,
+            "review": true
         },
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
@@ -95,29 +95,29 @@ config = {
                 "logo": "http://example.com/logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
-                "www": "example.com",
+                "www": "example.com"
             },
             "feedback": {
                 "url": "http://example.com",
-                "visible": true,
+                "visible": true
             },
             "goback": {
                 "text": "Go to Documents",
-                "url": "http://example.com",
+                "url": "http://example.com"
             },
             "logo": {
                 "image": "http://example.com/logo.png",
                 "imageEmbedded": "http://example.com/logo_em.png",
-                "url": "http://example.com",
+                "url": "http://example.com"
             },
-            "zoom": 100,
+            "zoom": 100
         },
         "embedded": {
             "embedUrl": "http://example.com/embedded?doc=exampledocument1.docx",
             "fullscreenUrl": "http://example.com/embedded?doc=exampledocument1.docx#fullscreen",
             "saveUrl": "http://example.com/download?doc=exampledocument1.docx",
             "shareUrl": "http://example.com/view?doc=exampledocument1.docx",
-            "toolbarDocked": "top",
+            "toolbarDocked": "top"
         },
         "lang": "en-US",
         "mode": "edit",
@@ -127,25 +127,25 @@ config = {
                  "plugin2/config.json",
                  ...
              ],
-             "url": "http://example.com/plugins/",
+             "url": "http://example.com/plugins/"
         },
         "recent": [
             {
                 "folder": "Example Files",
                 "title": "exampledocument1.docx",
-                "url": "http://example.com/exampledocument1.docx",
+                "url": "http://example.com/exampledocument1.docx"
             },
             {
                 "folder": "Example Files",
                 "title": "exampledocument2.docx",
-                "url": "http://example.com/exampledocument2.docx",
+                "url": "http://example.com/exampledocument2.docx"
             },
             ...
         ],
         "user": {
             "id": "78e1e841",
-            "name": "John Smith",
-        },
+            "name": "John Smith"
+        }
     },
     "events": {
         "onCollaborativeChanges": onCollaborativeChanges,
@@ -156,12 +156,12 @@ config = {
         "onRequestEditRights": onRequestEditRights,
         "onRequestHistory": onRequestHistory,
         "onRequestHistoryData": onRequestHistoryData,
-        "onRequestHistoryClose": onRequestHistoryClose,
+        "onRequestHistoryClose": onRequestHistoryClose
     },
     "height": "100%",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M",
     "type": "desktop",
-    "width": "100%",
+    "width": "100%"
 };
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>

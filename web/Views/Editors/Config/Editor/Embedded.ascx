@@ -74,7 +74,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "fullscreenUrl": "http://example.com/embedded?doc=exampledocument1.docx#fullscreen",
             "saveUrl": "http://example.com/download?doc=exampledocument1.docx",
             "shareUrl": "http://example.com/view?doc=exampledocument1.docx",
-            "toolbarDocked": "top",
+            "toolbarDocked": "top"
         },
         ...
     },

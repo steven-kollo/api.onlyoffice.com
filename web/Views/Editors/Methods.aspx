@@ -78,9 +78,9 @@ docEditor.refreshHistory({
             "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
             "user": {
                 "id": "F89d8069ba2b",
-                "name": "Kate Cage",
+                "name": "Kate Cage"
             },
-            "version": 1,
+            "version": 1
         },
         {
             "changes": changes,
@@ -89,9 +89,9 @@ docEditor.refreshHistory({
             "serverVersion": serverVersion,
             "user": {
                 "id": "78e1e841",
-                "name": "John Smith",
+                "name": "John Smith"
             },
-            "version": 2,
+            "version": 2
         },
         ...
     ],
@@ -190,7 +190,7 @@ docEditor.setHistoryData({
     "key": "Khirz6zTPdfd7",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3giLCJ2ZXJzaW9uIjoyfQ.N9N9IMwX5e6kdfx4wssAPrGMnzPAZCd4PwDf2D8mJ8s",
     "url": "http://example.com/url-to-example-document.docx",
-    "version": 2,
+    "version": 2
 });
 </pre>
             <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
@@ -201,11 +201,11 @@ docEditor.setHistoryData({
     "key": "Khirz6zTPdfd7",
     "previous": {
         "key": "af86C7e71Ca8",
-        "url": "http://example.com/url-to-the-previous-version-of-the-document.docx",
+        "url": "http://example.com/url-to-the-previous-version-of-the-document.docx"
     },
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1jaGFuZ2VzLnppcCIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJwcmV2aW91cyI6eyJrZXkiOiJhZjg2QzdlNzFDYTgiLCJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLXRoZS1wcmV2aW91cy12ZXJzaW9uLW9mLXRoZS1kb2N1bWVudC5kb2N4In0sInVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.9dgDsaVLFQ6RtoX_1s2pBVJHGnyMjxDXKC2TpC2nXb4",
     "url": "http://example.com/url-to-example-document.docx",
-    "version": 2,
+    "version": 2
 });
 </pre>
             <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
@@ -213,7 +213,7 @@ docEditor.setHistoryData({
             <pre>
 docEditor.setHistoryData({
     "error": "Exception",
-    "version": 2,
+    "version": 2
 });
 </pre>
             <table class="table">

@@ -44,9 +44,9 @@ new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "text"
 });
 </pre>
     Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.

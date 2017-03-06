@@ -70,10 +70,10 @@
         "CoAuthoring": {
             "secret": {
                 "inbox": {
-                    "string": "secret",
+                    "string": "secret"
                 },
                 "outbox": {
-                    "string": "secret",
+                    "string": "secret"
                 },
             },
             "token": {
@@ -81,11 +81,11 @@
                     "browser": true,
                     "request": {
                         "inbox": true,
-                        "outbox": true,
-                    },
-                },
-            },
-        },
-    },
+                        "outbox": true
+                    }
+                }
+            }
+        }
+    }
 }
 </pre>

@@ -74,7 +74,7 @@
 {
     "c": "drop",
     "key": "Khirz6zTPdfd7",
-    "users": [ "6d5a81d0" ],
+    "users": [ "6d5a81d0" ]
 }
 </pre>
 
@@ -82,7 +82,7 @@
     <pre>
 {
     "c": "forcesave",
-    "key": "Khirz6zTPdfd7",
+    "key": "Khirz6zTPdfd7"
 }
 </pre>
 
@@ -90,7 +90,7 @@
     <pre>
 {
     "c": "info",
-    "key": "Khirz6zTPdfd7",
+    "key": "Khirz6zTPdfd7"
 }
 </pre>
 
@@ -99,7 +99,7 @@
     <pre>
 {
     "error": 0,
-    "key": "Khirz6zTPdfd7",
+    "key": "Khirz6zTPdfd7"
 }
 </pre>
 

@@ -75,10 +75,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "download": true,
             "edit": true,
             "print": true,
-            "review": true,
+            "review": true
         },
         ...
-    ...
     },
 });
 </pre>

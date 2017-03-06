@@ -87,7 +87,7 @@
     <pre>
 {
     "errors": [ "portalNameExist" ],
-    "variants": [ "example", "example2014" ],
+    "variants": [ "example", "example2014" ]
 }
 </pre>
 

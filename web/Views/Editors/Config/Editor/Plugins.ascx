@@ -56,7 +56,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                  "plugin2/config.json",
                  ...
              ],
-             "url": "http://example.com/plugins/",
+             "url": "http://example.com/plugins/"
         },
         ...
     },

@@ -158,9 +158,9 @@ var onRequestHistory = function() {
                 "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
                 "user": {
                     "id": "F89d8069ba2b",
-                    "name": "Kate Cage",
+                    "name": "Kate Cage"
                 },
-                "version": 1,
+                "version": 1
             },
             {
                 "changes": changes,
@@ -168,12 +168,12 @@ var onRequestHistory = function() {
                 "key": "Khirz6zTPdfd7",
                 "user": {
                     "id": "78e1e841",
-                    "name": "John Smith",
+                    "name": "John Smith"
                 },
-                "version": 2,
+                "version": 2
             },
             ...
-        ],
+        ]
     });
 };
 
@@ -198,10 +198,10 @@ var onRequestHistoryData = function(event) {
         "key": "Khirz6zTPdfd7",
         "previous": {
             "key": "af86C7e71Ca8",
-            "url": "http://example.com/url-to-the-previous-version-of-the-document.docx",
+            "url": "http://example.com/url-to-the-previous-version-of-the-document.docx"
         },
         "url": "http://example.com/url-to-example-document.docx",
-        "version": version,
+        "version": version
     })
 };
 

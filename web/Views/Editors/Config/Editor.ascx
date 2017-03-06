@@ -145,19 +145,19 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             {
                 "folder": "Example Files",
                 "title": "exampledocument1.docx",
-                "url": "http://example.com/exampledocument1.docx",
+                "url": "http://example.com/exampledocument1.docx"
             },
             {
                 "folder": "Example Files",
                 "title": "exampledocument2.docx",
-                "url": "http://example.com/exampledocument2.docx",
+                "url": "http://example.com/exampledocument2.docx"
             },
             ...
         ],
         "user": {
             "id": "78e1e841",
-            "name": "John Smith",
-        },
+            "name": "John Smith"
+        }
     },
     ...
 });

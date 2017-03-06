@@ -65,7 +65,7 @@
             "portalName": "example",
             "status": "Active",
             "tenantId": 1,
-            "timeZoneName": "UTC",
+            "timeZoneName": "UTC"
         },
         {
             "created": "2014-02-07T20:14:00",
@@ -75,10 +75,10 @@
             "portalName": "example2014",
             "status": "Active",
             "tenantId": 2,
-            "timeZoneName": "(UTC+03:00) Moscow, St. Petersburg, Volgograd",
+            "timeZoneName": "(UTC+03:00) Moscow, St. Petersburg, Volgograd"
         },
         ...
-    ],
+    ]
 }
 </pre>
 

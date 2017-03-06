@@ -26,7 +26,7 @@
         {
             "buttons": [
                 { "text": "OK", "primary": true  },
-                { "text": "Cancel", "primary": false },
+                { "text": "Cancel", "primary": false }
             ],
             "description": "chess",
             "EditorsSupport": ["word", "cell", "slide"],
@@ -39,9 +39,9 @@
             "isUpdateOleOnResize": true,
             "isViewer": true,
             "isVisual": true,
-            "url": "chess/index.html",
-        },
-    ],
+            "url": "chess/index.html"
+        }
+    ]
 };</pre>
     <table class="table">
         <colgroup>

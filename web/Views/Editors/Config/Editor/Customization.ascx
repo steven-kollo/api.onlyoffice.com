@@ -187,22 +187,22 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "logo": "http://example.com/logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
-                "www": "example.com",
+                "www": "example.com"
             },
             "feedback": {
                 "url": "http://example.com",
-                "visible": true,
+                "visible": true
             },
             "goback": {
                 "text": "Go to Documents",
-                "url": "http://example.com",
+                "url": "http://example.com"
             },
             "logo": {
                 "image": "http://example.com/logo.png",
                 "imageEmbedded": "http://example.com/logo_em.png",
-                "url": "http://www.onlyoffice.com",
+                "url": "http://www.onlyoffice.com"
             },
-            "zoom": 100,
+            "zoom": 100
         },
         ...
     },

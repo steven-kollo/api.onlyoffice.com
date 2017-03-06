@@ -47,12 +47,12 @@ config = {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "http://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
-        "callbackUrl": "http://example.com/url-to-callback.ashx",
-    },
+        "callbackUrl": "http://example.com/url-to-callback.ashx"
+    }
 };
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>

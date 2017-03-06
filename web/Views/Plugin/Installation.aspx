@@ -27,18 +27,18 @@
 
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    ...
     "editorConfig": {
-        ...
         "plugins": {
              "pluginsData": [
                  "plugin1/config.json",
                  "plugin2/config.json",
                  ...
              ],
-             "url": "http://example.com/plugins/",
+             "url": "http://example.com/plugins/"
         },
+        ...
     },
+    ...
 });
 </pre>
 
