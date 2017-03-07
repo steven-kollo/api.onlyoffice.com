@@ -28,7 +28,7 @@
             </div>
         </li>
 
-        <% if (Model.Count > 0)
+        <% if (Model != null && Model.Count > 0)
            { %>
         <li>
             <p>Select the programming language and download the code for the sample of online editors integration into your web site:</p>
