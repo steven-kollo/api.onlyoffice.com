@@ -45,7 +45,7 @@
             </tr>
             <tr class="tablerow">
                 <td colspan="4">
-                    <img src="/content/img/editor/permissions.png" alt=""/>
+                    <img src="<%= Url.Content("~/content/img/editor/permissions.png") %>" alt=""/>
                 </td>
             </tr>
             <tr class="tablerow">
@@ -56,7 +56,7 @@
             </tr>
             <tr class="tablerow">
                 <td colspan="4">
-                    <img src="/content/img/editor/review.png" alt=""/>
+                    <img src="<%= Url.Content("~/content/img/editor/review.png") %>" alt=""/>
                 </td>
             </tr>
         </tbody>

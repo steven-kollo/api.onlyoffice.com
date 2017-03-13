@@ -53,7 +53,7 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
         <p><b>JAVA_HOME</b> if you installed the <b>JDK</b> (Java Development Kit) or <b>JRE_HOME</b> if you installed the <b>JRE</b> (Java Runtime Environment).</p>
         <p>In the <b>Variable Value</b> field, enter your <b>JDK</b> or <b>JRE</b> installation path, for example C:\Program Files\Java\jdk1.8.0_65 </p>
 
-        <img src="/content/img/java/make-var.png" alt="" />
+        <img src="<%= Url.Content("~/content/img/java/make-var.png") %>" alt="" />
 
         <p>Check if the variable created successfully by <b>echo</b> command in the <b>Command Prompt</b>:</p>
         <pre>echo %JAVA_HOME%</pre>
@@ -66,7 +66,7 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
         <p>Use the bin <em>startup.bat</em> script to start Apache Tomcat:</p>
         <pre>startup.bat</pre>
         <p>You will see the new <b>Tomcat</b> console window displayed that provides the information and mesages about Tomcat startup:</p>
-        <img src="/content/img/java/tomcat-cmd.jpg" width="800" alt="" />
+        <img src="<%= Url.Content("~/content/img/java/tomcat-cmd.jpg") %>" width="800" alt="" />
 
         <p>Test your Tomcat installation using the address in a web browser:</p>
         <div class="commandline">http://localhost:8080</div>
@@ -78,11 +78,11 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
 <ol>
     <li>
         <p>Open Tomcat Web Application Manager by clicking <b>Manager App:</b></p>
-        <img src="/content/img/java/manager.jpg" width="700" alt="" />
+        <img src="<%= Url.Content("~/content/img/java/manager.jpg") %>" width="700" alt="" />
     </li>
     <li>
         <p>Tomcat Web Application Manager will request the <b>username</b> and the <b>password:</b></p>
-        <img src="/content/img/java/author.jpg" height="300" alt="" />
+        <img src="<%= Url.Content("~/content/img/java/author.jpg") %>" height="300" alt="" />
 
         <p>For that you will need to specify user data in <em>tomcat-users.xml</em> file in the Apache Tomcat installation folder. Define the <b>manager-gui</b> user role, specify the <b>user name</b> and <b>password</b> values:</p>
 
@@ -96,12 +96,12 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
     </li>
     <li>
         <p>Upload the Java project in Tomcat Web Application Manager. For that click <b>Choose File</b> in the <b>WAR file to deploy</b> section  and find the <b>.war</b> file in the Java project folder, then click <b>Deploy</b>.</p>
-        <img src="/content/img/java/upload-app.jpg" width="800" alt="" />
-        <img src="/content/img/java/war-file.jpg" width="600" alt="" />
+        <img src="<%= Url.Content("~/content/img/java/upload-app.jpg") %>" width="800" alt="" />
+        <img src="<%= Url.Content("~/content/img/java/war-file.jpg") %>" width="600" alt="" />
     </li>
     <li>
         <p>You will see the project in the <b>Application List</b>:</p>
-        <img src="/content/img/java/manager-app.jpg" width="800" alt="" />
+        <img src="<%= Url.Content("~/content/img/java/manager-app.jpg") %>" width="800" alt="" />
     </li>
     <li>
         <p>Click the link with the application name to run it.</p>

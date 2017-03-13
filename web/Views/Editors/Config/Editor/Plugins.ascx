@@ -40,7 +40,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/content/img/editor/plugins.png" alt="" />
+                <img src="<%= Url.Content("~/content/img/editor/plugins.png") %>" alt="" />
             </td>
         </tr>
     </tbody>

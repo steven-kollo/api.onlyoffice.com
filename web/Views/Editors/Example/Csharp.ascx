@@ -44,23 +44,23 @@
     <li>
         <p>Add your web site in the IIS Manager</p>
         <p>On the <b>Connections</b> panel right-click the <b>Sites</b> node in the tree, then click <b>Add Website</b></p>
-        <img alt="" src="/content/img/csharp/add.png" />
+        <img alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
     </li>
     <li>
         <p>In the <b>Add Website</b> dialog box specify the name of the folder with the .Net (C#) project in the <b>Site name</b> box.</p>
         <p>Specify the path to the folder with your project in the <b>Physical Path</b> box.</p>
         <p>Specify the unique value used only for this website in the <b>Port</b> box.</p>
-        <img alt="" src="/content/img/csharp/sitename.png" />
+        <img alt="" src="<%= Url.Content("~/content/img/csharp/sitename.png") %>" />
     </li>
     <li>
         <p>Check for the .NET platform version specified in IIS manager for you web site. Choose <b>v4.0.</b> version.</p>
         <p>Click the <b>Application Pool</b> -> right-click the platform name -> <b>Set application Pool defaults</b> -> <b>.NET CLR version</b></p>
-        <img alt="" src="/content/img/csharp/platform.png" />
+        <img alt="" src="<%= Url.Content("~/content/img/csharp/platform.png") %>" />
     </li>
     <li>
         <p>Browse your web site with the IIS manager:</p>
         <p>Right-click the site -> <b>Manage Website</b> -> <b>Browse</b></p>
-        <img alt="" src="/content/img/csharp/browse.png" />
+        <img alt="" src="<%= Url.Content("~/content/img/csharp/browse.png") %>" />
     </li>
 </ol>
 

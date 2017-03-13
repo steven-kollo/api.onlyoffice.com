@@ -16,7 +16,7 @@
     </h1>
 
     <div class="video-link" title="Show video">
-        <img src="/content/img/video/owncloud_integration.png" alt="Show video" />
+        <img src="<%= Url.Content("~/content/img/video/owncloud_integration.png") %>" alt="Show video" />
 
         <div class="popap-dialog">
             <div class="popap-container">
