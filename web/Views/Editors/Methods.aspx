@@ -51,12 +51,12 @@ docEditor.denyEditingRights(message);
                 </tbody>
             </table>
         </li>
-        <%--<li id="destroyEditor">
+        <li id="destroyEditor">
             <p><b>destroyEditor</b> - destroy <em>docEditor</em> object. This method can be called when you want to reinit document editor with another configurations. Used since v.4.3.</p>
             <pre>
 docEditor.destroyEditor();
 </pre>
-        </li>--%>
+        </li>
 
         <li id="downloadAs">
             <p><b>downloadAs</b> - download the edited file. This method can be called only when the existence of the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a> events. <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.</p>
