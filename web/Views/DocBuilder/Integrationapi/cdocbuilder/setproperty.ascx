@@ -37,7 +37,6 @@
 <pre>
 Argument.name === "ONLYOFFICE" // true
 </pre>
-
             <h2>Example</h2>
 <h4 class="header-gray" >C++</h4>
 <pre>
@@ -49,4 +48,18 @@ NSDoctRenderer::CDocBuilder::Dispose();
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>
 docbuilder.exe "--argument={\"name\":\"ONLYOFFICE\"}" test.docbuilder
+</pre>
+<h2>Adding or removing fonts</h2>
+<p>It is also possible to update the font list, when you either add new fonts or remove older ones. To do that the <b>check-fonts</b> variable is used:</p>
+<h2>Example</h2>
+<h4 class="header-gray">C++</h4>
+<pre>
+NSDoctRenderer::CDocBuilder::Initialize();
+NSDoctRenderer::CDocBuilder oBuilder;
+oBuilder.SetProperty("--check-fonts", L"true");
+NSDoctRenderer::CDocBuilder::Dispose();
+</pre>
+<h4 class="header-gray">.docbuilder</h4>
+<pre>
+docbuilder.exe --check-fonts=true test.docbuilder
 </pre>
