@@ -121,61 +121,61 @@ docEditor.refreshHistory({
                 <tbody>
                     <tr class="tablerow">
                         <td>currentVersion</td>
-                        <td>defines the current document version number</td>
+                        <td>defines the current document version number.</td>
                         <td>integer</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>error</td>
-                        <td>defines the error message text</td>
+                        <td>defines the error message text.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history</td>
-                        <td>defines the array with the document versions</td>
+                        <td>defines the array with the document versions.</td>
                         <td>array</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.changes</td>
-                        <td>defines the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document</td>
+                        <td>defines the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</td>
                         <td>object</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.created</td>
-                        <td>defines the document version creation date</td>
+                        <td>defines the document version creation date.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.key</td>
-                        <td>defines the unique document identifier used for document recognition by the service</td>
+                        <td>defines the unique document identifier used for document recognition by the service.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user</td>
-                        <td>defines the user who is the author of the document version </td>
+                        <td>defines the user who is the author of the document version.</td>
                         <td>object</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user.id</td>
-                        <td>defines the identifier of the user who is the author of the document version</td>
+                        <td>defines the identifier of the user who is the author of the document version.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user.name</td>
-                        <td>defines the name of the user who is the author of the document version</td>
+                        <td>defines the name of the user who is the author of the document version.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.version</td>
-                        <td>defines the document version number</td>
+                        <td>defines the document version number.</td>
                         <td>integer</td>
                         <td>required</td>
                     </tr>
@@ -234,13 +234,13 @@ docEditor.setHistoryData({
                 <tbody>
                     <tr class="tablerow">
                         <td>changesUrl</td>
-                        <td>defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document</td>
+                        <td>defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>error</td>
-                        <td>defines the error message text</td>
+                        <td>defines the error message text.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
@@ -252,37 +252,37 @@ docEditor.setHistoryData({
                     </tr>
                     <tr class="tablerow">
                         <td>previous</td>
-                        <td>defines the object of the previous version of the document if <em>changesUrl</em> address was returned after saving the document</td>
+                        <td>defines the object of the previous version of the document if <em>changesUrl</em> address was returned after saving the document.</td>
                         <td>object</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>previous.key</td>
-                        <td>defines the document identifier of the previous version of the document</td>
+                        <td>defines the document identifier of the previous version of the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>previous.url</td>
-                        <td>defines the url address of the previous version of the document</td>
+                        <td>defines the url address of the previous version of the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td id="token">token</td>
-                        <td>defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setHistoryData">token</a></td>
+                        <td>defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setHistoryData">token</a>.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>defines the url address of the current version of the document. Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document</td>
+                        <td>defines the url address of the current version of the document. Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>version</td>
-                        <td>defines the document version number</td>
+                        <td>defines the document version number.</td>
                         <td>integer</td>
                         <td>required</td>
                     </tr>
@@ -313,19 +313,19 @@ docEditor.showMessage(title, message, type);
                 <tbody>
                     <tr class="tablerow">
                         <td>title</td>
-                        <td>Dialog title</td>
+                        <td>Dialog title.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>message</td>
-                        <td>Message text</td>
+                        <td>Message text.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
                         <td>type</td>
-                        <td>Defines dialog type. Can be: <b>info</b>, <b>warning</b>, <b>error</b></td>
+                        <td>Defines dialog type. Can be: <b>info</b>, <b>warning</b>, <b>error</b>.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>

@@ -32,18 +32,18 @@
 <p>To run your website with the editors successfully, check if your system meets the necessary system requirements:</p>
 <ul>
     <li>Microsoft .NET Framework: version 4.5 (download it from the <a href="https://www.microsoft.com/en-US/download/details.aspx?id=30653">official Microsoft website</a>);</li>
-    <li>Internet Information Services: version 7 or later;</li>
+    <li>Internet Information Services: version 7 or later.</li>
 </ul>
 
 <h2 id="win-4"><span class="style_step">Step 4. </span>Running your web site with the editors</h2>
 <ol>
     <li>
         <p>Run the Internet Information Service (IIS) manager</p>
-        <p>Start -> ControlPanel -> System and Security -> Administrative Tools -> Internet Information Services (IIS) Manager </p>
+        <p>Start -> ControlPanel -> System and Security -> Administrative Tools -> Internet Information Services (IIS) Manager</p>
     </li>
     <li>
         <p>Add your web site in the IIS Manager</p>
-        <p>On the <b>Connections</b> panel right-click the <b>Sites</b> node in the tree, then click <b>Add Website</b></p>
+        <p>On the <b>Connections</b> panel right-click the <b>Sites</b> node in the tree, then click <b>Add Website</b>.</p>
         <img alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
     </li>
     <li>

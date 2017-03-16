@@ -31,11 +31,11 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\src\main\webapp\editor.jsp</em> file.</p>
 
 <h2 id="win-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
-<p>To run the Java example code you will need to install the Java version appropriate for your OS and web server <b>Apache Tomcat</b>.</p>
+<p>To run the Java example code you will need to install the Java version appropriate for your OS and web server <b>Apache Tomcat</b>:</p>
 
 <ul>
-    <li>Java (download from  <a href="https://www.java.com/en/download/manual.jsp">the Oracle official web site</a>)</li>
-    <li>Apache Tomcat (download from <a href="http://tomcat.apache.org/">the official website</a>)</li>
+    <li>Java (download from  <a href="https://www.java.com/en/download/manual.jsp">the Oracle official web site</a>);</li>
+    <li>Apache Tomcat (download from <a href="http://tomcat.apache.org/">the official website</a>).</li>
 </ul>
 
 <h2 id="win-4"><span class="style_step">Step 4. </span>Running Apache Tomcat</h2>
@@ -51,7 +51,7 @@ files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/docum
         <p>Under <b>System Variables</b>, click <b>New</b>.</p>
         <p>In the <b>Variable Name</b> field, enter:</p>
         <p><b>JAVA_HOME</b> if you installed the <b>JDK</b> (Java Development Kit) or <b>JRE_HOME</b> if you installed the <b>JRE</b> (Java Runtime Environment).</p>
-        <p>In the <b>Variable Value</b> field, enter your <b>JDK</b> or <b>JRE</b> installation path, for example C:\Program Files\Java\jdk1.8.0_65 </p>
+        <p>In the <b>Variable Value</b> field, enter your <b>JDK</b> or <b>JRE</b> installation path, for example C:\Program Files\Java\jdk1.8.0_65.</p>
 
         <img src="<%= Url.Content("~/content/img/java/make-var.png") %>" alt="" />
 

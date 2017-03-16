@@ -35,7 +35,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
 <ul>
     <li><b>IIS: version 7</b> or later (refer to <a href="http://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
     <li><b>PHP</b> (download it from the <a href="http://php.net/downloads.php">http://php.net</a> site);</li>
-    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site)</a>.</li>
+    <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site</a>).</li>
 </ul>
 
 <h2 id="win-4"><span class="style_step">Step 4. </span>IIS configuration</h2>
@@ -49,26 +49,26 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
 
         <p>You need to register the installed PHP version in <b>IIS</b> using <b>PHP Manager</b>.</p>
 
-        <p>Double-click <b>PHP Manager</b> to open it, click the <b>Register new PHP version</b> task and specify the full path to the main PHP executable file location. For example: C:\Program Files\PHP\php-cgi.exe</p>
+        <p>Double-click <b>PHP Manager</b> to open it, click the <b>Register new PHP version</b> task and specify the full path to the main PHP executable file location. For example: C:\Program Files\PHP\php-cgi.exe.</p>
         <img src="<%= Url.Content("~/content/img/php/php-version-1.jpg") %>" width="700" alt="" />
 
         <p>After clicking <b>OK</b> the new <b>PHP version</b> will be registered with IIS and will become active.</p>
         <img src="<%= Url.Content("~/content/img/php/php-version-2.jpg") %>" width="650" alt="" />
     </li>
     <li>
-        <p>Configure IIS to handle PHP requests</p>
+        <p>Configure IIS to handle PHP requests:</p>
         <p>For IIS to host PHP applications, you must add handler mapping that tells IIS to pass all PHP-specific requests to the PHP application framework by using the FastCGI protocol.</p>
         <p>Double-click the <b>Handler Mappings</b> feature:</p>
         <img src="<%= Url.Content("~/content/img/php/handlerclick.png") %>" alt="" />
 
         <p>In the <b>Action</b> panel, click <b>Add Module Mapping</b>. In the <b>Add Module Mapping</b> dialog box, specify the configuration settings as follows:</p>
         <ul>
-            <li>Request path: <b>*.php</b></li>
-            <li>Module: <b>FastCgiModule</b></li>
-            <li>Executable: <b>"C:\[Path to your PHP installation]\php-cgi.exe"</b></li>
+            <li>Request path: <b>*.php</b>,</li>
+            <li>Module: <b>FastCgiModule</b>,</li>
+            <li>Executable: <b>"C:\[Path to your PHP installation]\php-cgi.exe"</b>,</li>
             <li>
-                <p>Name: <b>PHP via FastCGI</b></p>
-                <p>Click <b>OK</b>.</p>
+                <p>Name: <b>PHP via FastCGI</b>,</p>
+                <p>click <b>OK</b>.</p>
             </li>
         </ul>
         <img src="<%= Url.Content("~/content/img/php/handler-add.png") %>" alt="" />
@@ -79,8 +79,8 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
 <h2 id="win-5"><span class="style_step">Step 5. </span>Running your web site with the editors</h2>
 <ol>
     <li>
-        <p>Add your web site in the IIS Manager</p>
-        <p>On the <b>Connections</b> panel right-click the <b>Sites</b> node in the tree, then click <b>Add Website</b></p>
+        <p>Add your web site in the IIS Manager:</p>
+        <p>On the <b>Connections</b> panel right-click the <b>Sites</b> node in the tree, then click <b>Add Website</b>.</p>
         <img alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
     </li>
     <li>

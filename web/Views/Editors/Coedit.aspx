@@ -26,7 +26,7 @@
 
     <h2 id="apply">How this can be done in practice</h2>
     <ol>
-        <li>Create an empty <em>html</em> file</li>
+        <li>Create an empty <em>html</em> file.</li>
         <li>Add the <em>div</em> element as shown below.
             <pre>&lt;div id=&quot;placeholder&quot;&gt;&lt;/div&gt;</pre>
         </li>
