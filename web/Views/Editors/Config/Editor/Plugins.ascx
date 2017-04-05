@@ -27,7 +27,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="pluginsData">pluginsData</td>
-            <td>The list of relative paths to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
+            <td>The list of absolute paths to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
             <td>Collection of string
                 <div class="infotext">Collection</div>
             </td>
@@ -35,7 +35,7 @@
         </tr>
         <tr class="tablerow">
             <td id="url">url</td>
-            <td>The absolute path to the directory where the plugins are stored.</td>
+            <td>The absolute path to the directory where the plugins are stored. Deprecated since v.4.3.</td>
             <td>string</td>
             <td>"http://example.com/plugins/"</td>
         </tr>
@@ -53,11 +53,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "plugins": {
              "pluginsData": [
-                 "plugin1/config.json",
-                 "plugin2/config.json",
+                 "http://example.com/plugin1/config.json",
+                 "http://example.com/plugin2/config.json",
                  ...
-             ],
-             "url": "http://example.com/plugins/"
+             ]
         },
         ...
     },
