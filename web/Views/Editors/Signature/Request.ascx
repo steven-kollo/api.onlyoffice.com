@@ -104,7 +104,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Imtle
 <pre>
 {}
 </pre>
-<div class="header-gray">Sample of request to document storage service for file download.</div>
+<div class="header-gray">Sample of request to document storage service for file download</div>
 <pre>
 GET url-to-example-document.docx HTTP/1.1
 Host: example.com

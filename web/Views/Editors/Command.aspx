@@ -69,7 +69,7 @@
         </tbody>
     </table>
 
-    <div id="drop" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to disconnect the user with the <em>6d5a81d0</em> identifier from the document editing service.</div>
+    <div id="drop" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to disconnect the user with the <em>6d5a81d0</em> identifier from the document editing service</div>
     <pre>
 {
     "c": "drop",
@@ -78,7 +78,7 @@
 }
 </pre>
 
-    <div id="forcesave" class="header-gray">Sample of JSON object sent to <b>document command service</b> used for force saving the document with the <em>6d5a81d0</em> identifier being edited without closing it.</div>
+    <div id="forcesave" class="header-gray">Sample of JSON object sent to <b>document command service</b> used for force saving the document with the <em>6d5a81d0</em> identifier being edited without closing it</div>
     <pre>
 {
     "c": "forcesave",
@@ -86,7 +86,7 @@
 }
 </pre>
 
-    <div id="info" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier.</div>
+    <div id="info" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
     <pre>
 {
     "c": "info",
@@ -120,35 +120,35 @@
         <tbody>
             <tr class="tablerow">
                 <td>0</td>
-                <td>No errors</td>
+                <td>No errors.</td>
             </tr>
             <tr class="tablerow">
                 <td>1</td>
-                <td>Document key is missing or no document with such key could be found</td>
+                <td>Document key is missing or no document with such key could be found.</td>
             </tr>
             <tr class="tablerow">
                 <td>2</td>
-                <td>Callback url not correct</td>
+                <td>Callback url not correct.</td>
             </tr>
             <tr class="tablerow">
                 <td>3</td>
-                <td>Internal server error</td>
+                <td>Internal server error.</td>
             </tr>
             <tr class="tablerow">
                 <td>4</td>
-                <td>No changes were applied to the document before the <b>forcesave</b> command was received</td>
+                <td>No changes were applied to the document before the <b>forcesave</b> command was received.</td>
             </tr>
             <tr class="tablerow">
                 <td>5</td>
-                <td>Command not correсt</td>
+                <td>Command not correсt.</td>
             </tr>
             <tr class="tablerow">
                 <td>6</td>
-                <td>Invalid token</td>
+                <td>Invalid token.</td>
             </tr>
             <%--<tr class="tablerow">
                 <td>7</td>
-                <td>Token signature is expired</td>
+                <td>Token signature is expired.</td>
             </tr>--%>
         </tbody>
     </table>

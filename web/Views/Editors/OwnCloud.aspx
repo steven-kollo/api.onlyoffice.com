@@ -16,7 +16,7 @@
     </h1>
 
     <div class="video-link" title="Show video">
-        <img src="/content/img/video/owncloud_integration.png" alt="Show video" />
+        <img src="<%= Url.Content("~/content/img/video/owncloud_integration.png") %>" alt="Show video" />
 
         <div class="popap-dialog">
             <div class="popap-container">
@@ -39,7 +39,7 @@
         It will also create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to ownCloud/Nextcloud.
     </p>
-    <p>Tested with ownCloud 9.0.3 and 9.1.3, Nextcloud 11.0.2</p>
+    <p>Tested with ownCloud 9.0.3 and 9.1.3, Nextcloud 11.0.2.</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
@@ -68,7 +68,7 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span
 
     <h2>Configuring ownCloud/Nextcloud ONLYOFFICE integration app</h2>
     <p>
-        In ownCloud/Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section and enter the address
+        In ownCloud/Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section and enter the address:
     </p>
     <span class="commandline">https://&lt;documentserver&gt;</span>
     <p>

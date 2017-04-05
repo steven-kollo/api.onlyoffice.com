@@ -21,7 +21,7 @@
             <a href="http://www.onlyoffice.com/document-builder.aspx" class="button" target="blank">Download</a>
         </li>
 
-        <% if (Model.Count > 0)
+        <% if (Model != null && Model.Count > 0)
            { %>
         <li>
             <p>Select the programming language and download the code for the sample of <b>ONLYOFFICE Document Builder</b> integration into your application</p>

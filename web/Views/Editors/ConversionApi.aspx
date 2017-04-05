@@ -53,11 +53,11 @@
                 <td>The file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
                     Main supported values:
                     <ul>
-                        <li><b>932</b> - Japanese (Shift-JIS)</li>
-                        <li><b>950</b> - Chinese Traditional (Big5)</li>
-                        <li><b>1250</b> - Central European (Windows)</li>
-                        <li><b>1251</b> - Cyrillic (Windows)</li>
-                        <li><b>65001</b> - Unicode (UTF-8)</li>
+                        <li><b>932</b> - Japanese (Shift-JIS),</li>
+                        <li><b>950</b> - Chinese Traditional (Big5),</li>
+                        <li><b>1250</b> - Central European (Windows),</li>
+                        <li><b>1251</b> - Cyrillic (Windows),</li>
+                        <li><b>65001</b> - Unicode (UTF-8).</li>
                     </ul>
                     You can find all the supported values <a target="_blank" href="https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js">in this file</a>.
                 </td>
@@ -69,12 +69,12 @@
                 <td>Delimiter characters for separating values when converting from <em>csv</em> format.<br />
                     Supported values:
                     <ul>
-                        <li><b>0</b> - no delimiter</li>
-                        <li><b>1</b> - tab</li>
-                        <li><b>2</b> - semicolon</li>
-                        <li><b>3</b> - colon</li>
-                        <li><b>4</b> - comma</li>
-                        <li><b>5</b> - space</li>
+                        <li><b>0</b> - no delimiter,</li>
+                        <li><b>1</b> - tab,</li>
+                        <li><b>2</b> - semicolon,</li>
+                        <li><b>3</b> - colon,</li>
+                        <li><b>4</b> - comma,</li>
+                        <li><b>5</b> - space.</li>
                     </ul>
                 </td>
                 <td>integer</td>
@@ -102,29 +102,29 @@
                 <td>thumbnail</td>
                 <td>The option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
                     <ul>
-                        <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed. Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image
+                        <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed. Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
                             <br />
-                            <b>type</b>: integer
+                            <b>type</b>: integer,
                             <br />
-                            <b>example</b>: 1
+                            <b>example</b>: 1;
                         </li>
-                        <li><b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages. If false, the zip archive containing thumbnails for all the pages will be created. The default value is <em>true</em>.
+                        <li><b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages. If false, the zip archive containing thumbnails for all the pages will be created. The default value is <em>true</em>,
                             <br />
-                            <b>type</b>: boolean
+                            <b>type</b>: boolean,
                             <br />
-                            <b>example</b>: true
+                            <b>example</b>: true;
                         </li>
-                        <li><b>height</b> - the thumbnail height in pixels (default: 100)
+                        <li><b>height</b> - the thumbnail height in pixels (default: 100),
                             <br />
-                            <b>type</b>: integer
+                            <b>type</b>: integer,
                             <br />
-                            <b>example</b>: 100
+                            <b>example</b>: 100;
                         </li>
-                        <li><b>width</b> - the thumbnail width in pixels (default: 100)
+                        <li><b>width</b> - the thumbnail width in pixels (default: 100),
                             <br />
-                            <b>type</b>: integer
+                            <b>type</b>: integer,
                             <br />
-                            <b>example</b>: 100
+                            <b>example</b>: 100.
                         </li>
                     </ul>
                 </td>
@@ -415,7 +415,7 @@
         </tbody>
     </table>
 
-    <div id="sample-conversion" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format.</div>
+    <div id="sample-conversion" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
     <pre>
 {
     "async": false,
@@ -428,7 +428,7 @@
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
-    <div id="sample-thumbnail" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format.</div>
+    <div id="sample-thumbnail" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format</div>
     <pre>
 {
     "filetype": "docx",
@@ -505,31 +505,31 @@
         <tbody>
             <tr class="tablerow">
                 <td>-1</td>
-                <td>Unknown error</td>
+                <td>Unknown error.</td>
             </tr>
             <tr class="tablerow">
                 <td>-2</td>
-                <td>Timeout conversion error</td>
+                <td>Timeout conversion error.</td>
             </tr>
             <tr class="tablerow">
                 <td>-3</td>
-                <td>Conversion error</td>
+                <td>Conversion error.</td>
             </tr>
             <tr class="tablerow">
                 <td>-4</td>
-                <td>Error while downloading the document file to be converted</td>
+                <td>Error while downloading the document file to be converted.</td>
             </tr>
             <tr class="tablerow">
                 <td>-6</td>
-                <td>Error while accessing the conversion result database</td>
+                <td>Error while accessing the conversion result database.</td>
             </tr>
             <tr class="tablerow">
                 <td>-8</td>
-                <td>Invalid token</td>
+                <td>Invalid token.</td>
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>
-                <td>Token signature is expired</td>
+                <td>Token signature is expired.</td>
             </tr>--%>
         </tbody>
     </table>

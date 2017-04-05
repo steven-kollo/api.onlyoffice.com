@@ -23,18 +23,17 @@
 
     <h2>Adding a plugin to the server editors</h2>
 
-    <p>You need to edit the editor config and all the Document Server users will have the plugin available afterwards. Use the <b>Document Server</b> config to add the following lines:</p>
+    <p>You need to edit the editor config and all the Document Server users will have the plugin available afterwards. Use the <a href="<%= Url.Action("config/editor/plugins", "editors") %>">Document Server config</a> to add the following lines:</p>
 
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "plugins": {
              "pluginsData": [
-                 "plugin1/config.json",
-                 "plugin2/config.json",
+                 "http://example.com/plugin1/config.json",
+                 "http://example.com/plugin2/config.json",
                  ...
-             ],
-             "url": "http://example.com/plugins/"
+             ]
         },
         ...
     },
@@ -42,7 +41,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 
-    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed. See the <a href="<%= Url.Action("howitworks", "editors") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
     <p>See the <a href="<%= Url.Action("config/editor/plugins", "editors") %>">Document Server API</a> documentation for more information on where to find the config and what and how can be changed there.</p>
 

@@ -6,33 +6,27 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Alfresco ONLYOFFICE integration plugin
+    ONLYOFFICE Alfresco module package
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Alfresco ONLYOFFICE integration plugin</span>
+        <span class="hdr">ONLYOFFICE Alfresco module package</span>
     </h1>
 
-    <p class="dscr">
-        This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE Document Server.
-        Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.
-    </p>
-    <p>
-        The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents.
-        This allows multiple users to collaborate in real time and to save back those changes to Alfresco.
-    </p>
-    <p>Tested with Enterprise 5.0.* and Community 5.1.*</p>
+    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE Document Server.</p>
 
+    <p>Tested with Alfresco 5.*</p>
 
-    <h2>Compiling</h2>
-    <p>You will need:</p>
+    <h2>Features</h2>
     <ul>
-        <li>Gradle,</li>
-        <li>Java 7 SDK or above,</li>
-        <li>Parashift's Alfresco amp plugin which can be found <a href="https://bitbucket.org/parashift/alfresco-amp-plugin" target="_blank">here</a>,</li>
-        <li>Run <em>gradle amp</em> from the <em>repo</em> and <em>share</em> directories.</li>
+        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</li>
+        <li>
+            The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents.
+            <img alt="Edit in OnlyOffice" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
+        </li>
+        <li>This allows multiple users to collaborate in real time and to save back those changes to Alfresco.</li>
     </ul>
 
 
@@ -45,8 +39,9 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Installing Alfresco ONLYOFFICE integration plugin</h2>
+    <h2>Installing ONLYOFFICE Alfresco module package</h2>
     <p>To start using ONLYOFFICE Document Server with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
+    <div class="note">Steps <b>1</b> &mdash; <b>6</b> are only necessary if you for some reason plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards). If you do not want to do that and plan to use the already compiled module files, please skip to step <b>7</b> directly. The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a>.</div>
     <ol>
         <li>Remove gradle in case it has already been installed (it is needed to install the latest available version later at the next step):
             <span class="commandline">sudo apt-get remove gradle</span>
@@ -61,17 +56,17 @@ sudo apt-get install gradle</span>
 sudo apt-get update
 sudo apt-get install oracle-java8-installer</span>
         </li>
-        <li>Switch Java alternatives to Oracle Java:
+        <%--<li>Switch Java alternatives to Oracle Java:
             <span class="commandline">sudo update-alternatives --config java
 sudo update-alternatives --config javac
 sudo update-alternatives --config javaws</span>
-        </li>
-        <li>Build the necessary dependencies:
+        </li>--%>
+        <li><a href="https://bitbucket.org/parashift/alfresco-amp-plugin" target="_blank">Build</a> the necessary dependencies:
             <span class="commandline">git clone https://github.com/yeyan/alfresco-amp-plugin.git
 cd alfresco-amp-plugin
 gradle publish</span>
         </li>
-        <li>Download the Alfresco ONLYOFFICE integration plugin source code:
+        <li>Download the ONLYOFFICE Alfresco module package source code:
             <span class="commandline">cd ..
 git clone https://github.com/ONLYOFFICE/onlyoffice-alfresco.git</span>
         </li>
@@ -81,18 +76,28 @@ gradle amp
 cd ../share/
 gradle amp</span>
         </li>
-        <li>Upload the compiled packages from <em>./build/amp</em> to the <em>amps/</em> and <em>amps_share/</em> directories accordingly for your Alfresco installation.</li>
-        <li>Run the <em>bin/apply_amps.sh</em> script in Alfresco installation. You will see the two new modules being installed during the installation process. Press Enter to continue the installation.</li>
+        <li>Upload the compiled <b>*.amp</b> packages to directories accordingly for your Alfresco installation:
+            <ul>
+                <li>from <em>onlyoffice-alfresco/repo/build/amp</em> to the <em>amps/</em> for Alfresco repository,</li>
+                <li>from <em>onlyoffice-alfresco/share/build/amp</em> to <em>amps_share/</em> for Share.</li>
+            </ul>
+            <div class="note">You can download the already compiled package files <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a> and place them to the respective directories.</div>
+        </li>
+        <li>
+            Installing an <a href="http://docs.alfresco.com/5.2/tasks/amp-install.html" target="_blank">Alfresco Module Package</a> to Alfresco.
+            <span class="commandline">sudo bin/apply_amps.sh</span>
+            You will see the two new modules being installed during the installation process. Press Enter to continue the installation.
+        </li>
         <li>Add the <b>onlyoffice.url</b> property to <em>alfresco-global.properties</em>:
             <span class="commandline">onlyoffice.url=http://documentserver/</span>
             Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Restart Alfresco:
-            <span class="commandline">./alfresco.sh stop
-./alfresco.sh start</span>
+            <span class="commandline">sudo ./alfresco.sh stop
+sudo ./alfresco.sh start</span>
         </li>
     </ol>
-    <p>The module can be checked in administrator tools in Alfresco 5.1 or at <em>/share/page/modules/deploy</em> in Alfresco 5.0.</p>
+    <p>The module can be checked in administrator tools at <em>/share/page/console/admin-console/module-package</em> in Alfresco.</p>
 
 
     <h2>How it works</h2>
@@ -116,6 +121,6 @@ gradle amp</span>
     <p>Alfresco downloads the new version of the document, replacing the old one.</p>
 
     <br />
-    <p>Download the Alfresco ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">here</a>.</p>
+    <p>Download the ONLYOFFICE Alfresco module package <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">here</a>.</p>
 
 </asp:Content>

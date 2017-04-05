@@ -123,11 +123,10 @@ config = {
         "mode": "edit",
         "plugins": {
              "pluginsData": [
-                 "plugin1/config.json",
-                 "plugin2/config.json",
+                 "http://example.com/plugin1/config.json",
+                 "http://example.com/plugin2/config.json",
                  ...
-             ],
-             "url": "http://example.com/plugins/"
+             ]
         },
         "recent": [
             {

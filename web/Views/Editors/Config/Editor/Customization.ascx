@@ -6,7 +6,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details</p>
+<p class="dscr">The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.</p>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -47,41 +47,41 @@
             <td id="customer">customer<span class="required">*</span></td>
             <td>Contains the information for the editor <b>About</b> section. The object has the following parameters:
                 <ul>
-                    <li><b>address</b> - postal address of the above company or person
+                    <li><b>address</b> - postal address of the above company or person,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "My City, 123a-45"
+                        <b>example</b>: "My City, 123a-45";
                     </li>
-                    <li><b>info</b> - some information about the above company or person which will be displayed at the <b>About</b> page and visible to all editor users
+                    <li><b>info</b> - some information about the above company or person which will be displayed at the <b>About</b> page and visible to all editor users,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Some additional information"
+                        <b>example</b>: "Some additional information";
                     </li>
-                    <li><b>logo</b> - the path to the image logo which will be displayed at the <b>About</b> page (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image must have the following size: 432x70.
+                    <li><b>logo</b> - the path to the image logo which will be displayed at the <b>About</b> page (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image must have the following size: 432x70,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com/logo-big.png"
+                        <b>example</b>: "http://example.com/logo-big.png".
                     </li>
-                    <li><b>mail</b> - email address of the above company or person
+                    <li><b>mail</b> - email address of the above company or person,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "john@example.com"
+                        <b>example</b>: "john@example.com".
                     </li>
-                    <li><b>name</b> - the name of the company or person who gives access to the editors or the editor authors.
+                    <li><b>name</b> - the name of the company or person who gives access to the editors or the editor authors,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "John Smith and Co."
+                        <b>example</b>: "John Smith and Co.";
                     </li>
-                    <li><b>www</b> - home website address of the above company or person
+                    <li><b>www</b> - home website address of the above company or person,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "example.com"
+                        <b>example</b>: "example.com".
                     </li>
                 </ul>
             </td>
@@ -92,17 +92,17 @@
             <td id="feedback">feedback</td>
             <td>defines settings for the <b>Feedback &amp; Support</b> menu button. Can be either boolean (simply displays or hides the <b>Feedback &amp; Support</b> menu button) or object. In case of object type the following parameters are available:
                 <ul>
-                    <li><b>url</b> - the website address which will be opened when clicking the <b>Feedback &amp; Support</b> menu button
+                    <li><b>url</b> - the website address which will be opened when clicking the <b>Feedback &amp; Support</b> menu button,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com"
+                        <b>example</b>: "http://example.com";
                     </li>
-                    <li><b>visible</b> - show or hide the <b>Feedback &amp; Support</b> menu button
+                    <li><b>visible</b> - show or hide the <b>Feedback &amp; Support</b> menu button,
                         <br />
-                        <b>type</b>: boolean
+                        <b>type</b>: boolean,
                         <br />
-                        <b>example</b>: true
+                        <b>example</b>: true.
                     </li>
                 </ul>
                 The default value is <b>false</b>.
@@ -114,17 +114,17 @@
             <td id="goback">goback</td>
             <td>defines settings for the <b>Go to Documents</b> menu button and upper right corner link. The object has the following parameters:
                 <ul>
-                    <li><b>text</b> - the text which will be displayed for the <b>Go to Documents</b> menu button and upper right corner link (i.e. instead of <em>Go to Documents</em>)
+                    <li><b>text</b> - the text which will be displayed for the <b>Go to Documents</b> menu button and upper right corner link (i.e. instead of <em>Go to Documents</em>),
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Go to Documents"
+                        <b>example</b>: "Go to Documents";
                     </li>
-                    <li><b>url</b> - the website address which will be opened when clicking the <b>Go to Documents</b> menu button
+                    <li><b>url</b> - the website address which will be opened when clicking the <b>Go to Documents</b> menu button,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com"
+                        <b>example</b>: "http://example.com".
                     </li>
                 </ul>
             </td>
@@ -135,23 +135,23 @@
             <td id="logo">logo<span class="required">*</span></td>
             <td>Changes the image file at the top left corner of the Editor header. The recommended image height is 20 pixels. The object has the following parameters:
                 <ul>
-                    <li><b>image</b> - path to the image file used to show in common work mode (i.e. in view and edit modes for all editors). The image must have the following size: 172x40.
+                    <li><b>image</b> - path to the image file used to show in common work mode (i.e. in view and edit modes for all editors). The image must have the following size: 172x40,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com/logo.png"
+                        <b>example</b>: "http://example.com/logo.png";
                     </li>
-                    <li><b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type). The image must have the following size: 248x40.
+                    <li><b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type). The image must have the following size: 248x40,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com/logo_em.png"
+                        <b>example</b>: "http://example.com/logo_em.png";
                     </li>
-                    <li><b>url</b> - the link which will be used when someone clicks the logo image (can be used to go to your web site, etc.).
+                    <li><b>url</b> - the link which will be used when someone clicks the logo image (can be used to go to your web site, etc.),
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com"
+                        <b>example</b>: "http://example.com".
                     </li>
                 </ul>
             </td>
@@ -166,7 +166,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/content/img/editor/customization.png" alt="" />
+                <img src="<%= Url.Content("~/content/img/editor/customization.png") %>" alt="" />
             </td>
         </tr>
     </tbody>
@@ -209,10 +209,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+<p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
 <p>
     If you have any further questions, please contact us at
     <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
 </p>
-

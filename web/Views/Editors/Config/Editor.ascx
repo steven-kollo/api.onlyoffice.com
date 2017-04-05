@@ -6,7 +6,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.)</p>
+<p class="dscr">The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.).</p>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -27,20 +27,20 @@
     <tbody>
         <tr class="tablerow">
             <td id="callbackUrl">callbackUrl<span class="required">*</span></td>
-            <td>specifies URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server)</td>
+            <td>specifies URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server).</td>
             <td>string</td>
             <td>"http://example.com/url-to-callback.ashx"</td>
         </tr>
         <tr class="tablerow">
             <td id="createUrl">createUrl</td>
-            <td>defines the URL of the document where it will be created and available after creation. If not specified, there will be no creation button
+            <td>defines the URL of the document where it will be created and available after creation. If not specified, there will be no creation button.
             </td>
             <td>string</td>
             <td>"http://example.com/url-to-create-document/"</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/content/img/editor/create.png" alt="" />
+                <img src="<%= Url.Content("~/content/img/editor/create.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -60,25 +60,25 @@
             <td>defines the presence or absence of the documents in the <b>Open Recent...</b> menu option where the following document parameters can be set:
                 <ul>
                     <li>
-                        <b>folder</b> - the folder where the document is stored (can be empty in case the document is stored in the root folder)
+                        <b>folder</b> - the folder where the document is stored (can be empty in case the document is stored in the root folder),
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Example Files"
+                        <b>example</b>: "Example Files";
                     </li>
                     <li>
-                        <b>title</b> - the document title that will be displayed in the <b>Open Recent...</b> menu option
+                        <b>title</b> - the document title that will be displayed in the <b>Open Recent...</b> menu option,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "exampledocument1.docx"
+                        <b>example</b>: "exampledocument1.docx";
                     </li>
                     <li>
-                        <b>url</b> - the URL to the document where it is stored
+                        <b>url</b> - the URL to the document where it is stored,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com/exampledocument1.docx"
+                        <b>example</b>: "http://example.com/exampledocument1.docx".
                     </li>
                 </ul>
             </td>
@@ -89,7 +89,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/content/img/editor/recent.png" alt="" />
+                <img src="<%= Url.Content("~/content/img/editor/recent.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -97,32 +97,32 @@
             <td>the user currently viewing or editing the document:
                 <ul>
                     <li>
-                        <b>firstname</b> - the first name of the user. Deprecated since v.4.2
+                        <b>firstname</b> - the first name of the user. Deprecated since v.4.2,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "John"
+                        <b>example</b>: "John";
                     </li>
                     <li>
-                        <b>id</b> - the identification of the user
+                        <b>id</b> - the identification of the user,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "78e1e841"
+                        <b>example</b>: "78e1e841";
                     </li>
                     <li>
-                        <b>lastname</b> - the last name of the user. Deprecated since v.4.2
+                        <b>lastname</b> - the last name of the user. Deprecated since v.4.2,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Smith"
+                        <b>example</b>: "Smith";
                     </li>
                     <li>
-                        <b>name</b> - the full name of the user. Used since v.4.2
+                        <b>name</b> - the full name of the user. Used since v.4.2,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "John Smith"
+                        <b>example</b>: "John Smith".
                     </li>
                 </ul>
             </td>
@@ -162,4 +162,4 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-    <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+<p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>

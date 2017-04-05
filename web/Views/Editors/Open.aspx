@@ -29,7 +29,7 @@
 
     <h2 id="apply">How this can be done in practice</h2>
     <ol>
-        <li>Create an empty <em>html</em> file</li>
+        <li>Create an empty <em>html</em> file.</li>
         <li>Add the <em>div</em> element as shown below.
             <pre>&lt;div id=&quot;placeholder&quot;&gt;&lt;/div&gt;</pre>
         </li>
@@ -49,7 +49,7 @@ new DocsAPI.DocEditor("placeholder", {
     "documentType": "text"
 });
 </pre>
-    Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser.</li>
     </ol>

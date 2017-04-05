@@ -6,7 +6,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">The document info section allows to change additional parameters for the document (document author, folder where the document is stored, creation date, sharing settings)</p>
+<p class="dscr">The document info section allows to change additional parameters for the document (document author, folder where the document is stored, creation date, sharing settings).</p>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -27,19 +27,19 @@
     <tbody>
         <tr class="tablerow">
             <td id="author">author</td>
-            <td>defines the name of the document author/creator</td>
+            <td>defines the name of the document author/creator.</td>
             <td>string</td>
             <td>"John Smith"</td>
         </tr>
         <tr class="tablerow">
             <td id="created">created</td>
-            <td>defines the document creation date</td>
+            <td>defines the document creation date.</td>
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
         <tr class="tablerow">
             <td id="folder">folder</td>
-            <td>defines the folder where the document is stored (can be empty in case the document is stored in the root folder)</td>
+            <td>defines the folder where the document is stored (can be empty in case the document is stored in the root folder).</td>
             <td>string</td>
             <td>"Example Files"</td>
         </tr>
@@ -59,7 +59,7 @@
                         <br />
                         <b>type</b>: string
                         <br />
-                        <b>example</b>: "John Smith"
+                        <b>example</b>: "John Smith".
                     </li>
                 </ul>
             </td>
@@ -70,7 +70,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="/content/img/editor/info.png" alt="" />
+                <img src="<%= Url.Content("~/content/img/editor/info.png") %>" alt="" />
             </td>
         </tr>
     </tbody>

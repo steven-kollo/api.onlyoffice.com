@@ -58,7 +58,7 @@
     <p><em>Status</em> <b>2</b> (<b>3</b>) is received 10 seconds after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.</p>
     <p><em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.</p>
 
-    <div id="status-1" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document.</div>
+    <div id="status-1" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>
     <pre>
 {
     "actions": [{"type": 1, "userid": "78e1e841"}],
@@ -68,7 +68,7 @@
 }
 </pre>
 
-    <div id="status-2" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing.</div>
+    <div id="status-2" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing</div>
     <pre>
 {
     "actions": [{"type": 0, "userid": "78e1e841"}],
@@ -84,7 +84,7 @@
 }
 </pre>
 
-    <div id="status-4" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when the last user closed the document for editing without changes.</div>
+    <div id="status-4" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when the last user closed the document for editing without changes</div>
     <pre>
 {
     "key": "Khirz6zTPdfd7",
@@ -92,7 +92,7 @@
 }
 </pre>
 
-    <div id="status-6" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command") %>">forcesave</a> command had been received.</div>
+    <div id="status-6" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command") %>">forcesave</a> command had been received</div>
     <pre>
 {
     "changesurl": "http://documentserver/url-to-changes.zip",

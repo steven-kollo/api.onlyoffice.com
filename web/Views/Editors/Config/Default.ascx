@@ -5,7 +5,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">The config base section allows to change the platform type used, document display size (width and height) and type of the document opened</p>
+<p class="dscr">The config base section allows to change the platform type used, document display size (width and height) and type of the document opened.</p>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -29,20 +29,20 @@
             <td>defines the document type to be opened:
                 <em>open a text document (.docx, .doc, .odt, .txt, .rtf, .html, .htm, .mht, .epub, .pdf, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
                 <em>open a spreadsheet (.xlsx, .xls, .ods, .csv) for viewing or editing</em> - <b>spreadsheet</b>,
-                <em>open a presentation (.pptx, .ppt, .odp, .ppsx, .pps) for viewing  or editing</em> - <b>presentation</b>
+                <em>open a presentation (.pptx, .ppt, .odp, .ppsx, .pps) for viewing  or editing</em> - <b>presentation</b>.
             </td>
             <td>string</td>
             <td>"spreadsheet"</td>
         </tr>
         <tr class="tablerow">
             <td id="height">height</td>
-            <td>defines the document height (<b>100%</b> by default) in the browser window</td>
+            <td>defines the document height (<b>100%</b> by default) in the browser window.</td>
             <td>string</td>
             <td>"100%"</td>
         </tr>
         <tr class="tablerow">
             <td id="token">token</td>
-            <td>defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a></td>
+            <td>defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a>.</td>
             <td>string</td>
             <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M"</td>
         </tr>
@@ -59,7 +59,7 @@
         </tr>
         <tr class="tablerow">
             <td id="width">width</td>
-            <td>defines the document width (<b>100%</b> by default) in the browser window</td>
+            <td>defines the document width (<b>100%</b> by default) in the browser window.</td>
             <td>string</td>
             <td>"100%"</td>
         </tr>
