@@ -199,6 +199,9 @@
         <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalName(System.String)">
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Portal.PortalApi.SendCongratulations(System.Guid,System.String)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Portal.PortalApi.RemoveCommentComplete(System.String,System.String)">
             <visible>false</visible>
         </member>

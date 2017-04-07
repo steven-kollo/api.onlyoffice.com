@@ -488,10 +488,12 @@
             h1.Access Granted to Calendar: $CalendarName
              
              
-            &quot;$UserName&quot;:&quot;$UserLink&quot; has granted you the access to the calendar: $CalendarName  &quot;$UserName&quot;:&quot;$UserLink&quot; has granted you the access to the calendar: $CalendarName  
+            &quot;$UserName&quot;:&quot;$UserLink&quot; has granted you the access to the calendar: $CalendarName 
              
-             
-            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the notifications about the calendars shared with you, please manage your &quot;subscription settings&quot;:&quot;$Reci [rest of string was truncated]&quot;;.
+            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the notifications about the calendars shared with you, please manage your &quot;subscription settings&quot;:&quot;$RecipientSubscriptionConfigURL&quot;.^
+            #end
+            #if($SharingType == &quot;event&quot;)
+            h1.Access Granted to Event: $ [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.CalendarSharingJabberPattern">
@@ -507,10 +509,10 @@
         <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.CalendarSharingSubject">
              <summary>
                Looks up a localized string similar to #if($SharingType == &quot;calendar&quot;)
-            Calendar. Access Granted to Calendar: $CalendarName
+            Calendar. Access granted to calendar: $CalendarName
             #end
             #if($SharingType == &quot;event&quot;)
-            Calendar. Access Granted to Event: $EventName
+            Calendar. Access granted to event: $EventName
             #end.
              </summary>
         </member>
@@ -544,7 +546,7 @@
         </member>
         <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAlertSubject">
             <summary>
-              Looks up a localized string similar to Calendar. Reminder about the Event: $EventName.
+              Looks up a localized string similar to Calendar. Reminder about the event: $EventName.
             </summary>
         </member>
         <member name="T:ASC.Api.Calendar.Notification.CalendarPatterns">
@@ -663,7 +665,7 @@
         </member>
         <member name="P:ASC.Api.Calendar.Resources.CalendarApiResource.ReadOption">
             <summary>
-              Looks up a localized string similar to Read only.
+              Looks up a localized string similar to Read Only.
             </summary>
         </member>
         <member name="P:ASC.Api.Calendar.Resources.CalendarApiResource.SharedCalendarsGroup">
