@@ -357,12 +357,13 @@
         <tbody>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="6">Output format</th>
+                <th colspan="7">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
                 <td>gif</td>
                 <td>jpg</td>
+                <td>odp</td>
                 <td>pdf</td>
                 <td>png</td>
                 <td>pptx</td>
@@ -372,12 +373,14 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td></td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
                 <td>pps</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
@@ -393,6 +396,7 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
                 <td>ppt</td>
@@ -402,9 +406,11 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
                 <td>pptx</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
