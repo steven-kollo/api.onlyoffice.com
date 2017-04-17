@@ -146,7 +146,7 @@ namespace ASC.Api.Web.Help
                             CacheManifest.AddFallback(new Uri("/portals/search", UriKind.Relative), new Uri("/portals/notfound", UriKind.Relative));
 
                             LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
-                            Documentation.Load(AppDomain.CurrentDomain.RelativeSearchPath);
+                            Documentation.Load();
                             Documentation.GenerateRouteMap("portals");
                         }
                         catch (Exception error)

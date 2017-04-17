@@ -743,6 +743,16 @@
             <returns>list of topics</returns>
             <category>Forums</category>
         </member>
+        <member name="M:ASC.Api.Community.CommunityApi.RemindAboutBirthday(System.Guid,System.Boolean)">
+            <summary>
+            Subscribe or unsubscribe on birthday of user with the ID specified
+            </summary>
+            <short>Subscribe/unsubscribe on birthday</short>
+            <param name="userid">user ID</param>
+            <param name="onRemind">should be subscribed or unsubscribed</param>
+            <returns>onRemind value</returns>
+            <category>Birthday</category>
+        </member>
         <member name="M:ASC.Api.Community.CommunityApi.CreatePage(System.String,System.String)">
             <summary>
             Creates a new wiki page with the page name and content specified in the request

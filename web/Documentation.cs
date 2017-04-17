@@ -24,10 +24,6 @@
 */
 
 
-using ASC.Api.Interfaces;
-using ASC.Api.Web.Help.DocumentGenerator;
-using ASC.Api.Web.Help.Helpers;
-using Microsoft.Practices.Unity;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -36,32 +32,38 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Routing;
+using ASC.Api.Interfaces;
+using ASC.Api.Web.Help.DocumentGenerator;
+using ASC.Api.Web.Help.Helpers;
+using Microsoft.Practices.Unity;
 
 namespace ASC.Api.Web.Help
 {
     internal static class Documentation
     {
-        static List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
-        static readonly Dictionary<string, MsDocEntryPointMethod> MethodList = new Dictionary<string, MsDocEntryPointMethod>();
+        private static List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
+        private static readonly Dictionary<string, MsDocEntryPointMethod> MethodList = new Dictionary<string, MsDocEntryPointMethod>();
 
-        public static void Load(string msDocFolder)
+        public static void Load()
         {
             MethodList.Clear();
+
             //Load documentation
-            _points = GenerateDocs(msDocFolder);
+            _points = GenerateDocs();
 
             var basePath = ConfigurationManager.AppSettings["apiprefix"] ?? "api";
             if (_points != null) _points.ForEach(x => x.Methods.ForEach(y => y.Path = basePath + y.Path));
         }
 
-        public static List<MsDocEntryPoint> GenerateDocs(string msDocFolder)
+        public static List<MsDocEntryPoint> GenerateDocs()
         {
             //Generate the docs first
             var container = ApiSetup.ConfigureEntryPoints();
             var entries = container.Resolve<IEnumerable<IApiMethodCall>>();
 
-            var apiEntryPoints = container.Registrations.Where(x => x.RegisteredType == typeof(IApiEntryPoint)).ToList();
+            var apiEntryPoints = container.Registrations.Where(x => x.RegisteredType == typeof (IApiEntryPoint)).ToList();
 
+            var msDocFolder = AppDomain.CurrentDomain.RelativeSearchPath;
             var generator = new MsDocDocumentGenerator(Path.Combine(msDocFolder, "help.xml"), msDocFolder, container);
 
             foreach (var apiEntryPoint in entries.GroupBy(x => x.ApiClassType))
@@ -92,41 +94,39 @@ namespace ASC.Api.Web.Help
                 return new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>();
             }
 
-            var terms = Regex.Split(query ?? String.Empty, @"\W+").Where(x => !String.IsNullOrEmpty(x));
+            var terms = Regex.Split(query, @"\W+").Where(x => !String.IsNullOrEmpty(x));
             var result = _points.ToDictionary(
                 x => x,
                 ep => ep.Methods.Where(m => terms.All(
-                        term => (m.Summary != null && 0 <= m.Summary.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
+                    term => (m.Summary != null && 0 <= m.Summary.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Category != null && 0 <= m.Category.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.FunctionName != null && 0 <= m.FunctionName.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Notes != null && 0 <= m.Notes.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Path != null && 0 <= m.Path.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Remarks != null && 0 <= m.Remarks.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Returns != null && 0 <= m.Returns.IndexOf(term, StringComparison.OrdinalIgnoreCase)))
-                    )
-                    .ToDictionary(key => key, value => string.Empty)
-            );
+                          )
+                        .ToDictionary(key => key, value => string.Empty)
+                );
             return result;
 
         }
 
         public static void GenerateRouteMap(object controller)
         {
-            if (!MethodList.Any())
+            if (MethodList.Any()) return;
+
+            //Build list
+            var reqContext = new RequestContext(new HttpContextWrapper(HttpContext.Current), new RouteData());
+            foreach (var msDocEntryPoint in _points)
             {
-                //Build list
-                var reqContext = new RequestContext(new HttpContextWrapper(HttpContext.Current), new RouteData());
-                foreach (var msDocEntryPoint in _points)
+                var url = Url.GetDocUrl(msDocEntryPoint, null, controller, reqContext);
+                MvcApplication.CacheManifest.AddCached(new Uri(url, UriKind.Relative));
+                foreach (var method in msDocEntryPoint.Methods)
                 {
-                    var url = Url.GetDocUrl(msDocEntryPoint, null, controller, reqContext);
-                    MvcApplication.CacheManifest.AddCached(new Uri(url, UriKind.Relative));
-                    foreach (var method in msDocEntryPoint.Methods)
-                    {
-                        method.Parent = msDocEntryPoint;
-                        url = Url.GetDocUrl(msDocEntryPoint, method, controller, reqContext);
-                        MethodList.Add(url, method);
-                        //MvcApplication.CacheManifest.AddCached(new Uri(url, UriKind.Relative));
-                    }
+                    method.Parent = msDocEntryPoint;
+                    url = Url.GetDocUrl(msDocEntryPoint, method, controller, reqContext);
+                    MethodList.Add(url, method);
                 }
             }
         }

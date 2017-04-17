@@ -295,6 +295,14 @@
              <category>Discussions</category>
             <param name="htmltext">html to create preview</param>
         </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetReportTemplate(System.Int32)">
+            <summary>
+            
+            </summary>
+            <category>Report</category>
+            <param name="reportid"></param>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.SaveReportTemplate(System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean)">
             <summary>
              Creates the project report template with the parameters specified in the request. Most of the parameters are optional and depend on the report type selected.
@@ -551,6 +559,15 @@
             <short>
             Project time spent
             </short>
+             <category>Projects</category>
+            <param name="id">Project ID</param>
+            <returns>List of time spent</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTotalProjectTime(System.Int32)">
+            <summary>
+            
+            </summary>
              <category>Projects</category>
             <param name="id">Project ID</param>
             <returns>List of time spent</returns>
@@ -866,7 +883,7 @@
             <short>
             Templates
             </short>
-             <category>Projects</category>
+             <category>Template</category>
             <returns>List of templates</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTemplate(System.Int32)">
@@ -876,7 +893,7 @@
             <short>
             Template by ID
             </short>
-             <category>Projects</category>
+             <category>Template</category>
             <param name="id">Template ID</param>
             <returns>Template</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -888,9 +905,9 @@
             <short>
             Create template
             </short>
-             <category>Projects</category>
+             <category>Template</category>
             <param name="title">Title</param>
-            <param name="description">Структура шаблона в формате json. Пример: {"tasks":[{"title":"Task without milestone"}],"milestones":[{"title":"milestone title","duration":0.5,"tasks":[{"title":"task milestone"}]}]}</param>
+            <param name="description">JSON template structure. Sample: {"tasks":[{"title":"Task without milestone"}],"milestones":[{"title":"milestone title","duration":0.5,"tasks":[{"title":"task milestone"}]}]}</param>
             <returns>Newly created template</returns>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
@@ -901,10 +918,10 @@
             <short>
             Update template
             </short>
-             <category>Projects</category>
+             <category>Template</category>
             <param name="id">Template ID</param>
             <param name="title">Title</param>
-            <param name="description">Структура шаблона в формате json. Пример: {"tasks":[{"title":"Task without milestone"}],"milestones":[{"title":"milestone title","duration":0.5,"tasks":[{"title":"task milestone"}]}]}</param>
+            <param name="description">JSON template structure. Sample: {"tasks":[{"title":"Task without milestone"}],"milestones":[{"title":"milestone title","duration":0.5,"tasks":[{"title":"task milestone"}]}]}</param>
             <returns>Updated template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -916,7 +933,7 @@
             <short>
             Delete template
             </short>
-             <category>Projects</category>
+             <category>Template</category>
             <param name="id">Project ID</param>
             <returns>Deleted template</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1090,6 +1107,30 @@
             <returns>Updated task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.CopyTask(System.Int32,System.String,ASC.Specific.ApiDateTime,ASC.Projects.Core.Domain.TaskPriority,System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+             Copy task
+            </summary>
+            <short>
+            Copy task
+            </short>
+             <category>Tasks</category>
+            <param name="projectid">Project ID</param>
+            <param name="description">Description</param>
+            <param name="deadline">Deadline time</param>
+            <param name="priority">Priority: Low|Normal|High</param>
+            <param name="title">Title</param>
+            <param name="milestoneid">Milestone ID</param>
+            <param name="responsibles">List responsibles</param>
+            <param name="notify">Notify responsible</param>
+            <param name="startDate"></param>
+            <param name="copyFrom"></param>
+            <param name="copySubtasks"></param>
+            <param name="copyFiles"></param>
+            <param name="removeOld"></param>
+            <returns>Created task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTask(System.Int32,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{ASC.Projects.Core.Domain.TaskPriority},System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Nullable{System.Int32},System.Boolean,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Nullable{System.Int32})">
             <summary>
             Updates the selected task with the parameters (responsible user ID, task description, deadline time, etc) specified in the request
@@ -1223,6 +1264,19 @@
             <param name="responsible">Subtask responsible</param>
             <param name="title">Subtask title</param>
             <returns>Task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.CopySubtask(System.Int32,System.Int32)">
+            <summary>
+             Copy subtask
+            </summary>
+            <short>
+            Copy subtask
+            </short>
+             <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <param name="subtaskid">Subtask ID</param>
+            <returns>New task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateSubtask(System.Int32,System.Int32,System.Guid,System.String)">
