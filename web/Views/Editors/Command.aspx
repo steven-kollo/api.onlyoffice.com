@@ -42,7 +42,8 @@
                     <ul>
                         <li><b>drop</b> - disconnect the users with the identifiers present in the <em>users</em> parameter from the <b>document editing service</b> (these users will be able to view the document, but will not be allowed to make changes to it);</li>
                         <li><b>forcesave</b> - force saving the document being edited without closing it (the document editing might be continued after this command, so this will not be the final saved document version);</li>
-                        <li><b>info</b> - receive a document status.</li>
+                        <li><b>info</b> - receive a document status;</li>
+                        <li><b>version</b> - receive the current version number of Document Server.</li>
                     </ul>
                 </td>
                 <td>string</td>
@@ -100,6 +101,22 @@
 {
     "error": 0,
     "key": "Khirz6zTPdfd7"
+}
+</pre>
+
+    <div id="version" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to receive the current version number of Document Server</div>
+    <pre>
+{
+    "c": "version"
+}
+</pre>
+
+    <p>The request result of version is returned in JSON form.</p>
+    <div class="header-gray">Reply format</div>
+    <pre>
+{
+    "error": 0,
+    "version": "4.3.1.4"
 }
 </pre>
 
