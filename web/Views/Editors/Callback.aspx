@@ -57,6 +57,7 @@
     <p><em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.</p>
     <p><em>Status</em> <b>2</b> (<b>3</b>) is received <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.</p>
     <p><em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.</p>
+    <p><em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>.</p>
 
     <div id="status-1" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>
     <pre>
