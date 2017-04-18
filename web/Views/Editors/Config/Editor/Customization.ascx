@@ -111,6 +111,12 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td id="forcesave">forcesave</td>
+            <td>adds the request for the forced file saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.). The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
             <td id="goback">goback</td>
             <td>defines settings for the <b>Go to Documents</b> menu button and upper right corner link. The object has the following parameters:
                 <ul>
@@ -193,6 +199,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "http://example.com",
                 "visible": true
             },
+            "forcesave": false,
             "goback": {
                 "text": "Go to Documents",
                 "url": "http://example.com"

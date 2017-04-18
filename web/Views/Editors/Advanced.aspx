@@ -101,6 +101,7 @@ config = {
                 "url": "http://example.com",
                 "visible": true
             },
+            "forcesave": false,
             "goback": {
                 "text": "Go to Documents",
                 "url": "http://example.com"

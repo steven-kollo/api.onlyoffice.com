@@ -16,24 +16,26 @@
     </h1>
 
     <p class="dscr">The <b>document editing service</b> informs the <b>document storage service</b> about status of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a>.</p>
+
     <p>The <b>document editing service</b> will send POST request with the following information in body:</p>
     <ul>
         <li>
             <b>actions</b> - an object received if the new user connected to the document co-editing or disconnected from it. In the first case the <em>type</em> field value is <b>1</b> , in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected to or disconnected from the document co-editing.
         </li>
         <li id="changeshistory">
-            <b>changeshistory</b> - the array of objects with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. Deprecated since version 4.2.
+            <b>changeshistory</b> - the array of objects with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. Deprecated since version 4.2.
         </li>
         <li id="changesurl">
             <b>changesurl</b> - the link to the file with the document editing data used to track and display the document changes history. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
         </li>
         <li id="forcesavetype">
             <b>forcesavetype</b> - the type of initiator when the force saving request is performed. Can have the following values:
-            <b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>.
+            <b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>,
+            <b>1</b> - the force saving request is performed each time the saving is done (e.g. the <b>Save</b> button is clicked), which is only available when the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> option is set to <em>true</em>.
             The type is present when the <em>status</em> value is equal to <b>6</b> or <b>7</b> only.
         </li>
         <li id="history">
-            <b>history</b> - the object with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+            <b>history</b> - the object with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
         </li>
         <li>
             <b>key</b> - the edited document identifier.
