@@ -27,6 +27,11 @@
         <li id="changesurl">
             <b>changesurl</b> - the link to the file with the document editing data used to track and display the document changes history. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
         </li>
+        <li id="forcesavetype">
+            <b>forcesavetype</b> - the type of initiator when the force saving request is performed. Can have the following values:
+            <b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>.
+            The type is present when the <em>status</em> value is equal to <b>6</b> or <b>7</b> only.
+        </li>
         <li id="history">
             <b>history</b> - the object with the document changes history. The object is present when the status value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
         </li>
@@ -57,7 +62,7 @@
     <p><em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.</p>
     <p><em>Status</em> <b>2</b> (<b>3</b>) is received <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.</p>
     <p><em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.</p>
-    <p><em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>.</p>
+    <p><em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed.</p>
 
     <div id="status-1" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>
     <pre>
@@ -97,6 +102,7 @@
     <pre>
 {
     "changesurl": "http://documentserver/url-to-changes.zip",
+    "forcesavetype": 0,
     "history": {
         "changes": changes,
         "serverVersion": serverVersion
