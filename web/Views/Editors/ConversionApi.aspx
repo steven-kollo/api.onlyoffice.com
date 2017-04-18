@@ -98,7 +98,7 @@
                 <td>string</td>
                 <td>required</td>
             </tr>
-            <tr class="tablerow">
+            <tr id="thumbnail" class="tablerow">
                 <td>thumbnail</td>
                 <td>The option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
                     <ul>
@@ -493,7 +493,7 @@
     <div class="header-gray">Possible error codes and their description</div>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
+            <col style="width: 105px;" />
             <col />
         </colgroup>
         <thead>

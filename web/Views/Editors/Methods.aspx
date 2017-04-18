@@ -52,7 +52,7 @@ docEditor.denyEditingRights(message);
             </table>
         </li>
         <li id="destroyEditor">
-            <p><b>destroyEditor</b> - destroy <em>docEditor</em> object. This method can be called when you want to reinit document editor with another configurations. Used since v.4.3.</p>
+            <p><b>destroyEditor</b> - destroy <em>docEditor</em> object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.</p>
             <pre>
 docEditor.destroyEditor();
 </pre>

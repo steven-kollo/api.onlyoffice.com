@@ -34,7 +34,7 @@
     <div class="header-gray">Possible error codes and their description</div>
     <table class="table">
         <colgroup>
-            <col style="width: 130px;" />
+            <col style="width: 160px;" />
             <col style="width: 150px;" />
             <col />
         </colgroup>

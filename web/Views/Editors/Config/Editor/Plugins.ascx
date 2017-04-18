@@ -35,7 +35,7 @@
         </tr>
         <tr class="tablerow">
             <td id="url">url</td>
-            <td>The absolute path to the directory where the plugins are stored. Deprecated since v.4.3.</td>
+            <td>The absolute path to the directory where the plugins are stored. Deprecated since version 4.3.</td>
             <td>string</td>
             <td>"http://example.com/plugins/"</td>
         </tr>
