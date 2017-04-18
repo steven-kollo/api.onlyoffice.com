@@ -15,51 +15,106 @@
         <span class="hdr">Callback handler</span>
     </h1>
 
-    <p class="dscr">The <b>document editing service</b> informs the <b>document storage service</b> about status of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a>.</p>
+    <p class="dscr">
+        The <b>document editing service</b> informs the <b>document storage service</b> about status of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a>.
+        The <b>document editing service</b> use the POST request with the information in body.
+    </p>
 
-    <p>The <b>document editing service</b> will send POST request with the following information in body:</p>
-    <ul>
-        <li>
-            <b>actions</b> - an object received if the new user connected to the document co-editing or disconnected from it. In the first case the <em>type</em> field value is <b>1</b> , in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected to or disconnected from the document co-editing.
-        </li>
-        <li id="changeshistory">
-            <b>changeshistory</b> - the array of objects with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. Deprecated since version 4.2.
-        </li>
-        <li id="changesurl">
-            <b>changesurl</b> - the link to the file with the document editing data used to track and display the document changes history. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
-        </li>
-        <li id="forcesavetype">
-            <b>forcesavetype</b> - the type of initiator when the force saving request is performed. Can have the following values:
-            <b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>,
-            <b>1</b> - the force saving request is performed each time the saving is done (e.g. the <b>Save</b> button is clicked), which is only available when the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> option is set to <em>true</em>.
-            The type is present when the <em>status</em> value is equal to <b>6</b> or <b>7</b> only.
-        </li>
-        <li id="history">
-            <b>history</b> - the object with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
-        </li>
-        <li>
-            <b>key</b> - the edited document identifier.
-        </li>
-        <li>
-            <b>status</b> - status of the document. Can have the following values:
-            <b>0</b> - no document with the key identifier could be found,
-            <b>1</b> - document is being edited,
-            <b>2</b> - document is ready for saving,
-            <b>3</b> - document saving error has occurred,
-            <b>4</b> - document is closed with no changes,
-            <b>6</b> - document is being edited, but the current document state is saved,
-            <b>7</b> - error has occurred while force saving the document.
-        </li>
-        <li id="url">
-            <b>url</b> - the link to the edited document to be saved with the document storage service. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only.
-        </li>
-        <li>
-            <b>userdata</b> - the custom information sent to the <a href="<%= Url.Action("command") %>">command service</a> in case it was present in the request.
-        </li>
-        <li>
-            <b>users</b> - the list of the identifiers of the users who opened the document for editing; when the document has been changed the <b>users</b> will return the identifier of the user who was the last to edit the document (for status <b>2</b> and status <b>6</b> replies).
-        </li>
-    </ul>
+    <h2>Parameters and their description:</h2>
+    <table class="table">
+        <colgroup>
+            <col style="width: 100px;" />
+            <col />
+            <col style="width: 100px;" />
+            <col style="width: 150px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Parameter</td>
+                <td>Description</td>
+                <td>Type</td>
+                <td>Presence</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td>actions</td>
+                <td>Defines the object received if the new user connected to the document co-editing or disconnected from it. In the first case the <em>type</em> field value is <b>1</b>, in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected to or disconnected from the document co-editing.</td>
+                <td>array of object</td>
+                <td>optional</td>
+            </tr>
+            <tr id="changeshistory" class="tablerow">
+                <td>changeshistory</td>
+                <td>Defines the array of objects with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. Deprecated since version 4.2.</td>
+                <td>array of object</td>
+                <td>optional</td>
+            </tr>
+            <tr id="changesurl" class="tablerow">
+                <td>changesurl</td>
+                <td>Defines the link to the file with the document editing data used to track and display the document changes history. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr id="forcesavetype" class="tablerow">
+                <td>forcesavetype</td>
+                <td>Defines the type of initiator when the force saving request is performed. Can have the following values:
+                    <ul>
+                        <li><b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>,</li>
+                        <li><b>1</b> - the force saving request is performed each time the saving is done (e.g. the <b>Save</b> button is clicked), which is only available when the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> option is set to <em>true</em>.</li>
+                    </ul>
+                    The type is present when the <em>status</em> value is equal to <b>6</b> or <b>7</b> only.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr id="history" class="tablerow">
+                <td>history</td>
+                <td>Defines the object with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td>key</td>
+                <td>Defines the edited document identifier.</td>
+                <td>string</td>
+                <td>required</td>
+            </tr>
+            <tr class="tablerow">
+                <td>status</td>
+                <td>Defines the status of the document. Can have the following values:
+                    <ul>
+                        <li><b>0</b> - no document with the key identifier could be found,</li>
+                        <li><b>1</b> - document is being edited,</li>
+                        <li><b>2</b> - document is ready for saving,</li>
+                        <li><b>3</b> - document saving error has occurred,</li>
+                        <li><b>4</b> - document is closed with no changes,</li>
+                        <li><b>6</b> - document is being edited, but the current document state is saved,</li>
+                        <li><b>7</b> - error has occurred while force saving the document.</li>
+                    </ul>
+                </td>
+                <td>integer</td>
+                <td>required</td>
+            </tr>
+            <tr id="url" class="tablerow">
+                <td>url</td>
+                <td>Defines the link to the edited document to be saved with the document storage service. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only.</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td>userdata</td>
+                <td>Defines the custom information sent to the <a href="<%= Url.Action("command") %>#userdata">command service</a> in case it was present in the request.</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td>users</td>
+                <td>Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the <b>users</b> will return the identifier of the user who was the last to edit the document (for status <b>2</b> and status <b>6</b> replies).</td>
+                <td>array of string</td>
+                <td>optional</td>
+            </tr>
+        </tbody>
+    </table>
 
     <p><em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.</p>
     <p><em>Status</em> <b>2</b> (<b>3</b>) is received <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.</p>

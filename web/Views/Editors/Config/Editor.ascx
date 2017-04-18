@@ -82,9 +82,7 @@
                     </li>
                 </ul>
             </td>
-            <td>collection of object
-                <div class="infotext">Collection</div>
-            </td>
+            <td>array of object</td>
             <td></td>
         </tr>
         <tr class="tablerow">

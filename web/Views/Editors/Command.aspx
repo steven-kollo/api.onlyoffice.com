@@ -55,7 +55,7 @@
                 <td>string</td>
                 <td>required</td>
             </tr>
-            <tr class="tablerow">
+            <tr id="userdata" class="tablerow">
                 <td>userdata</td>
                 <td>Defines some custom identifier which will help distinguish the specific request in case there were more than one.</td>
                 <td>string</td>

@@ -28,9 +28,7 @@
         <tr class="tablerow">
             <td id="pluginsData">pluginsData</td>
             <td>Defines the list of absolute paths to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
-            <td>collection of string
-                <div class="infotext">Collection</div>
-            </td>
+            <td>array of string</td>
             <td></td>
         </tr>
         <tr class="tablerow">
