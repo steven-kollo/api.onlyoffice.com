@@ -21,6 +21,7 @@
     <ul>
         <li>Added the <a href="<%= Url.Action("methods") %>#destroyEditor">destroyEditor</a> method.</li>
         <li>Removed the <a href="<%= Url.Action("config/editor/plugins") %>#url">url</a> field from the plugin connection pattern.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">commentAuthorOnly</a> field.</li>
         <li>Added the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> field in the callback handler request when froce saving the file.</li>
     </ul>
 

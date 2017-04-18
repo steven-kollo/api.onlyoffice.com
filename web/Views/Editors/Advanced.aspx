@@ -87,6 +87,7 @@ config = {
         "createUrl": "http://example.com/url-to-create-document/",
         "customization": {
             "chat": true,
+            "commentAuthorOnly": false,
             "comments": true,
             "compactToolbar": false,
             "customer": {

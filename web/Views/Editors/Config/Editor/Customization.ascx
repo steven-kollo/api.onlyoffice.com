@@ -32,6 +32,12 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td id="commentAuthorOnly">commentAuthorOnly</td>
+            <td>Defines if the user can edit only his comments. The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
             <td id="comments">comments</td>
             <td>Defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The default value is <b>true</b>.</td>
             <td>boolean</td>
