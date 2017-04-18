@@ -87,6 +87,7 @@ config = {
         "createUrl": "http://example.com/url-to-create-document/",
         "customization": {
             "chat": true,
+            "commentAuthorOnly": false,
             "comments": true,
             "compactToolbar": false,
             "customer": {
@@ -101,6 +102,7 @@ config = {
                 "url": "http://example.com",
                 "visible": true
             },
+            "forcesave": false,
             "goback": {
                 "text": "Go to Documents",
                 "url": "http://example.com"

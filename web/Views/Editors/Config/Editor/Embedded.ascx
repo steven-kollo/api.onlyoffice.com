@@ -27,31 +27,31 @@
     <tbody>
         <tr class="tablerow">
             <td id="embedUrl">embedUrl</td>
-            <td>defines the URL to the document serving as a source file for the document embedded into the web page.</td>
+            <td>Defines the URL to the document serving as a source file for the document embedded into the web page.</td>
             <td>string</td>
             <td>"http://example.com/embedded?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="fullscreenUrl">fullscreenUrl</td>
-            <td>defines the URL to the document which will open in full screen mode.</td>
+            <td>Defines the URL to the document which will open in full screen mode.</td>
             <td>string</td>
             <td>"http://example.com/embedded?doc=exampledocument1.docx#fullscreen"</td>
         </tr>
         <tr class="tablerow">
             <td id="saveUrl">saveUrl</td>
-            <td>defines the URL that will allow the document to be saved onto the user personal computer.</td>
+            <td>Defines the URL that will allow the document to be saved onto the user personal computer.</td>
             <td>string</td>
             <td>"http://example.com/download?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="shareUrl">shareUrl</td>
-            <td>defines the URL that will allow other users to share this document.</td>
+            <td>Defines the URL that will allow other users to share this document.</td>
             <td>string</td>
             <td>"http://example.com/view?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="toolbarDocked">toolbarDocked</td>
-            <td>defines the place for the embedded viewer toolbar, can be either <b>top</b> or <b>bottom</b>.</td>
+            <td>Defines the place for the embedded viewer toolbar, can be either <b>top</b> or <b>bottom</b>.</td>
             <td>string</td>
             <td>"top"</td>
         </tr>

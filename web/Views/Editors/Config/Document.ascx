@@ -27,7 +27,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="fileType">fileType<span class="required">*</span></td>
-            <td>defines the type of the file for the source viewed or edited document.</td>
+            <td>Defines the type of the file for the source viewed or edited document.</td>
             <td>string</td>
             <td>"docx", "xlsx", "pptx", "ppsx",<br />
                 "doc", "xls", "ppt", "pps",<br />
@@ -38,19 +38,19 @@
         </tr>
         <tr class="tablerow">
             <td id="key">key<span class="required">*</span></td>
-            <td>defines the unique document identifier used for document recognition by the service. In case the known key is sent the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the <b>key</b> but without the special characters and the length is limited to 20 symbols.</td>
+            <td>Defines the unique document identifier used for document recognition by the service. In case the known key is sent the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the <b>key</b> but without the special characters and the length is limited to 20 symbols.</td>
             <td>string</td>
             <td>"Khirz6zTPdfd7"</td>
         </tr>
         <tr class="tablerow">
             <td id="title">title<span class="required">*</span></td>
-            <td>defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded.</td>
+            <td>Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded.</td>
             <td>string</td>
             <td>"Example Document Title.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="url">url<span class="required">*</span></td>
-            <td>defines the URL where the source viewed or edited document is stored.</td>
+            <td>Defines the URL where the source viewed or edited document is stored.</td>
             <td>string</td>
             <td>"http://example.com/url-to-example-document.docx"</td>
         </tr>

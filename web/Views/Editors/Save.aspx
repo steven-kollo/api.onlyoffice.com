@@ -48,4 +48,54 @@ new DocsAPI.DocEditor("placeholder", {
         <li>Open your <em>html</em> file in the browser and edit your document.</li>
         <li>Close the <b>Document Editor</b>. Check out your document in about 10 seconds. All changes should be saved, meaning the configuration is correct.</li>
     </ol>
+
+    <h2 id="tenseconds">Save delay</h2>
+    <p>The <b>document editing service</b> informs the <b>document storage service</b> about the end of the document editing after 10 seconds of editing closure.
+        The time is not precise and is calculated using the file conversion time and conversion start delay time.
+        The duration of the edited file conversion into the Office Open XML format depends on the file structure complexity and can be performed rather a long time.
+        The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing.
+        The conversion start delay time can be changed in <b>Document Server</b> configuration file, which can be found at the following path:</p>
+    <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
+    <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
+
+<div class="header-gray">Parameters</div>
+
+<table class="table">
+    <colgroup>
+        <col style="width: 300px;" />
+        <col />
+        <col style="width: 100px;" />
+        <col style="width: 100px;" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>services.CoAuthoring.server.savetimeoutdelay</td>
+            <td>Defines the conversion start delay time (in milliseconds) after the edited file is closed.</td>
+            <td>integer</td>
+            <td>5000</td>
+        </tr>
+    </tbody>
+</table>
+    
+    <div class="header-gray">Sample default.json configuration</div>
+    <pre>
+{
+    "services": {
+        "CoAuthoring": {
+            "server": {
+                "savetimeoutdelay": 5000
+            }
+        }
+    }
+}
+</pre>
+
 </asp:Content>

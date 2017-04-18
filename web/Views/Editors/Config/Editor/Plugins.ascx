@@ -27,15 +27,13 @@
     <tbody>
         <tr class="tablerow">
             <td id="pluginsData">pluginsData</td>
-            <td>The list of absolute paths to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
-            <td>Collection of string
-                <div class="infotext">Collection</div>
-            </td>
+            <td>Defines the list of absolute paths to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
+            <td>array of string</td>
             <td></td>
         </tr>
         <tr class="tablerow">
             <td id="url">url</td>
-            <td>The absolute path to the directory where the plugins are stored. Deprecated since v.4.3.</td>
+            <td>Defines the absolute path to the directory where the plugins are stored. Deprecated since version 4.3.</td>
             <td>string</td>
             <td>"http://example.com/plugins/"</td>
         </tr>

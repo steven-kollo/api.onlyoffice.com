@@ -131,6 +131,9 @@
         </ul>
     </li>
     <li>
+        <a href="<%= Url.Action("changelog") %>">Changelog</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("troubleshooting") %>">Troubleshooting</a>
     </li>
 </ul>

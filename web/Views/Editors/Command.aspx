@@ -14,7 +14,7 @@
         <span class="hdr">Command service</span>
     </h1>
 
-    <p>For the interaction with the <b>document command service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">http://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+    <p class="dscr">For the interaction with the <b>document command service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">http://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
@@ -37,12 +37,13 @@
         <tbody>
             <tr class="tablerow">
                 <td>c</td>
-                <td>Type of command.<br />
+                <td>Defined the type of command.<br />
                     Supported values:
                     <ul>
                         <li><b>drop</b> - disconnect the users with the identifiers present in the <em>users</em> parameter from the <b>document editing service</b> (these users will be able to view the document, but will not be allowed to make changes to it);</li>
                         <li><b>forcesave</b> - force saving the document being edited without closing it (the document editing might be continued after this command, so this will not be the final saved document version);</li>
-                        <li><b>info</b> - receive a document status.</li>
+                        <li><b>info</b> - receive a document status;</li>
+                        <li><b>version</b> - receive the current version number of Document Server.</li>
                     </ul>
                 </td>
                 <td>string</td>
@@ -50,19 +51,19 @@
             </tr>
             <tr class="tablerow">
                 <td>key</td>
-                <td>Document identifier used to unambiguously identify the document file.</td>
+                <td>Defines the document identifier used to unambiguously identify the document file.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
-            <tr class="tablerow">
+            <tr id="userdata" class="tablerow">
                 <td>userdata</td>
-                <td>Some custom identifier which will help distinguish the specific request in case there were more than one.</td>
+                <td>Defines some custom identifier which will help distinguish the specific request in case there were more than one.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td>users</td>
-                <td>the list of the user identifiers (used for the <em>c=drop</em> parameter value).</td>
+                <td>Defines the list of the user identifiers (used for the <em>c=drop</em> parameter value).</td>
                 <td>array of strings</td>
                 <td>optional</td>
             </tr>
@@ -82,7 +83,8 @@
     <pre>
 {
     "c": "forcesave",
-    "key": "Khirz6zTPdfd7"
+    "key": "Khirz6zTPdfd7",
+    "userdata": "sample userdata"
 }
 </pre>
 
@@ -103,12 +105,28 @@
 }
 </pre>
 
+    <div id="version" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to receive the current version number of Document Server</div>
+    <pre>
+{
+    "c": "version"
+}
+</pre>
+
+    <p>The request result of version is returned in JSON form.</p>
+    <div class="header-gray">Reply format</div>
+    <pre>
+{
+    "error": 0,
+    "version": "4.3.1.4"
+}
+</pre>
+
     <p>The <b>document editing service</b> informs the <b>document storage service</b> about the result caused by command using the <a href="<%= Url.Action("callback") %>">callback handler</a>.</p>
 
     <div class="header-gray">Possible error codes and their description</div>
     <table class="table">
         <colgroup>
-            <col style="width: 100px;" />
+            <col style="width: 105px;" />
             <col />
         </colgroup>
         <thead>

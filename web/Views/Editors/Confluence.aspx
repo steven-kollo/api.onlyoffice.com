@@ -70,7 +70,7 @@
     <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the DocEditor configuration with the above properties.</p>
     <p>Then ONLYOFFICE Document Server downloads the document from Confluence and the user begins editing.</p>
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
-    <p>After 10 seconds of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Confluence know that the clients have finished editing the document and closed it.</p>
+    <p>After <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Confluence know that the clients have finished editing the document and closed it.</p>
     <p>Confluence downloads the new version of the document, replacing the old one.</p>
 
     <br />
