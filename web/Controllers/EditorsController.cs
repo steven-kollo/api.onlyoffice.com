@@ -44,6 +44,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Alfresco",
                 "Basic",
                 "Callback",
+                "Changelog",
                 "Coedit",
                 "Command",
                 "Config",
@@ -147,6 +148,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Callback()
+        {
+            return View();
+        }
+
+        public ActionResult Changelog()
         {
             return View();
         }
