@@ -37,7 +37,7 @@
         <tbody>
             <tr class="tablerow">
                 <td>async</td>
-                <td>Conversion request type: asynchronous or not.<br />
+                <td>Defines the conversion request type: asynchronous or not.<br />
                     Supported values:
                     <ul>
                         <li>true</li>
@@ -50,7 +50,7 @@
             </tr>
             <tr class="tablerow">
                 <td>codePage</td>
-                <td>The file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
+                <td>Defines the file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
                     Main supported values:
                     <ul>
                         <li><b>932</b> - Japanese (Shift-JIS),</li>
@@ -66,7 +66,7 @@
             </tr>
             <tr class="tablerow">
                 <td>delimiter</td>
-                <td>Delimiter characters for separating values when converting from <em>csv</em> format.<br />
+                <td>Dfines the delimiter characters for separating values when converting from <em>csv</em> format.<br />
                     Supported values:
                     <ul>
                         <li><b>0</b> - no delimiter,</li>
@@ -82,25 +82,25 @@
             </tr>
             <tr class="tablerow">
                 <td>filetype<span class="required">*</span></td>
-                <td>Type of the document file to be converted.</td>
+                <td>Defines the type of the document file to be converted.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
                 <td>key</td>
-                <td>Document identifier used to unambiguously identify the document file.</td>
+                <td>Defines the document identifier used to unambiguously identify the document file.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
                 <td>outputtype<span class="required">*</span></td>
-                <td>Resulting converted document type.</td>
+                <td>Defines the resulting converted document type.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
             <tr id="thumbnail" class="tablerow">
                 <td>thumbnail</td>
-                <td>The option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
+                <td>Defines the option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
                     <ul>
                         <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed. Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
                             <br />
@@ -133,13 +133,13 @@
             </tr>
             <tr class="tablerow">
                 <td>title</td>
-                <td>Converted file name.</td>
+                <td>Defines the converted file name.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td>url</td>
-                <td>Link to the document to be converted.</td>
+                <td>Defines the link to the document to be converted.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>

@@ -27,13 +27,13 @@
     <tbody>
         <tr class="tablerow">
             <td id="callbackUrl">callbackUrl<span class="required">*</span></td>
-            <td>specifies URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server).</td>
+            <td>Specifies URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server).</td>
             <td>string</td>
             <td>"http://example.com/url-to-callback.ashx"</td>
         </tr>
         <tr class="tablerow">
             <td id="createUrl">createUrl</td>
-            <td>defines the URL of the document where it will be created and available after creation. If not specified, there will be no creation button.
+            <td>Defines the URL of the document where it will be created and available after creation. If not specified, there will be no creation button.
             </td>
             <td>string</td>
             <td>"http://example.com/url-to-create-document/"</td>
@@ -45,19 +45,19 @@
         </tr>
         <tr class="tablerow">
             <td id="lang">lang</td>
-            <td>defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) or four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes. The default value is <b>"en-US"</b>.</td>
+            <td>Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) or four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes. The default value is <b>"en-US"</b>.</td>
             <td>string</td>
             <td>"en-US"</td>
         </tr>
         <tr class="tablerow">
             <td id="mode">mode</td>
-            <td>defines the editor opening mode. Can be either <b>view</b> to open the document for viewing, or <b>edit</b> to open the document in the editing mode allowing to apply changes to the document data. The default value is <b>"edit"</b>.</td>
+            <td>Defines the editor opening mode. Can be either <b>view</b> to open the document for viewing, or <b>edit</b> to open the document in the editing mode allowing to apply changes to the document data. The default value is <b>"edit"</b>.</td>
             <td>string</td>
             <td>"edit"</td>
         </tr>
         <tr>
             <td id="recent">recent</td>
-            <td>defines the presence or absence of the documents in the <b>Open Recent...</b> menu option where the following document parameters can be set:
+            <td>Defines the presence or absence of the documents in the <b>Open Recent...</b> menu option where the following document parameters can be set:
                 <ul>
                     <li>
                         <b>folder</b> - the folder where the document is stored (can be empty in case the document is stored in the root folder),
@@ -82,7 +82,7 @@
                     </li>
                 </ul>
             </td>
-            <td>Collection of object
+            <td>collection of object
                 <div class="infotext">Collection</div>
             </td>
             <td></td>
@@ -94,7 +94,7 @@
         </tr>
         <tr class="tablerow">
             <td id="user">user</td>
-            <td>the user currently viewing or editing the document:
+            <td>Defines the user currently viewing or editing the document:
                 <ul>
                     <li>
                         <b>firstname</b> - the first name of the user. Deprecated since version 4.2,

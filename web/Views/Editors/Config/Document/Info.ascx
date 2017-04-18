@@ -27,25 +27,25 @@
     <tbody>
         <tr class="tablerow">
             <td id="author">author</td>
-            <td>defines the name of the document author/creator.</td>
+            <td>Defines the name of the document author/creator.</td>
             <td>string</td>
             <td>"John Smith"</td>
         </tr>
         <tr class="tablerow">
             <td id="created">created</td>
-            <td>defines the document creation date.</td>
+            <td>Defines the document creation date.</td>
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
         <tr class="tablerow">
             <td id="folder">folder</td>
-            <td>defines the folder where the document is stored (can be empty in case the document is stored in the root folder).</td>
+            <td>Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).</td>
             <td>string</td>
             <td>"Example Files"</td>
         </tr>
         <tr class="tablerow">
             <td id="sharingSettings">sharingSettings</td>
-            <td>defines the settings which will allow to share the document with other users:
+            <td>Defines the settings which will allow to share the document with other users:
                 <ul>
                     <li>
                         <b>permissions</b> - the access rights for the user with the name above. Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>
@@ -63,7 +63,7 @@
                     </li>
                 </ul>
             </td>
-            <td>Collection of object
+            <td>collection of object
                 <div class="infotext">Collection</div>
             </td>
             <td></td>

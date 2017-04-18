@@ -78,7 +78,7 @@ new DocsAPI.DocEditor("placeholder", {
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.server.savetimeoutdelay</td>
-            <td>The conversion start delay time (in milliseconds) after the edited file is closed.</td>
+            <td>Defines the conversion start delay time (in milliseconds) after the edited file is closed.</td>
             <td>integer</td>
             <td>5000</td>
         </tr>

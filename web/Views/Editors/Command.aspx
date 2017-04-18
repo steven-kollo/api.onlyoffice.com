@@ -37,7 +37,7 @@
         <tbody>
             <tr class="tablerow">
                 <td>c</td>
-                <td>Type of command.<br />
+                <td>Defined the type of command.<br />
                     Supported values:
                     <ul>
                         <li><b>drop</b> - disconnect the users with the identifiers present in the <em>users</em> parameter from the <b>document editing service</b> (these users will be able to view the document, but will not be allowed to make changes to it);</li>
@@ -51,19 +51,19 @@
             </tr>
             <tr class="tablerow">
                 <td>key</td>
-                <td>Document identifier used to unambiguously identify the document file.</td>
+                <td>Defines the document identifier used to unambiguously identify the document file.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
                 <td>userdata</td>
-                <td>Some custom identifier which will help distinguish the specific request in case there were more than one.</td>
+                <td>Defines some custom identifier which will help distinguish the specific request in case there were more than one.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td>users</td>
-                <td>the list of the user identifiers (used for the <em>c=drop</em> parameter value).</td>
+                <td>Defines the list of the user identifiers (used for the <em>c=drop</em> parameter value).</td>
                 <td>array of strings</td>
                 <td>optional</td>
             </tr>

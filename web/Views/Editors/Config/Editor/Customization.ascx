@@ -27,19 +27,19 @@
     <tbody>
         <tr class="tablerow">
             <td id="chat">chat</td>
-            <td>defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled. The default value is <b>true</b>.</td>
+            <td>Defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled. The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="comments">comments</td>
-            <td>defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The default value is <b>true</b>.</td>
+            <td>Defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="compactToolbar">compactToolbar</td>
-            <td>defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>. The default value is <b>false</b>.</td>
+            <td>Defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>. The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -90,7 +90,7 @@
         </tr>
         <tr class="tablerow">
             <td id="feedback">feedback</td>
-            <td>defines settings for the <b>Feedback &amp; Support</b> menu button. Can be either boolean (simply displays or hides the <b>Feedback &amp; Support</b> menu button) or object. In case of object type the following parameters are available:
+            <td>Defines settings for the <b>Feedback &amp; Support</b> menu button. Can be either boolean (simply displays or hides the <b>Feedback &amp; Support</b> menu button) or object. In case of object type the following parameters are available:
                 <ul>
                     <li><b>url</b> - the website address which will be opened when clicking the <b>Feedback &amp; Support</b> menu button,
                         <br />
@@ -112,13 +112,13 @@
         </tr>
         <tr class="tablerow">
             <td id="forcesave">forcesave</td>
-            <td>adds the request for the forced file saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.). The default value is <b>false</b>.</td>
+            <td>Adds the request for the forced file saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.). The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td id="goback">goback</td>
-            <td>defines settings for the <b>Go to Documents</b> menu button and upper right corner link. The object has the following parameters:
+            <td>Defines settings for the <b>Go to Documents</b> menu button and upper right corner link. The object has the following parameters:
                 <ul>
                     <li><b>text</b> - the text which will be displayed for the <b>Go to Documents</b> menu button and upper right corner link (i.e. instead of <em>Go to Documents</em>),
                         <br />
@@ -166,7 +166,7 @@
         </tr>
         <tr class="tablerow">
             <td id="zoom">zoom</td>
-            <td>defines the document display zoom value measured in percent. Can take values larger than <b>0</b>. For text documents and presentations it is possible to set this parameter to <b>-1</b> (fitting the document to page option) or to <b>-2</b> (fitting the document page width to the editor page). The default value is <b>100</b>.</td>
+            <td>Defines the document display zoom value measured in percent. Can take values larger than <b>0</b>. For text documents and presentations it is possible to set this parameter to <b>-1</b> (fitting the document to page option) or to <b>-2</b> (fitting the document page width to the editor page). The default value is <b>100</b>.</td>
             <td>integer</td>
             <td>100</td>
         </tr>
@@ -185,6 +185,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {
             "chat": true,
+            "commentAuthorOnly": false,
             "comments": true,
             "compactToolbar": false,
             "customer": {
