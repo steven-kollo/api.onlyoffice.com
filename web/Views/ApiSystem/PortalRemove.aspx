@@ -48,10 +48,7 @@
     </table>
     <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
-    <div id="returns" class="header-gray">
-        Returns
-        <a id="clipLink" href="#returns" onclick="return false;">Get link to this headline</a>
-    </div>
+    <div class="header-gray">Returns</div>
     <p>Returns the description of the portal to be deleted.</p>
 
     <div class="header-gray">Example Response</div>

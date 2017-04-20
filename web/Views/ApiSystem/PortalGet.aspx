@@ -47,10 +47,7 @@
         </tbody>
     </table>
 
-    <div id="returns" class="header-gray">
-        Returns
-        <a id="clipLink" href="#returns" onclick="return false;">Get link to this headline</a>
-    </div>
+    <div class="header-gray">Returns</div>
     <p>Returns the list of all the portals registered to the user with the email address specified in the request.</p>
 
     <div class="header-gray">Example Response</div>
