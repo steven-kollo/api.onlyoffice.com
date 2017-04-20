@@ -156,7 +156,6 @@ html {
     margin: 0;
     min-width: 976px;
     padding: 0 24px;
-    position: fixed;
     left: 0;
     top: 0;
     z-index: 600;
@@ -174,7 +173,7 @@ html {
 .layout-table-side {
     height: 100%;
     margin: 0;
-    padding: 100px 0 30px 24px;
+    padding: 28px 0 30px 24px;
     width: 261px;
 }
 
@@ -189,7 +188,7 @@ html {
 
 .layout-table-content {
     margin: 0;
-    padding: 80px 24px;
+    padding: 8px 24px;
 }
 
 .layout-content {
