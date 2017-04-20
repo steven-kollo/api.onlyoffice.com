@@ -115,6 +115,57 @@ new DocsAPI.DocEditor("placeholder", {
             The <em>forcesavetype</em> parameter will have the <b>0</b> value when sending the request to the <b>callback handler</b>.</li>
         <li>Enable the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> mode setting it to <b>true</b> in the editor initialization configuration.
             In this case each time the user clicks the <b>Save</b> button, the forcesave will be done, and the <em>forcesavetype</em> parameter will have the <b>1</b> value when sending the request to the <b>callback handler</b>.</li>
+        <li>You can enable the repeating forcesave start in the <b>Document Server</b> configuration file, which can be found at the following path:
+            <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
+            <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
+
+            <div class="header-gray">Parameters</div>
+
+            <table class="table">
+                <colgroup>
+                    <col style="width: 300px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 100px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Example</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>services.CoAuthoring.autoAssembly.enable</td>
+                        <td>Specifies enabling the repeating force saving.</td>
+                        <td>boolean</td>
+                        <td>false</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>services.CoAuthoring.autoAssembly.interval</td>
+                        <td>Defines the time interval in minutes for initializing the force save.</td>
+                        <td>string</td>
+                        <td>5m</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="header-gray">Sample default.json configuration</div>
+            <pre>
+{
+    "services": {
+        "CoAuthoring": {
+            "autoAssembly": {
+                "enable": true,
+                "interval": "5m"
+            }
+        }
+    }
+}
+</pre>
+        The <em>forcesavetype</em> parameter will have the <b>2</b> value when sending the request to the <b>callback handler</b>.</li>
     </ul>
 
 </asp:Content>
