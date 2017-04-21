@@ -17,15 +17,16 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
-    <h2>Version 4.3</h2>
+    <h2 id="43" class="copy-link">Version 4.3</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("methods") %>#destroyEditor">destroyEditor</a> method.</li>
         <li>Removed the <a href="<%= Url.Action("config/editor/plugins") %>#url">url</a> field from the plugin connection pattern.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">commentAuthorOnly</a> field.</li>
-        <li>Added the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> field in the callback handler request when froce saving the file.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> field in the callback handler request when force saving the file.</li>
     </ul>
 
-    <h2>Version 4.2</h2>
+    <h2 id="42" class="copy-link">Version 4.2</h2>
     <ul>
         <li>Replaced the <em>firstname</em> and <em>lastname</em> fields with the <em>name</em> field in the <a href="<%= Url.Action("config/editor") %>#user">user</a> object.</li>
         <li>Added the possibility to specify the values for the <a href="<%= Url.Action("config/editor/customization") %>#chat">chat</a> and <a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a> in the Open Source version.</li>
@@ -34,6 +35,7 @@
         <li>Changed the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method parameter.</li>
         <li>Added the possibility to convert files to <a href="<%= Url.Action("conversionapi") %>#sample-thumbnail">thumbnail</a> in the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</li>
         <li>The POST requests are now used for the interaction with the <a href="<%= Url.Action("command") %>">document command service</a> and the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</li>
+        <li>Added the <a href="<%= Url.Action("command") %>#version">version</a> command.</li>
         <li>Added the <a href="<%= Url.Action("signature/") %>">signature</a> for the editor opening and for the incoming and outgoing requests.</li>
     </ul>
 

@@ -99,10 +99,7 @@
     <pre><%= method.Example%></pre>
     <% } %>
 
-    <div id="returns" class="header-gray">
-        Returns
-        <a id="clipLink" href="#returns" onclick="return false;">Get link to this headline</a>
-    </div>
+    <div class="header-gray">Returns</div>
     <p><%= method.Returns %></p>
     
     <% if (method.Response.Any())

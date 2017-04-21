@@ -158,14 +158,23 @@ $(function() {
         reader.readAsText(input.files[0]);
     });
 
-    new Clipboard("#clipLink", {
+    new Clipboard(".copy-link", {
         text: function (obj) {
+            var current = location.href;
+            if (current.indexOf("#") > 0) {
+                current = current.substring(0, Math.max(current.indexOf("#")));
+            }
+
             var href = $(obj).attr("href");
-            if (href.indexOf("#") == 0) {
-                var current = location.href;
-                if (current.indexOf("#") > 0) {
-                    current = current.substring(0, Math.max(current.indexOf("#")));
+            if (!href) {
+                var id = $(obj).attr("id");
+                if (!id) {
+                    id = $(obj).closest("[id]").attr("id");
                 }
+                location.hash = id;
+
+                href = current + "#" + id;
+            } else if (href.indexOf("#") == 0) {
                 location.hash = href;
 
                 href = current + href;

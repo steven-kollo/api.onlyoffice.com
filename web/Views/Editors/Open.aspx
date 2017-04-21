@@ -27,7 +27,7 @@
     </ol>
     <p>After the editing is finished, the <a href="<%= Url.Action("save") %>">document saving</a> process takes place.</p>
 
-    <h2 id="apply">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
     <ol>
         <li>Create an empty <em>html</em> file.</li>
         <li>Add the <em>div</em> element as shown below.

@@ -11,11 +11,11 @@
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
-<h2 id="win-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
+<h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
-<h2 id="win-2"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
+<h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>settings.config</em> file:</p>
 <pre>
@@ -28,14 +28,14 @@
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>DocEditor.aspx</em> file.</p>
 
-<h2 id="win-3"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
+<h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>To run your website with the editors successfully, check if your system meets the necessary system requirements:</p>
 <ul>
     <li>Microsoft .NET Framework: version 4.5 (download it from the <a href="https://www.microsoft.com/en-US/download/details.aspx?id=30653">official Microsoft website</a>);</li>
     <li>Internet Information Services: version 7 or later.</li>
 </ul>
 
-<h2 id="win-4"><span class="style_step">Step 4. </span>Running your web site with the editors</h2>
+<h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Running your web site with the editors</h2>
 <ol>
     <li>
         <p>Run the Internet Information Service (IIS) manager</p>
@@ -64,7 +64,7 @@
     </li>
 </ol>
 
-<h2 id="win-5"><span class="style_step">Step 5. </span>Checking accessibility</h2>
+<h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Checking accessibility</h2>
 <p>
     In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
     And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.

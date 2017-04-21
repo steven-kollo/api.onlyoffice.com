@@ -42,7 +42,7 @@
 <% } %>
 
 <div class="treeheader">Help</div>
-<ul class="treeview root">
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("faq") %>">F.A.Q.</a>
     </li>

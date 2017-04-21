@@ -156,7 +156,6 @@ html {
     margin: 0;
     min-width: 976px;
     padding: 0 24px;
-    position: fixed;
     left: 0;
     top: 0;
     z-index: 600;
@@ -174,7 +173,7 @@ html {
 .layout-table-side {
     height: 100%;
     margin: 0;
-    padding: 100px 0 30px 24px;
+    padding: 28px 0 30px 24px;
     width: 261px;
 }
 
@@ -189,7 +188,7 @@ html {
 
 .layout-table-content {
     margin: 0;
-    padding: 80px 24px;
+    padding: 8px 24px;
 }
 
 .layout-content {
@@ -370,16 +369,26 @@ h5 {
     padding: 6px 8px;
 }
 
-#clipLink {
-    background: url("img/sprite.png") no-repeat scroll 0 -122px transparent;
-    color: #333;
+.copy-link[id]:hover {
     cursor: pointer;
-    float: right;
-    font-size: 12px;
-    line-height: 20px;
-    padding-left: 24px;
-    text-decoration: none;
-    outline: none;
+}
+.copy-link[id]:hover:before {
+    background: url("img/sprite.png") no-repeat scroll 0 -125px transparent;
+    content: " ";
+    display: inline-block;
+    height: 16px;
+    margin: 2px 0 0 -24px;
+    position: absolute;
+    width: 23px;
+}
+h2.copy-link[id]:hover:before {
+    margin-top: 15px;
+}
+li b.copy-link[id]:hover:before {
+    margin-left: -40px;
+}
+.header-gray.copy-link[id]:hover:before {
+    margin-left: -35px;
 }
 
 .list-header {

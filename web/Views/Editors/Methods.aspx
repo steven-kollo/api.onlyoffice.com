@@ -21,8 +21,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
     <ul>
-        <li id="denyEditingRights">
-            <p><b>denyEditingRights</b> - deny editing. This method can be called when you want to make the document editing unavailable.</p>
+        <li>
+            <p><b id="denyEditingRights" class="copy-link">denyEditingRights</b> - deny editing. This method can be called when you want to make the document editing unavailable.</p>
             <pre>
 docEditor.denyEditingRights(message);
 </pre>
@@ -51,22 +51,22 @@ docEditor.denyEditingRights(message);
                 </tbody>
             </table>
         </li>
-        <li id="destroyEditor">
-            <p><b>destroyEditor</b> - destroy <em>docEditor</em> object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.</p>
+        <li>
+            <p><b id="destroyEditor" class="copy-link">destroyEditor</b> - destroy <em>docEditor</em> object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.</p>
             <pre>
 docEditor.destroyEditor();
 </pre>
         </li>
 
-        <li id="downloadAs">
-            <p><b>downloadAs</b> - download the edited file. This method can be called only when the existence of the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a> events. <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.</p>
+        <li>
+            <p><b id="downloadAs" class="copy-link">downloadAs</b> - download the edited file. This method can be called only when the existence of the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a> events. <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.</p>
             <pre>
 docEditor.downloadAs();
 </pre>
         </li>
 
-        <li id="refreshHistory">
-            <p><b>refreshHistory</b> - show the document version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events.</p>
+        <li>
+            <p><b id="refreshHistory" class="copy-link">refreshHistory</b> - show the document version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events.</p>
             <pre>
 docEditor.refreshHistory({
     "currentVersion": 2,
@@ -183,8 +183,8 @@ docEditor.refreshHistory({
             </table>
         </li>
 
-        <li id="setHistoryData">
-            <p><b>setHistoryData</b> - send the link to the document for viewing the version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.</p>
+        <li>
+            <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - send the link to the document for viewing the version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.</p>
             <pre>
 docEditor.setHistoryData({
     "key": "Khirz6zTPdfd7",
@@ -290,8 +290,8 @@ docEditor.setHistoryData({
             </table>
         </li>
 
-        <li id="showMessage">
-            <p><b>showMessage</b> - Display dialog with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onReady">onReady</a> events.</p>
+        <li>
+            <p><b id="showMessage" class="copy-link">showMessage</b> - Display dialog with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onReady">onReady</a> events.</p>
             <pre>
 docEditor.showMessage(title, message, type);
 </pre>

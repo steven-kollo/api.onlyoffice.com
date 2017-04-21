@@ -9,8 +9,8 @@
 <p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
 
 <ul>
-    <li id="onCollaborativeChanges">
-        <p><b>onCollaborativeChanges</b> - the function called when the document is co-edited by the other user in the <em>strict</em> co-editing mode.</p>
+    <li>
+        <p><b id="onCollaborativeChanges" class="copy-link">onCollaborativeChanges</b> - the function called when the document is co-edited by the other user in the <em>strict</em> co-editing mode.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onCollaborativeChanges = function () {
@@ -27,8 +27,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     </li>
 
-    <li id="onDocumentStateChange">
-        <p><b>onDocumentStateChange</b> - the function called when the document is modified. It is called with the parameter: <em>{"data" : true}</em> when the current user is editing the document and with the parameter: <em>{"data" : false}</em> when the current user's changes are sent to the <b>document editing service</b>.</p>
+    <li>
+        <p><b id="onDocumentStateChange" class="copy-link">onDocumentStateChange</b> - the function called when the document is modified. It is called with the parameter: <em>{"data" : true}</em> when the current user is editing the document and with the parameter: <em>{"data" : false}</em> when the current user's changes are sent to the <b>document editing service</b>.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onDocumentStateChange = function (event) {
@@ -49,8 +49,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     </li>
 
-    <li id="onDownloadAs">
-        <p><b>onDownloadAs</b> - the function called with the link to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called. The link to the document to be downloaded is sent in the <em>"data"</em> parameter.</p>
+    <li>
+        <p><b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the link to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called. The link to the document to be downloaded is sent in the <em>"data"</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onDownloadAs = function (event) {
@@ -67,8 +67,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     </li>
 
-    <li id="onError">
-        <p><b>onError</b> - the function called when an error or some other specific event occurs. The error message is sent in the <em>"data"</em> parameter.</p>
+    <li>
+        <p><b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs. The error message is sent in the <em>"data"</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onError = function (event) {
@@ -85,8 +85,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     </li>
 
-    <li id="onOutdatedVersion">
-        <p><b>onOutdatedVersion</b> - the function called after the <a href="<%= Url.Action("troubleshooting") %>#key">error</a> is shown, when the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new <em>document.key</em>.</p>
+    <li>
+        <p><b id="onOutdatedVersion" class="copy-link">onOutdatedVersion</b> - the function called after the <a href="<%= Url.Action("troubleshooting") %>#key">error</a> is shown, when the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new <em>document.key</em>.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onOutdatedVersion = function () {
@@ -103,8 +103,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     </li>
 
-    <li id="onReady">
-        <p><b>onReady</b> - the function called when the document is loaded into the document editor.</p>
+    <li>
+        <p><b id="onReady" class="copy-link">onReady</b> - the function called when the document is loaded into the document editor.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onReady = function() {
@@ -121,8 +121,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     </li>
 
-    <li id="onRequestEditRights">
-        <p><b>onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Edit</em> button will not be displayed.</p>
+    <li>
+        <p><b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Edit</em> button will not be displayed.</p>
         <div class="note">
             <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.
         </div>
@@ -143,8 +143,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     </li>
 
-    <li id="onRequestHistory">
-        <p><b>onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button. To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.</p>
+    <li>
+        <p><b id="onRequestHistory" class="copy-link">onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button. To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistory = function() {
@@ -187,8 +187,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     </li>
 
-    <li id="onRequestHistoryData">
-        <p><b>onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history. To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method. The document version number is sent in the <em>"data"</em> parameter.</p>
+    <li>
+        <p><b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history. To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method. The document version number is sent in the <em>"data"</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryData = function(event) {
@@ -217,8 +217,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     </li>
 
-    <li id="onRequestHistoryClose">
-        <p><b>onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Back to Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Back to Document</em> button will not be displayed.</p>
+    <li>
+        <p><b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Back to Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Back to Document</em> button will not be displayed.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryClose = function() {

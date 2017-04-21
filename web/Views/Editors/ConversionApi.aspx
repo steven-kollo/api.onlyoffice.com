@@ -36,7 +36,7 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td>async</td>
+                <td id="async" class="copy-link">async</td>
                 <td>Defines the conversion request type: asynchronous or not.<br />
                     Supported values:
                     <ul>
@@ -49,7 +49,7 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>codePage</td>
+                <td id="codePage" class="copy-link">codePage</td>
                 <td>Defines the file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
                     Main supported values:
                     <ul>
@@ -65,7 +65,7 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>delimiter</td>
+                <td id="delimiter" class="copy-link">delimiter</td>
                 <td>Dfines the delimiter characters for separating values when converting from <em>csv</em> format.<br />
                     Supported values:
                     <ul>
@@ -81,25 +81,25 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>filetype<span class="required">*</span></td>
+                <td id="filetype" class="copy-link">filetype<span class="required">*</span></td>
                 <td>Defines the type of the document file to be converted.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td>key</td>
+                <td id="key" class="copy-link">key</td>
                 <td>Defines the document identifier used to unambiguously identify the document file.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td>outputtype<span class="required">*</span></td>
+                <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
                 <td>Defines the resulting converted document type.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
-            <tr id="thumbnail" class="tablerow">
-                <td>thumbnail</td>
+            <tr class="tablerow">
+                <td id="thumbnail" class="copy-link">thumbnail</td>
                 <td>Defines the option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
                     <ul>
                         <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed. Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
@@ -132,13 +132,13 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>title</td>
+                <td id="title" class="copy-link">title</td>
                 <td>Defines the converted file name.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>url</td>
+                <td id="url" class="copy-link">url</td>
                 <td>Defines the link to the document to be converted.</td>
                 <td>string</td>
                 <td>required</td>
@@ -147,7 +147,7 @@
     </table>
     <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
 
-    <h2 id="text-matrix">Text document file formats</h2>
+    <h2 id="text-matrix" class="copy-link">Text document file formats</h2>
     <table class="table-conversion-matrix-text">
         <tbody>
             <tr>
@@ -288,7 +288,7 @@
         </tbody>
     </table>
                 
-    <h2 id="spreadsheet-matrix">Spreadsheet file formats</h2>
+    <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
     <table class="table-conversion-matrix-spreadsheet">
         <tbody>
             <tr>
@@ -352,7 +352,7 @@
         </tbody>
     </table>
 
-    <h2 id="presentation-matrix">Presentation file formats</h2>
+    <h2 id="presentation-matrix" class="copy-link">Presentation file formats</h2>
     <table class="table-conversion-matrix-presentation">
         <tbody>
             <tr>
@@ -415,7 +415,7 @@
         </tbody>
     </table>
 
-    <div id="sample-conversion" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
+    <div id="sample-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
     <pre>
 {
     "async": false,
@@ -428,7 +428,7 @@
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
-    <div id="sample-thumbnail" class="header-gray">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format</div>
+    <div id="sample-thumbnail" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format</div>
     <pre>
 {
     "filetype": "docx",
