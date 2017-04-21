@@ -384,6 +384,9 @@ h5 {
 h2.copy-link[id]:hover:before {
     margin-top: 15px;
 }
+li b.copy-link[id]:hover:before {
+    margin-left: -40px;
+}
 
 .list-header {
     margin: 32px 0 16px;
