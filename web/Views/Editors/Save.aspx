@@ -139,7 +139,7 @@ new DocsAPI.DocEditor("placeholder", {
                 <tbody>
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.enable</td>
-                        <td>Specifies enabling the repeating force saving.</td>
+                        <td>Specifies enabling the repeating force saving. The default value is <b>false</b>.</td>
                         <td>boolean</td>
                         <td>false</td>
                     </tr>

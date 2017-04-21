@@ -45,19 +45,19 @@
             <td>services.CoAuthoring.token.enable.browser</td>
             <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/browser") %>">config</a> for the <b>document editor</b> opening and calling the methods.</td>
             <td>boolean</td>
-            <td>true</td>
+            <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.inbox</td>
             <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b> and <b>document conversion service</b>.</td>
             <td>boolean</td>
-            <td>true</td>
+            <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.outbox</td>
             <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/request") %>">requests</a> by <b>document editing service</b> to "callbackUrl" address.</td>
             <td>boolean</td>
-            <td>true</td>
+            <td>false</td>
         </tr>
     </tbody>
 </table>
