@@ -36,7 +36,7 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td>async</td>
+                <td id="async" class="copy-link">async</td>
                 <td>Defines the conversion request type: asynchronous or not.<br />
                     Supported values:
                     <ul>
@@ -49,7 +49,7 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>codePage</td>
+                <td id="codePage" class="copy-link">codePage</td>
                 <td>Defines the file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
                     Main supported values:
                     <ul>
@@ -65,7 +65,7 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>delimiter</td>
+                <td id="delimiter" class="copy-link">delimiter</td>
                 <td>Dfines the delimiter characters for separating values when converting from <em>csv</em> format.<br />
                     Supported values:
                     <ul>
@@ -81,25 +81,25 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>filetype<span class="required">*</span></td>
+                <td id="filetype" class="copy-link">filetype<span class="required">*</span></td>
                 <td>Defines the type of the document file to be converted.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td>key</td>
+                <td id="key" class="copy-link">key</td>
                 <td>Defines the document identifier used to unambiguously identify the document file.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td>outputtype<span class="required">*</span></td>
+                <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
                 <td>Defines the resulting converted document type.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
-            <tr id="thumbnail" class="tablerow">
-                <td>thumbnail</td>
+            <tr class="tablerow">
+                <td id="thumbnail" class="copy-link">thumbnail</td>
                 <td>Defines the option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
                     <ul>
                         <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed. Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
@@ -132,13 +132,13 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>title</td>
+                <td id="title" class="copy-link">title</td>
                 <td>Defines the converted file name.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>url</td>
+                <td id="url" class="copy-link">url</td>
                 <td>Defines the link to the document to be converted.</td>
                 <td>string</td>
                 <td>required</td>

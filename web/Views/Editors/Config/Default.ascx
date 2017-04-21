@@ -25,7 +25,7 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td id="documentType">documentType</td>
+            <td id="documentType" class="copy-link">documentType</td>
             <td>Defines the document type to be opened:
                 <em>open a text document (.docx, .doc, .odt, .txt, .rtf, .html, .htm, .mht, .epub, .pdf, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
                 <em>open a spreadsheet (.xlsx, .xls, .ods, .csv) for viewing or editing</em> - <b>spreadsheet</b>,
@@ -35,19 +35,19 @@
             <td>"spreadsheet"</td>
         </tr>
         <tr class="tablerow">
-            <td id="height">height</td>
+            <td id="height" class="copy-link">height</td>
             <td>Defines the document height (<b>100%</b> by default) in the browser window.</td>
             <td>string</td>
             <td>"100%"</td>
         </tr>
         <tr class="tablerow">
-            <td id="token">token</td>
+            <td id="token" class="copy-link">token</td>
             <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a>.</td>
             <td>string</td>
             <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M"</td>
         </tr>
         <tr class="tablerow">
-            <td id="type">type</td>
+            <td id="type" class="copy-link">type</td>
             <td>Defines the platform type used to access the document. Can be:
                 <em>optimized to access the document from a desktop or laptop computer</em> - <b>desktop</b>,
                 <em>optimized to access the document from a tablet or a smartphone</em> - <b>mobile</b>,
@@ -58,7 +58,7 @@
             <td>"desktop"</td>
         </tr>
         <tr class="tablerow">
-            <td id="width">width</td>
+            <td id="width" class="copy-link">width</td>
             <td>Defines the document width (<b>100%</b> by default) in the browser window.</td>
             <td>string</td>
             <td>"100%"</td>

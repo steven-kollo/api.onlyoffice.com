@@ -36,7 +36,7 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td>c</td>
+                <td id="c" class="copy-link">c</td>
                 <td>Defined the type of command.<br />
                     Supported values:
                     <ul>
@@ -50,19 +50,19 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td>key</td>
+                <td id="key" class="copy-link">key</td>
                 <td>Defines the document identifier used to unambiguously identify the document file.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
-            <tr id="userdata" class="tablerow">
-                <td>userdata</td>
+            <tr class="tablerow">
+                <td id="userdata" class="copy-link">userdata</td>
                 <td>Defines some custom identifier which will help distinguish the specific request in case there were more than one.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td>users</td>
+                <td id="users" class="copy-link">users</td>
                 <td>Defines the list of the user identifiers (used for the <em>c=drop</em> parameter value).</td>
                 <td>array of strings</td>
                 <td>optional</td>

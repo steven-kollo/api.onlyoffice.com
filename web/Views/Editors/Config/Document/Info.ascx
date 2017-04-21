@@ -26,25 +26,25 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td id="author">author</td>
+            <td id="author" class="copy-link">author</td>
             <td>Defines the name of the document author/creator.</td>
             <td>string</td>
             <td>"John Smith"</td>
         </tr>
         <tr class="tablerow">
-            <td id="created">created</td>
+            <td id="created" class="copy-link">created</td>
             <td>Defines the document creation date.</td>
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
         <tr class="tablerow">
-            <td id="folder">folder</td>
+            <td id="folder" class="copy-link">folder</td>
             <td>Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).</td>
             <td>string</td>
             <td>"Example Files"</td>
         </tr>
         <tr class="tablerow">
-            <td id="sharingSettings">sharingSettings</td>
+            <td id="sharingSettings" class="copy-link">sharingSettings</td>
             <td>Defines the settings which will allow to share the document with other users:
                 <ul>
                     <li>
