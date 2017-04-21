@@ -11,12 +11,12 @@
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
-<h2 id="Windows">Running the example on Windows OS</h2>
-<h2 id="win-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
+<h2 id="Windows" class="copy-link">Running the example on Windows OS</h2>
+<h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/windows/document/index.aspx">install Document Server for Windows</a>.</p>
 
-<h2 id="win-2"><span class="style_step">Step 2. </span>Download the Node.js code for the editors integration</h2>
+<h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Node.js code for the editors integration<span class="copy-link" title="Click to get link"></span></h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config/default.js</em> file:</p>
 <pre class="commandline">
@@ -26,10 +26,10 @@
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\views\editor.ejs</em> file.</p>
 
-<h2 id="win-3"><span class="style_step">Step 3. </span>System requirements</h2>
+<h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>System requirements</h2>
 <p>Download and install the <b>node.js</b> enviroment which is going to be used to run the Node.js project. Please follow the link at the oficial website: <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>, choosing the correct version for your Windows OS (32-bit or 64-bit).</p>
 
-<h2 id="win-4"><span class="style_step">Step 4. </span>Running the Node.js code</h2>
+<h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Running the Node.js code</h2>
 <p>We will run the code in Node.js runtime environment and will interact with it using the command line interface (cmd).</p>
 
 <ol>
@@ -48,14 +48,14 @@
     </li>
 </ol>
 
-<h2 id="win-5"><span class="style_step">Step 5. </span>Checking accessibility</h2>
+<h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Checking accessibility</h2>
 <p>
     In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
     And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
 </p>
 
-<h2 id="Linux">Running the example on Linux OS</h2>
-<h2 id="linux-1"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
+<h2 id="Linux" class="copy-link">Running the example on Linux OS</h2>
+<h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">install Document Server for Linux</a>.</p>
 
@@ -93,7 +93,7 @@
     </li>
 </ol>
 
-<h2 id="linux-3"><span class="style_step">Step 3. </span>Checking accessibility</h2>
+<h2 id="linux-3" class="copy-link"><span class="style_step">Step 3. </span>Checking accessibility</h2>
 <p>
     In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
     And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.

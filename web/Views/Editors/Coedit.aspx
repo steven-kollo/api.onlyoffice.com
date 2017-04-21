@@ -24,7 +24,7 @@
     </ol>
     <img alt="Co-editing" src="<%= Url.Content("~/content/img/editor/coedit-view.png") %>" />
 
-    <h2 id="apply">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
     <ol>
         <li>Create an empty <em>html</em> file.</li>
         <li>Add the <em>div</em> element as shown below.

@@ -145,7 +145,7 @@
         </tbody>
     </table>
 
-    <h2 id="pluginVariations">Plugin variations</h2>
+    <h2 id="pluginVariations" class="copy-link">Plugin variations</h2>
 
     <p>Why would one plugin might need some variations? The answer is simple enough: the plugin can not only make some actions but also contain some settings, or 'About' window, or something like that. For example, translation plugin: the plugin itself does not need a visual window for translation as it can be done just pressing a single button, but its settings (the translation direction) and 'About' window must be visual. So we will need to have at least two plugin variations (translation itself and settings), or three, in case we want to add an 'About' window with the information about the plugin and its authors or the software used for the plugin creation.</p>
 

@@ -24,7 +24,7 @@
         <li>The <b>document storage service</b> downloads the document file with all the saved changes from the <b>document editing service</b> and stores it.</li>
     </ol>
 
-    <h2 id="apply">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
     <ol>
         <li>Create a <a href="<%= Url.Action("callback") %>">callback handler</a> to save the document from <b>document editing service</b>.</li>
         <li>Create an <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
@@ -50,7 +50,7 @@ new DocsAPI.DocEditor("placeholder", {
     </ol>
 
 
-    <h2 id="tenseconds">Save delay</h2>
+    <h2 id="tenseconds" class="copy-link">Save delay</h2>
     <p>
         The <b>document editing service</b> informs the <b>document storage service</b> about the end of the document editing after 10 seconds of editing closure.
         The time is not precise and is calculated using the file conversion time and conversion start delay time.
@@ -102,7 +102,7 @@ new DocsAPI.DocEditor("placeholder", {
 </pre>
 
 
-    <h2 id="forcesave">Force saving</h2>
+    <h2 id="forcesave" class="copy-link">Force saving</h2>
 
     <p>
         <b>Document editing service</b> allows to get the current document state before the editing is finished.

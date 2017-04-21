@@ -147,7 +147,7 @@
     </table>
     <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
 
-    <h2 id="text-matrix">Text document file formats</h2>
+    <h2 id="text-matrix" class="copy-link">Text document file formats</h2>
     <table class="table-conversion-matrix-text">
         <tbody>
             <tr>
@@ -288,7 +288,7 @@
         </tbody>
     </table>
                 
-    <h2 id="spreadsheet-matrix">Spreadsheet file formats</h2>
+    <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
     <table class="table-conversion-matrix-spreadsheet">
         <tbody>
             <tr>
@@ -352,7 +352,7 @@
         </tbody>
     </table>
 
-    <h2 id="presentation-matrix">Presentation file formats</h2>
+    <h2 id="presentation-matrix" class="copy-link">Presentation file formats</h2>
     <table class="table-conversion-matrix-presentation">
         <tbody>
             <tr>

@@ -56,7 +56,7 @@
 
     <p>The result should look like the demo preview below.</p>
 
-    <h2 id="DemoPreview">Demo Preview</h2>
+    <h2 id="DemoPreview" class="copy-link">Demo Preview</h2>
     <table class="demo-tab-panel">
         <tr>
             <td>
