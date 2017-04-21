@@ -70,7 +70,7 @@
         </tbody>
     </table>
 
-    <div id="drop" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to disconnect the user with the <em>6d5a81d0</em> identifier from the document editing service</div>
+    <div id="drop" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to disconnect the user with the <em>6d5a81d0</em> identifier from the document editing service</div>
     <pre>
 {
     "c": "drop",
@@ -79,7 +79,7 @@
 }
 </pre>
 
-    <div id="forcesave" class="header-gray">Sample of JSON object sent to <b>document command service</b> used for force saving the document with the <em>6d5a81d0</em> identifier being edited without closing it</div>
+    <div id="forcesave" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used for force saving the document with the <em>6d5a81d0</em> identifier being edited without closing it</div>
     <pre>
 {
     "c": "forcesave",
@@ -88,7 +88,7 @@
 }
 </pre>
 
-    <div id="info" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
+    <div id="info" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
     <pre>
 {
     "c": "info",
@@ -105,7 +105,7 @@
 }
 </pre>
 
-    <div id="version" class="header-gray">Sample of JSON object sent to <b>document command service</b> used to receive the current version number of Document Server</div>
+    <div id="version" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to receive the current version number of Document Server</div>
     <pre>
 {
     "c": "version"

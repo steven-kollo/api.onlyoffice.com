@@ -122,7 +122,7 @@
     <p><em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.</p>
     <p><em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed.</p>
 
-    <div id="status-1" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>
+    <div id="status-1" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>
     <pre>
 {
     "actions": [{"type": 1, "userid": "78e1e841"}],
@@ -132,7 +132,7 @@
 }
 </pre>
 
-    <div id="status-2" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing</div>
+    <div id="status-2" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service when the user changed the document and closed it for editing</div>
     <pre>
 {
     "actions": [{"type": 0, "userid": "78e1e841"}],
@@ -148,7 +148,7 @@
 }
 </pre>
 
-    <div id="status-4" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service when the last user closed the document for editing without changes</div>
+    <div id="status-4" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service when the last user closed the document for editing without changes</div>
     <pre>
 {
     "key": "Khirz6zTPdfd7",
@@ -156,7 +156,7 @@
 }
 </pre>
 
-    <div id="status-6" class="header-gray">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command") %>">forcesave</a> command had been received</div>
+    <div id="status-6" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command") %>">forcesave</a> command had been received</div>
     <pre>
 {
     "changesurl": "http://documentserver/url-to-changes.zip",
@@ -173,9 +173,9 @@
 }
 </pre>
 
-    <p id="error-0">The <b>document storage service</b> must return the following response, otherwise the <b>document editor</b> will display an error message:</p>
+    <div id="error-0" class="header-gray copy-link">Response from the document storage service</div>
 
-    <div class="header-gray">Response from the document storage service</div>
+    <p>The <b>document storage service</b> must return the following response, otherwise the <b>document editor</b> will display an error message:</p>
     <pre>
 {
     "error": 0
@@ -184,7 +184,7 @@
 
     <p id="implement">The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators who use ONLYOFFICE Document Server on their own server.</p>
 
-    <div id="csharp" class="header-gray">.Net (C#) document save example</div>
+    <div id="csharp" class="header-gray copy-link">.Net (C#) document save example</div>
     <pre>
 public class WebEditor : IHttpHandler
 {

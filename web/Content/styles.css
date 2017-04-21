@@ -387,6 +387,9 @@ h2.copy-link[id]:hover:before {
 li b.copy-link[id]:hover:before {
     margin-left: -40px;
 }
+.header-gray.copy-link[id]:hover:before {
+    margin-left: -35px;
+}
 
 .list-header {
     margin: 32px 0 16px;
