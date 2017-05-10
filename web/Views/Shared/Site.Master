@@ -33,12 +33,8 @@
 </head>
 <body>
     <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
-        <tr>
-            <td class="layout-table-header" colspan="2">
-                <div class="layout-header">
-                    <% Html.RenderPartial("TopNavigation");%>
-                </div>
-            </td>
+        <tr class="layout-table-header">
+            <% Html.RenderPartial("TopNavigation");%>
         </tr>
         <tr>
             <% if (!Html.IfController("Home"))
@@ -51,7 +47,7 @@
             </td>
             <% } %>
 
-            <td class="layout-table-content">
+            <td class="layout-table-content" <%= Html.IfController("Home") ? "colspan=\"2\"" : ""  %> >
                 <div class="layout-content">
                     <%--<% Html.RenderPartial("BreadCrumbs");%>--%>
                     <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
