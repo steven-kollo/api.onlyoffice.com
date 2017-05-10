@@ -39,7 +39,7 @@
         It will also create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to ownCloud/Nextcloud.
     </p>
-    <p>Tested with ownCloud 9.0.3 and 9.1.3, Nextcloud 11.0.2.</p>
+    <p>Tested with ownCloud 9.0, 9.1 and 10.0, Nextcloud 11.0.</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
@@ -66,14 +66,36 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span
     </ol>
 
 
-    <h2>Configuring ownCloud/Nextcloud ONLYOFFICE integration app</h2>
+    <h2 id="settings">Configuring ownCloud/Nextcloud ONLYOFFICE integration app</h2>
     <p>
-        In ownCloud/Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section and enter the address:
+        In ownCloud/Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
+        Enter the following address to connect ONLYOFFICE Document Server:
     </p>
     <span class="commandline">https://&lt;documentserver&gt;</span>
+
     <p>
         Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        The address must be accessible for the user browser and from the ownCloud/Nextcloud server.
+        The ownCloud/Nextcloud server address must also be accessible from ONLYOFFICE Document Server for correct work.
     </p>
+    <img alt="Local" src="<%= Url.Content("~/content/img/editor/owncloud-local.jpg") %>" />
+
+    <p id="internalUrl">
+        Sometimes your network configuration might not allow the requests between installed ownCloud/Nextcloud and ONLYOFFICE Document Server using the public addresses.
+        The <em>Advanced server settings</em> allows to set the ONLYOFFICE Document Server address for internal requests from ownCloud/Nextcloud server and the returning ownCloud/Nextcloud address for the internal requests from ONLYOFFICE Document Server.
+        You need to enter them in the appropriate fields.
+    </p>
+    <img alt="Public" src="<%= Url.Content("~/content/img/editor/owncloud-public.jpg") %>" />
+
+    <p>
+        To restrict the access to ONLYOFFICE Document Server and for security reasons and data integrity the encrypted signature is used.
+        Specify the <em>Secret key</em> in the ownCloud/Nextcloud administrative configuration.
+        In the ONLYOFFICE Document Server <a href="<%= Url.Action("signature") %>">config file</a> specify the same secret key and enable the validation.
+    </p>
+
+    <p>Enable or disable the <em>Open file in the same tab</em> setting.</p>
+
+    <p>The <b>Open in ONLYOFFICE</b> action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.</p>
 
 
     <h2>How it works</h2>
@@ -103,5 +125,3 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span
     <p>Download the ownCloud/Nextcloud ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">here</a>.</p>
 
 </asp:Content>
-
-<asp:Content runat="server" ContentPlaceHolderID="ScriptPlaceholder"></asp:Content>

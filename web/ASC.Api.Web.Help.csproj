@@ -273,6 +273,8 @@
     <Content Include="Content\img\Editor\e-key.png" />
     <Content Include="Content\img\Editor\embedded.png" />
     <Content Include="Content\img\Editor\info.png" />
+    <Content Include="Content\img\Editor\owncloud-local.jpg" />
+    <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\permissions.png" />
     <Content Include="Content\img\Editor\plugins.png" />
     <Content Include="Content\img\Editor\rebranding\logo-big.png" />
