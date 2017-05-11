@@ -39,7 +39,7 @@
         It will also create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to ownCloud/Nextcloud.
     </p>
-    <p>Tested with ownCloud 9.0, 9.1 and 10.0, Nextcloud 11.0.</p>
+    <p>Tested with ownCloud 9 and 10, Nextcloud 11 and 12.</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
