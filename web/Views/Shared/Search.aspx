@@ -15,7 +15,7 @@ Search
 <% }
    else
    { %>
-Search - <%= ViewData["query"] %>
+Search - <%= HttpUtility.HtmlEncode(ViewData["query"]) %>
 <% } %>
 </asp:Content>
 
