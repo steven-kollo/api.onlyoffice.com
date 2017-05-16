@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="44" class="copy-link">Version 4.4</h2>
+    <ul>
+        <li>Changed the <a href="<%= Url.Action("methods") %>#showMessage">showMessage</a> method.</li>
+    </ul>
+
     <h2 id="43" class="copy-link">Version 4.3</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("methods") %>#destroyEditor">destroyEditor</a> method.</li>
