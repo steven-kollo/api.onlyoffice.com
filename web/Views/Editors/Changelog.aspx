@@ -31,6 +31,7 @@
         <li>Replaced the <em>firstname</em> and <em>lastname</em> fields with the <em>name</em> field in the <a href="<%= Url.Action("config/editor") %>#user">user</a> object.</li>
         <li>Added the possibility to specify the values for the <a href="<%= Url.Action("config/editor/customization") %>#chat">chat</a> and <a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a> in the Open Source version.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compactToolbar">compactToolbar</a> and <a href="<%= Url.Action("config/editor/customization") %>#zoom">zoom</a> fields.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#autosave">autosave</a> field.</li>
         <li>Replaced the <a href="<%= Url.Action("callback") %>#changeshistory">changeshistory</a> field with the <a href="<%= Url.Action("callback") %>#history">history</a> field in the callback handler request when saving the file.</li>
         <li>Changed the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method parameter.</li>
         <li>Added the possibility to convert files to <a href="<%= Url.Action("conversionapi") %>#sample-thumbnail">thumbnail</a> in the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</li>
