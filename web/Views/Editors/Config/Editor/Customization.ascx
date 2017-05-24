@@ -26,6 +26,12 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td id="autosave" class="copy-link">autosave</td>
+            <td>Defines if the <b>Autosave</b> menu option is enabled or disabled. If set to <b>false</b>, only <em>Strict</em> co-editing mode can be selected, as <em>Fast</em> does not work without autosave. Please note that in case you change this option in menu it will be saved to your browser localStorage. The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
             <td id="chat" class="copy-link">chat</td>
             <td>Defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled. The default value is <b>true</b>.</td>
             <td>boolean</td>

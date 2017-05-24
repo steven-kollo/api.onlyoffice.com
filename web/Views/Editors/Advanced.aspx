@@ -86,6 +86,7 @@ config = {
         "callbackUrl": "http://example.com/url-to-callback.ashx",
         "createUrl": "http://example.com/url-to-create-document/",
         "customization": {
+            "autosave": true,
             "chat": true,
             "commentAuthorOnly": false,
             "comments": true,

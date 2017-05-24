@@ -56,11 +56,20 @@
             </tr>
             <tr>
                 <th>Co-Edit</th>
-                <td><a title="Open DOCX file for co-editing" class="button button-upper button-coediting" data-type="docx">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for co-editing" class="button button-upper button-coediting" data-type="docxCoediting">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCoeditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open XLSX file for co-editing" class="button button-upper button-coediting" data-type="xlsx">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open XLSX file for co-editing" class="button button-upper button-coediting" data-type="xlsxCoediting">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxCoeditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open PPTX file for co-editing" class="button button-upper button-coediting" data-type="pptx">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open PPTX file for co-editing" class="button button-upper button-coediting" data-type="pptxCoediting">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxCoeditorCode">&lt;/&gt;</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Strict Co-Edit</th>
+                <td><a title="Open DOCX file for co-editing" class="button button-upper button-coediting" data-type="docxStrictCoediting">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxStrictCoeditorCode">&lt;/&gt;</a>
+                </td>
+                <td><a title="Open XLSX file for co-editing" class="button button-upper button-coediting" data-type="xlsxStrictCoediting">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxStrictCoeditorCode">&lt;/&gt;</a>
+                </td>
+                <td><a title="Open PPTX file for co-editing" class="button button-upper button-coediting" data-type="pptxStrictCoediting">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxStrictCoeditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
             <tr>
@@ -832,6 +841,246 @@
 </pre>
             </div>
 
+            <div id="docxStrictCoeditorCode">
+                <div class="popap-header">Open docx for co-editing in strict mode</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "B143195F47A0",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx"
+                },
+                "documentType": "text",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "78e1e841",
+                        "name": "John Smith"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "B143195F47A0",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx"
+                },
+                "documentType": "text",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "F89d8069ba2b",
+                        "name": "Kate Cage"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="xlsxStrictCoeditorCode">
+                <div class="popap-header">Open xlsx for co-editing in strict mode</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "6FB60FE9E548",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                },
+                "documentType": "spreadsheet",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "78e1e841",
+                        "name": "John Smith"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "6FB60FE9E548",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                },
+                "documentType": "spreadsheet",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "F89d8069ba2b",
+                        "name": "Kate Cage"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pptxStrictCoeditorCode">
+                <div class="popap-header">Open pptx for co-editing in strict mode</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "pptx",
+                    "key": "B6C57F1FC447",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://example.com/url-to-example-presentation.pptx"
+                },
+                "documentType": "presentation",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "78e1e841",
+                        "name": "John Smith"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "pptx",
+                    "key": "B6C57F1FC447",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://example.com/url-to-example-presentation.pptx"
+                },
+                "documentType": "presentation",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "F89d8069ba2b",
+                        "name": "Kate Cage"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
             <div id="rebrandingDocxEditorCode">
                 <div class="popap-header">Open docx with rebranding</div>
                 <pre>
@@ -1073,9 +1322,9 @@
         $(".button-coediting").click(function () {
             var documentType = $(this).attr("data-type");
             <% var key = DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()); %>
-            var addr1 = "<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&name=John%20Smith";
+            var addr1 = "<%= Url.Action("editor") %>?method=" + documentType + "&key=" + documentType + "<%= key %>&name=John%20Smith";
             var documentCoediting1 = window.open(addr1, "_blank");
-            var addr2 = "<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&name=Kate%20Cage";
+            var addr2 = "<%= Url.Action("editor") %>?method=" + documentType + "&key=" + documentType + "<%= key %>&name=Kate%20Cage";
             var documentCoediting2 = window.open(addr2, "_blank");
             if (!documentCoediting2) {
                 location.href = addr2;
