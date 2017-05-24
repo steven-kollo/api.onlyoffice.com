@@ -67,6 +67,14 @@
                         <td>Save the file after all the changes are made. The type of the file which will be saved needs to be set.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("integrationapi/cdocbuilder/setproperty") %>">SetProperty</a></td>
+                        <td>The argument which can be trasferred to the program outside the <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand") %>">CDocBuilder.ExecuteCommand</a> method.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("integrationapi/cdocbuilder/setpropertyw") %>">SetPropertyW</a></td>
+                        <td>The argument which can be trasferred to the program outside the <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand") %>">CDocBuilder.ExecuteCommand</a> method.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("integrationapi/cdocbuilder/settmpfolder") %>">SetTmpFolder</a></td>
                         <td>The path to the folder where the program will temporarily save files needed for the program correct work. After the successful document file creation all the files will be deleted from the folder. If no temporary folder is set, the system one will be used.</td>
                     </tr>
@@ -230,6 +238,10 @@
                         <td>Get this class type.</td>
                     </tr>
                     <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getcommentsreport") %>">GetCommentsReport</a></td>
+                        <td>Get a report about all the comments added to the document.</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td><a href="<%= Url.Action("textdocumentapi/apidocument/getdefaultparapr") %>">GetDefaultParaPr</a></td>
                         <td>Get a set of default paragraph properties in the current document.</td>
                     </tr>
@@ -252,6 +264,10 @@
                     <tr class="tablerow">
                         <td><a href="<%= Url.Action("textdocumentapi/apidocument/getfinalsection") %>">GetFinalSection</a></td>
                         <td>Get the document final section.</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action("textdocumentapi/apidocument/getreviewreport") %>">GetReviewReport</a></td>
+                        <td>Get a report about every change which was made to the document in the review mode.</td>
                     </tr>
                     <tr class="tablerow">
                         <td><a href="<%= Url.Action("textdocumentapi/apidocument/getstyle") %>">GetStyle</a></td>

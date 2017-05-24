@@ -27,10 +27,18 @@
                     </tr>
                     <tr class="tablerow">
                         <td><em>sParams</em></td>
-                        <td>const&nbsp;wchar_t*
-                        </td>
+                        <td>const&nbsp;wchar_t*</td>
                         <td>&lt;optional></td>
-                        <td>The parameters needed for the correct file opening (most commonly the encoding is used for the <em>txt</em> file type or the delimiter for the <em>csv</em> files, for other file types this is just an empty string).</td>
+                        <td>The parameters needed for the correct file opening (most commonly the encoding is used for the <em>txt</em> and <em>csv</em> file types or the delimiter for the <em>csv</em> files, for other file types this is just an empty string). The parameters are added in the form of XML tags, where <b>m_nCsvTxtEncoding</b> is used for the text encoding and <b>m_nCsvDelimiter</b> is used for the csv delimiter. You can find all the supported values for the encoding <a target="_blank" href="https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js">in this file</a>. The supported values for the csv delimiters include:
+                            <ul>
+                                <li><b>0</b> - no delimiter</li>
+                                <li><b>1</b> - tab</li>
+                                <li><b>2</b> - semicolon</li>
+                                <li><b>3</b> - colon</li>
+                                <li><b>4</b> - comma</li>
+                                <li><b>5</b> - space</li>
+                            </ul>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -40,10 +48,10 @@
 <pre>
 NSDoctRenderer::CDocBuilder::Initialize();
 NSDoctRenderer::CDocBuilder oBuilder;
-oBuilder.OpenFile(L"D:/DocBuilder/text-document.docx", "");
+oBuilder.OpenFile(L"D:/DocBuilder/text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;");
 NSDoctRenderer::CDocBuilder::Dispose();
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>
-builder.OpenFile("D:/DocBuilder/text-document.docx", "");
+builder.OpenFile("D:/DocBuilder/text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;");
 </pre>

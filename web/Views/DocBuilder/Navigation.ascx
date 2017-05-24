@@ -68,9 +68,18 @@
                         <a href="<%= Url.Action("integrationapi/cdocbuilder/savefile") %>">SaveFile</a>
                     </li>
                     <li>
+                        <a href="<%= Url.Action("integrationapi/cdocbuilder/setproperty") %>">SetProperty</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("integrationapi/cdocbuilder/setpropertyw") %>">SetPropertyW</a>
+                    </li>
+                    <li>
                         <a href="<%= Url.Action("integrationapi/cdocbuilder/settmpfolder") %>">SetTmpFolder</a>
                     </li>
                 </ul>
+            </li>
+            <li>
+                <a href="<%= Url.Action("integrationapi/globalvariable") %>">Exchanging data among files</a>
             </li>
         </ul>
     </li>
@@ -178,6 +187,9 @@
                         <a href="<%= Url.Action("textdocumentapi/apidocument/getclasstype") %>">GetClassType</a>
                     </li>
                     <li>
+                        <a href="<%= Url.Action("textdocumentapi/apidocument/getcommentsreport") %>">GetCommentsReport</a>
+                    </li>
+                    <li>
                         <a href="<%= Url.Action("textdocumentapi/apidocument/getdefaultparapr") %>">GetDefaultParaPr</a>
                     </li>
                     <li>
@@ -194,6 +206,9 @@
                     </li>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apidocument/getfinalsection") %>">GetFinalSection</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("textdocumentapi/apidocument/getreviewreport") %>">GetReviewReport</a>
                     </li>
                     <li>
                         <a href="<%= Url.Action("textdocumentapi/apidocument/getstyle") %>">GetStyle</a>
