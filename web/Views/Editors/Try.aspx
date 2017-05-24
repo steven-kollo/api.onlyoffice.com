@@ -1073,8 +1073,13 @@
         $(".button-coediting").click(function () {
             var documentType = $(this).attr("data-type");
             <% var key = DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()); %>
-            var documentCoediting1 = window.open("<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&name=John%20Smith", "_blank");
-            var documentCoediting2 = window.open("<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&name=Kate%20Cage", "_blank");
+            var addr1 = "<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&name=John%20Smith";
+            var documentCoediting1 = window.open(addr1, "_blank");
+            var addr2 = "<%= Url.Action("editor") %>?method=" + documentType + "Coediting&key=" + documentType + "<%= key %>&name=Kate%20Cage";
+            var documentCoediting2 = window.open(addr2, "_blank");
+            if (!documentCoediting2) {
+                location.href = addr2;
+            }
         });
     </script>
 </asp:Content>
