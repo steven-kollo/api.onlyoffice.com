@@ -291,9 +291,9 @@ docEditor.setHistoryData({
         </li>
 
         <li>
-            <p><b id="showMessage" class="copy-link">showMessage</b> - Display dialog with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onReady">onReady</a> events.</p>
+            <p><b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onReady">onReady</a> events.</p>
             <pre>
-docEditor.showMessage(title, message, type);
+docEditor.showMessage(title, message);
 </pre>
             <table class="table">
                 <colgroup>
@@ -322,12 +322,6 @@ docEditor.showMessage(title, message, type);
                         <td>Defines the message text.</td>
                         <td>string</td>
                         <td>required</td>
-                    </tr>
-                    <tr class="tablerow">
-                        <td>type</td>
-                        <td>Defines the dialog type. Can be: <b>info</b>, <b>warning</b>, <b>error</b>.</td>
-                        <td>string</td>
-                        <td>optional</td>
                     </tr>
                 </tbody>
             </table>

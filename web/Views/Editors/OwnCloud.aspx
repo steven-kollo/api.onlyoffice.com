@@ -58,9 +58,12 @@
     <h2>Installing ownCloud/Nextcloud ONLYOFFICE integration app</h2>
     <p>To start using ONLYOFFICE Document Server with ownCloud/Nextcloud, the following steps must be performed:</p>
     <ol>
-        <li>Place ownCloud/Nextcloud ONLYOFFICE integration app to your ownCloud/Nextcloud server into the <em>/apps</em> (or some other) directory, <a href="https://doc.owncloud.org/server/9.0/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications:
+        <li>Place ownCloud/Nextcloud ONLYOFFICE integration app to your ownCloud/Nextcloud server into the <em>apps/</em> (or some other) directory, <a href="https://doc.owncloud.org/server/9.0/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications:
             <span class="commandline">cd apps/
 git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span>
+        </li>
+        <li>Change the owner to update the application right from ownCloud/Nextcloud web interface:
+            <span class="commandline">chown -R www-data:www-data onlyoffice</span>
         </li>
         <li>In ownCloud/Nextcloud open the <span class="fakelink">~/index.php/settings/apps?category=disabled</span> page with <em>Not enabled</em> apps by administrator and click <em>Enable</em> for the <b>ONLYOFFICE</b> application.</li>
     </ol>
@@ -71,7 +74,7 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span
         In ownCloud/Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
         Enter the following address to connect ONLYOFFICE Document Server:
     </p>
-    <span class="commandline">https://&lt;documentserver&gt;</span>
+    <span class="commandline">https://&lt;documentserver&gt;/</span>
 
     <p>
         Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.

@@ -319,6 +319,78 @@
             });
         <% break; %>
 
+        <% case "docxStrictCoediting": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "apiwh<%= Request["key"] %>",
+                    "title": "Example Document Title.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
+                },
+                "documentType": "text",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "<%= Guid.NewGuid().ToString() %>",
+                        "name": "<%= Request["name"] %>"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+        <% break; %>
+
+        <% case "xlsxStrictCoediting": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "apiwh<%= Request["key"] %>",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
+                },
+                "documentType": "spreadsheet",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "<%= Guid.NewGuid().ToString() %>",
+                        "name": "<%= Request["name"] %>"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+        <% break; %>
+
+        <% case "pptxStrictCoediting": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "pptx",
+                    "key": "apiwh<%= Request["key"] %>",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
+                },
+                "documentType": "presentation",
+                "editorConfig": {
+                    "customization": {
+                        "autosave": false
+                    },
+                    "user": {
+                        "id": "<%= Guid.NewGuid().ToString() %>",
+                        "name": "<%= Request["name"] %>"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+        <% break; %>
+
         <% case "rebrandingDocxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
