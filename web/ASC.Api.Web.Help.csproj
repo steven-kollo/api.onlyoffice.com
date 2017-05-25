@@ -456,8 +456,11 @@
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\runtexta.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\runtextw.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\savefile.ascx" />
+    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\setproperty.ascx" />
+    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\setpropertyw.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\settmpfolder.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\default.ascx" />
+    <Content Include="Views\DocBuilder\Integrationapi\globalvariable.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
     <Content Include="Views\DocBuilder\presentationapi.aspx" />
@@ -790,12 +793,14 @@
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\createsection.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\createstyle.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getclasstype.ascx" />
+    <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getcommentsreport.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getdefaultparapr.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getdefaultstyle.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getdefaulttextpr.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getelement.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getelementscount.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getfinalsection.ascx" />
+    <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getreviewreport.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\getstyle.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\push.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\Apidocument\removeallelements.ascx" />
