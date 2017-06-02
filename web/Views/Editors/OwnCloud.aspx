@@ -30,8 +30,8 @@
 
     <p>
         This <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">app</a> enables users to edit office documents from <a href="https://owncloud.com" target="_blank">ownCloud</a>/<a href="https://nextcloud.com" target="_blank">Nextcloud</a> using ONLYOFFICE Document Server.
-        Currently the following document formats can be edited with this app: DOCX, XLSX, PPTX, TXT.
-        The above mentioned formats are also available for viewing together with PDF and CSV.
+        Currently the following document formats can be edited with this app: DOCX, XLSX, PPTX, TXT, CSV.
+        The above mentioned formats are also available for viewing together with PDF.
         The edited files of the corresponding type can be converted into the Office Open XML formats: ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM.
     </p>
     <p>
@@ -44,7 +44,7 @@
 
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
-        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from ownCloud/Nextcloud and any end clients (version 4.2 and later are supported for use with the app).
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from ownCloud/Nextcloud and any end clients (version 4.2.7 and later are supported for use with the app).
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
         ONLYOFFICE Document Server must also be able to POST to ownCloud/Nextcloud directly.
     </p>
