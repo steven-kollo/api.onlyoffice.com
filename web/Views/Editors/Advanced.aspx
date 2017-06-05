@@ -73,6 +73,7 @@ config = {
         },
         "key": "Khirz6zTPdfd7",
         "permissions": {
+            "comment": true,
             "download": true,
             "edit": true,
             "print": true,

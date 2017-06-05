@@ -80,6 +80,15 @@
                 <td></td>
             </tr>
             <tr>
+                <th>Comment</th>
+                <td><a title="Open DOCX file for commenting" href="<%= Url.Action("editor") %>?method=docxComment" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentCode">&lt;/&gt;</a>
+                </td>
+                <td><a title="Open XLSX file for commenting" href="<%= Url.Action("editor") %>?method=xlsxComment" class="button button-upper" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxCommentCode">&lt;/&gt;</a>
+                </td>
+                <td><a title="Open PPTX file for commenting" href="<%= Url.Action("editor") %>?method=pptxComment" class="button button-upper" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxCommentCode">&lt;/&gt;</a>
+                </td>
+            </tr>
+            <tr>
                 <th>View</th>
                 <td><a title="Open DOCX file for viewing" href="<%= Url.Action("editor") %>?method=docxViewer" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxViewerCode">&lt;/&gt;</a>
                     <br />
@@ -1255,6 +1264,126 @@
                     }
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxCommentCode">
+                <div class="popap-header">Open docx for comment</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "5C5D4CCA7674",
+                    "title": "Example Document Title.docx",
+                    "url": "http://example.com/url-to-example-document.docx",
+                    "permissions": {
+                        "comment": true,
+                        "edit": false
+                    }
+                },
+                "documentType": "text",
+                "editorConfig": {
+                    "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="xlsxCommentCode">
+                <div class="popap-header">Open xlsx for comment</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "B62D0C4B9C09",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "http://example.com/url-to-example-spreadsheet.xlsx",
+                    "permissions": {
+                        "comment": true,
+                        "edit": false
+                    }
+                },
+                "documentType": "spreadsheet",
+                "editorConfig": {
+                    "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pptxCommentCode">
+                <div class="popap-header">Open pptx for comment</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "pptx",
+                    "key": "B62D0C4B9C09",
+                    "title": "Example Presentation Title.pptx",
+                    "url": "http://example.com/url-to-example-presentation.pptx",
+                    "permissions": {
+                        "comment": true,
+                        "edit": false
+                    }
+                },
+                "documentType": "presentation",
                 "editorConfig": {
                     "mode": "edit"
                 },

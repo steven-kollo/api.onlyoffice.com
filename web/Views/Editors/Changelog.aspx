@@ -21,6 +21,7 @@
     <ul>
         <li>Changed the <a href="<%= Url.Action("methods") %>#showMessage">showMessage</a> method.</li>
         <li>Conversion <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">presentation</a> to <em>odp</em> format.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a> field.</li>
     </ul>
 
     <h2 id="43" class="copy-link">Version 4.3</h2>
