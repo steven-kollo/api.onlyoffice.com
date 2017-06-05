@@ -177,6 +177,12 @@
             <td></td>
         </tr>
         <tr class="tablerow">
+            <td id="showReviewChanges" class="copy-link">showReviewChanges</td>
+            <td>Defines if the review changes panel is automatically displayed or hidden when the editor is loaded. The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
             <td id="zoom" class="copy-link">zoom</td>
             <td>Defines the document display zoom value measured in percent. Can take values larger than <b>0</b>. For text documents and presentations it is possible to set this parameter to <b>-1</b> (fitting the document to page option) or to <b>-2</b> (fitting the document page width to the editor page). The default value is <b>100</b>.</td>
             <td>integer</td>
@@ -222,6 +228,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "http://example.com/logo_em.png",
                 "url": "http://www.onlyoffice.com"
             },
+            "showReviewChanges": false,
             "zoom": 100
         },
         ...

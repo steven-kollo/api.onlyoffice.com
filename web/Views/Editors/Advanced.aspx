@@ -113,6 +113,7 @@ config = {
                 "imageEmbedded": "http://example.com/logo_em.png",
                 "url": "http://example.com"
             },
+            "showReviewChanges": false,
             "zoom": 100
         },
         "embedded": {
