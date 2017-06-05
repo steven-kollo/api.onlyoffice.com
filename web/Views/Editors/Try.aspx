@@ -859,7 +859,7 @@
             {
                 "document": {
                     "fileType": "docx",
-                    "key": "B143195F47A0",
+                    "key": "491BD667CABA",
                     "title": "Example Document Title.docx",
                     "url": "http://example.com/url-to-example-document.docx"
                 },
@@ -897,7 +897,7 @@
             {
                 "document": {
                     "fileType": "docx",
-                    "key": "B143195F47A0",
+                    "key": "491BD667CABA",
                     "title": "Example Document Title.docx",
                     "url": "http://example.com/url-to-example-document.docx"
                 },
@@ -939,7 +939,7 @@
             {
                 "document": {
                     "fileType": "xlsx",
-                    "key": "6FB60FE9E548",
+                    "key": "DB1788E4AF4A",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx"
                 },
@@ -977,7 +977,7 @@
             {
                 "document": {
                     "fileType": "xlsx",
-                    "key": "6FB60FE9E548",
+                    "key": "DB1788E4AF4A",
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx"
                 },
@@ -1019,7 +1019,7 @@
             {
                 "document": {
                     "fileType": "pptx",
-                    "key": "B6C57F1FC447",
+                    "key": "5664FFF42E4E",
                     "title": "Example Presentation Title.pptx",
                     "url": "http://example.com/url-to-example-presentation.pptx"
                 },
@@ -1057,7 +1057,7 @@
             {
                 "document": {
                     "fileType": "pptx",
-                    "key": "B6C57F1FC447",
+                    "key": "5664FFF42E4E",
                     "title": "Example Presentation Title.pptx",
                     "url": "http://example.com/url-to-example-presentation.pptx"
                 },
