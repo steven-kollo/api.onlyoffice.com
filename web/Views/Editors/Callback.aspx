@@ -45,7 +45,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="changeshistory" class="copy-link">changeshistory</td>
-                <td>Defines the array of objects with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. Deprecated since version 4.2.</td>
+                <td>Defines the array of objects with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. Deprecated since version 4.2, please use <a href="#history">history</a> instead.</td>
                 <td>array of object</td>
                 <td>optional</td>
             </tr>
