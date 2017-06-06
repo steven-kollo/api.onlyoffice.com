@@ -50,7 +50,7 @@
         </tr>
         <tr class="tablerow">
             <td id="review" class="copy-link">review</td>
-            <td>Defines if the document can be reviewed or not. In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.</td>
+            <td>Defines if the document can be reviewed or not. In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -62,9 +62,9 @@
     </tbody>
 </table>
 <div class="note">
-    In case 'edit' is set to <b>"true"</b> and 'review' is also set to <b>"true"</b>, the user will be able to edit the document, accept/reject the changes made and switch to the review mode him-/herself.
-        In case 'edit' is set to <b>"true"</b> and 'review' is set to <b>"false"</b>, the user will be able to edit only.
-        In case 'edit' is set to <b>"false"</b> and 'review' is set to <b>"true"</b>, the document will be available in review mode only.
+    In case <em>edit</em> is set to <b>"true"</b> and <em>review</em> is also set to <b>"true"</b>, the user will be able to edit the document, accept/reject the changes made and switch to the review mode him-/herself.
+    In case <em>edit</em> is set to <b>"true"</b> and <em>review</em> is set to <b>"false"</b>, the user will be able to edit only.
+    In case <em>edit</em> is set to <b>"false"</b> and <em>review</em> is set to <b>"true"</b>, the document will be available in review mode only.
 </div>
 
 <div class="header-gray">Example</div>

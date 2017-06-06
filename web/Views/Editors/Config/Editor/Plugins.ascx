@@ -33,7 +33,7 @@
         </tr>
         <tr class="tablerow">
             <td id="url" class="copy-link">url</td>
-            <td>Defines the absolute path to the directory where the plugins are stored. Deprecated since version 4.3.</td>
+            <td>Defines the absolute path to the directory where the plugins are stored. Deprecated since version 4.3, please use the absolute paths in <a href="#pluginsData">pluginsData</a> field.</td>
             <td>string</td>
             <td>"http://example.com/plugins/"</td>
         </tr>

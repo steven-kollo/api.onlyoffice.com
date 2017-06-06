@@ -23,6 +23,7 @@
         <li>Removed the <a href="<%= Url.Action("config/editor/plugins") %>#url">url</a> field from the plugin connection pattern.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">commentAuthorOnly</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a> field.</li>
         <li>Added the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> field in the callback handler request when force saving the file.</li>
     </ul>
 
