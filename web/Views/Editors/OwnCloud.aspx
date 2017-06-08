@@ -50,7 +50,7 @@
     </p>
     <div class="note note-important">
         <div class="note-important-label">Please note</div>
-        ONLYOFFICE Document Builder and ownCloud/Nextcloud <b>must</b> be installed on <b>different</b> computers, otherwise problems might occur and no correct connector work can be guaranteed.
+        ONLYOFFICE Document Server and ownCloud/Nextcloud <b>must</b> be installed on <b>different</b> computers, otherwise problems might occur and no correct connector work can be guaranteed.
     </div>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
