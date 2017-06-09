@@ -273,7 +273,9 @@
     <Content Include="Content\img\Editor\e-key.png" />
     <Content Include="Content\img\Editor\embedded.png" />
     <Content Include="Content\img\Editor\info.png" />
+    <Content Include="Content\img\Editor\nextcloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
+    <Content Include="Content\img\Editor\nextcloud-public.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
     <Content Include="Content\img\Editor\permissions.png" />
     <Content Include="Content\img\Editor\plugins.png" />
@@ -1104,6 +1106,7 @@
     <Content Include="Views\DocBuilder\Textdocumentapi\Api\getdocument.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
     <Content Include="Views\Editors\Changelog.aspx" />
+    <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
     <Content Include="Views\Editors\Signature.aspx" />
