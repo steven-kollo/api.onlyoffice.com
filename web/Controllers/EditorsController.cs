@@ -73,6 +73,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Plugins",
                 "Save",
                 "Security",
+                "SharePoint",
                 "Signature",
                 "Signature/Browser",
                 "Signature/Request",
@@ -250,6 +251,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Security()
+        {
+            return View();
+        }
+
+        public ActionResult SharePoint()
         {
             return View();
         }
