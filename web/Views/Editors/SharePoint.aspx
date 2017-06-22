@@ -47,16 +47,16 @@
     </ol>
     <div class="note">Alternatively to steps <b>7</b> and <b>8</b> you can type the following command:
         <span class="commandline">Add-SPSolution -LiteralPath&lt;solutionpath&gt;/onlyoffice.wsp</span>
-        On the <b>SharePoint Central Administration</b> Home page, click <b>System Settings > Farm Management > Manage farm solutions</b>.
+        On the <b>SharePoint Central Administration</b> home page, click <b>System Settings > Farm Management > Manage farm solutions</b>.
 On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then click <b>Deploy Solution</b>.
     </div>
     <ol start="9">
-        <li>On the SharePoint Central Administration home page, under Application Management, click on the Manage web applications.</li>
-        <li>Make sure you select your site and click on the Authentication Providers icon.</li>
-        <li>On the Authentication Providers pop-up window click on the Default zone.</li>
-        <li>Under Edit Authentication, check Enable anonymous access and click Save.</li>
-        <li>Going back to Web Application Management click on the Anonymous Policy icon.</li>
-        <li>Under Anonymous Access Restrictions select your Zone and set the Permissions to None – No policy and click Save.</li>
+        <li>On the <b>SharePoint Central Administration</b> home page, under <b>Application Management</b>, click <b>Manage web applications</b>.</li>
+        <li>Make sure you select your site and click the <b>Authentication Providers</b> icon.</li>
+        <li>In the <b>Authentication Providers</b> pop-up window click <b>Default zone</b>.</li>
+        <li>Under <b>Edit Authentication</b>, check <b>Enable anonymous access</b> and click <b>Save</b>.</li>
+        <li>Going back to <b>Web Application Management</b> click on the <b>Anonymous Policy</b> icon.</li>
+        <li>Under <b>Anonymous Access Restrictions</b> select your <b>Zone</b> and set the <b>Permissions to None – No</b> policy and click <b>Save</b>.</li>
     </ol>
 
     <h2>Configuring SharePoint ONLYOFFICE integration solution</h2>
