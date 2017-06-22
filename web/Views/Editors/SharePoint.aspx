@@ -15,7 +15,7 @@
         <span class="hdr">ONLYOFFICE SharePoint integration solution</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-sharepoint" target="_blank">solution</a> enables users to edit office documents from SharePoint using <b>ONLYOFFICE Document Server</b>. Currently the following document formats can be edited: DOCX, XLSX, PPTX. The above mentioned formats are also available for viewing together with PDF.</p>
+    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-sharepoint" target="_blank">solution</a> enables users to edit office documents from SharePoint using <b>ONLYOFFICE Document Server</b>. Currently the following document formats can be edited: DOCX, XLSX, PPTX, PPSX. The above mentioned formats are also available for viewing together with PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.</p>
 
     <p>The solution will create a new <b>Edit in ONLYOFFICE</b> menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.</p>
 
@@ -47,9 +47,17 @@
     </ol>
     <div class="note">Alternatively to steps <b>7</b> and <b>8</b> you can type the following command:
         <span class="commandline">Add-SPSolution -LiteralPath&lt;solutionpath&gt;/onlyoffice.wsp</span>
-        On the <b>Central Administration</b> Home page, click <b>System Settings > Farm Management > Manage farm solutions</b>.
+        On the <b>SharePoint Central Administration</b> Home page, click <b>System Settings > Farm Management > Manage farm solutions</b>.
 On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then click <b>Deploy Solution</b>.
     </div>
+    <ol start="9">
+        <li>On the SharePoint Central Administration home page, under Application Management, click on the Manage web applications.</li>
+        <li>Make sure you select your site and click on the Authentication Providers icon.</li>
+        <li>On the Authentication Providers pop-up window click on the Default zone.</li>
+        <li>Under Edit Authentication, check Enable anonymous access and click Save.</li>
+        <li>Going back to Web Application Management click on the Anonymous Policy icon.</li>
+        <li>Under Anonymous Access Restrictions select your Zone and set the Permissions to None – No policy and click Save.</li>
+    </ol>
 
     <h2>Configuring SharePoint ONLYOFFICE integration solution</h2>
     <p>In SharePoint open the <em>~/_layouts/15/Onlyoffice/Settings.aspx</em> page with administrative settings. Enter the following address to connect <b>ONLYOFFICE Document Server</b>:</p>
