@@ -291,7 +291,7 @@
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\apisystem.png" />
-    <Content Include="Content\img\php\add.png" />
+    <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
     <Content Include="Content\img\php\handlerclick.png" />
