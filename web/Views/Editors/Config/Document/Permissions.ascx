@@ -27,7 +27,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="comment" class="copy-link">comment</td>
-            <td>Defines if the document can be commented or not. In case the commenting permission is set to <b>"true"</b> the document <b>side bar</b> will contain the <b>Comment</b> menu option; the document commenting will only be available if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value is <b>true</b>.</td>
+            <td>Defines if the document can be commented or not. In case the commenting permission is set to <b>"true"</b> the document <b>side bar</b> will contain the <b>Comment</b> menu option; the document commenting will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
