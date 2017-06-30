@@ -28,14 +28,42 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Installing ONLYOFFICE SharePoint integration solution</h2>
-    <p>To start using ONLYOFFICE Document Server with ONLYOFFICE SharePoint solution, the following steps must be performed:</p>
-    <div class="note">Steps <b>1</b> &mdash; <b>4</b> are only necessary if you for some reason plan to compile the ONLYOFFICE SharePoint solution yourself (e.g. edit the source code and compile it afterwards). If you do not want to do that and plan to use the already compiled solution package, please skip to step <b>5</b> directly. The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-sharepoint/releases">here</a>.</div>
+    <h2>Using ONLYOFFICE SharePoint integration solution</h2>
+    <p>Before you use ONLYOFFICE Document Server with ONLYOFFICE SharePoint solution, you need to install it. If you for some reason plan to edit the ONLYOFFICE SharePoint solution source code, you will need to compile it and install it afterwards. If you do not want to do that and plan to use the already compiled solution package, please skip to the <b>Installation</b> section directly. The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-sharepoint/releases">here</a>.</p>
+    <h5>Compiling ONLYOFFICE SharePoint integration solution</h5>
+    <p></p>
+    <p>If you have SharePoint with version later than 2010, you will not need to change anything, you can compile the project. In case you have SharePoint 2010 and want to build the project for this version, you will need to open the <em>ONLYOFFICE.csproj</em> file and find the lines:</p>
+    <pre>&lt;Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"&gt;
+  &lt;PropertyGroup&gt;
+    &lt;TargetFrameworkVersion&gt;v4.5.2&lt;/TargetFrameworkVersion&gt;
+    &lt;TargetOfficeVersion&gt;15.0&lt;/TargetOfficeVersion&gt;</pre>
+    <p>Replace these lines with the following ones:</p>
+    <pre>&lt;Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"&gt;
+  &lt;PropertyGroup&gt;
+    &lt;TargetFrameworkVersion&gt;v3.5&lt;/TargetFrameworkVersion&gt;
+    &lt;TargetOfficeVersion&gt;14.0&lt;/TargetOfficeVersion&gt;</pre>
+    <p>And go to the steps below after that.</p>
+    <p>There are two ways to compile ONLYOFFICE SharePoint integration solution:</p>
+    <ol style="list-style-type: lower-alpha;">
+        <li>Using MS Visual Studio:
+            <ol>
+                <li>Enter the SharePoint server and open this project in Visual Studio.</li>
+                <li>In Solution Explorer, open the shortcut menu for the project and then choose <b>Publish</b>.</li>
+                <li>In the <b>Publish</b> dialog box, choose the <b>Publish to File System</b> option button.</li>
+                <li>Click the <b>Publish</b> button. When the publishing process is finished, the solution <em>.wsp</em> file will be created.</li>
+                <li>Copy the resulting file to the folder with the <em>Install.ps1</em> file (<b>BuildAndInstall</b> folder by default).</li>
+            </ol>
+        </li>
+        <li>With the help of the <em>build.bat</em> file provided:
+            <ol>
+                <li>Go to the <b>BuildAndInstall</b> folder.</li>
+                <li>Run the <em>build.bat</em> file.</li>
+                <li>The resulting solution <em>.wsp</em> file will be created and placed to the <b>BuildAndInstall</b> folder.</li>
+            </ol>
+        </li>
+    </ol>
+    <h5>Installing ONLYOFFICE SharePoint integration solution</h5>
     <ol>
-        <li>Enter the SharePoint server and open this project in Visual Studio.</li>
-        <li>In Solution Explorer, open the shortcut menu for the project and then choose <b>Publish</b>.</li>
-        <li>In the <b>Publish</b> dialog box, choose the <b>Publish to File System</b> option button.</li>
-        <li>In the <b>Target Location</b> text box, enter the path where <em>Install.ps1</em> is located, and then choose the <b>Publish</b> button; when the publishing process is finished, the solution <em>(.wsp)</em> file will appear.</li>
         <li>Click <b>Start</b>, point to <b>All Programs</b>, point to <b>Administrative Tools</b>, and then click <b>Services</b>, and make sure that <b>SharePoint Administration</b> service is started.</li>
         <li>Click <b>Start</b>, click <b>SharePoint Management Shell</b>, go to the directory with the <em>.wsp</em> file.</li>
         <li>Run the <em>Install.ps1</em> script:
@@ -45,7 +73,7 @@
             <span class="commandline">https://&lt;yoursharepointsite&gt;</span>
         </li>
     </ol>
-    <div class="note">Alternatively to steps <b>7</b> and <b>8</b> you can type the following command:
+    <div class="note">Alternatively to steps <b>3</b> and <b>4</b> you can type the following command:
         <span class="commandline">Add-SPSolution -LiteralPath&lt;solutionpath&gt;/onlyoffice.wsp</span>
         On the <b>SharePoint Central Administration</b> home page, click <b>System Settings > Farm Management > Manage farm solutions</b>.
 On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then click <b>Deploy Solution</b>.
@@ -60,7 +88,7 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
     </ol>
 
     <h2>Configuring SharePoint ONLYOFFICE integration solution</h2>
-    <p>In SharePoint open the <em>~/_layouts/15/Onlyoffice/Settings.aspx</em> page with administrative settings. Enter the following address to connect <b>ONLYOFFICE Document Server</b>:</p>
+    <p>In SharePoint open the <em>/_layouts/15/Onlyoffice/Settings.aspx</em> page with administrative settings. Enter the following address to connect <b>ONLYOFFICE Document Server</b>:</p>
 
     <span class="commandline">https://&lt;documentserver&gt;/</span>
 
