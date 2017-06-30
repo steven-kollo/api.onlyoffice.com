@@ -42,6 +42,9 @@
             <li>
                 <a href="<%= Url.Action("owncloud") %>">ownCloud/Nextcloud integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
+            </li>
         </ul>
     </li>
     <li>
