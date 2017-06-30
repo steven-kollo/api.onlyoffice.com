@@ -115,6 +115,6 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
     <p>SharePoint ONLYOFFICE solution downloads the new version of the document, replacing the old one.</p>
 
     <br />
-    <p>Download the ONLYOFFICE SharePoint module package <a href="https://github.com/ONLYOFFICE/onlyoffice-sharepoint" target="_blank">here</a>.</p>
+    <p>Download the ONLYOFFICE SharePoint integration solution <a href="https://github.com/ONLYOFFICE/onlyoffice-sharepoint" target="_blank">here</a>.</p>
 
 </asp:Content>
