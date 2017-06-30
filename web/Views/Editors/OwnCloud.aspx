@@ -39,6 +39,7 @@
         It will also create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to ownCloud/Nextcloud.
     </p>
+    <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud">Docker installation</a> to get installed and configured Document Server and ownCloud installation with a couple of commands.</p>
     <p>Tested with ownCloud 9 and 10, Nextcloud 11 and 12.</p>
 
 
@@ -50,7 +51,7 @@
     </p>
     <div class="note note-important">
         <div class="note-important-label">Please note</div>
-        ONLYOFFICE Document Builder and ownCloud/Nextcloud <b>must</b> be installed on <b>different</b> computers, otherwise problems might occur and no correct connector work can be guaranteed.
+        ONLYOFFICE Document Server and ownCloud/Nextcloud <b>must</b> be installed on <b>different</b> computers, otherwise problems might occur and no correct connector work can be guaranteed.
     </div>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 

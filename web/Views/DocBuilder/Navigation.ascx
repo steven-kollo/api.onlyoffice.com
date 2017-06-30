@@ -10,10 +10,6 @@
     <li>
         <a href="<%= Url.Action("gettingstarted") %>">Getting started</a>
     </li>
-</ul>
-
-<div class="treeheader">Documentation</div>
-<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("integratingdocumentbuilder") %>">Integrating Document Builder</a>
         <ul>
@@ -24,10 +20,17 @@
                 <a href="<%= Url.Action("nodejsexample") %>">Node.js example</a>
             </li>
             <li>
+                <a href="<%= Url.Action("phpexample") %>">PHP example</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("rubyexample") %>">Ruby example</a>
             </li>
         </ul>
     </li>
+</ul>
+
+<div class="treeheader">Documentation</div>
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("integrationapi") %>">Integration API</a>
         <ul>

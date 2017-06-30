@@ -7,7 +7,7 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{9B3A9A14-F4CC-4F01-9525-37C87880BA4B}</ProjectGuid>
-    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ASC.Api.Web.Help</RootNamespace>
@@ -256,6 +256,7 @@
     <Content Include="Content\img\docbuilder\file_docx.png" />
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
+    <Content Include="Content\img\docbuilder\php-add.png" />
     <Content Include="Content\img\Editor\alfresco.png" />
     <Content Include="Content\img\Editor\e-token.png" />
     <Content Include="Content\img\Editor\history.png" />
@@ -291,7 +292,7 @@
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\apisystem.png" />
-    <Content Include="Content\img\php\add.png" />
+    <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
     <Content Include="Content\img\php\handlerclick.png" />
@@ -329,6 +330,7 @@
     <Content Include="Views\ApiSystem\Navigation.ascx" />
     <Content Include="Views\DocBuilder\Basic.aspx" />
     <Content Include="Views\DocBuilder\classlist.aspx" />
+    <Content Include="Views\DocBuilder\phpexample.aspx" />
     <Content Include="Views\DocBuilder\nodejsexample.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\ApiBullet\GetClassType.ascx" />
@@ -1104,6 +1106,7 @@
     <Content Include="Views\DocBuilder\Textdocumentapi\Api\getdocument.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
     <Content Include="Views\Editors\Changelog.aspx" />
+    <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
     <Content Include="Views\Editors\Signature.aspx" />
@@ -1210,6 +1213,7 @@
     <Content Include="App_Data\Templates\docx.docbuilder" />
     <Content Include="App_Data\Templates\pdf.docbuilder" />
     <Content Include="App_Data\Templates\xlsx.docbuilder" />
+    <Content Include="App_Data\docbuilder\PHP Example.zip" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />

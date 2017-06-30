@@ -11,6 +11,12 @@
 <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
 <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
 
+<p>Restart the services for the config changes to take effect:</p>
+
+<pre>
+supervisorctl restart all
+</pre>
+
 <div class="header-gray">Parameters</div>
 
 <table class="table">

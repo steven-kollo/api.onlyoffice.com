@@ -46,9 +46,10 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Basic",
                 "gettingstarted",
-                "nodejsexample",
-                "rubyexample",
                 "csharpexample",
+                "nodejsexample",
+                "phpexample",
+                "rubyexample",
                 "integratingdocumentbuilder",
                 "integrationapi",
                 "integrationapi/usingdocbuilderfile",
@@ -763,12 +764,17 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult nodejsexample()
+        public ActionResult Nodejsexample()
         {
             return View();
         }
 
         public ActionResult Rubyexample()
+        {
+            return View();
+        }
+
+        public ActionResult Phpexample()
         {
             return View();
         }

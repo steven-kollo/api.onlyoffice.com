@@ -14,7 +14,7 @@
 <h2 id="Windows" class="copy-link">Running the example on Windows OS</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
+<p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">install Document Server for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> from our site.</p>
@@ -87,7 +87,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
         <p>In the <b>Add Website</b> dialog box specify the name of the folder with the PHP project in the <b>Site name</b> box.</p>
         <p>Specify the path to the folder with your project in the <b>Physical Path</b> box.</p>
         <p>Specify the unique value used only for this website in the <b>Port</b> box.</p>
-        <img alt="" src="<%= Url.Content("~/content/img/php/add.png") %>" />
+        <img alt="" src="<%= Url.Content("~/content/img/editor/php-add.png") %>" />
     </li>
     <li>
         <p>Browse your web site with the IIS manager:</p>
