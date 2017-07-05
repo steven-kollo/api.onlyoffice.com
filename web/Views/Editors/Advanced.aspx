@@ -73,6 +73,7 @@ config = {
         },
         "key": "Khirz6zTPdfd7",
         "permissions": {
+            "comment": true,
             "download": true,
             "edit": true,
             "print": true,
@@ -89,7 +90,6 @@ config = {
             "autosave": true,
             "chat": true,
             "commentAuthorOnly": false,
-            "comments": true,
             "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",

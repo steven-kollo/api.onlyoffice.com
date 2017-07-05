@@ -26,6 +26,27 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td id="comment" class="copy-link">comment</td>
+            <td>Defines if the document can be commented or not. In case the commenting permission is set to <b>"true"</b> the document <b>side bar</b> will contain the <b>Comment</b> menu option; the document commenting will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="note">
+    In case <em>edit</em> is set to <b>"true"</b> and <em>comment</em> is also set to <b>"true"</b>, the user will be able to edit the document and comment.
+    In case <em>edit</em> is set to <b>"true"</b> and <em>comment</em> is set to <b>"false"</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable.
+    In case <em>edit</em> is set to <b>"false"</b> and <em>comment</em> is set to <b>"true"</b>, the document will be available for commenting only.
+</div>
+
+<table class="table">
+    <tbody>
+        <tr class="tablerow">
             <td id="download" class="copy-link">download</td>
             <td>Defines if the document can be downloaded or only viewed or edited online. In case the downloading permission is set to <b>"false"</b> the <b>Download as...</b> menu option will be absent from the <b>File</b> menu. The default value is <b>true</b>.</td>
             <td>boolean</td>
@@ -72,6 +93,7 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
+            "comment": true,
             "download": true,
             "edit": true,
             "print": true,
