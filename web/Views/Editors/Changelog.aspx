@@ -17,6 +17,13 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="44" class="copy-link">Version 4.4</h2>
+    <ul>
+        <li>Changed the <a href="<%= Url.Action("methods") %>#showMessage">showMessage</a> method.</li>
+        <li>Conversion <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">presentation</a> to <em>odp</em> format.</li>
+        <li>The <a href="<%= Url.Action("config/editor/customization") %>#comments">editorConfig.customization.comments</a> field is deprecated, please use the <a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a> field instead.</li>
+    </ul>
+
     <h2 id="43" class="copy-link">Version 4.3</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("methods") %>#destroyEditor">destroyEditor</a> method.</li>

@@ -45,7 +45,7 @@
         </tr>
         <tr class="tablerow">
             <td id="comments" class="copy-link">comments</td>
-            <td>Defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The default value is <b>true</b>.</td>
+            <td>Defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. Deprecated since version 4.4, please use <a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a> instead.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -204,7 +204,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "customization": {
             "chat": true,
             "commentAuthorOnly": false,
-            "comments": true,
             "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",

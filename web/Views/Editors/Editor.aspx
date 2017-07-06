@@ -506,6 +506,72 @@
             });
         <% break; %>
 
+        <% case "docxComment": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
+                    "title": "Example Document Title.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
+                    "permissions": {
+                        "comment": true,
+                        "edit": false
+                    }
+                },
+                "documentType": "text",
+                "editorConfig": {
+                    "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+        <% break; %>
+
+        <% case "xlsxComment": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
+                    "title": "Example Spreadsheet Title.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
+                    "permissions": {
+                        "comment": true,
+                        "edit": false
+                    }
+                },
+                "documentType": "spreadsheet",
+                "editorConfig": {
+                    "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+        <% break; %>
+
+        <% case "pptxxComment": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "pptx",
+                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
+                    "title": "Example Presentation Title.docx",
+                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
+                    "permissions": {
+                        "comment": true,
+                        "edit": false
+                    }
+                },
+                "documentType": "presentation",
+                "editorConfig": {
+                    "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+        <% break; %>
+
         <% case "docxPlugins": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
