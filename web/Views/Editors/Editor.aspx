@@ -585,13 +585,12 @@
                 "editorConfig": {
                     "plugins": {
                         "pluginsData": [
-                            "chess/config.json",
-                            "clipart/config.json",
-                            "ocr/config.json",
-                            "speech/config.json",
-                            "youtube/config.json"
-                        ],
-                        "url": "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/"
+                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/chess/config.json",
+                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/clipart/config.json",
+                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/ocr/config.json",
+                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/speech/config.json",
+                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/youtube/config.json"
+                        ]
                     }
                 },
                 "height": "100%",
