@@ -25,28 +25,33 @@
 
 
 using System.Collections.Generic;
-using System.IO;
+using System.Configuration;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Json;
-using System.Text;
+using JWT;
+using JWT.Algorithms;
+using JWT.Serializers;
 
 namespace ASC.Api.Web.Help.Helpers
 {
     [DataContract(Name = "EditorConfiguration", Namespace = "")]
     public class Config
     {
-        public static string Serialize(Config configuration)
+        public static string Serialize(Config config, bool sign = false)
         {
-            string config;
-            using (var ms = new MemoryStream())
+            string secret;
+            if (!sign || string.IsNullOrEmpty(secret = ConfigurationManager.AppSettings["editor_token"]))
             {
-                var serializer = new DataContractJsonSerializer(typeof (Config));
-                serializer.WriteObject(ms, configuration);
-                ms.Seek(0, SeekOrigin.Begin);
-                config = Encoding.UTF8.GetString(ms.GetBuffer(), 0, (int)ms.Length);
+                return new JsonNetSerializer().Serialize(config);
             }
 
-            return config;
+            var algorithm = new HMACSHA256Algorithm();
+            var serializer = new JsonNetSerializer();
+            var urlEncoder = new JwtBase64UrlEncoder();
+            var encoder = new JwtEncoder(algorithm, serializer, urlEncoder);
+
+            config.Token = encoder.Encode(config, secret);
+
+            return Serialize(config);
         }
 
 
