@@ -1423,9 +1423,9 @@
                 "editorConfig": {
                     "plugins": {
                          "pluginsData": [
-                             "plugin1/config.json"
-                         ],
-                         "url": "http://example.com/plugins/"
+                             "http://example.com/plugin1/config.json"
+                             "http://example.com/plugin2/config.json"
+                         ]
                     }
                 },
                 "height": "100%",
