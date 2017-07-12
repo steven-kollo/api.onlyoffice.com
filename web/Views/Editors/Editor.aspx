@@ -750,40 +750,6 @@
             );
         <% break; %>
 
-        <% case "docxPlugins": %>
-        window.docEditor = new DocsAPI.DocEditor("placeholder",
-            <%= Config.Serialize(
-                new Config
-                    {
-                        Document = new Config.DocumentConfig
-                            {
-                                FileType = "docx",
-                                Key = "apiwh" + Guid.NewGuid(),
-                                Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
-                            },
-                        DocumentType = "text",
-                        EditorConfig = new Config.EditorConfigConfiguration
-                            {
-                                Plugins = new Config.EditorConfigConfiguration.PluginsConfig
-                                    {
-                                        PluginsData = new List<string>
-                                            {
-                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/chess/config.json",
-                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/clipart/config.json",
-                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/ocr/config.json",
-                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/speech/config.json",
-                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/youtube/config.json"
-                                            }
-                                    }
-                            },
-                        Height = "100%",
-                        Width = "100%"
-                    },
-                true) %>
-            );
-        <% break; %>
-
         <% } %>
     </script>
 </body>

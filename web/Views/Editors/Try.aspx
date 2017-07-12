@@ -106,13 +106,6 @@
                 <td><a title="Open PPTX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="rebrandingPptxEditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
-            <tr>
-                <th>Plugins</th>
-                <td><a title="Open DOCX file with plugins" href="<%= Url.Action("editor") %>?method=docxPlugins" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxPlugins">&lt;/&gt;</a>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
         </tbody>
     </table>
 
@@ -1384,47 +1377,6 @@
                 "documentType": "presentation",
                 "editorConfig": {
                     "mode": "edit"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
-
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-            </div>
-
-            <div id="docxPlugins">
-                <div class="popap-header">Open docx with plugins</div>
-                <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html style="height: 100%;"&gt;
-&lt;head&gt;
-    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
-&lt;/head&gt;
-&lt;body style="height: 100%; margin: 0;"&gt;
-    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
-
-    &lt;script type="text/javascript"&gt;
-
-        window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "A0B7F5CBFB24",
-                    "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "plugins": {
-                         "pluginsData": [
-                             "http://example.com/plugin1/config.json"
-                             "http://example.com/plugin2/config.json"
-                         ]
-                    }
                 },
                 "height": "100%",
                 "width": "100%"
