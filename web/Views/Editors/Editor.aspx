@@ -4,8 +4,6 @@
     Inherits="System.Web.Mvc.ViewPage<string>"
     ContentType="text/html" %>
 
-<%@ Import Namespace="ASC.Web.Core.Files" %>
-
 <!DOCTYPE html>
 <html style="height: 100%;">
 <head>
@@ -28,7 +26,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "docx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
@@ -48,7 +46,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "xlsx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
@@ -68,7 +66,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "pptx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
@@ -88,7 +86,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "doc",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.doc",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.doc"
                             },
@@ -108,7 +106,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "xls",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Spreadsheet Title.xls",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xls"
                             },
@@ -128,7 +126,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "ppt",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Presentation Title.ppt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ppt"
                             },
@@ -148,7 +146,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "odt",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.odt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odt"
                             },
@@ -168,7 +166,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "ods",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Spreadsheet Title.ods",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ods"
                             },
@@ -188,7 +186,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "odp",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Presentation Title.odp",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odp"
                             },
@@ -208,7 +206,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "txt",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.txt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.txt"
                             },
@@ -228,7 +226,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "csv",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Spreadsheet Title.csv",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.csv"
                             },
@@ -248,7 +246,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "pdf",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.pdf",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf"
                             },
@@ -272,7 +270,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "docx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
@@ -296,7 +294,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "xlsx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
@@ -320,7 +318,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "pptx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
@@ -524,7 +522,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "docx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
@@ -564,7 +562,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "xlsx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
@@ -604,7 +602,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "pptx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
@@ -644,7 +642,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "docx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
@@ -673,7 +671,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "docx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
@@ -702,7 +700,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "xlsx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
@@ -731,7 +729,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "pptx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
@@ -760,7 +758,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = "docx",
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },

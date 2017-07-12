@@ -5,8 +5,6 @@
     Inherits="System.Web.Mvc.ViewPage<List<string>>"
     ContentType="text/html" %>
 
-<%@ Import Namespace="ASC.Web.Core.Files" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Integration Examples
 </asp:Content>
@@ -95,7 +93,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = ext,
-                                Key = "apiwh" + DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()),
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
                                 Title = "Example Title." + ext,
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + ext,
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
