@@ -129,25 +129,25 @@ namespace ASC.Api.Web.Help.Helpers
             public class PermissionsConfig
             {
                 [DataMember(Name = "changeHistory", EmitDefaultValue = false)]
-                public bool ChangeHistory;
+                public bool? ChangeHistory;
 
                 [DataMember(Name = "comment", EmitDefaultValue = false)]
-                public bool Comment;
+                public bool? Comment;
 
                 [DataMember(Name = "download", EmitDefaultValue = false)]
-                public bool Download;
+                public bool? Download;
 
                 [DataMember(Name = "edit", EmitDefaultValue = false)]
-                public bool Edit;
+                public bool? Edit;
 
                 [DataMember(Name = "print", EmitDefaultValue = false)]
-                public bool Print;
+                public bool? Print;
 
                 [DataMember(Name = "rename", EmitDefaultValue = false)]
-                public bool Rename;
+                public bool? Rename;
 
                 [DataMember(Name = "review", EmitDefaultValue = false)]
-                public bool Review;
+                public bool? Review;
             }
         }
 
@@ -198,19 +198,19 @@ namespace ASC.Api.Web.Help.Helpers
             public class CustomizationConfig
             {
                 [DataMember(Name = "about", EmitDefaultValue = false)]
-                public bool About;
+                public bool? About;
 
                 [DataMember(Name = "autosave", EmitDefaultValue = false)]
-                public bool Autosave;
+                public bool? Autosave;
 
                 [DataMember(Name = "chat", EmitDefaultValue = false)]
-                public bool Chat;
+                public bool? Chat;
 
                 [DataMember(Name = "commentAuthorOnly", EmitDefaultValue = false)]
-                public bool CommentAuthorOnly;
+                public bool? CommentAuthorOnly;
 
                 [DataMember(Name = "compactToolbar", EmitDefaultValue = false)]
-                public bool CompactToolbar;
+                public bool? CompactToolbar;
 
                 [DataMember(Name = "customer", EmitDefaultValue = false)]
                 public CustomerConfig Customer;
@@ -219,7 +219,7 @@ namespace ASC.Api.Web.Help.Helpers
                 public FeedbackConfig Feedback;
 
                 [DataMember(Name = "forcesave", EmitDefaultValue = false)]
-                public bool Forcesave;
+                public bool? Forcesave;
 
                 [DataMember(Name = "goback", EmitDefaultValue = false)]
                 public GobackConfig Goback;
@@ -228,7 +228,7 @@ namespace ASC.Api.Web.Help.Helpers
                 public LogoConfig Logo;
 
                 [DataMember(Name = "showReviewChanges", EmitDefaultValue = false)]
-                public bool ShowReviewChanges;
+                public bool? ShowReviewChanges;
 
                 [DataMember(Name = "zoom", EmitDefaultValue = false)]
                 public int Zoom;
@@ -263,7 +263,7 @@ namespace ASC.Api.Web.Help.Helpers
                     public string Url;
 
                     [DataMember(Name = "visible", EmitDefaultValue = false)]
-                    public bool Visible;
+                    public bool? Visible;
                 }
 
                 [DataContract(Name = "goback", Namespace = "")]
