@@ -4,14 +4,13 @@
     Inherits="System.Web.Mvc.ViewPage<string>"
     ContentType="text/html" %>
 
-<%@ Import Namespace="ASC.Web.Core.Files" %>
-
 <!DOCTYPE html>
 <html style="height: 100%;">
 <head>
     <title>ONLYOFFICE Api Documentation</title>
 </head>
 <body style="height: 100%; margin: 0;">
+
     <div id="placeholder" style="height: 100%"></div>
     <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_api_url"] ?? "" %>"></script>
 
@@ -21,581 +20,768 @@
 
         <% case "docxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
-                },
-                "documentType": "text",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                            },
+                        DocumentType = "text",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "xlsxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "xlsx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
-                },
-                "documentType": "spreadsheet",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xlsx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Spreadsheet Title.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                            },
+                        DocumentType = "spreadsheet",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "pptxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "pptx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
-                },
-                "documentType": "presentation",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pptx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Presentation Title.pptx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                            },
+                        DocumentType = "presentation",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "docEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "doc",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.doc",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.doc"
-                },
-                "documentType": "text",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "doc",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.doc",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.doc"
+                            },
+                        DocumentType = "text",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "xlsEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "xls",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Spreadsheet Title.xls",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xls"
-                },
-                "documentType": "spreadsheet",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xls",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Spreadsheet Title.xls",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xls"
+                            },
+                        DocumentType = "spreadsheet",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "pptEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "ppt",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Presentation Title.ppt",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.ppt"
-                },
-                "documentType": "presentation",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "ppt",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Presentation Title.ppt",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ppt"
+                            },
+                        DocumentType = "presentation",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "odtEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "odt",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.odt",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.odt"
-                },
-                "documentType": "text",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "odt",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.odt",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odt"
+                            },
+                        DocumentType = "text",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "odsEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "ods",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Spreadsheet Title.ods",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.ods"
-                },
-                "documentType": "spreadsheet",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "ods",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Spreadsheet Title.ods",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ods"
+                            },
+                        DocumentType = "spreadsheet",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "odpEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "odp",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Presentation Title.odp",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.odp"
-                },
-                "documentType": "presentation",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "odp",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Presentation Title.odp",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odp"
+                            },
+                        DocumentType = "presentation",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "txtEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "txt",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.txt",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.txt"
-                },
-                "documentType": "text",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "txt",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.txt",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.txt"
+                            },
+                        DocumentType = "text",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "csvEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "csv",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Spreadsheet Title.csv",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.csv"
-                },
-                "documentType": "spreadsheet",
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "csv",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Spreadsheet Title.csv",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.csv"
+                            },
+                        DocumentType = "spreadsheet",
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "pdfViewer": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "pdf",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.pdf",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pdf"
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "mode": "view"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pdf",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.pdf",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf"
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Mode = "view"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "docxViewer": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "mode": "view"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Mode = "view"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "xlsxViewer": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "xlsx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
-                },
-                "documentType": "spreadsheet",
-                "editorConfig": {
-                    "mode": "view"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xlsx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Spreadsheet Title.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                            },
+                        DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Mode = "view"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "pptxViewer": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "pptx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
-                },
-                "documentType": "presentation",
-                "editorConfig": {
-                    "mode": "view"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pptx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Presentation Title.pptx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                            },
+                        DocumentType = "presentation",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Mode = "view"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "docxCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "apiwh<%= Request["key"] %>",
-                    "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "user": {
-                        "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>"
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Request["key"],
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                User = new Config.EditorConfigConfiguration.UserConfig
+                                    {
+                                        Id = Guid.NewGuid().ToString(),
+                                        Name = Request["name"]
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "xlsxCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "xlsx",
-                    "key": "apiwh<%= Request["key"] %>",
-                    "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
-                },
-                "documentType": "spreadsheet",
-                "editorConfig": {
-                    "user": {
-                        "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>"
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xlsx",
+                                Key = "apiwh" + Request["key"],
+                                Title = "Example Spreadsheet Title.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                            },
+                        DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                User = new Config.EditorConfigConfiguration.UserConfig
+                                    {
+                                        Id = Guid.NewGuid().ToString(),
+                                        Name = Request["name"]
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "pptxCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "pptx",
-                    "key": "apiwh<%= Request["key"] %>",
-                    "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
-                },
-                "documentType": "presentation",
-                "editorConfig": {
-                    "user": {
-                        "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>"
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pptx",
+                                Key = "apiwh" + Request["key"],
+                                Title = "Example Presentation Title.pptx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                            },
+                        DocumentType = "presentation",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                User = new Config.EditorConfigConfiguration.UserConfig
+                                    {
+                                        Id = Guid.NewGuid().ToString(),
+                                        Name = Request["name"]
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "docxStrictCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "apiwh<%= Request["key"] %>",
-                    "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "customization": {
-                        "autosave": false
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Request["key"],
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Autosave = false
+                                    },
+                                User = new Config.EditorConfigConfiguration.UserConfig
+                                    {
+                                        Id = Guid.NewGuid().ToString(),
+                                        Name = Request["name"]
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
                     },
-                    "user": {
-                        "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>"
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+                true) %>
+            );
         <% break; %>
 
         <% case "xlsxStrictCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "xlsx",
-                    "key": "apiwh<%= Request["key"] %>",
-                    "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
-                },
-                "documentType": "spreadsheet",
-                "editorConfig": {
-                    "customization": {
-                        "autosave": false
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xlsx",
+                                Key = "apiwh" + Request["key"],
+                                Title = "Example Spreadsheet Title.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                            },
+                        DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Autosave = false
+                                    },
+                                User = new Config.EditorConfigConfiguration.UserConfig
+                                    {
+                                        Id = Guid.NewGuid().ToString(),
+                                        Name = Request["name"]
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
                     },
-                    "user": {
-                        "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>"
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+                true) %>
+            );
         <% break; %>
 
         <% case "pptxStrictCoediting": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "pptx",
-                    "key": "apiwh<%= Request["key"] %>",
-                    "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
-                },
-                "documentType": "presentation",
-                "editorConfig": {
-                    "customization": {
-                        "autosave": false
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pptx",
+                                Key = "apiwh" + Request["key"],
+                                Title = "Example Presentation Title.pptx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                            },
+                        DocumentType = "presentation",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Autosave = false
+                                    },
+                                User = new Config.EditorConfigConfiguration.UserConfig
+                                    {
+                                        Id = Guid.NewGuid().ToString(),
+                                        Name = Request["name"]
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
                     },
-                    "user": {
-                        "id": "<%= Guid.NewGuid().ToString() %>",
-                        "name": "<%= Request["name"] %>"
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+                true) %>
+            );
         <% break; %>
 
         <% case "rebrandingDocxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "customization": {
-                        "customer": {
-                            "address": "My City, 123a-45",
-                            "info": "Some additional information",
-                            "logo": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString() %>",
-                            "mail": "john@example.com",
-                            "name": "John Smith and Co.",
-                            "www": "example.com"
-                        },
-                        "logo": {
-                            "image": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString() %>",
-                            "url": "http://example.com"
-                        }
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
+                                            {
+                                                Address = "My City, 123a-45",
+                                                Info = "Some additional information",
+                                                Logo = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString(),
+                                                Mail = "john@example.com",
+                                                Name = "John Smith and Co.",
+                                                Www = "example.com"
+                                            },
+                                        Logo = new Config.EditorConfigConfiguration.CustomizationConfig.LogoConfig
+                                            {
+                                                Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
+                                                Url = "http://example.com"
+                                            }
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "rebrandingXlsxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "xlsx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Spreadsheet Title.xlsx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx"
-                },
-                "documentType": "spreadsheet",
-                "editorConfig": {
-                    "customization": {
-                        "customer": {
-                            "address": "My City, 123a-45",
-                            "info": "Some additional information",
-                            "logo": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString() %>",
-                            "mail": "john@example.com",
-                            "name": "John Smith and Co.",
-                            "www": "example.com"
-                        },
-                        "logo": {
-                            "image": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString() %>",
-                            "url": "http://example.com"
-                        }
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xlsx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Spreadsheet Title.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                            },
+                        DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
+                                            {
+                                                Address = "My City, 123a-45",
+                                                Info = "Some additional information",
+                                                Logo = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString(),
+                                                Mail = "john@example.com",
+                                                Name = "John Smith and Co.",
+                                                Www = "example.com"
+                                            },
+                                        Logo = new Config.EditorConfigConfiguration.CustomizationConfig.LogoConfig
+                                            {
+                                                Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
+                                                Url = "http://example.com"
+                                            }
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "rebrandingPptxEditor": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "pptx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Presentation Title.pptx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx"
-                },
-                "documentType": "presentation",
-                "editorConfig": {
-                    "customization": {
-                        "customer": {
-                            "address": "My City, 123a-45",
-                            "info": "Some additional information",
-                            "logo": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString() %>",
-                            "mail": "john@example.com",
-                            "name": "John Smith and Co.",
-                            "www": "example.com"
-                        },
-                        "logo": {
-                            "image": "<%= new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString() %>",
-                            "url": "http://example.com"
-                        }
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pptx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Presentation Title.pptx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                            },
+                        DocumentType = "presentation",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
+                                            {
+                                                Address = "My City, 123a-45",
+                                                Info = "Some additional information",
+                                                Logo = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo-big.png"), Query = ""}.ToString(),
+                                                Mail = "john@example.com",
+                                                Name = "John Smith and Co.",
+                                                Www = "example.com"
+                                            },
+                                        Logo = new Config.EditorConfigConfiguration.CustomizationConfig.LogoConfig
+                                            {
+                                                Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
+                                                Url = "http://example.com"
+                                            }
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "docxReview": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
-                    "permissions": {
-                        "edit": false,
-                        "review": true
-                    }
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "mode": "edit"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx",
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Edit = false,
+                                        Review = true
+                                    }
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Mode = "edit"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "docxComment": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx",
-                    "permissions": {
-                        "comment": true,
-                        "edit": false
-                    }
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "mode": "edit"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx",
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Comment = true,
+                                        Edit = false
+                                    }
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Mode = "edit"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "xlsxComment": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "xlsx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Spreadsheet Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.xlsx",
-                    "permissions": {
-                        "comment": true,
-                        "edit": false
-                    }
-                },
-                "documentType": "spreadsheet",
-                "editorConfig": {
-                    "mode": "edit"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xlsx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Spreadsheet Title.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx",
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Comment = true,
+                                        Edit = false
+                                    }
+                            },
+                        DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Mode = "edit"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
-        <% case "pptxxComment": %>
+        <% case "pptxComment": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "pptx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Presentation Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.pptx",
-                    "permissions": {
-                        "comment": true,
-                        "edit": false
-                    }
-                },
-                "documentType": "presentation",
-                "editorConfig": {
-                    "mode": "edit"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pptx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Presentation Title.pptx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx",
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Comment = true,
+                                        Edit = false
+                                    }
+                            },
+                        DocumentType = "presentation",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Mode = "edit"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% case "docxPlugins": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-                    "title": "Example Document Title.docx",
-                    "url": "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>demo.docx"
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "plugins": {
-                        "pluginsData": [
-                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/chess/config.json",
-                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/clipart/config.json",
-                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/ocr/config.json",
-                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/speech/config.json",
-                            "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/youtube/config.json"
-                        ]
-                    }
-                },
-                "height": "100%",
-                "width": "100%"
-            });
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Plugins = new Config.EditorConfigConfiguration.PluginsConfig
+                                    {
+                                        PluginsData = new List<string>
+                                            {
+                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/chess/config.json",
+                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/clipart/config.json",
+                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/ocr/config.json",
+                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/speech/config.json",
+                                                "https://d2ettrnqo7v976.cloudfront.net/sdkjs-plugins/4.1/youtube/config.json"
+                                            }
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    },
+                true) %>
+            );
         <% break; %>
 
         <% } %>

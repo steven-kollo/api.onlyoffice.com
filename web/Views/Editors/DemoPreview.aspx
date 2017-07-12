@@ -5,8 +5,6 @@
     Inherits="System.Web.Mvc.ViewPage<List<string>>"
     ContentType="text/html" %>
 
-<%@ Import Namespace="ASC.Web.Core.Files" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Integration Examples
 </asp:Content>
@@ -60,13 +58,13 @@
     <table class="demo-tab-panel">
         <tr>
             <td>
-                <%= Html.ActionLink("Demo Document editor", "demopreview", "editors", null, null, "text", null, new { id = "textDemo", @class = "active" }) %>
+                <a class="<%= Request["type"] != "spreadsheet" && Request["type"] != "presentation"  ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=text">Demo Document editor</a>
             </td>
             <td>
-                <%= Html.ActionLink("Demo Spreadsheet editor", "demopreview", "editors", null, null, "spreadsheet", null, new { id = "spreadsheetDemo", @class = "demo-tab-center" }) %>
+                <a class="<%= Request["type"] == "spreadsheet" ? "active" : "" %> demo-tab-center" href="<%= Url.Action("demopreview") %>?type=spreadsheet">Demo Spreadsheet editor</a>
             </td>
             <td>
-                <%= Html.ActionLink("Demo Presentation editor", "demopreview", "editors", null, null, "presentation", null, new { id = "presentationDemo" }) %>
+                <a class="<%= Request["type"] == "presentation" ? "active" : "" %>" href="<%= Url.Action("demopreview") %>?type=presentation">Demo Presentation editor</a>
             </td>
         </tr>
     </table>
@@ -83,14 +81,43 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceholder" runat="server">
-    <script type="text/javascript">
-        window.Config = {
-            EditorKey: "apiwh<%= DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()) %>",
-            DemoUrl: "<%= ConfigurationManager.AppSettings["storage_demo_url"] %>"
-        };
-    </script>
 
     <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_api_url"] ?? "" %>"></script>
-    <script type="text/javascript" src="<%= Url.Content("~/scripts/editor.js") %>"></script>
+
+    <% var ext = Request["type"] == "spreadsheet" ? "xlsx" : Request["type"] == "presentation" ? "pptx" : "docx"; %>
+    <script type="text/javascript">
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = ext,
+                                Key = "apiwh" + Guid.NewGuid().ToString(),
+                                Title = "Example Title." + ext,
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + ext,
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Download = false,
+                                        Print = false
+                                    }
+                            },
+                        DocumentType = Request["type"],
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                                            {
+                                                Visible = true
+                                            }
+                                    }
+                            },
+                        Height = "550px",
+                        Width = "100%"
+                    },
+                true) %>
+            );
+    </script>
 
 </asp:Content>

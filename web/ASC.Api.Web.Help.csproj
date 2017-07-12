@@ -143,6 +143,9 @@
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
+    <Reference Include="JWT">
+      <HintPath>..\packages\JWT.3.0.0\lib\net35\JWT.dll</HintPath>
+    </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -162,7 +165,7 @@
       <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -212,6 +215,7 @@
     </Compile>
     <Compile Include="Helpers\BreadCrumbsBuilder.cs" />
     <Compile Include="Helpers\ClassNamePluralizer.cs" />
+    <Compile Include="Helpers\Config.cs" />
     <Compile Include="Helpers\DocBuilderHelper.cs" />
     <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
@@ -300,7 +304,6 @@
     <Content Include="robots.txt" />
     <Content Include="Scripts\clipboard.js" />
     <Content Include="Scripts\highlight.pack.js" />
-    <Content Include="Scripts\editor.js" />
     <Content Include="Scripts\jquery\jquery.blockUI.js" />
     <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery.treeview.js" />

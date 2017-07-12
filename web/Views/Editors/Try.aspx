@@ -5,8 +5,6 @@
     Inherits="System.Web.Mvc.ViewPage"
     ContentType="text/html" %>
 
-<%@ Import Namespace="ASC.Web.Core.Files" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Try now
 </asp:Content>
@@ -1450,7 +1448,7 @@
     <script type="text/javascript">
         $(".button-coediting").click(function () {
             var documentType = $(this).attr("data-type");
-            <% var key = DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()); %>
+            <% var key = Guid.NewGuid().ToString(); %>
             var addr1 = "<%= Url.Action("editor") %>?method=" + documentType + "&key=" + documentType + "<%= key %>&name=John%20Smith";
             var documentCoediting1 = window.open(addr1, "_blank");
             var addr2 = "<%= Url.Action("editor") %>?method=" + documentType + "&key=" + documentType + "<%= key %>&name=Kate%20Cage";
