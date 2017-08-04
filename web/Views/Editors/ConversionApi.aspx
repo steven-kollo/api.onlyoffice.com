@@ -178,6 +178,18 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
+                <td>docm</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
                 <td>docx</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td></td>
@@ -339,6 +351,17 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
+                <td>xlsm</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
                 <td>xlsx</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
@@ -400,6 +423,16 @@
             </tr>
             <tr>
                 <td>ppt</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>pptm</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>

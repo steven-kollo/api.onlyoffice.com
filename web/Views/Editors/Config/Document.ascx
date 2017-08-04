@@ -29,12 +29,7 @@
             <td id="fileType" class="copy-link">fileType<span class="required">*</span></td>
             <td>Defines the type of the file for the source viewed or edited document.</td>
             <td>string</td>
-            <td>"docx", "xlsx", "pptx", "ppsx",<br />
-                "doc", "xls", "ppt", "pps",<br />
-                "odt", "ods", "odp",<br />
-                "txt", "rtf", "csv",<br />
-                "mht", "html", "htm", "epub",<br />
-                "pdf", "djvu", "xps"</td>
+            <td>"docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="key" class="copy-link">key<span class="required">*</span></td>

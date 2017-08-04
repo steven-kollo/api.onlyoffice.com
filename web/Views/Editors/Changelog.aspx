@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="45" class="copy-link">Version 4.5</h2>
+    <ul>
+        <li>Added support for DOCM, PPSM, PPTM and XLSM <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
+    </ul>
+
     <h2 id="44" class="copy-link">Version 4.4</h2>
     <ul>
         <li>Changed the <a href="<%= Url.Action("methods") %>#showMessage">showMessage</a> method.</li>

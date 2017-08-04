@@ -27,9 +27,9 @@
         <tr class="tablerow">
             <td id="documentType" class="copy-link">documentType</td>
             <td>Defines the document type to be opened:
-                <em>open a text document (.docx, .doc, .odt, .txt, .rtf, .html, .htm, .mht, .epub, .pdf, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
-                <em>open a spreadsheet (.xlsx, .xls, .ods, .csv) for viewing or editing</em> - <b>spreadsheet</b>,
-                <em>open a presentation (.pptx, .ppt, .odp, .ppsx, .pps) for viewing  or editing</em> - <b>presentation</b>.
+                <em>open a text document (.docx, .docm, .doc, .odt, .txt, .rtf, .html, .htm, .mht, .epub, .pdf, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
+                <em>open a spreadsheet (.xlsx, .xlsm, .xls, .ods, .csv) for viewing or editing</em> - <b>spreadsheet</b>,
+                <em>open a presentation (.pptx, .pptm, .ppt, .odp, .ppsx, .ppsm, .pps) for viewing  or editing</em> - <b>presentation</b>.
             </td>
             <td>string</td>
             <td>"spreadsheet"</td>
