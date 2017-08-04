@@ -183,7 +183,7 @@ $(function() {
         }
     }).on("success",
         function () {
-            alert("Link was copied to clipboard");
+            //alert("Link was copied to clipboard");
         });
 
 
