@@ -202,6 +202,42 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
+                <td>dot</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>dotm</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>dotx</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
                 <td>epub</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
@@ -372,6 +408,39 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td></td>
             </tr>
+            <tr>
+                <td>xlt</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>xltm</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>xltx</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
         </tbody>
     </table>
 
@@ -402,7 +471,47 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
+                <td>pot</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>potm</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>potx</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
                 <td>pps</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
+                <td>ppsm</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
