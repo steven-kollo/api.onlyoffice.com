@@ -31,6 +31,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
                         DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -49,6 +53,10 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                            },
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
                             },
                         DocumentType = "spreadsheet",
                         Height = "100%",
@@ -69,6 +77,10 @@
                                 Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                            },
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
                             },
                         DocumentType = "presentation",
                         Height = "100%",
@@ -91,6 +103,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.doc"
                             },
                         DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -111,6 +127,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xls"
                             },
                         DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -131,6 +151,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ppt"
                             },
                         DocumentType = "presentation",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -151,6 +175,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odt"
                             },
                         DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -171,6 +199,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ods"
                             },
                         DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -191,6 +223,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odp"
                             },
                         DocumentType = "presentation",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -211,6 +247,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.txt"
                             },
                         DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -231,6 +271,10 @@
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.csv"
                             },
                         DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                            },
                         Height = "100%",
                         Width = "100%"
                     },
@@ -349,6 +393,7 @@
                         DocumentType = "text",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -377,6 +422,7 @@
                         DocumentType = "spreadsheet",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -405,6 +451,7 @@
                         DocumentType = "presentation",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -433,6 +480,7 @@
                         DocumentType = "text",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
                                         Autosave = false
@@ -465,6 +513,7 @@
                         DocumentType = "spreadsheet",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
                                         Autosave = false
@@ -497,6 +546,7 @@
                         DocumentType = "presentation",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
                                         Autosave = false
@@ -529,6 +579,7 @@
                         DocumentType = "text",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
@@ -569,6 +620,7 @@
                         DocumentType = "spreadsheet",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
@@ -609,6 +661,7 @@
                         DocumentType = "presentation",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
@@ -654,6 +707,7 @@
                         DocumentType = "text",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -683,6 +737,7 @@
                         DocumentType = "text",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -712,6 +767,7 @@
                         DocumentType = "spreadsheet",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -741,6 +797,7 @@
                         DocumentType = "presentation",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Mode = "edit"
                             },
                         Height = "100%",

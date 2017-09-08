@@ -135,6 +135,9 @@
                     "url": "http://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -168,6 +171,9 @@
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -201,6 +207,9 @@
                     "url": "http://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -234,6 +243,9 @@
                     "url": "http://example.com/url-to-example-document.doc"
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -267,6 +279,9 @@
                     "url": "http://example.com/url-to-example-spreadsheet.xls"
                 },
                 "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -300,6 +315,9 @@
                     "url": "http://example.com/url-to-example-presentation.ppt"
                 },
                 "documentType": "presentation",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -333,6 +351,9 @@
                     "url": "http://example.com/url-to-example-document.odt"
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -366,6 +387,9 @@
                     "url": "http://example.com/url-to-example-spreadsheet.ods"
                 },
                 "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -399,6 +423,9 @@
                     "url": "http://example.com/url-to-example-presentation.odp"
                 },
                 "documentType": "presentation",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -432,6 +459,9 @@
                     "url": "http://example.com/url-to-example-document.txt"
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -465,6 +495,9 @@
                     "url": "http://example.com/url-to-example-spreadsheet.csv"
                 },
                 "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -643,6 +676,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -678,6 +712,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -717,6 +752,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -752,6 +788,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -791,6 +828,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -826,6 +864,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -865,6 +904,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -903,6 +943,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -945,6 +986,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -983,6 +1025,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1025,6 +1068,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1063,6 +1107,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1105,6 +1150,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
@@ -1154,6 +1200,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
@@ -1203,6 +1250,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
@@ -1256,6 +1304,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1296,6 +1345,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1336,6 +1386,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1376,6 +1427,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",

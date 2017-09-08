@@ -25,13 +25,13 @@
 
 
 using System;
-using ASC.Api.Web.Help.DocumentGenerator;
-using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
+using ASC.Api.Web.Help.DocumentGenerator;
+using ASC.Api.Web.Help.Helpers;
+using HtmlAgilityPack;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -151,6 +151,12 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Callback()
         {
             return View();
+        }
+
+        [HttpPost]
+        public JsonResult Callback(string data)
+        {
+            return Json(new { error = 0 });
         }
 
         public ActionResult Changelog()
