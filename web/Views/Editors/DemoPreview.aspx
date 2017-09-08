@@ -105,6 +105,7 @@
                         DocumentType = Request["type"],
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
                                         Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
