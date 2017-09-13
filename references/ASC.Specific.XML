@@ -72,6 +72,31 @@
             Entry point name
             </summary>
         </member>
+        <member name="T:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint">
+            <summary>
+            Capabilities for api
+            </summary>
+        </member>
+        <member name="M:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint.#ctor(ASC.Api.Impl.ApiContext)">
+            <summary>
+             Constructor
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint.GetPortalCapabilities">
+            <summary>
+            Returns the information about portal capabilities
+            </summary>
+            <short>
+            Get portal capabilities
+            </short>
+            <returns>CapabilitiesData</returns>
+        </member>
+        <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint.Name">
+            <summary>
+            Entry point name
+            </summary>
+        </member>
         <member name="T:ASC.Specific.WarmUpApi.WarnUpEntryPoint">
             <summary>
             Authorization for api

@@ -9,6 +9,52 @@
              Portal settings
             </summary>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettingsV2">
+            <summary>
+            Returns current portal SSO settings
+            </summary>
+            <short>
+            Get SSO settings
+            </short>
+            <returns>SsoSettingsV2 object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetDefaultSsoSettingsV2">
+            <summary>
+            Returns default portal SSO settings
+            </summary>
+            <short>
+            Get default SSO settings
+            </short>
+            <returns>SsoSettingsV2 object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettingsV2Constants">
+            <summary>
+            Returns SSO settings constants
+            </summary>
+            <short>
+            Get SSO settings constants
+            </short>
+            <returns>object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveSsoSettingsV2(System.String)">
+            <summary>
+            Save SSO settings for current portal
+            </summary>
+            <short>
+            Save SSO settings
+            </short>
+            <param name="serializeSettings">serialized SsoSettingsV2 object</param>
+            <returns>SsoSettingsV2 object</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.ResetSsoSettingsV2">
+            <summary>
+            Reset SSO settings for current portal
+            </summary>
+            <short>
+            Reset SSO settings
+            </short>
+            <returns>SsoSettingsV2 object</returns>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSettings">
             <summary>
             Returns current portal LDAP settings
