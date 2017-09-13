@@ -37,17 +37,22 @@
 
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-  "editorConfig": {
-    "plugins": {
-      "pluginsData": [
-        "http://example.com/plugin1/config.json",
-        "http://example.com/plugin2/config.json",
+    "editorConfig": {
+        "plugins": {
+            "autostart": [
+                "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
+                "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+                ...
+            ],
+            "pluginsData": [
+                "http://example.com/plugin1/config.json",
+                "http://example.com/plugin2/config.json",
+                ...
+            ]
+        },
         ...
-      ]
     },
     ...
-  },
-  ...
 });
 </pre>
 
