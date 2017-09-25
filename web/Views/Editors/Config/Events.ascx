@@ -46,6 +46,24 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onDocumentReady" class="copy-link">onDocumentReady</b> - the function called when the document is loaded into the document editor.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onDocumentReady = function() {
+    console.log("Document is loaded");
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    events: {
+        "onDocumentReady": onDocumentReady,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
         <p><b id="onDocumentStateChange" class="copy-link">onDocumentStateChange</b> - the function called when the document is modified. It is called with the parameter: <em>{"data" : true}</em> when the current user is editing the document and with the parameter: <em>{"data" : false}</em> when the current user's changes are sent to the <b>document editing service</b>.</p>
         <div class="header-gray">Example</div>
         <pre>

@@ -153,6 +153,7 @@ config = {
     "events": {
         "onAppReady": onAppReady,
         "onCollaborativeChanges": onCollaborativeChanges,
+        "onDocumentReady": onDocumentReady,
         "onDocumentStateChange": onDocumentStateChange,
         "onDownloadAs": onDownloadAs,
         "onError": onError,
