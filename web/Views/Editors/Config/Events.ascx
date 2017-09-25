@@ -10,6 +10,24 @@
 
 <ul>
     <li>
+        <p><b id="onAppReady" class="copy-link">onAppReady</b> - the function called when the application is loaded into the browser.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onAppReady = function() {
+    console.log("ONLYOFFICE Document Editor is ready");
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    events: {
+        "onAppReady": onAppReady,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
         <p><b id="onCollaborativeChanges" class="copy-link">onCollaborativeChanges</b> - the function called when the document is co-edited by the other user in the <em>strict</em> co-editing mode.</p>
         <div class="header-gray">Example</div>
         <pre>
@@ -104,21 +122,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onReady" class="copy-link">onReady</b> - the function called when the document is loaded into the document editor.</p>
-        <div class="header-gray">Example</div>
-        <pre>
-var onReady = function() {
-    console.log("ONLYOFFICE Document Editor is ready");
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
-        "onReady": onReady,
-        ...
-    },
-    ...
-});
-</pre>
+        <p><b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser. Deprecated since version 5.0</p>
     </li>
 
     <li>
