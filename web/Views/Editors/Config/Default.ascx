@@ -27,9 +27,9 @@
         <tr class="tablerow">
             <td id="documentType" class="copy-link">documentType</td>
             <td>Defines the document type to be opened:
-                <em>open a text document (.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .htm, .html, .mht, .odt, .pdf, .rtf, .txt, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
-                <em>open a spreadsheet (.csv, .ods, .xls, .xlsm, .xlsx, .xlt, .xltm, .xltx) for viewing or editing</em> - <b>spreadsheet</b>,
-                <em>open a presentation (.odp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx) for viewing  or editing</em> - <b>presentation</b>.
+                <em>open a text document (.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fodt, .htm, .html, .mht, .odt, .pdf, .rtf, .txt, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
+                <em>open a spreadsheet (.csv, .fods, .ods, .xls, .xlsm, .xlsx, .xlt, .xltm, .xltx) for viewing or editing</em> - <b>spreadsheet</b>,
+                <em>open a presentation (.fodp, .odp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx) for viewing  or editing</em> - <b>presentation</b>.
             </td>
             <td>string</td>
             <td>"spreadsheet"</td>
