@@ -16,6 +16,9 @@
         <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetCommonSettings">
             <summary>
                Returns Common Settings
@@ -224,6 +227,18 @@
             <exception cref="T:System.Exception">Exception contains text description of happened error.</exception>
             <returns>Created account</returns>
             <short>Create OAuth account</short> 
+            <category>Accounts</category>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.UpdateAccountOAuth(System.String,System.Byte,System.Int32)">
+            <summary>
+               Update Mail account with OAuth authentication. Only Google OAuth supported.
+            </summary>
+            <param name="code">Oauth code</param>
+            <param name="type">Type of OAuth service. 0- Unknown, 1 - Google.</param>
+            <param name="mailboxId">Mailbox ID to update</param>
+            <exception cref="T:System.Exception">Exception contains text description of happened error.</exception>
+            <returns>Updated OAuth account</returns>
+            <short>Update OAuth account</short> 
             <category>Accounts</category>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.CreateAccount(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Boolean,ASC.Mail.Aggregator.Common.EncryptionType,ASC.Mail.Aggregator.Common.EncryptionType,ASC.Mail.Aggregator.Common.SaslMechanism,ASC.Mail.Aggregator.Common.SaslMechanism)">

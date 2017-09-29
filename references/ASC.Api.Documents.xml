@@ -699,7 +699,7 @@
             <param name="docServiceUrlPortal">Community Server Address</param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetDocServiceUrl">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetDocServiceUrl(System.Boolean)">
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.Documents.DocumentsApi.Name">
@@ -775,11 +775,6 @@
         </member>
         <member name="P:ASC.Api.Documents.FileEntryWrapper.Shared">
             <summary>
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Documents.FileEntryWrapper.SharedByMe">
-            <summary>
-            SharedByMe is deprecated, please use Shared instead.
             </summary>
         </member>
         <member name="P:ASC.Api.Documents.FileEntryWrapper.Created">

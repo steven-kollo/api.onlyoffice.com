@@ -66,7 +66,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="delimiter" class="copy-link">delimiter</td>
-                <td>Dfines the delimiter characters for separating values when converting from <em>csv</em> format.<br />
+                <td>Defines the delimiter characters for separating values when converting from <em>csv</em> format.<br />
                     Supported values:
                     <ul>
                         <li><b>0</b> - no delimiter,</li>

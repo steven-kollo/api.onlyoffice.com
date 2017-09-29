@@ -5,8 +5,6 @@
     Inherits="System.Web.Mvc.ViewPage"
     ContentType="text/html" %>
 
-<%@ Import Namespace="ASC.Web.Core.Files" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Try now
 </asp:Content>
@@ -108,13 +106,6 @@
                 <td><a title="Open PPTX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="rebrandingPptxEditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
-            <tr>
-                <th>Plugins</th>
-                <td><a title="Open DOCX file with plugins" href="<%= Url.Action("editor") %>?method=docxPlugins" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxPlugins">&lt;/&gt;</a>
-                </td>
-                <td></td>
-                <td></td>
-            </tr>
         </tbody>
     </table>
 
@@ -144,6 +135,9 @@
                     "url": "http://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -177,6 +171,9 @@
                     "url": "http://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -210,6 +207,9 @@
                     "url": "http://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -243,6 +243,9 @@
                     "url": "http://example.com/url-to-example-document.doc"
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -276,6 +279,9 @@
                     "url": "http://example.com/url-to-example-spreadsheet.xls"
                 },
                 "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -309,6 +315,9 @@
                     "url": "http://example.com/url-to-example-presentation.ppt"
                 },
                 "documentType": "presentation",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -342,6 +351,9 @@
                     "url": "http://example.com/url-to-example-document.odt"
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -375,6 +387,9 @@
                     "url": "http://example.com/url-to-example-spreadsheet.ods"
                 },
                 "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -408,6 +423,9 @@
                     "url": "http://example.com/url-to-example-presentation.odp"
                 },
                 "documentType": "presentation",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -441,6 +459,9 @@
                     "url": "http://example.com/url-to-example-document.txt"
                 },
                 "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -474,6 +495,9 @@
                     "url": "http://example.com/url-to-example-spreadsheet.csv"
                 },
                 "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                },
                 "height": "100%",
                 "width": "100%"
             });
@@ -652,6 +676,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -687,6 +712,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -726,6 +752,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -761,6 +788,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -800,6 +828,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -835,6 +864,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -874,6 +904,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -912,6 +943,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -954,6 +986,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -992,6 +1025,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1034,6 +1068,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1072,6 +1107,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1114,6 +1150,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
@@ -1163,6 +1200,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
@@ -1212,6 +1250,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
@@ -1265,6 +1304,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1305,6 +1345,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1345,6 +1386,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1385,48 +1427,8 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
+                    "callbackUrl": "http://example.com/url-to-callback.ashx",
                     "mode": "edit"
-                },
-                "height": "100%",
-                "width": "100%"
-            });
-
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-            </div>
-
-            <div id="docxPlugins">
-                <div class="popap-header">Open docx with plugins</div>
-                <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html style="height: 100%;"&gt;
-&lt;head&gt;
-    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
-&lt;/head&gt;
-&lt;body style="height: 100%; margin: 0;"&gt;
-    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
-
-    &lt;script type="text/javascript"&gt;
-
-        window.docEditor = new DocsAPI.DocEditor("placeholder",
-            {
-                "document": {
-                    "fileType": "docx",
-                    "key": "A0B7F5CBFB24",
-                    "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
-                },
-                "documentType": "text",
-                "editorConfig": {
-                    "plugins": {
-                         "pluginsData": [
-                             "plugin1/config.json"
-                         ],
-                         "url": "http://example.com/plugins/"
-                    }
                 },
                 "height": "100%",
                 "width": "100%"
@@ -1450,7 +1452,7 @@
     <script type="text/javascript">
         $(".button-coediting").click(function () {
             var documentType = $(this).attr("data-type");
-            <% var key = DocumentService.GenerateRevisionId(Guid.NewGuid().ToString()); %>
+            <% var key = Guid.NewGuid().ToString(); %>
             var addr1 = "<%= Url.Action("editor") %>?method=" + documentType + "&key=" + documentType + "<%= key %>&name=John%20Smith";
             var documentCoediting1 = window.open(addr1, "_blank");
             var addr2 = "<%= Url.Action("editor") %>?method=" + documentType + "&key=" + documentType + "<%= key %>&name=Kate%20Cage";

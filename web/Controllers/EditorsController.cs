@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2016
+ * (c) Copyright Ascensio System Limited 2010-2017
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -25,13 +25,13 @@
 
 
 using System;
-using ASC.Api.Web.Help.DocumentGenerator;
-using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
+using ASC.Api.Web.Help.DocumentGenerator;
+using ASC.Api.Web.Help.Helpers;
+using HtmlAgilityPack;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -151,6 +151,12 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Callback()
         {
             return View();
+        }
+
+        [HttpPost]
+        public JsonResult Callback(string data)
+        {
+            return Json(new { error = 0 });
         }
 
         public ActionResult Changelog()
