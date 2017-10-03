@@ -72,6 +72,14 @@
             Sync LDAP
             </short>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TestLdapSync">
+            <summary>
+            Starts the process of collecting preliminary changes on the portal according to the selected LDAP settings
+            </summary>
+            <short>
+            Sync LDAP
+            </short>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveLdapSettings(System.String,System.Boolean)">
             <summary>
             Save LDAP settings and start import/sync users and groups process by LDAP
@@ -82,7 +90,15 @@
             <param name="settings">LDAPSupportSettings serialized string</param>
             <param name="acceptCertificate">Flag permits errors of checking certificates</param>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapSyncStatus">
+        <member name="M:ASC.Api.Settings.SettingsApi.TestLdapSave(System.String,System.Boolean)">
+            <summary>
+            Starts the process of collecting preliminary changes on the portal according to the LDAP settings
+            </summary>
+            <short>
+            Save LDAP settings
+            </short>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLdapOperationStatus">
             <summary>
             Returns LDAP sync process status
             </summary>

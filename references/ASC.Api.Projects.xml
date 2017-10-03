@@ -1094,6 +1094,17 @@
             <returns>Updated task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTasks(System.Int32[],ASC.Projects.Core.Domain.TaskStatus)">
+            <summary>
+             Updates the status of the tasks with the IDs specified in the request
+            </summary>
+            <short>
+            Update tasks status
+            </short>
+             <category>Tasks</category>
+            <param name="taskids">Tasks ID</param>
+            <param name="status">Status of tasks. Can be one of: open|closed</param>
+        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateTask(System.Int32,System.Int32)">
             <summary>
              Updates the milestone of the task with the ID specified in the request
@@ -1105,6 +1116,19 @@
             <param name="taskid">Task ID</param>
             <param name="milestoneid">Milestone ID</param>
             <returns>Updated task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateTasks(System.Int32[],System.Int32)">
+            <summary>
+             Updates the milestone of the tasks with the IDs specified in the request
+            </summary>
+            <short>
+            Update tasks milestone
+            </short>
+             <category>Tasks</category>
+            <param name="taskids">Task ID</param>
+            <param name="milestoneid">Milestone ID</param>
+            <returns>Updated tasks</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.CopyTask(System.Int32,System.String,ASC.Specific.ApiDateTime,ASC.Projects.Core.Domain.TaskPriority,System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
@@ -1164,6 +1188,18 @@
              <category>Projects</category>
             <param name="taskid">task ID</param>
             <returns>Deleted task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteTasks(System.Int32[])">
+            <summary>
+            Deletes the tasks with the IDs specified in the request from the project
+            </summary>
+            <short>
+            Delete tasks
+            </short>
+             <category>Projects</category>
+            <param name="taskids">task ID</param>
+            <returns>Deleted tasks</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTaskComments(System.Int32)">
@@ -1547,6 +1583,18 @@
              <category>Milestones</category>
             <param name="id">Milestone ID</param>
             <returns>Deleted milestone</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DeleteMilestones(System.Int32[])">
+            <summary>
+            Deletes milestones with the IDs specified in the request
+            </summary>
+            <short>
+            Delete milestones
+            </short>
+             <category>Milestones</category>
+            <param name="ids">Milestones ID</param>
+            <returns>Deleted milestones</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTaskTimeByFilter(System.Int32,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Int32,System.Guid,System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Nullable{ASC.Projects.Core.Domain.PaymentStatus})">

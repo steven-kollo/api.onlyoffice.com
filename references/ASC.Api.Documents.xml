@@ -702,6 +702,9 @@
         <member name="M:ASC.Api.Documents.DocumentsApi.GetDocServiceUrl(System.Boolean)">
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdpartyProvider">
+            <visible>false</visible>
+        </member>
         <member name="P:ASC.Api.Documents.DocumentsApi.Name">
             <summary>
             </summary>

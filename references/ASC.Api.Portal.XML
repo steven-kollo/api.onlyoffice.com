@@ -114,6 +114,30 @@
         <member name="M:ASC.Api.Portal.PortalApi.GetMessageCount">
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Portal.PortalApi.RemoveXmppConnection(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.AddXmppConnection(System.String,System.Byte)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetState(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.SendState(System.Byte)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.SendMessage(System.String,System.String,System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetAllStates">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetRecentMessages(System.String,System.Int32)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.Ping(System.Byte)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Portal.PortalApi.RegisterMobileAppInstall(ASC.Core.Common.Notify.Push.MobileAppType)">
             <visible>false</visible>
         </member>
@@ -209,6 +233,21 @@
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.EditCommentComplete(System.String,System.String,System.String,System.Boolean)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetBarPromotions(System.String,System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.MarkBarPromotion(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetBarTips(System.String,System.Boolean)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.MarkBarTip(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.DeleteBarTips">
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.Portal.PortalApi.Name">

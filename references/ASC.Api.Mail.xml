@@ -16,6 +16,9 @@
         <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetCommonSettings">
             <summary>
                Returns Common Settings
@@ -360,6 +363,13 @@
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
             <exception cref="T:System.Exception">Exception happens when update operation failed.</exception>
             <short>Set account state</short> 
+            <category>Accounts</category>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.UpdateUserActivity(System.Boolean)">
+            <summary>
+            UpdateUserActivity
+            </summary>
+            <param name="userOnline"></param>
             <category>Accounts</category>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetAlerts">

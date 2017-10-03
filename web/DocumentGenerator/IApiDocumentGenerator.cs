@@ -26,13 +26,13 @@
 
 using System.Collections.Generic;
 using ASC.Api.Interfaces;
-using Microsoft.Practices.Unity;
+using Autofac.Core;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
 {
     public interface IApiDocumentGenerator
     {
-        void GenerateDocForEntryPoint(ContainerRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls);
+        void GenerateDocForEntryPoint(IComponentRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls);
 
         void Finish();
     }

@@ -35,7 +35,7 @@ using System.Web.Routing;
 using ASC.Api.Interfaces;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using Microsoft.Practices.Unity;
+using Autofac;
 
 namespace ASC.Api.Web.Help
 {
@@ -58,10 +58,12 @@ namespace ASC.Api.Web.Help
         public static List<MsDocEntryPoint> GenerateDocs()
         {
             //Generate the docs first
-            var container = ApiSetup.ConfigureEntryPoints();
+            ApiSetup.Init();
+            var container = ApiSetup.Builder;
+
             var entries = container.Resolve<IEnumerable<IApiMethodCall>>();
 
-            var apiEntryPoints = container.Registrations.Where(x => x.RegisteredType == typeof (IApiEntryPoint)).ToList();
+            var apiEntryPoints = container.ComponentRegistry.Registrations.Where(x => typeof(IApiEntryPoint).IsAssignableFrom(x.Activator.LimitType)).ToList();
 
             var msDocFolder = AppDomain.CurrentDomain.RelativeSearchPath;
             var generator = new MsDocDocumentGenerator(Path.Combine(msDocFolder, "help.xml"), msDocFolder, container);
@@ -70,7 +72,7 @@ namespace ASC.Api.Web.Help
             {
                 var point = apiEntryPoint;
                 generator.GenerateDocForEntryPoint(
-                    apiEntryPoints.SingleOrDefault(x => x.MappedToType == point.Key),
+                    apiEntryPoints.SingleOrDefault(x => x.Activator.LimitType == point.Key),
                     apiEntryPoint.AsEnumerable());
             }
 
