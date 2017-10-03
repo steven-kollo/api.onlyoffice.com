@@ -16,9 +16,6 @@
         <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String)">
-            <visible>false</visible>
-        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetCommonSettings">
             <summary>
                Returns Common Settings
