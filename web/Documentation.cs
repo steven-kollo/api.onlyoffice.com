@@ -35,6 +35,7 @@ using System.Web.Routing;
 using ASC.Api.Interfaces;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
+using ASC.Common.DependencyInjection;
 using Autofac;
 
 namespace ASC.Api.Web.Help
@@ -57,9 +58,12 @@ namespace ASC.Api.Web.Help
 
         public static List<MsDocEntryPoint> GenerateDocs()
         {
-            //Generate the docs first
-            ApiSetup.Init();
-            var container = ApiSetup.Builder;
+            var containerBuilder = AutofacConfigLoader.Load("api");
+            containerBuilder.Register(c => c.Resolve<IApiRouteConfigurator>().RegisterEntryPoints())
+                .As<IEnumerable<IApiMethodCall>>()
+                .SingleInstance();
+
+            var container = containerBuilder.Build();
 
             var entries = container.Resolve<IEnumerable<IApiMethodCall>>();
 
