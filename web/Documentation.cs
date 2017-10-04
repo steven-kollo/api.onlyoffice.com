@@ -66,8 +66,7 @@ namespace ASC.Api.Web.Help
 
             var apiEntryPoints = container.ComponentRegistry.Registrations.Where(x => typeof(IApiEntryPoint).IsAssignableFrom(x.Activator.LimitType)).ToList();
 
-            var msDocFolder = AppDomain.CurrentDomain.RelativeSearchPath;
-            var generator = new MsDocDocumentGenerator(Path.Combine(msDocFolder, "help.xml"), msDocFolder, container);
+            var generator = new MsDocDocumentGenerator(container);
 
             foreach (var apiEntryPoint in entries.GroupBy(x => x.ApiClassType))
             {

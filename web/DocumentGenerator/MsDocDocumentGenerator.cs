@@ -31,11 +31,9 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Routing;
-using System.Xml;
 using System.Xml.Linq;
 using ASC.Api.Enums;
 using ASC.Api.Impl;
@@ -184,29 +182,16 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public bool Visible { get; set; }
     }
 
-    public class MsDocDocumentGenerator : IApiDocumentGenerator
+    public class MsDocDocumentGenerator
     {
         private static readonly Regex RouteRegex = new Regex(@"\{([^\}]+)\}", RegexOptions.Compiled);
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
         private readonly string[] _responseFormats = (ConfigurationManager.AppSettings["enabled_response_formats"] ?? "").Split('|');
 
-        public MsDocDocumentGenerator(string path, IContainer container)
-            : this(path, null, container)
-        {
-        }
-
-        public MsDocDocumentGenerator(string path, string lookupDir, IContainer container)
+        public MsDocDocumentGenerator(IContainer container)
         {
             Container = container;
-            XmlPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
-
-            LookupDir = !string.IsNullOrEmpty(lookupDir)
-                            ? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, lookupDir)
-                            : AppDomain.CurrentDomain.RelativeSearchPath;
         }
-
-        public string XmlPath { get; set; }
-        public string LookupDir { get; set; }
 
         #region IApiDocumentGenerator Members
 
@@ -220,7 +205,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public void GenerateDocForEntryPoint(IComponentRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls)
         {
             //Find the document
-            var docFile = Path.Combine(LookupDir, Path.GetFileName(apiEntryPointRegistration.Activator.LimitType.Assembly.Location).ToLowerInvariant().Replace(".dll", ".xml"));
+            var lookupDir = AppDomain.CurrentDomain.RelativeSearchPath;
+            var docFile = Path.Combine(lookupDir, Path.GetFileName(apiEntryPointRegistration.Activator.LimitType.Assembly.Location).ToLowerInvariant().Replace(".dll", ".xml"));
 
             if (!File.Exists(docFile))
             {
@@ -439,31 +425,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
             }
             return examples;
-        }
-
-        public virtual void Finish()
-        {
-            //Write for usage
-            var serializer = new DataContractSerializer(Points.GetType());
-            var settings = new XmlWriterSettings
-                {
-                    ConformanceLevel = ConformanceLevel.Document,
-                    Encoding = Encoding.UTF8,
-                    Indent = true
-                };
-            var helpDir = Path.GetDirectoryName(XmlPath);
-            if (helpDir != null)
-                if (!Directory.Exists(helpDir))
-                {
-                    Directory.CreateDirectory(helpDir);
-                }
-            using (var fs = File.Create(XmlPath))
-            {
-                using (var xmlWriter = XmlWriter.Create(fs, settings))
-                {
-                    serializer.WriteObject(xmlWriter, Points);
-                }
-            }
         }
 
         #endregion

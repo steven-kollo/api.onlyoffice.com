@@ -212,7 +212,6 @@
     <Compile Include="Controllers\EditorsController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
     <Compile Include="Documentation.cs" />
-    <Compile Include="DocumentGenerator\IApiDocumentGenerator.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
