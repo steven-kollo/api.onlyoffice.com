@@ -51,9 +51,6 @@ namespace ASC.Api.Web.Help
 
             //Load documentation
             _points = GenerateDocs();
-
-            var basePath = ConfigurationManager.AppSettings["apiprefix"] ?? "api";
-            if (_points != null) _points.ForEach(x => x.Methods.ForEach(y => y.Path = basePath + y.Path));
         }
 
         public static List<MsDocEntryPoint> GenerateDocs()
