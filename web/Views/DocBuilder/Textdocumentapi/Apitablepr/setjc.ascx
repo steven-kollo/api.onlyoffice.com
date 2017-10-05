@@ -51,4 +51,4 @@ builder.SaveFile("docx", "SetJc.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896608&doc=cGNoanArTnBEQ0tKSUZlVjQ5UlNFQWRmUzBwYzVzTnpaRUxpK285Q3ZCND0_IjQ4OTY2MDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896608&doc=WDlCQ2FJZFZzajQ3blRwK0t3TlljUndpNmxQVkozRkU4TkJGSXZMcWxQQT0_IjQ4OTY2MDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

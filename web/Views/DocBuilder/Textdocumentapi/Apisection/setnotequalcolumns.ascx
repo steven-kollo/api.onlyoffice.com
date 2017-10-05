@@ -5,7 +5,8 @@
 </h1>
 
 <h4 class="header-gray" id="SetNotEqualColumns">SetNotEqualColumns(aWidths, aSpaces)</h4>
-<p class="dscr">Specify that all columns in the current section are of a different width. Number of columns is equal to the length of the <em>aWidth</em> array.The length of the <em>aSpaces</em> array <b>MUST BE</b> equal to (<em>aWidth.length - 1</em>).</p>
+<p class="dscr">Specify that all columns in the current section are of a different width. Number of columns is equal to the length of the <em>aWidth</em> array.
+The length of the <em>aSpaces</em> array <b>MUST BE</b> equal to (<em>aWidth.length - 1</em>).</p>
 
             <h2>Parameters:</h2>
                 <table class="table">
@@ -56,4 +57,4 @@ builder.SaveFile("docx", "SetNotEqualColumns.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892373&doc=cEY2WlZsSWlZM2xkWXRkbU5vYWpJN2tYY3g1T0RxSDZlUjBlcWY4TUxTcz0_IjQ4OTIzNzMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892373&doc=TEg5TVpURk1UNnFmZmlwNFFwZjlOY0kwSFhaVW85V29xSWFxT0k3dWtURT0_IjQ4OTIzNzMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

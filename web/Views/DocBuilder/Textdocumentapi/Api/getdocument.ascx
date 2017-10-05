@@ -21,4 +21,4 @@
 <pre>var oDocument = Api.GetDocument();</pre>
 
 <%--<h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883384&doc=eVFmVDdLbkFZNHh5RkEwU3d5cFQwdXhnYjVFcHRGUjVYbHRNOUs1a1BXdz0_IjQ4ODMzODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>--%>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883384&doc=YnhPQ0J1RnFyd1dJdlU4NEpvcGJSTU5QbDd2V3Yvd3NqTU1zcXh5ZlAyYz0_IjQ4ODMzODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>--%>

@@ -29,4 +29,4 @@ builder.SaveFile("pptx", "AddText.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009682&doc=eElDcnVwaTZaVTgzNnFHcWJmbW1WcHJFZkM2TXlvY3JXR3EzQjRrQm1Baz0_IjUwMDk2ODIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009682&doc=dFNZWUN5TXg1SFZTL0E1VU1JUjFHN3pZZ0hJOFFLQXk0UFE0MWNBM2F0WT0_IjUwMDk2ODIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

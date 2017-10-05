@@ -40,4 +40,4 @@ builder.SaveFile("docx", "AddPageNumber.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5057167&doc=RlUxaXZEemNFS0xkQVIybXo3cEdUMFkvU3JyaUM0VWRyeVk0WmRMVXJQOD0_IjUwNTcxNjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5057167&doc=OEZySnhVWWtpb1RUdzBzb0RqZktia2FkVmJZREE4RDV5Z29WRkkzc0hRZz0_IjUwNTcxNjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

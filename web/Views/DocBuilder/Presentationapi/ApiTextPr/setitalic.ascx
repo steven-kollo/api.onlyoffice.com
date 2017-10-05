@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "SetItalic.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011334&doc=a0JGQWFQZFpKc3hodG5kWjlHNmwyV2hHT0VXd2ovZHNlVkVZZzBIa2NOST0_IjUwMTEzMzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011334&doc=RHVqbXViNVpJeUo5MFh6Y0hjZ05ndi9zRC9WWEJ6WHZaU3V2Y0RUd3Qrbz0_IjUwMTEzMzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

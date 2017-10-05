@@ -93,4 +93,4 @@ builder.SaveFile("xlsx", "AddChart.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882043&doc=YTdLNmNUTkdxUjhySzVrYzVvM0Z5WWthZjV5RmJPRC90djl2RmVtYjlJcz0_IjQ4ODIwNDMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882043&doc=aUJkTDdaZXMxUm5ETzBxSHIyZGZTRjBCN3A0VUZTbVpyNzhwVC9VOGtEST0_IjQ4ODIwNDMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

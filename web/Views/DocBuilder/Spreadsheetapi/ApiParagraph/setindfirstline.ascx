@@ -30,4 +30,4 @@ builder.SaveFile("xlsx", "SetIndFirstLine.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006356&doc=UzlQek1sMlc1eC9OZ09BaEtYcUJac2QxS3FlSmVuUmg5OHBUWWpNejI2bz0_IjUwMDYzNTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006356&doc=VFZ6NGVDN1gwbXFXUVhLOE9Ua2RCNmhLeXdWeS9NcS8rNGxlQlNTODhqTT0_IjUwMDYzNTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

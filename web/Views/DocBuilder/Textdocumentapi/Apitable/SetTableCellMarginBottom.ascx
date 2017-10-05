@@ -11,7 +11,8 @@
                 <a href="<%= Url.Action("textdocumentapi/apitablepr/settablecellmarginbottom") %>">ApiTablePr.SetTableCellMarginBottom</a>
                 </li></ul></dd>
                 </dl>
-<p class="dscr">Specify the amount of space which will be left between the bottom extent of the cell contents and the borderof all table cells within the parent table (or table row).</p>
+<p class="dscr">Specify the amount of space which will be left between the bottom extent of the cell contents and the border
+of all table cells within the parent table (or table row).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -51,4 +52,4 @@ builder.SaveFile("docx", "SetTableCellMarginBottom.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895022&doc=dnRHVm9zV3FqTEwzUWh3VFdha2YvNkMraWV2YmVvWEVrdmt5K2cydFJXcz0_IjQ4OTUwMjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895022&doc=NVJtOTgralNUVDB2OWY2ZFU1b29EWlc4cUV3QjhJMHBPVTRQeVNzSWdmWT0_IjQ4OTUwMjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

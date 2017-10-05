@@ -42,4 +42,4 @@ builder.SaveFile("xlsx", "SetHorAxisOrientation.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115620&doc=K1R5RVEyN0JRYjdYNS9RcngybjNFbkdydDRKeG1NQ1VKak9jaHZIeHJVOD0_IjUxMTU2MjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115620&doc=NDNya3JUZEFxRnFWTUZZNVBOQWN2d3R2a2x6MEdCQ0RUcjNkdW1tZXQ1UT0_IjUxMTU2MjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

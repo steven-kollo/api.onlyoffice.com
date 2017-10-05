@@ -42,4 +42,4 @@ builder.SaveFile("xlsx", "ApiRGBColor.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004562&doc=Z01jSkJONHJmU1FsWnBGSCtsRXlBdlNsYW8rQy9lUXMvVjhLbUNEanhscz0_IjUwMDQ1NjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004562&doc=Uk1nb3VianpwVndKMEJ6UjBZbk5jWWFBRUJWLzBoUmh0VVJBZFVGaWhTWT0_IjUwMDQ1NjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

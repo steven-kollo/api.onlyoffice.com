@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetUnderline.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006263&doc=QWJDM2liNWF0RVVXLzUwNENEa1hmOXk0a2p5QWtRZXFReUFTaVMyUTJKUT0_IjUwMDYyNjMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006263&doc=UDV0TlRCYzZwaG1Ud2tsalhMMFkrZy9LOWpHUkhXZUhEOGYvblN0allsUT0_IjUwMDYyNjMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

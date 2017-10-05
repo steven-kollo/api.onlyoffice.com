@@ -74,4 +74,4 @@ builder.SaveFile("docx", "SetHeight.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896841&doc=S3psUHQ1UUlaZGFHU3Zmcm5YTDhqK0VkdDNrdmZmdVZJcVFrTkJWWFUxWT0_IjQ4OTY4NDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896841&doc=RUc3Q1lnNUUzT2ZWSS80bXNHeitHbEcwZEVDcHZvckxKc3JQYS9oeWVVTT0_IjQ4OTY4NDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

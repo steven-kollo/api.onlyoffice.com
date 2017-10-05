@@ -90,4 +90,4 @@ builder.SaveFile("docx", "SetBetweenBorder.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891195&doc=clFlL3A4T3JyRDdaR2l1bDFiZ1ZneHhEQWFEQXU1dElkZ2syR2VBN1FhMD0_IjQ4OTExOTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891195&doc=Njh4bE5oSG5mQ0VmZTZnTlJIdWtkb1hVRHo5Q0ZTTEh0Z0ZDOTZRSkl3RT0_IjQ4OTExOTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

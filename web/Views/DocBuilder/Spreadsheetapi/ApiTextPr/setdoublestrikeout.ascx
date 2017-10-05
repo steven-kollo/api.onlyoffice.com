@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetDoubleStrikeout.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006258&doc=aG9Mekw1UjI0S2F6N1JqU0doamxzNDhFTDZlRWN1NFJoWGVrVkNJREZEUT0_IjUwMDYyNTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006258&doc=N3pjazZWVDNVUmd0WExmc2RzWEp4SW1XN0pKOGhNQXZQNzZJWFpLOEExQT0_IjUwMDYyNTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

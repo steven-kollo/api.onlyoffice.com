@@ -23,4 +23,4 @@ builder.SaveFile("docx", "SetFontSize.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892191&doc=ZGpqTUhMSy9OMnVuNmhTWHdOMGZabVNNZ1EzM0hvVkYxZlRIa0s5M2ZmUT0_IjQ4OTIxOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892191&doc=YmRXRjdMVFZTbmp3V0xPQVNZRUoyWmtKOGxVenV1TEtFSjNWeS8zdGtxVT0_IjQ4OTIxOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

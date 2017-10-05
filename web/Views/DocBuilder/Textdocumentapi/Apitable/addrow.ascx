@@ -71,4 +71,4 @@ builder.SaveFile("docx", "AddRow.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894684&doc=VkVqMTVwRGt4ZFo4YjV1a0lHTFV3WGpOL21ub2s2QzZHRnNpODNmSjNqTT0_IjQ4OTQ2ODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894684&doc=WHdydXcwbDlMcXA1dkgxSkpCd1MwMkdXcE5LelFHWUJSbHQwcEoyWGRBUT0_IjQ4OTQ2ODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "SetStrikeout.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011318&doc=WVo3NWw4bVJzTWl0M2VUNFN6WGxyMzZYeURESDJxVW03RzNDOHdUbkhhWT0_IjUwMTEzMTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011318&doc=bFcveWxjOTlOT0puWDkvbFpLRm9zSnlsS0FvRTdNWk9FVVc5STNicmNvRT0_IjUwMTEzMTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

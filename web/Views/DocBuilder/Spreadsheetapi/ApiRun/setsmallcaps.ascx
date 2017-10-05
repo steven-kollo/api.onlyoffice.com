@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetSmallCaps.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006266&doc=VDRhRWhYMHFxc1luVzBNQ2VPNVNwR0xBaWZTTHN5U1dQc08xVC9pUXMvST0_IjUwMDYyNjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006266&doc=bjdRM2hKaGxFUFczM0RDL2kvdUdoWVZiSHN4Z043MnVYRDZISDFhcWxDST0_IjUwMDYyNjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

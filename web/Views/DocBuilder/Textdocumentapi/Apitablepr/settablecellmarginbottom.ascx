@@ -5,7 +5,8 @@
 </h1>
 <h4 class="header-gray" id="SetTableCellMarginBottom">SetTableCellMarginBottom(nValue)</h4>
                 
-<p class="dscr">Specify the amount of space which will be left between the bottom extent of the cell contents and the borderof all table cells within the parent table (or table row).</p>
+<p class="dscr">Specify the amount of space which will be left between the bottom extent of the cell contents and the border
+of all table cells within the parent table (or table row).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -47,4 +48,4 @@ builder.SaveFile("docx", "SetTableCellMarginBottom.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896657&doc=eldWMEZaQzE2Z3lBb2crWXhGOXhDR3oxT1lGQVQ4azNDZjFpMmNKbFJWdz0_IjQ4OTY2NTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896657&doc=REg3azArTmRYbCtPaFRWa1hCV2dhdmpmaEJOQzFJUFVkSERzaTZlSEQvST0_IjQ4OTY2NTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

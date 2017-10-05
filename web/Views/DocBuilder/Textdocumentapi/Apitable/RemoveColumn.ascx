@@ -59,4 +59,4 @@ builder.SaveFile("docx", "RemoveColumn.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894835&doc=WXZjN2Q1RDByS2hPc2V4UUk1eFVwUGhVcmtIVmkya2FNL1RZd2VyNnl0ST0_IjQ4OTQ4MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894835&doc=dENRQzV4TEVuV3h4VVRJaUxzSEJncHdxRkhHTWM5VlMvUWxYRm9sa2prbz0_IjQ4OTQ4MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

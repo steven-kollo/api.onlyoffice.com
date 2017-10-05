@@ -5,7 +5,8 @@
 </h1>
 <h4 class="header-gray" id="SetTableBorderInsideH">SetTableBorderInsideH(sType, nSize, nSpace, r, g, b)</h4>
                 
-<p class="dscr">Specify the border which will be displayed on all horizontal table cell borders which are not onan outmost edge of the parent table (all horizontal borders which are not the topmost or bottommost border).</p>
+<p class="dscr">Specify the border which will be displayed on all horizontal table cell borders which are not on
+an outmost edge of the parent table (all horizontal borders which are not the topmost or bottommost border).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -82,4 +83,4 @@ builder.SaveFile("docx", "SetTableBorderInsideH.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896635&doc=MjZNMlhMdFd5QXlPMTFxMDNSbVNlQ2xzSlRwRHdCRVRrbGh2bUY4K1hEST0_IjQ4OTY2MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896635&doc=Q25LTHpzQmdRczczU1pHSTlXMmJ3MDl0TFdDRlNBVFpvNWYyQ0t3OTlhcz0_IjQ4OTY2MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

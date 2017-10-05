@@ -83,4 +83,4 @@ builder.CloseFile();
 </pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891077&doc=bXZxZ2NjOFlXSVRDSHFLcEJjVlZOTTNaV0szV2gvVEMxTXRRRlkzcVhJRT0_IjQ4OTEwNzci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891077&doc=cmRUZDJERHdMUU1UUEVhRk1Vb1hMd0dsenBtL0pCZFZmZlFoRG9uS3ozOD0_IjQ4OTEwNzci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -21,4 +21,4 @@ builder.SaveFile("docx", "CreateSolidFill.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883390&doc=TEY2dld6VFpTd0hoS016ejZtSFVZaVZiRmRxeWNZUnNHZU00RDVvYXhhaz0_IjQ4ODMzOTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883390&doc=eVdGbmpMU0pMRE4yY1FaOWpvVGU1N0NkcWl6SUJjZ0RhNEdzUVlWNW9BUT0_IjQ4ODMzOTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

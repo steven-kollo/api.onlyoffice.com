@@ -20,4 +20,4 @@ builder.SaveFile("pptx", "CreateChart.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007679&doc=WUFrM0gxSEFyUitPeWM5Y1hucjZCSm8zR2ZpdStzSnRudk13cG1DQUdRYz0_IjUwMDc2Nzki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007679&doc=TDgrVCtGazRjUnJtTnA0VGUra2hlVDNuV0JHMkVGeloxdDBNNGJ4Z1hKQT0_IjUwMDc2Nzki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

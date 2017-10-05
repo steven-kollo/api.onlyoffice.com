@@ -41,4 +41,4 @@ builder.SaveFile("docx", "SetSpacingLine.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891100&doc=VUZsMlpOY1BqQUVLOU5Gc2FhV2FYalRlY2lDbCtyancyTHJQWEQ0N0p3ND0_IjQ4OTExMDAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891100&doc=L1pmcnU2SGhVeGJYK25TcWwycGhSOURnUE5xbEE5SmxLQmxFeEVMdThXcz0_IjQ4OTExMDAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -40,4 +40,4 @@ builder.SaveFile("xlsx", "SetStrikeout.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5114907&doc=a2FqQWxEZCsycTAxcjlXTnN4UW1FSlJNVUFQbHRaaVRxVjdML3pOb2pJOD0_IjUxMTQ5MDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5114907&doc=aVRXamFmdmtwYTBPZFQ2WlhHZVlTckpyVCtPL2JJUFFPdmJWYU1RQS9jOD0_IjUxMTQ5MDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

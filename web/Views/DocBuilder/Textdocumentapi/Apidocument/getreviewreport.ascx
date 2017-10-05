@@ -108,4 +108,4 @@ builder.SaveFile("docx", "GetReviewReport.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5235513&doc=aGIrSjBHQi9PdkJsbE1QM3FwUHQrZ3l2WGNxRzZia3d3L0dRZ0ljS1FBMD0_IjUyMzU1MTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5235513&doc=MGJ2NUl4cUU0ZzVOVE9mcW45WEM4R2h3NVNhNTdxVVlXclZ1VzV4ckdlOD0_IjUyMzU1MTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

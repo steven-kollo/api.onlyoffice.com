@@ -19,4 +19,4 @@ builder.SaveFile("docx", "SetBold.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898099&doc=QzdWZ1U0ck91RDhZRVFzWkJNRFcrbTVldjVmYWQ0OTBhUDNLazFoZDRoaz0_IjQ4OTgwOTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898099&doc=NDhyZ1FXcTN5OVZYSHVJYVdzaDVtQTlBT2NXd0Nnd240a1NneE9QM0Zscz0_IjQ4OTgwOTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

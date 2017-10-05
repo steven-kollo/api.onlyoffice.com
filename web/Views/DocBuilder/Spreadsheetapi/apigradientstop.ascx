@@ -41,4 +41,4 @@ builder.SaveFile("xlsx", "ApiGradientStop.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004569&doc=VWxCM1l1bXF6V1F4QWk2eW11U3czWGxhZktuaEdhMHduN2JROHJuem02QT0_IjUwMDQ1Njki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004569&doc=cGY2aHRld0RucExGZnBveGtGdCtWQkNZcEFidEhjQ2psYkxrQTdmSjFTUT0_IjUwMDQ1Njki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -22,4 +22,4 @@ builder.SaveFile("docx", "CreatePresetColor.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887168&doc=MS9vZXd1Qm9pSDU0blYwNmNWSWgwZnhEWWRjVi81T1UrcWViSCtmRTRtWT0_IjQ4ODcxNjgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887168&doc=VFJRTStkOGxLWFRib2R2WVhjcFBPajlwZE9QLyt3VTBqN0d0UDJISmJ6QT0_IjQ4ODcxNjgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

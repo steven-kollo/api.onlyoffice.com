@@ -11,7 +11,8 @@
                 <a href="<%= Url.Action("textdocumentapi/apitablepr/settablecellmarginleft") %>">ApiTablePr.SetTableCellMarginLeft</a>
                 </li></ul></dd>
                 </dl>
-<p class="dscr">Specify the amount of space which will be present between the left extent of the cell contents and the leftborder of all table cells within the parent table (or table row).</p>
+<p class="dscr">Specify the amount of space which will be present between the left extent of the cell contents and the left
+border of all table cells within the parent table (or table row).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -51,4 +52,4 @@ builder.SaveFile("docx", "SetTableCellMarginLeft.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895034&doc=Ym9Tdm9mTUcyY3F6OWJ6bXJWVTQ2NFNsbFBaTERTSmd5bWk3ZXk4aFJjZz0_IjQ4OTUwMzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895034&doc=VGVKMjB5SStiQ3JrbjFNNHZzMUoxb2YvWExoc2ppVkp3STNyQWx2TWdxQT0_IjQ4OTUwMzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

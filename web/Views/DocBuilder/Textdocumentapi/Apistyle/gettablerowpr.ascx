@@ -39,4 +39,4 @@ builder.SaveFile("docx", "GetTableRowPr.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892942&doc=cHZoMERNVmFuSUFLRDBCMFRBSFR1WVEzQXNCV1NYY3JRR3lSOVNQMnlYcz0_IjQ4OTI5NDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892942&doc=QXZjc0YrOUt5b3RjMDhaMXM3YjdYS252RDJDdUJLWWcyZkIrTHlNWDZpTT0_IjQ4OTI5NDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

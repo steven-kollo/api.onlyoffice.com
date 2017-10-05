@@ -18,4 +18,4 @@ builder.SaveFile("xlsx", "CreatePatternFill.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004585&doc=UWJpVERCVVVZRGFnT1pJTVFUcDVxWTdTYmNZQXNnVGQxbkFrUDFWanlKTT0_IjUwMDQ1ODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004585&doc=YldBRGpPYUtCYWg3azk5ZkE3dXlYRW1EbUlyaEMxUGtnOHcrcTgwNmZoMD0_IjUwMDQ1ODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

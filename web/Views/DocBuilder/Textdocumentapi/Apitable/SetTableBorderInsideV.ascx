@@ -11,7 +11,8 @@
                 <a href="<%= Url.Action("textdocumentapi/apitablepr/settableborderinsidev") %>">ApiTablePr.SetTableBorderInsideV</a>
                 </li></ul></dd>
                 </dl>
-<p class="dscr">Specify the border which will be displayed on all vertical table cell borders which are not on anoutmost edge of the parent table (all vertical borders which are not the leftmost or rightmost border).</p>
+<p class="dscr">Specify the border which will be displayed on all vertical table cell borders which are not on an
+outmost edge of the parent table (all vertical borders which are not the leftmost or rightmost border).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -88,4 +89,4 @@ builder.SaveFile("docx", "SetTableBorderInsideV.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894944&doc=SVRQZnJaaVVYNWkyVHozRXpHdmF6d3V1MFhHTVdnQnp3THBaRyt2K3lBRT0_IjQ4OTQ5NDQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894944&doc=aHRVWW14bElGTWNLem9PTU10WGN5UU9zK0pXbXVmaUhrajhJWEI5VlowRT0_IjQ4OTQ5NDQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -87,4 +87,4 @@ builder.SaveFile("xlsx", "AddImage.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003260&doc=M1hVRjVYUVdneVdKY0Q5dkU0emxWZ3FjVStFN3kyQ0dpaERKeUpyRzhncz0_IjUwMDMyNjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003260&doc=ZXhmUmxSbm1SZElvVnFNSFRTOXBRc3prNzBUYkY0RTBVNUY4eEZMem5lMD0_IjUwMDMyNjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -23,4 +23,4 @@ builder.SaveFile("docx", "AddTabStop.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891437&doc=QmtPaGNWRk40TmFqbllPTE5oc1Fady9GQ3VXeEJibjVRZElSZm5FOUN4VT0_IjQ4OTE0Mzci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891437&doc=dVoyRGxRS1M3dHFJL3pmNmN0bHM4aUNjd3dkQnRObHZ6Snh4bWpCeU5VRT0_IjQ4OTE0Mzci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -25,4 +25,4 @@ builder.SaveFile("xlsx", "GetElementsCount.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006395&doc=OGZMSDVLRzlmMzdkdVk5V0V4TlFkQXBHcktBWGU4aUcyNGYvTWs4ajVXOD0_IjUwMDYzOTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006395&doc=Wm1DaFVXTTRyS2JIMW5DT280MjVnMFR2N2FBVWkvYTQra2pNZzRLVk5jVT0_IjUwMDYzOTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

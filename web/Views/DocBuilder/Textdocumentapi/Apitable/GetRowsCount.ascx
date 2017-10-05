@@ -31,4 +31,4 @@ builder.SaveFile("docx", "GetRowsCount.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894689&doc=Q2dHOE0rb0lacDZESGhSaUtjdTdJRXltREt6emdpMHczMDQzUFB0RGNwVT0_IjQ4OTQ2ODki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894689&doc=V0ZMYjJQaE1NeVloalRWbVJINmJUWUVZWklXSXJQU3g1LzZBUFA2ck82MD0_IjQ4OTQ2ODki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

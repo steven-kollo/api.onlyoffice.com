@@ -17,4 +17,4 @@ builder.SaveFile("pptx", "CreateBlipFill.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007636&doc=cGwraURxM29qWXVXRkxMUkpmNWlITjBLbktlMjZtTkllbjlJbE43LzlObz0_IjUwMDc2MzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007636&doc=V1VTOEVNZGFhd3U1UmlZbkRQMXl6cFRUMlhHeFZFbjBGVTJZMTBqRnh5Yz0_IjUwMDc2MzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

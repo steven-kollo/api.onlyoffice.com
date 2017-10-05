@@ -50,4 +50,4 @@ builder.SaveFile("docx", "GetNumbering.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912719&doc=SWZyL240bkZ4SmNhYjZHN1RidVZ2VVBvMjl2MmJSb0duNmt5WStTWExCWT0_IjQ5MTI3MTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912719&doc=bjFOeEpSM2J5d080L0xrbS9kOWVXeEJBWmQyT1VTNW5GRVRJUi9na2J6OD0_IjQ5MTI3MTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

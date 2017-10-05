@@ -42,4 +42,4 @@ builder.SaveFile("xlsx", "SetAlignVertical.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882005&doc=TlA5VkZ1L0NsY0VHcjUza2hRN1lmdXlvaDcrUWpWdDFMWmNjUjdzUFVIdz0_IjQ4ODIwMDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882005&doc=MTROSXhHMWtOMEN0bkgxZjZhWTdKTkY3WTdGZG95OHdnVTdxRk53ZjR1bz0_IjQ4ODIwMDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

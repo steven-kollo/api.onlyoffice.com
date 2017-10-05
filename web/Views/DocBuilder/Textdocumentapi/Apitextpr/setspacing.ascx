@@ -19,4 +19,4 @@ builder.SaveFile("docx", "SetSpacing.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898162&doc=Rk96UGpsSlc2S1lPdTVIUG5hNkg4YVdCTDBocjZMQmhtZ2I1S1ByM1BkTT0_IjQ4OTgxNjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898162&doc=L3BQWVowc3VYVitZa0ZHb0NoWHdEM2I5ZjJjWndQYVBNNnBvTWRBT21FMD0_IjQ4OTgxNjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

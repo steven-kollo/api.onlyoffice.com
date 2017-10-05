@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "SetDoubleStrikeout.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011305&doc=bFRZQzJjeTRURlRTSWNTNCtFN0hVaW02N25GSE5zb3ZCZkZjaDhFY0h0VT0_IjUwMTEzMDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011305&doc=M0xXaWt5VGNVbldmL212cklHVThOUjhTWnp1c1djYTdhY2dNWW9URDRiZz0_IjUwMTEzMDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

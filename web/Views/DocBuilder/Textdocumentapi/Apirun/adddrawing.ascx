@@ -46,4 +46,4 @@ builder.SaveFile("docx", "AddDrawing.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891434&doc=SDVqeGZGTW9aTmJkSlpnK3k1OURPeCtIR2ZGVFlaeWdPTVFWZTQ3QXNYdz0_IjQ4OTE0MzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891434&doc=NXBMSzRjUUd3aUNPR2U5dXNBOXNCR2hSWFkrVitIckN2TXZ5NW1VUmJXRT0_IjQ4OTE0MzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

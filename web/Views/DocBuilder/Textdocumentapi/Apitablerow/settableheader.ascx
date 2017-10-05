@@ -12,7 +12,9 @@
                 </li></ul></dd>
                 </dl>
 
-<p class="dscr">Specify that the current table row will be repeated at the top of each new page wherever this tableis displayed. This gives this table row the behavior of a 'header' row on each of these pages. This element canbe applied to any number of rows at the top of the table structure in order to generate multi-row table headers.</p>
+<p class="dscr">Specify that the current table row will be repeated at the top of each new page wherever this table
+is displayed. This gives this table row the behavior of a 'header' row on each of these pages. This element can
+be applied to any number of rows at the top of the table structure in order to generate multi-row table headers.</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -62,4 +64,4 @@ builder.SaveFile("docx", "SetTableHeader.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896846&doc=RjZvMTJwTGhWbVVIQmJsUmUwK3VpblFnZkV0YXlPaDJ3RitEaSs3WEJCOD0_IjQ4OTY4NDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896846&doc=TmZJcTFlaVVNbnN0QkxQeWl6ZlBEL0wyTXRKNE1Sd2U2dlB3L1psNzV1TT0_IjQ4OTY4NDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

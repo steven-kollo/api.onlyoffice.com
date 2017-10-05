@@ -94,4 +94,4 @@ builder.SaveFile("docx", "ApiNumberingLevel.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888909&doc=NnNpRnFoR1draGhob2dPT2dIb0pnSlEwQWs0c0ZXN0pVT2I4dUl0NHhIQT0_IjQ4ODg5MDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888909&doc=TFJjR3pqa2cvMDY5ZWxjVVprN1p2MEE1YWxJVFVxMTl1RGJpRUlJUGRMZz0_IjQ4ODg5MDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

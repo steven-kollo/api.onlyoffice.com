@@ -21,4 +21,4 @@ builder.SaveFile("xlsx", "CreateSchemeColor.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004635&doc=ZUJ3WGhzaFlmM3EyZHE3NGk3ajd1OWZVRG1YRnpVMm51eDI3SWhJeDNxdz0_IjUwMDQ2MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004635&doc=NmJORzlQSVc1a2Y1d2hJK1V6OGRGeUNCVlI1VDZMU1pQeTBIWFkvVytZUT0_IjUwMDQ2MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

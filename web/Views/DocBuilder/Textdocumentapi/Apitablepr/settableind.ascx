@@ -5,7 +5,8 @@
 </h1>
 <h4 class="header-gray" id="SetTableInd">SetTableInd(nValue)</h4>
                 
-<p class="dscr">Specify the indentation which will be added before the leading edge of the current table in the document (theleft edge in a left-to-right table, and the right edge in a right-to-left table).</p>
+<p class="dscr">Specify the indentation which will be added before the leading edge of the current table in the document (the
+left edge in a left-to-right table, and the right edge in a right-to-left table).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -47,4 +48,4 @@ builder.SaveFile("docx", "SetTableInd.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896664&doc=eGpKVEdrS2d1WFMrYVJYQW0veWVyU1BmdU5qNU1sWTVXdjBmT25ZSTJJZz0_IjQ4OTY2NjQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896664&doc=clQ0RTRmcDZMdnFvSC8vQ2xBZitBclA3eC9udHRZejh3MXFkOHVYNHcyZz0_IjQ4OTY2NjQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

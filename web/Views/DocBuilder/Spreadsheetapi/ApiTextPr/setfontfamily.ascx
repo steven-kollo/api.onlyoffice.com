@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetFontFamily.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006257&doc=cVZLbStxckpSRXE3VzhNZVpHcXpEbHBuWkRFbHhWeU1NOU84bVBoSENFZz0_IjUwMDYyNTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006257&doc=TnQwQWtaNW0vZjZnR3JqdlV5a1RiR2dYNm8rbXc0d1lBZFI2UmlJOURyND0_IjUwMDYyNTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

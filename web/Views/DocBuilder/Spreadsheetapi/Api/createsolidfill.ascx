@@ -19,4 +19,4 @@ builder.SaveFile("xlsx", "CreateSolidFill.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004636&doc=U3JRbjRPbHJHT3NwOEV3enM5RnF0OGpkYmk1TFV6RTljMWtudHduWkZBND0_IjUwMDQ2MzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004636&doc=TGRZdHRjMEd4ZlA4ZG9jNlJWdDAzQmtmaDl4YTR5Z1lOR1BaSnRKWEVUQT0_IjUwMDQ2MzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

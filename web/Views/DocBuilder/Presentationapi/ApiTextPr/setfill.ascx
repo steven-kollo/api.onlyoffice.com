@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "SetFill.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011330&doc=MU9LdWlpZFJuckdOcG1CamlwQU81amRjcGphK0ZtYTFjZ3YyblcyOC95Zz0_IjUwMTEzMzAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011330&doc=WVdRYlc5aWtTUWh5eVFsemFFZmFlZFVzMzdpNDVlRHJ5dkNJVFJyYzRtWT0_IjUwMTEzMzAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

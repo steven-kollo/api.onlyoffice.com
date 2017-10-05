@@ -41,4 +41,4 @@ builder.SaveFile("xlsx", "ApiFill.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004572&doc=aGNrS1NCVXRuT25XNGR1ZkJwSDcwb0pDb1RoRThmbUJROXpNMDN6eStmST0_IjUwMDQ1NzIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004572&doc=aWlPWmhKSHFxdU9JNmFqODNPZTF5L005UVZLeDNNSkFrSmcxUS9DaXhyST0_IjUwMDQ1NzIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
