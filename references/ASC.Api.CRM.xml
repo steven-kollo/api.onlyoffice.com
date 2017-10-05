@@ -52,6 +52,22 @@
             <category>Common</category>
             <returns></returns>
         </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetCurrencyRates(System.String,System.Collections.Generic.List{ASC.CRM.Core.CurrencyRate})">
+            <summary>
+               Set currency rates
+            </summary>
+            <short></short>
+            <category>Common</category>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.AddCurrencyRates(System.Collections.Generic.List{ASC.CRM.Core.CurrencyRate})">
+            <summary>
+               Add currency rates
+            </summary>
+            <short></short>
+            <category>Common</category>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCurrencyRate(System.Int32)">
             <summary>
                Delete currency rate object
@@ -462,6 +478,12 @@
             <short>Save default invoice terms</short>
             <category>Invoices</category>
             <returns>InvoiceSetting</returns>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetInvoiceCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetInvoiceLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CloseCases(System.Int32)">
             <summary>
@@ -1367,7 +1389,7 @@
         <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImagesByNetworks(System.Collections.Generic.List{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
             <category>Contacts</category>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.SocialMedia.SocialNetworks,System.String,System.Boolean)">
+        <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.Thrdparty.SocialNetworks,System.String,System.Boolean)">
             <category>Contacts</category>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SendMailSMTPToContacts(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String,System.String,System.Boolean)">
@@ -1380,6 +1402,12 @@
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CancelMailSMTPToContacts">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetContactCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetContactLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.#ctor(ASC.Api.Impl.ApiContext)">
@@ -1831,6 +1859,12 @@
             <returns>
               Opportunity list
             </returns>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetDealCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetDealLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateDealMilestone(System.String,System.String,System.String,System.Int32,ASC.CRM.Core.DealMilestoneStatus)">
             <summary>
@@ -2435,44 +2469,12 @@
                File Info
             </returns>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.BuildContactPopulateReport(ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Boolean},System.String,System.Int32)">
+        <member name="M:ASC.Api.CRM.CRMApi.FillDb(System.Int32)">
             <summary>
-            
+            Temporary hidden method for insertion data to database
             </summary>
-            <param name="fromDate"></param>
-            <param name="toDate"></param>
-            <param name="isCompany"></param>
-            <param name="tagName"></param>
-            <param name="contactType"></param>
-            <returns></returns>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.BuildSalesForecastByMonthReport(System.Guid,System.DateTime,System.DateTime)">
-            <summary>
-            
-            </summary>
-            <param name="responsibleID"></param>
-            <param name="fromDate"></param>
-            <param name="toDate"></param>
-            <returns></returns>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.BuildSalesForecastByClientReport(System.DateTime,System.DateTime)">
-            <summary>
-            
-            </summary>
-            <param name="fromDate"></param>
-            <param name="toDate"></param>
-            <returns></returns>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.BuildSalesForecastByManagerReport(System.DateTime,System.DateTime)">
-            <summary>
-            
-            </summary>
-            <param name="fromDate"></param>
-            <param name="toDate"></param>
-            <returns></returns>
+            <param name="count">Count</param>
+            <returns>Count</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetEntityTags(System.String,System.Int32)">
@@ -2798,6 +2800,12 @@
             <short> Update task</short> 
             <category>Tasks</category>
             <returns>Task</returns>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetTaskCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.SetTaskLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskTemplateContainer(System.String,System.String)">
              <summary>

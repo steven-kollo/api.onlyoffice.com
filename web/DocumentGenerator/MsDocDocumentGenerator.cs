@@ -31,21 +31,22 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Xml;
+using System.Web;
+using System.Web.Routing;
 using System.Xml.Linq;
 using ASC.Api.Enums;
 using ASC.Api.Impl;
 using ASC.Api.Interfaces;
 using ASC.Api.Utils;
+using Autofac;
+using Autofac.Core;
 using log4net;
-using Microsoft.Practices.Unity;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
 {
     [DataContract(Name = "response", Namespace = "")]
-    public class MsDocFunctionResponce
+    public class MsDocFunctionResponse
     {
         [DataMember(Name = "output")]
         public Dictionary<string, string> Outputs { get; set; }
@@ -98,7 +99,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public string Returns { get; set; }
 
         [DataMember(Name = "responses")]
-        public List<MsDocFunctionResponce> Response { get; set; }
+        public List<MsDocFunctionResponse> Response { get; set; }
 
         [DataMember(Name = "category")]
         public string Category { get; set; }
@@ -181,43 +182,31 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public bool Visible { get; set; }
     }
 
-    public class MsDocDocumentGenerator : IApiDocumentGenerator
+    public class MsDocDocumentGenerator
     {
         private static readonly Regex RouteRegex = new Regex(@"\{([^\}]+)\}", RegexOptions.Compiled);
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
         private readonly string[] _responseFormats = (ConfigurationManager.AppSettings["enabled_response_formats"] ?? "").Split('|');
 
-        public MsDocDocumentGenerator(string path, IUnityContainer container)
-            : this(path, null, container)
-        {
-        }
-
-        public MsDocDocumentGenerator(string path, string lookupDir, IUnityContainer container)
+        public MsDocDocumentGenerator(IContainer container)
         {
             Container = container;
-            XmlPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, path);
-
-            LookupDir = !string.IsNullOrEmpty(lookupDir)
-                            ? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, lookupDir)
-                            : AppDomain.CurrentDomain.RelativeSearchPath;
         }
-
-        public string XmlPath { get; set; }
-        public string LookupDir { get; set; }
 
         #region IApiDocumentGenerator Members
 
-        public IUnityContainer Container { get; set; }
+        public IContainer Container { get; set; }
 
         public List<MsDocEntryPoint> Points
         {
             get { return _points; }
         }
 
-        public void GenerateDocForEntryPoint(ContainerRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls)
+        public void GenerateDocForEntryPoint(IComponentRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls)
         {
             //Find the document
-            var docFile = Path.Combine(LookupDir, Path.GetFileName(apiEntryPointRegistration.MappedToType.Assembly.Location).ToLowerInvariant().Replace(".dll", ".xml"));
+            var lookupDir = AppDomain.CurrentDomain.RelativeSearchPath;
+            var docFile = Path.Combine(lookupDir, Path.GetFileName(apiEntryPointRegistration.Activator.LimitType.Assembly.Location).ToLowerInvariant().Replace(".dll", ".xml"));
 
             if (!File.Exists(docFile))
             {
@@ -228,7 +217,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             var members = XDocument.Load(docFile).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + docFile)).Element("members").Elements("member");
             //Find entry point first
-            var entryPointDoc = members.SingleOrDefault(x => x.Attribute("name").ValueOrNull() == string.Format("T:{0}", apiEntryPointRegistration.MappedToType.FullName))
+            var entryPointDoc = members.SingleOrDefault(x => x.Attribute("name").ValueOrNull() == string.Format("T:{0}", apiEntryPointRegistration.Activator.LimitType.FullName))
                                 ?? new XElement("member",
                                                 new XElement("summary", "This entry point doesn't have documentation."),
                                                 new XElement("remarks", ""));
@@ -244,7 +233,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 {
                     Summary = entryPointDoc.Element("summary").ValueOrNull(),
                     Remarks = entryPointDoc.Element("remarks").ValueOrNull(),
-                    Name = apiEntryPointRegistration.Name,
+                    Name = apiEntryPointRegistration.Services.OfType<KeyedService>().First().ServiceKey.ToString(),
                     Example = entryPointDoc.Element("example").ValueOrNull(),
 
                     Methods = (from methodCall in methodCallsDoc
@@ -259,7 +248,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                        Remarks = methodCall.description.Element("remarks").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
                                        Returns = methodCall.description.Element("returns").ValueOrNull(),
                                        Example = methodCall.description.Element("example").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
-                                       Response = TryCreateResponce(methodCall.apiMethod, Container, methodCall.description.Element("returns")),
+                                       Response = TryCreateResponse(methodCall.apiMethod, Container, methodCall.description.Element("returns")),
                                        Category = methodCall.description.Element("category").ValueOrNull(),
                                        Notes = methodCall.description.Element("notes").ValueOrNull(),
                                        ShortName = methodCall.description.Element("short").ValueOrNull(),
@@ -288,11 +277,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                        : paramType.ToString();
         }
 
-        private void BuildUndocumented(ContainerRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls)
+        private void BuildUndocumented(IComponentRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls)
         {
             var root = new MsDocEntryPoint
                 {
-                    Name = apiEntryPointRegistration.Name,
+                    Name = apiEntryPointRegistration.Services.OfType<KeyedService>().First().ServiceKey.ToString(),
                     Remarks = "This entry point doesn't have any documentation. This is generated automaticaly using metadata",
                     Methods = (from methodCall in apiMethodCalls
                                select new MsDocEntryPointMethod
@@ -301,7 +290,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                        HttpMethod = methodCall.HttpMethod,
                                        FunctionName = GetFunctionName(methodCall.MethodCall.Name),
                                        Authentification = methodCall.RequiresAuthorization,
-                                       Response = TryCreateResponce(methodCall, Container, null),
+                                       Response = TryCreateResponse(methodCall, Container, null),
                                        Params = (from methodParam in
                                                      methodCall.GetParams()
                                                  select new MsDocEntryPointMethodParams
@@ -323,7 +312,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static string GetFunctionName(string functionName)
         {
-            return Regex.Replace(Regex.Replace(functionName, "[a-z][A-Z]+", (match) => (match.Value[0] + " " + match.Value.Substring(1, match.Value.Length - 2) + (" " + match.Value[match.Value.Length - 1]).ToLowerInvariant())), @"\s+", " ");
+            return Regex.Replace(Regex.Replace(functionName, "[a-z][A-Z]+", match => (match.Value[0] + " " + match.Value.Substring(1, match.Value.Length - 2) + (" " + match.Value[match.Value.Length - 1]).ToLowerInvariant())), @"\s+", " ");
         }
 
         private static XElement CreateEmptyParams(IApiMethodCall apiMethodCall)
@@ -333,9 +322,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private readonly HashSet<Type> _alreadyRegisteredTypes = new HashSet<Type>();
 
-        private List<MsDocFunctionResponce> TryCreateResponce(IApiMethodCall apiMethod, IUnityContainer container, XElement returns)
+        private List<MsDocFunctionResponse> TryCreateResponse(IApiMethodCall apiMethod, IContainer container, XElement returns)
         {
-            var samples = new List<MsDocFunctionResponce>();
+            var samples = new List<MsDocFunctionResponse>();
             var returnType = apiMethod.MethodCall.ReturnType;
             var collection = false;
             if (apiMethod.MethodCall.ReturnType.IsGenericType)
@@ -387,38 +376,42 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return samples;
         }
 
-        private IEnumerable<MsDocFunctionResponce> GetSamples(IApiMethodCall apiMethod, IUnityContainer container, MethodInfo sample, bool collection, Type returnType)
+        private IEnumerable<MsDocFunctionResponse> GetSamples(IApiMethodCall apiMethod, IContainer container, MethodInfo sample, bool collection, Type returnType)
         {
             try
             {
-                var responce = container.Resolve<IApiStandartResponce>();
-                responce.Status = ApiStatus.Ok;
-
-                var apiContext = new ApiContext(null);
-                apiContext.RegisterType(returnType);
-
-                var sampleResponce = sample.Invoke(null, new object[0]);
-                if (collection)
+                using (var lifetimeScope = container.BeginLifetimeScope())
                 {
-                    //wrap in array
-                    sampleResponce = new List<object> { sampleResponce };
-                }
-                responce.Response = sampleResponce;
+                    var routeContext = new RequestContext(new HttpContextWrapper(HttpContext.Current), new RouteData());
+                    var apiContext = lifetimeScope.Resolve<ApiContext>(new NamedParameter("requestContext", routeContext));
+                    var response = lifetimeScope.Resolve<IApiStandartResponce>();
+                    response.Status = ApiStatus.Ok;
 
-                var serializers = container.ResolveAll<IApiSerializer>().Where(x => x.CanSerializeType(apiMethod.MethodCall.ReturnType));
-                return serializers.Select(apiResponder => new MsDocFunctionResponce
+                    apiContext.RegisterType(returnType);
+
+                    var sampleResponse = sample.Invoke(null, new object[0]);
+                    if (collection)
                     {
-                        Outputs = CreateResponse(apiResponder, responce, apiContext)
-                    });
+                        //wrap in array
+                        sampleResponse = new List<object> { sampleResponse };
+                    }
+                    response.Response = sampleResponse;
+
+                    var serializers = container.Resolve<IEnumerable<IApiSerializer>>().Where(x => x.CanSerializeType(apiMethod.MethodCall.ReturnType));
+                    return serializers.Select(apiResponder => new MsDocFunctionResponse
+                        {
+                            Outputs = CreateResponse(apiResponder, response, apiContext)
+                        });
+                }
             }
             catch (Exception err)
             {
                 LogManager.GetLogger("ASC.Api").Error(err);
-                return Enumerable.Empty<MsDocFunctionResponce>();
+                return Enumerable.Empty<MsDocFunctionResponse>();
             }
         }
 
-        private Dictionary<string, string> CreateResponse(IApiSerializer apiResponder, IApiStandartResponce responce, ApiContext apiContext)
+        private Dictionary<string, string> CreateResponse(IApiSerializer apiResponder, IApiStandartResponce response, ApiContext apiContext)
         {
             var examples = new Dictionary<string, string>();
             foreach (var extension in apiResponder.GetSupportedExtensions().Where(extension => _responseFormats.Contains(extension)))
@@ -426,37 +419,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 //Create request context
                 using (var writer = new StringWriter())
                 {
-                    var contentType = apiResponder.RespondTo(responce, writer, "dummy" + extension, string.Empty, true, false);
+                    var contentType = apiResponder.RespondTo(response, writer, "dummy" + extension, string.Empty, true, false);
                     writer.Flush();
                     examples[contentType.MediaType] = writer.GetStringBuilder().ToString();
                 }
             }
             return examples;
-        }
-
-        public virtual void Finish()
-        {
-            //Write for usage
-            var serializer = new DataContractSerializer(Points.GetType());
-            var settings = new XmlWriterSettings
-                {
-                    ConformanceLevel = ConformanceLevel.Document,
-                    Encoding = Encoding.UTF8,
-                    Indent = true
-                };
-            var helpDir = Path.GetDirectoryName(XmlPath);
-            if (helpDir != null)
-                if (!Directory.Exists(helpDir))
-                {
-                    Directory.CreateDirectory(helpDir);
-                }
-            using (var fs = File.Create(XmlPath))
-            {
-                using (var xmlWriter = XmlWriter.Create(fs, settings))
-                {
-                    serializer.WriteObject(xmlWriter, Points);
-                }
-            }
         }
 
         #endregion

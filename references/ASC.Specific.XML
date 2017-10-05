@@ -97,27 +97,5 @@
             Entry point name
             </summary>
         </member>
-        <member name="T:ASC.Specific.WarmUpApi.WarnUpEntryPoint">
-            <summary>
-            Authorization for api
-            </summary>
-        </member>
-        <member name="M:ASC.Specific.WarmUpApi.WarnUpEntryPoint.#ctor(ASC.Api.Impl.ApiContext)">
-            <summary>
-             Constructor
-            </summary>
-            <param name="context"></param>
-        </member>
-        <member name="M:ASC.Specific.WarmUpApi.WarnUpEntryPoint.GetWarmupProgress">
-            <summary>
-            Request of warmup progress
-            </summary>
-            <visible>false</visible>
-        </member>
-        <member name="P:ASC.Specific.WarmUpApi.WarnUpEntryPoint.Name">
-            <summary>
-            Entry point name
-            </summary>
-        </member>
     </members>
 </doc>
