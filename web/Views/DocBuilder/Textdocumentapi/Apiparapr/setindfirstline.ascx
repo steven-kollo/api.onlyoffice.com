@@ -33,4 +33,4 @@ builder.SaveFile("docx", "SetIndFirstLine.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891338&doc=clhkRGd3bkFJWW53ckZwRjViYUM3TllWZWs4WkhzeVBSVU0vL1BCZFpDdz0_IjQ4OTEzMzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891338&doc=d0VNSzBpYWNGWnlJWFBteWdjZlVNNjZOVW5EZThoUm56TVJRdk1wQzVkRT0_IjQ4OTEzMzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

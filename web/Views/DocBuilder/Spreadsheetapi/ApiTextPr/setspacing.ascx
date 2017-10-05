@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetSpacing.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006249&doc=TFQrUjZmdUptc2JHMEUwQmZEZWxXM2cwSXIyUVZwMVFzNUdVeTQzTE92WT0_IjUwMDYyNDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006249&doc=TDdGblVJMXlFWC9kdFVaTExKMnhnNUYxdEI4S0Q4RUVuWmNjQ1R1aTRtaz0_IjUwMDYyNDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

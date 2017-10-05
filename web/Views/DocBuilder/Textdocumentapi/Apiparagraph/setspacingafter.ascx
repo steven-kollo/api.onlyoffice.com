@@ -23,4 +23,4 @@ builder.SaveFile("docx", "ApiParagraph.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891098&doc=Z1JCWWNDQUNLNWl2WkN4VGhLUzJpT2tWR21wYlRLTzJyTlF5dWxJVDNZYz0_IjQ4OTEwOTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891098&doc=T0dRM1FhdjNwd3RnQ2ZYMHlXTTV0QzNGdFNIOVdTN2dNMlZYRGdOZWI3ND0_IjQ4OTEwOTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

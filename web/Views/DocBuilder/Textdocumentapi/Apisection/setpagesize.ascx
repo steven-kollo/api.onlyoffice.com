@@ -44,7 +44,8 @@
                         </td>
                         <td> &lt;optional></td>
                         <td>false</td>
-                        <td>Specifies the orientation of all pages in this section (if set to <code>true</code> then the portrait orientation is chosen).</td>
+                        <td>Specifies the orientation of all pages in this section 
+(if set to <code>true</code> then the portrait orientation is chosen).</td>
                     </tr>
                 </tbody>
                 </table>
@@ -66,4 +67,4 @@ builder.SaveFile("docx", "SetPageSize.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892400&doc=akFINE5ZMGtIL05FSHVOdmJEKzIxaXMxdWlrL3FFb3h5QkJORWVobHBYcz0_IjQ4OTI0MDAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892400&doc=RzdPT0RqbUJud1lOdzh0bVR1S1hCcnJSdEFRYlVqUUMxOG9tVFRVOWNqcz0_IjQ4OTI0MDAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

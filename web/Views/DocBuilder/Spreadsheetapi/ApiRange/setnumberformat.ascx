@@ -75,4 +75,4 @@ builder.SaveFile("xlsx", "SetNumberFormat.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5114914&doc=MW1OMWllWncvSXB0WVhpVzNZc1IrL0ludWZiNVpGc2RRckVvWDBJd3BOOD0_IjUxMTQ5MTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5114914&doc=cmVKL1cxbks5TkllS0ZPb0t1dTZ2bll6RGJEaXNrMzBWWnNzQVJXQ2RNYz0_IjUxMTQ5MTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

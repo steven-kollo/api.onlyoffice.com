@@ -35,7 +35,8 @@
                         </td>
                         <td> &lt;optional></td>
                         <td>false</td>
-                        <td>Whether to create a new footer or not with the specified footer type in case no footer with such a type could be found in the current section.</td>
+                        <td>Whether to create a new footer or not with the 
+specified footer type in case no footer with such a type could be found in the current section.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -65,4 +66,4 @@ builder.SaveFile("docx", "GetFooter.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892247&doc=blJyT1lka29sSGhUUnlqSlpZZ1dlK3JOZWVrNjIrMWtpbFYyWi95K2J1WT0_IjQ4OTIyNDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892247&doc=UjE0eDRYSCtaR3E4bEtGbzAveU9jOTZRSkpsUEVEVkVMSkZtUVlUQ3ZoWT0_IjQ4OTIyNDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

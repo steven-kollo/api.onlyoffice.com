@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "SetFontSize.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011312&doc=RW15K2U4YVc5WGd1TnZrVnU5d0JqTGlmb0szb2hESENGVG5ma1FLenpIWT0_IjUwMTEzMTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011312&doc=ditER2tLN2pleGdOeUxraGFaelc1UEs1M0NnclRTNlNOQkRvK1ZYaXczVT0_IjUwMTEzMTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

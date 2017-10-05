@@ -26,4 +26,4 @@ builder.SaveFile("docx", "GetElementsCount.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889009&doc=MEJVejYraWNVODNoRmdpM0hSMzE5S3B2dm94dGZRVDM1aC91VEk0QjBxND0_IjQ4ODkwMDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889009&doc=Y1pyY3ZlTjd6Y1ladjZOT255cnlleHh1bVZBU2JSMkN5dmNLYU9QMno5VT0_IjQ4ODkwMDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

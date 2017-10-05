@@ -32,4 +32,4 @@ builder.SaveFile("pptx", "CreateShape.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007717&doc=bktubVBKT2FQOTNDWWNqOWthWk4yNVpqQmN4Qmh2V1BJV2laN0dzT2N3cz0_IjUwMDc3MTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007717&doc=OXVGWlcwTzZ6VWJnQTF3SE5VWEFSampZQWR0YTdxYWZEWWJjbGwxQ1cydz0_IjUwMDc3MTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetItalic.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006268&doc=TEx1MEk5Wm4xTHZwQ3I5aVVMZ2NHSm9RakZSa1pLSXltZ2JJek5HelVjcz0_IjUwMDYyNjgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006268&doc=N2xKM21KbmhaN2hmcWxsZUxoUGV0c2FMaG12cDBzMnJDOWdDYkx1eTBucz0_IjUwMDYyNjgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

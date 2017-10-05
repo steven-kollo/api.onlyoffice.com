@@ -35,4 +35,4 @@ builder.SaveFile("pptx", "SetIndFirstLine.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009948&doc=NnY2emxSR3RpNTZ2S1dld2ZFd2NEMzYyQ2ZpYW51QWtmSW9IOUpvb2V4OD0_IjUwMDk5NDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009948&doc=TDlDTEVxdjl3a2grNklyWWl2bTZzY2trajdMNmd0TU1kSzFxK0dKbUo1bz0_IjUwMDk5NDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -23,4 +23,4 @@ builder.SaveFile("xlsx", "CreateBullet.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006437&doc=dHdhMDNhTnA0dHFmeEsxbVl3VDU3cG40cW9zdGd5UEY5c3FRMkJ0YVEzMD0_IjUwMDY0Mzci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006437&doc=WkZCVGQ0aWsrQXlFS2cwSndPSE9Yb2hKWHV3cVhHb3FUZ3pSWklpZmZQYz0_IjUwMDY0Mzci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

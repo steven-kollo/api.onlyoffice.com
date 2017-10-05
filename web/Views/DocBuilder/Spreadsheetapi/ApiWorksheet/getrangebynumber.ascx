@@ -53,4 +53,4 @@ builder.SaveFile("xlsx", "GetRangeByNumber.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003326&doc=Q1FpNzV2eWhMdkttQUxMMjc0ZDh3V0M4aWFIMFoyOXJsNGQreE1YZ25ORT0_IjUwMDMzMjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003326&doc=SnBCdGE5dVVScXJSbG1kc2lNdkhwa3pON3ZJeDJ1d1R5cDdlRzhoUjJHUT0_IjUwMDMzMjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

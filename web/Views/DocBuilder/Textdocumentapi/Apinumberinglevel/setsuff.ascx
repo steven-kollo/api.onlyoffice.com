@@ -52,4 +52,4 @@ builder.SaveFile("docx", "SetSuff.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888920&doc=M2xia0hkY01IUG9KTHZiUEc0dzFEZDZrbzdET1JjbTZ2dUw5NCtLSXJCND0_IjQ4ODg5MjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888920&doc=akJTQlplQ29vdXdhQ3dLbEJTdDdqM1BCT2FldklYcHJlZTQ5cFNKTWc0WT0_IjQ4ODg5MjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -55,4 +55,4 @@ builder.SaveFile("pptx", "ApiPresentation.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011291&doc=NExpMkRTNHdpdTgzQ2J2Y3BiRVREcTJzdTgreElIalB4RTltOHZlNjVMcz0_IjUwMTEyOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011291&doc=VE5qbGpRMjZabHlaMnZUMGdndnZDN1oxUW51TTZJelJCbU93ZTVDL1V2dz0_IjUwMTEyOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -28,4 +28,4 @@ builder.SaveFile("xlsx", "GetParaPr.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006308&doc=eDc0WUhBQ1U3cGg4SXkyNVVaQ2ZMK2pPZFYzMGJtV3JNQjMwRTRUeWEwQT0_IjUwMDYzMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006308&doc=OUZaMW9ieUpmS09mYmRmR21ZUmpFOGlNMHZBR2I3d1p0UjhFbTNXWkZhWT0_IjUwMDYzMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

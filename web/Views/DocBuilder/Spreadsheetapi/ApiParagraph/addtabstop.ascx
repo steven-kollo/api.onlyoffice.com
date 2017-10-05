@@ -25,4 +25,4 @@ builder.SaveFile("xlsx", "AddTabStop.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006367&doc=V0VINUxZR1NDdGhXNnFmazZBN3BaQmpPWmdUSURFK1lTY1FCTnFwdHdmST0_IjUwMDYzNjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006367&doc=MUdxTXl4T1dGSlUrc2ZxQnhjV3Fick9rYXFDU3hjblYxSzd5aGZuYWNyOD0_IjUwMDYzNjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

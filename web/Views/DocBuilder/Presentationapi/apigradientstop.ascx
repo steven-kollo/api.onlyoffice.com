@@ -45,4 +45,4 @@ builder.SaveFile("pptx", "ApiGradientStop.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007758&doc=c2l1cUE4ZXhNNzViSzdGZDBlSkJJSjEvaThWT0ZiMzZEcVp5NXNDTkkrQT0_IjUwMDc3NTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007758&doc=NkZBbzAxOUM2RkxWYXhMRk1oOWRGeGdHeHBXYldYeXlSZHZPUjNzbWJiZz0_IjUwMDc3NTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

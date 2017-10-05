@@ -80,4 +80,4 @@ builder.SaveFile("docx", "SetBottomBorder.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891216&doc=N1ZPc2hZNTUzLy9UMXJGSHlLZHNOdDNvNEFCTFBJVFpXZ2VCTk4xcFc0ND0_IjQ4OTEyMTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891216&doc=OWtyUk9hdk9CR0cvUkV2TEZTclJaSkExT1B3Q2lKZHYydHFpT2EwcTVRQT0_IjQ4OTEyMTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

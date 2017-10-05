@@ -28,4 +28,4 @@ builder.SaveFile("docx", "GetTextPr.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891497&doc=YWxqVHBPNUQyQ2tYUm53b2p2TzRnNW9EYk9sbkg2K2dFcWE4Q3ZCRFVkMD0_IjQ4OTE0OTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891497&doc=L2hZVXhrMnJHV0RTOEl3K1JoYnIwQUgvQmR3ZVI4V3ZOV2c0TldCWGFHWT0_IjQ4OTE0OTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

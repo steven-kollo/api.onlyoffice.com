@@ -28,4 +28,4 @@ builder.SaveFile("pptx", "GetElementsCount.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007735&doc=bHdmeTdFQVFybFdISllYKzA3bFpVRVg3RE92NDVqd2ZRc3huYk8xOTFJWT0_IjUwMDc3MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007735&doc=MDg0a3c0NndkcHMzSFhieitsUU9uWUI2TTVsa1pWQjRVWXFySURId3BBVT0_IjUwMDc3MzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

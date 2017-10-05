@@ -5,7 +5,8 @@
 </h1>
 <h4 class="header-gray" id="SetTableBorderInsideV">SetTableBorderInsideV(sType, nSize, nSpace, r, g, b)</h4>
                 
-<p class="dscr">Specify the border which will be displayed on all vertical table cell borders which are not on anoutmost edge of the parent table (all vertical borders which are not the leftmost or rightmost border).</p>
+<p class="dscr">Specify the border which will be displayed on all vertical table cell borders which are not on an
+outmost edge of the parent table (all vertical borders which are not the leftmost or rightmost border).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -82,4 +83,4 @@ builder.SaveFile("docx", "SetTableBorderInsideV.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896637&doc=OEN3NFZ3cUNGTjV1NXJFSnNwVFVQUmVoSWhDVWEwbTFKeFhvV2VqT1hBOD0_IjQ4OTY2Mzci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896637&doc=Q2lla1RpeE1iYTNicVZjMDRTSVk1SWYrbVNINFRidUtCeVJyM0hjMW5iaz0_IjQ4OTY2Mzci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

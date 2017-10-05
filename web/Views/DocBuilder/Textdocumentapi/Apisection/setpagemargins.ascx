@@ -65,4 +65,4 @@ builder.SaveFile("docx", "SetPageMargins.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892397&doc=UndEMERmRGV4eGhDY1VKZ1lXaFFXamJ5Ny9jUmZML2FnZHkyOWhGYXRaVT0_IjQ4OTIzOTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892397&doc=ZndNRGFITDJMUkV1Y2k5ZkxkaVR3RjJSc2ZwdFZ0N1hoTTNjb3ZUY3VLQT0_IjQ4OTIzOTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -22,4 +22,4 @@ builder.CloseFile();
 </pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887196&doc=SFhPYnI0VmxZajAyUFZrS2I3YzJXeG5JdzNNc0ZOaGZzYnpOQW1sVitPUT0_IjQ4ODcxOTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887196&doc=QXZNWWhLV1lqNVFOMUlFdzZJMVdRdUpqK3BDZncyRnd2RTBjb3N3S0JLYz0_IjQ4ODcxOTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -5,7 +5,8 @@
 </h1>
 <h4 class="header-gray" id="SetTableCellMarginTop">SetTableCellMarginTop(nValue)</h4>
                 
-<p class="dscr">Specify the amount of space which will be present between the top extent of the cell contents and the topborder of all table cells within the parent table (or table row).</p>
+<p class="dscr">Specify the amount of space which will be present between the top extent of the cell contents and the top
+border of all table cells within the parent table (or table row).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -47,4 +48,4 @@ builder.SaveFile("docx", "SetTableCellMarginTop.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896660&doc=cENTemYwM3Z1ZEUwL2ZaMXBuN2Rybk5kSmRQcDk1Y3U3ZkNDd1FxSDdDTT0_IjQ4OTY2NjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896660&doc=ZStZbkJqWjJNUTVjYTdsdUF6MTk2YndKdEc2SEl0K3Z6bWJCZGlGSi9Laz0_IjQ4OTY2NjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -70,4 +70,4 @@ builder.SaveFile("docx", "SetWidth.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896410&doc=MTQ0c0t4cEdDNFpFcUwybWJab01ZQ1doclYyQmE4cjBPMzBuVDJEQnp1az0_IjQ4OTY0MTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896410&doc=S3NVT1ZCSGlRQWFoS1hXOFErVEVidzlrTXluZjFWZEZPcGlMYXQxayszUT0_IjQ4OTY0MTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -223,4 +223,4 @@ builder.SaveFile("docx", "SetJc.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889108&doc=YzhrS1VPYU5qd09rS081S3BjV2Qvems3emhkOHkwSGVGN2pMM3hSSWlaTT0_IjQ4ODkxMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889108&doc=TGxaSjZRVXJYMDFtMmtmZmVDSDh3dGhrT3V3M3czKzZVOFZRUWtMRTA5QT0_IjQ4ODkxMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

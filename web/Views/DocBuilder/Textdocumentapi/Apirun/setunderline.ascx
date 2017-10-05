@@ -23,4 +23,4 @@ builder.SaveFile("docx", "SetUnderline.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892235&doc=NXV3QzVxdERBMnhlQ2FPR0x2TnlTTklqOGxQNVZHZUdQK0dQMnYwNDRvaz0_IjQ4OTIyMzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892235&doc=L3d4Sm5zaTdKb2JZSDJ0WmlmQVBJM08yYWJKM2k3MFJNZGNwYW93eU53Yz0_IjQ4OTIyMzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

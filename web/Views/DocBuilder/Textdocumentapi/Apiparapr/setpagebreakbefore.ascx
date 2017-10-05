@@ -46,4 +46,4 @@ builder.SaveFile("docx", "SetPageBreakBefore.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891386&doc=V0ZKUnlxMjhmakJTMmhSMlRYMzdJMXVPV1ZFWXFmWklHNGpKMHAxMDkwcz0_IjQ4OTEzODYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891386&doc=Z1E1d3JkTGFXKzR6azJ5Q0paMlpXRVhMS01jbUJmT2FPd0g0Z001VFFvMD0_IjQ4OTEzODYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

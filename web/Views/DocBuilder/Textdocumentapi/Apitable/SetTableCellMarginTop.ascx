@@ -11,7 +11,8 @@
                 <a href="<%= Url.Action("textdocumentapi/apitablepr/settablecellmargintop") %>">ApiTablePr.SetTableCellMarginTop</a>
                 </li></ul></dd>
                 </dl>
-<p class="dscr">Specify the amount of space which will be present between the top extent of the cell contents and the topborder of all table cells within the parent table (or table row).</p>
+<p class="dscr">Specify the amount of space which will be present between the top extent of the cell contents and the top
+border of all table cells within the parent table (or table row).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -51,4 +52,4 @@ builder.SaveFile("docx", "SetTableCellMarginTop.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895045&doc=V2gydE1NQjhKMVM0QkxIekJ2Rm8yOHF1N1ppYXNRVUY2dnREZGFDZU9abz0_IjQ4OTUwNDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895045&doc=RUtLdVowOTE1ZSt0Q3h5b0hLMHcxN2l2MVI4cXVodnhNb0hyckd2dTZ4bz0_IjQ4OTUwNDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -52,4 +52,4 @@ builder.SaveFile("docx", "SetCellSpacing.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912898&doc=SDRtem4yeWkyOGphOVpqcUdrSXVWM2hUSllVU3N2QzEwSFl0V1VzendzRT0_IjQ5MTI4OTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912898&doc=b05PNFE3NkE2M2hHeXBVbEJWTXVCQkZOVWFWb3BNRyswTWkza2EreHpKWT0_IjQ5MTI4OTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

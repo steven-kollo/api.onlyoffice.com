@@ -34,4 +34,4 @@ builder.SaveFile("docx", "ApiStyle.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896261&doc=R3pyajJncjl1R3RUbVJmSmVlVTJJekJmWWRZNVAwaVJXNUxmNHIyTGlHQT0_IjQ4OTYyNjEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896261&doc=V29laXVJK0Q2RWVUL0NROWJYZytKS1c4bUsvTVRTM0RaUkNFWkx5RkJIND0_IjQ4OTYyNjEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

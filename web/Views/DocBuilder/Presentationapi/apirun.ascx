@@ -127,4 +127,4 @@ builder.SaveFile("pptx", "ApiRun.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011296&doc=elVLaEQxelJhL0lsTTJEellUZHBibG9FQnFqTGxQbW9zYnNteUhITElFRT0_IjUwMTEyOTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011296&doc=V3N0RTdITjh2UFRtUXFSc0xoZ3JobU00b25UTDd4ZE5rRi9iTHQ2MTdqST0_IjUwMTEyOTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

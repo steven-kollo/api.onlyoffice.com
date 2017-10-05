@@ -45,4 +45,4 @@ builder.SaveFile("xlsx", "GetCol.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004446&doc=d1Z1bk5TS1o4QkhURW85NmVlMVgrUlZGZmw4VGFMNTZxUlNPWWkxZXE2Zz0_IjUwMDQ0NDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004446&doc=dlZubWJUTU5qOWlkK1N4QnNVMmRyYVBXcmtRMS9vYnYyUlZ5Yk01OVlhcz0_IjUwMDQ0NDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

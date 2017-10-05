@@ -29,4 +29,4 @@ builder.SaveFile("pptx", "SetVerticalTextAlign.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011498&doc=TGg1aDRvaUZNV0JtUExwMU85VXg5eU8waWNoT3UvdUF0TkYvQzRLTk1WVT0_IjUwMTE0OTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011498&doc=SWIzOG03N1ozR01XWDlxNHJxaWVSckFkLytiV25LVVl0b25reU8zRHRLaz0_IjUwMTE0OTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

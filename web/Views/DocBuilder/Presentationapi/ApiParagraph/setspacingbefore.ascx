@@ -32,4 +32,4 @@ builder.SaveFile("pptx", "SetSpacingBefore.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009965&doc=LzdiVzNUd3k5c3p3aEVrM0RyTE1Ya09KYmdKVXRTL0M4RjBubGpCMmJVOD0_IjUwMDk5NjUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009965&doc=ZHNTbzArSVk4N1YxRGg3Q3I0eXBZWmgxRVFGaWlaS254Z3k2S2tRNTN4QT0_IjUwMDk5NjUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "SetSmallCaps.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011315&doc=TWxHd05kbkd5Z1pWa2lBV0hwTGxUZ1E3bEdSOEdaY05xL2ZqKzZVM0NUST0_IjUwMTEzMTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011315&doc=SysrNDY3dmpzTWV0aXVINm9ETWlXTnp4OGppeUJrUkU3Tmx6MTBlVTJ2cz0_IjUwMTEzMTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

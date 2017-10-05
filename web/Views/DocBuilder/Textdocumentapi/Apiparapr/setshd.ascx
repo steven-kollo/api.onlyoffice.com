@@ -91,4 +91,4 @@ builder.SaveFile("docx", "SetShd.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891390&doc=cktMK2tGSVpBN0NDOTI4VzhEYkg1L3YzL0NPRWkvYmhCeWRoZ2lQY043RT0_IjQ4OTEzOTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891390&doc=VW8yeWNKcFNDdUxvM0lhVnZGOEZwTGdDUHZ6LzZ2dHZPVHg4NXQ4S0Jsaz0_IjQ4OTEzOTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

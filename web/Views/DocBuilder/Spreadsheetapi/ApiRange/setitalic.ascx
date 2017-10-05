@@ -40,4 +40,4 @@ builder.SaveFile("xlsx", "SetBold.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5114814&doc=TWNoUWhkTHhyM3ljeVYrSXg2Q1ZidWh4YUZSeTR4OW1HWWtLakNCejBJOD0_IjUxMTQ4MTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5114814&doc=c0lxakdhL0lhWTZTZ3ZKWkYyZW1sdDZQbHdDVlFVODVIQU9MaEM1ajJZND0_IjUxMTQ4MTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

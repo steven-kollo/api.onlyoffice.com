@@ -36,4 +36,4 @@ builder.SaveFile("xlsx", "SetJc.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006331&doc=VlErZ2RCTVl0blY1d3FVWHVPV1RHNTZteTJZUjhrOTcxeWdtZE1aZ3BCOD0_IjUwMDYzMzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006331&doc=dTFSSjNMTFk0VFBndnd5WFR3dmVod2tQTmZkUGhvMFZQb1VGT0hJSCswVT0_IjUwMDYzMzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

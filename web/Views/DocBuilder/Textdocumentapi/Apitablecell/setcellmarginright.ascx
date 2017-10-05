@@ -30,7 +30,10 @@
                         <a href="<%= Url.Action("global") %>#twips">twips</a>
                         </td>
                         <td> &lt;nullable><br></td>
-                        <td>The value for the amount of space to the right extent of the cell measured in twentieths of a point (1/1440 of an inch). If this value is <em>null</em>, then default table cell right margin will be used,otherwise the table cell right margin will be overridden with the specified value for the current cell.</td>
+                        <td>The value for the amount of space to the right extent of the cell 
+measured in twentieths of a point (1/1440 of an inch). 
+If this value is <em>null</em>, then default table cell right margin will be used,
+otherwise the table cell right margin will be overridden with the specified value for the current cell.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -54,4 +57,4 @@ builder.SaveFile("docx", "SetCellMarginRight.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896354&doc=NEwrT2FQL2xCMmdUSlRlTXBWNitubzQxZ0xCbGhzMitCNWJySkRiYTA3VT0_IjQ4OTYzNTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896354&doc=SG5oUmo0YXh6VW9rWGdTQ0Z4a0JLZGlNZFVWbnI5dG1OREVBakJJYTREWT0_IjQ4OTYzNTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

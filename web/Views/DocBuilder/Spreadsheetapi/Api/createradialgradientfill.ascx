@@ -20,4 +20,4 @@ builder.SaveFile("xlsx", "CreateRadialGradientFill.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004634&doc=SlRjU0xXYllObjFsUWNBTm1ZSWRtclR3M25uaFU0Q2ZNZFhnNEVKS3hkdz0_IjUwMDQ2MzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004634&doc=SDVGaGVDQmU5OTNVVGw1TmNjVHpNVSs0bmltamdNc3pMWjRvbzhtRU1uST0_IjUwMDQ2MzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -27,4 +27,4 @@ builder.SaveFile("pptx", "GetClassType.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009698&doc=T2s0bGhmeWpUb1A2Z1d0Qm84bHhjNXlwRlJZL2hLVG9CdGgrcHpaNU1oQT0_IjUwMDk2OTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009698&doc=SlJmVTVIZjk2RTFQb0tlUjhxU2NGbk5ubk9GL0dLYnNTWlFQNkZpVjM2az0_IjUwMDk2OTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

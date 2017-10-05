@@ -31,4 +31,4 @@ builder.SaveFile("docx", "GetParagraphMarkTextPr.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912784&doc=Z0dmdFNNYkc0Z2NmajdVUEg3cFVYMUgwN2lCM2YzNTBWQk1tN1pUa3J2Zz0_IjQ5MTI3ODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912784&doc=OXpxU2lhR29nclNoaUFIK3UvRFFRMXZ2QU9zWXFFOE5ZbWpKMlBDSFlYbz0_IjQ5MTI3ODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -23,4 +23,4 @@ builder.SaveFile("docx", "SetItalic.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892197&doc=SVUzeG9SbWVvZHBvQTRad2ZPOTZRS1Q5NEJobUZ1VURJNS9BYWswY2N4ST0_IjQ4OTIxOTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892197&doc=OFJTWTUxemNEN2tTN2FjQmJuVlUvSWlOTThGNGlWVEJCWlpwRzZQZUhDRT0_IjQ4OTIxOTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

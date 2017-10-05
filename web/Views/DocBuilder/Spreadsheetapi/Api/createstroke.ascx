@@ -21,4 +21,4 @@ builder.SaveFile("xlsx", "CreateStroke.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5026742&doc=RkZSNVRPSUhyczRXRHpCVlhaR2Y5Q0dhTEQ2ampKUGJBSEdabWd6L3VvUT0_IjUwMjY3NDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5026742&doc=bHBTRklWUDJoMzVmSUZIU05NbTlUdFM5RWJVaytCdWVYU1ByTnI1NHhRcz0_IjUwMjY3NDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

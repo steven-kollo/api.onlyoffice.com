@@ -44,4 +44,4 @@ builder.SaveFile("xlsx", "SetColumnWidth.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882048&doc=NU9IbTc0SVBGTS9CTnUzdHpZRDc2aVJTUmNkUCs1UmdnL3FWdG0zMFc5ND0_IjQ4ODIwNDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882048&doc=TG1vM2g2ODd2TXRNbGF1bEwxenZtSXJGZG4vYi9FRGFJNndpUHBXNnFpaz0_IjQ4ODIwNDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

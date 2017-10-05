@@ -39,4 +39,4 @@ builder.SaveFile("docx", "GetParaPr.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898068&doc=YW1oQmRGakt3cGxKMFpJU1F3UEJJeWhvbTZFNnNwallXQzR2OG00L1ZnMD0_IjQ4OTgwNjgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898068&doc=d1hFQkgzRHhvQk1VcGlOZnYvWkltSHZVSVk3ZUxIRXY0NTVHMGo4MjFTVT0_IjQ4OTgwNjgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

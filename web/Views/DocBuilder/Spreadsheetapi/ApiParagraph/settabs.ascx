@@ -32,4 +32,4 @@ builder.SaveFile("xlsx", "SetTabs.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006317&doc=c01XZ3RJem1qOFNoODNJb2hRdUtNampxV25BdkQyWHNGY0FsREs3eFZxVT0_IjUwMDYzMTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006317&doc=VzNiMWV3UEpMTkp0QkErOVJLY1NnNWE5NlQ1N2xsYjlZenJTd1AxbGNkaz0_IjUwMDYzMTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

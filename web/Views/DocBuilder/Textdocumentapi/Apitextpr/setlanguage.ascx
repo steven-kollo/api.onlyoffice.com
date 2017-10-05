@@ -5,7 +5,8 @@
 </h1>
 
 <h4 class="header-gray" id="SetLanguage">SetLanguage(sLangId)</h4>
-<p class="dscr">Specify the languages which will be used to check spelling and grammar (if requested) when processing thecontents of this text run.</p>
+<p class="dscr">Specify the languages which will be used to check spelling and grammar (if requested) when processing the
+contents of this text run.</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -40,4 +41,4 @@ builder.SaveFile("docx", "SetLanguage.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898125&doc=bG5ETXVPZFM2MSt4RG5IZnRTSEU0UmlWTGgxN091alNvNUFqWjcvZjFCTT0_IjQ4OTgxMjUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898125&doc=RXduUVJzVGdMbFNjWGpqd0N1R0NLcmhIeFhVYkduWk40ekw0Q0UrMVpPND0_IjQ4OTgxMjUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

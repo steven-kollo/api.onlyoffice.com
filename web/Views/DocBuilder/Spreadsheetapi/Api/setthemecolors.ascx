@@ -42,4 +42,4 @@ builder.SaveFile("xlsx", "SetThemeColors.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5116585&doc=UDMwVWN1amw2YU84WWY0a3VRcUIwdTNKbFZVdEZRK1hjbTByZVlXWUlpND0_IjUxMTY1ODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5116585&doc=WlpiUjNFZ0ZCUDBjTmNjdmVCWktQemJ1NzlLMmxxYTJraUlLd0JWSzJmdz0_IjUxMTY1ODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

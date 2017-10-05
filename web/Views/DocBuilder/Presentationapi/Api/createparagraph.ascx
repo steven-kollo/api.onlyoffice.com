@@ -27,4 +27,4 @@ builder.SaveFile("pptx", "CreateParagraph.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007707&doc=MTF5R3VLK3FoaU9rOFZzYktsQnlaMDUydk1ET1Z1SHhyU2JQNHo5eFBQQT0_IjUwMDc3MDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007707&doc=WW1DMWtVUlRkTFFlTFM4cWRjVEVKeW1pUlY0U1lyRG53Q25jYXRwb09mUT0_IjUwMDc3MDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

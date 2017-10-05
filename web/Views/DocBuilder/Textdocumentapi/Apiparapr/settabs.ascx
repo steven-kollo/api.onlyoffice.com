@@ -31,4 +31,4 @@ builder.SaveFile("docx", "SetTabs.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891405&doc=RC9DOFY2dVhmNHlXbUYycm85aUFmSEFkcGpWSXNEUFhGZ1Y0b0diUXFiYz0_IjQ4OTE0MDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891405&doc=eFprbWg0dGx1SWtnL2JpR0w1dU03QS9UVXg2K2xZazBCRG5HNHBUazJ3OD0_IjQ4OTE0MDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

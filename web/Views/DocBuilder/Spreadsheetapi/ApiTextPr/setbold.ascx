@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetBold.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006260&doc=elFMOUJMOEs0UlN4ME00bHhNeGV5S2YrakkwM0dkaFRKNWNOYS9uakxKZz0_IjUwMDYyNjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006260&doc=UlJDM0xqLzJwTUFHRHJjUnFKWVMvN1IwSS9WTkdUZ1JNS1NaZk5lV0p3UT0_IjUwMDYyNjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

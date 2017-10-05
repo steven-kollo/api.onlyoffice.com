@@ -19,4 +19,4 @@ builder.SaveFile("pptx", "CreateLinearGradientFill.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004799&doc=eHo1UE1VejhQUjBoYUtQcUtvcWF2dTNXc3JLUnNpQmR3dy9kZHRoTiszND0_IjUwMDQ3OTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004799&doc=Y1JwL0d4Ujh0aGYvbUdVVGloUUhvNkl0VHFoV1JyOW5VcnJqRmJuaysvVT0_IjUwMDQ3OTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

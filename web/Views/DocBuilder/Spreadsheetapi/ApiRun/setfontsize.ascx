@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetFontSize.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006285&doc=U0hYRkJXTnVobkFBZ080bTZ4bWw3cWxkdGJCaTNWU0ZHOTFKTG53c25IRT0_IjUwMDYyODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006285&doc=R2pSZnpkN3dGcDlkSDBsYU54R0ozcXBKQkFNRHN0TnJFNmxxM0ZWSk51RT0_IjUwMDYyODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

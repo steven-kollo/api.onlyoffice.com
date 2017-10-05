@@ -43,4 +43,4 @@ builder.SaveFile("docx", "GetClassType.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896231&doc=aGl1cDhocGhZRDU1b2lwNFhmcHgzSEk0cGF2MTQzcWcyM0dGTDZBaFJNVT0_IjQ4OTYyMzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896231&doc=blRIN3dYWTMvOTE4ditZak5ZQURzRG5lZGJ6Q094bHNnL2p0eTc5THIzTT0_IjQ4OTYyMzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -31,4 +31,4 @@ builder.SaveFile("xlsx", "RemoveAllElements.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006359&doc=R0xaSi9vNStVT1VZdzZ0Z3QvU2Z5cEsvOUkyNEFLYU55VktXNmtodTNXdz0_IjUwMDYzNTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006359&doc=UXMrVzlYQjRYM3QrdlB1NWR6NWZESDR2dW90eUN4M1M0dDJ6aVdRVCtXOD0_IjUwMDYzNTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

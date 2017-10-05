@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "SetUnderline.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011403&doc=bVpwa04vaEFTaFlDZlhVcW0ydlB2dGF1ZVlsOUhVNmhDbGdZYkpXYzlaVT0_IjUwMTE0MDMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011403&doc=M1VXc3c2YWV5ZTlOckxUV3ZBd2ZDaEtkVUp2a2pwZWZTZkdYaHRKdFUzcz0_IjUwMTE0MDMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

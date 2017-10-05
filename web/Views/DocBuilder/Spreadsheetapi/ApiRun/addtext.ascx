@@ -24,4 +24,4 @@ builder.SaveFile("xlsx", "AddText.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006294&doc=MVNYRjYyck9NVVR2Z1l6anJsTmh5RDVKemk0aTFSVXBmYXZrdWl6bmRzRT0_IjUwMDYyOTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006294&doc=cEx0T2NMeUNpaU9kUGJvQjNQMXFTbGozMUdxTjVmdXpGbUpDRzRkY1ZBbz0_IjUwMDYyOTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

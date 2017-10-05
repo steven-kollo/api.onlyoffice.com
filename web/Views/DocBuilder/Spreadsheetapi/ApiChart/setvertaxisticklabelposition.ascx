@@ -41,4 +41,4 @@ builder.SaveFile("xlsx", "SetVertAxisTickLabelPosition.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115691&doc=WlRNS3N6blFwUzVsS3lyWkMzc0x0VVJYRG5HL0JMRzhrdG9WaHJaa3NvYz0_IjUxMTU2OTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115691&doc=b29DUFBmOWFWN29XZWZwRk5XNWxpTnlvWDJGb1JlVmNlV0JpN2UxZ0dSYz0_IjUxMTU2OTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

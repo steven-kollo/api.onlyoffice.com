@@ -5,7 +5,9 @@
 </h1>
 
 <h4 class="header-gray" id="RemoveHeader">RemoveHeader(sType)</h4>
-<p class="dscr">Remove the header of the specified type from the current section. After removal the header will be inherited fromthe previous section or, if this is the first section in the document, no header of the specifiedtype will be present.</p>
+<p class="dscr">Remove the header of the specified type from the current section. After removal the header will be inherited from
+the previous section or, if this is the first section in the document, no header of the specified
+type will be present.</p>
 
             <h2>Parameters:</h2>
                 <table class="table">
@@ -54,4 +56,4 @@ builder.SaveFile("docx", "RemoveHeader.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892308&doc=bmZGZ3ZBc3dyWWE4c2FEUUNNU3FKaTJzbVVVOGR1REQwa3FpNnlLNEJWWT0_IjQ4OTIzMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892308&doc=MUl2VjQrZ2RnLzlqSlV5cmNLWjlTRHpCL0JyKy9HbmFzNWxGZkdoaVQrcz0_IjQ4OTIzMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

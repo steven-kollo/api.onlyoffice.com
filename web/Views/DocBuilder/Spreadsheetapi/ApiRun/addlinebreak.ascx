@@ -26,4 +26,4 @@ builder.SaveFile("xlsx", "AddLineBreak.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006298&doc=TldQanlISDBUaXFNTFJ5OWtCQnZ4ZThsdFBMMlFYczh0VHU1UlVVdHdrRT0_IjUwMDYyOTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006298&doc=K3lqUys0ekJZY09CTDZFSnJyblBzenQvRGE2TGVFc1JmSnJFaVh1dk1aUT0_IjUwMDYyOTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
