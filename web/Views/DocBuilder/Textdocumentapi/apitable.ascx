@@ -164,4 +164,4 @@ builder.SaveFile("docx", "MergeCells.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894751&doc=YTB1V29rR1lSVDZRRTV0YTk4OVRzaG85T2ZRb2loOUsxWnp0ZjhkLzVCOD0_IjQ4OTQ3NTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894751&doc=QlNPWW85UUpKWHFMSjBBZktKYkJ6SUZocExpQkRoT1NVVzBWRVZYeGxHTT0_IjQ4OTQ3NTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

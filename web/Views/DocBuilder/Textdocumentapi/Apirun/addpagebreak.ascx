@@ -23,4 +23,4 @@ builder.SaveFile("docx", "AddPageBreak.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891436&doc=bFpOdCtqTmJ0NWxrZUtxbnc5Ty9kOEJEaVVQQm9WQnE3dXVNK1RJUWZMRT0_IjQ4OTE0MzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891436&doc=a2hHMGs1N0FFK1ZjaXhjNFFwcFFsUGM5R296SWpQamZwN2VVdHFOVWIyVT0_IjQ4OTE0MzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

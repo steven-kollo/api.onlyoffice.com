@@ -62,4 +62,4 @@ builder.SaveFile("xlsx", "CreateColorFromRGB.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5116064&doc=bkJCWlJ2b0xURE13TGdpS09oVUUzYlJWZ2hMNzFHV0QwbkVGSnF1bHdDaz0_IjUxMTYwNjQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5116064&doc=K25EdHA0VENYK2dqTVdXTnVYcWJyOXB3OVQ5Y3ZBZkhIZXV3SkNDdTcxND0_IjUxMTYwNjQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

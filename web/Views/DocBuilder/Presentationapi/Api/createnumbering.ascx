@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "CreateNumbering.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007696&doc=cVVmWnJsRGRnS1Y0bDU4VXBialdzMU93TDdCdEtCNGJ3L05FMXNHQ2pzbz0_IjUwMDc2OTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007696&doc=QWROTXZ5aExPajRjUU8yUStIcWhBSytOYkhqU1hERVdSNUUxMk1GNUhjaz0_IjUwMDc2OTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

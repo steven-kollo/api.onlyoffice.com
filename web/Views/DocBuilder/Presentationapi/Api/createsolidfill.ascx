@@ -18,4 +18,4 @@ builder.SaveFile("pptx", "CreateSolidFill.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004820&doc=MUJXR0xaSzh0RTNHaGxhSnppK09TT1JGSDB3UmtleS8wSnlHZ3BIaitDST0_IjUwMDQ4MjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004820&doc=Y3J4SmxsTWlJQkZYQmJNejhtRUpERlhYazFSU2VzVEdSQkxuY3VoUXZiTT0_IjUwMDQ4MjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

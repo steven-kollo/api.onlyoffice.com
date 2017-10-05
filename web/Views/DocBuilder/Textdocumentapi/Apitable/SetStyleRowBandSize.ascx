@@ -59,4 +59,4 @@ builder.SaveFile("docx", "SetStyleRowBandSize.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912882&doc=MmZHRzMyT05nQlpPNlZKdE9wRnorb29OSmFmL0NWNHVNMy81dUlESzJEYz0_IjQ5MTI4ODIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912882&doc=UmF5SGFwYUkwMEVBdHkvWjhSVStNSW1tZTRTbUdUM2huNjg5ZWVCOEFTND0_IjQ5MTI4ODIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

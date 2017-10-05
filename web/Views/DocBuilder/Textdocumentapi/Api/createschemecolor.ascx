@@ -21,4 +21,4 @@ builder.SaveFile("docx", "CreateSchemeColor.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887176&doc=R09nRjhWTVhaNzBSb0FGZHlkLzdKUlgzL0xvc3o3VGZ3ZFY2QnE1S0Z0RT0_IjQ4ODcxNzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887176&doc=Q0poaHJoVTVkQ2JMZVkxNEVOOU81RmZwZDhoUDhCbU4xYnFQZG4xbVl5dz0_IjQ4ODcxNzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

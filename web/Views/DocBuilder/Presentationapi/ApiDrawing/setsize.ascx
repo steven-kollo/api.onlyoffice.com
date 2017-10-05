@@ -28,4 +28,4 @@ builder.SaveFile("pptx", "SetSize.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007743&doc=OE56eU5URGh1cTc0cGhzUVl0eTFpOVpUVGhxS2h0SHV3NG1yS0p3T1Z4OD0_IjUwMDc3NDMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007743&doc=dThKdTdnLy9nQjVxdkRLK0JLM3VDSXB2U1ZwTXZiQi9RYlhXcy9uUlBVYz0_IjUwMDc3NDMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

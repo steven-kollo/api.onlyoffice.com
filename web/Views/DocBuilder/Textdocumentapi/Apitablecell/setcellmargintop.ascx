@@ -30,7 +30,10 @@
                         <a href="<%= Url.Action("global") %>#twips">twips</a>
                         </td>
                         <td> &lt;nullable><br></td>
-                        <td>The value for the amount of space above the upper extent of the cell measured in twentieths of a point (1/1440 of an inch). If this value is <em>null</em>, then default table cell top margin will be used,otherwise the table cell top margin will be overridden with the specified value for the current cell.</td>
+                        <td>The value for the amount of space above the upper extent of the cell 
+measured in twentieths of a point (1/1440 of an inch). 
+If this value is <em>null</em>, then default table cell top margin will be used,
+otherwise the table cell top margin will be overridden with the specified value for the current cell.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -54,4 +57,4 @@ builder.SaveFile("docx", "SetCellMarginTop.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896364&doc=Nmp1aGxXU241b2FCa1phdWJFU1ZDTmY4bTUxL05wZzdDZmtQL0dWRlRkUT0_IjQ4OTYzNjQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896364&doc=a1BVL3dYa04rR2dsdXBPL1h0eGlTVXZpcW1hNXlsdG05QXUzc214dm0zdz0_IjQ4OTYzNjQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

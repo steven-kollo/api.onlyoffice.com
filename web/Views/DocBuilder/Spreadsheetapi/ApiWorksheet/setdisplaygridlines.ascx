@@ -39,4 +39,4 @@ builder.SaveFile("xlsx", "SetDisplayGridlines.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115612&doc=RCs1dmFzazNiUlJZQUFLZ3hEYzFjUEtEWVIxN2ZkbDdOOG1pQVpwU05QQT0_IjUxMTU2MTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115612&doc=dDJRQWR2eTRscC90WmJSV25ZQ0QxMXcrb0xEYitpSHUvOWZrc2p1cis4ST0_IjUxMTU2MTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

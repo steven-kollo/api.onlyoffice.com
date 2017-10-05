@@ -45,4 +45,4 @@ builder.SaveFile("xlsx", "GetRow.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003345&doc=eWZkaUtUZmdmQ3Q3TW1iMmhOMFI1YWd2TnFaRFVDYXp4Yzcyd0pYY09Daz0_IjUwMDMzNDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003345&doc=V2FGcjE4SkxDREszdnVaSHBCdG14UmZIbUsyQ0I2UnlobXM1VEIzRnVjaz0_IjUwMDMzNDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

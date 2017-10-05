@@ -47,4 +47,4 @@ builder.SaveFile("docx", "ApiNumbering.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888904&doc=UlNNeXNNaEpjcXdWS2tUNWpZZUxqOXZOdkEyTG84S2wrTTQyMTBzL2xKST0_IjQ4ODg5MDQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888904&doc=SzF4LzkwS0huSWVyb2pMaSs5MUJ4Qngxai9FNUF3amQzOHZCME9IV0NEST0_IjQ4ODg5MDQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -40,4 +40,4 @@ builder.SaveFile("xlsx", "SetFontColor.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882019&doc=cU5VOGMwUDhiV2Y4QWNKYzEwdzE1UXVvOUZmd0I2YmdScTVjNDJQSWh2Zz0_IjQ4ODIwMTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882019&doc=R25ZbTh3RytveU11emhEejFqZ2V0YWg2RzZ3ZjZPcGN1cHdzU2ZsMHRrRT0_IjQ4ODIwMTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -71,4 +71,4 @@ builder.SaveFile("docx", "SetHighlight.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898114&doc=WHhjeGx4RzFRYnUrdWphUDVVcjZvTHFETHQySklRMGdFMGUwZU9Kb3hGYz0_IjQ4OTgxMTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898114&doc=WDhZOVByZVZ4ZDllSkNDcDFJSXFZdmExVkpWRUk2VXhYYTVJa0NDbzVqcz0_IjQ4OTgxMTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

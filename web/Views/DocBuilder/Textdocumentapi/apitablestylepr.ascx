@@ -71,4 +71,4 @@ builder.SaveFile("docx", "GetTextPr.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898081&doc=QkxEeUR1RHNrNksvUWozTXpCYVQzVW9mcG5jMEV1SHhGUHdkRFZ1NVIyRT0_IjQ4OTgwODEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898081&doc=UUI0THdpQkFjRG8rdEdhcmFIT0VLNjhoZHVKalltYURBMVA4YU1KM0tNRT0_IjQ4OTgwODEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

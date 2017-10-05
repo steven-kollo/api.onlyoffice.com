@@ -72,4 +72,4 @@ builder.SaveFile("docx", "SetDistances.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887427&doc=UVJ6alFrdkxnS3V5OTBQZk1ua2g5R0E0MmJjYkdTWENSSlFhRnRxd1A5ND0_IjQ4ODc0Mjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887427&doc=V2I3ODRGQlJhZ1l2VVRXbkNGOFZYcy9UcG10R0ltS0ZydGd3Yy93TnVpND0_IjQ4ODc0Mjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

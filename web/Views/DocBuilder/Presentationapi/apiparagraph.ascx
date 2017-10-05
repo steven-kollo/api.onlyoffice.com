@@ -145,4 +145,4 @@ builder.SaveFile("pptx", "ApiParagraph.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009960&doc=cUVOSnUzdDlrK2Rhb3hDSlFCNjIra0JmdFBJZjNNS0JjRGF4UmRYNWRwND0_IjUwMDk5NjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009960&doc=RmwvYnVGSnFvNGhWanNPN2FuR2FncTZILys4dzZIclU0NTRYK2NtdFlyWT0_IjUwMDk5NjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

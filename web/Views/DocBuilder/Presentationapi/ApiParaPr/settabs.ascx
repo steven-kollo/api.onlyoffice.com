@@ -38,4 +38,4 @@ builder.SaveFile("pptx", "SetTabs.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5010022&doc=WWFYeTk3SzR3TTlBRnZDaitWRzcyTkhoQzVQWFRFLzl1TmRvN1NpNWtQWT0_IjUwMTAwMjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5010022&doc=Yjc1NzhFYTRnSjA4bXNZZlozLy9RbTVqUEw0T0Q1ek5ZUTB1TnpudjRldz0_IjUwMTAwMjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -90,4 +90,4 @@ builder.SaveFile("xlsx", "ApiTextPr.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006256&doc=Wk12YzJhcEJLMnM5YWZ3dldXdUozTHM0bFhCTUc4TlhJL2pFbzVydUtwQT0_IjUwMDYyNTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006256&doc=d1pFeUtjODY3dkYveGJKWXVuSi8xS2ZOOGh4UnI1SGpSbHk2eC9YNE9rRT0_IjUwMDYyNTYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

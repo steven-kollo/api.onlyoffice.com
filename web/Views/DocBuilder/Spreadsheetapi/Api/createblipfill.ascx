@@ -18,4 +18,4 @@ builder.SaveFile("xlsx", "CreateBlipFill.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004593&doc=WlBHczhKenU4OGRXNFQ5NTdyd0x1VGtlS1d2c0JETlhwNDYwM2htQzlDaz0_IjUwMDQ1OTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004593&doc=bk1KamQ0bS9RL2x6ZU1NeGsxUWxXdVFFY3Z4UmdiOXBFY1lRU0VyVjNxVT0_IjUwMDQ1OTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

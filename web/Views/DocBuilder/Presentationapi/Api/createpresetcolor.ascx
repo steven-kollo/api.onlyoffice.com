@@ -19,4 +19,4 @@ builder.SaveFile("pptx", "CreatePresetColor.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004805&doc=ZHI3VFNzYTF1dkxWYjVjZW4xc2N6TXl1eXhUVVV3USsrQm9pOWI3Q0d5ST0_IjUwMDQ4MDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004805&doc=VERLRVRQUUwyb1NBMm5FTFhYQ1NWL0d5aFRsSDNuRVRxRjVwTGIreERDUT0_IjUwMDQ4MDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

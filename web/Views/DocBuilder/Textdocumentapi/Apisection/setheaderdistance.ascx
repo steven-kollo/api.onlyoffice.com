@@ -22,7 +22,8 @@
                         <td>
                         <a href="<%= Url.Action("global") %>#twips">twips</a>
                         </td>
-                        <td>The distance from the top edge of the page to the top edge of the header measured in twentieths of a point (1/1440 of an inch).</td>
+                        <td>The distance from the top edge of the page to the top edge of the 
+header measured in twentieths of a point (1/1440 of an inch).</td>
                     </tr>
                 </tbody>
                 </table>
@@ -45,4 +46,4 @@ builder.SaveFile("docx", "SetHeaderDistance.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892391&doc=RW5ENmlDKzl1ODNCQklENCtWamNramFna29CNHFKak1Lelh0ZVhPenBsVT0_IjQ4OTIzOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892391&doc=MnFOUFNhTmZNNFNHdVV4U2k5ZFhkZk1ZbkhhZFhQbVdzT2pSRVMxZG9CVT0_IjQ4OTIzOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

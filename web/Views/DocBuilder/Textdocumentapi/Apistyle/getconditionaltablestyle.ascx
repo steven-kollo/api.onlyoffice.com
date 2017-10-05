@@ -5,7 +5,8 @@
 </h1>
 
 <h4 class="header-gray" id="GetConditionalTableStyle">GetConditionalTableStyle(sType<sub>opt</sub>) &rarr; {<a href="<%= Url.Action("textdocumentapi/apitablestylepr") %>">ApiTableStylePr</a>}</h4>
-<p class="dscr">Get a set of formatting properties which will be conditionally applied to the parts of a table that match therequirement specified in the <em>sType</em> parameter.</p>
+<p class="dscr">Get a set of formatting properties which will be conditionally applied to the parts of a table that match the
+requirement specified in the <em>sType</em> parameter.</p>
 
             <h2>Parameters:</h2>
                 <table class="table">
@@ -26,7 +27,8 @@
                         </td>
                         <td> &lt;optional></td>
                         <td>"wholeTable"</td>
-                        <td>The part of the table which the formatting properties must be applied to.</td>
+                        <td>The part of the table which the formatting 
+properties must be applied to.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -74,4 +76,4 @@ builder.SaveFile("docx", "GetConditionalTableStyle.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892601&doc=ZExzL2hDQlBnbUNvRmNoSkxhaHg5b1ZqK096REE0YmVKM2JCRytScXN6dz0_IjQ4OTI2MDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892601&doc=UW5zMlhWOG5XMEk1OFpjNWsraUxMYUlUQUFjZmZWWFlWL3JaNTFKditRbz0_IjQ4OTI2MDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

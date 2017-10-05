@@ -23,4 +23,4 @@ builder.SaveFile("docx", "SetCaps.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892183&doc=OE01a0RUVW1obEpaeGZrazBjTU1iTW5iWG04STQrbnJ3SVFEU1dXNTcraz0_IjQ4OTIxODMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892183&doc=eTladEN1dHltMElyMG9SOUI2Rm56VllmbE8rZjlSVWNSVk5sWExiV1hGcz0_IjQ4OTIxODMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

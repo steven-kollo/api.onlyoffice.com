@@ -5,8 +5,12 @@
 </h1>
 
 <h4 class="header-gray" id="SetTableLook">SetTableLook(isFirstColumn, isFirstRow, isLastColumn, isLastRow, isHorBand, isVerBand)</h4>
-<p class="dscr">Specify the components of the conditional formatting of the referenced table style (if one exists)which will be applied to the set of table rows with the current table-level property exceptions. A table style canspecify up to six different optional conditional formats, for example, different formatting for first column, which then can be applied or omitted from individual table rows in the parent table.</p>
-<p>The default setting is to apply the row and column banding formatting, but not the first row, last row, firstcolumn, or last column formatting.</p>
+<p class="dscr">Specify the components of the conditional formatting of the referenced table style (if one exists)
+which will be applied to the set of table rows with the current table-level property exceptions. A table style can
+specify up to six different optional conditional formats, for example, different formatting for first column, 
+which then can be applied or omitted from individual table rows in the parent table.</p>
+<p>The default setting is to apply the row and column banding formatting, but not the first row, last row, first
+column, or last column formatting.</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -82,4 +86,4 @@ builder.SaveFile("docx", "SetTableLook.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895057&doc=UDl3VEJycTdiQjhwSFUzUkxVSTlWTFVKekZjUEU1eE1JZzl2TEEzOStVST0_IjQ4OTUwNTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895057&doc=MnZxKzJqUnRJVnFNbU5pa05YYnhuUkJEQkdXNlZJclhoZ3VQckVmVG1mQT0_IjQ4OTUwNTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -31,4 +31,4 @@ builder.SaveFile("pptx", "AddTabStop.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011295&doc=K0hWWEd2a3oxZDlXY25BZ3lVUHdNQjFsSSt6dWFxZE42dlJTQ3FoZ2NGND0_IjUwMTEyOTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011295&doc=LytnUi9mQjE5amkxcVdHMjdrT0pzYnVsL0tTZkhxQlIyQ1N0c2tMQlEwaz0_IjUwMTEyOTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

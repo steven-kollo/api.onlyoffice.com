@@ -63,4 +63,4 @@ builder.SaveFile("docx", "SetHorPosition.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887475&doc=K3Z3YUJTbjFGVG1CUWxVSnpWOGJjbVNvblFWNlVvc1pycjV0N2lvVWNZZz0_IjQ4ODc0NzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887475&doc=YitvVGsvU3Y1VDZ5OTdpWWFzRC9sRVZBU0E0OUEzWGxOUjlSNEZEK0hQTT0_IjQ4ODc0NzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

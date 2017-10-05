@@ -32,12 +32,18 @@
 |
 <em>"btlr"</em>
                         </td>
-                        <td>The available types of the text direction in the table cell: <em>"lrtb"</em> - text direction left-to-right moving from top to bottom, <em>"tbrl"</em> - text direction top-to-bottom moving from right to left, <em>"btlr"</em> - text direction bottom-to-top moving from left to right.</td>
+                        <td>The available types of the text direction 
+in the table cell: <em>"lrtb"</em> - text direction left-to-right moving from top to bottom, 
+<em>"tbrl"</em> - text direction top-to-bottom moving from right to left, 
+<em>"btlr"</em> - text direction bottom-to-top moving from left to right.</td>
                     </tr>
                 </tbody>
                 </table>
 
-<h2>Example</h2><div class="button copy-code">Copy code</div><pre>builder.CreateFile("docx");var oDocument = Api.GetDocument();
+<h2>Example</h2>
+<div class="button copy-code">Copy code</div>
+<pre>builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
 var oParagraph, oTable, oTableStyle, oCell;
 oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
 oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
@@ -63,4 +69,4 @@ builder.SaveFile("docx", "SetTextDirection.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896391&doc=ZHpjbXF5OUtVYVJCQWU1dDJFbFByeDRhUUdNU2xoUHh5dldlOWZ1blRjcz0_IjQ4OTYzOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896391&doc=UzRlaVBReWpoZVRrdlArelpWcnQvanl6UU92cVljMXVFSWJjbzI0eVV2Yz0_IjQ4OTYzOTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

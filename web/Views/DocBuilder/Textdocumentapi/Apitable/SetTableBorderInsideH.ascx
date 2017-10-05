@@ -12,7 +12,8 @@
                 </li></ul></dd>
                 </dl>
 
-<p class="dscr">Specify the border which will be displayed on all horizontal table cell borders which are not onan outmost edge of the parent table (all horizontal borders which are not the topmost or bottommost border).</p>
+<p class="dscr">Specify the border which will be displayed on all horizontal table cell borders which are not on
+an outmost edge of the parent table (all horizontal borders which are not the topmost or bottommost border).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -89,4 +90,4 @@ builder.SaveFile("docx", "SetTableBorderInsideH.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894946&doc=eU5sRFVhOU1sRi8wMHRnSEJ1dWlVUzg4bmhvZzVyS2NmZU1pNnE1OEhmVT0_IjQ4OTQ5NDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894946&doc=WGROSjNFK2VkM2t1N3ZSTDBPck1xc3ZubnREUFJmbjdWNW40RE01KzRKOD0_IjQ4OTQ5NDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

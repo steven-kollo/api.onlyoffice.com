@@ -26,4 +26,4 @@ builder.SaveFile("pptx", "SetBullet.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007659&doc=RUk2TmpFdWpTK3lUb0h4c1FCOGlTYnNseFQxdzJ5S21yeVFubldkN05TYz0_IjUwMDc2NTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007659&doc=UEk3V2N1Y3ZRMG1kOTRhZEhTN0cvVE9ha1hJaDA4VFR3WEN3K3lHQjAzND0_IjUwMDc2NTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

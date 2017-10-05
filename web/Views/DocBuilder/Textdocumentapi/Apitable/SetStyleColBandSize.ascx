@@ -59,4 +59,4 @@ builder.SaveFile("docx", "SetStyleColBandSize.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912861&doc=MU9yU1JFSGVSTlFBNXVDcnZsMUoxWFBqbEE0TE9EK1JPWUtjQXpRVVRlYz0_IjQ5MTI4NjEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912861&doc=QkpXRWF5UWZuN2FzR3NvMGF0ck9peWxsTnVvak0rN1lOMXJqUUtiWEpjYz0_IjQ5MTI4NjEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

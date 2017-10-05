@@ -39,4 +39,4 @@ builder.SaveFile("xlsx", "SetDisplayHeadings.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115613&doc=aVowc3luQW1OUFBXTEp6b1NpZzZtOGZzU3hVaHRGeS9ORFllVjZYZzVRTT0_IjUxMTU2MTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115613&doc=ZCtMUzJEV2g4bnJZVG9DZ01oRGlFVXpadEdVU1dCc0FFMXE3TkY1dlZRVT0_IjUxMTU2MTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

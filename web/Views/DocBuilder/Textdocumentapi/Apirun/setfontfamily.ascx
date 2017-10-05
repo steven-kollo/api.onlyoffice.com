@@ -23,4 +23,4 @@ builder.SaveFile("docx", "SetFontFamily.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892189&doc=R3FrQnVwQTNQKytxQnEzTnNPMEc4WXZmNHlyaEtNSzBVRXNPaStXYVFtMD0_IjQ4OTIxODki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892189&doc=MnljMzlyTU0rOTl5QlR5cm1XcWJyaDM0alJSdi9qREoxNG1vRWdBb2NUZz0_IjQ4OTIxODki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

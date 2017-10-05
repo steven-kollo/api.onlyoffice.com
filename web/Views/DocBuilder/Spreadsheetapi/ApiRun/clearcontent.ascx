@@ -31,4 +31,4 @@ builder.SaveFile("xlsx", "ClearContent.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006293&doc=NnhtODlSWGgvM1I3aGxzNEE5dVBaYXBrUEdpM2hrazNzRkVSUHBlZkFiYz0_IjUwMDYyOTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006293&doc=bW9wZTN0bWZSbXlWQVJvZTYwNnBocDNxWkhKSFRrU0xXaGZXajZ3RWc1bz0_IjUwMDYyOTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

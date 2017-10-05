@@ -82,4 +82,4 @@ builder.SaveFile("docx", "SetTableBorderRight.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896632&doc=WVRDZUVObWFYMnV0c09Sd0JwWnd0QnlJZExibXlJUFF2QjMwa203SXJMOD0_IjQ4OTY2MzIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896632&doc=UmJSUk4rLy9hYXNMLzNlMUp3c2tHZ0JlUlVhZDArdGxpVFVhUVMwLzVSaz0_IjQ4OTY2MzIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

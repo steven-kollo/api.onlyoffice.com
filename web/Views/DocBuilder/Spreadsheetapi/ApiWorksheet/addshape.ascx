@@ -125,4 +125,4 @@ builder.SaveFile("xlsx", "AddShape.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003261&doc=NWtXVjBMYnhRbXk1WnpyVlY4Y3hlNm8ySWRxSmkxenNNQ1lMNzArRERDVT0_IjUwMDMyNjEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003261&doc=SWpKN2RWYk93aU9lSjNNWGw4MTJsNTBvUXhyR1pSMDNDcjhHVFZwQk5OUT0_IjUwMDMyNjEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

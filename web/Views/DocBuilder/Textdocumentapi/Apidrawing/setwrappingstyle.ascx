@@ -72,4 +72,4 @@ builder.SaveFile("docx", "SetWrappingStyle.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887531&doc=Qi9pY2hsVU5WNzdBc3dXTVN1a1RQd1dKRUVDVzU1S1NIclhIbnNsV24zcz0_IjQ4ODc1MzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887531&doc=Wkw4RC9RL1VoZFVDWGpxOC9jMlZ0VmZmOHpkbGNSeldrQU1LZFlVVFM4ND0_IjQ4ODc1MzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

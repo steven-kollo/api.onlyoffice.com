@@ -29,4 +29,4 @@ builder.SaveFile("pptx", "AddLineBreak.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011293&doc=TFB6MEJCVFlGSFpyZC9IeE5vcHVLYmp5U0F0QjRpTk1SdkFaT2tVVTZVYz0_IjUwMTEyOTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011293&doc=NDdQNXh0d1FvZFFJa1A5enpxWEgzeGtmK0hoV3NIVy9tYlRTbkdBR1BCST0_IjUwMTEyOTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

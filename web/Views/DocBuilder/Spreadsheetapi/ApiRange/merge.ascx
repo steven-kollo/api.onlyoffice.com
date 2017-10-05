@@ -39,4 +39,4 @@ builder.SaveFile("xlsx", "Merge.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115544&doc=NmtncE94Y05oRzRLd1BrdWRINURRR2h0YW15UUZOQnorMnpzSWQ5R0hPZz0_IjUxMTU1NDQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115544&doc=NlkyMEZIUmdPZ0pqU3VWUUszajJOSndBdFlvVUpKQ0lYZGlYbGVIRXRRcz0_IjUxMTU1NDQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

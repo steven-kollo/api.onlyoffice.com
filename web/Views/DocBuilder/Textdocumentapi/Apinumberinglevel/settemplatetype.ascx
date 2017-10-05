@@ -84,4 +84,4 @@ builder.SaveFile("docx", "SetTemplateType.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888922&doc=T21XSE0wblZwWm9aZTdaVG5mTDJOVXB4NGtzVDc4d3diWjR3TEE1Q0ZGaz0_IjQ4ODg5MjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888922&doc=U3hRdlNJY3lWb01xWkl5YXkvNW5UbG44U1E5MytRRitlYWo3WVFENms3Zz0_IjQ4ODg5MjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -51,4 +51,4 @@ builder.SaveFile("docx", "ApiShape.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4911012&doc=cFdPdXFmK2w3aENMaDB3NU1ZRTh2enJ2UTFDdDRlRURISStuYTRrb01IWT0_IjQ5MTEwMTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4911012&doc=c3pZdzJBZ3U5a1oxN1ZuNG9FVXlFbzJRVVJCb0lnTWNVeU5HTzNVcDlHbz0_IjQ5MTEwMTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

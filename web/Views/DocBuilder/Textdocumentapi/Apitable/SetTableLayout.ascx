@@ -54,4 +54,4 @@ builder.SaveFile("docx", "SetTableLayout.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895070&doc=MFZUQkdCQlFmVUdDdWw2U2lKcmx1UFJITVlzVUdqUjBiSURWQkUwMVNDZz0_IjQ4OTUwNzAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895070&doc=STJ2V2M4aUJQQU9DdXBQbGY3Q3dmeUFjVGJmdEV3UUh5ZTRDTWQwb3I5dz0_IjQ4OTUwNzAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

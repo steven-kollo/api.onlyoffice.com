@@ -11,7 +11,8 @@
                 <a href="<%= Url.Action("textdocumentapi/apitablepr/settableind") %>">ApiTablePr.SetTableInd</a>
                 </li></ul></dd>
                 </dl>
-<p class="dscr">Specify the indentation which will be added before the leading edge of the current table in the document (theleft edge in a left-to-right table, and the right edge in a right-to-left table).</p>
+<p class="dscr">Specify the indentation which will be added before the leading edge of the current table in the document (the
+left edge in a left-to-right table, and the right edge in a right-to-left table).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -51,4 +52,4 @@ builder.SaveFile("docx", "SetTableInd.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895049&doc=UGhLU1Rud0JVZXpVTGZ1aHBXOEhNTEUrdWdud2pRbUt1S0w2RklYeE94QT0_IjQ4OTUwNDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4895049&doc=M3hoT245Sm54bWdqdUxSTGVNN2FGVWdhbmRMaUUxMXJDUXBaSUhxNkNHWT0_IjQ4OTUwNDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

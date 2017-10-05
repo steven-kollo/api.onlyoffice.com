@@ -91,4 +91,4 @@ builder.SaveFile("docx", "SetEqualColumns.docx");
 builder.CloseFile();</pre>
     
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892336&doc=enErSFV3TU9tZENjSVM3NjlJeC9FclRaUlhOVnA0cFNoOUpyY2hjV20zMD0_IjQ4OTIzMzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892336&doc=TXM5SWdHdkdLOGlObjB2QTduTFJ5UmRXS0xmR3NzTWFpdWI4NklEZmdLcz0_IjQ4OTIzMzYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

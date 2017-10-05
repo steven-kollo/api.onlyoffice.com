@@ -63,4 +63,4 @@ builder.SaveFile("docx", "CreateNumbering.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887088&doc=dnRZcGdoVGErbE9MNjFJb1F2U3dhVHJTVVM1WmR3c252RVl1NHh2L3U1WT0_IjQ4ODcwODgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887088&doc=ajJWdGl5dERxR0NSQnVyZHpMQ2d2WDJYNDNOVzJEUWJaK0N2aTJlcXpFaz0_IjQ4ODcwODgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

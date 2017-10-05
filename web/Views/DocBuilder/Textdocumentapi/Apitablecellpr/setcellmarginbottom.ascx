@@ -24,7 +24,10 @@
                         <a href="<%= Url.Action("global") %>#twips">twips</a>
                         </td>
                         <td> &lt;nullable><br></td>
-                        <td>The value for the amount of space below the bottom extent of the cell measured in twentieths of a point (1/1440 of an inch). If this value is <em>null</em>, then default table cell bottom margin will be used,otherwise the table cell bottom margin will be overridden with the specified value for the current cell.</td>
+                        <td>The value for the amount of space below the bottom extent of the cell 
+measured in twentieths of a point (1/1440 of an inch). 
+If this value is <em>null</em>, then default table cell bottom margin will be used,
+otherwise the table cell bottom margin will be overridden with the specified value for the current cell.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -48,4 +51,4 @@ builder.SaveFile("docx", "SetCellMarginBottom.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896445&doc=aHo0M1lQMjJrMG9Gd0xsU1JNTmRvUVJxRk1tNTlGcHhzN2JKTmVLdFYwND0_IjQ4OTY0NDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896445&doc=T3FFZzBnMkpOcFdhUnZiSDExM1hvY2FKNGtyYlFnWUlqamJDT0ZXUXAyTT0_IjQ4OTY0NDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

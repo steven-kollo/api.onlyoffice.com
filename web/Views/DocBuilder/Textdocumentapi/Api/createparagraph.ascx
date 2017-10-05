@@ -18,4 +18,4 @@ builder.SaveFile("docx", "CreateParagraph.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882310&doc=SmIwdDV5M3QraEovSlc0MDd6ME9oOFV2ek9KME83VmY1bVUxdUlGOWZMdz0_IjQ4ODIzMTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882310&doc=NUdkSjVKQkU0TXhOb2JIM08vejhuOG8rR1Q4WW9QcUZkdUthMDZNcjFGUT0_IjQ4ODIzMTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

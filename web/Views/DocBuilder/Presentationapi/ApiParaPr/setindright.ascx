@@ -31,4 +31,4 @@ builder.SaveFile("pptx", "SetIndRight.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5010010&doc=bXV2aGl3WS9rcUhiVnQvcU5zUWNxNnBzYmFEanhZNUlkRFdmR2VwK1Z5OD0_IjUwMTAwMTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5010010&doc=ZEZyVTYrNXVvT0toc3F2MUFpaDlaMUJiL0JRR2Q5NU12MHdJcStiMUZOND0_IjUwMTAwMTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

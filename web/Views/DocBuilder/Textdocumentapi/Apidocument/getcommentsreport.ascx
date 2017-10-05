@@ -86,4 +86,4 @@ builder.SaveFile("docx", "GetCommentsReport.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5235514&doc=ZXZKMm5OMjI2djdnZDdDeGFGakRGcnhVVW0rdzdxNE12TXpFSFIvbVN1ND0_IjUyMzU1MTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5235514&doc=VDJWT2Y4d1FHdXFoWjJwVG9KbllWOFFVYTMrVjdubWFyUU1NRGJqZndFdz0_IjUyMzU1MTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

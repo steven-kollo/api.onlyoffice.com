@@ -45,4 +45,4 @@ builder.SaveFile("pptx", "RemoveElement.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009946&doc=aVdaZGkxQnZ0QVVEemdxaUlQSnJySzRBaGZhN2NIdHB0akVCeE1SNmJrRT0_IjUwMDk5NDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009946&doc=WXJLUzVzV0s0dVpMWStDcG12Q2J3NXVNZW1RWmpOWFk2RXNneHVWOTIzND0_IjUwMDk5NDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

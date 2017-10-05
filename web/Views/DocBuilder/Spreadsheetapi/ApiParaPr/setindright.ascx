@@ -26,4 +26,4 @@ builder.SaveFile("xlsx", "SetIndRight.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006310&doc=UE4rakk5ekpmbHlJUCtFTngrWXZhYndCa0NIVXlMYmRld0ZzWmYzN25Rcz0_IjUwMDYzMTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006310&doc=VUlFaXZDNUtTSzB5MjNaeVRGbktsK2tGMDloM1JnK3FZcjJLNzRCY1FDUT0_IjUwMDYzMTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
