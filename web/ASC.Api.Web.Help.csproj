@@ -1211,9 +1211,9 @@
     <Content Include="Views\Shared\Search.aspx" />
     <Content Include="Views\Shared\SearchForm.ascx" />
     <Content Include="Views\Portals\Auth.aspx" />
-    <None Include="web.autofac.config">
+    <Content Include="web.autofac.config">
       <SubType>Designer</SubType>
-    </None>
+    </Content>
     <None Include="Web.COM.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
