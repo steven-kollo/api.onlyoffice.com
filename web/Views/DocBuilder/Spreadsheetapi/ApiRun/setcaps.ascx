@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetCaps.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006288&doc=SEpxSTQxN1RidnFJbFRKUDZxeUpIK3lXWnpmSXFtSUpoYU0rdGtmY2l2QT0_IjUwMDYyODgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006288&doc=RkpIbVc0M0lPeGpZTjloRnd3eno5R0h2aThBa3lFV0Q2cGVJaWFDQkFIZz0_IjUwMDYyODgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

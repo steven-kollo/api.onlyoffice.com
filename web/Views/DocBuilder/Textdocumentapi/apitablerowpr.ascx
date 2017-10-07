@@ -51,4 +51,4 @@ builder.SaveFile("docx", "SetTableHeader.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896868&doc=b0hEMHFnWjN0VmZJbjhXRkp1Q3BlZ2JseVlmcytOaHBQc2IvWEp5bXdaND0_IjQ4OTY4Njgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896868&doc=NlAwc0RHUDZScCt4MWd3dzMrNnhTV2FmK04wRzlxYzNjSCs0WFlYY3lVYz0_IjQ4OTY4Njgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

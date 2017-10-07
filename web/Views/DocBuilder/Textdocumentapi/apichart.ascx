@@ -60,4 +60,4 @@ builder.SaveFile("docx", "ApiChart.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883430&doc=RlN4YzVZZWd4RlBvbmR2OG9kZE1BMEs2eWpyRTdobkR0azl2aWxqODRRND0_IjQ4ODM0MzAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883430&doc=WVFVTFhqdEdBVzQxdWRmZW1BQS9QdmtOSGR6bzJXeVpZMUNGY1pEcWlqYz0_IjQ4ODM0MzAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

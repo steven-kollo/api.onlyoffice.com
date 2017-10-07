@@ -30,4 +30,4 @@ builder.SaveFile("pptx", "SetVertAlign.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011407&doc=QnFBUXp2TTA3alh5TmVsc2ZJeHpKQml6a3BjWVk0ZXFTbUJkbmpRcE9Vcz0_IjUwMTE0MDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011407&doc=ZFBXTUk0MzRVd1VkTDgyeXV4S0FuMkpuZ0xURVZFMWZRWVpXelhHaTEyOD0_IjUwMTE0MDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -25,4 +25,4 @@ builder.SaveFile("docx", "SetIndLeft.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889083&doc=akpoOTJWd1pNcHpDeUpLUE9EbzFWRk05S2RlUkovUkpYM0Z2eldENnM5ST0_IjQ4ODkwODMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889083&doc=dDlNRk84aFRpenVyT3Y0TEtmekxCOGRRdnNHVWRxOXJ1MklyK3VIRWEzST0_IjQ4ODkwODMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

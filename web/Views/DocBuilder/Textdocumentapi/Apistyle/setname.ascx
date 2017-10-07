@@ -42,4 +42,4 @@ builder.SaveFile("docx", "SetName.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892960&doc=RGI0ck1tRm9Pdk92dzY0TnVSMGl5NFhJanlEMThpVE1UdUtoQ2ZTbGEwST0_IjQ4OTI5NjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892960&doc=aUphcmh4UTRkQjhNeitRMjVGT3FZVkNVVkd2Mng2dUNHb1BVZG91Y0kvZz0_IjQ4OTI5NjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

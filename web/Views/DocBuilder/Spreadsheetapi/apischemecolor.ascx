@@ -42,4 +42,4 @@ builder.SaveFile("xlsx", "ApiSchemeColor.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004574&doc=Q1BrTC9NbE1abTJ5MGpCaUpUK2FwWlBzdHRWd245WGtGZ1RqQkQ5dGdSVT0_IjUwMDQ1NzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004574&doc=OHRlc2tpYjZuSis1ZUVLVEtvMVJMMzVTdDNFYXpVS2x2WDAzVUJjSEJTZz0_IjUwMDQ1NzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

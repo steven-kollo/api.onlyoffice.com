@@ -41,4 +41,4 @@ builder.SaveFile("xlsx", "SetHorAxisTickLabelPosition.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115689&doc=WHN0RWVZbDA1RTdSbTB2cFZBcVFpeU1wNlA5QUJPekNjOXQ0UHFULy9xWT0_IjUxMTU2ODki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115689&doc=Ujh4Z3NWZTZMNk1rRlBtanJpenk1ZVk1bDdjZWFaOEo4elJqaEhYRmQwWT0_IjUxMTU2ODki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

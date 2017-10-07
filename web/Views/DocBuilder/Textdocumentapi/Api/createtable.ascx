@@ -60,4 +60,4 @@ builder.SaveFile("docx", "CreateTable.docx");
 builder.CloseFile();</pre>
             
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883401&doc=TmhqOUxkU1hQSkJUOUtkSGFycEdXZDJVaDhyQTZnWkNEU2hQbWRLQkIrWT0_IjQ4ODM0MDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883401&doc=Z3lqWC84dUNtRHppMUFIU2tIS0h1NjM0K1RqZlJFU1prNzFndU5ZK1ZFcz0_IjQ4ODM0MDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

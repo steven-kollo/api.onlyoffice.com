@@ -36,4 +36,4 @@ builder.SaveFile("docx", "GetTableCellPr.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898069&doc=VWNGcHovS1VOaFVjd2UzK2RGVURpbXF3a1ZMZWtBWUZyK0ZnMG9LNjNsVT0_IjQ4OTgwNjki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898069&doc=M3h2OUJkellVbnVQRG01ZmlVTWI2aFJsUmJOQUhnRjR2TnFXK0JHNXFkMD0_IjQ4OTgwNjki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

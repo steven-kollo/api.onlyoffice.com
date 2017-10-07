@@ -36,4 +36,4 @@ builder.SaveFile("pptx", "RemoveAllElements.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009942&doc=L1U2cVEwLy9sVzRJVDVqT2ZHMFhEbXFHZXdaM1NyVjJCSlpLQ011YkdOTT0_IjUwMDk5NDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009942&doc=NFBkM1I1dC9kNFNGeEduS2llWmhyaXJZYmc1Rmw0UGpmdDMyNjFjZWhRND0_IjUwMDk5NDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

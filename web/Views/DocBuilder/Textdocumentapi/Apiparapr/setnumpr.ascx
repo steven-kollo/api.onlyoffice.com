@@ -70,4 +70,4 @@ builder.SaveFile("docx", "SetNumPr.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891384&doc=enF4VGh1QldyUldpc1duZk5BUy8rY2dqZWQrbWJXdGdjN20vTFgzK0IxND0_IjQ4OTEzODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891384&doc=MUtSbG5HNmd6TldscEdJbW5HdHRBTGx3RHhMa2tEczhGQ0VxYjg4QTljVT0_IjQ4OTEzODQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

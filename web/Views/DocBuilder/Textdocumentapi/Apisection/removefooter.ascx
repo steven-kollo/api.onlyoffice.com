@@ -5,7 +5,9 @@
 </h1>
 
 <h4 class="header-gray" id="RemoveFooter">RemoveFooter(sType)</h4>
-<p class="dscr">Remove the footer of the specified type from the current section. After removal the footer will be inherited fromthe previous section or, if this is the first section in the document, no footer of the specifiedtype will be present.</p>
+<p class="dscr">Remove the footer of the specified type from the current section. After removal the footer will be inherited from
+the previous section or, if this is the first section in the document, no footer of the specified
+type will be present.</p>
 
             <h2>Parameters:</h2>
                 <table class="table">
@@ -54,4 +56,4 @@ builder.SaveFile("docx", "RemoveFooter.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892302&doc=SEhOcWpGTXdhVENkcTRhUis5dFpFcTdwTHdSRlFic0JxejBBSXladm1Laz0_IjQ4OTIzMDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892302&doc=enR5b0hwT29zNXRlSkRwUElYUmI5TGdJSzFUMW5pZXlHZ3VnSFRxd2lGYz0_IjQ4OTIzMDIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

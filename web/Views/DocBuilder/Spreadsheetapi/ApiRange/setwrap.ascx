@@ -41,4 +41,4 @@ builder.SaveFile("xlsx", "SetWrap.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115557&doc=M2V2dHh4ZWh2dnRoODlINi9udDNvcU16ZXlJTDQ5Wjh0Vys3eE1MSnJ0MD0_IjUxMTU1NTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115557&doc=V1g1QjBFekY4ZHJ1UzRiTktDb1lkR0dxcVlmUGcxazZ2dFFVSENFKzRjMD0_IjUxMTU1NTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

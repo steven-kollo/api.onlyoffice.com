@@ -62,4 +62,4 @@ builder.SaveFile("docx", "SetWidowControl.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891173&doc=cVpKdmx3TFJEeXRNYUF1a2tEaGJ2bXZjREtSWTEwWk5iR3hGZ1YwdndDMD0_IjQ4OTExNzMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891173&doc=K1lNbXdaU05TQjlrS0xhNFdEQndtb0YrUVIvRVh6WkNrNEE1QnJlVHZDRT0_IjQ4OTExNzMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

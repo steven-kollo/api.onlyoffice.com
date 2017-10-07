@@ -35,4 +35,4 @@ builder.SaveFile("docx", "RemoveElement.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889062&doc=M2tHbkdSQ2NrbzNMOWkzN2JZbk1YRGJOR29NTEtEK2c1Yms2TXJrZndmQT0_IjQ4ODkwNjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889062&doc=eEdnVERaRW1QRExZUHFwRTBjaTJHSUpvekYwVVB0cnN2dlg0NHZzbUdpQT0_IjQ4ODkwNjIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

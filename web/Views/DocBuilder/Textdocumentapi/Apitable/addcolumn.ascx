@@ -61,4 +61,4 @@ builder.SaveFile("docx", "AddColumn.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894681&doc=LzhEYUZJcmUrMDFuY2lNSytaSHJJVGZNK3RzcVZFTEd4cTd1cGRRdGtHZz0_IjQ4OTQ2ODEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4894681&doc=S2ViMWpHNjRuVU9GSEJ4T1pwL1BrR2RQZC9sMlo5TUlUbXJBR0R4VTNpWT0_IjQ4OTQ2ODEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

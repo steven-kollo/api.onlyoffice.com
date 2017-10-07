@@ -103,4 +103,4 @@ builder.SaveFile("xlsx", "ApiRange.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882026&doc=M3ZjUVlCZE11Z09QVi9MV0tSeEVKbTRwRmVqTit4LzFWMGkxRFA4SkJnRT0_IjQ4ODIwMjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882026&doc=bHBrTXVQK3FmeXFnZVE4Z0pCYjZ3N2ZyVDFjNC84Q2k0Z08yQTBZd2NPbz0_IjQ4ODIwMjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

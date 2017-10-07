@@ -47,4 +47,4 @@ builder.SaveFile("docx", "GetLevelIndex.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912541&doc=ZWFmSTFkdi9xZVlsNXRWWEU1TFVlUjRMOU9UUmNkbUczbjZ0cEsyRkRqTT0_IjQ5MTI1NDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4912541&doc=TE5zOU95V2UySGt2MEhYUFVtdlUvUENHQXhjN3hwMTdpK1F5S3F4OGw0QT0_IjQ5MTI1NDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

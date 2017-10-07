@@ -48,4 +48,4 @@ builder.SaveFile("pptx", "GetSlideByIndex.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004788&doc=WGR4M0lYZzdTUDA5eUErTDZQY1VIdTIvRXBWLy9yRVZQcXc3TkhUaE9YYz0_IjUwMDQ3ODgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004788&doc=SStoSy9FNnFqbnp3WVBQU1RBYWJvTEJNbjdwZXBsM2ZkTDRxeUpBYmtWST0_IjUwMDQ3ODgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

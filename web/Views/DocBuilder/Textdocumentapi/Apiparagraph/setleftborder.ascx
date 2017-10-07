@@ -88,4 +88,4 @@ builder.SaveFile("docx", "SetLeftBorder.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891070&doc=eDFmelNJUGZtU1ZDNFh0TStoQy8rbzFTU1JCRk4zUlhYWDNGaDNaZDMxdz0_IjQ4OTEwNzAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891070&doc=b0pEY1JUQnBraEtKTTlrYTgvMmNIVFY2S2RCVkhRdkJXditYcEh2dENyTT0_IjQ4OTEwNzAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -71,4 +71,4 @@ builder.SaveFile("docx", "SetColor.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898105&doc=MU44WkozVkVxZ0tScXkyNDMwaFlzNE43QTVrZ21ZdElmT1A1YUVPTjRXZz0_IjQ4OTgxMDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898105&doc=RDdwaXVWYUJVQ1hRb2NVTGxoZG5hTVFzRU9lTHc4Z29OTFJmVytDTXp0WT0_IjQ4OTgxMDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

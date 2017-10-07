@@ -31,4 +31,4 @@ builder.SaveFile("docx", "SetSize.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887486&doc=UDdjbGNiM3l3K3cxUkFyU0pZV3hvOWM3K0dxeElLbWlsU3JXLy9vWHQ1QT0_IjQ4ODc0ODYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887486&doc=c3g3cVBoSHZ0dVRERVdIZVJLL1FEcnZSdnRtNXgyc1hUcTFiR0lyWFQ2dz0_IjQ4ODc0ODYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

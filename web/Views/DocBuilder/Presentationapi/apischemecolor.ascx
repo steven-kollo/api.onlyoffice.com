@@ -46,4 +46,4 @@ builder.SaveFile("pptx", "ApiSchemeColor.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007769&doc=M2d1QXA5VEF3NnV3dnpYSG9wVS9vZmVWOTk2Yk1rRmltOXp4NFFCbHdJQT0_IjUwMDc3Njki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007769&doc=TnFLY0hqN0EvazhBVE90bE5nTnFYQUJLMHhrN25IQld1UHh3ZDlVYXptVT0_IjUwMDc3Njki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

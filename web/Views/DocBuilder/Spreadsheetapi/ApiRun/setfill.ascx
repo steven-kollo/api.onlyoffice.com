@@ -28,4 +28,4 @@ builder.SaveFile("xlsx", "SetFill.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006452&doc=em41VDRzb1FuREJCR3B2VS95VWhPdjdQQkpLSDdPQUp3aVZ0L1FuR1dZbz0_IjUwMDY0NTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006452&doc=bmZ6YVNWVWhkWFJDWk9PVmV6SHFEMGlHcG4zQnYyazJ2WC9ENGxQSEgrUT0_IjUwMDY0NTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

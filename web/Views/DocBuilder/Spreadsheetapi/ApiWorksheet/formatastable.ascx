@@ -37,4 +37,4 @@ builder.SaveFile("xlsx", "FormatAsTable.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882045&doc=c21ZTnJncTZoZU5UYUZTYnd0bHJjSDUzOXIzMnRPcUQ0MjM2eFRoV1hOST0_IjQ4ODIwNDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882045&doc=UzJWYkJUT2NvUU5lYzlNV2g3SkxCVlJCMmk1ZjMrb09ka0Y3aDhTSHZBMD0_IjQ4ODIwNDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

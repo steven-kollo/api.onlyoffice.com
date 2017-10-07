@@ -35,7 +35,8 @@
                         </td>
                         <td> &lt;optional></td>
                         <td>false</td>
-                        <td>Whether to create a new header or not with the specified header type in case no header with such a type could be found in the current section.</td>
+                        <td>Whether to create a new header or not with the specified 
+header type in case no header with such a type could be found in the current section.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -65,4 +66,4 @@ builder.SaveFile("docx", "GetHeader.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892250&doc=WGxnVVFqTjlnSGpLTWN2Ty9JcG9lZmRZenNwUVowS0dhU0JEdnJmNTYyaz0_IjQ4OTIyNTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892250&doc=R1o0UDVKUU1CeHVjL0tlazJ1eWxrSzUyWVZzVDZCRE1ITTg4VkZaRUlYVT0_IjQ4OTIyNTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

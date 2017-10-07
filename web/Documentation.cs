@@ -35,7 +35,8 @@ using System.Web.Routing;
 using ASC.Api.Interfaces;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using Microsoft.Practices.Unity;
+using ASC.Common.DependencyInjection;
+using Autofac;
 
 namespace ASC.Api.Web.Help
 {
@@ -50,27 +51,28 @@ namespace ASC.Api.Web.Help
 
             //Load documentation
             _points = GenerateDocs();
-
-            var basePath = ConfigurationManager.AppSettings["apiprefix"] ?? "api";
-            if (_points != null) _points.ForEach(x => x.Methods.ForEach(y => y.Path = basePath + y.Path));
         }
 
         public static List<MsDocEntryPoint> GenerateDocs()
         {
-            //Generate the docs first
-            var container = ApiSetup.ConfigureEntryPoints();
+            var containerBuilder = AutofacConfigLoader.Load("api");
+            containerBuilder.Register(c => c.Resolve<IApiRouteConfigurator>().RegisterEntryPoints())
+                .As<IEnumerable<IApiMethodCall>>()
+                .SingleInstance();
+
+            var container = containerBuilder.Build();
+
             var entries = container.Resolve<IEnumerable<IApiMethodCall>>();
 
-            var apiEntryPoints = container.Registrations.Where(x => x.RegisteredType == typeof (IApiEntryPoint)).ToList();
+            var apiEntryPoints = container.ComponentRegistry.Registrations.Where(x => typeof(IApiEntryPoint).IsAssignableFrom(x.Activator.LimitType)).ToList();
 
-            var msDocFolder = AppDomain.CurrentDomain.RelativeSearchPath;
-            var generator = new MsDocDocumentGenerator(Path.Combine(msDocFolder, "help.xml"), msDocFolder, container);
+            var generator = new MsDocDocumentGenerator(container);
 
             foreach (var apiEntryPoint in entries.GroupBy(x => x.ApiClassType))
             {
                 var point = apiEntryPoint;
                 generator.GenerateDocForEntryPoint(
-                    apiEntryPoints.SingleOrDefault(x => x.MappedToType == point.Key),
+                    apiEntryPoints.SingleOrDefault(x => x.Activator.LimitType == point.Key),
                     apiEntryPoint.AsEnumerable());
             }
 

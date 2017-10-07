@@ -40,4 +40,4 @@ builder.SaveFile("xlsx", "SetShowDataLabels.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115751&doc=M3BEd1QrTytBNzduY2ZCb2tIMnE2aWZqa3ZTcGgvOHAxektxWGI4N1l1bz0_IjUxMTU3NTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115751&doc=dXpZQzR5MHNrYWwwcnhjNUtiSlVJOTVKVURuN1RQU1JYVGpyNVo3VWxPRT0_IjUxMTU3NTEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

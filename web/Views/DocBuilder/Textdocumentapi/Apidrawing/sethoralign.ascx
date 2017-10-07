@@ -77,4 +77,4 @@ builder.SaveFile("docx", "SetHorAlign.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887449&doc=MklBVzJGTkF3ekVEelhxc3V6Ti9Bc210S2VIcHBnV2JISUMvZTRWZE9pRT0_IjQ4ODc0NDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887449&doc=VjhhN2NzRi8wMFovbng2YXJuQy9GeTdCeXFOQU9hdEgrdjBtSlVKRS9iZz0_IjQ4ODc0NDki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

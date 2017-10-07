@@ -34,4 +34,4 @@ builder.SaveFile("pptx", "GetCurSlideIndex.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011274&doc=RWJkY05kRTVOUzJ4M3pJaXVFaHdDcFR3M0RZTXU5RytlZ2tGZ1hlZEorZz0_IjUwMTEyNzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011274&doc=a0VycUtDNE1GWVQrckRpYTZWV0NsWWRwbWV5WGR2N1FXb21iUDdHdG5Tdz0_IjUwMTEyNzQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

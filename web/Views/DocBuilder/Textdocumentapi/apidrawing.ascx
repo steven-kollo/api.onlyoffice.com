@@ -71,4 +71,4 @@ builder.SaveFile("docx", "ApiDrawing.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887378&doc=RzRaQVV2WFJndXRSc05FNHlORmsxUDlZWEFjTHk3eFJOZ1pMSCtuUzBKRT0_IjQ4ODczNzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887378&doc=KzV3MHBwMFBqeW5uVDdsSkZqeUVqRjl1czFvSGQwUzRxczA3aFlVQ21icz0_IjQ4ODczNzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

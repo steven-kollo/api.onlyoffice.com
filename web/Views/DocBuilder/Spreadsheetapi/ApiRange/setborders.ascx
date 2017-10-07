@@ -54,4 +54,4 @@ builder.SaveFile("xlsx", "SetBorders.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115592&doc=MUJINldwOEVkT1kvZ3hLUHFXQUJpWUhsdDlTV3d2QkxtWnZRc3locmgzMD0_IjUxMTU1OTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115592&doc=UU9xYUs5d0VmUVU2WS96WWx1WWN5RVFabjd3YjRncytLL0dLR3VsL0pldz0_IjUxMTU1OTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

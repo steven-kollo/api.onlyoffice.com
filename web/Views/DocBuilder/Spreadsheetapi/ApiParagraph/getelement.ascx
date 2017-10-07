@@ -32,4 +32,4 @@ builder.SaveFile("xlsx", "GetElement.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004866&doc=c0tFdFZVK1FaT0JnK2NPWjE5c2ZXRnFTb2Z1SXpPSmpUSnd2RGZMZHN4RT0_IjUwMDQ4NjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004866&doc=ZDBSV05US3lrMzV3b1A3dEcxdzEvRGliMWZscG52YXR6cFYzZEFmQnduZz0_IjUwMDQ4NjYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

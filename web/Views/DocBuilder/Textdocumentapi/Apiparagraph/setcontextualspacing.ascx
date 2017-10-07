@@ -63,4 +63,4 @@ builder.SaveFile("docx", "SetContextualSpacing.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889079&doc=d1NSZmdoK3dZb3QxejF1ZkZEdWVGcWV4eDdJS01rVHJQTHFESDl6NHN2QT0_IjQ4ODkwNzki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889079&doc=dXYzSnROSyt5di9mNU82UFp5dEcrUjhicWFiY1lnSS9uVWZ6andZUzBqUT0_IjQ4ODkwNzki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -30,7 +30,7 @@
 
     <p>
         <b>ONLYOFFICE Document Server</b> validates the <b>token</b>.
-        The data from the <em>payload</em> are considered valid and is used instead of the corresponding data from the main parameters.
+        The data from the <em>payload</em> is considered valid and is used instead of the corresponding data from the main parameters.
         If the <b>token</b> is invalid, the command is not executed.<p>
 
     <p>See the <a href="<%= Url.Action("signature/") %>">Signature</a> configuration section to find more.</p>

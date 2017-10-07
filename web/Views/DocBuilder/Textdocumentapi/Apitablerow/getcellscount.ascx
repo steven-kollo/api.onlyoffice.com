@@ -35,4 +35,4 @@ builder.SaveFile("docx", "GetCellsCount.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896831&doc=MXdTU3dJQUNRMksrdnU1MnZnRzBXRHZsanNMQVNKQ3NoNkJQcjAyRlRBaz0_IjQ4OTY4MzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896831&doc=aG5rMnh0d2wrSDRTVUZCZkgyVC9BSkZmQVloWkJwQ2drL2lEbkZCTk1ORT0_IjQ4OTY4MzEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

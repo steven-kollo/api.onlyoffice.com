@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "CreateNumbering.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006579&doc=dTlCRmVvd2pUUlh2YSswa1pocHpDMVAxWnZQSlBvRWtHOFVEYWJaWDY5Zz0_IjUwMDY1Nzki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006579&doc=eXEzNk5YNndWUGlNWGw5YkQ4QXV3VC9IakFFMlRqZ1FUS3RsSW5WMEl5WT0_IjUwMDY1Nzki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

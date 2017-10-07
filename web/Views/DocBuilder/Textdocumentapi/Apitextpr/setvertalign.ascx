@@ -19,4 +19,4 @@ builder.SaveFile("docx", "SetVertAlign.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898208&doc=eXpZMGpzMXdDNGhqQWJEcWt3Zmt6cW4vaW81ZU40TTNBU2NsUXczMnJTaz0_IjQ4OTgyMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898208&doc=S0VkS2VUc2U5ZVhIL0tzaXppMitiR0JFQWNiVG5UbDU5SGZwTVlmWFRxdz0_IjQ4OTgyMDgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

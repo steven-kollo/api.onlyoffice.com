@@ -47,4 +47,4 @@ builder.SaveFile("pptx", "ApiBullet.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007720&doc=TlI1OHVoU2UySENBWmorYm4za3FxSk1VYjBTaXRNOWN1ZFdhbFdudUVYZz0_IjUwMDc3MjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5007720&doc=Z0VUVGtSM2lvZ3lKdDd1WVZ2K1Z2VjBCSEdOWWVhS0ViVjhJYlVJRklNZz0_IjUwMDc3MjAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

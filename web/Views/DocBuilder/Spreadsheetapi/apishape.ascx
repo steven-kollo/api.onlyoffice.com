@@ -50,4 +50,4 @@ builder.SaveFile("xlsx", "SetVerticalTextAlign.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004838&doc=QjA3MitaZlZxU0k5cVB3TzE5V25MVEtRQmYrMzRDVFZveG52VG0wMDJnRT0_IjUwMDQ4Mzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004838&doc=RThPdnFOajQvM2p6NGFodFJFQWd4MkV2L3dSM2lMNjQ4ajRCRVAzUTNuYz0_IjUwMDQ4Mzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

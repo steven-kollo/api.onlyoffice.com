@@ -20,4 +20,4 @@ builder.SaveFile("xlsx", "SetSize.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004855&doc=SzFxTDYveVpMRUlPR2ZZREh1UXBpYjFwZFovOTByR3hHS1BaM2NlN1FxVT0_IjUwMDQ4NTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004855&doc=bngrTmdIZGZRcGJxT2Z3ZFQxME1NRTh2WEFUNFV3Q0hyVGVJeHJxNTJxbz0_IjUwMDQ4NTUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

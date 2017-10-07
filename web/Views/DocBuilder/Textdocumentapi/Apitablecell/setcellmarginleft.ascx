@@ -30,7 +30,10 @@
                         <a href="<%= Url.Action("global") %>#twips">twips</a>
                         </td>
                         <td> &lt;nullable><br></td>
-                        <td>The value for the amount of space to the left extent of the cell measured in twentieths of a point (1/1440 of an inch). If this value is <em>null</em>, then default table cell left margin will be used,otherwise the table cell left margin will be overridden with the specified value for the current cell.</td>
+                        <td>The value for the amount of space to the left extent of the cell 
+measured in twentieths of a point (1/1440 of an inch). 
+If this value is <em>null</em>, then default table cell left margin will be used,
+otherwise the table cell left margin will be overridden with the specified value for the current cell.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -54,4 +57,4 @@ builder.SaveFile("docx", "SetCellMarginLeft.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896350&doc=QVM1S0pSMm5lSjArR2dHbVd0SkFMT3pSTU51ZHEycnpwRmlaa1RHMzNaND0_IjQ4OTYzNTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896350&doc=bm1GZzcvbWx2Znk5dzZpWVpwNStibVN2eWdGZExVNm9WL0dQUWhqV1diMD0_IjQ4OTYzNTAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

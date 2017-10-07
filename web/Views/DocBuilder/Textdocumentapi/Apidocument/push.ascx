@@ -53,4 +53,4 @@ builder.SaveFile("docx", "Push.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887275&doc=ZHpFeVdvVGtEaEthMllpNUNsTlBXNmxVTlBYK01OREtZTUY1RWJSczJMVT0_IjQ4ODcyNzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887275&doc=WFVOaVFOS0Iybk9IVE1acEx0dU44NXV2ajZmc2RlRkRqUDVCZTZsalZZTT0_IjQ4ODcyNzUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

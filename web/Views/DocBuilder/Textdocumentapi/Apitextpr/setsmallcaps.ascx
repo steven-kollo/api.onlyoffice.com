@@ -19,4 +19,4 @@ builder.SaveFile("docx", "SetSmallCaps.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898158&doc=WlM4SVRyQzdGanVUL0FCNWZmQ3NTNzQ0RmFDZ2tEcnRkamJMeDBmTVBlMD0_IjQ4OTgxNTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898158&doc=N2VuczFLcmxCNTlNS3g4aktDT3ZSOElObTRFdXl3Zmc1aFJWZlV1dHU1UT0_IjQ4OTgxNTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

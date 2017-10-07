@@ -82,4 +82,4 @@ builder.SaveFile("pptx", "ApiParaPr.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5010013&doc=a0xuMnZLdUlMV3cxL3ZiOWVhWHZNNEkwYncreVlJeHROaExCK1VxVklWWT0_IjUwMTAwMTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5010013&doc=UGhrbVd4WE1DYkE1cXd0RSs5Nkl0ckZvV3ZlV29seTJJdExiZVcxc0hnZz0_IjUwMTAwMTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

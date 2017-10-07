@@ -32,7 +32,8 @@
 <em>"atLeast"</em>
                         </td>
                         <td></td>
-                        <td>The rule to either apply or ignore the height value to the current table row. Use the <em>"atLeast"</em> value to enable the <em>SetHeight</em> method use.</td>
+                        <td>The rule to either apply or ignore the height value 
+to the current table row. Use the <em>"atLeast"</em> value to enable the <em>SetHeight</em> method use.</td>
                     </tr>
                         <tr class="tablerow">
                         <td><em>nValue</em></td>
@@ -40,7 +41,8 @@
                         <a href="<%= Url.Action("global") %>#twips">twips</a>
                         </td>
                         <td>&lt;optional><br></td>
-                        <td>The height for the current table row measured in twentieths of a point (1/1440 of an inch). This value will be ignored if <em>sHRule="auto"</em>.</td>
+                        <td>The height for the current table row measured in twentieths of a 
+point (1/1440 of an inch). This value will be ignored if <em>sHRule="auto"</em>.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -64,4 +66,4 @@ builder.SaveFile("docx", "SetHeight.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896841&doc=S3psUHQ1UUlaZGFHU3Zmcm5YTDhqK0VkdDNrdmZmdVZJcVFrTkJWWFUxWT0_IjQ4OTY4NDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896841&doc=RUc3Q1lnNUUzT2ZWSS80bXNHeitHbEcwZEVDcHZvckxKc3JQYS9oeWVVTT0_IjQ4OTY4NDEi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

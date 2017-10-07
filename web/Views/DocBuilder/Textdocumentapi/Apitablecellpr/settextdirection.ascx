@@ -26,7 +26,10 @@
 |
 <em>"btlr"</em>
                         </td>
-                        <td>The available types of the text direction in the table cell: <em>"lrtb"</em> - text direction left-to-right moving from top to bottom, <em>"tbrl"</em> - text direction top-to-bottom moving from right to left, <em>"btlr"</em> - text direction bottom-to-top moving from left to right.</td>
+                        <td>The available types of the text direction 
+in the table cell: <em>"lrtb"</em> - text direction left-to-right moving from top to bottom, 
+<em>"tbrl"</em> - text direction top-to-bottom moving from right to left, 
+<em>"btlr"</em> - text direction bottom-to-top moving from left to right.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -53,4 +56,4 @@ builder.SaveFile("docx", "SetTextDirection.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896505&doc=RG5OZFZOeUhqM2wvZWlRTDhUSGFsVkxXMmlNVmhwZGJ5d2REZEVORFlBOD0_IjQ4OTY1MDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896505&doc=QkVkL3V5TUZRbndWVTJLZnpJQ2J2LzVhTDBhd2EyaUNsSWdCZFRyT09tVT0_IjQ4OTY1MDUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -365,6 +365,13 @@
             <short>Set account state</short> 
             <category>Accounts</category>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.UpdateUserActivity(System.Boolean)">
+            <summary>
+            UpdateUserActivity
+            </summary>
+            <param name="userOnline"></param>
+            <category>Accounts</category>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetAlerts">
             <summary>
                Returns the list of alerts for the authenticated user

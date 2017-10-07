@@ -31,4 +31,4 @@ builder.SaveFile("docx", "AddColumnBreak.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888985&doc=UmhSb2hTdEtwU2hXRDBYS0M5UFlBcHN4cWg0ZFJrRkpzNWVvU2MvS0RZaz0_IjQ4ODg5ODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888985&doc=bmZPNFN1V3N1c1V0WWxMTmhuS25DdGJndHlUeHk1RDRBOW1tTGxIK3dZQT0_IjQ4ODg5ODUi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

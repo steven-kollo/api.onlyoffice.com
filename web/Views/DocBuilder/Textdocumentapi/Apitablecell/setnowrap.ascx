@@ -11,7 +11,9 @@
                 <a href="<%= Url.Action("textdocumentapi/apitablecellpr/setnowrap") %>">ApiTableCellPr.SetNoWrap</a>
                 </li></ul></dd>
                 </dl>
-<p class="dscr">Specify how this table cell is laid out when the parent table is displayed in a document. This settingonly affects the behavior of the cell when the <a href="<%= Url.Action("textdocumentapi/apitablepr/settablelayout") %>">SetTableLayout</a> table layout for this table isset to use the <em>"autofit"</em> algorithm.</p>
+<p class="dscr">Specify how this table cell is laid out when the parent table is displayed in a document. This setting
+only affects the behavior of the cell when the <a href="<%= Url.Action("textdocumentapi/apitablepr/settablelayout") %>">SetTableLayout</a> table layout for this table is
+set to use the <em>"autofit"</em> algorithm.</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -52,4 +54,4 @@ builder.SaveFile("docx", "SetNoWrap.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896367&doc=bTFoVjRxem8yeDc1TjRPL3h5a3dFZTNsbi95NGpYMlZuemJhNHl1ZEN1UT0_IjQ4OTYzNjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896367&doc=L0NOQWRlblFGTGQvNmdLYmdFOVVrSGNUYllqQzUydnpBVXduN0RtZWNiTT0_IjQ4OTYzNjci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

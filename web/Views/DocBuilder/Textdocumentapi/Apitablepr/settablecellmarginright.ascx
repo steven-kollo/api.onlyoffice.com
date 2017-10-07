@@ -5,7 +5,8 @@
 </h1>
 <h4 class="header-gray" id="SetTableCellMarginRight">SetTableCellMarginRight(nValue)</h4>
                 
-<p class="dscr">Specify the amount of space which will be present between the right extent of the cell contents and the rightborder of all table cells within the parent table (or table row).</p>
+<p class="dscr">Specify the amount of space which will be present between the right extent of the cell contents and the right
+border of all table cells within the parent table (or table row).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -47,4 +48,4 @@ builder.SaveFile("docx", "SetTableCellMarginRight.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896659&doc=N0llcEozSHlRUUtkTWpBQ3YySm1GaUNLTUtNQU5wT082dlUxNCtiWmd3dz0_IjQ4OTY2NTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896659&doc=L3FpWlVReDYrTXpMMXVTMzRVM3pjVnpIZGhPclFCdHFZbk0vM2laRU4yZz0_IjQ4OTY2NTki0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

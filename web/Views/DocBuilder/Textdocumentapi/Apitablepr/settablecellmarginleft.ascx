@@ -5,7 +5,8 @@
 </h1>
 <h4 class="header-gray" id="SetTableCellMarginLeft">SetTableCellMarginLeft(nValue)</h4>
                 
-<p class="dscr">Specify the amount of space which will be present between the left extent of the cell contents and the leftborder of all table cells within the parent table (or table row).</p>
+<p class="dscr">Specify the amount of space which will be present between the left extent of the cell contents and the left
+border of all table cells within the parent table (or table row).</p>
 
             <h2>Parameters:</h2>
             <table class="table">
@@ -47,4 +48,4 @@ builder.SaveFile("docx", "SetTableCellMarginLeft.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896658&doc=bW1UVzVqTGU1WEs4ZHNHRjdmbHp3dlp4THltako5blc0ZStoa3VPVmdTWT0_IjQ4OTY2NTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896658&doc=ckVWYTdDZ29wTlRiSFd5VnF6RzdKWllRZ09NVjhwWFVhQThNZXhhU1pGbz0_IjQ4OTY2NTgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

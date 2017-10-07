@@ -27,4 +27,4 @@ builder.SaveFile("docx", "SetVerticalTextAlign.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892538&doc=blVZb3BJN3NoTHhEbDFocUtkVjJ2Y3RqM1BCdDZUSjhRWTZHWm4vNjdtdz0_IjQ4OTI1Mzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892538&doc=RG5SZ3pMUHhmOTlieHRBMWdBMjAxd0RjcG5CRWNWNGpsYmd5QXozS3RCVT0_IjQ4OTI1Mzgi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

@@ -20,4 +20,4 @@ builder.SaveFile("pptx", "CreateSchemeColor.pptx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004812&doc=bDlLNm1mVG9oVXp3emxWeDFGOFhCNk9QcDRXejg3TjlzY0tkMjZhcU9qbz0_IjUwMDQ4MTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004812&doc=SGIyRGphNkM1L1FWV2NLQUt2NkZ6RXFqSkNWb2VvN1RVM3paOWdxdVo4UT0_IjUwMDQ4MTIi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

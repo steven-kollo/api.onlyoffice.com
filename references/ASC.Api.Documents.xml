@@ -636,7 +636,7 @@
             <param name="providerId">Provider ID</param>
             <category>Third-Party Integration</category>
             <returns>Folder contents</returns>
-            <remarks> List of provider key: DropboxV2, Box, WebDav, Yandex, SkyDrive, SharePoint, GoogleDrive</remarks>
+            <remarks> List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdPartyAccounts">
@@ -700,6 +700,9 @@
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetDocServiceUrl(System.Boolean)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdpartyProvider">
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.Documents.DocumentsApi.Name">

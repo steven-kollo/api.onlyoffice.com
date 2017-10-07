@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "CreateRun.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006286&doc=NVlOUE1ZQU1hMXBPOFFTbmx2Wi9PUTVjeEx3dEJxanM4Z3dBbmpDb1VtOD0_IjUwMDYyODYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006286&doc=eURVYWtreFZMbEljNlk5V2xOL0VEY1pGQmxHUzgrcWZ1K0crUWJyQTZOaz0_IjUwMDYyODYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

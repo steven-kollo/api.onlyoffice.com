@@ -19,4 +19,4 @@ builder.SaveFile("docx", "SetDoubleStrikeout.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898106&doc=VWU3YU9TSFJYVU5tYTRkR0NPRWllWGl3bml2K2FaVFBnRVFQdkFGTkcwdz0_IjQ4OTgxMDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898106&doc=dklUTklHb1JPOXRrL3ZKZUxDQWlEQzBpWnR3LzMvcHBzMXpldlVOdERsZz0_IjQ4OTgxMDYi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

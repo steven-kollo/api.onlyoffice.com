@@ -27,4 +27,4 @@ builder.SaveFile("xlsx", "SetStrikeout.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006247&doc=Y1Brd0ZUQkp0SStFNk9tb0szOEsvMzU4RWlndXQrQlhyOW1vbG1VNzBlQT0_IjUwMDYyNDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006247&doc=RUVYUmEyYWlBZkJQUkR4WlJmekNTVDlUeEthbUlLeStpK2xmQzAzODVWZz0_IjUwMDYyNDci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

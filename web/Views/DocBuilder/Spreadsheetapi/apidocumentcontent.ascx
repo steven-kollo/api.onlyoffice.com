@@ -91,4 +91,4 @@ builder.SaveFile("xlsx", "ApiDocumentContent.xlsx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006400&doc=VElUcmpmaGYvZ0tYN21KQnE1dHdYRi8vNzZ2d2V2ZEUwdEZ3UzR5YUQrST0_IjUwMDY0MDAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006400&doc=cU5DdUR4ak5jZlFVL3pDalk4eFFQbHpUZ0RCN0hJOVF2SVp6R0RDRDFMbz0_IjUwMDY0MDAi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

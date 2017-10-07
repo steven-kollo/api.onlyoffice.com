@@ -21,7 +21,8 @@
                         <td>
                         <em>boolean</em>
                         </td>
-                        <td>If <em>true</em> the first page of the section will have header and footer that will differ from the other pages of the same section.</td>
+                        <td>If <em>true</em> the first page of the section will have 
+header and footer that will differ from the other pages of the same section.</td>
                     </tr>
                 </tbody>
                 </table>
@@ -48,4 +49,4 @@ builder.SaveFile("docx", "SetTitlePage.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892417&doc=VWhxM1EwM0d5TC9ZVU81RS9KQzVQQmNIOWxFcHQ5bzR0MG1VV1lMV1U5dz0_IjQ4OTI0MTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892417&doc=SnFLMWFSUEVXazg0S0xLRE9zYlo5T2JUV3FVZ2kzZmRDc3JJNXFjOWIydz0_IjQ4OTI0MTci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

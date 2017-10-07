@@ -22,7 +22,8 @@
                         <td>
                         <a href="<%= Url.Action("global") %>#twips">twips</a>
                         </td>
-                        <td>The distance from the bottom edge of the page to the bottom edge of the footer measured in twentieths of a point (1/1440 of an inch).</td>
+                        <td>The distance from the bottom edge of the page to the bottom edge 
+of the footer measured in twentieths of a point (1/1440 of an inch).</td>
                     </tr>
                 </tbody>
                 </table>
@@ -45,4 +46,4 @@ builder.SaveFile("docx", "SetFooterDistance.docx");
 builder.CloseFile();</pre>
 
 <h2>Resulting document</h2>
-<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892387&doc=UTAwQ2lJbTVQTkMwbjJ2aFlLSVBmT2p0T1pUSFMyZ212R0F1SldGalppRT0_IjQ4OTIzODci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
+<iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892387&doc=VTV3R2FvaGltM0lseTE1d3ZIN056VDBzbUZ2M1BCUjBraDl3UURtR0NTbz0_IjQ4OTIzODci0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
