@@ -72,7 +72,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onError = function (event) {
-    console.log("ONLYOFFICE Document Editor reports an error: " + event.data);
+    console.log("ONLYOFFICE Document Editor reports an error: code " + event.data.errorCode + ", description " + event.data.errorDescription);
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
