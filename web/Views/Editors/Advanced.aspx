@@ -126,6 +126,11 @@ config = {
         "lang": "en-US",
         "mode": "edit",
         "plugins": {
+             "autostart": [
+                 "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
+                 "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+                 ...
+             ],
              "pluginsData": [
                  "http://example.com/plugin1/config.json",
                  "http://example.com/plugin2/config.json",
@@ -151,11 +156,12 @@ config = {
         }
     },
     "events": {
+        "onAppReady": onAppReady,
         "onCollaborativeChanges": onCollaborativeChanges,
+        "onDocumentReady": onDocumentReady,
         "onDocumentStateChange": onDocumentStateChange,
         "onDownloadAs": onDownloadAs,
         "onError": onError,
-        "onReady": onReady,
         "onRequestEditRights": onRequestEditRights,
         "onRequestHistory": onRequestHistory,
         "onRequestHistoryData": onRequestHistoryData,

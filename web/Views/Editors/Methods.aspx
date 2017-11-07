@@ -291,7 +291,7 @@ docEditor.setHistoryData({
         </li>
 
         <li>
-            <p><b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onReady">onReady</a> events.</p>
+            <p><b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.</p>
             <pre>
 docEditor.showMessage(message);
 </pre>

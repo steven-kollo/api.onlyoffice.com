@@ -26,8 +26,14 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td id="autostart" class="copy-link">autostart</td>
+            <td>Defines the array of the identifiers (as entered in <a href="<%= Url.Action("config", "plugin") %>#guid">config.json</a>) for the plugins, which will automatically start when the editor opens, and the order the plugins will run one-by-one.</td>
+            <td>array of string</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow">
             <td id="pluginsData" class="copy-link">pluginsData</td>
-            <td>Defines the list of absolute paths to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
+            <td>Defines the array of absolute paths to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>), which is defined relatively to the <em>url</em> path.</td>
             <td>array of string</td>
             <td></td>
         </tr>
@@ -50,6 +56,11 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "plugins": {
+             "autostart": [
+                 "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
+                 "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+                 ...
+             ],
              "pluginsData": [
                  "http://example.com/plugin1/config.json",
                  "http://example.com/plugin2/config.json",

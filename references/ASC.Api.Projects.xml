@@ -6,12 +6,12 @@
     <members>
         <member name="T:ASC.Api.Projects.ProjectApi">
             <summary>
-             Projects access
+            Projects access
             </summary>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.#ctor(ASC.Api.Impl.ApiContext,ASC.Api.Documents.DocumentsApi)">
             <summary>
-             Constructor
+            Constructor
             </summary>
             <param name="context"></param>
             <param name="documentsApi">Docs api</param>
@@ -23,7 +23,7 @@
             <short>
             Add importing URL to queue
             </short>
-             <category>Import</category>        
+            <category>Import</category>        
             <param name="url">The company URL </param>
             <param name="userName">User Name </param>
             <param name="password">Password </param>
@@ -40,7 +40,7 @@
             <short>
             Get projects for import
             </short>
-             <category>Import</category>
+            <category>Import</category>
             <returns>List of projects</returns>
             <param name="url">The company URL </param>
             <param name="userName">User Name </param>
@@ -53,7 +53,7 @@
             <short>
             Returns the number of users that can be added to the import
             </short>
-             <category>Import</category>
+            <category>Import</category>
             <returns>Number of users</returns>
             <param name="url">The company URL </param>
             <param name="userName">User Name </param>
@@ -67,7 +67,7 @@
             <short>
             Get import status
             </short>
-             <category>Import</category>
+            <category>Import</category>
             <returns>Importing Status</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetMessageByFilter(System.Int32,System.Int32,System.Guid,System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,System.Nullable{ASC.Projects.Core.Domain.MessageStatus})">
@@ -77,7 +77,7 @@
             <short>
              Get message by filter
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="projectid" optional="true"> Project ID</param>
             <param name="tag" optional="true">Project Tag</param>
             <param name="departament" optional="true">Departament GUID</param>
@@ -98,7 +98,7 @@
             <short>
             Messages
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="projectid">Project ID</param>
             <returns>List of messages</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -110,7 +110,7 @@
             <short>
             Add message
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="projectid">Project ID</param>
             <param name="title">Discussion title</param>
             <param name="content">Message text</param>
@@ -127,7 +127,7 @@
             <short>
             Update message
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="messageid">Message ID</param>
             <param name="projectid">Project ID</param>
             <param name="title">Discussion title</param>
@@ -145,7 +145,7 @@
             <short>
             Update message status
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="messageid">Message ID</param>
             <param name="status">Project ID</param>
             <returns></returns>
@@ -159,7 +159,7 @@
             <short>
             Delete message
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="messageid">Message ID</param>
             <returns></returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -171,7 +171,7 @@
             <short>
             Message
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="messageid">Message ID</param>
             <returns>Message</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -183,19 +183,19 @@
             <short>
             Message files
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="messageid">Message ID</param>
             <returns> List of message files</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UploadFilesToMessage(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
-             Uploads the file specified in the request to the selected message
+            Uploads the file specified in the request to the selected message
             </summary>
             <short>
-             Upload file to message
+            Upload file to message
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="messageid">Message ID</param>
             <param name="files">File ID</param>
             <returns>Message</returns>
@@ -203,12 +203,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromMessage(System.Int32,System.Int32)">
             <summary>
-             Detaches the selected file from the message with the ID specified in the request
+            Detaches the selected file from the message with the ID specified in the request
             </summary>
             <short>
-             Detach file from message
+            Detach file from message
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="messageid">Message ID</param>
             <param name="fileid">File ID</param>
             <returns>Message</returns>
@@ -221,7 +221,7 @@
             <short>
             Latest messages
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <returns>List of messages</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
@@ -232,7 +232,7 @@
             <short>
             Message comments
             </short>
-             <category>Comments</category>
+            <category>Comments</category>
             <param name="messageid">Message ID</param>
             <returns>Comments for message</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -244,7 +244,7 @@
             <short>
             Add message comment
             </short>
-             <category>Comments</category>
+            <category>Comments</category>
             <param name="messageid">Message ID</param>
             <param name="content">Comment content</param>
             <param name="parentId">Parrent comment ID</param>
@@ -258,8 +258,8 @@
             <short>
             Subscribe to message action
             </short>
-             <category>Discussions</category>
-             <returns>Discussion</returns>
+            <category>Discussions</category>
+            <returns>Discussion</returns>
             <param name="messageid">Message ID</param>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
@@ -270,7 +270,7 @@
             <short>
             Check subscription to discussion action
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="messageid">Message ID</param>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
@@ -281,7 +281,7 @@
             <short>
             Get subscribers
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="messageid">Message ID</param>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
@@ -292,7 +292,7 @@
             <short>
             Get preview
             </short>
-             <category>Discussions</category>
+            <category>Discussions</category>
             <param name="htmltext">html to create preview</param>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetReportTemplate(System.Int32)">
@@ -305,12 +305,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.SaveReportTemplate(System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean)">
             <summary>
-             Creates the project report template with the parameters specified in the request. Most of the parameters are optional and depend on the report type selected.
+            Creates the project report template with the parameters specified in the request. Most of the parameters are optional and depend on the report type selected.
             </summary>
             <short>
-             Create report template
+            Create report template
             </short>
-             <category>Report</category>         
+            <category>Report</category>         
             <param name="name">Report name</param>
             <param name="period" optional="true">Report template generation period. Can be one of the following: Day/Week/Month</param>
             <param name="periodItem" optional="true">Period item. Can be: weekday name (for weekly report, starting with Sunday), day of the month (for monthly report).</param>
@@ -331,12 +331,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateReportTemplate(System.Int32,System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean)">
             <summary>
-             Updates the selected project report template with the parameters specified in the request
+            Updates the selected project report template with the parameters specified in the request
             </summary>
             <short>
-             Update report template
+            Update report template
             </short>
-             <category>Report</category>           
+            <category>Report</category>           
             <param name="reportid">Report template ID</param>    
             <param name="name">Report name</param>
             <param name="period" optional="true">Report template generation period. Can be one of the following: Day/Week/Month</param>
@@ -358,12 +358,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DeleteReportTemplate(System.Int32)">
             <summary>
-             Deletes the project report template with the ID specified in the request
+            Deletes the project report template with the ID specified in the request
             </summary>
             <short>
-             Delete report template
+            Delete report template
             </short>
-             <category>Report</category>   
+            <category>Report</category>   
             <param name="reportid">Report template ID</param>        
             <returns>Project report template</returns>
         </member>
@@ -374,7 +374,7 @@
             <short>
             Projects
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <returns>List of projects</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetMyProjects">
@@ -384,7 +384,7 @@
             <short>
             Participated projects
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <returns>List of projects</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetFollowProjects">
@@ -394,7 +394,7 @@
             <short>
             Followed projects
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <returns>List of projects</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjects(ASC.Projects.Core.Domain.ProjectStatus)">
@@ -404,7 +404,7 @@
             <short>
             Project by status
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="status">"open"|"paused"|"closed"</param>
             <returns>List of projects</returns>
         </member>
@@ -415,7 +415,7 @@
             <short>
             Project by ID
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <returns>Project</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -443,7 +443,7 @@
             <short>
             Search project
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <param name="query">Search query</param>
             <returns>List of results</returns>
@@ -456,7 +456,7 @@
             <short>
             Search all projects
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="query">Search query</param>
             <returns>List of results</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -488,7 +488,7 @@
             <short>
             Update project
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <param name="title">Title</param>
             <param name="description">Description</param>
@@ -509,7 +509,7 @@
             <short>
             Update project status
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <param name="status">Status. One of (Open|Paused|Closed)</param>
             <returns>Updated project</returns>
@@ -522,7 +522,7 @@
             <short>
             Delete project
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <returns>Deleted project</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -534,9 +534,9 @@
             <short>
             Following/Unfollowing project
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="projectId">Project ID</param>
-             <returns>Project</returns>
+            <returns>Project</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTags(System.Int32,System.String)">
@@ -546,7 +546,7 @@
             <short>
             Update project tags
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <param name="tags">Tags</param>
             <returns>project</returns>
@@ -559,7 +559,7 @@
             <short>
             Project time spent
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <returns>List of time spent</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -568,7 +568,7 @@
             <summary>
             
             </summary>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <returns>List of time spent</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -580,7 +580,7 @@
             <short>
             Add milestone
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <param name="title">Milestone title</param>
             <param name="deadline">Milestone deadline</param>
@@ -600,7 +600,7 @@
             <short>
             Get milestones by project ID
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <returns>List of milestones</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -612,7 +612,7 @@
             <short>
             Get milestones by project ID and milestone status
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <param name="status">Milestone status</param>
             <returns>List of milestones</returns>
@@ -625,8 +625,8 @@
             <short>
             Project team
             </short>
-             <category>Team</category>
-             <param name="projectid">Project ID</param>
+            <category>Team</category>
+            <param name="projectid">Project ID</param>
             <returns>List of team members</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTeam(System.Collections.Generic.List{System.Int32})">
@@ -636,8 +636,8 @@
             <short>
             Project team
             </short>
-             <category>Team</category>
-             <param name="ids">Project IDs</param>
+            <category>Team</category>
+            <param name="ids">Project IDs</param>
             <returns>List of team members</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.AddToProjectTeam(System.Int32,System.Guid)">
@@ -647,7 +647,7 @@
             <short>
             Add to team
             </short>
-             <category>Team</category>
+            <category>Team</category>
             <param name="projectid">Project ID</param>
             <param name="userId">ID of the user to add</param>
             <returns>List of team members</returns>
@@ -660,7 +660,7 @@
             <short>
             Set team security
             </short>
-             <category>Team</category>
+            <category>Team</category>
             <param name="projectid">Project ID</param>
             <param name="userId">ID of the user to set</param>
             <param name="security">Security rights</param>
@@ -675,7 +675,7 @@
             <short>
             Remove from team
             </short>
-             <category>Team</category>
+            <category>Team</category>
             <param name="projectid">Project ID</param>
             <param name="userId">ID of the user to add</param>
             <returns>List of team members</returns>
@@ -683,12 +683,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTeam(System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
             <summary>
-             Updates the project team with the users IDs specified in the request
+            Updates the project team with the users IDs specified in the request
             </summary>
             <short>
             Updates project team
             </short>
-             <category>Team</category>
+            <category>Team</category>
             <param name="projectId">Project ID</param>
             <param name="participants">IDs of users to update team</param>
             <param name="notify">Notify project team</param>
@@ -702,7 +702,7 @@
             <short>
             Tasks
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="projectid">Project ID</param>
             <returns></returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">List of tasks</exception>
@@ -714,7 +714,7 @@
             <short>
             Add task
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="projectid">Project ID</param>
             <param name="description">Description</param>
             <param name="deadline">Deadline time</param>
@@ -734,7 +734,7 @@
             <short>
             Add task
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="projectid">Project ID</param>
             <param name="messageid">Message ID</param>
             <returns>Created task</returns>
@@ -747,7 +747,7 @@
             <short>
             Tasks with status
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="projectid">Project ID</param>
             <param name="status">Task status. Can be one of: notaccept|open|closed|disable|unclassified|notinmilestone</param>
             <returns>List of tasks</returns>
@@ -760,7 +760,7 @@
             <short>
             My tasks
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="projectid">Project ID</param>
             <param name="status">Task status. Can be one of: notaccept|open|closed|disable|unclassified|notinmilestone</param>
             <returns>List of tasks</returns>
@@ -773,7 +773,7 @@
             <short>
             Project files by project ID
             </short>
-             <category>Projects</category>
+            <category>Projects</category>
             <param name="id">Project ID</param>
             <returns>Project files</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -785,7 +785,7 @@
             <short>
             Entity files
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="entityType">Entity type</param>
             <param name="entityID">Entity ID</param>
             <returns>Message</returns>
@@ -796,9 +796,9 @@
             Uploads the selected files to the entity (project, milestone, task) with the type and ID specified
             </summary>
             <short>
-             Upload file to entity
+            Upload file to entity
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="entityType">Entity type </param>
             <param name="entityID">Entity ID</param>
             <param name="files">File IDs</param>
@@ -811,9 +811,9 @@
             Detaches the selected file from the entity (project, milestone, task) with the type and ID specified
             </summary>
             <short>
-             Detach file from entity
+            Detach file from entity
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="entityType">Entity type </param>
             <param name="entityID">Entity ID</param>
             <param name="fileid">File ID</param>
@@ -826,54 +826,54 @@
             Uploads the selected files to the entity (project, milestone, task) with the type and ID specified
             </summary>
             <short>
-             Upload file to entity
+            Upload file to entity
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="entityType">Entity type </param>
             <param name="entityID">Entity ID</param>
-             <param name="folderid">ID of the folder to upload to</param>
-             <param name="file" visible="false">Request enput stream</param>
-             <param name="contentType" visible="false">Content-type header</param>
-             <param name="contentDisposition" visible="false">Content disposition header</param>
-             <param name="files" visible="false">List of files when posted as multipart/form-data</param>
-             <param name="createNewIfExist" visible="false">Create new if exist</param>
-             <param name="storeOriginalFileFlag" visible="false">If true, upload documents in original formats as well</param>
+            <param name="folderid">ID of the folder to upload to</param>
+            <param name="file" visible="false">Request enput stream</param>
+            <param name="contentType" visible="false">Content-type header</param>
+            <param name="contentDisposition" visible="false">Content disposition header</param>
+            <param name="files" visible="false">List of files when posted as multipart/form-data</param>
+            <param name="createNewIfExist" visible="false">Create new if exist</param>
+            <param name="storeOriginalFileFlag" visible="false">If true, upload documents in original formats as well</param>
             <returns>Uploaded files</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectsByContactID(System.Int32)">
-             <summary>
-              Returns the list of all the projects linked with the contact with the ID specified in the request
-             </summary>
-             <param name="contactid">Contact ID</param>
-             <category>Contacts</category>
-             <short>Get projects for contact</short> 
-             <returns>
-                 Projects list
-             </returns>
+            <summary>
+             Returns the list of all the projects linked with the contact with the ID specified in the request
+            </summary>
+            <param name="contactid">Contact ID</param>
+            <category>Contacts</category>
+            <short>Get projects for contact</short> 
+            <returns>
+                Projects list
+            </returns>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.AddProjectContact(System.Int32,System.Int32)">
-             <summary>
-              Adds the selected contact to the project with the ID specified in the request
-             </summary>
-             <param name="projectid">Project ID</param>
-             <param name="contactid">Contact ID</param>
-             <category>Contacts</category>
-             <short>Add project contact</short> 
-             <returns>Project</returns>
+            <summary>
+             Adds the selected contact to the project with the ID specified in the request
+            </summary>
+            <param name="projectid">Project ID</param>
+            <param name="contactid">Contact ID</param>
+            <category>Contacts</category>
+            <short>Add project contact</short> 
+            <returns>Project</returns>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DeleteProjectContact(System.Int32,System.Int32)">
-             <summary>
-              Deletes the selected contact from the project with the ID specified in the request
-             </summary>       
-             <param name="projectid">Project ID</param>
-             <param name="contactid">Contact ID</param>
-             <category>Contacts</category>
-             <short>Delete project contact</short> 
-             <returns>Project</returns>
+            <summary>
+             Deletes the selected contact from the project with the ID specified in the request
+            </summary>       
+            <param name="projectid">Project ID</param>
+            <param name="contactid">Contact ID</param>
+            <category>Contacts</category>
+            <short>Delete project contact</short> 
+            <returns>Project</returns>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetAllTemplates">
@@ -883,7 +883,7 @@
             <short>
             Templates
             </short>
-             <category>Template</category>
+            <category>Template</category>
             <returns>List of templates</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTemplate(System.Int32)">
@@ -893,7 +893,7 @@
             <short>
             Template by ID
             </short>
-             <category>Template</category>
+            <category>Template</category>
             <param name="id">Template ID</param>
             <returns>Template</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -905,7 +905,7 @@
             <short>
             Create template
             </short>
-             <category>Template</category>
+            <category>Template</category>
             <param name="title">Title</param>
             <param name="description">JSON template structure. Sample: {"tasks":[{"title":"Task without milestone"}],"milestones":[{"title":"milestone title","duration":0.5,"tasks":[{"title":"task milestone"}]}]}</param>
             <returns>Newly created template</returns>
@@ -918,7 +918,7 @@
             <short>
             Update template
             </short>
-             <category>Template</category>
+            <category>Template</category>
             <param name="id">Template ID</param>
             <param name="title">Title</param>
             <param name="description">JSON template structure. Sample: {"tasks":[{"title":"Task without milestone"}],"milestones":[{"title":"milestone title","duration":0.5,"tasks":[{"title":"task milestone"}]}]}</param>
@@ -933,17 +933,17 @@
             <short>
             Delete template
             </short>
-             <category>Template</category>
+            <category>Template</category>
             <param name="id">Project ID</param>
             <returns>Deleted template</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectSecurityInfo">
             <summary>
-              Returns the basic information about the access rights
+             Returns the basic information about the access rights
             </summary>
             <short>
-               Access rights info
+              Access rights info
             </short>
             <category>Projects</category>
             <returns>Basic information about access rights</returns>
@@ -965,7 +965,7 @@
             <short>
             My tasks
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <returns>List of tasks</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetMyTasks(ASC.Projects.Core.Domain.TaskStatus)">
@@ -975,18 +975,18 @@
             <short>
             My tasks by status
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="status">Status of task. One of notaccept|open|closed|disable|unclassified|notinmilestone</param>
             <returns>List of tasks</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTask(System.Int32)">
             <summary>
-             Returns the detailed information about the task with the ID specified in the request
+            Returns the detailed information about the task with the ID specified in the request
             </summary>
             <short>
-             Get task
+            Get task
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">Task ID</param>
             <returns>Task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -999,9 +999,9 @@
             Returns the list with the detailed information about all the tasks matching the filter parameters specified in the request
             </summary>
             <short>
-             Get task by filter
+            Get task by filter
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="projectid" optional="true"> Project Id</param>
             <param name="tag" optional="true">Project Tag</param>
             <param name="status" optional="true">Task Status</param>
@@ -1023,9 +1023,9 @@
             Returns the list with the detailed information about all the tasks matching the filter parameters specified in the request
             </summary>
             <short>
-             Get task by filter
+            Get task by filter
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="projectid" optional="true"> Project Id</param>
             <param name="tag" optional="true">Project Tag</param>
             <param name="status" optional="true">Task Status</param>
@@ -1045,24 +1045,24 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTaskFiles(System.Int32)">
             <summary>
-             Returns the list of all files attached to the task with the ID specified in the request
+            Returns the list of all files attached to the task with the ID specified in the request
             </summary>
             <short>
-             Get task files
+            Get task files
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="taskid">Task ID</param>
             <returns>List of files</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UploadFilesToTask(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
-             Uploads the file specified in the request to the selected task
+            Uploads the file specified in the request to the selected task
             </summary>
             <short>
-             Upload file to task
+            Upload file to task
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="taskid">Task ID</param>
             <param name="files">File ID</param>
             <returns>List of tasks</returns>
@@ -1070,12 +1070,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromTask(System.Int32,System.Int32)">
             <summary>
-             Detaches the selected file from the task with the ID specified in the request
+            Detaches the selected file from the task with the ID specified in the request
             </summary>
             <short>
-             Detach file from task
+            Detach file from task
             </short>
-             <category>Files</category>
+            <category>Files</category>
             <param name="taskid">Task ID</param>
             <param name="fileid">File ID</param>
             <returns>Task</returns>
@@ -1083,12 +1083,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateTask(System.Int32,ASC.Projects.Core.Domain.TaskStatus)">
             <summary>
-             Updates the status of the task with the ID specified in the request
+            Updates the status of the task with the ID specified in the request
             </summary>
             <short>
             Update task status
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">Task ID</param>
             <param name="status">Status of task. Can be one of: open|closed</param>
             <returns>Updated task</returns>
@@ -1096,23 +1096,23 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateTasks(System.Int32[],ASC.Projects.Core.Domain.TaskStatus)">
             <summary>
-             Updates the status of the tasks with the IDs specified in the request
+            Updates the status of the tasks with the IDs specified in the request
             </summary>
             <short>
             Update tasks status
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskids">Tasks ID</param>
             <param name="status">Status of tasks. Can be one of: open|closed</param>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateTask(System.Int32,System.Int32)">
             <summary>
-             Updates the milestone of the task with the ID specified in the request
+            Updates the milestone of the task with the ID specified in the request
             </summary>
             <short>
             Update task milestone
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">Task ID</param>
             <param name="milestoneid">Milestone ID</param>
             <returns>Updated task</returns>
@@ -1120,12 +1120,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateTasks(System.Int32[],System.Int32)">
             <summary>
-             Updates the milestone of the tasks with the IDs specified in the request
+            Updates the milestone of the tasks with the IDs specified in the request
             </summary>
             <short>
             Update tasks milestone
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskids">Task ID</param>
             <param name="milestoneid">Milestone ID</param>
             <returns>Updated tasks</returns>
@@ -1133,12 +1133,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.CopyTask(System.Int32,System.String,ASC.Specific.ApiDateTime,ASC.Projects.Core.Domain.TaskPriority,System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
-             Copy task
+            Copy task
             </summary>
             <short>
             Copy task
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="projectid">Project ID</param>
             <param name="description">Description</param>
             <param name="deadline">Deadline time</param>
@@ -1162,7 +1162,7 @@
             <short>
             Update Task
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">task ID</param>
             <param name="description">description</param>
             <param name="deadline">deadline time</param>
@@ -1185,7 +1185,7 @@
             <short>
             Delete task
             </short>
-             <category>Projects</category>
+            <category>Tasks</category>
             <param name="taskid">task ID</param>
             <returns>Deleted task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1197,7 +1197,7 @@
             <short>
             Delete tasks
             </short>
-             <category>Projects</category>
+            <category>Tasks</category>
             <param name="taskids">task ID</param>
             <returns>Deleted tasks</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1209,7 +1209,7 @@
             <short>
             Task comments
             </short>
-             <category>Comments</category>
+            <category>Comments</category>
             <param name="taskid">Task ID</param>
             <returns>List of comments</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1221,7 +1221,7 @@
             <short>
             Add task comment
             </short>
-             <category>Comments</category>
+            <category>Comments</category>
             <param name="taskid">Task ID</param>
             <param name="content">Comment text</param>
             <param name="parentid">Parent comment ID</param>
@@ -1235,8 +1235,8 @@
             <short>
             Notify task responsible
             </short>
-             <category>Tasks</category>
-             <returns>Task</returns>
+            <category>Tasks</category>
+            <returns>Task</returns>
             <param name="taskid">Task ID</param>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
@@ -1247,8 +1247,8 @@
             <short>
             Subscribe to task action
             </short>
-             <category>Tasks</category>
-             <returns>Task</returns>
+            <category>Tasks</category>
+            <returns>Task</returns>
             <param name="taskid">Task ID</param>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
@@ -1259,7 +1259,7 @@
             <short>
             Check subscription to task action
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">Task ID</param>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
@@ -1270,7 +1270,7 @@
             <short>
             Add link 
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="parentTaskId">Parent Task ID</param>
             <param name="dependenceTaskId">Dependent Task ID</param>
             <param name="linkType">Link Type</param>
@@ -1283,19 +1283,19 @@
             <short>
             Remove link 
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="dependenceTaskId">Dependent Task ID</param>
             <param name="parentTaskId">Parent Task ID</param>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.AddSubtask(System.Int32,System.Guid,System.String)">
             <summary>
-             Creates the subtask with the selected title and responsible within the parent task specified in the request
+            Creates the subtask with the selected title and responsible within the parent task specified in the request
             </summary>
             <short>
-             Create subtask
+            Create subtask
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">Parent task ID</param>
             <param name="responsible">Subtask responsible</param>
             <param name="title">Subtask title</param>
@@ -1304,12 +1304,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.CopySubtask(System.Int32,System.Int32)">
             <summary>
-             Copy subtask
+            Copy subtask
             </summary>
             <short>
             Copy subtask
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">Task ID</param>
             <param name="subtaskid">Subtask ID</param>
             <returns>New task</returns>
@@ -1317,12 +1317,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateSubtask(System.Int32,System.Int32,System.Guid,System.String)">
             <summary>
-             Updates the subtask with the selected title and responsible with the subtask ID specified in the request
+            Updates the subtask with the selected title and responsible with the subtask ID specified in the request
             </summary>
             <short>
-             Update subtask
+            Update subtask
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">Task ID</param>
             <param name="subtaskid">Subtask ID</param>
             <param name="responsible">Subtask responsible</param>
@@ -1332,10 +1332,10 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DeleteSubtask(System.Int32,System.Int32)">
             <summary>
-             Deletes the selected subtask from the parent task with the ID specified in the request
+            Deletes the selected subtask from the parent task with the ID specified in the request
             </summary>
             <short>
-             Delete subtask
+            Delete subtask
             </short>
             <category>Tasks</category>
             <param name="taskid">Task ID</param>
@@ -1344,12 +1344,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateSubtask(System.Int32,System.Int32,ASC.Projects.Core.Domain.TaskStatus)">
             <summary>
-             Updates the selected subtask status in the parent task with the ID specified in the request
+            Updates the selected subtask status in the parent task with the ID specified in the request
             </summary>
             <short>
             Update subtask status
             </short>
-             <category>Tasks</category>
+            <category>Tasks</category>
             <param name="taskid">Task ID</param>
             <param name="subtaskid">Subtask ID</param>
             <param name="status">Status of task. Can be one of: open|closed|disable|unclassified</param>
@@ -1366,7 +1366,7 @@
             <category>Comments</category>
             <param name="commentid">Comment ID</param>
             <returns>Comment</returns>        
-             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectCommentPreview(System.String,System.String)">
             <summary>
@@ -1375,25 +1375,39 @@
             <short>
             Get preview
             </short>
-             <category>Comments</category>
+            <category>Comments</category>
             <param name="htmltext">html to create preview</param>
             <param name="commentid">guid of editing comment or empty string if comment is new</param>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.RemoveProjectComment(System.String)">
-             <summary>
+            <summary>
             Remove comment with the id specified in the request
-             </summary>
-             <short>Remove comment</short>
-             <section>Comments</section>
-             <param name="commentid">Comment ID</param>
-             <returns>Comment id</returns>
-             <category>Comments</category>
+            </summary>
+            <short>Remove comment</short>
+            <section>Comments</section>
+            <param name="commentid">Comment ID</param>
+            <returns>Comment id</returns>
+            <category>Comments</category>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.AddProjectComment(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="parentcommentid"></param>
+            <param name="entityid"></param>
+            <param name="content"></param>
+            <param name="type"></param>
             <category>Comments</category>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateComment(System.String,System.String)">
+             <summary>
+             
+             </summary>
+             <param name="commentid"></param>
+             <param name="content"></param>
             <category>Comments</category>
+             <returns></returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetAllTags">
             <summary>
@@ -1402,7 +1416,7 @@
             <short>
             Project tags
             </short>
-             <category>Tags</category>
+            <category>Tags</category>
             <returns>List of tags</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectsByTags(System.String)">
@@ -1412,7 +1426,7 @@
             <short>
             Project by tag
             </short>
-             <category>Tags</category>
+            <category>Tags</category>
             <param name="tag">Tag name</param>
             <returns>List of projects</returns>
         </member>
@@ -1423,7 +1437,7 @@
             <short>
             Tags by tag name
             </short>
-             <category>Tags</category>
+            <category>Tags</category>
             <param name="tagName">Tag name</param>
             <returns>List of tags</returns>
         </member>
@@ -1434,7 +1448,7 @@
             <short>
             Upcoming milestones
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <returns>List of milestones</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetMilestonesByFilter(System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.MilestoneStatus},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Int32,System.Boolean,System.Guid)">
@@ -1444,7 +1458,7 @@
             <short>
             Milestones by filter
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="projectid" optional="true">Project ID</param>
             <param name="tag" optional="true">Project tag</param>
             <param name="status" optional="true">Milstone status/ Can be open or closed</param>
@@ -1464,7 +1478,7 @@
             <short>
             Overdue milestones
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <returns>List of milestones</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetMilestonesByDeadLineFull(System.Int32,System.Int32,System.Int32)">
@@ -1474,7 +1488,7 @@
             <short>
             Milestones by full date
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="year">Deadline year</param>
             <param name="month">Deadline month</param>
             <param name="day">Deadline day</param>
@@ -1487,7 +1501,7 @@
             <short>
             Milestones by month
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="year">Deadline year</param>
             <param name="month">Deadline month</param>
             <returns>List of milestones</returns>
@@ -1499,7 +1513,7 @@
             <short>
             Get milestone
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="id">Milestone ID</param>
             <returns>Milestone</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1511,7 +1525,7 @@
             <short>
             Get milestone tasks 
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="id">Milestone ID </param>
             <returns>Tasks list</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1523,7 +1537,7 @@
             <short>
             Update milestone
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="id">Milestone ID</param>
             <param name="title">Title</param>
             <param name="deadline">Deadline</param>
@@ -1538,17 +1552,17 @@
             <exception cref="T:System.ArgumentNullException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <example>
-             <![CDATA[
-             Sending data in application/json:
-             
-             {
-                 title:"New title",
-                 deadline:"2011-03-23T14:27:14",
-                 isKey:false,
-                 status:"Open"
-             }
-             ]]>
-             </example>
+            <![CDATA[
+            Sending data in application/json:
+            
+            {
+                title:"New title",
+                deadline:"2011-03-23T14:27:14",
+                isKey:false,
+                status:"Open"
+            }
+            ]]>
+            </example>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateMilestone(System.Int32,ASC.Projects.Core.Domain.MilestoneStatus)">
             <summary>
@@ -1557,21 +1571,21 @@
             <short>
             Update milestone status
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="id">Milestone ID</param>
             <param name="status">Status</param>
             <returns>Updated milestone</returns>
             <exception cref="T:System.ArgumentNullException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <example>
-             <![CDATA[
-             Sending data in application/json:
-             
-             {
-                 status:"Open"
-             }
-             ]]>
-             </example>
+            <![CDATA[
+            Sending data in application/json:
+            
+            {
+                status:"Open"
+            }
+            ]]>
+            </example>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DeleteMilestone(System.Int32)">
             <summary>
@@ -1580,7 +1594,7 @@
             <short>
             Delete milestone
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="id">Milestone ID</param>
             <returns>Deleted milestone</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1592,7 +1606,7 @@
             <short>
             Delete milestones
             </short>
-             <category>Milestones</category>
+            <category>Milestones</category>
             <param name="ids">Milestones ID</param>
             <returns>Deleted milestones</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1602,9 +1616,9 @@
             Returns the list with the detailed information about all the time spent matching the filter parameters specified in the request
             </summary>
             <short>
-             Get time spent by filter
+            Get time spent by filter
             </short>
-             <category>Time</category>
+            <category>Time</category>
             <param name="projectid" optional="true"> Project Id</param>
             <param name="tag" optional="true">Project Tag</param>
             <param name="departament" optional="true">Departament GUID</param>
@@ -1624,9 +1638,9 @@
             Returns the total time spent matching the filter parameters specified in the request
             </summary>
             <short>
-             Get total time spent by tilter
+            Get total time spent by tilter
             </short>
-             <category>Time</category>
+            <category>Time</category>
             <param name="projectid" optional="true"> Project ID</param>
             <param name="tag" optional="true">Project tag</param>
             <param name="departament" optional="true">Departament GUID</param>
@@ -1643,12 +1657,12 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTaskTime(System.Int32)">
             <summary>
-             Returns the time spent on the task with the ID specified in the request
+            Returns the time spent on the task with the ID specified in the request
             </summary>
             <short>
-             Get time spent
+            Get time spent
             </short>
-             <category>Time</category>
+            <category>Time</category>
             <param name="taskid">Task ID</param>
             <returns></returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1660,7 +1674,7 @@
             <short>
             Add task time
             </short>
-             <category>Time</category>
+            <category>Time</category>
             <param name="taskid">Task ID</param>
             <param name="note">Note</param>
             <param name="date">Date</param>
@@ -1678,7 +1692,7 @@
             <short>
             Update task time
             </short>
-             <category>Time</category>
+            <category>Time</category>
             <param name="timeid">ID of time spent</param>
             <param name="note">Note</param>
             <param name="date">Date</param>
@@ -1695,7 +1709,7 @@
             <short>
             Updates the time status of payment
             </short>
-             <category>Time</category>
+            <category>Time</category>
             <param name="timeids">List IDs of time spent</param>
             <param name="status">Status</param>
             <returns>Created time</returns>
@@ -1708,14 +1722,14 @@
             <short>
             Delete time spents
             </short>
-             <category>Time</category>
+            <category>Time</category>
             <param name="timeids">IDs of time spents</param>
             <returns></returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="P:ASC.Api.Projects.ProjectApi.Name">
             <summary>
-             Api name entry
+            Api name entry
             </summary>
         </member>
     </members>

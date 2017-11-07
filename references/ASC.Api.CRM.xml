@@ -223,7 +223,7 @@
             <param optional="true" name="entityId">Invoice entity ID</param>
             <param optional="true" name="billingAddressID">Invoice billing address ID</param>
             <param optional="true" name="deliveryAddressID">Invoice delivery address ID</param>
-            <param optional="true" name="dueDate">Invoice due date</param>
+            <param name="dueDate">Invoice due date</param>
             <param optional="false" name="language">Invoice language</param>
             <param optional="false" name="currency" remark="Allowed values: EUR, RUB etc. You can get the whole list of available currencies by api">Invoice currency</param>
             <param optional="false" name="exchangeRate">Invoice exchange rate</param>
@@ -1372,25 +1372,67 @@
             </returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetUserTweets(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="contactid"></param>
+            <param name="count"></param>
             <category>Contacts</category>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.FindTwitterProfiles(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="searchText"></param>
             <category>Contacts</category>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.FindFacebookProfiles(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="searchText"></param>
+            <param name="isUser"></param>
             <category>Contacts</category>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactAvatar(System.Int32,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="contactId"></param>
+            <param name="contactType"></param>
+            <param name="uploadOnly"></param>
             <category>Contacts</category>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImages(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="contactId"></param>
             <category>Contacts</category>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImagesByNetworks(System.Collections.Generic.List{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
+            <summary>
+            
+            </summary>
+            <param name="socialNetworks"></param>
             <category>Contacts</category>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.Thrdparty.SocialNetworks,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="contactId"></param>
+            <param name="socialNetwork"></param>
+            <param name="userIdentity"></param>
+            <param name="uploadOnly"></param>
             <category>Contacts</category>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SendMailSMTPToContacts(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String,System.String,System.Boolean)">
             <visible>false</visible>
@@ -2468,14 +2510,6 @@
             <returns>
                File Info
             </returns>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.FillDb(System.Int32)">
-            <summary>
-            Temporary hidden method for insertion data to database
-            </summary>
-            <param name="count">Count</param>
-            <returns>Count</returns>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetEntityTags(System.String,System.Int32)">
              <summary>
