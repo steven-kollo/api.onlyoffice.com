@@ -19,7 +19,9 @@
 
     <h2 id="51" class="copy-link">Version 5.0</h2>
     <ul>
-        <li>Added support for macro-enabled document and document template <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
+        <li>Added support for macro-enabled document, document template and flat document <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
+        <li>The <a href="<%= Url.Action("config/events") %>#onReady">events.onReady</a> event is deprecated, please use the <a href="<%= Url.Action("config/events") %>#onAppReady">events.onAppReady</a> events instead.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onDocumentReady">onDocumentReady</a> event.</li>
     </ul>
 
     <h2 id="44" class="copy-link">Version 4.4</h2>

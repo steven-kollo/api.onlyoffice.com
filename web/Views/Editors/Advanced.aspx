@@ -151,11 +151,12 @@ config = {
         }
     },
     "events": {
+        "onAppReady": onAppReady,
         "onCollaborativeChanges": onCollaborativeChanges,
+        "onDocumentReady": onDocumentReady,
         "onDocumentStateChange": onDocumentStateChange,
         "onDownloadAs": onDownloadAs,
         "onError": onError,
-        "onReady": onReady,
         "onRequestEditRights": onRequestEditRights,
         "onRequestHistory": onRequestHistory,
         "onRequestHistoryData": onRequestHistoryData,

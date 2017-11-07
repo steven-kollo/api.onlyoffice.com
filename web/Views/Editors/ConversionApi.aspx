@@ -250,6 +250,18 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
+                <td>fodt</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
                 <td>html</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
@@ -365,6 +377,17 @@
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
+                <td>fods</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+            </tr>
+            <tr>
                 <td>ods</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
@@ -459,6 +482,16 @@
                 <td>pdf</td>
                 <td>png</td>
                 <td>pptx</td>
+            </tr>
+            <tr>
+                <td>fodp</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
                 <td>odp</td>
