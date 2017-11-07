@@ -62,7 +62,7 @@
                 <td>Path to the plugin. All the other paths are calculated relative to this path. In case the plugin is installed on the server, an additional parameter (path to the plugins) is added there. If <em>baseUrl == ""</em> the path to all plugins will be used.</td>
                 <td>string</td>
             </tr>
-            <tr class="tablerow">
+            <tr id="guid" class="tablerow">
                 <td>guid</td>
                 <td>Plugin identifier. It <b>must</b> be of the <em>asc.{uuid}</em> type.</td>
                 <td>string</td>
