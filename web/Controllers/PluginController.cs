@@ -44,6 +44,14 @@ namespace ASC.Api.Web.Help.Controllers
                 "Code",
                 "Config",
                 "ExecuteCommand",
+                "executemethod",
+                "executemethod/insertandreplacecontentcontrols",
+                "executemethod/getfields",
+                "executemethod/removecontentcontrols",
+                "executemethod/getallcontentcontrols",
+                "executemethod/addcontentcontrol",
+                "executemethod/removecontentcontrol",
+                "executemethod/getcurrentcontentcontrol",
                 "Example",
                 "IndexHtml",
                 "Info",
@@ -60,6 +68,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Init",
                 "Installation",
                 "OnExternalMouseUp",
+                "onmethodreturn",
                 "Plugin",
                 "Structure",
             };
@@ -138,6 +147,15 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Executemethod(string catchall)
+        {
+            if (!_actionMap.Contains("executemethod/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Executemethod", (object)catchall);
+        }
+
         public ActionResult Example()
         {
             return View();
@@ -168,6 +186,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult OnExternalMouseUp()
+        {
+            return View();
+        }
+
+        public ActionResult Onmethodreturn()
         {
             return View();
         }
