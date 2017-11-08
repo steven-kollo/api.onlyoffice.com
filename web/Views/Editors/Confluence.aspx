@@ -33,16 +33,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Configuring Confluence ONLYOFFICE integration plugin</h2>
-    <ol>
-        <li>Change the <b>files.docservice.url.domain</b> properties in <em>src/main/resources/onlyoffice-config.properties</em> to the name of the server with the ONLYOFFICE Document Server installed:
-            <span class="commandline">files.docservice.url.domain=http://documentserver/</span>
-            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
-        </li>
-    </ol>
-
-
-    <h2>Installing Confluence ONLYOFFICE integration plugin</h2>
+    <h2>Compiling Confluence ONLYOFFICE integration plugin</h2>
     <p>To start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
@@ -50,8 +41,18 @@
         <li>Compile package:
             <span class="commandline">atlas-package</span>
         </li>
-        <li>Upload <b>target/onlyoffice-confluence-plugin-*.jar</b> to Confluence on page <em>Manage add-ons</em>.</li>
     </ul>
+
+
+    <h2>Installing Confluence ONLYOFFICE integration plugin</h2>
+    <p>Upload the compiled <b>target/onlyoffice-confluence-plugin-*.jar</b> to Confluence on the <em>Manage add-ons</em> page.</p>
+    <p>The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-confluence/releases">here</a>.</p>
+
+
+    <h2>Configuring Confluence ONLYOFFICE integration plugin</h2>
+    <p>Find the uploaded <b>ONLYOFFICE Confluence plugin</b> on the <em>Manage add-ons</em> page.
+        Click <em>Configure</em> and enter the name of the server with the ONLYOFFICE Document Server installed:</p>
+    <span class="commandline">http://documentserver/</span>
 
 
     <h2>How it works</h2>

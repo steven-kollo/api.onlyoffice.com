@@ -41,7 +41,9 @@
 
     <h2>Installing ONLYOFFICE Alfresco module package</h2>
     <p>To start using ONLYOFFICE Document Server with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
-    <div class="note">Steps <b>1</b> &mdash; <b>6</b> are only necessary if you for some reason plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards). If you do not want to do that and plan to use the already compiled module files, please skip to step <b>7</b> directly. The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a>.</div>
+    <div class="note">Steps <b>1</b> &mdash; <b>6</b> are only necessary if you for some reason plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards).
+        If you do not want to do that and plan to use the already compiled module files, please skip to step <b>7</b> directly.
+        The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a>.</div>
     <ol>
         <li>Remove gradle in case it has already been installed (it is needed to install the latest available version later at the next step):
             <span class="commandline">sudo apt-get remove gradle</span>
