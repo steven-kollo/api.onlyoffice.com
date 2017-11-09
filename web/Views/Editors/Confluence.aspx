@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Confluence ONLYOFFICE integration plugin
+    ONLYOFFICE Connector for Confluence
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Confluence ONLYOFFICE integration plugin</span>
+        <span class="hdr">ONLYOFFICE Connector for Confluence</span>
     </h1>
 
     <p class="dscr">
@@ -33,7 +33,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Compiling Confluence ONLYOFFICE integration plugin</h2>
+    <h2>Compiling ONLYOFFICE Connector for Confluence</h2>
     <p>To start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
@@ -44,13 +44,13 @@
     </ul>
 
 
-    <h2>Installing Confluence ONLYOFFICE integration plugin</h2>
+    <h2>Installing ONLYOFFICE Connector for Confluence</h2>
     <p>Upload the compiled <b>target/onlyoffice-confluence-plugin-*.jar</b> to Confluence on the <em>Manage add-ons</em> page.</p>
     <p>The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-confluence/releases">here</a>.</p>
 
 
-    <h2>Configuring Confluence ONLYOFFICE integration plugin</h2>
-    <p>Find the uploaded <b>ONLYOFFICE Confluence plugin</b> on the <em>Manage add-ons</em> page.
+    <h2>Configuring ONLYOFFICE Connector for Confluence</h2>
+    <p>Find the uploaded <b>ONLYOFFICE Connector for Confluence</b> on the <em>Manage add-ons</em> page.
         Click <em>Configure</em> and enter the name of the server with the ONLYOFFICE Document Server installed:</p>
     <span class="commandline">http://documentserver/</span>
 
@@ -75,6 +75,6 @@
     <p>Confluence downloads the new version of the document, replacing the old one.</p>
 
     <br />
-    <p>Download the Confluence ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
+    <p>Download the ONLYOFFICE Connector for Confluence <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
 
 </asp:Content>
