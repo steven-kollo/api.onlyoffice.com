@@ -36,7 +36,6 @@
         <p>Edit the following lines:</p>
 
         <pre>
-Rails.configuration.urlStorage="http://documentserver/FileUploader.ashx"
 Rails.configuration.urlConverter="http://documentserver/ConvertService.ashx"
 Rails.configuration.urlApi="http://documentserver/web-apps/apps/api/documents/api.js"
 Rails.configuration.urlPreloader="http://documentserver/web-apps/apps/api/documents/cache-scripts.html"

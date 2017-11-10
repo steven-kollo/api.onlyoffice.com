@@ -20,7 +20,6 @@
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config.php</em> file:</p>
 <pre>
-$GLOBALS['DOC_SERV_STORAGE_URL'] = "http://documentserver/FileUploader.ashx";
 $GLOBALS['DOC_SERV_CONVERTER_URL'] = "http://documentserver/ConvertService.ashx";
 $GLOBALS['DOC_SERV_API_URL'] = "http://documentserver/web-apps/apps/api/documents/api.js";
 $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/documents/cache-scripts.html";
@@ -123,7 +122,6 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
         <p>Edit the following lines:</p>
 
         <pre>
-$GLOBALS['DOC_SERV_STORAGE_URL'] = "http://documentserver/FileUploader.ashx";
 $GLOBALS['DOC_SERV_CONVERTER_URL'] = "http://documentserver/ConvertService.ashx";
 $GLOBALS['DOC_SERV_API_URL'] = "http://documentserver/web-apps/apps/api/documents/api.js";
 $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/documents/cache-scripts.html";

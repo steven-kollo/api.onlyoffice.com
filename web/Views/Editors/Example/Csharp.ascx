@@ -19,7 +19,6 @@
 <p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>settings.config</em> file:</p>
 <pre>
-&lt;add key="files.docservice.url.storage" value="http://documentserver/FileUploader.ashx" /&gt;
 &lt;add key="files.docservice.url.converter" value="http://documentserver/ConvertService.ashx" /&gt;
 &lt;add key="files.docservice.url.api" value="http://documentserver/web-apps/apps/api/documents/api.js" /&gt;
 &lt;add key="files.docservice.url.preloader" value="http://documentserver/web-apps/apps/api/documents/cache-scripts.html"/&gt;

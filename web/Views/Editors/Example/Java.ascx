@@ -20,8 +20,7 @@
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
 
-<span class="commandline">files.docservice.url.storage=http://documentserver.com/FileUploader.ashx
-files.docservice.url.converter=http://documentserver.com/ConvertService.ashx
+<span class="commandline">files.docservice.url.converter=http://documentserver.com/ConvertService.ashx
 files.docservice.url.tempstorage=http://documentserver.com/ResourceService.ashx
 files.docservice.url.api=http://documentserver.com/web-apps/apps/api/documents/api.js
 files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/documents/cache-scripts.html
