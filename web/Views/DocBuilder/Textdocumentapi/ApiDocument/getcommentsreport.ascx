@@ -85,5 +85,7 @@ oTable.SetStyle(oDocument.GetStyle("Bordered"));
 builder.SaveFile("docx", "GetCommentsReport.docx");
 builder.CloseFile();</pre>
 
+<p>An example of the document with comments can be taken <a target="_blank" href="http://bit.ly/2A3wW2r">here</a>.</p>
+
 <h2>Resulting document</h2>
 <iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5235514&doc=VDJWT2Y4d1FHdXFoWjJwVG9KbllWOFFVYTMrVjdubWFyUU1NRGJqZndFdz0_IjUyMzU1MTQi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>
