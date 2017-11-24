@@ -58,13 +58,13 @@
             <td class="layout-table-footer" colspan="2">
                 <div class="bottommenu">
                     <ul>
-                        <li><a target="_blank" href="http://www.onlyoffice.com/">Home site</a></li>
-                        <li><a target="_blank" href="http://www.onlyoffice.com/integration-edition.aspx">For integrators</a></li>
-                        <li><a target="_blank" href="http://www.onlyoffice.com/document-builder.aspx">Document Builder</a></li>
+                        <li><a target="_blank" href="https://www.onlyoffice.com/">Home site</a></li>
+                        <li><a target="_blank" href="https://www.onlyoffice.com/integration-edition.aspx">For integrators</a></li>
+                        <li><a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx">Document Builder</a></li>
                         <li><a target="_blank" href="http://dev.onlyoffice.org/">Server Forum</a></li>
                         <li><a target="_blank" href="http://cloud.onlyoffice.org/">SaaS Forum</a></li>
-                        <li><a target="_blank" href="http://helpcenter.onlyoffice.com/">Help Center</a></li>
-                        <li><a target="_blank" href="http://www.onlyoffice.com/legalterms.aspx">Legal notice</a></li>
+                        <li><a target="_blank" href="https://helpcenter.onlyoffice.com/">Help Center</a></li>
+                        <li><a target="_blank" href="https://www.onlyoffice.com/legalterms.aspx">Legal notice</a></li>
                     </ul>
                 </div>
                 <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>

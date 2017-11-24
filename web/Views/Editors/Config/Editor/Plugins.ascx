@@ -41,7 +41,7 @@
             <td id="url" class="copy-link">url</td>
             <td>Defines the absolute path to the directory where the plugins are stored. Deprecated since version 4.3, please use the absolute paths in <a href="#pluginsData">pluginsData</a> field.</td>
             <td>string</td>
-            <td>"http://example.com/plugins/"</td>
+            <td>"https://example.com/plugins/"</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -62,8 +62,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                  ...
              ],
              "pluginsData": [
-                 "http://example.com/plugin1/config.json",
-                 "http://example.com/plugin2/config.json",
+                 "https://example.com/plugin1/config.json",
+                 "https://example.com/plugin2/config.json",
                  ...
              ]
         },

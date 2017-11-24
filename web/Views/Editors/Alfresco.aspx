@@ -33,7 +33,7 @@
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin).
-        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
+        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
         ONLYOFFICE Document Server must also be able to POST to Alfresco directly.
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
@@ -86,12 +86,12 @@ gradle amp</span>
             <div class="note">You can download the already compiled package files <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a> and place them to the respective directories.</div>
         </li>
         <li>
-            Installing an <a href="http://docs.alfresco.com/5.2/tasks/amp-install.html" target="_blank">Alfresco Module Package</a> to Alfresco.
+            Installing an <a href="https://docs.alfresco.com/5.2/tasks/amp-install.html" target="_blank">Alfresco Module Package</a> to Alfresco.
             <span class="commandline">sudo bin/apply_amps.sh</span>
             You will see the two new modules being installed during the installation process. Press Enter to continue the installation.
         </li>
         <li>Add the <b>onlyoffice.url</b> property to <em>alfresco-global.properties</em>:
-            <span class="commandline">onlyoffice.url=http://documentserver/</span>
+            <span class="commandline">onlyoffice.url=https://documentserver/</span>
             Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Restart Alfresco:

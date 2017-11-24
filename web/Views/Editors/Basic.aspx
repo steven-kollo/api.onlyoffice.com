@@ -18,19 +18,19 @@
     <p class="dscr">ONLYOFFICE Document Server API is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
 
     <p>The API JavaScript file can normally be found in the following editors folder:</p>
-    <p><b>http://documentserver/web-apps/apps/api/documents/api.js</b></p>
+    <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>
     <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
     <div class="note">
         For <b>Document Server</b> versions prior to 4.0 the path to the API JavaScript file will look like this:
         <br />
-        <b>http://documentserver/OfficeWeb/apps/api/documents/api.js</b>
+        <b>https://documentserver/OfficeWeb/apps/api/documents/api.js</b>
     </div>
 
     <p>The target HTML file where the editors are to be embedded need to have a placeholder <em>div</em> tag, where all the information about the editor parameters will be passed:</p>
 
     <pre>
 &lt;div id=&quot;placeholder&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;http://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;
 </pre>
 
     <p>The page code containing the changeable parameters looks the following way:</p>
@@ -47,11 +47,11 @@ config = {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx"
+        "url": "https://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
-        "callbackUrl": "http://example.com/url-to-callback.ashx"
+        "callbackUrl": "https://example.com/url-to-callback.ashx"
     }
 };
 </pre>

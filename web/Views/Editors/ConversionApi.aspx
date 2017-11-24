@@ -14,7 +14,7 @@
         <span class="hdr">Conversion API</span>
     </h1>
 
-    <p class="dscr">For the interaction with the <b>document conversion service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">http://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+    <p class="dscr">For the interaction with the <b>document conversion service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
@@ -604,7 +604,7 @@
     "key": "Khirz6zTPdfd7",
     "outputtype": "pdf",
     "title": "Example Document Title.docx",
-    "url": "http://example.com/url-to-example-document.docx"
+    "url": "https://example.com/url-to-example-document.docx"
 }
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
@@ -622,7 +622,7 @@
         "width": 100
     },
     "title": "Example Document Title.docx",
-    "url": "http://example.com/url-to-example-document.docx"
+    "url": "https://example.com/url-to-example-document.docx"
 }
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
@@ -642,7 +642,7 @@
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
-    &lt;FileUrl&gt;http://documentserver/ResourceService.ashx?filename=output.doc&lt;/FileUrl&gt;
+    &lt;FileUrl&gt;https://documentserver/ResourceService.ashx?filename=output.doc&lt;/FileUrl&gt;
     &lt;Percent&gt;100&lt;/Percent&gt;
     &lt;EndConvert&gt;True&lt;/EndConvert&gt;
 &lt;/FileResult&gt;

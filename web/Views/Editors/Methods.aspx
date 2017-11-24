@@ -189,7 +189,7 @@ docEditor.refreshHistory({
 docEditor.setHistoryData({
     "key": "Khirz6zTPdfd7",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3giLCJ2ZXJzaW9uIjoyfQ.N9N9IMwX5e6kdfx4wssAPrGMnzPAZCd4PwDf2D8mJ8s",
-    "url": "http://example.com/url-to-example-document.docx",
+    "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });
 </pre>
@@ -197,14 +197,14 @@ docEditor.setHistoryData({
             <p>If after editing and saving the document the link <em>changesurl</em> to the file with changes data is returned, download the file by this link and send the file url in <em>changesUrl</em> parameter. The url address of the document previous version must be sent in <em>previous.url</em> parameter.</p>
             <pre>
 docEditor.setHistoryData({
-    "changesUrl": "http://example.com/url-to-changes.zip",
+    "changesUrl": "https://example.com/url-to-changes.zip",
     "key": "Khirz6zTPdfd7",
     "previous": {
         "key": "af86C7e71Ca8",
-        "url": "http://example.com/url-to-the-previous-version-of-the-document.docx"
+        "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1jaGFuZ2VzLnppcCIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJwcmV2aW91cyI6eyJrZXkiOiJhZjg2QzdlNzFDYTgiLCJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLXRoZS1wcmV2aW91cy12ZXJzaW9uLW9mLXRoZS1kb2N1bWVudC5kb2N4In0sInVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.9dgDsaVLFQ6RtoX_1s2pBVJHGnyMjxDXKC2TpC2nXb4",
-    "url": "http://example.com/url-to-example-document.docx",
+    "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });
 </pre>

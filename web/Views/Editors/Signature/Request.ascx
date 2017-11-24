@@ -49,7 +49,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImMiO
         "key": "Khirz6zTPdfd7",
         "outputtype": "pdf",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx"
+        "url": "https://example.com/url-to-example-document.docx"
     }
 }
 </pre>
@@ -66,7 +66,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpb
     "key": "Khirz6zTPdfd7",
     "outputtype": "pdf",
     "title": "Example Document Title.docx",
-    "url": "http://example.com/url-to-example-document.docx"
+    "url": "https://example.com/url-to-example-document.docx"
 }
 </pre>
 <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>

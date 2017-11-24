@@ -107,7 +107,7 @@ oTable.SetStyle(oDocument.GetStyle("Bordered"));
 builder.SaveFile("docx", "GetReviewReport.docx");
 builder.CloseFile();</pre>
 
-<p>An example of the document with review can be taken <a target="_blank" href="http://bit.ly/2A2axm2">here</a>.</p>
+<p>An example of the document with review can be taken <a target="_blank" href="https://bit.ly/2A2axm2">here</a>.</p>
 
 <h2>Resulting document</h2>
 <iframe class="docbuilder_resulting_docs" src="https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5235513&doc=MGJ2NUl4cUU0ZzVOVE9mcW45WEM4R2h3NVNhNTdxVVlXclZ1VzV4ckdlOD0_IjUyMzU1MTMi0&action=embedded" frameborder="0" scrolling="no" allowtransparency></iframe>

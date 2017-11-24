@@ -18,7 +18,7 @@
     <ol>
         <li>
             <p>Download <b>ONLYOFFICE Document Builder</b> application and install it to your computer</p>
-            <a href="http://www.onlyoffice.com/document-builder.aspx" class="button" target="blank">Download</a>
+            <a href="https://www.onlyoffice.com/document-builder.aspx" class="button" target="blank">Download</a>
         </li>
 
         <% if (Model != null && Model.Count > 0)

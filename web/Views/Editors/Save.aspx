@@ -35,11 +35,11 @@ new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx"
+        "url": "https://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
-        "callbackUrl": "http://example.com/url-to-callback.ashx"
+        "callbackUrl": "https://example.com/url-to-callback.ashx"
     }
 });
 </pre>

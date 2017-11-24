@@ -13,15 +13,15 @@
 
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="https://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>settings.config</em> file:</p>
 <pre>
-&lt;add key="files.docservice.url.converter" value="http://documentserver/ConvertService.ashx" /&gt;
-&lt;add key="files.docservice.url.api" value="http://documentserver/web-apps/apps/api/documents/api.js" /&gt;
-&lt;add key="files.docservice.url.preloader" value="http://documentserver/web-apps/apps/api/documents/cache-scripts.html"/&gt;
+&lt;add key="files.docservice.url.converter" value="https://documentserver/ConvertService.ashx" /&gt;
+&lt;add key="files.docservice.url.api" value="https://documentserver/web-apps/apps/api/documents/api.js" /&gt;
+&lt;add key="files.docservice.url.preloader" value="https://documentserver/web-apps/apps/api/documents/cache-scripts.html"/&gt;
 </pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>

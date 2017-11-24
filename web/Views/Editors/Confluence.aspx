@@ -28,7 +28,7 @@
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin).
-        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to Confluence directly.
+        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to Confluence directly.
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
@@ -52,7 +52,7 @@
     <h2>Configuring ONLYOFFICE Connector for Confluence</h2>
     <p>Find the uploaded <b>ONLYOFFICE Connector for Confluence</b> on the <em>Manage add-ons</em> page.
         Click <em>Configure</em> and enter the name of the server with the ONLYOFFICE Document Server installed:</p>
-    <span class="commandline">http://documentserver/</span>
+    <span class="commandline">https://documentserver/</span>
 
 
     <h2>How it works</h2>
