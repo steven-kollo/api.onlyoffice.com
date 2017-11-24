@@ -84,6 +84,9 @@
             <li>
                 <a href="<%= Url.Action("integrationapi/globalvariable") %>">Exchanging data among files</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("integrationapi/arguments") %>">Using command line arguments</a>
+            </li>
         </ul>
     </li>
     <li>

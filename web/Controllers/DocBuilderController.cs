@@ -68,6 +68,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "integrationapi/cdocbuilder/setpropertyw",
                 "integrationapi/cdocbuilder/settmpfolder",
                 "integrationapi/globalvariable",
+                "integrationapi/arguments",
                 "textdocumentapi",
                 "textdocumentapi/api",
                 "textdocumentapi/api/createblipfill",

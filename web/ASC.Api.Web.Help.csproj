@@ -456,6 +456,7 @@
     <Content Include="Views\DocBuilder\Integrationapi\default.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\globalvariable.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
+    <Content Include="Views\DocBuilder\Integrationapi\arguments.ascx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
     <Content Include="Views\DocBuilder\presentationapi.aspx" />
     <Content Include="Views\DocBuilder\Presentationapi\api.ascx" />
