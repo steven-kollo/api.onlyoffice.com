@@ -26,10 +26,11 @@
 
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
+using System.Text;
 using JWT;
-using JWT.Algorithms;
-using JWT.Serializers;
 
 namespace ASC.Api.Web.Help.Helpers
 {
@@ -41,15 +42,16 @@ namespace ASC.Api.Web.Help.Helpers
             string secret;
             if (!sign || string.IsNullOrEmpty(secret = ConfigurationManager.AppSettings["editor_token"]))
             {
-                return new JsonNetSerializer().Serialize(config);
+                using (var ms = new MemoryStream())
+                {
+                    var serializer = new DataContractJsonSerializer(typeof (Config));
+                    serializer.WriteObject(ms, config);
+                    ms.Seek(0, SeekOrigin.Begin);
+                    return Encoding.UTF8.GetString(ms.GetBuffer(), 0, (int)ms.Length);
+                }
             }
 
-            var algorithm = new HMACSHA256Algorithm();
-            var serializer = new JsonNetSerializer();
-            var urlEncoder = new JwtBase64UrlEncoder();
-            var encoder = new JwtEncoder(algorithm, serializer, urlEncoder);
-
-            config.Token = encoder.Encode(config, secret);
+            config.Token = JsonWebToken.Encode(config, secret, JwtHashAlgorithm.HS256);
 
             return Serialize(config);
         }
