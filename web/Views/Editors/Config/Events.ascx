@@ -18,7 +18,7 @@ var onAppReady = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onAppReady": onAppReady,
         ...
     },
@@ -36,7 +36,7 @@ var onCollaborativeChanges = function () {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onCollaborativeChanges": onCollaborativeChanges,
         ...
     },
@@ -54,7 +54,7 @@ var onDocumentReady = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onDocumentReady": onDocumentReady,
         ...
     },
@@ -76,7 +76,7 @@ var onDocumentStateChange = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onDocumentStateChange": onDocumentStateChange,
         ...
     },
@@ -94,7 +94,7 @@ var onDownloadAs = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onDownloadAs": onDownloadAs,
         ...
     },
@@ -112,7 +112,7 @@ var onError = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onError": onError,
         ...
     },
@@ -130,7 +130,7 @@ var onOutdatedVersion = function () {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onOutdatedVersion": onOutdatedVersion,
         ...
     },
@@ -156,7 +156,7 @@ var onRequestEditRights = function () {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onRequestEditRights": onRequestEditRights,
         ...
     },
@@ -200,7 +200,7 @@ var onRequestHistory = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onRequestHistory": onRequestHistory,
         ...
     },
@@ -228,7 +228,7 @@ var onRequestHistoryData = function(event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onRequestHistoryData": onRequestHistoryData,
         ...
     },
@@ -248,7 +248,7 @@ var onRequestHistoryClose = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onRequestHistoryClose": onRequestHistoryClose,
         ...
     },

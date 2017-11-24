@@ -28,7 +28,7 @@
     <h2>Making requests
     </h2>
     <p>
-        To identify the request and response format please make sure that both the 'Content-Type' and 'Accept' headers are set to 'application/json'.
+        To identify the request and response format please make sure that both the <b>Content-Type</b> and <b>Accept</b> headers are set to <em>application/json</em>.
             Any API method can be called stating the format for the response (json or xml).
     </p>
     <p>

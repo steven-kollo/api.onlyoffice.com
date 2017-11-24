@@ -27,7 +27,7 @@ Accept: application/json
 
 {"userName":"yourusername","password":"yourpassword"}
 </pre>
-            <div class="note">Please note, that you have to enter your own portal address to the 'Host: yourportal.onlyoffice.com' line instead of yourportal.onlyoffice.com address.</div>
+            <div class="note">Please note, that you have to enter your own portal address to the <em>Host: yourportal.onlyoffice.com</em> line instead of yourportal.onlyoffice.com address.</div>
 
             <div class="header-gray">Response</div>
             <pre>
@@ -57,7 +57,7 @@ Accept: application/json
 Authorization:sdjhfskjdhkqy739459234
 </pre>
 
-            <div class="note">Please note, that you have to enter your own portal address to the 'Host: yourportal.onlyoffice.com' line instead of yourportal.onlyoffice.com address.</div>
+            <div class="note">Please note, that you have to enter your own portal address to the <em>Host: yourportal.onlyoffice.com</em> line instead of yourportal.onlyoffice.com address.</div>
         </li>
     </ol>
 
@@ -79,12 +79,12 @@ using (var stream = request.GetRequestStream())
 var response = (System.Net.HttpWebResponse)request.GetResponse();
 var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
 </pre>
-    <div class="note">Please note, that you have to enter your own portal address to the 'yourportal.onlyoffice.com' line instead of yourportal.onlyoffice.com address.</div>
+    <div class="note">Please note, that you have to enter your own portal address to the <em>yourportal.onlyoffice.com</em> line instead of yourportal.onlyoffice.com address.</div>
 
     <div id="curl" class="header-gray">cURL authentication request example</div>
     <pre>
 curl --request POST --header "Content-Type: application/json" --data "{\"username\":\"yourusername\",\"password\":\"yourpassword\"}" "https://yourportal.onlyoffice.com/api/2.0/authentication.json"
 </pre>
-    <div class="note">Please note, that you have to enter your own portal address to the 'yourportal.onlyoffice.com' line instead of yourportal.onlyoffice.com address.</div>
+    <div class="note">Please note, that you have to enter your own portal address to the <em>yourportal.onlyoffice.com</em> line instead of yourportal.onlyoffice.com address.</div>
 
 </asp:Content>
