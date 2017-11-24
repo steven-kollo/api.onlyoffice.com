@@ -866,6 +866,16 @@
             <returns>none</returns>
             <category>Messages</category>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.CreateSampleMessage(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Create sample message [Tests]
+            </summary>
+            <param name="mailboxId"></param>
+            <param name="folderId"></param>
+            <returns>Id message</returns>
+            <category>Messages</category>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetTags">
             <summary>
                Returns list of the tags used in Mail
