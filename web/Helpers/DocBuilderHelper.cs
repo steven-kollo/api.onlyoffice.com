@@ -26,12 +26,13 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Configuration;
 using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web.Configuration;
+using ASC.Web.Core.Files;
 
 namespace ASC.Api.Web.Help.Helpers
 {
@@ -42,31 +43,19 @@ namespace ASC.Api.Web.Help.Helpers
             get { return WebConfigurationManager.AppSettings["builder-path"] ?? string.Empty; }
         }
 
-        public static string GenerateDocument(string builderPath, string builderScript)
-        {
-            const string savePattern = "builder.SaveFile\\s*\\(.*\\);";
-            const string setTmpFolderPattern = "builder.SetTmpFolder\\s*\\(.*\\);";
+        private const int ScriptMaxLength = 10000;
 
+        public static string GenerateDocument(string builderScript)
+        {
             builderScript = CutBuilderScript(builderScript);
 
-            var fileName = GetFileName(builderScript);
-            var format = (Path.GetExtension(fileName) ?? "").TrimStart('.');
+            if (builderScript.Length > ScriptMaxLength)
+            {
+                throw new Exception("The script is too long");
+            }
 
-            var hash = Guid.NewGuid().ToString();
-            var inputFilePath = Path.Combine(Path.GetTempPath(), string.Format("input.{0}.docbuilder", hash));
-            var outputFilePath = Path.Combine(Path.GetTempPath(), string.Format("output.{0}.{1}", hash, fileName));
-
-            var replacement = string.Format("builder.SaveFile(\"{0}\", \"{1}\");", format, outputFilePath);
-
-            builderScript = Regex.Replace(builderScript, savePattern, replacement);
-
-            builderScript = Regex.Replace(builderScript, setTmpFolderPattern, string.Empty);
-
-            File.WriteAllText(inputFilePath, builderScript);
-
-            BuildFile(builderPath, inputFilePath, outputFilePath);
-
-            return outputFilePath;
+            var link = BuildFile(builderScript);
+            return link;
         }
 
         private static string CutBuilderScript(string builderScript)
@@ -128,7 +117,7 @@ namespace ASC.Api.Web.Help.Helpers
             return fileName + "." + format;
         }
 
-        public static string CreateDocument(string builderPath, string name, string company, string title, string format)
+        public static string CreateDocument(string name, string company, string title, string format)
         {
             const string replacePattern = "['\"\\(\\)\\r\\n]";
 
@@ -137,10 +126,6 @@ namespace ASC.Api.Web.Help.Helpers
             {
                 throw new Exception("SaveFile without format");
             }
-
-            var hash = Guid.NewGuid().ToString();
-            var inputFilePath = Path.Combine(Path.GetTempPath(), string.Format("input.{0}.docbuilder", hash));
-            var outputFilePath = Path.Combine(Path.GetTempPath(), string.Format("output.{0}.{1}", hash, format));
 
             var templatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "Templates", string.Format("{0}.docbuilder", format));
 
@@ -155,59 +140,42 @@ namespace ASC.Api.Web.Help.Helpers
                     { "${Name}", Regex.Replace(name, replacePattern, string.Empty) },
                     { "${Company}", Regex.Replace(company, replacePattern, string.Empty) },
                     { "${Title}", Regex.Replace(title, replacePattern, string.Empty) },
-                    { "${DateTime}", DateTime.Now.ToString(CultureInfo.InvariantCulture) },
-                    { "${OutputFilePath}", outputFilePath }
+                    { "${DateTime}", DateTime.Now.ToString(CultureInfo.InvariantCulture) }
                 };
 
-            var inputText = customerData.Aggregate(templateText,
-                                                   (current, substitution) =>
-                                                   current.Replace(substitution.Key, substitution.Value));
+            var builderScript = customerData.Aggregate(templateText,
+                                                       (current, substitution) =>
+                                                       current.Replace(substitution.Key, substitution.Value));
 
-            File.WriteAllText(inputFilePath, inputText);
+            if (builderScript.Length > ScriptMaxLength)
+            {
+                throw new Exception("The script is too long");
+            }
 
-            BuildFile(builderPath, inputFilePath, outputFilePath);
-
-            return outputFilePath;
+            var link = BuildFile(builderScript);
+            return link;
         }
 
-
-        private static int _run;
-        private const int Max = 10;
-
-        private static void BuildFile(string builderFilePath, string inputFilePath, string outputFilePath)
+        private static string BuildFile(string builderScript)
         {
-            try
+            var fileName = GetFileName(builderScript);
+
+            var response = DocumentService.DocbuilderRequest(
+                ConfigurationManager.AppSettings["editor_url"] + "/docbuilder",
+                null,
+                builderScript,
+                false,
+                ConfigurationManager.AppSettings["editor_token"]
+                );
+
+            if (response.Error != 0)
             {
-                if (++_run > Max)
-                {
-                    throw new Exception("Not available. Try later");
-                }
-
-                var startInfo = new ProcessStartInfo
-                    {
-                        WindowStyle = ProcessWindowStyle.Hidden,
-                        WorkingDirectory = Path.GetDirectoryName(builderFilePath) ?? string.Empty,
-                        FileName = builderFilePath,
-                        Arguments = inputFilePath,
-                        UseShellExecute = false
-                    };
-
-                using (var process = Process.Start(startInfo))
-                {
-                    process.WaitForExit();
-                }
-
-                if (!File.Exists(outputFilePath))
-                {
-                    throw new Exception("An error has occurred. Result File not found");
-                }
+                throw new Exception(response.GetErrorText());
             }
-            catch (Exception)
-            {
-                _run--;
-                throw;
-            }
-            _run--;
+
+            var fileUrl = response.GetFileUrl(fileName);
+            if (string.IsNullOrEmpty(fileUrl)) throw new Exception("Result without file");
+            return fileUrl;
         }
     }
 }

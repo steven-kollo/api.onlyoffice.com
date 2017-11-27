@@ -44,9 +44,6 @@
     <p>Or you can try and write the application yourself using the <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">integration API documentation</a>.</p>
 
     <%
-        if (!string.IsNullOrEmpty(DocBuilderHelper.BuilderPath))
-        {
-            Html.RenderPartial("DocBuilderShared/DocBuilderAction");
-        }
+        Html.RenderPartial("DocBuilderShared/DocBuilderAction");
     %>
 </asp:Content>

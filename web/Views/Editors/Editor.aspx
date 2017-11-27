@@ -12,7 +12,7 @@
 <body style="height: 100%; margin: 0;">
 
     <div id="placeholder" style="height: 100%"></div>
-    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_api_url"] ?? "" %>"></script>
+    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 
     <script type="text/javascript">
         <% switch (Request["method"])

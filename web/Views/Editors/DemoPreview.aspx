@@ -82,7 +82,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceholder" runat="server">
 
-    <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_api_url"] ?? "" %>"></script>
+    <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 
     <% var ext = Request["type"] == "spreadsheet" ? "xlsx" : Request["type"] == "presentation" ? "pptx" : "docx"; %>
     <script type="text/javascript">
