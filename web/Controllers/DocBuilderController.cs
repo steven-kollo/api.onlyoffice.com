@@ -28,7 +28,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
@@ -845,18 +844,12 @@ namespace ASC.Api.Web.Help.Controllers
         {
             try
             {
-                if (string.IsNullOrEmpty(DocBuilderHelper.BuilderPath))
-                    throw new Exception("DocBuilder not configured");
-
                 builderScript = (builderScript ?? "").Trim();
                 if (string.IsNullOrEmpty(builderScript))
                     throw new Exception("Empty Script");
 
-                var filePath = DocBuilderHelper.GenerateDocument(DocBuilderHelper.BuilderPath, builderScript);
-
-                var fileName = Path.GetFileName(filePath) ?? "output..tmp.docx";
-                fileName = fileName.Substring(1 + fileName.IndexOf('.', 7));
-                return File(filePath, MimeMapping.GetMimeMapping(fileName), fileName);
+                var fileUrl = DocBuilderHelper.GenerateDocument(builderScript);
+                return Redirect(fileUrl);
             }
             catch (Exception ex)
             {
@@ -870,9 +863,6 @@ namespace ASC.Api.Web.Help.Controllers
         {
             try
             {
-                if (string.IsNullOrEmpty(DocBuilderHelper.BuilderPath))
-                    throw new Exception("DocBuilder not configured");
-
                 name = (name ?? "").Trim();
                 if (string.IsNullOrEmpty(name))
                     name = "John Smith";
@@ -885,11 +875,8 @@ namespace ASC.Api.Web.Help.Controllers
                 if (string.IsNullOrEmpty(title))
                     title = "Commercial director";
 
-                var filePath = DocBuilderHelper.CreateDocument(DocBuilderHelper.BuilderPath, name, company, title, format);
-
-                var fileName = Path.GetFileName(filePath) ?? "output..docx";
-                fileName = "Sample" + fileName.Substring(fileName.IndexOf('.', 7));
-                return File(filePath, MimeMapping.GetMimeMapping(fileName), fileName);
+                var fileUrl = DocBuilderHelper.CreateDocument(name, company, title, format);
+                return Redirect(fileUrl);
             }
             catch (Exception ex)
             {

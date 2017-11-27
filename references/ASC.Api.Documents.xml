@@ -688,7 +688,7 @@
             <param name="set"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.CheckDocServiceUrl(System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.CheckDocServiceUrl(System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
              Checking document service location
             </summary>
@@ -697,6 +697,7 @@
             <param name="docServiceUrlStorage">Document storage service Address</param>
             <param name="docServiceUrlConverter">Document conversion service Address</param>
             <param name="docServiceUrlPortal">Community Server Address</param>
+            <param name="docServiceUrlDocbuilder">Docbuilder Service Address</param>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetDocServiceUrl(System.Boolean)">
