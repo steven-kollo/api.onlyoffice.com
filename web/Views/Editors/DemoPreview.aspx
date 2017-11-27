@@ -93,7 +93,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = ext,
-                                Key = "apiwh" + Guid.NewGuid().ToString(),
+                                Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Title." + ext,
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + ext,
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
@@ -102,7 +102,7 @@
                                         Print = false
                                     }
                             },
-                        DocumentType = Request["type"],
+                        DocumentType = Request["type"] ?? "text",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
