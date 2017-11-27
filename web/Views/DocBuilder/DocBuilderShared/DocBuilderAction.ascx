@@ -87,9 +87,9 @@ builder.CloseFile();</textarea>
         <input type="text" name="title" class="clearfix" placeholder="Commercial director" />
     </div>
 
-    <button type="submit" id="createPdf" name="format" value="pdf" class="builder-run">
+    <%--<button type="submit" id="createPdf" name="format" value="pdf" class="builder-run">
         Create<br />
-        PDF</button>
+        PDF</button>--%>
     <button type="submit" id="createXlsx" name="format" value="xlsx" class="builder-run">
         Create<br />
         spreadsheet</button>
