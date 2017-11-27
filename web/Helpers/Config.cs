@@ -25,11 +25,11 @@
 
 
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
+using ASC.Web.Core.Files;
 using JWT;
 
 namespace ASC.Api.Web.Help.Helpers
@@ -39,8 +39,7 @@ namespace ASC.Api.Web.Help.Helpers
     {
         public static string Serialize(Config config, bool sign = false)
         {
-            string secret;
-            if (!sign || string.IsNullOrEmpty(secret = ConfigurationManager.AppSettings["editor_token"]))
+            if (!sign || string.IsNullOrEmpty(FileUtility.SignatureSecret))
             {
                 using (var ms = new MemoryStream())
                 {
@@ -51,7 +50,7 @@ namespace ASC.Api.Web.Help.Helpers
                 }
             }
 
-            config.Token = JsonWebToken.Encode(config, secret, JwtHashAlgorithm.HS256);
+            config.Token = JsonWebToken.Encode(config, FileUtility.SignatureSecret, JwtHashAlgorithm.HS256);
 
             return Serialize(config);
         }

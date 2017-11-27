@@ -165,7 +165,7 @@ namespace ASC.Api.Web.Help.Helpers
                 null,
                 builderScript,
                 false,
-                ConfigurationManager.AppSettings["editor_token"]
+                FileUtility.SignatureSecret
                 );
 
             if (response.Error != 0)
