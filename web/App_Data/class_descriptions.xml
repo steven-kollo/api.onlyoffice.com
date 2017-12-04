@@ -168,12 +168,19 @@
         <Description>list of sharing options</Description>
         <Example></Example>
       </value>
-    </entry>    
-	<entry>
+    </entry>
+    <entry>
       <key>ASC.Api.Documents.FileShareParams</key>
       <value>
         <Description>FileShareParams</Description>
         <Example>share[0].ShareTo=9924256A-739C-462b-AF15-E652A3B1B6EB&amp;share[0].Access=0</Example>
+      </value>
+    </entry>
+    <entry>
+      <key>ASC.Web.Studio.Core.Backup.BackupAjaxHandler+StorageParams</key>
+      <value>
+        <Description>Object with fields: AccessKeyId, SecretAccessKey, Bucket, FolderId, FilePath, Region</Description>
+        <Example></Example>
       </value>
     </entry>
   </Names>
