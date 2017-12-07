@@ -33,10 +33,10 @@
 <pre>
 NSDoctRenderer::CDocBuilder::Initialize();
 NSDoctRenderer::CDocBuilder oBuilder;
-oBuilder.SetTmpFolder(L"D:/DocBuilderTemp");
+oBuilder.SetTmpFolder(L"DocBuilderTemp");
 NSDoctRenderer::CDocBuilder::Dispose();
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>
-builder.SetTmpFolder("D:/DocBuilderTemp");
+builder.SetTmpFolder("DocBuilderTemp");
 </pre>

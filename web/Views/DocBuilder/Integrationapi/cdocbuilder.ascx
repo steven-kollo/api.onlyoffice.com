@@ -100,27 +100,27 @@ int wmain(int argc, wchar_t *argv[])
   std::wstring sBuildFile(argv[argc - 1]);
   oBuilder.Run(argv[argc - 1]);
 #else
-  oBuilder.SetTmpFolder(L"D:/DocBuilderTemp");
+  oBuilder.SetTmpFolder(L"DocBuilderTemp");
   oBuilder.CreateFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX);
   oBuilder.ExecuteCommand(L"var oDocument = Api.GetDocument();");
   oBuilder.ExecuteCommand(L"var oParagraph;");
   oBuilder.ExecuteCommand(L"oParagraph = oDocument.GetElement(0);");
   oBuilder.ExecuteCommand(L"oParagraph.SetJc(\"center\");");
   oBuilder.ExecuteCommand(L"oParagraph.AddText(\"Center\");");
-  oBuilder.SaveFile(OFFICESTUDIO_FILE_CROSSPLATFORM_PDF, L"D:/TESTFILES/document.pdf");
+  oBuilder.SaveFile(OFFICESTUDIO_FILE_CROSSPLATFORM_PDF, L"document.pdf");
   oBuilder.CloseFile();
 #endif
   NSDoctRenderer::CDocBuilder::Dispose();
   return 0;
 }</pre>
                 <h4 class="header-gray" >.docbuilder</h4>
-<pre>builder.SetTmpFolder("D:/DocBuilderTemp");
+<pre>builder.SetTmpFolder("DocBuilderTemp");
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph;
 oParagraph = oDocument.GetElement(0);
 oParagraph.SetJc("center");
 oParagraph.AddText("Center");
-builder.SaveFile("pdf", "D:/TESTFILES/images.pdf");
+builder.SaveFile("pdf", "images.pdf");
 builder.CloseFile();</pre>
                 

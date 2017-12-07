@@ -29,5 +29,5 @@ oParagraph.AddLineBreak();
 oParagraph.AddText("Product:  " + sProduct);
 oParagraph.AddLineBreak();
 oParagraph.AddText("Compatibility with OOXML standards: " + sCompatibility);
-builder.SaveFile("docx", "D:/TESTFILES/ArgumentUse.docx");
+builder.SaveFile("docx", "ArgumentUse.docx");
 builder.CloseFile();</pre>
