@@ -17,7 +17,7 @@
 
     <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE Document Server.</p>
 
-    <p>Tested with Alfresco 5.*</p>
+    <p>Tested with Alfresco 5.*, the plugin is available in the official <a href="https://addons.alfresco.com/addons/onlyoffice-connector-alfresco" target="_blank">Alfresco Add-ons directory</a>.</p>
 
     <h2>Features</h2>
     <ul>

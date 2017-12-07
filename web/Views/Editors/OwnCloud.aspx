@@ -64,13 +64,13 @@
         </li>
         <li>Get the ownCloud/Nextcloud ONLYOFFICE integration app. There are several ways to do that:
             <ol style="list-style-type: lower-alpha;">
-                <li>Download the latest signed version from the official store for <a target="_blank" href="https://apps.owncloud.com/content/show.php?content=174798">ownCloud 9</a>, <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud 10</a> or <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</li>
+                <li>Download the latest signed version from the official store for <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a> or <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</li>
                 <li>Or you can download the latest signed version from the application <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases">release page</a> on GitHub.</li>
                 <li>Or you can clone the application source code and compile it yourself:
                     <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span>
                 </li>
             </ol>
-            <div class="note">ownCloud version 10 does not work with unsigned applications giving an alert, so you will need to use either option <b>a</b> or <b>b</b> to get the application.</div>
+            <div class="note">ownCloud does not work with unsigned applications giving an alert, so you will need to use either option <b>a</b> or <b>b</b> to get the application.</div>
         </li>
         <li>Change the owner to update the application right from ownCloud/Nextcloud web interface:
             <span class="commandline">chown -R www-data:www-data onlyoffice</span>

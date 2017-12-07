@@ -32,9 +32,19 @@
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
+    <h2>Getting ONLYOFFICE Connector for Confluence from Atlassian Marketplace</h2>
+    <p>You can download the latest connector version from the <a href="https://marketplace.atlassian.com/plugins/onlyoffice.onlyoffice-confluence-plugin/server/overview" target="_blank">official Atlassian Marketplace</a>. This is done the following way:</p>
+    <ul>
+        <li>Log into your Confluence instance as an administrator.</li>
+        <li>Click the admin drop-down box and choose <b>Add-ons</b>. The <b>Manage add-ons</b> screen will load.</li>
+        <li>Click <b>Find new add-ons</b> from the left-hand side of the page.</li>
+        <li>Locate <b>ONLYOFFICE Connector for Confluence</b> via search. Results will include the add-on versions compatible with your Confluence instance.</li>
+        <li>Click <b>Install</b> to download and install your add-on.</li>
+        <li>Now you can click <b>Close</b> in the <b>Installed and ready to go</b> dialog.</li>
+    </ul>
 
-    <h2>Compiling ONLYOFFICE Connector for Confluence</h2>
-    <p>To start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
+    <h2>Compiling and installing ONLYOFFICE Connector for Confluence</h2>
+    <p>If for some reason you want to compile ONLYOFFICE Connector for Confluence, then to start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
         <li>Atlassian Plugin SDK (<a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" target="_blank">official instructions</a>),</li>
@@ -42,9 +52,6 @@
             <span class="commandline">atlas-package</span>
         </li>
     </ul>
-
-
-    <h2>Installing ONLYOFFICE Connector for Confluence</h2>
     <p>Upload the compiled <b>target/onlyoffice-confluence-plugin-*.jar</b> to Confluence on the <em>Manage add-ons</em> page.</p>
     <p>The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-confluence/releases">here</a>.</p>
 
