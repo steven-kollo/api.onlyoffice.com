@@ -29,25 +29,25 @@
             <td id="embedUrl" class="copy-link">embedUrl</td>
             <td>Defines the URL to the document serving as a source file for the document embedded into the web page.</td>
             <td>string</td>
-            <td>"http://example.com/embedded?doc=exampledocument1.docx"</td>
+            <td>"https://example.com/embedded?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="fullscreenUrl" class="copy-link">fullscreenUrl</td>
             <td>Defines the URL to the document which will open in full screen mode.</td>
             <td>string</td>
-            <td>"http://example.com/embedded?doc=exampledocument1.docx#fullscreen"</td>
+            <td>"https://example.com/embedded?doc=exampledocument1.docx#fullscreen"</td>
         </tr>
         <tr class="tablerow">
             <td id="saveUrl" class="copy-link">saveUrl</td>
             <td>Defines the URL that will allow the document to be saved onto the user personal computer.</td>
             <td>string</td>
-            <td>"http://example.com/download?doc=exampledocument1.docx"</td>
+            <td>"https://example.com/download?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="shareUrl" class="copy-link">shareUrl</td>
             <td>Defines the URL that will allow other users to share this document.</td>
             <td>string</td>
-            <td>"http://example.com/view?doc=exampledocument1.docx"</td>
+            <td>"https://example.com/view?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="toolbarDocked" class="copy-link">toolbarDocked</td>
@@ -68,10 +68,10 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "embedded": {
-            "embedUrl": "http://example.com/embedded?doc=exampledocument1.docx",
-            "fullscreenUrl": "http://example.com/embedded?doc=exampledocument1.docx#fullscreen",
-            "saveUrl": "http://example.com/download?doc=exampledocument1.docx",
-            "shareUrl": "http://example.com/view?doc=exampledocument1.docx",
+            "embedUrl": "https://example.com/embedded?doc=exampledocument1.docx",
+            "fullscreenUrl": "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
+            "saveUrl": "https://example.com/download?doc=exampledocument1.docx",
+            "shareUrl": "https://example.com/view?doc=exampledocument1.docx",
             "toolbarDocked": "top"
         },
         ...

@@ -33,6 +33,29 @@
                         <a href="<%= Url.Action("executecommand") %>">executeCommand</a>
                     </li>
                     <li>
+                        <a href="<%= Url.Action("executemethod/") %>">executeMethod</a>
+                        <ul>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/removecontentcontrols") %>">RemoveContentControls</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/getallcontentcontrols") %>">GetAllContentControls</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/addcontentcontrol") %>">AddContentControl</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/removecontentcontrol") %>">RemoveContentControl</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
                         <a href="<%= Url.Action("info/") %>">info object</a>
                         <ul>
                             <li>
@@ -72,6 +95,9 @@
                     </li>
                     <li>
                         <a href="<%= Url.Action("onExternalMouseUp") %>">onExternalMouseUp</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("onmethodreturn") %>">onMethodReturn</a>
                     </li>
                 </ul>
             </li>

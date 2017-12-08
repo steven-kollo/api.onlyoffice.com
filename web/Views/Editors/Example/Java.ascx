@@ -14,17 +14,16 @@
 
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="https://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
 
-<span class="commandline">files.docservice.url.storage=http://documentserver.com/FileUploader.ashx
-files.docservice.url.converter=http://documentserver.com/ConvertService.ashx
-files.docservice.url.tempstorage=http://documentserver.com/ResourceService.ashx
-files.docservice.url.api=http://documentserver.com/web-apps/apps/api/documents/api.js
-files.docservice.url.preloader=http://documentserver.com/web-apps/apps/api/documents/cache-scripts.html
+<span class="commandline">files.docservice.url.converter=https://documentserver/ConvertService.ashx
+files.docservice.url.tempstorage=https://documentserver/ResourceService.ashx
+files.docservice.url.api=https://documentserver/web-apps/apps/api/documents/api.js
+files.docservice.url.preloader=https://documentserver/web-apps/apps/api/documents/cache-scripts.html
 </span>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>

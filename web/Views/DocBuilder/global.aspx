@@ -32,7 +32,8 @@
     </ul>
     </div>
     <h5>Example</h5>
-<pre>// Create a blip fill with an image which is tiled all over the created shape:oFill = Api.CreateBlipFill("http://mywebsite.com/myimage.png", "tile");</pre>
+<pre>// Create a blip fill with an image which is tiled all over the created shape:
+oFill = Api.CreateBlipFill("https://example.com/myimage.png", "tile");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -135,7 +136,10 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The resulting color is green, the bytes are measured in decimal numbers:oRGBColor = Api.CreateRGBColor(0, 255, 0);// The resulting color is green, the bytes are measured in hexadecimal numbers:oRGBColor = Api.CreateRGBColor(0, 0xff, 0);</pre>
+    <pre>// The resulting color is green, the bytes are measured in decimal numbers:
+oRGBColor = Api.CreateRGBColor(0, 255, 0);
+// The resulting color is green, the bytes are measured in hexadecimal numbers:
+oRGBColor = Api.CreateRGBColor(0, 0xff, 0);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -200,9 +204,11 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </div>
     <h5>Examples</h5>
     <p class="code-caption">ChartType used in text documents</p>
-    <pre>// The resulting chart will have a 'bar3D' type:oDrawing = Api.CreateChart("bar3D", [[200, 240, 280],[250, 260, 280]], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);</pre>
+    <pre>// The resulting chart will have a 'bar3D' type:
+oDrawing = Api.CreateChart("bar3D", [[200, 240, 280],[250, 260, 280]], ["Projected Revenue", "Estimated Costs"], [2014, 2015, 2016], 4051300, 2347595, 24);</pre>
     <p class="code-caption">ChartType used in spreadsheets</p>
-    <pre>// The resulting chart will have a 'bar' type:oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 2, 10, 7, 20);</pre>
+    <pre>// The resulting chart will have a 'bar' type:
+oWorksheet.AddChart("'sheet 1'!$A$1:$D$5", true, "bar", 2, 2, 10, 7, 20);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -220,7 +226,8 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Add a document element called 'paragraph' to the document:oDocument.AddElement(oParagraph);</pre>
+    <pre>// Add a document element called 'paragraph' to the document:
+oDocument.AddElement(oParagraph);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -236,7 +243,8 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Set the size of the drawing to be created as 100 mm (10 cm) in width and 100 mm (10 cm) in height:oDrawing.SetSize(100 * 36000, 100 * 36000);</pre>
+    <pre>// Set the size of the drawing to be created as 100 mm (10 cm) in width and 100 mm (10 cm) in height:
+oDrawing.SetSize(100 * 36000, 100 * 36000);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -261,7 +269,8 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Remove the header of the 'title' type from the final document section:var oDocContent = oFinalSection.RemoveHeader("title");</pre>
+    <pre>// Remove the header of the 'title' type from the final document section:
+var oDocContent = oFinalSection.RemoveHeader("title");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -277,7 +286,8 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Set the text font size to 11 points:oTextPr.SetFontSize(22);</pre>
+    <pre>// Set the text font size to 11 points:
+oTextPr.SetFontSize(22);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -293,7 +303,8 @@ oBullet = Api.CreateNumbering("ArabicParenR");</pre>
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The paragraph line spacing is set to 1 line:oParaPr.SetSpacingLine(240, "auto");</pre>
+    <pre>// The paragraph line spacing is set to 1 line:
+oParaPr.SetSpacingLine(240, "auto");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -354,7 +365,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Add an element called 'text run' to the paragraph:oParagraph.AddElement(oRun,0);</pre>
+    <pre>// Add an element called 'text run' to the paragraph:
+oParagraph.AddElement(oRun,0);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -476,7 +488,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Create a fill with a 'dashDnDiag' pattern which has two colors - green and red:oFill = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(0, 225, 0), Api.CreateRGBColor(255, 0, 0));</pre>
+    <pre>// Create a fill with a 'dashDnDiag' pattern which has two colors - green and red:
+oFill = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(0, 225, 0), Api.CreateRGBColor(255, 0, 0));</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -492,7 +505,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The resulting gradient direction angle is 90 degrees:oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);</pre>
+    <pre>// The resulting gradient direction angle is 90 degrees:
+oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -508,7 +522,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The resulting gradient stop position is 100%:var oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);</pre>
+    <pre>// The resulting gradient stop position is 100%:
+var oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -902,7 +917,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Create a scheme color using the 'lightYellow' color preset:oSchemeColor = Api.CreatePresetColor("lightYellow");</pre>
+    <pre>// Create a scheme color using the 'lightYellow' color preset:
+oSchemeColor = Api.CreatePresetColor("lightYellow");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -918,7 +934,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The paragraph will have a single 3 point wide green bottom border with a 1 point offset from the bottom paragraph edge:oParaPr.SetBottomBorder("single", 24, 1, 0, 255, 0);</pre>
+    <pre>// The paragraph will have a single 3 point wide green bottom border with a 1 point offset from the bottom paragraph edge:
+oParaPr.SetBottomBorder("single", 24, 1, 0, 255, 0);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -934,7 +951,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The paragraph will have a single 6 point wide green bottom border with a zero offset from the bottom paragraph edge:oParaPr.SetBottomBorder("single", 48, 0, 0, 255, 0);</pre>
+    <pre>// The paragraph will have a single 6 point wide green bottom border with a zero offset from the bottom paragraph edge:
+oParaPr.SetBottomBorder("single", 48, 0, 0, 255, 0);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -960,7 +978,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The created drawing will be centered horizontally relative to the page width:oDrawing.SetHorAlign("page", "center");</pre>
+    <pre>// The created drawing will be centered horizontally relative to the page width:
+oDrawing.SetHorAlign("page", "center");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -986,7 +1005,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The created drawing will be centered vertically relative to the paragraph height:oDrawing.SetHorAlign("paragraph", "center");</pre>
+    <pre>// The created drawing will be centered vertically relative to the paragraph height:
+oDrawing.SetHorAlign("paragraph", "center");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1028,7 +1048,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Create a scheme color with the 'accent2' identifier:oSchemeColor = Api.CreateSchemeColor("accent2");</pre>
+    <pre>// Create a scheme color with the 'accent2' identifier:
+oSchemeColor = Api.CreateSchemeColor("accent2");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1416,7 +1437,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Create a shape using the 'diamond' preset:oDrawing = Api.CreateShape("diamond", 100 * 36000, 100 * 36000, oFill, oStroke);</pre>
+    <pre>// Create a shape using the 'diamond' preset:
+oDrawing = Api.CreateShape("diamond", 100 * 36000, 100 * 36000, oFill, oStroke);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1434,7 +1456,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Add a green shadow to the table:oTablePr.SetShd("clear", 0, 255, 0, false);</pre>
+    <pre>// Add a green shadow to the table:
+oTablePr.SetShd("clear", 0, 255, 0, false);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1456,7 +1479,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Assign the default document paragraph style to the 'oNormalStyle' variable:var oNormalStyle = oDocument.GetDefaultStyle("paragraph");</pre>
+    <pre>// Assign the default document paragraph style to the 'oNormalStyle' variable:
+var oNormalStyle = oDocument.GetDefaultStyle("paragraph");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1478,13 +1502,15 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Set tab positions at 50, 75 and 150 points with the text aligned center, left and right at each tab stop accordingly:oParaPr.SetTabs([1000, 1500, 3000], ["center", "left", "right"]);</pre>
+    <pre>// Set tab positions at 50, 75 and 150 points with the text aligned center, left and right at each tab stop accordingly:
+oParaPr.SetTabs([1000, 1500, 3000], ["center", "left", "right"]);</pre>
     </div>
 
     <div class="global-type-definitions">
     <span class="anchor-position" id="TableStyleOverrideType">&nbsp;</span>
     <h4 class="header-gray">TableStyleOverrideType</h4>
-    <p>This simple type specifies possible values for the table sections to which the current conditionalformatting properties will be applied when this selected table style is used.</p>
+    <p>This simple type specifies possible values for the table sections to which the current conditional
+formatting properties will be applied when this selected table style is used.</p>
         <ul>
             <li><b>"topLeftCell"</b> - specifies that the table formatting applies to the top left cell.</li>
             <li><b>"topRightCell"</b> - specifies that the table formatting applies to the top right cell.</li>
@@ -1533,7 +1559,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Apply the created style (set shadow) to the top left cell of the table:oTableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 0, 0);</pre>
+    <pre>// Apply the created style (set shadow) to the top left cell of the table:
+oTableStyle.GetConditionalTableStyle("topLeftCell").GetTableCellPr().SetShd("clear", 255, 0, 0);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1561,7 +1588,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Set the width of the table cell equal to 100 points (2000 twips):oTableCell.SetWidth("twips", 2000);</pre>
+    <pre>// Set the width of the table cell equal to 100 points (2000 twips):
+oTableCell.SetWidth("twips", 2000);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1589,7 +1617,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
             </ul>
         </div>
         <h5>Example</h5>
-        <pre>// Set the position of the vertical tick labels next to the main vertical label:oChart.SetVertAxisTickLabelPosition("nextTo");</pre>
+        <pre>// Set the position of the vertical tick labels next to the main vertical label:
+oChart.SetVertAxisTickLabelPosition("nextTo");</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1605,7 +1634,8 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// Set the distance between columns equal to 36 points:oParagraph.SetEqualColumns(2, 720);</pre>
+    <pre>// Set the distance between columns equal to 36 points:
+oParagraph.SetEqualColumns(2, 720);</pre>
     </div>
 
     <div class="global-type-definitions">
@@ -1625,6 +1655,7 @@ oWorksheet.GetRange("E2").SetBorders("Bottom", "Dotted", Api.CreateColorFromRGB(
     </ul>
     </div>
     <h5>Example</h5>
-    <pre>// The inner text for the created shape will be added aligned vertically closer to the shape upper part:oDrawing.SetVerticalTextAlign("top");</pre>
+    <pre>// The inner text for the created shape will be added aligned vertically closer to the shape upper part:
+oDrawing.SetVerticalTextAlign("top");</pre>
     </div>
 </asp:Content>

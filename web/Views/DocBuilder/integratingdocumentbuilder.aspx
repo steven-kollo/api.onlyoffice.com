@@ -18,7 +18,7 @@
     <ol>
         <li>
             <p>Download <b>ONLYOFFICE Document Builder</b> application and install it to your computer</p>
-            <a href="http://www.onlyoffice.com/document-builder.aspx" class="button" target="blank">Download</a>
+            <a href="https://www.onlyoffice.com/document-builder.aspx" class="button" target="blank">Download</a>
         </li>
 
         <% if (Model != null && Model.Count > 0)
@@ -44,9 +44,6 @@
     <p>Or you can try and write the application yourself using the <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">integration API documentation</a>.</p>
 
     <%
-        if (!string.IsNullOrEmpty(DocBuilderHelper.BuilderPath))
-        {
-            Html.RenderPartial("DocBuilderShared/DocBuilderAction");
-        }
+        Html.RenderPartial("DocBuilderShared/DocBuilderAction");
     %>
 </asp:Content>

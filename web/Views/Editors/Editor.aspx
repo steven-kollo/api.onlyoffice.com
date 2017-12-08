@@ -12,7 +12,7 @@
 <body style="height: 100%; margin: 0;">
 
     <div id="placeholder" style="height: 100%"></div>
-    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_api_url"] ?? "" %>"></script>
+    <script type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 
     <script type="text/javascript">
         <% switch (Request["method"])
@@ -594,7 +594,7 @@
                                         Logo = new Config.EditorConfigConfiguration.CustomizationConfig.LogoConfig
                                             {
                                                 Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
-                                                Url = "http://example.com"
+                                                Url = "https://example.com"
                                             }
                                     }
                             },
@@ -635,7 +635,7 @@
                                         Logo = new Config.EditorConfigConfiguration.CustomizationConfig.LogoConfig
                                             {
                                                 Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
-                                                Url = "http://example.com"
+                                                Url = "https://example.com"
                                             }
                                     }
                             },
@@ -676,7 +676,7 @@
                                         Logo = new Config.EditorConfigConfiguration.CustomizationConfig.LogoConfig
                                             {
                                                 Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
-                                                Url = "http://example.com"
+                                                Url = "https://example.com"
                                             }
                                     }
                             },

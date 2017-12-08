@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Confluence ONLYOFFICE integration plugin
+    ONLYOFFICE Connector for Confluence
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Confluence ONLYOFFICE integration plugin</span>
+        <span class="hdr">ONLYOFFICE Connector for Confluence</span>
     </h1>
 
     <p class="dscr">
@@ -28,30 +28,38 @@
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin).
-        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to Confluence directly.
+        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to Confluence directly.
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
+    <h2>Getting ONLYOFFICE Connector for Confluence from Atlassian Marketplace</h2>
+    <p>You can download the latest connector version from the <a href="https://marketplace.atlassian.com/plugins/onlyoffice.onlyoffice-confluence-plugin/server/overview" target="_blank">official Atlassian Marketplace</a>. This is done the following way:</p>
+    <ul>
+        <li>Log into your Confluence instance as an administrator.</li>
+        <li>Click the admin drop-down box and choose <b>Add-ons</b>. The <b>Manage add-ons</b> screen will load.</li>
+        <li>Click <b>Find new add-ons</b> from the left-hand side of the page.</li>
+        <li>Locate <b>ONLYOFFICE Connector for Confluence</b> via search. Results will include the add-on versions compatible with your Confluence instance.</li>
+        <li>Click <b>Install</b> to download and install your add-on.</li>
+        <li>Now you can click <b>Close</b> in the <b>Installed and ready to go</b> dialog.</li>
+    </ul>
 
-    <h2>Configuring Confluence ONLYOFFICE integration plugin</h2>
-    <ol>
-        <li>Change the <b>files.docservice.url.domain</b> properties in <em>src/main/resources/onlyoffice-config.properties</em> to the name of the server with the ONLYOFFICE Document Server installed:
-            <span class="commandline">files.docservice.url.domain=http://documentserver/</span>
-            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
-        </li>
-    </ol>
-
-
-    <h2>Installing Confluence ONLYOFFICE integration plugin</h2>
-    <p>To start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
+    <h2>Compiling and installing ONLYOFFICE Connector for Confluence</h2>
+    <p>If for some reason you want to compile ONLYOFFICE Connector for Confluence, then to start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
         <li>Atlassian Plugin SDK (<a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" target="_blank">official instructions</a>),</li>
         <li>Compile package:
             <span class="commandline">atlas-package</span>
         </li>
-        <li>Upload <b>target/onlyoffice-confluence-plugin-*.jar</b> to Confluence on page <em>Manage add-ons</em>.</li>
     </ul>
+    <p>Upload the compiled <b>target/onlyoffice-confluence-plugin-*.jar</b> to Confluence on the <em>Manage add-ons</em> page.</p>
+    <p>The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-confluence/releases">here</a>.</p>
+
+
+    <h2>Configuring ONLYOFFICE Connector for Confluence</h2>
+    <p>Find the uploaded <b>ONLYOFFICE Connector for Confluence</b> on the <em>Manage add-ons</em> page.
+        Click <em>Configure</em> and enter the name of the server with the ONLYOFFICE Document Server installed:</p>
+    <span class="commandline">https://documentserver/</span>
 
 
     <h2>How it works</h2>
@@ -74,6 +82,6 @@
     <p>Confluence downloads the new version of the document, replacing the old one.</p>
 
     <br />
-    <p>Download the Confluence ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
+    <p>Download the ONLYOFFICE Connector for Confluence <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
 
 </asp:Content>

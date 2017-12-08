@@ -136,14 +136,14 @@
     <pre>
 {
     "actions": [{"type": 0, "userid": "78e1e841"}],
-    "changesurl": "http://documentserver/url-to-changes.zip",
+    "changesurl": "https://documentserver/url-to-changes.zip",
     "history": {
         "changes": changes,
         "serverVersion": serverVersion
     },
     "key": "Khirz6zTPdfd7",
     "status": 2,
-    "url": "http://documentserver/url-to-edited-document.docx",
+    "url": "https://documentserver/url-to-edited-document.docx",
     "users": ["6d5a81d0"]
 }
 </pre>
@@ -159,7 +159,7 @@
     <div id="status-6" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command") %>">forcesave</a> command had been received</div>
     <pre>
 {
-    "changesurl": "http://documentserver/url-to-changes.zip",
+    "changesurl": "https://documentserver/url-to-changes.zip",
     "forcesavetype": 0,
     "history": {
         "changes": changes,
@@ -167,7 +167,7 @@
     },
     "key": "Khirz6zTPdfd7",
     "status": 6,
-    "url": "http://documentserver/url-to-edited-document.docx",
+    "url": "https://documentserver/url-to-edited-document.docx",
     "users": ["6d5a81d0"],
     "userdata": "sample userdata"
 }

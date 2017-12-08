@@ -33,10 +33,10 @@
 <pre>
 NSDoctRenderer::CDocBuilder::Initialize();
 NSDoctRenderer::CDocBuilder oBuilder;
-oBuilder.RunTextA(L"builder.SetTmpFolder(\"D:/DocBuilderTemp\");\n\
+oBuilder.RunTextA(L"builder.SetTmpFolder(\"DocBuilderTemp\");\n\
 builder.CreateFile(\"docx\");\n\
 var oDocument = Api.GetDocument();var oParagraph;oParagraph = oDocument.GetElement(0);oParagraph.SetJc(\"center\");oParagraph.AddText(\"Center\");\n\
-builder.SaveFile(\"pdf\", \"D:/TESTFILES/images.pdf\");\n\
+builder.SaveFile(\"pdf\", \"images.pdf\");\n\
 builder.CloseFile();");
 NSDoctRenderer::CDocBuilder::Dispose();
 </pre>

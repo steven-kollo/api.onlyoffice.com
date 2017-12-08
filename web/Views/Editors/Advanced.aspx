@@ -80,12 +80,12 @@ config = {
             "review": true
         },
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx"
+        "url": "https://example.com/url-to-example-document.docx"
     },
     "documentType": "text",
     "editorConfig": {
-        "callbackUrl": "http://example.com/url-to-callback.ashx",
-        "createUrl": "http://example.com/url-to-create-document/",
+        "callbackUrl": "https://example.com/url-to-callback.ashx",
+        "createUrl": "https://example.com/url-to-create-document/",
         "customization": {
             "autosave": true,
             "chat": true,
@@ -94,33 +94,33 @@ config = {
             "customer": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
-                "logo": "http://example.com/logo-big.png",
+                "logo": "https://example.com/logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
             },
             "feedback": {
-                "url": "http://example.com",
+                "url": "https://example.com",
                 "visible": true
             },
             "forcesave": false,
             "goback": {
                 "text": "Go to Documents",
-                "url": "http://example.com"
+                "url": "https://example.com"
             },
             "logo": {
-                "image": "http://example.com/logo.png",
-                "imageEmbedded": "http://example.com/logo_em.png",
-                "url": "http://example.com"
+                "image": "https://example.com/logo.png",
+                "imageEmbedded": "https://example.com/logo_em.png",
+                "url": "https://example.com"
             },
             "showReviewChanges": false,
             "zoom": 100
         },
         "embedded": {
-            "embedUrl": "http://example.com/embedded?doc=exampledocument1.docx",
-            "fullscreenUrl": "http://example.com/embedded?doc=exampledocument1.docx#fullscreen",
-            "saveUrl": "http://example.com/download?doc=exampledocument1.docx",
-            "shareUrl": "http://example.com/view?doc=exampledocument1.docx",
+            "embedUrl": "https://example.com/embedded?doc=exampledocument1.docx",
+            "fullscreenUrl": "https://example.com/embedded?doc=exampledocument1.docx#fullscreen",
+            "saveUrl": "https://example.com/download?doc=exampledocument1.docx",
+            "shareUrl": "https://example.com/view?doc=exampledocument1.docx",
             "toolbarDocked": "top"
         },
         "lang": "en-US",
@@ -132,8 +132,8 @@ config = {
                  ...
              ],
              "pluginsData": [
-                 "http://example.com/plugin1/config.json",
-                 "http://example.com/plugin2/config.json",
+                 "https://example.com/plugin1/config.json",
+                 "https://example.com/plugin2/config.json",
                  ...
              ]
         },
@@ -141,12 +141,12 @@ config = {
             {
                 "folder": "Example Files",
                 "title": "exampledocument1.docx",
-                "url": "http://example.com/exampledocument1.docx"
+                "url": "https://example.com/exampledocument1.docx"
             },
             {
                 "folder": "Example Files",
                 "title": "exampledocument2.docx",
-                "url": "http://example.com/exampledocument2.docx"
+                "url": "https://example.com/exampledocument2.docx"
             },
             ...
         ],

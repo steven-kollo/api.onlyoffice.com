@@ -82,7 +82,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptPlaceholder" runat="server">
 
-    <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_api_url"] ?? "" %>"></script>
+    <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 
     <% var ext = Request["type"] == "spreadsheet" ? "xlsx" : Request["type"] == "presentation" ? "pptx" : "docx"; %>
     <script type="text/javascript">
@@ -93,7 +93,7 @@
                         Document = new Config.DocumentConfig
                             {
                                 FileType = ext,
-                                Key = "apiwh" + Guid.NewGuid().ToString(),
+                                Key = "apiwh" + Guid.NewGuid(),
                                 Title = "Example Title." + ext,
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo." + ext,
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
@@ -102,7 +102,7 @@
                                         Print = false
                                     }
                             },
-                        DocumentType = Request["type"],
+                        DocumentType = Request["type"] ?? "text",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),

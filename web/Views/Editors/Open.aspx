@@ -34,7 +34,7 @@
             <pre>&lt;div id=&quot;placeholder&quot;&gt;&lt;/div&gt;</pre>
         </li>
         <li>Specify your ONLYOFFICE Document Server link with the JavaScript API that will be used for your website.
-            <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;http://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre>
+            <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;https://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre>
             Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
@@ -44,7 +44,7 @@ new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx"
+        "url": "https://example.com/url-to-example-document.docx"
     },
     "documentType": "text"
 });

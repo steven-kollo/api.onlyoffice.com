@@ -48,6 +48,12 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
+                <td><a href="<%= Url.Action("executemethod") %>">executeMethod</a></td>
+                <td>Used to execute certain editor methods using the plugin.</td>
+                <td>function</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td><a href="<%= Url.Action("info") %>">info</a></td>
                 <td>It stores all the information about the editor where the plugin is used.</td>
                 <td>object</td>
@@ -62,6 +68,12 @@
             <tr class="tablerow">
                 <td><a href="<%= Url.Action("onexternalmouseup") %>">onExternalMouseUp</a></td>
                 <td>Specify the action that is to be performed when the mouse button is released outside the plugin iframe.</td>
+                <td>function</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("onmethodreturn") %>">onMethodReturn</a></td>
+                <td>Used to return the result of the previously executed method.</td>
                 <td>function</td>
                 <td>optional</td>
             </tr>

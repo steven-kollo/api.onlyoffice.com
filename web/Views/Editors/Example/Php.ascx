@@ -14,16 +14,15 @@
 <h2 id="Windows" class="copy-link">Running the example on Windows OS</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">install Document Server for Windows</a>.</p>
+<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">install Document Server for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config.php</em> file:</p>
 <pre>
-$GLOBALS['DOC_SERV_STORAGE_URL'] = "http://documentserver/FileUploader.ashx";
-$GLOBALS['DOC_SERV_CONVERTER_URL'] = "http://documentserver/ConvertService.ashx";
-$GLOBALS['DOC_SERV_API_URL'] = "http://documentserver/web-apps/apps/api/documents/api.js";
-$GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/documents/cache-scripts.html";
+$GLOBALS['DOC_SERV_CONVERTER_URL'] = "https://documentserver/ConvertService.ashx";
+$GLOBALS['DOC_SERV_API_URL'] = "https://documentserver/web-apps/apps/api/documents/api.js";
+$GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/documents/cache-scripts.html";
 </pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
@@ -33,8 +32,8 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
 <p>You can use any web server capable of runnig PHP code to run the sample. We will demonstrate how to run the PHP sample using <b>Internet Information Services (IIS)</b> web server. To set up and configure PHP on IIS <b>PHP Manager for IIS</b> will be used.</p>
 
 <ul>
-    <li><b>IIS: version 7</b> or later (refer to <a href="http://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
-    <li><b>PHP</b> (download it from the <a href="http://php.net/downloads.php">http://php.net</a> site);</li>
+    <li><b>IIS: version 7</b> or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
+    <li><b>PHP</b> (download it from the <a href="https://php.net/downloads.php">http://php.net</a> site);</li>
     <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site</a>).</li>
 </ul>
 
@@ -106,7 +105,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
 <h2 id="Linux" class="copy-link">Running the example on Linux OS</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">install Document Server for Linux</a>.</p>
+<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/server/linux/document/index.aspx">install Document Server for Linux</a>.</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
@@ -115,7 +114,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
     </li>
     <li>Download the archive with the PHP Example and unpack the archive:
         <div class="commandline">cd /var/www/html</div>
-        <div class="commandline">wget http://api.onlyoffice.com/app_data/editor/PHP%20Example.zip</div>
+        <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/PHP%20Example.zip</div>
         <div class="commandline">unzip PHP\ Example.zip</div>
     </li>
     <li>Edit the <em>config.php</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
@@ -123,10 +122,9 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/do
         <p>Edit the following lines:</p>
 
         <pre>
-$GLOBALS['DOC_SERV_STORAGE_URL'] = "http://documentserver/FileUploader.ashx";
-$GLOBALS['DOC_SERV_CONVERTER_URL'] = "http://documentserver/ConvertService.ashx";
-$GLOBALS['DOC_SERV_API_URL'] = "http://documentserver/web-apps/apps/api/documents/api.js";
-$GLOBALS['DOC_SERV_PRELOADER_URL'] = "http://documentserver/web-apps/apps/api/documents/cache-scripts.html";
+$GLOBALS['DOC_SERV_CONVERTER_URL'] = "https://documentserver/ConvertService.ashx";
+$GLOBALS['DOC_SERV_API_URL'] = "https://documentserver/web-apps/apps/api/documents/api.js";
+$GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/documents/cache-scripts.html";
 </pre>
 
         <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>

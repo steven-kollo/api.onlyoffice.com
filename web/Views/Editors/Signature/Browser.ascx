@@ -25,10 +25,10 @@
             "review": true
         },
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx"
+        "url": "https://example.com/url-to-example-document.docx"
     },
     "editorConfig": {
-        "callbackUrl": "http://example.com/url-to-callback.ashx",
+        "callbackUrl": "https://example.com/url-to-callback.ashx",
         "mode": "edit",
         "user": {
             "id": "78e1e841",
@@ -52,13 +52,13 @@
 
 <pre>
 {
-    "changesUrl": "http://example.com/url-to-changes.zip",
+    "changesUrl": "https://example.com/url-to-changes.zip",
     "key": "Khirz6zTPdfd7",
     "previous": {
         "key": "af86C7e71Ca8",
-        "url": "http://example.com/url-to-the-previous-version-of-the-document.docx"
+        "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
-    "url": "http://example.com/url-to-example-document.docx",
+    "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 }
 </pre>

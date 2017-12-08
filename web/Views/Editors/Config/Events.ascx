@@ -18,7 +18,7 @@ var onAppReady = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onAppReady": onAppReady,
         ...
     },
@@ -36,7 +36,7 @@ var onCollaborativeChanges = function () {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onCollaborativeChanges": onCollaborativeChanges,
         ...
     },
@@ -54,7 +54,7 @@ var onDocumentReady = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onDocumentReady": onDocumentReady,
         ...
     },
@@ -76,7 +76,7 @@ var onDocumentStateChange = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onDocumentStateChange": onDocumentStateChange,
         ...
     },
@@ -94,7 +94,7 @@ var onDownloadAs = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onDownloadAs": onDownloadAs,
         ...
     },
@@ -112,7 +112,7 @@ var onError = function (event) {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onError": onError,
         ...
     },
@@ -130,7 +130,7 @@ var onOutdatedVersion = function () {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onOutdatedVersion": onOutdatedVersion,
         ...
     },
@@ -156,7 +156,7 @@ var onRequestEditRights = function () {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onRequestEditRights": onRequestEditRights,
         ...
     },
@@ -200,7 +200,7 @@ var onRequestHistory = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onRequestHistory": onRequestHistory,
         ...
     },
@@ -216,19 +216,19 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 var onRequestHistoryData = function(event) {
     var version = event.data;
     docEditor.setHistoryData({
-        "changesUrl": "http://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
+        "changesUrl": "https://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
         "key": "Khirz6zTPdfd7",
         "previous": {
             "key": "af86C7e71Ca8",
-            "url": "http://example.com/url-to-the-previous-version-of-the-document.docx"
+            "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
         },
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "https://example.com/url-to-example-document.docx",
         "version": version
     })
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onRequestHistoryData": onRequestHistoryData,
         ...
     },
@@ -248,7 +248,7 @@ var onRequestHistoryClose = function() {
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    events: {
+    "events": {
         "onRequestHistoryClose": onRequestHistoryClose,
         ...
     },

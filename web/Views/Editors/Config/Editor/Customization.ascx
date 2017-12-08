@@ -75,7 +75,7 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com/logo-big.png".
+                        <b>example</b>: "https://example.com/logo-big.png".
                     </li>
                     <li><b>mail</b> - email address of the above company or person,
                         <br />
@@ -108,7 +108,7 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com";
+                        <b>example</b>: "https://example.com";
                     </li>
                     <li><b>visible</b> - show or hide the <b>Feedback &amp; Support</b> menu button,
                         <br />
@@ -142,7 +142,7 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com".
+                        <b>example</b>: "https://example.com".
                     </li>
                 </ul>
             </td>
@@ -157,19 +157,19 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com/logo.png";
+                        <b>example</b>: "https://example.com/logo.png";
                     </li>
                     <li><b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type). The image must have the following size: 248x40,
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com/logo_em.png";
+                        <b>example</b>: "https://example.com/logo_em.png";
                     </li>
                     <li><b>url</b> - the link which will be used when someone clicks the logo image (can be used to go to your web site, etc.),
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com".
+                        <b>example</b>: "https://example.com".
                     </li>
                 </ul>
             </td>
@@ -208,24 +208,24 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "customer": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
-                "logo": "http://example.com/logo-big.png",
+                "logo": "https://example.com/logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
             },
             "feedback": {
-                "url": "http://example.com",
+                "url": "https://example.com",
                 "visible": true
             },
             "forcesave": false,
             "goback": {
                 "text": "Go to Documents",
-                "url": "http://example.com"
+                "url": "https://example.com"
             },
             "logo": {
-                "image": "http://example.com/logo.png",
-                "imageEmbedded": "http://example.com/logo_em.png",
-                "url": "http://www.onlyoffice.com"
+                "image": "https://example.com/logo.png",
+                "imageEmbedded": "https://example.com/logo_em.png",
+                "url": "https://www.onlyoffice.com"
             },
             "showReviewChanges": false,
             "zoom": 100

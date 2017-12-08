@@ -8,7 +8,7 @@
             <p class="dscr">All <b>.docbuilder</b> files have simple structure which allows to create them easily. They consist of the following main parts each of them having the appropriate <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">CDocBuilder</a> class method used:</p>
             <ol>
                 <li>Preparing to work with the document (either the <a href="<%= Url.Action("integrationapi/cdocbuilder/createfile") %>">CDocBuilder.CreateFile</a> or <a href="<%= Url.Action("integrationapi/cdocbuilder/openfile") %>">CDocBuilder.OpenFile</a> methods are used together with the <a href="<%= Url.Action("integrationapi/cdocbuilder/settmpfolder") %>">CDocBuilder.SetTmpFolder</a> method).
-<pre>builder.SetTmpFolder("D:/DocBuilderTemp");
+<pre>builder.SetTmpFolder("DocBuilderTemp");
 builder.CreateFile("docx");</pre>
                 </li>
                 <li>Creating the document contents with the help of the <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand") %>">CDocBuilder.ExecuteCommand</a> method (the method is not used explicitly, the commands themselves are used instead).
@@ -20,7 +20,7 @@ oParagraph.AddText("Center");
 oDocument.Push(oParagraph);</pre>
                 </li>
                 <li>Saving the document (using the <a href="<%= Url.Action("integrationapi/cdocbuilder/savefile") %>">CDocBuilder.SaveFile</a> method) and releasing it to finish work with it (the <a href="<%= Url.Action("integrationapi/cdocbuilder/closefile") %>">CloseFile</a> method).
-<pre>builder.SaveFile("pdf", "D:/TESTFILES/images.pdf");
+<pre>builder.SaveFile("pdf", "images.pdf");
 builder.CloseFile();</pre>
                 </li>
             </ol>
@@ -39,13 +39,13 @@ builder.CloseFile();</pre>
             <p>Thus the example of the complete working <b>.docbuilder</b> file is available below.</p>
 
             <h2>Example</h2>
-<pre>builder.SetTmpFolder("D:/DocBuilderTemp");
+<pre>builder.SetTmpFolder("DocBuilderTemp");
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oParagraph;
 oParagraph = oDocument.GetElement(0);
 oParagraph.SetJc("center");
 oParagraph.AddText("Center");
-builder.SaveFile("pdf", "D:/TESTFILES/images.pdf");
+builder.SaveFile("pdf", "images.pdf");
 builder.CloseFile();</pre>
     

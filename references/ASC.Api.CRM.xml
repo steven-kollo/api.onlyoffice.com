@@ -314,6 +314,15 @@
             <category>Invoices</category>
             <returns>InvoiceItem list</returns>
         </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceItemByID(System.Int32)">
+            <summary>
+             Returns the detailed information about the invoice item with the ID specified in the request
+            </summary>
+            <param name="invoiceitemid">Invoice Item ID</param>
+            <short>Get invoice item by ID</short> 
+            <category>Invoices</category>
+            <returns>Invoice Item</returns>
+        </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Decimal,System.Int32)">
             <summary>
              Creates the invoice line with the parameters (invoiceId, invoiceItemId, etc.) specified in the request

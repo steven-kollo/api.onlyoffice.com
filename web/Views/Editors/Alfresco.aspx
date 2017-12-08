@@ -17,7 +17,7 @@
 
     <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE Document Server.</p>
 
-    <p>Tested with Alfresco 5.*</p>
+    <p>Tested with Alfresco 5.*, the plugin is available in the official <a href="https://addons.alfresco.com/addons/onlyoffice-connector-alfresco" target="_blank">Alfresco Add-ons directory</a>.</p>
 
     <h2>Features</h2>
     <ul>
@@ -33,7 +33,7 @@
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin).
-        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
+        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
         ONLYOFFICE Document Server must also be able to POST to Alfresco directly.
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
@@ -41,7 +41,9 @@
 
     <h2>Installing ONLYOFFICE Alfresco module package</h2>
     <p>To start using ONLYOFFICE Document Server with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
-    <div class="note">Steps <b>1</b> &mdash; <b>6</b> are only necessary if you for some reason plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards). If you do not want to do that and plan to use the already compiled module files, please skip to step <b>7</b> directly. The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a>.</div>
+    <div class="note">Steps <b>1</b> &mdash; <b>6</b> are only necessary if you for some reason plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards).
+        If you do not want to do that and plan to use the already compiled module files, please skip to step <b>7</b> directly.
+        The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a>.</div>
     <ol>
         <li>Remove gradle in case it has already been installed (it is needed to install the latest available version later at the next step):
             <span class="commandline">sudo apt-get remove gradle</span>
@@ -84,12 +86,12 @@ gradle amp</span>
             <div class="note">You can download the already compiled package files <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a> and place them to the respective directories.</div>
         </li>
         <li>
-            Installing an <a href="http://docs.alfresco.com/5.2/tasks/amp-install.html" target="_blank">Alfresco Module Package</a> to Alfresco.
+            Installing an <a href="https://docs.alfresco.com/5.2/tasks/amp-install.html" target="_blank">Alfresco Module Package</a> to Alfresco.
             <span class="commandline">sudo bin/apply_amps.sh</span>
             You will see the two new modules being installed during the installation process. Press Enter to continue the installation.
         </li>
         <li>Add the <b>onlyoffice.url</b> property to <em>alfresco-global.properties</em>:
-            <span class="commandline">onlyoffice.url=http://documentserver/</span>
+            <span class="commandline">onlyoffice.url=https://documentserver/</span>
             Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
         </li>
         <li>Restart Alfresco:

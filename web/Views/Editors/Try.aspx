@@ -122,7 +122,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -132,11 +132,11 @@
                     "fileType": "docx",
                     "key": "E7FAFC9C22A8",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
+                    "url": "https://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -158,7 +158,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -168,11 +168,11 @@
                     "fileType": "xlsx",
                     "key": "53500B46FCA9",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -194,7 +194,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -204,11 +204,11 @@
                     "fileType": "pptx",
                     "key": "9E2BDFCD1D75",
                     "title": "Example Presentation Title.pptx",
-                    "url": "http://example.com/url-to-example-presentation.pptx"
+                    "url": "https://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -230,7 +230,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -240,11 +240,11 @@
                     "fileType": "doc",
                     "key": "D21889C484E9",
                     "title": "Example Document Title.doc",
-                    "url": "http://example.com/url-to-example-document.doc"
+                    "url": "https://example.com/url-to-example-document.doc"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -266,7 +266,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -276,11 +276,11 @@
                     "fileType": "xls",
                     "key": "D01A6B57CD96",
                     "title": "Example Spreadsheet Title.xls",
-                    "url": "http://example.com/url-to-example-spreadsheet.xls"
+                    "url": "https://example.com/url-to-example-spreadsheet.xls"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -302,7 +302,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -312,11 +312,11 @@
                     "fileType": "ppt",
                     "key": "EEE93333E5F3",
                     "title": "Example Presentation Title.ppt",
-                    "url": "http://example.com/url-to-example-presentation.ppt"
+                    "url": "https://example.com/url-to-example-presentation.ppt"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -338,7 +338,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -348,11 +348,11 @@
                     "fileType": "odt",
                     "key": "B95B853D3B1E",
                     "title": "Example Document Title.odt",
-                    "url": "http://example.com/url-to-example-document.odt"
+                    "url": "https://example.com/url-to-example-document.odt"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -374,7 +374,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -384,11 +384,11 @@
                     "fileType": "ods",
                     "key": "000C2F39D5A4",
                     "title": "Example Spreadsheet Title.ods",
-                    "url": "http://example.com/url-to-example-spreadsheet.ods"
+                    "url": "https://example.com/url-to-example-spreadsheet.ods"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -410,7 +410,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -420,11 +420,11 @@
                     "fileType": "odp",
                     "key": "47BAE2E8A54F",
                     "title": "Example Presentation Title.odp",
-                    "url": "http://example.com/url-to-example-presentation.odp"
+                    "url": "https://example.com/url-to-example-presentation.odp"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -446,7 +446,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -456,11 +456,11 @@
                     "fileType": "txt",
                     "key": "B2D7ACF65806",
                     "title": "Example Document Title.txt",
-                    "url": "http://example.com/url-to-example-document.txt"
+                    "url": "https://example.com/url-to-example-document.txt"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -482,7 +482,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -492,11 +492,11 @@
                     "fileType": "csv",
                     "key": "B04E56B18519",
                     "title": "Example Spreadsheet Title.csv",
-                    "url": "http://example.com/url-to-example-spreadsheet.csv"
+                    "url": "https://example.com/url-to-example-spreadsheet.csv"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
                 "height": "100%",
                 "width": "100%"
@@ -518,7 +518,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -528,7 +528,7 @@
                     "fileType": "pdf",
                     "key": "9B9F6EFE8937",
                     "title": "Example Document Title.pdf",
-                    "url": "http://example.com/url-to-example-document.pdf"
+                    "url": "https://example.com/url-to-example-document.pdf"
                 },
                 "documentType": "text",
                 "editorConfig": {
@@ -554,7 +554,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -564,7 +564,7 @@
                     "fileType": "docx",
                     "key": "D24A86BDE9A2",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
+                    "url": "https://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
@@ -590,7 +590,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -600,7 +600,7 @@
                     "fileType": "xlsx",
                     "key": "138E9734B413",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
@@ -626,7 +626,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -636,7 +636,7 @@
                     "fileType": "pptx",
                     "key": "37195B2B9BF4",
                     "title": "Example Presentation Title.pptx",
-                    "url": "http://example.com/url-to-example-presentation.pptx"
+                    "url": "https://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
@@ -662,7 +662,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -672,11 +672,11 @@
                     "fileType": "docx",
                     "key": "B143195F47A0",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
+                    "url": "https://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -698,7 +698,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -708,11 +708,11 @@
                     "fileType": "docx",
                     "key": "B143195F47A0",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
+                    "url": "https://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -738,7 +738,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -748,11 +748,11 @@
                     "fileType": "xlsx",
                     "key": "6FB60FE9E548",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -774,7 +774,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -784,11 +784,11 @@
                     "fileType": "xlsx",
                     "key": "6FB60FE9E548",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -814,7 +814,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -824,11 +824,11 @@
                     "fileType": "pptx",
                     "key": "B6C57F1FC447",
                     "title": "Example Presentation Title.pptx",
-                    "url": "http://example.com/url-to-example-presentation.pptx"
+                    "url": "https://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "78e1e841",
                         "name": "John Smith"
@@ -850,7 +850,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -860,11 +860,11 @@
                     "fileType": "pptx",
                     "key": "B6C57F1FC447",
                     "title": "Example Presentation Title.pptx",
-                    "url": "http://example.com/url-to-example-presentation.pptx"
+                    "url": "https://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
                         "id": "F89d8069ba2b",
                         "name": "Kate Cage"
@@ -890,7 +890,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -900,11 +900,11 @@
                     "fileType": "docx",
                     "key": "491BD667CABA",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
+                    "url": "https://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -929,7 +929,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -939,11 +939,11 @@
                     "fileType": "docx",
                     "key": "491BD667CABA",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
+                    "url": "https://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -972,7 +972,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -982,11 +982,11 @@
                     "fileType": "xlsx",
                     "key": "DB1788E4AF4A",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1011,7 +1011,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1021,11 +1021,11 @@
                     "fileType": "xlsx",
                     "key": "DB1788E4AF4A",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1054,7 +1054,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1064,11 +1064,11 @@
                     "fileType": "pptx",
                     "key": "5664FFF42E4E",
                     "title": "Example Presentation Title.pptx",
-                    "url": "http://example.com/url-to-example-presentation.pptx"
+                    "url": "https://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1093,7 +1093,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1103,11 +1103,11 @@
                     "fileType": "pptx",
                     "key": "5664FFF42E4E",
                     "title": "Example Presentation Title.pptx",
-                    "url": "http://example.com/url-to-example-presentation.pptx"
+                    "url": "https://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "autosave": false
                     },
@@ -1136,7 +1136,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1146,23 +1146,23 @@
                     "fileType": "docx",
                     "key": "D97815D69205",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx"
+                    "url": "https://example.com/url-to-example-document.docx"
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
                             "info": "Some additional information",
-                            "logo": "http://example.com/logo-big.png",
+                            "logo": "https://example.com/logo-big.png",
                             "mail": "john@example.com",
                             "name": "John Smith and Co.",
                             "www": "example.com"
                         },
                         "logo": {
-                            "image": "http://example.com/logo.png",
-                            "url": "http://example.com"
+                            "image": "https://example.com/logo.png",
+                            "url": "https://example.com"
                         }
                     }
                 },
@@ -1186,7 +1186,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1196,23 +1196,23 @@
                     "fileType": "xlsx",
                     "key": "6CDE57CAF31F",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "http://example.com/url-to-example-spreadsheet.xlsx"
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
                             "info": "Some additional information",
-                            "logo": "http://example.com/logo-big.png",
+                            "logo": "https://example.com/logo-big.png",
                             "mail": "john@example.com",
                             "name": "John Smith and Co.",
                             "www": "example.com"
                         },
                         "logo": {
-                            "image": "http://example.com/logo.png",
-                            "url": "http://example.com"
+                            "image": "https://example.com/logo.png",
+                            "url": "https://example.com"
                         }
                     }
                 },
@@ -1236,7 +1236,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1246,23 +1246,23 @@
                     "fileType": "pptx",
                     "key": "E9B24523F469",
                     "title": "Example Presentation Title.pptx",
-                    "url": "http://example.com/url-to-example-presentation.pptx"
+                    "url": "https://example.com/url-to-example-presentation.pptx"
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
                         "customer": {
                             "address": "My City, 123a-45",
                             "info": "Some additional information",
-                            "logo": "http://example.com/logo-big.png",
+                            "logo": "https://example.com/logo-big.png",
                             "mail": "john@example.com",
                             "name": "John Smith and Co.",
                             "www": "example.com"
                         },
                         "logo": {
-                            "image": "http://example.com/logo.png",
-                            "url": "http://example.com"
+                            "image": "https://example.com/logo.png",
+                            "url": "https://example.com"
                         }
                     }
                 },
@@ -1286,7 +1286,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1296,7 +1296,7 @@
                     "fileType": "docx",
                     "key": "9B5D4A67A9A9",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx",
+                    "url": "https://example.com/url-to-example-document.docx",
                     "permissions": {
                         "edit": false,
                         "review": true
@@ -1304,7 +1304,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1327,7 +1327,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1337,7 +1337,7 @@
                     "fileType": "docx",
                     "key": "5C5D4CCA7674",
                     "title": "Example Document Title.docx",
-                    "url": "http://example.com/url-to-example-document.docx",
+                    "url": "https://example.com/url-to-example-document.docx",
                     "permissions": {
                         "comment": true,
                         "edit": false
@@ -1345,7 +1345,7 @@
                 },
                 "documentType": "text",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1368,7 +1368,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1378,7 +1378,7 @@
                     "fileType": "xlsx",
                     "key": "B62D0C4B9C09",
                     "title": "Example Spreadsheet Title.xlsx",
-                    "url": "http://example.com/url-to-example-spreadsheet.xlsx",
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx",
                     "permissions": {
                         "comment": true,
                         "edit": false
@@ -1386,7 +1386,7 @@
                 },
                 "documentType": "spreadsheet",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",
@@ -1409,7 +1409,7 @@
 &lt;/head&gt;
 &lt;body style="height: 100%; margin: 0;"&gt;
     &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
-    &lt;script type="text/javascript" src="http://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
 
     &lt;script type="text/javascript"&gt;
 
@@ -1419,7 +1419,7 @@
                     "fileType": "pptx",
                     "key": "B62D0C4B9C09",
                     "title": "Example Presentation Title.pptx",
-                    "url": "http://example.com/url-to-example-presentation.pptx",
+                    "url": "https://example.com/url-to-example-presentation.pptx",
                     "permissions": {
                         "comment": true,
                         "edit": false
@@ -1427,7 +1427,7 @@
                 },
                 "documentType": "presentation",
                 "editorConfig": {
-                    "callbackUrl": "http://example.com/url-to-callback.ashx",
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
                 },
                 "height": "100%",

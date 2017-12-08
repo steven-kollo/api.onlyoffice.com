@@ -53,12 +53,12 @@
 #define OFFICESTUDIO_FILE_DOCUMENT_DOCX     OFFICESTUDIO_FILE_DOCUMENT + 0x0001
 NSDoctRenderer::CDocBuilder::Initialize();
 NSDoctRenderer::CDocBuilder oBuilder;
-oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, L"D:/TESTFILES/document.docx");
+oBuilder.SaveFile(OFFICESTUDIO_FILE_DOCUMENT_DOCX, L"document.docx");
 NSDoctRenderer::CDocBuilder::Dispose();
 </pre>
 <h4 class="header-gray">.docbuilder</h4>
 <pre>
-builder.SaveFile("docx", "D:/TESTFILES/document.docx");
+builder.SaveFile("docx", "document.docx");
 </pre>
 
 <h2 id="SaveImage">Saving into images</h2>
@@ -74,7 +74,7 @@ builder.SaveFile("docx", "D:/TESTFILES/document.docx");
 <h2>Example</h2>
 <h4 class="header-gray">C++</h4>
 <pre>
-oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"D:/TESTFILES/thumbnail.png", "&lt;m_oThumbnail&gt;&lt;format&gt;4&lt;/format&gt;&lt;aspect&gt;1&lt;/aspect&gt;&lt;first&gt;false&lt;/first&gt;&lt;width&gt;1000&lt;/width&gt;&lt;height&gt;1000&lt;/height&gt;&lt;/m_oThumbnail&gt;");
+oBuilder.SaveFile(OFFICESTUDIO_FILE_IMAGE, L"thumbnail.png", "&lt;m_oThumbnail&gt;&lt;format&gt;4&lt;/format&gt;&lt;aspect&gt;1&lt;/aspect&gt;&lt;first&gt;false&lt;/first&gt;&lt;width&gt;1000&lt;/width&gt;&lt;height&gt;1000&lt;/height&gt;&lt;/m_oThumbnail&gt;");
 </pre>
 <h4 class="header-gray">.docbuilder</h4>
 <pre>

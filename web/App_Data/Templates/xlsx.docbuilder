@@ -8,5 +8,5 @@ oWorksheet.GetRange('A5').SetValue('This spreadsheet proves that ONLYOFFICE Docu
 oWorksheet.GetRange('A7').SetValue('The answer was viewed by ${Company} ${Title} ${Name}, checked and considered to be correct.');
 oWorksheet.GetRange('A9').SetValue('Best regards,');
 oWorksheet.GetRange('A10').SetValue('ONLYOFFICE Document Builder Team');
-builder.SaveFile("xlsx", "${OutputFilePath}");
+builder.SaveFile("xlsx", "Sample.xlsx");
 builder.CloseFile();

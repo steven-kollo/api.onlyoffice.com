@@ -13,7 +13,7 @@
 
 <h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="http://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="http://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="https://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
@@ -22,7 +22,7 @@
         <div class="commandline">\curl -sSL https://get.rvm.io | bash -s stable --ruby</div>
     </li>
     <li>Download the archive with the Ruby Example and unpack the archive:
-        <div class="commandline">wget "http://api.onlyoffice.com/app_data/editor/Ruby%20Example.zip"</div>
+        <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Ruby%20Example.zip"</div>
         <div class="commandline">unzip Ruby\ Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
@@ -36,10 +36,9 @@
         <p>Edit the following lines:</p>
 
         <pre>
-Rails.configuration.urlStorage="http://documentserver/FileUploader.ashx"
-Rails.configuration.urlConverter="http://documentserver/ConvertService.ashx"
-Rails.configuration.urlApi="http://documentserver/web-apps/apps/api/documents/api.js"
-Rails.configuration.urlPreloader="http://documentserver/web-apps/apps/api/documents/cache-scripts.html"
+Rails.configuration.urlConverter="https://documentserver/ConvertService.ashx"
+Rails.configuration.urlApi="https://documentserver/web-apps/apps/api/documents/api.js"
+Rails.configuration.urlPreloader="https://documentserver/web-apps/apps/api/documents/cache-scripts.html"
 </pre>
 
         <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>

@@ -48,10 +48,10 @@
 <pre>
 NSDoctRenderer::CDocBuilder::Initialize();
 NSDoctRenderer::CDocBuilder oBuilder;
-oBuilder.OpenFile(L"D:/DocBuilder/text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;");
+oBuilder.OpenFile(L"text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;");
 NSDoctRenderer::CDocBuilder::Dispose();
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>
-builder.OpenFile("D:/DocBuilder/text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;");
+builder.OpenFile("text-document.csv", "&lt;m_nCsvTxtEncoding&gt;46&lt;/m_nCsvTxtEncoding&gt;&lt;m_nCsvDelimiter&gt;4&lt;/m_nCsvDelimiter&gt;");
 </pre>

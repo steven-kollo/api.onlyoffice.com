@@ -47,7 +47,7 @@
             <td id="url" class="copy-link">url<span class="required">*</span></td>
             <td>Defines the URL where the source viewed or edited document is stored.</td>
             <td>string</td>
-            <td>"http://example.com/url-to-example-document.docx"</td>
+            <td>"https://example.com/url-to-example-document.docx"</td>
         </tr>
     </tbody>
 </table>
@@ -61,7 +61,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "title": "Example Document Title.docx",
-        "url": "http://example.com/url-to-example-document.docx",
+        "url": "https://example.com/url-to-example-document.docx",
     },
     ...
 });

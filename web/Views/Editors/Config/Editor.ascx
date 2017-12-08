@@ -29,14 +29,14 @@
             <td id="callbackUrl" class="copy-link">callbackUrl<span class="required">*</span></td>
             <td>Specifies URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server).</td>
             <td>string</td>
-            <td>"http://example.com/url-to-callback.ashx"</td>
+            <td>"https://example.com/url-to-callback.ashx"</td>
         </tr>
         <tr class="tablerow">
             <td id="createUrl" class="copy-link">createUrl</td>
             <td>Defines the URL of the document where it will be created and available after creation. If not specified, there will be no creation button.
             </td>
             <td>string</td>
-            <td>"http://example.com/url-to-create-document/"</td>
+            <td>"https://example.com/url-to-create-document/"</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -78,7 +78,7 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "http://example.com/exampledocument1.docx".
+                        <b>example</b>: "https://example.com/exampledocument1.docx".
                     </li>
                 </ul>
             </td>
@@ -135,20 +135,20 @@
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
-        "callbackUrl": "http://example.com/url-to-callback.ashx",
-        "createUrl": "http://example.com/url-to-create-document/",
+        "callbackUrl": "https://example.com/url-to-callback.ashx",
+        "createUrl": "https://example.com/url-to-create-document/",
         "lang": "en-US",
         "mode": "edit",
         "recent": [
             {
                 "folder": "Example Files",
                 "title": "exampledocument1.docx",
-                "url": "http://example.com/exampledocument1.docx"
+                "url": "https://example.com/exampledocument1.docx"
             },
             {
                 "folder": "Example Files",
                 "title": "exampledocument2.docx",
-                "url": "http://example.com/exampledocument2.docx"
+                "url": "https://example.com/exampledocument2.docx"
             },
             ...
         ],

@@ -13,7 +13,7 @@
     <div class="header-gray">What is the date/time format used in the response to the requests?</div>
     <p>
         The response to the requests use the Roundtrip format: 2008-04-10T06:30:00.0000000-07:00.
-        <br />Where '-07:00' is UTC offset which is set on the portal.
+        <br />Where <em>-07:00</em> is UTC offset which is set on the portal.
         In case the portal uses UTC time without any offset the date/time format in the response will be the following:
         2008-04-10T06:30:00.0000000Z.
         <br />As for the request, only date can be send in it: 2008-04-10
@@ -25,7 +25,7 @@
 
     <div class="header-gray">How to get json or xml format?</div>
     <p>
-        You can get json or xml format adding '.json' or '.xml' to the request or pointing the request content-type in application/json or text/xml.
+        You can get json or xml format adding <em>.json</em> or <em>.xml</em> to the request or pointing the request content-type in application/json or text/xml.
         <br />E.g.:
         <a href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "portals") %>">api/2.0/people.json</a> 
     </p>
