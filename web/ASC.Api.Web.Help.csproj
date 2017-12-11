@@ -1111,6 +1111,14 @@
     <Content Include="Views\Plugin\Code.aspx" />
     <Content Include="Views\Plugin\Button.aspx" />
     <Content Include="Views\Plugin\example.aspx" />
+    <Content Include="Views\Plugin\Executemethod.aspx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
+    <Content Include="Views\Plugin\Executemethod\default.ascx" />
+    <Content Include="Views\Plugin\Executemethod\getallcontentcontrols.ascx" />
+    <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrol.ascx" />
+    <Content Include="Views\Plugin\Executemethod\insertandreplacecontentcontrols.ascx" />
+    <Content Include="Views\Plugin\Executemethod\removecontentcontrol.ascx" />
+    <Content Include="Views\Plugin\Executemethod\removecontentcontrols.ascx" />
     <Content Include="Views\Plugin\Info\Recalculate.ascx" />
     <Content Include="Views\Plugin\Info\ImgSrc.ascx" />
     <Content Include="Views\Plugin\Info\Data.ascx" />
@@ -1126,6 +1134,7 @@
     <Content Include="Views\Plugin\Info.aspx" />
     <Content Include="Views\Plugin\Init.aspx" />
     <Content Include="Views\Plugin\ExecuteCommand.aspx" />
+    <Content Include="Views\Plugin\onmethodreturn.aspx" />
     <Content Include="Views\Plugin\Plugin.aspx" />
     <Content Include="Views\Plugin\IndexHtml.aspx" />
     <Content Include="Views\Plugin\Structure.aspx" />
@@ -1237,7 +1246,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58608</DevelopmentServerPort>
+          <DevelopmentServerPort>64688</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
