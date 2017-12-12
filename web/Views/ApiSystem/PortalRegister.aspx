@@ -109,7 +109,7 @@
     <div class="header-gray">Example Response</div>
     <pre>
 {
-    "reference" : "https://example.com/confirm.aspx",
+    "reference": "https://example.com/confirm.aspx",
     "tenant": {
         "created": "2010-07-07T15:46:00",
         "domain": "example.com",

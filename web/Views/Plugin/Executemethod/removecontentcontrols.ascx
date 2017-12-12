@@ -16,7 +16,15 @@ window.Asc.plugin.executeMethod("RemoveContentControls", [obj]);
 </pre>
 <p>Where <em>obj</em> is a JSON array of the following form:</p>
 <pre>
-[{"InternalId": "id"}, {"InternalId": "id2"}, {...}]
+[
+    {
+        "InternalId": "id"
+    },
+    {
+        "InternalId": "id2"
+    },
+    ...
+]
 </pre>
 
 <div class="header-gray">Returns</div>

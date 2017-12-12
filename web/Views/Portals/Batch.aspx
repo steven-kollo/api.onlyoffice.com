@@ -48,8 +48,14 @@
 
 <pre>
 batch = [
-    {"method": "GET", "relativeUrl":"/api/2.0/people/@self"}, 
-    {"method": "GET", "relativeUrl": "/api/2.0/group/@self"}
+    {
+        "method": "GET",
+        "relativeUrl": "/api/2.0/people/@self"
+    },
+    {
+        "method": "GET",
+        "relativeUrl": "/api/2.0/group/@self"
+    }
 ]
 </pre>
 
@@ -66,11 +72,11 @@ batch = [
 
 <pre>
 {
-    "count":1,
-    "startIndex":0,
-    "status":0,
-    "statusCode":200,
-    "response":[
+    "count": 1,
+    "startIndex": 0,
+    "status": 0,
+    "statusCode": 200,
+    "response": [
         {
             "status": 200,
             "headers": {
@@ -79,7 +85,7 @@ batch = [
                 "cache-Control": "private, max-age=0",
                 "content-Type": "application/json; charset=UTF-8"
             },
-            "data": "{\"count\":1, \"startIndex\":0, \"status\":0, \"statusCode\":200, \"response\" : {\"id\":\"293bb997-28d8-4be0-8547-6eb50add1f3c\", \"userName\":\"Mike.Zanyatski\", \"firstName\":\"Mike\", \"lastName\":\"Zanyatski\", \"email\":\"mike@gmail.com\", \"birthday\":\"1974-05-16T05:00:00.0000000+05:00\", \"sex\":\"male\", \"status\":1, \"terminated\":null, \"department\":\"Sample group\", \"workFrom\":\"2007-10-09T05:00:00.0000000+05:00\", \"location\":\"\", \"notes\":\"\", \"displayName\":\"Mike Zanyatski\", \"title\":\"Manager\", \"contacts\":[], \"groups\":[{\"id\":\"eeb47881-6330-4b6d-8a32-82366d4caf27\", \"name\":\"Sample group\",\"manager\":\"Jake.Zazhitski\"}], \"avatarMedium\":\"/data/0/userphotos/eeb47881-6330-4b6d-8a32-82366d4caf27_size_48-48.jpeg\", \"avatar\":\"/data/0/userphotos/eeb47881-6330-4b6d-8a32-82366d4caf27_size_82-82.jpeg\", \"avatarSmall\":\"/data/0/userphotos/eeb47881-6330-4b6d-8a32-82366d4caf27_size_32-32.jpeg\"}}"
+            "data": "{\"count\": 1, \"startIndex\": 0, \"status\": 0, \"statusCode\": 200, \"response\": {\"id\": \"293bb997-28d8-4be0-8547-6eb50add1f3c\", \"userName\": \"Mike.Zanyatski\", \"firstName\": \"Mike\", \"lastName\": \"Zanyatski\", \"email\": \"mike@gmail.com\", \"birthday\": \"1974-05-16T05:00:00.0000000+05:00\", \"sex\": \"male\", \"status\": 1, \"terminated\": null, \"department\": \"Sample group\", \"workFrom\": \"2007-10-09T05:00:00.0000000+05:00\", \"location\": \"\", \"notes\": \"\", \"displayName\": \"Mike Zanyatski\", \"title\": \"Manager\", \"contacts\": [], \"groups\": [{\"id\": \"eeb47881-6330-4b6d-8a32-82366d4caf27\", \"name\": \"Sample group\", \"manager\": \"Jake.Zazhitski\"}], \"avatarMedium\": \"/data/0/userphotos/eeb47881-6330-4b6d-8a32-82366d4caf27_size_48-48.jpeg\", \"avatar\": \"/data/0/userphotos/eeb47881-6330-4b6d-8a32-82366d4caf27_size_82-82.jpeg\", \"avatarSmall\": \"/data/0/userphotos/eeb47881-6330-4b6d-8a32-82366d4caf27_size_32-32.jpeg\"}}"
         }
     ]
 }
@@ -101,12 +107,12 @@ batch = [
 batch = [
     {
         "method": "GET",
-        "relativeUrl":"/api/2.0/people/@self"
-    }, 
+        "relativeUrl": "/api/2.0/people/@self"
+    },
     {
         "method": "POST",
         "relativeUrl": "/api/2.0/people/{userid}/contacts", 
-        "body":"contacts[0].Type=skype&amp;contacts[0].Value=skypename&amp;contacts[1].Type=msn&amp;contacts[1].Value=msn_login"
+        "body": "contacts[0].Type=skype&amp;contacts[0].Value=skypename&amp;contacts[1].Type=msn&amp;contacts[1].Value=msn_login"
     }
 ]
 </pre>

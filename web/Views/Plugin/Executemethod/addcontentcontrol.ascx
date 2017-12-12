@@ -20,7 +20,11 @@ window.Asc.plugin.executeMethod("AddContentControl", [wrap, obj]);
     <li><em>obj</em> is a JSON object of the following form:</li>
 </ul>
 <pre>
-{"Id" : 0, "Lock" : 0, "Tag" : "{tag}"}
+{
+    "Id" : 0,
+    "Lock" : 0,
+    "Tag" : "{tag}"
+}
 </pre>
 <p>The <em>obj</em> object has the values that can be the following:</p>
 <ul>
@@ -64,7 +68,12 @@ window.Asc.plugin.executeMethod("AddContentControl", [wrap, obj]);
 
 <p>The method returns a JSON object containing the data about the created content control in the following form (JSON):</p>
 <pre>
-{Tag: "{tag}", Id: 0, Lock: 0, InternalId: "1_713"}
+{
+    "Tag": "{tag}",
+    "Id": 0,
+    "Lock": 0,
+    "InternalId": "1_713"
+}
 </pre>
 
 <%--<div class="header-gray">Example</div>

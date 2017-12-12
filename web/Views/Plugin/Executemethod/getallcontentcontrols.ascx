@@ -19,7 +19,14 @@ window.Asc.plugin.executeMethod("GetAllContentControls");
 
 <p>The method returns the data in the following form (JSON):</p>
 <pre>
-[{"Tag":"Document","Id":0,"Lock":0,"InternalId":"1_713"}]
+[
+    {
+        "Tag": "Document",
+        "Id": 0,
+        "Lock": 0,
+        "InternalId": "1_713"
+    }
+]
 </pre>
 
 <%--<div class="header-gray">Example</div>
