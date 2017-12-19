@@ -43,6 +43,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Button",
                 "Code",
                 "Config",
+                "callCommand",
                 "ExecuteCommand",
                 "executemethod",
                 "executemethod/insertandreplacecontentcontrols",
@@ -70,6 +71,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OnExternalMouseUp",
                 "onmethodreturn",
                 "Plugin",
+                "scope",
                 "Structure",
             };
 
@@ -142,6 +144,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult callCommand()
+        {
+            return View();
+        }
+
         public ActionResult ExecuteCommand()
         {
             return View();
@@ -200,6 +207,10 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult scope()
+        {
+            return View();
+        }
         public ActionResult Structure()
         {
             return View();

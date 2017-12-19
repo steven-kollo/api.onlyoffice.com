@@ -17,7 +17,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Used to send the data back to the editor.</p>
+    <p class="dscr">Used to send the data back to the editor. This method is mainly used to work with the OLE objects and is retained for the usage with text for the compatibility with the previous plugin versions.</p>
 
     <p>The second parameter is the JavaScript code for work with <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a>, which allows the plugin to send structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.).</p>
 
@@ -61,20 +61,6 @@
 
     <p>When you create/edit the objects, you can pass their properties to the <a href="<%= Url.Action("info") %>">window.Asc.plugin.info</a> object which is responsible for how the object looks like.</p>
 
-    <div class="header-gray">Example text</div>
-
-    <pre>
-window.Asc.plugin.init = function () {
-    var sScript = 'var oDocument = Api.GetDocument();';
-    sScript += 'oDocument.CreateNewHistoryPoint();';
-    sScript += 'oParagraph = Api.CreateParagraph();';
-    sScript += 'oParagraph.AddText(\'Hello word!\');';
-    sScript += 'oDocument.InsertContent([oParagraph]);';
-    window.Asc.plugin.info.recalculate = true;
-    this.executeCommand("close", sScript);
-};
-</pre>
-
     <div class="header-gray">Example OLE object</div>
 
     <pre>
@@ -91,4 +77,19 @@ window.Asc.plugin.button = function (id) {
     this.executeCommand("close", _code);
 };
 </pre>
+
+    <div class="header-gray">Example text (not used but retained for compatibility reason)</div>
+
+    <pre>
+window.Asc.plugin.init = function () {
+    var sScript = 'var oDocument = Api.GetDocument();';
+    sScript += 'oDocument.CreateNewHistoryPoint();';
+    sScript += 'oParagraph = Api.CreateParagraph();';
+    sScript += 'oParagraph.AddText(\'Hello word!\');';
+    sScript += 'oDocument.InsertContent([oParagraph]);';
+    window.Asc.plugin.info.recalculate = true;
+    this.executeCommand("close", sScript);
+};
+</pre>
+
 </asp:Content>

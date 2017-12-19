@@ -30,6 +30,9 @@
                         <a href="<%= Url.Action("button") %>">button</a>
                     </li>
                     <li>
+                        <a href="<%= Url.Action("callcommand") %>">callCommand</a>
+                    </li>
+                    <li>
                         <a href="<%= Url.Action("executecommand") %>">executeCommand</a>
                     </li>
                     <li>
@@ -100,6 +103,9 @@
                         <a href="<%= Url.Action("onmethodreturn") %>">onMethodReturn</a>
                     </li>
                 </ul>
+            </li>
+            <li>
+                <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
             </li>
         </ul>
     </li>

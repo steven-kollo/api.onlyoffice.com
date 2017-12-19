@@ -1133,9 +1133,11 @@
     <Content Include="Views\Plugin\OnExternalMouseUp.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
     <Content Include="Views\Plugin\Init.aspx" />
+    <Content Include="Views\Plugin\callCommand.ascx" />
     <Content Include="Views\Plugin\ExecuteCommand.aspx" />
     <Content Include="Views\Plugin\onmethodreturn.aspx" />
     <Content Include="Views\Plugin\Plugin.aspx" />
+    <Content Include="Views\Plugin\scope.aspx" />
     <Content Include="Views\Plugin\IndexHtml.aspx" />
     <Content Include="Views\Plugin\Structure.aspx" />
     <Content Include="Views\Plugin\Installation.aspx" />
