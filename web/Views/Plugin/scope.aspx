@@ -16,9 +16,9 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">The object is used to pass any additional data (objects, parameters, variables, etc.) to the <a href="<%= Url.Action("callCommand") %>">callCommand</a> method, which is executed in its own isolated context.</p>
+    <p class="dscr">The object is used to pass any additional data (objects, parameters, variables, etc.) to the <a href="<%= Url.Action("callCommand") %>">window.Asc.plugin.callCommand</a> method, which is executed in its own isolated context.</p>
     
-    <div class="note">The functions cannot be passed to the <a href="<%= Url.Action("callCommand") %>">callCommand</a> method using the <em>Asc.scope</em> object.</div>
+    <div class="note">The functions cannot be passed to the <a href="<%= Url.Action("callCommand") %>">window.Asc.plugin.callCommand</a> method using the <em>Asc.scope</em> object.</div>
 
     <div class="header-gray">Example</div>
 

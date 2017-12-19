@@ -17,7 +17,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">The <em>window.Asc.plugin</em> object method that allows to return the result of the previously executed method. It can be used to return data after the execution of the <a href="<%= Url.Action("executemethod") %>">executeMethod(...)</a> method.</p>
+    <p class="dscr">The <em>window.Asc.plugin</em> object method that allows to return the result of the previously executed method. It can be used to return data after the execution of the <a href="<%= Url.Action("executemethod") %>">window.Asc.plugin.executeMethod(...)</a> method.</p>
 
     <div class="header-gray">Usage</div>
     <p>This method should be used in the following way:</p>

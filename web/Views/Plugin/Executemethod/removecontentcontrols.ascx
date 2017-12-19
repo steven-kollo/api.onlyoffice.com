@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod(RemoveContentControls, [args])</span>
+    <span class="hdr">window.Asc.plugin.executeMethod("RemoveContentControls", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>

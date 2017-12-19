@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod(GetCurrentContentControl)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod("GetCurrentContentControl", callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
