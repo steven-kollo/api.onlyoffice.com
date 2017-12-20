@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod(GetAllContentControls)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod("GetAllContentControls", callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
@@ -19,7 +19,14 @@ window.Asc.plugin.executeMethod("GetAllContentControls");
 
 <p>The method returns the data in the following form (JSON):</p>
 <pre>
-[{"Tag":"Document","Id":0,"Lock":0,"InternalId":"1_713"}]
+[
+    {
+        "Tag": "Document",
+        "Id": 0,
+        "Lock": 0,
+        "InternalId": "1_713"
+    }
+]
 </pre>
 
 <%--<div class="header-gray">Example</div>

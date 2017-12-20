@@ -30,10 +30,13 @@
                         <a href="<%= Url.Action("button") %>">button</a>
                     </li>
                     <li>
+                        <a href="<%= Url.Action("callcommand") %>">callCommand</a>
+                    </li>
+                    <li>
                         <a href="<%= Url.Action("executecommand") %>">executeCommand</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("executemethod/") %>">executeMethod</a>
+                        <a href="<%= Url.Action("executemethod") %>">executeMethod</a>
                         <ul>
                             <li>
                                 <a href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
@@ -56,7 +59,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("info/") %>">info object</a>
+                        <a href="<%= Url.Action("info") %>">info object</a>
                         <ul>
                             <li>
                                 <a href="<%= Url.Action("info/data") %>">data</a>
@@ -100,6 +103,9 @@
                         <a href="<%= Url.Action("onmethodreturn") %>">onMethodReturn</a>
                     </li>
                 </ul>
+            </li>
+            <li>
+                <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
             </li>
         </ul>
     </li>

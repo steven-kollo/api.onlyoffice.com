@@ -17,17 +17,19 @@
     <p class="dscr">To understand how the plugins work and how they can be written and added to document editors, please see the example of the <em>helloworld.js</em> plugin below:</p>
 
     <pre>
-(function (window, undefined) {
-    window.Asc.plugin.init = function () {
-        var sScript = 'var oDocument = Api.GetDocument();';
-        sScript += 'oDocument.CreateNewHistoryPoint();';
-        sScript += 'oParagraph = Api.CreateParagraph();';
-        sScript += 'oParagraph.AddText(\'Hello world!\');';
-        sScript += 'oDocument.InsertContent([oParagraph]);';
-        window.Asc.plugin.info.recalculate = true;
-        this.executeCommand("close", sScript);
+(function(window, undefined){
+    var text = "Hello world!";
+    window.Asc.plugin.init = function() {
+        Asc.scope.text = text; // export variable to plugin scope
+        this.callCommand(function() {
+            var oDocument = Api.GetDocument();
+            var oParagraph = Api.CreateParagraph();
+            oParagraph.AddText(Asc.scope.text); // or oParagraph.AddText(scope.text);
+            oDocument.InsertContent([oParagraph]);
+        }, true);
     };
-    window.Asc.plugin.button = function (id) {
+    window.Asc.plugin.button = function(id)
+    {
     };
 })(window, undefined);
 </pre>

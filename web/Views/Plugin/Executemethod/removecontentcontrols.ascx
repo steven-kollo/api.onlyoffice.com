@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod(RemoveContentControls, [args])</span>
+    <span class="hdr">window.Asc.plugin.executeMethod("RemoveContentControls", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
@@ -16,7 +16,15 @@ window.Asc.plugin.executeMethod("RemoveContentControls", [obj]);
 </pre>
 <p>Where <em>obj</em> is a JSON array of the following form:</p>
 <pre>
-[{"InternalId": "id"}, {"InternalId": "id2"}, {...}]
+[
+    {
+        "InternalId": "id"
+    },
+    {
+        "InternalId": "id2"
+    },
+    ...
+]
 </pre>
 
 <div class="header-gray">Returns</div>

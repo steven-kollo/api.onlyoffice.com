@@ -2,12 +2,12 @@
 
 <h1>
         <a class="up" href="<%= Url.Action("plugin") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod(Name, [args])</span>
+    <span class="hdr">window.Asc.plugin.executeMethod(Name, [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">The <em>window.Asc.plugin</em> object method that allows to execute certain editor methods using the plugin.</p>
+<p class="dscr">The <em>window.Asc.plugin</em> object method that allows to execute certain editor methods using the plugin. The <em>Name</em> is the name of the specific method which must be executed, <em>[args]</em> are the arguments the used method has (in case it has any), and the <em>callback</em> is the result the method returns. The latter is an optional parameter, in case it is missing, the <a href="<%= Url.Action("onmethodreturn") %>">window.Asc.plugin.onMethodReturn</a> will be used to return the method execution result.</p>
 
 <p>See the available <em>window.Asc.plugin.executeMethod</em> methods below to find more on each of them.</p>
 

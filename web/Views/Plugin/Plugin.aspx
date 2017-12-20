@@ -42,8 +42,9 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td><a href="<%= Url.Action("executecommand") %>">executeCommand</a></td>
-                <td>Used to send the data back to the editor.</td>
+                <td><a href="<%= Url.Action("callcommand") %>">callCommand</a>/<a href="<%= Url.Action("executecommand") %>">executeCommand</a></td>
+                <td>The <em>window.Asc.plugin.callCommand</em> method is used to send the data back to the editor. Replaced the <em>window.Asc.plugin.executeCommand</em> method when working with texts so that to simplify the syntax of the script you want to pass to the editors. The <em>window.Asc.plugin.executeCommand</em> method is now primarily used to work with OLE objects.
+                </td>
                 <td>function</td>
                 <td>required</td>
             </tr>
@@ -83,17 +84,19 @@
     <div class="header-gray">Example</div>
 
     <pre>
-(function (window, undefined) {
-    window.Asc.plugin.init = function () {
-        var sScript = 'var oDocument = Api.GetDocument();';
-        sScript += 'oDocument.CreateNewHistoryPoint();';
-        sScript += 'oParagraph = Api.CreateParagraph();';
-        sScript += 'oParagraph.AddText(\'Hello world!\');';
-        sScript += 'oDocument.InsertContent([oParagraph]);';
-        window.Asc.plugin.info.recalculate = true;
-        this.executeCommand("close", sScript);
+(function(window, undefined){
+    var text = "Hello world!";
+    window.Asc.plugin.init = function() {
+        Asc.scope.text = text;
+        this.callCommand(function() {
+            var oDocument = Api.GetDocument();
+            var oParagraph = Api.CreateParagraph();
+            oParagraph.AddText(Asc.scope.text);
+            oDocument.InsertContent([oParagraph]);
+        }, true);
     };
-    window.Asc.plugin.button = function (id) {
+    window.Asc.plugin.button = function(id)
+    {
     };
 })(window, undefined);
 </pre>

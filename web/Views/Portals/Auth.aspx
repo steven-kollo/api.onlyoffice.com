@@ -25,7 +25,10 @@ Host: yourportal.onlyoffice.com
 Content-Type: application/json
 Accept: application/json
 
-{"userName":"yourusername","password":"yourpassword"}
+{
+    "userName": "yourusername",
+    "password": "yourpassword"
+}
 </pre>
             <div class="note">Please note, that you have to enter your own portal address to the <em>Host: yourportal.onlyoffice.com</em> line instead of yourportal.onlyoffice.com address.</div>
 
@@ -35,13 +38,13 @@ HTTP/1.1 201 Created
 Cache-Control: private
 Content-Type: application/json; charset=utf-8
 {
-    "count" : 1,
+    "count": 1,
     "response": {
         "expires": "2010-07-07T17:06:03.5845502+03:00",
         "token": "sdjhfskjdhkqy739459234"
     },
-    "status" : 0,
-    "statusCode" : 201
+    "status": 0,
+    "statusCode": 201
 }
 </pre>
         </li>

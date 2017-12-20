@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod(InsertAndReplaceContentControls, [args])</span>
+    <span class="hdr">window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
@@ -17,13 +17,13 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [obj]);
 <p>Where <em>obj</em> is a JSON array:</p>
 <pre>
 [
-    {"Props" : 
-      {   
-        "Id" : Number,
-        "Tag" : "{String}",   
-        "Lock" : Number 
-      }, 
-    "Script" : "var oDocument = Api.GetDocument();var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');oDocument.InsertContent([oParagraph]);" 
+    {
+        "Props": {
+            "Id": Number,
+            "Tag": "{String}",
+            "Lock": Number 
+        },
+        "Script": "var oDocument = Api.GetDocument();var oParagraph = Api.CreateParagraph();oParagraph.AddText('Hello world!');oDocument.InsertContent([oParagraph]);" 
     }
 ]
 </pre>
@@ -74,13 +74,15 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [obj]);
 <div class="header-gray">Example 1</div>
 
 <pre>
-{"Url":"https://personal.onlyoffice.com/products/files/httphandlers/filehandler.ashx?action=view&fileid=1617658&version=0&doc=aEE1OEk0THZWakI4bC9Ydm1CaFdQaGRpOFdLMURzaUFkV3cvRFlXS1dUND0_IjE2MTc2NTgi0"}
+{
+    "Url": "https://example.com/script.docbuilder"
+}
 </pre>
 
 <div class="header-gray">Example 2</div>
 
 <pre>
-"Script" : "var oDocument = Api.GetDocument();
+"Script": "var oDocument = Api.GetDocument();
 var oParagraph=Api.CreateParagraph();
 oParagraph.AddText('Helloworld!');
 oDocument.InsertContent([oParagraph]);"
@@ -90,5 +92,12 @@ oDocument.InsertContent([oParagraph]);"
 
 <p>The method returns the data which the created content control contains (in JSON format)</p>
 <pre>
-[{"Tag":"Document","Id":0,"Lock":0,"InternalId":"1_713"}]
+[
+    {
+        "Tag": "Document",
+        "Id": 0,
+        "Lock": 0,
+        "InternalId": "1_713"
+    }
+]
 </pre>
