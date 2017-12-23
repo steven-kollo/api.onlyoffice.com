@@ -47,7 +47,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "ExecuteCommand",
                 "executemethod",
                 "executemethod/insertandreplacecontentcontrols",
-                "executemethod/getfields",
                 "executemethod/removecontentcontrols",
                 "executemethod/getallcontentcontrols",
                 "executemethod/addcontentcontrol",
