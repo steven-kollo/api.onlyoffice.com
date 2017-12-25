@@ -301,6 +301,9 @@
     <Content Include="Content\img\sprite.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
     <Content Include="Content\img\Video\plugin.png" />
+    <Content Include="Content\img\plugins\plugin-button.png" />
+    <Content Include="Content\img\plugins\plugin-manager.png" />
+    <Content Include="Content\img\plugins\remove-plugin-button.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
     <Content Include="robots.txt" />
