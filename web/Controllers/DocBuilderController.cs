@@ -724,8 +724,15 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 var actionString = action.ToLower();
                 var doc = new HtmlDocument();
-                var html = this.RenderView(actionString, new ViewDataDictionary());
-                doc.LoadHtml(html);
+                try
+                {
+                    var html = this.RenderView(actionString, new ViewDataDictionary());
+                    doc.LoadHtml(html);
+                }
+                catch (Exception e)
+                {
+                    LogManager.GetLogger("ASC.Api").Error(e);
+                }
                 var content = doc.DocumentNode;
                 if (content.SelectSingleNode("html") != null)
                 {
