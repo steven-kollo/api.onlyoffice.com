@@ -37,22 +37,21 @@ namespace ASC.Api.Web.Help.Helpers
     [DataContract(Name = "EditorConfiguration", Namespace = "")]
     public class Config
     {
-        public static string Serialize(Config config, bool sign = false)
+        public static string Serialize(Config config)
         {
-            if (!sign || string.IsNullOrEmpty(FileUtility.SignatureSecret))
+            if (!string.IsNullOrEmpty(FileUtility.SignatureSecret))
             {
-                using (var ms = new MemoryStream())
-                {
-                    var serializer = new DataContractJsonSerializer(typeof (Config));
-                    serializer.WriteObject(ms, config);
-                    ms.Seek(0, SeekOrigin.Begin);
-                    return Encoding.UTF8.GetString(ms.GetBuffer(), 0, (int)ms.Length);
-                }
+                JsonWebToken.JsonSerializer = new DocumentService.JwtSerializer();
+                config.Token = JsonWebToken.Encode(config, FileUtility.SignatureSecret, JwtHashAlgorithm.HS256);
             }
 
-            config.Token = JsonWebToken.Encode(config, FileUtility.SignatureSecret, JwtHashAlgorithm.HS256);
-
-            return Serialize(config);
+            using (var ms = new MemoryStream())
+            {
+                var serializer = new DataContractJsonSerializer(typeof (Config));
+                serializer.WriteObject(ms, config);
+                ms.Seek(0, SeekOrigin.Begin);
+                return Encoding.UTF8.GetString(ms.GetBuffer(), 0, (int)ms.Length);
+            }
         }
 
 
