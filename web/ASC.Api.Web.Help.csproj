@@ -266,6 +266,7 @@
     <Content Include="Content\img\Editor\e-error0.png" />
     <Content Include="Content\img\Editor\e-key.png" />
     <Content Include="Content\img\Editor\embedded.png" />
+    <Content Include="Content\img\Editor\history_open.png" />
     <Content Include="Content\img\Editor\info.png" />
     <Content Include="Content\img\Editor\owncloud-local.jpg" />
     <Content Include="Content\img\Editor\owncloud-public.jpg" />
