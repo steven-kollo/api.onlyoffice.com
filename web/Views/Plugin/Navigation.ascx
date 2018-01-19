@@ -116,3 +116,18 @@
         <a href="<%= Url.Action("example") %>">Plugin example</a>
     </li>
 </ul>
+<div class="treeheader">Macros</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("macros") %>">ONLYOFFICE macros</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("macros/writing") %>">Writing macros</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("macros/convertingvba") %>">Converting macros</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("macros/samples") %>">Macro samples</a>
+    </li>
+</ul>

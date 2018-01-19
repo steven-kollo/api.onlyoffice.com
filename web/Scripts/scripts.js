@@ -193,3 +193,8 @@ $(function() {
         }
     });
 });
+$(document).ready(function () {
+    $(".spoiler_heading").on("click", function () {
+        $(this).next(".spoiler_code").slideToggle("fast");
+    });
+});

@@ -293,6 +293,7 @@
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
     <Content Include="Content\img\plugin.png" />
+    <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\portals.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
@@ -1133,6 +1134,7 @@
     <Content Include="Views\Plugin\Info\Guid.ascx" />
     <Content Include="Views\Plugin\Info\EditorType.ascx" />
     <Content Include="Views\Plugin\Info\Default.ascx" />
+    <Content Include="Views\Plugin\Macros\default.ascx" />
     <Content Include="Views\Plugin\OnExternalMouseUp.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
     <Content Include="Views\Plugin\Init.aspx" />
@@ -1181,7 +1183,10 @@
     <Content Include="Views\Editors\Basic.aspx" />
     <Content Include="Views\Editors\HowItWorks.aspx" />
     <Content Include="Views\Editors\Navigation.ascx" />
-    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Plugin\Macros\ConvertingVBA.ascx" />
+    <Content Include="Views\Plugin\Macros\Samples.ascx" />
+    <Content Include="Views\Plugin\Macros\Writing.ascx" />
+    <Content Include="Views\Plugin\Macros.aspx" />
     <Content Include="Views\Portals\Basic.aspx" />
     <Content Include="Views\Portals\Batch.aspx" />
     <Content Include="Views\Portals\Faq.aspx" />
