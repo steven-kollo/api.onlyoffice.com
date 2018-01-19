@@ -1,4 +1,16 @@
-﻿    <h1>
+﻿<%@  Page
+    Title=""
+    Language="C#"
+    MasterPageFile="~/Views/Shared/Site.Master"
+    Inherits="System.Web.Mvc.ViewPage"
+    ContentType="text/html" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    ONLYOFFICE macros
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <h1>
         <span class="hdr">ONLYOFFICE macros</span>
     </h1>
 
@@ -29,3 +41,4 @@
 
     <p>You can also rename your macro, to distinguish it from the other ones in case they are used in the same document, or delete the unnecessary ones.</p>
 
+</asp:Content>

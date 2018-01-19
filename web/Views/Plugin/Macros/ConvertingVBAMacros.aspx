@@ -1,4 +1,16 @@
-﻿    <h1>
+﻿<%@  Page
+    Title=""
+    Language="C#"
+    MasterPageFile="~/Views/Shared/Site.Master"
+    Inherits="System.Web.Mvc.ViewPage"
+    ContentType="text/html" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Converting MS VBA macros
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <h1>
         <span class="hdr">Converting MS VBA macros</span>
     </h1>
 
@@ -53,3 +65,4 @@ End Sub</pre>
 })();</pre>
 
     <p>The same way any other Visual Basic for Applications script can be converted into JavaScript code compatible with ONLYOFFICE macros. In future we hope to add a converter to our editors which will allow to convert the macros automatically.</p>
+</asp:Content>

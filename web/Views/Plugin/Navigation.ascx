@@ -122,12 +122,12 @@
         <a href="<%= Url.Action("macros") %>">ONLYOFFICE macros</a>
     </li>
     <li>
-        <a href="<%= Url.Action("macros/writing") %>">Writing macros</a>
+        <a href="<%= Url.Action("writingmacros") %>">Writing macros</a>
     </li>
     <li>
-        <a href="<%= Url.Action("macros/convertingvba") %>">Converting macros</a>
+        <a href="<%= Url.Action("convertingvbamacros") %>">Converting macros</a>
     </li>
     <li>
-        <a href="<%= Url.Action("macros/samples") %>">Macro samples</a>
+        <a href="<%= Url.Action("macrosamples") %>">Macro samples</a>
     </li>
 </ul>

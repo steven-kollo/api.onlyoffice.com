@@ -1,4 +1,15 @@
-﻿<%@  Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@  Page
+    Title=""
+    Language="C#"
+    MasterPageFile="~/Views/Shared/Site.Master"
+    Inherits="System.Web.Mvc.ViewPage"
+    ContentType="text/html" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Some useful samples of macros
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 <h1>
         <span class="hdr">Some useful samples of macros</span>
     </h1>
@@ -98,3 +109,4 @@ End Sub</pre>
     End With
 End Sub</pre>
     </div>
+</asp:Content>

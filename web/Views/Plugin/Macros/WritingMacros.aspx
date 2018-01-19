@@ -1,4 +1,16 @@
-﻿    <h1>
+﻿<%@  Page
+    Title=""
+    Language="C#"
+    MasterPageFile="~/Views/Shared/Site.Master"
+    Inherits="System.Web.Mvc.ViewPage"
+    ContentType="text/html" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+    Writing your own macros
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <h1>
         <span class="hdr">Writing your own macros</span>
     </h1>
 
@@ -49,3 +61,4 @@
 
     <p>Paste the code above to the macros window and click <b>Run</b>. The table rows from 1 to 200 will be colored alternately in less than a second.</p>
 
+</asp:Content>

@@ -73,7 +73,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Plugin",
                 "scope",
                 "Structure",
-                "Macros",
+                "macros/Macros",
                 "macros/Writing",
                 "macros/ConvertingVBA",
                 "macros/Samples",
@@ -227,14 +227,26 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Macros(string catchall)
+        public ActionResult Macros()
         {
-            if (!_actionMap.Contains("macros/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("Macros", (object)catchall);
+            return View("Macros/Macros");
         }
+
+        public ActionResult ConvertingVBAMacros()
+        {
+            return View("Macros/ConvertingVBAMacros");
+        }
+
+        public ActionResult MacroSamples()
+        {
+            return View("Macros/MacroSamples");
+        }
+
+        public ActionResult WritingMacros()
+        {
+            return View("Macros/WritingMacros");
+        }
+
 
     }
 }
