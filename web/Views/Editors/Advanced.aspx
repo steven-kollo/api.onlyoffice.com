@@ -164,8 +164,8 @@ config = {
         "onError": onError,
         "onRequestEditRights": onRequestEditRights,
         "onRequestHistory": onRequestHistory,
-        "onRequestHistoryData": onRequestHistoryData,
-        "onRequestHistoryClose": onRequestHistoryClose
+        "onRequestHistoryClose": onRequestHistoryClose,
+        "onRequestHistoryData": onRequestHistoryData
     },
     "height": "100%",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M",

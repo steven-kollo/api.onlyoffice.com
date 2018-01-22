@@ -31,6 +31,7 @@ using System.Web.Mvc;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
 using HtmlAgilityPack;
+using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -47,7 +48,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "ExecuteCommand",
                 "executemethod",
                 "executemethod/insertandreplacecontentcontrols",
-                "executemethod/getfields",
                 "executemethod/removecontentcontrols",
                 "executemethod/getallcontentcontrols",
                 "executemethod/addcontentcontrol",
@@ -73,6 +73,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "Plugin",
                 "scope",
                 "Structure",
+                "macros/Macros",
+                "macros/Writing",
+                "macros/ConvertingVBA",
+                "macros/Samples",
             };
 
         public ActionResult Index()
@@ -94,8 +98,15 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 var actionString = action.ToLower();
                 var doc = new HtmlDocument();
-                var html = this.RenderView(actionString, new ViewDataDictionary());
-                doc.LoadHtml(html);
+                try
+                {
+                    var html = this.RenderView(actionString, new ViewDataDictionary());
+                    doc.LoadHtml(html);
+                }
+                catch (Exception e)
+                {
+                    LogManager.GetLogger("ASC.Api").Error(e);
+                }
                 var content = doc.DocumentNode;
                 if (content.SelectSingleNode("html") != null)
                 {
@@ -215,5 +226,27 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View();
         }
+
+        public ActionResult Macros()
+        {
+            return View("Macros/Macros");
+        }
+
+        public ActionResult ConvertingVBAMacros()
+        {
+            return View("Macros/ConvertingVBAMacros");
+        }
+
+        public ActionResult MacroSamples()
+        {
+            return View("Macros/MacroSamples");
+        }
+
+        public ActionResult WritingMacros()
+        {
+            return View("Macros/WritingMacros");
+        }
+
+
     }
 }

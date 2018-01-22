@@ -116,8 +116,7 @@
                             },
                         Height = "550px",
                         Width = "100%"
-                    },
-                true) %>
+                    }) %>
             );
     </script>
 

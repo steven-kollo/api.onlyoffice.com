@@ -210,6 +210,24 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Back to Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Back to Document</em> button will not be displayed.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestHistoryClose = function() {
+    document.location.reload();
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestHistoryClose": onRequestHistoryClose,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
         <p><b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history. To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method. The document version number is sent in the <em>"data"</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
@@ -237,23 +255,5 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
         Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 
-    </li>
-
-    <li>
-        <p><b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Back to Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Back to Document</em> button will not be displayed.</p>
-        <div class="header-gray">Example</div>
-        <pre>
-var onRequestHistoryClose = function() {
-    document.location.reload();
-};
-
-var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "events": {
-        "onRequestHistoryClose": onRequestHistoryClose,
-        ...
-    },
-    ...
-});
-</pre>
     </li>
 </ul>
