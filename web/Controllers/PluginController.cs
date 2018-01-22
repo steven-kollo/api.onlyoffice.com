@@ -73,6 +73,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "Plugin",
                 "scope",
                 "Structure",
+                "macros/Macros",
+                "macros/Writing",
+                "macros/ConvertingVBA",
+                "macros/Samples",
             };
 
         public ActionResult Index()
@@ -222,5 +226,27 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View();
         }
+
+        public ActionResult Macros()
+        {
+            return View("Macros/Macros");
+        }
+
+        public ActionResult ConvertingVBAMacros()
+        {
+            return View("Macros/ConvertingVBAMacros");
+        }
+
+        public ActionResult MacroSamples()
+        {
+            return View("Macros/MacroSamples");
+        }
+
+        public ActionResult WritingMacros()
+        {
+            return View("Macros/WritingMacros");
+        }
+
+
     }
 }

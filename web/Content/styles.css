@@ -1206,3 +1206,14 @@ iframe.docbuilder_resulting_docs {
     float: left;
     width: 50%;
 }
+
+.spoiler_code {
+    display: none;
+}
+
+.spoiler_heading {
+    color: #808080;
+    cursor: pointer;
+    border-bottom: 1px dotted #808080;
+    display: inline-block;
+}
