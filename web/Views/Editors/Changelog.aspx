@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="51" class="copy-link">Version 5.1</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event.</li>
+    </ul>
+
     <h2 id="50" class="copy-link">Version 5.0</h2>
     <ul>
         <li>Added support for macro-enabled document, document template and flat document <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>

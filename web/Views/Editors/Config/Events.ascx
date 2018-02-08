@@ -144,6 +144,28 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - the function called when the work with the editor must be ended and the editor must be closed.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestClose = function () {
+    if (window.opener) {
+        window.close();
+        return;
+    }
+    docEditor.destroyEditor();
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestClose": onRequestClose,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
         <p><b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Edit</em> button will not be displayed.</p>
         <div class="note">
             <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.

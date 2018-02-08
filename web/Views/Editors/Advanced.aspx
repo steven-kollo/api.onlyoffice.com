@@ -162,6 +162,7 @@ config = {
         "onDocumentStateChange": onDocumentStateChange,
         "onDownloadAs": onDownloadAs,
         "onError": onError,
+        "onRequestClose": onRequestClose,
         "onRequestEditRights": onRequestEditRights,
         "onRequestHistory": onRequestHistory,
         "onRequestHistoryClose": onRequestHistoryClose,
