@@ -105,6 +105,7 @@ config = {
             },
             "forcesave": false,
             "goback": {
+                "blank": true,
                 "text": "Go to Documents",
                 "url": "https://example.com"
             },

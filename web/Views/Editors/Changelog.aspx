@@ -20,6 +20,7 @@
     <h2 id="51" class="copy-link">Version 5.1</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#goback">editorConfig.customization.goback.blank</a> field.</li>
     </ul>
 
     <h2 id="50" class="copy-link">Version 5.0</h2>
