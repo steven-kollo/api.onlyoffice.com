@@ -395,7 +395,7 @@
             <param name="lastVersion">File last version number</param>
             <returns>File info</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteFile(System.String,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteFile(System.String,System.Boolean,System.Boolean)">
             <summary>
             Deletes the file with the ID specified in the request
             </summary>
@@ -403,6 +403,7 @@
             <category>Files</category>
             <param name="fileId">File ID</param>
             <param name="deleteAfter">Delete after finished</param>
+            <param name="immediately">Don't move to the Recycle Bin</param>
             <returns>Operation result</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.StartConversion(System.String)">
@@ -432,7 +433,7 @@
             <returns>Url</returns>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteFolder(System.String,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteFolder(System.String,System.Boolean,System.Boolean)">
             <summary>
             Deletes the folder with the ID specified in the request
             </summary>
@@ -440,6 +441,7 @@
             <category>Folders</category>
             <param name="folderId">Folder ID</param>
             <param name="deleteAfter">Delete after finished</param>
+            <param name="immediately">Don't move to the Recycle Bin</param>
             <returns>Operation result</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.MoveOrCopyBatchCheck(System.String,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
@@ -513,13 +515,14 @@
             <category>File operations</category>
             <returns>Operation result</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteBatchItems(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteBatchItems(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Boolean)">
             <summary>
               Deletes the files and folders with the IDs specified in the request
             </summary>
             <param name="folderIds">Folder ID list</param>
             <param name="fileIds">File ID list</param>
             <param name="deleteAfter">Delete after finished</param>
+            <param name="immediately">Don't move to the Recycle Bin</param>
             <short>Delete files and folders</short>
             <category>File operations</category>
             <returns>Operation result</returns>
@@ -688,22 +691,40 @@
             <param name="set"></param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.CheckDocServiceUrl(System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.CheckDocServiceUrl(System.String,System.String,System.String)">
             <summary>
              Checking document service location
             </summary>
-            <param name="docServiceUrlApi">Document editing service Address</param>
-            <param name="docServiceUrlCommand">Document command service Address</param>
-            <param name="docServiceUrlStorage">Document storage service Address</param>
-            <param name="docServiceUrlConverter">Document conversion service Address</param>
+            <param name="docServiceUrl">Document editing service Domain</param>
+            <param name="docServiceUrlInternal">Document command service Domain</param>
             <param name="docServiceUrlPortal">Community Server Address</param>
-            <param name="docServiceUrlDocbuilder">Docbuilder Service Address</param>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetDocServiceUrl(System.Boolean)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdpartyProvider">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetWordpressInfo">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteWordpressInfo">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.WordpressSave(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.CreateWordpressPost(System.String,System.String,System.String,System.Int32)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetEasybibCitationList(System.Int32,System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetEasybibStyles">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.EasyBibCitationBook(System.String)">
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.Documents.DocumentsApi.Name">

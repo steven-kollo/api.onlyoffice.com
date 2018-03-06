@@ -1432,7 +1432,7 @@
             <category>Contacts</category>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.Thrdparty.SocialNetworks,System.String,System.Boolean)">
+        <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.Thrdparty.SocialNetworks,System.String,System.Boolean,System.String)">
             <summary>
             
             </summary>
@@ -1440,6 +1440,7 @@
             <param name="socialNetwork"></param>
             <param name="userIdentity"></param>
             <param name="uploadOnly"></param>
+            <param name="tmpDirName" visible="false"></param>
             <category>Contacts</category>
             <returns></returns>
         </member>

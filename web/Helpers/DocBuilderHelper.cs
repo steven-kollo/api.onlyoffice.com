@@ -160,21 +160,25 @@ namespace ASC.Api.Web.Help.Helpers
         {
             var fileName = GetFileName(builderScript);
 
-            var response = DocumentService.DocbuilderRequest(
+            Dictionary<string, string> urls;
+            DocumentService.DocbuilderRequest(
                 ConfigurationManager.AppSettings["editor_url"] + "/docbuilder",
                 null,
                 builderScript,
                 false,
-                FileUtility.SignatureSecret
+                FileUtility.SignatureSecret,
+                out urls
                 );
 
-            if (response.Error != 0)
+            var fileUrl = string.Empty;
+            if (urls != null && urls.ContainsKey(fileName))
             {
-                throw new Exception(response.GetErrorText());
+                fileUrl = urls[fileName];
             }
-
-            var fileUrl = response.GetFileUrl(fileName);
-            if (string.IsNullOrEmpty(fileUrl)) throw new Exception("Result without file");
+            if (string.IsNullOrEmpty(fileUrl))
+            {
+                throw new Exception("Result without file");
+            }
             return fileUrl;
         }
     }

@@ -296,66 +296,37 @@
             </summary>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettings">
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItems">
             <summary>
-            Returns current portal SSO settings
+            Get Custom Navigation Items
             </summary>
-            <short>
-            Get SSO settings
-            </short>
-            <returns>SsoSettings object</returns>
+            <returns>CustomNavigationItem List</returns>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.IsStandalone">
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItemSample">
             <summary>
-            Check that server is standalone (Obsolete)
+            Get Custom Navigation Items Sample
             </summary>
-            <returns>bool</returns>
-            <visible>false</visible>
+            <returns>CustomNavigationItem Sample</returns>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.SaveSettings(System.String)">
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItem(System.Guid)">
             <summary>
-            Save SSO settings for current portal
+            Get Custom Navigation Item by Id
             </summary>
-            <short>
-            Save SSO settings
-            </short>
-            <param name="serializeSettings">SsoSettings serialized string</param>
-            <returns>SaveSettingsResult object</returns>
+            <param name="id">Item id</param>
+            <returns>CustomNavigationItem</returns>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.CheckSsoCertificate">
+        <member name="M:ASC.Api.Settings.SettingsApi.CreateCustomNavigationItem(ASC.Web.Studio.Core.CustomNavigationItem)">
             <summary>
-            Check SSO certificate existance
+            Add Custom Navigation Item
             </summary>
-            <returns>object like {success: true, exist: true}</returns>
-            <visible>false</visible>
+            <param name="item">Item</param>
+            <returns>CustomNavigationItem</returns>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.UploadSsoCertificate(System.String,System.Collections.Generic.List{System.Web.HttpPostedFileBase})">
+        <member name="M:ASC.Api.Settings.SettingsApi.DeleteCustomNavigationItem(System.Guid)">
             <summary>
-            Upload SSO certificate
+            Delete Custom Navigation Item by Id
             </summary>
-            <param name="certPassword">Certificate password</param>
-            <param name="files">List of HttpPostedFileBase objects with Certificate file</param>
-            <returns>object like {success: true} or {success: false, message: "some error"}</returns>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetSsoCertificateKey">
-            <summary>
-            Get SSO certificate public key
-            </summary>
-            <short>
-            Get SSO certificate key
-            </short>
-            <returns>object like {success: true, publicKey: "[key string]"} or {success: false, message: "some error"}</returns>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.ResetSettings">
-            <summary>
-            Reset SSO settings for current portal
-            </summary>
-            <short>
-            Reset SSO settings
-            </short>
-            <returns>object like {success: true} or {success: false, message: "some error"}</returns>
+            <param name="id">Item id</param>
         </member>
     </members>
 </doc>
