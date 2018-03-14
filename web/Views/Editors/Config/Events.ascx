@@ -362,7 +362,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history. When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again. The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history. Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from <a href="<%= Url.Action("callback") %>#history">the history object</a>.</p>
+        <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history. When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again. The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history. Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">the history object</a>.</p>
+        <div class="note">The <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b> and is displayed for the previous document versions only and hidden for the current one.</div>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestRestore = function(event) {
