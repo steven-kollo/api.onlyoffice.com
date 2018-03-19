@@ -101,5 +101,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         },
         ...
     },
+    ...
 });
 </pre>

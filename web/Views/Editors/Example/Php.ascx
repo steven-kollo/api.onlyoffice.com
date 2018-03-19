@@ -110,12 +110,15 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/d
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
     <li>Install <b>Apache</b> and <b>PHP</b>:
-        <div class="commandline">apt-get install apache2 php7.0 libapache2-mod-php7.0</div>
+        <div class="commandline">apt-get install -y apache2 php7.0 libapache2-mod-php7.0</div>
     </li>
     <li>Download the archive with the PHP Example and unpack the archive:
         <div class="commandline">cd /var/www/html</div>
         <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/PHP%20Example.zip</div>
         <div class="commandline">unzip PHP\ Example.zip</div>
+    </li>
+    <li>Change the current directory for the project directory:
+        <div class="commandline">cd PHP\ Example/</div>
     </li>
     <li>Edit the <em>config.php</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config.php</div>
@@ -136,7 +139,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/d
         <div class="commandline">service apache2 restart</div>
     </li>
     <li>See the result in your browser using the address:
-        <div class="commandline">http://localhost</div>
+        <div class="commandline">http://localhost/PHP%20Example/</div>
     </li>
 </ol>
 

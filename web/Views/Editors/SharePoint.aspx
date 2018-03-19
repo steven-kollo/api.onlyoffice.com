@@ -94,6 +94,8 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
 
     <p>Where the <b>documentserver</b> is the name of the server with the <b>ONLYOFFICE Document Server</b> installed. The address must be accessible for the user browser and from the SharePoint server. The SharePoint server address must also be accessible from <b>ONLYOFFICE Document Server</b> for correct work.</p>
 
+    <div class="note">Please note, that if you have subsites set up with SharePoint, you will need to additionally configure <b>ONLYOFFICE Document Server</b> connection with each of them, in order for it to work properly. Go to each subsite settings and enter the <b>Document Server</b> address to the proper field.</div>
+
     <h2>How it works</h2>
     <p>User navigates to a document within SharePoint and selects the <b>Edit in ONLYOFFICE</b> action on context menu or ribbon.</p>
     <p>SharePoint ONLYOFFICE solution makes a request to the editor page (URL of the form: <em>/_layouts/15/Onlyoffice/editorPage.aspx?SPListItemId={SelectedItemId}&SPListId={SelectedListId}&SPSource={Source}&SPListURLDir={ListUrlDir}</em>).</p>

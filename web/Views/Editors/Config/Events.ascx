@@ -256,4 +256,22 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 
     </li>
+
+    <li>
+        <p><b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs. The warning message is sent in the <em>"data"</em> parameter.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onWarning = function (event) {
+    console.log("ONLYOFFICE Document Editor reports an warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onWarning": onWarning,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
 </ul>

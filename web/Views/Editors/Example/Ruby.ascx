@@ -26,7 +26,7 @@
         <div class="commandline">unzip Ruby\ Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
-        <div class="commandline">cd ~/OnlineEditorsExampleRuby</div>
+        <div class="commandline">cd Ruby\ Example</div>
     </li>
     <li>Install the dependencies:
         <div class="commandline">bundle install</div>

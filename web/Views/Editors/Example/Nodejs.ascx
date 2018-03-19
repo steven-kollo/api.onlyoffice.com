@@ -34,7 +34,7 @@
 
 <ol>
     <li>Launch the <b>Command Prompt</b> and switch to the folder with the Node.js project code, for example:
-        <div class="commandline">cd  /d C:\OnlineEditorsExampleNodeJS</div>
+        <div class="commandline">cd /d "C:\Node.js Example"</div>
     </li>
     <li>Node.js comes with a package manager, <b>node package manager (npm)</b>, which is automatically installed along with Node.js. To run the Node.js code install the project modules using the following npm command:
         <div class="commandline">npm install</div>
@@ -62,21 +62,21 @@
 <h2 id="linux-2"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
     <li>Install <b>Node.js</b>:
-        <div class="commandline">curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -</div>
-        <div class="commandline">apt-get install nodejs</div>
+        <div class="commandline">curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -</div>
+        <div class="commandline">sudo apt-get install -y nodejs</div>
     </li>
     <li>Download the archive with the Node.js Example and unpack the archive:
         <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/Node.js%20Example.zip</div>
         <div class="commandline">unzip Node.js\ Example.zip</div>
     </li>
     <li>Change the current directory for the project directory:
-        <div class="commandline">cd ~/OnlineEditorsExampleNodeJS/</div>
+        <div class="commandline">cd Node.js\ Example/</div>
     </li>
     <li>Install the dependencies:
         <div class="commandline">npm install</div>
     </li>
     <li>Edit the <em>config/default.js</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
-        <div class="commandline">nano config/default.js</div>
+        <div class="commandline">nano config/default.json</div>
         <p>Edit the following lines:</p>
         
         <pre>
@@ -89,7 +89,7 @@
         <div class="commandline">nodejs bin/www</div>
     </li>
     <li>See the result in your browser using the address:
-        <div class="commandline">http://localhost</div>
+        <div class="commandline">http://localhost:3000</div>
     </li>
 </ol>
 
