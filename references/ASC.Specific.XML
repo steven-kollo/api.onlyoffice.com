@@ -58,13 +58,12 @@
             <param name="code">sms code</param>
             <returns>tokent to use in 'Authorization' header when calling API methods</returns>
         </member>
-        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean)">
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String)">
             <summary>
             Request of invitation by email on personal.onlyoffice.com
             </summary>
             <param name="email">Email address</param>
             <param name="lang">Culture</param>
-            <param name="campaign"></param>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.Name">
