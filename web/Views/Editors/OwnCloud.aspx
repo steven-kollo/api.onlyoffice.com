@@ -79,7 +79,7 @@
     </ol>
 
 
-    <h2 id="settings">Configuring ownCloud/Nextcloud ONLYOFFICE integration app</h2>
+    <h2 id="settings" class="copy-link">Configuring ownCloud/Nextcloud ONLYOFFICE integration app</h2>
     <p>
         In ownCloud/Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
         Enter the following address to connect ONLYOFFICE Document Server:
@@ -123,7 +123,7 @@
     </div>
 
 
-    <h2>How it works</h2>
+    <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>When creating a new file, the user navigates to a document folder within ownCloud/Nextcloud and clicks the <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> item in the <em>new</em> (+) menu.</p>
     <p>The browser invokes the <em>create</em> method in the <em>/lib/Controller/EditorController.php</em> controller. This method adds the copy of the file from the <em>assets</em> folder to the folder the user is currently in.</p>
     <p>Or, when opening an existing file, the user navigates to it within ownCloud/Nextcloud and selects the <b>Open in ONLYOFFICE</b> menu option.</p>
