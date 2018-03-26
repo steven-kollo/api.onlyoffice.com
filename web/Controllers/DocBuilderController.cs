@@ -846,6 +846,16 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public FileResult DownloadScript(string fileId)
+        {
+            var hash = new Guid(fileId);
+            var fileName = string.Format("{0}.docbuilder", hash);
+            var builderPath = Path.Combine(Path.GetTempPath(), fileName);
+
+            var bytes = System.IO.File.ReadAllBytes(builderPath);
+            return File(bytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+        }
+
         [HttpPost]
         public ActionResult DocBuilderGenerate(string actionName, string builderScript)
         {
@@ -855,7 +865,7 @@ namespace ASC.Api.Web.Help.Controllers
                 if (string.IsNullOrEmpty(builderScript))
                     throw new Exception("Empty Script");
 
-                var fileUrl = DocBuilderHelper.GenerateDocument(builderScript);
+                var fileUrl = new DocBuilderHelper(Url, Request).GenerateDocument(builderScript);
                 return Redirect(fileUrl);
             }
             catch (Exception ex)
@@ -882,7 +892,7 @@ namespace ASC.Api.Web.Help.Controllers
                 if (string.IsNullOrEmpty(title))
                     title = "Commercial director";
 
-                var fileUrl = DocBuilderHelper.CreateDocument(name, company, title, format);
+                var fileUrl = new DocBuilderHelper(Url, Request).CreateDocument(name, company, title, format);
                 return Redirect(fileUrl);
             }
             catch (Exception ex)
