@@ -146,20 +146,21 @@
     <p>After <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting ownCloud/Nextcloud know that the clients have finished editing the document and closed it.</p>
     <p>ownCloud/Nextcloud downloads the new version of the document, replacing the old one.</p>
 
-    <br />
-    <p>Download the ownCloud/Nextcloud ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">here</a>.</p>
-
 
     <h2 id="issue" class="copy-link">Known issues</h2>
     <p>
-        If the document is shared using the Federated Cloud Sharing app, the co-editing among the servers will not be avaialble.
+        If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing among the servers will not be avaialble.
         The users from one and the same server can edit the document in the co-editing mode, but the users from two (or more) different servers will not be able to collaborate on the same document in real time.
     </p>
     <p>
-        Adding the storage using the External storages app has issues with the co-editing in some cases.
-        If the connection is made using the same authorization keys (the <b>Username and password</b> or <b>Global credentials</b> authentication type is selected), then the co-editing is available for the users.
-        If different authorization keys are used (<b>Log-in credentials, save in database</b> or <b>User entered, store in database</b> authentication options), the co-editing is not available.
-        When the <b>Log-in credentials, save in session</b> authentication type is used, the files cannot be opened in the editor.
+        Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
+        If the connection is made using the same authorization keys (the <em>Username and password</em> or <em>Global credentials</em> authentication type is selected), then the co-editing is available for the users.
+        If different authorization keys are used (<em>Log-in credentials, save in database</em> or <em>User entered, store in database</em> authentication options), the co-editing is not available.
+        When the <em>Log-in credentials, save in session</em> authentication type is used, the files cannot be opened in the editor.
     </p>
+
+
+    <br />
+    <p>Download the ownCloud/Nextcloud ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">here</a>.</p>
 
 </asp:Content>
