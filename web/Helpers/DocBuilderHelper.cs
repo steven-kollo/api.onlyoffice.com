@@ -31,13 +31,24 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Web;
 using System.Web.Configuration;
+using System.Web.Mvc;
 using ASC.Web.Core.Files;
 
 namespace ASC.Api.Web.Help.Helpers
 {
-    public static class DocBuilderHelper
+    public class DocBuilderHelper
     {
+        public UrlHelper Url;
+        public HttpRequestBase Request;
+
+        public DocBuilderHelper(UrlHelper url, HttpRequestBase request)
+        {
+            Url = url;
+            Request = request;
+        }
+
         public static string BuilderPath
         {
             get { return WebConfigurationManager.AppSettings["builder-path"] ?? string.Empty; }
@@ -45,7 +56,7 @@ namespace ASC.Api.Web.Help.Helpers
 
         private const int ScriptMaxLength = 10000;
 
-        public static string GenerateDocument(string builderScript)
+        public string GenerateDocument(string builderScript)
         {
             builderScript = CutBuilderScript(builderScript);
 
@@ -117,7 +128,7 @@ namespace ASC.Api.Web.Help.Helpers
             return fileName + "." + format;
         }
 
-        public static string CreateDocument(string name, string company, string title, string format)
+        public string CreateDocument(string name, string company, string title, string format)
         {
             const string replacePattern = "['\"\\(\\)\\r\\n]";
 
@@ -156,15 +167,27 @@ namespace ASC.Api.Web.Help.Helpers
             return link;
         }
 
-        private static string BuildFile(string builderScript)
+        private string GetScriptUrl(string builderScript)
+        {
+            var hash = Guid.NewGuid();
+            var fileName = string.Format("{0}.docbuilder", hash);
+            var builderPath = Path.Combine(Path.GetTempPath(), fileName);
+
+            File.WriteAllText(builderPath, builderScript);
+            return Url.Action("DownloadScript", null, new { fileId = hash }, (Request.Url ?? new Uri("")).Scheme);
+        }
+
+        private string BuildFile(string builderScript)
         {
             var fileName = GetFileName(builderScript);
+
+            var scriptUrl = GetScriptUrl(builderScript);
 
             Dictionary<string, string> urls;
             DocumentService.DocbuilderRequest(
                 ConfigurationManager.AppSettings["editor_url"] + "/docbuilder",
                 null,
-                builderScript,
+                scriptUrl,
                 false,
                 FileUtility.SignatureSecret,
                 out urls
