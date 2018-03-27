@@ -110,18 +110,6 @@
 
     <p>The <b>Open in ONLYOFFICE</b> action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.</p>
 
-    <p id="masterKey">
-        ownCloud/Nextcloud provides an option to encrypt the file storage. 
-        Unfortunately if you enable the encryption with the per-user encryption keys (used by default in ownCloud/Nextcloud) <b>ONLYOFFICE Document Server</b> cannot open the encrypted files for editing and save them after the editing.
-        The <b>ONLYOFFICE</b> section of the administrative settings page will display a notification about it.
-        However if you set the encryption with the master key, <b>ONLYOFFICE</b> application will work as intended.
-        The instruction on enabling master key based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/latest/admin_manual/configuration_files/encryption_configuration.html#enabling-master-key-based-encryption" target="_blank">ownCloud</a>/<a href="https://docs.nextcloud.com/server/12/admin_manual/configuration_files/encryption_configuration.html#occ-encryption-commands" target="_blank">Nextcloud</a> websites.
-    </p>
-    <div class="note note-important">
-        <div class="note-important-label">Please note</div>
-        ownCloud/Nextcloud recommends using master encryption key only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable master key based encryption on them.
-    </div>
-
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>When creating a new file, the user navigates to a document folder within ownCloud/Nextcloud and clicks the <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> item in the <em>new</em> (+) menu.</p>
@@ -148,16 +136,26 @@
 
 
     <h2 id="issue" class="copy-link">Known issues</h2>
-    <p>
-        If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing among the servers will not be avaialble.
+    <ul>
+        <li id="federatedSharing">If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing among the servers will not be avaialble.
         The users from one and the same server can edit the document in the co-editing mode, but the users from two (or more) different servers will not be able to collaborate on the same document in real time.
-    </p>
-    <p>
-        Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
+        </li>
+        <li id="externalStorage">Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
         If the connection is made using the same authorization keys (the <em>Username and password</em> or <em>Global credentials</em> authentication type is selected), then the co-editing is available for the users.
         If different authorization keys are used (<em>Log-in credentials, save in database</em> or <em>User entered, store in database</em> authentication options), the co-editing is not available.
         When the <em>Log-in credentials, save in session</em> authentication type is used, the files cannot be opened in the editor.
-    </p>
+        </li>
+        <li id="masterKey">ownCloud/Nextcloud provides an option to encrypt the file storage. 
+        But if the encryption with the <em>per-user encryption keys</em> (used by default in ownCloud/Nextcloud <b>Default encryption module</b> app) is enabled, ONLYOFFICE Document Server cannot open the encrypted files for editing and save them after the editing.
+        The ONLYOFFICE section of the administrative settings page will display a notification about it.
+        However if you set the encryption with the <em>master key</em>, ONLYOFFICE application will work as intended.
+        The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/latest/admin_manual/configuration_files/encryption_configuration.html#enabling-master-key-based-encryption" target="_blank">ownCloud</a>/<a href="https://docs.nextcloud.com/server/12/admin_manual/configuration_files/encryption_configuration.html#occ-encryption-commands" target="_blank">Nextcloud</a> websites.
+            <div class="note note-important">
+                <div class="note-important-label">Please note</div>
+                ownCloud/Nextcloud recommends using <em>master encryption key</em> only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable <em>master key</em> based encryption on them.
+            </div>
+        </li>
+    </ul>
 
 
     <br />
