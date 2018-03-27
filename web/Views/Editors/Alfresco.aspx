@@ -102,7 +102,7 @@ sudo ./alfresco.sh start</span>
     <p>The module can be checked in administrator tools at <em>/share/page/console/admin-console/module-package</em> in Alfresco.</p>
 
 
-    <h2>How it works</h2>
+    <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>User navigates to a document within Alfresco Share and selects the <b>Edit in ONLYOFFICE</b> menu option.</p>
     <p>Alfresco Share makes a request to the repo end (URL of the form: <em>/parashift/onlyoffice/prepare?nodeRef={nodeRef}</em>).</p>
     <p>Alfresco Repo end prepares a JSON object for the Share with the following properties:</p>

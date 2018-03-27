@@ -62,7 +62,7 @@
     <span class="commandline">https://documentserver/</span>
 
 
-    <h2>How it works</h2>
+    <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>User navigates to a Confluence attachments and selects the <b>Edit in ONLYOFFICE</b> action.</p>
     <p>Confluence makes a request to OnlyOfficeEditorServlet (URL of the form: <em>/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id</em>).</p>
     <p>Confluence sends document to ONLYOFFICE Document storage service and receive a temporary link.</p>

@@ -79,7 +79,7 @@
     </ol>
 
 
-    <h2 id="settings">Configuring ownCloud/Nextcloud ONLYOFFICE integration app</h2>
+    <h2 id="settings" class="copy-link">Configuring ownCloud/Nextcloud ONLYOFFICE integration app</h2>
     <p>
         In ownCloud/Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
         Enter the following address to connect ONLYOFFICE Document Server:
@@ -110,20 +110,8 @@
 
     <p>The <b>Open in ONLYOFFICE</b> action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.</p>
 
-    <p id="masterKey">
-        ownCloud/Nextcloud provides an option to encrypt the file storage. 
-        Unfortunately if you enable the encryption with the per-user encryption keys (used by default in ownCloud/Nextcloud) <b>ONLYOFFICE Document Server</b> cannot open the encrypted files for editing and save them after the editing.
-        The <b>ONLYOFFICE</b> section of the administrative settings page will display a notification about it.
-        However if you set the encryption with the master key, <b>ONLYOFFICE</b> application will work as intended.
-        The instruction on enabling master key based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/latest/admin_manual/configuration_files/encryption_configuration.html#enabling-master-key-based-encryption" target="_blank">ownCloud</a>/<a href="https://docs.nextcloud.com/server/12/admin_manual/configuration_files/encryption_configuration.html#occ-encryption-commands" target="_blank">Nextcloud</a> websites.
-    </p>
-    <div class="note note-important">
-        <div class="note-important-label">Please note</div>
-        ownCloud/Nextcloud recommends using master encryption key only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable master key based encryption on them.
-    </div>
 
-
-    <h2>How it works</h2>
+    <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>When creating a new file, the user navigates to a document folder within ownCloud/Nextcloud and clicks the <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> item in the <em>new</em> (+) menu.</p>
     <p>The browser invokes the <em>create</em> method in the <em>/lib/Controller/EditorController.php</em> controller. This method adds the copy of the file from the <em>assets</em> folder to the folder the user is currently in.</p>
     <p>Or, when opening an existing file, the user navigates to it within ownCloud/Nextcloud and selects the <b>Open in ONLYOFFICE</b> menu option.</p>
@@ -145,6 +133,30 @@
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
     <p>After <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting ownCloud/Nextcloud know that the clients have finished editing the document and closed it.</p>
     <p>ownCloud/Nextcloud downloads the new version of the document, replacing the old one.</p>
+
+
+    <h2 id="issue" class="copy-link">Known issues</h2>
+    <ul>
+        <li id="federatedSharing">If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing among the servers will not be avaialble.
+        The users from one and the same server can edit the document in the co-editing mode, but the users from two (or more) different servers will not be able to collaborate on the same document in real time.
+        </li>
+        <li id="externalStorage">Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
+        If the connection is made using the same authorization keys (the <em>Username and password</em> or <em>Global credentials</em> authentication type is selected), then the co-editing is available for the users.
+        If different authorization keys are used (<em>Log-in credentials, save in database</em> or <em>User entered, store in database</em> authentication options), the co-editing is not available.
+        When the <em>Log-in credentials, save in session</em> authentication type is used, the files cannot be opened in the editor.
+        </li>
+        <li id="masterKey">ownCloud/Nextcloud provides an option to encrypt the file storage. 
+        But if the encryption with the <em>per-user encryption keys</em> (used by default in ownCloud/Nextcloud <b>Default encryption module</b> app) is enabled, ONLYOFFICE Document Server cannot open the encrypted files for editing and save them after the editing.
+        The ONLYOFFICE section of the administrative settings page will display a notification about it.
+        However if you set the encryption with the <em>master key</em>, ONLYOFFICE application will work as intended.
+        The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/latest/admin_manual/configuration_files/encryption_configuration.html#enabling-master-key-based-encryption" target="_blank">ownCloud</a>/<a href="https://docs.nextcloud.com/server/12/admin_manual/configuration_files/encryption_configuration.html#occ-encryption-commands" target="_blank">Nextcloud</a> websites.
+            <div class="note note-important">
+                <div class="note-important-label">Please note</div>
+                ownCloud/Nextcloud recommends using <em>master encryption key</em> only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable <em>master key</em> based encryption on them.
+            </div>
+        </li>
+    </ul>
+
 
     <br />
     <p>Download the ownCloud/Nextcloud ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">here</a>.</p>
