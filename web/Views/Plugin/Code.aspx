@@ -47,7 +47,7 @@
 
     <p>The only 'OK' button (<em>window.Asc.plugin.button = function (id) {...}</em>) is used to create the text and finish the work with the plugin.</p>
 
-    <p>This way any other plugin can be created. Currently the plugins support not only sending text or formatted text to the editors, but also OLE objects embedding (such examples are available here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess" target="_blank">chess</a> - the chess game plugin, and <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/youtube" target="_blank">youtube</a> - embedding the YouTube video into an editor page).</p>
+    <p>This way any other plugin can be created. Currently the plugins support not only sending text or formatted text to the editors, but also OLE objects embedding (such examples are available here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/examples/chess" target="_blank">chess</a> - the chess game plugin, and <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/youtube" target="_blank">youtube</a> - embedding the YouTube video into an editor page).</p>
 
     <p>More existing open source plugin examples can be found here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>.</p>
 

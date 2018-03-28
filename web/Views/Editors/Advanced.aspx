@@ -105,6 +105,7 @@ config = {
             },
             "forcesave": false,
             "goback": {
+                "blank": true,
                 "text": "Go to Documents",
                 "url": "https://example.com"
             },
@@ -162,6 +163,7 @@ config = {
         "onDocumentStateChange": onDocumentStateChange,
         "onDownloadAs": onDownloadAs,
         "onError": onError,
+        "onRequestClose": onRequestClose,
         "onRequestEditRights": onRequestEditRights,
         "onRequestHistory": onRequestHistory,
         "onRequestHistoryClose": onRequestHistoryClose,

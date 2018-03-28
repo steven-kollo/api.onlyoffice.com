@@ -7,10 +7,10 @@
         <member name="M:ASC.Api.Mail.MailApi.GetMailServerInfo">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ConnectMailServer(System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.ConnectMailServer(System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.SaveMailServerInfo(System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.SaveMailServerInfo(System.String,System.String,System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String)">
@@ -196,6 +196,47 @@
             <param name="mailbox_id">Id of updated mailbox.</param>
             <param name="html">New signature value.</param>
             <param name="is_active">New signature status.</param>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.CreateSampleMessage(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+            Create sample message [Tests]
+            </summary>
+            <param name="folderId"></param>
+            <param name="mailboxId"></param>
+            <param name="to"></param>
+            <param name="cc"></param>
+            <param name="bcc"></param>
+            <param name="importance"></param>
+            <param name="unread"></param>
+            <param name="subject"></param>
+            <param name="body"></param>
+            <returns>Id message</returns>
+            <category>Tests</category>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.AppendAttachmentsToSampleMessage(System.Nullable{System.Int32},System.String,System.IO.Stream,System.String)">
+            <summary>
+            Append attachment to sample message [Tests]
+            </summary>
+            <param name="messageId">Id of any message</param>
+            <param name="filename">File name</param>
+            <param name="stream">File stream</param>
+            <param name="contentType">File content type</param>
+            <returns>Id message</returns>
+            <category>Tests</category>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.LoadSampleMessage(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.IO.Stream)">
+            <summary>
+            Load sample message from EML [Tests]
+            </summary>
+            <param name="folderId"></param>
+            <param name="mailboxId"></param>
+            <param name="unread"></param>
+            <param name="emlStream"></param>
+            <returns>Id message</returns>
+            <category>Tests</category>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetAccounts(System.String)">
             <summary>
@@ -866,16 +907,6 @@
             <returns>none</returns>
             <category>Messages</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.CreateSampleMessage(System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            Create sample message [Tests]
-            </summary>
-            <param name="mailboxId"></param>
-            <param name="folderId"></param>
-            <returns>Id message</returns>
-            <category>Messages</category>
-            <visible>false</visible>
-        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetTags">
             <summary>
                Returns list of the tags used in Mail
@@ -969,6 +1000,11 @@
         <member name="P:ASC.Api.Mail.MailApi.ProtocolLogPath">
             <summary>
             Protocol log path (if not empty then enabled)
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Mail.MailApi.TcpTimeout">
+            <summary>
+            Test mailbox connection tcp timeout (10 sec is default)
             </summary>
         </member>
         <member name="T:ASC.Api.Mail.Resources.MailApiResource">

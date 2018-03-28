@@ -331,7 +331,7 @@
             <summary>
             Returns the progress of the started reassign process
             </summary>
-            <param name="userId">User Id</param>
+            <param name="userId">User ID whose data is reassigned</param>
             <category>Reassign user data</category>
             <returns>Reassign Progress</returns>
         </member>
@@ -339,17 +339,40 @@
             <summary>
             Terminate reassign process
             </summary>
-            <param name="userId">User Id</param>
+            <param name="userId">User ID whose data is reassigned</param>
             <category>Reassign user data</category>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.StartReassign(System.Guid,System.Guid)">
             <summary>
             Start a reassign process
             </summary>
-            <param name="fromUserId">From User Id</param>
-            <param name="toUserId">To User Id</param>
+            <param name="fromUserId">From User ID</param>
+            <param name="toUserId">To User ID</param>
             <category>Reassign user data</category>
             <returns>Reassign Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetRemoveProgress(System.Guid)">
+            <summary>
+            Returns the progress of the started remove process
+            </summary>
+            <param name="userId">User ID</param>
+            <category>Remove user data</category>
+            <returns>Remove Progress</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.TerminateRemove(System.Guid)">
+            <summary>
+            Terminate remove process
+            </summary>
+            <param name="userId">User ID</param>
+            <category>Remove user data</category>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.StartRemove(System.Guid)">
+            <summary>
+            Start a remove process
+            </summary>
+            <param name="userId">User ID</param>
+            <category>Remove user data</category>
+            <returns>Remove Progress</returns>
         </member>
         <member name="T:ASC.Api.Employee.GroupsApi">
             <summary>
