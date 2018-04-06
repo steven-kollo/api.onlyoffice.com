@@ -27,7 +27,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="comment" class="copy-link">comment</td>
-            <td>Defines if the document can be commented or not. In case the commenting permission is set to <b>"true"</b> the document <b>side bar</b> will contain the <b>Comment</b> menu option; the document commenting will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value is <b>true</b>.</td>
+            <td>Defines if the document can be commented or not. In case the commenting permission is set to <b>"true"</b> the document <b>side bar</b> will contain the <b>Comment</b> menu option; the document commenting will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> parameter.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -71,7 +71,7 @@
         </tr>
         <tr class="tablerow">
             <td id="review" class="copy-link">review</td>
-            <td>Defines if the document can be reviewed or not. In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value is <b>true</b>.</td>
+            <td>Defines if the document can be reviewed or not. In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> parameter.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
