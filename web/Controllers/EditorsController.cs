@@ -61,6 +61,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Conversion",
                 "ConversionApi",
                 "DemoPreview",
+                "DocumentBuilderApi",
                 "Example/Java",
                 "Example/Nodejs",
                 "Example/Php",
@@ -222,6 +223,11 @@ namespace ASC.Api.Web.Help.Controllers
             var examples = directoryInfo.GetFiles("*.zip", SearchOption.TopDirectoryOnly).Select(fileInfo => fileInfo.Name).ToList();
 
             return View(examples);
+        }
+
+        public ActionResult DocumentBuilderApi()
+        {
+            return View();
         }
 
         public ActionResult Editor()
