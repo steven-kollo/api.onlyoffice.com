@@ -86,7 +86,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the link to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called. The link to the document to be downloaded is sent in the <em>"data"</em> parameter.</p>
+        <p><b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called. The absolute URL to the document to be downloaded is sent in the <em>"data"</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onDownloadAs = function (event) {

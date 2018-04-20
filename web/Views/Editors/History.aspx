@@ -80,7 +80,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <li>
             <p>
                 In the configuration script for Document Editor initialization specify the event handler which will select the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">version from history</a>.
-                When the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> event is called, the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method must be executed. This method contains the link to the file of the corresponding version.
+                When the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> event is called, the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method must be executed. This method contains the absolute URL to the file of the corresponding version.
             </p>
             <pre>
 var onRequestHistoryData = function(event) {
@@ -150,7 +150,7 @@ docEditor.refreshHistory({
         </li>
         <li>
             <p>
-                <a href="<%= Url.Action("callback") %>#changesurl">changesurl</a> - the link to the file with the document editing data used to show the changes corresponding to the specific document version.
+                <a href="<%= Url.Action("callback") %>#changesurl">changesurl</a> - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version.
                 The file must be saved and its address must be sent as changesUrl parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
                 The link to the previous document version (<em>previous.url</em>) must be added into the object.
             </p>

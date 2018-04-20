@@ -139,7 +139,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
-                <td>Defines the link to the document to be converted.</td>
+                <td>Defines the absolute URL to the document to be converted.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
