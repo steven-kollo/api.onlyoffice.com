@@ -207,7 +207,6 @@ html {
 .table-conversion-matrix-text,
 .table-conversion-matrix-spreadsheet,
 .table-conversion-matrix-presentation {
-    border: 1px solid #d7d8dc;
     vertical-align: middle;
     padding: 5px;
     font-size: 12px;
@@ -222,7 +221,7 @@ html {
     vertical-align: middle;
     padding: 5px;
     font-size: 12px;
-    border: 1px solid #d7d8dc;
+    border-bottom: 1px solid #d7d8dc;
 }
 .table-conversion-matrix-text td {
     width: 10%;
@@ -242,7 +241,7 @@ html {
     padding: 5px;
     font-size: 12px;
     font-weight: bold;
-    border: 1px solid #d7d8dc;
+    border-bottom: 1px solid #d7d8dc;
 }
 
 .table-conversion-matrix-cell-tick {
@@ -1216,4 +1215,20 @@ iframe.docbuilder_resulting_docs {
     cursor: pointer;
     border-bottom: 1px dotted #808080;
     display: inline-block;
+}
+span.yes, span.no {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    vertical-align: middle;
+}
+span.yes {
+    background-color: #666;
+}
+span.no {
+    background-color: #dedede;
 }
