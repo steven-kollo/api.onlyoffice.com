@@ -14,7 +14,11 @@
         <span class="hdr">Conversion API</span>
     </h1>
 
-    <p class="dscr">For the interaction with the <b>document conversion service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+    <p class="dscr">
+        For the interaction with the <b>document conversion service</b> the POST requests are used.
+        The request parameters are entered in JSON format in the request body.
+        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+    </p>
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
@@ -43,7 +47,8 @@
                         <li>true</li>
                         <li>false</li>
                     </ul>
-                    When the asynchronous request type is used, the reply is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
+                    When the asynchronous request type is used, the reply is formed instantly.
+                    In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
                 </td>
                 <td>boolean</td>
                 <td>optional</td>
@@ -102,13 +107,15 @@
                 <td id="thumbnail" class="copy-link">thumbnail</td>
                 <td>Defines the option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
                     <ul>
-                        <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed. Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
+                        <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed.
+                            Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
                             <br />
                             <b>type</b>: integer,
                             <br />
                             <b>example</b>: 1;
                         </li>
-                        <li><b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages. If false, the zip archive containing thumbnails for all the pages will be created. The default value is <em>true</em>,
+                        <li><b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages.
+                            If false, the zip archive containing thumbnails for all the pages will be created. The default value is <em>true</em>,
                             <br />
                             <b>type</b>: boolean,
                             <br />
@@ -347,7 +354,7 @@
             </tr>
         </tbody>
     </table>
-                
+
     <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
     <table class="table-conversion-matrix-spreadsheet">
         <tbody>
@@ -690,7 +697,7 @@
             </tr>
             <tr class="tablerow">
                 <td>-2</td>
-                <td>Timeout conversion error.</td>
+                <td>Conversion timeout error.</td>
             </tr>
             <tr class="tablerow">
                 <td>-3</td>
