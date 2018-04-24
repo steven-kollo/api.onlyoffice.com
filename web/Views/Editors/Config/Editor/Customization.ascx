@@ -156,6 +156,13 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td id="help" class="copy-link">help</td>
+            <td>Defines if the <b>Help</b> menu button is displayed or hidden.
+                The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
             <td id="logo" class="copy-link">logo<span class="required">*</span></td>
             <td>Changes the image file at the top left corner of the Editor header. The recommended image height is 20 pixels. The object has the following parameters:
                 <ul>
@@ -229,6 +236,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "text": "Go to Documents",
                 "url": "https://example.com"
             },
+            "help": true,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
