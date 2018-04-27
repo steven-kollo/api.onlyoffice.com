@@ -6,9 +6,15 @@
 
 <h2>Introduction</h2>
 <p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Java</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Java Example</a> for their integration.</p>
-<p>You can choose any appropriate way how to run the Java example code. We will show how to run the Java code using the <b>Apache Tomcat</b> web server on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.</p>
+<p>
+    You can choose any appropriate way how to run the Java example code.
+    We will show how to run the Java code using the <b>Apache Tomcat</b> web server on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.
+</p>
 
-<div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
+<div class="note">
+    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+    <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
@@ -21,11 +27,10 @@
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
 
-<span class="commandline">files.docservice.url.converter=https://documentserver/ConvertService.ashx
+<pre>files.docservice.url.converter=https://documentserver/ConvertService.ashx
 files.docservice.url.tempstorage=https://documentserver/ResourceService.ashx
 files.docservice.url.api=https://documentserver/web-apps/apps/api/documents/api.js
-files.docservice.url.preloader=https://documentserver/web-apps/apps/api/documents/cache-scripts.html
-</span>
+files.docservice.url.preloader=https://documentserver/web-apps/apps/api/documents/cache-scripts.html</pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\src\main\webapp\editor.jsp</em> file.</p>
@@ -42,7 +47,10 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
 <ol>
     <li>
         <p>After you have installed Java in Windows, you must set the <b>JAVA_HOME</b> environment variable to point to the Java installation directory.</p>
-        <p>Find out where Java is installed. If you didn't change the path during installation, it will be something like this:</p>
+        <p>
+            Find out where Java is installed.
+            If you didn't change the path during installation, it will be something like this:
+        </p>
 
         <pre>C:\Program Files\Java\jdk1.8.0_65</pre>
         <p>In <b>Windows 7</b> right click <b>My Computer</b> and select <b>Properties</b>, then click <b>Advanced</b>.</p>
@@ -59,7 +67,10 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
         <pre>echo %JAVA_HOME%</pre>
     </li>
     <li>
-        <p>Run the <b>Command Prompt</b>. Change the current directory for the <b>Apache Tomcat</b> installation directory:</p>
+        <p>
+            Run the <b>Command Prompt</b>.
+            Change the current directory for the <b>Apache Tomcat</b> installation directory:
+        </p>
         <pre>cd /d C:\Apache Tomcat\apache-tomcat-7.0.67\bin</pre>
     </li>
     <li>
@@ -84,7 +95,10 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
         <p>Tomcat Web Application Manager will request the <b>username</b> and the <b>password:</b></p>
         <img src="<%= Url.Content("~/content/img/java/author.jpg") %>" height="300" alt="" />
 
-        <p>For that you will need to specify user data in <em>tomcat-users.xml</em> file in the Apache Tomcat installation folder. Define the <b>manager-gui</b> user role, specify the <b>user name</b> and <b>password</b> values:</p>
+        <p>
+            For that you will need to specify user data in <em>tomcat-users.xml</em> file in the Apache Tomcat installation folder.
+            Define the <b>manager-gui</b> user role, specify the <b>user name</b> and <b>password</b> values:
+        </p>
 
         <pre>
 &lt;tomcat-users&gt;
@@ -136,7 +150,8 @@ sudo apt-get install oracle-java8-installer</span>
     <li>Change the current directory for the project directory:
         <div class="commandline">cd Java\ Example/</div>
     </li>
-    <li>Edit the <em>settings.properties</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
+    <li>Edit the <em>settings.properties</em> configuration file.
+        Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano src/main/resources/settings.properties</div>
         <p>Edit the following lines:</p>
 
