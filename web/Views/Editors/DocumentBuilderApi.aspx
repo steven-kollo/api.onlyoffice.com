@@ -19,7 +19,7 @@
         The request parameters are entered in JSON format in the request body.
         The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
     </p>
-    <span class="note">ONLYOFFICE Web Document Builder service available only for <em>ONLYOFFICE Document Server Integration Edition</em></span>
+    <span class="note">ONLYOFFICE Web Document Builder service available only for <em>ONLYOFFICE Developer Edition</em></span>
 
     <h2>Parameters and their description:</h2>
     <table class="table">

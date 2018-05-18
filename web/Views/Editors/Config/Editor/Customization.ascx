@@ -201,7 +201,7 @@
         </tr>
     </tbody>
 </table>
-<span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Document Server Integration Edition</em></span>
+<span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
 
 <div class="header-gray">Example</div>
 <pre>
