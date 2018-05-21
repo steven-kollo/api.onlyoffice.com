@@ -45,7 +45,7 @@
         </tr>
         <tr class="tablerow">
             <td id="url" class="copy-link">url<span class="required">*</span></td>
-            <td>Defines the URL where the source viewed or edited document is stored.</td>
+            <td>Defines the absolute URL where the source viewed or edited document is stored.</td>
             <td>string</td>
             <td>"https://example.com/url-to-example-document.docx"</td>
         </tr>

@@ -5,9 +5,15 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>PHP</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> for their integration. We will show you how to run the PHP example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.</p>
+<p class="dscr">
+    To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>PHP</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> for their integration.
+    We will show you how to run the PHP example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.
+</p>
 
-<div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
+<div class="note">
+    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+    <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
@@ -17,7 +23,7 @@
 <p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">install Document Server for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
-<p>Download the <a href="<%= Url.Action("demopreview") %>">PHP Example</a> from our site.</p>
+<p>Download the <a href="<%= Url.Action("demopreview") %>">PHP example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config.php</em> file:</p>
 <pre>
 $GLOBALS['DOC_SERV_CONVERTER_URL'] = "https://documentserver/ConvertService.ashx";
@@ -29,7 +35,11 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/d
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>doceditor.php</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
-<p>You can use any web server capable of runnig PHP code to run the sample. We will demonstrate how to run the PHP sample using <b>Internet Information Services (IIS)</b> web server. To set up and configure PHP on IIS <b>PHP Manager for IIS</b> will be used.</p>
+<p>
+    You can use any web server capable of runnig PHP code to run the sample.
+    We will demonstrate how to run the PHP sample using <b>Internet Information Services (IIS)</b> web server.
+    To set up and configure PHP on IIS <b>PHP Manager for IIS</b> will be used.
+</p>
 
 <ul>
     <li><b>IIS: version 7</b> or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
@@ -48,7 +58,10 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/d
 
         <p>You need to register the installed PHP version in <b>IIS</b> using <b>PHP Manager</b>.</p>
 
-        <p>Double-click <b>PHP Manager</b> to open it, click the <b>Register new PHP version</b> task and specify the full path to the main PHP executable file location. For example: C:\Program Files\PHP\php-cgi.exe.</p>
+        <p>
+            Double-click <b>PHP Manager</b> to open it, click the <b>Register new PHP version</b> task and specify the full path to the main PHP executable file location.
+            For example: <em>C:\Program Files\PHP\php-cgi.exe</em>.
+        </p>
         <img src="<%= Url.Content("~/content/img/php/php-version-1.jpg") %>" width="700" alt="" />
 
         <p>After clicking <b>OK</b> the new <b>PHP version</b> will be registered with IIS and will become active.</p>
@@ -60,7 +73,10 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/d
         <p>Double-click the <b>Handler Mappings</b> feature:</p>
         <img src="<%= Url.Content("~/content/img/php/handlerclick.png") %>" alt="" />
 
-        <p>In the <b>Action</b> panel, click <b>Add Module Mapping</b>. In the <b>Add Module Mapping</b> dialog box, specify the configuration settings as follows:</p>
+        <p>
+            In the <b>Action</b> panel, click <b>Add Module Mapping</b>.
+            In the <b>Add Module Mapping</b> dialog box, specify the configuration settings as follows:
+        </p>
         <ul>
             <li>Request path: <b>*.php</b>,</li>
             <li>Module: <b>FastCgiModule</b>,</li>
@@ -112,7 +128,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/d
     <li>Install <b>Apache</b> and <b>PHP</b>:
         <div class="commandline">apt-get install -y apache2 php7.0 libapache2-mod-php7.0</div>
     </li>
-    <li>Download the archive with the PHP Example and unpack the archive:
+    <li>Download the archive with the PHP example and unpack the archive:
         <div class="commandline">cd /var/www/html</div>
         <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/PHP%20Example.zip</div>
         <div class="commandline">unzip PHP\ Example.zip</div>

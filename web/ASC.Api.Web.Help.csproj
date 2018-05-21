@@ -1104,6 +1104,7 @@
     <Content Include="Views\DocBuilder\Textdocumentapi\Api\getdocument.ascx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
     <Content Include="Views\Editors\Changelog.aspx" />
+    <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />

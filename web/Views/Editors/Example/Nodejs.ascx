@@ -5,9 +5,15 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Node.js</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> for their integration. We will show you how to run the Node.js example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.</p>
+<p class="dscr">
+    To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Node.js</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> for their integration.
+    We will show you how to run the Node.js example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.
+</p>
 
-<div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
+<div class="note">
+    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+    <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
@@ -17,7 +23,7 @@
 <p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/server/windows/document/index.aspx">install Document Server for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Node.js code for the editors integration<span class="copy-link" title="Click to get link"></span></h2>
-<p>Download the <a href="<%= Url.Action("demopreview") %>">Node.js Example</a> from our site.</p>
+<p>Download the <a href="<%= Url.Action("demopreview") %>">Node.js example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config/default.js</em> file:</p>
 <pre class="commandline">
 "siteUrl": "https://documentserver/"
@@ -36,7 +42,8 @@
     <li>Launch the <b>Command Prompt</b> and switch to the folder with the Node.js project code, for example:
         <div class="commandline">cd /d "C:\Node.js Example"</div>
     </li>
-    <li>Node.js comes with a package manager, <b>node package manager (npm)</b>, which is automatically installed along with Node.js. To run the Node.js code install the project modules using the following npm command:
+    <li>Node.js comes with a package manager, <b>node package manager (npm)</b>, which is automatically installed along with Node.js.
+        To run the Node.js code install the project modules using the following npm command:
         <div class="commandline">npm install</div>
         <p>A new <em>node_modules</em> folder will be created in the project folder.</p>
     </li>
@@ -59,13 +66,13 @@
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
 <p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/server/linux/document/index.aspx">install Document Server for Linux</a>.</p>
 
-<h2 id="linux-2"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
+<h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
     <li>Install <b>Node.js</b>:
         <div class="commandline">curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -</div>
         <div class="commandline">sudo apt-get install -y nodejs</div>
     </li>
-    <li>Download the archive with the Node.js Example and unpack the archive:
+    <li>Download the archive with the Node.js example and unpack the archive:
         <div class="commandline">wget https://api.onlyoffice.com/app_data/editor/Node.js%20Example.zip</div>
         <div class="commandline">unzip Node.js\ Example.zip</div>
     </li>
@@ -75,10 +82,11 @@
     <li>Install the dependencies:
         <div class="commandline">npm install</div>
     </li>
-    <li>Edit the <em>config/default.js</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
+    <li>Edit the <em>default.js</em> configuration file.
+        Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/default.json</div>
         <p>Edit the following lines:</p>
-        
+
         <pre>
 "siteUrl": "https://documentserver/"
 </pre>

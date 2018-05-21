@@ -14,7 +14,11 @@
         <span class="hdr">Conversion API</span>
     </h1>
 
-    <p class="dscr">For the interaction with the <b>document conversion service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+    <p class="dscr">
+        For the interaction with the <b>document conversion service</b> the POST requests are used.
+        The request parameters are entered in JSON format in the request body.
+        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+    </p>
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
@@ -43,7 +47,8 @@
                         <li>true</li>
                         <li>false</li>
                     </ul>
-                    When the asynchronous request type is used, the reply is formed instantly. In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
+                    When the asynchronous request type is used, the reply is formed instantly.
+                    In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
                 </td>
                 <td>boolean</td>
                 <td>optional</td>
@@ -102,13 +107,15 @@
                 <td id="thumbnail" class="copy-link">thumbnail</td>
                 <td>Defines the option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
                     <ul>
-                        <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed. Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
+                        <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed.
+                            Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
                             <br />
                             <b>type</b>: integer,
                             <br />
                             <b>example</b>: 1;
                         </li>
-                        <li><b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages. If false, the zip archive containing thumbnails for all the pages will be created. The default value is <em>true</em>,
+                        <li><b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages.
+                            If false, the zip archive containing thumbnails for all the pages will be created. The default value is <em>true</em>,
                             <br />
                             <b>type</b>: boolean,
                             <br />
@@ -139,7 +146,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
-                <td>Defines the link to the document to be converted.</td>
+                <td>Defines the absolute URL to the document to be converted.</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
@@ -167,131 +174,143 @@
             </tr>
             <tr>
                 <td>doc</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>docm</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>docx</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>dot</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>dotm</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>dotx</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>epub</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>fodt</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>html</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>mht</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>odt</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>ott</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
@@ -299,55 +318,55 @@
             </tr>
             <tr>
                 <td>pdf</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td></td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
             </tr>
             <tr>
                 <td>rtf</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>txt</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
             </tr>
             <tr>
                 <td>xps</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
             </tr>
         </tbody>
     </table>
-                
+
     <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
     <table class="table-conversion-matrix-spreadsheet">
         <tbody>
@@ -367,102 +386,113 @@
             </tr>
             <tr>
                 <td>csv</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>fods</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ods</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>ots</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
                 <td>xls</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xlsm</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xlsx</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
             </tr>
             <tr>
                 <td>xlt</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xltm</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xltx</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
         </tbody>
     </table>
@@ -485,113 +515,123 @@
             </tr>
             <tr>
                 <td>fodp</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>odp</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>otp</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
+                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
                 <td class="table-conversion-matrix-cell-tick">&#10003;</td>
             </tr>
             <tr>
                 <td>pot</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>potm</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>potx</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pps</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ppsm</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ppsx</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ppt</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptm</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptx</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
             </tr>
         </tbody>
     </table>
@@ -690,7 +730,7 @@
             </tr>
             <tr class="tablerow">
                 <td>-2</td>
-                <td>Timeout conversion error.</td>
+                <td>Conversion timeout error.</td>
             </tr>
             <tr class="tablerow">
                 <td>-3</td>

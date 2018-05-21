@@ -27,13 +27,13 @@
     <tbody>
         <tr class="tablerow">
             <td id="callbackUrl" class="copy-link">callbackUrl<span class="required">*</span></td>
-            <td>Specifies URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server).</td>
+            <td>Specifies absolute URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server).</td>
             <td>string</td>
             <td>"https://example.com/url-to-callback.ashx"</td>
         </tr>
         <tr class="tablerow">
             <td id="createUrl" class="copy-link">createUrl</td>
-            <td>Defines the URL of the document where it will be created and available after creation. If not specified, there will be no creation button.
+            <td>Defines the absolute URL of the document where it will be created and available after creation. If not specified, there will be no creation button.
             </td>
             <td>string</td>
             <td>"https://example.com/url-to-create-document/"</td>
@@ -74,7 +74,7 @@
                         <b>example</b>: "exampledocument1.docx";
                     </li>
                     <li>
-                        <b>url</b> - the URL to the document where it is stored,
+                        <b>url</b> - the absolute URL to the document where it is stored,
                         <br />
                         <b>type</b>: string,
                         <br />

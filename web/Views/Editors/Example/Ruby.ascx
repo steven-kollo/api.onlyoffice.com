@@ -5,9 +5,15 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Ruby</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Ruby Example</a> for their integration. We will show how to run the Ruby example on Linux OS.</p>
+<p class="dscr">
+    To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>Ruby</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">Ruby Example</a> for their integration.
+    We will show how to run the Ruby example on Linux OS.
+</p>
 
-<div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
+<div class="note">
+    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+    <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
@@ -21,7 +27,7 @@
         <div class="commandline">gpg --keyserver "hkp://keys.gnupg.net" --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</div>
         <div class="commandline">\curl -sSL https://get.rvm.io | bash -s stable --ruby</div>
     </li>
-    <li>Download the archive with the Ruby Example and unpack the archive:
+    <li>Download the archive with the Ruby example and unpack the archive:
         <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Ruby%20Example.zip"</div>
         <div class="commandline">unzip Ruby\ Example.zip</div>
     </li>
@@ -31,7 +37,8 @@
     <li>Install the dependencies:
         <div class="commandline">bundle install</div>
     </li>
-    <li>Edit the <em>application.rb</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
+    <li>Edit the <em>application.rb</em> configuration file.
+        Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/application.rb</div>
         <p>Edit the following lines:</p>
 

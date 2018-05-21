@@ -104,7 +104,7 @@
             <td id="feedback" class="copy-link">feedback</td>
             <td>Defines settings for the <b>Feedback &amp; Support</b> menu button. Can be either boolean (simply displays or hides the <b>Feedback &amp; Support</b> menu button) or object. In case of object type the following parameters are available:
                 <ul>
-                    <li><b>url</b> - the website address which will be opened when clicking the <b>Feedback &amp; Support</b> menu button,
+                    <li><b>url</b> - the absolute URL to the website address which will be opened when clicking the <b>Feedback &amp; Support</b> menu button,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -144,7 +144,7 @@
                         <br />
                         <b>example</b>: "Go to Documents";
                     </li>
-                    <li><b>url</b> - the website address which will be opened when clicking the <b>Go to Documents</b> menu button,
+                    <li><b>url</b> - the absolute URL to the website address which will be opened when clicking the <b>Go to Documents</b> menu button,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -171,7 +171,7 @@
                         <br />
                         <b>example</b>: "https://example.com/logo_em.png";
                     </li>
-                    <li><b>url</b> - the link which will be used when someone clicks the logo image (can be used to go to your web site, etc.),
+                    <li><b>url</b> - the absolute URL which will be used when someone clicks the logo image (can be used to go to your web site, etc.),
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -201,7 +201,7 @@
         </tr>
     </tbody>
 </table>
-<span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Document Server Integration Edition</em></span>
+<span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
 
 <div class="header-gray">Example</div>
 <pre>

@@ -5,9 +5,12 @@
 </h1>
 
 <h2>Introduction</h2>
-<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>.Net (C#)</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> for their integration.</p>
+<p class="dscr">To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>.Net (C#)</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">.Net (C#) example</a> for their integration.</p>
 
-<div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
+<div class="note">
+    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+    <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+</div>
 
 <p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
 
@@ -16,7 +19,7 @@
 <p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/server/windows/document/install-office-apps.aspx">for Windows</a> or <a href="https://helpcenter.onlyoffice.com/server/linux/document/index.aspx">for Linux</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
-<p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) Example</a> from our site.</p>
+<p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>settings.config</em> file:</p>
 <pre>
 &lt;add key="files.docservice.url.converter" value="https://documentserver/ConvertService.ashx" /&gt;
