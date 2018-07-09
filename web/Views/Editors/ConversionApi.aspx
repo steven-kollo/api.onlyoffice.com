@@ -306,15 +306,15 @@
             </tr>
             <tr>
                 <td>ott</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pdf</td>
@@ -419,14 +419,14 @@
             </tr>
             <tr>
                 <td>ots</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xls</td>
@@ -535,13 +535,13 @@
             </tr>
             <tr>
                 <td>otp</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pot</td>
