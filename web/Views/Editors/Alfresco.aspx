@@ -109,7 +109,7 @@ sudo ./alfresco.sh start</span>
     <ul>
         <li><b>docUrl</b> - the URL that ONLYOFFICE Document Server uses to download the document (includes the <em>alf_ticket</em> of the current user);</li>
         <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-        <li><b>onlyofficeUrl</b> - the URL that the client needs to reply to ONLYOFFICE Document Server (provided by the onlyoffice.url property);</li>
+        <li><b>onlyofficeUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (provided by the onlyoffice.url property);</li>
         <li><b>key</b> - the UUID+Modified Timestamp to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
         <li><b>docTitle</b> - the document Title (name).</li>
     </ul>

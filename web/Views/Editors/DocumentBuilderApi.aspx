@@ -44,7 +44,7 @@
                         <li>true</li>
                         <li>false</li>
                     </ul>
-                    When the asynchronous request type is used, the reply is formed instantly.
+                    When the asynchronous request type is used, the response is formed instantly.
                     In this case to get the result it is necessary to send requests without parameter change until the document generation is finished.
                     The default value is <b>false</b>.
                 </td>
@@ -53,7 +53,7 @@
             <tr class="tablerow">
                 <td id="key" class="copy-link">key</td>
                 <td>Defines the request identifier used to unambiguously identify the request.
-                    The key is formed on the <b>document builder service</b> side and is returned as the reply to the first request.
+                    The key is formed on the <b>document builder service</b> side and is returned as the response to the first request.
                     When the asynchronous request is used (the <em>async</em> parameter is set to <b>true</b>) the key is not present in the first request, but must be present in all the following requests which will be send before the generation is complete.
                     When the synchronous request is used (the <em>async</em> parameter is set to <b>false</b>), this parameter is not required.
                 </td>
@@ -67,9 +67,9 @@
         </tbody>
     </table>
 
-    <p>The <em>.docbuilder</em> file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the reply with the absolute URL to the resulting file will be returned (see below).</p>
+    <p>The <em>.docbuilder</em> file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).</p>
 
-    <div class="note">Please note, that <em>.docbuilder</em> script file can contain several output files as a result. The URL to them all will be returned in the reply to the request once the file generation is finished.</div>
+    <div class="note">Please note, that <em>.docbuilder</em> script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.</div>
 
     <p>You can find more information about the <em>.docbuilder</em> file syntax <a href="<%= Url.Action("integrationapi/usingdocbuilderfile", "DocBuilder") %>">here</a>. Please read <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("gettingstarted", "DocBuilder") %>">API documentation</a> for the detailed information on what classes and methods are used to generate the documents with the help of <em>.docbuilder</em> files.</p>
 
@@ -82,7 +82,7 @@
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
-    <div class="header-gray">Reply format</div>
+    <div class="header-gray">Response format</div>
     <pre>
 {
    "key": "af86C7e71Ca8",
@@ -99,7 +99,7 @@
 </pre>
 
 
-    <div class="header-gray">Reply format</div>
+    <div class="header-gray">Response format</div>
     <pre>
 {
    "key": "Khirz6zTPdfd7",
@@ -120,7 +120,7 @@
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
-    <div class="header-gray">Reply example</div>
+    <div class="header-gray">Response example</div>
     <pre>
 {
    "key": "af86C7e71Ca8",
@@ -132,7 +132,7 @@
 }
 </pre>
 
-    <div class="header-gray">Example of the reply when an error occurred</div>
+    <div class="header-gray">Example of the response when an error occurred</div>
     <pre>
 {
     "error": -8

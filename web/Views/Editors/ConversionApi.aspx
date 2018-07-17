@@ -47,7 +47,7 @@
                         <li>true</li>
                         <li>false</li>
                     </ul>
-                    When the asynchronous request type is used, the reply is formed instantly.
+                    When the asynchronous request type is used, the response is formed instantly.
                     In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
                 </td>
                 <td>boolean</td>
@@ -672,7 +672,7 @@
         To receive a response in JSON format you need to specify in the HTTP request Header <em>accept</em> with the value <b>application/json</b> (available from version 4.3).
         When forming the link to the resulting file, the same server name is used which was made the conversion request to.
     </p>
-    <div class="header-gray">Sample of the reply in XML format</div>
+    <div class="header-gray">Sample of the response in XML format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
@@ -682,7 +682,7 @@
     &lt;Percent&gt;100&lt;/Percent&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Sample of the reply in JSOn format</div>
+    <div class="header-gray">Sample of the response in JSOn format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
     <pre>
 {
@@ -692,7 +692,7 @@
 }
 </pre>
 
-    <div class="header-gray">Sample of the intermediate reply to the asynchronous request (with the parameter <em>async=true</em>) in XML format</div>
+    <div class="header-gray">Sample of the intermediate response to the asynchronous request (with the parameter <em>async=true</em>) in XML format</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
@@ -701,7 +701,7 @@
     &lt;Percent&gt;95&lt;/Percent&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Sample of the intermediate reply to the asynchronous request (with the parameter <em>async=true</em>) in JSON format</div>
+    <div class="header-gray">Sample of the intermediate response to the asynchronous request (with the parameter <em>async=true</em>) in JSON format</div>
     <pre>
 {
     "endConvert": false,
@@ -709,14 +709,14 @@
 }
 </pre>
 
-    <div class="header-gray">Sample of the reply when an error occurred in XML format</div>
+    <div class="header-gray">Sample of the response when an error occurred in XML format</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;Error&gt;-3&lt;/Error&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Sample of the reply when an error occurred in JSON format</div>
+    <div class="header-gray">Sample of the response when an error occurred in JSON format</div>
     <pre>
 {
     "error": -3
