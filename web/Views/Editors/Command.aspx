@@ -97,7 +97,7 @@
 </pre>
 
     <p>The request result is returned in JSON form.</p>
-    <div class="header-gray">Reply format</div>
+    <div class="header-gray">Sample of the reply</div>
     <pre>
 {
     "error": 0,
@@ -113,7 +113,7 @@
 </pre>
 
     <p>The request result of version is returned in JSON form.</p>
-    <div class="header-gray">Reply format</div>
+    <div class="header-gray">Sample of the reply</div>
     <pre>
 {
     "error": 0,

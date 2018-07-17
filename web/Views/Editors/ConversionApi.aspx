@@ -667,18 +667,12 @@
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
-    <p>The request result is returned in XML form.</p>
-    <div class="header-gray">Reply format</div>
-    <pre>
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;FileResult&gt;
-    &lt;FileUrl&gt;[Link to the converted file at the server]&lt;/FileUrl&gt;
-    &lt;Percent&gt;[Conversion progress percentage]&lt;/Percent&gt;
-    &lt;EndConvert&gt;[Conversion is finished - True|False]&lt;/EndConvert&gt;
-&lt;/FileResult&gt;
-</pre>
+    <p id="response-xml" class="copy-link">
+        The request result is returned in XML form.
+        When forming the link to the resulting file, the same server name is used which was made the conversion request to.
+    </p>
+    <div class="header-gray">Sample of the reply</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
-    <div class="header-gray">Reply example</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
@@ -687,7 +681,8 @@
     &lt;EndConvert&gt;True&lt;/EndConvert&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Example of the intermediate reply to the asynchronous request (with the parameter <em>async=true</em>)</div>
+
+    <div class="header-gray">Sample of the intermediate reply to the asynchronous request (with the parameter <em>async=true</em>)</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
@@ -696,14 +691,8 @@
     &lt;EndConvert&gt;False&lt;/EndConvert&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Reply format when an error occurred</div>
-    <pre>
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;FileResult&gt;
-    &lt;Error&gt;Error code&lt;/Error&gt;
-&lt;/FileResult&gt;
-</pre>
-    <div class="header-gray">Example of the reply when an error occurred</div>
+
+    <div class="header-gray">Sample of the reply when an error occurred</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
