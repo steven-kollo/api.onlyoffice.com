@@ -667,37 +667,60 @@
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
-    <p id="response-xml" class="copy-link">
-        The request result is returned in XML form.
+    <p id="response" class="copy-link">
+        The request result is returned in XML format.
+        To receive a response in JSON format you need to specify in the HTTP request Header <em>accept</em> with the value <b>application/json</b> (available from version 4.3).
         When forming the link to the resulting file, the same server name is used which was made the conversion request to.
     </p>
-    <div class="header-gray">Sample of the reply</div>
+    <div class="header-gray">Sample of the reply in XML format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
+    &lt;EndConvert&gt;True&lt;/EndConvert&gt;
     &lt;FileUrl&gt;https://documentserver/ResourceService.ashx?filename=output.doc&lt;/FileUrl&gt;
     &lt;Percent&gt;100&lt;/Percent&gt;
-    &lt;EndConvert&gt;True&lt;/EndConvert&gt;
 &lt;/FileResult&gt;
 </pre>
+    <div class="header-gray">Sample of the reply in JSOn format</div>
+    <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
+    <pre>
+{
+    "endConvert": true,
+    "fileUrl": "https://documentserver/ResourceService.ashx?filename=output.doc",
+    "percent": 100
+}
+</pre>
 
-    <div class="header-gray">Sample of the intermediate reply to the asynchronous request (with the parameter <em>async=true</em>)</div>
+    <div class="header-gray">Sample of the intermediate reply to the asynchronous request (with the parameter <em>async=true</em>) in XML format</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
+    &lt;EndConvert&gt;False&lt;/EndConvert&gt;
     &lt;FileUrl&gt;&lt;/FileUrl&gt;
     &lt;Percent&gt;95&lt;/Percent&gt;
-    &lt;EndConvert&gt;False&lt;/EndConvert&gt;
 &lt;/FileResult&gt;
 </pre>
+    <div class="header-gray">Sample of the intermediate reply to the asynchronous request (with the parameter <em>async=true</em>) in JSON format</div>
+    <pre>
+{
+    "endConvert": false,
+    "percent": 95
+}
+</pre>
 
-    <div class="header-gray">Sample of the reply when an error occurred</div>
+    <div class="header-gray">Sample of the reply when an error occurred in XML format</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;Error&gt;-3&lt;/Error&gt;
 &lt;/FileResult&gt;
+</pre>
+    <div class="header-gray">Sample of the reply when an error occurred in JSON format</div>
+    <pre>
+{
+    "error": -3
+}
 </pre>
 
     <div class="header-gray">Possible error codes and their description</div>
