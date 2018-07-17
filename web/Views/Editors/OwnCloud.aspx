@@ -57,7 +57,8 @@
 
 
     <h2>Installing ownCloud/Nextcloud ONLYOFFICE integration app</h2>
-    <p>To start using ONLYOFFICE Document Server with ownCloud/Nextcloud, the following steps must be performed:</p>
+    <p>The ownCloud/Nextcloud administrator can install the integration app from the in-built application market. For that go to the user name and select <b>Apps</b>, if you are using Nextcloud, or click the upper-left hamburger menu and select <b>Market</b> if you are using ownCloud. After that find <b>ONLYOFFICE</b> in the list of available applications and install it.</p>
+    <p>If the server with the ownCloud/Nextcloud installed does not have an Internet access, or if you need it for some other reason, the administrator can install the application manually. To start using ONLYOFFICE Document Server with ownCloud/Nextcloud, the following steps must be performed:</p>
     <ol>
         <li>Go to the ownCloud/Nextcloud server <em>apps/</em> directory (or some other directory <a href="https://doc.owncloud.org/server/9.0/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
             <span class="commandline">cd apps/</span>
