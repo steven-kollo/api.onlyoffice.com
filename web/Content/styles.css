@@ -386,7 +386,7 @@ li b.copy-link[id]:hover:before {
 }
 
 .todo {
-    color: red;
+    color: red !important;
 }
 
 /*top navigation*/

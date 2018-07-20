@@ -158,7 +158,7 @@
             </tr>
             <tr class="tablerow">
                 <td>5</td>
-                <td>Command not correсt.</td>
+                <td>Command not correct.</td>
             </tr>
             <tr class="tablerow">
                 <td>6</td>
