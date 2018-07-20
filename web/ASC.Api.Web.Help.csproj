@@ -252,6 +252,7 @@
     <Content Include="Content\img\Editor\alfresco.png" />
     <Content Include="Content\img\Editor\comment.png" />
     <Content Include="Content\img\Editor\e-token.png" />
+    <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\history.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />

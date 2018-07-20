@@ -78,6 +78,13 @@
                 <td></td>
             </tr>
             <tr>
+                <th>Filling in forms</th>
+                <td><a title="Open DOCX file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
                 <th>Comment</th>
                 <td><a title="Open DOCX file for commenting" href="<%= Url.Action("editor") %>?method=docxComment" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentCode">&lt;/&gt;</a>
                 </td>
@@ -1300,6 +1307,47 @@
                     "permissions": {
                         "edit": false,
                         "review": true
+                    }
+                },
+                "documentType": "text",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
+                    "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="fillFormsCode">
+                <div class="popap-header">Open docx for filling in forms</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "9B5D4A67A9A9",
+                    "title": "Example Document Title.docx",
+                    "url": "https://example.com/url-to-example-document.docx",
+                    "permissions": {
+                        "edit": false,
+                        "fillForms": true
                     }
                 },
                 "documentType": "text",

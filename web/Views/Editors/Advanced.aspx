@@ -76,6 +76,7 @@ config = {
             "comment": true,
             "download": true,
             "edit": true,
+            "fillForms": true,
             "print": true,
             "review": true
         },
