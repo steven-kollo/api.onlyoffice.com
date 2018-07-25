@@ -19,6 +19,8 @@
 
     <p>The solution will create a new <b>Edit in ONLYOFFICE</b> menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.</p>
 
+    <p>Tested with SharePoint 2010, 2013 and 2016.</p>
+
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from SharePoint and any end clients.
