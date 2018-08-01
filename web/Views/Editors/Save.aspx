@@ -50,7 +50,7 @@ new DocsAPI.DocEditor("placeholder", {
     </ol>
 
 
-    <h2 id="tenseconds" class="copy-link">Save delay</h2>
+    <h2 id="savedelay" class="copy-link">Save delay</h2>
     <p>
         The <b>document editing service</b> informs the <b>document storage service</b> about the end of the document editing after 10 seconds of editing closure.
         The time is not precise and is calculated using the file conversion time and conversion start delay time.

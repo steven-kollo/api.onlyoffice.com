@@ -131,7 +131,7 @@
     <p>Then ONLYOFFICE Document Server downloads the document from ownCloud/Nextcloud and the user begins editing.</p>
     <p>ONLYOFFICE Document Server sends a POST request to the <em>callback</em> URL to inform ownCloud/Nextcloud that a user is editing the document.</p>
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
-    <p>After <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting ownCloud/Nextcloud know that the clients have finished editing the document and closed it.</p>
+    <p>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting ownCloud/Nextcloud know that the clients have finished editing the document and closed it.</p>
     <p>ownCloud/Nextcloud downloads the new version of the document, replacing the old one.</p>
 
 
