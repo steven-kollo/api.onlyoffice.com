@@ -50,19 +50,29 @@
         ONLYOFFICE Document Server must also be able to POST to ownCloud directly.
     </p>
     <p>
-        Starting with version 4.3.0, ONLYOFFICE Document Server and ownCloud can be installed either on different computers, or on the same machine. In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Document Server and ownCloud work on port 80. Or you can use Document Server behind a proxy, please refer to <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">this article</a> to learn how you can configure it.
+        Starting with version 4.3.0, ONLYOFFICE Document Server and ownCloud can be installed either on different computers, or on the same machine.
+        In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Document Server and ownCloud work on port 80.
+        Or you can use Document Server behind a proxy, please refer to <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">this article</a> to learn how you can configure it.
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
     <h2>Installing ownCloud ONLYOFFICE integration app</h2>
-    <p>The ownCloud administrator can install the integration app from the in-built application market. For that click the upper-left hamburger menu and select <b>Market</b>. After that find <b>ONLYOFFICE</b> in the list of available applications and install it.</p>
-    <p>If the server with the ownCloud installed does not have an Internet access, or if you need it for some other reason, the administrator can install the application manually. To start using ONLYOFFICE Document Server with ownCloud, the following steps must be performed:</p>
+    <p>
+        The ownCloud administrator can install the integration app from the in-built application market.
+        For that click the upper-left hamburger menu and select <b>Market</b>.
+        After that find <b>ONLYOFFICE</b> in the list of available applications and install it.
+    </p>
+    <p>
+        If the server with the ownCloud installed does not have an Internet access, or if you need it for some other reason, the administrator can install the application manually.
+        To start using ONLYOFFICE Document Server with ownCloud, the following steps must be performed:
+    </p>
     <ol>
         <li>Go to the ownCloud server <em>apps/</em> directory (or some other directory <a href="https://doc.owncloud.org/server/latest/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
             <span class="commandline">cd apps/</span>
         </li>
-        <li>Get the ownCloud ONLYOFFICE integration app. There are several ways to do that:
+        <li>Get the ownCloud ONLYOFFICE integration app.
+            There are several ways to do that:
             <ol style="list-style-type: lower-alpha;">
                 <li>Download the latest signed version from the official store for <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>.</li>
                 <li>Or you can download the latest signed version from the application <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases">release page</a> on GitHub.</li>
@@ -108,12 +118,18 @@
 
     <p>Enable or disable the <em>Open file in the same tab</em> setting.</p>
 
-    <p>The <b>Open in ONLYOFFICE</b> action will be added to the file context menu. You can specify this action as default and it will be used when the file name is clicked for the selected file types.</p>
+    <p>
+        The <b>Open in ONLYOFFICE</b> action will be added to the file context menu.
+        You can specify this action as default and it will be used when the file name is clicked for the selected file types.
+    </p>
 
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>When creating a new file, the user navigates to a document folder within ownCloud and clicks the <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> item in the <em>new</em> (+) menu.</p>
-    <p>The browser invokes the <em>create</em> method in the <em>/lib/Controller/EditorController.php</em> controller. This method adds the copy of the file from the <em>assets</em> folder to the folder the user is currently in.</p>
+    <p>
+        The browser invokes the <em>create</em> method in the <em>/lib/Controller/EditorController.php</em> controller.
+        This method adds the copy of the file from the <em>assets</em> folder to the folder the user is currently in.
+    </p>
     <p>Or, when opening an existing file, the user navigates to it within ownCloud and selects the <b>Open in ONLYOFFICE</b> menu option.</p>
     <p>A new browser tab is opened and the <em>index</em> method of the <em>/lib/Controller/EditorController.php</em> controller is invoked.</p>
     <p>The app prepares a JSON object with the following properties:</p>
