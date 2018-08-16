@@ -26,7 +26,7 @@
         It will also create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to Nextcloud.
     </p>
-    <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud">Docker installation</a> to get installed and configured Document Server and Nextcloud installation with a couple of commands.</p>
+    <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud">Docker installation</a> to get installed and configured Document Server and Nextcloud installation with a couple of commands.</p>
     <p>Tested with Nextcloud 12 and 13, the latest connector signed versions are available in the official store for <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</p>
 
 
