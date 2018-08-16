@@ -70,6 +70,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "History",
                 "HowItWorks",
                 "Methods",
+                "Nextcloud",
                 "Open",
                 "OwnCloud",
                 "Plugins",
@@ -246,6 +247,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Methods()
+        {
+            return View();
+        }
+
+        public ActionResult Nextcloud()
         {
             return View();
         }
