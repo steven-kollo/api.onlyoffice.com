@@ -15,6 +15,19 @@
         <span class="hdr">Nextcloud ONLYOFFICE integration app</span>
     </h1>
 
+    <div class="video-link" title="Show video">
+        <img src="<%= Url.Content("~/content/img/video/nextcloud_integration.png") %>" alt="Show video" />
+
+        <div class="popap-dialog">
+            <div class="popap-container">
+                <div class="popap-header">How to integrate ONLYOFFICE Document Server with Nextcloud</div>
+                <iframe src="https://www.youtube.com/embed/vN9v9sJ0HVw?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
+                <a class="button-close button">Close</a>
+            </div>
+            <div class="button-close popap-close" title="Close">&times;</div>
+        </div>
+    </div>
+
     <p>
         This <a href="https://github.com/ONLYOFFICE/onlyoffice-nextcloud" target="_blank">app</a> enables users to edit office documents from <a href="https://nextcloud.com" target="_blank">Nextcloud</a> using ONLYOFFICE Document Server.
         Currently the following document formats can be edited with this app: csv, docx, pptx, txt, xlsx.
