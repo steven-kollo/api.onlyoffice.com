@@ -50,11 +50,13 @@ new DocsAPI.DocEditor("placeholder", {
     </ol>
 
 
-    <h2 id="tenseconds" class="copy-link">Save delay</h2>
+    <h2 id="savedelay" class="copy-link">Save delay</h2>
     <p>
-        The <b>document editing service</b> informs the <b>document storage service</b> about the end of the document editing after 10 seconds of editing closure.
-        The time is not precise and is calculated using the file conversion time and conversion start delay time.
-        The duration of the edited file conversion into the Office Open XML format depends on the file structure complexity and can be performed rather a long time.
+        Once the document editing is finished, the <b>document editing service</b> informs the <b>document storage service</b> about it.
+        The time before this is done is calculated using the conversion time of the edited file into the Office Open XML format (which depends on the file size, complexity and the computer power, and can be performed rather a long time), and conversion start delay time (which is equal to 5 seconds by default).
+        In most common cases the time is about 10 seconds after the editing is finished.
+    </p>
+    <p>
         The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing.
         The conversion start delay time can be changed in <b>Document Server</b> configuration file, which can be found at the following path:
     </p>

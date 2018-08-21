@@ -19,6 +19,8 @@
 
     <p>The solution will create a new <b>Edit in ONLYOFFICE</b> menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.</p>
 
+    <p>Tested with SharePoint 2010, 2013 and 2016.</p>
+
     <h2>Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from SharePoint and any end clients.
@@ -103,7 +105,7 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
     <ul>
         <li><b>url</b> - the URL that ONLYOFFICE Document Server uses to download the document;</li>
         <li><b>callback</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-        <li><b>documentServerUrl</b> - the URL that the client needs to reply to ONLYOFFICE Document Server (can be set at the settings page);</li>
+        <li><b>documentServerUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (can be set at the settings page);</li>
         <li><b>key</b> - the file identifier from SharePoint;</li>
         <li><b>fileName</b> - the document Title (name);</li>
         <li><b>userId</b> - the user identifier;</li>
@@ -113,7 +115,7 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
     <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the DocEditor configuration with the above properties.</p>
     <p>Then ONLYOFFICE Document Server downloads the document from SharePoint and the user begins editing.</p>
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
-    <p>After <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the callback URL letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.</p>
+    <p>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the callback URL letting SharePoint ONLYOFFICE solution know that the clients have finished editing the document and closed it.</p>
     <p>SharePoint ONLYOFFICE solution downloads the new version of the document, replacing the old one.</p>
 
     <br />

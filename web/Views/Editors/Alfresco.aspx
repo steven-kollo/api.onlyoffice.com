@@ -109,7 +109,7 @@ sudo ./alfresco.sh start</span>
     <ul>
         <li><b>docUrl</b> - the URL that ONLYOFFICE Document Server uses to download the document (includes the <em>alf_ticket</em> of the current user);</li>
         <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-        <li><b>onlyofficeUrl</b> - the URL that the client needs to reply to ONLYOFFICE Document Server (provided by the onlyoffice.url property);</li>
+        <li><b>onlyofficeUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (provided by the onlyoffice.url property);</li>
         <li><b>key</b> - the UUID+Modified Timestamp to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
         <li><b>docTitle</b> - the document Title (name).</li>
     </ul>
@@ -119,7 +119,7 @@ sudo ./alfresco.sh start</span>
     <p>ONLYOFFICE Document Server sends a POST request to the <em>callback</em> URL to inform Alfresco that a user is editing the document.</p>
     <p>Alfresco locks the document, but still allows other users with write access the ability to collaborate in real time with ONLYOFFICE Document Server by leaving the Action present.</p>
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
-    <p>After <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Alfresco know that the clients have finished editing the document and closed it.</p>
+    <p>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Alfresco know that the clients have finished editing the document and closed it.</p>
     <p>Alfresco downloads the new version of the document, replacing the old one.</p>
 
     <br />

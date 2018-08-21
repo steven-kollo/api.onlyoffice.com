@@ -47,7 +47,7 @@
                         <li>true</li>
                         <li>false</li>
                     </ul>
-                    When the asynchronous request type is used, the reply is formed instantly.
+                    When the asynchronous request type is used, the response is formed instantly.
                     In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
                 </td>
                 <td>boolean</td>
@@ -306,15 +306,15 @@
             </tr>
             <tr>
                 <td>ott</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pdf</td>
@@ -419,14 +419,14 @@
             </tr>
             <tr>
                 <td>ots</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xls</td>
@@ -535,13 +535,13 @@
             </tr>
             <tr>
                 <td>otp</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
-                <td class="table-conversion-matrix-cell-tick">&#10003;</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pot</td>
@@ -667,48 +667,60 @@
 </pre>
     <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
-    <p>The request result is returned in XML form.</p>
-    <div class="header-gray">Reply format</div>
-    <pre>
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;FileResult&gt;
-    &lt;FileUrl&gt;[Link to the converted file at the server]&lt;/FileUrl&gt;
-    &lt;Percent&gt;[Conversion progress percentage]&lt;/Percent&gt;
-    &lt;EndConvert&gt;[Conversion is finished - True|False]&lt;/EndConvert&gt;
-&lt;/FileResult&gt;
-</pre>
+    <p id="response" class="copy-link">
+        The request result is returned in XML format.
+        To receive a response in JSON format you need to specify in the HTTP request Header <em>accept</em> with the value <b>application/json</b> (available from version 4.3).
+        When forming the link to the resulting file, the same server name is used which was made the conversion request to.
+    </p>
+    <div class="header-gray">Sample of the response in XML format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
-    <div class="header-gray">Reply example</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
+    &lt;EndConvert&gt;True&lt;/EndConvert&gt;
     &lt;FileUrl&gt;https://documentserver/ResourceService.ashx?filename=output.doc&lt;/FileUrl&gt;
     &lt;Percent&gt;100&lt;/Percent&gt;
-    &lt;EndConvert&gt;True&lt;/EndConvert&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Example of the intermediate reply to the asynchronous request (with the parameter <em>async=true</em>)</div>
+    <div class="header-gray">Sample of the response in JSOn format</div>
+    <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
+    <pre>
+{
+    "endConvert": true,
+    "fileUrl": "https://documentserver/ResourceService.ashx?filename=output.doc",
+    "percent": 100
+}
+</pre>
+
+    <div class="header-gray">Sample of the intermediate response to the asynchronous request (with the parameter <em>async=true</em>) in XML format</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
+    &lt;EndConvert&gt;False&lt;/EndConvert&gt;
     &lt;FileUrl&gt;&lt;/FileUrl&gt;
     &lt;Percent&gt;95&lt;/Percent&gt;
-    &lt;EndConvert&gt;False&lt;/EndConvert&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Reply format when an error occurred</div>
+    <div class="header-gray">Sample of the intermediate response to the asynchronous request (with the parameter <em>async=true</em>) in JSON format</div>
     <pre>
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;FileResult&gt;
-    &lt;Error&gt;Error code&lt;/Error&gt;
-&lt;/FileResult&gt;
+{
+    "endConvert": false,
+    "percent": 95
+}
 </pre>
-    <div class="header-gray">Example of the reply when an error occurred</div>
+
+    <div class="header-gray">Sample of the response when an error occurred in XML format</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;Error&gt;-3&lt;/Error&gt;
 &lt;/FileResult&gt;
+</pre>
+    <div class="header-gray">Sample of the response when an error occurred in JSON format</div>
+    <pre>
+{
+    "error": -3
+}
 </pre>
 
     <div class="header-gray">Possible error codes and their description</div>

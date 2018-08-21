@@ -386,7 +386,7 @@ li b.copy-link[id]:hover:before {
 }
 
 .todo {
-    color: red;
+    color: red !important;
 }
 
 /*top navigation*/
@@ -870,13 +870,14 @@ pre.hljs {
     video
 ******************/
 .video-link {
+    background-color: #000;
     cursor: pointer;
     float: right;
-    height: 150px;
+    height: 138px;
     margin: 0 0 20px 20px;
     overflow: hidden;
     position: relative;
-    width: 300px;
+    width: 246px;
 }
 
 .video-link:before,
@@ -890,9 +891,9 @@ pre.hljs {
     background: white;
     content: "";
     height: 93px;
-    left: 103px;
+    left: 76px;
     opacity: 0.3;
-    top: 28px;
+    top: 22px;
     width: 93px;
     border-radius: 50px;
     -moz-border-radius: 50px;
@@ -905,14 +906,18 @@ pre.hljs {
     border-bottom: 28px solid transparent;
     content: "";
     height: 0;
-    left: 130px;
+    left: 103px;
     opacity: 0.8;
-    top: 47px;
+    top: 41px;
     width: 0;
 }
 
 .video-link:hover:after {
     opacity: 1;
+}
+
+.video-link img {
+    opacity: 0.7;
 }
 
 .video-frame {

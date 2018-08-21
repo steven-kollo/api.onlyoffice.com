@@ -23,6 +23,7 @@
         The plugin will create a new <b>Edit in ONLYOFFICE</b> action within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to Confluence.
     </p>
+    <p>Tested with Confluence Server 5.9.4 - 6.4.3, the connector is available in the official <a href="https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence" target="_blank">Atlassian Marketplace</a>.</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
@@ -33,7 +34,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
     <h2>Getting ONLYOFFICE Connector for Confluence from Atlassian Marketplace</h2>
-    <p>You can download the latest connector version from the <a href="https://marketplace.atlassian.com/plugins/onlyoffice.onlyoffice-confluence-plugin/server/overview" target="_blank">official Atlassian Marketplace</a>. This is done the following way:</p>
+    <p>You can download the latest connector version from the <a href="https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence" target="_blank">official Atlassian Marketplace</a>. This is done the following way:</p>
     <ul>
         <li>Log into your Confluence instance as an administrator.</li>
         <li>Click the admin drop-down box and choose <b>Add-ons</b>. The <b>Manage add-ons</b> screen will load.</li>
@@ -70,7 +71,7 @@
     <ul>
         <li><b>fileUrl</b> - the temporary link that ONLYOFFICE Document Server uses to download the document;</li>
         <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-        <li><b>docserviceApiUrl</b> - the URL that the client needs to reply to ONLYOFFICE Document Server (provided by the files.docservice.url.api property);</li>
+        <li><b>docserviceApiUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (provided by the files.docservice.url.api property);</li>
         <li><b>key</b> - the UUID to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
         <li><b>fileName</b> - the document Title (name).</li>
     </ul>
@@ -78,7 +79,7 @@
     <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the DocEditor configuration with the above properties.</p>
     <p>Then ONLYOFFICE Document Server downloads the document from Confluence and the user begins editing.</p>
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
-    <p>After <a href="<%= Url.Action("save") %>#tenseconds">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Confluence know that the clients have finished editing the document and closed it.</p>
+    <p>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Confluence know that the clients have finished editing the document and closed it.</p>
     <p>Confluence downloads the new version of the document, replacing the old one.</p>
 
     <br />

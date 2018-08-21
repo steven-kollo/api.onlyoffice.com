@@ -21,10 +21,11 @@
     <ul>
         <li><a href="<%= Url.Action("alfresco") %>">ONLYOFFICE Alfresco module package</a></li>
         <li><a href="<%= Url.Action("confluence") %>">ONLYOFFICE Connector for Confluence</a></li>
-        <li><a href="<%= Url.Action("owncloud") %>">ownCloud/Nextcloud ONLYOFFICE integration app</a></li>
+        <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE integration app</a></li>
+        <li><a href="<%= Url.Action("owncloud") %>">ownCloud ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE integration plugin</a></li>
     </ul>
-    
+
     <br />
     <p>
         If you have any further questions, please contact us at

@@ -48,6 +48,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">editorConfig.customization.showReviewChanges</a> field.</li>
         <li>Added the <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> field in the callback handler request when force saving the file.</li>
+        <li>Added the <a href="<%= Url.Action("conversionapi") %>#response">JSON format for response<a></a> from document conversion service.</li>
     </ul>
 
     <h2 id="42" class="copy-link">Version 4.2</h2>

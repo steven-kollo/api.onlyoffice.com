@@ -97,7 +97,7 @@
 </pre>
 
     <p>The request result is returned in JSON form.</p>
-    <div class="header-gray">Reply format</div>
+    <div class="header-gray">Sample of the response</div>
     <pre>
 {
     "error": 0,
@@ -113,7 +113,7 @@
 </pre>
 
     <p>The request result of version is returned in JSON form.</p>
-    <div class="header-gray">Reply format</div>
+    <div class="header-gray">Sample of the response</div>
     <pre>
 {
     "error": 0,
@@ -158,7 +158,7 @@
             </tr>
             <tr class="tablerow">
                 <td>5</td>
-                <td>Command not correсt.</td>
+                <td>Command not correct.</td>
             </tr>
             <tr class="tablerow">
                 <td>6</td>

@@ -44,6 +44,11 @@
             <td>"Example Files"</td>
         </tr>
         <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/info.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="sharingSettings" class="copy-link">sharingSettings</td>
             <td>Defines the settings which will allow to share the document with other users:
                 <ul>
@@ -68,7 +73,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/info.png") %>" alt="" />
+                <img src="<%= Url.Content("~/content/img/editor/sharing_settings.png") %>" alt="" />
             </td>
         </tr>
     </tbody>
