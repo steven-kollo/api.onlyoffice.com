@@ -122,6 +122,20 @@
         You can specify this action as default and it will be used when the file name is clicked for the selected file types.
     </p>
 
+    <p id="editable">
+        ONLYOFFICE Document Server uses Office Open XML format as a basis when opening and editing files.
+        If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the document server proper work and faster performance.
+        After that you can edit the file, making any changes available for the base OOXML format and save the file to this base OOXML format.
+    </p>
+
+    <p>
+        In case the source Nextcloud file format was different from the base one, and you still want to save it to the original format, the file will be converted to this format from OOXML.
+        As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (<em>csv</em>, <em>txt</em>, etc.) do not support them or treat them differently than OOXML standard does.
+        That is why all the non-OOXML files by default are opened for viewing only, although there is an option to convert the file in the context menu.
+        If you realise the data/formatting loss risks after the conversion, but still want to open non-OOXML files for editing, you can check them in the list in the settings.
+        Editing for <em>csv</em> and <em>txt</em> files is available by default.
+    </p>
+
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>When creating a new file, the user navigates to a document folder within Nextcloud and clicks the <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> item in the <em>new</em> (+) menu.</p>
