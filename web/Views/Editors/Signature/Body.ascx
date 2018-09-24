@@ -11,10 +11,67 @@
 </p>
 
 <div class="note">
-    The token in body parameters is used in <b>Document Server</b> starting with version 5.2.
-    <br />
-    To enable it set the <em>services.CoAuthoring.token.inbox.inBody</em> and <em>services.CoAuthoring.token.outbox.inBody</em> in configuration file to <b>true</b>.
+    Token in body is used for POST requests only. For the GET requests <a href="<%= Url.Action("signature/request") %>">token in header</a> is used.
 </div>
+
+<p>
+    Starting with version 5.2 it is possible to use the token in body parameters with <b>Document Server</b>.
+    To enable it set the <em>services.CoAuthoring.token.inbox.inBody</em> and <em>services.CoAuthoring.token.outbox.inBody</em> in configuration file to <b>true</b>.
+</p>
+
+
+<div class="header-gray">Parameters</div>
+
+<table class="table">
+    <colgroup>
+        <col style="width: 300px;" />
+        <col />
+        <col style="width: 100px;" />
+        <col style="width: 100px;" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>services.CoAuthoring.token.inbox.inBody</td>
+            <td>Specifies the enabling the token validation in the requests body to the <b>document command service</b> and <b>document conversion service</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td>services.CoAuthoring.token.outbox.inBody</td>
+            <td>Specifies the enabling the token generation for the requests body by <b>document editing service</b> to <b>document storage service</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="header-gray">Sample default.json configuration</div>
+<pre>
+{
+    "services": {
+        "CoAuthoring": {
+            "token": {
+                "inbox": {
+                    "inBody": true,
+                },
+                "outbox": {
+                    "inBody": true
+                }
+            }
+        }
+    }
+}
+</pre>
+
 
 <p>The <em>payload</em> for the JSON Web Token contains the request body parameters.</p>
 
@@ -36,8 +93,6 @@ Host: documentserver
 Content-Type: application/json
 
 {
-    "c": "info",
-    "key": "Khirz6zTPdfd7",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
 }
 </pre>
@@ -63,12 +118,7 @@ Host: documentserver
 Content-Type: application/json
 
 {
-    "filetype": "docx",
-    "key": "Khirz6zTPdfd7",
-    "outputtype": "pdf",
-    "title": "Example Document Title.docx",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M",
-    "url": "https://example.com/url-to-example-document.docx"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
 }
 </pre>
 <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
@@ -92,8 +142,6 @@ Host: example.com
 Content-Type: application/json
 
 {
-    "key": "Khirz6zTPdfd7",
-    "status": 4,
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwic3RhdHVzIjo0fQ.gCyNKPpg6ISAnhvFQmRiY6BRqG6WPcEGgnK79hREdkU"
 }
 </pre>
@@ -108,12 +156,14 @@ Content-Type: application/json
 
 <div class="header-gray">Sample payload of request to document storage service for file download</div>
 <pre>
-{}
+{
+    "url: "http://example.com/url-to-example-document.docx"
+}
 </pre>
 <div class="header-gray">Sample of request to document storage service for file download</div>
 <pre>
 GET url-to-example-document.docx HTTP/1.1
 Host: example.com
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9.-DBTpvYH2srNUc3Xy2N4QozEXO6VF1XS89K7Li0JM68
 </pre>
 <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
