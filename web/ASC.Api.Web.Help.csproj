@@ -1114,6 +1114,7 @@
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
     <Content Include="Views\Editors\Signature.aspx" />
+    <Content Include="Views\Editors\Signature\Body.ascx" />
     <Content Include="Views\Editors\Signature\Request.ascx" />
     <Content Include="Views\Editors\Signature\Browser.ascx" />
     <Content Include="Views\Editors\Signature\Default.ascx" />

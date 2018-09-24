@@ -79,6 +79,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "SharePoint",
                 "Signature",
                 "Signature/Browser",
+                "Signature/Body",
                 "Signature/Request",
                 "Troubleshooting",
                 "Try",

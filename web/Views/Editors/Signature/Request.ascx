@@ -2,19 +2,23 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("signature/") %>"></a>
-    <span class="hdr">Request</span>
+    <span class="hdr">Request with token in header</span>
 </h1>
 
-<p class="dscr">When performing the HTTP requests with ONLYOFFICE Document Server an authorization header with the <em>token</em> is added to validate the request.</p>
+<p class="dscr">
+    When performing the HTTP requests from ONLYOFFICE Document Server an authorization header with the <em>token</em> is added to validate the request.
+    When performing the HTTP requests to ONLYOFFICE Document Server an authorization header with the <em>token</em> must be added to validate the request.
+</p>
 
 <p>The <em>payload</em> for the JSON Web Token contains the following fields:</p>
 <ul>
-    <%--<li><b>query</b> - the key-value object containing the request query parameters.</li>--%>
     <li><b>payload</b> - the object containing the request body parameters in JSON format if not empty.</li>
 </ul>
 
 
-<p id="command">Validation is performed for inbox requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("command") %>">document command service</a>.</p>
+<h2>Incoming request</h2>
+
+<p id="command" class="copy-link">Validation is performed for incoming requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("command") %>">document command service</a>.</p>
 
 <div class="header-gray">Sample payload of request to receive the status of the edited document</div>
 <pre>
@@ -39,7 +43,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImMiO
 </pre>
 
 
-<p id="conversion">Validation is performed for incoming requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</p>
+<p id="conversion" class="copy-link">Validation is performed for incoming requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</p>
 
 <div class="header-gray">Sample payload of request to convert the document</div>
 <pre>
@@ -72,7 +76,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpb
 <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
 
-<p id="callbackUrl">Validation is performed for outgoing requests to "callbackUrl" address by <b>document editing service</b>.</p>
+<h2>Outgoing requests</h2>
+
+<p id="callbackUrl" class="copy-link">Validation is performed for outgoing requests to "<a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a>" address by <b>document editing service</b>.</p>
 
 <div class="header-gray">Sample payload of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes</div>
 <pre>
@@ -98,7 +104,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Imtle
 <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
 
-<p id="download">Validation is performed for outgoing requests to <b>document storage service</b> for file download.</p>
+<p id="download" class="copy-link">Validation is performed for outgoing requests to <b>document storage service</b> for file download.</p>
 
 <div class="header-gray">Sample payload of request to document storage service for file download</div>
 <pre>
