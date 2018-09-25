@@ -10,15 +10,14 @@
     When performing the HTTP requests to ONLYOFFICE Document Server the <em>token</em> must be added to the parameters to validate the data.
 </p>
 
-<div class="note">
-    Token in body is used for POST requests only. For the GET requests <a href="<%= Url.Action("signature/request") %>">token in header</a> is used.
-</div>
-
 <p>
     Starting with version 5.2 it is possible to use the token in body parameters with <b>Document Server</b>.
     To enable it set the <em>services.CoAuthoring.token.inbox.inBody</em> and <em>services.CoAuthoring.token.outbox.inBody</em> in configuration file to <b>true</b>.
 </p>
 
+<div class="note">
+    Token in body is used for POST requests only. For the GET requests <a href="<%= Url.Action("signature/request") %>">token in header</a> is used.
+</div>
 
 <div class="header-gray">Parameters</div>
 
@@ -40,13 +39,13 @@
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.inbox.inBody</td>
-            <td>Specifies the enabling the token validation in the requests body to the <b>document command service</b> and <b>document conversion service</b>.</td>
+            <td>Specifies the enabling the token validation in the request body to the <b>document command service</b> and <b>document conversion service</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.outbox.inBody</td>
-            <td>Specifies the enabling the token generation for the requests body by <b>document editing service</b> to <b>document storage service</b>.</td>
+            <td>Specifies the enabling the token generation for the request body by <b>document editing service</b> to <b>document storage service</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -86,6 +85,9 @@
     "key": "Khirz6zTPdfd7"
 }
 </pre>
+
+<p>These parameters must be encoded into the token so that the request looked like this:</p>
+
 <div class="header-gray">Sample of request to receive the status of the edited document</div>
 <pre>
 POST coauthoring/CommandService.ashx HTTP/1.1
@@ -97,6 +99,7 @@ Content-Type: application/json
 }
 </pre>
 
+<p>As you can see there is no need to include the above parameters into the request body, as all of them are already encoded into the token and sent within it.</p>
 
 <p id="conversion" class="copy-link">Validation is performed for incoming requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</p>
 
@@ -167,3 +170,4 @@ Host: example.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9.-DBTpvYH2srNUc3Xy2N4QozEXO6VF1XS89K7Li0JM68
 </pre>
 <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+<p>The token includes the payload (the full URL to the document, in the example above it is <em>{"url: "http://example.com/url-to-example-document.docx"}</em>), which is also duplicated in the header as the <b>Host</b> (<em>example.com</em>) and the document address the GET request is sent to (<em>url-to-example-document.docx</em>).</p>
