@@ -129,10 +129,18 @@
         <a href="<%= Url.Action("signature/") %>">Signature</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("signature/browser") %>">browser</a>
+                <a href="<%= Url.Action("signature/browser") %>">Browser</a>
             </li>
             <li>
-                <a href="<%= Url.Action("signature/request") %>">request</a>
+                <a href="<%= Url.Action("signature/request") %>">Request</a>
+                <ul>
+                    <li>
+                        <a href="<%= Url.Action("signature/request") %>">Token in header</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("signature/body") %>">Token in body</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </li>

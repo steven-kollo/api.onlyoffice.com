@@ -7,7 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="products-info">
         <h1>
-            <span class="hdr">Welcome to onlyoffice api</span>
+            <span class="hdr">Welcome to ONLYOFFICE API</span>
         </h1>
         <p>
             ONLYOFFICE API describes the main methods that allow you to interact with different ONLYOFFICE components.
