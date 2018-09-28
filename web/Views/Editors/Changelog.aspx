@@ -19,6 +19,7 @@
 
     <h2 id="52" class="copy-link">Version 5.2</h2>
     <ul>
+        <li>Token in request <a href="<%= Url.Action("signature/body") %>">body</a> parameters.</li>
         <li><a href="<%= Url.Action("config/document/permissions") %>#comment">Commenting only</a> is available in all types of editors.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#fillForms">document.permissions.fillForms</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#help">editorConfig.customization.help</a> field.</li>

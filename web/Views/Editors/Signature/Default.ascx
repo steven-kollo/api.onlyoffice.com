@@ -61,7 +61,7 @@ supervisorctl restart all
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.outbox</td>
-            <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/request") %>">requests</a> by <b>document editing service</b> to "callbackUrl" address.</td>
+            <td>Specifies the enabling the token generation for the <a href="<%= Url.Action("signature/request") %>">requests</a> by <b>document editing service</b> to <b>document storage service</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
