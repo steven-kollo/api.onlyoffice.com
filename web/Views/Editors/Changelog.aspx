@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="52" class="copy-link">Version 5.2</h2>
+    <ul>
+        <li><a href="<%= Url.Action("config/document/permissions") %>#comment">Commenting only</a> is available in all types of editors.</li>
+    </ul>
+
     <h2 id="51" class="copy-link">Version 5.1</h2>
     <ul>
         <li>Added support for OpenDocument Template <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
