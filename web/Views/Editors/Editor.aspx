@@ -692,6 +692,35 @@
             );
         <% break; %>
 
+        <% case "fillForms": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo-form.docx",
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Edit = false,
+                                        FillForms = true
+                                    }
+                            },
+                        DocumentType = "text",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Mode = "edit"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    }) %>
+            );
+        <% break; %>
+
         <% case "docxComment": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             <%= Config.Serialize(

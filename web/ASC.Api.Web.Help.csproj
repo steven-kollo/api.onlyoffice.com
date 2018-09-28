@@ -253,6 +253,7 @@
     <Content Include="Content\img\Editor\alfresco.png" />
     <Content Include="Content\img\Editor\comment.png" />
     <Content Include="Content\img\Editor\e-token.png" />
+    <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\history.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
@@ -1114,6 +1115,7 @@
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
     <Content Include="Views\Editors\Signature.aspx" />
+    <Content Include="Views\Editors\Signature\Body.ascx" />
     <Content Include="Views\Editors\Signature\Request.ascx" />
     <Content Include="Views\Editors\Signature\Browser.ascx" />
     <Content Include="Views\Editors\Signature\Default.ascx" />

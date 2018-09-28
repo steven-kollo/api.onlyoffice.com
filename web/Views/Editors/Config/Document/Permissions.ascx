@@ -42,7 +42,7 @@
     In case <em>edit</em> is set to <b>"true"</b> and <em>comment</em> is also set to <b>"true"</b>, the user will be able to edit the document and comment.
     In case <em>edit</em> is set to <b>"true"</b> and <em>comment</em> is set to <b>"false"</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable.
     In case <em>edit</em> is set to <b>"false"</b> and <em>comment</em> is set to <b>"true"</b>, the document will be available for commenting only.
-    This latter mode (commenting only) is currently available for <b>Document Editor</b> only.
+    In case <em>edit</em> is set to <b>"false"</b> and <em>review</em> is set to <b>"false"</b> and <em>fillForms</em> is set to <b>"true"</b> the <em>comments</em> value is not considered and the commenting is not available.
 </div>
 
 <table class="table">
@@ -71,6 +71,28 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="fillForms" class="copy-link">fillForms</td>
+            <td>Defines if the forms can ve filled. Filling in forms will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> or the <a href="#review">review</a> parameter.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/fill-forms.png") %>" alt="" />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="note">
+    In case <em>edit</em> is set to <b>"true"</b> or <em>review</em> is set to <b>"true"</b>, the <em>fillForms</em> value is not considered and the form filling is possible.
+    In case <em>edit</em> is set to <b>"false"</b> and <em>review</em> is set to <b>"false"</b> and <em>fillForms</em> is also set to <b>"true"</b>, the user can only fill forms in the document.
+    In case <em>edit</em> is set to <b>"false"</b> and <em>review</em> is set to <b>"false"</b> and <em>fillForms</em> is set to <b>"true"</b> the <em>comments</em> value is not considered and the commenting is not available.
+    The form filling only mode is currently available for <b>Document Editor</b> only.
+</div>
+
+<table class="table">
+    <tbody>
+        <tr class="tablerow">
             <td id="review" class="copy-link">review</td>
             <td>Defines if the document can be reviewed or not. In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> parameter.</td>
             <td>boolean</td>
@@ -97,6 +119,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "comment": true,
             "download": true,
             "edit": true,
+            "fillForms": true,
             "print": true,
             "review": true
         },

@@ -76,6 +76,7 @@ config = {
             "comment": true,
             "download": true,
             "edit": true,
+            "fillForms": true,
             "print": true,
             "review": true
         },
@@ -109,6 +110,7 @@ config = {
                 "text": "Go to Documents",
                 "url": "https://example.com"
             },
+            "help": true,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
