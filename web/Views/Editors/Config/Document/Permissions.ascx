@@ -72,7 +72,7 @@
         </tr>
         <tr class="tablerow">
             <td id="fillForms" class="copy-link">fillForms</td>
-            <td>Defines if the forms can ve filled. Filling in forms will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> or the <a href="#review">review</a> parameter.</td>
+            <td>Defines if the forms can be filled. Filling in forms will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> or the <a href="#review">review</a> parameter.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
