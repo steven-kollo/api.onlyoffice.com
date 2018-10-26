@@ -111,7 +111,8 @@
                                         Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
                                             {
                                                 Visible = true
-                                            }
+                                            },
+                                        HideRightMenu = true
                                     }
                             },
                         Height = "550px",
