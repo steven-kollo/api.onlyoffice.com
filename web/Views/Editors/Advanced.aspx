@@ -165,6 +165,7 @@ config = {
         "onDocumentStateChange": onDocumentStateChange,
         "onDownloadAs": onDownloadAs,
         "onError": onError,
+        "onInfo": onInfo,
         "onOutdatedVersion": onOutdatedVersion,
         "onRequestClose": onRequestClose,
         "onRequestEditRights": onRequestEditRights,
