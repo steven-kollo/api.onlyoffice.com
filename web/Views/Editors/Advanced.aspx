@@ -111,6 +111,7 @@ config = {
                 "url": "https://example.com"
             },
             "help": true,
+            "hideRightMenu": false,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",

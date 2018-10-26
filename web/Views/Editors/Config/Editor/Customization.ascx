@@ -168,6 +168,13 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="hideRightMenu" class="copy-link">hideRightMenu</td>
+            <td>Defines if the right menu is displayed or hidden on first loading.
+                The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
             <td id="logo" class="copy-link">logo<span class="required">*</span></td>
             <td>Changes the image file at the top left corner of the Editor header. The recommended image height is 20 pixels. The object has the following parameters:
                 <ul>
@@ -242,6 +249,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "https://example.com"
             },
             "help": true,
+            "hideRightMenu": false,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
