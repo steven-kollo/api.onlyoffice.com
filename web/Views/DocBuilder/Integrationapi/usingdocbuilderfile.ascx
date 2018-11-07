@@ -29,6 +29,7 @@ builder.CloseFile();</pre>
                 <ul>
                     <li>The file encoding is always <b>UTF8</b>.</li>
                     <li>All the commands containing <em>builder.</em> are line separated, i.e. you cannot write them in one line, each command <b>must</b> start with its own line.</li>
+                    <li>All the common JavaScript commands and methods must be used inside the <em>builder.CreateFile()</em> and <em>builder.SaveFile()</em> lines, otherwise an error will be thrown when executing the code.</li>
                     <li>The comments are allowed. Any line starting with <em>#</em> or <em>//</em> is considered to be a comment.</li>
                     <li>Empty lines are allowed. You can enter any number of empty lines to separate the blocks, the parser will ignore them.</li>
                     <li>All the <em>CDocBuilder</em> methods (except the <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand") %>">CDocBuilder.ExecuteCommand</a>) are started with <em>builder</em>.</li>
