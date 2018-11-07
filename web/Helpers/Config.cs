@@ -227,6 +227,9 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "goback", EmitDefaultValue = false)]
                 public GobackConfig Goback;
 
+                [DataMember(Name = "hideRightMenu", EmitDefaultValue = false)]
+                public bool? HideRightMenu;
+
                 [DataMember(Name = "logo", EmitDefaultValue = false)]
                 public LogoConfig Logo;
 

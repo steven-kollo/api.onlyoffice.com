@@ -163,6 +163,11 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="logo" class="copy-link">logo<span class="required">*</span></td>
             <td>Changes the image file at the top left corner of the Editor header. The recommended image height is 20 pixels. The object has the following parameters:
                 <ul>
