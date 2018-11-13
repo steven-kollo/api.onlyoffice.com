@@ -183,7 +183,7 @@
                         <br />
                         <b>example</b>: "https://example.com/logo_em.png";
                     </li>
-                    <li><b>url</b> - the absolute URL which will be used when someone clicks the logo image (can be used to go to your web site, etc.),
+                    <li><b>url</b> - the absolute URL which will be used when someone clicks the logo image (can be used to go to your web site, etc.). Leave as an empty string or <em>null</em> to make the logo not clickable,
                         <br />
                         <b>type</b>: string,
                         <br />
