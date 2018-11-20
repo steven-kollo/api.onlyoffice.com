@@ -198,3 +198,10 @@ $(document).ready(function () {
         $(this).next(".spoiler_code").slideToggle("fast");
     });
 });
+$(document).ready(function () {
+    $('.qa-question-link').on('click', function() {
+        var index = $(this).parents('.qa-questions .qa-block-question').index();
+        $($(this).parents('.qa-blocks').find(".qa-block .qa-block-question").removeClass('selected')[index]).addClass('selected');
+        $($(this).parents('.qa-blocks').find(".qa-block .qa-block-answer").fadeOut()[index]).fadeIn();
+    });
+});
