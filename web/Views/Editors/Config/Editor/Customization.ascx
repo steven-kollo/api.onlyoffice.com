@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
+<% var license = !string.IsNullOrEmpty(Page.Request["license"]); %>
+
 <h1>
     <a class="up" href="<%= Url.Action("config/editor") %>"></a>
     <span class="hdr">Customization</span>
@@ -25,6 +27,15 @@
         </tr>
     </thead>
     <tbody>
+        <% if (license)
+           { %>
+        <tr class="tablerow">
+            <td id="about" class="copy-link">about<span class="required">**</span></td>
+            <td>Defines if the <b>About</b> menu button is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <% } %>
         <tr class="tablerow">
             <td id="autosave" class="copy-link">autosave</td>
             <td>Defines if the <b>Autosave</b> menu option is enabled or disabled. If set to <b>false</b>, only <em>Strict</em> co-editing mode can be selected, as <em>Fast</em> does not work without autosave. Please note that in case you change this option in menu it will be saved to your browser localStorage. The default value is <b>true</b>.</td>
@@ -214,12 +225,18 @@
     </tbody>
 </table>
 <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
+<% if (license)
+   { %>
+<span class="required-descr"><span class="required">**</span><em> - available for editing only for ONLYOFFICE SaaS Server</em></span>
+<% } %>
 
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {
+            <% if (license)
+               { %>"about": true,<% } %>
             "chat": true,
             "commentAuthorOnly": false,
             "compactToolbar": false,
