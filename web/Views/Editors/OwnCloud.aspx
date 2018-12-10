@@ -40,7 +40,7 @@
         This allows multiple users to collaborate in real time and to save back those changes to ownCloud.
     </p>
     <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud">Docker installation</a> to get installed and configured Document Server and ownCloud installation with a couple of commands.</p>
-    <p>Tested with ownCloud 9 and 10, the latest connector signed versions are available in the official store for <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>.</p>
+    <p>The latest connector signed versions are available in the official store for <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>.</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
