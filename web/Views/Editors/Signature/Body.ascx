@@ -53,7 +53,7 @@
 </table>
 
 
-<div class="header-gray">Sample default.json configuration</div>
+<div class="header-gray">Sample local.json configuration</div>
 <pre>
 {
     "services": {
