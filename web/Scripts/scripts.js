@@ -199,9 +199,47 @@ $(document).ready(function () {
     });
 });
 $(document).ready(function () {
-    $('.qa-question-link').on('click', function() {
-        var index = $(this).parents('.qa-questions .qa-block-question').index();
-        $($(this).parents('.qa-blocks').find(".qa-block .qa-block-question").removeClass('selected')[index]).addClass('selected');
-        $($(this).parents('.qa-blocks').find(".qa-block .qa-block-answer").fadeOut()[index]).fadeIn();
+    $(".qa-question-link").on("click", function () {
+        var index = $(this).parents(".qa-questions .qa-block-question").index();
+        $($(this).parents(".qa-blocks").find(".qa-block .qa-block-question").removeClass("selected")[index]).addClass("selected");
+        $($(this).parents(".qa-blocks").find(".qa-block .qa-block-answer").fadeOut()[index]).fadeIn();
+    });
+    $(".faq_block dt").on("click", function () {
+        var i = 0;
+        $(this).toggleClass("expanded_node").siblings("dd").slideToggle("fast");
+
+        $.each($(".faq_block dt"), function () {
+            if ($(this).attr("class") == "expanded_node") {
+                i = 1;
+            }
+        });
+        if (i == 1) {
+            $(".fq_expand").hide();
+            $(".fq_collapse").show();
+        } else {
+            $(".fq_collapse").hide();
+            $(".fq_expand").show();
+        }
+    });
+    var current = window.location.href.split("#")[1];
+    $.each($("dl"), function () {
+        if (current == null || current == "undefined") {
+            $(".faq_block:first-of-type dt").addClass("expanded_node");
+            $(".faq_block:first-of-type dd").show();
+        } else if (current == $(this).attr("id")) {
+            $(this).children("dt").addClass("expanded_node").siblings("dd").show();
+        }
+    });
+    $(".fq_expand").on("click", function () {
+        $("dt").removeClass("expanded_node").addClass("expanded_node");
+        $("dd").slideDown("fast");
+        $(this).hide();
+        $(".fq_collapse").show();
+    });
+    $(".fq_collapse").on("click", function () {
+        $("dt").removeClass("expanded_node");
+        $("dd").slideUp("fast");
+        $(this).hide();
+        $(".fq_expand").show();
     });
 });

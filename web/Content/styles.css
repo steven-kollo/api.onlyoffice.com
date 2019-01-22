@@ -1284,3 +1284,51 @@ a.qa-question-link {
     top: 0;
     left: 30px;
 }
+.faq_block {
+    padding: 20px 0 20px 50px;
+    border-top: 1px solid #e5e5e5;
+}
+.faq_block:last-of-type {
+    border-bottom: 1px solid #e5e5e5;
+}
+.faq_block:before {
+    content: none;
+}
+dt {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+dt:before {
+    display: block;
+    content: '';
+    width: 29px;
+    height: 24px;
+    background-image: url(img/accordions_sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    left: -36px;
+    top: -1px;
+}
+dt.expanded_node:before {
+    background-position: -34px 0;
+}
+dd {
+    display: none;
+    font-size: 14px;
+    padding-bottom: 0;
+}
+.fq_expand, .fq_collapse {
+    text-align: right;
+}
+.fq_expand span, .fq_collapse span {
+    border-bottom: 1px dotted #5891d0;
+    color: #5891d0;
+    cursor: pointer;
+}
+.fq_collapse {
+    display: none;
+}

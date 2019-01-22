@@ -173,6 +173,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc">
@@ -235,6 +236,7 @@
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
     <Content Include="Content\hightlight.css" />
+    <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\docbuilder.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
@@ -1112,6 +1114,10 @@
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
+    <Content Include="Views\Editors\FAQ.aspx" />
+    <Content Include="Views\Editors\FAQ\Default.ascx" />
+    <Content Include="Views\Editors\FAQ\Security.ascx" />
+    <Content Include="Views\Editors\FAQ\General.ascx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />

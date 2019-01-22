@@ -144,8 +144,22 @@
             </li>
         </ul>
     </li>
+</ul>
+<div class="treeheader">More information</div>
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("changelog") %>">Changelog</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("faq/") %>">FAQ</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("faq/general") %>">General questions</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/security") %>">Security questions</a>
+            </li>
+        </ul>
     </li>
     <li>
         <a href="<%= Url.Action("troubleshooting") %>">Troubleshooting</a>
