@@ -40,7 +40,7 @@
         This allows multiple users to collaborate in real time and to save back those changes to Nextcloud.
     </p>
     <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud">Docker installation</a> to get installed and configured Document Server and Nextcloud installation with a couple of commands.</p>
-    <p>Tested with Nextcloud 12 and 13, the latest connector signed versions are available in the official store for <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</p>
+    <p>The latest connector signed versions are available in the official store for <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
@@ -68,7 +68,7 @@
         To start using ONLYOFFICE Document Server with Nextcloud, the following steps must be performed:
     </p>
     <ol>
-        <li>Go to the Nextcloud server <em>apps/</em> directory (or some other directory <a href="https://docs.nextcloud.com/server/13/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
+        <li>Go to the Nextcloud server <em>apps/</em> directory (or some other directory <a href="https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
             <span class="commandline">cd apps/</span>
         </li>
         <li>Get the Nextcloud ONLYOFFICE integration app.
@@ -177,7 +177,7 @@
             But if the encryption with the <em>per-user encryption keys</em> (used by default in Nextcloud <b>Default encryption module</b> app) is enabled, ONLYOFFICE Document Server cannot open the encrypted files for editing and save them after the editing.
             The ONLYOFFICE section of the administrative settings page will display a notification about it.
             However if you set the encryption with the <em>master key</em>, ONLYOFFICE application will work as intended.
-            The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://docs.nextcloud.com/server/13/admin_manual/configuration_files/encryption_configuration.html#occ-encryption-commands" target="_blank">Nextcloud</a> websites.
+            The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/encryption_configuration.html#occ-encryption-commands" target="_blank">Nextcloud</a> websites.
             <div class="note note-important">
                 <div class="note-important-label">Please note</div>
                 Nextcloud recommends using <em>master encryption key</em> only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable <em>master key</em> based encryption on them.

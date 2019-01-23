@@ -24,7 +24,7 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Node.js code for the editors integration<span class="copy-link" title="Click to get link"></span></h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Node.js example</a> from our site.</p>
-<p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config/default.js</em> file:</p>
+<p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config/default.json</em> file:</p>
 <pre class="commandline">
 "siteUrl": "https://documentserver/"
 </pre>
@@ -82,7 +82,7 @@
     <li>Install the dependencies:
         <div class="commandline">npm install</div>
     </li>
-    <li>Edit the <em>default.js</em> configuration file.
+    <li>Edit the <em>default.json</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/default.json</div>
         <p>Edit the following lines:</p>

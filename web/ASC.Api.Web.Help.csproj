@@ -249,6 +249,7 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\Editor\help.png" />
     <Content Include="Content\img\Editor\sharing_settings.png" />
     <Content Include="Content\img\Editor\alfresco.png" />
     <Content Include="Content\img\Editor\comment.png" />
@@ -311,6 +312,7 @@
     <Content Include="Content\img\plugins\plugin-button.png" />
     <Content Include="Content\img\plugins\plugin-manager.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
+    <Content Include="version.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
     <Content Include="robots.txt" />
@@ -1279,8 +1281,7 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>if exist "C:\Program Files\Git\bin\git.exe" ("C:\Program Files\Git\bin\git.exe" rev-parse HEAD &gt; "$(ProjectDir)\version.txt")</PostBuildEvent>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets" Condition=" Exists( '$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets' ) " />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" Condition=" Exists( '$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets' ) " />

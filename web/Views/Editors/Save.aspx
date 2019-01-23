@@ -58,10 +58,16 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing.
-        The conversion start delay time can be changed in <b>Document Server</b> configuration file, which can be found at the following path:
+        The default conversion start delay time is defined in <b>Document Server</b> configuratino file, which can be found at the following path:
     </p>
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
     <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
+    <p>
+        If you want to change it, you can use the <em>local.json</em> file, where all the edited parameters should be stored. This file must be created in the same folder with the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b> (see the examples below).
+    </p>
+    <div class="note">
+        Please do not edit the contents of the <em>default.json</em> file directly. The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+    </div>
 
     <div class="header-gray">Parameters</div>
 
@@ -90,7 +96,7 @@ new DocsAPI.DocEditor("placeholder", {
         </tbody>
     </table>
 
-    <div class="header-gray">Sample default.json configuration</div>
+    <div class="header-gray">Sample local.json configuration</div>
     <pre>
 {
     "services": {
@@ -117,9 +123,9 @@ new DocsAPI.DocEditor("placeholder", {
             The <em>forcesavetype</em> parameter will have the <b>0</b> value when sending the request to the <b>callback handler</b>.</li>
         <li>Enable the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> mode setting it to <b>true</b> in the editor initialization configuration.
             In this case each time the user clicks the <b>Save</b> button, the forcesave will be done, and the <em>forcesavetype</em> parameter will have the <b>1</b> value when sending the request to the <b>callback handler</b>.</li>
-        <li>You can enable the repeating forcesave start in the <b>Document Server</b> configuration file, which can be found at the following path:
-            <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
-            <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
+        <li>You can enable the repeating forcesave start in the <b>Document Server</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
+            <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
+            <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
 
             <div class="header-gray">Parameters</div>
 
@@ -154,7 +160,7 @@ new DocsAPI.DocEditor("placeholder", {
                 </tbody>
             </table>
 
-            <div class="header-gray">Sample default.json configuration</div>
+            <div class="header-gray">Sample local.json configuration</div>
             <pre>
 {
     "services": {

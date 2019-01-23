@@ -86,7 +86,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called. The absolute URL to the document to be downloaded is sent in the <em>"data"</em> parameter.</p>
+        <p><b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called. The absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onDownloadAs = function (event) {
@@ -104,7 +104,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs. The error message is sent in the <em>"data"</em> parameter.</p>
+        <p><b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs. The error message is sent in the <em>data</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onError = function (event) {
@@ -114,6 +114,24 @@ var onError = function (event) {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onError": onError,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onInfo" class="copy-link">onInfo</b> - the function called when the application opened the file. The mode is sent in the <em>data.mode</em> parameter. Can be <b>view</b> or <b>edit</b>.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onInfo = function (event) {
+    console.log("ONLYOFFICE Document Editor is opened in mode " + event.data.mode);
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onInfo": onInfo,
         ...
     },
     ...
@@ -250,7 +268,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history. To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method. The document version number is sent in the <em>"data"</em> parameter.</p>
+        <p><b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history. To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method. The document version number is sent in the <em>data</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryData = function(event) {
@@ -280,7 +298,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs. The warning message is sent in the <em>"data"</em> parameter.</p>
+        <p><b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs. The warning message is sent in the <em>data</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var onWarning = function (event) {

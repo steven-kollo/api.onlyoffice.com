@@ -7,9 +7,13 @@
 
 <div class="note">This feature is used in <b>Document Server</b> starting with version 4.2</div>
 
-<p>For the validation setup it is necessary to edit the configuration file which can be found at the following path:</p>
-<div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
-<div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
+<p>For the validation setup it is necessary to edit the configuration file which can be found (or created) at the following path:</p>
+<div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
+<div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
+
+<div class="note">
+    The default values are available in the <em>default.json</em> configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the <em>default.json</em> file directly. The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+</div>
 
 <p>Restart the services for the config changes to take effect:</p>
 
@@ -69,7 +73,7 @@ supervisorctl restart all
 </table>
 
 
-<div class="header-gray">Sample default.json configuration</div>
+<div class="header-gray">Sample local.json configuration</div>
 <pre>
 {
     "services": {

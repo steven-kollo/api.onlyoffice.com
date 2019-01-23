@@ -7,3 +7,4 @@
 /web/*.user
 /.vs/config/applicationhost.config
 Thumbs.db
+/web/version.txt
