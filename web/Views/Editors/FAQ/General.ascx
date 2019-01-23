@@ -1,12 +1,11 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />General questions</span>
+    <span class="hdr">Document Server FAQ: <br />
+        General questions</span>
 </h1>
 
-<p class="dscr"></p>
-<p class="fq_expand"><span>Expand all</span></p>
-<p class="fq_collapse"><span>Collapse all</span></p>
+<% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="general_1">
     <dt>I am new to Document Server API. Where should I start?</dt>
     <dd>
