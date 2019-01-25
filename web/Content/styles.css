@@ -212,7 +212,6 @@ html {
     font-size: 12px;
     width: 100%;
 }
-
 .table-conversion-matrix-text td,
 .table-conversion-matrix-spreadsheet td,
 .table-conversion-matrix-presentation td {
@@ -1284,6 +1283,10 @@ a.qa-question-link {
     top: 0;
     left: 30px;
 }
+.qa-read-more {
+    display: block;
+    margin-top: 10px;
+}
 .faq_block {
     padding: 20px 0 20px 50px;
     border-top: 1px solid #e5e5e5;
@@ -1331,4 +1334,23 @@ dd {
 }
 .fq_collapse {
     display: none;
+}
+.faq_all_list li {
+    line-height: 1.5em;
+    list-style-type: none;
+    margin: 6px 0;
+    max-width: 650px;
+}
+.faq_all_list li a {
+    text-decoration: none;
+}
+.faq_all_list li a:hover {
+    text-decoration: underline;
+}
+a.link_in_heading {
+    color: #333;
+    text-decoration: none;
+}
+a.link_in_heading:hover {
+    text-decoration: underline;
 }

@@ -18,13 +18,36 @@
 <dl class="faq_block" id="general_2">
     <dt>How to find out the current version number of Document Server?</dt>
     <dd>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>The current Document Server version number can be found at the <b>About</b> page of the Document, Presentation or Spreadsheet Editor, right below the logo and the editor name.</p>
+        <p>You can use the API to send a POST request to the <b><b>document command service</b></b>. Use the <em>c</em> parameter for that with the <b>version</b> value, which is sent as a JSON object in the request body:</p>
+        <pre>{
+    "c": "version"
+}
+</pre>
+        <p>The request result of version is returned in JSON form, like this:</p>
+        <pre>{
+    "error": 0,
+    "version": "4.3.1.4"
+}</pre>
+        <p>More detailed information about the the interaction with the <b>document command service</b> and the use of various commands to do that is available <a href="<%= Url.Action("command") %>">at this page</a>.</p>
+    </dd>
+</dl>
+<dl class="faq_block" id="general_3">
+    <dt>I want to change some Document Server parameters from the default.json configuration file. How can I do that so that my changes were not lost after update?</dt>
+    <dd>
+        <p>All the main settings for Document Sever are stored in the <em>default.json</em> configuration file which is available in the <em>/etc/onlyoffice/documentserver/</em> folder (for Linux) or <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\</em> (for Windows). There is also the platform-specific <em>production.json</em> file in the same folder, in which the settings relevant for Linux or Windows are stored.</p>
+        <p>Document server uses the <a target="_blank" href="https://www.npmjs.com/package/config">Node.js config module</a> to organize and structure configuration files, so the hierarchy of these files looks like this:</p>
+        <pre>default.json
+production.json
+local.json</pre>
+        <p>Where all the main settings are stored in the <em>default.json</em> file, with some of them added or overriden by ones from <em>production.json</em> file and any user/developer settings overriden by the ones from <em>local.json</em> configuration file.</p>
+        <div class="note">If you change the parameters in either <em>default.json</em> or <em>production.json</em> file, all the changes will be lost after Document Server update or Docker container restart (in case you have Document server installed using Docker).</div>
+        <p>So we strongly recommend that you <b>do not</b> alter the parameters in either <em>default.json</em> or <em>production.json</em> files and use <em>local.json</em> configuration file instead. This file must be created in the same folder with the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b>.</p>
+        <p>The examples of <em>local.json</em> use can be found in the following sections:</p>
         <ul>
-            <li>Posuere urna nec tincidunt praesent semper feugiat nibh.</li>
-            <li>Mauris a diam maecenas sed enim ut sem viverra.</li>
-            <li>Et pharetra pharetra massa massa.</li>
-            <li>Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lacus vestibulum sed arcu non odio euismod. Id faucibus nisl tincidunt eget nullam non. Aliquet enim tortor at auctor urna nunc id cursus. Nunc faucibus a pellentesque sit amet. Nibh sit amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor vitae. Molestie ac feugiat sed lectus vestibulum.</li>
+            <li><a href="<%= Url.Action("save") %>#savedelay">Save delay</a></li>
+            <li><a href="<%= Url.Action("save") %>#forcesave">Force saving</a></li>
+            <li><a href="<%= Url.Action("signature/body") %>">Request with token in body</a></li>
         </ul>
-        <pre>Pellentesque dignissim enim sit amet venenatis urna. Sed sed risus pretium quam. Odio ut sem nulla pharetra diam sit. Erat imperdiet sed euismod nisi. Gravida quis blandit turpis cursus in hac habitasse platea. Bibendum neque egestas congue quisque egestas diam. Neque ornare aenean euismod elementum nisi quis. Ullamcorper sit amet risus nullam eget felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Faucibus ornare suspendisse sed nisi. Porta non pulvinar neque laoreet suspendisse interdum. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Praesent tristique magna sit amet purus gravida quis. Sodales neque sodales ut etiam sit amet nisl purus. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Egestas pretium aenean pharetra magna. Aliquam eleifend mi in nulla posuere.</pre>
     </dd>
 </dl>

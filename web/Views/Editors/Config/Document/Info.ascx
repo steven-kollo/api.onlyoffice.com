@@ -50,7 +50,7 @@
         </tr>
         <tr class="tablerow">
             <td id="sharingSettings" class="copy-link">sharingSettings</td>
-            <td>Defines the settings which will allow to share the document with other users:
+            <td>Displays the information about the settings which allow to share the document with other users:
                 <ul>
                     <li>
                         <b>permissions</b> - the access rights for the user with the name above. Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>
