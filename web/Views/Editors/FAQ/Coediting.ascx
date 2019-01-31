@@ -9,24 +9,45 @@
 <dl class="faq_block" id="coediting_1">
     <dt>How to check how many connections I need?</dt>
     <dd>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Posuere urna nec tincidunt praesent semper feugiat nibh. Mauris a diam maecenas sed enim ut sem viverra. Et pharetra pharetra massa massa. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lacus vestibulum sed arcu non odio euismod. Id faucibus nisl tincidunt eget nullam non. Aliquet enim tortor at auctor urna nunc id cursus. Nunc faucibus a pellentesque sit amet. Nibh sit amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor vitae. Molestie ac feugiat sed lectus vestibulum.</p>
-        <p>Pellentesque dignissim enim sit amet venenatis urna. Sed sed risus pretium quam. Odio ut sem nulla pharetra diam sit. Erat imperdiet sed euismod nisi. Gravida quis blandit turpis cursus in hac habitasse platea. Bibendum neque egestas congue quisque egestas diam. Neque ornare aenean euismod elementum nisi quis. Ullamcorper sit amet risus nullam eget felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Faucibus ornare suspendisse sed nisi. Porta non pulvinar neque laoreet suspendisse interdum. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Praesent tristique magna sit amet purus gravida quis. Sodales neque sodales ut etiam sit amet nisl purus. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Egestas pretium aenean pharetra magna. Aliquam eleifend mi in nulla posuere.</p>
+        <p>The minimal number of connections you might need should be equal to the number of users who are going to use your Document Server. But you should bear in mind, that in most cases one user <span class="strikethrough">=</span> one connection, as one and the same user can open more than one document in more than one browser.</p>
+        <p>So if you are sure that all your users are going to use the Document Server at one and the same time, have a surplus for the connection number equal of at least two times of your user number, otherwise the users with the lack of connections will be able to open the document in view-only mode.</p>
+        <p>All the available pricing plans for the connections are available at <a target="_blank" href="https://www.onlyoffice.com/integration-edition-prices.aspx">this page</a>.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="coediting_2">
     <dt>How to find the information about users who are currently editing the document?</dt>
     <dd>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Posuere urna nec tincidunt praesent semper feugiat nibh. Mauris a diam maecenas sed enim ut sem viverra. Et pharetra pharetra massa massa. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lacus vestibulum sed arcu non odio euismod. Id faucibus nisl tincidunt eget nullam non. Aliquet enim tortor at auctor urna nunc id cursus. Nunc faucibus a pellentesque sit amet. Nibh sit amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor vitae. Molestie ac feugiat sed lectus vestibulum.</p>
-        <p>Pellentesque dignissim enim sit amet venenatis urna. Sed sed risus pretium quam. Odio ut sem nulla pharetra diam sit. Erat imperdiet sed euismod nisi. Gravida quis blandit turpis cursus in hac habitasse platea. Bibendum neque egestas congue quisque egestas diam. Neque ornare aenean euismod elementum nisi quis. Ullamcorper sit amet risus nullam eget felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Faucibus ornare suspendisse sed nisi. Porta non pulvinar neque laoreet suspendisse interdum. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Praesent tristique magna sit amet purus gravida quis. Sodales neque sodales ut etiam sit amet nisl purus. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Egestas pretium aenean pharetra magna. Aliquam eleifend mi in nulla posuere.</p>
+        <p>You can use the API to send a POST request to the <b>document command service</b>. Use the <em>c</em> parameter for that with the <b>info</b> value and the <em>key</em> parameter identifying the document you want to find the information about. The parameters are sent as a part of the JSON object in the request body:</p>
+        <pre>{
+    "c": "info",
+    "key": "Khirz6zTPdfd7"
+}</pre>
+        <p>In case the document is being edited, for instance, by two users, the <b>document editing service</b> will respond with the following information:</p>
+        <pre>{
+    "actions": [{"type": 1, "userid": "78e1e841"}],
+    "key": "Khirz6zTPdfd7",
+    "status": 1,
+    "users": ["6d5a81d0", "78e1e841"]
+}</pre>
+        <ul>
+            <li><em>actions</em> defines the IDs of the users either connected to (<em>type</em> value equal to <b>1</b>) or disconnected from (<em>type</em> value equal to <b>1</b>) the document co-editing;</li>
+            <li><em>key</em> is the identifier of the document (the same as in the POST request above);</li>
+            <li><em>status</em> with value of <b>1</b> means that the document is currently being edited;</li>
+            <li>and the <em>users</em> is the array of the IDs of the users who take part in the co-editing.</li>
+        </ul>
+        <p>Further information about the response from the <b>document editing service</b> can be found <a href="<%= Url.Action("callback") %>">at this page</a>.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="coediting_3">
     <dt>How to disconnect users who are currently editing the document before saving the document?</dt>
     <dd>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Posuere urna nec tincidunt praesent semper feugiat nibh. Mauris a diam maecenas sed enim ut sem viverra. Et pharetra pharetra massa massa. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lacus vestibulum sed arcu non odio euismod. Id faucibus nisl tincidunt eget nullam non. Aliquet enim tortor at auctor urna nunc id cursus. Nunc faucibus a pellentesque sit amet. Nibh sit amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor vitae. Molestie ac feugiat sed lectus vestibulum.</p>
-        <p>Pellentesque dignissim enim sit amet venenatis urna. Sed sed risus pretium quam. Odio ut sem nulla pharetra diam sit. Erat imperdiet sed euismod nisi. Gravida quis blandit turpis cursus in hac habitasse platea. Bibendum neque egestas congue quisque egestas diam. Neque ornare aenean euismod elementum nisi quis. Ullamcorper sit amet risus nullam eget felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Faucibus ornare suspendisse sed nisi. Porta non pulvinar neque laoreet suspendisse interdum. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Praesent tristique magna sit amet purus gravida quis. Sodales neque sodales ut etiam sit amet nisl purus. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Egestas pretium aenean pharetra magna. Aliquam eleifend mi in nulla posuere.</p>
+        <p>To force disconnecting the users from the document before it can be saved, use the API to send a POST request to the <b>document command service</b>. Use the <em>c</em> parameter for that with the <b>drop</b> value and the <em>key</em> parameter identifying the document and the array of the IDs of the users you want to disconnect. The parameters are sent as a part of the JSON object in the request body:</p>
+        <pre>{
+    "c": "drop",
+    "key": "Khirz6zTPdfd7",
+    "users": [ "6d5a81d0", "78e1e841" ]
+}</pre>
+        <p>As a result the two users with the IDs in the request above ("6d5a81d0" and "78e1e841") will be disconnected from editing the document with the <b>Khirz6zTPdfd7</b> key.</p>
+        <p>Further information about the use of requests from <b>document command service</b> can be found <a href="<%= Url.Action("command") %>">at this page</a>.</p>
     </dd>
 </dl>

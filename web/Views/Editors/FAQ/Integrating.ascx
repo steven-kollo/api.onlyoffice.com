@@ -7,26 +7,37 @@
 
 <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="integrating_1">
-    <dt>How to find integration examples for ONLYOFFICE Document Server?</dt>
+    <dt>Where can I find integration examples for ONLYOFFICE Document Server?</dt>
     <dd>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Posuere urna nec tincidunt praesent semper feugiat nibh. Mauris a diam maecenas sed enim ut sem viverra. Et pharetra pharetra massa massa. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lacus vestibulum sed arcu non odio euismod. Id faucibus nisl tincidunt eget nullam non. Aliquet enim tortor at auctor urna nunc id cursus. Nunc faucibus a pellentesque sit amet. Nibh sit amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor vitae. Molestie ac feugiat sed lectus vestibulum.</p>
-        <p>Pellentesque dignissim enim sit amet venenatis urna. Sed sed risus pretium quam. Odio ut sem nulla pharetra diam sit. Erat imperdiet sed euismod nisi. Gravida quis blandit turpis cursus in hac habitasse platea. Bibendum neque egestas congue quisque egestas diam. Neque ornare aenean euismod elementum nisi quis. Ullamcorper sit amet risus nullam eget felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Faucibus ornare suspendisse sed nisi. Porta non pulvinar neque laoreet suspendisse interdum. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Praesent tristique magna sit amet purus gravida quis. Sodales neque sodales ut etiam sit amet nisl purus. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Egestas pretium aenean pharetra magna. Aliquam eleifend mi in nulla posuere.</p>
+        <p>The examples of integration of Document Server with your own website can be found <a href="<%= Url.Action("demopreview") %>">here</a>. You can choose among different web development programming languages:</p>
+        <ul>
+            <li><a href="<%= Url.Action("example/csharp") %>">.Net (C#)</a></li>
+            <li><a href="<%= Url.Action("example/java") %>">Java</a></li>
+            <li><a href="<%= Url.Action("example/nodejs") %>">Node.js</a></li>
+            <li><a href="<%= Url.Action("example/php") %>">PHP</a></li>
+            <li><a href="<%= Url.Action("example/ruby") %>">Ruby</a></li>
+        </ul>
+        <p>The examples will show where to get the source codes, how to install and set up the working examples for integrating Document Server into your website written with the help of one of these programming languages.</p>
+        <p>If you want to connect Document Server to one of the existing document management services, you can see the ready-made connectors for the following services:</p>
+        <ul>
+            <li><a href="<%= Url.Action("example/alfresco") %>">Alfresco</a></li>
+            <li><a href="<%= Url.Action("example/confluence") %>">Confluence</a></li>
+            <li><a href="<%= Url.Action("example/nextcloud") %>">Nextcloud</a></li>
+            <li><a href="<%= Url.Action("example/owncloud") %>">ownCloud</a></li>
+            <li><a href="<%= Url.Action("example/sharepoint") %>">SharePoint</a></li>
+        </ul>
+        <p>Most of the connectors are available from the corresponding service application store and are easy to install. Just follow the step-by-step instructions at the connector page and connect Document Server to your service.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="integrating_2">
-    <dt>Which paths should I specify when integrating Document Server with my web site?</dt>
+    <dt>Which paths should I specify when integrating Document Server with my website?</dt>
     <dd>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Posuere urna nec tincidunt praesent semper feugiat nibh. Mauris a diam maecenas sed enim ut sem viverra. Et pharetra pharetra massa massa. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lacus vestibulum sed arcu non odio euismod. Id faucibus nisl tincidunt eget nullam non. Aliquet enim tortor at auctor urna nunc id cursus. Nunc faucibus a pellentesque sit amet. Nibh sit amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor vitae. Molestie ac feugiat sed lectus vestibulum.</p>
-        <p>Pellentesque dignissim enim sit amet venenatis urna. Sed sed risus pretium quam. Odio ut sem nulla pharetra diam sit. Erat imperdiet sed euismod nisi. Gravida quis blandit turpis cursus in hac habitasse platea. Bibendum neque egestas congue quisque egestas diam. Neque ornare aenean euismod elementum nisi quis. Ullamcorper sit amet risus nullam eget felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Faucibus ornare suspendisse sed nisi. Porta non pulvinar neque laoreet suspendisse interdum. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Praesent tristique magna sit amet purus gravida quis. Sodales neque sodales ut etiam sit amet nisl purus. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Egestas pretium aenean pharetra magna. Aliquam eleifend mi in nulla posuere.</p>
+        <p></p>
     </dd>
 </dl>
 <dl class="faq_block" id="integrating_3">
     <dt>What settings should be used when connecting ONLYOFFICE to ownClowd/Nextcloud via a local and public network?</dt>
     <dd>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Posuere urna nec tincidunt praesent semper feugiat nibh. Mauris a diam maecenas sed enim ut sem viverra. Et pharetra pharetra massa massa. Ut sem nulla pharetra diam sit amet nisl suscipit adipiscing. Lacus vestibulum sed arcu non odio euismod. Id faucibus nisl tincidunt eget nullam non. Aliquet enim tortor at auctor urna nunc id cursus. Nunc faucibus a pellentesque sit amet. Nibh sit amet commodo nulla. Pretium viverra suspendisse potenti nullam ac tortor vitae. Molestie ac feugiat sed lectus vestibulum.</p>
-        <p>Pellentesque dignissim enim sit amet venenatis urna. Sed sed risus pretium quam. Odio ut sem nulla pharetra diam sit. Erat imperdiet sed euismod nisi. Gravida quis blandit turpis cursus in hac habitasse platea. Bibendum neque egestas congue quisque egestas diam. Neque ornare aenean euismod elementum nisi quis. Ullamcorper sit amet risus nullam eget felis. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Pulvinar neque laoreet suspendisse interdum consectetur libero id. Faucibus ornare suspendisse sed nisi. Porta non pulvinar neque laoreet suspendisse interdum. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Praesent tristique magna sit amet purus gravida quis. Sodales neque sodales ut etiam sit amet nisl purus. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Egestas pretium aenean pharetra magna. Aliquam eleifend mi in nulla posuere.</p>
+        <p></p>
     </dd>
 </dl>

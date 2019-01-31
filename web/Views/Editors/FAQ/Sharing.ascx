@@ -12,7 +12,7 @@
         <p>To open the document with the <em>track changes</em> mode enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
         <p>There are three main variants how the document can be opened with the <em>track changes</em> mode enabled:</p>
         <ol>
-            <li>Both reviewing and editing enabled: if both the <em>document.permission.edit</em> and <em>document.permission.review</em> parameters are set to <b>true</b>, the user will be able to edit the document, accept/reject the changes made and switch to the review mode him-/herself. The <em>permission</em> configuration in this case will look like this:
+            <li>Both reviewing and editing enabled: if both the <em>document.permission.edit</em> and <em>document.permission.review</em> parameters are set to <b>true</b>, the user will be able to edit the document, accept/reject the changes made and switch to the review mode him-/herself. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -21,10 +21,14 @@
         },
         ...
     },
+    "editorConfig": {
+        "mode": "edit",
+        ...
+    },
     ...
 });</pre>
             </li>
-            <li>Reviewing only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.review</em> is set to <b>true</b>, the user will be able to open the document in review mode only. The <em>permission</em> configuration in this case will look like this:
+            <li>Reviewing only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.review</em> is set to <b>true</b>, the user will be able to open the document in review mode only. Theconfiguration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -33,10 +37,14 @@
         },
         ...
     },
+    "editorConfig": {
+        "mode": "edit",
+        ...
+    },
     ...
 });</pre>
             </li>
-            <li>Reviewing and commenting enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b>, <em>document.permission.review</em> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to open the document in review mode with possibility to comment it, but will not be able to edit it. The <em>permission</em> configuration in this case will look like this:
+            <li>Reviewing and commenting enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b>, <em>document.permission.review</em> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to open the document in review mode with possibility to comment it, but will not be able to edit it. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -44,6 +52,10 @@
             "comment": true,
             "review": true
         },
+        ...
+    },
+    "editorConfig": {
+        "mode": "edit",
         ...
     },
     ...
@@ -59,7 +71,7 @@
         <p>To open the document with the <em>commenting</em> mode enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
         <p>There are the following main variants how the document can be opened with the <em>commenting</em> mode enabled:</p>
         <ol>
-            <li>Both commenting and editing enabled: if both the <em>document.permission.edit</em> and <em>document.permission.comment</em> parameters are set to <b>true</b>, the user will be able to edit the document and comment. The <em>permission</em> configuration in this case will look like this:
+            <li>Both commenting and editing enabled: if both the <em>document.permission.edit</em> and <em>document.permission.comment</em> parameters are set to <b>true</b>, the user will be able to edit the document and comment. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -68,10 +80,14 @@
         },
         ...
     },
+    "editorConfig": {
+        "mode": "edit",
+        ...
+    },
     ...
 });</pre>
             </li>
-            <li>Commenting only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.comment</em> is set to <b>true</b>, the document will be available for commenting only. The <em>permission</em> configuration in this case will look like this:
+            <li>Commenting only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.comment</em> is set to <b>true</b>, the document will be available for commenting only. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -80,10 +96,14 @@
         },
         ...
     },
+    "editorConfig": {
+        "mode": "edit",
+        ...
+    },
     ...
 });</pre>
             </li>
-            <li>Reviewing and commenting enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b>, <em>document.permission.review</em> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to open the document in review mode with possibility to comment it, but will not be able to edit it. The <em>permission</em> configuration in this case will look like this:
+            <li>Reviewing and commenting enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b>, <em>document.permission.review</em> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to open the document in review mode with possibility to comment it, but will not be able to edit it. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -93,16 +113,24 @@
         },
         ...
     },
+    "editorConfig": {
+        "mode": "edit",
+        ...
+    },
     ...
 });</pre>
             </li>
-            <li>Comments are available for viewing only: if the <em>document.permission.edit</em> parameter is set to <b>true</b> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The <em>permission</em> configuration in this case will look like this:
+            <li>Comments are available for viewing only: if the <em>document.permission.edit</em> parameter is set to <b>true</b> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
             "edit": true,
             "comment": false
         },
+        ...
+    },
+    "editorConfig": {
+        "mode": "edit",
         ...
     },
     ...
@@ -127,6 +155,10 @@
         },
         ...
     },
+    "editorConfig": {
+        "mode": "edit",
+        ...
+    },
     ...
 });</pre>
         <p>With the configuration above the document will be opened with the form filling mode enabled and all the other modes disabled, giving the users who have access to it only the possibility to fill the fields in the special <a target="_blank" href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx">content controls</a>.</p>
@@ -140,13 +172,17 @@
     <dt>How to enable both the editing and commenting mode for a document?</dt>
     <dd>
         <p>To open the document with both the <em>editing</em> and the <em>commenting</em> modes enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
-        <p>You will need to set both the <em>document.permission.edit</em> and <em>document.permission.comment</em> parameters to <b>true</b>, so that the user will be able to edit the document and comment. The <em>permission</em> configuration in this case will look like this:</p>
+        <p>You will need to set both the <em>document.permission.edit</em> and <em>document.permission.comment</em> parameters to <b>true</b>, so that the user will be able to edit the document and comment. The configuration in this case will look like this:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
             "edit": true,
             "comment": true
         },
+        ...
+    },
+    "editorConfig": {
+        "mode": "edit",
         ...
     },
     ...
