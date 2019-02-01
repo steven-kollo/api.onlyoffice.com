@@ -16,7 +16,7 @@
     </h1>
 
     <p class="dscr">
-        The <b>document editing service</b> informs the <b>document storage service</b> about status of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a>.
+        The <b>document editing service</b> informs the <b>document storage service</b> about the status of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a>.
         The <b>document editing service</b> use the POST request with the information in body.
     </p>
 
@@ -214,7 +214,7 @@ public class WebEditor : IHttpHandler
 </pre>
     <div class="note"><em>PATH_FOR_SAVE</em> is the absolute path to your computer folder where the file will be saved including the file name.</div>
 
-    <div id="java" class="header-gray">Java document save example</div>
+    <div id="java" class="header-gray copy-link">Java document save example</div>
     <pre>
 public class IndexServlet extends HttpServlet {
     @Override
@@ -253,7 +253,7 @@ public class IndexServlet extends HttpServlet {
 </pre>
     <div class="note"><em>pathForSave</em> is the absolute path to your computer folder where the file will be saved including the file name.</div>
 
-    <div id="nodejs" class="header-gray">Node.js document save example</div>
+    <div id="nodejs" class="header-gray copy-link">Node.js document save example</div>
     <pre>
 var fs = require("fs");
 
@@ -290,7 +290,7 @@ app.post("/track", function (req, res) {
 </pre>
     <div class="note"><em>pathForSave</em> is the absolute path to your computer folder where the file will be saved including the file name.</div>
 
-    <div id="php" class="header-gray">PHP document save example</div>
+    <div id="php" class="header-gray copy-link">PHP document save example</div>
     <pre>
 &lt;?php
 
@@ -315,7 +315,7 @@ echo "{\"error\":0}";
 </pre>
     <div class="note"><em>$path_for_save</em> is the absolute path to your computer folder where the file will be saved including the file name.</div>
 
-    <div id="ruby" class="header-gray">Ruby document save example</div>
+    <div id="ruby" class="header-gray copy-link">Ruby document save example</div>
     <pre>
 class ApplicationController < ActionController::Base
     def index

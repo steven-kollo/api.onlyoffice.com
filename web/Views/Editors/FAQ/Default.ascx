@@ -67,3 +67,18 @@
     <li><a href="<%= Url.Action("faq/integrating") %>#integrating_2">Which paths should I specify when integrating Document Server with my website?</a></li>
     <li><a href="<%= Url.Action("faq/integrating") %>#integrating_3">What settings should be used when connecting ONLYOFFICE to ownClowd/Nextcloud via a local and public network?</a></li>
 </ul>
+
+<h5><a class="link_in_heading" href="<%= Url.Action("faq/editing") %>">Editing questions</a></h5>
+<p class="dscr">The questions concerning editing documents using Document Server are in this section.</p>
+<ul class="faq_all_list">
+    <li><a href="<%= Url.Action("faq/editing") %>#editing_1">What is the 'Callback handler' and why do I need it?</a></li>
+    <li><a href="<%= Url.Action("faq/editing") %>#editing_2">What is the 'document.key' parameter?</a></li>
+    <li><a href="<%= Url.Action("faq/editing") %>#editing_3">How to define the mode that the file should be opened in (viewing or editing)?</a></li>
+</ul>
+
+<h5><a class="link_in_heading" href="<%= Url.Action("faq/managingversions") %>">Managing versions</a></h5>
+<p class="dscr">The questions concerning working with versions of documents are in this section.</p>
+<ul class="faq_all_list">
+    <li><a href="<%= Url.Action("faq/managingversions") %>#versions_1">Which methods can be used when working with the document history events?</a></li>
+    <li><a href="<%= Url.Action("faq/managingversions") %>#versions_2">How to display a document with highlighted changes?</a></li>
+</ul>
