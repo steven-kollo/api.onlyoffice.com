@@ -302,7 +302,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onWarning = function (event) {
-    console.log("ONLYOFFICE Document Editor reports an warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
+    console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
