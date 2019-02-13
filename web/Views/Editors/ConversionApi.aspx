@@ -682,7 +682,7 @@
     &lt;Percent&gt;100&lt;/Percent&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Sample of the response in JSOn format</div>
+    <div class="header-gray">Sample of the response in JSON format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
     <pre>
 {
