@@ -60,7 +60,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 
-            <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed. See the <a href="<%= Url.Action("howitworks", "editors") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed. See the <a href="<%= Url.Action("howitworks", "editors") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
             <div class="note">If the plugins placed into the folder and the plugins specified in the config coincide, the latter will be used.</div>
 

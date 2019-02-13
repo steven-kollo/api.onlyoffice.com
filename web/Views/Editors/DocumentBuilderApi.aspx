@@ -80,7 +80,7 @@
     "url": "https://example.com/url-to-example-script.docbuilder"
 }
 </pre>
-    <p>Where the <b>example.com</b> is the name of the the server where <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
     <div class="header-gray">Response format</div>
     <pre>
@@ -118,7 +118,7 @@
     "url": "https://example.com/url-to-example-script.docbuilder"
 }
 </pre>
-    <p>Where the <b>example.com</b> is the name of the the server where <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
     <div class="header-gray">Response example</div>
     <pre>
