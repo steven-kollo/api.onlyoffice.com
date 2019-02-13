@@ -29,11 +29,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using ASC.Api.Interfaces;
-using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Common.DependencyInjection;
 using Autofac;
 
-namespace ASC.Api.Web.Help
+namespace ASC.Api.Web.Help.DocumentGenerator
 {
     internal static class Documentation
     {
