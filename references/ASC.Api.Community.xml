@@ -422,6 +422,23 @@
         <member name="M:ASC.Api.Community.CommunityApi.UpdateBookmarkComment(System.String,System.String)">
             <category>Bookmarks</category>
         </member>
+        <member name="M:ASC.Api.Community.CommunityApi.RemoveBookmarkFromFavourite(System.Int64)">
+            <summary>
+            Removes bookmark from favourite. If after removing user bookmark raiting of this bookmark is 0, the bookmark will be removed completely.
+            </summary>
+            <short>Removes bookmark from favourite</short>
+            <param name="id">Bookmark ID</param>
+            <returns>bookmark</returns>
+            <category>Bookmarks</category>
+        </member>
+        <member name="M:ASC.Api.Community.CommunityApi.RemoveBookmark(System.Int64)">
+            <summary>
+            Removes bookmark
+            </summary>
+            <short>Removes bookmark</short>
+            <param name="id">Bookmark ID</param>
+            <category>Bookmarks</category>
+        </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetEvents">
             <summary>
             Returns the list of all events on the portal with the event titles, date of creation and update, event text and author
@@ -720,18 +737,6 @@
             <returns>Updated post</returns>    
             <category>Forums</category>
         </member>
-        <member name="M:ASC.Api.Community.CommunityApi.DeleteTopicPosts(System.Int32,System.Int32)">
-            <summary>
-             Deletes a selected post in an existing topic
-            </summary>
-            <short>
-             Delete post in topic
-            </short>
-            <param name="topicid">Topic ID</param>
-            <param name="postid">Post ID</param>
-            <returns></returns>
-            <category>Forums</category>
-        </member>
         <member name="M:ASC.Api.Community.CommunityApi.SearchTopics(System.String)">
             <summary>
             Returns a list of topics matching the search query with the topic title, date of creation and update, post text and author
@@ -741,6 +746,50 @@
             </short>
             <param name="query">Search query</param>
             <returns>list of topics</returns>
+            <category>Forums</category>
+        </member>
+        <member name="M:ASC.Api.Community.CommunityApi.DeletePost(System.Int32)">
+            <summary>
+             Deletes a selected post
+            </summary>
+            <short>
+             Delete post
+            </short>
+            <param name="postid">Post ID</param>
+            <returns></returns>
+            <category>Forums</category>
+        </member>
+        <member name="M:ASC.Api.Community.CommunityApi.DeleteTopic(System.Int32)">
+            <summary>
+             Deletes a selected topic
+            </summary>
+            <short>
+             Delete topic
+            </short>
+            <param name="topicid">Topic ID</param>
+            <returns></returns>
+            <category>Forums</category>
+        </member>
+        <member name="M:ASC.Api.Community.CommunityApi.DeleteThread(System.Int32)">
+            <summary>
+             Deletes a selected thread
+            </summary>
+            <short>
+             Delete thread
+            </short>
+            <param name="threadid">Thread ID</param>
+            <returns></returns>
+            <category>Forums</category>
+        </member>
+        <member name="M:ASC.Api.Community.CommunityApi.DeleteThreadCategory(System.Int32)">
+            <summary>
+             Deletes a selected thread category
+            </summary>
+            <short>
+             Delete category
+            </short>
+            <param name="categoryid">Category ID</param>
+            <returns></returns>
             <category>Forums</category>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.RemindAboutBirthday(System.Guid,System.Boolean)">
