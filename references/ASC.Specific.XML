@@ -58,13 +58,24 @@
             <param name="code">sms code</param>
             <returns>tokent to use in 'Authorization' header when calling API methods</returns>
         </member>
-        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean)">
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
             Request of invitation by email on personal.onlyoffice.com
             </summary>
             <param name="email">Email address</param>
             <param name="lang">Culture</param>
             <param name="spam">User consent to subscribe to the ONLYOFFICE newsletter</param>
+            <param name="analytics">Track analytics</param>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String)">
+            <summary>
+            Check userName and password
+            </summary>
+            <param name="userName">user name or email</param>
+            <param name="password">password</param>
+            <param name="key"></param>
+            <exception cref="T:System.Security.Authentication.AuthenticationException">Thrown when not authenticated</exception>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.Name">

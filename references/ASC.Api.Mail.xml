@@ -4,6 +4,66 @@
         <name>ASC.Api.Mail</name>
     </assembly>
     <members>
+        <member name="M:ASC.Api.Mail.MailApi.GetFilters">
+            <summary>
+               Returns list of the tags used in Mail
+            </summary>
+            <returns>Filters list. Filters represented as JSON.</returns>
+            <short>Get filters list</short> 
+            <category>Filters</category>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.CreateFilter(ASC.Mail.Data.Contracts.MailSieveFilterData)">
+            <summary>
+               Creates a new filter
+            </summary>
+            <param name="filter"></param>
+            <returns>Filter</returns>
+            <short>Create filter</short> 
+            <category>Filters</category>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.UpdateFilter(ASC.Mail.Data.Contracts.MailSieveFilterData)">
+            <summary>
+               Updates the selected filter
+            </summary>
+            <param name="filter"></param>
+            <returns>Updated filter</returns>
+            <short>Update filter</short> 
+            <category>Filters</category>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.DeleteFilter(System.Int32)">
+            <summary>
+               Deletes the selected filter
+            </summary>
+            <param name="id">Filter id</param>
+            <returns>Deleted Filter id</returns>
+            <short>Delete filter</short> 
+            <category>Filters</category>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.CheckFilter(ASC.Mail.Data.Contracts.MailSieveFilterData,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+               Check filter result
+            </summary>
+            <param name="filter"></param>
+            <param optional="true" name="page">Page number</param>
+            <param optional="true" name="pageSize">Number of messages on page</param>
+            <returns>List messages</returns>
+            <short>Check filter</short> 
+            <category>Filters</category>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.ApplyFilter(System.Int32)">
+            <summary>
+               Apply filter to existing messages
+            </summary>
+            <param name="id">Filter id</param>
+            <returns>MailOperationResult object</returns>
+            <short>Check filter</short> 
+            <category>Filters</category>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetMailServerInfo">
             <visible>false</visible>
         </member>
@@ -226,11 +286,12 @@
             <category>Tests</category>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.LoadSampleMessage(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.IO.Stream)">
+        <member name="M:ASC.Api.Mail.MailApi.LoadSampleMessage(System.Nullable{System.Int32},System.Nullable{System.UInt32},System.Nullable{System.Int32},System.Boolean,System.IO.Stream)">
             <summary>
             Load sample message from EML [Tests]
             </summary>
             <param name="folderId"></param>
+            <param name="userFolderId"></param>
             <param name="mailboxId"></param>
             <param name="unread"></param>
             <param name="emlStream"></param>
@@ -247,6 +308,17 @@
             <short>Get mailboxes, aliases and groups list</short> 
             <category>Accounts</category>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.GetAccount(System.String)">
+            <summary>
+               Returns the information about the account.
+            </summary>
+            <param name="email">Account email address</param>
+            <returns>Account with specified email</returns>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+            <exception cref="T:System.NullReferenceException">Exception happens when mailbox wasn't found by email.</exception>
+            <short>Get account by email</short> 
+            <category>Accounts</category>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.CreateAccountSimple(System.String,System.String)">
             <summary>
                Creates an account based on email and password.
@@ -259,30 +331,7 @@
             <short>Create new account by email and password</short> 
             <category>Accounts</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.CreateAccountOAuth(System.String,System.Byte)">
-            <summary>
-               Creates Mail account with OAuth authentication. Only Google OAuth supported.
-            </summary>
-            <param name="code">Oauth code</param>
-            <param name="type">Type of OAuth service. 0- Unknown, 1 - Google.</param>
-            <exception cref="T:System.Exception">Exception contains text description of happened error.</exception>
-            <returns>Created account</returns>
-            <short>Create OAuth account</short> 
-            <category>Accounts</category>
-        </member>
-        <member name="M:ASC.Api.Mail.MailApi.UpdateAccountOAuth(System.String,System.Byte,System.Int32)">
-            <summary>
-               Update Mail account with OAuth authentication. Only Google OAuth supported.
-            </summary>
-            <param name="code">Oauth code</param>
-            <param name="type">Type of OAuth service. 0- Unknown, 1 - Google.</param>
-            <param name="mailboxId">Mailbox ID to update</param>
-            <exception cref="T:System.Exception">Exception contains text description of happened error.</exception>
-            <returns>Updated OAuth account</returns>
-            <short>Update OAuth account</short> 
-            <category>Accounts</category>
-        </member>
-        <member name="M:ASC.Api.Mail.MailApi.CreateAccount(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Boolean,ASC.Mail.Aggregator.Common.EncryptionType,ASC.Mail.Aggregator.Common.EncryptionType,ASC.Mail.Aggregator.Common.SaslMechanism,ASC.Mail.Aggregator.Common.SaslMechanism)">
+        <member name="M:ASC.Api.Mail.MailApi.CreateAccount(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Boolean,ASC.Mail.Enums.EncryptionType,ASC.Mail.Enums.EncryptionType,ASC.Mail.Enums.SaslMechanism,ASC.Mail.Enums.SaslMechanism)">
             <summary>
                Creates account using full information about mail servers.
             </summary>
@@ -308,7 +357,30 @@
             <short>Create account with custom mail servers.</short> 
             <category>Accounts</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.UpdateAccount(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,ASC.Mail.Aggregator.Common.EncryptionType,ASC.Mail.Aggregator.Common.EncryptionType,ASC.Mail.Aggregator.Common.SaslMechanism,ASC.Mail.Aggregator.Common.SaslMechanism)">
+        <member name="M:ASC.Api.Mail.MailApi.CreateAccountOAuth(System.String,System.Byte)">
+            <summary>
+               Creates Mail account with OAuth authentication. Only Google OAuth supported.
+            </summary>
+            <param name="code">Oauth code</param>
+            <param name="type">Type of OAuth service. 0- Unknown, 1 - Google.</param>
+            <exception cref="T:System.Exception">Exception contains text description of happened error.</exception>
+            <returns>Created account</returns>
+            <short>Create OAuth account</short> 
+            <category>Accounts</category>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.UpdateAccountOAuth(System.String,System.Byte,System.Int32)">
+            <summary>
+               Update Mail account with OAuth authentication. Only Google OAuth supported.
+            </summary>
+            <param name="code">Oauth code</param>
+            <param name="type">Type of OAuth service. 0- Unknown, 1 - Google.</param>
+            <param name="mailboxId">Mailbox ID to update</param>
+            <exception cref="T:System.Exception">Exception contains text description of happened error.</exception>
+            <returns>Updated OAuth account</returns>
+            <short>Update OAuth account</short> 
+            <category>Accounts</category>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.UpdateAccount(System.String,System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,ASC.Mail.Enums.EncryptionType,ASC.Mail.Enums.EncryptionType,ASC.Mail.Enums.SaslMechanism,ASC.Mail.Enums.SaslMechanism)">
             <summary>
                Updates the existing account.
             </summary>
@@ -368,18 +440,7 @@
             <short>Set default account</short> 
             <category>Accounts</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.GetAccount(System.String)">
-            <summary>
-               Returns the information about the account.
-            </summary>
-            <param name="email">Account email address</param>
-            <returns>Account with specified email</returns>
-            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
-            <exception cref="T:System.NullReferenceException">Exception happens when mailbox wasn't founded by email.</exception>
-            <short>Get account by email</short> 
-            <category>Accounts</category>
-        </member>
-        <member name="M:ASC.Api.Mail.MailApi.GetAccountsDefaults(System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.GetAccountDefaults(System.String,System.String)">
             <summary>
                Gets the default settings for the account based on the email domain.
             </summary>
@@ -453,7 +514,7 @@
             <short>Gets filtered contacts</short> 
             <category>Contacts</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.GetContactsByContactInfo(ASC.Mail.Aggregator.ContactInfoType,System.String,System.Nullable{System.Boolean})">
+        <member name="M:ASC.Api.Mail.MailApi.GetContactsByContactInfo(ASC.Mail.Enums.ContactInfoType,System.String,System.Nullable{System.Boolean})">
             <summary>
               Returns lists of mail contacts with contact information
             </summary>
@@ -476,7 +537,7 @@
             <short>Create mail contact</short>
             <category>Contacts</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.RemoveContact(System.Collections.Generic.List{System.Int32})">
+        <member name="M:ASC.Api.Mail.MailApi.RemoveContacts(System.Collections.Generic.List{System.Int32})">
             <summary>
                Removes selected mail contacts
             </summary>
@@ -508,7 +569,7 @@
              <category>Contacts</category>
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.GetFilteredConversations(System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.String,ASC.Specific.ApiDateTime,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+        <member name="M:ASC.Api.Mail.MailApi.GetFilteredConversations(System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.String,ASC.Specific.ApiDateTime,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32})">
             <summary>
                Returns filtered conversations, if were changes since last check date
             </summary>
@@ -518,7 +579,8 @@
             <param optional="true" name="period_from">Begin search period date</param>
             <param optional="true" name="period_to">End search period date</param>
             <param optional="true" name="important">Message has importance flag. bool flag.</param>
-            <param optional="true" name="find_address">Address to find. Email for search in all mail fields: from, to</param>
+            <param optional="true" name="from_address">Address to find 'From' field</param>
+            <param optional="true" name="to_address">Address to find 'To' field</param>
             <param optional="true" name="mailbox_id">Recipient mailbox id.</param>
             <param optional="true" name="tags">Messages tags. Id of tags linked with target messages.</param>
             <param optional="true" name="search">Text to search in messages body and subject.</param>
@@ -527,6 +589,7 @@
             <param optional="true" name="from_date">Date from wich conversations search performed</param>
             <param optional="true" name="from_message">Message from wich conversations search performed</param>
             <param optional="true" name="with_calendar">Message has calendar flag. bool flag.</param>
+            <param optional="true" name="user_folder_id">id of user's folder</param>
             <param name="prev_flag"></param>
             <returns>List of filtered chains</returns>
             <short>Gets filtered conversations</short>
@@ -544,7 +607,7 @@
             <category>Conversations</category>
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.GetPrevNextConversationId(System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean})">
+        <member name="M:ASC.Api.Mail.MailApi.GetPrevNextConversationId(System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32})">
             <summary>
             Get previous or next conversation id.
             </summary>
@@ -556,22 +619,25 @@
             <param optional="true" name="period_from">Begin search period date</param>
             <param optional="true" name="period_to">End search period date</param>
             <param optional="true" name="important">Message has importance flag. bool flag.</param>
-            <param optional="true" name="find_address">Address to find. Email for search in all mail fields: from, to</param>
+            <param optional="true" name="from_address">Address to find 'From' field</param>
+            <param optional="true" name="to_address">Address to find 'To' field</param>
             <param optional="true" name="mailbox_id">Recipient mailbox id.</param>
             <param optional="true" name="tags">Messages tags. Id of tags linked with target messages.</param>
             <param optional="true" name="search">Text to search in messages body and subject.</param>
             <param optional="true" name="page_size">Count on messages on page</param>
             <param name="sortorder">Sort order by date. String parameter: "ascending" - ascended, "descending" - descended.</param>
             <param optional="true" name="with_calendar">Message has with_calendar flag. bool flag.</param> 
+            <param optional="true" name="user_folder_id">id of user's folder</param>
             <returns>Head message id of previous or next conversation.</returns>
             <category>Conversations</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.MoveConversations(System.Collections.Generic.List{System.Int32},System.Int32)">
+        <member name="M:ASC.Api.Mail.MailApi.MoveConversations(System.Collections.Generic.List{System.Int32},System.Int32,System.Nullable{System.UInt32})">
             <summary>
                Moves conversation specified in ids to the folder.
             </summary>
             <param name="ids">List of mesasges ids from conversations.</param>
             <param name="folder">Folder ID - integer. 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam.</param>
+            <param optional="true" name="userFolderId">User Folder Id</param>
             <returns>List of mesasges ids from conversations.</returns>
             <short>Move conversations to folder</short>
             <category>Conversations</category>
@@ -627,7 +693,7 @@
              <category>Conversations</category>
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.LinkConversationToCrm(System.Int32,System.Collections.Generic.IEnumerable{ASC.Mail.Aggregator.Common.CrmContactEntity})">
+        <member name="M:ASC.Api.Mail.MailApi.LinkConversationToCrm(System.Int32,System.Collections.Generic.IEnumerable{ASC.Mail.Data.Contracts.CrmContactData})">
             <summary>
             Marks conversation as CRM linked. All new mail will be added to CRM history.
             </summary>
@@ -639,7 +705,7 @@
             <category>Conversations</category>
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.MarkConversationAsCrmLinked(System.Int32,System.Collections.Generic.IEnumerable{ASC.Mail.Aggregator.Common.CrmContactEntity})">
+        <member name="M:ASC.Api.Mail.MailApi.MarkConversationAsCrmLinked(System.Int32,System.Collections.Generic.IEnumerable{ASC.Mail.Data.Contracts.CrmContactData})">
             <summary>
             Marks conversation as CRM linked. All new mail will be added to CRM history.
             </summary>
@@ -651,7 +717,7 @@
             <category>Conversations</category>
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.UnmarkConversationAsCrmLinked(System.Int32,System.Collections.Generic.IEnumerable{ASC.Mail.Aggregator.Common.CrmContactEntity})">
+        <member name="M:ASC.Api.Mail.MailApi.UnmarkConversationAsCrmLinked(System.Int32,System.Collections.Generic.IEnumerable{ASC.Mail.Data.Contracts.CrmContactData})">
             <summary>
             Method tears conversation link with crm.
             </summary>
@@ -674,7 +740,7 @@
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetFolders">
             <summary>
-               Returns the list of all folders
+               Returns the list of default folders
             </summary>
             <returns>Folders list</returns>
             <short>Get folders</short> 
@@ -690,12 +756,64 @@
         </member>
         <member name="M:ASC.Api.Mail.MailApi.RecalculateFolders">
             <summary>
-               Returns the list of all folders
+               Recalculate folders counters
             </summary>
-            <returns>Folders list</returns>
+            <returns>MailOperationResult object</returns>
             <short>Get folders</short> 
             <category>Folders</category>
             <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.GetUserFolders(System.Collections.Generic.List{System.UInt32},System.Nullable{System.UInt32})">
+            <summary>
+               Returns the list of user folders
+            </summary>
+            <param name="ids" optional="true">List of folder's id</param>
+            <param name="parentId" optional="true">Selected parent folder id (root level equals 0)</param>
+            <returns>Folders list</returns>
+            <short>Get folders</short> 
+            <category>Folders</category>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.CreateUserFolder(System.String,System.UInt32)">
+            <summary>
+               Create user folder
+            </summary>
+            <param name="name">Folder name</param>
+            <param name="parentId">Parent folder id (default = 0)</param>
+            <returns>Folders list</returns>
+            <short>Create folder</short> 
+            <category>Folders</category>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.UpdateUserFolder(System.UInt32,System.String,System.Nullable{System.UInt32})">
+            <summary>
+               Update user folder
+            </summary>
+            <param name="id">Folder id</param>
+            <param name="name">new Folder name</param>
+            <param name="parentId">new Parent folder id (default = 0)</param>
+            <returns>Folders list</returns>
+            <short>Update folder</short> 
+            <category>Folders</category>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.DeleteUserFolder(System.UInt32)">
+            <summary>
+               Delete user folder
+            </summary>
+            <param name="id">Folder id</param>
+            <short>Delete folder</short> 
+            <category>Folders</category>
+            <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
+            <returns>MailOperationResult object</returns>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.GetUserFolderByMailId(System.UInt32)">
+            <summary>
+               Returns the user folders by mail id
+            </summary>
+            <param name="mailId">List of folder's id</param>
+            <returns>User Folder</returns>
+            <short>Get folder by mail id</short> 
+            <category>Folders</category>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetDisplayImagesAddresses">
             <summary>
@@ -725,7 +843,7 @@
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
              <category>Images</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.GetFilteredMessages(System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean})">
+        <member name="M:ASC.Api.Mail.MailApi.GetFilteredMessages(System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32})">
             <summary>
                Returns the filtered messages in case there were changes since last check date
             </summary>
@@ -735,13 +853,15 @@
             <param optional="true" name="period_from">Period start date</param>
             <param optional="true" name="period_to">Period end date</param>
             <param optional="true" name="important">Message with importance flag</param>
-            <param optional="true" name="find_address">Address to find</param>
+            <param optional="true" name="from_address">Address to find 'From' field</param>
+            <param optional="true" name="to_address">Address to find 'To' field</param>
             <param optional="true" name="mailbox_id">Recipient mailbox id</param>
             <param optional="true" name="tags">Message tags</param>
             <param optional="true" name="search">Text to search in messages</param>
             <param optional="true" name="page">Page number</param>
             <param optional="true" name="with_calendar">Message has calendar flag. bool flag.</param>
             <param optional="true" name="page_size">Number of messages on page</param>
+            <param optional="true" name="user_folder_id">id of user's folder</param>
             <param name="sortorder">Sort order</param>
             <returns>Messages list</returns>
             <short>Get filtered messages</short> 
@@ -759,9 +879,9 @@
             <short>Get message</short>
             <category>Messages</category>
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
-            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">Exception happens when message with specified id wasn't founded.</exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">Exception happens when message with specified id wasn't found.</exception>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.GetPrevNextMessageId(System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean})">
+        <member name="M:ASC.Api.Mail.MailApi.GetPrevNextMessageId(System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32})">
             <summary>
             Get previous or next message id. U
             </summary>
@@ -773,13 +893,15 @@
             <param optional="true" name="period_from">Begin search period date</param>
             <param optional="true" name="period_to">End search period date</param>
             <param optional="true" name="important">Message has importance flag. bool flag.</param>
-            <param optional="true" name="find_address">Address to find. Email for search in all mail fields: from, to</param>
+            <param optional="true" name="from_address">Address to find 'From' field</param>
+            <param optional="true" name="to_address">Address to find 'To' field</param>
             <param optional="true" name="mailbox_id">Recipient mailbox id.</param>
             <param optional="true" name="tags">Messages tags. Id of tags linked with target messages.</param>
             <param optional="true" name="search">Text to search in messages body and subject.</param>
             <param optional="true" name="page_size">Count on messages on page</param>
             <param optional="true" name="sortorder">Sort order by date. String parameter: "ascending" - ascended, "descending" - descended.</param>
             <param optional="true" name="with_calendar">Message has with_calendar flag. bool flag.</param>
+            <param optional="true" name="user_folder_id">id of user's folder</param>
             <returns>Previous or next message id</returns>
             <short>Get previous or next message id</short> 
             <category>Messages</category>
@@ -814,17 +936,18 @@
             <short>Restore messages to original folders</short>
             <category>Messages</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.MoveMessages(System.Collections.Generic.List{System.Int32},System.Int32)">
+        <member name="M:ASC.Api.Mail.MailApi.MoveMessages(System.Collections.Generic.List{System.Int32},System.Int32,System.Nullable{System.UInt32})">
             <summary>
                Moves the messages to the specified folder
             </summary>
             <param name="ids">List of mesasges ids.</param>
             <param name="folder">Folder ID - integer. 1 - inbox, 2 - sent, 3 - drafts, 4 - trash, 5 - spam.</param>
+            <param optional="true" name="userFolderId">User Folder Id</param>
             <returns>List of moved messages ids.</returns>
             <short>Move message to folder</short> 
             <category>Messages</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.SendMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Aggregator.Common.MailAttachment},ASC.Files.Core.Security.FileShare,System.String,System.Boolean)">
+        <member name="M:ASC.Api.Mail.MailApi.SendMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},ASC.Files.Core.Security.FileShare,System.String,System.Boolean)">
             <summary>
                Sends the message with the ID specified in the request
             </summary>
@@ -846,7 +969,7 @@
             <short>Send message</short> 
             <category>Messages</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.SaveMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Aggregator.Common.MailAttachment},System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.SaveMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},System.String)">
             <summary>
                Saves the message with the ID specified in the request
             </summary>
@@ -883,20 +1006,19 @@
             <short>Get message template</short> 
             <category>Messages</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.AttachDocument(System.Int32,System.String,System.String,System.String)">
-             <summary>
-                Attaches Teamlab document to the specified message
-             </summary>
-             <param name="id"> Message id for adding attachment</param>
+        <member name="M:ASC.Api.Mail.MailApi.AttachDocument(System.Int32,System.String,System.String)">
+            <summary>
+               Attaches Teamlab document to the specified message
+            </summary>
+            <param name="id"> Message id for adding attachment</param>
             <param name="fileId">Teamlab document id.</param>
             <param name="version">Teamlab document version</param>
-            <param name="shareLink">Teamlab document share link</param>
             <returns>Attached document as MailAttachment object</returns>
             <short>Attach Teamlab document</short>
             <category>Messages</category>
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ExportMessageToCrm(System.Int32,System.Collections.Generic.IEnumerable{ASC.Mail.Aggregator.Common.CrmContactEntity})">
+        <member name="M:ASC.Api.Mail.MailApi.ExportMessageToCrm(System.Int32,System.Collections.Generic.IEnumerable{ASC.Mail.Data.Contracts.CrmContactData})">
             <summary>
             Export mail to CRM relations history for some entities
             </summary>
@@ -985,192 +1107,6 @@
         <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteTimeout">
             <summary>
             Timeout in milliseconds
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.NeedProxyHttp">
-            <summary>
-            Need any mail's body http links change to proxy handler
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.SslCertificatesErrorPermit">
-            <summary>
-            Permit errors of SSL certificates
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.ProtocolLogPath">
-            <summary>
-            Protocol log path (if not empty then enabled)
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.TcpTimeout">
-            <summary>
-            Test mailbox connection tcp timeout (10 sec is default)
-            </summary>
-        </member>
-        <member name="T:ASC.Api.Mail.Resources.MailApiResource">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.AttachmentsBadInputParamsError">
-            <summary>
-              Looks up a localized string similar to Some input parameters are invalid..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.AttachmentsDocumentAccessDeniedError">
-            <summary>
-              Looks up a localized string similar to Access to the document is denied..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.AttachmentsDocumentNotFoundError">
-            <summary>
-              Looks up a localized string similar to Document could not be found or does not exist on the chosen storage..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.AttachmentsEmptyFileNotSupportedError">
-            <summary>
-              Looks up a localized string similar to Empty files are not supported..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.AttachmentsMessageNotFoundError">
-            <summary>
-              Looks up a localized string similar to Message could not be found..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.AttachmentsTotalLimitError">
-            <summary>
-              Looks up a localized string similar to Total size of all attachments exceeds limit..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.AttachmentsUnknownError">
-            <summary>
-              Looks up a localized string similar to Some unexpected error has occurred. Please try again later..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureAutomaticMessage">
-            <summary>
-              Looks up a localized string similar to This message was created automatically by mail delivery software..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureBtn">
-            <summary>
-              Looks up a localized string similar to Change your message.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureFAQInformation">
-            <summary>
-              Looks up a localized string similar to In case the error persists, please read the {url_begin}FAQ section{url_end} to learn more about the problem..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureHeaders">
-            <summary>
-              Looks up a localized string similar to Message headers follow.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureMessageIdentificator">
-            <summary>
-              Looks up a localized string similar to Delivery failed for message with subject &quot;{subject}&quot; from {date}..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureReason">
-            <summary>
-              Looks up a localized string similar to Reason.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureRecipients">
-            <summary>
-              Looks up a localized string similar to Message could not be delivered to recipient(s).
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureRecommendations">
-            <summary>
-              Looks up a localized string similar to Please, check your message recipients addresses and message format.  If you are sure your message is correct, check all the {account_name} account settings, and, if everything is correct, sign in to the mail service you use and confirm any verification questions, in case there are some. After then try again..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.DeliveryFailureSubject">
-            <summary>
-              Looks up a localized string similar to Message delivery failure.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.ErrorEmptyField">
-            <summary>
-              Looks up a localized string similar to This field cannot be empty.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.ErrorIncorrectEmailAddress">
-            <summary>
-              Looks up a localized string similar to Incorrect email address in %1 field.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.ErrorTagNameAlreadyExists">
-            <summary>
-              Looks up a localized string similar to Tag %1 already exists.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.ErrorTagNameCantBeEmpty">
-            <summary>
-              Looks up a localized string similar to Tag name cannot be empty.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.FieldNameBcc">
-            <summary>
-              Looks up a localized string similar to Bcc.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.FieldNameCc">
-            <summary>
-              Looks up a localized string similar to Cc.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.FieldNameFrom">
-            <summary>
-              Looks up a localized string similar to From.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.FieldNameTo">
-            <summary>
-              Looks up a localized string similar to To.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.ImapConnectionTimeoutError">
-            <summary>
-              Looks up a localized string similar to IMAP server connection timeout exceeded..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.ImapResponse">
-            <summary>
-              Looks up a localized string similar to IMAP response:.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.Pop3ConnectionTimeoutError">
-            <summary>
-              Looks up a localized string similar to POP3 server connection timeout exceeded..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.Pop3Response">
-            <summary>
-              Looks up a localized string similar to POP3 response:.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.SmtpConnectionTimeoutError">
-            <summary>
-              Looks up a localized string similar to SMTP server connection timeout exceeded..
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.Resources.MailApiResource.SmtRresponse">
-            <summary>
-              Looks up a localized string similar to SMTP response:.
             </summary>
         </member>
     </members>

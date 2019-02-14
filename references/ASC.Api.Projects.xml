@@ -214,6 +214,20 @@
             <returns>Message</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromMessage(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Detaches the selected file from the message with the ID specified in the request
+            </summary>
+            <short>
+            Detach file from message
+            </short>
+            <category>Files</category>
+            <param name="messageid">Message ID</param>
+            <param name="files">File ID</param>
+            <returns>Message</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectRecentMessages">
             <summary>
             Returns the list of latest messages in the discussions within the project with the ID specified in the request
@@ -295,14 +309,6 @@
             <category>Discussions</category>
             <param name="htmltext">html to create preview</param>
         </member>
-        <member name="M:ASC.Api.Projects.ProjectApi.GetReportTemplate(System.Int32)">
-            <summary>
-            
-            </summary>
-            <category>Report</category>
-            <param name="reportid"></param>
-            <returns></returns>
-        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.SaveReportTemplate(System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean)">
             <summary>
             Creates the project report template with the parameters specified in the request. Most of the parameters are optional and depend on the report type selected.
@@ -355,6 +361,14 @@
             <param name="viewType" optional="true">View type: view by group or view by project</param>
             <param name="noResponsible" optional="true">Show or hide tasks without responsible</param>   
             <returns>Project report template</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetReportTemplate(System.Int32)">
+            <summary>
+            
+            </summary>
+            <category>Report</category>
+            <param name="reportid"></param>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DeleteReportTemplate(System.Int32)">
             <summary>
@@ -540,6 +554,19 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTags(System.Int32,System.String)">
+            <summary>
+            Updates the tags for the project with the selected project ID with the tags specified in the request
+            </summary>
+            <short>
+            Update project tags
+            </short>
+            <category>Projects</category>
+            <param name="id">Project ID</param>
+            <param name="tags">Tags</param>
+            <returns>project</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.UpdateProjectTags(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
             Updates the tags for the project with the selected project ID with the tags specified in the request
             </summary>
@@ -821,6 +848,21 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Detaches the selected file from the entity (project, milestone, task) with the type and ID specified
+            </summary>
+            <short>
+            Detach file from entity
+            </short>
+            <category>Files</category>
+            <param name="entityType">Entity type </param>
+            <param name="entityID">Entity ID</param>
+            <param name="files">files</param>
+            <returns>Detached file</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UploadFilesToEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.String,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean,System.Boolean)">
             <summary>
             Uploads the selected files to the entity (project, milestone, task) with the type and ID specified
@@ -994,7 +1036,7 @@
         <member name="M:ASC.Api.Projects.ProjectApi.GetTask(System.Collections.Generic.IEnumerable{System.Int32})">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Projects.ProjectApi.GetTaskByFilter(System.Int32,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Boolean,System.Guid,System.Nullable{System.Guid},System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32)">
+        <member name="M:ASC.Api.Projects.ProjectApi.GetTaskByFilter(System.Int32,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Boolean,System.Guid,System.Nullable{System.Guid},System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32)">
             <summary>
             Returns the list with the detailed information about all the tasks matching the filter parameters specified in the request
             </summary>
@@ -1014,6 +1056,7 @@
             <param name="lastId">Last task ID</param>
             <param name="myProjects">Tasks in My Projects</param>
             <param name="myMilestones">Tasks in My Milestones</param>
+            <param name="nomilestone">Tasks without Milestone</param>
             <param name="follow">Followed tasks</param>
             <returns>List of tasks</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
@@ -1080,6 +1123,20 @@
             <param name="fileid">File ID</param>
             <returns>Task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromTask(System.Int32,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            Detaches the selected file from the task with the ID specified in the request
+            </summary>
+            <short>
+            Detach file from task
+            </short>
+            <category>Files</category>
+            <param name="taskid">Task ID</param>
+            <param name="files">files</param>
+            <returns>Task</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateTask(System.Int32,ASC.Projects.Core.Domain.TaskStatus)">
             <summary>
@@ -1418,6 +1475,16 @@
             </short>
             <category>Tags</category>
             <returns>List of tags</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.CreateNewTag(System.String)">
+            <summary>
+            Creates new tag
+            </summary>
+            <short>
+            Tag
+            </short>
+            <category>Tags</category>
+            <returns>Created tag</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectsByTags(System.String)">
             <summary>
