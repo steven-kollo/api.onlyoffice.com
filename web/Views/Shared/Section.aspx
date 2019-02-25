@@ -54,7 +54,7 @@
                    var url = Url.DocUrl(model.Section, method, Html.GetCurrentController()); %>
             <tr class="tablerow">
                 <td>
-                    <a href="<%= url %>"><%= !string.IsNullOrEmpty(method.FunctionName) ? method.FunctionName : method.ShortName %></a>
+                    <a href="<%= url %>"><%= !string.IsNullOrEmpty(method.ShortName) ? method.ShortName : method.FunctionName %></a>
                 </td>
                 <td>
                     <a href="<%= url %>"><span class="uppercase"><%= method.HttpMethod %></span>&nbsp;<%= method.Path %></a>

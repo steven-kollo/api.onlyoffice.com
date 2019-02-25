@@ -60,7 +60,7 @@ Search - <%= HttpUtility.HtmlEncode(ViewData["query"]) %>
                 </td>
                 <td>
                     <a href="<%= methodUrl %>">
-                        <%= !string.IsNullOrEmpty(method.Key.FunctionName) ? method.Key.FunctionName : method.Key.ShortName %>
+                        <%= !string.IsNullOrEmpty(method.Key.ShortName) ? method.Key.ShortName : method.Key.FunctionName %>
                     </a>
                 </td>
                 <td>
