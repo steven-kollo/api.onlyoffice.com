@@ -197,4 +197,21 @@ $(document).ready(function () {
     $(".spoiler_heading").on("click", function () {
         $(this).next(".spoiler_code").slideToggle("fast");
     });
+
+    function fixedHeaderOffset(hash) {
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top - 71
+        }, 'fast');
+    }
+    var hash = location.hash;
+    if(hash !== '' && hash !== 'undefined') {
+        fixedHeaderOffset(hash);
+    }
+    
+    $('a, td, div').on('click', function(){
+        var hashID = '#' + $(this).attr('id');
+        if(hashID !== '#' && hashID !== '#undefined') {
+            fixedHeaderOffset(hashID);
+        }
+    });
 });
