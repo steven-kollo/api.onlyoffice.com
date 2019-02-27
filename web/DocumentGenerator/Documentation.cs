@@ -26,34 +26,25 @@
 
 using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
-using System.Web.Routing;
 using ASC.Api.Interfaces;
-using ASC.Api.Web.Help.DocumentGenerator;
-using ASC.Api.Web.Help.Helpers;
 using ASC.Common.DependencyInjection;
 using Autofac;
 
-namespace ASC.Api.Web.Help
+namespace ASC.Api.Web.Help.DocumentGenerator
 {
     internal static class Documentation
     {
         private static List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
-        private static readonly Dictionary<string, MsDocEntryPointMethod> MethodList = new Dictionary<string, MsDocEntryPointMethod>();
 
         public static void Load()
         {
-            MethodList.Clear();
-
             //Load documentation
             _points = GenerateDocs();
         }
 
-        public static List<MsDocEntryPoint> GenerateDocs()
+        private static List<MsDocEntryPoint> GenerateDocs()
         {
             var containerBuilder = AutofacConfigLoader.Load("api");
             containerBuilder.Register(c => c.Resolve<IApiRouteConfigurator>().RegisterEntryPoints())
@@ -102,7 +93,7 @@ namespace ASC.Api.Web.Help
                 ep => ep.Methods.Where(m => terms.All(
                     term => (m.Summary != null && 0 <= m.Summary.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Category != null && 0 <= m.Category.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
-                            (m.FunctionName != null && 0 <= m.FunctionName.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
+                            (m.ShortName != null && 0 <= m.ShortName.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Notes != null && 0 <= m.Notes.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Path != null && 0 <= m.Path.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
                             (m.Remarks != null && 0 <= m.Remarks.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
@@ -111,33 +102,6 @@ namespace ASC.Api.Web.Help
                         .ToDictionary(key => key, value => string.Empty)
                 );
             return result;
-
-        }
-
-        public static void GenerateRouteMap(object controller)
-        {
-            if (MethodList.Any()) return;
-
-            //Build list
-            var reqContext = new RequestContext(new HttpContextWrapper(HttpContext.Current), new RouteData());
-            foreach (var msDocEntryPoint in _points)
-            {
-                var url = Url.GetDocUrl(msDocEntryPoint, null, controller, reqContext);
-                MvcApplication.CacheManifest.AddCached(new Uri(url, UriKind.Relative));
-                foreach (var method in msDocEntryPoint.Methods)
-                {
-                    method.Parent = msDocEntryPoint;
-                    url = Url.GetDocUrl(msDocEntryPoint, method, controller, reqContext);
-                    MethodList.Add(url, method);
-                }
-            }
-        }
-
-        public static MsDocEntryPointMethod GetByUri(Uri uri)
-        {
-            MsDocEntryPointMethod pointMethod;
-            MethodList.TryGetValue(uri.AbsolutePath, out pointMethod);
-            return pointMethod;
         }
     }
 }
