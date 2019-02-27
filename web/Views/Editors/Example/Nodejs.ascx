@@ -33,7 +33,7 @@
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\views\editor.ejs</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>System requirements</h2>
-<p>Download and install the <b>node.js</b> enviroment which is going to be used to run the Node.js project. Please follow the link at the oficial website: <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>, choosing the correct version for your Windows OS (32-bit or 64-bit).</p>
+<p>Download and install the <b>node.js</b> environment which is going to be used to run the Node.js project. Please follow the link at the official website: <a href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a>, choosing the correct version for your Windows OS (32-bit or 64-bit).</p>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Running the Node.js code</h2>
 <p>We will run the code in Node.js runtime environment and will interact with it using the command line interface (cmd).</p>
