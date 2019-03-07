@@ -29,7 +29,7 @@
 
     <p>Example Authentication Token will look like this: "<em>ASC abc:20100707140603:E7lwEXOplYS-0lbnV1XQnDSbi3w</em>"</p>
 
-    <div id="csharp" class="header-gray">.Net(C#) generating token example</div>
+    <div id="csharp" class="header-gray copy-link">.Net(C#) generating token example</div>
     <pre>
 public string CreateAuthToken(string pkey, string machinekey)
 {
@@ -43,7 +43,7 @@ public string CreateAuthToken(string pkey, string machinekey)
 }
 </pre>
 
-    <div id="bash" class="header-gray">Bash generating token example</div>
+    <div id="bash" class="header-gray copy-link">Bash generating token example</div>
     <pre>
 CreateAuthToken() {
     pkey="$1";
@@ -57,7 +57,7 @@ CreateAuthToken() {
 }
 </pre>
 
-    <div id="nodejs" class="header-gray">Node.js generating token example</div>
+    <div id="nodejs" class="header-gray copy-link">Node.js generating token example</div>
     <pre>
 var moment = require("moment");
 var crypto = require("crypto");
@@ -75,7 +75,7 @@ var createToken = function (pkey, machinekey) {
 };
 </pre>
 
-    <div id="php" class="header-gray">PHP generating token example</div>
+    <div id="php" class="header-gray copy-link">PHP generating token example</div>
     <pre>
 function CreateAuthToken($pkey, $machinekey) {
     $now=gmdate('YmdHis');
@@ -88,7 +88,7 @@ function CreateAuthToken($pkey, $machinekey) {
 }
 </pre>
 
-    <div id="powershell" class="header-gray">PowerShell generating token example</div>
+    <div id="powershell" class="header-gray copy-link">PowerShell generating token example</div>
     <pre>
 function CreateAuthToken([string]$pkey, [string]$machinekey){
     $hmacsha = New-Object System.Security.Cryptography.HMACSHA1
@@ -104,7 +104,7 @@ function CreateAuthToken([string]$pkey, [string]$machinekey){
 }
 </pre>
 
-    <div id="ruby" class="header-gray">Ruby generating token example</div>
+    <div id="ruby" class="header-gray copy-link">Ruby generating token example</div>
     <pre>
 def create_auth_token(pkey, machine_key)
     now = Time.now.strftime('%Y%m%d%H%M%S')
