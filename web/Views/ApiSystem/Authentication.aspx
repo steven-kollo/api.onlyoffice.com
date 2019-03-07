@@ -113,4 +113,29 @@ def create_auth_token(pkey, machine_key)
 end
 </pre>
 
+    <div id="python" class="header-gray copy-link">Python generating token example</div>
+    <pre>
+import base64
+import hashlib
+import hmac
+
+from datetime import datetime, date, time
+
+def create_auth_token(pkey, machine_key):
+
+    machine_key = bytes(machine_key, 'UTF-8')
+    now = datetime.strftime(datetime.utcnow(), "%Y%m%d%H%M%S")
+
+    message = bytes('{0}\n{1}'.format(now, pkey), 'UTF-8')
+
+    _hmac = hmac.new(machine_key, message, hashlib.sha1)
+        
+    signature = str(base64.urlsafe_b64encode(_hmac.digest()), 'UTF-8')
+    signature = signature.replace('-', '+')
+    signature = signature.replace('_', '/')
+    token = 'ASC {0}:{1}:{2}'.format(pkey, now, signature)
+
+    return token
+</pre>
+
 </asp:Content>
