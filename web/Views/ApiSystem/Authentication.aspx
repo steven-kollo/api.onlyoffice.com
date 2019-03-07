@@ -33,10 +33,10 @@
     <pre>
 public string CreateAuthToken(string pkey, string machinekey)
 {
-    using (var hasher = new System.Security.Cryptography.HMACSHA1(Encoding.UTF8.GetBytes(machinekey)))
+    using (var hasher = new System.Security.Cryptography.HMACSHA1(System.Text.Encoding.UTF8.GetBytes(machinekey)))
     {
         var now = DateTime.UtcNow.ToString("yyyyMMddHHmmss");
-        var hash = System.Web.HttpServerUtility.UrlTokenEncode(hasher.ComputeHash(Encoding.UTF8.GetBytes(string.Join("\n", now, pkey))));
+        var hash = System.Web.HttpServerUtility.UrlTokenEncode(hasher.ComputeHash(System.Text.Encoding.UTF8.GetBytes(string.Join("\n", now, pkey))));
 
         return string.Format("ASC {0}:{1}:{2}", pkey, now, hash);
     }
@@ -90,7 +90,7 @@ function CreateAuthToken($pkey, $machinekey) {
 
     <div id="powershell" class="header-gray copy-link">PowerShell generating token example</div>
     <pre>
-function CreateAuthToken([string]$pkey, [string]$machinekey){
+function CreateAuthToken([string]$pkey, [string]$machinekey) {
     $hmacsha = New-Object System.Security.Cryptography.HMACSHA1
     $hmacsha.Key = [System.Text.Encoding]::UTF8.GetBytes($machinekey)
 
@@ -136,6 +136,24 @@ def create_auth_token(pkey, machine_key):
     token = 'ASC {0}:{1}:{2}'.format(pkey, now, signature)
 
     return token
+</pre>
+
+    <div id="java" class="header-gray copy-link">Java generating token example</div>
+    <pre>
+public String createAuthToken(String pkey, String machinekey) throws Exception
+{
+    java.time.OffsetDateTime date = java.time.OffsetDateTime.now(java.time.ZoneOffset.UTC);
+    String time = date.format(java.time.format.DateTimeFormatter.ofPattern("YYYYMMddHHmmss"));
+    String data = time + "\n" + pkey;
+
+    javax.crypto.spec.SecretKeySpec signingKey = new javax.crypto.spec.SecretKeySpec(machinekey.getBytes(), "HmacSHA1");
+
+    javax.crypto.Mac mac = javax.crypto.Mac.getInstance("HmacSHA1");
+    mac.init(signingKey);
+    String hash = java.util.Base64.getUrlEncoder().encodeToString(mac.doFinal(data.getBytes()));
+
+    return String.format("ASC %1$s:%2$s:%3$s", pkey, time, hash);
+}
 </pre>
 
 </asp:Content>
