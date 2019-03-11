@@ -183,6 +183,12 @@
                 Nextcloud recommends using <em>master encryption key</em> only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable <em>master key</em> based encryption on them.
             </div>
         </li>
+        <li id="selfSigned">If you are using a self-signed certificate for your <b>Document Server</b>, Nextcloud will not validate such a certificate and will not allow connection to/from <b>Document Server</b>. This issue can be solved the following way: locate the Nextcloud config file (<em>/nextcloud/config/config.php</em>) and open it. Insert the following section to it:
+        <pre>'onlyoffice' => array (
+    'verify_peer_off' => TRUE
+)</pre>
+            This will disable the certificate verification and allow Nextcloud to establish connection with <b>Document Server</b>, but you must remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to remove the above section from Nextcloud config file.
+        </li>
     </ul>
 
 
