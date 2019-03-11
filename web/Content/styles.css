@@ -671,10 +671,18 @@ pre.hljs {
     background: #444;
 }
 
+.button.red {
+    background-color: #ff642e;
+}
+
 .button:hover {
     text-decoration: none;
     background: #565656;
     color: #fff;
+}
+
+.button.red:hover {
+    background-color: #ff7a4b;
 }
 
 .button-upper {
