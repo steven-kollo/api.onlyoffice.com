@@ -671,10 +671,18 @@ pre.hljs {
     background: #444;
 }
 
+.button.red {
+    background-color: #ff642e;
+}
+
 .button:hover {
     text-decoration: none;
     background: #565656;
     color: #fff;
+}
+
+.button.red:hover {
+    background-color: #ff7a4b;
 }
 
 .button-upper {
@@ -1237,3 +1245,22 @@ span.yes {
 span.no {
     background-color: #dedede;
 }
+
+/* Promotion 02-03.2019 start */
+.top_menu_gs_button {
+    padding: 10px 0;
+    text-align: right;
+    max-width: 972px;
+    min-width: 972px;
+}
+.layout-table-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,255,255,.95);
+    z-index: 1000;
+}
+.top-padding {
+    height: 71px;
+}
+/* Promotion 02-03.2019 end */

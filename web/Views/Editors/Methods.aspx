@@ -193,7 +193,7 @@ docEditor.setHistoryData({
     "version": 2
 });
 </pre>
-            <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
             <p>If after editing and saving the document the <em>changesurl</em> link to the file with changes data is returned, download the file by this link and send the file URL in the <em>changesUrl</em> parameter. The absolute URL address of the document previous version must be sent in the <em>previous.url</em> parameter.</p>
             <pre>
 docEditor.setHistoryData({
@@ -208,7 +208,7 @@ docEditor.setHistoryData({
     "version": 2
 });
 </pre>
-            <p>Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
             <p>Send the error message explaining why the document version can not be displayed.</p>
             <pre>
 docEditor.setHistoryData({

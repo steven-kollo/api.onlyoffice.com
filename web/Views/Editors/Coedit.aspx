@@ -52,7 +52,7 @@ new DocsAPI.DocEditor("placeholder", {
     }
 });
 </pre>
-            Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser.</li>
         <li>Now make a copy of your <em>html</em> file created above.</li>
@@ -74,7 +74,7 @@ new DocsAPI.DocEditor("placeholder", {
     }
 });
 </pre>
-            Where the <b>example.com</b> is the name of the the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your copied and edited <em>html</em> file in the browser.</li>
     </ol>
