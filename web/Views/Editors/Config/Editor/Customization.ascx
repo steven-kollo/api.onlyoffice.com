@@ -31,32 +31,39 @@
            { %>
         <tr class="tablerow">
             <td id="about" class="copy-link">about<span class="required">**</span></td>
-            <td>Defines if the <b>About</b> menu button is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>Defines if the <b>About</b> menu button is displayed or hidden.
+                The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <% } %>
         <tr class="tablerow">
             <td id="autosave" class="copy-link">autosave</td>
-            <td>Defines if the <b>Autosave</b> menu option is enabled or disabled. If set to <b>false</b>, only <em>Strict</em> co-editing mode can be selected, as <em>Fast</em> does not work without autosave. Please note that in case you change this option in menu it will be saved to your browser localStorage. The default value is <b>true</b>.</td>
+            <td>Defines if the <b>Autosave</b> menu option is enabled or disabled.
+                If set to <b>false</b>, only <em>Strict</em> co-editing mode can be selected, as <em>Fast</em> does not work without autosave.
+                Please note that in case you change this option in menu it will be saved to your browser localStorage.
+                The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="chat" class="copy-link">chat</td>
-            <td>Defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled. The default value is <b>true</b>.</td>
+            <td>Defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled.
+                The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="commentAuthorOnly" class="copy-link">commentAuthorOnly</td>
-            <td>Defines if the user can edit only his comments. The default value is <b>false</b>.</td>
+            <td>Defines if the user can edit only his comments.
+                The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="comments" class="copy-link">comments</td>
-            <td>Defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The default value is <b>true</b>.</td>
+            <td>Defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable.
+                The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -68,13 +75,15 @@
         </tr>
         <tr class="tablerow">
             <td id="compactToolbar" class="copy-link">compactToolbar</td>
-            <td>Defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>. The default value is <b>false</b>.</td>
+            <td>Defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>.
+                The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td id="customer" class="copy-link">customer<span class="required">*</span></td>
-            <td>Contains the information for the editor <b>About</b> section. The object has the following parameters:
+            <td>Contains the information for the editor <b>About</b> section.
+                The object has the following parameters:
                 <ul>
                     <li><b>address</b> - postal address of the above company or person,
                         <br />
@@ -88,7 +97,8 @@
                         <br />
                         <b>example</b>: "Some additional information";
                     </li>
-                    <li><b>logo</b> - the path to the image logo which will be displayed at the <b>About</b> page (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image must have the following size: 432x70,
+                    <li><b>logo</b> - the path to the image logo which will be displayed at the <b>About</b> page (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
+                        The image must have the following size: 432x70,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -119,7 +129,9 @@
         </tr>
         <tr class="tablerow">
             <td id="feedback" class="copy-link">feedback</td>
-            <td>Defines settings for the <b>Feedback &amp; Support</b> menu button. Can be either boolean (simply displays or hides the <b>Feedback &amp; Support</b> menu button) or object. In case of object type the following parameters are available:
+            <td>Defines settings for the <b>Feedback &amp; Support</b> menu button.
+                Can be either boolean (simply displays or hides the <b>Feedback &amp; Support</b> menu button) or object.
+                In case of object type the following parameters are available:
                 <ul>
                     <li><b>url</b> - the absolute URL to the website address which will be opened when clicking the <b>Feedback &amp; Support</b> menu button,
                         <br />
@@ -141,15 +153,18 @@
         </tr>
         <tr class="tablerow">
             <td id="forcesave" class="copy-link">forcesave</td>
-            <td>Adds the request for the forced file saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.). The default value is <b>false</b>.</td>
+            <td>Adds the request for the forced file saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.).
+                The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td id="goback" class="copy-link">goback</td>
-            <td>Defines settings for the <b>Go to Documents</b> menu button and upper right corner button. The object has the following parameters:
+            <td>Defines settings for the <b>Go to Documents</b> menu button and upper right corner button.
+                The object has the following parameters:
                 <ul>
-                    <li><b>blank</b> - open the website in the new browser tab/window (if the value is set to <em>true</em>) or the current tab (if the value is set to <em>false</em>) when the <b>Go to Documents</b> button is clicked. The default value is <b>true</b>,
+                    <li><b>blank</b> - open the website in the new browser tab/window (if the value is set to <em>true</em>) or the current tab (if the value is set to <em>false</em>) when the <b>Go to Documents</b> button is clicked.
+                        The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -195,13 +210,15 @@
            { %>
         <tr class="tablerow">
             <td id="about" class="copy-link">leftMenu<span class="required">**</span></td>
-            <td>Defines if the left menu panel is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>Defines if the left menu panel is displayed or hidden.
+                The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="about" class="copy-link">loaderLogo<span class="required">**</span></td>
-            <td>Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image will be proportionally resized to the height of 160 pixels when displayed in the editors.</td>
+            <td>Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
+                The image will be proportionally resized to the height of 160 pixels when displayed in the editors.</td>
             <td>string</td>
             <td>"https://example.com/loader-logo.png"</td>
         </tr>
@@ -214,21 +231,26 @@
         <% } %>
         <tr class="tablerow">
             <td id="logo" class="copy-link">logo<span class="required">*</span></td>
-            <td>Changes the image file at the top left corner of the Editor header. The recommended image height is 20 pixels. The object has the following parameters:
+            <td>Changes the image file at the top left corner of the Editor header.
+                The recommended image height is 20 pixels.
+                The object has the following parameters:
                 <ul>
-                    <li><b>image</b> - path to the image file used to show in common work mode (i.e. in view and edit modes for all editors). The image must have the following size: 172x40,
+                    <li><b>image</b> - path to the image file used to show in common work mode (i.e. in view and edit modes for all editors).
+                        The image must have the following size: 172x40,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "https://example.com/logo.png";
                     </li>
-                    <li><b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type). The image must have the following size: 248x40,
+                    <li><b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type).
+                        The image must have the following size: 248x40,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "https://example.com/logo_em.png";
                     </li>
-                    <li><b>url</b> - the absolute URL which will be used when someone clicks the logo image (can be used to go to your web site, etc.). Leave as an empty string or <em>null</em> to make the logo not clickable,
+                    <li><b>url</b> - the absolute URL which will be used when someone clicks the logo image (can be used to go to your web site, etc.).
+                        Leave as an empty string or <em>null</em> to make the logo not clickable,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -243,14 +265,16 @@
            { %>
         <tr class="tablerow">
             <td id="about" class="copy-link">rightMenu<span class="required">**</span></td>
-            <td>Defines if the right menu panel is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>Defines if the right menu panel is displayed or hidden.
+                The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <% } %>
         <tr class="tablerow">
             <td id="showReviewChanges" class="copy-link">showReviewChanges</td>
-            <td>Defines if the review changes panel is automatically displayed or hidden when the editor is loaded. The default value is <b>false</b>.</td>
+            <td>Defines if the review changes panel is automatically displayed or hidden when the editor is loaded.
+                The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -258,20 +282,25 @@
            { %>
         <tr class="tablerow">
             <td id="about" class="copy-link">statusBar<span class="required">**</span></td>
-            <td>Defines if the status bar is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>Defines if the status bar is displayed or hidden.
+                The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="about" class="copy-link">toolbar<span class="required">**</span></td>
-            <td>Defines if the top toolbar is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>Defines if the top toolbar is displayed or hidden.
+                The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <% } %>
         <tr class="tablerow">
             <td id="zoom" class="copy-link">zoom</td>
-            <td>Defines the document display zoom value measured in percent. Can take values larger than <b>0</b>. For text documents and presentations it is possible to set this parameter to <b>-1</b> (fitting the document to page option) or to <b>-2</b> (fitting the document page width to the editor page). The default value is <b>100</b>.</td>
+            <td>Defines the document display zoom value measured in percent.
+                Can take values larger than <b>0</b>.
+                For text documents and presentations it is possible to set this parameter to <b>-1</b> (fitting the document to page option) or to <b>-2</b> (fitting the document page width to the editor page).
+                The default value is <b>100</b>.</td>
             <td>integer</td>
             <td>100</td>
         </tr>
@@ -292,9 +321,10 @@
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
-        "customization": {<% if (license) { %>
-            "about": true,<% } %>
-            "chat": true,
+        "customization": {
+            <% if (license)
+               { %>"about": true,
+            <% } %>"chat": true,
             "commentAuthorOnly": false,
             "comments": true,
             "compactHeader": false,
@@ -317,21 +347,24 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "text": "Go to Documents",
                 "url": "https://example.com"
             },
-            "help": true,<% if (license) { %>
-            "leftMenu": true,
+            "help": true,
+            <% if (license)
+               { %>"leftMenu": true,
             "loaderLogo": "https://example.com/loader-logo.png",
-            "loaderName": "The document is loading, please wait...",<% } %>
-            "hideRightMenu": false,
+            "loaderName": "The document is loading, please wait...",
+            <% } %>"hideRightMenu": false,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
-            },<% if (license) { %>
-            "rightMenu": true,<% } %>
-            "showReviewChanges": false,<% if (license) { %>
-            "statusBar": true,
-            "toolbar": true,<% } %>
-            "zoom": 100
+            },
+            <% if (license)
+               { %>"rightMenu": true,
+            <% } %>"showReviewChanges": false,
+            <% if (license)
+               { %>"statusBar": true,
+            "toolbar": true,
+            <% } %>"zoom": 100
         },
         ...
     },
