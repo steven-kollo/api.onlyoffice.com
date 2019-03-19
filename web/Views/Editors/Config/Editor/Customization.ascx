@@ -279,9 +279,8 @@
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
-        "customization": {
-            <% if (license)
-               { %>"about": true,<% } %>
+        "customization": {<% if (license) { %>
+            "about": true,<% } %>
             "chat": true,
             "commentAuthorOnly": false,
             "compactToolbar": false,
@@ -303,21 +302,18 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "text": "Go to Documents",
                 "url": "https://example.com"
             },
-            "help": true,
-            <% if (license)
-               { %>"leftMenu": true,
+            "help": true,<% if (license) { %>
+            "leftMenu": true,
             "loaderLogo": "https://example.com/loader-logo.png",
             "loaderName": "The document is loading, please wait...",<% } %>
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
-            },
-            <% if (license)
-               { %>"rightMenu": true,<% } %>
-            "showReviewChanges": false,
-            <% if (license)
-               { %>"statusBar": true,
+            },<% if (license) { %>
+            "rightMenu": true,<% } %>
+            "showReviewChanges": false,<% if (license) { %>
+            "statusBar": true,
             "toolbar": true,<% } %>
             "zoom": 100
         },
