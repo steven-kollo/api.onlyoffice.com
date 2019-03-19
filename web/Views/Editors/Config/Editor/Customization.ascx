@@ -55,7 +55,7 @@
         </tr>
         <tr class="tablerow">
             <td id="commentAuthorOnly" class="copy-link">commentAuthorOnly</td>
-            <td>Defines if the user can edit only his comments.
+            <td>Defines if the user can edit and delete only his comments.
                 The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>true</td>
