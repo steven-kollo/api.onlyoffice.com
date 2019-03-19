@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="53" class="copy-link">Version 5.3</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> field.</li>
+    </ul>
+
     <h2 id="52" class="copy-link">Version 5.2</h2>
     <ul>
         <li>Token in request <a href="<%= Url.Action("signature/body") %>">body</a> parameters.</li>

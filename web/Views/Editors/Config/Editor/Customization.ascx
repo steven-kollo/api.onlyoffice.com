@@ -178,6 +178,13 @@
                 <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="hideRightMenu" class="copy-link">hideRightMenu</td>
+            <td>Defines if the right menu is displayed or hidden on first loading.
+                The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -307,6 +314,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "leftMenu": true,
             "loaderLogo": "https://example.com/loader-logo.png",
             "loaderName": "The document is loading, please wait...",<% } %>
+            "hideRightMenu": false,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
