@@ -61,6 +61,12 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td id="compactHeader" class="copy-link">compactHeader</td>
+            <td>Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (<b>false</b>) or in the toolbar (<b>true</b>) making the header more compact. The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
             <td id="compactToolbar" class="copy-link">compactToolbar</td>
             <td>Defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>. The default value is <b>false</b>.</td>
             <td>boolean</td>
@@ -291,6 +297,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "chat": true,
             "commentAuthorOnly": false,
             "comments": true,
+            "compactHeader": false,
             "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",

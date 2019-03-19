@@ -92,6 +92,7 @@ config = {
             "chat": true,
             "commentAuthorOnly": false,
             "comments": true,
+            "compactHeader": false,
             "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",

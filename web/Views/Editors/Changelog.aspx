@@ -19,6 +19,7 @@
 
     <h2 id="53" class="copy-link">Version 5.3</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">editorConfig.customization.compactHeader</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> field.</li>
     </ul>
 
