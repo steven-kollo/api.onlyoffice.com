@@ -1,5 +1,7 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
+<% var license = !string.IsNullOrEmpty(Page.Request["license"]); %>
+
 <h1>
     <a class="up" href="<%= Url.Action("config/editor") %>"></a>
     <span class="hdr">Customization</span>
@@ -25,6 +27,15 @@
         </tr>
     </thead>
     <tbody>
+        <% if (license)
+           { %>
+        <tr class="tablerow">
+            <td id="about" class="copy-link">about<span class="required">**</span></td>
+            <td>Defines if the <b>About</b> menu button is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <% } %>
         <tr class="tablerow">
             <td id="autosave" class="copy-link">autosave</td>
             <td>Defines if the <b>Autosave</b> menu option is enabled or disabled. If set to <b>false</b>, only <em>Strict</em> co-editing mode can be selected, as <em>Fast</em> does not work without autosave. Please note that in case you change this option in menu it will be saved to your browser localStorage. The default value is <b>true</b>.</td>
@@ -167,6 +178,27 @@
                 <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
+        <% if (license)
+           { %>
+        <tr class="tablerow">
+            <td id="about" class="copy-link">leftMenu<span class="required">**</span></td>
+            <td>Defines if the left menu panel is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="about" class="copy-link">loaderLogo<span class="required">**</span></td>
+            <td>Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background). The image will be proportionally resized to the height of 160 pixels when displayed in the editors.</td>
+            <td>string</td>
+            <td>"https://example.com/loader-logo.png"</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="about" class="copy-link">loaderName<span class="required">**</span></td>
+            <td>Defines the text which will be displayed while the document is being loaded.</td>
+            <td>string</td>
+            <td>"The document is loading, please wait..."</td>
+        </tr>
+        <% } %>
         <tr class="tablerow">
             <td id="logo" class="copy-link">logo<span class="required">*</span></td>
             <td>Changes the image file at the top left corner of the Editor header. The recommended image height is 20 pixels. The object has the following parameters:
@@ -194,12 +226,36 @@
             <td>object</td>
             <td></td>
         </tr>
+        <% if (license)
+           { %>
+        <tr class="tablerow">
+            <td id="about" class="copy-link">rightMenu<span class="required">**</span></td>
+            <td>Defines if the right menu panel is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <% } %>
         <tr class="tablerow">
             <td id="showReviewChanges" class="copy-link">showReviewChanges</td>
             <td>Defines if the review changes panel is automatically displayed or hidden when the editor is loaded. The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
+        <% if (license)
+           { %>
+        <tr class="tablerow">
+            <td id="about" class="copy-link">statusBar<span class="required">**</span></td>
+            <td>Defines if the status bar is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="about" class="copy-link">toolbar<span class="required">**</span></td>
+            <td>Defines if the top toolbar is displayed or hidden. The default value is <b>true</b>.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <% } %>
         <tr class="tablerow">
             <td id="zoom" class="copy-link">zoom</td>
             <td>Defines the document display zoom value measured in percent. Can take values larger than <b>0</b>. For text documents and presentations it is possible to set this parameter to <b>-1</b> (fitting the document to page option) or to <b>-2</b> (fitting the document page width to the editor page). The default value is <b>100</b>.</td>
@@ -214,12 +270,17 @@
     </tbody>
 </table>
 <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
+<% if (license)
+   { %>
+<span class="required-descr"><span class="required">**</span><em> - extended white label option for Developer Edition</em></span>
+<% } %>
 
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
-        "customization": {
+        "customization": {<% if (license) { %>
+            "about": true,<% } %>
             "chat": true,
             "commentAuthorOnly": false,
             "compactToolbar": false,
@@ -241,13 +302,19 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "text": "Go to Documents",
                 "url": "https://example.com"
             },
-            "help": true,
+            "help": true,<% if (license) { %>
+            "leftMenu": true,
+            "loaderLogo": "https://example.com/loader-logo.png",
+            "loaderName": "The document is loading, please wait...",<% } %>
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
-            },
-            "showReviewChanges": false,
+            },<% if (license) { %>
+            "rightMenu": true,<% } %>
+            "showReviewChanges": false,<% if (license) { %>
+            "statusBar": true,
+            "toolbar": true,<% } %>
             "zoom": 100
         },
         ...
