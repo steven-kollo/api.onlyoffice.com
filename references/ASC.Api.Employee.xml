@@ -79,7 +79,18 @@
             <param name="query">Search text</param>
             <returns>User list</returns>
         </member>
-        <member name="M:ASC.Api.Employee.EmployeeApi.GetByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean})">
+        <member name="M:ASC.Api.Employee.EmployeeApi.SaveUsers(System.String,System.Boolean)">
+            <summary>
+            Adds a new portal user from import with the first and last name, email address
+            </summary>
+            <short>
+            Add new import user
+            </short>
+            <param name="userList">The list of users to add</param>
+            <param name="importUsersAsCollaborators" optional="true">Add users as guests (bool type: false|true)</param>
+            <returns>Newly created users</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetFullByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean})">
             <summary>
                Returns the list of users matching the filter with the parameters specified in the request
             </summary>
@@ -95,7 +106,23 @@
                User list
             </returns>
         </member>
-        <member name="M:ASC.Api.Employee.EmployeeApi.AddMember(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String)">
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetSimpleByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean})">
+            <summary>
+               Returns the list of users matching the filter with the parameters specified in the request
+            </summary>
+            <short>
+               User search by extended filter
+            </short>
+            <param optional="true" name="employeeStatus">User status</param>
+            <param optional="true" name="groupId">Group ID</param>
+            <param optional="true" name="activationStatus">Activation status</param>
+            <param optional="true" name="employeeType">User type</param>
+             <param optional="true" name="isAdministrator">Administrator(bool type)</param>
+            <returns>
+               User list
+            </returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.AddMember(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String)">
             <summary>
             Adds a new portal user with the first and last name, email address and several optional parameters specified in the request
             </summary>
@@ -115,6 +142,7 @@
             <param name="comment" optional="true">Comment for user</param>
             <param name="contacts">List of contacts</param>
             <param name="files">Avatar photo url</param>
+            <param name="password" optional="true">User Password</param>
             <returns>Newly created user</returns>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.AddMemberAsActivated(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String)">
@@ -207,6 +235,16 @@
             <param name="contacts">Contacts list</param>
             <returns>Updated user profile</returns>
         </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetMemberPhoto(System.String)">
+            <summary>
+            Get user photoes
+            </summary>
+            <short>
+            Get user photoes
+            </short>
+            <param name="userid">User ID</param>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.UpdateMemberPhoto(System.String,System.String)">
             <summary>
             Updates the specified user photo with the pathname
@@ -226,6 +264,21 @@
             Delete user photo
             </short>
             <param name="userid">User ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.CreateMemberPhotoThumbnails(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create photo thumbnails by coordinates of original image
+            </summary>
+            <short>
+            Create user photo thumbnails
+            </short>
+            <param name="userid">User ID</param>
+            <param name="tmpFile">Path to the temporary file</param>
+            <param name="x">X</param>
+            <param name="y">Y</param>
+            <param name="width">Width</param>
+            <param name="height">Height</param>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.SendUserPassword(System.String)">
@@ -342,12 +395,13 @@
             <param name="userId">User ID whose data is reassigned</param>
             <category>Reassign user data</category>
         </member>
-        <member name="M:ASC.Api.Employee.EmployeeApi.StartReassign(System.Guid,System.Guid)">
+        <member name="M:ASC.Api.Employee.EmployeeApi.StartReassign(System.Guid,System.Guid,System.Boolean)">
             <summary>
             Start a reassign process
             </summary>
             <param name="fromUserId">From User ID</param>
             <param name="toUserId">To User ID</param>
+            <param name="deleteProfile">Delete profile when reassignment will be finished</param>
             <category>Reassign user data</category>
             <returns>Reassign Progress</returns>
         </member>

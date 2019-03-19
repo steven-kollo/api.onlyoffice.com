@@ -30,6 +30,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using ASC.Api.Interfaces;
 using ASC.Common.DependencyInjection;
+using ASC.Common.Logging;
 using Autofac;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
@@ -47,6 +48,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private static List<MsDocEntryPoint> GenerateDocs()
         {
             var containerBuilder = AutofacConfigLoader.Load("api");
+
+            containerBuilder.Register(c => LogManager.GetLogger("ASC"))
+                .As<ILog>()
+                .SingleInstance();
+
             containerBuilder.Register(c => c.Resolve<IApiRouteConfigurator>().RegisterEntryPoints())
                 .As<IEnumerable<IApiMethodCall>>()
                 .SingleInstance();

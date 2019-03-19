@@ -148,7 +148,7 @@
             <category>Backup</category>
             <returns>Backup Schedule</returns>
         </member>
-        <member name="M:ASC.Api.Portal.PortalApi.CreateBackupSchedule(ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Int32,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.CronParams,System.Boolean)">
+        <member name="M:ASC.Api.Portal.PortalApi.CreateBackupSchedule(ASC.Core.Common.Contracts.BackupStorageType,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Int32,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.CronParams,System.Boolean)">
             <summary>
             Create the backup schedule of the current portal
             </summary>
@@ -165,7 +165,7 @@
             </summary>
             <category>Backup</category>
         </member>
-        <member name="M:ASC.Api.Portal.PortalApi.StartBackup(ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Boolean)">
+        <member name="M:ASC.Api.Portal.PortalApi.StartBackup(ASC.Core.Common.Contracts.BackupStorageType,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Boolean)">
             <summary>
             Start a backup of the current portal
             </summary>
@@ -202,7 +202,7 @@
             <category>Backup</category>
             <returns>Backup History</returns>
         </member>
-        <member name="M:ASC.Api.Portal.PortalApi.StartBackupRestore(System.String,ASC.Core.Common.Contracts.BackupStorageType,ASC.Web.Studio.Core.Backup.BackupAjaxHandler.StorageParams,System.Boolean)">
+        <member name="M:ASC.Api.Portal.PortalApi.StartBackupRestore(System.String,ASC.Core.Common.Contracts.BackupStorageType,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Boolean)">
             <summary>
             Start a data restore of the current portal
             </summary>
@@ -220,7 +220,13 @@
             <category>Backup</category>
             <returns>Restore Progress</returns>
         </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetTempPath(System.String)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalName(System.String)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalAnalytics(System.Boolean)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.SendCongratulations(System.Guid,System.String)">
@@ -235,19 +241,26 @@
         <member name="M:ASC.Api.Portal.PortalApi.EditCommentComplete(System.String,System.String,System.String,System.Boolean)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Portal.PortalApi.GetBarPromotions(System.String,System.String)">
+        <member name="M:ASC.Api.Portal.PortalApi.GetBarPromotions(System.String,System.String,System.Boolean)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.MarkBarPromotion(System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Portal.PortalApi.GetBarTips(System.String,System.Boolean)">
+        <member name="M:ASC.Api.Portal.PortalApi.GetBarTips(System.String,System.Boolean,System.Boolean)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.MarkBarTip(System.String)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.DeleteBarTips">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetRandomPassword">
+             <summary>
+                Get random password
+             </summary>
+             <short>Get random password</short>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.Portal.PortalApi.Name">

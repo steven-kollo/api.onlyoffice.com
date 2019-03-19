@@ -10,6 +10,9 @@
         <member name="P:ASC.Api.Calendar.BusinessObjects.Calendar.ObjectType">
             <inheritdoc/>
         </member>
+        <member name="P:ASC.Api.Calendar.BusinessObjects.Todo.ObjectType">
+            <inheritdoc/>
+        </member>
         <member name="P:ASC.Api.Calendar.BusinessObjects.Event.ObjectType">
             <inheritdoc/>
         </member>
@@ -71,7 +74,7 @@
             <param name="calendarId">Calendar ID</param>
             <returns>Calendar</returns>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.CreateCalendar(System.String,System.String,System.String,System.String,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam})">
+        <member name="M:ASC.Api.Calendar.CalendarApi.CreateCalendar(System.String,System.String,System.String,System.String,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String,System.Int32)">
             <summary>
             Creates the new calendar with the parameters (name, description, color, etc.) specified in the request
             </summary>
@@ -85,9 +88,11 @@
             <param name="timeZone">Calendar time zone</param>
             <param name="alertType">Event alert type, in case alert type is set by default</param>
             <param name="sharingOptions">Calendar sharing options with other users</param>
+            <param name="iCalUrl">iCal url</param>
+            <param name="isTodo">Calendar for todo list</param>
             <returns>Created calendar</returns>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.UpdateCalendar(System.String,System.String,System.String,System.String,System.String,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Boolean,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam})">
+        <member name="M:ASC.Api.Calendar.CalendarApi.UpdateCalendar(System.String,System.String,System.String,System.String,System.String,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Boolean,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String)">
             <summary>
             Updates the selected calendar with the parameters (name, description, color, etc.) specified in the request for the current user and access rights for other users
             </summary>
@@ -103,6 +108,7 @@
             <param name="alertType">Event alert type, in case alert type is set by default</param>
             <param name="hideEvents">Display type: show or hide events in calendar</param>
             <param name="sharingOptions">Calendar sharing options with other users</param>
+            <param name="iCalUrl">iCal url</param>
             <returns>Updated calendar</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.UpdateCalendarView(System.String,System.String,System.String,System.String,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Boolean)">
@@ -139,6 +145,38 @@
             </short>
             <param name="calendarId">Calendar ID</param>
             <returns>iCal link</returns>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.GetCalendarCalDavUrl(System.String)">
+            <summary>
+            Returns the link for the CalDav associated with the calendar with the ID specified in the request
+            </summary>
+            <short>
+            Get CalDav link
+            </short>
+            <param name="calendarId">Calendar ID</param>
+            <returns>CalDav link</returns>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.ChangeOfCalendarStorage(System.String,System.String)">
+            <summary>
+            Run caldav event update function
+            </summary>
+            <short>
+            Update CalDav Event
+            </short>
+            <param name="change">changes of event</param>
+            <param name="key"></param>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.CaldavDeleteEvent(System.String,System.String)">
+            <summary>
+            Run caldav event delete function
+            </summary>
+            <short>
+            Delete CalDav Event
+            </short>
+            <param name="eventInfo">event info</param>
+            <param name="key"></param>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.GetCalendariCalStream(System.String,System.String)">
             <summary>
@@ -250,7 +288,28 @@
             <param name="status">Event status</param>
             <returns>Updated event list</returns>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.AddEvent(System.Int32,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam})">
+        <member name="M:ASC.Api.Calendar.CalendarApi.AddTodo(System.String,System.String)">
+            <summary>
+            Creates the new task in the selected calendar with the parameters specified in the request
+            </summary>
+            <short>
+            Create new event
+            </short>
+            <param name="ics">Task in iCal format</param>
+            <param name="todoUid">Task uid</param>
+            <returns>Todo</returns>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.RemoveTodo(System.Int32,System.Boolean)">
+            <summary>
+            Deletes task
+            </summary>
+            <short>
+            Delete task
+            </short>
+            <param name="todoId">Task ID</param>
+            <param name="fromCaldavServer">Bool flag says that request from caldav server</param>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.AddEvent(System.Int32,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String)">
             <summary>
             Creates the new event in the selected calendar with the parameters specified in the request
             </summary>
@@ -261,9 +320,10 @@
             <param name="ics">Event in iCal format</param>
             <param name="alertType">Event notification type</param>
             <param name="sharingOptions">Event sharing access parameters</param>
+            <param name="eventUid">Event uid</param>
             <returns>Event</returns>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.UpdateEvent(System.Int32,System.String,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam})">
+        <member name="M:ASC.Api.Calendar.CalendarApi.UpdateEvent(System.Int32,System.String,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.Boolean,System.String)">
             <summary>
             Updates the existing event in the selected calendar with the parameters specified in the request
             </summary>
@@ -275,6 +335,8 @@
             <param name="ics">Event in iCal format</param>
             <param name="alertType">Event notification type</param>
             <param name="sharingOptions">Event sharing access parameters</param>
+            <param name="fromCalDavServer">bool flag says that request from caldav server</param>
+            <param name="ownerId">Event owner id</param>
             <returns>Updated event</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.RemoveEvent(System.Int32)">
@@ -286,7 +348,7 @@
             </short>
             <param name="eventId">Event ID</param>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.RemoveEvent(System.Int32,ASC.Specific.ApiDateTime,ASC.Api.Calendar.CalendarApi.EventRemoveType)">
+        <member name="M:ASC.Api.Calendar.CalendarApi.RemoveEvent(System.Int32,ASC.Specific.ApiDateTime,ASC.Api.Calendar.CalendarApi.EventRemoveType,System.Boolean)">
             <summary>
             Deletes one event from the series of recurrent events
             </summary>
@@ -296,6 +358,7 @@
             <param name="eventId">Event ID</param>
             <param name="date">Date to be deleted from the recurrent event</param>
             <param name="type">Recurrent event deletion type</param>
+            <param name="fromCaldavServer">Bool flag says that request from caldav server</param>
             <returns>Updated event series collection</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.UnsubscribeEvent(System.Int32)">
