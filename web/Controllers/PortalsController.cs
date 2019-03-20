@@ -24,11 +24,12 @@
 */
 
 
-using ASC.Api.Web.Help.Helpers;
-using ASC.Api.Web.Help.Models;
 using System;
 using System.Linq;
 using System.Web.Mvc;
+using ASC.Api.Web.Help.DocumentGenerator;
+using ASC.Api.Web.Help.Helpers;
+using ASC.Api.Web.Help.Models;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -140,9 +141,11 @@ namespace ASC.Api.Web.Help.Controllers
                     if (!string.IsNullOrEmpty(method.Category))
                         _breadCrumbsBuilder.Add(method.Category, docsSection.Name, method.Category, null, null, controller);
 
-                    var text = string.IsNullOrEmpty(method.ShortName) ?
-                        (string.IsNullOrEmpty(method.Summary) ? method.FunctionName : method.Summary) :
-                        method.ShortName;
+                    var text = !string.IsNullOrEmpty(method.ShortName)
+                                   ? method.ShortName
+                                   : (!string.IsNullOrEmpty(method.Summary)
+                                          ? method.Summary
+                                          : method.FunctionName);
 
                     _breadCrumbsBuilder.Add(text, docsSection, method, controller);
 

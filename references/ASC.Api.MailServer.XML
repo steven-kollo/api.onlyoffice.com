@@ -4,7 +4,7 @@
         <name>ASC.Api.MailServer</name>
     </assembly>
     <members>
-        <member name="M:ASC.Api.MailServer.MailServerApi.CreateMailbox(System.String,System.String,System.Int32,System.String)">
+        <member name="M:ASC.Api.MailServer.MailServerApi.CreateMailbox(System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean)">
             <summary>
                Create mailbox
             </summary>
@@ -12,6 +12,8 @@
             <param name="local_part"></param>
             <param name="domain_id"></param>
             <param name="user_id"></param>
+            <param name="notifyCurrent">Send message to creating mailbox's address</param>
+            <param name="notifyProfile">Send message to email from user profile</param>
             <returns>MailboxData associated with tenant</returns>
             <short>Create mailbox</short> 
             <category>Mailboxes</category>
@@ -72,6 +74,35 @@
             <param name="address_id"></param>
             <returns>id of mailbox</returns>
             <short>Remove mailbox's aliases</short>
+            <category>Mailboxes</category>
+        </member>
+        <member name="M:ASC.Api.MailServer.MailServerApi.ChangeMailboxPassword(System.Int32,System.String)">
+            <summary>
+               Change mailbox password
+            </summary>
+            <param name="mailbox_id"></param>
+            <param name="password"></param>
+            <short>Change mailbox password</short> 
+            <category>Mailboxes</category>
+        </member>
+        <member name="M:ASC.Api.MailServer.MailServerApi.IsAddressAlreadyRegistered(System.String,System.Int32)">
+            <summary>
+               Check existence of mailbox address
+            </summary>
+            <param name="local_part"></param>
+            <param name="domain_id"></param>
+            <short>Is server mailbox address exists</short>
+            <returns>True - address exists, False - not exists</returns>
+            <category>Mailboxes</category>
+        </member>
+        <member name="M:ASC.Api.MailServer.MailServerApi.IsAddressValid(System.String,System.Int32)">
+            <summary>
+               Validate mailbox address
+            </summary>
+            <param name="local_part"></param>
+            <param name="domain_id"></param>
+            <short>Is server mailbox address valid</short>
+            <returns>True - address valid, False - not valid</returns>
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.CreateMailGroup(System.String,System.Int32,System.Collections.Generic.List{System.Int32})">
@@ -195,7 +226,7 @@
                Deletes the selected web domain
             </summary>
             <param name="id">id of web domain</param>
-            <returns>id of web domain</returns>
+            <returns>MailOperationResult object</returns>
             <short>Remove domain from mail server</short> 
             <category>Domains</category>
         </member>

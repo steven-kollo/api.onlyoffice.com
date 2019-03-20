@@ -24,14 +24,15 @@
 */
 
 
-using ASC.Api.Web.Help.Helpers;
-using log4net;
-using log4net.Config;
 using System;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using ASC.Api.Web.Help.DocumentGenerator;
+using ASC.Api.Web.Help.Helpers;
+using log4net;
+using log4net.Config;
 
 namespace ASC.Api.Web.Help
 {
@@ -147,7 +148,6 @@ namespace ASC.Api.Web.Help
 
                             LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
                             Documentation.Load();
-                            Documentation.GenerateRouteMap("portals");
                         }
                         catch (Exception error)
                         {

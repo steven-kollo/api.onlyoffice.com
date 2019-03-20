@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ASC.Api.Web.Help</RootNamespace>
     <AssemblyName>ASC.Api.Web.Help</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>true</MvcBuildViews>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -104,8 +104,17 @@
     <Reference Include="ASC.Data.Reassigns">
       <HintPath>..\references\ASC.Data.Reassigns.dll</HintPath>
     </Reference>
+    <Reference Include="ASC.Data.Storage">
+      <HintPath>..\references\ASC.Data.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.ElasticSearch">
+      <HintPath>..\references\ASC.ElasticSearch.dll</HintPath>
+    </Reference>
     <Reference Include="ASC.IPSecurity">
       <HintPath>..\references\ASC.IPSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="ASC.Mail">
+      <HintPath>..\references\ASC.Mail.dll</HintPath>
     </Reference>
     <Reference Include="ASC.Mail.Aggregator">
       <HintPath>..\references\ASC.Mail.Aggregator.dll</HintPath>
@@ -147,7 +156,7 @@
       <HintPath>..\references\ASC.Web.UserControls.SocialMedia.dll</HintPath>
     </Reference>
     <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.4.6.0\lib\net45\Autofac.dll</HintPath>
+      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
@@ -169,12 +178,17 @@
       <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
     </Reference>
@@ -211,7 +225,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EditorsController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
-    <Compile Include="Documentation.cs" />
+    <Compile Include="DocumentGenerator\Documentation.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
