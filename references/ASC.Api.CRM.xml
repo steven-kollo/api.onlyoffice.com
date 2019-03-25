@@ -1397,15 +1397,6 @@
             <category>Contacts</category>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.FindFacebookProfiles(System.String,System.Boolean)">
-            <summary>
-            
-            </summary>
-            <param name="searchText"></param>
-            <param name="isUser"></param>
-            <category>Contacts</category>
-            <returns></returns>
-        </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactAvatar(System.Int32,System.String,System.Boolean)">
             <summary>
             
@@ -1889,12 +1880,13 @@
                Participant
             </returns>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.GetDealsByPrefix(System.String,System.Int32)">
+        <member name="M:ASC.Api.CRM.CRMApi.GetDealsByPrefix(System.String,System.Int32,System.Boolean)">
             <summary>
                Returns the list of 30 opportunities in the CRM module with prefix
             </summary>
             <param optional="true" name="prefix"></param>
             <param optional="true" name="contactID"></param>
+            <param optional="true" name="internalSearch"></param>
             <category>Opportunities</category>
             <returns>
                Opportunities list
@@ -2521,6 +2513,55 @@
                File Info
             </returns>
         </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetFiles">
+            <summary>Returns a list of all user report files</summary>
+            <short>Get report files</short>
+            <category>Reports</category>
+            <returns>Report files</returns>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.DeleteFile(System.Int32)">
+            <summary>Delete the report file with the ID specified in the request</summary>
+            <param name="fileid">File ID</param>
+            <short>Delete report file</short>
+            <category>Reports</category>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+            <exception cref="T:System.ArgumentException">if fileid les than 0</exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">if file not found</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetStatus">
+            <summary>Get the state of the report generation task</summary>
+            <short>Get report generation state</short>
+            <category>Reports</category>
+            <returns>Report state</returns>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.Terminate">
+            <summary>Terminate the report generation task</summary>
+            <short>Terminate report generation</short>
+            <category>Reports</category>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.CheckReportData(ASC.CRM.Core.ReportType,ASC.CRM.Core.ReportTimePeriod,System.Guid[])">
+            <summary>Check data availability for a report</summary>
+            <param name="type">Report type</param>
+            <param name="timePeriod">Time period</param>
+            <param name="managers">Managers</param>
+            <short>Check report data</short>
+            <category>Reports</category>
+            <returns>Object</returns>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GenerateReport(ASC.CRM.Core.ReportType,ASC.CRM.Core.ReportTimePeriod,System.Guid[])">
+            <summary>Run the report generation task</summary>
+            <param name="type">Report type</param>
+            <param name="timePeriod">Time period</param>
+            <param name="managers">Managers</param>
+            <short>Generate report</short>
+            <category>Reports</category>
+            <returns>Report state</returns>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetEntityTags(System.String,System.Int32)">
              <summary>
               Returns the list of all tags associated with the entity with the ID and type specified in the request
@@ -2852,17 +2893,18 @@
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskTemplateContainer(System.String,System.String)">
-             <summary>
-               Creates a new task template container with the type and title specified in the request
-             </summary>
-             <param name="entityType">Type</param>
-             <param name="title">Title</param>
-             <short>Create task template container</short> 
-             <category>Task Templates</category>
-             <returns>
-                 Task template container
-             </returns>
+            <summary>
+              Creates a new task template container with the type and title specified in the request
+            </summary>
+            <param name="entityType">Type</param>
+            <param name="title">Title</param>
+            <short>Create task template container</short> 
+            <category>Task Templates</category>
+            <returns>
+                Task template container
+            </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateContainers(System.String)">
             <summary>
@@ -2874,59 +2916,64 @@
             <returns>
                 Task template container list
             </returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTaskTemplateContainer(System.Int32)">
-             <summary>
-               Deletes the task template container with the ID specified in the request
-             </summary>
-             <param name="containerid">Task template container ID</param>
-             <short>Delete task template container</short> 
-             <category>Task Templates</category>
-             <returns>
-                Deleted task template container
-             </returns>
+            <summary>
+              Deletes the task template container with the ID specified in the request
+            </summary>
+            <param name="containerid">Task template container ID</param>
+            <short>Delete task template container</short> 
+            <category>Task Templates</category>
+            <returns>
+               Deleted task template container
+            </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskTemplateContainer(System.Int32,System.String)">
-             <summary>
-               Updates the task template container with the ID specified in the request
-             </summary>
-             <param name="containerid">Task template container ID</param>
-             <param name="title">Title</param>
-             <short>Update task template container</short> 
-             <category>Task Templates</category>
-             <returns>
-                 Task template container
-             </returns>
+            <summary>
+              Updates the task template container with the ID specified in the request
+            </summary>
+            <param name="containerid">Task template container ID</param>
+            <param name="title">Title</param>
+            <short>Update task template container</short> 
+            <category>Task Templates</category>
+            <returns>
+                Task template container
+            </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateContainerByID(System.Int32)">
-             <summary>
-               Returns the detailed information on the task template container with the ID specified in the request
-             </summary>
-             <param name="containerid">Task template container ID</param>
-             <short>Get task template container by ID</short> 
-             <category>Task Templates</category>
-             <returns>
-                 Task template container
-             </returns>
+            <summary>
+              Returns the detailed information on the task template container with the ID specified in the request
+            </summary>
+            <param name="containerid">Task template container ID</param>
+            <short>Get task template container by ID</short> 
+            <category>Task Templates</category>
+            <returns>
+                Task template container
+            </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplates(System.Int32)">
-             <summary>
-               Returns the list of all tasks in the container with the ID specified in the request
-             </summary>
-             <param name="containerid">Task template container ID</param>
-             <short>Get task template list by contaier ID</short> 
-             <category>Task Templates</category>
-             <returns>
-                 Task template list
-             </returns>
+            <summary>
+              Returns the list of all tasks in the container with the ID specified in the request
+            </summary>
+            <param name="containerid">Task template container ID</param>
+            <short>Get task template list by contaier ID</short> 
+            <category>Task Templates</category>
+            <returns>
+                Task template list
+            </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskTemplate(System.Int32,System.String,System.String,System.Guid,System.Int32,System.Boolean,System.Int64,System.Boolean)">
             <summary>
@@ -2945,6 +2992,7 @@
             <returns>Task template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskTemplate(System.Int32,System.Int32,System.String,System.String,System.Guid,System.Int32,System.Boolean,System.Int64,System.Boolean)">
             <summary>
@@ -2964,6 +3012,7 @@
             <returns>Task template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTaskTemplate(System.Int32)">
             <summary>
@@ -2975,6 +3024,7 @@
             <returns>Task template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateByID(System.Int32)">
             <summary>
@@ -2986,6 +3036,7 @@
             <returns>Task template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAvaliableCurrency">
             <summary>
@@ -3078,14 +3129,18 @@
             <returns>Organisation company name</returns>
             <exception cref="T:System.Security.SecurityException"></exception>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsCompanyAddress(System.String)">
+        <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsCompanyAddress(System.String,System.String,System.String,System.String,System.String)">
             <summary>
              Save organisation company address
             </summary>
-            <param name="companyAddress">Organisation company address</param>
+            <param name="street">Organisation company street/building/apartment address</param>
+            <param name="city">City</param>
+            <param name="state">State</param>
+            <param name="zip">Zip</param>
+            <param name="country">Country</param>
             <short>Save organisation company address</short>
             <category>Organisation</category>
-            <returns>Organisation company address</returns>
+            <returns>Returns a JSON object with the organization company address details</returns>
             <exception cref="T:System.Security.SecurityException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsLogo(System.Boolean)">
@@ -3129,26 +3184,6 @@
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.SaveSMTPSettings(System.String,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.Boolean)">
-            <summary>
-             Save SMTP Server Settings
-            </summary>
-            <short>Save SMTP Settings</short>
-            <param name="host">Host name</param>
-            <param name="port">Port</param>
-            <param name="authentication">Need authentication</param>
-            <param name="hostLogin">Host Login</param>
-            <param name="hostPassword">Host Password</param>
-            <param name="senderDisplayName">Sender Name</param>
-            <param name="senderEmailAddress">Sender Email Address</param>
-            <param name="enableSSL">Enable SSL</param>
-            <category>Common</category>
-            <returns>SMTP Server Settings</returns>
-            <exception cref="T:System.Security.SecurityException"></exception>
-        </member>
-        <member name="M:ASC.Api.CRM.CRMApi.SendTestMailSMTP(System.String,System.String,System.String)">
-            <visible>false</visible>
-        </member>
         <member name="M:ASC.Api.CRM.CRMApi.StartImportFromCSV(System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
@@ -3161,13 +3196,22 @@
         <member name="M:ASC.Api.CRM.CRMApi.ProcessUploadFake(System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.GetExportToCSVStatus">
+        <member name="M:ASC.Api.CRM.CRMApi.GetExportStatus">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.Cancel">
+        <member name="M:ASC.Api.CRM.CRMApi.CancelExport">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.StartExportData">
+        <member name="M:ASC.Api.CRM.CRMApi.StartExport">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetPartialExportStatus">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.CancelPartialExport">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.StartPartialExport(System.String,System.String)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAvailablePhoneNumbers(ASC.VoipService.Twilio.PhoneNumberType,System.String)">

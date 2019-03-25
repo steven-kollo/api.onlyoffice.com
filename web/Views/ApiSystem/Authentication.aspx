@@ -29,21 +29,21 @@
 
     <p>Example Authentication Token will look like this: "<em>ASC abc:20100707140603:E7lwEXOplYS-0lbnV1XQnDSbi3w</em>"</p>
 
-    <div id="csharp" class="header-gray">.Net(C#) generating token example</div>
+    <div id="csharp" class="header-gray copy-link">.Net(C#) generating token example</div>
     <pre>
 public string CreateAuthToken(string pkey, string machinekey)
 {
-    using (var hasher = new System.Security.Cryptography.HMACSHA1(Encoding.UTF8.GetBytes(machinekey)))
+    using (var hasher = new System.Security.Cryptography.HMACSHA1(System.Text.Encoding.UTF8.GetBytes(machinekey)))
     {
         var now = DateTime.UtcNow.ToString("yyyyMMddHHmmss");
-        var hash = System.Web.HttpServerUtility.UrlTokenEncode(hasher.ComputeHash(Encoding.UTF8.GetBytes(string.Join("\n", now, pkey))));
+        var hash = System.Web.HttpServerUtility.UrlTokenEncode(hasher.ComputeHash(System.Text.Encoding.UTF8.GetBytes(string.Join("\n", now, pkey))));
 
         return string.Format("ASC {0}:{1}:{2}", pkey, now, hash);
     }
 }
 </pre>
 
-    <div id="bash" class="header-gray">Bash generating token example</div>
+    <div id="bash" class="header-gray copy-link">Bash generating token example</div>
     <pre>
 CreateAuthToken() {
     pkey="$1";
@@ -57,7 +57,7 @@ CreateAuthToken() {
 }
 </pre>
 
-    <div id="nodejs" class="header-gray">Node.js generating token example</div>
+    <div id="nodejs" class="header-gray copy-link">Node.js generating token example</div>
     <pre>
 var moment = require("moment");
 var crypto = require("crypto");
@@ -75,7 +75,7 @@ var createToken = function (pkey, machinekey) {
 };
 </pre>
 
-    <div id="php" class="header-gray">PHP generating token example</div>
+    <div id="php" class="header-gray copy-link">PHP generating token example</div>
     <pre>
 function CreateAuthToken($pkey, $machinekey) {
     $now=gmdate('YmdHis');
@@ -88,9 +88,9 @@ function CreateAuthToken($pkey, $machinekey) {
 }
 </pre>
 
-    <div id="powershell" class="header-gray">PowerShell generating token example</div>
+    <div id="powershell" class="header-gray copy-link">PowerShell generating token example</div>
     <pre>
-function CreateAuthToken([string]$pkey, [string]$machinekey){
+function CreateAuthToken([string]$pkey, [string]$machinekey) {
     $hmacsha = New-Object System.Security.Cryptography.HMACSHA1
     $hmacsha.Key = [System.Text.Encoding]::UTF8.GetBytes($machinekey)
 
@@ -104,13 +104,56 @@ function CreateAuthToken([string]$pkey, [string]$machinekey){
 }
 </pre>
 
-    <div id="ruby" class="header-gray">Ruby generating token example</div>
+    <div id="ruby" class="header-gray copy-link">Ruby generating token example</div>
     <pre>
 def create_auth_token(pkey, machine_key)
     now = Time.now.strftime('%Y%m%d%H%M%S')
     hash = Base64.strict_encode64(OpenSSL::HMAC.digest('sha1', machine_key, [now, pkey].join("\n")))
     "ASC #{pkey}:#{now}:#{hash.tr('+', '-').tr('/', '_').chop}"
 end
+</pre>
+
+    <div id="python" class="header-gray copy-link">Python generating token example</div>
+    <pre>
+import base64
+import hashlib
+import hmac
+
+from datetime import datetime, date, time
+
+def create_auth_token(pkey, machine_key):
+
+    machine_key = bytes(machine_key, 'UTF-8')
+    now = datetime.strftime(datetime.utcnow(), "%Y%m%d%H%M%S")
+
+    message = bytes('{0}\n{1}'.format(now, pkey), 'UTF-8')
+
+    _hmac = hmac.new(machine_key, message, hashlib.sha1)
+        
+    signature = str(base64.urlsafe_b64encode(_hmac.digest()), 'UTF-8')
+    signature = signature.replace('-', '+')
+    signature = signature.replace('_', '/')
+    token = 'ASC {0}:{1}:{2}'.format(pkey, now, signature)
+
+    return token
+</pre>
+
+    <div id="java" class="header-gray copy-link">Java generating token example</div>
+    <pre>
+public String createAuthToken(String pkey, String machinekey) throws Exception
+{
+    java.time.OffsetDateTime date = java.time.OffsetDateTime.now(java.time.ZoneOffset.UTC);
+    String time = date.format(java.time.format.DateTimeFormatter.ofPattern("YYYYMMddHHmmss"));
+    String data = time + "\n" + pkey;
+
+    javax.crypto.spec.SecretKeySpec signingKey = new javax.crypto.spec.SecretKeySpec(machinekey.getBytes(), "HmacSHA1");
+
+    javax.crypto.Mac mac = javax.crypto.Mac.getInstance("HmacSHA1");
+    mac.init(signingKey);
+    String hash = java.util.Base64.getUrlEncoder().encodeToString(mac.doFinal(data.getBytes()));
+
+    return String.format("ASC %1$s:%2$s:%3$s", pkey, time, hash);
+}
 </pre>
 
 </asp:Content>
