@@ -91,6 +91,7 @@ config = {
             "autosave": true,
             "chat": true,
             "commentAuthorOnly": false,
+            "comments": true,
             "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",
