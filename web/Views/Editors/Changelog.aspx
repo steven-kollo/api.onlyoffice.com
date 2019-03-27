@@ -22,6 +22,7 @@
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> field is now used to restrict comment deletion as well.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">editorConfig.customization.compactHeader</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> field.</li>
+        <li>Added <a href="<%= Url.Action("conversionapi") %>#error">conversion error</a> for password protected documents.</li>
     </ul>
 
     <h2 id="52" class="copy-link">Version 5.2</h2>
