@@ -459,6 +459,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     {
         [JsonProperty("type")]
         public string Type { get; set; }
+
+        [JsonProperty("optional")]
+        public bool Optional { get; set; }
+
+        [JsonProperty("defaultValue")]
+        public string DefaultValue { get; set; }
     }
 
     public abstract class DBEntity
