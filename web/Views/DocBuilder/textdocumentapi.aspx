@@ -10,5 +10,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%= Html.Partial("Textdocumentapi/"+ (Model ?? "Default")) %>
+    <%= Html.Partial("Textdocumentapi/Default") %>
 </asp:Content>

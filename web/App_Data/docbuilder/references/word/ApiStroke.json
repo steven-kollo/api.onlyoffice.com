@@ -1,0 +1,1 @@
+{"methods":{"GetClassType":{"memberof":"ApiStroke","name":"GetClassType","description":"Get the type of this class.","tags":{"typeofeditors":["CDE","CSE","CPE"]},"returns":[["\"stroke\""]]}},"comment":"/**\r\n\t * Class represent a stroke class\r\n\t * @constructor\r\n\t */","description":"Class represent a stroke class","scope":"global","params":[]}

@@ -10,5 +10,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%= Html.Partial("Presentationapi/"+ (Model ?? "Default")) %>
+    <%= Html.Partial("Presentationapi/Default") %>
 </asp:Content>

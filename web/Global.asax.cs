@@ -148,6 +148,9 @@ namespace ASC.Api.Web.Help
 
                             LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
                             Documentation.Load();
+
+                            LogManager.GetLogger("ASC.Api").Debug("Generate docbuilder documentations");
+                            DocBuilderDocumentation.Load();
                         }
                         catch (Exception error)
                         {

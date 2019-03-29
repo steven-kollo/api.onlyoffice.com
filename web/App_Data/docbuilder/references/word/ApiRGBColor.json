@@ -1,0 +1,1 @@
+{"methods":{"GetClassType":{"memberof":"ApiRGBColor","name":"GetClassType","description":"Get the type of this class.","tags":{"typeofeditors":["CDE","CSE","CPE"]},"returns":[["\"rgbColor\""]]}},"comment":"/**\r\n\t * Class representing RGB color\r\n\t * @constructor\r\n\t */","description":"Class representing RGB color","scope":"global","params":[]}

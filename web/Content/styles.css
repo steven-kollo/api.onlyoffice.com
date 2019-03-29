@@ -581,7 +581,7 @@ pre.hljs {
 }
 
 /*note block*/
-.note {
+.note, note {
     color: #808080;
     padding: 10px 30px 10px 50px;
     text-align: justify;
@@ -598,7 +598,7 @@ pre.hljs {
     border-right: 5px solid #5891d0;
 }
 
-.note:before {
+.note:before, note:before {
     content: 'N';
     font-size: 15px;
     font-weight: bold;
@@ -608,7 +608,7 @@ pre.hljs {
     top: 10px;
 }
 
-.note:after {
+.note:after, note:after {
     content: 'B:';
     font-size: 15px;
     font-weight: bold;

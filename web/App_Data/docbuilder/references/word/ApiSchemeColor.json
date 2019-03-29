@@ -1,0 +1,1 @@
+{"methods":{"GetClassType":{"memberof":"ApiSchemeColor","name":"GetClassType","description":"Get the type of this class.","tags":{"typeofeditors":["CDE","CSE","CPE"]},"returns":[["\"schemeColor\""]]}},"comment":"/**\r\n\t * Class representing a Scheme Color\r\n\t * @constructor\r\n\t */","description":"Class representing a Scheme Color","scope":"global","params":[]}
