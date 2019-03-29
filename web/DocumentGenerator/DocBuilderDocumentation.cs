@@ -34,7 +34,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public static void Load()
         {
-            _logger = LogManager.GetLogger("ASC.DocbuilderDocs");
+            _logger = LogManager.GetLogger("ASC.DocumentBuilder");
+            _logger.Debug("Generate docbuilder documentations");
 
             var tree = new Dictionary<string, SortedDictionary<string, DBEntry>>(StringComparer.OrdinalIgnoreCase);
             var path = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references");
@@ -198,8 +199,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 return string.Format("/docbuilderjson/{0}/{1}", module[type].Path, module[type].Name);
             }
 
-            IEnumerable<DBEntry> sections;
-            sections = _entries.Where(kv => kv.Key != priorityModule).SelectMany(m => m.Value.Values);
+            var sections = _entries.Where(kv => kv.Key != priorityModule).SelectMany(m => m.Value.Values);
 
             foreach (var section in sections)
             {
@@ -318,12 +318,30 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 if (mod.ContainsKey(split[0]))
                                 {
                                     var section = mod[split[0]];
-                                    if (section.Methods.ContainsKey(split[1])) section.Methods[split[1]].Example = ex.Value;
+                                    if (section.Methods.ContainsKey(split[1]))
+                                    {
+                                        section.Methods[split[1]].Example = ex.Value;
+                                    }
+                                    else
+                                    {
+                                        _logger.InfoFormat("Found example for {0} but the method is missing", ex.Key);
+                                    }
+                                }
+                                else
+                                {
+                                    _logger.InfoFormat("Found example for {0} but the class is missing", ex.Key);
                                 }
                             }
                             else
                             {
-                                if (mod.ContainsKey(ex.Key)) mod[ex.Key].Example = ex.Value;
+                                if (mod.ContainsKey(ex.Key))
+                                {
+                                    mod[ex.Key].Example = ex.Value;
+                                }
+                                else
+                                {
+                                    _logger.InfoFormat("Found example for {0} but the class is missing", ex.Key);
+                                }
                             }
                         }
                     }
@@ -331,6 +349,38 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 catch (Exception e)
                 {
                     _logger.WarnFormat("Couldn't parse examples.json. Got an error: {0}", e.Message);
+                }
+            }
+
+            Action<DBExample, string> logMissing = (ex, path) =>
+                {
+                    if (ex == null)
+                    {
+                        _logger.InfoFormat("Missing example and demo for {0}", path);
+                    }
+                    else
+                    {
+                        if (ex.DemoUrl == null)
+                        {
+                            _logger.InfoFormat("Missing demo for {0}", path);
+                        }
+                        if (ex.Script == null)
+                        {
+                            _logger.InfoFormat("Missing example for {0}", path);
+                        }
+                    }
+                };
+
+            foreach (var mod in _entries)
+            {
+                foreach (var section in mod.Value.Values)
+                {
+                    logMissing(section.Example, string.Format("{0}.{1}", mod.Key, section.Name));
+
+                    foreach (var method in section.Methods.Values)
+                    {
+                        logMissing(section.Example, string.Format("{0}.{1}.{2}", mod.Key, section.Name, method.Name));
+                    }
                 }
             }
 

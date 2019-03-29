@@ -145,16 +145,28 @@ namespace ASC.Api.Web.Help
                             CacheManifest.AddCached(new Uri("/portals/batch", UriKind.Relative));
                             CacheManifest.AddOnline(new Uri("/portals/search", UriKind.Relative));
                             CacheManifest.AddFallback(new Uri("/portals/search", UriKind.Relative), new Uri("/portals/notfound", UriKind.Relative));
-
-                            LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
-                            Documentation.Load();
-
-                            LogManager.GetLogger("ASC.Api").Debug("Generate docbuilder documentations");
-                            DocBuilderDocumentation.Load();
                         }
                         catch (Exception error)
                         {
                             LogManager.GetLogger("ASC.Api").Error(error);
+                        }
+
+                        try
+                        {
+                            Documentation.Load();
+                        }
+                        catch (Exception error)
+                        {
+                            LogManager.GetLogger("ASC.Api").Error(error);
+                        }
+
+                        try
+                        {
+                            DocBuilderDocumentation.Load();
+                        }
+                        catch (Exception error)
+                        {
+                            LogManager.GetLogger("ASC.DocumentBuilder").Error(error);
                         }
                     }
                 }
