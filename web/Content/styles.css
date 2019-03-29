@@ -937,6 +937,10 @@ pre.hljs {
     margin-top: 6px;
 }
 
+.details > span {
+    margin-left: 10px;
+}
+
 .details dt {
     float: left;
     padding-left: 10px;

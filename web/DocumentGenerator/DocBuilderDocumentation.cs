@@ -185,31 +185,21 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return result;
         }
 
-        public static string SearchType(string type, string priorityModule = null)
+        public static string SearchType(string type, string priorityModule = "word")
         {
             if (type.StartsWith("\"")) return null;
 
             type = type.ToLowerInvariant();
-            if (priorityModule != null)
-            {
-                var module = GetModule(priorityModule);
-                if (module == null) return null;
+            var module = GetModule(priorityModule);
+            if (module == null) return null;
 
-                if (module.ContainsKey(type))
-                {
-                    return string.Format("/docbuilderjson/{0}/{1}", module[type].Path, module[type].Name);
-                }
+            if (module.ContainsKey(type))
+            {
+                return string.Format("/docbuilderjson/{0}/{1}", module[type].Path, module[type].Name);
             }
 
             IEnumerable<DBEntry> sections;
-            if (priorityModule != null)
-            {
-                sections = _entries.Where(kv => kv.Key != priorityModule).SelectMany(m => m.Value.Values);
-            }
-            else
-            {
-                sections = _entries.SelectMany(m => m.Value.Values);
-            }
+            sections = _entries.Where(kv => kv.Key != priorityModule).SelectMany(m => m.Value.Values);
 
             foreach (var section in sections)
             {
@@ -282,7 +272,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                     {
                                         Comment = section.Value.Comment,
                                         Description = section.Value.Description,
-                                        Methods = new SortedDictionary<string, DBMethod>(),
+                                        Methods = new SortedDictionary<string, DBMethod>(StringComparer.OrdinalIgnoreCase),
                                         Name = section.Value.Name,
                                         Params = section.Value.Params,
                                         Scope = section.Value.Scope,
@@ -395,12 +385,20 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 if (string.IsNullOrEmpty(entity.Description)) continue;
 
-                entity.Description = regex.Replace(entity.Description, m =>
+                MatchEvaluator replacer = m =>
                     {
                         var link = SearchType(m.Groups[1].Value);
                         var text = string.Format("{0}.{1}", m.Groups[1].Value, m.Groups[2].Value);
                         return string.IsNullOrEmpty(link) ? text : string.Format(" <a href=\"{0}/{1}\">{2}</a> ", link, m.Groups[2].Value, text);
-                    });
+                    };
+
+                entity.Description = regex.Replace(entity.Description, replacer);
+                if (entity is DBMethod)
+                {
+                    var m = (DBMethod)entity;
+                    if (m.See != null) m.See = regex.Replace(m.See, replacer);
+                    if (m.Inherits != null) m.Inherits = regex.Replace(m.Inherits, replacer);
+                }
             }
         }
     }
@@ -444,6 +442,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [JsonProperty("returns")]
         public List<List<string>> Returns { get; set; }
+
+        [JsonProperty("see")]
+        public string See { get; set; }
+
+        [JsonProperty("inherits")]
+        public string Inherits { get; set; }
 
         [JsonIgnore]
         public DBExample Example { get; set; }

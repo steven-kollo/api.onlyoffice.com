@@ -23,8 +23,20 @@
            { %>
             &rarr; { <%= DocBuilderDocumentation.ReturnTypeToHtml(method) %> }
         <% } %>
-
     </h4>
+
+    <% if (method.See != null) { %>
+        <div class="details">
+            <span><%= method.See %></span>
+        </div>
+    <% } %>
+
+    <% if (method.Inherits != null) { %>
+        <div class="details">
+            <span><%= method.Inherits %></span>
+        </div>
+    <% } %>
+
     <p class="dscr">
         <%= method.Description %>
     </p>
