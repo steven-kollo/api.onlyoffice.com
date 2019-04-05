@@ -9,14 +9,14 @@
 <dl class="faq_block" id="customizing_1">
     <dt>How to whitelabel ONLYOFFICE Document Server?</dt>
     <dd>
-        <p>The below options can be edited for whitelabeling your version of Document Server.</p>
+        <p>The below options can be edited for whitelabeling your version of Document Server, changing the information which will be displayed at the <b>About</b> page and visible to all editor users.</p>
         <div class="note">Please note that changing these options is only available to the <a target="_blank" href="https://www.onlyoffice.com/developer-edition-prices.aspx">ONLYOFFICE Developer Edition</a> users.</div>
         <ul>
             <li><em>editorConfig.customization.customer</em> options:
                 <ul>
                     <li><em>editorConfig.customization.customer.address</em> is used to specify the postal address of the company or person;</li>
-                    <li><em>editorConfig.customization.customer.info</em> is used to give some additional information about the company or person, which will be displayed at the <b>About</b> page and visible to all editor users;</li>
-                    <li><em>editorConfig.customization.customer.logo</em> is used to specify the path to the image logo which will be displayed at the <b>About</b> page;</li>
+                    <li><em>editorConfig.customization.customer.info</em> is used to give some additional information about the company or person;</li>
+                    <li><em>editorConfig.customization.customer.logo</em> is used to specify the path to the image logo;</li>
                     <li><em>editorConfig.customization.customer.mail</em> is used to specify the email address of the company or person;</li>
                     <li><em>editorConfig.customization.customer.name</em> is used to specify the name of the company or person who gives access to the editors or the editor authors;</li>
                     <li><em>editorConfig.customization.customer.www</em> is used to specify the home website address of the company or person.</li>

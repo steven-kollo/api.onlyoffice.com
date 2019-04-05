@@ -75,7 +75,7 @@
     ...
 });</pre>
         <div class="note">Please note, that disabling the <b>Autosave</b> will also disable the <b>Fast</b> co-editing mode which only works with the automatic document saving enabled.</div>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/editor/customization") %>#autosave">at this page</a>.</p>
+        <p>Further information about the autosaving can be found <a href="<%= Url.Action("config/editor/customization") %>#autosave">at this page</a>.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="saving_5">
@@ -93,7 +93,7 @@
         }
     }
 }</pre>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("save") %>">at this page</a>.</p>
+        <p>Further information about the conversion start delay can be found <a href="<%= Url.Action("save") %>">at this page</a>.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="saving_6">
@@ -109,6 +109,6 @@
     "title": "Example Document Title.docx",
     "url": "https://example.com/url-to-example-document.txt"
 }</pre>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("conversionapi") %>#codePage">at this page</a>.</p>
+        <p>Further information about using the codepage during conversion can be found <a href="<%= Url.Action("conversionapi") %>#codePage">at this page</a>.</p>
     </dd>
 </dl>
