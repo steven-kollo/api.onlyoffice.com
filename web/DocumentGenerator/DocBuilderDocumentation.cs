@@ -146,7 +146,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                             Name = action,
                             Resource = Highliter.HighliteString(section.Name, query).ToHtmlString(),
                             Description = Highliter.HighliteString(section.Description, query).ToHtmlString(),
-                            Url = url.Action(action, "docbuilderjson")
+                            Url = url.Action(action, "docbuilder")
                         });
                 }
 
@@ -161,7 +161,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 Name = methodAction,
                                 Resource = Highliter.HighliteString(method.Name, query).ToHtmlString(),
                                 Description = Highliter.HighliteString(method.Description, query).ToHtmlString(),
-                                Url = url.Action(methodAction, "docbuilderjson")
+                                Url = url.Action(methodAction, "docbuilder")
                             });
                     }
                 }
@@ -171,7 +171,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 if (type.Key.ToLowerInvariant().Contains(q) || (!string.IsNullOrEmpty(type.Value.Description) && type.Value.Description.ToLowerInvariant().Contains(q)))
                 {
-                    var action = string.Format("{0}#{1}", url.Action("global", "docbuilderjson"), type.Key);
+                    var action = string.Format("{0}#{1}", url.Action("global", "docbuilder"), type.Key);
                     result.Add(new SearchResult
                         {
                             Module = "docbuilder",
@@ -196,7 +196,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             if (module.ContainsKey(type))
             {
-                return string.Format("/docbuilderjson/{0}/{1}", module[type].Path, module[type].Name);
+                return string.Format("/docbuilder/{0}/{1}", module[type].Path, module[type].Name);
             }
 
             var sections = _entries.Where(kv => kv.Key != priorityModule).SelectMany(m => m.Value.Values);
@@ -205,7 +205,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 if (section.Name.ToLowerInvariant() == type)
                 {
-                    return string.Format("/docbuilderjson/{0}/{1}", section.Path, section.Name);
+                    return string.Format("/docbuilder/{0}/{1}", section.Path, section.Name);
                 }
             }
 
@@ -213,7 +213,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 if (global.Key.ToLowerInvariant() == type)
                 {
-                    return string.Format("/docbuilderjson/global#{0}", global.Key);
+                    return string.Format("/docbuilder/global#{0}", global.Key);
                 }
             }
 
