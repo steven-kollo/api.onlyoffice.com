@@ -203,11 +203,12 @@ $(document).ready(function () {
             scrollTop: $(hash).offset().top - 71
         }, 'fast');
     }
+
     var hash = location.hash;
     if(hash !== '' && hash !== 'undefined') {
         fixedHeaderOffset(hash);
     }
-    
+
     $('a, td, div').on('click', function(){
         var hashID = '#' + $(this).attr('id');
         if(hashID !== '#' && hashID !== '#undefined') {
