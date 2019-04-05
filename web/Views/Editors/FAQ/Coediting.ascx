@@ -24,13 +24,11 @@
 }</pre>
         <p>In case the document is being edited, for instance, by two users, the <b>document editing service</b> will respond with the following information:</p>
         <pre>{
-    "actions": [{"type": 1, "userid": "78e1e841"}],
     "key": "Khirz6zTPdfd7",
     "status": 1,
     "users": ["6d5a81d0", "78e1e841"]
 }</pre>
         <ul>
-            <li><em>actions</em> defines the IDs of the users either connected to (<em>type</em> value equal to <b>1</b>) or disconnected from (<em>type</em> value equal to <b>1</b>) the document co-editing;</li>
             <li><em>key</em> is the identifier of the document (the same as in the POST request above);</li>
             <li><em>status</em> with value of <b>1</b> means that the document is currently being edited;</li>
             <li>and the <em>users</em> is the array of the IDs of the users who take part in the co-editing.</li>
