@@ -549,7 +549,7 @@ li b.copy-link[id]:hover:before {
     display: inline-block;
     font-size: 15px;
     width: 212px;
-    margin-right: 10px;
+    margin-right: 35px;
     text-align: center;
     vertical-align: top;
 }
