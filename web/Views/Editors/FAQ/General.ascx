@@ -29,7 +29,7 @@
     "error": 0,
     "version": "4.3.1.4"
 }</pre>
-        <p>More detailed information about the the interaction with the <b>document command service</b> and the use of various commands to do that is available <a href="<%= Url.Action("command") %>">at this page</a>.</p>
+        <p>More detailed information about the interaction with the <b>document command service</b> and the use of various commands to do that is available <a href="<%= Url.Action("command") %>">at this page</a>.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="general_3">

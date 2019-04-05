@@ -82,7 +82,7 @@
     <dt>What is the conversion start delay time and how can it be changed?</dt>
     <dd>
         <p>Normally the document is not physically saved to the computer hard disk drive in the compiled form when it is being edited. Once the editing is done and all the users who work on the document close it, the file is converted to the Office Open XML format and saved to disk.</p>
-        <p>After that the the <b>document editing service</b> informs the <b>document storage service</b> that the file is ready and can be downloaded.</p>
+        <p>After that the <b>document editing service</b> informs the <b>document storage service</b> that the file is ready and can be downloaded.</p>
         <p>The time between the end of the editing and the conversion start is set in the <b>default.json</b> configuration file (5000 milliseconds or 5 seconds by default) and can be changed:</p>
         <pre>{
     "services": {
