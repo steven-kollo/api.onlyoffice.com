@@ -27,6 +27,8 @@
     <%= Styles.Render("~/content/styles") %>
 
     <%= Scripts.Render("~/bundles/scripts") %>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 <body>
     <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">

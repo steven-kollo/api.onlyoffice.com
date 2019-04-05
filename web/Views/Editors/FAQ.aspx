@@ -4,6 +4,11 @@
     MasterPageFile="~/Views/Shared/Site.Master"
     Inherits="System.Web.Mvc.ViewPage<string>"
     ContentType="text/html" %>
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<asp:Content ID="FaqHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <%= Scripts.Render("~/bundles/faq") %>
+</asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Frequently asked questions
