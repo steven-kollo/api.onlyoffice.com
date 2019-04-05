@@ -110,8 +110,15 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [DataMember(Name = "short")]
         public string ShortName { get; set; }
 
+        [IgnoreDataMember]
+        private string _functionName;
+
         [DataMember(Name = "function")]
-        public string FunctionName { get; set; }
+        public string FunctionName
+        {
+            get { return !string.IsNullOrEmpty(ShortName) ? ShortName.Trim() : _functionName; }
+            set { _functionName = value.Trim(); }
+        }
 
         public MsDocEntryPoint Parent { get; set; }
 
