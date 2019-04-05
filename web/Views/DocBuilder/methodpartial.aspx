@@ -14,6 +14,7 @@
     <% var method = (DBMethod)Model; %>
 
     <h1>
+        <a href="<%= Request.Path.Substring(0, Request.Path.LastIndexOf('/')) %>" class="up"></a>
        <span class="hdr"><%= method.Name %></span>
     </h1>            
 
