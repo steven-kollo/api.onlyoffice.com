@@ -379,7 +379,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
                     foreach (var method in section.Methods.Values)
                     {
-                        logMissing(section.Example, string.Format("{0}.{1}.{2}", mod.Key, section.Name, method.Name));
+                        logMissing(method.Example, string.Format("{0}.{1}.{2}", mod.Key, section.Name, method.Name));
                     }
                 }
             }
