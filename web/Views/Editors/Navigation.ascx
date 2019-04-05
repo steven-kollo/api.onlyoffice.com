@@ -151,7 +151,7 @@
         <a href="<%= Url.Action("changelog") %>">Changelog</a>
     </li>
     <li>
-        <a href="<%= Url.Action("faq/") %>">FAQ</a>
+        <a href="<%= Url.Action("faq") %>">FAQ</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("faq/general") %>">General</a>

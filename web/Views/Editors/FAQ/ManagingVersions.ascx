@@ -88,7 +88,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <dd>
         <p>The <b>document editing service</b> saves all the interim changes of the document into separate files and, once the version is compiled and <em>status</em> <b>2</b> is received, the link to the archive with all the changes between the versions is also sent to the callback handler.</p>
         <p>So, if you want to additionally show the difference between the versions, you will also have to use the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> function (with the <em>events.onRequestHistoryData</em> event) which must contain data also returned by the <b>document editing service</b> <a href="<%= Url.Action("callback") %>#changeshistory">callback</a>.</p>
-        <p>In addition to the actions described in the <a onclick="$('#versions_1').children('dd').slideDown()">above question</a> you will need to:</p>
+        <p>In addition to the actions described in the <a href="#versions_1" onclick="$('#versions_1').children('dd').slideDown();return false;">above question</a> you will need to:</p>
         <ul>
             <li>Parse the <em>changesurl</em> parameter from the <b>document editing service</b> received response with <em>status</em> <b>2</b>:
                 <pre>{
