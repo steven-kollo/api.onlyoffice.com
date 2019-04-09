@@ -153,6 +153,19 @@ $(function() {
         var reader = new FileReader();
         reader.onload = function () {
             var text = reader.result;
+
+            var scriptMaxLength = 10000;
+            var createFunction = "builder.CreateFile";
+            var saveFunction = "builder.SaveFile";
+
+            if (text.length == 0
+                || text.length >= scriptMaxLength
+                || text.indexOf(createFunction) == -1
+                || text.indexOf(saveFunction) == -1) {
+                $("#builderScript").val("Invalid script");
+                return;
+            }
+
             $("#builderScript").val(text);
         };
         reader.readAsText(input.files[0]);
