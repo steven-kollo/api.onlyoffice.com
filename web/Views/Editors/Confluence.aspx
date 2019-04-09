@@ -23,7 +23,7 @@
         The plugin will create a new <b>Edit in ONLYOFFICE</b> action within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to Confluence.
     </p>
-    <p>Tested with Confluence Server 5.9.4 - 6.4.3, the connector is available in the official <a href="https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence" target="_blank">Atlassian Marketplace</a>.</p>
+    <p>Tested with Confluence Server 5.9.4 - 6.4.3, the connector is available in the official <a href="https://marketplace.atlassian.com/1218214" target="_blank">Atlassian Marketplace</a>.</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
@@ -34,7 +34,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
     <h2>Getting ONLYOFFICE Connector for Confluence from Atlassian Marketplace</h2>
-    <p>You can download the latest connector version from the <a href="https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence" target="_blank">official Atlassian Marketplace</a>. This is done the following way:</p>
+    <p>You can download the latest connector version from the <a href="https://marketplace.atlassian.com/1218214" target="_blank">official Atlassian Marketplace</a>. This is done the following way:</p>
     <ul>
         <li>Log into your Confluence instance as an administrator.</li>
         <li>Click the admin drop-down box and choose <b>Add-ons</b>. The <b>Manage add-ons</b> screen will load.</li>
