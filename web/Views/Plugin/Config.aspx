@@ -34,8 +34,10 @@
             "initData": "",
             "initDataType": "ole",
             "initOnSelectionChanged": true,
+            "isDisplayedInViewer": true,
             "isInsideMode": false,
             "isModal": true,
+            "isSystem": false,
             "isUpdateOleOnResize": true,
             "isViewer": true,
             "isVisual": true,
@@ -113,6 +115,11 @@
                 <td>boolean</td>
             </tr>
             <tr class="tablerow">
+                <td>variations.isDisplayedInViewer</td>
+                <td>Specifies if the plugin will be displayed in viewer mode as well as in editor mode (<em>isDisplayedInViewer == true</em>) or in the editor mode only (<em>isDisplayedInViewer == false</em>). The default value is <b>true</b>.</td>
+                <td>boolean</td>
+            </tr>
+            <tr class="tablerow">
                 <td>variations.isInsideMode</td>
                 <td>Specifies if the plugin must be displayed inside the editor panel instead of its own window (used for visual non-modal plugins only). The following rule must be observed at all times: <em>isModal != isInsideMode</em>.</td>
                 <td>boolean</td>
@@ -120,6 +127,11 @@
             <tr class="tablerow">
                 <td>variations.isModal</td>
                 <td>Specifies if the opened plugin window is modal, i.e. a separate modal window must be opened, or not (used for visual plugins only). The following rule must be observed at all times: <em>isModal != isInsideMode</em>.</td>
+                <td>boolean</td>
+            </tr>
+            <tr class="tablerow">
+                <td>variations.isSystem</td>
+                <td>Specifies if the plugin is not displayed in the editor interface and is started with the server (or desktop editors start) not interfering with the other plugins, so that they can work simultaneously. The default value is <b>false</b>.</td>
                 <td>boolean</td>
             </tr>
             <tr class="tablerow">
