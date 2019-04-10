@@ -221,11 +221,6 @@
                         <td class="paramTrue active_param"><p>true</p></td>
                         <td class="paramFalse inactive_param"><p>false</p></td>
                     </tr>
-                    <tr id="comment">
-                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a></a></p></th>
-                        <td class="paramTrue active_param"><p>true</p></td>
-                        <td class="paramFalse inactive_param"><p>false</p></td>
-                    </tr>
                     <tr id="review">
                         <th><p><a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a></p></th>
                         <td class="paramTrue active_param"><p>true</p></td>
@@ -233,6 +228,11 @@
                     </tr>
                     <tr id="fillForms">
                         <th><p><a href="<%= Url.Action("config/document/permissions") %>#fillForms">document.permissions.fillForms</a></p></th>
+                        <td class="paramTrue active_param"><p>true</p></td>
+                        <td class="paramFalse inactive_param"><p>false</p></td>
+                    </tr>
+                    <tr id="comment">
+                        <th><p><a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a></a></p></th>
                         <td class="paramTrue active_param"><p>true</p></td>
                         <td class="paramFalse inactive_param"><p>false</p></td>
                     </tr>
@@ -270,11 +270,6 @@
                         <td class="resultPermission notallowed"><p>not allowed</p></td>
                         <td class="resultNote"></td>
                     </tr>
-                    <tr id="commenting">
-                        <td class="resultAction"><p>Commenting</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
-                        <td class="resultNote"></td>
-                    </tr>
                     <tr id="reviewing">
                         <td class="resultAction"><p>Reviewing</p></td>
                         <td class="resultPermission notallowed"><p>not allowed</p></td>
@@ -282,6 +277,11 @@
                     </tr>
                     <tr id="formFilling">
                         <td class="resultAction"><p>Form filling</p></td>
+                        <td class="resultPermission notallowed"><p>not allowed</p></td>
+                        <td class="resultNote"></td>
+                    </tr>
+                    <tr id="commenting">
+                        <td class="resultAction"><p>Commenting</p></td>
                         <td class="resultPermission notallowed"><p>not allowed</p></td>
                         <td class="resultNote"></td>
                     </tr>
