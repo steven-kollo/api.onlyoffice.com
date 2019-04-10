@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public static void Load()
         {
+            LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
             //Load documentation
             _points = GenerateDocs();
         }
