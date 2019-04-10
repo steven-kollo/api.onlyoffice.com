@@ -24,10 +24,10 @@
 
     <pre>"name": "Highlight code",
 "nameLocale": {
-    "ru": "Подсветка кода",
-    "fr": "Code en surbrillance",
+    "de": "Code hervorheben",
     "es": "Resaltar el código",
-    "de": "Code hervorheben"
+    "fr": "Code en surbrillance",
+    "ru": "Подсветка кода"
 }</pre>
 
     <p>The complete translations in the <a href="<%= Url.Action("config") %>">config.json</a> for the <a target="_blank" href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/code">code highlighting plugin</a> will look the following way:</p>
@@ -35,30 +35,30 @@
     <pre>{
     "name": "Highlight code",
     "nameLocale": {
-        "ru": "Подсветка кода",
-        "fr": "Code en surbrillance",
+        "de": "Code hervorheben",
         "es": "Resaltar el código",
-        "de": "Code hervorheben"
+        "fr": "Code en surbrillance",
+        "ru": "Подсветка кода"
     },
     ...,
     "variations": [
         {
             "description": "Highlight code",
             "descriptionLocale": {
-                "ru": "Подсветка кода",
-                "fr": "Code en surbrillance",
+                "de": "Code hervorheben",
                 "es": "Resaltar el código",
-                "de": "Code hervorheben"
+                "fr": "Code en surbrillance",
+                "ru": "Подсветка кода"
             },
             ...,
             "buttons": [
                 {
                     "text": "Cancel",
                     "textLocale": {
-                        "ru": "Отмена",
-                        "fr": "Annuler",
+                        "de": "Abbrechen",
                         "es": "Cancelar",
-                        "de": "Abbrechen"
+                        "fr": "Annuler",
+                        "ru": "Отмена"
                     },
                     ...
                 }
@@ -126,8 +126,8 @@ pluginCode.js</pre>
 
     <pre>window.Asc.plugin.onTranslate = function()
     {
-        document.getElementById("button_new").innerHTML    = window.Asc.plugin.tr("New");
         document.getElementById("button_delete").innerHTML = window.Asc.plugin.tr("Delete");
+        document.getElementById("button_new").innerHTML    = window.Asc.plugin.tr("New");
         document.getElementById("button_rename").innerHTML = window.Asc.plugin.tr("Rename");
         document.getElementById("button_run").innerHTML    = window.Asc.plugin.tr("Run");
     }</pre>
