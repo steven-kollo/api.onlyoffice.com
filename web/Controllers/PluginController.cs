@@ -68,6 +68,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Info/width",
                 "Init",
                 "Installation",
+                "Localization",
                 "OnExternalMouseUp",
                 "onmethodreturn",
                 "Plugin",
@@ -199,6 +200,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Installation()
+        {
+            return View();
+        }
+
+        public ActionResult Localization()
         {
             return View();
         }
