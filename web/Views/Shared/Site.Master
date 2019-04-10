@@ -26,15 +26,17 @@
 
     <%= Styles.Render("~/content/styles") %>
 
-    <% if (!Html.IfController("Home"))
-       { %>
     <%= Scripts.Render("~/bundles/scripts") %>
-    <% } %>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 <body>
     <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
         <tr class="layout-table-header">
             <% Html.RenderPartial("TopNavigation");%>
+        </tr>
+        <tr class="top-padding">
+            <td></td>
         </tr>
         <tr>
             <% if (!Html.IfController("Home"))

@@ -21,7 +21,7 @@
         <li>
             <p>Download Document Server installation and set it up on your local server:</p>
             <div class="list-buttons">
-                <a class="button" href="https://sourceforge.net/projects/teamlab/files/ONLYOFFICE_DocumentServer/v4.0/binaries/" target="_blank">Download Editors
+                <a class="button" href="https://www.onlyoffice.com/developer-edition-request.aspx?from=api.onlyoffice.com" target="_blank">Get ONLYOFFICE editors
                 </a>
             </div>
         </li>

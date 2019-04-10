@@ -260,6 +260,7 @@
             <short>
             Enabled modules
             </short>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetPasswordSettings">
             <summary>

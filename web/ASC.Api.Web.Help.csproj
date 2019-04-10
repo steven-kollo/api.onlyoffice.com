@@ -250,6 +250,7 @@
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
     <Content Include="Content\hightlight.css" />
+    <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\docbuilder.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
@@ -327,6 +328,7 @@
     <Content Include="Content\img\plugins\plugin-button.png" />
     <Content Include="Content\img\plugins\plugin-manager.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
+    <Content Include="Scripts\faq.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
@@ -387,6 +389,19 @@
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
+    <Content Include="Views\Editors\FAQ.aspx" />
+    <Content Include="Views\Editors\FAQ\Default.ascx" />
+    <Content Include="Views\Editors\FAQ\FAQShared\ExpandCollapse.ascx" />
+    <Content Include="Views\Editors\FAQ\Integrating.ascx" />
+    <Content Include="Views\Editors\FAQ\Editing.ascx" />
+    <Content Include="Views\Editors\FAQ\ManagingVersions.ascx" />
+    <Content Include="Views\Editors\FAQ\Saving.ascx" />
+    <Content Include="Views\Editors\FAQ\Sharing.ascx" />
+    <Content Include="Views\Editors\FAQ\Embedding.ascx" />
+    <Content Include="Views\Editors\FAQ\Coediting.ascx" />
+    <Content Include="Views\Editors\FAQ\Customizing.ascx" />
+    <Content Include="Views\Editors\FAQ\Security.ascx" />
+    <Content Include="Views\Editors\FAQ\General.ascx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
@@ -421,6 +436,7 @@
     <Content Include="Views\Plugin\Info\Guid.ascx" />
     <Content Include="Views\Plugin\Info\EditorType.ascx" />
     <Content Include="Views\Plugin\Info\Default.ascx" />
+    <Content Include="Views\Plugin\Localization.aspx" />
     <Content Include="Views\Plugin\Macros\Macros.aspx" />
     <Content Include="Views\Plugin\OnExternalMouseUp.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />

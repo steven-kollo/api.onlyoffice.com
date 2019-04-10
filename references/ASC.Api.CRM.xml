@@ -2513,6 +2513,55 @@
                File Info
             </returns>
         </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetFiles">
+            <summary>Returns a list of all user report files</summary>
+            <short>Get report files</short>
+            <category>Reports</category>
+            <returns>Report files</returns>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.DeleteFile(System.Int32)">
+            <summary>Delete the report file with the ID specified in the request</summary>
+            <param name="fileid">File ID</param>
+            <short>Delete report file</short>
+            <category>Reports</category>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+            <exception cref="T:System.ArgumentException">if fileid les than 0</exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">if file not found</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetStatus">
+            <summary>Get the state of the report generation task</summary>
+            <short>Get report generation state</short>
+            <category>Reports</category>
+            <returns>Report state</returns>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.Terminate">
+            <summary>Terminate the report generation task</summary>
+            <short>Terminate report generation</short>
+            <category>Reports</category>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.CheckReportData(ASC.CRM.Core.ReportType,ASC.CRM.Core.ReportTimePeriod,System.Guid[])">
+            <summary>Check data availability for a report</summary>
+            <param name="type">Report type</param>
+            <param name="timePeriod">Time period</param>
+            <param name="managers">Managers</param>
+            <short>Check report data</short>
+            <category>Reports</category>
+            <returns>Object</returns>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GenerateReport(ASC.CRM.Core.ReportType,ASC.CRM.Core.ReportTimePeriod,System.Guid[])">
+            <summary>Run the report generation task</summary>
+            <param name="type">Report type</param>
+            <param name="timePeriod">Time period</param>
+            <param name="managers">Managers</param>
+            <short>Generate report</short>
+            <category>Reports</category>
+            <returns>Report state</returns>
+            <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+        </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetEntityTags(System.String,System.Int32)">
              <summary>
               Returns the list of all tags associated with the entity with the ID and type specified in the request

@@ -947,7 +947,7 @@
             <short>Move message to folder</short> 
             <category>Messages</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.SendMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},ASC.Files.Core.Security.FileShare,System.String,System.Boolean)">
+        <member name="M:ASC.Api.Mail.MailApi.SendMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},ASC.Files.Core.Security.FileShare,System.String,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
                Sends the message with the ID specified in the request
             </summary>
@@ -965,6 +965,8 @@
             <param name="fileLinksShareMode">Share mode for attached file links</param>
             <param name="calendarIcs">Calendar event ical-format for sending</param>
             <param name="isAutoreply">Indicate that message is autoreply or not</param>
+            <param optional="true" name="requestReceipt">Add request Return-Receipt-To header</param>
+            <param optional="true" name="requestRead">Add request Disposition-Notification-To header</param>
             <returns>message id</returns>
             <short>Send message</short> 
             <category>Messages</category>

@@ -153,6 +153,19 @@ $(function() {
         var reader = new FileReader();
         reader.onload = function () {
             var text = reader.result;
+
+            var scriptMaxLength = 10000;
+            var createFunction = "builder.CreateFile";
+            var saveFunction = "builder.SaveFile";
+
+            if (text.length == 0
+                || text.length >= scriptMaxLength
+                || text.indexOf(createFunction) == -1
+                || text.indexOf(saveFunction) == -1) {
+                $("#builderScript").val("Invalid script");
+                return;
+            }
+
             $("#builderScript").val(text);
         };
         reader.readAsText(input.files[0]);
@@ -196,5 +209,23 @@ $(function() {
 $(document).ready(function () {
     $(".spoiler_heading").on("click", function () {
         $(this).next(".spoiler_code").slideToggle("fast");
+    });
+
+    function fixedHeaderOffset(hash) {
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top - 71
+        }, 'fast');
+    }
+
+    var hash = location.hash;
+    if(hash !== '' && hash !== 'undefined') {
+        fixedHeaderOffset(hash);
+    }
+
+    $('a, td, div').on('click', function(){
+        var hashID = '#' + $(this).attr('id');
+        if(hashID !== '#' && hashID !== '#undefined') {
+            fixedHeaderOffset(hashID);
+        }
     });
 });

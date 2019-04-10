@@ -656,6 +656,17 @@
             <param name="projectid">Project ID</param>
             <returns>List of team members</returns>
         </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTeamExcluded(System.Int32)">
+            <summary>
+            Returns the list of all users participating in the project with the ID specified in the request
+            </summary>
+            <short>
+            Project team
+            </short>
+            <category>Team</category>
+            <param name="projectid">Project ID</param>
+            <returns>List of team members</returns>
+        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectTeam(System.Collections.Generic.List{System.Int32})">
             <summary>
             Returns the list of all users participating in the project with the ID specified in the request
