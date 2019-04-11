@@ -225,7 +225,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var methodCallsDoc = from apiMethodCall in apiMethodCalls
                                  let memberdesc = (from member in members
                                                    where member.Attribute("name").ValueOrNull() == GetMethodString(apiMethodCall.MethodCall)
-                                                   select member).SingleOrDefault()
+                                                   select member).FirstOrDefault()
                                  select new { apiMethod = apiMethodCall, description = memberdesc ?? CreateEmptyParams(apiMethodCall) };
 
             //Ughh. we got all what we need now building
