@@ -531,10 +531,8 @@
     <Content Include="App_Data\docbuilder\references\cell\Api.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiChart.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiColor.json" />
-    <Content Include="App_Data\docbuilder\references\cell\ApiComment.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiDrawing.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiImage.json" />
-    <Content Include="App_Data\docbuilder\references\cell\ApiName.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiRange.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiShape.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiWorksheet.json" />
