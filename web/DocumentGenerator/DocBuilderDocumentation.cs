@@ -62,7 +62,15 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         var entry = JsonConvert.DeserializeObject<DBEntry>(File.ReadAllText(file));
                         entry.Name = clearname;
                         entry.Path = PathMapping[moduleName];
+                        entry.Module = moduleName;
                         if (entry.Methods == null || entry.Methods.Count == 0) continue;
+
+                        entry.Methods.ToList().ForEach(m => {
+                            m.Value.Module = moduleName;
+                            if (m.Value.Params != null) m.Value.Params.ToList().ForEach(p => p.Module = moduleName);
+                        });
+                        if (entry.Params != null) entry.Params.ToList().ForEach(p => p.Module = moduleName);
+
                         moduleTree.Add(entry.Name, entry);
                     }
                     catch (Exception e)
@@ -86,6 +94,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         var content = JsonConvert.DeserializeObject<SortedDictionary<string, DBGlobal>>(File.ReadAllText(globalsPath));
                         foreach (var kv in content)
                         {
+                            kv.Value.Module = moduleName;
                             if (!_globals.ContainsKey(kv.Key)) _globals.Add(kv.Key, kv.Value);
                         }
                     }
@@ -222,16 +231,16 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public static HtmlString ReturnTypeToHtml(DBMethod method)
         {
-            return TypesToHtml(method.Returns.First());
+            return TypesToHtml(method.Returns.First(), method.Module);
         }
 
         public static HtmlString ParamTypeToHtml(DBParam param)
         {
-            var link = SearchType(param.Type);
+            var link = SearchType(param.Type, param.Module);
             return new HtmlString(link == null ? param.Type : string.Format("<a href=\"{0}\">{1}</a>", link, param.Type));
         }
 
-        public static HtmlString TypesToHtml(IEnumerable<string> types)
+        public static HtmlString TypesToHtml(IEnumerable<string> types, string priority)
         {
             var returnsHtml = new List<string>();
 
@@ -243,7 +252,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     continue;
                 }
 
-                var link = SearchType(type);
+                var link = SearchType(type, priority);
                 returnsHtml.Add(link == null ? type : string.Format("<a href=\"{0}\">{1}</a>", link, type));
             }
 
@@ -274,16 +283,43 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                         Description = section.Value.Description,
                                         Methods = new SortedDictionary<string, DBMethod>(StringComparer.OrdinalIgnoreCase),
                                         Name = section.Value.Name,
-                                        Params = section.Value.Params,
+                                        Params = section.Value.Params != null ? section.Value.Params.Select(p => new DBParam {
+                                            DefaultValue = p.DefaultValue,
+                                            Description = p.Description,
+                                            Module = EditorsTypeMapping[type],
+                                            Name = p.Name,
+                                            Optional = p.Optional,
+                                            Type = p.Type
+                                        }).ToList() : null,
                                         Scope = section.Value.Scope,
-                                        Path = PathMapping[EditorsTypeMapping[type]]
+                                        Path = PathMapping[EditorsTypeMapping[type]],
+                                        Module = EditorsTypeMapping[type]
                                     };
                                 _entries[EditorsTypeMapping[type]].Add(section.Key, targetType);
                             }
 
                             if (!targetType.Methods.ContainsKey(method.Name))
                             {
-                                targetType.Methods.Add(method.Name, method);
+                                targetType.Methods.Add(method.Name, new DBMethod
+                                    {
+                                        Description = method.Description,
+                                        Inherits = method.Inherits,
+                                        MemberOf = method.MemberOf,
+                                        Name = method.Name,
+                                        Params = method.Params != null ? method.Params.Select(p => new DBParam
+                                        {
+                                            DefaultValue = p.DefaultValue,
+                                            Description = p.Description,
+                                            Module = EditorsTypeMapping[type],
+                                            Name = p.Name,
+                                            Optional = p.Optional,
+                                            Type = p.Type
+                                        }).ToList() : null,
+                                        Returns = method.Returns,
+                                        See = method.See,
+                                        Tags = method.Tags,
+                                        Module = targetType.Module
+                                    });
                             }
                         }
                     }
@@ -435,19 +471,21 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 if (string.IsNullOrEmpty(entity.Description)) continue;
 
-                MatchEvaluator replacer = m =>
+                Func<string, MatchEvaluator> replacer = priority => {
+                    return m =>
                     {
-                        var link = SearchType(m.Groups[1].Value);
+                        var link = SearchType(m.Groups[1].Value, priority);
                         var text = string.Format("{0}.{1}", m.Groups[1].Value, m.Groups[2].Value);
                         return string.IsNullOrEmpty(link) ? text : string.Format(" <a href=\"{0}/{1}\">{2}</a> ", link, m.Groups[2].Value, text);
                     };
+                };
 
-                entity.Description = regex.Replace(entity.Description, replacer);
+                entity.Description = regex.Replace(entity.Description, replacer(entity.Module));
                 if (entity is DBMethod)
                 {
                     var m = (DBMethod)entity;
-                    if (m.See != null) m.See = regex.Replace(m.See, replacer);
-                    if (m.Inherits != null) m.Inherits = regex.Replace(m.Inherits, replacer);
+                    if (m.See != null) m.See = regex.Replace(m.See, replacer(m.Module));
+                    if (m.Inherits != null) m.Inherits = regex.Replace(m.Inherits, replacer(m.Module));
                 }
             }
         }
@@ -528,6 +566,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [JsonProperty("description")]
         public string Description { get; set; }
+
+        [JsonIgnore]
+        public string Module { get; set; }
     }
 
     public class DBExample
