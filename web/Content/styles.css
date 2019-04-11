@@ -1328,14 +1328,14 @@ a.qa-question-link {
 .faq_block:before {
     content: none;
 }
-dt {
+.faq_block dt {
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     display: block;
     position: relative;
 }
-dt:before {
+.faq_block dt:before {
     display: block;
     content: '';
     width: 29px;
@@ -1347,10 +1347,10 @@ dt:before {
     left: -36px;
     top: -1px;
 }
-dt.expanded_node:before {
+.faq_block dt.expanded_node:before {
     background-position: -34px 0;
 }
-dd {
+.faq_block dd {
     display: none;
     font-size: 14px;
     padding-bottom: 0;
