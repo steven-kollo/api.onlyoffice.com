@@ -31,6 +31,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Routing;
@@ -39,9 +40,11 @@ using ASC.Api.Enums;
 using ASC.Api.Impl;
 using ASC.Api.Interfaces;
 using ASC.Api.Utils;
+using ASC.Api.Web.Help.Helpers;
 using Autofac;
 using Autofac.Core;
 using log4net;
+using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
 {
@@ -173,6 +176,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [DataMember(Name = "type")]
         public string Type { get; set; }
 
+        [IgnoreDataMember]
+        public Type PureType { get; set; }
+
         [DataMember(Name = "sendmethod")]
         public string Method { get; set; }
 
@@ -268,6 +274,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                                          IsOptional = string.Equals(methodParam.Attribute("optional").ValueOrNull(), bool.TrueString, StringComparison.OrdinalIgnoreCase),
                                                          Visible = !string.Equals(methodParam.Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
                                                          Type = methodCall.apiMethod.GetParams().Where(x => x.Name == methodParam.Attribute("name").ValueOrNull()).Select(x => GetParameterTypeRepresentation(x.ParameterType)).SingleOrDefault(),
+                                                         PureType = methodCall.apiMethod.GetParams().Where(x => x.Name == methodParam.Attribute("name").ValueOrNull()).Select(x => x.ParameterType).SingleOrDefault(),
                                                          Method = GuesMethod(methodParam.Attribute("name").ValueOrNull(), methodCall.apiMethod.RoutingUrl, methodCall.apiMethod.HttpMethod)
                                                      }).ToList()
                                    }
@@ -275,6 +282,87 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                select pointMethod).ToList()
                 };
             Points.Add(root);
+        }
+
+        public static void GenerateRequestExample(MsDocEntryPointMethod method)
+        {
+            var sb = new StringBuilder();
+
+            var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p => ClassNamePluralizer.ToHumanName(p.Type, p.PureType));
+            var urlParams = visible.Where(p => p.Key.Method == "url").ToList();
+            var bodyParams = visible.Except(urlParams).ToList();
+
+            var path = method.Path.ToLowerInvariant();
+            var query = false;
+            urlParams.ForEach(p => {
+                if (path.IndexOf('{' + p.Key.Name.ToLowerInvariant() + '}') > 0)
+                {
+                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', ParamToJson(p.Key, p.Value, true).ToString());
+                }
+                else
+                {
+                    var value = ParamToJson(p.Key, p.Value, true).ToString();
+                    if (value == "null") return;
+
+                    path += string.Format("{0}{1}={2}", query ? "&" : "?", p.Key.Name, value);
+                    query = true;
+                }
+            });
+
+            var args = new Dictionary<string, object>();
+            bodyParams.ForEach(p => args.Add(p.Key.Name, ParamToJson(p.Key, p.Value)));
+
+            sb.AppendFormat("{0} {1}", method.HttpMethod, path).AppendLine()
+                .AppendLine("Host: yourportal.onlyoffice.com")
+                .AppendLine("Content-Type: application/json")
+                .Append("Accept: application/json");
+
+            if (args.Any()) {
+                sb.AppendLine().AppendLine()
+                   .Append(JsonConvert.SerializeObject(args, Formatting.Indented));
+            }
+
+            method.Example = sb.ToString();
+        }
+
+        private static object ParamToJson(MsDocEntryPointMethodParams param, TypeDescription desc, bool asString = false)
+        {
+            if (desc.JsonParam != null) return desc.JsonParam;
+
+            object obj;
+            if (param.Type.StartsWith("System.Collections.Generic.IEnumerable`1[")
+                || param.Type.StartsWith("System.Collections.Generic.List`1")
+                || param.Type.EndsWith("[]") && (param.PureType.IsGenericType || param.PureType.IsArray))
+            {
+                var elementType = param.PureType.IsArray ? param.PureType.GetElementType() : param.PureType.GenericTypeArguments[0];
+
+                Type listType = typeof(List<>).MakeGenericType(new [] { elementType });
+                var list = (System.Collections.IList)Activator.CreateInstance(listType);
+
+                var el = ClassNamePluralizer.ToHumanName(elementType.ToString(), elementType);
+
+                if (el != null && el.JsonParam != null && el.JsonParam.GetType() == elementType)
+                {
+                    list.Add(el.JsonParam);
+                }
+                else if (!elementType.IsAbstract)
+                {
+                    list.Add(Activator.CreateInstance(elementType));
+                }
+
+                obj = list;
+            } else {
+                obj = Activator.CreateInstance(param.PureType);
+            }
+
+            if (obj is Enum) obj = obj.ToString();
+
+            if (asString)
+            {
+                return obj == null ? "null" : (obj is string ? (string)obj : JsonConvert.SerializeObject(obj)).Trim('"');
+            }
+
+            return obj;
         }
 
         private static string GetParameterTypeRepresentation(Type paramType)

@@ -44,6 +44,12 @@ namespace ASC.Api.Web.Help.Helpers
         [DataMember]
         public string Example { get; set; }
 
+        [DataMember]
+        public string ExampleJson { get; set; }
+
+        [IgnoreDataMember]
+        public object JsonParam { get; set; }
+
         [DataMember(EmitDefaultValue = false)]
         public string Note { get; set; }
 
@@ -137,9 +143,26 @@ namespace ASC.Api.Web.Help.Helpers
             return false;
         }
 
-        public static TypeDescription ToHumanName(string typeName)
+        public static TypeDescription ToHumanName(string typeName, Type type = null)
         {
-            return _descriptor==null?new TypeDescription(typeName,""):_descriptor.Get(typeName);
+            var desc = _descriptor == null ? new TypeDescription(typeName, "") : _descriptor.Get(typeName);
+            if (type != null && desc.JsonParam == null && !string.IsNullOrEmpty(desc.ExampleJson))
+            {
+                if (desc.ExampleJson.StartsWith("\"") && desc.ExampleJson.EndsWith("\""))
+                {
+                    desc.JsonParam = desc.ExampleJson.Trim('"');
+                }
+                else if (desc.ExampleJson.StartsWith("!"))
+                {
+                    desc.JsonParam = Newtonsoft.Json.JsonConvert.DeserializeObject(desc.ExampleJson.Substring(1));
+                }
+                else
+                {
+                    desc.JsonParam = Newtonsoft.Json.JsonConvert.DeserializeObject(desc.ExampleJson, type);
+                }
+            }
+
+            return desc;
         }
 
         public static void LoadAndWatch(string path)
