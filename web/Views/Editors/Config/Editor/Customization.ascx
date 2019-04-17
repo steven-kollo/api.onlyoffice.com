@@ -74,11 +74,21 @@
             <td>false</td>
         </tr>
         <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="compactToolbar" class="copy-link">compactToolbar</td>
             <td>Defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>.
                 The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="customer" class="copy-link">customer<span class="required">*</span></td>
