@@ -306,6 +306,18 @@
         </tr>
         <% } %>
         <tr class="tablerow">
+            <td id="toolbarNoTabs" class="copy-link">toolbarNoTabs</td>
+            <td>Defines if the top toolbar tabs are distinctly displayed (when set to <b>false</b>) or only highlighted to see which one is selected (when set to <b>true</b>).
+                The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="zoom" class="copy-link">zoom</td>
             <td>Defines the document display zoom value measured in percent.
                 Can take values larger than <b>0</b>.
@@ -374,7 +386,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% if (license)
                { %>"statusBar": true,
             "toolbar": true,
-            <% } %>"zoom": 100
+            <% } %>"toolbarNoTabs": false,
+            "zoom": 100
         },
         ...
     },

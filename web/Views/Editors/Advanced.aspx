@@ -120,6 +120,7 @@ config = {
                 "url": "https://example.com"
             },
             "showReviewChanges": false,
+            "toolbarNoTabs": false,
             "zoom": 100
         },
         "embedded": {
