@@ -85,6 +85,7 @@ config = {
     },
     "documentType": "text",
     "editorConfig": {
+        "actionLink": ACTION_DATA,
         "callbackUrl": "https://example.com/url-to-callback.ashx",
         "createUrl": "https://example.com/url-to-create-document/",
         "customization": {

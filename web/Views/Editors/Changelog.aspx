@@ -24,6 +24,9 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">editorConfig.customization.toolbarNoTabs</a> field.</li>
         <li>Added <a href="<%= Url.Action("conversionapi") %>#error">conversion error</a> for password protected documents.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method parameter.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.</li>
     </ul>
 
     <h2 id="52" class="copy-link">Version 5.2</h2>

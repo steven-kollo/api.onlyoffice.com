@@ -184,6 +184,37 @@ docEditor.refreshHistory({
         </li>
 
         <li>
+            <p><b id="setActionLink" class="copy-link">setActionLink</b> - set the link to the document which contains a bookmark. This method must be called after the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event. The integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.</p>
+            <pre>
+docEditor.setActionLink(link);
+</pre>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>link</td>
+                        <td>Defines the link which allows to scroll to the bookmark position in the document.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+        <li>
             <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - send the link to the document for viewing the version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.</p>
             <pre>
 docEditor.setHistoryData({
