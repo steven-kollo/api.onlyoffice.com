@@ -297,14 +297,14 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             urlParams.ForEach(p => {
                 if (path.IndexOf('{' + p.Key.Name.ToLowerInvariant() + '}') > 0)
                 {
-                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', ParamToJson(p.Key, p.Value, true).ToString());
+                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', HttpUtility.UrlEncode(ParamToJson(p.Key, p.Value, true).ToString()));
                 }
                 else
                 {
                     var value = ParamToJson(p.Key, p.Value, true).ToString();
                     if (value == "null") return;
 
-                    path += string.Format("{0}{1}={2}", query ? "&" : "?", p.Key.Name, value);
+                    path += string.Format("{0}{1}={2}", query ? "&" : "?", p.Key.Name, HttpUtility.UrlEncode(value));
                     query = true;
                 }
             });
