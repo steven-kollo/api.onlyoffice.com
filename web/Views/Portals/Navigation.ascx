@@ -26,14 +26,35 @@
     <li>
         <a href="<%= Url.DocUrl(entryPoint, null, "portals") %>"><%= entryPoint.Name %></a>
         <% var categories = entryPoint.Methods.Where(x => !string.IsNullOrEmpty(x.Category)).GroupBy(x => x.Category).OrderBy(x => x.Key).ToList(); %>
-        <% if (categories.Any()) { %>
+        <% var rootMethods = entryPoint.Methods.Where(x => string.IsNullOrEmpty(x.Category)).OrderBy(x => x.FunctionName).ToList(); %>
+        <% if (categories.Any() || rootMethods.Any()) { %>
         <ul>
-        <% foreach (var category in categories)
-           { %>
-            <li>
-                <a href="<%= Url.DocUrl(entryPoint.Name, category.Key, null, null, "portals") %>"><%= category.Key %></a>
-            </li>
-        <% } %>
+            <% if (categories.Any()) { %>
+                <% foreach (var category in categories)
+                   { %>
+                    <li>
+                        <a href="<%= Url.DocUrl(entryPoint.Name, category.Key, null, null, "portals") %>"><%= category.Key %></a>
+                        <% var methods = category.OrderBy(x => x.FunctionName).ToList(); %>
+                        <% if (methods.Any()) { %>
+                            <ul>
+                                <% foreach (var method in methods) { %>
+                                    <li>
+                                        <a href="<%= Url.DocUrl(entryPoint, method, "portals") %>"><%= method.FunctionName %></a>
+                                    </li>
+                                <% } %>
+                            </ul>
+                        <% } %>
+                    </li>
+                <% } %>
+            <% } %>
+            <% if (rootMethods.Any()) { %>
+                <% foreach (var method in rootMethods)
+                   { %>
+                    <li>
+                        <a href="<%= Url.DocUrl(entryPoint, method, "portals") %>"><%= method.FunctionName %></a>
+                    </li>
+                <% } %>
+            <% } %>
         </ul>
         <% } %>
     </li>

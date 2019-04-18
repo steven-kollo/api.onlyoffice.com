@@ -49,12 +49,12 @@
             </tr>
         </thead>
         <tbody>
-            <% foreach (var method in model.Methods.OrderBy(x => x.HttpMethod, new HttpMethodOrderComarer()).ThenBy(x => x.Path.Length))
+            <% foreach (var method in model.Methods.OrderBy(x => x.FunctionName))
                {
                    var url = Url.DocUrl(model.Section, method, Html.GetCurrentController()); %>
             <tr class="tablerow">
                 <td>
-                    <a href="<%= url %>"><%= !string.IsNullOrEmpty(method.ShortName) ? method.ShortName : method.FunctionName %></a>
+                    <a href="<%= url %>"><%= method.FunctionName %></a>
                 </td>
                 <td>
                     <a href="<%= url %>"><span class="uppercase"><%= method.HttpMethod %></span>&nbsp;<%= method.Path %></a>

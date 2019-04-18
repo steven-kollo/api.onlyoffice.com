@@ -74,6 +74,18 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     apiEntryPoint.AsEnumerable());
             }
 
+            foreach (var method in generator.Points.SelectMany(x => x.Methods))
+            {
+                if (string.IsNullOrEmpty(method.Example))
+                {
+                    try
+                    {
+                        MsDocDocumentGenerator.GenerateRequestExample(method);
+                    }
+                    catch { }
+                }
+            }
+
             return generator.Points;
         }
 
