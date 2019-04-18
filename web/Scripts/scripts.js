@@ -222,9 +222,9 @@ $(document).ready(function () {
         fixedHeaderOffset(hash);
     }
 
-    $('a, td, div').on('click', function(){
-        var hashID = '#' + $(this).attr('id');
-        if(hashID !== '#' && hashID !== '#undefined') {
+    $('a, td, div, b').on('click', function(){
+        if($(this).attr('id')){
+            var hashID = '#' + $(this).attr('id');
             fixedHeaderOffset(hashID);
         }
     });
