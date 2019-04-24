@@ -92,29 +92,29 @@
         </tr>
         <tr class="tablerow">
             <td id="customer" class="copy-link">customer<span class="required">*</span></td>
-            <td>Contains the information for the editor <b>About</b> section.
+            <td>Contains the information which will be displayed int the editor <b>About</b> section and visible to all the editor users.
                 The object has the following parameters:
                 <ul>
-                    <li><b>address</b> - postal address of the above company or person,
+                    <li><b>address</b> - postal address of the company or person who gives access to the editors or the editor authors,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "My City, 123a-45";
                     </li>
-                    <li><b>info</b> - some information about the above company or person which will be displayed at the <b>About</b> page and visible to all editor users,
+                    <li><b>info</b> - some additional information about the company or person you want the others to know,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "Some additional information";
                     </li>
-                    <li><b>logo</b> - the path to the image logo which will be displayed at the <b>About</b> page (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
+                    <li><b>logo</b> - the path to the image logo (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
                         The image must have the following size: 432x70,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "https://example.com/logo-big.png".
                     </li>
-                    <li><b>mail</b> - email address of the above company or person,
+                    <li><b>mail</b> - email address of the company or person who gives access to the editors or the editor authors,
                         <br />
                         <b>type</b>: string,
                         <br />

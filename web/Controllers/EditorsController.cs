@@ -67,6 +67,17 @@ namespace ASC.Api.Web.Help.Controllers
                 "Example/Php",
                 "Example/Ruby",
                 "Example/Csharp",
+                "FAQ",
+                "FAQ/Coediting",
+                "FAQ/Customizing",
+                "FAQ/Editing",
+                "FAQ/Embedding",
+                "FAQ/General",
+                "FAQ/Integrating",
+                "FAQ/ManagingVersions",
+                "FAQ/Saving",
+                "FAQ/Security",
+                "FAQ/Sharing",
                 "History",
                 "HowItWorks",
                 "Methods",
@@ -216,6 +227,15 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Example", (object)catchall);
+        }
+
+        public ActionResult FAQ(string catchall)
+        {
+            if (!_actionMap.Contains("faq/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("FAQ", (object)catchall);
         }
 
         public ActionResult DemoPreview()

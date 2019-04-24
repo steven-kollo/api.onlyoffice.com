@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public static void Load()
         {
+            LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
             //Load documentation
             _points = GenerateDocs();
         }
@@ -71,6 +72,18 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 generator.GenerateDocForEntryPoint(
                     apiEntryPoints.SingleOrDefault(x => x.Activator.LimitType == point.Key),
                     apiEntryPoint.AsEnumerable());
+            }
+
+            foreach (var method in generator.Points.SelectMany(x => x.Methods))
+            {
+                if (string.IsNullOrEmpty(method.Example))
+                {
+                    try
+                    {
+                        MsDocDocumentGenerator.GenerateRequestExample(method);
+                    }
+                    catch { }
+                }
             }
 
             return generator.Points;

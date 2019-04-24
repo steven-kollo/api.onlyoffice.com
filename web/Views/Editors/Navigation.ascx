@@ -144,8 +144,46 @@
             </li>
         </ul>
     </li>
+</ul>
+<div class="treeheader">More information</div>
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("changelog") %>">Changelog</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("faq") %>">FAQ</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("faq/general") %>">General</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/security") %>">Security</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/sharing") %>">Sharing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/embedding") %>">Embedding</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/coediting") %>">Co-editing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/customizing") %>">Customizing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/integrating") %>">Integrating</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/editing") %>">Editing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/managingversions") %>">Managing versions</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/saving") %>">Saving</a>
+            </li>
+        </ul>
     </li>
     <li>
         <a href="<%= Url.Action("troubleshooting") %>">Troubleshooting</a>

@@ -5,6 +5,7 @@
       <value>
         <Description>Bool value</Description>
         <Example>true</Example>
+        <ExampleJson>true</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -12,6 +13,7 @@
       <value>
         <Description>Date and Time</Description>
         <Example>2011-10-1</Example>
+        <ExampleJson>"2008-04-10T06-30-00.000Z"</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -19,6 +21,7 @@
       <value>
         <Description>string</Description>
         <Example>some text</Example>
+        <ExampleJson>"some text"</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -26,6 +29,7 @@
       <value>
         <Description>number</Description>
         <Example>1234</Example>
+        <ExampleJson>1234</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -33,6 +37,7 @@
       <value>
         <Description>number</Description>
         <Example>1234</Example>
+        <ExampleJson>1234</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -40,6 +45,7 @@
       <value>
         <Description>number</Description>
         <Example>1234</Example>
+        <ExampleJson>1234</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -47,6 +53,7 @@
       <value>
         <Description>array of numbers</Description>
         <Example>[1234,123]</Example>
+        <ExampleJson>[1234, 123]</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -54,6 +61,7 @@
       <value>
         <Description>array of strings</Description>
         <Example>[some string,another string]</Example>
+        <ExampleJson>["some string","another string"]</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -61,6 +69,7 @@
       <value>
         <Description>floating point number</Description>
         <Example>123.45</Example>
+        <ExampleJson>123.45</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -68,6 +77,7 @@
       <value>
         <Description>guid</Description>
         <Example>9924256A-739C-462b-AF15-E652A3B1B6EB</Example>
+        <ExampleJson>"9924256A-739C-462b-AF15-E652A3B1B6EB"</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -112,6 +122,7 @@
       <value>
         <Description>A stream for uploading files without multipart request</Description>
         <Example>N/A</Example>
+        <ExampleJson>"N/A"</ExampleJson>
         <Note></Note>
       </value>
     </entry>
@@ -142,10 +153,35 @@
       </value>
     </entry>
     <entry>
+      <key>System.Collections.Generic.IEnumerable`1[ASC.Mail.Data.Contracts.CrmContactData]</key>
+      <value>
+        <ExampleJson>![{"entity_id": 0, "entity_type": 1}]</ExampleJson>
+      </value>
+    </entry>
+    <entry>
+      <key>System.Collections.Generic.IEnumerable`1[ASC.Projects.Core.Domain.Task]</key>
+      <value>
+        <ExampleJson>![]</ExampleJson>
+      </value>
+    </entry>
+    <entry>
+      <key>System.Collections.Generic.IEnumerable`1[ASC.Projects.Core.Domain.Milestone]</key>
+      <value>
+        <ExampleJson>![]</ExampleJson>
+      </value>
+    </entry>
+    <entry>
+      <key>System.Collections.Generic.List`1[ASC.Mail.Data.Contracts.MailAttachmentData]</key>
+      <value>
+        <ExampleJson>![]</ExampleJson>
+      </value>
+    </entry>
+    <entry>
       <key>ASC.Api.Employee.Contact</key>
       <value>
         <Description>Contact</Description>
         <Example>contacts[0][Type]=GTalk&amp;contacts[0][Value]=my@gmail.com</Example>
+        <ExampleJson>{"type": "GTalk", "value": "my@gmail.com"}</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -153,6 +189,7 @@
       <value>
         <Description>Collection of Guids</Description>
         <Example></Example>
+        <ExampleJson>["9924256A-739C-462b-AF15-E652A3B1B6EB", "98777E9C-F2A7-4E97-B314-BA9F92C2E882"]</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -160,6 +197,7 @@
       <value>
         <Description>Date and Time</Description>
         <Example>Roundtrip format: 2008-04-10T06-30-00.000Z</Example>
+        <ExampleJson>"2008-04-10T06-30-00.000Z"</ExampleJson>
       </value>
     </entry>
     <entry>
