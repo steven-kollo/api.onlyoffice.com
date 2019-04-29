@@ -23,7 +23,7 @@
         The plugin will create a new <b>Edit in ONLYOFFICE</b> action within the document library for Office documents.
         This allows multiple users to collaborate in real time and to save back those changes to Confluence.
     </p>
-    <p>Tested with Confluence Server 5.9.4 - 6.4.3, the connector is available in the official <a href="https://marketplace.atlassian.com/1218214" target="_blank">Atlassian Marketplace</a>.</p>
+    <p>Tested with Confluence Server 5.9.4 - 6.14.0, the connector is available in the official <a href="https://marketplace.atlassian.com/1218214" target="_blank">Atlassian Marketplace</a>.</p>
 
 
     <h2>Installing ONLYOFFICE Document Server</h2>
