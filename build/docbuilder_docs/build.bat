@@ -36,13 +36,13 @@ if %parseDocs% NEQ Y goto skipParse
     node reformat_script.js
 
     echo generating docs
-    node node_modules\jsdoc\jsdoc.js tmp\word.js  -t .
+    node node_modules\jsdoc\jsdoc.js tmp\word.js  -t . -c .\conf.json
     move out %outPath%\word
     md out
-    node node_modules\jsdoc\jsdoc.js tmp\cell.js  -t .
+    node node_modules\jsdoc\jsdoc.js tmp\cell.js  -t . -c .\conf.json
     move out %outPath%\cell
     md out
-    node node_modules\jsdoc\jsdoc.js tmp\slide.js  -t .
+    node node_modules\jsdoc\jsdoc.js tmp\slide.js  -t . -c .\conf.json
     move out %outPath%\slide
     md out
 :skipParse
