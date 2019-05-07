@@ -43,7 +43,7 @@
     <p>The latest connector signed versions are available in the official store for <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</p>
 
 
-    <h2>Installing ONLYOFFICE Document Server</h2>
+    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Nextcloud and any end clients (version 4.2.7 and later are supported for use with the app).
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
@@ -57,7 +57,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Installing Nextcloud ONLYOFFICE integration app</h2>
+    <h2 id="install" class="copy-link">Installing Nextcloud ONLYOFFICE integration app</h2>
     <p>
         The Nextcloud administrator can install the integration app from the in-built application market.
         For that go to the user name and select <b>Apps</b>.

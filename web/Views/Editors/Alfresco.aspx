@@ -17,9 +17,9 @@
 
     <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE Document Server.</p>
 
-    <p>Tested with Alfresco 5.*, the plugin is available in the official <a href="https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco" target="_blank">Alfresco Add-ons directory</a>.</p>
+    <p>Tested with Alfresco 5.2 - 6.1, the plugin is available in the official <a href="https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco" target="_blank">Alfresco Add-ons directory</a>.</p>
 
-    <h2>Features</h2>
+    <h2 id="features" class="copy-link">Features</h2>
     <ul>
         <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</li>
         <li>
@@ -30,7 +30,7 @@
     </ul>
 
 
-    <h2>Installing ONLYOFFICE Document Server</h2>
+    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin).
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
@@ -39,7 +39,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Installing ONLYOFFICE Alfresco module package</h2>
+    <h2 id="install" class="copy-link">Installing ONLYOFFICE Alfresco module package</h2>
     <p>To start using ONLYOFFICE Document Server with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
     <div class="note">Steps <b>1</b> &mdash; <b>6</b> are only necessary if you for some reason plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards).
         If you do not want to do that and plan to use the already compiled module files, please skip to step <b>7</b> directly.

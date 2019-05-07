@@ -21,7 +21,7 @@
 
     <p>Tested with SharePoint 2010, 2013 and 2016.</p>
 
-    <h2>Installing ONLYOFFICE Document Server</h2>
+    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from SharePoint and any end clients.
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
@@ -30,7 +30,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Using ONLYOFFICE SharePoint integration solution</h2>
+    <h2 id="using" class="copy-link">Using ONLYOFFICE SharePoint integration solution</h2>
     <p>Before you use ONLYOFFICE Document Server with ONLYOFFICE SharePoint solution, you need to install it. If you for some reason plan to edit the ONLYOFFICE SharePoint solution source code, you will need to compile it and install it afterwards. If you do not want to do that and plan to use the already compiled solution package, please skip to the <b>Installation</b> section directly. The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-sharepoint/releases">here</a>.</p>
     <h5>Compiling ONLYOFFICE SharePoint integration solution</h5>
     <p></p>
@@ -89,7 +89,7 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
         <li>Under <b>Anonymous Access Restrictions</b> select your <b>Zone</b> and set the <b>Permissions to None – No</b> policy and click <b>Save</b>.</li>
     </ol>
 
-    <h2>Configuring SharePoint ONLYOFFICE integration solution</h2>
+    <h2 id="configure" class="copy-link">Configuring SharePoint ONLYOFFICE integration solution</h2>
     <p>In SharePoint open the <em>/_layouts/15/Onlyoffice/Settings.aspx</em> page with administrative settings. Enter the following address to connect <b>ONLYOFFICE Document Server</b>:</p>
 
     <span class="commandline">https://&lt;documentserver&gt;/</span>
