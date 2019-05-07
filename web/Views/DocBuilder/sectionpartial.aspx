@@ -19,7 +19,9 @@
 
     <h4 class="header-gray" id="<%= section.Name %>">new <%= section.Name %>(<%= section.Params != null ? string.Join(", ", section.Params.Select(p => p.Name)) : "" %>)</h4> 
 
-    <p class="dscr"><%= section.Description %></p>
+    <span id="dscr" class="dscr">
+        <%= section.Description %>
+    </span>
 
     <% if (section.Params != null && section.Params.Any()) { %>
     <h2>Parameters:</h2>

@@ -38,9 +38,9 @@
         </div>
     <% } %>
 
-    <p class="dscr">
+    <span id="dscr" class="dscr">
         <%= method.Description %>
-    </p>
+    </span>
 
     <% if (method.Params != null && method.Params.Any()) { %>
     <% var hasOptional = method.Params.Any(m => m.Optional); %>
