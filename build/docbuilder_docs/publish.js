@@ -77,7 +77,7 @@ function get_params(data) {
     let params = [];
     var type = '';
     data.forEach(x => {
-        if (x.type) { type = x.type.names[0]}
+        if (x.type) { type = x.type.names.join(" | ") }
         if (x.type) {
             params.push({
                 "type": type,

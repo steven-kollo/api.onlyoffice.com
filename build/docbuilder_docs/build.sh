@@ -37,13 +37,13 @@ then
     node reformat_script.js
 
     echo generating docs
-    node node_modules/jsdoc/jsdoc.js tmp/word.js  -t .
+    node node_modules/jsdoc/jsdoc.js tmp/word.js  -t . -c ./conf.json
     mv out $outPath/word/
     mkdir out
-    node node_modules/jsdoc/jsdoc.js tmp/cell.js  -t .
+    node node_modules/jsdoc/jsdoc.js tmp/cell.js  -t . -c ./conf.json
     mv out $outPath/cell/
     mkdir out
-    node node_modules/jsdoc/jsdoc.js tmp/slide.js  -t .
+    node node_modules/jsdoc/jsdoc.js tmp/slide.js  -t . -c ./conf.json
     mv out $outPath/slide/
     mkdir out
 fi
