@@ -26,14 +26,14 @@
     <p>Tested with Confluence Server 5.9.4 - 6.14.0, the connector is available in the official <a href="https://marketplace.atlassian.com/1218214" target="_blank">Atlassian Marketplace</a>.</p>
 
 
-    <h2>Installing ONLYOFFICE Document Server</h2>
+    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin).
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to Confluence directly.
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
-    <h2>Getting ONLYOFFICE Connector for Confluence from Atlassian Marketplace</h2>
+    <h2 id="get-connector" class="copy-link">Getting ONLYOFFICE Connector for Confluence from Atlassian Marketplace</h2>
     <p>You can download the latest connector version from the <a href="https://marketplace.atlassian.com/1218214" target="_blank">official Atlassian Marketplace</a>. This is done the following way:</p>
     <ul>
         <li>Log into your Confluence instance as an administrator.</li>
@@ -44,7 +44,7 @@
         <li>Now you can click <b>Close</b> in the <b>Installed and ready to go</b> dialog.</li>
     </ul>
 
-    <h2>Compiling and installing ONLYOFFICE Connector for Confluence</h2>
+    <h2 id="compile" class="copy-link">Compiling and installing ONLYOFFICE Connector for Confluence</h2>
     <p>If for some reason you want to compile ONLYOFFICE Connector for Confluence, then to start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
@@ -57,7 +57,7 @@
     <p>The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-confluence/releases">here</a>.</p>
 
 
-    <h2>Configuring ONLYOFFICE Connector for Confluence</h2>
+    <h2 id="configure" class="copy-link">Configuring ONLYOFFICE Connector for Confluence</h2>
     <p>Find the uploaded <b>ONLYOFFICE Connector for Confluence</b> on the <em>Manage add-ons</em> page.
         Click <em>Configure</em> and enter the name of the server with the ONLYOFFICE Document Server installed:</p>
     <span class="commandline">https://documentserver/</span>
