@@ -1,1 +1,225 @@
-{"methods":{"GetClassType":{"memberof":"ApiDrawing","name":"GetClassType","description":"<p>Get the type of the class based on this base class.</p>","tags":{"typeofeditors":["CDE","CPE"]},"returns":[["\"drawing\""]],"see":null,"inherits":null},"SetSize":{"memberof":"ApiDrawing","name":"SetSize","description":"<p>Set the size of the object (image, shape, chart) bounding box.</p>","tags":{"typeofeditors":["CDE"]},"returns":[],"see":null,"inherits":null,"params":[{"type":"EMU","name":"nWidth","description":"<p>The object width measured in English measure units.</p>","optional":false},{"type":"EMU","name":"nHeight","description":"<p>The object height measured in English measure units.</p>","optional":false}]},"SetWrappingStyle":{"memberof":"ApiDrawing","name":"SetWrappingStyle","description":"<p>Set the wrapping type of this object (image, shape, chart). One of the following wrapping style types can be set:</p>\n<ul>\n<li><b>&quot;inline&quot;</b> - the object is considered to be a part of the text, like a character, so when the text moves, the object moves as well. In this case the positioning options are inaccessible.<br>If one of the following styles is selected, the object can be moved independently of the text and positioned on the page exactly:</li>\n<li><b>&quot;square&quot;</b> - the text wraps the rectangular box that bounds the object.</li>\n<li><b>&quot;tight&quot;</b> - the text wraps the actual object edges.</li>\n<li><b>&quot;through&quot;</b> - the text wraps around the object edges and fills in the open white space within the object.</li>\n<li><b>&quot;topAndBottom&quot;</b> - the text is only above and below the object.</li>\n<li><b>&quot;behind&quot;</b> - the text overlaps the object.</li>\n<li><b>&quot;inFront&quot;</b> - the object overlaps the text.</li>\n</ul>","tags":{"typeofeditors":["CDE"]},"returns":[],"see":null,"inherits":null,"params":[{"type":"\"inline\" | \"square\" | \"tight\" | \"through\" | \"topAndBottom\" | \"behind\" | \"inFront\"","name":"sType","description":"<p>The wrapping style type available for the object.</p>","optional":false}]},"SetHorAlign":{"memberof":"ApiDrawing","name":"SetHorAlign","description":"<p>Specify how the floating object will be horizontally aligned.</p>","tags":{"typeofeditors":["CDE"]},"returns":[],"see":null,"inherits":null,"params":[{"type":"RelFromH","name":"sRelativeFrom","description":"<p>The document element which will be taken as a countdown point for the object horizontal alignment.</p>","optional":true,"defaultValue":"\"page\""},{"type":"\"left\" | \"right\" | \"center\"","name":"sAlign","description":"<p>The alingment type which will be used for the object horizontal alignment.</p>","optional":true,"defaultValue":"\"left\""}]},"SetVerAlign":{"memberof":"ApiDrawing","name":"SetVerAlign","description":"<p>Specify how the floating object will be vertically aligned.</p>","tags":{"typeofeditors":["CDE"]},"returns":[],"see":null,"inherits":null,"params":[{"type":"RelFromV","name":"sRelativeFrom","description":"<p>The document element which will be taken as a countdown point for the object vertical alignment.</p>","optional":true,"defaultValue":"\"page\""},{"type":"\"top\" | \"bottom\" | \"center\"","name":"sAlign","description":"<p>The alingment type which will be used for the object vertical alignment.</p>","optional":true,"defaultValue":"\"top\""}]},"SetHorPosition":{"memberof":"ApiDrawing","name":"SetHorPosition","description":"<p>Set an absolute measurement for the horizontal positioning of the floating object.</p>","tags":{"typeofeditors":["CDE"]},"returns":[],"see":null,"inherits":null,"params":[{"type":"RelFromH","name":"sRelativeFrom","description":"<p>The document element which will be taken as a countdown point for the object horizontal alignment.</p>","optional":false},{"type":"EMU","name":"nDistance","description":"<p>The distance from the right side of the document element to the floating object measured in English measure units.</p>","optional":false}]},"SetVerPosition":{"memberof":"ApiDrawing","name":"SetVerPosition","description":"<p>Set an absolute measurement for the vertical positioning of the floating object.</p>","tags":{"typeofeditors":["CDE"]},"returns":[],"see":null,"inherits":null,"params":[{"type":"RelFromV","name":"sRelativeFrom","description":"<p>The document element which will be taken as a countdown point for the object vertical alignment.</p>","optional":false},{"type":"EMU","name":"nDistance","description":"<p>The distance from the bottom part of the document element to the floating object measured in English measure units.</p>","optional":false}]},"SetDistances":{"memberof":"ApiDrawing","name":"SetDistances","description":"<p>Specify the minimum distance which will be maintained between the edges of this drawing object and any<br>subsequent text.</p>","tags":{"typeofeditors":["CDE"]},"returns":[],"see":null,"inherits":null,"params":[{"type":"EMU","name":"nLeft","description":"<p>The distance from the left side of the current object and the subsequent text run measured in English measure units.</p>","optional":false},{"type":"EMU","name":"nTop","description":"<p>The distance from the top side of the current object and the preceding text run measured in English measure units.</p>","optional":false},{"type":"EMU","name":"nRight","description":"<p>The distance from the right side of the current object and the subsequent text run measured in English measure units.</p>","optional":false},{"type":"EMU","name":"nBottom","description":"<p>The distance from the bottom side of the current object and the subsequent text run measured in English measure units.</p>","optional":false}]}},"comment":"/**\r\n\t * Class representing a graphical object.\r\n\t * @constructor\r\n\t */","description":"<p>Class representing a graphical object.</p>","scope":"global","params":[]}
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiDrawing",
+      "name": "GetClassType",
+      "description": "<p>Get the type of the class based on this base class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"drawing\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSize": {
+      "memberof": "ApiDrawing",
+      "name": "SetSize",
+      "description": "<p>Set the size of the object (image, shape, chart) bounding box.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The object width measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The object height measured in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetWrappingStyle": {
+      "memberof": "ApiDrawing",
+      "name": "SetWrappingStyle",
+      "description": "<p>Set the wrapping type of this object (image, shape, chart). One of the following wrapping style types can be set:</p>\n<ul>\n<li><b>&quot;inline&quot;</b> - the object is considered to be a part of the text, like a character, so when the text moves, the object moves as well. In this case the positioning options are inaccessible.<br>If one of the following styles is selected, the object can be moved independently of the text and positioned on the page exactly:</li>\n<li><b>&quot;square&quot;</b> - the text wraps the rectangular box that bounds the object.</li>\n<li><b>&quot;tight&quot;</b> - the text wraps the actual object edges.</li>\n<li><b>&quot;through&quot;</b> - the text wraps around the object edges and fills in the open white space within the object.</li>\n<li><b>&quot;topAndBottom&quot;</b> - the text is only above and below the object.</li>\n<li><b>&quot;behind&quot;</b> - the text overlaps the object.</li>\n<li><b>&quot;inFront&quot;</b> - the object overlaps the text.</li>\n</ul>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"inline\" | \"square\" | \"tight\" | \"through\" | \"topAndBottom\" | \"behind\" | \"inFront\"",
+          "name": "sType",
+          "description": "<p>The wrapping style type available for the object.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetHorAlign": {
+      "memberof": "ApiDrawing",
+      "name": "SetHorAlign",
+      "description": "<p>Specify how the floating object will be horizontally aligned.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "RelFromH",
+          "name": "sRelativeFrom",
+          "description": "<p>The document element which will be taken as a countdown point for the object horizontal alignment.</p>",
+          "optional": true,
+          "defaultValue": "\"page\""
+        },
+        {
+          "type": "\"left\" | \"right\" | \"center\"",
+          "name": "sAlign",
+          "description": "<p>The alingment type which will be used for the object horizontal alignment.</p>",
+          "optional": true,
+          "defaultValue": "\"left\""
+        }
+      ]
+    },
+    "SetVerAlign": {
+      "memberof": "ApiDrawing",
+      "name": "SetVerAlign",
+      "description": "<p>Specify how the floating object will be vertically aligned.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "RelFromV",
+          "name": "sRelativeFrom",
+          "description": "<p>The document element which will be taken as a countdown point for the object vertical alignment.</p>",
+          "optional": true,
+          "defaultValue": "\"page\""
+        },
+        {
+          "type": "\"top\" | \"bottom\" | \"center\"",
+          "name": "sAlign",
+          "description": "<p>The alingment type which will be used for the object vertical alignment.</p>",
+          "optional": true,
+          "defaultValue": "\"top\""
+        }
+      ]
+    },
+    "SetHorPosition": {
+      "memberof": "ApiDrawing",
+      "name": "SetHorPosition",
+      "description": "<p>Set an absolute measurement for the horizontal positioning of the floating object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "RelFromH",
+          "name": "sRelativeFrom",
+          "description": "<p>The document element which will be taken as a countdown point for the object horizontal alignment.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nDistance",
+          "description": "<p>The distance from the right side of the document element to the floating object measured in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetVerPosition": {
+      "memberof": "ApiDrawing",
+      "name": "SetVerPosition",
+      "description": "<p>Set an absolute measurement for the vertical positioning of the floating object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "RelFromV",
+          "name": "sRelativeFrom",
+          "description": "<p>The document element which will be taken as a countdown point for the object vertical alignment.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nDistance",
+          "description": "<p>The distance from the bottom part of the document element to the floating object measured in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetDistances": {
+      "memberof": "ApiDrawing",
+      "name": "SetDistances",
+      "description": "<p>Specify the minimum distance which will be maintained between the edges of this drawing object and any<br>subsequent text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "EMU",
+          "name": "nLeft",
+          "description": "<p>The distance from the left side of the current object and the subsequent text run measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nTop",
+          "description": "<p>The distance from the top side of the current object and the preceding text run measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nRight",
+          "description": "<p>The distance from the right side of the current object and the subsequent text run measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nBottom",
+          "description": "<p>The distance from the bottom side of the current object and the subsequent text run measured in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a graphical object.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a graphical object.</p>",
+  "scope": "global",
+  "params": []
+}

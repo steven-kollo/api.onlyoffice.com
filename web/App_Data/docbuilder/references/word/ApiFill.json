@@ -1,1 +1,27 @@
-{"methods":{"GetClassType":{"memberof":"ApiFill","name":"GetClassType","description":"<p>Get the type of this class.</p>","tags":{"typeofeditors":["CDE","CSE","CPE"]},"returns":[["\"fill\""]],"see":null,"inherits":null}},"comment":"/**\r\n\t * Class represent a base class fill\r\n\t * @constructor\r\n\t * */","description":"<p>Class represent a base class fill</p>","scope":"global","params":[]}
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiFill",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"fill\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class represent a base class fill\r\n\t * @constructor\r\n\t * */",
+  "description": "<p>Class represent a base class fill</p>",
+  "scope": "global",
+  "params": []
+}

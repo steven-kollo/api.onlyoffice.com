@@ -1,1 +1,7 @@
-{"methods":{},"comment":"/**\r\n     * Class representing a group of drawings.\r\n     * @constructor\r\n     */","description":"<p>Class representing a group of drawings.</p>","scope":"global","params":[]}
+{
+  "methods": {},
+  "comment": "/**\r\n     * Class representing a group of drawings.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a group of drawings.</p>",
+  "scope": "global",
+  "params": []
+}

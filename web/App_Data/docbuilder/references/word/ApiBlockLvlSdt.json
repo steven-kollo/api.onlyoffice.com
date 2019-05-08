@@ -1,1 +1,150 @@
-{"methods":{"GetClassType":{"memberof":"ApiBlockLvlSdt","name":"GetClassType","description":"<p>Get the type of this class.</p>","tags":{},"returns":[["\"blockLvlSdt\""]],"see":null,"inherits":null},"SetLock":{"memberof":"ApiBlockLvlSdt","name":"SetLock","description":"<p>Set the lock type of this container</p>","tags":{},"returns":[],"see":null,"inherits":null,"params":[{"type":"SdtLock","name":"sLockType","optional":false}]},"GetLock":{"memberof":"ApiBlockLvlSdt","name":"GetLock","description":"<p>Get the lock type of this container</p>","tags":{},"returns":[["SdtLock"]],"see":null,"inherits":null},"SetTag":{"memberof":"ApiBlockLvlSdt","name":"SetTag","description":"<p>Set the tag attribute for this container</p>","tags":{},"returns":[],"see":null,"inherits":null,"params":[{"type":"string","name":"sTag","optional":false}]},"GetTag":{"memberof":"ApiBlockLvlSdt","name":"GetTag","description":"<p>Get the tag attribute for this container</p>","tags":{},"returns":[["string"]],"see":null,"inherits":null},"SetLabel":{"memberof":"ApiBlockLvlSdt","name":"SetLabel","description":"<p>Set the label attribute for this container</p>","tags":{},"returns":[],"see":null,"inherits":null,"params":[{"type":"string","name":"sLabel","optional":false}]},"GetLabel":{"memberof":"ApiBlockLvlSdt","name":"GetLabel","description":"<p>Get the label attribute for this container</p>","tags":{},"returns":[["string"]],"see":null,"inherits":null},"SetAlias":{"memberof":"ApiBlockLvlSdt","name":"SetAlias","description":"<p>Set the alias attribute for this container</p>","tags":{},"returns":[],"see":null,"inherits":null,"params":[{"type":"string","name":"sAlias","optional":false}]},"GetAlias":{"memberof":"ApiBlockLvlSdt","name":"GetAlias","description":"<p>Get the alias attribute for this container</p>","tags":{},"returns":[["string"]],"see":null,"inherits":null},"GetContent":{"memberof":"ApiBlockLvlSdt","name":"GetContent","description":"<p>Get the content of this container</p>","tags":{},"returns":[["ApiDocumentContent"]],"see":null,"inherits":null}},"comment":"/**\r\n\t * Class represent a container for the content of the document\r\n\t * @constructor\r\n\t */","description":"<p>Class represent a container for the content of the document</p>","scope":"global","params":[]}
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "\"blockLvlSdt\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetLock": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "SetLock",
+      "description": "<p>Set the lock type of this container</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "SdtLock",
+          "name": "sLockType",
+          "optional": false
+        }
+      ]
+    },
+    "GetLock": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetLock",
+      "description": "<p>Get the lock type of this container</p>",
+      "tags": {},
+      "returns": [
+        [
+          "SdtLock"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTag": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "SetTag",
+      "description": "<p>Set the tag attribute for this container</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sTag",
+          "optional": false
+        }
+      ]
+    },
+    "GetTag": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetTag",
+      "description": "<p>Get the tag attribute for this container</p>",
+      "tags": {},
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetLabel": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "SetLabel",
+      "description": "<p>Set the label attribute for this container</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sLabel",
+          "optional": false
+        }
+      ]
+    },
+    "GetLabel": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetLabel",
+      "description": "<p>Get the label attribute for this container</p>",
+      "tags": {},
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetAlias": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "SetAlias",
+      "description": "<p>Set the alias attribute for this container</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sAlias",
+          "optional": false
+        }
+      ]
+    },
+    "GetAlias": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetAlias",
+      "description": "<p>Get the alias attribute for this container</p>",
+      "tags": {},
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetContent": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetContent",
+      "description": "<p>Get the content of this container</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class represent a container for the content of the document\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class represent a container for the content of the document</p>",
+  "scope": "global",
+  "params": []
+}

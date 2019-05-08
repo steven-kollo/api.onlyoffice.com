@@ -1,1 +1,27 @@
-{"methods":{"GetClassType":{"memberof":"ApiUniColor","name":"GetClassType","description":"<p>Get the type of the class based on this base class.</p>","tags":{"typeofeditors":["CDE","CSE","CPE"]},"returns":[["\"uniColor\""]],"see":null,"inherits":null}},"comment":"/**\r\n\t * Class representing a base class for color types\r\n\t * @constructor\r\n\t */","description":"<p>Class representing a base class for color types</p>","scope":"global","params":[]}
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiUniColor",
+      "name": "GetClassType",
+      "description": "<p>Get the type of the class based on this base class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"uniColor\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a base class for color types\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a base class for color types</p>",
+  "scope": "global",
+  "params": []
+}

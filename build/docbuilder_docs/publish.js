@@ -93,7 +93,7 @@ function get_params(data) {
 
 function json_generate(data) {
     Object.keys(data).forEach(key => {
-        fs.writeFileSync('./out/' + key + '.json', JSON.stringify(data[key]));
+        fs.writeFileSync('./out/' + key + '.json', JSON.stringify(data[key], null, 2));
     })
 }
 

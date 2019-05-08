@@ -1,1 +1,230 @@
-{"methods":{"Format":{"memberof":"Api","name":"Format","description":"<p>Returns a class formatted according to instructions contained in a format expression</p>","tags":{},"returns":[["string"]],"see":null,"inherits":null,"params":[{"type":"string","name":"expression","description":"<p>Any valid expression.</p>","optional":false},{"type":"string","name":"format","description":"<p>A valid named or user-defined format expression.</p>","optional":true}]},"AddSheet":{"memberof":"Api","name":"AddSheet","description":"<p>Create a sheet.</p>","tags":{},"returns":[],"see":null,"inherits":null,"params":[{"type":"string","name":"name","optional":false}]},"GetSheets":{"memberof":"Api","name":"GetSheets","description":"<p>Returns a Sheets collection that represents all the sheets in the active workbook.</p>","tags":{},"returns":[["Array.<ApiWorksheet>"]],"see":null,"inherits":null},"SetLocale":{"memberof":"Api","name":"SetLocale","description":"<p>Set locale for document.</p>","tags":{},"returns":[],"see":null,"inherits":null,"params":[{"type":"number","name":"LCID","optional":false}]},"GetLocale":{"memberof":"Api","name":"GetLocale","description":"<p>Returns current locale id.</p>","tags":{},"returns":[["number"]],"see":null,"inherits":null},"GetActiveSheet":{"memberof":"Api","name":"GetActiveSheet","description":"<p>Get the object that represents the active sheet.</p>","tags":{"typeofeditors":["CSE"]},"returns":[["ApiWorksheet"]],"see":null,"inherits":null},"GetSheet":{"memberof":"Api","name":"GetSheet","description":"<p>Returns an object that represents the sheet</p>","tags":{},"returns":[["ApiWorksheet","null"]],"see":null,"inherits":null,"params":[{"type":"string | number","name":"nameOrIndex","description":"<p>Sheet name or Sheet index</p>","optional":false}]},"GetThemesColors":{"memberof":"Api","name":"GetThemesColors","description":"<p>Get the list of all available theme colors for the spreadsheet.</p>","tags":{"typeofeditors":["CSE"]},"returns":[["array"]],"see":null,"inherits":null},"SetThemeColors":{"memberof":"Api","name":"SetThemeColors","description":"<p>Set the theme colors to the current spreadsheet.</p>","tags":{"typeofeditors":["CSE"]},"returns":[],"see":null,"inherits":null,"params":[{"type":"string | number","name":"theme","description":"<p>The list of theme colors that will be used to select the color scheme to be set to the current spreadsheet.</p>","optional":false}]},"CreateColorFromRGB":{"memberof":"Api","name":"CreateColorFromRGB","description":"<p>Create an RGB color setting the appropriate values for the red, green and blue color components.</p>","tags":{"typeofeditors":["CSE"]},"returns":[["ApiColor"]],"see":null,"inherits":null,"params":[{"type":"byte","name":"r","description":"<p>Red color component value.</p>","optional":false},{"type":"byte","name":"g","description":"<p>Green color component value.</p>","optional":false},{"type":"byte","name":"b","description":"<p>Blue color component value.</p>","optional":false}]},"CreateColorByName":{"memberof":"Api","name":"CreateColorByName","description":"<p>Create a color selecting it from one of the available color presets.</p>","tags":{"typeofeditors":["CSE"]},"returns":[["ApiColor"]],"see":null,"inherits":null,"params":[{"type":"PresetColor","name":"presetColor","description":"<p>A preset selected from the list of the available color preset names.</p>","optional":false}]}},"comment":"/**\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */","scope":"global"}
+{
+  "methods": {
+    "Format": {
+      "memberof": "Api",
+      "name": "Format",
+      "description": "<p>Returns a class formatted according to instructions contained in a format expression</p>",
+      "tags": {},
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "expression",
+          "description": "<p>Any valid expression.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "format",
+          "description": "<p>A valid named or user-defined format expression.</p>",
+          "optional": true
+        }
+      ]
+    },
+    "AddSheet": {
+      "memberof": "Api",
+      "name": "AddSheet",
+      "description": "<p>Create a sheet.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "name",
+          "optional": false
+        }
+      ]
+    },
+    "GetSheets": {
+      "memberof": "Api",
+      "name": "GetSheets",
+      "description": "<p>Returns a Sheets collection that represents all the sheets in the active workbook.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "Array.<ApiWorksheet>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetLocale": {
+      "memberof": "Api",
+      "name": "SetLocale",
+      "description": "<p>Set locale for document.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "LCID",
+          "optional": false
+        }
+      ]
+    },
+    "GetLocale": {
+      "memberof": "Api",
+      "name": "GetLocale",
+      "description": "<p>Returns current locale id.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetActiveSheet": {
+      "memberof": "Api",
+      "name": "GetActiveSheet",
+      "description": "<p>Get the object that represents the active sheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiWorksheet"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetSheet": {
+      "memberof": "Api",
+      "name": "GetSheet",
+      "description": "<p>Returns an object that represents the sheet</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiWorksheet",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string | number",
+          "name": "nameOrIndex",
+          "description": "<p>Sheet name or Sheet index</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetThemesColors": {
+      "memberof": "Api",
+      "name": "GetThemesColors",
+      "description": "<p>Get the list of all available theme colors for the spreadsheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "array"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetThemeColors": {
+      "memberof": "Api",
+      "name": "SetThemeColors",
+      "description": "<p>Set the theme colors to the current spreadsheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string | number",
+          "name": "theme",
+          "description": "<p>The list of theme colors that will be used to select the color scheme to be set to the current spreadsheet.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateColorFromRGB": {
+      "memberof": "Api",
+      "name": "CreateColorFromRGB",
+      "description": "<p>Create an RGB color setting the appropriate values for the red, green and blue color components.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiColor"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateColorByName": {
+      "memberof": "Api",
+      "name": "CreateColorByName",
+      "description": "<p>Create a color selecting it from one of the available color presets.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiColor"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "PresetColor",
+          "name": "presetColor",
+          "description": "<p>A preset selected from the list of the available color preset names.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",
+  "scope": "global"
+}

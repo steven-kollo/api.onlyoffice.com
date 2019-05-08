@@ -1,1 +1,26 @@
-{"methods":{"GetClassType":{"memberof":"ApiImage","name":"GetClassType","description":"<p>Get the type of this class.</p>","tags":{"typeofeditors":["CDE","CSE"]},"returns":[["\"image\""]],"see":null,"inherits":null}},"comment":"/**\r\n\t * Class representing a image.\r\n\t * @constructor\r\n\t */","description":"<p>Class representing a image.</p>","scope":"global","params":[]}
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiImage",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "\"image\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a image.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a image.</p>",
+  "scope": "global",
+  "params": []
+}

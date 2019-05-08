@@ -1,1 +1,233 @@
-{"methods":{"GetPresentation":{"memberof":"Api","name":"GetPresentation","description":"<p>Get the main presentation.</p>","tags":{"typeofeditors":["CPE"]},"returns":[["ApiPresentation"]],"see":null,"inherits":null},"CreateSlide":{"memberof":"Api","name":"CreateSlide","description":"<p>Create a new slide.</p>","tags":{"typeofeditors":["CPE"]},"returns":[["ApiSlide"]],"see":null,"inherits":null},"CreateImage":{"memberof":"Api","name":"CreateImage","description":"<p>Create an image with the parameters specified.</p>","tags":{"typeofeditors":["CPE"]},"returns":[["ApiImage"]],"see":null,"inherits":null,"params":[{"type":"string","name":"sImageSrc","description":"<p>The image source where the image to be inserted should be taken from (currently<br>only internet URL or Base64 encoded images are supported).</p>","optional":false},{"type":"EMU","name":"nWidth","description":"<p>The image width in English measure units.</p>","optional":false},{"type":"EMU","name":"nHeight","description":"<p>The image height in English measure units.</p>","optional":false}]},"CreateShape":{"memberof":"Api","name":"CreateShape","description":"<p>Create a shape with the parameters specified.</p>","tags":{"typeofeditors":["CPE"]},"returns":[["ApiShape"]],"see":null,"inherits":null,"params":[{"type":"ShapeType","name":"sType","description":"<p>The shape type which specifies the preset shape geometry.</p>","optional":true,"defaultValue":"\"rect\""},{"type":"EMU","name":"nWidth","description":"<p>The shape width in English measure units.</p>","optional":false},{"type":"EMU","name":"nHeight","description":"<p>The shape height in English measure units.</p>","optional":false},{"type":"ApiFill","name":"oFill","description":"<p>The color or pattern used to fill the shape.</p>","optional":false},{"type":"ApiStroke","name":"oStroke","description":"<p>The stroke used to create the element shadow.</p>","optional":false}]},"CreateChart":{"memberof":"Api","name":"CreateChart","description":"<p>Create a chart with the parameters specified.</p>","tags":{"typeofeditors":["CPE"]},"returns":[["ApiChart"]],"see":null,"inherits":null,"params":[{"type":"ChartType","name":"sType","description":"<p>The chart type used for the chart display.</p>","optional":true,"defaultValue":"\"bar\""},{"type":"Array","name":"aSeries","description":"<p>The array of the data used to build the chart from.</p>","optional":false},{"type":"Array","name":"aSeriesNames","description":"<p>The array of the names (the source table column names) used for the data which the chart will be build from.</p>","optional":false},{"type":"Array","name":"aCatNames","description":"<p>The array of the names (the source table row names) used for the data which the chart will be build from.</p>","optional":false},{"type":"EMU","name":"nWidth","description":"<p>The chart width in English measure units.</p>","optional":false},{"type":"EMU","name":"nHeight","description":"<p>The chart height in English measure units.</p>","optional":false},{"type":"number","name":"nStyleIndex","description":"<p>The chart color style index (can be <b>1 - 48</b>, as described in OOXML specification).</p>","optional":false}]},"CreateGroup":{"memberof":"Api","name":"CreateGroup","description":"<p>Create a group of drawings.</p>","tags":{},"returns":[["ApiGroup"]],"see":null,"inherits":null},"CreateTable":{"memberof":"Api","name":"CreateTable","description":"<p>Create table</p>","tags":{},"returns":[["ApiTable"]],"see":null,"inherits":null,"params":[]},"CreateParagraph":{"memberof":"Api","name":"CreateParagraph","description":"<p>Create a new paragraph.</p>","tags":{"typeofeditors":["CPE"]},"returns":[["ApiParagraph"]],"see":null,"inherits":null}},"comment":"/**\r\n     * @global\r\n     * @class\r\n     * @name Api\r\n     */","scope":"global"}
+{
+  "methods": {
+    "GetPresentation": {
+      "memberof": "Api",
+      "name": "GetPresentation",
+      "description": "<p>Get the main presentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiPresentation"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "CreateSlide": {
+      "memberof": "Api",
+      "name": "CreateSlide",
+      "description": "<p>Create a new slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiSlide"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "CreateImage": {
+      "memberof": "Api",
+      "name": "CreateImage",
+      "description": "<p>Create an image with the parameters specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiImage"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sImageSrc",
+          "description": "<p>The image source where the image to be inserted should be taken from (currently<br>only internet URL or Base64 encoded images are supported).</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The image width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The image height in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateShape": {
+      "memberof": "Api",
+      "name": "CreateShape",
+      "description": "<p>Create a shape with the parameters specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiShape"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ShapeType",
+          "name": "sType",
+          "description": "<p>The shape type which specifies the preset shape geometry.</p>",
+          "optional": true,
+          "defaultValue": "\"rect\""
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The shape width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The shape height in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The color or pattern used to fill the shape.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the element shadow.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateChart": {
+      "memberof": "Api",
+      "name": "CreateChart",
+      "description": "<p>Create a chart with the parameters specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiChart"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ChartType",
+          "name": "sType",
+          "description": "<p>The chart type used for the chart display.</p>",
+          "optional": true,
+          "defaultValue": "\"bar\""
+        },
+        {
+          "type": "Array",
+          "name": "aSeries",
+          "description": "<p>The array of the data used to build the chart from.</p>",
+          "optional": false
+        },
+        {
+          "type": "Array",
+          "name": "aSeriesNames",
+          "description": "<p>The array of the names (the source table column names) used for the data which the chart will be build from.</p>",
+          "optional": false
+        },
+        {
+          "type": "Array",
+          "name": "aCatNames",
+          "description": "<p>The array of the names (the source table row names) used for the data which the chart will be build from.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The chart width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The chart height in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nStyleIndex",
+          "description": "<p>The chart color style index (can be <b>1 - 48</b>, as described in OOXML specification).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateGroup": {
+      "memberof": "Api",
+      "name": "CreateGroup",
+      "description": "<p>Create a group of drawings.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiGroup"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "CreateTable": {
+      "memberof": "Api",
+      "name": "CreateTable",
+      "description": "<p>Create table</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiTable"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
+    },
+    "CreateParagraph": {
+      "memberof": "Api",
+      "name": "CreateParagraph",
+      "description": "<p>Create a new paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * @global\r\n     * @class\r\n     * @name Api\r\n     */",
+  "scope": "global"
+}
