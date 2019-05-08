@@ -237,7 +237,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public static HtmlString ParamTypeToHtml(DBParam param)
         {
             var link = SearchType(param.Type, param.Module);
-            return new HtmlString(link == null ? param.Type : string.Format("<a href=\"{0}\">{1}</a>", link, param.Type));
+            var encoded = HttpUtility.HtmlEncode(param.Type);
+            return new HtmlString(link == null ? encoded : string.Format("<a href=\"{0}\">{1}</a>", link, encoded));
         }
 
         public static HtmlString TypesToHtml(IEnumerable<string> types, string priority)
@@ -253,7 +254,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
 
                 var link = SearchType(type, priority);
-                returnsHtml.Add(link == null ? type : string.Format("<a href=\"{0}\">{1}</a>", link, type));
+                var encoded = HttpUtility.HtmlEncode(type);
+                returnsHtml.Add(link == null ? encoded : string.Format("<a href=\"{0}\">{1}</a>", link, encoded));
             }
 
             return new HtmlString(string.Join(" | ", returnsHtml));
