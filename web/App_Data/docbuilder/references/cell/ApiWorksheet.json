@@ -171,7 +171,7 @@
     "GetRange": {
       "memberof": "ApiWorksheet",
       "name": "GetRange",
-      "description": "<p>Returns an object that represents the selected range of the current sheet. Can be a single cell - <b>A1</b>, or cells<br>from a single row - <b>A1:E1</b>, or cells from a single column - <b>A1:A10</b>, or cells from several rows and columns - <b>A1:E10</b>.</p>",
+      "description": "<p>Returns an object that represents the selected range of the current sheet. Can be a single cell - <b>A1</b>, or cells\nfrom a single row - <b>A1:E1</b>, or cells from a single column - <b>A1:A10</b>, or cells from several rows and columns - <b>A1:E10</b>.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -244,7 +244,7 @@
     "SetColumnWidth": {
       "memberof": "ApiWorksheet",
       "name": "SetColumnWidth",
-      "description": "<p>Set the width to the selected column of the current active sheet. The width is equal to the set number multiplied<br>by 7 pixels - so if you set the width to 10 it will be equal to 70 pixels.</p>",
+      "description": "<p>Set the width to the selected column of the current active sheet. The width is equal to the set number multiplied\nby 7 pixels - so if you set the width to 10 it will be equal to 70 pixels.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -479,7 +479,7 @@
     "AddChart": {
       "memberof": "ApiWorksheet",
       "name": "AddChart",
-      "description": "<p>Create a chart of the set type from the selected data range of the current sheet.</p>\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of the specified nFromCol column and nFromRow<br>row cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
+      "description": "<p>Create a chart of the set type from the selected data range of the current sheet.</p>\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of the specified nFromCol column and nFromRow\nrow cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -558,7 +558,7 @@
     "AddShape": {
       "memberof": "ApiWorksheet",
       "name": "AddShape",
-      "description": "<p>Adds the shape to the current sheet with the parameters specified.</p>\n<note>Please note, that the horizontal <code>nColOffset</code> and vertical <code>nRowOffset</code> offsets are<br>calculated within the limits of the specified <code>nFromCol</code> column and <code>nFromRow</code> row cell<br>only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
+      "description": "<p>Adds the shape to the current sheet with the parameters specified.</p>\n<note>Please note, that the horizontal <code>nColOffset</code> and vertical <code>nRowOffset</code> offsets are\ncalculated within the limits of the specified <code>nFromCol</code> column and <code>nFromRow</code> row cell\nonly. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
       "tags": {
         "typeofeditors": [
           "CSE"

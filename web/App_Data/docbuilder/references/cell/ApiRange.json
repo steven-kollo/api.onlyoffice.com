@@ -392,7 +392,7 @@
         {
           "type": "'none' | 'single' | 'singleAccounting' | 'double' | 'doubleAccounting'",
           "name": "value",
-          "description": "<p>Specifies the type of the<br>line displayed under the characters. The following values are available:</p>\n<ul>\n<li><b>&quot;none&quot;</b> - for no underlining;</li>\n<li><b>&quot;single&quot;</b> - for the single line underlining the cell contents;</li>\n<li><b>&quot;singleAccounting&quot;</b> - for the single line underlining the cell contents but not protruding beyond the cell borders;</li>\n<li><b>&quot;double&quot;</b> - for the double line underlining the cell contents;</li>\n<li><b>&quot;doubleAccounting&quot;</b> - for the double line underlining the cell contents but not protruding beyond the cell borders.</li>\n</ul>",
+          "description": "<p>Specifies the type of the\nline displayed under the characters. The following values are available:</p>\n<ul>\n<li><b>&quot;none&quot;</b> - for no underlining;</li>\n<li><b>&quot;single&quot;</b> - for the single line underlining the cell contents;</li>\n<li><b>&quot;singleAccounting&quot;</b> - for the single line underlining the cell contents but not protruding beyond the cell borders;</li>\n<li><b>&quot;double&quot;</b> - for the double line underlining the cell contents;</li>\n<li><b>&quot;doubleAccounting&quot;</b> - for the double line underlining the cell contents but not protruding beyond the cell borders.</li>\n</ul>",
           "optional": false
         }
       ]
@@ -530,7 +530,7 @@
         {
           "type": "bool",
           "name": "across",
-          "description": "<p>When set to <b>true</b>, the cells within the selected range will be merged along the rows,<br>but remain split in the columns. When set to <b>false</b>, the whole selected range of cells will be merged into a single cell.</p>",
+          "description": "<p>When set to <b>true</b>, the cells within the selected range will be merged along the rows,\nbut remain split in the columns. When set to <b>false</b>, the whole selected range of cells will be merged into a single cell.</p>",
           "optional": false
         }
       ]

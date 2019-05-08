@@ -135,7 +135,7 @@
     "GetElementsCount": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetElementsCount",
-      "description": "<p>Get the number of elements in the current inline text content control. The text content<br>control is created with one text run present in it by default, so any even without any<br>element added this method will return the value of '1'.</p>",
+      "description": "<p>Get the number of elements in the current inline text content control. The text content \ncontrol is created with one text run present in it by default, so any even without any \nelement added this method will return the value of '1'.</p>",
       "tags": {},
       "returns": [
         [

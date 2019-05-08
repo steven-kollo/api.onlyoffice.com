@@ -54,7 +54,7 @@
     "CreateStyle": {
       "memberof": "ApiDocument",
       "name": "CreateStyle",
-      "description": "<p>Create a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one.<br>with a new one.</p>",
+      "description": "<p>Create a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one.\nwith a new one.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -162,7 +162,7 @@
     "CreateSection": {
       "memberof": "ApiDocument",
       "name": "CreateSection",
-      "description": "<p>Create a new document section which ends at the specified paragraph. Allows to set local parameters for the current<br>section - page size, footer, header, columns, etc.</p>",
+      "description": "<p>Create a new document section which ends at the specified paragraph. Allows to set local parameters for the current\nsection - page size, footer, header, columns, etc.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -187,7 +187,7 @@
     "SetEvenAndOddHdrFtr": {
       "memberof": "ApiDocument",
       "name": "SetEvenAndOddHdrFtr",
-      "description": "<p>Specify whether sections in this document will have different headers and footers for even and<br>odd pages (one header/footer for odd pages and another header/footer for even pages).</p>",
+      "description": "<p>Specify whether sections in this document will have different headers and footers for even and\nodd pages (one header/footer for odd pages and another header/footer for even pages).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -458,7 +458,7 @@
     "RemoveAllElements": {
       "memberof": "ApiDocument",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current document or from the current document element.</p>\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add<br>content to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note>",
+      "description": "<p>Remove all elements from the current document or from the current document element.</p>\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note>",
       "tags": {
         "typeofeditors": [
           "CDE",

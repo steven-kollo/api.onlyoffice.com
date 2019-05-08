@@ -43,7 +43,7 @@
     "SetContextualSpacing": {
       "memberof": "ApiParaPr",
       "name": "SetContextualSpacing",
-      "description": "<p>Specify that any space before or after this paragraph set using the<br>{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and<br>following paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
+      "description": "<p>Specify that any space before or after this paragraph set using the \n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and \nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -148,7 +148,7 @@
         {
           "type": "\"left\" | \"right\" | \"both\" | \"center\"",
           "name": "sJc",
-          "description": "<p>The parameters will define the justification type that<br>will be applied to the paragraph contents.</p>",
+          "description": "<p>The parameters will define the justification type that\nwill be applied to the paragraph contents.</p>",
           "optional": false
         }
       ]
@@ -177,7 +177,7 @@
     "SetKeepNext": {
       "memberof": "ApiParaPr",
       "name": "SetKeepNext",
-      "description": "<p>Specify that when rendering this document using a paginated view, the contents of this paragraph are at least<br>partly rendered on the same page as the following paragraph whenever possible.</p>",
+      "description": "<p>Specify that when rendering this document using a paginated view, the contents of this paragraph are at least\npartly rendered on the same page as the following paragraph whenever possible.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -190,7 +190,7 @@
         {
           "type": "boolean",
           "name": "isKeepNext",
-          "description": "<p>The true value will enable the option to keep lines of the paragraph on the same<br>page as the following paragraph.</p>",
+          "description": "<p>The true value will enable the option to keep lines of the paragraph on the same\npage as the following paragraph.</p>",
           "optional": false
         }
       ]
@@ -198,7 +198,7 @@
     "SetPageBreakBefore": {
       "memberof": "ApiParaPr",
       "name": "SetPageBreakBefore",
-      "description": "<p>Specify that when rendering this document using a paginated view, the contents of this paragraph are rendered at<br>the beginning of a new page in the document.</p>",
+      "description": "<p>Specify that when rendering this document using a paginated view, the contents of this paragraph are rendered at\nthe beginning of a new page in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -211,7 +211,7 @@
         {
           "type": "boolean",
           "name": "isPageBreakBefore",
-          "description": "<p>The true value will enable the option to render the contents of the paragraph<br>at the beginning of the a new page in the document.</p>",
+          "description": "<p>The true value will enable the option to render the contents of the paragraph\nat the beginning of the a new page in the document.</p>",
           "optional": false
         }
       ]
@@ -219,7 +219,7 @@
     "SetSpacingLine": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingLine",
-      "description": "<p>Set the paragraph line spacing. If the value of the sLineRule parameter is either<br>&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If<br>the value of the sLineRule parameter is &quot;auto&quot;, then the value of the<br>nLine parameter will be interpreted as 240ths of a line.</p>",
+      "description": "<p>Set the paragraph line spacing. If the value of the sLineRule parameter is either \n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If \nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the \nnLine parameter will be interpreted as 240ths of a line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -248,7 +248,7 @@
     "SetSpacingBefore": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingBefore",
-      "description": "<p>Set the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then<br>any value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then<br>it will be interpreted as false.</p>",
+      "description": "<p>Set the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then \nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then \nit will be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -278,7 +278,7 @@
     "SetSpacingAfter": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingAfter",
-      "description": "<p>Set the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then<br>any value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it<br>will be interpreted as false.</p>",
+      "description": "<p>Set the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then \nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it \nwill be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -354,7 +354,7 @@
     "SetBottomBorder": {
       "memberof": "ApiParaPr",
       "name": "SetBottomBorder",
-      "description": "<p>Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings.</p>\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added<br>to the whole block rather than to every paragraph in this block.</note>",
+      "description": "<p>Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings.</p>\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -630,7 +630,7 @@
     "SetTabs": {
       "memberof": "ApiParaPr",
       "name": "SetTabs",
-      "description": "<p>Specify a sequence of custom tab stops which will be used for any tab characters in the current paragraph.<br><b>Warning</b>: The lengths of aPos array and aVal array <b>MUST BE</b> equal to each other.</p>",
+      "description": "<p>Specify a sequence of custom tab stops which will be used for any tab characters in the current paragraph.\n<b>Warning</b>: The lengths of aPos array and aVal array <b>MUST BE</b> equal to each other.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -645,13 +645,13 @@
         {
           "type": "Array.<twips>",
           "name": "aPos",
-          "description": "<p>An array of the positions of custom tab stops with respect to the current page margins<br>measured in twentieths of a point (1/1440 of an inch).</p>",
+          "description": "<p>An array of the positions of custom tab stops with respect to the current page margins\nmeasured in twentieths of a point (1/1440 of an inch).</p>",
           "optional": false
         },
         {
           "type": "Array.<TabJc>",
           "name": "aVal",
-          "description": "<p>An array of the styles of custom tab stops, which determines the behavior of the tab<br>stop and the alignment which will be applied to text entered at the current custom tab stop.</p>",
+          "description": "<p>An array of the styles of custom tab stops, which determines the behavior of the tab\nstop and the alignment which will be applied to text entered at the current custom tab stop.</p>",
           "optional": false
         }
       ]
@@ -678,7 +678,7 @@
         {
           "type": "number",
           "name": "nLvl",
-          "description": "<p>Specifies a numbering level reference. If the current instance of the ApiParaPr class is direct<br>formatting of a paragraph, then this parameter MUST BE specified. Otherwise if the current instance of the ApiParaPr class<br>is the part of ApiStyle properties, this parameter will be ignored.</p>",
+          "description": "<p>Specifies a numbering level reference. If the current instance of the ApiParaPr class is direct\nformatting of a paragraph, then this parameter MUST BE specified. Otherwise if the current instance of the ApiParaPr class\nis the part of ApiStyle properties, this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": 0
         }

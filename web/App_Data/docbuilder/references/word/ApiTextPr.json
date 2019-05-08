@@ -22,7 +22,7 @@
     "SetStyle": {
       "memberof": "ApiTextPr",
       "name": "SetStyle",
-      "description": "<p>The text style base method.</p>\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiRun#SetStyle} method which sets<br>the selected or created style for the text.</note>",
+      "description": "<p>The text style base method.</p>\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiRun#SetStyle} method which sets\nthe selected or created style for the text.</note>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -112,7 +112,7 @@
     "SetUnderline": {
       "memberof": "ApiTextPr",
       "name": "SetUnderline",
-      "description": "<p>Specify that the contents of this run are displayed along with a line appearing directly below the character<br>(less than all the spacing above and below the characters on the line).</p>",
+      "description": "<p>Specify that the contents of this run are displayed along with a line appearing directly below the character\n(less than all the spacing above and below the characters on the line).</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -353,7 +353,7 @@
     "SetSmallCaps": {
       "memberof": "ApiTextPr",
       "name": "SetSmallCaps",
-      "description": "<p>Specify that all small letter characters in this text run are formatted for display only as their capital<br>letter character equivalents in a font size two points smaller than the actual font size specified for this text.</p>",
+      "description": "<p>Specify that all small letter characters in this text run are formatted for display only as their capital\nletter character equivalents in a font size two points smaller than the actual font size specified for this text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -376,7 +376,7 @@
     "SetPosition": {
       "memberof": "ApiTextPr",
       "name": "SetPosition",
-      "description": "<p>Specify the amount by which text is raised or lowered for this run in relation to the default<br>baseline of the surrounding non-positioned text.</p>",
+      "description": "<p>Specify the amount by which text is raised or lowered for this run in relation to the default\nbaseline of the surrounding non-positioned text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -389,7 +389,7 @@
         {
           "type": "hps",
           "name": "nPosition",
-          "description": "<p>Specifies a positive (raised text) or negative (lowered text)<br>measurement in half-points (1/144 of an inch).</p>",
+          "description": "<p>Specifies a positive (raised text) or negative (lowered text)\nmeasurement in half-points (1/144 of an inch).</p>",
           "optional": false
         }
       ]
@@ -397,7 +397,7 @@
     "SetLanguage": {
       "memberof": "ApiTextPr",
       "name": "SetLanguage",
-      "description": "<p>Specify the languages which will be used to check spelling and grammar (if requested) when processing<br>the contents of this text run.</p>",
+      "description": "<p>Specify the languages which will be used to check spelling and grammar (if requested) when processing\nthe contents of this text run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -410,7 +410,7 @@
         {
           "type": "string",
           "name": "sLangId",
-          "description": "<p>The possible value for this parameter is a language identifier as defined by<br>RFC 4646/BCP 47. Example: &quot;en-CA&quot;.</p>",
+          "description": "<p>The possible value for this parameter is a language identifier as defined by\nRFC 4646/BCP 47. Example: &quot;en-CA&quot;.</p>",
           "optional": false
         }
       ]

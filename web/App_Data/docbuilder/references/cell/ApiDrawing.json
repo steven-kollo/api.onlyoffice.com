@@ -47,7 +47,7 @@
     "SetPosition": {
       "memberof": "ApiDrawing",
       "name": "SetPosition",
-      "description": "<p>Change the position for the drawing object.</p>\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of<br>the specified nFromCol column and nFromRow row cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
+      "description": "<p>Change the position for the drawing object.</p>\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of\nthe specified nFromCol column and nFromRow row cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
       "tags": {
         "typeofeditors": [
           "CSE"

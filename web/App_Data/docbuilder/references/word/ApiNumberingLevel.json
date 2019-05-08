@@ -135,7 +135,7 @@
         {
           "type": "string",
           "name": "sTextFormatString",
-          "description": "<p>Any text in this parameter will be taken as literal text to be repeated in each instance of this numbering level, except for any use of the percent symbol (%) followed by a number, which will be used to indicate the one-based index of the number to be used at this level. Any number of a level higher than this level will be ignored.<br>higher than this level shall be ignored.</p>",
+          "description": "<p>Any text in this parameter will be taken as literal text to be repeated in each instance of this numbering level, except for any use of the percent symbol (%) followed by a number, which will be used to indicate the one-based index of the number to be used at this level. Any number of a level higher than this level will be ignored.\nhigher than this level shall be ignored.</p>",
           "optional": false
         },
         {

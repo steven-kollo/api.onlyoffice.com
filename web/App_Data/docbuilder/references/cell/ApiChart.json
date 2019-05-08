@@ -132,7 +132,7 @@
         {
           "type": "bool",
           "name": "bIsMinMax",
-          "description": "<p>The <code>true</code> value will set the normal data direction for the vertical axis (from minimum to maximum).<br>The <code>false</code> value will set the inverted data direction for the vertical axis (from maximum to minimum).</p>",
+          "description": "<p>The <code>true</code> value will set the normal data direction for the vertical axis (from minimum to maximum).\nThe <code>false</code> value will set the inverted data direction for the vertical axis (from maximum to minimum).</p>",
           "optional": false
         }
       ]
@@ -217,7 +217,7 @@
         {
           "type": "bool",
           "name": "bIsMinMax",
-          "description": "<p>The <code>true</code> value will set the normal data direction for the horizontal axis<br>(from minimum to maximum). The <code>false</code> value will set the inverted data direction for the horizontal axis (from maximum to minimum).</p>",
+          "description": "<p>The <code>true</code> value will set the normal data direction for the horizontal axis\n(from minimum to maximum). The <code>false</code> value will set the inverted data direction for the horizontal axis (from maximum to minimum).</p>",
           "optional": false
         }
       ]

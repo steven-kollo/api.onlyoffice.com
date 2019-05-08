@@ -20,7 +20,7 @@
     "RemoveAllObjects": {
       "memberof": "ApiSlide",
       "name": "RemoveAllObjects",
-      "description": "<p>/**<br>Remove all the objects from the current slide.</p>",
+      "description": "<p>/**\nRemove all the objects from the current slide.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"

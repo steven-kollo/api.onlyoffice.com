@@ -36,7 +36,7 @@
     "MergeCells": {
       "memberof": "ApiTable",
       "name": "MergeCells",
-      "description": "<p>Merge array of cells. If merge was done successfully it will return merged cell, otherwise &quot;null&quot;.<br><b>Warning</b>: The number of cells in any row and the numbers of rows in the current table may be changed.</p>",
+      "description": "<p>Merge array of cells. If merge was done successfully it will return merged cell, otherwise &quot;null&quot;.\n<b>Warning</b>: The number of cells in any row and the numbers of rows in the current table may be changed.</p>",
       "tags": {},
       "returns": [
         [
@@ -56,7 +56,7 @@
     "SetTableLook": {
       "memberof": "ApiTable",
       "name": "SetTableLook",
-      "description": "<p>Specify the components of the conditional formatting of the referenced table style (if one exists)<br>which shall be applied to the set of table rows with the current table-level property exceptions. A table style<br>can specify up to six different optional conditional formats [Example: Different formatting for first column.<br>end example], which then can be applied or omitted from individual table rows in the parent table.</p>\n<p>The default setting is to apply the row and column banding formatting, but not the first row, last row, first<br>column, or last column formatting.</p>",
+      "description": "<p>Specify the components of the conditional formatting of the referenced table style (if one exists)\nwhich shall be applied to the set of table rows with the current table-level property exceptions. A table style\ncan specify up to six different optional conditional formats [Example: Different formatting for first column.\nend example], which then can be applied or omitted from individual table rows in the parent table.</p>\n<p>The default setting is to apply the row and column banding formatting, but not the first row, last row, first\ncolumn, or last column formatting.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -65,7 +65,7 @@
         {
           "type": "boolean",
           "name": "isFirstColumn",
-          "description": "<p>Specifies that the first column conditional formatting shall be applied to the<br>    table.</p>",
+          "description": "<p>Specifies that the first column conditional formatting shall be applied to the\n    table.</p>",
           "optional": false
         },
         {
@@ -77,7 +77,7 @@
         {
           "type": "boolean",
           "name": "isLastColumn",
-          "description": "<p>Specifies that the last column conditional formatting shall be applied to the<br>    table.</p>",
+          "description": "<p>Specifies that the last column conditional formatting shall be applied to the\n    table.</p>",
           "optional": false
         },
         {
@@ -89,13 +89,13 @@
         {
           "type": "boolean",
           "name": "isHorBand",
-          "description": "<p>Specifies that the horizontal banding conditional formatting shall not be applied<br>    to the table.</p>",
+          "description": "<p>Specifies that the horizontal banding conditional formatting shall not be applied\n    to the table.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isVerBand",
-          "description": "<p>Specifies that the vertical banding conditional formatting shall not be applied to<br>    the table.</p>",
+          "description": "<p>Specifies that the vertical banding conditional formatting shall not be applied to\n    the table.</p>",
           "optional": false
         }
       ]
@@ -122,7 +122,7 @@
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new row before or after the specified cell. If no cell is specified<br>then this parameter will be ignored.</p>",
+          "description": "<p>Add a new row before or after the specified cell. If no cell is specified\nthen this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -146,7 +146,7 @@
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new column before or after the specified cell. If no cell is specified<br>then this parameter will be ignored.</p>",
+          "description": "<p>Add a new column before or after the specified cell. If no cell is specified\nthen this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
         }

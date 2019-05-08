@@ -20,7 +20,7 @@
     "SetType": {
       "memberof": "ApiSection",
       "name": "SetType",
-      "description": "<p>Specify the type of the current section. The section type defines how the contents of the current<br>section are placed relative to the previous section.<br/><br>WordprocessingML supports five distinct types of section breaks:</p>\n<ul>\n<li><b>Next page</b> section breaks (the default if type is not specified), which begin the new section on the<br>following page.</li>\n<li><b>Odd</b> page section breaks, which begin the new section on the next odd-numbered page.</li>\n<li><b>Even</b> page section breaks, which begin the new section on the next even-numbered page.</li>\n<li><b>Continuous</b> section breaks, which begin the new section on the following paragraph. This means that<br>continuous section breaks might not specify certain page-level section properties, since they shall be<br>inherited from the following section. These breaks, however, can specify other section properties, such<br>as line numbering and footnote/endnote settings.</li>\n<li><b>Column</b> section breaks, which begin the new section on the next column on the page.</li>\n</ul>",
+      "description": "<p>Specify the type of the current section. The section type defines how the contents of the current \nsection are placed relative to the previous section.<br/>\nWordprocessingML supports five distinct types of section breaks:</p>\n<ul>\n<li><b>Next page</b> section breaks (the default if type is not specified), which begin the new section on the\nfollowing page.</li>\n<li><b>Odd</b> page section breaks, which begin the new section on the next odd-numbered page.</li>\n<li><b>Even</b> page section breaks, which begin the new section on the next even-numbered page.</li>\n<li><b>Continuous</b> section breaks, which begin the new section on the following paragraph. This means that\ncontinuous section breaks might not specify certain page-level section properties, since they shall be\ninherited from the following section. These breaks, however, can specify other section properties, such\nas line numbering and footnote/endnote settings.</li>\n<li><b>Column</b> section breaks, which begin the new section on the next column on the page.</li>\n</ul>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -68,7 +68,7 @@
     "SetNotEqualColumns": {
       "memberof": "ApiSection",
       "name": "SetNotEqualColumns",
-      "description": "<p>Specify that all columns in the current section are of a different width. Number of columns is equal<br>to the length of the aWidth array. The length of the aSpaces array MUST BE equal to (aWidth.length - 1).</p>",
+      "description": "<p>Specify that all columns in the current section are of a different width. Number of columns is equal \nto the length of the aWidth array. The length of the aSpaces array MUST BE equal to (aWidth.length - 1).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -202,7 +202,7 @@
         {
           "type": "twips",
           "name": "nDistance",
-          "description": "<p>The distance from the bottom edge of the page to the bottom edge of the footer measured<br>in twentieths of a point (1/1440 of an inch).</p>",
+          "description": "<p>The distance from the bottom edge of the page to the bottom edge of the footer measured\nin twentieths of a point (1/1440 of an inch).</p>",
           "optional": false
         }
       ]
@@ -233,7 +233,7 @@
         {
           "type": "boolean",
           "name": "isCreate",
-          "description": "<p>Whether to create a new header or not with the specified header type in case<br>no header with such a type could be found in the current section.</p>",
+          "description": "<p>Whether to create a new header or not with the specified header type in case\nno header with such a type could be found in the current section.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -242,7 +242,7 @@
     "RemoveHeader": {
       "memberof": "ApiSection",
       "name": "RemoveHeader",
-      "description": "<p>Remove the header of the specified type from the current section. After removal the header will be inherited from<br>the previous section or, if this is the first section in the document, no header of the specified type will be present.</p>",
+      "description": "<p>Remove the header of the specified type from the current section. After removal the header will be inherited from\nthe previous section or, if this is the first section in the document, no header of the specified type will be present.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -286,7 +286,7 @@
         {
           "type": "boolean",
           "name": "isCreate",
-          "description": "<p>Whether to create a new footer or not with the specified footer type in case<br>no footer with such a type could be found in the current section.</p>",
+          "description": "<p>Whether to create a new footer or not with the specified footer type in case\nno footer with such a type could be found in the current section.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -295,7 +295,7 @@
     "RemoveFooter": {
       "memberof": "ApiSection",
       "name": "RemoveFooter",
-      "description": "<p>Remove the footer of the specified type from the current section. After removal the footer will be inherited from<br>the previous section or, if this is the first section in the document, no footer of the specified type will be present.</p>",
+      "description": "<p>Remove the footer of the specified type from the current section. After removal the footer will be inherited from \nthe previous section or, if this is the first section in the document, no footer of the specified type will be present.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

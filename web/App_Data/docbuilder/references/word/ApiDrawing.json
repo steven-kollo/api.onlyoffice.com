@@ -48,7 +48,7 @@
     "SetWrappingStyle": {
       "memberof": "ApiDrawing",
       "name": "SetWrappingStyle",
-      "description": "<p>Set the wrapping type of this object (image, shape, chart). One of the following wrapping style types can be set:</p>\n<ul>\n<li><b>&quot;inline&quot;</b> - the object is considered to be a part of the text, like a character, so when the text moves, the object moves as well. In this case the positioning options are inaccessible.<br>If one of the following styles is selected, the object can be moved independently of the text and positioned on the page exactly:</li>\n<li><b>&quot;square&quot;</b> - the text wraps the rectangular box that bounds the object.</li>\n<li><b>&quot;tight&quot;</b> - the text wraps the actual object edges.</li>\n<li><b>&quot;through&quot;</b> - the text wraps around the object edges and fills in the open white space within the object.</li>\n<li><b>&quot;topAndBottom&quot;</b> - the text is only above and below the object.</li>\n<li><b>&quot;behind&quot;</b> - the text overlaps the object.</li>\n<li><b>&quot;inFront&quot;</b> - the object overlaps the text.</li>\n</ul>",
+      "description": "<p>Set the wrapping type of this object (image, shape, chart). One of the following wrapping style types can be set:</p>\n<ul>\n<li><b>&quot;inline&quot;</b> - the object is considered to be a part of the text, like a character, so when the text moves, the object moves as well. In this case the positioning options are inaccessible.\nIf one of the following styles is selected, the object can be moved independently of the text and positioned on the page exactly:</li>\n<li><b>&quot;square&quot;</b> - the text wraps the rectangular box that bounds the object.</li>\n<li><b>&quot;tight&quot;</b> - the text wraps the actual object edges.</li>\n<li><b>&quot;through&quot;</b> - the text wraps around the object edges and fills in the open white space within the object.</li>\n<li><b>&quot;topAndBottom&quot;</b> - the text is only above and below the object.</li>\n<li><b>&quot;behind&quot;</b> - the text overlaps the object.</li>\n<li><b>&quot;inFront&quot;</b> - the object overlaps the text.</li>\n</ul>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -181,7 +181,7 @@
     "SetDistances": {
       "memberof": "ApiDrawing",
       "name": "SetDistances",
-      "description": "<p>Specify the minimum distance which will be maintained between the edges of this drawing object and any<br>subsequent text.</p>",
+      "description": "<p>Specify the minimum distance which will be maintained between the edges of this drawing object and any\nsubsequent text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

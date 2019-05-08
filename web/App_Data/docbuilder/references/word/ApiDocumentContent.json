@@ -112,7 +112,7 @@
     "RemoveAllElements": {
       "memberof": "ApiDocumentContent",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current document or from the current document element.</p>\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add<br>content to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note>",
+      "description": "<p>Remove all elements from the current document or from the current document element.</p>\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note>",
       "tags": {
         "typeofeditors": [
           "CDE",

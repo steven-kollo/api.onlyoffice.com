@@ -333,7 +333,7 @@
     "SetTableBorderInsideH": {
       "memberof": "ApiTablePr",
       "name": "SetTableBorderInsideH",
-      "description": "<p>Specify the border which will be displayed on all horizontal table cell borders which are not on an outmost edge<br>of the parent table (all horizontal borders which are not the topmost or bottommost border).</p>",
+      "description": "<p>Specify the border which will be displayed on all horizontal table cell borders which are not on an outmost edge\nof the parent table (all horizontal borders which are not the topmost or bottommost border).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -384,7 +384,7 @@
     "SetTableBorderInsideV": {
       "memberof": "ApiTablePr",
       "name": "SetTableBorderInsideV",
-      "description": "<p>Specify the border which will be displayed on all vertical table cell borders which are not on an outmost edge<br>of the parent table (all vertical borders which are not the leftmost or rightmost border).</p>",
+      "description": "<p>Specify the border which will be displayed on all vertical table cell borders which are not on an outmost edge\nof the parent table (all vertical borders which are not the leftmost or rightmost border).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -435,7 +435,7 @@
     "SetTableCellMarginBottom": {
       "memberof": "ApiTablePr",
       "name": "SetTableCellMarginBottom",
-      "description": "<p>Specify the amount of space which will be left between the bottom extent of the cell contents and the border<br>of all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specify the amount of space which will be left between the bottom extent of the cell contents and the border\nof all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -448,7 +448,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>The value for the amount of space below the bottom extent of the cell measured in<br>twentieths of a point (1/1440 of an inch).</p>",
+          "description": "<p>The value for the amount of space below the bottom extent of the cell measured in\ntwentieths of a point (1/1440 of an inch).</p>",
           "optional": false
         }
       ]
@@ -456,7 +456,7 @@
     "SetTableCellMarginLeft": {
       "memberof": "ApiTablePr",
       "name": "SetTableCellMarginLeft",
-      "description": "<p>Specify the amount of space which will be present between the left extent of the cell contents and the left<br>border of all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specify the amount of space which will be present between the left extent of the cell contents and the left\nborder of all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -477,7 +477,7 @@
     "SetTableCellMarginRight": {
       "memberof": "ApiTablePr",
       "name": "SetTableCellMarginRight",
-      "description": "<p>Specify the amount of space which will be present between the right extent of the cell contents and the right<br>border of all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specify the amount of space which will be present between the right extent of the cell contents and the right\nborder of all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -498,7 +498,7 @@
     "SetTableCellMarginTop": {
       "memberof": "ApiTablePr",
       "name": "SetTableCellMarginTop",
-      "description": "<p>Specify the amount of space which will be present between the top extent of the cell contents and the top border<br>of all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specify the amount of space which will be present between the top extent of the cell contents and the top border\nof all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -540,7 +540,7 @@
     "SetTableInd": {
       "memberof": "ApiTablePr",
       "name": "SetTableInd",
-      "description": "<p>Specify the indentation which will be added before the leading edge of the current table in the document<br>(the left edge in a left-to-right table, and the right edge in a right-to-left table).</p>",
+      "description": "<p>Specify the indentation which will be added before the leading edge of the current table in the document\n(the left edge in a left-to-right table, and the right edge in a right-to-left table).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

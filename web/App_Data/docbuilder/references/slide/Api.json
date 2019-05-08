@@ -54,7 +54,7 @@
         {
           "type": "string",
           "name": "sImageSrc",
-          "description": "<p>The image source where the image to be inserted should be taken from (currently<br>only internet URL or Base64 encoded images are supported).</p>",
+          "description": "<p>The image source where the image to be inserted should be taken from (currently\nonly internet URL or Base64 encoded images are supported).</p>",
           "optional": false
         },
         {

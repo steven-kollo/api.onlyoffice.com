@@ -45,7 +45,7 @@
     "SetCellMarginBottom": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginBottom",
-      "description": "<p>Specifies the amount of space which shall be left between the bottom extent of the cell contents and the border<br>of a specific table cell within a table.</p>",
+      "description": "<p>Specifies the amount of space which shall be left between the bottom extent of the cell contents and the border\nof a specific table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -54,7 +54,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,<br>otherwise override the table cell bottom margin with specified value for the current cell.</p>",
+          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,\notherwise override the table cell bottom margin with specified value for the current cell.</p>",
           "optional": false
         }
       ]
@@ -62,7 +62,7 @@
     "SetCellMarginLeft": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginLeft",
-      "description": "<p>Specifies the amount of space which shall be left between the left extent of the current cell contents and the<br>left edge border of a specific individual table cell within a table.</p>",
+      "description": "<p>Specifies the amount of space which shall be left between the left extent of the current cell contents and the\nleft edge border of a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -71,7 +71,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,<br>otherwise override the table cell bottom margin with specified value for the current cell.</p>",
+          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,\notherwise override the table cell bottom margin with specified value for the current cell.</p>",
           "optional": false
         }
       ]
@@ -79,7 +79,7 @@
     "SetCellMarginRight": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginRight",
-      "description": "<p>Specifies the amount of space which shall be left between the right extent of the current cell contents and the<br>right edge border of a specific individual table cell within a table.</p>",
+      "description": "<p>Specifies the amount of space which shall be left between the right extent of the current cell contents and the\nright edge border of a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -88,7 +88,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,<br>otherwise override the table cell bottom margin with specified value for the current cell.</p>",
+          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,\notherwise override the table cell bottom margin with specified value for the current cell.</p>",
           "optional": false
         }
       ]
@@ -96,7 +96,7 @@
     "SetCellMarginTop": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginTop",
-      "description": "<p>Specifies the amount of space which shall be left between the top extent of the current cell contents and the<br>top edge border of a specific individual table cell within a table.</p>",
+      "description": "<p>Specifies the amount of space which shall be left between the top extent of the current cell contents and the\ntop edge border of a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -105,7 +105,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,<br>otherwise override the table cell bottom margin with specified value for the current cell.</p>",
+          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,\notherwise override the table cell bottom margin with specified value for the current cell.</p>",
           "optional": false
         }
       ]
