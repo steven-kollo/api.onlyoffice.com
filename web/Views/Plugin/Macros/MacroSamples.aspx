@@ -55,7 +55,7 @@ End Sub</pre>
     <pre>(function()
 {
     Api.GetActiveSheet().GetRange("A1:B3").Merge(true);
-    Api.GetActiveSheet().GetRange("A1:B3").UnMerge();
+    Api.GetActiveSheet().GetRange("C5:D10").UnMerge();
 })();</pre>
     <p>Methods used: <a href="<%= Url.Action("spreadsheetapi/api/getactivesheet", "docbuilder") %>">GetActiveSheet</a>, <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrange", "docbuilder") %>">GetRange</a>, <a href="<%= Url.Action("spreadsheetapi/apirange/merge", "docbuilder") %>">Merge</a>, <a href="<%= Url.Action("spreadsheetapi/apirange/unmerge", "docbuilder") %>">UnMerge</a></p>
     <h3 class="spoiler_heading">Reference Microsoft VBA macro code</h3>
