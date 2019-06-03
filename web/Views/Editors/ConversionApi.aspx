@@ -743,7 +743,7 @@
 }
 </pre>
 
-    <div class="header-gray">Possible error codes and their description</div>
+    <div id="error" class="copy-link header-gray">Possible error codes and their description</div>
     <table class="table">
         <colgroup>
             <col style="width: 105px;" />

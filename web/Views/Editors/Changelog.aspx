@@ -17,6 +17,18 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="53" class="copy-link">Version 5.3</h2>
+    <ul>
+        <li>The <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> field is now used to restrict comment deletion as well.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">editorConfig.customization.compactHeader</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">editorConfig.customization.toolbarNoTabs</a> field.</li>
+        <li>Added <a href="<%= Url.Action("conversionapi") %>#error">conversion error</a> for password protected documents.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method parameter.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.</li>
+    </ul>
+
     <h2 id="52" class="copy-link">Version 5.2</h2>
     <ul>
         <li>Token in request <a href="<%= Url.Action("signature/body") %>">body</a> parameters.</li>

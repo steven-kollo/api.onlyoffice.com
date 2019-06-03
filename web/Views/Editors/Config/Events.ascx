@@ -140,6 +140,21 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to open the document which contains a bookmark, scrolling to the bookmark position. To use the document bookmarks you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method. The bookmark data is received in the <em>event.data</em> parameter.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onMakeActionLink": function (event){
+            var ACTION_DATA = event.data;
+        },
+        ...
+    },
+    ...
+});</pre>
+    </li>
+
+    <li>
         <p><b id="onOutdatedVersion" class="copy-link">onOutdatedVersion</b> - the function called after the <a href="<%= Url.Action("troubleshooting") %>#key">error</a> is shown, when the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new <em>document.key</em>.</p>
         <div class="header-gray">Example</div>
         <pre>
