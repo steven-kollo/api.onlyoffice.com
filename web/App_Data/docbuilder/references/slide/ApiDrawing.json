@@ -1,0 +1,67 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiDrawing",
+      "name": "GetClassType",
+      "description": "<p>Get the type of the class based on this base class.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "\"drawing\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSize": {
+      "memberof": "ApiDrawing",
+      "name": "SetSize",
+      "description": "<p>Set the size of the object (image, shape, chart) bounding box.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The object width measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The object height measured in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetPosition": {
+      "memberof": "ApiDrawing",
+      "name": "SetPosition",
+      "description": "<p>Set the position of the drawing on the slide.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "EMU",
+          "name": "nPosX",
+          "description": "<p>The distance from the left side of the slide to left side of the drawing measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nPosY",
+          "description": "<p>The distance from the top side of the slide to the upper side of the drawing measured in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\r\n     * Class representing a graphical object.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a graphical object.</p>",
+  "scope": "global",
+  "params": []
+}

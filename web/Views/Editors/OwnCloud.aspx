@@ -43,7 +43,7 @@
     <p>The latest connector signed versions are available in the official store for <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>.</p>
 
 
-    <h2>Installing ONLYOFFICE Document Server</h2>
+    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from ownCloud and any end clients (version 4.2.7 and later are supported for use with the app).
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
@@ -57,7 +57,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2>Installing ownCloud ONLYOFFICE integration app</h2>
+    <h2 id="install" class="copy-link">Installing ownCloud ONLYOFFICE integration app</h2>
     <p>
         The ownCloud administrator can install the integration app from the in-built application market.
         For that click the upper-left hamburger menu and select <b>Market</b>.
@@ -68,7 +68,7 @@
         To start using ONLYOFFICE Document Server with ownCloud, the following steps must be performed:
     </p>
     <ol>
-        <li>Go to the ownCloud server <em>apps/</em> directory (or some other directory <a href="https://doc.owncloud.org/server/administration_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
+        <li>Go to the ownCloud server <em>apps/</em> directory (or some other directory <a href="https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
             <span class="commandline">cd apps/</span>
         </li>
         <li>Get the ownCloud ONLYOFFICE integration app.
@@ -179,7 +179,7 @@
             But if the encryption with the <em>per-user encryption keys</em> (used by default in ownCloud <b>Default encryption module</b> app) is enabled, ONLYOFFICE Document Server cannot open the encrypted files for editing and save them after the editing.
             The ONLYOFFICE section of the administrative settings page will display a notification about it.
             However if you set the encryption with the <em>master key</em>, ONLYOFFICE application will work as intended.
-            The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/administration_manual/configuration/files/encryption_configuration.html#enabling-encryption-from-the-command-line" target="_blank">ownCloud</a> websites.
+            The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/admin_manual/configuration/files/encryption_configuration.html#enabling-encryption-from-the-command-line" target="_blank">ownCloud</a> websites.
             <div class="note note-important">
                 <div class="note-important-label">Please note</div>
                 ownCloud recommends using <em>master encryption key</em> only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable <em>master key</em> based encryption on them.

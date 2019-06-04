@@ -1,0 +1,27 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiGradientStop",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"gradientStop\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class represent gradient stop\r\n\t * @constructor\r\n\t * */",
+  "description": "<p>Class represent gradient stop</p>",
+  "scope": "global",
+  "params": []
+}

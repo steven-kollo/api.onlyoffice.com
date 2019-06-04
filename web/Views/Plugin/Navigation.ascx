@@ -113,6 +113,9 @@
         <a href="<%= Url.Action("installation") %>">Plugin installation</a>
     </li>
     <li>
+        <a href="<%= Url.Action("localization") %>">Plugin localization</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("example") %>">Plugin example</a>
     </li>
 </ul>

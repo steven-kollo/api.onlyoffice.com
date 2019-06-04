@@ -1,0 +1,114 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiSlide",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"slide\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "RemoveAllObjects": {
+      "memberof": "ApiSlide",
+      "name": "RemoveAllObjects",
+      "description": "<p>/**\nRemove all the objects from the current slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "AddObject": {
+      "memberof": "ApiSlide",
+      "name": "AddObject",
+      "description": "<p>Add an object (image, shape or chart) to the current presentation slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiDrawing",
+          "name": "oDrawing",
+          "description": "<p>The object which will be added to the current presentation slide.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetBackground": {
+      "memberof": "ApiSlide",
+      "name": "SetBackground",
+      "description": "<p>Set the background to the current presentation slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the presentation slide background.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetWidth": {
+      "memberof": "ApiSlide",
+      "name": "GetWidth",
+      "description": "<p>Get the slide width in English measure units.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "EMU"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetHeight": {
+      "memberof": "ApiSlide",
+      "name": "GetHeight",
+      "description": "<p>Get the slide height in English measure units.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "EMU"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * Class representing a slide.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a slide.</p>",
+  "scope": "global",
+  "params": []
+}

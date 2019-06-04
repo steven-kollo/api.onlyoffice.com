@@ -1,0 +1,25 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiUnsupported",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "\"unsupported\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class representing an unsupported element.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing an unsupported element.</p>",
+  "scope": "global",
+  "params": []
+}

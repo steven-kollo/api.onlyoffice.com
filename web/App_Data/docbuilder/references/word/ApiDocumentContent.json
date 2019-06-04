@@ -1,0 +1,155 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetClassType",
+      "description": "<p>Get the type of the current class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"documentContent\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetElementsCount": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetElementsCount",
+      "description": "<p>Get the number of elements in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetElement": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetElement",
+      "description": "<p>Get the element by its position in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "DocumentElement"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddElement": {
+      "memberof": "ApiDocumentContent",
+      "name": "AddElement",
+      "description": "<p>Add paragraph or table using its position in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>The position where the current element will be added.</p>",
+          "optional": false
+        },
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The document element which will be added at the current position.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Push": {
+      "memberof": "ApiDocumentContent",
+      "name": "Push",
+      "description": "<p>Push a paragraph or a table to actually add it to the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The type of the element which will be pushed to the document.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "RemoveAllElements": {
+      "memberof": "ApiDocumentContent",
+      "name": "RemoveAllElements",
+      "description": "<p>Remove all elements from the current document or from the current document element.</p>\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "RemoveElement": {
+      "memberof": "ApiDocumentContent",
+      "name": "RemoveElement",
+      "description": "<p>Remove element using the position specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>The element number (position) in the document or inside other element.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a container for paragraphs and tables.\r\n\t * @param Document\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a container for paragraphs and tables.</p>",
+  "scope": "global",
+  "params": []
+}

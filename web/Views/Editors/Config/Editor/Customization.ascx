@@ -55,7 +55,7 @@
         </tr>
         <tr class="tablerow">
             <td id="commentAuthorOnly" class="copy-link">commentAuthorOnly</td>
-            <td>Defines if the user can edit only his comments.
+            <td>Defines if the user can edit and delete only his comments.
                 The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>true</td>
@@ -68,6 +68,17 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td id="compactHeader" class="copy-link">compactHeader</td>
+            <td>Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (<b>false</b>) or in the toolbar (<b>true</b>) making the header more compact. The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="compactToolbar" class="copy-link">compactToolbar</td>
             <td>Defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>.
                 The default value is <b>false</b>.</td>
@@ -75,30 +86,35 @@
             <td>false</td>
         </tr>
         <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="customer" class="copy-link">customer<span class="required">*</span></td>
-            <td>Contains the information for the editor <b>About</b> section.
+            <td>Contains the information which will be displayed int the editor <b>About</b> section and visible to all the editor users.
                 The object has the following parameters:
                 <ul>
-                    <li><b>address</b> - postal address of the above company or person,
+                    <li><b>address</b> - postal address of the company or person who gives access to the editors or the editor authors,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "My City, 123a-45";
                     </li>
-                    <li><b>info</b> - some information about the above company or person which will be displayed at the <b>About</b> page and visible to all editor users,
+                    <li><b>info</b> - some additional information about the company or person you want the others to know,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "Some additional information";
                     </li>
-                    <li><b>logo</b> - the path to the image logo which will be displayed at the <b>About</b> page (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
+                    <li><b>logo</b> - the path to the image logo (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
                         The image must have the following size: 432x70,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "https://example.com/logo-big.png".
                     </li>
-                    <li><b>mail</b> - email address of the above company or person,
+                    <li><b>mail</b> - email address of the company or person who gives access to the editors or the editor authors,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -193,6 +209,13 @@
                 <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="hideRightMenu" class="copy-link">hideRightMenu</td>
+            <td>Defines if the right menu is displayed or hidden on first loading.
+                The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -283,6 +306,18 @@
         </tr>
         <% } %>
         <tr class="tablerow">
+            <td id="toolbarNoTabs" class="copy-link">toolbarNoTabs</td>
+            <td>Defines if the top toolbar tabs are distinctly displayed (when set to <b>false</b>) or only highlighted to see which one is selected (when set to <b>true</b>).
+                The default value is <b>false</b>.</td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="zoom" class="copy-link">zoom</td>
             <td>Defines the document display zoom value measured in percent.
                 Can take values larger than <b>0</b>.
@@ -314,6 +349,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% } %>"chat": true,
             "commentAuthorOnly": false,
             "comments": true,
+            "compactHeader": false,
             "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",
@@ -338,7 +374,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                { %>"leftMenu": true,
             "loaderLogo": "https://example.com/loader-logo.png",
             "loaderName": "The document is loading, please wait...",
-            <% } %>"logo": {
+            <% } %>"hideRightMenu": false,
+            "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
@@ -349,7 +386,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% if (license)
                { %>"statusBar": true,
             "toolbar": true,
-            <% } %>"zoom": 100
+            <% } %>"toolbarNoTabs": false,
+            "zoom": 100
         },
         ...
     },

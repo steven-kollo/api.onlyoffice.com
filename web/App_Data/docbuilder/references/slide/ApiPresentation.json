@@ -1,0 +1,146 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiPresentation",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"presentation\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetCurSlideIndex": {
+      "memberof": "ApiPresentation",
+      "name": "GetCurSlideIndex",
+      "description": "<p>Get the index for the current slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetSlideByIndex": {
+      "memberof": "ApiPresentation",
+      "name": "GetSlideByIndex",
+      "description": "<p>Get the slide by its position in the presentation.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiSlide"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nIndex",
+          "description": "<p>The slide number (position) in the presentation.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetCurrentSlide": {
+      "memberof": "ApiPresentation",
+      "name": "GetCurrentSlide",
+      "description": "<p>Get the current slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiSlide"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddSlide": {
+      "memberof": "ApiPresentation",
+      "name": "AddSlide",
+      "description": "<p>Append a new slide to the end of the presentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiSlide",
+          "name": "oSlide",
+          "description": "<p>The slide created using the {@link Api#CreateSlide} method.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetSizes": {
+      "memberof": "ApiPresentation",
+      "name": "SetSizes",
+      "description": "<p>Set the size for the current presentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The presentation width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The presentation height in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateNewHistoryPoint": {
+      "memberof": "ApiPresentation",
+      "name": "CreateNewHistoryPoint",
+      "description": "<p>Create new history point.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "ReplaceCurrentImage": {
+      "memberof": "ApiPresentation",
+      "name": "ReplaceCurrentImage",
+      "description": "<p>Replace current image</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * Class representing a presentation.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a presentation.</p>",
+  "scope": "global",
+  "params": []
+}

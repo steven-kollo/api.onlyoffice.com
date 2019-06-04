@@ -83,7 +83,8 @@
     </table>
     <pre>
 {
-    "errors": [ "portalNameExist" ],
+    "error": "portalNameExist",
+    "message": "Portal already exists",
     "variants": [ "example", "example2014" ]
 }
 </pre>

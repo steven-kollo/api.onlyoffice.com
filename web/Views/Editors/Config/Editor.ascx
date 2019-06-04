@@ -26,6 +26,12 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td id="actionLink" class="copy-link">actionLink</td>
+            <td>Specifies the data received from the <b>document editing service</b> using the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event, which contains the information about the bookmark in the document that will be scrolled to.</td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow">
             <td id="callbackUrl" class="copy-link">callbackUrl<span class="required">*</span></td>
             <td>Specifies absolute URL to the <b>document storage service</b> (which <a href="<%= Url.Action("callback") %>">must be implemented</a> by the software integrators who use ONLYOFFICE Document Server on their own server).</td>
             <td>string</td>
@@ -135,6 +141,7 @@
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
+        "actionLink": ACTION_DATA,
         "callbackUrl": "https://example.com/url-to-callback.ashx",
         "createUrl": "https://example.com/url-to-create-document/",
         "lang": "en-US",

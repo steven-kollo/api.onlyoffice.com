@@ -85,6 +85,7 @@ config = {
     },
     "documentType": "text",
     "editorConfig": {
+        "actionLink": ACTION_DATA,
         "callbackUrl": "https://example.com/url-to-callback.ashx",
         "createUrl": "https://example.com/url-to-create-document/",
         "customization": {
@@ -92,6 +93,7 @@ config = {
             "chat": true,
             "commentAuthorOnly": false,
             "comments": true,
+            "compactHeader": false,
             "compactToolbar": false,
             "customer": {
                 "address": "My City, 123a-45",
@@ -112,12 +114,14 @@ config = {
                 "url": "https://example.com"
             },
             "help": true,
+            "hideRightMenu": false,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://example.com"
             },
             "showReviewChanges": false,
+            "toolbarNoTabs": false,
             "zoom": 100
         },
         "embedded": {

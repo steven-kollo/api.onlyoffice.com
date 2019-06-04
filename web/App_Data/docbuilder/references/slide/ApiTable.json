@@ -1,0 +1,216 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiTable",
+      "name": "GetClassType",
+      "description": "<p>Returns type of object</p>",
+      "tags": {},
+      "returns": [
+        [
+          "\"table\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetRow": {
+      "memberof": "ApiTable",
+      "name": "GetRow",
+      "description": "<p>Returns row by index</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiTableRow"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nIndex",
+          "optional": false
+        }
+      ]
+    },
+    "MergeCells": {
+      "memberof": "ApiTable",
+      "name": "MergeCells",
+      "description": "<p>Merge array of cells. If merge was done successfully it will return merged cell, otherwise &quot;null&quot;.\n<b>Warning</b>: The number of cells in any row and the numbers of rows in the current table may be changed.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiTableCell"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ApiTableCell>",
+          "name": "aCells",
+          "optional": false
+        }
+      ]
+    },
+    "SetTableLook": {
+      "memberof": "ApiTable",
+      "name": "SetTableLook",
+      "description": "<p>Specify the components of the conditional formatting of the referenced table style (if one exists)\nwhich shall be applied to the set of table rows with the current table-level property exceptions. A table style\ncan specify up to six different optional conditional formats [Example: Different formatting for first column.\nend example], which then can be applied or omitted from individual table rows in the parent table.</p>\n<p>The default setting is to apply the row and column banding formatting, but not the first row, last row, first\ncolumn, or last column formatting.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isFirstColumn",
+          "description": "<p>Specifies that the first column conditional formatting shall be applied to the\n    table.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isFirstRow",
+          "description": "<p>Specifies that the first row conditional formatting shall be applied to the table.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isLastColumn",
+          "description": "<p>Specifies that the last column conditional formatting shall be applied to the\n    table.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isLastRow",
+          "description": "<p>Specifies that the last row conditional formatting shall be applied to the table.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isHorBand",
+          "description": "<p>Specifies that the horizontal banding conditional formatting shall not be applied\n    to the table.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isVerBand",
+          "description": "<p>Specifies that the vertical banding conditional formatting shall not be applied to\n    the table.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddRow": {
+      "memberof": "ApiTable",
+      "name": "AddRow",
+      "description": "<p>Add a new row to the current table.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiTableRow"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTableCell",
+          "name": "oCell",
+          "description": "<p>If not specified a new row will be added to the end of the table.</p>",
+          "optional": true
+        },
+        {
+          "type": "boolean",
+          "name": "isBefore",
+          "description": "<p>Add a new row before or after the specified cell. If no cell is specified\nthen this parameter will be ignored.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddColumn": {
+      "memberof": "ApiTable",
+      "name": "AddColumn",
+      "description": "<p>Add a new column to the end of the current table.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTableCell",
+          "name": "oCell",
+          "description": "<p>If not specified a new column will be added to the end of the table.</p>",
+          "optional": true
+        },
+        {
+          "type": "boolean",
+          "name": "isBefore",
+          "description": "<p>Add a new column before or after the specified cell. If no cell is specified\nthen this parameter will be ignored.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "RemoveRow": {
+      "memberof": "ApiTable",
+      "name": "RemoveRow",
+      "description": "<p>Remove the table row with a specified cell.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTableCell",
+          "name": "oCell",
+          "optional": false
+        }
+      ]
+    },
+    "RemoveColumn": {
+      "memberof": "ApiTable",
+      "name": "RemoveColumn",
+      "description": "<p>Remove the table column with a specified cell.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTableCell",
+          "name": "oCell",
+          "optional": false
+        }
+      ]
+    },
+    "SetShd": {
+      "memberof": "ApiTable",
+      "name": "SetShd",
+      "description": "<p>Specify the shading which shall be applied to the extents of the current table.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oApiFill",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\r\n     * Represents table in presentation\r\n     * @param oGraphicFrame\r\n     * @constructor\r\n     * */",
+  "description": "<p>Represents table in presentation</p>",
+  "scope": "global",
+  "params": []
+}

@@ -100,6 +100,10 @@ namespace ASC.Api.Web.Help
                                 "~/scripts/clipboard.js",
                                 "~/scripts/scripts.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/faq")
+                            .Include(
+                                "~/scripts/faq.js"));
+
             bundles.Add(new Bundle("~/content/styles", new CssMinify())
                             .Include(
                                 "~/content/styles.css",
@@ -145,13 +149,28 @@ namespace ASC.Api.Web.Help
                             CacheManifest.AddCached(new Uri("/portals/batch", UriKind.Relative));
                             CacheManifest.AddOnline(new Uri("/portals/search", UriKind.Relative));
                             CacheManifest.AddFallback(new Uri("/portals/search", UriKind.Relative), new Uri("/portals/notfound", UriKind.Relative));
+                        }
+                        catch (Exception error)
+                        {
+                            LogManager.GetLogger("ASC.Api").Error(error);
+                        }
 
-                            LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
+                        try
+                        {
                             Documentation.Load();
                         }
                         catch (Exception error)
                         {
                             LogManager.GetLogger("ASC.Api").Error(error);
+                        }
+
+                        try
+                        {
+                            DocBuilderDocumentation.Load();
+                        }
+                        catch (Exception error)
+                        {
+                            LogManager.GetLogger("ASC.DocumentBuilder").Error(error);
                         }
                     }
                 }

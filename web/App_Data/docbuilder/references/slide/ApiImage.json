@@ -1,0 +1,21 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiImage",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "\"image\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * Class representing a image.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a image.</p>",
+  "scope": "global",
+  "params": []
+}

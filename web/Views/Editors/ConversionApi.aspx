@@ -104,6 +104,12 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
+                <td id="outputtype" class="copy-link">password</td>
+                <td>Specifies the password for the document file if it is protected with a password.</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="thumbnail" class="copy-link">thumbnail</td>
                 <td>Defines the option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
                     <ul>
@@ -649,6 +655,20 @@
 </pre>
     <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
 
+    <div id="sample-password-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the password-protected file from <em>docx</em> format to <em>pdf</em> format</div>
+    <pre>
+{
+    "async": false,
+    "filetype": "docx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "password": "123456",
+    "title": "Example Document Title.docx",
+    "url": "https://example.com/url-to-example-document.docx"
+}
+</pre>
+    <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+
     <div id="sample-thumbnail" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format</div>
     <pre>
 {
@@ -682,7 +702,7 @@
     &lt;Percent&gt;100&lt;/Percent&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Sample of the response in JSOn format</div>
+    <div class="header-gray">Sample of the response in JSON format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
     <pre>
 {
@@ -723,7 +743,7 @@
 }
 </pre>
 
-    <div class="header-gray">Possible error codes and their description</div>
+    <div id="error" class="copy-link header-gray">Possible error codes and their description</div>
     <table class="table">
         <colgroup>
             <col style="width: 105px;" />
@@ -751,6 +771,10 @@
             <tr class="tablerow">
                 <td>-4</td>
                 <td>Error while downloading the document file to be converted.</td>
+            </tr>
+            <tr class="tablerow">
+                <td>-5</td>
+                <td>Incorrect password.</td>
             </tr>
             <tr class="tablerow">
                 <td>-6</td>

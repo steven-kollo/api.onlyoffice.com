@@ -1,0 +1,496 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiChart",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "\"chart\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTitle": {
+      "memberof": "ApiChart",
+      "name": "SetTitle",
+      "description": "<p>Specify the chart title.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sTitle",
+          "description": "<p>The title which will be displayed for the current chart.</p>",
+          "optional": false
+        },
+        {
+          "type": "hps",
+          "name": "nFontSize",
+          "description": "<p>The text size value measured in points.</p>",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "bIsBold",
+          "description": "<p>Specifies if the chart title is written in bold font or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetHorAxisTitle": {
+      "memberof": "ApiChart",
+      "name": "SetHorAxisTitle",
+      "description": "<p>Specify the chart horizontal axis title.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sTitle",
+          "description": "<p>The title which will be displayed for the horizontal axis of the current chart.</p>",
+          "optional": false
+        },
+        {
+          "type": "hps",
+          "name": "nFontSize",
+          "description": "<p>The text size value measured in points.</p>",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "bIsBold",
+          "description": "<p>Specifies if the horizontal axis title is written in bold font or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetVerAxisTitle": {
+      "memberof": "ApiChart",
+      "name": "SetVerAxisTitle",
+      "description": "<p>Specify the chart vertical axis title.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sTitle",
+          "description": "<p>The title which will be displayed for the vertical axis of the current chart.</p>",
+          "optional": false
+        },
+        {
+          "type": "hps",
+          "name": "nFontSize",
+          "description": "<p>The text size value measured in points.</p>",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "bIsBold",
+          "description": "<p>Specifies if the vertical axis title is written in bold font or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetVerAxisOrientation": {
+      "memberof": "ApiChart",
+      "name": "SetVerAxisOrientation",
+      "description": "<p>Specifies the direction of the data displayed on the vertical axis.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bIsMinMax",
+          "description": "<p>The <code>true</code> value will set the normal data direction for the vertical axis (from minimum to maximum).\nThe <code>false</code> value will set the inverted data direction for the vertical axis (from maximum to minimum).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetHorAxisMajorTickMark": {
+      "memberof": "ApiChart",
+      "name": "SetHorAxisMajorTickMark",
+      "description": "<p>Specifies major tick mark for horizontal axis</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TickMark",
+          "name": "sTickMark",
+          "optional": false
+        }
+      ]
+    },
+    "SetHorAxisMinorTickMark": {
+      "memberof": "ApiChart",
+      "name": "SetHorAxisMinorTickMark",
+      "description": "<p>Specifies minor tick mark for horizontal axis</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TickMark",
+          "name": "sTickMark",
+          "optional": false
+        }
+      ]
+    },
+    "SetVertAxisMajorTickMark": {
+      "memberof": "ApiChart",
+      "name": "SetVertAxisMajorTickMark",
+      "description": "<p>Specifies major tick mark for vertical axis</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TickMark",
+          "name": "sTickMark",
+          "optional": false
+        }
+      ]
+    },
+    "SetVertAxisMinorTickMark": {
+      "memberof": "ApiChart",
+      "name": "SetVertAxisMinorTickMark",
+      "description": "<p>Specifies minor tick mark for vertical axis</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TickMark",
+          "name": "sTickMark",
+          "optional": false
+        }
+      ]
+    },
+    "SetHorAxisOrientation": {
+      "memberof": "ApiChart",
+      "name": "SetHorAxisOrientation",
+      "description": "<p>Specifies the direction of the data displayed on the horizontal axis.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bIsMinMax",
+          "description": "<p>The <code>true</code> value will set the normal data direction for the horizontal axis\n(from minimum to maximum). The <code>false</code> value will set the inverted data direction for the horizontal axis (from maximum to minimum).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetLegendPos": {
+      "memberof": "ApiChart",
+      "name": "SetLegendPos",
+      "description": "<p>Specify the chart legend position.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"left\" | \"top\" | \"right\" | \"bottom\" | \"none\"",
+          "name": "sLegendPos",
+          "description": "<p>The position of the chart legend inside the chart window.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetLegendFontSize": {
+      "memberof": "ApiChart",
+      "name": "SetLegendFontSize",
+      "description": "<p>Specifies a legend position</p>",
+      "tags": {
+        "number": "nFontSize"
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "SetShowDataLabels": {
+      "memberof": "ApiChart",
+      "name": "SetShowDataLabels",
+      "description": "<p>Specifies which chart data labels are shown for the chart.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bShowSerName",
+          "description": "<p>Whether to show or hide the source table column names used for the data which the chart will be build from.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bShowCatName",
+          "description": "<p>Whether to show or hide the source table row names used for the data which the chart will be build from.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bShowVal",
+          "description": "<p>Whether to show or hide the chart data values.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bShowPercent",
+          "description": "<p>Whether to show or hide the percent for the data values (works with stacked chart types).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetShowPointDataLabel": {
+      "memberof": "ApiChart",
+      "name": "SetShowPointDataLabel",
+      "description": "<p>Spicifies a show options for data labels</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nSeriesIndex",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nPointIndex",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bShowSerName",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bShowCatName",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bShowVal",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bShowPercent",
+          "optional": false
+        }
+      ]
+    },
+    "SetVertAxisTickLabelPosition": {
+      "memberof": "ApiChart",
+      "name": "SetVertAxisTickLabelPosition",
+      "description": "<p>Set the possible values for the position of the chart tick labels in relation to the main vertical label or the values of the chart data.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TickLabelPosition",
+          "name": "sTickLabelPosition",
+          "description": "<p>Set the position of the chart vertical tick labels.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetHorAxisTickLabelPosition": {
+      "memberof": "ApiChart",
+      "name": "SetHorAxisTickLabelPosition",
+      "description": "<p>Set the possible values for the position of the chart tick labels in relation to the main horizontal label or the values of the chart data.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TickLabelPosition",
+          "name": "sTickLabelPosition",
+          "description": "<p>Set the position of the chart horizontal tick labels.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetMajorVerticalGridlines": {
+      "memberof": "ApiChart",
+      "name": "SetMajorVerticalGridlines",
+      "description": "<p>Specifies major vertical gridline's visual properties</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "optional": false
+        }
+      ]
+    },
+    "SetMinorVerticalGridlines": {
+      "memberof": "ApiChart",
+      "name": "SetMinorVerticalGridlines",
+      "description": "<p>Specifies minor vertical gridline's visual properties</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "optional": false
+        }
+      ]
+    },
+    "SetMajorHorizontalGridlines": {
+      "memberof": "ApiChart",
+      "name": "SetMajorHorizontalGridlines",
+      "description": "<p>Specifies major horizontal gridline's visual properties</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "optional": false
+        }
+      ]
+    },
+    "SetMinorHorizontalGridlines": {
+      "memberof": "ApiChart",
+      "name": "SetMinorHorizontalGridlines",
+      "description": "<p>Specifies minor vertical gridline's visual properties</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "optional": false
+        }
+      ]
+    },
+    "SetHorAxisLablesFontSize": {
+      "memberof": "ApiChart",
+      "name": "SetHorAxisLablesFontSize",
+      "description": "<p>Specifies font size for labels of horizontal axis</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nFontSize",
+          "optional": false
+        }
+      ]
+    },
+    "SetVertAxisLablesFontSize": {
+      "memberof": "ApiChart",
+      "name": "SetVertAxisLablesFontSize",
+      "description": "<p>Specifies font size for labels of vertical axis</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nFontSize",
+          "optional": false
+        }
+      ]
+    },
+    "ApplyChartStyle": {
+      "memberof": "ApiChart",
+      "name": "ApplyChartStyle",
+      "description": "<p>Apply set of visual settings for chart</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nStyleIndex",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a chart.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a chart.</p>",
+  "scope": "global",
+  "params": []
+}

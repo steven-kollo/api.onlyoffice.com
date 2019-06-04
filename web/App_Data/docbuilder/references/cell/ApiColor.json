@@ -1,0 +1,25 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiColor",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "\"color\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a base class for color types\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a base class for color types</p>",
+  "scope": "global",
+  "params": []
+}

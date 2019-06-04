@@ -1,0 +1,91 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiDrawing",
+      "name": "GetClassType",
+      "description": "<p>Get the type of the class based on this base class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "\"drawing\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSize": {
+      "memberof": "ApiDrawing",
+      "name": "SetSize",
+      "description": "<p>Set the size of the object (image, shape, chart) bounding box.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The object width measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The object height measured in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetPosition": {
+      "memberof": "ApiDrawing",
+      "name": "SetPosition",
+      "description": "<p>Change the position for the drawing object.</p>\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of\nthe specified nFromCol column and nFromRow row cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nFromCol",
+          "description": "<p>The number of the column where the beginning of the drawing object will be placed.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nColOffset",
+          "description": "<p>The offset from the nFromCol column to the left part of the drawing object measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nFromRow",
+          "description": "<p>The number of the row where the beginning of the drawing object will be placed.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nRowOffset",
+          "description": "<p>The offset from the nFromRow row to the upper part of the drawing object measured in English measure units.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a graphical object.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a graphical object.</p>",
+  "scope": "global",
+  "params": []
+}
