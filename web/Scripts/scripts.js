@@ -210,22 +210,4 @@ $(document).ready(function () {
     $(".spoiler_heading").on("click", function () {
         $(this).next(".spoiler_code").slideToggle("fast");
     });
-
-    function fixedHeaderOffset(hash) {
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top - 71
-        }, 'fast');
-    }
-
-    var hash = location.hash;
-    if(hash !== '' && hash !== 'undefined') {
-        fixedHeaderOffset(hash);
-    }
-
-    $('a, td, div, b').on('click', function(){
-        if($(this).attr('id')){
-            var hashID = '#' + $(this).attr('id');
-            fixedHeaderOffset(hashID);
-        }
-    });
 });

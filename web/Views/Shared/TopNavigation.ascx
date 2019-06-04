@@ -16,7 +16,4 @@
         </li>
         <% } %>
     </ul>
-    <div class="top_menu_gs_button">
-        <a class="button red" target="_blank" href="https://www.onlyoffice.com/developer-edition.aspx?from=api.onlyoffice.com">Get started</a>
-    </div>
 </td>

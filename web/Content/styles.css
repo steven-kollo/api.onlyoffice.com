@@ -1254,25 +1254,6 @@ span.yes {
 span.no {
     background-color: #dedede;
 }
-
-/* Promotion 02-03.2019 start */
-.top_menu_gs_button {
-    padding: 10px 0;
-    text-align: right;
-    max-width: 972px;
-    min-width: 972px;
-}
-.layout-table-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(255,255,255,.95);
-    z-index: 1000;
-}
-.top-padding {
-    height: 71px;
-}
-/* Promotion 02-03.2019 end */
 .main-faq-section {
     margin: 70px 0 0;
 }

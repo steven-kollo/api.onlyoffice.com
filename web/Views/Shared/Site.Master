@@ -35,9 +35,6 @@
         <tr class="layout-table-header">
             <% Html.RenderPartial("TopNavigation");%>
         </tr>
-        <tr class="top-padding">
-            <td></td>
-        </tr>
         <tr>
             <% if (!Html.IfController("Home"))
                { %>
