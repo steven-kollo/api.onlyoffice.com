@@ -140,7 +140,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to open the document which contains a bookmark, scrolling to the bookmark position. To use the document bookmarks you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method. The bookmark data is received in the <em>event.data</em> parameter.</p>
+        <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to open the document which contains a bookmark, scrolling to the bookmark position. To use the document bookmarks you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method. The bookmark data is received in the <em>event.data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
