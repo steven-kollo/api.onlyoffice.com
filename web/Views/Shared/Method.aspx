@@ -34,51 +34,55 @@
     <div class="header-gray">Parameters</div>
     <% if (method.Params.Any(x => x.Visible))
        { %>
-    <table class="table">
-        <colgroup>
-            <col style="width: 20%"/>
-            <col/>
-            <col style="width: 110px"/>
-            <col style="width: 20%"/>
-        </colgroup>
-        <thead>
-            <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Example</td>
-            </tr>
-        </thead>
-        <tbody>
-        <% foreach (var param in method.Params.OrderByDescending(x => x.Method).Where(x => x.Visible))
-           {
-               var paramModel = ClassNamePluralizer.ToHumanName(param.Type); %>
-            <tr class="tablerow">
-                <td>
-                    <%= param.Name %>
-                    <div class="infotext">sent in <%= param.Method %></div>
-                </td>
-                <td>
-                    <%= param.Description %>
-                    <% if (ClassNamePluralizer.IsOptional(param.Type) || param.IsOptional) { %>
-                    <div class="infotext">optional</div><% } %>
-                </td>
-                <td>
-                    <%= paramModel.Description %>
-                    <% if (ClassNamePluralizer.IsCollection(param.Type) || paramModel.IsCollection) { %>
-                    <div class="infotext">collection</div><% } %>
-                </td>
-                <td>
-                    <% if (!string.IsNullOrEmpty(paramModel.Example)) { %><%= paramModel.Example %><% } %>
-                    <% if (!string.IsNullOrEmpty(paramModel.Note)) { %>
-                    <div class="infotext"><%= paramModel.Note %></div><% } %>
-                </td>
-            </tr>
-        <% } %>
-        </tbody>
-    </table>
+    <div id="methodParams">
+        <table class="table">
+            <colgroup>
+                <col style="width: 20%"/>
+                <col/>
+                <col style="width: 110px"/>
+                <col style="width: 20%"/>
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Name</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                    <td>Example</td>
+                </tr>
+            </thead>
+            <tbody>
+            <% foreach (var param in method.Params.OrderByDescending(x => x.Method).Where(x => x.Visible))
+               {
+                   var paramModel = ClassNamePluralizer.ToHumanName(param.Type); %>
+                <tr class="tablerow">
+                    <td>
+                        <%= param.Name %>
+                        <div class="infotext">sent in <%= param.Method %></div>
+                    </td>
+                    <td>
+                        <%= param.Description %>
+                        <% if (ClassNamePluralizer.IsOptional(param.Type) || param.IsOptional) { %>
+                        <div class="infotext">optional</div><% } %>
+                    </td>
+                    <td>
+                        <%= paramModel.Description %>
+                        <% if (ClassNamePluralizer.IsCollection(param.Type) || paramModel.IsCollection) { %>
+                        <div class="infotext">collection</div><% } %>
+                    </td>
+                    <td>
+                        <% if (!string.IsNullOrEmpty(paramModel.Example)) { %><%= paramModel.Example %><% } %>
+                        <% if (!string.IsNullOrEmpty(paramModel.Note)) { %>
+                        <div class="infotext"><%= paramModel.Note %></div><% } %>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
     <% } else { %>
-    <p>This method doesn't have any parameters</p>
+    <div id="methodParams">
+        <p>This method doesn't have any parameters</p>
+    </div>
     <%} %>
 
     <%if (!string.IsNullOrEmpty(method.Remarks))
@@ -100,8 +104,10 @@
     <% } %>
 
     <div class="header-gray">Returns</div>
-    <p><%= method.Returns %></p>
-    
+    <div id="methodReturns">
+        <p><%= method.Returns %></p>
+    </div>
+
     <% if (method.Response.Any())
        { %>
     <div class="header-gray">Example Response</div>
