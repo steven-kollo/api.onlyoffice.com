@@ -25,12 +25,14 @@
         <% } %>
     </h1>
     
-    <% if (!string.IsNullOrEmpty(method.Summary))
-          { %>
-    <div class="header-gray">Description</div>
-    <p class="dscr"><%= method.Summary %></p>
-    <% } %>
-    
+    <div id="methodDesc">
+        <% if (!string.IsNullOrEmpty(method.Summary))
+              { %>
+        <div class="header-gray">Description</div>
+        <p class="dscr"><%= method.Summary %></p>
+        <% } %>
+    </div>
+
     <div class="header-gray">Parameters</div>
     <% if (method.Params.Any(x => x.Visible))
        { %>
@@ -97,17 +99,20 @@
     <p><%= method.Notes %></p>
     <% } %>
     
-    <%if (!string.IsNullOrEmpty(method.Example))
-      { %>
-    <div class="header-gray">Example</div>
-    <pre><%= method.Example%></pre>
-    <% } %>
+    <div id="methodExample">
+        <%if (!string.IsNullOrEmpty(method.Example))
+          { %>
+        <div class="header-gray">Example</div>
+        <pre><%= method.Example%></pre>
+        <% } %>
+    </div>
 
     <div class="header-gray">Returns</div>
     <div id="methodReturns">
         <p><%= method.Returns %></p>
     </div>
 
+    <div id="methodResponse">
     <% if (method.Response.Any())
        { %>
     <div class="header-gray">Example Response</div>
@@ -117,5 +122,6 @@
         <pre><%= Html.Encode(output.Value) %></pre>
     <% }
        } %>
+    </div>
 
 </asp:Content>
