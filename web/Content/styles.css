@@ -329,11 +329,10 @@ h1 .up:after {
 h1 .comment {
     color: #666;
     font-size: 12px;
-    left: 32px;
     line-height: 12px;
-    position: absolute;
     text-transform: none;
-    top: 46px;
+    display: block;
+    margin-left: 32px
 }
 
 h2 {
