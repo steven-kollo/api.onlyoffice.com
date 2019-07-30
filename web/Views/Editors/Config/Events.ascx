@@ -176,7 +176,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser. Deprecated since version 5.0</p>
+        <p><b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser. Deprecated since version 5.0, please use <a href="#onAppReady">onAppReady</a> instead</p>
     </li>
 
     <li>

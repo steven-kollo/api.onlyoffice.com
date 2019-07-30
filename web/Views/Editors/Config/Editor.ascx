@@ -101,7 +101,7 @@
             <td>Defines the user currently viewing or editing the document:
                 <ul>
                     <li>
-                        <b>firstname</b> - the first name of the user. Deprecated since version 4.2, please use name instead,
+                        <b>firstname</b> - the first name of the user. Deprecated since version 4.2, please use <em>name</em> instead,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -115,7 +115,7 @@
                         <b>example</b>: "78e1e841";
                     </li>
                     <li>
-                        <b>lastname</b> - the last name of the user. Deprecated since version 4.2, please use name instead,
+                        <b>lastname</b> - the last name of the user. Deprecated since version 4.2, please use <em>name</em> instead,
                         <br />
                         <b>type</b>: string,
                         <br />
