@@ -134,14 +134,14 @@
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_5">
-    <dt>How to view and change the document additional parameters, e.g. its owner or creation date?</dt>
+    <dt>How to view and change the document additional parameters, e.g. its owner or uploading date?</dt>
     <dd>
-        <p>The document owner and creation date is affected by the <em>document.info.owner</em> and <em>document.info.created</em> parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:</p>
+        <p>The document owner and uploading date is affected by the <em>document.info.owner</em> and <em>document.info.uploaded</em> parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "info": {
-            "created": "2010-07-07 3:46 PM",
             "owner": "John Smith",
+            "uploaded": "2010-07-07 3:46 PM",
         },
         ...
     },

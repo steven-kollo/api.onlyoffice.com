@@ -19,6 +19,7 @@
 
     <h2 id="54" class="copy-link">Version 5.4</h2>
     <ul>
+        <li>The <a href="<%= Url.Action("config/document/info") %>#created">document.info.created</a> field is deprecated, please use the <a href="<%= Url.Action("config/document/info") %>#uploaded">document.info.uploaded</a> field instead.</li>
         <li>The <a href="<%= Url.Action("config/document/info") %>#author">document.info.author</a> field is deprecated, please use the <a href="<%= Url.Action("config/document/info") %>#owner">document.info.owner</a> field instead.</li>
         <li>The <a href="<%= Url.Action("config/events") %>#onReady">events.onReady</a> event is removed.</li>
         <li>The <em>firstname</em> and <em>lastname</em> fields in the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a> object is removed.</li>
