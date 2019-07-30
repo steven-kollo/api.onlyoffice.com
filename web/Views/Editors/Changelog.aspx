@@ -17,6 +17,12 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="54" class="copy-link">Version 5.4</h2>
+    <ul>
+        <li>The <a href="<%= Url.Action("config/events") %>#onReady">events.onReady</a> event is removed.</li>
+        <li>The <em>firstname</em> and <em>lastname</em> fields in the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a> object is removed.</li>
+    </ul>
+
     <h2 id="53" class="copy-link">Version 5.3</h2>
     <ul>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> field is now used to restrict comment deletion as well.</li>
