@@ -23,7 +23,7 @@
             <a href="<%= Url.Action("config/document") %>"><b>document</b></a> - contains all the parameters pertaining to the document (title, url, file type, etc.);
             <ul>
                 <li>
-                    <a href="<%= Url.Action("config/document/info") %>"><b>info</b></a> - contains additional parameters for the document (document author, folder where the document is stored, creation date, sharing settings);
+                    <a href="<%= Url.Action("config/document/info") %>"><b>info</b></a> - contains additional parameters for the document (document owner, folder where the document is stored, creation date, sharing settings);
                 </li>
                 <li>
                     <a href="<%= Url.Action("config/document/permissions") %>"><b>permissions</b></a> - defines whether the document can be edited and downloaded or not;
@@ -56,9 +56,9 @@ config = {
     "document": {
         "fileType": "docx",
         "info": {
-            "author": "John Smith",
             "created": "2010-07-07 3:46 PM",
             "folder": "Example Files",
+            "owner": "John Smith",
             "sharingSettings": [
                 {
                     "permissions": "Full Access",

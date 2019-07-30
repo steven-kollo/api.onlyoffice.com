@@ -55,7 +55,7 @@
     <li><a href="<%= Url.Action("faq/customizing") %>#customizing_2">How to change the default language of the Document Server interface?</a></li>
     <li><a href="<%= Url.Action("faq/customizing") %>#customizing_3">How to enable or disable the chat and/or the comments panel in the editors?</a></li>
     <li><a href="<%= Url.Action("faq/customizing") %>#customizing_4">How to customize the editors interface, e.g. adjust the top toolbar view?</a></li>
-    <li><a href="<%= Url.Action("faq/customizing") %>#customizing_5">How to view and change the document additional parameters, e.g. its author or creation date?</a></li>
+    <li><a href="<%= Url.Action("faq/customizing") %>#customizing_5">How to view and change the document additional parameters, e.g. its owner or creation date?</a></li>
     <li><a href="<%= Url.Action("faq/customizing") %>#customizing_6">How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?</a></li>
     <li><a href="<%= Url.Action("faq/customizing") %>#customizing_7">How to connect plugins to Document Server so that they become visible for all editor users?</a></li>
 </ul>
