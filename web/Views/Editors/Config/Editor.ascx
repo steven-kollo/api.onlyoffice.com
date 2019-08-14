@@ -97,6 +97,12 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="region" class="copy-link">region</td>
+            <td>Defines the default display format for currency and date and time (in the <b>Spreadsheet Editor</b> only). Is set using the four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes. For the default value the <em>lang</em> parameter is taken, or, if no regional setting corresponding to the <em>lang</em> value is available, <b>en-US</b> is used.</td>
+            <td>string</td>
+            <td>"en-US"</td>
+        </tr>
+        <tr class="tablerow">
             <td id="user" class="copy-link">user</td>
             <td>Defines the user currently viewing or editing the document:
                 <ul>
@@ -159,6 +165,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             ...
         ],
+        "region": "en-US",
         "user": {
             "id": "78e1e841",
             "name": "John Smith"

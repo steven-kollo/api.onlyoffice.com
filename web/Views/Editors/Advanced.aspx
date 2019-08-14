@@ -158,6 +158,7 @@ config = {
             },
             ...
         ],
+        "region": "en-US",
         "user": {
             "id": "78e1e841",
             "name": "John Smith"
