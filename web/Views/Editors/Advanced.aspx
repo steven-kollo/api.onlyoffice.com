@@ -131,7 +131,7 @@
             "<a href="<%= Url.Action("config/editor/embedded") %>#shareUrl">shareUrl</a>": "https://example.com/view?doc=exampledocument1.docx",
             "<a href="<%= Url.Action("config/editor/embedded") %>#toolbarDocked">toolbarDocked</a>": "top"
         },
-        "<a href="<%= Url.Action("config/editor") %>#lang">lang</a>": "en-US",
+        "<a href="<%= Url.Action("config/editor") %>#lang">lang</a>": "en",
         "<a href="<%= Url.Action("config/editor") %>#mode">mode</a>": "edit",
         "<a href="<%= Url.Action("config/editor/plugins") %>">plugins</a>": {
              "<a href="<%= Url.Action("config/editor/plugins") %>#autostart">autostart</a>": [

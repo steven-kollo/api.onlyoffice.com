@@ -51,9 +51,9 @@
         </tr>
         <tr class="tablerow">
             <td id="lang" class="copy-link">lang</td>
-            <td>Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) or four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes. The default value is <b>"en-US"</b>.</td>
+            <td>Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) language codes. The default value is <b>"en"</b>.</td>
             <td>string</td>
-            <td>"en-US"</td>
+            <td>"en"</td>
         </tr>
         <tr class="tablerow">
             <td id="mode" class="copy-link">mode</td>
@@ -144,7 +144,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "actionLink": ACTION_DATA,
         "callbackUrl": "https://example.com/url-to-callback.ashx",
         "createUrl": "https://example.com/url-to-create-document/",
-        "lang": "en-US",
+        "lang": "en",
         "mode": "edit",
         "recent": [
             {
