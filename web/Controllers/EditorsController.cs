@@ -80,6 +80,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Sharing",
                 "History",
                 "HowItWorks",
+                "Liferay",
                 "Methods",
                 "Nextcloud",
                 "Open",
@@ -263,6 +264,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult HowItWorks()
+        {
+            return View();
+        }
+
+        public ActionResult Liferay()
         {
             return View();
         }
