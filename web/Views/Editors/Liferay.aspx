@@ -39,7 +39,7 @@
 
     <h2 id="installing-plugin" class="copy-link">Installing Liferay ONLYOFFICE integration plugin</h2>
 
-    <p>Either install it from Liferay Marketplace or if you're building the plugin by yourself simply put compiled .jar file from <i>build\libs</i> folder to <i>/opt/liferay/deploy</i>. Liferay will install the plugin automatically.</p>
+    <p>Either install it from Liferay Marketplace or if you're building the plugin by yourself simply put compiled .jar file from <i>build/libs</i> folder to <i>/opt/liferay/deploy</i>. Liferay will install the plugin automatically.</p>
 
 
     <h2 id="configuring" class="copy-link">Configuring Liferay CONLYOFFICE integration plugin</h2>
