@@ -583,7 +583,16 @@ pre,
 pre.hljs {
     padding-left: 35px;
 }
-
+pre.hljs a {
+    font-weight: 600;
+    color: inherit;
+}
+pre.hljs a span {
+    text-decoration: underline;
+}
+pre.hljs a:hover, pre.hljs a:hover span {
+    text-decoration: underline;
+}
 /*note block*/
 .note, note {
     color: #808080;
