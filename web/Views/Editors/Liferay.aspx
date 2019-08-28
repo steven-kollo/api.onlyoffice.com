@@ -12,17 +12,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-	    <span class="hdr">Liferay ONLYOFFICE integration plugin</span>
+        <span class="hdr">Liferay ONLYOFFICE integration plugin</span>
     </h1>
 
     <p>This plugin enables users to edit office documents from <a href="https://www.liferay.com/" target="_blank">Liferay</a> using ONLYOFFICE Document Server.</p>
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-	    <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</li>
-	    <li>The following formats are available for view only: ODT, ODS, ODP, DOC, XLS, PPT.</li>
-	    <li>The plugin will create a new <em>ONLYOFFICE Edit/View</em>  menu option within the <em>Documents and Media</em> section for Office documents.</li>
-	    <li>This allows multiple users to collaborate in real time and to save back those changes to Liferay.</li>
+        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</li>
+        <li>The following formats are available for view only: ODT, ODS, ODP, DOC, XLS, PPT.</li>
+        <li>The plugin will create a new <em>ONLYOFFICE Edit/View</em>  menu option within the <em>Documents and Media</em> section for Office documents.</li>
+        <li>This allows multiple users to collaborate in real time and to save back those changes to Liferay.</li>
     </ul>
 
     <h2 id="installing-doc-serv" class="copy-link">Installing ONLYOFFICE Document Server</h2>
@@ -55,10 +55,10 @@
     <p>User navigates to a <em>Documents and Media</em> section within Liferay and selects the <i>Edit in ONLYOFFICE</i> action.</p>
     <p>Liferay prepares a JSON object for the Document Server with the following properties:</p>
     <ul>
-	    <li><b>docUrl</b>: the URL that ONLYOFFICE Document Server uses to download the document,</li>
-	    <li><b>callbackUrl</b>: the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-	    <li><b>key</b>: the fileVersionId to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
-	    <li><b>docTitle</b>: the document Title (name).</li>
+        <li><b>docUrl</b>: the URL that ONLYOFFICE Document Server uses to download the document,</li>
+        <li><b>callbackUrl</b>: the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
+        <li><b>key</b>: the fileVersionId to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
+        <li><b>docTitle</b>: the document Title (name).</li>
     </ul>
     <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the docEditor configuration with the above properties.</p>
     <p>Then ONLYOFFICE Document Server downloads the document from Liferay and the user begins editing.</p>
