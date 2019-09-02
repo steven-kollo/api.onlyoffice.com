@@ -367,6 +367,26 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save as</em> button. The title of the document and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSaveAs = function(event) {
+    var title = event.data.title;
+    var url = event.data.url;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSaveAs": onRequestSaveAs,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
         <p><b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs. The warning message is sent in the <em>data</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>

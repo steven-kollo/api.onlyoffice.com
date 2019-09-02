@@ -179,6 +179,7 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a>": onRequestHistoryClose,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a>": onRequestHistoryData,
         "<a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a>": onRequestRestore,
+        "<a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a>": onRequestSaveAs,
         "<a href="<%= Url.Action("config/events") %>#onWarning">onWarning</a>": onWarning
     },
     "<a href="<%= Url.Action("config/") %>#height">height</a>": "100%",
