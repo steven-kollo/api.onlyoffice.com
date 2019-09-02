@@ -145,7 +145,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <pre>
 var onMakeActionLink = function (event){
     var ACTION_DATA = event.data;
-}
+    ...
+    var link = GENERATE_LINK(ACTION_DATA);
+    docEditor.setActionLink(link);
+};
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
