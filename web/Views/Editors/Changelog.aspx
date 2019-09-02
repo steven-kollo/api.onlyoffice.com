@@ -25,6 +25,8 @@
         <li>The <a href="<%= Url.Action("config/events") %>#onReady">events.onReady</a> event is removed.</li>
         <li>The <em>firstname</em> and <em>lastname</em> fields in the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a> object is removed.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.</li>
     </ul>
 
     <h2 id="53" class="copy-link">Version 5.3</h2>

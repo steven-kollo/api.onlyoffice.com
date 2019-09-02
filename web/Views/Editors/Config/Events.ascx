@@ -315,7 +315,28 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
 
+    <li>
+        <p><b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button. To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestInsertImage = function() {
+    docEditor.insertImage({
+        "fileType": "png",
+        "url": "https://example.com/url-to-example-image.png"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestInsertImage": onRequestInsertImage,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </li>
 
     <li>
