@@ -55,10 +55,10 @@
     <p>User navigates to a <em>Documents and Media</em> section within Liferay and selects the <i>Edit in ONLYOFFICE</i> action.</p>
     <p>Liferay prepares a JSON object for the Document Server with the following properties:</p>
     <ul>
-        <li><b>docUrl</b>: the URL that ONLYOFFICE Document Server uses to download the document,</li>
+        <li><b>url</b>: the URL that ONLYOFFICE Document Server uses to download the document,</li>
         <li><b>callbackUrl</b>: the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
         <li><b>key</b>: the fileVersionId to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
-        <li><b>docTitle</b>: the document Title (name).</li>
+        <li><b>title</b>: the document Title (name).</li>
     </ul>
     <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the docEditor configuration with the above properties.</p>
     <p>Then ONLYOFFICE Document Server downloads the document from Liferay and the user begins editing.</p>

@@ -117,11 +117,11 @@ sudo ./alfresco.sh start</span>
     <p>Alfresco Share makes a request to the repo end (URL of the form: <em>/parashift/onlyoffice/prepare?nodeRef={nodeRef}</em>).</p>
     <p>Alfresco Repo end prepares a JSON object for the Share with the following properties:</p>
     <ul>
-        <li><b>docUrl</b> - the URL that ONLYOFFICE Document Server uses to download the document (includes the <em>alf_ticket</em> of the current user);</li>
+        <li><b>url</b> - the URL that ONLYOFFICE Document Server uses to download the document (includes the <em>alf_ticket</em> of the current user);</li>
         <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
         <li><b>onlyofficeUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (provided by the onlyoffice.url property);</li>
         <li><b>key</b> - the UUID+Modified Timestamp to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
-        <li><b>docTitle</b> - the document Title (name).</li>
+        <li><b>title</b> - the document Title (name).</li>
     </ul>
     <p>Alfresco Share takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.</p>
     <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the DocEditor configuration with the above properties.</p>

@@ -104,12 +104,12 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
     <p>SharePoint ONLYOFFICE solution prepares a JSON object with the following properties:</p>
     <ul>
         <li><b>url</b> - the URL that ONLYOFFICE Document Server uses to download the document;</li>
-        <li><b>callback</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
+        <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
         <li><b>documentServerUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (can be set at the settings page);</li>
         <li><b>key</b> - the file identifier from SharePoint;</li>
-        <li><b>fileName</b> - the document Title (name);</li>
-        <li><b>userId</b> - the user identifier;</li>
-        <li><b>userName</b> - the name of the user.</li>
+        <li><b>title</b> - the document Title (name);</li>
+        <li><b>id</b> - the user identifier;</li>
+        <li><b>name</b> - the name of the user.</li>
     </ul>
     <p>SharePoint ONLYOFFICE solution constructs a page, filling in all of those values so that the client browser can load up the editor.</p>
     <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the DocEditor configuration with the above properties.</p>
