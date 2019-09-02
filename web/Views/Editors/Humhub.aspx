@@ -12,17 +12,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-	    <span class="hdr">HumHub ONLYOFFICE integration plugin</span>
+        <span class="hdr">HumHub ONLYOFFICE integration plugin</span>
     </h1>
 
-    <p>This plugin enables users to edit office documents from <a href="https://www.liferay.com/" target="_blank">Liferay</a> using ONLYOFFICE Document Server.</p>
+    <p>This plugin enables users to edit office documents from <a href="https://www.humhub.com/" target="_blank">HumHub</a> using ONLYOFFICE Document Server.</p>
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-	    <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</li>
-	    <li>The following formats are available for view only: ODT, ODS, ODP, DOC, XLS, PPT, TXT, PDF.</li>
-	    <li>The plugin will create a new <em>Edit/View</em>  menu option for Office documents.</li>
-	    <li>This allows multiple users to collaborate in real time and to save back those changes to HumHub.</li>
+        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</li>
+        <li>The following formats are available for view only: ODT, ODS, ODP, DOC, XLS, PPT, TXT, PDF.</li>
+        <li>The plugin will create a new <em>Edit/View</em>  menu option for Office documents.</li>
+        <li>This allows multiple users to collaborate in real time and to save back those changes to HumHub.</li>
         <li>The following formats can be converted to Office Open XML: ODT, ODS, ODP, DOC, XLS, PPT, TXT, CSV.</li>
     </ul>
 
@@ -57,12 +57,12 @@
 
     <p>The app prepares a JSON object with the following properties:</p>
     <ul>
-      <li><b>url</b> - the URL that ONLYOFFICE Document Server uses to download the document;</li>
-      <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-      <li><b>key</b> - the random MD5 hash to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
-      <li><b>title</b> - the document Title (name);</li>
-      <li><b>id</b> - the identification of the user;</li>
-      <li><b>name</b> - the name of the user.</li>
+        <li><b>url</b> - the URL that ONLYOFFICE Document Server uses to download the document;</li>
+        <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
+        <li><b>key</b> - the random MD5 hash to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
+        <li><b>title</b> - the document Title (name);</li>
+        <li><b>id</b> - the identification of the user;</li>
+        <li><b>name</b> - the name of the user.</li>
     </ul>
     <p>HumHub takes this object and constructs a page from <em>views/open/index.php</em> template, filling in all of those values so that the client browser can load up the editor.</p>
 
@@ -80,6 +80,6 @@
 
 
     <br />
-    <p>Download the Liferay ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">here</a>.</p>
+    <p>Download the HumHub ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">here</a>.</p>
 
 </asp:Content>
