@@ -71,7 +71,6 @@
     <ul>
         <li><b>url</b> - the temporary link that ONLYOFFICE Document Server uses to download the document;</li>
         <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-        <li><b>docserviceApiUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (provided by the files.docservice.url.api property);</li>
         <li><b>key</b> - the UUID to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
         <li><b>title</b> - the document Title (name).</li>
     </ul>

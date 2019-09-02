@@ -105,7 +105,6 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
     <ul>
         <li><b>url</b> - the URL that ONLYOFFICE Document Server uses to download the document;</li>
         <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-        <li><b>documentServerUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (can be set at the settings page);</li>
         <li><b>key</b> - the file identifier from SharePoint;</li>
         <li><b>title</b> - the document Title (name);</li>
         <li><b>id</b> - the user identifier;</li>
