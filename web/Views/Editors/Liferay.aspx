@@ -44,7 +44,7 @@
 
     <h2 id="configuring" class="copy-link">Configuring Liferay CONLYOFFICE integration plugin</h2>
 
-    <p>In order to configure plugin you must navigate to <em>System Settings</em> <i>(Control Panel -> Configuration -> System Settings)</i>. In <em>Platform</em> section click on <em>Connectors</em> category and select ONLYOFFICE.</li></p>
+    <p>In order to configure plugin you must navigate to <em>System Settings</em> <i>(Control Panel -> Configuration -> System Settings)</i>. In <em>Platform</em> section click on <em>Connectors</em> category and select ONLYOFFICE.</p>
 
 
     <h2 id="how-it-works" class="copy-link">How it works</h2>
