@@ -69,11 +69,10 @@
     <p>Confluence sends document to ONLYOFFICE Document storage service and receive a temporary link.</p>
     <p>Confluence prepares a JSON object with the following properties:</p>
     <ul>
-        <li><b>fileUrl</b> - the temporary link that ONLYOFFICE Document Server uses to download the document;</li>
+        <li><b>url</b> - the temporary link that ONLYOFFICE Document Server uses to download the document;</li>
         <li><b>callbackUrl</b> - the URL that ONLYOFFICE Document Server informs about status of the document editing;</li>
-        <li><b>docserviceApiUrl</b> - the URL that the client needs to respond to ONLYOFFICE Document Server (provided by the files.docservice.url.api property);</li>
         <li><b>key</b> - the UUID to instruct ONLYOFFICE Document Server whether to download the document again or not;</li>
-        <li><b>fileName</b> - the document Title (name).</li>
+        <li><b>title</b> - the document Title (name).</li>
     </ul>
     <p>Confluence takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.</p>
     <p>The client browser makes a request for the javascript library from ONLYOFFICE Document Server and sends ONLYOFFICE Document Server the DocEditor configuration with the above properties.</p>
