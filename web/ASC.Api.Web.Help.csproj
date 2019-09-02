@@ -390,6 +390,7 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
