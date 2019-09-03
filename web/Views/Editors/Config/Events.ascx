@@ -340,6 +340,28 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button. To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestMailMergeRecipients = function() {
+    docEditor.setMailMergeRecipients({
+        "fileType": "xlsx",
+        "url": "https://example.com/url-to-example-recipients.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestMailMergeRecipients": onRequestMailMergeRecipients,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
         <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history. When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again. The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history. Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from <a href="<%= Url.Action("callback") %>#history">the history object</a>.</p>
         <div class="header-gray">Example</div>
         <pre>

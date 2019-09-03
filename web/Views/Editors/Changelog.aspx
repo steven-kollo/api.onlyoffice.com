@@ -27,6 +27,8 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> event.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.</li>
     </ul>
 
     <h2 id="53" class="copy-link">Version 5.3</h2>
