@@ -34,7 +34,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">editorConfig.customization.toolbarNoTabs</a> field.</li>
         <li>Added <a href="<%= Url.Action("conversionapi") %>#error">conversion error</a> for password protected documents.</li>
         <li>Added the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> field.</li>
-        <li>Added the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method parameter.</li>
+        <li>Added the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.</li>
     </ul>
 
@@ -88,7 +88,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compactToolbar">editorConfig.customization.compactToolbar</a> and <a href="<%= Url.Action("config/editor/customization") %>#zoom">editorConfig.customization.zoom</a> fields.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#autosave">editorConfig.customization.autosave</a> field.</li>
         <li>Replaced the <a href="<%= Url.Action("callback") %>#changeshistory">changeshistory</a> field with the <a href="<%= Url.Action("callback") %>#history">history</a> field in the callback handler request when saving the file.</li>
-        <li>Changed the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method parameter.</li>
+        <li>Changed the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.</li>
         <li>Added the possibility to convert files to <a href="<%= Url.Action("conversionapi") %>#sample-thumbnail">thumbnail</a> in the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</li>
         <li>The POST requests are now used for the interaction with the <a href="<%= Url.Action("command") %>">document command service</a> and the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</li>
         <li>Added the <a href="<%= Url.Action("command") %>#version">version</a> command.</li>
