@@ -319,6 +319,54 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history. When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again. The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history. Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from <a href="<%= Url.Action("callback") %>#history">the history object</a>.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestRestore = function(event) {
+    var url = event.data.url;
+    var version = event.data.version;
+    ...
+    docEditor.refreshHistory({
+        "currentVersion": 2,
+        "history": [
+            {
+                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "created": "2010-07-06 10:13 AM",
+                "key": "af86C7e71Ca8",
+                "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "user": {
+                    "id": "F89d8069ba2b",
+                    "name": "Kate Cage"
+                },
+                "version": 1
+            },
+            {
+                "changes": changes,
+                "created": "2010-07-07 3:46 PM",
+                "key": "Khirz6zTPdfd7",
+                "user": {
+                    "id": "78e1e841",
+                    "name": "John Smith"
+                },
+                "version": 2
+            },
+            ...
+        ]
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestHistoryData": onRequestHistoryData,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
         <p><b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs. The warning message is sent in the <em>data</em> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
