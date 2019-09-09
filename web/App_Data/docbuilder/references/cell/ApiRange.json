@@ -34,6 +34,44 @@
       "see": null,
       "inherits": null
     },
+    "Clear": {
+      "memberof": "ApiRange",
+      "name": "Clear",
+      "description": "<p>Clears the entire object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetRows": {
+      "memberof": "ApiRange",
+      "name": "GetRows",
+      "description": "<p>Returns a Range object that represents the rows in the specified range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "number",
+          "description": "<p>The number of the row. *</p>",
+          "optional": false
+        }
+      ]
+    },
     "SetOffset": {
       "memberof": "ApiRange",
       "name": "SetOffset",
@@ -228,7 +266,7 @@
       "tags": {},
       "returns": [
         [
-          "number"
+          "pt"
         ]
       ],
       "see": null,
@@ -244,8 +282,9 @@
       "inherits": null,
       "params": [
         {
-          "type": "number",
+          "type": "pt",
           "name": "height",
+          "description": "<p>The height the row in the range specified, measured in points.</p>",
           "optional": false
         }
       ]
@@ -577,6 +616,58 @@
           "optional": false
         }
       ]
+    },
+    "GetWorksheet": {
+      "memberof": "ApiRange",
+      "name": "GetWorksheet",
+      "description": "<p>Returns a Worksheet object that represents the worksheet containing the specified range. Read-only.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetDefName": {
+      "memberof": "ApiRange",
+      "name": "GetDefName",
+      "description": "<p>Returns a ApiName.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiName"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetComment": {
+      "memberof": "ApiRange",
+      "name": "GetComment",
+      "description": "<p>Returns a ApiComment.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiComment"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Select": {
+      "memberof": "ApiRange",
+      "name": "Select",
+      "description": "<p>Selects the object.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a range.\r\n\t * @constructor\r\n\t */",

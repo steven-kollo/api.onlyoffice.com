@@ -143,7 +143,7 @@
     "GetTableCellPr": {
       "memberof": "ApiStyle",
       "name": "GetTableCellPr",
-      "description": "<p>Get the table cell properties of the current style.</p>",
+      "description": "<p>Get the table cell properties for the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -181,7 +181,7 @@
     "GetConditionalTableStyle": {
       "memberof": "ApiStyle",
       "name": "GetConditionalTableStyle",
-      "description": "<p>Get a set of formatting properties which will be conditionally applied to the parts of a table that match the \nrequirement specified in the sType parameter.</p>",
+      "description": "<p>Get a set of formatting properties which will be conditionally applied to the parts of a table that match the\nrequirement specified in the sType parameter.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

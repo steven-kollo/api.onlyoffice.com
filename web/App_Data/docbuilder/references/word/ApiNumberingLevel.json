@@ -54,7 +54,7 @@
     "GetTextPr": {
       "memberof": "ApiNumberingLevel",
       "name": "GetTextPr",
-      "description": "<p>Specify the text properties which will be applied to the text in the current numbering level itself, not to the text in the subsequent paragraph.</p>\n<note>To change the text style for the paragraph, a style must be applied to it using the {@link ApiRun#SetStyle} method.</note>",
+      "description": "<p>Specify the text properties which will be applied to the text in the current numbering level itself, not to the text in the subsequent paragraph.\n<note>To change the text style for the paragraph, a style must be applied to it using the {@link ApiRun#SetStyle} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -135,7 +135,7 @@
         {
           "type": "string",
           "name": "sTextFormatString",
-          "description": "<p>Any text in this parameter will be taken as literal text to be repeated in each instance of this numbering level, except for any use of the percent symbol (%) followed by a number, which will be used to indicate the one-based index of the number to be used at this level. Any number of a level higher than this level will be ignored.\nhigher than this level shall be ignored.</p>",
+          "description": "<p>Any text in this parameter will be taken as literal text to be repeated in each instance of this numbering level, except for any use of the percent symbol (%) followed by a number, which will be used to indicate the one-based index of the number to be used at this level. Any number of a level higher than this level will be ignored.</p>",
           "optional": false
         },
         {

@@ -29,6 +29,15 @@
         }
       ]
     },
+    "SetActive": {
+      "memberof": "ApiWorksheet",
+      "name": "SetActive",
+      "description": "<p>Makes the current sheet the active sheet.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
     "GetActiveCell": {
       "memberof": "ApiWorksheet",
       "name": "GetActiveCell",
@@ -223,7 +232,7 @@
     "FormatAsTable": {
       "memberof": "ApiWorksheet",
       "name": "FormatAsTable",
-      "description": "<p>Format the selected range of cells from the current sheet as a table (with the first row formatted as a header).</p>\n<note>As the first row is always formatted as a table header, you need to select at least two rows for the table to be formed correctly.</note>",
+      "description": "<p>Format the selected range of cells from the current sheet as a table (with the first row formatted as a header).\n<note>As the first row is always formatted as a table header, you need to select at least two rows for the table to be formed correctly.</note></p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -476,10 +485,114 @@
       "see": null,
       "inherits": null
     },
+    "GetDefNames": {
+      "memberof": "ApiWorksheet",
+      "name": "GetDefNames",
+      "description": "<p>Returns array a ApiName.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiName"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetDefName": {
+      "memberof": "ApiWorksheet",
+      "name": "GetDefName",
+      "description": "<p>Returns a ApiName.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiName"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddDefName": {
+      "memberof": "ApiWorksheet",
+      "name": "AddDefName",
+      "description": "<p>Defines a new name for a range of cells.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiName"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetComments": {
+      "memberof": "ApiWorksheet",
+      "name": "GetComments",
+      "description": "<p>Returns a ApiComment.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiComment"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Delete": {
+      "memberof": "ApiWorksheet",
+      "name": "Delete",
+      "description": "<p>Deletes the object.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "SetHyperlink": {
+      "memberof": "ApiWorksheet",
+      "name": "SetHyperlink",
+      "description": "<p>Add Hyperlink</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Anchor",
+          "name": "Anchor",
+          "optional": false
+        },
+        {
+          "type": "Address",
+          "name": "Address",
+          "optional": false
+        },
+        {
+          "type": "ScreenTip",
+          "name": "ScreenTip",
+          "optional": false
+        },
+        {
+          "type": "TextToDisplay",
+          "name": "TextToDisplay",
+          "optional": false
+        }
+      ]
+    },
     "AddChart": {
       "memberof": "ApiWorksheet",
       "name": "AddChart",
-      "description": "<p>Create a chart of the set type from the selected data range of the current sheet.</p>\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of the specified nFromCol column and nFromRow\nrow cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
+      "description": "<p>Create a chart of the set type from the selected data range of the current sheet.\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of the specified nFromCol column and nFromRow\nrow cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note></p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -558,7 +671,7 @@
     "AddShape": {
       "memberof": "ApiWorksheet",
       "name": "AddShape",
-      "description": "<p>Adds the shape to the current sheet with the parameters specified.</p>\n<note>Please note, that the horizontal <code>nColOffset</code> and vertical <code>nRowOffset</code> offsets are\ncalculated within the limits of the specified <code>nFromCol</code> column and <code>nFromRow</code> row cell\nonly. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>",
+      "description": "<p>Adds the shape to the current sheet with the parameters specified.\n<note>Please note, that the horizontal <code>nColOffset</code> and vertical <code>nRowOffset</code> offsets are\ncalculated within the limits of the specified <code>nFromCol</code> column and <code>nFromRow</code> row cell\nonly. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note></p>",
       "tags": {
         "typeofeditors": [
           "CSE"

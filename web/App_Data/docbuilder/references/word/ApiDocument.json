@@ -54,7 +54,7 @@
     "CreateStyle": {
       "memberof": "ApiDocument",
       "name": "CreateStyle",
-      "description": "<p>Create a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one.\nwith a new one.</p>",
+      "description": "<p>Create a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -342,6 +342,35 @@
       "see": null,
       "inherits": null
     },
+    "SetTrackRevisions": {
+      "memberof": "ApiDocument",
+      "name": "SetTrackRevisions",
+      "description": "<p>Set to track changes or not</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isTrack",
+          "optional": false
+        }
+      ]
+    },
+    "IsTrackRevisions": {
+      "memberof": "ApiDocument",
+      "name": "IsTrackRevisions",
+      "description": "<p>Is change tracking enabled</p>",
+      "tags": {},
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "InsertWatermark": {
       "memberof": "ApiDocument",
       "name": "InsertWatermark",
@@ -458,7 +487,7 @@
     "RemoveAllElements": {
       "memberof": "ApiDocument",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current document or from the current document element.</p>\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note>",
+      "description": "<p>Remove all elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",

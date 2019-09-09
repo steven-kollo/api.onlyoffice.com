@@ -152,10 +152,29 @@
         }
       ]
     },
+    "Copy": {
+      "memberof": "ApiRun",
+      "name": "Copy",
+      "description": "<p>Create a copy of the run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRun"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetStyle": {
       "memberof": "ApiRun",
       "name": "SetStyle",
-      "description": "<p>The text style base method.</p>\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiRun#SetStyle} method which sets\nthe selected or created style for the text.</note>",
+      "description": "<p>The text style base method.\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiRun#SetStyle} method which sets\nthe selected or created style for the text.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"

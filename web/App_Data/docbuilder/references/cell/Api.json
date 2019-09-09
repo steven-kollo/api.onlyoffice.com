@@ -223,6 +223,90 @@
           "optional": false
         }
       ]
+    },
+    "Intersect": {
+      "memberof": "Api",
+      "name": "Intersect",
+      "description": "<p>Returns a ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiRange",
+          "Error"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiRange",
+          "name": "Range1",
+          "description": "<p>The intersecting ranges. At least two Range objects must be specified.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiRange",
+          "name": "Range2",
+          "description": "<p>The intersecting ranges. At least two Range objects must be specified.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetSelection": {
+      "memberof": "Api",
+      "name": "GetSelection",
+      "description": "<p>Returns an object that represents the selection range</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddDefName": {
+      "memberof": "Api",
+      "name": "AddDefName",
+      "description": "<p>Defines a new name for a range of cells.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetDefName": {
+      "memberof": "Api",
+      "name": "GetDefName",
+      "description": "<p>Returns a ApiName.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiName"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Save": {
+      "memberof": "Api",
+      "name": "Save",
+      "description": "<p>Saves changes to the specified document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",
