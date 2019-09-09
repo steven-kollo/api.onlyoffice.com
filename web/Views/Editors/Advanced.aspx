@@ -23,7 +23,7 @@
             <a href="<%= Url.Action("config/document") %>"><b>document</b></a> - contains all the parameters pertaining to the document (title, url, file type, etc.);
             <ul>
                 <li>
-                    <a href="<%= Url.Action("config/document/info") %>"><b>info</b></a> - contains additional parameters for the document (document author, folder where the document is stored, creation date, sharing settings);
+                    <a href="<%= Url.Action("config/document/info") %>"><b>info</b></a> - contains additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings);
                 </li>
                 <li>
                     <a href="<%= Url.Action("config/document/permissions") %>"><b>permissions</b></a> - defines whether the document can be edited and downloaded or not;
@@ -56,9 +56,8 @@
     "<a href="<%= Url.Action("config/document") %>">document</a>": {
         "<a href="<%= Url.Action("config/document") %>#fileType">fileType</a>": "docx",
         "<a href="<%= Url.Action("config/document/info") %>">info</a>": {
-            "<a href="<%= Url.Action("config/document/info") %>#author">author</a>": "John Smith",
-            "<a href="<%= Url.Action("config/document/info") %>#created">created</a>": "2010-07-07 3:46 PM",
             "<a href="<%= Url.Action("config/document/info") %>#folder">folder</a>": "Example Files",
+            "<a href="<%= Url.Action("config/document/info") %>#owner">owner</a>": "John Smith",
             "<a href="<%= Url.Action("config/document/info") %>#sharingSettings">sharingSettings</a>": [
                 {
                     "permissions": "Full Access",
@@ -69,7 +68,8 @@
                     "user": "Kate Cage"
                 },
                 ...
-            ]
+            ],
+            "<a href="<%= Url.Action("config/document/info") %>#uploaded">uploaded</a>": "2010-07-07 3:46 PM"
         },
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
@@ -158,6 +158,7 @@
             },
             ...
         ],
+        "<a href="<%= Url.Action("config/editor") %>#region">region</a>": "en-US",
         "<a href="<%= Url.Action("config/editor") %>#user">user</a>": {
             "id": "78e1e841",
             "name": "John Smith"
@@ -177,7 +178,10 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a>": onRequestHistory,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a>": onRequestHistoryClose,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a>": onRequestHistoryData,
+        "<a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a>": onRequestInsertImage,
+        "<a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a>": onRequestMailMergeRecipients,
         "<a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a>": onRequestRestore,
+        "<a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a>": onRequestSaveAs,
         "<a href="<%= Url.Action("config/events") %>#onWarning">onWarning</a>": onWarning
     },
     "<a href="<%= Url.Action("config/") %>#height">height</a>": "100%",

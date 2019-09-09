@@ -6,7 +6,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">The document info section allows to change additional parameters for the document (document author, folder where the document is stored, creation date, sharing settings).</p>
+<p class="dscr">The document info section allows to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).</p>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -27,13 +27,13 @@
     <tbody>
         <tr class="tablerow">
             <td id="author" class="copy-link">author</td>
-            <td>Defines the name of the document author/creator.</td>
+            <td>Defines the name of the document author/creator. Deprecated since version 5.4, please use <a href="#owner">owner</a> instead.</td>
             <td>string</td>
             <td>"John Smith"</td>
         </tr>
         <tr class="tablerow">
             <td id="created" class="copy-link">created</td>
-            <td>Defines the document creation date.</td>
+            <td>Defines the document creation date. Deprecated since version 5.4, please use <a href="#uploaded">uploaded</a> instead.</td>
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
@@ -42,6 +42,18 @@
             <td>Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).</td>
             <td>string</td>
             <td>"Example Files"</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="owner" class="copy-link">owner</td>
+            <td>Defines the name of the document owner/creator.</td>
+            <td>string</td>
+            <td>"John Smith"</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="uploaded" class="copy-link">uploaded</td>
+            <td>Defines the document uploading date.</td>
+            <td>string</td>
+            <td>"2010-07-07 3:46 PM"</td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -84,9 +96,8 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "info": {
-            "author": "John Smith",
-            "created": "2010-07-07 3:46 PM",
             "folder": "Example Files",
+            "owner": "John Smith",
             "sharingSettings": [
                 {
                     "permissions": "Full Access",
@@ -97,7 +108,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                     "user": "Kate Cage"
                 },
                 ...
-            ]
+            ],
+            "uploaded": "2010-07-07 3:46 PM"
         },
         ...
     },

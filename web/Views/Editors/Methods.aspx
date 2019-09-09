@@ -66,6 +66,50 @@ docEditor.downloadAs();
         </li>
 
         <li>
+            <p><b id="insertImage" class="copy-link">insertImage</b> - insert an image into the file. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> events.</p>
+            <pre>
+docEditor.insertImage({
+    "fileType": "png",
+    "url": "https://example.com/url-to-example-image.png"
+});
+</pre>
+            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>
+                            Defines the type of image for insert into the file.
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>url</td>
+                        <td>Defines the absolute URL where the source image is stored.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+        <li>
             <p><b id="refreshHistory" class="copy-link">refreshHistory</b> - show the document version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events.</p>
             <pre>
 docEditor.refreshHistory({
@@ -315,6 +359,50 @@ docEditor.setHistoryData({
                         <td>version</td>
                         <td>Defines the document version number.</td>
                         <td>integer</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+        <li>
+            <p><b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - insert recipient data for mail merge into the file. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> events.</p>
+            <pre>
+docEditor.setMailMergeRecipients({
+    "fileType": "xlsx",
+    "url": "https://example.com/url-to-example-recipients.xlsx"
+});
+</pre>
+            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>
+                            Defines the type of spreadsheet for mail merge in the file.
+                            Can be: xlsx.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>url</td>
+                        <td>Defines the absolute URL where the source data is stored.</td>
+                        <td>string</td>
                         <td>required</td>
                     </tr>
                 </tbody>
