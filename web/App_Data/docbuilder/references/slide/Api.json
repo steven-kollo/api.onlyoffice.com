@@ -226,6 +226,19 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "Save": {
+      "memberof": "Api",
+      "name": "Save",
+      "description": "<p>Saves changes to the specified document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n     * @global\r\n     * @class\r\n     * @name Api\r\n     */",

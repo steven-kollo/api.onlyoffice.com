@@ -1,0 +1,34 @@
+{
+  "methods": {
+    "GetText": {
+      "memberof": "ApiComment",
+      "name": "GetText",
+      "description": "<p>Returns the text of comment.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "Delete": {
+      "memberof": "ApiComment",
+      "name": "Delete",
+      "description": "<p>Deletes the object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a comments\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a comments</p>",
+  "scope": "global",
+  "params": []
+}

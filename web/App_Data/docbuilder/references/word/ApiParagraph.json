@@ -103,7 +103,7 @@
     "AddPageNumber": {
       "memberof": "ApiParagraph",
       "name": "AddPageNumber",
-      "description": "<p>Insert the number of the current document page into the paragraph.</p>\n<note>This method works for the paragraphs in the document header/footer only.</note>",
+      "description": "<p>Insert the number of the current document page into the paragraph.\n<note>This method works for the paragraphs in the document header/footer only.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -120,7 +120,7 @@
     "AddPagesCount": {
       "memberof": "ApiParagraph",
       "name": "AddPagesCount",
-      "description": "<p>Insert the number of pages in the current document into the paragraph.</p>\n<note>This method works for the paragraphs in the document header/footer only.</note>",
+      "description": "<p>Insert the number of pages in the current document into the paragraph.\n<note>This method works for the paragraphs in the document header/footer only.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -257,7 +257,7 @@
     "RemoveElement": {
       "memberof": "ApiParagraph",
       "name": "RemoveElement",
-      "description": "<p>Remove the element using the position specified.</p>\n<note>If the element you remove is the last paragraph element (i.e. all elements are removed from the paragraph),\na new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note>",
+      "description": "<p>Remove the element using the position specified.\n<note>If the element you remove is the last paragraph element (i.e. all elements are removed from the paragraph),\na new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -280,7 +280,7 @@
     "RemoveAllElements": {
       "memberof": "ApiParagraph",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current paragraph.</p>\n<note>When all elements are removed from the paragraph, a new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note>",
+      "description": "<p>Remove all elements from the current paragraph.\n<note>When all elements are removed from the paragraph, a new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -289,6 +289,25 @@
         ]
       },
       "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "Copy": {
+      "memberof": "ApiParagraph",
+      "name": "Copy",
+      "description": "<p>Create a copy of the paragraph. Ingonore comments, footnote references, complex fields</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
@@ -393,7 +412,7 @@
     "SetStyle": {
       "memberof": "ApiParagraph",
       "name": "SetStyle",
-      "description": "<p>The paragraph style base method.</p>\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiParagraph#SetStyle} method which sets the selected or created style for the paragraph.</note>",
+      "description": "<p>The paragraph style base method.\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiParagraph#SetStyle} method which sets the selected or created style for the paragraph.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -414,7 +433,7 @@
     "SetContextualSpacing": {
       "memberof": "ApiParagraph",
       "name": "SetContextualSpacing",
-      "description": "<p>Specify that any space before or after this paragraph set using the \n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and \nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
+      "description": "<p>Specify that any space before or after this paragraph set using the\n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and\nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -590,7 +609,7 @@
     "SetSpacingLine": {
       "memberof": "ApiParagraph",
       "name": "SetSpacingLine",
-      "description": "<p>Set the paragraph line spacing. If the value of the sLineRule parameter is either \n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If \nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the \nnLine parameter will be interpreted as 240ths of a line.</p>",
+      "description": "<p>Set the paragraph line spacing. If the value of the sLineRule parameter is either\n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If\nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the\nnLine parameter will be interpreted as 240ths of a line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -619,7 +638,7 @@
     "SetSpacingBefore": {
       "memberof": "ApiParagraph",
       "name": "SetSpacingBefore",
-      "description": "<p>Set the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then \nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then \nit will be interpreted as false.</p>",
+      "description": "<p>Set the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then\nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then\nit will be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -649,7 +668,7 @@
     "SetSpacingAfter": {
       "memberof": "ApiParagraph",
       "name": "SetSpacingAfter",
-      "description": "<p>Set the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then \nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it \nwill be interpreted as false.</p>",
+      "description": "<p>Set the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then\nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it\nwill be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -725,7 +744,7 @@
     "SetBottomBorder": {
       "memberof": "ApiParagraph",
       "name": "SetBottomBorder",
-      "description": "<p>Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings.</p>\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note>",
+      "description": "<p>Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -878,7 +897,7 @@
     "SetTopBorder": {
       "memberof": "ApiParagraph",
       "name": "SetTopBorder",
-      "description": "<p>Specify the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.</p>\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.</note>",
+      "description": "<p>Specify the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"

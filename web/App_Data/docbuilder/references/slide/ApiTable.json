@@ -65,7 +65,7 @@
         {
           "type": "boolean",
           "name": "isFirstColumn",
-          "description": "<p>Specifies that the first column conditional formatting shall be applied to the\n    table.</p>",
+          "description": "<p>Specifies that the first column conditional formatting shall be applied to the\ntable.</p>",
           "optional": false
         },
         {
@@ -77,7 +77,7 @@
         {
           "type": "boolean",
           "name": "isLastColumn",
-          "description": "<p>Specifies that the last column conditional formatting shall be applied to the\n    table.</p>",
+          "description": "<p>Specifies that the last column conditional formatting shall be applied to the\ntable.</p>",
           "optional": false
         },
         {
@@ -89,13 +89,13 @@
         {
           "type": "boolean",
           "name": "isHorBand",
-          "description": "<p>Specifies that the horizontal banding conditional formatting shall not be applied\n    to the table.</p>",
+          "description": "<p>Specifies that the horizontal banding conditional formatting shall not be applied\nto the table.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isVerBand",
-          "description": "<p>Specifies that the vertical banding conditional formatting shall not be applied to\n    the table.</p>",
+          "description": "<p>Specifies that the vertical banding conditional formatting shall not be applied to\nthe table.</p>",
           "optional": false
         }
       ]

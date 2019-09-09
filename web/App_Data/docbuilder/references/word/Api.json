@@ -636,6 +636,19 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "Save": {
+      "memberof": "Api",
+      "name": "Save",
+      "description": "<p>Saves changes to the specified document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Base class\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",
