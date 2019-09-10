@@ -51,9 +51,9 @@
         </tr>
         <tr class="tablerow">
             <td id="lang" class="copy-link">lang</td>
-            <td>Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) or four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes. The default value is <b>"en-US"</b>.</td>
+            <td>Defines the editor interface language (if some other languages other than English are present). Is set using the two letter (<b>de</b>, <b>ru</b>, <b>it</b>, etc.) language codes. The default value is <b>"en"</b>.</td>
             <td>string</td>
-            <td>"en-US"</td>
+            <td>"en"</td>
         </tr>
         <tr class="tablerow">
             <td id="mode" class="copy-link">mode</td>
@@ -97,11 +97,17 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="region" class="copy-link">region</td>
+            <td>Defines the default display format for currency and date and time (in the <b>Spreadsheet Editor</b> only). Is set using the four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes. For the default value the <em>lang</em> parameter is taken, or, if no regional setting corresponding to the <em>lang</em> value is available, <b>en-US</b> is used.</td>
+            <td>string</td>
+            <td>"en-US"</td>
+        </tr>
+        <tr class="tablerow">
             <td id="user" class="copy-link">user</td>
             <td>Defines the user currently viewing or editing the document:
                 <ul>
                     <li>
-                        <b>firstname</b> - the first name of the user. Deprecated since version 4.2, please use name instead,
+                        <b>firstname</b> - the first name of the user. Deprecated since version 4.2, please use <em>name</em> instead,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -115,7 +121,7 @@
                         <b>example</b>: "78e1e841";
                     </li>
                     <li>
-                        <b>lastname</b> - the last name of the user. Deprecated since version 4.2, please use name instead,
+                        <b>lastname</b> - the last name of the user. Deprecated since version 4.2, please use <em>name</em> instead,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -144,7 +150,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "actionLink": ACTION_DATA,
         "callbackUrl": "https://example.com/url-to-callback.ashx",
         "createUrl": "https://example.com/url-to-create-document/",
-        "lang": "en-US",
+        "lang": "en",
         "mode": "edit",
         "recent": [
             {
@@ -159,6 +165,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             ...
         ],
+        "region": "en-US",
         "user": {
             "id": "78e1e841",
             "name": "John Smith"

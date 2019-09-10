@@ -329,11 +329,10 @@ h1 .up:after {
 h1 .comment {
     color: #666;
     font-size: 12px;
-    left: 32px;
     line-height: 12px;
-    position: absolute;
     text-transform: none;
-    top: 46px;
+    display: block;
+    margin-left: 32px
 }
 
 h2 {
@@ -584,7 +583,15 @@ pre,
 pre.hljs {
     padding-left: 35px;
 }
-
+pre.hljs a {
+    color: inherit;
+}
+pre.hljs a span {
+    text-decoration: underline;
+}
+pre.hljs a:hover span {
+    text-decoration: none;
+}
 /*note block*/
 .note, note {
     color: #808080;
@@ -1254,25 +1261,6 @@ span.yes {
 span.no {
     background-color: #dedede;
 }
-
-/* Promotion 02-03.2019 start */
-.top_menu_gs_button {
-    padding: 10px 0;
-    text-align: right;
-    max-width: 972px;
-    min-width: 972px;
-}
-.layout-table-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: rgba(255,255,255,.95);
-    z-index: 1000;
-}
-.top-padding {
-    height: 71px;
-}
-/* Promotion 02-03.2019 end */
 .main-faq-section {
     margin: 70px 0 0;
 }

@@ -561,7 +561,7 @@
     "SetWidth": {
       "memberof": "ApiTablePr",
       "name": "SetWidth",
-      "description": "<p>Set the preferred width for this table.</p>\n<note>Tables are created with the {@link ApiTable#SetWidth} method properties set by default, which always override the {@link ApiTablePr#SetWidth} method properties. That is why there is no use to try and apply {@link ApiTablePr#SetWidth}, we recommend that you use the  {@link ApiTablePr#SetWidth}  method instead.</note>",
+      "description": "<p>Set the preferred width for this table.\n<note>Tables are created with the {@link ApiTable#SetWidth} method properties set by default, which always override the {@link ApiTablePr#SetWidth} method properties. That is why there is no use to try and apply {@link ApiTablePr#SetWidth}, we recommend that you use the  {@link ApiTablePr#SetWidth}  method instead.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"

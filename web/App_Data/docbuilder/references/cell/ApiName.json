@@ -1,0 +1,101 @@
+{
+  "methods": {
+    "GetName": {
+      "memberof": "ApiName",
+      "name": "GetName",
+      "description": "<p>Returns a String value representing the name of the object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetName": {
+      "memberof": "ApiName",
+      "name": "SetName",
+      "description": "<p>Sets a String value representing the name of the object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Error"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "Name",
+          "description": "<p>// new name for range</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Delete": {
+      "memberof": "ApiName",
+      "name": "Delete",
+      "description": "<p>Deletes the DefName object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "SetRefersTo": {
+      "memberof": "ApiName",
+      "name": "SetRefersTo",
+      "description": "<p>Sets the formula that the name is defined to refer to.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "Ref",
+          "description": "<p>// new refers to defined name</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetRefersTo": {
+      "memberof": "ApiName",
+      "name": "GetRefersTo",
+      "description": "<p>Returns the formula that the name is defined to refer to.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a names\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a names</p>",
+  "scope": "global",
+  "params": []
+}

@@ -472,8 +472,18 @@
              <param name="feedid">Feed ID</param>
              <param name="title">Title</param>
              <param name="content">Content</param>
-             <param name="type">Type</param>
+             <param name="type">Type. One of  (News|Order|Advert|Poll)</param>
             <returns>List of events</returns>
+            <category>Events</category>
+        </member>
+        <member name="M:ASC.Api.Community.CommunityApi.DeleteEvent(System.Int32)">
+            <summary>
+            Deletes the selected event
+            </summary>
+            <short>Delete event</short>
+            <param name="feedid">Feed ID</param>
+            <returns>Nothing</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <category>Events</category>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetMyEvents">

@@ -23,6 +23,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css" />
     <link rel="icon" href="<%= Url.Content("~/favicon.ico") %>" type="image/x-icon" />
+    <% var canonicalUrl = Request.Url;
+       var canonicalHref = canonicalUrl.ToString();
+       if (!string.IsNullOrEmpty(canonicalUrl.Query))
+       {
+           canonicalHref = canonicalHref.Replace(canonicalUrl.Query, "");
+       } %>
+    <link rel="canonical" href="<%= canonicalHref %>" />
 
     <%= Styles.Render("~/content/styles") %>
 
@@ -34,9 +41,6 @@
     <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
         <tr class="layout-table-header">
             <% Html.RenderPartial("TopNavigation");%>
-        </tr>
-        <tr class="top-padding">
-            <td></td>
         </tr>
         <tr>
             <% if (!Html.IfController("Home"))

@@ -22,7 +22,7 @@
     "SetStyle": {
       "memberof": "ApiParaPr",
       "name": "SetStyle",
-      "description": "<p>The paragraph style base method.</p>\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiParagraph#SetStyle} method which sets the selected or created style for the paragraph.</note>",
+      "description": "<p>The paragraph style base method.\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiParagraph#SetStyle} method which sets the selected or created style for the paragraph.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -43,7 +43,7 @@
     "SetContextualSpacing": {
       "memberof": "ApiParaPr",
       "name": "SetContextualSpacing",
-      "description": "<p>Specify that any space before or after this paragraph set using the \n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and \nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
+      "description": "<p>Specify that any space before or after this paragraph set using the\n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and\nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -219,7 +219,7 @@
     "SetSpacingLine": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingLine",
-      "description": "<p>Set the paragraph line spacing. If the value of the sLineRule parameter is either \n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If \nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the \nnLine parameter will be interpreted as 240ths of a line.</p>",
+      "description": "<p>Set the paragraph line spacing. If the value of the sLineRule parameter is either\n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If\nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the\nnLine parameter will be interpreted as 240ths of a line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -248,7 +248,7 @@
     "SetSpacingBefore": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingBefore",
-      "description": "<p>Set the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then \nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then \nit will be interpreted as false.</p>",
+      "description": "<p>Set the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then\nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then\nit will be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -278,7 +278,7 @@
     "SetSpacingAfter": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingAfter",
-      "description": "<p>Set the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then \nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it \nwill be interpreted as false.</p>",
+      "description": "<p>Set the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then\nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it\nwill be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -354,7 +354,7 @@
     "SetBottomBorder": {
       "memberof": "ApiParaPr",
       "name": "SetBottomBorder",
-      "description": "<p>Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings.</p>\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note>",
+      "description": "<p>Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -507,7 +507,7 @@
     "SetTopBorder": {
       "memberof": "ApiParaPr",
       "name": "SetTopBorder",
-      "description": "<p>Specify the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.</p>\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.</note>",
+      "description": "<p>Specify the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"

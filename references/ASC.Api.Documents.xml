@@ -437,14 +437,6 @@
             <param name="start"></param>
             <returns>Operation result</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetPresignedUri(System.String)">
-            <summary>
-            Get presigned Uri
-            </summary>
-            <param name="fileId">File ID</param>
-            <returns>Url</returns>
-            <visible>false</visible>
-        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.DeleteFolder(System.String,System.Boolean,System.Boolean)">
             <summary>
             Deletes the folder with the ID specified in the request

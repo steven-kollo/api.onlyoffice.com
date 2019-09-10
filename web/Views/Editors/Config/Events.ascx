@@ -140,18 +140,24 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to open the document which contains a bookmark, scrolling to the bookmark position. To use the document bookmarks you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method. The bookmark data is received in the <em>event.data</em> parameter.</p>
+        <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to open the document which contains a bookmark, scrolling to the bookmark position. To use the document bookmarks you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method. The bookmark data is received in the <em>event.data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.</p>
         <div class="header-gray">Example</div>
         <pre>
+var onMakeActionLink = function (event){
+    var ACTION_DATA = event.data;
+    ...
+    var link = GENERATE_LINK(ACTION_DATA);
+    docEditor.setActionLink(link);
+};
+
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
-        "onMakeActionLink": function (event){
-            var ACTION_DATA = event.data;
-        },
+        "onMakeActionLink": onMakeActionLink,
         ...
     },
     ...
-});</pre>
+});
+</pre>
     </li>
 
     <li>
@@ -173,7 +179,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser. Deprecated since version 5.0</p>
+        <p><b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser. Deprecated since version 5.0, please use <a href="#onAppReady">onAppReady</a> instead</p>
     </li>
 
     <li>
@@ -309,7 +315,118 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
 
+    <li>
+        <p><b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button. To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestInsertImage = function() {
+    docEditor.insertImage({
+        "fileType": "png",
+        "url": "https://example.com/url-to-example-image.png"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestInsertImage": onRequestInsertImage,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button. To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestMailMergeRecipients = function() {
+    docEditor.setMailMergeRecipients({
+        "fileType": "xlsx",
+        "url": "https://example.com/url-to-example-recipients.xlsx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestMailMergeRecipients": onRequestMailMergeRecipients,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history. When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again. The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history. Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from <a href="<%= Url.Action("callback") %>#history">the history object</a>.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestRestore = function(event) {
+    var url = event.data.url;
+    var version = event.data.version;
+    ...
+    docEditor.refreshHistory({
+        "currentVersion": 2,
+        "history": [
+            {
+                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "created": "2010-07-06 10:13 AM",
+                "key": "af86C7e71Ca8",
+                "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "user": {
+                    "id": "F89d8069ba2b",
+                    "name": "Kate Cage"
+                },
+                "version": 1
+            },
+            {
+                "changes": changes,
+                "created": "2010-07-07 3:46 PM",
+                "key": "Khirz6zTPdfd7",
+                "user": {
+                    "id": "78e1e841",
+                    "name": "John Smith"
+                },
+                "version": 2
+            },
+            ...
+        ]
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestHistoryData": onRequestHistoryData,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p><b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save as</em> button. The title of the document and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSaveAs = function(event) {
+    var title = event.data.title;
+    var url = event.data.url;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSaveAs": onRequestSaveAs,
+        ...
+    },
+    ...
+});
+</pre>
     </li>
 
     <li>

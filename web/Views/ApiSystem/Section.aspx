@@ -47,7 +47,7 @@
                 <td>Portal deletion.</td>
             </tr>
             <tr class="tablerow">
-                <td><a href="<%= Url.Action("portalstatus") %>">Status portal</a></td>
+                <td><a href="<%= Url.Action("portalstatus") %>">Portal status</a></td>
                 <td><a href="<%= Url.Action("portalstatus") %>">PUT /api/portal/status</a></td>
                 <td>Portal activation status change.</td>
             </tr>

@@ -16,60 +16,6 @@
             <param name="context"></param>
             <param name="documentsApi">Docs api</param>
         </member>
-        <member name="M:ASC.Api.Projects.ProjectApi.Add(System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Collections.Generic.IEnumerable{System.Int32})">
-            <summary>
-            Adds the company URL for importing to the queue
-            </summary>
-            <short>
-            Add importing URL to queue
-            </short>
-            <category>Import</category>        
-            <param name="url">The company URL </param>
-            <param name="userName">User Name </param>
-            <param name="password">Password </param>
-            <param name="importClosed">Import closed</param>
-            <param name="disableNotifications">Disable notifications</param>
-            <param name="importUsersAsCollaborators">Flag for add users as guests</param>
-            <param name="projects" optional="true">Projects for importing</param>
-            <returns>Import status</returns>
-        </member>
-        <member name="M:ASC.Api.Projects.ProjectApi.GetProjectsForImport(System.String,System.String,System.String)">
-            <summary>
-            Returns the list of the projects to be imported
-            </summary>
-            <short>
-            Get projects for import
-            </short>
-            <category>Import</category>
-            <returns>List of projects</returns>
-            <param name="url">The company URL </param>
-            <param name="userName">User Name </param>
-            <param name="password">Password </param>
-        </member>
-        <member name="M:ASC.Api.Projects.ProjectApi.CheckUsersQuota(System.String,System.String,System.String)">
-            <summary>
-            Returns the number of users that can be added to the import. This number can be negative, if the number of imported users exceeds the quota.
-            </summary>
-            <short>
-            Returns the number of users that can be added to the import
-            </short>
-            <category>Import</category>
-            <returns>Number of users</returns>
-            <param name="url">The company URL </param>
-            <param name="userName">User Name </param>
-            <param name="password">Password </param>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.Projects.ProjectApi.GetStatus">
-            <summary>
-            Returns the project importing status
-            </summary>
-            <short>
-            Get import status
-            </short>
-            <category>Import</category>
-            <returns>Importing Status</returns>
-        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetMessageByFilter(System.Int32,System.Int32,System.Guid,System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,System.Nullable{ASC.Projects.Core.Domain.MessageStatus})">
             <summary>
             Returns the list with the detailed information about all the message matching the filter parameters specified in the request

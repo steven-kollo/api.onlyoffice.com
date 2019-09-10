@@ -22,7 +22,7 @@
     "SetStyle": {
       "memberof": "ApiTextPr",
       "name": "SetStyle",
-      "description": "<p>The text style base method.</p>\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiRun#SetStyle} method which sets\nthe selected or created style for the text.</note>",
+      "description": "<p>The text style base method.\n<note>This method is not used by itself, as it only forms the basis for the {@link ApiRun#SetStyle} method which sets\nthe selected or created style for the text.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
