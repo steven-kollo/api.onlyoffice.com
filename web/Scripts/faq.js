@@ -164,7 +164,7 @@ $(document).ready(function () {
                 // mode=edit, edit=false, review=true
                 if ($('#review .paramTrue').hasClass('active_param')) {
                     $('#reviewing .resultPermission').removeClass('notallowed').addClass('allowed').html(allowedYes);
-                    $('#reviewing .resultNote').html(yesReviewOnlyEdit);
+                    $('#reviewing .resultNote').html(yesReviewEdit);
                 }
                     // mode=edit, edit=false, review=false
                 else {
