@@ -46,9 +46,8 @@
         The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a>.</div>
     <ol>
         <li>The latest stable Oracle Java version is necessary for the successful build. If you do not have it installed, use the following commands to install Oracle Java 8:
-            <span class="commandline">sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer</span>
+            <span class="commandline">sudo apt-get update
+sudo apt-get install openjdk-8-jdk</span>
         </li>
         <%--<li>Switch Java alternatives to Oracle Java:
             <span class="commandline">sudo update-alternatives --config java
