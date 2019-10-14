@@ -355,7 +355,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 obj = Activator.CreateInstance(param.PureType);
             }
 
-            if (obj is Enum) obj = obj.ToString();
+            if (obj is Enum)
+            {
+                var names = param.PureType.GetEnumNames();
+                obj = names.Length > 0 ? param.PureType.GetEnumNames()[0].ToLower() : obj.ToString();
+            }
 
             if (asString)
             {
