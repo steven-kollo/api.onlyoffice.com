@@ -1502,6 +1502,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange('B1').SetValue('2');\noWorksheet.GetRange('B2').SetValue('2');\noWorksheet.GetRange('A3').SetValue('2x2=');\noWorksheet.GetRange('B3').SetValue('=B1*B2');\nbuilder.SaveFile(\"xlsx\", \"GetActiveSheet.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882026&doc=bHBrTXVQK3FmeXFnZVE4Z0pCYjZ3N2ZyVDFjNC84Q2k0Z08yQTBZd2NPbz0_IjQ4ODIwMjYi0&action=embedded"
 		},
+		"Api.getsheets": {
+			"script": "builder.CreateFile(\"xlsx\");\nApi.AddSheet('new_sheet_name');\nvar sheets = Api.GetSheets();\nvar sheet_name1, sheet_name2;\nsheet_name1 = sheets[0].GetName();\nsheet_name2 = sheets[1].GetName();\nsheets[1].GetRange(\"A1\").SetValue(sheet_name1);\nsheets[1].GetRange(\"A2\").SetValue(sheet_name2);\nbuilder.SaveFile(\"xlsx\", \"GetSheets.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=6309522&doc=M1NRREljUUpaYm8wRm13UUxldUZxRzQvMjVkY2w5RzJZdXBDSS9pOHV3ND0_IjYzMDk1MjIi0&action=embedded"
+		},
 		"Api.getthemescolors": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar themes = Api.GetThemesColors();\nfor (var i = 0; i < themes.length; ++i) {\n  oWorksheet.GetRange('A' + (i + 1)).SetValue(themes[i]);\n}\nbuilder.SaveFile(\"xlsx\", \"GetThemesColors.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5116480&doc=cWZ5dGY1eVBOVEljMzRVQmFjNVZDY0E5S1JHSzlVQUpkQk5QK2hkZThoRT0_IjUxMTY0ODAi0&action=embedded"
