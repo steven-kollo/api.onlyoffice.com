@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="55" class="copy-link">Version 5.5</h2>
+    <ul>
+        <li>Conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">document</a>, <a href="<%= Url.Action("conversionapi") %>#spreadsheet-matrix">spreadsheet</a>, <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">presentation</a> to <em>pdfa</em> format.</li>
+    </ul>
+
     <h2 id="54" class="copy-link">Version 5.4</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/editor") %>#region">editorConfig.region</a> field.</li>
