@@ -13,7 +13,10 @@
     <h1>
         <span class="hdr">Converting and downloading file</span>
     </h1>
-    <p class="dscr">Document conversion service is a part of ONLYOFFICE Document Server. It lets the user convert files from one format into another to open them later in <b>document editors</b> or for their export.</p>
+    <p class="dscr">
+        Document conversion service is a part of ONLYOFFICE Document Server.
+        It lets the user convert files from one format into another to open them later in <b>document editors</b> or for their export.
+    </p>
     <p>There are two main situations when document conversion is necessary.</p>
     <h2>Interim conversion needed for document editing</h2>
     <p>For the <b>document editors</b> correct work with the document files it is recommended to convert them  prior to editing into Office Open XML formats:</p>

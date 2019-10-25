@@ -33,10 +33,12 @@
     <p class="list-header">The server side includes:</p>
     <ul>
         <li>
-            <b>Document storage service</b> - the server service which stores all the documents available to the users with the appropriate access rights. It provides the document IDs and links to these documents to the <b>document manager</b> which the user sees in the browser.
+            <b>Document storage service</b> - the server service which stores all the documents available to the users with the appropriate access rights.
+            It provides the document IDs and links to these documents to the <b>document manager</b> which the user sees in the browser.
         </li>
         <li>
-            <b>Document editing service</b> - the server service which allows to perform the document viewing and editing (in case the user has the appropriate rights to do that). The <b>document editor</b> interface is used to access all the <b>document editing service</b> features.
+            <b>Document editing service</b> - the server service which allows to perform the document viewing and editing (in case the user has the appropriate rights to do that).
+            The <b>document editor</b> interface is used to access all the <b>document editing service</b> features.
         </li>
         <li>
             <b>Document command service</b> - the server service which allows to perfom additional commands with <b>document editing service</b>.

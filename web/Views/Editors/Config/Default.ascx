@@ -48,7 +48,9 @@
         </tr>
         <tr class="tablerow">
             <td id="type" class="copy-link">type</td>
-            <td>Defines the platform type used to access the document. Can be:
+            <td>
+                Defines the platform type used to access the document.
+                Can be:
                 <em>optimized to access the document from a desktop or laptop computer</em> - <b>desktop</b>,
                 <em>optimized to access the document from a tablet or a smartphone</em> - <b>mobile</b>,
                 <em>specifically formed to be easily embedded into a web page</em> - <b>embedded</b>.

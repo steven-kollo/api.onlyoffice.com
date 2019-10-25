@@ -15,9 +15,16 @@
         <span class="hdr">ONLYOFFICE SharePoint integration solution</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-sharepoint" target="_blank">solution</a> enables users to edit office documents from SharePoint using <b>ONLYOFFICE Document Server</b>. Currently the following document formats can be edited: DOCX, XLSX, PPTX, PPSX. The above mentioned formats are also available for viewing together with PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.</p>
+    <p class="dscr">
+        This <a href="https://github.com/ONLYOFFICE/onlyoffice-sharepoint" target="_blank">solution</a> enables users to edit office documents from SharePoint using <b>ONLYOFFICE Document Server</b>.
+        Currently the following document formats can be edited: DOCX, XLSX, PPTX, PPSX.
+        The above mentioned formats are also available for viewing together with PDF, DJVU, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS.
+    </p>
 
-    <p>The solution will create a new <b>Edit in ONLYOFFICE</b> menu option within the context menu of the file and the ribbon for Office documents. This allows multiple users to collaborate in real time and to save back those changes to SharePoint.</p>
+    <p>
+        The solution will create a new <b>Edit in ONLYOFFICE</b> menu option within the context menu of the file and the ribbon for Office documents.
+        This allows multiple users to collaborate in real time and to save back those changes to SharePoint.
+    </p>
 
     <p>Tested with SharePoint 2010, 2013 and 2016.</p>
 
@@ -31,10 +38,18 @@
 
 
     <h2 id="using" class="copy-link">Using ONLYOFFICE SharePoint integration solution</h2>
-    <p>Before you use ONLYOFFICE Document Server with ONLYOFFICE SharePoint solution, you need to install it. If you for some reason plan to edit the ONLYOFFICE SharePoint solution source code, you will need to compile it and install it afterwards. If you do not want to do that and plan to use the already compiled solution package, please skip to the <b>Installation</b> section directly. The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-sharepoint/releases">here</a>.</p>
+    <p>
+        Before you use ONLYOFFICE Document Server with ONLYOFFICE SharePoint solution, you need to install it.
+        If you for some reason plan to edit the ONLYOFFICE SharePoint solution source code, you will need to compile it and install it afterwards.
+        If you do not want to do that and plan to use the already compiled solution package, please skip to the <b>Installation</b> section directly.
+        The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-sharepoint/releases">here</a>.
+    </p>
     <h5>Compiling ONLYOFFICE SharePoint integration solution</h5>
     <p></p>
-    <p>If you have SharePoint with version later than 2010, you will not need to change anything, you can compile the project. In case you have SharePoint 2010 and want to build the project for this version, you will need to open the <em>ONLYOFFICE.csproj</em> file and find the lines:</p>
+    <p>
+        If you have SharePoint with version later than 2010, you will not need to change anything, you can compile the project.
+        In case you have SharePoint 2010 and want to build the project for this version, you will need to open the <em>ONLYOFFICE.csproj</em> file and find the lines:
+    </p>
     <pre>&lt;Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"&gt;
   &lt;PropertyGroup&gt;
     &lt;TargetFrameworkVersion&gt;v4.5.2&lt;/TargetFrameworkVersion&gt;
@@ -52,7 +67,10 @@
                 <li>Enter the SharePoint server and open this project in Visual Studio.</li>
                 <li>In Solution Explorer, open the shortcut menu for the project and then choose <b>Publish</b>.</li>
                 <li>In the <b>Publish</b> dialog box, choose the <b>Publish to File System</b> option button.</li>
-                <li>Click the <b>Publish</b> button. When the publishing process is finished, the solution <em>.wsp</em> file will be created.</li>
+                <li>
+                    Click the <b>Publish</b> button.
+                    When the publishing process is finished, the solution <em>.wsp</em> file will be created.
+                </li>
                 <li>Copy the resulting file to the folder with the <em>Install.ps1</em> file (<b>BuildAndInstall</b> folder by default).</li>
             </ol>
         </li>
@@ -90,13 +108,23 @@ On the <b>Solution Management</b> page, click <em>onlyoffice.wsp</em>, then clic
     </ol>
 
     <h2 id="configure" class="copy-link">Configuring SharePoint ONLYOFFICE integration solution</h2>
-    <p>In SharePoint open the <em>/_layouts/15/Onlyoffice/Settings.aspx</em> page with administrative settings. Enter the following address to connect <b>ONLYOFFICE Document Server</b>:</p>
+    <p>
+        In SharePoint open the <em>/_layouts/15/Onlyoffice/Settings.aspx</em> page with administrative settings.
+        Enter the following address to connect <b>ONLYOFFICE Document Server</b>:
+    </p>
 
     <span class="commandline">https://&lt;documentserver&gt;/</span>
 
-    <p>Where the <b>documentserver</b> is the name of the server with the <b>ONLYOFFICE Document Server</b> installed. The address must be accessible for the user browser and from the SharePoint server. The SharePoint server address must also be accessible from <b>ONLYOFFICE Document Server</b> for correct work.</p>
+    <p>
+        Where the <b>documentserver</b> is the name of the server with the <b>ONLYOFFICE Document Server</b> installed.
+        The address must be accessible for the user browser and from the SharePoint server.
+        The SharePoint server address must also be accessible from <b>ONLYOFFICE Document Server</b> for correct work.
+    </p>
 
-    <div class="note">Please note, that if you have subsites set up with SharePoint, you will need to additionally configure <b>ONLYOFFICE Document Server</b> connection with each of them, in order for it to work properly. Go to each subsite settings and enter the <b>Document Server</b> address to the proper field.</div>
+    <div class="note">
+        Please note, that if you have subsites set up with SharePoint, you will need to additionally configure <b>ONLYOFFICE Document Server</b> connection with each of them, in order for it to work properly.
+        Go to each subsite settings and enter the <b>Document Server</b> address to the proper field.
+    </div>
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>User navigates to a document within SharePoint and selects the <b>Edit in ONLYOFFICE</b> action on context menu or ribbon.</p>

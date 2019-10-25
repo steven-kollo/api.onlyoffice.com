@@ -6,7 +6,10 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">The embedded section is for the <b>embedded</b> document type only (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type). It allows to change the settings which define the behavior of the buttons in the embedded mode.</p>
+<p class="dscr">
+    The embedded section is for the <b>embedded</b> document type only (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type).
+    It allows to change the settings which define the behavior of the buttons in the embedded mode.
+</p>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -79,4 +82,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-<p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>

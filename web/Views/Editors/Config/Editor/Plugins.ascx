@@ -39,7 +39,10 @@
         </tr>
         <tr class="tablerow">
             <td id="url" class="copy-link">url</td>
-            <td>Defines the absolute URL to the directory where the plugins are stored. Deprecated since version 4.3, please use the absolute URLs in <a href="#pluginsData">pluginsData</a> field.</td>
+            <td>
+                Defines the absolute URL to the directory where the plugins are stored.
+                Deprecated since version 4.3, please use the absolute URLs in <a href="#pluginsData">pluginsData</a> field.
+            </td>
             <td>string</td>
             <td>"https://example.com/plugins/"</td>
         </tr>
@@ -72,7 +75,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-<p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
 
 <p>
     If you have any further questions, please contact us at

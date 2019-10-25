@@ -69,7 +69,10 @@
         </tr>
         <tr>
             <td id="compactHeader" class="copy-link">compactHeader</td>
-            <td>Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (<b>false</b>) or in the toolbar (<b>true</b>) making the header more compact. The default value is <b>false</b>.</td>
+            <td>
+                Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (<b>false</b>) or in the toolbar (<b>true</b>) making the header more compact.
+                The default value is <b>false</b>.
+            </td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -394,7 +397,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-<p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
 
 <p>
     If you have any further questions, please contact us at

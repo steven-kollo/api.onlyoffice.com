@@ -27,24 +27,37 @@
 
     <h2 id="installing-doc-serv" class="copy-link">Installing ONLYOFFICE Document Server</h2>
 
-    <p>You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Liferay and any end clients. If that is not the case, use the official ONLYOFFICE Document Server documetnation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to Liferay directly.</p>
+    <p>
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Liferay and any end clients.
+        If that is not the case, use the official ONLYOFFICE Document Server documetnation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
+        ONLYOFFICE Document Server must also be able to POST to Liferay directly.
+    </p>
 
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
     <h2 id="compiling" class="copy-link">Compiling Liferay ONLYOFFICE integration plugin</h2>
 
-    <p>Simply run <i>gradle build</i>. Output .jar will be placed inside <i>build/libs</i> directory.</p>
+    <p>
+        Simply run <i>gradle build</i>.
+        Output .jar will be placed inside <i>build/libs</i> directory.
+    </p>
 
 
     <h2 id="installing-plugin" class="copy-link">Installing Liferay ONLYOFFICE integration plugin</h2>
 
-    <p>Either install it from Liferay Marketplace or if you're building the plugin by yourself simply put compiled .jar file from <i>build/libs</i> folder to <i>/opt/liferay/deploy</i>. Liferay will install the plugin automatically.</p>
+    <p>
+        Either install it from Liferay Marketplace or if you're building the plugin by yourself simply put compiled .jar file from <i>build/libs</i> folder to <i>/opt/liferay/deploy</i>.
+        Liferay will install the plugin automatically.
+    </p>
 
 
     <h2 id="configuring" class="copy-link">Configuring Liferay CONLYOFFICE integration plugin</h2>
 
-    <p>In order to configure plugin you must navigate to <em>System Settings</em> <i>(Control Panel -> Configuration -> System Settings)</i>. In <em>Platform</em> section click on <em>Connectors</em> category and select ONLYOFFICE.</p>
+    <p>
+        In order to configure plugin you must navigate to <em>System Settings</em> <i>(Control Panel -> Configuration -> System Settings)</i>.
+        In <em>Platform</em> section click on <em>Connectors</em> category and select ONLYOFFICE.
+    </p>
 
 
     <h2 id="how-it-works" class="copy-link">How it works</h2>

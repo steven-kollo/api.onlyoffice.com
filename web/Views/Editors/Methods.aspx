@@ -22,7 +22,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 
     <ul>
         <li>
-            <p><b id="denyEditingRights" class="copy-link">denyEditingRights</b> - deny editing. This method can be called when you want to make the document editing unavailable.</p>
+            <p>
+                <b id="denyEditingRights" class="copy-link">denyEditingRights</b> - deny editing.
+                This method can be called when you want to make the document editing unavailable.
+            </p>
             <pre>
 docEditor.denyEditingRights(message);
 </pre>
@@ -52,28 +55,42 @@ docEditor.denyEditingRights(message);
             </table>
         </li>
         <li>
-            <p><b id="destroyEditor" class="copy-link">destroyEditor</b> - destroy <em>docEditor</em> object. This method can be called when you want to reinit document editor with another configurations. Used since version 4.3.</p>
+            <p>
+                <b id="destroyEditor" class="copy-link">destroyEditor</b> - destroy <em>docEditor</em> object.
+                This method can be called when you want to reinit document editor with another configurations.
+                Used since version 4.3.
+            </p>
             <pre>
 docEditor.destroyEditor();
 </pre>
         </li>
 
         <li>
-            <p><b id="downloadAs" class="copy-link">downloadAs</b> - download the edited file. This method can be called only when the existence of the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a> events. <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.</p>
+            <p>
+                <b id="downloadAs" class="copy-link">downloadAs</b> - download the edited file.
+                This method can be called only when the existence of the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a> events.
+                <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.
+            </p>
             <pre>
 docEditor.downloadAs();
 </pre>
         </li>
 
         <li>
-            <p><b id="insertImage" class="copy-link">insertImage</b> - insert an image into the file. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> events.</p>
+            <p>
+                <b id="insertImage" class="copy-link">insertImage</b> - insert an image into the file.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> events.
+            </p>
             <pre>
 docEditor.insertImage({
     "fileType": "png",
     "url": "https://example.com/url-to-example-image.png"
 });
 </pre>
-            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -110,7 +127,10 @@ docEditor.insertImage({
         </li>
 
         <li>
-            <p><b id="refreshHistory" class="copy-link">refreshHistory</b> - show the document version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events.</p>
+            <p>
+                <b id="refreshHistory" class="copy-link">refreshHistory</b> - show the document version history.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events.
+            </p>
             <pre>
 docEditor.refreshHistory({
     "currentVersion": 2,
@@ -228,7 +248,11 @@ docEditor.refreshHistory({
         </li>
 
         <li>
-            <p><b id="setActionLink" class="copy-link">setActionLink</b> - set the link to the document which contains a bookmark. This method must be called after the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event. The integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.</p>
+            <p>
+                <b id="setActionLink" class="copy-link">setActionLink</b> - set the link to the document which contains a bookmark.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.
+                The integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.
+            </p>
             <pre>
 docEditor.setActionLink(link);
 </pre>
@@ -259,7 +283,10 @@ docEditor.setActionLink(link);
         </li>
 
         <li>
-            <p><b id="setHistoryData" class="copy-link">setHistoryData</b> - send the link to the document for viewing the version history. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.</p>
+            <p>
+                <b id="setHistoryData" class="copy-link">setHistoryData</b> - send the link to the document for viewing the version history.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.
+            </p>
             <pre>
 docEditor.setHistoryData({
     "key": "Khirz6zTPdfd7",
@@ -268,8 +295,14 @@ docEditor.setHistoryData({
     "version": 2
 });
 </pre>
-            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
-            <p>If after editing and saving the document the <em>changesurl</em> link to the file with changes data is returned, download the file by this link and send the file URL in the <em>changesUrl</em> parameter. The absolute URL address of the document previous version must be sent in the <em>previous.url</em> parameter.</p>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
+            <p>
+                If after editing and saving the document the <em>changesurl</em> link to the file with changes data is returned, download the file by this link and send the file URL in the <em>changesUrl</em> parameter.
+                The absolute URL address of the document previous version must be sent in the <em>previous.url</em> parameter.
+            </p>
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "https://example.com/url-to-changes.zip",
@@ -283,7 +316,10 @@ docEditor.setHistoryData({
     "version": 2
 });
 </pre>
-            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
             <p>Send the error message explaining why the document version can not be displayed.</p>
             <pre>
 docEditor.setHistoryData({
@@ -351,7 +387,10 @@ docEditor.setHistoryData({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the url address of the current version of the document. Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document.</td>
+                        <td>
+                            Defines the url address of the current version of the document.
+                            Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document.
+                        </td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -366,14 +405,20 @@ docEditor.setHistoryData({
         </li>
 
         <li>
-            <p><b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - insert recipient data for mail merge into the file. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> events.</p>
+            <p>
+                <b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - insert recipient data for mail merge into the file.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> events.
+            </p>
             <pre>
 docEditor.setMailMergeRecipients({
     "fileType": "xlsx",
     "url": "https://example.com/url-to-example-recipients.xlsx"
 });
 </pre>
-            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -410,7 +455,10 @@ docEditor.setMailMergeRecipients({
         </li>
 
         <li>
-            <p><b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message. This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.</p>
+            <p>
+                <b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message.
+                This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
+            </p>
             <pre>
 docEditor.showMessage(message);
 </pre>

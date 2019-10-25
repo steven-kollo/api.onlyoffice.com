@@ -111,29 +111,37 @@
             </tr>
             <tr class="tablerow">
                 <td id="thumbnail" class="copy-link">thumbnail</td>
-                <td>Defines the option is used since version 4.2. Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>. The object has the following parameters:
+                <td>
+                    Defines the option is used since version 4.2.
+                    Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>.
+                    The object has the following parameters:
                     <ul>
-                        <li><b>aspect</b> - sets the mode to fit the image to the height and width specifyed.
+                        <li>
+                            <b>aspect</b> - sets the mode to fit the image to the height and width specifyed.
                             Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
                             <br />
                             <b>type</b>: integer,
                             <br />
                             <b>example</b>: 1;
                         </li>
-                        <li><b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages.
-                            If false, the zip archive containing thumbnails for all the pages will be created. The default value is <em>true</em>,
+                        <li>
+                            <b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages.
+                            If false, the zip archive containing thumbnails for all the pages will be created.
+                            The default value is <em>true</em>,
                             <br />
                             <b>type</b>: boolean,
                             <br />
                             <b>example</b>: true;
                         </li>
-                        <li><b>height</b> - the thumbnail height in pixels (default: 100),
+                        <li>
+                            <b>height</b> - the thumbnail height in pixels (default: 100),
                             <br />
                             <b>type</b>: integer,
                             <br />
                             <b>example</b>: 100;
                         </li>
-                        <li><b>width</b> - the thumbnail width in pixels (default: 100),
+                        <li>
+                            <b>width</b> - the thumbnail width in pixels (default: 100),
                             <br />
                             <b>type</b>: integer,
                             <br />
@@ -653,7 +661,10 @@
     "url": "https://example.com/url-to-example-document.docx"
 }
 </pre>
-    <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
 
     <div id="sample-password-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the password-protected file from <em>docx</em> format to <em>pdf</em> format</div>
     <pre>
@@ -667,7 +678,10 @@
     "url": "https://example.com/url-to-example-document.docx"
 }
 </pre>
-    <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
 
     <div id="sample-thumbnail" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format</div>
     <pre>
@@ -685,7 +699,10 @@
     "url": "https://example.com/url-to-example-document.docx"
 }
 </pre>
-    <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
 
     <p id="response" class="copy-link">
         The request result is returned in XML format.

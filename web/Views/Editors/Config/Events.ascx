@@ -64,7 +64,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onDocumentStateChange" class="copy-link">onDocumentStateChange</b> - the function called when the document is modified. It is called with the parameter: <em>{"data": true}</em> when the current user is editing the document and with the parameter: <em>{"data" : false}</em> when the current user's changes are sent to the <b>document editing service</b>.</p>
+        <p>
+            <b id="onDocumentStateChange" class="copy-link">onDocumentStateChange</b> - the function called when the document is modified.
+            It is called with the parameter: <em>{"data": true}</em> when the current user is editing the document and with the parameter: <em>{"data" : false}</em> when the current user's changes are sent to the <b>document editing service</b>.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onDocumentStateChange = function (event) {
@@ -86,7 +89,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called. The absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.</p>
+        <p>
+            <b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called.
+            The absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onDownloadAs = function (event) {
@@ -104,7 +110,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs. The error message is sent in the <em>data</em> parameter.</p>
+        <p>
+            <b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs.
+            The error message is sent in the <em>data</em> parameter.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onError = function (event) {
@@ -122,7 +131,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onInfo" class="copy-link">onInfo</b> - the function called when the application opened the file. The mode is sent in the <em>data.mode</em> parameter. Can be <b>view</b> or <b>edit</b>.</p>
+        <p>
+            <b id="onInfo" class="copy-link">onInfo</b> - the function called when the application opened the file.
+            The mode is sent in the <em>data.mode</em> parameter.
+            Can be <b>view</b> or <b>edit</b>.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onInfo = function (event) {
@@ -140,7 +153,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to open the document which contains a bookmark, scrolling to the bookmark position. To use the document bookmarks you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method. The bookmark data is received in the <em>event.data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.</p>
+        <p>
+            <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to open the document which contains a bookmark, scrolling to the bookmark position.
+            To use the document bookmarks you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
+            The bookmark data is received in the <em>event.data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onMakeActionLink = function (event){
@@ -161,7 +178,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onOutdatedVersion" class="copy-link">onOutdatedVersion</b> - the function called after the <a href="<%= Url.Action("troubleshooting") %>#key">error</a> is shown, when the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved. When this event is called the editor must be reinitialized with a new <em>document.key</em>.</p>
+        <p>
+            <b id="onOutdatedVersion" class="copy-link">onOutdatedVersion</b> - the function called after the <a href="<%= Url.Action("troubleshooting") %>#key">error</a> is shown, when the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved.
+            When this event is called the editor must be reinitialized with a new <em>document.key</em>.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onOutdatedVersion = function () {
@@ -179,7 +199,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser. Deprecated since version 5.0, please use <a href="#onAppReady">onAppReady</a> instead</p>
+        <p>
+            <b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser.
+            Deprecated since version 5.0, please use <a href="#onAppReady">onAppReady</a> instead
+        </p>
     </li>
 
     <li>
@@ -205,7 +228,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Edit</em> button will not be displayed.</p>
+        <p>
+            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.
+            When the function is called, the editor must be initialized again, in editing mode.
+            If the method is not declared the <em>Edit</em> button will not be displayed.
+        </p>
         <div class="note">
             <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.
         </div>
@@ -227,7 +254,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestHistory" class="copy-link">onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button. To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.</p>
+        <p>
+            <b id="onRequestHistory" class="copy-link">onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button.
+            To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistory = function() {
@@ -271,7 +301,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Back to Document</em> button. When the function is called, the editor must be initialized again, in editing mode. If the method is not declared the <em>Back to Document</em> button will not be displayed.</p>
+        <p>
+            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Back to Document</em> button.
+            When the function is called, the editor must be initialized again, in editing mode.
+            If the method is not declared the <em>Back to Document</em> button will not be displayed.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryClose = function() {
@@ -289,7 +323,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history. To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method. The document version number is sent in the <em>data</em> parameter.</p>
+        <p>
+            <b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history.
+            To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
+            The document version number is sent in the <em>data</em> parameter.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryData = function(event) {
@@ -314,11 +352,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </li>
 
     <li>
-        <p><b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button. To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.</p>
+        <p>
+            <b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button.
+            To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestInsertImage = function() {
@@ -336,11 +378,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </li>
 
     <li>
-        <p><b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button. To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.</p>
+        <p>
+            <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
+            To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestMailMergeRecipients = function() {
@@ -358,11 +404,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </li>
 
     <li>
-        <p><b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history. When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again. The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history. Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">the history object</a>.</p>
+        <p>
+            <b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.
+            When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again.
+            The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
+            Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">the history object</a>.
+        </p>
         <div class="note">The <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b> and is displayed for the previous document versions only and hidden for the current one.</div>
         <div class="header-gray">Example</div>
         <pre>
@@ -407,11 +459,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </li>
 
     <li>
-        <p><b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save as</em> button. The title of the document and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.</p>
+        <p>
+            <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save as</em> button.
+            The title of the document and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestSaveAs = function(event) {
@@ -431,7 +487,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs. The warning message is sent in the <em>data</em> parameter.</p>
+        <p>
+            <b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs.
+            The warning message is sent in the <em>data</em> parameter.
+        </p>
         <div class="header-gray">Example</div>
         <pre>
 var onWarning = function (event) {

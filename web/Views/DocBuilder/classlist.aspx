@@ -41,7 +41,10 @@
                     </tr>
                     <tr class="tablerow">
                         <td><a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand") %>">ExecuteCommand</a></td>
-                        <td>Execute the command which will be used to create the document file (text document, spreadsheet, PDF, etc.). See the <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a> and <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a> sections for more information which commands are available for various document types.</td>
+                        <td>
+                            Execute the command which will be used to create the document file (text document, spreadsheet, PDF, etc.).
+                            See the <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a> and <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a> sections for more information which commands are available for various document types.
+                        </td>
                     </tr>
                     <tr class="tablerow">
                         <td><a href="<%= Url.Action("integrationapi/cdocbuilder/initialize") %>">Initialize</a></td>

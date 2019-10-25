@@ -68,10 +68,12 @@
         To start using ONLYOFFICE Document Server with Nextcloud, the following steps must be performed:
     </p>
     <ol>
-        <li>Go to the Nextcloud server <em>apps/</em> directory (or some other directory <a href="https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
+        <li>
+            Go to the Nextcloud server <em>apps/</em> directory (or some other directory <a href="https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
             <span class="commandline">cd apps/</span>
         </li>
-        <li>Get the Nextcloud ONLYOFFICE integration app.
+        <li>
+            Get the Nextcloud ONLYOFFICE integration app.
             There are several ways to do that:
             <ol style="list-style-type: lower-alpha;">
                 <li>Download the latest signed version from the official store for <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</li>
@@ -164,15 +166,18 @@
 
     <h2 id="issue" class="copy-link">Known issues</h2>
     <ul>
-        <li id="federatedSharing">If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing among the servers will not be avaialble.
+        <li id="federatedSharing">
+            If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing among the servers will not be avaialble.
             The users from one and the same server can edit the document in the co-editing mode, but the users from two (or more) different servers will not be able to collaborate on the same document in real time.
         </li>
-        <li id="externalStorage">Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
+        <li id="externalStorage">
+            Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
             If the connection is made using the same authorization keys (the <em>Username and password</em> or <em>Global credentials</em> authentication type is selected), then the co-editing is available for the users.
             If different authorization keys are used (<em>Log-in credentials, save in database</em> or <em>User entered, store in database</em> authentication options), the co-editing is not available.
             When the <em>Log-in credentials, save in session</em> authentication type is used, the files cannot be opened in the editor.
         </li>
-        <li id="masterKey">Nextcloud provides an option to encrypt the file storage. 
+        <li id="masterKey">
+            Nextcloud provides an option to encrypt the file storage.
             But if the encryption with the <em>per-user encryption keys</em> (used by default in Nextcloud <b>Default encryption module</b> app) is enabled, ONLYOFFICE Document Server cannot open the encrypted files for editing and save them after the editing.
             The ONLYOFFICE section of the administrative settings page will display a notification about it.
             However if you set the encryption with the <em>master key</em>, ONLYOFFICE application will work as intended.
@@ -182,7 +187,8 @@
                 Nextcloud recommends using <em>master encryption key</em> only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable <em>master key</em> based encryption on them.
             </div>
         </li>
-        <li id="verify_peer_off">If you are using a self-signed certificate for your <b>Document Server</b>, Nextcloud will not validate such a certificate and will not allow connection to/from <b>Document Server</b>.
+        <li id="verify_peer_off">
+            If you are using a self-signed certificate for your <b>Document Server</b>, Nextcloud will not validate such a certificate and will not allow connection to/from <b>Document Server</b>.
             This issue can be solved the following way: locate the Nextcloud config file (<em>/nextcloud/config/config.php</em>) and open it.
             Insert the following section to it:
         <pre>

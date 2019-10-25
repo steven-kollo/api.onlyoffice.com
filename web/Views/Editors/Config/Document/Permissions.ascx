@@ -27,7 +27,10 @@
     <tbody>
         <tr>
             <td id="changeHistory" class="copy-link">changeHistory</td>
-            <td>Allows to display the <em>Restore</em> button when using the <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> event. The default value is <b>false</b>.</td>
+            <td>
+                Allows to display the <em>Restore</em> button when using the <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> event.
+                The default value is <b>false</b>.
+            </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -38,7 +41,10 @@
         </tr>
         <tr>
             <td id="comment" class="copy-link">comment</td>
-            <td>Defines if the document can be commented or not. In case the commenting permission is set to <b>"true"</b> the document <b>side bar</b> will contain the <b>Comment</b> menu option; the document commenting will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> parameter.</td>
+            <td>
+                Defines if the document can be commented or not.
+                In case the commenting permission is set to <b>"true"</b> the document <b>side bar</b> will contain the <b>Comment</b> menu option; the document commenting will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> parameter.
+            </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -55,19 +61,31 @@
         </tr>
         <tr class="tablerow">
             <td id="download" class="copy-link">download</td>
-            <td>Defines if the document can be downloaded or only viewed or edited online. In case the downloading permission is set to <b>"false"</b> the <b>Download as...</b> menu option will be absent from the <b>File</b> menu. The default value is <b>true</b>.</td>
+            <td>
+                Defines if the document can be downloaded or only viewed or edited online.
+                In case the downloading permission is set to <b>"false"</b> the <b>Download as...</b> menu option will be absent from the <b>File</b> menu.
+                The default value is <b>true</b>.
+            </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="edit" class="copy-link">edit</td>
-            <td>Defines if the document can be edited or only viewed. In case the editing permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Edit Document</b> menu option; please note that if the editing permission is set to <b>"false"</b> the document will be opened in viewer and you will <b>not</b> be able to switch it to the editor even if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value is <b>true</b>.</td>
+            <td>
+                Defines if the document can be edited or only viewed.
+                In case the editing permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Edit Document</b> menu option; please note that if the editing permission is set to <b>"false"</b> the document will be opened in viewer and you will <b>not</b> be able to switch it to the editor even if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.
+                The default value is <b>true</b>.
+            </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="print" class="copy-link">print</td>
-            <td>Defines if the document can be printed or not. In case the printing permission is set to <b>"false"</b> the <b>Print</b> menu option will be absent from the <b>File</b> menu. The default value is <b>true</b>.</td>
+            <td>
+                Defines if the document can be printed or not.
+                In case the printing permission is set to <b>"false"</b> the <b>Print</b> menu option will be absent from the <b>File</b> menu.
+                The default value is <b>true</b>.
+            </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -78,7 +96,11 @@
         </tr>
         <tr>
             <td id="fillForms" class="copy-link">fillForms</td>
-            <td>Defines if the forms can be filled. Filling in forms will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> or the <a href="#review">review</a> parameter.</td>
+            <td>
+                Defines if the forms can be filled.
+                Filling in forms will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.
+                The default value coincides with the value of the <a href="#edit">edit</a> or the <a href="#review">review</a> parameter.
+            </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -95,7 +117,11 @@
         </tr>
         <tr>
             <td id="review" class="copy-link">review</td>
-            <td>Defines if the document can be reviewed or not. In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>. The default value coincides with the value of the <a href="#edit">edit</a> parameter.</td>
+            <td>
+                Defines if the document can be reviewed or not.
+                In case the reviewing permission is set to <b>"true"</b> the document <b>status bar</b> will contain the <b>Review</b> menu option; the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.
+                The default value coincides with the value of the <a href="#edit">edit</a> parameter.
+            </td>
             <td>boolean</td>
             <td>true</td>
         </tr>

@@ -46,7 +46,11 @@ new DocsAPI.DocEditor("placeholder", {
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser and edit your document.</li>
-        <li>Close the <b>Document Editor</b>. Check out your document in about 10 seconds. All changes should be saved, meaning the configuration is correct.</li>
+        <li>
+            Close the <b>Document Editor</b>.
+            Check out your document in about 10 seconds.
+            All changes should be saved, meaning the configuration is correct.
+        </li>
     </ol>
 
 
@@ -63,10 +67,12 @@ new DocsAPI.DocEditor("placeholder", {
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
     <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
     <p>
-        If you want to change it, you can use the <em>local.json</em> file, where all the edited parameters should be stored. This file must be created in the same folder with the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b> (see the examples below).
+        If you want to change it, you can use the <em>local.json</em> file, where all the edited parameters should be stored.
+        This file must be created in the same folder with the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b> (see the examples below).
     </p>
     <div class="note">
-        Please do not edit the contents of the <em>default.json</em> file directly. The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+        Please do not edit the contents of the <em>default.json</em> file directly.
+        The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
     </div>
 
     <div class="header-gray">Parameters</div>
@@ -147,7 +153,10 @@ new DocsAPI.DocEditor("placeholder", {
                 <tbody>
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.enable</td>
-                        <td>Specifies enabling the repeating force saving. The default value is <b>false</b>.</td>
+                        <td>
+                            Specifies enabling the repeating force saving.
+                            The default value is <b>false</b>.
+                        </td>
                         <td>boolean</td>
                         <td>false</td>
                     </tr>

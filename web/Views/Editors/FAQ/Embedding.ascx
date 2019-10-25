@@ -45,7 +45,10 @@
     },
     ...
 });</pre>
-        <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
         <p>To remove any of these buttons simply do not include the corresponding parameter into the configuration file.</p>
         <div class="note">If you decide to hide the <b>Download</b> button (<em>editorConfig.embedded.saveUrl</em> parameter), please do not forget to also set the <em>document.permission.download</em> parameter in the document configuration to <b>false</b> to completely disable the possibility to download the file.</div>
         <p>Further information about the embedding parameters can be found <a href="<%= Url.Action("config/editor/embedded") %>">at this page</a>.</p>
