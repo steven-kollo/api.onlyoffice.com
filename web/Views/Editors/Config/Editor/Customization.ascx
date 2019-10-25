@@ -67,7 +67,7 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="compactHeader" class="copy-link">compactHeader</td>
             <td>Defines if the additional action buttons are displayed in the upper part of the editor window header next to the logo (<b>false</b>) or in the toolbar (<b>true</b>) making the header more compact. The default value is <b>false</b>.</td>
             <td>boolean</td>
@@ -78,7 +78,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="compactToolbar" class="copy-link">compactToolbar</td>
             <td>Defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>.
                 The default value is <b>false</b>.</td>
@@ -197,7 +197,7 @@
             <td>boolean or object</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="help" class="copy-link">help</td>
             <td>Defines if the <b>Help</b> menu button is displayed or hidden.
                 The default value is <b>true</b>.</td>
@@ -305,7 +305,7 @@
             <td>true</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="toolbarNoTabs" class="copy-link">toolbarNoTabs</td>
             <td>Defines if the top toolbar tabs are distinctly displayed (when set to <b>false</b>) or only highlighted to see which one is selected (when set to <b>true</b>).
                 The default value is <b>false</b>.</td>

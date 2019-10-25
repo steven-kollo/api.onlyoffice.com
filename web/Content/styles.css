@@ -274,6 +274,14 @@ html {
     color: #999;
 }
 
+.tablerow-note td {
+    padding-top: 0;
+}
+
+.tablerow-note .note {
+    margin-top: 0;
+}
+
 /*links*/
 a,
 a:hover,

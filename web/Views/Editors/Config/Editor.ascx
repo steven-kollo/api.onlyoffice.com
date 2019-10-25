@@ -37,7 +37,7 @@
             <td>string</td>
             <td>"https://example.com/url-to-callback.ashx"</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="createUrl" class="copy-link">createUrl</td>
             <td>Defines the absolute URL of the document where it will be created and available after creation. If not specified, there will be no creation button.
             </td>

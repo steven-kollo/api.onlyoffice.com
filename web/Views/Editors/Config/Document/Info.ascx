@@ -60,7 +60,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/info.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="sharingSettings" class="copy-link">sharingSettings</td>
             <td>Displays the information about the settings which allow to share the document with other users:
                 <ul>
