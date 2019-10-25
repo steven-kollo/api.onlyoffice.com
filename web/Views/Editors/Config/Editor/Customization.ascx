@@ -222,21 +222,21 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="about" class="copy-link">leftMenu<span class="required">**</span></td>
+            <td id="leftMenu" class="copy-link">leftMenu<span class="required">**</span></td>
             <td>Defines if the left menu panel is displayed or hidden.
                 The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
-            <td id="about" class="copy-link">loaderLogo<span class="required">**</span></td>
+            <td id="loaderLogo" class="copy-link">loaderLogo<span class="required">**</span></td>
             <td>Defines the path to the image logo which will be displayed while the document is being loaded (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
                 The image will be proportionally resized to the height of 160 pixels when displayed in the editors.</td>
             <td>string</td>
             <td>"https://example.com/loader-logo.png"</td>
         </tr>
         <tr class="tablerow">
-            <td id="about" class="copy-link">loaderName<span class="required">**</span></td>
+            <td id="loaderName" class="copy-link">loaderName<span class="required">**</span></td>
             <td>Defines the text which will be displayed while the document is being loaded.</td>
             <td>string</td>
             <td>"The document is loading, please wait..."</td>
@@ -277,7 +277,7 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="about" class="copy-link">rightMenu<span class="required">**</span></td>
+            <td id="rightMenu" class="copy-link">rightMenu<span class="required">**</span></td>
             <td>Defines if the right menu panel is displayed or hidden.
                 The default value is <b>true</b>.</td>
             <td>boolean</td>
@@ -294,14 +294,14 @@
         <% if (license)
            { %>
         <tr class="tablerow">
-            <td id="about" class="copy-link">statusBar<span class="required">**</span></td>
+            <td id="statusBar" class="copy-link">statusBar<span class="required">**</span></td>
             <td>Defines if the status bar is displayed or hidden.
                 The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
         <tr class="tablerow">
-            <td id="about" class="copy-link">toolbar<span class="required">**</span></td>
+            <td id="toolbar" class="copy-link">toolbar<span class="required">**</span></td>
             <td>Defines if the top toolbar is displayed or hidden.
                 The default value is <b>true</b>.</td>
             <td>boolean</td>
