@@ -274,6 +274,25 @@
             <td>object</td>
             <td></td>
         </tr>
+        <tr class="tablerow">
+            <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
+            <td>
+                Defines the review editing mode which will be used when the document is opened for viewing.
+                It will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>view</b>.
+                The object has the following parameters:
+                <ul>
+                    <li><b>final</b> - the document is displayed with all the proposed changes applied;
+                    </li>
+                    <li><b>markup</b> - the document is displayed with proposed changes highlighted;
+                    </li>
+                    <li><b>original</b> - the original document is displayed without the proposed changes.
+                    </li>
+                </ul>
+                The default value is <b>original</b>.
+            </td>
+            <td>string</td>
+            <td>original</td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -383,6 +402,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
             },
+            "reviewDisplay": "original",
             <% if (license)
                { %>"rightMenu": true,
             <% } %>"showReviewChanges": false,

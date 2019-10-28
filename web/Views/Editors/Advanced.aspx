@@ -123,6 +123,7 @@
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://example.com"
             },
+            "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",
             "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#zoom">zoom</a>": 100
