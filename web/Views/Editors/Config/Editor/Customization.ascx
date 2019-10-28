@@ -37,7 +37,7 @@
             <td>true</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="autosave" class="copy-link">autosave</td>
             <td>Defines if the <b>Autosave</b> menu option is enabled or disabled.
                 If set to <b>false</b>, only <em>Strict</em> co-editing mode can be selected, as <em>Fast</em> does not work without autosave.
@@ -45,6 +45,11 @@
                 The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.autosave</em> parameter.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="chat" class="copy-link">chat</td>
@@ -88,8 +93,9 @@
             <td>boolean</td>
             <td>false</td>
         </tr>
-        <tr class="tablerow">
+        <tr class="tablerow tablerow-note">
             <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.compactToolbar</em> parameter.</div>
                 <img src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
             </td>
         </tr>
@@ -164,12 +170,17 @@
             <td>boolean or object</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="forcesave" class="copy-link">forcesave</td>
             <td>Adds the request for the forced file saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.).
                 The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.forcesave</em> parameter.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="goback" class="copy-link">goback</td>
@@ -212,12 +223,17 @@
                 <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="hideRightMenu" class="copy-link">hideRightMenu</td>
             <td>Defines if the right menu is displayed or hidden on first loading.
                 The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.hideRightMenu</em> parameter.</div>
+            </td>
         </tr>
         <% if (license)
            { %>
@@ -293,8 +309,9 @@
             <td>string</td>
             <td>original</td>
         </tr>
-        <tr class="tablerow">
+        <tr class="tablerow tablerow-note">
             <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
                 <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
@@ -344,7 +361,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="zoom" class="copy-link">zoom</td>
             <td>Defines the document display zoom value measured in percent.
                 Can take values larger than <b>0</b>.
@@ -352,6 +369,11 @@
                 The default value is <b>100</b>.</td>
             <td>integer</td>
             <td>100</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.zoom</em> parameter.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
