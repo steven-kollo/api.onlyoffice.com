@@ -19,6 +19,7 @@
 
     <h2 id="55" class="copy-link">Version 5.5</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#spellcheck">editorConfig.customization.spellcheck</a> field.</li>
         <li>Conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">document</a>, <a href="<%= Url.Action("conversionapi") %>#spreadsheet-matrix">spreadsheet</a>, <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">presentation</a> to <em>pdfa</em> format.</li>
     </ul>
 

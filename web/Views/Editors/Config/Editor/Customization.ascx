@@ -291,6 +291,21 @@
             <td>boolean</td>
             <td>false</td>
         </tr>
+        <tr>
+            <td id="spellcheck" class="copy-link">spellcheck</td>
+            <td>
+                Defines if the spell checker is automatically switched on or off when the editor is loaded.
+                Spell checker will only be available for the document editor and the presentation editor.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.spellcheck</em> parameter.</div>
+            </td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -386,6 +401,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% if (license)
                { %>"rightMenu": true,
             <% } %>"showReviewChanges": false,
+            "spellcheck": true,
             <% if (license)
                { %>"statusBar": true,
             "toolbar": true,
