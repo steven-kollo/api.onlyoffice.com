@@ -143,6 +143,9 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "fillForms", EmitDefaultValue = false)]
                 public bool? FillForms;
 
+                [DataMember(Name = "modifyContentControl", EmitDefaultValue = false)]
+                public bool? ModifyContentControl;
+
                 [DataMember(Name = "modifyFilter", EmitDefaultValue = false)]
                 public bool? ModifyFilter;
 

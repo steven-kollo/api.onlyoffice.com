@@ -78,6 +78,7 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#download">download</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">modifyContentControl</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#modifyFilter">modifyFilter</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#print">print</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#review">review</a>": true
