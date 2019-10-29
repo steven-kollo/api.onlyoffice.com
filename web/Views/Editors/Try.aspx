@@ -75,6 +75,14 @@
                 </td>
             </tr>
             <tr>
+                <th>Local filter</th>
+                <td></td>
+                <td>
+                    <a title="Open XLSX file without access to change the filter" class="button button-upper button-coediting" data-type="modifyFilter">XLSX</a><a title="View source code" class="button-popap-try" data-code="modifyFilterCode">&lt;/&gt;</a>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
                 <th>Review</th>
                 <td><a title="Open DOCX file for review" href="<%= Url.Action("editor") %>?method=docxReview" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewCode">&lt;/&gt;</a>
                 </td>
@@ -1481,6 +1489,90 @@
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="modifyFilterCode">
+                <div class="popap-header">Open xlsx without access to change the filter</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "B0823482653D",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx",
+                    "permissions": {
+                        "edit": true,
+                        "modifyFilter": false
+                    }
+                },
+                "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
+                    "user": {
+                        "id": "78e1e841",
+                        "name": "John Smith"
+                    }
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "B0823482653D",
+                    "title": "Example Spreadsheet Title.xlsx",
+                    "url": "https://example.com/url-to-example-spreadsheet.xlsx",
+                    "permissions": {
+                        "edit": true,
+                        "modifyFilter": false
+                    }
+                },
+                "documentType": "spreadsheet",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
+                    "user": {
+                        "id": "F89d8069ba2b",
+                        "name": "Kate Cage"
+                    }
                 },
                 "height": "100%",
                 "width": "100%"

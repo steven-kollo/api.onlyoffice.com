@@ -808,6 +808,38 @@
             );
         <% break; %>
 
+        <% case "modifyFilter": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xlsx",
+                                Key = "apiwh" + Request["key"],
+                                Title = "Example Spreadsheet Title.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo-filter.xlsx",
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        ModifyFilter = false
+                                    }
+                            },
+                        DocumentType = "spreadsheet",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                User = new Config.EditorConfigConfiguration.UserConfig
+                                    {
+                                        Id = Guid.NewGuid().ToString(),
+                                        Name = Request["name"]
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    }) %>
+            );
+        <% break; %>
+
         <% } %>
     </script>
 </body>
