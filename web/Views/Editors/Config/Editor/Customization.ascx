@@ -274,7 +274,7 @@
             <td>object</td>
             <td></td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
                 Defines the review editing mode which will be used when the document is opened for viewing.
@@ -292,6 +292,11 @@
             </td>
             <td>string</td>
             <td>original</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+            </td>
         </tr>
         <% if (license)
            { %>
