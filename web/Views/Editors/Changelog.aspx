@@ -24,6 +24,7 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">events.onRequestCompareFile</a> event.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.</li>
         <li>Token in <a href="<%= Url.Action("signature/browser") %>#methods">methods</a> parameters.</li>
+        <li>The <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> field is deprecated, please add the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> field instead.</li>
     </ul>
 
     <h2 id="54" class="copy-link">Version 5.4</h2>

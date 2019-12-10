@@ -73,7 +73,6 @@
         },
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
-            "<a href="<%= Url.Action("config/document/permissions") %>#changeHistory">changeHistory</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#download">download</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>": true,
