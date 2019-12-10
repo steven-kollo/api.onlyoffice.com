@@ -184,23 +184,23 @@
         </tr>
         <tr class="tablerow">
             <td id="goback" class="copy-link">goback</td>
-            <td>Defines settings for the <b>Go to Documents</b> menu button and upper right corner button.
+            <td>Defines settings for the <b>Open file location</b> menu button and upper right corner button.
                 The object has the following parameters:
                 <ul>
-                    <li><b>blank</b> - open the website in the new browser tab/window (if the value is set to <em>true</em>) or the current tab (if the value is set to <em>false</em>) when the <b>Go to Documents</b> button is clicked.
+                    <li><b>blank</b> - open the website in the new browser tab/window (if the value is set to <em>true</em>) or the current tab (if the value is set to <em>false</em>) when the <b>Open file location</b> button is clicked.
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
                         <br />
                         <b>example</b>: true;
                     </li>
-                    <li><b>text</b> - the text which will be displayed for the <b>Go to Documents</b> menu button and upper right corner button (i.e. instead of <em>Go to Documents</em>),
+                    <li><b>text</b> - the text which will be displayed for the <b>Open file location</b> menu button and upper right corner button (i.e. instead of <em>Go to Documents</em>),
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Go to Documents";
+                        <b>example</b>: "Open file location";
                     </li>
-                    <li><b>url</b> - the absolute URL to the website address which will be opened when clicking the <b>Go to Documents</b> menu button,
+                    <li><b>url</b> - the absolute URL to the website address which will be opened when clicking the <b>Open file location</b> menu button,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -415,7 +415,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "forcesave": false,
             "goback": {
                 "blank": true,
-                "text": "Go to Documents",
+                "text": "Open file location",
                 "url": "https://example.com"
             },
             "help": true,
