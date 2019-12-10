@@ -125,7 +125,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     },
     ...
 });</pre>
-                The object containing the valid links to the current document version (<em>url</em>) and to the previous document version (<em>previous.url</em>) as well as the IDs (<em>key</em> and <em>previous.key</em>) must be passed to the configuration file. <em>changesUrl</em> archive file must be also available and downloadable by the Document Server to be able to display the changes.
+                The object containing the valid links to the current document version (<em>url</em>) and to the previous document version (<em>previous.url</em>) as well as the IDs (<em>key</em> and <em>previous.key</em>) must be passed to the configuration file. <em>changesUrl</em> archive file must be also available and downloadable from the browser to be able to display the changes.
             </li>
         </ul>
     </dd>
