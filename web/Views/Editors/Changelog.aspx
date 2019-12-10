@@ -23,6 +23,7 @@
         <li>Conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">document</a>, <a href="<%= Url.Action("conversionapi") %>#spreadsheet-matrix">spreadsheet</a>, <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">presentation</a> to <em>pdfa</em> format.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> event.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.</li>
+        <li>Token in <a href="<%= Url.Action("signature/browser") %>#methods">methods</a> parameters.</li>
     </ul>
 
     <h2 id="54" class="copy-link">Version 5.4</h2>
