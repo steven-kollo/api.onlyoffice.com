@@ -228,6 +228,29 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile</b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button. To select a document for comparing you must call the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.</p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestCompareFile = function() {
+    docEditor.setRevisedFile({
+        "fileType": "docx",
+        "url": "https://example.com/url-to-example-document.docx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestCompareFile": onRequestCompareFile,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
         <p>
             <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.
             When the function is called, the editor must be initialized again, in editing mode.

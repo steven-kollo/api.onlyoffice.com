@@ -455,6 +455,50 @@ docEditor.setMailMergeRecipients({
         </li>
 
         <li>
+            <p><b id="setRevisedFile" class="copy-link">setRevisedFile</b> - select a document for comparing. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.</p>
+            <pre>
+docEditor.setRevisedFile({
+    "fileType": "docx",
+    "url": "https://example.com/url-to-example-document.docx"
+});
+</pre>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>Defines the type of image for insert into the file.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>url</td>
+                        <td>Defines the absolute URL where the source image is stored.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+        <li>
             <p>
                 <b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message.
                 This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
