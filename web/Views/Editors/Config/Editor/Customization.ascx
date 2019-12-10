@@ -37,7 +37,7 @@
             <td>true</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="autosave" class="copy-link">autosave</td>
             <td>Defines if the <b>Autosave</b> menu option is enabled or disabled.
                 If set to <b>false</b>, only <em>Strict</em> co-editing mode can be selected, as <em>Fast</em> does not work without autosave.
@@ -45,6 +45,11 @@
                 The default value is <b>true</b>.</td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.autosave</em> parameter.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="chat" class="copy-link">chat</td>
@@ -88,8 +93,9 @@
             <td>boolean</td>
             <td>false</td>
         </tr>
-        <tr class="tablerow">
+        <tr class="tablerow tablerow-note">
             <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.compactToolbar</em> parameter.</div>
                 <img src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
             </td>
         </tr>
@@ -164,32 +170,37 @@
             <td>boolean or object</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="forcesave" class="copy-link">forcesave</td>
             <td>Adds the request for the forced file saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.).
                 The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.forcesave</em> parameter.</div>
+            </td>
+        </tr>
         <tr class="tablerow">
             <td id="goback" class="copy-link">goback</td>
-            <td>Defines settings for the <b>Go to Documents</b> menu button and upper right corner button.
+            <td>Defines settings for the <b>Open file location</b> menu button and upper right corner button.
                 The object has the following parameters:
                 <ul>
-                    <li><b>blank</b> - open the website in the new browser tab/window (if the value is set to <em>true</em>) or the current tab (if the value is set to <em>false</em>) when the <b>Go to Documents</b> button is clicked.
+                    <li><b>blank</b> - open the website in the new browser tab/window (if the value is set to <em>true</em>) or the current tab (if the value is set to <em>false</em>) when the <b>Open file location</b> button is clicked.
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
                         <br />
                         <b>example</b>: true;
                     </li>
-                    <li><b>text</b> - the text which will be displayed for the <b>Go to Documents</b> menu button and upper right corner button (i.e. instead of <em>Go to Documents</em>),
+                    <li><b>text</b> - the text which will be displayed for the <b>Open file location</b> menu button and upper right corner button (i.e. instead of <em>Go to Documents</em>),
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Go to Documents";
+                        <b>example</b>: "Open file location";
                     </li>
-                    <li><b>url</b> - the absolute URL to the website address which will be opened when clicking the <b>Go to Documents</b> menu button,
+                    <li><b>url</b> - the absolute URL to the website address which will be opened when clicking the <b>Open file location</b> menu button,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -212,12 +223,17 @@
                 <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="hideRightMenu" class="copy-link">hideRightMenu</td>
             <td>Defines if the right menu is displayed or hidden on first loading.
                 The default value is <b>false</b>.</td>
             <td>boolean</td>
             <td>false</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.hideRightMenu</em> parameter.</div>
+            </td>
         </tr>
         <% if (license)
            { %>
@@ -273,6 +289,31 @@
             </td>
             <td>object</td>
             <td></td>
+        </tr>
+        <tr>
+            <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
+            <td>
+                Defines the review editing mode which will be used when the document is opened for viewing.
+                It will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>view</b>.
+                The object has the following parameters:
+                <ul>
+                    <li><b>final</b> - the document is displayed with all the proposed changes applied;
+                    </li>
+                    <li><b>markup</b> - the document is displayed with proposed changes highlighted;
+                    </li>
+                    <li><b>original</b> - the original document is displayed without the proposed changes.
+                    </li>
+                </ul>
+                The default value is <b>original</b>.
+            </td>
+            <td>string</td>
+            <td>original</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
+                <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+            </td>
         </tr>
         <% if (license)
            { %>
@@ -335,7 +376,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="zoom" class="copy-link">zoom</td>
             <td>Defines the document display zoom value measured in percent.
                 Can take values larger than <b>0</b>.
@@ -343,6 +384,11 @@
                 The default value is <b>100</b>.</td>
             <td>integer</td>
             <td>100</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.zoom</em> parameter.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td colspan="4">
@@ -384,7 +430,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "forcesave": false,
             "goback": {
                 "blank": true,
-                "text": "Go to Documents",
+                "text": "Open file location",
                 "url": "https://example.com"
             },
             "help": true,
@@ -398,6 +444,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
             },
+            "reviewDisplay": "original",
             <% if (license)
                { %>"rightMenu": true,
             <% } %>"showReviewChanges": false,

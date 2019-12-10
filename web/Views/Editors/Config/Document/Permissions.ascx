@@ -116,6 +116,31 @@
             </td>
         </tr>
         <tr>
+            <td id="modifyContentControl" class="copy-link">modifyContentControl</td>
+            <td>
+                Defines if the content control settings can be changed.
+                Content control modification will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="modifyFilter" class="copy-link">modifyFilter</td>
+            <td>
+                Defines if the filter can applied globally (<b>true</b>) affecting all the other users, or locally (<b>false</b>), i.e. for the current user only.
+                Filter modification will only be available for the spreadsheet editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">In case the document is edited by a user with the full access rights, the filters applied by such a user will be visible to all other users despite their local settings.</div>
+            </td>
+        </tr>
+        <tr>
             <td id="review" class="copy-link">review</td>
             <td>
                 Defines if the document can be reviewed or not.
@@ -148,6 +173,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "download": true,
             "edit": true,
             "fillForms": true,
+            "modifyContentControl": true,
+            "modifyFilter": true,
             "print": true,
             "review": true
         },

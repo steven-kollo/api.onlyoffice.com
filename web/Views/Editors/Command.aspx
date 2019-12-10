@@ -59,6 +59,12 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
+                <td id="token" class="copy-link">token</td>
+                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#command">token</a>.</td>
+                <td>string</td>
+                <td>required by configuration</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="userdata" class="copy-link">userdata</td>
                 <td>Defines some custom identifier which will help distinguish the specific request in case there were more than one.</td>
                 <td>string</td>
@@ -121,6 +127,13 @@
 {
     "error": 0,
     "version": "4.3.1.4"
+}
+</pre>
+
+    <div id="info-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document command service</b> used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
+    <pre>
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
 }
 </pre>
 

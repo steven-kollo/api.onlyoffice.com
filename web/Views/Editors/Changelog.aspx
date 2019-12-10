@@ -42,6 +42,7 @@
 
     <h2 id="53" class="copy-link">Version 5.3</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a> field.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> field is now used to restrict comment deletion as well.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">editorConfig.customization.compactHeader</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> field.</li>
@@ -63,6 +64,7 @@
 
     <h2 id="51" class="copy-link">Version 5.1</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">document.permissions.modifyContentControl</a> field.</li>
         <li>Added support for OpenDocument Template <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#goback">editorConfig.customization.goback.blank</a> field.</li>
@@ -70,6 +72,7 @@
 
     <h2 id="50" class="copy-link">Version 5.0</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#modifyFilter">document.permissions.modifyFilter</a> field.</li>
         <li>Added support for macro-enabled document, document template and flat document <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
         <li>The <a href="<%= Url.Action("config/events") %>#onReady">events.onReady</a> event is deprecated, please use the <a href="<%= Url.Action("config/events") %>#onAppReady">events.onAppReady</a> events instead.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onDocumentReady">onDocumentReady</a> event.</li>

@@ -78,6 +78,8 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#download">download</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">modifyContentControl</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#modifyFilter">modifyFilter</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#print">print</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#review">review</a>": true
         },
@@ -111,7 +113,7 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#goback">goback</a>": {
                 "blank": true,
-                "text": "Go to Documents",
+                "text": "Open file location",
                 "url": "https://example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#help">help</a>": true,
@@ -121,6 +123,7 @@
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://example.com"
             },
+            "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",
             "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
