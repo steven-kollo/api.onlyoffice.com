@@ -159,6 +159,12 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="token" class="copy-link">token</td>
+                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#conversion">token</a>.</td>
+                <td>string</td>
+                <td>required by configuration</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
                 <td>Defines the absolute URL to the document to be converted.</td>
                 <td>string</td>
@@ -697,6 +703,17 @@
     },
     "title": "Example Document Title.docx",
     "url": "https://example.com/url-to-example-document.docx"
+}
+</pre>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
+    
+    <div id="sample-conversion-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
+    <pre>
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
 }
 </pre>
     <p>
