@@ -268,6 +268,7 @@
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
     <Content Include="Content\img\Editor\onMakeActionLink.png" />
+    <Content Include="Content\img\Editor\onRequestCompareFile.png" />
     <Content Include="Content\img\Editor\onRequestEditRights.png" />
     <Content Include="Content\img\Editor\onRequestHistory.png" />
     <Content Include="Content\img\Editor\onRequestHistoryClose.png" />
