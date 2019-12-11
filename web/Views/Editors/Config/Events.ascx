@@ -521,11 +521,24 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - the function called when the user is trying to manage document access rights by clicking <em>Change access rights</em> button.
+            When the access rights is changed, you must call the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method to update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
         </p>
         <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestSharingSettings = function() {
+    docEditor.setSharingSettings({
+        "sharingSettings": [
+            {
+                "permissions": "Full Access",
+                "user": "John Smith"
+            },
+            {
+                "permissions": "Read Only",
+                "user": "Kate Cage"
+            }
+        ]
+    });
     ...
 };
 

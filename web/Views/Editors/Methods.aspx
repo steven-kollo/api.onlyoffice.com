@@ -519,6 +519,63 @@ docEditor.setRevisedFile({
 
         <li>
             <p>
+                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - Update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
+                This method can be called after the <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a> events.
+            </p>
+            <pre>
+docEditor.setSharingSettings({
+    "sharingSettings": [
+        {
+            "permissions": "Full Access",
+            "user": "John Smith"
+        },
+        {
+            "permissions": "Read Only",
+            "user": "Kate Cage"
+        }
+    ]
+});
+</pre>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>sharingSettings</td>
+                        <td>Defines the settings which allow to share the document with other users.</td>
+                        <td>array of object</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>sharingSettings.permissions</td>
+                        <td>Defines the access rights for the user with the name above.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>sharingSettings.user</td>
+                        <td>Defines the name of the user the document will be shared with.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+        <li>
+            <p>
                 <b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message.
                 This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
             </p>
