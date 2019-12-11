@@ -103,6 +103,8 @@
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRename">events.onRequestRename</a> event.</li>
         <li>Added the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
         <li>Changed the use of callbackUrl from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>

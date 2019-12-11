@@ -137,6 +137,20 @@
             </td>
         </tr>
         <tr>
+            <td id="rename" class="copy-link">rename</td>
+            <td>
+                Allows to display the <em>Rename...</em> button when using the <a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a> event.
+                The default value is <b>false</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
             <td id="review" class="copy-link">review</td>
             <td>
                 Defines if the document can be reviewed or not.
@@ -172,6 +186,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "modifyContentControl": true,
             "modifyFilter": true,
             "print": true,
+            "rename": true,
             "review": true
         },
         ...

@@ -276,6 +276,7 @@
     <Content Include="Content\img\Editor\onRequestHistoryData.png" />
     <Content Include="Content\img\Editor\onRequestInsertImage.png" />
     <Content Include="Content\img\Editor\onRequestMailMergeRecipients.png" />
+    <Content Include="Content\img\Editor\onRequestRename.png" />
     <Content Include="Content\img\Editor\onRequestRestore.png" />
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
