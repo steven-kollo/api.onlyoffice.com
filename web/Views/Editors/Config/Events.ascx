@@ -520,6 +520,27 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
+            <b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - the function called when the user is trying to manage document access rights by clicking <em>Change access rights</em> button.
+        </p>
+        <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSharingSettings = function() {
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSharingSettings": onRequestSharingSettings,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
             <b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs.
             The warning message is sent in the <em>data</em> parameter.
         </p>
