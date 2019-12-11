@@ -112,6 +112,7 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#goback">goback</a>": {
                 "blank": true,
+                "requestClose": false,
                 "text": "Open file location",
                 "url": "https://example.com"
             },

@@ -194,6 +194,13 @@
                         <br />
                         <b>example</b>: true;
                     </li>
+                    <li><b>requestClose</b> - defines that if the <b>Open file location</b> button is clicked, <a href="<%= Url.Action("config/events") %>#onRequestClose">events.onRequestClose</a> event is called instead of opening a browser tab or window.
+                        The default value is <b>false</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false;
+                    </li>
                     <li><b>text</b> - the text which will be displayed for the <b>Open file location</b> menu button and upper right corner button (i.e. instead of <em>Go to Documents</em>),
                         <br />
                         <b>type</b>: string,
@@ -430,6 +437,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "forcesave": false,
             "goback": {
                 "blank": true,
+                "requestClose": false,
                 "text": "Open file location",
                 "url": "https://example.com"
             },
