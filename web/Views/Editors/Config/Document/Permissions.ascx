@@ -115,7 +115,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/fill-forms.png") %>" alt="" />
             </td>
         </tr>
-        <tr>
+        <tr class="tablerow">
             <td id="modifyContentControl" class="copy-link">modifyContentControl</td>
             <td>
                 Defines if the content control settings can be changed.
@@ -125,7 +125,7 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="modifyFilter" class="copy-link">modifyFilter</td>
             <td>
                 Defines if the filter can applied globally (<b>true</b>) affecting all the other users, or locally (<b>false</b>), i.e. for the current user only.
