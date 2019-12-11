@@ -446,7 +446,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
             Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">the history object</a>.
         </p>
-        <div class="note">The <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b> and is displayed for the previous document versions only and hidden for the current one.</div>
+        <div class="note">
+            The <em>Restore</em> button is displayed for the previous document versions only and hidden for the current one.
+            Until version 5.5 the <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b>.
+        </div>
         <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
