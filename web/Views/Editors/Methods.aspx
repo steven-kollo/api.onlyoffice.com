@@ -349,7 +349,10 @@ docEditor.setHistoryData({
                 <tbody>
                     <tr class="tablerow">
                         <td>changesUrl</td>
-                        <td>Defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.</td>
+                        <td>
+                            Defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.
+                            The request for file is sent out directly from the browser.
+                        </td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>

@@ -168,7 +168,8 @@ docEditor.setHistoryData({
     "version": 2
 });
 </pre>
-            <div class="note">The <em>changesurl</em> request is made in the browser from the added iframe with the <b>documentserver</b> domain, where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+            <div class="note">
+                The <em>changesurl</em> request is made in the browser from the added iframe with the <b>documentserver</b> domain, where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
                 For its correct work the cross-origin HTTP requests must be allowed (CORS).
                 This can be achieved using the <em>Access-Control-Allow-Origin</em> header.
             </div>

@@ -154,10 +154,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to open the document which contains a bookmark, scrolling to the bookmark position.
-            To use the document bookmarks you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
+            <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.
+            To set the bookmark link you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
             The bookmark data is received in the <em>event.data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
         </p>
+        <img alt="onMakeActionLink" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onMakeActionLink = function (event){
@@ -259,6 +260,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="note">
             <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.
         </div>
+        <img alt="onRequestEditRights" src="<%= Url.Content("~/content/img/editor/onRequestEditRights.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestEditRights = function () {
@@ -281,6 +283,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <b id="onRequestHistory" class="copy-link">onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button.
             To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
         </p>
+        <img alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistory = function() {
@@ -325,10 +328,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Back to Document</em> button.
+            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.
             When the function is called, the editor must be initialized again, in editing mode.
-            If the method is not declared the <em>Back to Document</em> button will not be displayed.
+            If the method is not declared the <em>Close History</em> button will not be displayed.
         </p>
+        <img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryClose = function() {
@@ -351,6 +355,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
             The document version number is sent in the <em>data</em> parameter.
         </p>
+        <img alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestHistoryData = function(event) {
@@ -384,6 +389,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button.
             To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.
         </p>
+        <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestInsertImage = function() {
@@ -410,6 +416,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
             To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
         </p>
+        <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestMailMergeRecipients = function() {
@@ -439,6 +446,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">the history object</a>.
         </p>
         <div class="note">The <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b> and is displayed for the previous document versions only and hidden for the current one.</div>
+        <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestRestore = function(event) {
@@ -488,9 +496,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save as</em> button.
+            <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save Copy as...</em> button.
             The title of the document and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
         </p>
+        <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestSaveAs = function(event) {

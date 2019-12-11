@@ -62,13 +62,13 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing.
-        The default conversion start delay time is defined in <b>Document Server</b> configuratino file, which can be found at the following path:
+        The default conversion start delay time is defined in <b>Document Server</b> configuration file, which can be found at the following path:
     </p>
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
     <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
     <p>
         If you want to change it, you can use the <em>local.json</em> file, where all the edited parameters should be stored.
-        This file must be created in the same folder with the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b> (see the examples below).
+        This file is located in the same directory as the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b> (see the examples below).
     </p>
     <div class="note">
         Please do not edit the contents of the <em>default.json</em> file directly.

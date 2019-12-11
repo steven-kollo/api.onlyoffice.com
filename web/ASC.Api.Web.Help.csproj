@@ -267,6 +267,16 @@
     <Content Include="Content\img\docbuilder\php-add.png" />
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
+    <Content Include="Content\img\Editor\onMakeActionLink.png" />
+    <Content Include="Content\img\Editor\onRequestEditRights.png" />
+    <Content Include="Content\img\Editor\onRequestHistory.png" />
+    <Content Include="Content\img\Editor\onRequestHistoryClose.png" />
+    <Content Include="Content\img\Editor\onRequestHistoryData.png" />
+    <Content Include="Content\img\Editor\onRequestInsertImage.png" />
+    <Content Include="Content\img\Editor\onRequestMailMergeRecipients.png" />
+    <Content Include="Content\img\Editor\onRequestRestore.png" />
+    <Content Include="Content\img\Editor\onRequestSaveAs.png" />
+    <Content Include="Content\img\Editor\reviewDisplay.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
     <Content Include="Content\img\Editor\help.png" />
     <Content Include="Content\img\Editor\sharing_settings.png" />
