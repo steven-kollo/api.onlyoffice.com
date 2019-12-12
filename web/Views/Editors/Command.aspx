@@ -88,12 +88,30 @@
 }
 </pre>
 
+    <p>The request result is returned in JSON form.</p>
+    <div class="header-gray">Sample of the response</div>
+    <pre>
+{
+    "error": 0,
+    "key": "Khirz6zTPdfd7"
+}
+</pre>
+
     <div id="forcesave" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used for force saving the document with the <em>6d5a81d0</em> identifier being edited without closing it</div>
     <pre>
 {
     "c": "forcesave",
     "key": "Khirz6zTPdfd7",
     "userdata": "sample userdata"
+}
+</pre>
+
+    <p>The request result is returned in JSON form.</p>
+    <div class="header-gray">Sample of the response</div>
+    <pre>
+{
+    "error": 0,
+    "key": "Khirz6zTPdfd7"
 }
 </pre>
 
