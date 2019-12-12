@@ -177,6 +177,7 @@
         "<a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a>": onDownloadAs,
         "<a href="<%= Url.Action("config/events") %>#onError">onError</a>": onError,
         "<a href="<%= Url.Action("config/events") %>#onInfo">onInfo</a>": onInfo,
+        "<a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a>": onMetaChange,
         "<a href="<%= Url.Action("config/events") %>#onOutdatedVersion">onOutdatedVersion</a>": onOutdatedVersion,
         "<a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a>": onRequestClose,
         "<a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a>": onRequestCompareFile,

@@ -154,6 +154,28 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
+            <b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command") %>#meta">meta</a> command.
+            The name of the document is sent in the <em>data.title</em> parameter.
+        </p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onMetaChange = function (event) {
+    var title = event.data.title;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onMetaChange": onMetaChange,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
             <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.
             To set the bookmark link you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
             The bookmark data is received in the <em>event.data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.

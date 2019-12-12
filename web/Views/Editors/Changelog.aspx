@@ -91,6 +91,8 @@
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
     </ul>
 
     <h2 id="43" class="copy-link">Version 4.3</h2>
