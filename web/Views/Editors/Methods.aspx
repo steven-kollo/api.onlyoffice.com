@@ -459,6 +459,68 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
+                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> events.
+            </p>
+            <pre>
+docEditor.setUsers({
+    "users": [
+        {
+            "email": "john@example.com",
+            "name": "John Smith"
+        },
+        {
+            "email": "kate@example.com",
+            "name": "Kate Cage"
+        },
+        ...
+    ]
+});
+</pre>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>users</td>
+                        <td>Defines the list of the users.</td>
+                        <td>array of strings</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>users.email</td>
+                        <td>Defines the email address of the user.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>users.name</td>
+                        <td>Defines the full name of the user.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+        <li>
+            <p>
                 <b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message.
                 This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
             </p>

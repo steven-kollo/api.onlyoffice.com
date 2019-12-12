@@ -519,6 +519,40 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
+            <b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the commenter can select other users for mention in the comments.
+            To set the users list you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
+        </p>
+        <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestUsers = function() {
+    docEditor.setUsers({
+        "users": [
+            {
+                "email": "john@example.com",
+                "name": "John Smith"
+            },
+            {
+                "email": "kate@example.com",
+                "name": "Kate Cage"
+            },
+            ...
+        ]
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestUsers": onRequestUsers,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
             <b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs.
             The warning message is sent in the <em>data</em> parameter.
         </p>
