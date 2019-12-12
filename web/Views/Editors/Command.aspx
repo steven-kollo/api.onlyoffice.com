@@ -46,6 +46,7 @@
                         <li><b>drop</b> - disconnect the users with the identifiers present in the <em>users</em> parameter from the <b>document editing service</b> (these users will be able to view the document, but will not be allowed to make changes to it);</li>
                         <li><b>forcesave</b> - force saving the document being edited without closing it (the document editing might be continued after this command, so this will not be the final saved document version);</li>
                         <li><b>info</b> - receive a document status;</li>
+                        <li><b>meta</b> - update the meta information of the document for all collaborative editors;</li>
                         <li><b>version</b> - receive the current version number of Document Server.</li>
                     </ul>
                 </td>
@@ -55,6 +56,12 @@
             <tr class="tablerow">
                 <td id="key" class="copy-link">key</td>
                 <td>Defines the document identifier used to unambiguously identify the document file.</td>
+                <td>string</td>
+                <td>required</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="meta-title" class="copy-link">meta.title</td>
+                <td>Defines the new name of the document (used for the <em>c=meta</em> parameter value).</td>
                 <td>string</td>
                 <td>required</td>
             </tr>
@@ -120,6 +127,26 @@
 {
     "c": "info",
     "key": "Khirz6zTPdfd7"
+}
+</pre>
+
+    <p>The request result is returned in JSON form.</p>
+    <div class="header-gray">Sample of the response</div>
+    <pre>
+{
+    "error": 0,
+    "key": "Khirz6zTPdfd7"
+}
+</pre>
+
+    <div id="meta" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to update the name of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
+    <pre>
+{
+    "c": "meta",
+    "key": "Khirz6zTPdfd7",
+    "meta": {
+        "title": "Example Document Title.docx"
+    }
 }
 </pre>
 
