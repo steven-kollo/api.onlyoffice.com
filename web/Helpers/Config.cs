@@ -129,7 +129,7 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "permissions", Namespace = "")]
             public class PermissionsConfig
             {
-                [Obsolete]
+                [Obsolete("Since DS v5.5")]
                 [DataMember(Name = "changeHistory", EmitDefaultValue = false)]
                 public bool? ChangeHistory;
 
@@ -154,6 +154,7 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "print", EmitDefaultValue = false)]
                 public bool? Print;
 
+                [Obsolete("Since DS v6.0")]
                 [DataMember(Name = "rename", EmitDefaultValue = false)]
                 public bool? Rename;
 

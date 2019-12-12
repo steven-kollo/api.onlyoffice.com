@@ -494,7 +494,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onRequestRename" class="copy-link">onRequestRename</b> - the function called when the user is trying to rename the file by clicking the <em>Rename...</em> button.
         </p>
-        <div class="note">The <em>Rename...</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> is set to <b>true</b>.</div>
+        <div class="note">Until version 6.0 the <em>Rename...</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> is set to <b>true</b>.</div>
         <img alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>

@@ -26,6 +26,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#macrosMode">editorConfig.customization.macrosMode</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestCreateNew">events.onRequestCreateNew</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#copy">document.permissions.copy</a> field.</li>
+        <li>The <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> field is deprecated, please add the <a href="<%= Url.Action("config/events") %>#onRequestRename">events.onRequestRename</a> field instead.</li>
     </ul>
 
     <h2 id="55" class="copy-link">Version 5.5</h2>

@@ -81,7 +81,6 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">modifyContentControl</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#modifyFilter">modifyFilter</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#print">print</a>": true,
-            "<a href="<%= Url.Action("config/document/permissions") %>#rename">rename</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#review">review</a>": true
         },
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
