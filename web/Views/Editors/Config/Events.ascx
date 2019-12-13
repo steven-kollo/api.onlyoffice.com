@@ -519,6 +519,33 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
+            <b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - the function called when a user is mentioned in a comment.
+            The list of users to be mentioned should be completed by <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
+            The comment and the list of emails is sent in the <em>data</em> parameter.
+        </p>
+        <div class="note">
+            Event <b>onRequestSendNotify</b> will only be used if <a href="#onRequestUsers">onRequestUsers</a> event is used.
+        </div>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSendNotify = function(event) {
+    var comment = event.data.message;
+    var emails = event.data.emails;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSendNotify": onRequestSendNotify,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
             <b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the commenter can select other users for mention in the comments.
             To set the users list you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
         </p>

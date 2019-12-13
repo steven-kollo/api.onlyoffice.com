@@ -31,6 +31,7 @@
         <li>Added the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">events.onRequestSendNotify</a> event.</li>
     </ul>
 
     <h2 id="53" class="copy-link">Version 5.3</h2>
