@@ -199,6 +199,10 @@
             This will disable the certificate verification and allow ownCloud to establish connection with <b>Document Server</b>, but you must remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA.
             Once you do that, do not forget to remove the above section from ownCloud config file.
         </li>
+        <li id="federated">
+            If the document is shared using the Federated Cloud Sharing app, the co-editing between the ownCloud instances connected to different ONLYOFFICE servers will not be avaialble.
+            The users from one and the same Document Server can edit the document in the co-editing mode, but the users from two (or more) different Document Servers will not be able to collaborate on the same document in real time.
+        </li>
     </ul>
 
 
