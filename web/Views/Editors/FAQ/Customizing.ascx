@@ -156,19 +156,22 @@
     <dd>
         <p>There are three main appearances of the editors, optimized for different use:</p>
         <ul>
-            <li><b>desktop</b>, which is optimized for the display in desktop computer browsers:
+            <li>
+                <b>desktop</b>, which is optimized for the display in desktop computer browsers:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "type": "desktop",
     ...
 });</pre>
             </li>
-            <li><b>mobile</b>, which is optimized for the display in mobile device browsers:
+            <li>
+                <b>mobile</b>, which is optimized for the display in mobile device browsers:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "type": "mobile",
     ...
 });</pre>
             </li>
-            <li><b>embedded</b>, which is optimized for the embedding the documents into a website page:
+            <li>
+                <b>embedded</b>, which is optimized for the embedding the documents into a website page:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "type": "embedded",
     ...
