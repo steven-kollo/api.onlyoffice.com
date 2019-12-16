@@ -27,6 +27,7 @@
         <li>The <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> field is deprecated, please add the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> field instead.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#goback">editorConfig.customization.goback.requestClose</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">events.onRequestSharingSettings</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#unit">editorConfig.customization.unit</a> field.</li>
     </ul>
 
     <h2 id="54" class="copy-link">Version 5.4</h2>

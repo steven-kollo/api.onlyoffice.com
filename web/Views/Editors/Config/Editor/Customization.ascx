@@ -432,6 +432,26 @@
             </td>
         </tr>
         <tr>
+            <td id="unit" class="copy-link">unit</td>
+            <td>
+                Defines the measurement units used on the ruler and in dialog boxes.
+                Can take the following values:
+                <ul>
+                    <li><b>cm</b> - centimeters,</li>
+                    <li><b>pt</b> - points,</li>
+                    <li><b>inch</b> - inches.</li>
+                </ul>
+                The default value is centimeters (cm).
+            </td>
+            <td>string</td>
+            <td>cm</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.unit</em> parameter.</div>
+            </td>
+        </tr>
+        <tr>
             <td id="zoom" class="copy-link">zoom</td>
             <td>
                 Defines the document display zoom value measured in percent.
@@ -511,6 +531,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                { %>"statusBar": true,
             "toolbar": true,
             <% } %>"toolbarNoTabs": false,
+            "unit": "cm",
             "zoom": 100
         },
         ...
