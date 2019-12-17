@@ -104,8 +104,8 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td id="outputtype" class="copy-link">password</td>
-                <td>Specifies the password for the document file if it is protected with a password.</td>
+                <td id="password" class="copy-link">password</td>
+                <td>Defines the password for the document file if it is protected with a password.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
