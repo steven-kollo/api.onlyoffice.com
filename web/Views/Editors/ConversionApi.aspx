@@ -110,6 +110,16 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="region" class="copy-link">region</td>
+                <td>
+                    Defines the default display format for currency and date and time when converting from <em>Spreadsheet format</em> to <em>pdf</em>.
+                    Is set using the four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes.
+                    The default value is <b>en-US</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="thumbnail" class="copy-link">thumbnail</td>
                 <td>
                     Defines the option is used since version 4.2.
