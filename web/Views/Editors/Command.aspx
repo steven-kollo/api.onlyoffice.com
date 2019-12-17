@@ -60,6 +60,12 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
+                <td id="meta" class="copy-link">meta</td>
+                <td>Defines the new meta information of the document (used for the <em>c=meta</em> parameter value).</td>
+                <td>string</td>
+                <td>required</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="meta-title" class="copy-link">meta.title</td>
                 <td>Defines the new name of the document (used for the <em>c=meta</em> parameter value).</td>
                 <td>string</td>
@@ -139,7 +145,7 @@
 }
 </pre>
 
-    <div id="meta" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to update the name of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
+    <div id="meta-command" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to update the name of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
     <pre>
 {
     "c": "meta",

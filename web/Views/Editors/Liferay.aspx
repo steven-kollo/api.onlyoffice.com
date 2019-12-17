@@ -52,7 +52,7 @@
     </p>
 
 
-    <h2 id="configuring" class="copy-link">Configuring Liferay CONLYOFFICE integration plugin</h2>
+    <h2 id="configuring" class="copy-link">Configuring Liferay ONLYOFFICE integration plugin</h2>
 
     <p>
         In order to configure plugin you must navigate to <em>System Settings</em> <i>(Control Panel -> Configuration -> System Settings)</i>.
