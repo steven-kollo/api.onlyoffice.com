@@ -50,6 +50,7 @@
                     </ul>
                     When the asynchronous request type is used, the response is formed instantly.
                     In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
+                    The default value is <b>false</b>.
                 </td>
                 <td>boolean</td>
                 <td>optional</td>

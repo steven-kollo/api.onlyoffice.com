@@ -40,7 +40,7 @@
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.inbox.inBody</td>
-            <td>Specifies the enabling the token validation in the request body to the <b>document command service</b> and <b>document conversion service</b>.</td>
+            <td>Specifies the enabling the token validation in the request body to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -130,6 +130,34 @@ Content-Type: application/json
 </pre>
 <p>
     Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+
+<p id="builder" class="copy-link">Validation is performed for incoming requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("documentbuilderapi") %>">document builder service</a>.</p>
+
+<div class="header-gray">Sample parameters of request to document builder service</div>
+<pre>
+{
+    "async": true,
+    "url": "https://example.com/url-to-example-script.docbuilder"
+}
+</pre>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+<div class="header-gray">Sample of request to document builder service</div>
+<pre>
+POST docbuilder HTTP/1.1
+Host: documentserver
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
+}
+</pre>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
     See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 </p>
 

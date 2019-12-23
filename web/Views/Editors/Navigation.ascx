@@ -129,6 +129,9 @@
         <a href="<%= Url.Action("conversionapi") %>">Conversion API</a>
     </li>
     <li>
+        <a href="<%= Url.Action("documentbuilderapi") %>">Document Builder API</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("signature/") %>">Signature</a>
         <ul>
             <li>

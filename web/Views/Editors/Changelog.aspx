@@ -73,6 +73,7 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onDocumentReady">onDocumentReady</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/plugins") %>#autostart">editorConfig.plugins.autostart</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onWarning">onWarning</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("documentbuilderapi") %>">Document Builder service</a>.</li>
     </ul>
 
     <h2 id="44" class="copy-link">Version 4.4</h2>

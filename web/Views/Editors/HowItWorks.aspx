@@ -46,10 +46,13 @@
         <li>
             <b>Document conversion service</b> - the server service which allows to convert the document file into the appropriate Office Open XML format (<em>docx</em> for text documents, <em>xlsx</em> for spreadsheets and <em>pptx</em> for presentations) for their editing or downloading.
         </li>
+        <li>
+            <b>Document builder service</b> - the server service which allows to build a document easily without the need to actually run a document processing editor.
+        </li>
     </ul>
 
     <p class="list-header">
-        Please note, that ONLYOFFICE Document Server includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b> and <b>document conversion service</b>.
+        Please note, that ONLYOFFICE Document Server includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.
         The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators who use ONLYOFFICE Document Server on their own server.
     </p>
 
