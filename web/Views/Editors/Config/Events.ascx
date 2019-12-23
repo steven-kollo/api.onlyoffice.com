@@ -178,7 +178,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.
             To set the bookmark link you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
-            The bookmark data is received in the <em>event.data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
+            The bookmark data is received in the <em>data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
         </p>
         <img alt="onMakeActionLink" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>"/>
         <div class="header-gray">Example</div>
@@ -546,6 +546,35 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
+            <b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - the function called when the user is mentioned in a comment.
+            The list of users to be mentioned should be completed by <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
+            The message and the list of emails is sent in the <em>data</em> parameter.
+            The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
+        </p>
+        <div class="note">
+            Event <b>onRequestSendNotify</b> will only be used if <a href="#onRequestUsers">onRequestUsers</a> event is used.
+        </div>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSendNotify = function(event) {
+    var ACTION_DATA = event.data.actionLink;
+    var comment = event.data.message;
+    var emails = event.data.emails;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSendNotify": onRequestSendNotify,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
             <b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - the function called when the user is trying to manage document access rights by clicking <em>Change access rights</em> button.
             When the access rights is changed, you must call the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method to update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
         </p>
@@ -571,6 +600,40 @@ var onRequestSharingSettings = function() {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestSharingSettings": onRequestSharingSettings,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
+            <b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the commenter can select other users for mention in the comments.
+            To set the users list you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
+        </p>
+        <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestUsers = function() {
+    docEditor.setUsers({
+        "users": [
+            {
+                "email": "john@example.com",
+                "name": "John Smith"
+            },
+            {
+                "email": "kate@example.com",
+                "name": "Kate Cage"
+            },
+            ...
+        ]
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestUsers": onRequestUsers,
         ...
     },
     ...
