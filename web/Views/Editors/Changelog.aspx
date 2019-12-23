@@ -70,6 +70,7 @@
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#fillForms">document.permissions.fillForms</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#help">editorConfig.customization.help</a> field.</li>
         <li>Added the possibility to make the <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> not clickable.</li>
+        <li>Added for the <a href="<%= Url.Action("conversionapi") %>#thumbnail-aspect">aspect</a> field value <em>2</em> for the conversion.</li>
     </ul>
 
     <h2 id="51" class="copy-link">Version 5.1</h2>

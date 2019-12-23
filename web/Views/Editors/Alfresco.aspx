@@ -27,6 +27,11 @@
             <img alt="Edit in OnlyOffice" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
         </li>
         <li>This allows multiple users to collaborate in real time and to save back those changes to Alfresco.</li>
+        <li>And a Convert using ONLYOFFICE option to quickly convert ODT, ODP, ODS, DOC, XLS, PPT files to their Office Open XML counterpart</li>
+        <li>
+            Context menu <em>Create new...</em> option within document library
+            <img alt="Create new..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
+        </li>
     </ul>
 
 
@@ -99,14 +104,14 @@ sudo ./alfresco.sh start</span>
     <span class="commandline">docker-compose up</span>
 
     <h2 id="configuration" class="copy-link">Configuration</h2>
-    <p>Module configuration can be found at <b>/alfresco/s/onlyoffice/onlyoffice-config</b> page</p>
+    <p>Module configuration can be found inside <b>Alfresco Administration Console</b> or by simply navigating to <b>http://&lt;alfrescohost&gt;/alfresco/s/onlyoffice/onlyoffice-config</b></p>
     <div class="note">
         You can also add <b>onlyoffice.url</b> in <b>alfresco-global.properties</b>.
         Configuration made via settings page will override <b>alfresco-global.properties</b>.
     </div>
 
     <h2 id="jwt" class="copy-link">JWT</h2>
-    <p>JWT can be configured via configuration page or by adding <b>onlyoffice.jwtsecret</b> in <b>alfresco-global.properties</b>.</p>
+    <p>JWT can be configured via <a href="#configuration">configuration page</a> or by adding <b>onlyoffice.jwtsecret</b> in <b>alfresco-global.properties</b>.</p>
     <p>The JWT configuration on the Document Server side can be found <a href="/editors/signature/">here</a>.</p>
 
     <h2 id="convertation" class="copy-link">Convertation</h2>

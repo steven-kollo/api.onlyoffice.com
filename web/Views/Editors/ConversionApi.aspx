@@ -41,11 +41,12 @@
         <tbody>
             <tr class="tablerow">
                 <td id="async" class="copy-link">async</td>
-                <td>Defines the conversion request type: asynchronous or not.<br />
+                <td>
+                    Defines the conversion request type: asynchronous or not.<br />
                     Supported values:
                     <ul>
-                        <li>true</li>
-                        <li>false</li>
+                        <li><b>true</b></li>
+                        <li><b>false</b></li>
                     </ul>
                     When the asynchronous request type is used, the response is formed instantly.
                     In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
@@ -55,7 +56,8 @@
             </tr>
             <tr class="tablerow">
                 <td id="codePage" class="copy-link">codePage</td>
-                <td>Defines the file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
+                <td>
+                    Defines the file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
                     Main supported values:
                     <ul>
                         <li><b>932</b> - Japanese (Shift-JIS),</li>
@@ -71,7 +73,8 @@
             </tr>
             <tr class="tablerow">
                 <td id="delimiter" class="copy-link">delimiter</td>
-                <td>Defines the delimiter characters for separating values when converting from <em>csv</em> format.<br />
+                <td>
+                    Defines the delimiter characters for separating values when converting from <em>csv</em> format.<br />
                     Supported values:
                     <ul>
                         <li><b>0</b> - no delimiter,</li>
@@ -121,45 +124,55 @@
             </tr>
             <tr class="tablerow">
                 <td id="thumbnail" class="copy-link">thumbnail</td>
+                <td>Defines the settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="thumbnail-aspect" class="copy-link">thumbnail.aspect</td>
                 <td>
-                    Defines the option is used since version 4.2.
-                    Settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>.
-                    The object has the following parameters:
+                    Defines the mode to fit the image to the height and width specifyed.
+                    Supported values:
                     <ul>
+                        <li><b>0</b> - stretch file to fit height and width,</li>
+                        <li><b>1</b> - keep the aspect for the image,</li>
                         <li>
-                            <b>aspect</b> - sets the mode to fit the image to the height and width specifyed.
-                            Supported values: 0 - stretch file to fit height and width, 1 - keep the aspect for the image,
-                            <br />
-                            <b>type</b>: integer,
-                            <br />
-                            <b>example</b>: 1;
-                        </li>
-                        <li>
-                            <b>first</b> - specifies if the thumbnails should be generated for the first page only or for all the document pages.
-                            If false, the zip archive containing thumbnails for all the pages will be created.
-                            The default value is <em>true</em>,
-                            <br />
-                            <b>type</b>: boolean,
-                            <br />
-                            <b>example</b>: true;
-                        </li>
-                        <li>
-                            <b>height</b> - the thumbnail height in pixels (default: 100),
-                            <br />
-                            <b>type</b>: integer,
-                            <br />
-                            <b>example</b>: 100;
-                        </li>
-                        <li>
-                            <b>width</b> - the thumbnail width in pixels (default: 100),
-                            <br />
-                            <b>type</b>: integer,
-                            <br />
-                            <b>example</b>: 100.
+                            <b>2</b> - in this case, the width and height settings are not used.
+                            Instead of that, metric sizes of the page are converted into pixels with 96dpi.
+                            E.g., the A4 (210x297mm) page will turn out to be a picture with the 794x1123pix dimensions.
                         </li>
                     </ul>
+                    The default value is <b>2</b>.
                 </td>
-                <td>object</td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="thumbnail-first" class="copy-link">thumbnail.first</td>
+                <td>
+                    Defines if the thumbnails should be generated for the first page only or for all the document pages.
+                    If false, the zip archive containing thumbnails for all the pages will be created.
+                    The default value is <b>true</b>,
+                </td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="thumbnail-height" class="copy-link">thumbnail.height</td>
+                <td>
+                    Defines the thumbnail height in pixels.
+                    The default value is <b>100</b>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="thumbnail-width" class="copy-link">thumbnail.width</td>
+                <td>
+                    Defines the thumbnail width in pixels.
+                    The default value is <b>100</b>.
+                </td>
+                <td>integer</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
