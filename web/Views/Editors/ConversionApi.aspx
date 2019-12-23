@@ -123,6 +123,141 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="spreadsheetLayout" class="copy-link">spreadsheetLayout</td>
+                <td>Defines settings for converting the spreadsheet to pdf.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="fitToHeight" class="copy-link">spreadsheetLayout.fitToHeight</td>
+                <td>
+                    Sets the height of the converted area, measured in the number of pages.
+                    The default value is <b>0</b>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="fitToWidth" class="copy-link">spreadsheetLayout.fitToWidth</td>
+                <td>
+                    Sets the width of the converted area, measured in the number of pages.
+                    The default value is <b>0</b>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="gridLines" class="copy-link">spreadsheetLayout.gridLines</td>
+                <td>
+                    Allows to include grid lines to the output PDF file or not.
+                    The default value is <b>false</b>.
+                </td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="headings" class="copy-link">spreadsheetLayout.headings</td>
+                <td>
+                    Allows to include the headings to the output PDF file or not.
+                    The default value is <b>false</b>.
+                </td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="ignorePrintArea" class="copy-link">spreadsheetLayout.ignorePrintArea</td>
+                <td>
+                    Determines whether to ignore the print area chosen for the spreadsheet file or not.
+                    The default value is <b>true</b>.
+                </td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins" class="copy-link">spreadsheetLayout.margins</td>
+                <td>Sets the margins of the output PDF file.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins-bottom" class="copy-link">spreadsheetLayout.margins.bottom</td>
+                <td>
+                    Sets the bottom margin of the output PDF file.
+                    The default value is <b>19.1mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins-left" class="copy-link">spreadsheetLayout.margins.left</td>
+                <td>
+                    Sets the left margin of the output PDF file.
+                    The default value is <b>17.8mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins-right" class="copy-link">spreadsheetLayout.margins.right</td>
+                <td>
+                    Sets the right margin of the output PDF file.
+                    The default value is <b>17.8mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins-top" class="copy-link">spreadsheetLayout.margins.top</td>
+                <td>
+                    Sets the top margin of the output PDF file.
+                    The default value is <b>19.1mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="orientation" class="copy-link">spreadsheetLayout.orientation</td>
+                <td>
+                    Sets the orientation of the output PDF file. 
+                    May be <b>landscape</b>, <b>portrait</b>. The default value is <b>portrait</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="pageSize" class="copy-link">spreadsheetLayout.pageSize</td>
+                <td>Sets the page size of the output PDF file.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="pageSize-height" class="copy-link">spreadsheetLayout.pageSize.height</td>
+                <td>
+                    Sets the page height of the output PDF file.
+                    The default value is <b>297mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="pageSize-width" class="copy-link">spreadsheetLayout.pageSize.width</td>
+                <td>
+                    Sets the page width of the output PDF file.
+                    The default value is <b>210mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="scale" class="copy-link">spreadsheetLayout.scale</td>
+                <td>
+                    Allows to set the scale of the output PDF file.
+                    The default value is <b>100</b>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="thumbnail" class="copy-link">thumbnail</td>
                 <td>Defines the settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>.</td>
                 <td>object</td>
@@ -773,7 +908,42 @@
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
-    
+
+    <div id="sample-spreadsheet-to-pdf" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the <em>spreadsheet</em> file to <em>pdf</em> format</div>
+    <pre>
+{
+    "filetype": "xlsx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "region": "en-US",
+    "spreadsheetLayout": {
+        "ignorePrintArea": true,
+        "orientation": "portrait",
+        "fitToWidth": 0,
+        "fitToHeight": 0,
+        "scale": 100,
+        "headings": false,
+        "gridLines": false,
+        "pageSize": {
+            "width": "210mm",
+            "height": "297mm"
+        },
+        "margins": {
+            "left": "17.8mm",
+            "right": "17.8mm",
+            "top": "19.1mm",
+            "bottom": "19.1mm"
+        }
+    },
+    "title": "Example Document Title.docx",
+    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+}
+</pre>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
+
     <div id="sample-conversion-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
     <pre>
 {
