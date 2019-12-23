@@ -27,7 +27,7 @@
     <tbody>
         <tr class="tablerow">
             <td id="actionLink" class="copy-link">actionLink</td>
-            <td>Specifies the data received from the <b>document editing service</b> using the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event, which contains the information about the bookmark in the document that will be scrolled to.</td>
+            <td>Specifies the data received from the <b>document editing service</b> using the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event or the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event in <em>data.actionLink</em> parameter, which contains the information about the action in the document that will be scrolled to.</td>
             <td>object</td>
             <td></td>
         </tr>
