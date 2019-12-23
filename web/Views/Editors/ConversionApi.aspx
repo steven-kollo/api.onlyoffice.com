@@ -125,8 +125,14 @@
                     Supported values:
                     <ul>
                         <li><b>0</b> - stretch file to fit height and width,</li>
-                        <li><b>1</b> - keep the aspect for the image.</li>
+                        <li><b>1</b> - keep the aspect for the image,</li>
+                        <li>
+                            <b>2</b> - in this case, the width and height settings are not used.
+                            Instead of that, metric sizes of the page are converted into pixels with 96dpi.
+                            E.g., the A4 (210x297mm) page will turn out to be a picture with the 794x1123pix dimensions.
+                        </li>
                     </ul>
+                    The default value is <b>2</b>.
                 </td>
                 <td>integer</td>
                 <td>optional</td>
