@@ -29,6 +29,7 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">events.onRequestSharingSettings</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#unit">editorConfig.customization.unit</a> field.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#region">region</a> field.</li>
+        <li>The <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">events.onRequestSendNotify</a> event and the <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event can be set independently.</li>
     </ul>
 
     <h2 id="54" class="copy-link">Version 5.4</h2>

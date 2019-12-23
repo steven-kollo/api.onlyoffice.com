@@ -552,7 +552,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
         </p>
         <div class="note">
-            Event <b>onRequestSendNotify</b> will only be used if <a href="#onRequestUsers">onRequestUsers</a> event is used.
+            In version 5.4 <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
+            Since version 5.5 there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
         </div>
         <div class="header-gray">Example</div>
         <pre>
