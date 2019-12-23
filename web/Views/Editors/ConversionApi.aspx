@@ -879,6 +879,10 @@
                 <td>Error while accessing the conversion result database.</td>
             </tr>
             <tr class="tablerow">
+                <td>-7</td>
+                <td>Input error.</td>
+            </tr>
+            <tr class="tablerow">
                 <td>-8</td>
                 <td>Invalid token.</td>
             </tr>
