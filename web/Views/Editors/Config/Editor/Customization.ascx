@@ -339,6 +339,23 @@
             <td></td>
         </tr>
         <tr>
+            <td id="mentionShare" class="copy-link">mentionShare</td>
+            <td>
+                Defines the hint that describes the event after mentions in a comment.
+                If <b>true</b>, a hint indicates that the user will receive a notification and access to the document.
+                If <b>false</b>, a hint indicates that the user will receive only a notification of the mention.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that it will only be available for the comments if the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is set.</div>
+                <img src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
                 Defines the review editing mode which will be used when the document is opened for viewing.
@@ -522,6 +539,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
             },
+            "mentionShare": true,
             "reviewDisplay": "original",
             <% if (license)
                { %>"rightMenu": true,
