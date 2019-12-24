@@ -91,6 +91,7 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onDocumentReady">events.onDocumentReady</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/plugins") %>#autostart">editorConfig.plugins.autostart</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onWarning">events.onWarning</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("documentbuilderapi") %>">Document Builder service</a>.</li>
     </ul>
 
     <h2 id="44" class="copy-link">Version 4.4</h2>
@@ -102,6 +103,7 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> event.</li>
         <li>Added the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
+        <li>Changed the use of callbackUrl from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>
     </ul>
 
     <h2 id="43" class="copy-link">Version 4.3</h2>

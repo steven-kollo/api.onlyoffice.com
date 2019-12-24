@@ -43,7 +43,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImMiO
 </pre>
 
 
-<p id="conversion" class="copy-link">Validation is performed for incoming requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</p>
+<p id="conversion" class="copy-link">Validation is performed for incoming requests from the <b>document storage service</b> to the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</p>
 
 <div class="header-gray">Sample payload of request to convert the document</div>
 <pre>
@@ -78,6 +78,39 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpb
 </pre>
 <p>
     Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+
+
+<p id="builder" class="copy-link">Validation is performed for incoming requests from the <b>document storage service</b> to the <a href="<%= Url.Action("documentbuilderapi") %>">document builder service</a>.</p>
+
+<div class="header-gray">Sample payload of request to document builder service</div>
+<pre>
+{
+    "payload": {
+        "async": true,
+        "url": "https://example.com/url-to-example-script.docbuilder"
+    }
+}
+</pre>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
+<div class="header-gray">Sample of request to document builder service</div>
+<pre>
+POST docbuilder HTTP/1.1
+Host: documentserver
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFzeW5jIjp0cnVlLCJ1cmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLXNjcmlwdC5kb2NidWlsZGVyIn19.JpHp_TB3XDacAhTTB4I0CE7SIESSE9aQUGDulbpYKTE
+
+{
+    "async": true,
+    "url": "https://example.com/url-to-example-script.docbuilder"
+}
+</pre>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
     See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
 </p>
 

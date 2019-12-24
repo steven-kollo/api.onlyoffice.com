@@ -19,7 +19,6 @@
         The request parameters are entered in JSON format in the request body.
         The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
     </p>
-    <span class="note">ONLYOFFICE Web Document Builder service available only for <em>ONLYOFFICE Developer Edition</em></span>
 
     <h2>Parameters and their description:</h2>
     <table class="table">
@@ -41,8 +40,8 @@
                 <td>Defines the type of the request to the <b>document builder service</b>: asynchronous or not.<br />
                     Supported values:
                     <ul>
-                        <li>true</li>
-                        <li>false</li>
+                        <li><b>true</b></li>
+                        <li><b>false</b></li>
                     </ul>
                     When the asynchronous request type is used, the response is formed instantly.
                     In this case to get the result it is necessary to send requests without parameter change until the document generation is finished.
@@ -60,8 +59,14 @@
                 <td>string</td>
             </tr>
             <tr class="tablerow">
+                <td id="token" class="copy-link">token</td>
+                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#builder">token</a>.</td>
+                <td>string</td>
+                <td>required by configuration</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
-                <td>Defines the link to the .docbuilder file.</td>
+                <td>Defines the absolute URL to the .docbuilder file.</td>
                 <td>string</td>
             </tr>
         </tbody>
@@ -144,6 +149,13 @@
       "SampleText2.docx": "https://documentserver/SampleText2.docx"
    },
    "end": true
+}
+</pre>
+
+    <div id="sample-builder-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document builder service</b> for the first asynchronous request</div>
+    <pre>
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
 }
 </pre>
 
