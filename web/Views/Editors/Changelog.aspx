@@ -32,6 +32,7 @@
         <li>Added <a href="<%= Url.Action("conversionapi") %>#error">input error</a> for conversion.</li>
         <li>The <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">events.onRequestSendNotify</a> event and the <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event can be set independently.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">editorConfig.customization.mentionShare</a> field.</li>
+        <li>The callbackUrl is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">status</a>.</li>
     </ul>
 
     <h2 id="54" class="copy-link">Version 5.4</h2>

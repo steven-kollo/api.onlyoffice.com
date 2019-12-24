@@ -23,7 +23,8 @@
         <li>
             The <b>document editing service</b> informs the <b>document storage service</b> about the end of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a> and returns the link to the modified document.
             <div class="note">
-                Please note that since version 4.4, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is used from the last user who joined the co-editing.
+                Please note that since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected based on <a href="<%= Url.Action("callback") %>#status">status</a> of the request.
+                Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
                 Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.                
             </div>
         </li>
