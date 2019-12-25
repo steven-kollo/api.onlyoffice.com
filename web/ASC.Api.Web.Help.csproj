@@ -401,6 +401,7 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\Example\Python.ascx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
@@ -600,6 +601,7 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUniColor.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
+    <Content Include="App_Data\editor\Python Example.zip" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
