@@ -28,6 +28,9 @@
             <li>
                 <a href="<%= Url.Action("example/ruby") %>">Ruby example</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("example/python") %>">Python example</a>
+            </li>
         </ul>
     </li>
     <li>
