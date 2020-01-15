@@ -16,6 +16,7 @@
     </h1>
 
     <p>This plugin enables users to edit office documents from <a href="https://www.humhub.com/" target="_blank">HumHub</a> using ONLYOFFICE Document Server.</p>
+    <p>The plugin is available in the official <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a>.</p>
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
