@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    HumHub ONLYOFFICE integration plugin
+    ONLYOFFICE Connector for HumHub
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">HumHub ONLYOFFICE integration plugin</span>
+        <span class="hdr">ONLYOFFICE Connector for HumHub</span>
     </h1>
 
     <p>This plugin enables users to edit office documents from <a href="https://www.humhub.com/" target="_blank">HumHub</a> using ONLYOFFICE Document Server.</p>
@@ -34,12 +34,12 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2 id="installing-plugin" class="copy-link">Installing HumHub ONLYOFFICE integration plugin</h2>
+    <h2 id="installing-plugin" class="copy-link">Installing ONLYOFFICE Connector for HumHub</h2>
 
     <p>Either install it from HumHub Marketplace or simply clone the repository inside one of the folder specified by <em>moduleAutoloadPaths</em> parameter. Please see <a href="http://docs.humhub.org/dev-environment.html#external-modules-directory" target="_blank">HumHub Documentation</a> for more information.</p>
 
 
-    <h2 id="configuring" class="copy-link">Configuring HumHub CONLYOFFICE integration plugin</h2>
+    <h2 id="configuring" class="copy-link">Configuring ONLYOFFICE Connector for HumHub</h2>
 
     <p>In order to configure plugin you must navigate to <em>Administation -> Modules</em>. Find ONLYOFFICE plugin and click <em>Configure</em>.</p>
 
@@ -81,6 +81,6 @@
 
 
     <br />
-    <p>Download the HumHub ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">here</a>.</p>
+    <p>Download the ONLYOFFICE Connector for HumHub <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">here</a>.</p>
 
 </asp:Content>
