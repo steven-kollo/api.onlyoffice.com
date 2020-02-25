@@ -166,10 +166,6 @@
 
     <h2 id="issue" class="copy-link">Known issues</h2>
     <ul>
-        <li id="federatedSharing">
-            If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing among the servers will not be avaialble.
-            The users from one and the same server can edit the document in the co-editing mode, but the users from two (or more) different servers will not be able to collaborate on the same document in real time.
-        </li>
         <li id="externalStorage">
             Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
             If the connection is made using the same authorization keys (the <em>Username and password</em> or <em>Global credentials</em> authentication type is selected), then the co-editing is available for the users.
