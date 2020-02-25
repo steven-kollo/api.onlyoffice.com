@@ -26,10 +26,10 @@
                 <a href="<%= Url.Action("example/php") %>">PHP example</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/ruby") %>">Ruby example</a>
+                <a href="<%= Url.Action("example/python") %>">Python example</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/python") %>">Python example</a>
+                <a href="<%= Url.Action("example/ruby") %>">Ruby example</a>
             </li>
         </ul>
     </li>
