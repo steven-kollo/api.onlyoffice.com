@@ -81,6 +81,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Sharing",
                 "History",
                 "HowItWorks",
+                "HumHub",
                 "Liferay",
                 "Methods",
                 "Nextcloud",
@@ -265,6 +266,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult HowItWorks()
+        {
+            return View();
+        }
+
+        public ActionResult HumHub()
         {
             return View();
         }
