@@ -66,6 +66,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Example/Nodejs",
                 "Example/Php",
                 "Example/Ruby",
+                "Example/Python",
                 "Example/Csharp",
                 "FAQ",
                 "FAQ/Coediting",
