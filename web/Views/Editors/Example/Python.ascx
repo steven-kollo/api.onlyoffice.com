@@ -23,7 +23,7 @@
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
-    <li>Python comes preinstalled on most Linux distributions, and is available as a package on all others. Python 3.5+ is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html">official documentation</a> if you have any troubles.</li>
+    <li>Python comes preinstalled on most Linux distributions, and is available as a package on all others. Python 3.6+ is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html">official documentation</a> if you have any troubles.</li>
     <li>Download the archive with the Python example and unpack the archive:
         <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Python%20Example.zip"</div>
         <div class="commandline">unzip Python\ Example.zip</div>
