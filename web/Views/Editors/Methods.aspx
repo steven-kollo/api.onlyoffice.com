@@ -117,6 +117,12 @@ docEditor.insertImage({
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
+                        <td>token</td>
+                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#insertImage">token</a>.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>url</td>
                         <td>Defines the absolute URL where the source image is stored.</td>
                         <td>string</td>
@@ -290,7 +296,6 @@ docEditor.setActionLink(link);
             <pre>
 docEditor.setHistoryData({
     "key": "Khirz6zTPdfd7",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3giLCJ2ZXJzaW9uIjoyfQ.N9N9IMwX5e6kdfx4wssAPrGMnzPAZCd4PwDf2D8mJ8s",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });
@@ -311,7 +316,6 @@ docEditor.setHistoryData({
         "key": "af86C7e71Ca8",
         "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGFuZ2VzVXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1jaGFuZ2VzLnppcCIsImtleSI6IktoaXJ6NnpUUGRmZDciLCJwcmV2aW91cyI6eyJrZXkiOiJhZjg2QzdlNzFDYTgiLCJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLXRoZS1wcmV2aW91cy12ZXJzaW9uLW9mLXRoZS1kb2N1bWVudC5kb2N4In0sInVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1kb2N1bWVudC5kb2N4IiwidmVyc2lvbiI6Mn0.9dgDsaVLFQ6RtoX_1s2pBVJHGnyMjxDXKC2TpC2nXb4",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
 });
@@ -383,7 +387,7 @@ docEditor.setHistoryData({
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
-                        <td id="token">token</td>
+                        <td>token</td>
                         <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setHistoryData">token</a>.</td>
                         <td>string</td>
                         <td>optional</td>
@@ -448,10 +452,123 @@ docEditor.setMailMergeRecipients({
                         <td>required</td>
                     </tr>
                     <tr class="tablerow">
+                        <td>token</td>
+                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setMailMergeRecipients">token</a>.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>url</td>
                         <td>Defines the absolute URL where the source data is stored.</td>
                         <td>string</td>
                         <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+        <li>
+            <p><b id="setRevisedFile" class="copy-link">setRevisedFile</b> - select a document for comparing. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.</p>
+            <pre>
+docEditor.setRevisedFile({
+    "fileType": "docx",
+    "url": "https://example.com/url-to-example-document.docx"
+});
+</pre>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>Defines the type of image for insert into the file.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>token</td>
+                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setRevisedFile">token</a>.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>url</td>
+                        <td>Defines the absolute URL where the source image is stored.</td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+
+        <li>
+            <p>
+                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - Update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
+                This method can be called after the <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a> events.
+            </p>
+            <pre>
+docEditor.setSharingSettings({
+    "sharingSettings": [
+        {
+            "permissions": "Full Access",
+            "user": "John Smith"
+        },
+        {
+            "permissions": "Read Only",
+            "user": "Kate Cage"
+        }
+    ]
+});
+</pre>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>sharingSettings</td>
+                        <td>Defines the settings which allow to share the document with other users.</td>
+                        <td>array of object</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>sharingSettings.permissions</td>
+                        <td>Defines the access rights for the user with the name above.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>sharingSettings.user</td>
+                        <td>Defines the name of the user the document will be shared with.</td>
+                        <td>string</td>
+                        <td>optional</td>
                     </tr>
                 </tbody>
             </table>

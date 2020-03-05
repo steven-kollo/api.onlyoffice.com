@@ -251,6 +251,30 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
+        <p><b id="onRequestCompareFile" class="copy-link">onRequestCompareFile</b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button. To select a document for comparing you must call the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.</p>
+        <img alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestCompareFile = function() {
+    docEditor.setRevisedFile({
+        "fileType": "docx",
+        "url": "https://example.com/url-to-example-document.docx"
+    });
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestCompareFile": onRequestCompareFile,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
         <p>
             <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.
             When the function is called, the editor must be initialized again, in editing mode.
@@ -444,7 +468,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
             Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">the history object</a>.
         </p>
-        <div class="note">The <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b> and is displayed for the previous document versions only and hidden for the current one.</div>
+        <div class="note">
+            The <em>Restore</em> button is displayed for the previous document versions only and hidden for the current one.
+            Until version 5.5 the <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b>.
+        </div>
         <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
@@ -519,13 +546,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - the function called when a user is mentioned in a comment.
+            <b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - the function called when the user is mentioned in a comment.
             The list of users to be mentioned should be completed by <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
             The message and the list of emails is sent in the <em>data</em> parameter.
             The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
         </p>
         <div class="note">
-            Event <b>onRequestSendNotify</b> will only be used if <a href="#onRequestUsers">onRequestUsers</a> event is used.
+            In version 5.4 <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
+            Since version 5.5 there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
         </div>
         <div class="header-gray">Example</div>
         <pre>
@@ -539,6 +567,40 @@ var onRequestSendNotify = function(event) {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onRequestSendNotify": onRequestSendNotify,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
+            <b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - the function called when the user is trying to manage document access rights by clicking <em>Change access rights</em> button.
+            When the access rights is changed, you must call the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method to update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
+        </p>
+        <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestSharingSettings = function() {
+    docEditor.setSharingSettings({
+        "sharingSettings": [
+            {
+                "permissions": "Full Access",
+                "user": "John Smith"
+            },
+            {
+                "permissions": "Read Only",
+                "user": "Kate Cage"
+            }
+        ]
+    });
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestSharingSettings": onRequestSharingSettings,
         ...
     },
     ...

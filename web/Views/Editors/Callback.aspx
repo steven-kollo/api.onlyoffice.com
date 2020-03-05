@@ -101,7 +101,6 @@
                     Defines the status of the document.
                     Can have the following values:
                     <ul>
-                        <li><b>0</b> - no document with the key identifier could be found,</li>
                         <li><b>1</b> - document is being edited,</li>
                         <li><b>2</b> - document is ready for saving,</li>
                         <li><b>3</b> - document saving error has occurred,</li>
@@ -138,13 +137,26 @@
     </table>
     
     <p id="used-callbackUrl" class="copy-link">
-        Since version 4.4, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is used from the last user who joined the co-editing.
+        Since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected depending on the <em>status</em> of the request.
+        Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
         Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.
     </p>
-    <p><em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.</p>
-    <p><em>Status</em> <b>2</b> (<b>3</b>) is received <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.</p>
-    <p><em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.</p>
-    <p><em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed.</p>
+    <p>
+        <em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.
+        His <em>callbackUrl</em> is used.
+    </p>
+    <p>
+        <em>Status</em> <b>2</b> (<b>3</b>) is received <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.
+        The <em>callbackUrl</em> from the user who made the last changes to the file is used.
+    </p>
+    <p>
+        <em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.
+        His <em>callbackUrl</em> is used.
+    </p>
+    <p>
+        <em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed.
+        The <em>callbackUrl</em> from the user who made the last changes to the file is used.
+    </p>
 
     <div id="status-1" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>
     <pre>

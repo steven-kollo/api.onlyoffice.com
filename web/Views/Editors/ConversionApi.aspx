@@ -114,6 +114,151 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="region" class="copy-link">region</td>
+                <td>
+                    Defines the default display format for currency and date and time when converting from <em>Spreadsheet format</em> to <em>pdf</em>.
+                    Is set using the four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes.
+                    The default value is <b>en-US</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="spreadsheetLayout" class="copy-link">spreadsheetLayout</td>
+                <td>Defines settings for converting the spreadsheet to pdf.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="fitToHeight" class="copy-link">spreadsheetLayout.fitToHeight</td>
+                <td>
+                    Sets the height of the converted area, measured in the number of pages.
+                    The default value is <b>0</b>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="fitToWidth" class="copy-link">spreadsheetLayout.fitToWidth</td>
+                <td>
+                    Sets the width of the converted area, measured in the number of pages.
+                    The default value is <b>0</b>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="gridLines" class="copy-link">spreadsheetLayout.gridLines</td>
+                <td>
+                    Allows to include grid lines to the output PDF file or not.
+                    The default value is <b>false</b>.
+                </td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="headings" class="copy-link">spreadsheetLayout.headings</td>
+                <td>
+                    Allows to include the headings to the output PDF file or not.
+                    The default value is <b>false</b>.
+                </td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="ignorePrintArea" class="copy-link">spreadsheetLayout.ignorePrintArea</td>
+                <td>
+                    Determines whether to ignore the print area chosen for the spreadsheet file or not.
+                    The default value is <b>true</b>.
+                </td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins" class="copy-link">spreadsheetLayout.margins</td>
+                <td>Sets the margins of the output PDF file.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins-bottom" class="copy-link">spreadsheetLayout.margins.bottom</td>
+                <td>
+                    Sets the bottom margin of the output PDF file.
+                    The default value is <b>19.1mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins-left" class="copy-link">spreadsheetLayout.margins.left</td>
+                <td>
+                    Sets the left margin of the output PDF file.
+                    The default value is <b>17.8mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins-right" class="copy-link">spreadsheetLayout.margins.right</td>
+                <td>
+                    Sets the right margin of the output PDF file.
+                    The default value is <b>17.8mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="margins-top" class="copy-link">spreadsheetLayout.margins.top</td>
+                <td>
+                    Sets the top margin of the output PDF file.
+                    The default value is <b>19.1mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="orientation" class="copy-link">spreadsheetLayout.orientation</td>
+                <td>
+                    Sets the orientation of the output PDF file. 
+                    May be <b>landscape</b>, <b>portrait</b>. The default value is <b>portrait</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="pageSize" class="copy-link">spreadsheetLayout.pageSize</td>
+                <td>Sets the page size of the output PDF file.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="pageSize-height" class="copy-link">spreadsheetLayout.pageSize.height</td>
+                <td>
+                    Sets the page height of the output PDF file.
+                    The default value is <b>297mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="pageSize-width" class="copy-link">spreadsheetLayout.pageSize.width</td>
+                <td>
+                    Sets the page width of the output PDF file.
+                    The default value is <b>210mm</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="scale" class="copy-link">spreadsheetLayout.scale</td>
+                <td>
+                    Allows to set the scale of the output PDF file.
+                    The default value is <b>100</b>.
+                </td>
+                <td>integer</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="thumbnail" class="copy-link">thumbnail</td>
                 <td>Defines the settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>.</td>
                 <td>object</td>
@@ -193,7 +338,7 @@
         <tbody>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="9">Output format</th>
+                <th colspan="10">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -202,12 +347,14 @@
                 <td>jpg</td>
                 <td>odt</td>
                 <td>pdf</td>
+                <td>pdfa</td>
                 <td>png</td>
                 <td>rtf</td>
                 <td>txt</td>
             </tr>
             <tr>
                 <td>doc</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -229,6 +376,7 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>docx</td>
@@ -241,9 +389,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>dot</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -265,9 +415,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>dotx</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -289,9 +441,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>fodt</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -313,9 +467,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>mht</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -337,9 +493,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ott</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -358,12 +516,14 @@
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
             </tr>
             <tr>
                 <td>rtf</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -384,6 +544,7 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
             </tr>
             <tr>
@@ -393,6 +554,7 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
@@ -406,7 +568,7 @@
         <tbody>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="8">Output format</th>
+                <th colspan="9">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -415,6 +577,7 @@
                 <td>jpg</td>
                 <td>ods</td>
                 <td>pdf</td>
+                <td>pdfa</td>
                 <td>png</td>
                 <td>xlsx</td>
             </tr>
@@ -422,6 +585,7 @@
                 <td>csv</td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -439,6 +603,7 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ods</td>
@@ -450,9 +615,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ots</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -472,6 +639,7 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xlsm</td>
@@ -483,9 +651,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xlsx</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -505,9 +675,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xltm</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -527,6 +699,7 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
         </tbody>
     </table>
@@ -536,7 +709,7 @@
         <tbody>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="7">Output format</th>
+                <th colspan="8">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -544,11 +717,13 @@
                 <td>jpg</td>
                 <td>odp</td>
                 <td>pdf</td>
+                <td>pdfa</td>
                 <td>png</td>
                 <td>pptx</td>
             </tr>
             <tr>
                 <td>fodp</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -566,9 +741,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>otp</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -586,9 +763,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>potm</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -606,9 +785,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pps</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -626,9 +807,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ppsx</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -646,6 +829,7 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptm</td>
@@ -656,9 +840,11 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptx</td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -723,7 +909,42 @@
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
-    
+
+    <div id="sample-spreadsheet-to-pdf" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the <em>spreadsheet</em> file to <em>pdf</em> format</div>
+    <pre>
+{
+    "filetype": "xlsx",
+    "key": "Khirz6zTPdfd7",
+    "outputtype": "pdf",
+    "region": "en-US",
+    "spreadsheetLayout": {
+        "ignorePrintArea": true,
+        "orientation": "portrait",
+        "fitToWidth": 0,
+        "fitToHeight": 0,
+        "scale": 100,
+        "headings": false,
+        "gridLines": false,
+        "pageSize": {
+            "width": "210mm",
+            "height": "297mm"
+        },
+        "margins": {
+            "left": "17.8mm",
+            "right": "17.8mm",
+            "top": "19.1mm",
+            "bottom": "19.1mm"
+        }
+    },
+    "title": "Example Document Title.docx",
+    "url": "https://example.com/url-to-example-spreadsheet.xlsx"
+}
+</pre>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
+
     <div id="sample-conversion-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
     <pre>
 {
@@ -827,6 +1048,10 @@
             <tr class="tablerow">
                 <td>-6</td>
                 <td>Error while accessing the conversion result database.</td>
+            </tr>
+            <tr class="tablerow">
+                <td>-7</td>
+                <td>Input error.</td>
             </tr>
             <tr class="tablerow">
                 <td>-8</td>

@@ -221,6 +221,14 @@
                         <b>example</b>: true;
                     </li>
                     <li>
+                        <b>requestClose</b> - defines that if the <b>Open file location</b> button is clicked, <a href="<%= Url.Action("config/events") %>#onRequestClose">events.onRequestClose</a> event is called instead of opening a browser tab or window.
+                        The default value is <b>false</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false;
+                    </li>
+                    <li>
                         <b>text</b> - the text which will be displayed for the <b>Open file location</b> menu button and upper right corner button (i.e. instead of <em>Go to Documents</em>),
                         <br />
                         <b>type</b>: string,
@@ -331,6 +339,23 @@
             <td></td>
         </tr>
         <tr>
+            <td id="mentionShare" class="copy-link">mentionShare</td>
+            <td>
+                Defines the hint that describes the event after mentions in a comment.
+                If <b>true</b>, a hint indicates that the user will receive a notification and access to the document.
+                If <b>false</b>, a hint indicates that the user will receive only a notification of the mention.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that it will only be available for the comments if the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is set.</div>
+                <img src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
                 Defines the review editing mode which will be used when the document is opened for viewing.
@@ -373,6 +398,21 @@
             <td>boolean</td>
             <td>false</td>
         </tr>
+        <tr>
+            <td id="spellcheck" class="copy-link">spellcheck</td>
+            <td>
+                Defines if the spell checker is automatically switched on or off when the editor is loaded.
+                Spell checker will only be available for the document editor and the presentation editor.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.spellcheck</em> parameter.</div>
+            </td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -406,6 +446,26 @@
         <tr class="tablerow">
             <td colspan="4">
                 <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
+            <td id="unit" class="copy-link">unit</td>
+            <td>
+                Defines the measurement units used on the ruler and in dialog boxes.
+                Can take the following values:
+                <ul>
+                    <li><b>cm</b> - centimeters,</li>
+                    <li><b>pt</b> - points,</li>
+                    <li><b>inch</b> - inches.</li>
+                </ul>
+                The default value is centimeters (cm).
+            </td>
+            <td>string</td>
+            <td>cm</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.unit</em> parameter.</div>
             </td>
         </tr>
         <tr>
@@ -464,6 +524,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "forcesave": false,
             "goback": {
                 "blank": true,
+                "requestClose": false,
                 "text": "Open file location",
                 "url": "https://example.com"
             },
@@ -478,14 +539,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
             },
+            "mentionShare": true,
             "reviewDisplay": "original",
             <% if (license)
                { %>"rightMenu": true,
             <% } %>"showReviewChanges": false,
+            "spellcheck": true,
             <% if (license)
                { %>"statusBar": true,
             "toolbar": true,
             <% } %>"toolbarNoTabs": false,
+            "unit": "cm",
             "zoom": 100
         },
         ...

@@ -24,6 +24,7 @@
 */
 
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
@@ -128,6 +129,7 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "permissions", Namespace = "")]
             public class PermissionsConfig
             {
+                [Obsolete]
                 [DataMember(Name = "changeHistory", EmitDefaultValue = false)]
                 public bool? ChangeHistory;
 

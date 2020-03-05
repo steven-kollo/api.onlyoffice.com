@@ -223,13 +223,13 @@ html {
     border-bottom: 1px solid #d7d8dc;
 }
 .table-conversion-matrix-text td {
-    width: 10%;
+    width: 9%;
 }
 .table-conversion-matrix-spreadsheet td {
-    width: 11%;
+    width: 10%;
 }
 .table-conversion-matrix-presentation td {
-    width: 12%;
+    width: 11%;
 }
 
 .table-conversion-matrix-text th,

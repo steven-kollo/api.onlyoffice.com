@@ -25,19 +25,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr class="tablerow">
             <td id="changeHistory" class="copy-link">changeHistory</td>
             <td>
                 Allows to display the <em>Restore</em> button when using the <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> event.
                 The default value is <b>false</b>.
+                Deprecated since version 5.5, please add the <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> field instead.
             </td>
             <td>boolean</td>
             <td>true</td>
-        </tr>
-        <tr class="tablerow tablerow-note">
-            <td colspan="4">
-                <div class="note">The <em>Restore</em> button is displayed for the previous document versions only and hidden for the current one.</div>
-            </td>
         </tr>
         <tr>
             <td id="comment" class="copy-link">comment</td>
