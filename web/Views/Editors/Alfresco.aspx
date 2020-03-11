@@ -27,6 +27,11 @@
             <img alt="Edit in OnlyOffice" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
         </li>
         <li>This allows multiple users to collaborate in real time and to save back those changes to Alfresco.</li>
+        <li>And a Convert using ONLYOFFICE option to quickly convert ODT, ODP, ODS, DOC, XLS, PPT files to their Office Open XML counterpart</li>
+        <li>
+            Context menu <em>Create new...</em> option within document library
+            <img alt="Create new..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
+        </li>
     </ul>
 
 
@@ -41,14 +46,17 @@
 
     <h2 id="install" class="copy-link">Installing ONLYOFFICE Alfresco module package</h2>
     <p>To start using ONLYOFFICE Document Server with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
-    <div class="note">Steps <b>1</b> &mdash; <b>4</b> are only necessary if you for some reason plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards).
+    <div class="note">
+        Steps <b>1</b> &mdash; <b>4</b> are only necessary if you for some reason plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards).
         If you do not want to do that and plan to use the already compiled module files, please skip to step <b>5</b> directly.
-        The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a>.</div>
+        The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a>.
+    </div>
     <ol>
-        <li>The latest stable Oracle Java version is necessary for the successful build. If you do not have it installed, use the following commands to install Oracle Java 8:
-            <span class="commandline">sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install oracle-java8-installer</span>
+        <li>
+            The latest stable Oracle Java version is necessary for the successful build.
+            If you do not have it installed, use the following commands to install Oracle Java 8:
+            <span class="commandline">sudo apt-get update
+sudo apt-get install openjdk-8-jdk</span>
         </li>
         <%--<li>Switch Java alternatives to Oracle Java:
             <span class="commandline">sudo update-alternatives --config java
@@ -96,11 +104,14 @@ sudo ./alfresco.sh start</span>
     <span class="commandline">docker-compose up</span>
 
     <h2 id="configuration" class="copy-link">Configuration</h2>
-    <p>Module configuration can be found at <b>/alfresco/s/onlyoffice/onlyoffice-config</b> page</p>
-    <div class="note">You can also add <b>onlyoffice.url</b> in <b>alfresco-global.properties</b>. Configuration made via settings page will override <b>alfresco-global.properties</b>.</div>
+    <p>Module configuration can be found inside <b>Alfresco Administration Console</b> or by simply navigating to <b>http://&lt;alfrescohost&gt;/alfresco/s/onlyoffice/onlyoffice-config</b></p>
+    <div class="note">
+        You can also add <b>onlyoffice.url</b> in <b>alfresco-global.properties</b>.
+        Configuration made via settings page will override <b>alfresco-global.properties</b>.
+    </div>
 
     <h2 id="jwt" class="copy-link">JWT</h2>
-    <p>JWT can be configured via configuration page or by adding <b>onlyoffice.jwtsecret</b> in <b>alfresco-global.properties</b>.</p>
+    <p>JWT can be configured via <a href="#configuration">configuration page</a> or by adding <b>onlyoffice.jwtsecret</b> in <b>alfresco-global.properties</b>.</p>
     <p>The JWT configuration on the Document Server side can be found <a href="/editors/signature/">here</a>.</p>
 
     <h2 id="convertation" class="copy-link">Convertation</h2>
@@ -110,7 +121,10 @@ sudo ./alfresco.sh start</span>
         <li><b>.xls</b>, <b>.ods</b> -> <b>.xlsx</b></li>
         <li><b>.ppt</b>, <b>.odp</b> -> <b>.pptx</b></li>
     </ul>
-    <p>To convert one specific file you can simply select <b>Convert using ONLYOFFICE</b> action. Resulting file will be placed in the same folder. You can also configure rules for a folder, that will automatically convert files on upload or on change. You can read how such rules can be configured <a href="https://docs.alfresco.com/5.1/tasks/library-folder-rules-define-create.html">here</a>.</p>
+    <p>
+        To convert one specific file you can simply select <b>Convert using ONLYOFFICE</b> action.
+        Resulting file will be placed in the same folder. You can also configure rules for a folder, that will automatically convert files on upload or on change. You can read how such rules can be configured <a href="https://docs.alfresco.com/5.1/tasks/library-folder-rules-define-create.html">here</a>.
+    </p>
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>User navigates to a document within Alfresco Share and selects the <b>Edit in ONLYOFFICE</b> menu option.</p>

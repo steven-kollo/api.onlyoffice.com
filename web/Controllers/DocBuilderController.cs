@@ -215,7 +215,7 @@ namespace ASC.Api.Web.Help.Controllers
             return File(bytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
         }
 
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         public ActionResult DocBuilderGenerate(string actionName, string builderScript)
         {
             try

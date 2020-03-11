@@ -30,12 +30,21 @@ builder.CloseFile();</pre>
                     <li>The file encoding is always <b>UTF8</b>.</li>
                     <li>All the commands containing <em>builder.</em> are line separated, i.e. you cannot write them in one line, each command <b>must</b> start with its own line.</li>
                     <li>All the common JavaScript commands and methods must be used inside the <em>builder.CreateFile()</em> and <em>builder.SaveFile()</em> lines, otherwise an error will be thrown when executing the code.</li>
-                    <li>The comments are allowed. Any line starting with <em>#</em> or <em>//</em> is considered to be a comment.</li>
-                    <li>Empty lines are allowed. You can enter any number of empty lines to separate the blocks, the parser will ignore them.</li>
+                    <li>
+                        The comments are allowed.
+                        Any line starting with <em>#</em> or <em>//</em> is considered to be a comment.
+                    </li>
+                    <li>
+                        Empty lines are allowed.
+                        You can enter any number of empty lines to separate the blocks, the parser will ignore them.
+                    </li>
                     <li>All the <em>CDocBuilder</em> methods (except the <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand") %>">CDocBuilder.ExecuteCommand</a>) are started with <em>builder</em>.</li>
                     <li>The <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand") %>">CDocBuilder.ExecuteCommand</a> method is not used explicitly, the command itself is used instead. This is done to avoid the parsing complexity and allow the use of common JavaScript commands and methods.</li>
                     <li>The <a href="<%= Url.Action("integrationapi/cdocbuilder/runtexta") %>">CDocBuilder.RunTextA</a>, <a href="<%= Url.Action("integrationapi/cdocbuilder/runtextw") %>">CDocBuilder.RunTextW</a>, <a href="<%= Url.Action("integrationapi/cdocbuilder/initialize") %>">CDocBuilder.Initialize</a> and <a href="<%= Url.Action("integrationapi/cdocbuilder/dispose") %>">CDocBuilder.Dispose</a> methods are not used in <b>.docbuilder</b> files.</li>
-                    <li>All the methods in <b>.docbuilder</b> file (except the ones listed above) are used the same way as in C++ code. See the list of the methods below to find more on each of them.</li>
+                    <li>
+                        All the methods in <b>.docbuilder</b> file (except the ones listed above) are used the same way as in C++ code.
+                        See the list of the methods below to find more on each of them.
+                    </li>
                 </ul>            
             <p>Thus the example of the complete working <b>.docbuilder</b> file is available below.</p>
 

@@ -50,7 +50,10 @@
         </li>
     </ol>
 
-    <div class="note">The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application. <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!</div>
+    <div class="note">
+        The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+        <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+    </div>
 
     <p>The result should look like the demo preview below.</p>
 

@@ -39,25 +39,37 @@
         <tbody>
             <tr class="tablerow">
                 <td id="actions" class="copy-link">actions</td>
-                <td>Defines the object received if the new user connected to the document co-editing or disconnected from it. In the first case the <em>type</em> field value is <b>1</b>, in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected to or disconnected from the document co-editing.</td>
+                <td>
+                    Defines the object received if the new user connected to the document co-editing or disconnected from it.
+                    In the first case the <em>type</em> field value is <b>1</b>, in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected to or disconnected from the document co-editing.
+                </td>
                 <td>array of object</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td id="changeshistory" class="copy-link">changeshistory</td>
-                <td>Defines the array of objects with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method. Deprecated since version 4.2, please use <a href="#history">history</a> instead.</td>
+                <td>
+                    Defines the array of objects with the document changes history.
+                    The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. Must be sent as a property <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+                    Removed since version 4.2, please use <a href="#history">history</a> instead.
+                </td>
                 <td>array of object</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td id="changesurl" class="copy-link">changesurl</td>
-                <td>Defines the link to the file with the document editing data used to track and display the document changes history. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.</td>
+                <td>
+                    Defines the link to the file with the document editing data used to track and display the document changes history.
+                    The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. The file must be saved and its address must be sent as <i>changesUrl</i> parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method to show the changes corresponding to the specific document version.
+                </td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td id="forcesavetype" class="copy-link">forcesavetype</td>
-                <td>Defines the type of initiator when the <a href="<%= Url.Action("save") %>#forcesave">force saving</a> request is performed. Can have the following values:
+                <td>
+                    Defines the type of initiator when the <a href="<%= Url.Action("save") %>#forcesave">force saving</a> request is performed.
+                    Can have the following values:
                     <ul>
                         <li><b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>,</li>
                         <li><b>1</b> - the force saving request is performed each time the saving is done (e.g. the <b>Save</b> button is clicked), which is only available when the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> option is set to <em>true</em>.</li>
@@ -70,7 +82,10 @@
             </tr>
             <tr class="tablerow">
                 <td id="history" class="copy-link">history</td>
-                <td>Defines the object with the document changes history. The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.</td>
+                <td>
+                    Defines the object with the document changes history.
+                    The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+                </td>
                 <td>object</td>
                 <td>optional</td>
             </tr>
@@ -82,9 +97,10 @@
             </tr>
             <tr class="tablerow">
                 <td id="status" class="copy-link">status</td>
-                <td>Defines the status of the document. Can have the following values:
+                <td>
+                    Defines the status of the document.
+                    Can have the following values:
                     <ul>
-                        <li><b>0</b> - no document with the key identifier could be found,</li>
                         <li><b>1</b> - document is being edited,</li>
                         <li><b>2</b> - document is ready for saving,</li>
                         <li><b>3</b> - document saving error has occurred,</li>
@@ -98,7 +114,10 @@
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
-                <td>Defines the link to the edited document to be saved with the document storage service. The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only.</td>
+                <td>
+                    Defines the link to the edited document to be saved with the document storage service.
+                    The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only.
+                </td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
@@ -116,11 +135,28 @@
             </tr>
         </tbody>
     </table>
-
-    <p><em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.</p>
-    <p><em>Status</em> <b>2</b> (<b>3</b>) is received <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.</p>
-    <p><em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.</p>
-    <p><em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed.</p>
+    
+    <p id="used-callbackUrl" class="copy-link">
+        Since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected depending on the <em>status</em> of the request.
+        Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
+        Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.
+    </p>
+    <p>
+        <em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.
+        His <em>callbackUrl</em> is used.
+    </p>
+    <p>
+        <em>Status</em> <b>2</b> (<b>3</b>) is received <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.
+        The <em>callbackUrl</em> from the user who made the last changes to the file is used.
+    </p>
+    <p>
+        <em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.
+        His <em>callbackUrl</em> is used.
+    </p>
+    <p>
+        <em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed.
+        The <em>callbackUrl</em> from the user who made the last changes to the file is used.
+    </p>
 
     <div id="status-1" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>
     <pre>

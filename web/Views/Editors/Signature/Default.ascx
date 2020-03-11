@@ -12,7 +12,8 @@
 <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
 
 <div class="note">
-    The default values are available in the <em>default.json</em> configuration file, which is available in the folders above (for Linux and Windows). Please do not edit the contents of the <em>default.json</em> file directly. The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+    The default values are available in the <em>default.json</em> configuration file, which is available in the folders above (for Linux and Windows).
+    Please do not edit the contents of the <em>default.json</em> file directly. The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
 </div>
 
 <p>Restart the services for the config changes to take effect:</p>
@@ -41,7 +42,7 @@ supervisorctl restart all
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
-            <td>Defines the <em>secret key</em> to generate the token in the <a href="<%= Url.Action("signature/browser") %>">browser</a> for the <b>document editor</b> opening and calling the methods and the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b> and <b>document conversion service</b>.</td>
+            <td>Defines the <em>secret key</em> to generate the token in the <a href="<%= Url.Action("signature/browser") %>">browser</a> for the <b>document editor</b> opening and calling the methods and the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
             <td>string</td>
             <td>secret</td>
         </tr>
@@ -59,7 +60,7 @@ supervisorctl restart all
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.inbox</td>
-            <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b> and <b>document conversion service</b>.</td>
+            <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>

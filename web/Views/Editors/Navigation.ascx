@@ -26,6 +26,9 @@
                 <a href="<%= Url.Action("example/php") %>">PHP example</a>
             </li>
             <li>
+                <a href="<%= Url.Action("example/python") %>">Python example</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("example/ruby") %>">Ruby example</a>
             </li>
         </ul>
@@ -38,6 +41,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("humhub") %>">HumHub integration</a>
             </li>
             <li>
                 <a href="<%= Url.Action("liferay") %>">Liferay integration</a>
@@ -127,6 +133,9 @@
     </li>
     <li>
         <a href="<%= Url.Action("conversionapi") %>">Conversion API</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("documentbuilderapi") %>">Document Builder API</a>
     </li>
     <li>
         <a href="<%= Url.Action("signature/") %>">Signature</a>

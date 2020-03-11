@@ -27,13 +27,19 @@
     <tbody>
         <tr class="tablerow">
             <td id="author" class="copy-link">author</td>
-            <td>Defines the name of the document author/creator. Deprecated since version 5.4, please use <a href="#owner">owner</a> instead.</td>
+            <td>
+                Defines the name of the document author/creator.
+                Deprecated since version 5.4, please use <a href="#owner">owner</a> instead.
+            </td>
             <td>string</td>
             <td>"John Smith"</td>
         </tr>
         <tr class="tablerow">
             <td id="created" class="copy-link">created</td>
-            <td>Defines the document creation date. Deprecated since version 5.4, please use <a href="#uploaded">uploaded</a> instead.</td>
+            <td>
+                Defines the document creation date.
+                Deprecated since version 5.4, please use <a href="#uploaded">uploaded</a> instead.
+            </td>
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
@@ -49,23 +55,13 @@
             <td>string</td>
             <td>"John Smith"</td>
         </tr>
-        <tr class="tablerow">
-            <td id="uploaded" class="copy-link">uploaded</td>
-            <td>Defines the document uploading date.</td>
-            <td>string</td>
-            <td>"2010-07-07 3:46 PM"</td>
-        </tr>
-        <tr class="tablerow">
-            <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/info.png") %>" alt="" />
-            </td>
-        </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="sharingSettings" class="copy-link">sharingSettings</td>
             <td>Displays the information about the settings which allow to share the document with other users:
                 <ul>
                     <li>
-                        <b>permissions</b> - the access rights for the user with the name above. Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>
+                        <b>permissions</b> - the access rights for the user with the name above.
+                        Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>
                         <br />
                         <b>type</b>: string
                         <br />
@@ -86,6 +82,17 @@
         <tr class="tablerow">
             <td colspan="4">
                 <img src="<%= Url.Content("~/content/img/editor/sharing_settings.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
+            <td id="uploaded" class="copy-link">uploaded</td>
+            <td>Defines the document uploading date.</td>
+            <td>string</td>
+            <td>"2010-07-07 3:46 PM"</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/info.png") %>" alt="" />
             </td>
         </tr>
     </tbody>

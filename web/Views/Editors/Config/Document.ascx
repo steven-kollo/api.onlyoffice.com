@@ -33,7 +33,12 @@
         </tr>
         <tr class="tablerow">
             <td id="key" class="copy-link">key<span class="required">*</span></td>
-            <td>Defines the unique document identifier used for document recognition by the service. In case the known key is sent the document will be taken from the cache. Every time the document is edited and saved, the key must be generated anew. The document url can be used as the <b>key</b> but without the special characters and the length is limited to 20 symbols.</td>
+            <td>
+                Defines the unique document identifier used for document recognition by the service.
+                In case the known key is sent the document will be taken from the cache.
+                Every time the document is edited and saved, the key must be generated anew.
+                The document url can be used as the <b>key</b> but without the special characters and the length is limited to 20 symbols.
+            </td>
             <td>string</td>
             <td>"Khirz6zTPdfd7"</td>
         </tr>
@@ -66,6 +71,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-<p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+<p>
+    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+</p>
 
-<div class="note">The key characters can be used: <b>0-9</b>, <b>a-z</b>, <b>A-Z</b>, <b>-._=</b>. The maximal key length is <b>20</b> characters.</div>
+<div class="note">
+    The key characters can be used: <b>0-9</b>, <b>a-z</b>, <b>A-Z</b>, <b>-._=</b>.
+    The maximal key length is <b>20</b> characters.
+</div>

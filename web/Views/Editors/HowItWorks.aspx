@@ -33,10 +33,12 @@
     <p class="list-header">The server side includes:</p>
     <ul>
         <li>
-            <b>Document storage service</b> - the server service which stores all the documents available to the users with the appropriate access rights. It provides the document IDs and links to these documents to the <b>document manager</b> which the user sees in the browser.
+            <b>Document storage service</b> - the server service which stores all the documents available to the users with the appropriate access rights.
+            It provides the document IDs and links to these documents to the <b>document manager</b> which the user sees in the browser.
         </li>
         <li>
-            <b>Document editing service</b> - the server service which allows to perform the document viewing and editing (in case the user has the appropriate rights to do that). The <b>document editor</b> interface is used to access all the <b>document editing service</b> features.
+            <b>Document editing service</b> - the server service which allows to perform the document viewing and editing (in case the user has the appropriate rights to do that).
+            The <b>document editor</b> interface is used to access all the <b>document editing service</b> features.
         </li>
         <li>
             <b>Document command service</b> - the server service which allows to perfom additional commands with <b>document editing service</b>.
@@ -44,10 +46,13 @@
         <li>
             <b>Document conversion service</b> - the server service which allows to convert the document file into the appropriate Office Open XML format (<em>docx</em> for text documents, <em>xlsx</em> for spreadsheets and <em>pptx</em> for presentations) for their editing or downloading.
         </li>
+        <li>
+            <b>Document builder service</b> - the server service which allows to build a document easily without the need to actually run a document processing editor.
+        </li>
     </ul>
 
     <p class="list-header">
-        Please note, that ONLYOFFICE Document Server includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b> and <b>document conversion service</b>.
+        Please note, that ONLYOFFICE Document Server includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.
         The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators who use ONLYOFFICE Document Server on their own server.
     </p>
 

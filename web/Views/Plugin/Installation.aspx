@@ -18,7 +18,7 @@
 
     <h2>Adding a plugin to the desktop editors</h2>
 
-    <p>You need to take the plugin folder (it <b>must</b> contain the <a href="<%= Url.Action("config") %>">config.json</a>, <a href="<%= Url.Action("indexhtml") %>">index.html</a> and the <a href="<%= Url.Action("code") %>">pluginCode.js</a> files), archive it and change the file extension to <em>.plugin</em>. After that click the 
+    <p>You need to take the plugin files (<a href="<%= Url.Action("config") %>">config.json</a>, <a href="<%= Url.Action("indexhtml") %>">index.html</a> and <a href="<%= Url.Action("code") %>">pluginCode.js</a>), archive it and change the file extension to <em>.plugin</em>. After that click the 
         <img alt="Plugin button" src="<%= Url.Content("~/content/img/plugins/plugin-button.png") %>" /> plugin button and select the <b>Manage Plugins</b> option. The plugin manager window will be opened:</p>
     <p><img alt="Plugin manager window" src="<%= Url.Content("~/content/img/plugins/plugin-manager.png") %>" /></p>
     <p>Use the <b>Add plugin button</b> to load your created plugin. It will be added immediately to the opened editors and all the editors you will open afterwards. To delete the selected plugins the 
@@ -60,7 +60,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 
-            <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed. See the <a href="<%= Url.Action("howitworks", "editors") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+            <p>
+                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed.
+                See the <a href="<%= Url.Action("howitworks", "editors") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            </p>
 
             <div class="note">If the plugins placed into the folder and the plugins specified in the config coincide, the latter will be used.</div>
 

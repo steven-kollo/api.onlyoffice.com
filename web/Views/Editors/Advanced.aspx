@@ -77,6 +77,8 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#download">download</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">modifyContentControl</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#modifyFilter">modifyFilter</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#print">print</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#review">review</a>": true
         },
@@ -110,7 +112,8 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#goback">goback</a>": {
                 "blank": true,
-                "text": "Go to Documents",
+                "requestClose": false,
+                "text": "Open file location",
                 "url": "https://example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#help">help</a>": true,
@@ -120,8 +123,12 @@
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://example.com"
             },
+            "<a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a>": true,
+            "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",
             "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,
+            "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
+            "<a href="<%= Url.Action("config/editor/customization") %>#unit">unit</a>": "cm",
             "<a href="<%= Url.Action("config/editor/customization") %>#zoom">zoom</a>": 100
         },
         "<a href="<%= Url.Action("config/editor/embedded") %>">embedded</a>": {
@@ -172,8 +179,10 @@
         "<a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a>": onDownloadAs,
         "<a href="<%= Url.Action("config/events") %>#onError">onError</a>": onError,
         "<a href="<%= Url.Action("config/events") %>#onInfo">onInfo</a>": onInfo,
+        "<a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a>": onMetaChange,
         "<a href="<%= Url.Action("config/events") %>#onOutdatedVersion">onOutdatedVersion</a>": onOutdatedVersion,
         "<a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a>": onRequestClose,
+        "<a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a>": onRequestCompareFile,
         "<a href="<%= Url.Action("config/events") %>#onRequestEditRights">onRequestEditRights</a>": onRequestEditRights,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a>": onRequestHistory,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a>": onRequestHistoryClose,
@@ -182,6 +191,9 @@
         "<a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a>": onRequestMailMergeRecipients,
         "<a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a>": onRequestRestore,
         "<a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a>": onRequestSaveAs,
+        "<a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a>": onRequestSendNotify,
+        "<a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a>": onRequestSaveAs,
+        "<a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a>": onRequestUsers,
         "<a href="<%= Url.Action("config/events") %>#onWarning">onWarning</a>": onWarning
     },
     "<a href="<%= Url.Action("config/") %>#height">height</a>": "100%",
@@ -190,5 +202,8 @@
     "<a href="<%= Url.Action("config/") %>#width">width</a>": "100%"
 };
 </pre>
-    <p>Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
 </asp:Content>

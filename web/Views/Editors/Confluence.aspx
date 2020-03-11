@@ -29,17 +29,27 @@
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin).
-        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to Confluence directly.
+        If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
+        ONLYOFFICE Document Server must also be able to POST to Confluence directly.
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
     <h2 id="get-connector" class="copy-link">Getting ONLYOFFICE Connector for Confluence from Atlassian Marketplace</h2>
-    <p>You can download the latest connector version from the <a href="https://marketplace.atlassian.com/1218214" target="_blank">official Atlassian Marketplace</a>. This is done the following way:</p>
+    <p>
+        You can download the latest connector version from the <a href="https://marketplace.atlassian.com/1218214" target="_blank">official Atlassian Marketplace</a>.
+        This is done the following way:
+    </p>
     <ul>
         <li>Log into your Confluence instance as an administrator.</li>
-        <li>Click the admin drop-down box and choose <b>Add-ons</b>. The <b>Manage add-ons</b> screen will load.</li>
+        <li>
+            Click the admin drop-down box and choose <b>Add-ons</b>.
+            The <b>Manage add-ons</b> screen will load.
+        </li>
         <li>Click <b>Find new add-ons</b> from the left-hand side of the page.</li>
-        <li>Locate <b>ONLYOFFICE Connector for Confluence</b> via search. Results will include the add-on versions compatible with your Confluence instance.</li>
+        <li>
+            Locate <b>ONLYOFFICE Connector for Confluence</b> via search.
+            Results will include the add-on versions compatible with your Confluence instance.
+        </li>
         <li>Click <b>Install</b> to download and install your add-on.</li>
         <li>Now you can click <b>Close</b> in the <b>Installed and ready to go</b> dialog.</li>
     </ul>

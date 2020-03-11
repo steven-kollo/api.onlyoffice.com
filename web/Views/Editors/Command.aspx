@@ -14,7 +14,10 @@
         <span class="hdr">Command service</span>
     </h1>
 
-    <p class="dscr">For the interaction with the <b>document command service</b> the POST requests are used. The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+    <p class="dscr">
+        For the interaction with the <b>document command service</b> the POST requests are used.
+        The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+    </p>
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
@@ -43,6 +46,7 @@
                         <li><b>drop</b> - disconnect the users with the identifiers present in the <em>users</em> parameter from the <b>document editing service</b> (these users will be able to view the document, but will not be allowed to make changes to it);</li>
                         <li><b>forcesave</b> - force saving the document being edited without closing it (the document editing might be continued after this command, so this will not be the final saved document version);</li>
                         <li><b>info</b> - receive a document status;</li>
+                        <li><b>meta</b> - update the meta information of the document for all collaborative editors;</li>
                         <li><b>version</b> - receive the current version number of Document Server.</li>
                     </ul>
                 </td>
@@ -54,6 +58,24 @@
                 <td>Defines the document identifier used to unambiguously identify the document file.</td>
                 <td>string</td>
                 <td>required</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="meta" class="copy-link">meta</td>
+                <td>Defines the new meta information of the document (used for the <em>c=meta</em> parameter value).</td>
+                <td>string</td>
+                <td>required</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="meta-title" class="copy-link">meta.title</td>
+                <td>Defines the new name of the document (used for the <em>c=meta</em> parameter value).</td>
+                <td>string</td>
+                <td>required</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="token" class="copy-link">token</td>
+                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#command">token</a>.</td>
+                <td>string</td>
+                <td>required by configuration</td>
             </tr>
             <tr class="tablerow">
                 <td id="userdata" class="copy-link">userdata</td>
@@ -79,6 +101,15 @@
 }
 </pre>
 
+    <p>The request result is returned in JSON form.</p>
+    <div class="header-gray">Sample of the response</div>
+    <pre>
+{
+    "error": 0,
+    "key": "Khirz6zTPdfd7"
+}
+</pre>
+
     <div id="forcesave" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used for force saving the document with the <em>6d5a81d0</em> identifier being edited without closing it</div>
     <pre>
 {
@@ -88,11 +119,40 @@
 }
 </pre>
 
+    <p>The request result is returned in JSON form.</p>
+    <div class="header-gray">Sample of the response</div>
+    <pre>
+{
+    "error": 0,
+    "key": "Khirz6zTPdfd7"
+}
+</pre>
+
     <div id="info" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
     <pre>
 {
     "c": "info",
     "key": "Khirz6zTPdfd7"
+}
+</pre>
+
+    <p>The request result is returned in JSON form.</p>
+    <div class="header-gray">Sample of the response</div>
+    <pre>
+{
+    "error": 0,
+    "key": "Khirz6zTPdfd7"
+}
+</pre>
+
+    <div id="meta-command" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to update the name of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
+    <pre>
+{
+    "c": "meta",
+    "key": "Khirz6zTPdfd7",
+    "meta": {
+        "title": "Example Document Title.docx"
+    }
 }
 </pre>
 
@@ -118,6 +178,13 @@
 {
     "error": 0,
     "version": "4.3.1.4"
+}
+</pre>
+
+    <div id="info-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document command service</b> used to receive the status of the document with the <em>Khirz6zTPdfd7</em> identifier</div>
+    <pre>
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjIjoiaW5mbyIsImtleSI6IktoaXJ6NnpUUGRmZDcifQ.r_6sThjFABsHMNHhkVdHDSz4jwkbXRQNYdvawkBGJgg"
 }
 </pre>
 

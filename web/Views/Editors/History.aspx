@@ -37,7 +37,8 @@
         <li>
             <p>
                 Specify the event handler for opening the <a href="<%= Url.Action("config/events") %>#onRequestHistory">version history</a> list in the configuration script for Document Editor initialization.
-                When the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> event is called, the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method must be executed. This method contains document history for each document version, if the history parameter has been present for each version.
+                When the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> event is called, the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method must be executed.
+                This method contains document history for each document version, if the history parameter has been present for each version.
             </p>
             <pre>
 var onRequestHistory = function() {
@@ -80,7 +81,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <li>
             <p>
                 In the configuration script for Document Editor initialization specify the event handler which will select the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">version from history</a>.
-                When the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> event is called, the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method must be executed. This method contains the absolute URL to the file of the corresponding version.
+                When the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> event is called, the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method must be executed.
+                This method contains the absolute URL to the file of the corresponding version.
             </p>
             <pre>
 var onRequestHistoryData = function(event) {
@@ -166,7 +168,8 @@ docEditor.setHistoryData({
     "version": 2
 });
 </pre>
-            <div class="note">The <em>changesurl</em> request is made in the browser from the added iframe with the <b>documentserver</b> domain, where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+            <div class="note">
+                The <em>changesurl</em> request is made in the browser from the added iframe with the <b>documentserver</b> domain, where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
                 For its correct work the cross-origin HTTP requests must be allowed (CORS).
                 This can be achieved using the <em>Access-Control-Allow-Origin</em> header.
             </div>

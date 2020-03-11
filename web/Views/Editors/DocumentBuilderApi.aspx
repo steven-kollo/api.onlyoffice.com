@@ -19,7 +19,6 @@
         The request parameters are entered in JSON format in the request body.
         The requests are sent to the <span class="fakelink">https://documentserver/docbuilder</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
     </p>
-    <span class="note">ONLYOFFICE Web Document Builder service available only for <em>ONLYOFFICE Developer Edition</em></span>
 
     <h2>Parameters and their description:</h2>
     <table class="table">
@@ -41,8 +40,8 @@
                 <td>Defines the type of the request to the <b>document builder service</b>: asynchronous or not.<br />
                     Supported values:
                     <ul>
-                        <li>true</li>
-                        <li>false</li>
+                        <li><b>true</b></li>
+                        <li><b>false</b></li>
                     </ul>
                     When the asynchronous request type is used, the response is formed instantly.
                     In this case to get the result it is necessary to send requests without parameter change until the document generation is finished.
@@ -60,18 +59,33 @@
                 <td>string</td>
             </tr>
             <tr class="tablerow">
+                <td id="token" class="copy-link">token</td>
+                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#builder">token</a>.</td>
+                <td>string</td>
+                <td>required by configuration</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
-                <td>Defines the link to the .docbuilder file.</td>
+                <td>Defines the absolute URL to the .docbuilder file.</td>
                 <td>string</td>
             </tr>
         </tbody>
     </table>
 
-    <p>The <em>.docbuilder</em> file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name. Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).</p>
+    <p>
+        The <em>.docbuilder</em> file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name.
+        Once the document generation is ready, the response with the absolute URL to the resulting file will be returned (see below).
+    </p>
 
-    <div class="note">Please note, that <em>.docbuilder</em> script file can contain several output files as a result. The URL to them all will be returned in the response to the request once the file generation is finished.</div>
+    <div class="note">
+        Please note, that <em>.docbuilder</em> script file can contain several output files as a result.
+        The URL to them all will be returned in the response to the request once the file generation is finished.
+    </div>
 
-    <p>You can find more information about the <em>.docbuilder</em> file syntax <a href="<%= Url.Action("integrationapi/usingdocbuilderfile", "DocBuilder") %>">here</a>. Please read <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("gettingstarted", "DocBuilder") %>">API documentation</a> for the detailed information on what classes and methods are used to generate the documents with the help of <em>.docbuilder</em> files.</p>
+    <p>
+        You can find more information about the <em>.docbuilder</em> file syntax <a href="<%= Url.Action("integrationapi/usingdocbuilderfile", "DocBuilder") %>">here</a>.
+        Please read <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("gettingstarted", "DocBuilder") %>">API documentation</a> for the detailed information on what classes and methods are used to generate the documents with the help of <em>.docbuilder</em> files.
+    </p>
 
     <div id="sample-sync-first" class="header-gray copy-link">Sample of JSON object sent to <b>document builder service</b> for the first asynchronous request</div>
     <pre>
@@ -80,7 +94,10 @@
     "url": "https://example.com/url-to-example-script.docbuilder"
 }
 </pre>
-    <p>Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
 
     <div class="header-gray">Response format</div>
     <pre>
@@ -118,7 +135,10 @@
     "url": "https://example.com/url-to-example-script.docbuilder"
 }
 </pre>
-    <p>Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed. See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.</p>
+    <p>
+        Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </p>
 
     <div class="header-gray">Response example</div>
     <pre>
@@ -129,6 +149,13 @@
       "SampleText2.docx": "https://documentserver/SampleText2.docx"
    },
    "end": true
+}
+</pre>
+
+    <div id="sample-builder-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document builder service</b> for the first asynchronous request</div>
+    <pre>
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhc3luYyI6dHJ1ZSwidXJsIjoiaHR0cHM6Ly9leGFtcGxlLmNvbS91cmwtdG8tZXhhbXBsZS1zY3JpcHQuZG9jYnVpbGRlciJ9.dzoTbRzSMa95Fpg34CjnF3ZUPdGA2CnBedFL_qOOxAs"
 }
 </pre>
 

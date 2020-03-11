@@ -20,7 +20,14 @@
         <li>The <b>document editor</b> sends the changes to the <b>document editing service</b>.</li>
         <li>The user closes the <b>document editor</b>.</li>
         <li>The <b>document editing service</b> watches the end of work with the document and collects the changes sent from the <b>document editor</b> into one document.</li>
-        <li>The <b>document editing service</b> informs the <b>document storage service</b> about the end of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a> and returns the link to the modified document.</li>
+        <li>
+            The <b>document editing service</b> informs the <b>document storage service</b> about the end of the document editing using the <em>callbackUrl</em> from <a href="<%= Url.Action("basic") %>">JavaScript API</a> and returns the link to the modified document.
+            <div class="note">
+                Please note that since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected based on <a href="<%= Url.Action("callback") %>#status">status</a> of the request.
+                Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
+                Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.                
+            </div>
+        </li>
         <li>The <b>document storage service</b> downloads the document file with all the saved changes from the <b>document editing service</b> and stores it.</li>
     </ol>
 
@@ -46,7 +53,11 @@ new DocsAPI.DocEditor("placeholder", {
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         </li>
         <li>Open your <em>html</em> file in the browser and edit your document.</li>
-        <li>Close the <b>Document Editor</b>. Check out your document in about 10 seconds. All changes should be saved, meaning the configuration is correct.</li>
+        <li>
+            Close the <b>Document Editor</b>.
+            Check out your document in about 10 seconds.
+            All changes should be saved, meaning the configuration is correct.
+        </li>
     </ol>
 
 
@@ -58,15 +69,17 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing.
-        The default conversion start delay time is defined in <b>Document Server</b> configuratino file, which can be found at the following path:
+        The default conversion start delay time is defined in <b>Document Server</b> configuration file, which can be found at the following path:
     </p>
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
     <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
     <p>
-        If you want to change it, you can use the <em>local.json</em> file, where all the edited parameters should be stored. This file must be created in the same folder with the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b> (see the examples below).
+        If you want to change it, you can use the <em>local.json</em> file, where all the edited parameters should be stored.
+        This file is located in the same directory as the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b> (see the examples below).
     </p>
     <div class="note">
-        Please do not edit the contents of the <em>default.json</em> file directly. The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+        Please do not edit the contents of the <em>default.json</em> file directly.
+        The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
     </div>
 
     <div class="header-gray">Parameters</div>
@@ -147,7 +160,10 @@ new DocsAPI.DocEditor("placeholder", {
                 <tbody>
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.enable</td>
-                        <td>Specifies enabling the repeating force saving. The default value is <b>false</b>.</td>
+                        <td>
+                            Specifies enabling the repeating force saving.
+                            The default value is <b>false</b>.
+                        </td>
                         <td>boolean</td>
                         <td>false</td>
                     </tr>

@@ -20,8 +20,14 @@
             <div class="note">The browser <b>document manager</b> receives the list of all documents available to the user from the <b>document storage service</b>.</div>
         </li>
         <li>The document identifier and the link to it at the <b>document storage service</b> are sent using the <a href="<%= Url.Action("basic") %>">JavaScript API</a> to the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> forms a request to the <b>document editing service</b> for document opening. The <b>document editor</b> uses the document identifier and its link received from the <b>document manager</b> (at step 2).</li>
-        <li>The <b>document editing service</b> downloads the document file from the <b>document storage service</b> using the ID and link provided. At this step the <a href="<%= Url.Action("conversion") %>">conversion</a> of the file into Office Open XML format is also performed for the <b>document editor</b> better performance and formats compatibility.</li>
+        <li>
+            The <b>document editor</b> forms a request to the <b>document editing service</b> for document opening.
+            The <b>document editor</b> uses the document identifier and its link received from the <b>document manager</b> (at step 2).
+        </li>
+        <li>
+            The <b>document editing service</b> downloads the document file from the <b>document storage service</b> using the ID and link provided.
+            At this step the <a href="<%= Url.Action("conversion") %>">conversion</a> of the file into Office Open XML format is also performed for the <b>document editor</b> better performance and formats compatibility.
+        </li>
         <li>When ready the <b>document editing service</b> transfers the document file to the browser-based <b>document editor</b>.</li>
         <li>The <b>document editor</b> displays the document file and/or (in case the appropriate rights are provided) allows its editing.</li>
     </ol>

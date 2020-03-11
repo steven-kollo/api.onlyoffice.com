@@ -91,7 +91,6 @@ $(document).ready(function () {
         noFillingEdit = 'Filling forms in the document is disabled.',
         yesFillingOnlyEdit = 'Filling forms only mode is enabled.',
         yesReviewEdit = 'Review mode is enabled (form filling is also available).',
-        yesReviewOnlyEdit = 'Review only mode is enabled (form filling is also available).',
         noReviewEdit = 'Review mode is disabled.';
 
     function toggler() {
@@ -164,7 +163,7 @@ $(document).ready(function () {
                 // mode=edit, edit=false, review=true
                 if ($('#review .paramTrue').hasClass('active_param')) {
                     $('#reviewing .resultPermission').removeClass('notallowed').addClass('allowed').html(allowedYes);
-                    $('#reviewing .resultNote').html(yesReviewOnlyEdit);
+                    $('#reviewing .resultNote').html(yesReviewEdit);
                 }
                     // mode=edit, edit=false, review=false
                 else {
