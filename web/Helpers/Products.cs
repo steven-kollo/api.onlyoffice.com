@@ -43,6 +43,7 @@ namespace ASC.Api.Web.Help.Helpers
                 new Product {Id = "portals", Title = "Community Server"},
                 new Product {Id = "apisystem", Title = "Hosted Solution"},
                 new Product {Id = "editors", Title = "Document Server"},
+                new Product {Id = "editorsmd", Title = "Document Server MD"},
                 new Product {Id = "plugin", Title = "Plugins and Macros"},
                 new Product {Id = "docbuilder", Title = "Document Builder"},
             };
