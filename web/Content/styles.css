@@ -78,7 +78,7 @@ table {
     border-spacing: 0;
 }
 
-b {
+b, strong {
     font-weight: bold;
 }
 
@@ -601,6 +601,11 @@ pre.hljs a:hover span {
     text-decoration: none;
 }
 /*note block*/
+.note > p {
+    margin: 0;
+    font-size: 13px;
+}
+
 .note, note {
     color: #808080;
     padding: 10px 30px 10px 50px;

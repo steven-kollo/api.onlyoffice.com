@@ -167,6 +167,10 @@
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Markdig, Version=0.18.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Markdig.0.18.3\lib\net40\Markdig.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -221,12 +225,14 @@
     <Compile Include="Controllers\CacheManifestController.cs" />
     <Compile Include="Controllers\ApiSystemController.cs" />
     <Compile Include="Controllers\DocBuilderController.cs" />
+    <Compile Include="Controllers\EditorsMdController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EditorsController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
     <Compile Include="DocumentGenerator\Documentation.cs" />
+    <Compile Include="DocumentGenerator\MarkDown.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -236,12 +242,14 @@
     <Compile Include="Helpers\Config.cs" />
     <Compile Include="Helpers\DocBuilderHelper.cs" />
     <Compile Include="Helpers\Products.cs" />
+    <Compile Include="Helpers\MarkdownAttribute.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
     <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
     <Compile Include="Helpers\Highliter.cs" />
     <Compile Include="Helpers\RedirectAttribute.cs" />
     <Compile Include="Helpers\Url.cs" />
+    <Compile Include="Models\MarkDownViewModel.cs" />
     <Compile Include="Models\SectionViewModel.cs" />
     <Compile Include="Models\MethodViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -404,6 +412,69 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\EditorsMd\Advanced.aspx" />
+    <Content Include="Views\EditorsMd\Alfresco.aspx" />
+    <Content Include="Views\EditorsMd\Basic.aspx" />
+    <Content Include="Views\EditorsMd\Callback.aspx" />
+    <Content Include="Views\EditorsMd\Changelog.aspx" />
+    <Content Include="Views\EditorsMd\Coedit.aspx" />
+    <Content Include="Views\EditorsMd\Command.aspx" />
+    <Content Include="Views\EditorsMd\Config.aspx" />
+    <Content Include="Views\EditorsMd\Config\Default.ascx" />
+    <Content Include="Views\EditorsMd\Config\Document.ascx" />
+    <Content Include="Views\EditorsMd\Config\Document\Info.ascx" />
+    <Content Include="Views\EditorsMd\Config\Document\Permissions.ascx" />
+    <Content Include="Views\EditorsMd\Config\Editor.ascx" />
+    <Content Include="Views\EditorsMd\Config\Editor\Customization.ascx" />
+    <Content Include="Views\EditorsMd\Config\Editor\Embedded.ascx" />
+    <Content Include="Views\EditorsMd\Config\Editor\Plugins.ascx" />
+    <Content Include="Views\EditorsMd\Config\Events.ascx" />
+    <Content Include="Views\EditorsMd\Confluence.aspx" />
+    <Content Include="Views\EditorsMd\Conversion.aspx" />
+    <Content Include="Views\EditorsMd\ConversionApi.aspx" />
+    <Content Include="Views\EditorsMd\DemoPreview.aspx" />
+    <Content Include="Views\EditorsMd\DocumentBuilderApi.aspx" />
+    <Content Include="Views\EditorsMd\Editor.aspx" />
+    <Content Include="Views\EditorsMd\Example.aspx" />
+    <Content Include="Views\EditorsMd\Example\Csharp.ascx" />
+    <Content Include="Views\EditorsMd\Example\Java.ascx" />
+    <Content Include="Views\EditorsMd\Example\Nodejs.ascx" />
+    <Content Include="Views\EditorsMd\Example\Php.ascx" />
+    <Content Include="Views\EditorsMd\Example\Python.ascx" />
+    <Content Include="Views\EditorsMd\Example\Ruby.ascx" />
+    <Content Include="Views\EditorsMd\FAQ.aspx" />
+    <Content Include="Views\EditorsMd\FAQ\Coediting.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\Customizing.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\Default.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\Editing.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\Embedding.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\FAQShared\ExpandCollapse.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\General.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\Integrating.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\ManagingVersions.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\Saving.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\Security.ascx" />
+    <Content Include="Views\EditorsMd\FAQ\Sharing.ascx" />
+    <Content Include="Views\EditorsMd\History.aspx" />
+    <Content Include="Views\EditorsMd\HowItWorks.aspx" />
+    <Content Include="Views\EditorsMd\Humhub.aspx" />
+    <Content Include="Views\EditorsMd\Liferay.aspx" />
+    <Content Include="Views\EditorsMd\Methods.aspx" />
+    <Content Include="Views\EditorsMd\Navigation.ascx" />
+    <Content Include="Views\EditorsMd\Nextcloud.aspx" />
+    <Content Include="Views\EditorsMd\Open.aspx" />
+    <Content Include="Views\EditorsMd\OwnCloud.aspx" />
+    <Content Include="Views\EditorsMd\Plugins.aspx" />
+    <Content Include="Views\EditorsMd\Save.aspx" />
+    <Content Include="Views\EditorsMd\Security.aspx" />
+    <Content Include="Views\EditorsMd\SharePoint.aspx" />
+    <Content Include="Views\EditorsMd\Signature.aspx" />
+    <Content Include="Views\EditorsMd\Signature\Body.ascx" />
+    <Content Include="Views\EditorsMd\Signature\Browser.ascx" />
+    <Content Include="Views\EditorsMd\Signature\Default.ascx" />
+    <Content Include="Views\EditorsMd\Signature\Request.ascx" />
+    <Content Include="Views\EditorsMd\Troubleshooting.aspx" />
+    <Content Include="Views\EditorsMd\Try.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\Example\Python.ascx" />
     <Content Include="Views\Editors\Liferay.aspx" />
@@ -515,6 +586,7 @@
     <Content Include="Views\Portals\Filters.aspx" />
     <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\TopNavigation.ascx" />
+    <Content Include="Views\Shared\Markdown.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -606,6 +678,14 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\editor\Python Example.zip" />
+    <Content Include="App_Data\markdown\editorsmd\basic.md" />
+    <Content Include="App_Data\markdown\editorsmd\demopreview.md" />
+    <Content Include="App_Data\markdown\editorsmd\example\csharp.md" />
+    <Content Include="App_Data\markdown\editorsmd\example\java.md" />
+    <Content Include="App_Data\markdown\editorsmd\example\php.md" />
+    <Content Include="App_Data\markdown\editorsmd\example\ruby.md" />
+    <Content Include="App_Data\markdown\editorsmd\try.md" />
+    <Content Include="App_Data\markdown\remote.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />

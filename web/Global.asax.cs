@@ -158,6 +158,7 @@ namespace ASC.Api.Web.Help
                         try
                         {
                             Documentation.Load();
+                            MarkDown.Load();
                         }
                         catch (Exception error)
                         {
