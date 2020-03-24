@@ -1,9 +1,9 @@
 {
-	"editorsmd/alfresco.md": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-alfresco/master/README.md",
-	"editorsmd/confluence.md": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-confluence/master/README.md",
-	"editorsmd/humhub.md": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-humhub/master/README.md",
-	"editorsmd/liferay.md": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-liferay/master/README.md",
-	"editorsmd/nextcloud.md": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-nextcloud/master/README.md",
-	"editorsmd/owncloud.md": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-owncloud/master/README.md",
-	"editorsmd/sharepoint.md": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-sharepoint/master/README.md",
+	"editorsmd/plugins/alfresco": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-alfresco/master/README.md",
+	"editorsmd/plugins/confluence": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-confluence/master/README.md",
+	"editorsmd/plugins/humhub": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-humhub/master/README.md",
+	"editorsmd/plugins/liferay": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-liferay/master/README.md",
+	"editorsmd/plugins/nextcloud": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-nextcloud/master/README.md",
+	"editorsmd/plugins/owncloud": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-owncloud/master/README.md",
+	"editorsmd/plugins/sharepoint": "https://raw.githubusercontent.com/ONLYOFFICE/onlyoffice-sharepoint/master/README.md",
 }

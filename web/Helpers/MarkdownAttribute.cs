@@ -38,7 +38,9 @@ namespace ASC.Api.Web.Help.Helpers
 
             MarkDownViewModel model;
             var routes = filterContext.RouteData.Values;
-            if (MarkDown.TryGetMd(string.Join("/", routes.Values), out model)) {
+            if ((string)routes["action"] != "index") return;
+            var path = (string)routes["controller"] + "/" + (string)routes["catchall"];
+            if (MarkDown.TryGetMd(path, out model)) {
                 filterContext.Controller.ViewData.Model = model;
                 filterContext.Result = new ViewResult()
                 {

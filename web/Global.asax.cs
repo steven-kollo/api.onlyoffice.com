@@ -77,6 +77,16 @@ namespace ASC.Api.Web.Help
                 );
 
             routes.MapRoute(
+                "EditorsMd", // Route name
+                "editorsmd/{*catchall}", // URL with parameters
+                new
+                    {
+                        controller = "editorsmd",
+                        action = "index"
+                    } // Parameter defaults
+                );
+
+            routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{*catchall}", // URL with parameters
                 new

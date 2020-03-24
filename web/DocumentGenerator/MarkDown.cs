@@ -7,6 +7,7 @@ using Markdig.Syntax;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using System.Net;
 using System.Web.Hosting;
@@ -16,17 +17,20 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     internal static class MarkDown
     {
         private static ILog _logger;
-        private static Dictionary<string, string> routes;
+        private static Dictionary<string, MarkDownMeta> routes;
         private static MarkdownPipeline pipeline;
 
         private static readonly string rootPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\markdown");
+
+        public static SortedDictionary<string, SortedList<string, MarkDownMeta>> Navigation { get; private set; }
 
         public static void Load()
         {
             _logger = LogManager.GetLogger("ASC.Markdown");
 
-            Download();
+            //Download();
             BuildRoutes();
+            BuildNavigation();
 
             pipeline = new MarkdownPipelineBuilder()
                 .Use<CssExtension>()
@@ -36,7 +40,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public static void Download()
         {
-            var remotePath = Path.Combine(rootPath, "remote");
             var remoteFiles = Path.Combine(rootPath, "remote.json");
             var json = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(remoteFiles));
 
@@ -47,7 +50,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     try
                     {
                         _logger.DebugFormat("Downloading {0} from {1}", kv.Key, kv.Value);
-                        var path = Path.Combine(remotePath, kv.Key);
+                        var path = Path.Combine(rootPath, kv.Key, "body.md");
                         Directory.CreateDirectory(Path.GetDirectoryName(path));
                         wc.DownloadFile(kv.Value, path);
                     }
@@ -62,17 +65,61 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public static void BuildRoutes()
         {
             var files = Directory.GetFiles(rootPath, "*.md", SearchOption.AllDirectories);
-            routes = new Dictionary<string, string>();
+            routes = new Dictionary<string, MarkDownMeta>();
             foreach (var path in files)
             {
-                var converted = path
-                    .Substring(0, path.Length - 3)
-                    .Substring(rootPath.Length + 1)
-                    .Replace('\\', '/');
+                try
+                {
+                    var folderPath = Path.GetDirectoryName(path);
 
-                if (converted.StartsWith("remote/")) converted = converted.Substring("remote/".Length);
+                    var converted = folderPath
+                        .Substring(rootPath.Length + 1)
+                        .Replace('\\', '/');
 
-                routes.Add(converted, path);
+                    var metaPath = Path.Combine(folderPath, "meta.json");
+                    if (!File.Exists(metaPath)) throw new Exception("No meta file");
+                    var meta = JsonConvert.DeserializeObject<MarkDownMeta>(File.ReadAllText(metaPath));
+
+                    meta.Path = path;
+                    meta.Url = converted.Substring(converted.IndexOf("/"));
+
+                    routes.Add(converted, meta);
+                }
+                catch (Exception ex)
+                {
+                    _logger.DebugFormat("Couldn't load md page at {0}: {1}", path, ex.Message);
+                }
+            }
+        }
+
+        public static void BuildNavigation()
+        {
+            Navigation = new SortedDictionary<string, SortedList<string, MarkDownMeta>>();
+
+            foreach (var section in routes.Values.Select(x => x.Section).Distinct())
+            {
+                Navigation.Add(section, new SortedList<string, MarkDownMeta>());
+            }
+
+            foreach (var route in routes.Values)
+            {
+                if (string.IsNullOrEmpty(route.Parent))
+                {
+                    Navigation[route.Section].Add(route.Navigation, route);
+                }
+                else
+                {
+                    MarkDownMeta parent;
+                    if (!routes.TryGetValue(route.Parent, out parent))
+                    {
+                        _logger.DebugFormat("Couldn't find parent {0}", route.Parent);
+                        continue;
+                    }
+
+                    if (parent.Children == null) parent.Children = new SortedList<string, MarkDownMeta>();
+
+                    parent.Children.Add(route.Navigation, route);
+                }
             }
         }
 
@@ -83,13 +130,14 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             model = null;
             if (!routes.ContainsKey(path)) return false;
 
-            var md = File.ReadAllText(routes[path]);
+            var meta = routes[path];
+            var md = File.ReadAllText(meta.Path);
             var writer = new StringWriter();
             var markDoc = Markdown.ToHtml(md, writer, pipeline);
             model = new MarkDownViewModel()
             {
                 Content = writer.ToString(),
-                //Title = markDoc.Count > 0 && (markDoc[0] is HeadingBlock) ? (Block)markDoc[0].Inline
+                Title = meta.Title
             };
             return true;
         }
@@ -118,5 +166,29 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
             }
         }
+    }
+
+    public class MarkDownMeta
+    {
+        [JsonIgnore]
+        public string Path { get; set; }
+
+        [JsonIgnore]
+        public string Url { get; set; }
+
+        [JsonIgnore]
+        public SortedList<string, MarkDownMeta> Children { get; set; }
+
+        [JsonRequired, JsonProperty("section")]
+        public string Section { get; set; }
+
+        [JsonProperty("navigation")]
+        public string Navigation { get; set; }
+
+        [JsonProperty("title")]
+        public string Title { get; set; }
+
+        [JsonProperty("parent")]
+        public string Parent { get; set; }
     }
 }
