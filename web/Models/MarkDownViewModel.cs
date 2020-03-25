@@ -29,5 +29,6 @@ namespace ASC.Api.Web.Help.Models
     {
         public string Title { get; set; }
         public string Content { get; set; }
+        public string Aspx { get; set; }
     }
 }

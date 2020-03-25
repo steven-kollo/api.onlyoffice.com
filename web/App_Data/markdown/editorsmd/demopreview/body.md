@@ -28,7 +28,3 @@
 The result should look like the demo preview below.
 
 ## Demo Preview
-
-FIXME
-
-If you have any further questions, please contact us at integration@onlyoffice.com.

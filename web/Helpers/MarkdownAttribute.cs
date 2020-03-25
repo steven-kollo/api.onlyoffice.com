@@ -44,7 +44,7 @@ namespace ASC.Api.Web.Help.Helpers
                 filterContext.Controller.ViewData.Model = model;
                 filterContext.Result = new ViewResult()
                 {
-                    ViewName = "Markdown",
+                    ViewName = string.IsNullOrEmpty(model.Aspx) ? "Markdown" : model.Aspx,
                     TempData = filterContext.Controller.TempData,
                     ViewData = filterContext.Controller.ViewData
                 };

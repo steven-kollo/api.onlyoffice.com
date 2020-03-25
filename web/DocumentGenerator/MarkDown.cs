@@ -80,8 +80,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     if (!File.Exists(metaPath)) throw new Exception("No meta file");
                     var meta = JsonConvert.DeserializeObject<MarkDownMeta>(File.ReadAllText(metaPath));
 
+                    var aspxPath = Path.Combine(folderPath, "partial.aspx");
+
                     meta.Path = path;
                     meta.Url = converted.Substring(converted.IndexOf("/"));
+                    meta.Aspx = File.Exists(aspxPath) ? "~/" + aspxPath.Substring(HostingEnvironment.ApplicationPhysicalPath.Length).Replace('\\', '/') : null;
 
                     routes.Add(converted, meta);
                 }
@@ -137,7 +140,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             model = new MarkDownViewModel()
             {
                 Content = writer.ToString(),
-                Title = meta.Title
+                Title = meta.Title,
+                Aspx = meta.Aspx
             };
             return true;
         }
@@ -175,6 +179,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [JsonIgnore]
         public string Url { get; set; }
+
+        [JsonIgnore]
+        public string Aspx { get; set; }
 
         [JsonIgnore]
         public SortedList<string, MarkDownMeta> Children { get; set; }
