@@ -31,11 +31,11 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [obj]);
 <pre>
 [ {"Props": {...}, "Url": "http://"}, {"Props": {...}, "Url": "http://."}, {...}, {...}]
 </pre>
-<p>The <em>Props</em> key has the values that can be the following:</p>
+<p>The <em>Props</em> key can have the following values:</p>
 <ul>
-    <li>"Id" (e.g. <em>{"Id": 2}</em> ) is a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in your code.</li>
-    <li>"Tag" ( e.g. <em>{"Tag": "String"}</em> ) is a tag assigned to the content control. One and the same tag can be assigned to several content controls so that you can make reference to them in your code.</li>
-    <li>"Lock" (e.g. <em>{"Lock": 0}</em> ) is a value that defines if it is possible to delete and/or edit the content control or not. The values can be the following:</li>
+    <li>"Id" (e.g. <em>{"Id": 2}</em> ) is a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.</li>
+    <li>"Tag" ( e.g. <em>{"Tag": "String"}</em> ) is a tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code.</li>
+    <li>"Lock" (e.g. <em>{"Lock": 0}</em> ) is a value which defines if it is possible to delete and/or edit the content control or not. The values can be as follows:</li>
 </ul>
 <table class="table">
        <thead>
