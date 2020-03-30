@@ -39,12 +39,12 @@
         <tbody>
             <tr class="tablerow">
                 <td>fCommand</td>
-                <td>The command JavaScript code, which forms the structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.) to be sent to the editors. Must be compatible with <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> syntax.</td>
+                <td>Defines the command written in JavaScript whose purpose is to form structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.). Then the data is sent to the editors. The command must be compatible with <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> syntax.</td>
                 <td>string</td>
             </tr>
             <tr class="tablerow">
                 <td>isClose</td>
-                <td>Specifies either the plugin window must be closed after the code execution or be left open and wait for some other command or action. The <em>true</em> value is used to close the plugin window after executing the function in the <em>fCommand</em> parameter. The <em>false</em> is used to execute the command and leave the window open, awaiting for the next command.</td>
+                <td>Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action. The <em>true</em> value is used to close the plugin window after executing the function in the <em>fCommand</em> parameter. The <em>false</em> value is used to execute the command and leave the window open waiting for the next command.</td>
                 <td>boolean</td>
             </tr>
         </tbody>
