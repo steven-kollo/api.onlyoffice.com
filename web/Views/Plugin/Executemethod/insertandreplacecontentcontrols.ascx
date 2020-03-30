@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This method inserts a content control that contains data. The data is specified by the <em>js</em> code for <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder</a>, or by the link to a shared document.</p>
+<p class="dscr">Defines the method that inserts a content control containing data. The data is specified by the <em>js</em> code for <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder</a>, or by a link to the shared document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
