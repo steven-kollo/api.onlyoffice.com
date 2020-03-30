@@ -16,7 +16,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">The object created at the plugin startup. It has several methods, some of them are optional and are to be used only if and when needed.</p>
+    <p class="dscr">Defines the object created when the plugin is launched. It has several methods some of which are optional and must be used only if and when needed.</p>
 
     <div class="header-gray">Methods and properties</div>
 
