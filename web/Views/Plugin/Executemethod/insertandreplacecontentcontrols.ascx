@@ -69,7 +69,7 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [obj]);
         </tbody>
 </table>
 
-<p>Besides the <em>Props</em> key, there must be a Key/Value pair containing the <em>Url</em> or <em>Script</em> key, that defines the data that will be contained in the content control. If the <em>Url</em> key is used, its value must be a link to a shared file. If the <em>Script</em> key is used, its value must be a script that will be executed to generate the data within the content control.</p>
+<p>Besides the <em>Props</em> key, there must be a Key/Value pair containing the <em>Url</em> or <em>Script</em> key that defines the data that that the content control will contain. If the <em>Url</em> key is used, its value must be a link to the shared file. If the <em>Script</em> key is used, its value must be a script that will be executed to generate data within the content control.</p>
 
 <div class="header-gray">Example 1</div>
 
