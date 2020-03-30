@@ -52,14 +52,14 @@
         </tbody>
     </table>
 
-    <p>When creating/editing OLE objects, two extensions are used to work with OLE objects:</p>
+    <p>When creating/editing OLE objects, two extensions are used to work with them:</p>
 
     <ul>
         <li><em>Api.asc_addOleObject(window.Asc.plugin.info)</em> - used to create an OLE object in the document;</li>
         <li><em>Api.asc_editOleObject(window.Asc.plugin.info)</em> - used to edit the created OLE object.</li>
     </ul>
 
-    <p>When you create/edit the objects, you can pass their properties to the <a href="<%= Url.Action("info") %>">window.Asc.plugin.info</a> object which is responsible for how the object looks like.</p>
+    <p>When creating/editing the objects, their properties can be passed to the <a href="<%= Url.Action("info") %>">window.Asc.plugin.info</a> object that defines how the object should look.</p>
 
     <div class="header-gray">Example OLE object</div>
 
