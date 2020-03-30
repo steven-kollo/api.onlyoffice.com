@@ -7,7 +7,8 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This method allows to add an empty content control to the document.</p>
+<p class="dscr">Defines the method that allows adding an empty content control to 
+the document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
