@@ -50,7 +50,7 @@
         </tbody>
     </table>
 
-    <p>The <em>window.Asc.plugin.callCommand</em> method is executed in its own context, isolated from other JavaScript code data. If you want to pass some parameters or other data to it, you will need to use the <a href="<%= Url.Action("scope") %>">Asc.scope</a> object for that.</p>
+    <p>Defines the <em>window.Asc.plugin.callCommand</em> method that is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope") %>">Asc.scope</a> object.</p>
 
     <div class="header-gray">Example</div>
 
