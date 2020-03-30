@@ -17,7 +17,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">The buttons used with the plugin and the plugin behavior when these buttons are clicked. The method is called when any of the plugin buttons is clicked.</p>
+    <p class="dscr">Defines the buttons used with the plugin and the plugin behavior when they are clicked. This method is called when any of the plugin buttons is clicked.</p>
 
     <div class="header-gray">Parameters</div>
 
