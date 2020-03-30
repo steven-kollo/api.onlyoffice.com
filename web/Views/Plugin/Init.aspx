@@ -17,7 +17,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">The data sent to the plugin and what is to be done with it and how. This method is called when the plugin is started.</p>
+    <p class="dscr">Defines the data sent to the plugin describing what actions are to be performed and how they must be performed. This method is called when the plugin is launched.</p>
 
     <div class="header-gray">Parameters</div>
 
