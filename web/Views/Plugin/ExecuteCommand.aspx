@@ -17,11 +17,11 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Used to send the data back to the editor. This method is mainly used to work with the OLE objects and is retained for the usage with text for the compatibility with the previous plugin versions.</p>
+    <p class="dscr">Used to send the data back to the editor. This method is mainly used to work with the OLE objects and is retained for using with text so that the previous versions of the plugin remain compatible.</p>
 
-    <p>The second parameter is the JavaScript code for work with <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a>, which allows the plugin to send structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.).</p>
+    <p>The second parameter is the JavaScript code for working with <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a> that allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.).</p>
 
-    <div class="note"><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation is made due to the co-editing possibility in online editors. If you create a plugin for desktop editors working with local files, no such limitation is applied.</div>
+    NB:<div class="note"><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</div>
 
     <div class="header-gray">Parameters</div>
 
