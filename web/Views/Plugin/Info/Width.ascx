@@ -8,7 +8,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">The OLE object width measured in millimeters.</p>
+<p class="dscr">Defines the width of the OLE object measured in millimeters.</p>
 
 <div class="note">If you need the OLE object pixel width size for the raster representation, use the <a href="<%= Url.Action("info/mmtopx") %>">window.Asc.plugin.info.mmToPx</a> method to convert the values.</div>
 
