@@ -8,9 +8,9 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the millimeter to pixel conversion ratio for the OLE object vector draw.</p>
+<p class="dscr">Defines the millimeter to pixel conversion ratio for the OLE object vector drawing.</p>
 
-<p>The OLE object <a href="<%= Url.Action("info/height") %>">height</a> and <a href="<%= Url.Action("info/width") %>">width</a> values are returned in millimeters, so you will need to convert them to pixels for raster representation. </p>
+<p>The <a href="<%= Url.Action("info/height") %>">height</a> values and <a href="<%= Url.Action("info/width") %>">width</a> values of the OLE object are returned in millimeters, so it is necessary to convert them to pixels for raster representation. </p>
 
 <div class="header-gray">Returns</div>
 
