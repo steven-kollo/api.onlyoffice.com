@@ -8,7 +8,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">The OLE object identifier in the current document.</p>
+<p class="dscr">Defines the OLE object identifier in the current document.</p>
 
 <div class="header-gray">Returns</div>
 
