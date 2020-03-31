@@ -10,7 +10,7 @@
 
 <p class="dscr">Defines the method that returns the type of the editor where the plugin is currently running.</p>
 
-<p>The values are the following:</p>
+<p>The values are as follows:</p>
 
 <ul>
     <li><b>"word"</b> - the text document editor;</li>
