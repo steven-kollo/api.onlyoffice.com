@@ -7,6 +7,7 @@
     [GET ONLYOFFICE EDITORS](https://www.onlyoffice.com/developer-edition-request.aspx?from=api.onlyoffice.com)
 
 2. Select the programming language and download the code for the sample of online editors integration into your web site:
+
     [.NET (C# MVC) EXAMPLE](https://api.onlyoffice.com/app_data/editor/.Net%20(C%23%20MVC)%20Example.zip)
 
     [.NET (C#) EXAMPLE](https://api.onlyoffice.com/app_data/editor/.Net%20(C%23)%20Example.zip)
@@ -16,6 +17,8 @@
     [NODE.JS EXAMPLE](https://api.onlyoffice.com/app_data/editor/Node.js%20Example.zip)
 
     [PHP EXAMPLE](https://api.onlyoffice.com/app_data/editor/PHP%20Example.zip)
+
+    [PYTHON EXAMPLE](https://api.onlyoffice.com/app_data/editor/Python%20Example.zip)
 
     [RUBY EXAMPLE](https://api.onlyoffice.com/app_data/editor/Ruby%20Example.zip)
 
