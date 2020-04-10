@@ -28,8 +28,8 @@
 
     <p>Supported formats:</p>
     <ul>
-        <li>For viewing and editing: docx, xlsx, pptx.</li>
-        <li>For converting to OOXML formats (docx, xlsx, pptx): doc, docm, dot, dotx, epub, htm, html, odp, odt, pot, potm, potx, pps, ppsm, ppsx, ppt, pptm, rtf, xls, xlsm, xlsx, xlt, xltm, xltx.</li>
+        <li>For viewing and editing: DOCX, XLSX, PPTX.</li>
+        <li>For viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT.</li>
     </ul>
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
