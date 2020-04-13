@@ -37,6 +37,7 @@ using log4net;
 namespace ASC.Api.Web.Help.Controllers
 {
     [Redirect]
+    [Markdown]
     public class EditorsController : AsyncController
     {
         private readonly string[] _actionMap = new[]
@@ -130,13 +131,13 @@ namespace ASC.Api.Web.Help.Controllers
                     var header = headerNode != null ? headerNode.InnerText : string.Empty;
                     var descr = descrNode != null ? descrNode.InnerText : string.Empty;
                     result.Add(new SearchResult
-                        {
-                            Module = "editors",
-                            Name = actionString,
-                            Resource = Highliter.HighliteString(header, query).ToHtmlString(),
-                            Description = Highliter.HighliteString(descr, query).ToHtmlString(),
-                            Url = Url.Action(actionString, "editors")
-                        });
+                    {
+                        Module = "editors",
+                        Name = actionString,
+                        Resource = Highliter.HighliteString(header, query).ToHtmlString(),
+                        Description = Highliter.HighliteString(descr, query).ToHtmlString(),
+                        Url = Url.Action(actionString, "editors")
+                    });
                 }
             }
 
@@ -145,198 +146,25 @@ namespace ASC.Api.Web.Help.Controllers
             return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
         }
 
-
         public ActionResult Navigation()
         {
-            return View();
-        }
-
-
-        public ActionResult Index()
-        {
-            return View("Basic");
-        }
-
-
-        public ActionResult Alfresco()
-        {
-            return View();
-        }
-
-        public ActionResult Advanced()
-        {
-            return View();
-        }
-
-        public ActionResult Basic()
-        {
-            return View();
-        }
-
-        public ActionResult Callback()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public JsonResult Callback(string data)
-        {
-            return Json(new { error = 0 });
-        }
-
-        public ActionResult Changelog()
-        {
-            return View();
-        }
-
-        public ActionResult Coedit()
-        {
-            return View();
-        }
-
-        public ActionResult Command()
-        {
-            return View();
-        }
-
-        public ActionResult Config(string catchall)
-        {
-            if (!_actionMap.Contains("config/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("Config", (object) catchall);
-        }
-
-        public ActionResult Confluence()
-        {
-            return View();
-        }
-
-        public ActionResult Conversion()
-        {
-            return View();
-        }
-
-        public ActionResult ConversionApi()
-        {
-            return View();
-        }
-
-        public ActionResult Example(string catchall)
-        {
-            if (!_actionMap.Contains("example/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("Example", (object)catchall);
-        }
-
-        public ActionResult FAQ(string catchall)
-        {
-            if (!_actionMap.Contains("faq/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("FAQ", (object)catchall);
-        }
-
-        public ActionResult DemoPreview()
-        {
-            var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/editor"));
-
-            var examples = directoryInfo.GetFiles("*.zip", SearchOption.TopDirectoryOnly).Select(fileInfo => fileInfo.Name).ToList();
-
-            return View(examples);
-        }
-
-        public ActionResult DocumentBuilderApi()
-        {
-            return View();
+            return View("Navigation", MarkDown.Navigation);
         }
 
         public ActionResult Editor()
         {
-            return View();
+            return View("Editor");
         }
 
-        public ActionResult History()
+        public ActionResult Index(string catchall)
         {
-            return View();
-        }
-
-        public ActionResult HowItWorks()
-        {
-            return View();
-        }
-
-        public ActionResult HumHub()
-        {
-            return View();
-        }
-
-        public ActionResult Liferay()
-        {
-            return View();
-        }
-
-        public ActionResult Methods()
-        {
-            return View();
-        }
-
-        public ActionResult Nextcloud()
-        {
-            return View();
-        }
-
-        public ActionResult Open()
-        {
-            return View();
-        }
-
-        public ActionResult OwnCloud()
-        {
-            return View();
-        }
-
-        public ActionResult Plugins()
-        {
-            return View();
-        }
-
-        public ActionResult Save()
-        {
-            return View();
-        }
-
-        public ActionResult Security()
-        {
-            return View();
-        }
-
-        public ActionResult SharePoint()
-        {
-            return View();
-        }
-
-        public ActionResult Signature(string catchall)
-        {
-            if (!_actionMap.Contains("signature/" + catchall, StringComparer.OrdinalIgnoreCase))
+            if (catchall != null)
             {
-                catchall = null;
+                catchall = catchall.ToLower();
+                if (catchall == "navigation") return Navigation();
+                if (catchall == "editor") return Editor();
             }
-            return View("Signature", (object)catchall);
-        }
-
-        public ActionResult Troubleshooting()
-        {
-            return View();
-        }
-
-        public ActionResult Try()
-        {
-            return View();
+            return RedirectToAction("basic");
         }
     }
 }

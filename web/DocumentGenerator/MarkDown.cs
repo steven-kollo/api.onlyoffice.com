@@ -28,7 +28,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             _logger = LogManager.GetLogger("ASC.Markdown");
 
-            //Download();
+            Download();
             BuildRoutes();
             BuildStatic();
             BuildNavigation();
