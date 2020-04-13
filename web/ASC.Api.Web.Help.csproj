@@ -766,6 +766,7 @@
     <Content Include="App_Data\markdown\editorsmd\troubleshooting\meta.json" />
     <Content Include="App_Data\markdown\editorsmd\try\body.md" />
     <Content Include="App_Data\markdown\editorsmd\try\meta.json" />
+    <Content Include="App_Data\markdown\default.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />

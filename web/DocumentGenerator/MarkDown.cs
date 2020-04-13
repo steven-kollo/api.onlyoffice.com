@@ -30,6 +30,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             //Download();
             BuildRoutes();
+            BuildStatic();
             BuildNavigation();
 
             pipeline = new MarkdownPipelineBuilder()
@@ -95,6 +96,18 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             }
         }
 
+        public static void BuildStatic()
+        {
+            var staticFiles = Path.Combine(rootPath, "default.json");
+            var def = JsonConvert.DeserializeObject<Dictionary<string, MarkDownMeta>>(File.ReadAllText(staticFiles));
+            foreach(var item in def)
+            {
+                item.Value.Default = true;
+                item.Value.Url = item.Key.Substring(item.Key.IndexOf("/"));
+                routes.Add(item.Key, item.Value);
+            }
+        }
+
         public static void BuildNavigation()
         {
             Navigation = new SortedDictionary<string, SortedList<string, MarkDownMeta>>();
@@ -134,9 +147,22 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             if (!routes.ContainsKey(path)) return false;
 
             var meta = routes[path];
+            if (meta.Default)
+            {
+                var relativePath = meta.Url.Substring(1);
+                var index = relativePath.IndexOf("/");
+                relativePath = index < 0 ? null : relativePath.Substring(index);
+                model = new MarkDownViewModel()
+                {
+                    Aspx = meta.Aspx,
+                    Default = true,
+                    Content = relativePath
+                };
+                return true;
+            }
             var md = File.ReadAllText(meta.Path);
             var writer = new StringWriter();
-            var markDoc = Markdown.ToHtml(md, writer, pipeline);
+            Markdown.ToHtml(md, writer, pipeline);
             model = new MarkDownViewModel()
             {
                 Content = writer.ToString(),
@@ -181,10 +207,13 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public string Url { get; set; }
 
         [JsonIgnore]
-        public string Aspx { get; set; }
+        public bool Default { get; set; }
 
         [JsonIgnore]
         public SortedList<string, MarkDownMeta> Children { get; set; }
+
+        [JsonProperty("aspx")]
+        public string Aspx { get; set; }
 
         [JsonRequired, JsonProperty("section")]
         public string Section { get; set; }

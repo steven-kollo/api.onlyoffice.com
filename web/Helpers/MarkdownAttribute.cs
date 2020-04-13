@@ -40,8 +40,17 @@ namespace ASC.Api.Web.Help.Helpers
             var routes = filterContext.RouteData.Values;
             if ((string)routes["action"] != "index") return;
             var path = (string)routes["controller"] + "/" + (string)routes["catchall"];
-            if (MarkDown.TryGetMd(path, out model)) {
-                filterContext.Controller.ViewData.Model = model;
+            if (MarkDown.TryGetMd(path, out model))
+            {
+                if (model.Default)
+                {
+                    filterContext.Controller.ViewData.Model = model.Content;
+                }
+                else
+                {
+                    filterContext.Controller.ViewData.Model = model;
+                }
+
                 filterContext.Result = new ViewResult()
                 {
                     ViewName = string.IsNullOrEmpty(model.Aspx) ? "Markdown" : model.Aspx,

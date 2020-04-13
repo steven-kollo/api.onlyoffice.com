@@ -1,0 +1,179 @@
+{
+  "editorsmd/advanced": {
+    "aspx": "Advanced",
+    "section": "Documentation",
+    "navigation": "Advanced parameters"
+  },
+  "editorsmd/config": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Config"
+  },
+  "editorsmd/config/document": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Document",
+    "parent": "editorsmd/config"
+  },
+  "editorsmd/config/document/info": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Info",
+    "parent": "editorsmd/config/document"
+  },
+  "editorsmd/config/document/permissions": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Permissions",
+    "parent": "editorsmd/config/document"
+  },
+  "editorsmd/config/editor": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Editor",
+    "parent": "editorsmd/config"
+  },
+  "editorsmd/config/editor/customization": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Customization",
+    "parent": "editorsmd/config/editor"
+  },
+  "editorsmd/config/editor/embedded": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Embedded",
+    "parent": "editorsmd/config/editor"
+  },
+  "editorsmd/config/editor/plugins": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Plugins",
+    "parent": "editorsmd/config/editor"
+  },
+  "editorsmd/config/events": {
+    "aspx": "Config",
+    "section": "Documentation",
+    "navigation": "Events",
+    "parent": "editorsmd/config"
+  },
+  "editorsmd/methods": {
+    "aspx": "Methods",
+    "section": "Documentation",
+    "navigation": "Methods"
+  },
+  "editorsmd/callback": {
+    "aspx": "Callback",
+    "section": "Documentation",
+    "navigation": "Callback handler"
+  },
+  "editorsmd/command": {
+    "aspx": "Command",
+    "section": "Documentation",
+    "navigation": "Command service"
+  },
+  "editorsmd/conversionapi": {
+    "aspx": "ConversionApi",
+    "section": "Documentation",
+    "navigation": "Conversion API"
+  },
+  "editorsmd/documentbuilderapi": {
+    "aspx": "DocumentBuilderApi",
+    "section": "Documentation",
+    "navigation": "Document Builder API"
+  },
+  "editorsmd/signature": {
+    "aspx": "Signature",
+    "section": "Documentation",
+    "navigation": "Signature"
+  },
+  "editorsmd/signature/browser": {
+    "aspx": "Signature",
+    "section": "Documentation",
+    "navigation": "Browser",
+    "parent": "editorsmd/signature"
+  },
+  "editorsmd/signature/request": {
+    "aspx": "Signature",
+    "section": "Documentation",
+    "navigation": "Request",
+    "parent": "editorsmd/signature"
+  },
+  "editorsmd/signature/request/": {
+    "aspx": "Signature",
+    "section": "Documentation",
+    "navigation": "Token in header",
+    "parent": "editorsmd/signature/request"
+  },
+  "editorsmd/signature/body": {
+    "aspx": "Signature",
+    "section": "Documentation",
+    "navigation": "Token in body",
+    "parent": "editorsmd/signature/request"
+  },
+  "editorsmd/faq": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "FAQ"
+  },
+  "editorsmd/faq/general": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "General",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/security": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "Security",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/sharing": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "Sharing",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/embedding": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "Embedding",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/coediting": {
+    "aspx": "FAQ",
+    "section": "Documentation",
+    "navigation": "Co-editing",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/customizing": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "Customizing",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/integrating": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "Integrating",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/editing": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "Editing",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/managingversions": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "Managing versions",
+    "parent": "editorsmd/faq"
+  },
+  "editorsmd/faq/saving": {
+    "aspx": "FAQ",
+    "section": "More information",
+    "navigation": "Saving",
+    "parent": "editorsmd/faq"
+  }
+}
