@@ -2,7 +2,7 @@
 
 ## Introduction
 
-To integrate **ONLYOFFICE online editors** into your own web site on **Python** you need to download and install ONLYOFFICE editors on your local server and use the [Python Example](https://api.onlyoffice.com/editors/demopreview) for their integration. We will show how to run the Python example on Linux OS.
+To integrate **ONLYOFFICE online editors** into your own web site on **Python** you need to download and install ONLYOFFICE editors on your local server and use the [Python Example](/editors/demopreview) for their integration. We will show how to run the Python example on Linux OS.
 
 >The integration examples are used to demonstrate document editors functions and the ways to connect **Document Server** to your own application. **DO NOT USE** these examples on your own server without **PROPER CODE MODIFICATIONS**!
 
@@ -10,7 +10,7 @@ This guide will show you the sequence of actions to integrate the editors succes
 
 ## Step 1. Download and Install Document Server
 
-First, download [ONLYOFFICE Editors](https://api.onlyoffice.com/editors/demopreview) (the ONLYOFFICE Document Server).
+First, download [ONLYOFFICE Editors](/editors/demopreview) (the ONLYOFFICE Document Server).
 
 See the detailed guide to learn how to install Document Server  [for Windows](https://helpcenter.onlyoffice.com/server/developer-edition/windows/index.aspx?from=api_python_example), [for Linux](https://helpcenter.onlyoffice.com/server/developer-edition/linux/index.aspx?from=api_python_example), or [for Docker](https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_python_example).
 
@@ -84,4 +84,4 @@ See the detailed guide to learn how to install Document Server  [for Windows](ht
 
 In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of **documentserver** in the configuration files. And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of **exampleserver** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](https://api.onlyoffice.com/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.

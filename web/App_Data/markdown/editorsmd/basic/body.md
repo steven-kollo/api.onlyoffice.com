@@ -42,11 +42,11 @@ config = {
 };
 ```
 
-Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](https://api.onlyoffice.com/editors/howitworks) section to find out more on Document Server service client-server interactions.
+Where the **example.com** is the name of the server where **document manager** and **document storage service** are installed. See the [How it works](/editors/howitworks) section to find out more on Document Server service client-server interactions.
 
-From now the docEditor object can be used to call the **document editor** [Methods](https://api.onlyoffice.com/editors/methods).
+From now the docEditor object can be used to call the **document editor** [Methods](/editors/methods).
 
-The example above includes all the parameters necessary for Document Server correct startup. There are additional non-obligatory parameters though which can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.) See the [Advanced parameters](https://api.onlyoffice.com/editors/advanced) section to find out what these parameters are and how you can change them.
+The example above includes all the parameters necessary for Document Server correct startup. There are additional non-obligatory parameters though which can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.) See the [Advanced parameters](/editors/advanced) section to find out what these parameters are and how you can change them.
 
 ## Support
 

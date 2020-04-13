@@ -16,13 +16,13 @@ For the **document editors** correct work with the document files it is recommen
 
 The reference figure and the steps below explain the process of document conversion.
 
-![conversion.jpg](https://api.onlyoffice.com/content/img/editor/conversion.jpg)
+![conversion.jpg](/content/img/editor/conversion.jpg)
 
 1. The users selects a file on the computer hard disk drive that is to be uploaded to the **document manager**.
 
 2. The **document manager** uploads the selected file to the **document storage service**.
 
-3. The **document storage service** sends the uploaded file to ONLYOFFICE Document Server **document conversion service** for conversion into the Office Open XML format using the [conversion API](https://api.onlyoffice.com/editors/conversionapi).
+3. The **document storage service** sends the uploaded file to ONLYOFFICE Document Server **document conversion service** for conversion into the Office Open XML format using the [conversion API](/editors/conversionapi).
 
 4. The **document conversion service** converts the selected file to the Office Open XML format.
 
@@ -34,13 +34,13 @@ When the user needs to download the file in some format different from the Offic
 
 The reference figure and the steps below explain the process of document export.
 
-![export.jpg](https://api.onlyoffice.com/content/img/editor/export.jpg)
+![export.jpg](/content/img/editor/export.jpg)
 
 1. The user selects the file in the **document manager** and the format the file must be downloaded in.
 
 2. The **document manager** transforms this user action into a request to the **document storage service**.
 
-3. The **document storage service** sends the uploaded file to ONLYOFFICE Document Server **document conversion service** for conversion into the appropriate format using the [conversion API](https://api.onlyoffice.com/editors/conversionapi).
+3. The **document storage service** sends the uploaded file to ONLYOFFICE Document Server **document conversion service** for conversion into the appropriate format using the [conversion API](/editors/conversionapi).
 
 4. The **document conversion service** converts the selected file to the appropriate format.
 

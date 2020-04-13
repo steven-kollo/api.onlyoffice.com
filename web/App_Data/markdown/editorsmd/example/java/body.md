@@ -2,7 +2,7 @@
 
 ## Introduction
 
-To integrate **ONLYOFFICE online editors** into your own website on **Java** you need to download and install ONLYOFFICE editors on your local server and use the [Java Example](https://api.onlyoffice.com/editors/demopreview) for their integration.
+To integrate **ONLYOFFICE online editors** into your own website on **Java** you need to download and install ONLYOFFICE editors on your local server and use the [Java Example](/editors/demopreview) for their integration.
 
 You can choose any appropriate way how to run the Java example code. We will show how to run the Java code using the Apache Tomcat web server on Windows OS and Linux OS.
 
@@ -14,13 +14,13 @@ This guide will show you the sequence of actions to integrate the editors succes
 
 ### Step 1. Download and Install Document Server
 
-First, download the [ONLYOFFICE Editors](https://api.onlyoffice.com/editors/demopreview) (the ONLYOFFICE Document Server).
+First, download the [ONLYOFFICE Editors](/editors/demopreview) (the ONLYOFFICE Document Server).
 
 See the detailed guide to learn how to install Document Server for [Windows](https://helpcenter.onlyoffice.com/server/developer-edition/windows/index.aspx?from=api_java_example).
 
 ### Step 2. Download the Java code for the editors integration
 
-Download the [Java example](https://api.onlyoffice.com/editors/demopreview) from our site.
+Download the [Java example](/editors/demopreview) from our site.
 
 You need to connnect the editors to your web site. For that specify the path to the editors installation in the `\src\main\resources\settings.properties` file:
 
@@ -64,7 +64,7 @@ To run the Java example code you will need to install the Java version appropria
 
     In the **Variable Value** field, enter your **JDK** or **JRE** installation path, for example `C:\Program Files\Java\jdk1.8.0_65`.
 
-    ![ENV](https://api.onlyoffice.com/content/img/java/make-var.png)
+    ![ENV](/content/img/java/make-var.png)
 
     Check if the variable created successfully by **echo** command in the **Command Prompt**:
 
@@ -86,7 +86,7 @@ To run the Java example code you will need to install the Java version appropria
 
     You will see the new Tomcat console window displayed that provides the information and mesages about Tomcat startup:
 
-    ![Tomcat](https://api.onlyoffice.com/content/img/java/tomcat-cmd.jpg)
+    ![Tomcat](/content/img/java/tomcat-cmd.jpg)
 
     Test your Tomcat installation using the address in a web browser:
 
@@ -100,11 +100,11 @@ To run the Java example code you will need to install the Java version appropria
 
 1. Open Tomcat Web Application Manager by clicking **Manager App**:
 
-    ![Manager App](https://api.onlyoffice.com/content/img/java/manager.jpg)
+    ![Manager App](/content/img/java/manager.jpg)
 
 2. Tomcat Web Application Manager will request the **username** and the **password**:
 
-    ![Tomcat Web Application Manager](https://api.onlyoffice.com/content/img/java/author.jpg)
+    ![Tomcat Web Application Manager](/content/img/java/author.jpg)
 
     For that you will need to specify user data in tomcat-users.xml file in the Apache Tomcat installation folder. Define the **manager-gui** user role, specify the **user name** and **password** values:
 
@@ -117,12 +117,12 @@ To run the Java example code you will need to install the Java version appropria
 
 3. Upload the Java project in Tomcat Web Application Manager. For that click **Choose File** in the **WAR file to deploy** section and find the **.war** file in the Java project folder, then click **Deploy**.
 
-    ![Deploy](https://api.onlyoffice.com/content/img/java/upload-app.jpg)
-    ![Open File](https://api.onlyoffice.com/content/img/java/war-file.jpg)
+    ![Deploy](/content/img/java/upload-app.jpg)
+    ![Open File](/content/img/java/war-file.jpg)
 
 4. You will see the project in the **Application List**:
 
-    ![Application List](https://api.onlyoffice.com/content/img/java/manager-app.jpg)
+    ![Application List](/content/img/java/manager-app.jpg)
 
 5. Click the link with the application name to run it.
 
@@ -130,13 +130,13 @@ To run the Java example code you will need to install the Java version appropria
 
 In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of **documentserver** in the configuration files. And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](https://api.onlyoffice.com/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
 
 ## Running the example on Linux OS
 
 ### Step 1. Download and Install Document Server
 
-First, download the [ONLYOFFICE Editors](https://api.onlyoffice.com/editors/demopreview) (the ONLYOFFICE Document Server).
+First, download the [ONLYOFFICE Editors](/editors/demopreview) (the ONLYOFFICE Document Server).
 
 See the detailed guide to learn how to [install Document Server for Linux](https://helpcenter.onlyoffice.com/server/developer-edition/linux/index.aspx?from=api_java_example).
 
@@ -240,7 +240,7 @@ See the detailed guide to learn how to [install Document Server for Linux](https
 
 In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of **documentserver** in the configuration files. And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](https://api.onlyoffice.com/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.
 
 
 

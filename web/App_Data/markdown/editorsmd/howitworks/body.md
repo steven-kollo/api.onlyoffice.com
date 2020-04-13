@@ -1,6 +1,6 @@
 # How it works
 
-The work with document files in ONLYOFFICE Document Server is quite a simple process but it requires some understanding of what is going on when you click your document link to [open](https://api.onlyoffice.com/editors/open) it in the browser, or [save](https://api.onlyoffice.com/editors/save) the document or [upload](https://api.onlyoffice.com/editors/conversion) it from your computer to the document server.
+The work with document files in ONLYOFFICE Document Server is quite a simple process but it requires some understanding of what is going on when you click your document link to [open](/editors/open) it in the browser, or [save](/editors/save) the document or [upload](/editors/conversion) it from your computer to the document server.
 
 The user-document interaction is done both at the client side and at the server side.
 

@@ -2,7 +2,7 @@
 
 The reference figure and the steps below explain the process of saving the document in ONLYOFFICE Document Server.
 
-![saving](https://api.onlyoffice.com/content/img/editor/saving.jpg)
+![saving](/content/img/editor/saving.jpg)
 
 1. The user edits the document in the **document editor**.
 
@@ -12,19 +12,19 @@ The reference figure and the steps below explain the process of saving the docum
 
 4. The **document editing service** watches the end of work with the document and collects the changes sent from the **document editor** into one document.
 
-5. The **document editing service** informs the **document storage service** about the end of the document editing using the `callbackUrl` from [JavaScript API](https://api.onlyoffice.com/editors/basic) and returns the link to the modified document.
+5. The **document editing service** informs the **document storage service** about the end of the document editing using the `callbackUrl` from [JavaScript API](/editors/basic) and returns the link to the modified document.
 
-    >Please note that since version 5.5, [callbackUrl](https://api.onlyoffice.com/editors/config/editor#callbackUrl) is selected based on [status](https://api.onlyoffice.com/editors/callback#status) of the request. Starting from version 4.4 to version 5.5, callbackUrl is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, callbackUrl is used from the user who first opened the file for editing.
+    >Please note that since version 5.5, [callbackUrl](/editors/config/editor#callbackUrl) is selected based on [status](/editors/callback#status) of the request. Starting from version 4.4 to version 5.5, callbackUrl is used from the last user who joined the co-editing. Prior to version 4.4, when co-editing, callbackUrl is used from the user who first opened the file for editing.
 
 6. The **document storage service** downloads the document file with all the saved changes from the **document editing service** and stores it.
 
 ## How this can be done in practice
 
-1. Create a [callback handler](https://api.onlyoffice.com/editors/callback) to save the document from **document editing service**.
+1. Create a [callback handler](/editors/callback) to save the document from **document editing service**.
 
-2. Create an *html* file to [Open the document](https://api.onlyoffice.com/editors/open#apply).
+2. Create an *html* file to [Open the document](/editors/open#apply).
 
-3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](https://api.onlyoffice.com/editors/config/editor#callbackUrl).
+3. In the configuration script for Document Editor initialization specify the URL to the file with the *Callback handler* in the [parameter line](/editors/config/editor#callbackUrl).
 
     ```js
     new DocsAPI.DocEditor("placeholder", {
@@ -81,11 +81,11 @@ If you want to change it, you can use the local.json file, where all the edited 
 
 ## Force saving
 
-**Document editing service** allows to get the current document state before the editing is finished. The process is called *forcesave* in ONLYOFFICE Document Server. When forcesave is initiated, **document editing service** performs request to the [callback handler](https://api.onlyoffice.com/editors/callback) with the link to the document as the *url* parameter and with the **6** value for the **status** parameter. The forcesave process can be initiated the following ways:
+**Document editing service** allows to get the current document state before the editing is finished. The process is called *forcesave* in ONLYOFFICE Document Server. When forcesave is initiated, **document editing service** performs request to the [callback handler](/editors/callback) with the link to the document as the *url* parameter and with the **6** value for the **status** parameter. The forcesave process can be initiated the following ways:
 
-* By the request to the [document command service](https://api.onlyoffice.com/editors/command) with the **forcesave** value in the c parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
+* By the request to the [document command service](/editors/command) with the **forcesave** value in the c parameter. The *forcesavetype* parameter will have the **0** value when sending the request to the **callback handler**.
 
-* Enable the [editorConfig.customization.forcesave](https://api.onlyoffice.com/editors/config/editor/customization#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
+* Enable the [editorConfig.customization.forcesave](/editors/config/editor/customization#forcesave) mode setting it to **true** in the editor initialization configuration. In this case each time the user clicks the **Save** button, the forcesave will be done, and the *forcesavetype* parameter will have the **1** value when sending the request to the **callback handler**.
 
 * You can enable the repeating forcesave start in the **Document Server** additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:  
 For Linux - */etc/onlyoffice/documentserver/**local.json***.  

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-To integrate **ONLYOFFICE online editors** into your own website on **Node.js** you need to download and install ONLYOFFICE editors on your local server and use the [Node.js Example](https://api.onlyoffice.com/editors/demopreview) for their integration. We will show you how to run the Node.js example on [Windows OS](https://api.onlyoffice.com/editors/example/nodejs#Windows) and [Linux OS](https://api.onlyoffice.com/editors/example/nodejs#Linux).
+To integrate **ONLYOFFICE online editors** into your own website on **Node.js** you need to download and install ONLYOFFICE editors on your local server and use the [Node.js Example](/editors/demopreview) for their integration. We will show you how to run the Node.js example on [Windows OS](/editors/example/nodejs#Windows) and [Linux OS](/editors/example/nodejs#Linux).
 
 >The integration examples are used to demonstrate document editors functions and the ways to connect **Document Server** to your own application. **DO NOT USE** these examples on your own server without **PROPER CODE MODIFICATIONS**!
 
@@ -12,13 +12,13 @@ This guide will show you the sequence of actions to integrate the editors succes
 
 ### Step 1. Download and Install Document Server
 
-First, download the [ONLYOFFICE Editors](https://api.onlyoffice.com/editors/demopreview) (the ONLYOFFICE Document Server).
+First, download the [ONLYOFFICE Editors](/editors/demopreview) (the ONLYOFFICE Document Server).
 
 See the detailed guide to learn how to install [Document Server for Windows](https://helpcenter.onlyoffice.com/server/developer-edition/windows/index.aspx?from=api_nodejs_example).
 
 ### Step 2.  Download the Node.js code for the editors integration
 
-Download the [Node.js example](https://api.onlyoffice.com/editors/demopreview) from our site.
+Download the [Node.js example](/editors/demopreview) from our site.
 
 You need to connnect the editors to your web site. For that specify the path to the editors installation in the `config/default.json` file:
 
@@ -28,7 +28,7 @@ You need to connnect the editors to your web site. For that specify the path to 
 
 where the **documentserver** is the name of the server with the ONLYOFFICE Document Server installed.
 
-If you want to experiment with the editor configuration, modify the [parameters](https://api.onlyoffice.com/editors/advanced) it the `\views\editor.ejs` file.
+If you want to experiment with the editor configuration, modify the [parameters](/editors/advanced) it the `\views\editor.ejs` file.
 
 ### Step 3. System requirements
 
@@ -72,7 +72,7 @@ In case the example and Document Server are installed on different computers, ma
 
 ### Step 1. Download and Install Document Server
 
-First, download the [ONLYOFFICE Editors](https://api.onlyoffice.com/editors/demopreview) (the ONLYOFFICE Document Server).
+First, download the [ONLYOFFICE Editors](/editors/demopreview) (the ONLYOFFICE Document Server).
 
 See the detailed guide to learn how to [install Document Server for Linux](https://helpcenter.onlyoffice.com/server/developer-edition/linux/index.aspx?from=api_nodejs_example).
 
@@ -140,4 +140,4 @@ See the detailed guide to learn how to [install Document Server for Linux](https
 
 In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of **documentserver** in the configuration files. And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of **example.com** in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](https://api.onlyoffice.com/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.

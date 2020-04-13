@@ -2,7 +2,7 @@
 
 ## Introduction
 
-To integrate __ONLYOFFICE online editors__ into your own website on __PHP__ you need to download and install ONLYOFFICE editors on your local server and use the [PHP Example](https://api.onlyoffice.com/editors/demopreview) for their integration. We will show you how to run the PHP example on [Windows OS](https://api.onlyoffice.com/editors/example/php#Windows) and [Linux OS](https://api.onlyoffice.com/editors/example/php#Linux).
+To integrate __ONLYOFFICE online editors__ into your own website on __PHP__ you need to download and install ONLYOFFICE editors on your local server and use the [PHP Example](/editors/demopreview) for their integration. We will show you how to run the PHP example on [Windows OS](/editors/example/php#Windows) and [Linux OS](/editors/example/php#Linux).
 
 >The integration examples are used to demonstrate document editors functions and the ways to connect __Document Server__ to your own application. __DO NOT USE__ these examples on your own server without __PROPER CODE MODIFICATIONS__!
 
@@ -12,13 +12,13 @@ This guide will show you the sequence of actions to integrate the editors succes
 
 ### Step 1. Download and Install Document Server on Windows OS
 
-First, download the [ONLYOFFICE Editors](https://api.onlyoffice.com/editors/demopreview) (the ONLYOFFICE Document Server).
+First, download the [ONLYOFFICE Editors](/editors/demopreview) (the ONLYOFFICE Document Server).
 
 See the detailed guide to learn how to [install Document Server for Windows](https://helpcenter.onlyoffice.com/server/developer-edition/windows/index.aspx?from=api_php_example).
 
 ### Step 2. Download the PHP code for the editors integration
 
-Download the [PHP example](https://api.onlyoffice.com/editors/demopreview) from our site.
+Download the [PHP example](/editors/demopreview) from our site.
 
 You need to connnect the editors to your web site. For that specify the path to the editors installation in the __config.php__ file:
 
@@ -30,7 +30,7 @@ $GLOBALS['DOC_SERV_PRELOADER_URL'] = "https://documentserver/web-apps/apps/api/d
 
 where the __documentserver__ is the name of the server with the ONLYOFFICE Document Server installed.
 
-If you want to experiment with the editor configuration, modify the [parameters](https://api.onlyoffice.com/editors/advanced) it the _doceditor.php_ file.
+If you want to experiment with the editor configuration, modify the [parameters](/editors/advanced) it the _doceditor.php_ file.
 
 ### Step 3. Install the prerequisites
 
@@ -50,17 +50,17 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
     and find the __PHP Manager__ feature in the __Features View__ in __IIS__.
 
-    ![manager.png](https://api.onlyoffice.com/content/img/php/manager.png)
+    ![manager.png](/content/img/php/manager.png)
 
     You need to register the installed PHP version in __IIS__ using __PHP Manager__.
 
     Double-click __PHP Manager__ to open it, click the __Register new PHP version__ task and specify the full path to the main PHP executable file location. For example: _C:\Program Files\PHP\php-cgi.exe_.
 
-    ![php-version-1.jpg](https://api.onlyoffice.com/content/img/php/php-version-1.jpg)
+    ![php-version-1.jpg](/content/img/php/php-version-1.jpg)
 
     After clicking __OK__ the new __PHP version__ will be registered with IIS and will become active.
 
-    ![php-version-2.png](https://api.onlyoffice.com/content/img/php/php-version-2.jpg)
+    ![php-version-2.png](/content/img/php/php-version-2.jpg)
 
 2. Configure IIS to handle PHP requests:
 
@@ -68,7 +68,7 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
     Double-click the _Handler Mappings_ feature:
 
-    ![handlerxlick.png](https://api.onlyoffice.com/content/img/php/handlerclick.png)
+    ![handlerxlick.png](/content/img/php/handlerclick.png)
 
     In the __Action__ panel, click __Add Module Mapping__. In the __Add Module Mapping__ dialog box, specify the configuration settings as follows:
 
@@ -79,7 +79,7 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
     click __OK__.
 
-    ![handler-add.png](https://api.onlyoffice.com/content/img/php/handler-add.png)
+    ![handler-add.png](/content/img/php/handler-add.png)
 
     After IIS manager configuration is complete everything is ready for running the __PHP__ example.
 
@@ -89,7 +89,7 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
     On the __Connections__ panel right-click the __Sites__ node in the tree, then click __Add Website__.
 
-    ![add.png](https://api.onlyoffice.com/content/img/csharp/add.png)
+    ![add.png](/content/img/csharp/add.png)
 
 2. In the ___Add Website___ dialog box specify the name of the folder with the PHP project in the __Site name__ box.
 
@@ -97,13 +97,13 @@ You can use any web server capable of runnig PHP code to run the sample. We will
 
     Specify the unique value used only for this website in the __Port__ box.
 
-    ![php-add.png](https://api.onlyoffice.com/content/img/editor/php-add.png)
+    ![php-add.png](/content/img/editor/php-add.png)
 
 3. Browse your web site with the IIS manager:
 
     Right-click the site -> __Manage Website__ -> __Browse__
 
-    ![browse.png](https://api.onlyoffice.com/content/img/php/browse.png)
+    ![browse.png](/content/img/php/browse.png)
 
 ### Step 6. Checking accessibility
 
@@ -113,7 +113,7 @@ In case the example and Document Server are installed on different computers, ma
 
 ### Step 1. Download and Install Document Server on Linux OS
 
-First, download the [ONLYOFFICE Editors](https://api.onlyoffice.com/editors/demopreview) (the ONLYOFFICE Document Server).
+First, download the [ONLYOFFICE Editors](/editors/demopreview) (the ONLYOFFICE Document Server).
 
 See the detailed guide to learn how to [install Document Server for Linux](https://helpcenter.onlyoffice.com/server/developer-edition/linux/index.aspx?from=api_php_example).
 
@@ -183,4 +183,4 @@ See the detailed guide to learn how to [install Document Server for Linux](https
 
 In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of _documentserver_ in the configuration files. And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of __example.com__ in the configuration files.
 
-If you integrated the editors successfully the result should look like the [demo preview](https://api.onlyoffice.com/editors/demopreview#DemoPreview) on our site.
+If you integrated the editors successfully the result should look like the [demo preview](/editors/demopreview#DemoPreview) on our site.

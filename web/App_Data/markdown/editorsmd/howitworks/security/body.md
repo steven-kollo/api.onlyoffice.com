@@ -10,4 +10,4 @@ The **token** is generated using the *JWT* ([JSON Web Tokens](https://jwt.io/)) 
 
 **ONLYOFFICE Document Server** validates the **token**. The data from the *payload* is considered valid and is used instead of the corresponding data from the main parameters. If the **token** is invalid, the command is not executed.
 
-See the [Signature](https://api.onlyoffice.com/editors/signature/) configuration section to find more.
+See the [Signature](/editors/signature/) configuration section to find more.

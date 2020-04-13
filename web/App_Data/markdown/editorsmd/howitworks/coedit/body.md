@@ -2,9 +2,9 @@
 
 The reference figure and the steps below explain the process of co-editing the document in ONLYOFFICE Document Server.
 
-![coedit](https://api.onlyoffice.com/content/img/editor/coedit.jpg)
+![coedit](/content/img/editor/coedit.jpg)
 
-1. User 1 and user 2 open one and the same document in **document editor**, i.e. when opening the file one and the same [document.key](https://api.onlyoffice.com/editors/config/document#key) has been used.
+1. User 1 and user 2 open one and the same document in **document editor**, i.e. when opening the file one and the same [document.key](/editors/config/document#key) has been used.
 
 2. User 1 makes changes to the opened document.
 
@@ -14,7 +14,7 @@ The reference figure and the steps below explain the process of co-editing the d
 
 5. Now these changes become visible to user 2.
 
-![coedit-view.png](https://api.onlyoffice.com/content/img/editor/coedit-view.png)
+![coedit-view.png](/content/img/editor/coedit-view.png)
 
 ## How this can be done in practice
 
