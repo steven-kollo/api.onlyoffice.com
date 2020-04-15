@@ -85,6 +85,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Liferay",
                 "Methods",
                 "Nextcloud",
+                "Nuxeo",
                 "Open",
                 "OwnCloud",
                 "Plugins",
@@ -286,6 +287,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Nextcloud()
+        {
+            return View();
+        }
+
+        public ActionResult Nuxeo()
         {
             return View();
         }
