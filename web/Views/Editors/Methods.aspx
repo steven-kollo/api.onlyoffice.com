@@ -497,7 +497,7 @@ docEditor.setRevisedFile({
                 <tbody>
                     <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines the type of image for insert into the file.</td>
+                        <td>Defines the type of document for comparing.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -509,7 +509,7 @@ docEditor.setRevisedFile({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source image is stored.</td>
+                        <td>Defines the absolute URL where the source document is stored.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
