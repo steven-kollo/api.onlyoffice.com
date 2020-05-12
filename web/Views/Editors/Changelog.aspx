@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="56" class="copy-link">Version 5.6</h2>
+    <ul>
+        <li>Added the type of insertion in <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">events.onRequestInsertImage</a> event.</li>
+    </ul>
+
     <h2 id="55" class="copy-link">Version 5.5</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#spellcheck">editorConfig.customization.spellcheck</a> field.</li>

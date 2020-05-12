@@ -410,13 +410,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button.
-            To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.
+            The type of image insertion is specified in parameter <em>data.c</em>.
+            To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method with the specified command.
         </p>
         <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestInsertImage = function() {
+var onRequestInsertImage = function(event) {
     docEditor.insertImage({
+        "c": event.data.c,
         "fileType": "png",
         "url": "https://example.com/url-to-example-image.png"
     });
