@@ -25,6 +25,7 @@
 
 
 using System;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -120,6 +121,9 @@ namespace ASC.Api.Web.Help
                 RegisterRoutes(RouteTable.Routes);
                 RegisterBundles(BundleTable.Bundles);
                 ClassNamePluralizer.LoadAndWatch(HttpContext.Current.Server.MapPath("~/App_Data/class_descriptions.xml"));
+
+                ServicePointManager.SecurityProtocol =
+                         SecurityProtocolType.Tls12;
             }
             catch (Exception error)
             {
