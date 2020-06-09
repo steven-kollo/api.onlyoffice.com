@@ -20,6 +20,7 @@
     <h2 id="56" class="copy-link">Version 5.6</h2>
     <ul>
         <li>Added the type of insertion in <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">events.onRequestInsertImage</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor") %>#templates">editorConfig.templates</a> field.</li>
     </ul>
 
     <h2 id="55" class="copy-link">Version 5.5</h2>

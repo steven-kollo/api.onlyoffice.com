@@ -166,6 +166,19 @@
             ...
         ],
         "<a href="<%= Url.Action("config/editor") %>#region">region</a>": "en-US",
+        "<a href="<%= Url.Action("config/editor") %>#templates">templates</a>": [
+            {
+                "image": "https://example.com/exampletemplate1.png",
+                "title": "exampletemplate1.docx",
+                "url": "https://example.com/url-to-create-template1"
+            },
+            {
+                "image": "https://example.com/exampletemplate2.png",
+                "title": "exampletemplate2.docx",
+                "url": "https://example.com/url-to-create-template2"
+            },
+            ...
+        ],
         "<a href="<%= Url.Action("config/editor") %>#user">user</a>": {
             "id": "78e1e841",
             "name": "John Smith"

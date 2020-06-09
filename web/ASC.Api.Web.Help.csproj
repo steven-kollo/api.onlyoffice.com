@@ -281,6 +281,7 @@
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
+    <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
     <Content Include="Content\img\Editor\help.png" />
     <Content Include="Content\img\Editor\sharing_settings.png" />
