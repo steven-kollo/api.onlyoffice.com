@@ -87,6 +87,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Nextcloud",
                 "Open",
                 "OwnCloud",
+                "Plone",
                 "Plugins",
                 "Save",
                 "Security",
@@ -296,6 +297,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult OwnCloud()
+        {
+            return View();
+        }
+
+        public ActionResult Plone()
         {
             return View();
         }
