@@ -17,7 +17,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">The buttons used with the plugin and the plugin behavior when these buttons are clicked. The method is called when any of the plugin buttons is clicked.</p>
+    <p class="dscr">Defines the buttons used with the plugin and the plugin behavior when they are clicked. This method is called when any of the plugin buttons is clicked.</p>
 
     <div class="header-gray">Parameters</div>
 
@@ -37,7 +37,7 @@
         <tbody>
             <tr class="tablerow">
                 <td>id</td>
-                <td>The button index in the <em>"buttons"</em> array of the plugin configuration <a href="<%= Url.Action("config") %>">config.json</a> file. If <em>id == -1</em>, then the plugin considers that the plugin 'Close window' cross button has been clicked or the plugin work was somehow interrupted.</td>
+                <td>Defines the button index in the <em>"buttons"</em> array of the plugin configuration <a href="<%= Url.Action("config") %>">config.json</a> file. If <em>id == -1</em>, then the plugin considers that the 'Close window' cross button has been clicked or its operation has been somehow interrupted.</td>
                 <td>number</td>
             </tr>
         </tbody>

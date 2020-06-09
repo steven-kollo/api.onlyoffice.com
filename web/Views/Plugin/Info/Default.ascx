@@ -7,11 +7,11 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">During all the plugin work the auxiliary <em>window.Asc.plugin.info</em> object is available. It stores all the information about the editor where the plugin is used (the <a href="<%= Url.Action("info/editortype") %>">editorType</a> used - text documents, spreadsheets, presentations) and additional settings for OLE objects (their width, height, millimeter to pixel ratio for OLE objects vector draw, some other OLE object parameters).</p>
+<p class="dscr">Defines the auxiliary <em>window.Asc.plugin.info</em> object which is available when the plugin works. It stores all the information about the editor that uses the plugin (the used <a href="<%= Url.Action("info/editortype") %>">editorType</a> - text documents, spreadsheets, presentations) and additional settings for OLE objects (their width, height, millimeter to pixel ratio for the OLE objects vector drawing and some other OLE object parameters).</p>
 
-<p>This object is used change the object data and to send additional parameters when executing the <a href="<%= Url.Action("executecommand") %>">window.Asc.plugin.executeCommand</a>. For example, if the document content is changed and recalculation is needed, the parameter <a href="<%= Url.Action("info/recalculate") %>">window.Asc.plugin.info.recalculate</a> must be set to <em>true</em>. It is necessary because the recalculation process is asynchronous. Moreover, some other data might need to be uploaded (e.g. a font or something else).</p>
+<p>This object is used to change the object data and to send additional parameters when executing the <a href="<%= Url.Action("executecommand") %>">window.Asc.plugin.executeCommand</a>. For example, if the document content is changed and recalculation is needed, the parameter <a href="<%= Url.Action("info/recalculate") %>">window.Asc.plugin.info.recalculate</a> must be set to <em>true</em>. This action is necessary because the recalculation process is asynchronous. Moreover, some other data might need to be uploaded (e.g. a font or something else).</p>
 
-<p>See the available <em>window.Asc.plugin.info</em> object methods and properties below to find more on each of them.</p>
+<p>See the available <em>window.Asc.plugin.info</em> object methods and properties below to find out more about them.</p>
 
 <div class="header-gray">Methods and properties</div>
 

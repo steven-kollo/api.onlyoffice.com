@@ -7,7 +7,8 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This method allows to get the identifier of the selected content control (i.e. the content control where the mouse cursor is currently positioned).</p>
+<p class="dscr">Defines the method that allows getting the identifier of the selected
+content control (i.e. the content control where the mouse cursor is currently positioned).</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>

@@ -17,9 +17,9 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">The new method used to send the data back to the editor. Replaced the <a href="<%= Url.Action("executeCommand") %>">executeCommand</a> method when working with texts so that to simplify the syntax of the script you want to pass to the editors using <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a>. It allows the plugin to send structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.).</p>
+    <p class="dscr">Defines the method used to send the data back to the editor. It replaces the <a href="<%= Url.Action("executeCommand") %>">executeCommand</a> method when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors using <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a>. It allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.).</p>
 
-    <div class="note"><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation is made due to the co-editing possibility in online editors. If you create a plugin for desktop editors working with local files, no such limitation is applied.</div>
+    NB:<div class="note"><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</div>
 
     <div class="header-gray">Parameters</div>
 
@@ -39,18 +39,18 @@
         <tbody>
             <tr class="tablerow">
                 <td>fCommand</td>
-                <td>The command JavaScript code, which forms the structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.) to be sent to the editors. Must be compatible with <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> syntax.</td>
+                <td>Defines the command written in JavaScript whose purpose is to form structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.). Then the data is sent to the editors. The command must be compatible with <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> syntax.</td>
                 <td>string</td>
             </tr>
             <tr class="tablerow">
                 <td>isClose</td>
-                <td>Specifies either the plugin window must be closed after the code execution or be left open and wait for some other command or action. The <em>true</em> value is used to close the plugin window after executing the function in the <em>fCommand</em> parameter. The <em>false</em> is used to execute the command and leave the window open, awaiting for the next command.</td>
+                <td>Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action. The <em>true</em> value is used to close the plugin window after executing the function in the <em>fCommand</em> parameter. The <em>false</em> value is used to execute the command and leave the window open waiting for the next command.</td>
                 <td>boolean</td>
             </tr>
         </tbody>
     </table>
 
-    <p>The <em>window.Asc.plugin.callCommand</em> method is executed in its own context, isolated from other JavaScript code data. If you want to pass some parameters or other data to it, you will need to use the <a href="<%= Url.Action("scope") %>">Asc.scope</a> object for that.</p>
+    <p>Defines the <em>window.Asc.plugin.callCommand</em> method that is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope") %>">Asc.scope</a> object.</p>
 
     <div class="header-gray">Example</div>
 

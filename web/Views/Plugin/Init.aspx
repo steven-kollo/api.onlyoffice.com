@@ -17,7 +17,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">The data sent to the plugin and what is to be done with it and how. This method is called when the plugin is started.</p>
+    <p class="dscr">Defines the data sent to the plugin describing what actions are to be performed and how they must be performed. This method is called when the plugin is launched.</p>
 
     <div class="header-gray">Parameters</div>
 
@@ -37,7 +37,7 @@
         <tbody>
             <tr class="tablerow">
                 <td>data</td>
-                <td>The data parameter depends on the <em>"initDataType"</em> setting specified in the plugin configuration <a href="<%= Url.Action("config") %>">config.json</a> file. It can be of the following type: <em>"none"</em> - an empty string, <em>"text"</em> - the selected document text, <em>"html"</em> - selected document fragment, <em>"ole"</em> - OLE object data.</td>
+                <td>Defines the data parameter that depends on the <em>"initDataType"</em> setting specified in the plugin configuration <a href="<%= Url.Action("config") %>">config.json</a> file. The type of the data is as follows: <em>"none"</em> - an empty string, <em>"text"</em> - the text of the selected document, <em>"html"</em> - a fragment of the selected document, <em>"ole"</em> - the data of the OLE object.</td>
                 <td>string</td>
             </tr>
         </tbody>
