@@ -355,6 +355,15 @@
                 <img src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="plugins" class="copy-link">plugins</td>
+            <td>
+                Defines if <a href="<%= Url.Action("basic", "plugin") %>">plugins</a> will be launched and available.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
         <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
@@ -540,6 +549,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "https://www.onlyoffice.com"
             },
             "mentionShare": true,
+            "plugins": true,
             "reviewDisplay": "original",
             <% if (license)
                { %>"rightMenu": true,
