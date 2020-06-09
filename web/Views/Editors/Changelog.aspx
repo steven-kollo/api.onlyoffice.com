@@ -22,6 +22,7 @@
         <li>Added the type of insertion in <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">events.onRequestInsertImage</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/editor") %>#templates">editorConfig.templates</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#plugins">editorConfig.customization.plugins</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#macros">editorConfig.customization.macros</a> field.</li>
     </ul>
 
     <h2 id="55" class="copy-link">Version 5.5</h2>

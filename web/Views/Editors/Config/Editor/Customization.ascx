@@ -338,6 +338,15 @@
             <td>object</td>
             <td></td>
         </tr>
+        <tr class="tablerow">
+            <td id="macros" class="copy-link">macros</td>
+            <td>
+                Defines if document macros will be run and available macros settings.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
         <tr>
             <td id="mentionShare" class="copy-link">mentionShare</td>
             <td>
@@ -548,6 +557,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
             },
+            "macros": true,
             "mentionShare": true,
             "plugins": true,
             "reviewDisplay": "original",
