@@ -112,6 +112,16 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="compatibleFeatures" class="copy-link">compatibleFeatures</td>
+            <td>
+                Defines the use of functionality only compatible with the OOXML format.
+                For example, do not use comments on the entire document.
+                The default value is <b>false</b>.
+            </td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
             <td id="customer" class="copy-link">customer<span class="required">*</span></td>
             <td>
                 Contains the information which will be displayed int the editor <b>About</b> section and visible to all the editor users.
@@ -509,6 +519,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "comments": true,
             "compactHeader": false,
             "compactToolbar": false,
+            "compatibleFeatures": false,
             "customer": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",

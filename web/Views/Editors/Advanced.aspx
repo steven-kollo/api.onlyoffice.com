@@ -97,6 +97,7 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactToolbar">compactToolbar</a>": false,
+            "<a href="<%= Url.Action("config/editor/customization") %>#compatibleFeatures">compatibleFeatures</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#customer">customer</a>": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
