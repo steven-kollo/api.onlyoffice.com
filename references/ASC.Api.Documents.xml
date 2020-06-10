@@ -4,16 +4,35 @@
         <name>ASC.Api.Documents</name>
     </assembly>
     <members>
-        <member name="M:ASC.Api.Documents.BlockchainApi.UpdateData(System.String,System.String)">
+        <member name="M:ASC.Api.Documents.EncryptionApi.UpdateAddress(System.String,System.String)">
             <summary>
             
             </summary>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Documents.BlockchainApi.GetAccessAddresses(System.String)">
+        <member name="M:ASC.Api.Documents.EncryptionApi.GetAddressesWithAccess(System.String)">
             <summary>
             
             </summary>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.EncryptionApi.PutEncryptedData(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="publicKey"></param>
+            <param name="fileHash"></param>
+            <param name="data"></param>
+            <returns></returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.EncryptionApi.GetEncryptedData(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="publicKey"></param>
+            <param name="fileHash"></param>
+            <returns></returns>
             <visible>false</visible>
         </member>
         <member name="T:ASC.Api.Documents.DocumentsApi">
@@ -130,7 +149,7 @@
             <param name="files" visible="false">List of files when posted as multipart/form-data</param>
             <returns>Uploaded file</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.UploadFile(System.String,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Nullable{System.Boolean},System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.UploadFile(System.String,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Boolean)">
             <summary>
             Uploads the file specified with single file upload or standart multipart/form-data method to the selected folder
             </summary>
@@ -188,7 +207,17 @@
             <category>Uploads</category>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.SaveEditing(System.String,System.String,System.String,System.IO.Stream,System.String)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.UpdateFileStream(System.IO.Stream,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="file"></param>
+            <param name="fileId"></param>
+            <param name="encrypted"></param>
+            <returns></returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.SaveEditing(System.String,System.String,System.String,System.IO.Stream,System.String,System.Boolean)">
             <summary>
             
             </summary>
@@ -197,6 +226,7 @@
             <param name="downloadUri"></param>
             <param name="stream"></param>
             <param name="doc"></param>
+            <param name="forcesave"></param>
             <category>Files</category>
             <returns></returns>
         </member>
@@ -232,7 +262,7 @@
             <category>Files</category>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.CreateUploadSession(System.String,System.String,System.Int64,System.String)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.CreateUploadSession(System.String,System.String,System.Int64,System.String,System.Boolean)">
             <summary>
             Creates session to upload large files in multiple chunks.
             </summary>
@@ -242,6 +272,7 @@
             <param name="fileName">Name of file which has to be uploaded</param>
             <param name="fileSize">Length in bytes of file which has to be uploaded</param>
             <param name="relativePath">Relative folder from folderId</param>
+            <param name="encrypted" visible="false"></param>
             <remarks>
             <![CDATA[
             Each chunk can have different length but its important what length is multiple of <b>512</b> and greater or equal than <b>5 mb</b>. Last chunk can have any size.
@@ -628,6 +659,15 @@
             <category>Files</category>
             <returns>Shared file link</returns>
         </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.Capabilities">
+            <summary>
+              Get a list of available providers
+            </summary>
+            <category>Third-Party Integration</category>
+            <returns>List of provider key</returns>
+            <remarks>List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.SaveThirdParty(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
             <summary>
               Saves the third party file storage service account
@@ -643,7 +683,7 @@
             <param name="providerId">Provider ID</param>
             <category>Third-Party Integration</category>
             <returns>Folder contents</returns>
-            <remarks> List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
+            <remarks>List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdPartyAccounts">
@@ -688,6 +728,14 @@
             <param name="set"></param>
             <returns></returns>
         </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.HideConfirmConvert(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="save"></param>
+            <visible>false</visible>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UpdateIfExist(System.Boolean)">
             <summary>
             
@@ -705,9 +753,6 @@
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetDocServiceUrl(System.Boolean)">
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdpartyProvider">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetWordpressInfo">
@@ -831,6 +876,10 @@
             </summary>
         </member>
         <member name="P:ASC.Api.Documents.FileEntryWrapper.ProviderKey">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Documents.FileEntryWrapper.ProviderId">
             <summary>
             </summary>
         </member>
