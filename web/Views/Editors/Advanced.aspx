@@ -199,6 +199,7 @@
         "<a href="<%= Url.Action("config/events") %>#onOutdatedVersion">onOutdatedVersion</a>": onOutdatedVersion,
         "<a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a>": onRequestClose,
         "<a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a>": onRequestCompareFile,
+        "<a href="<%= Url.Action("config/events") %>#onRequestCreateNew">onRequestCreateNew</a>": onRequestCreateNew,
         "<a href="<%= Url.Action("config/events") %>#onRequestEditRights">onRequestEditRights</a>": onRequestEditRights,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a>": onRequestHistory,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a>": onRequestHistoryClose,

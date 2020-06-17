@@ -42,6 +42,7 @@
             <td>
                 Defines the absolute URL of the document where it will be created and available after creation.
                 If not specified, there will be no creation button.
+                Instead of this field, you can use the <a href="<%= Url.Action("config/events") %>#onRequestCreateNew">onRequestCreateNew</a> event.
             </td>
             <td>string</td>
             <td>"https://example.com/url-to-create-document/"</td>
