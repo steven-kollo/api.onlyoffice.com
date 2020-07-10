@@ -1308,6 +1308,14 @@
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oTable, oTableStyle, oTablePr;\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"We set the table cells to preserve their size:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTablePr = oTableStyle.GetTablePr();\noTable = Api.CreateTable(3, 3);\noTablePr.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetWidth.docx\");\nbuilder.CloseFile();",
 			"demo": null
 		},
+		"ApiTableRow.addrows": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"Second row\");\noTable.SetWidth(\"percent\", 100);\noRow.AddRows(1, true);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"AddRows.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.clear": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"Clear content\");\noRow.Clear();\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"Clear.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		}, 
 		"ApiTableRow.getcell": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oTable, oTableStyle, oCell, oTableRow;\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTableRow.SetHeight(\"atLeast\", 1440);\noCell = oTableRow.GetCell(1);\noCell.SetVerticalAlign(\"bottom\");\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Align bottom\");\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetCell.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896826&doc=dHRqVTRwMUtjTCs5RjRtQ204TTErWGRUaUVJNUVyeFBxU0MzYXE5R2tTUT0_IjQ4OTY4MjYi0&action=embedded"
@@ -1320,6 +1328,26 @@
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oTable, oTableStyle, oCell, oTableRow;\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nvar oClassType = oTableRow.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896837&doc=Mm5rNnZWaTJMc29SUGQybldnT2IyZ0REZ2dvMFBnalp5OEFscVFIcDJMOD0_IjQ4OTY4Mzci0&action=embedded"
 		},
+		"ApiTableRow.getindex": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noRow = oTable.GetRow(1);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"Row index: \" + oRow.GetIndex());\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetIndex.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.getnext": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"First row\");\noRow.GetNext().GetCell(0).GetContent().GetElement(0).AddText(\"Second row\");\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetNext.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.getprevious": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(1);\noRow.GetCell(1).GetContent().GetElement(0).AddText(\"Second row\");\noRow.GetPrevious().GetCell(1).GetContent().GetElement(0).AddText(\"First row\");\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetPrevious.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.mergecells": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noTableStyle = oDocument.GetStyle(\"Table Grid\");\noTable.SetStyle(oTableStyle);\noTable.SetWidth(\"percent\", 100);\noRow.MergeCells();\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"MergeCells.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.remove": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"First row\");\noRow.Remove();\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"Remove.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiTableRow.setheight": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oTable, oTableStyle, oCell, oTableRow;\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"We create a 3x3 table and set the height of half an inch to row #1:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTableRow.SetHeight(\"atLeast\", 720);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetHeight.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896841&doc=RUc3Q1lnNUUzT2ZWSS80bXNHeitHbEcwZEVDcHZvckxKc3JQYS9oeWVVTT0_IjQ4OTY4NDEi0&action=embedded"
@@ -1327,6 +1355,14 @@
 		"ApiTableRow.settableheader": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oTable, oTableStyle, oCell, oTableRow;\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"We create a 3x90 table and set row #1 as the table header:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 90);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTableRow.SetTableHeader(true);\noCell = oTableRow.GetCell(0);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Header cell #1\");\noCell = oTableRow.GetCell(1);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Header cell #2\");\noCell = oTableRow.GetCell(2);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Header cell #3\");\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetTableHeader.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896846&doc=TmZJcTFlaVVNbnN0QkxQeWl6ZlBEL0wyTXRKNE1Sd2U2dlB3L1psNzV1TT0_IjQ4OTY4NDYi0&action=embedded"
+		},
+		"ApiTableRow.settextpr": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetBold(true);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"First row\");\noRow.SetTextPr(oTextPr);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetTextPr.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.search": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"text\");\noRow.GetCell(1).GetContent().GetElement(0).AddText(\"text\");\noRow.GetCell(2).GetContent().GetElement(0).AddText(\"text\");\noDocument.Push(oTable);\noRowSearch = oRow.Search(\"tex\", true);\noRowSearch[1].SetBold(\"true\");\nbuilder.SaveFile(\"docx\", \"Search.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiTableRowPr.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oTable, oTableStyle, oCell, oTableRowPr;\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRowPr = oTableStyle.GetTableRowPr();\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nvar oClassType = oTableRowPr.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
