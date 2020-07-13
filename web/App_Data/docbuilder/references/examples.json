@@ -744,6 +744,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetFontSize(14);\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
+		"ApiRange.sethighlight": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 26);\noRange.SetHighlight(255, 164, 101);\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRange.setitalic": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetItalic(true);\nbuilder.SaveFile(\"docx\", \"SetItalic.docx\");\nbuilder.CloseFile();",
 			"demo": ""
@@ -766,6 +770,10 @@
 		},
 		"ApiRange.setstrikeout": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Server Builder\");\noRange = oDocument.GetRange(18, 23);\noRange.SetStrikeout(true);\nbuilder.SaveFile(\"docx\", \"SetStrikeout.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setstyle": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 26);\noStyle = oDocument.GetStyle(\"Heading 2\");\noRange.SetStyle(oStyle);\nbuilder.SaveFile(\"docx\", \"SetStyle.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
 		"ApiRange.settextpr": {
