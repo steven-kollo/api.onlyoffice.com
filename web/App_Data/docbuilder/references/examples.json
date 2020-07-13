@@ -1336,6 +1336,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"First row\");\noRow.GetNext().GetCell(0).GetContent().GetElement(0).AddText(\"Second row\");\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetNext.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
+		"ApiTableRow.getparenttable": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noRow = oTable.GetRow(0);\noParentTable = oRow.GetParentTable();\noDocument.Push(oParentTable);\nbuilder.SaveFile(\"docx\", \"GetParentTable.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiTableRow.getprevious": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(1);\noRow.GetCell(1).GetContent().GetElement(0).AddText(\"Second row\");\noRow.GetPrevious().GetCell(1).GetContent().GetElement(0).AddText(\"First row\");\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetPrevious.docx\");\nbuilder.CloseFile();",
 			"demo": ""
