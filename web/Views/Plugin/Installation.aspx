@@ -33,7 +33,7 @@
         <li><p>Put the folder with the plugin code to <b>ONLYOFFICE Document Server</b> folder depending on the operating system:</p>
             <div>For Linux - <em>/var/www/onlyoffice/documentserver/sdkjs-plugins/</em>.</div>
             <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\</em>.</div>
-            <p>The plugins will be available to all the users users of <b>ONLYOFFICE Document Server</b>. No service restart is required.</p>
+            <p>The plugins will be available to all the users users of <b>ONLYOFFICE Document Server</b>. <a href="https://nodejs.org/docs/latest/api/fs.html#fs_availability" target="_blank">In some cases</a>, service restart is required.</p>
 
         </li>
         <li>
