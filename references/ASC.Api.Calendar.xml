@@ -405,7 +405,7 @@
             <param name="date">Date to be deleted from the recurrent event</param>
             <param name="type">Recurrent event deletion type</param>
             <param name="fromCaldavServer">Bool flag says that request from caldav server</param>
-            <param name="uri">Current uri</param>
+            <param name="uri" visible="false">Current uri</param>
             <returns>Updated event series collection</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.UnsubscribeEvent(System.Int32)">

@@ -323,7 +323,7 @@
             <category>Invoices</category>
             <returns>Invoice Item</returns>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Decimal,System.Int32)">
+        <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal)">
             <summary>
              Creates the invoice line with the parameters (invoiceId, invoiceItemId, etc.) specified in the request
             </summary>
@@ -340,7 +340,7 @@
             <category>Invoices</category>
             <returns>InvoiceLine</returns>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Int32,System.Decimal,System.Int32)">
+        <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal)">
             <summary>
               Updates the selected invoice line with the parameters (invoiceId, invoiceItemId, etc.) specified in the request
             </summary>
@@ -367,7 +367,7 @@
             <category>Invoices</category>
             <returns>Line ID</returns>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceItem(System.String,System.String,System.Decimal,System.String,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32)">
+        <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceItem(System.String,System.String,System.Decimal,System.String,System.Decimal,System.Boolean,System.Int32,System.Int32)">
             <summary>
              Creates the invoice item with the parameters (title, description, price, etc.) specified in the request
             </summary>
@@ -375,7 +375,6 @@
             <param optional="true" name="description">Item description</param>
             <param optional="false" name="price">Item price</param>
             <param optional="true" name="sku">Item stock keeping unit</param>
-            <param optional="true" name="quantity">Item quantity</param>
             <param optional="true" name="stockQuantity">Item stock quantity</param>
             <param optional="true" name="trackInventory">Track inventory</param>
             <param optional="true" name="invoiceTax1id">Item first invoice tax ID</param>
@@ -384,7 +383,7 @@
             <category>Invoices</category>
             <returns>InvoiceItem</returns>
         </member>
-        <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceItem(System.Int32,System.String,System.String,System.Decimal,System.String,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32)">
+        <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceItem(System.Int32,System.String,System.String,System.Decimal,System.String,System.Decimal,System.Boolean,System.Int32,System.Int32)">
             <summary>
               Updates the selected invoice item with the parameters (title, description, price, etc.) specified in the request
             </summary>
@@ -393,7 +392,6 @@
             <param optional="true" name="description">Item description</param>
             <param optional="false" name="price">Item price</param>
             <param optional="true" name="sku">Item stock keeping unit</param>
-            <param optional="true" name="quantity">Item quantity</param>
             <param optional="true" name="stockQuantity">Item stock quantity</param>
             <param optional="true" name="trackInventory">Track inventory</param>
             <param optional="true" name="invoiceTax1id">Item first invoice tax ID</param>
@@ -791,7 +789,7 @@
             <param name="infoType">Contact information type</param>
             <param name="data">Data</param>
             <param name="isPrimary">Contact importance: primary or not</param>
-            <param name="category">Category</param>
+            <param   name="category">Category</param>
             <short> Add contact info</short> 
             <category>Contacts</category>
              <seealso cref="M:ASC.Api.CRM.CRMApi.GetContactInfoType"/>
@@ -1100,7 +1098,7 @@
             <summary>
               Adds the selected person to the company with the ID specified in the request
             </summary>
-            <param optional="true" name="companyid">Company ID</param>
+            <param optional="true"  name="companyid">Company ID</param>
             <param optional="true" name="personid">Person ID</param>
             <short>Add person to company</short> 
             <category>Contacts</category>
@@ -1114,7 +1112,7 @@
             <summary>
               Deletes the selected person from the company with the ID specified in the request
             </summary>
-            <param optional="true" name="companyid">Company ID</param>
+            <param optional="true"  name="companyid">Company ID</param>
             <param optional="true" name="personid">Person ID</param>
             <short>Delete person from company</short> 
             <category>Contacts</category>
@@ -1130,7 +1128,7 @@
             </summary>
             <param name="firstName">First name</param>
             <param name="lastName">Last name</param>
-            <param optional="true" name="jobTitle">Post</param>
+            <param optional="true"  name="jobTitle">Post</param>
             <param optional="true" name="companyId">Company ID</param>
             <param optional="true" name="about">Person description text</param>
             <param name="shareType">Person privacy: 0 - not shared, 1 - shared for read/write, 2 - shared for read only</param>
@@ -1190,7 +1188,7 @@
             <param name="personid">Person ID</param>
             <param name="firstName">First name</param>
             <param name="lastName">Last name</param>
-            <param optional="true" name="jobTitle">Post</param>
+            <param optional="true"  name="jobTitle">Post</param>
             <param optional="true" name="companyId">Company ID</param>
             <param optional="true" name="about">Person description text</param>
             <param name="shareType">Person privacy: 0 - not shared, 1 - shared for read/write, 2 - shared for read only</param>
@@ -1207,7 +1205,7 @@
             <summary>
                Creates the company with the parameters specified in the request
             </summary>
-            <param name="companyName">Company name</param>
+            <param  name="companyName">Company name</param>
             <param optional="true" name="about">Company description text</param>
             <param optional="true" name="personList">Linked person list</param>
             <param name="shareType">Company privacy: 0 - not shared, 1 - shared for read/write, 2 - shared for read only</param>
@@ -1254,7 +1252,7 @@
                Updates the selected company with the parameters specified in the request
             </summary>
             <param name="companyid">Company ID</param>
-            <param name="companyName">Company name</param>
+            <param  name="companyName">Company name</param>
             <param optional="true" name="about">Company description text</param>
             <param name="shareType">Company privacy: 0 - not shared, 1 - shared for read/write, 2 - shared for read only</param>
             <param optional="true" name="managerList">List of company managers</param>
@@ -1271,7 +1269,7 @@
                Updates the selected contact status
             </summary>
             <param name="contactid">Contact ID</param>
-            <param name="contactStatusid">Contact status ID</param>
+            <param  name="contactStatusid">Contact status ID</param>
             <short>Update status in contact by id</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
@@ -1285,7 +1283,7 @@
                Updates status of the selected company and all its participants
             </summary>
             <param name="companyid">Company ID</param>
-            <param name="contactStatusid">Contact status ID</param>
+            <param  name="contactStatusid">Contact status ID</param>
             <short>Update company and participants status</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
@@ -1299,7 +1297,7 @@
                Updates status of the selected person, related company and all its participants
             </summary>
             <param name="personid">Person ID</param>
-            <param name="contactStatusid">Contact status ID</param>
+            <param  name="contactStatusid">Contact status ID</param>
             <short>Update person, related company and participants status</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
@@ -1496,6 +1494,11 @@
         <member name="M:ASC.Api.CRM.CRMApi.SetContactLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
             <visible>false</visible>
         </member>
+        <member name="P:ASC.Api.CRM.CRMApi.Name">
+            <summary>
+             Api name entry
+            </summary>
+        </member>
         <member name="M:ASC.Api.CRM.CRMApi.#ctor(ASC.Api.Impl.ApiContext)">
             <summary>
              Constructor
@@ -1639,11 +1642,12 @@
              <param name="id">User field id</param>
              <param name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Entity type</param>
              <param optional="false" name="label">Field title</param>
-             <param name="fieldType" remark="Allowed values: 0 (TextField),1 (TextArea),2 (SelectBox),3 (CheckBox),4 (Heading) or 5 (Date)">
+             <param name="fieldType" 
+             remark="Allowed values: 0 (TextField),1 (TextArea),2 (SelectBox),3 (CheckBox),4 (Heading) or 5 (Date)">
                User field value
              </param>
              <param optional="true" name="position">Field position</param>
-             <param optional="true" name="mask" remark="Sent in json format only">Mask</param>
+             <param optional="true" name="mask" remark="Sent in json format only" >Mask</param>
              <short> Updates the selected user field</short> 
              <category>User fields</category>
              <returns>
@@ -2876,15 +2880,15 @@
              Creates the task with the parameters (title, description, due date, etc.) specified in the request
             </summary>
             <param name="title">Task title</param>
-            <param optional="true" name="description">Task description</param>
+            <param optional="true"  name="description">Task description</param>
             <param name="deadline">Task due date</param>
             <param name="responsibleId">Task responsible ID</param>
             <param name="categoryId">Task category ID</param>
-            <param optional="true" name="contactId">Contact ID</param>
-            <param optional="true" name="entityType" remark="Allowed values: opportunity or case">Related entity type</param>
-            <param optional="true" name="entityId">Related entity ID</param>
-            <param optional="true" name="isNotify">Notify the responsible about the task</param>
-            <param optional="true" name="alertValue">Time period in minutes for reminder to the responsible about the task</param>
+            <param optional="true"  name="contactId">Contact ID</param>
+            <param optional="true"  name="entityType" remark="Allowed values: opportunity or case">Related entity type</param>
+            <param optional="true"  name="entityId">Related entity ID</param>
+            <param optional="true"  name="isNotify">Notify the responsible about the task</param>
+            <param optional="true"  name="alertValue">Time period in minutes for reminder to the responsible about the task</param>
             <exception cref="T:System.ArgumentException"></exception>
             <short>Create task</short> 
             <category>Tasks</category>
@@ -2895,15 +2899,15 @@
              Creates the group of the same task with the parameters (title, description, due date, etc.) specified in the request for several contacts
             </summary>
             <param name="title">Task title</param>
-            <param optional="true" name="description">Task description</param>
+            <param optional="true"  name="description">Task description</param>
             <param name="deadline">Task due date</param>
             <param name="responsibleId">Task responsible ID</param>
             <param name="categoryId">Task category ID</param>
             <param name="contactId">contact ID list</param>
-            <param optional="true" name="entityType" remark="Allowed values: opportunity or case">Related entity type</param>
-            <param optional="true" name="entityId">Related entity ID</param>
-            <param optional="true" name="isNotify">Notify the responsible about the task</param>
-            <param optional="true" name="alertValue">Time period in minutes for reminder to the responsible about the task</param>
+            <param optional="true"  name="entityType" remark="Allowed values: opportunity or case">Related entity type</param>
+            <param optional="true"  name="entityId">Related entity ID</param>
+            <param optional="true"  name="isNotify">Notify the responsible about the task</param>
+            <param optional="true"  name="alertValue">Time period in minutes for reminder to the responsible about the task</param>
             <exception cref="T:System.ArgumentException"></exception>
             <short>Create task list</short> 
             <category>Tasks</category>
@@ -3493,11 +3497,6 @@
             <category>Voip</category>
             <returns></returns>
         </member>
-        <member name="P:ASC.Api.CRM.CRMApi.Name">
-            <summary>
-             Api name entry
-            </summary>
-        </member>
         <member name="T:ASC.Api.CRM.Wrappers.Address">
             <summary>
               Address
@@ -3513,19 +3512,14 @@
               Person
             </summary>
         </member>
-        <member name="T:ASC.Api.CRM.Wrappers.ContactBaseWrapper">
-            <summary>
-             Contact base information
-            </summary>
-        </member>
         <member name="T:ASC.Api.CRM.Wrappers.CompanyWrapper">
             <summary>
              Company
             </summary>
         </member>
-        <member name="T:ASC.Api.CRM.CurrencyRateWrapper">
+        <member name="T:ASC.Api.CRM.Wrappers.ContactBaseWrapper">
             <summary>
-             Currency rate
+             Contact base information
             </summary>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper">
@@ -3558,16 +3552,6 @@
              Invoice Status
             </summary>
         </member>
-        <member name="T:ASC.Api.CRM.CurrencyInfoWrapper">
-            <summary>
-             Currency information
-            </summary>
-        </member>
-        <member name="T:ASC.Api.CRM.CurrencyRateInfoWrapper">
-            <summary>
-             Currency rate information
-            </summary>
-        </member>
         <member name="T:ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper">
             <summary>
              User custom fields
@@ -3581,6 +3565,21 @@
         <member name="T:ASC.Api.CRM.Wrappers.TaskWrapper">
             <summary>
              Task
+            </summary>
+        </member>
+        <member name="T:ASC.Api.CRM.CurrencyRateWrapper">
+            <summary>
+             Currency rate
+            </summary>
+        </member>
+        <member name="T:ASC.Api.CRM.CurrencyInfoWrapper">
+            <summary>
+             Currency information
+            </summary>
+        </member>
+        <member name="T:ASC.Api.CRM.CurrencyRateInfoWrapper">
+            <summary>
+             Currency rate information
             </summary>
         </member>
     </members>
