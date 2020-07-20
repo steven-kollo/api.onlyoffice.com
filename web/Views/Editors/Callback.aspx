@@ -292,6 +292,7 @@ public class IndexServlet extends HttpServlet {
     <div id="nodejs" class="header-gray copy-link">Node.js document save example</div>
     <pre>
 var fs = require("fs");
+var syncRequest = require("sync-request");
 
 app.post("/track", function (req, res) {
 
