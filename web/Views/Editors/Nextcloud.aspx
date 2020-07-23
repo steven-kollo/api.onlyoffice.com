@@ -86,13 +86,13 @@
         <li>Change the owner to update the application right from Nextcloud web interface:
             <span class="commandline">chown -R www-data:www-data onlyoffice</span>
         </li>
-        <li>In Nextcloud open the <span class="fakelink">~/index.php/settings/apps?category=disabled</span> page with <em>Not enabled</em> apps by administrator and click <em>Enable</em> for the <b>ONLYOFFICE</b> application.</li>
+        <li>In Nextcloud open the <span class="fakelink">~/settings/apps/disabled</span> page with <em>Not enabled</em> apps by administrator and click <em>Enable</em> for the <b>ONLYOFFICE</b> application.</li>
     </ol>
 
 
     <h2 id="settings" class="copy-link">Configuring Nextcloud ONLYOFFICE integration app</h2>
     <p>
-        In Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
+        In Nextcloud open the <span class="fakelink">~/settings/admin/onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
         Enter the following address to connect ONLYOFFICE Document Server:
     </p>
     <span class="commandline">https://&lt;documentserver&gt;/</span>

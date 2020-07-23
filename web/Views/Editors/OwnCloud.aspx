@@ -85,13 +85,13 @@
         <li>Change the owner to update the application right from ownCloud web interface:
             <span class="commandline">chown -R www-data:www-data onlyoffice</span>
         </li>
-        <li>In ownCloud open the <span class="fakelink">~/index.php/settings/apps?category=disabled</span> page with <em>Not enabled</em> apps by administrator and click <em>Enable</em> for the <b>ONLYOFFICE</b> application.</li>
+        <li>In ownCloud open the <span class="fakelink">~/settings/admin?sectionid=apps&category=disabled</span> page with <em>Not enabled</em> apps by administrator and click <em>Enable</em> for the <b>ONLYOFFICE</b> application.</li>
     </ol>
 
 
     <h2 id="settings" class="copy-link">Configuring ownCloud ONLYOFFICE integration app</h2>
     <p>
-        In ownCloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
+        In ownCloud open the <span class="fakelink">~/settings/admin?sectionid=additional#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
         Enter the following address to connect ONLYOFFICE Document Server:
     </p>
     <span class="commandline">https://&lt;documentserver&gt;/</span>
