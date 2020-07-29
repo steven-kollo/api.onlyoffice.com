@@ -45,12 +45,12 @@
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
-        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from ownCloud and any end clients (version 4.2.7 and later are supported for use with the app).
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from ownCloud and any end clients.
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
         ONLYOFFICE Document Server must also be able to POST to ownCloud directly.
     </p>
     <p>
-        Starting with version 4.3.0, ONLYOFFICE Document Server and ownCloud can be installed either on different computers, or on the same machine.
+        ONLYOFFICE Document Server and ownCloud can be installed either on different computers, or on the same machine.
         In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Document Server and ownCloud work on port 80.
         Or you can use Document Server behind a proxy, please refer to <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">this article</a> to learn how you can configure it.
     </p>
