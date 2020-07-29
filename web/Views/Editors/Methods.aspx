@@ -142,6 +142,35 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
+            "created": "2010-07-06 10:13 AM",
+            "key": "af86C7e71Ca8",
+            "user": {
+                "id": "F89d8069ba2b",
+                "name": "Kate Cage"
+            },
+            "version": 1
+        },
+        {
+            "created": "2010-07-07 3:46 PM",
+            "key": "Khirz6zTPdfd7",
+            "user": {
+                "id": "78e1e841",
+                "name": "John Smith"
+            },
+            "version": 2
+        },
+        ...
+    ],
+});
+</pre>
+            <p>
+                If after editing and saving the document the <em>histoy</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
+            </p>
+            <pre>
+docEditor.refreshHistory({
+    "currentVersion": 2,
+    "history": [
+        {
             "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
