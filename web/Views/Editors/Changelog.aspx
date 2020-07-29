@@ -25,6 +25,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#macros">editorConfig.customization.macros</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#macrosMode">editorConfig.customization.macrosMode</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestCreateNew">events.onRequestCreateNew</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#copy">document.permissions.copy</a> field.</li>
     </ul>
 
     <h2 id="55" class="copy-link">Version 5.5</h2>

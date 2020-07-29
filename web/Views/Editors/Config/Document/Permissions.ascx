@@ -56,6 +56,15 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="copy" class="copy-link">copy</td>
+            <td>
+                Allows you to copy content to the clipboard.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
             <td id="download" class="copy-link">download</td>
             <td>
                 Defines if the document can be downloaded or only viewed or edited online.
@@ -166,6 +175,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "permissions": {
             "changeHistory": true,
             "comment": true,
+            "copy": true,
             "download": true,
             "edit": true,
             "fillForms": true,
