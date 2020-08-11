@@ -146,6 +146,12 @@ namespace ASC.Api.Web.Help.Controllers
             return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
         }
 
+        [HttpPost]
+        public JsonResult Callback(string data)
+        {
+            return Json(new { error = 0 });
+        }
+
         public ActionResult Navigation()
         {
             return View("Navigation", MarkDown.Navigation);
@@ -156,6 +162,18 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Editor");
         }
 
+        [HttpPost]
+        public ActionResult Index(string catchall, string data)
+        {
+            if (catchall != null)
+            {
+                catchall = catchall.ToLower();
+                if (catchall == "callback") return Callback(data);
+            }
+            return RedirectToAction("basic");
+        }
+
+        [HttpGet]
         public ActionResult Index(string catchall)
         {
             if (catchall != null)

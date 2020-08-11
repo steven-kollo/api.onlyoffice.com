@@ -35,6 +35,7 @@ namespace ASC.Api.Web.Help.Helpers
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             base.OnActionExecuting(filterContext);
+            if (filterContext.HttpContext.Request.HttpMethod == "POST") return;
 
             MarkDownViewModel model;
             var routes = filterContext.RouteData.Values;
