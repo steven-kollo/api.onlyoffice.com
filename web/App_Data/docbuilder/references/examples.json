@@ -316,6 +316,22 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.Delete();\noParentParagraph.AddLineBreak();\noParentParagraph.AddText(\"In this paragraph, the object Drawing has been deleted\");\nbuilder.SaveFile(\"docx\", \"Delete.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
+		"ApiDrawing.copy": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noCopyDrawing.Fill(oFill);\noParagraph.AddDrawing(oCopyDrawing);\nbuilder.SaveFile(\"docx\", \"Copy.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.fill": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noCopyDrawing.Fill(oFill);\noParagraph.AddDrawing(oCopyDrawing);\nbuilder.SaveFile(\"docx\", \"Fill.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.getnextdrawing": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noParagraph.AddDrawing(oCopyDrawing);\noNextDrawing = oDrawing.GetNextDrawing();\noNextDrawing.SetHorFlip(true);\nbuilder.SaveFile(\"docx\", \"GetNextDrawing.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.getprevdrawing": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noParagraph.AddDrawing(oCopyDrawing);\noNextDrawing = oCopyDrawing.GetPrevDrawing();\noNextDrawing.SetHorFlip(true);\nbuilder.SaveFile(\"docx\", \"GetPrevDrawing.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiDrawing.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oStroke, oFill, oDocContent;\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDocContent = oDrawing.GetDocContent();\noDrawing.SetVerticalTextAlign(\"top\");\noDocContent.RemoveAllElements();\noParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it, aligned top.\");\noDocContent.Push(oParagraph);\nvar oClassType = oDrawing.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896252&doc=KytIYWJKQ1QzV3ZZcUJlYzN0VEhXTzNaWjlycFRYNnJuL3JhdDBSaERpcz0_IjQ4OTYyNTIi0&action=embedded"
@@ -374,6 +390,22 @@
 		},
 		"ApiDrawing.setvertflip": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.SetVertFlip(true);\nbuilder.SaveFile(\"docx\", \"SetVertFlip.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.scaleheight": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor ( i = 3; i > 0; i-- ){\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.ScaleHeight( i );} \nbuilder.SaveFile(\"docx\", \"ScaleHeight.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.scalewidth": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\n    for (i = 1; i < 4; i++ ){\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 963295, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.ScaleWidth( i );}\nbuilder.SaveFile(\"docx\", \"ScaleWidth.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.sethorflip": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.SetHorFlip(true);\nbuilder.SaveFile(\"docx\", \"SetHorFlip.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.setoutline": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing); \noCopyDrawing = oDrawing.Copy();\noStroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 0)));\noCopyDrawing.SetOutLine(oStroke);\noParagraph.AddDrawing(oCopyDrawing);\nbuilder.SaveFile(\"docx\", \"SetOutLine.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
 		"ApiFill.getclasstype": {
