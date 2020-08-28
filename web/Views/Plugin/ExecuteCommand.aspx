@@ -17,11 +17,11 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Used to send the data back to the editor. This method is mainly used to work with the OLE objects and is retained for the usage with text for the compatibility with the previous plugin versions.</p>
+    <p class="dscr">Used to send the data back to the editor. This method is mainly used to work with the OLE objects and is retained for using with text so that the previous versions of the plugin remain compatible.</p>
 
-    <p>The second parameter is the JavaScript code for work with <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a>, which allows the plugin to send structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.).</p>
+    <p>The second parameter is the JavaScript code for working with <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("basic", "docbuilder") %>">API</a> that allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.).</p>
 
-    <div class="note"><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation is made due to the co-editing possibility in online editors. If you create a plugin for desktop editors working with local files, no such limitation is applied.</div>
+    NB:<div class="note"><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</div>
 
     <div class="header-gray">Parameters</div>
 
@@ -41,25 +41,25 @@
         <tbody>
             <tr class="tablerow">
                 <td>type</td>
-                <td>The command type. The <em>"close"</em> is used to close the plugin window after executing the function in the <em>command</em> parameter. The <em>"command"</em> is used to execute the command and leave the window open, awaiting for the next command.</td>
+                <td>Defines the type of the command. The <em>"close"</em> is used to close the plugin window after executing the function in the <em>command</em> parameter. The <em>"command"</em> is used to execute the command and leave the window open waiting for the next command.</td>
                 <td>string</td>
             </tr>
             <tr class="tablerow">
                 <td>command</td>
-                <td>The command JavaScript code, which forms the structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and single words, etc.) to be sent to the editors. Must be compatible with <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> syntax.</td>
+                <td>Defines the command written in JavaScript code whose purpose is to form the structured data which can be inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.). Then the data is sent to the editors. The command must be compatible with <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> syntax.</td>
                 <td>string</td>
             </tr>
         </tbody>
     </table>
 
-    <p>When creating/editing OLE objects, two extensions are used to work with OLE objects:</p>
+    <p>When creating/editing OLE objects, two extensions are used to work with them:</p>
 
     <ul>
         <li><em>Api.asc_addOleObject(window.Asc.plugin.info)</em> - used to create an OLE object in the document;</li>
         <li><em>Api.asc_editOleObject(window.Asc.plugin.info)</em> - used to edit the created OLE object.</li>
     </ul>
 
-    <p>When you create/edit the objects, you can pass their properties to the <a href="<%= Url.Action("info") %>">window.Asc.plugin.info</a> object which is responsible for how the object looks like.</p>
+    <p>When creating/editing the objects, their properties can be passed to the <a href="<%= Url.Action("info") %>">window.Asc.plugin.info</a> object that defines how the object should look.</p>
 
     <div class="header-gray">Example OLE object</div>
 

@@ -801,6 +801,22 @@
              </returns> 
             <exception cref="T:System.ArgumentException"></exception>
         </member>
+        <member name="M:ASC.Api.CRM.CRMApi.CreateContactInfoAddress(System.Int32,ASC.Api.CRM.Wrappers.Address)">
+            <summary>
+               Adds the address information to the contact with the selected ID
+            </summary>
+            <param name="contactid">Contact ID</param>
+            <param name="address">Address data</param>
+            <short>Add address info</short> 
+            <category>Contacts</category>
+            <seealso cref="M:ASC.Api.CRM.CRMApi.GetContactInfoType"/>
+            <seealso cref="M:ASC.Api.CRM.CRMApi.GetContactInfoCategory(ASC.CRM.Core.ContactInfoType)"/>
+            <returns>
+               Contact information
+            </returns> 
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateBatchContactInfo(System.Int32,System.Collections.Generic.IEnumerable{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
              <summary>
               Creates contact information (add new information to the old list) with the parameters specified in the request for the contact with the selected ID
@@ -837,6 +853,21 @@
              <returns>
                Contact information
              </returns>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.UpdateContactInfoAddress(System.Int32,System.Int32,ASC.Api.CRM.Wrappers.Address)">
+            <summary>
+              Updates the address information with the parameters specified in the request for the contact with the selected ID
+            </summary>
+            <param name="id">Contact information record ID</param>
+            <param name="contactid">Contact ID</param>
+            <param name="address">Address data</param>
+            <short>Update address info</short> 
+            <category>Contacts</category>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <returns>
+              Contact information
+            </returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateBatchContactInfo(System.Int32,System.Collections.Generic.IEnumerable{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
              <summary>
@@ -964,7 +995,7 @@
             </summary>
             <param name="opportunityid">Opportunity ID</param>
             <param name="contactid">Contact ID</param>
-            <short>Add contact opportunity</short> 
+            <short>Delete contact opportunity</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <returns>
@@ -1146,10 +1177,11 @@
             <short>Merge contacts</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <exception cref="T:System.Security.SecurityException"></exception>
             <returns>
                Contact
             </returns>
-            <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdatePerson(System.Int32,System.String,System.String,System.String,System.Int32,System.String,ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
@@ -1275,6 +1307,17 @@
             <returns>
               Person
             </returns>
+        </member>
+        <member name="M:ASC.Api.CRM.CRMApi.GetContactAccessList(System.Int32)">
+             <summary>
+               Get access rights to the contact with the ID specified in the request
+             </summary>
+             <short>Get contact access rights</short> 
+             <category>Contacts</category>
+            <exception cref="T:System.ArgumentException"></exception>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <exception cref="T:System.Security.SecurityException"></exception>
+             <returns>User list</returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToContact(System.Int32,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
              <summary>

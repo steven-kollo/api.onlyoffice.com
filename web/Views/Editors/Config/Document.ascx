@@ -27,7 +27,10 @@
     <tbody>
         <tr class="tablerow">
             <td id="fileType" class="copy-link">fileType<span class="required">*</span></td>
-            <td>Defines the type of the file for the source viewed or edited document.</td>
+            <td>
+                Defines the type of the file for the source viewed or edited document.
+                Must be lowercase.
+            </td>
             <td>string</td>
             <td>"docx"</td>
         </tr>

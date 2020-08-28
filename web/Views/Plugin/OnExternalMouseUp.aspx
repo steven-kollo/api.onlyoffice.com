@@ -17,7 +17,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Specify the action that is to be performed when the mouse button is released outside the plugin iframe. </p>
+    <p class="dscr">Defines the action that is to be performed when the mouse button is released outside the plugin iframe.</p>
 
     <div class="header-gray">Parameters</div>
 
@@ -37,7 +37,7 @@
         <tbody>
             <tr class="tablerow">
                 <td>fMouseUp</td>
-                <td>The function which will be performed when the mouse button is released outside the plugin iframe.</td>
+                <td>Defines the function that will be performed when the mouse button is released outside the plugin iframe.</td>
                 <td>function</td>
             </tr>
         </tbody>

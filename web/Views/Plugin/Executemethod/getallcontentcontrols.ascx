@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This method allows to get information about all content controls that have been added to the page.</p>
+<p class="dscr">Defines the method that allows getting information about all the content controls that have been added to the page.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>

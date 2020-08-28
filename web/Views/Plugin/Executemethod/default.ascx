@@ -7,13 +7,13 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">The <em>window.Asc.plugin</em> object method that allows to execute certain editor methods using the plugin. The <em>Name</em> is the name of the specific method which must be executed, <em>[args]</em> are the arguments the used method has (in case it has any), and the <em>callback</em> is the result the method returns. The latter is an optional parameter, in case it is missing, the <a href="<%= Url.Action("onmethodreturn") %>">window.Asc.plugin.onMethodReturn</a> will be used to return the method execution result.</p>
+<p class="dscr">Defines the <em>window.Asc.plugin</em> object method that allows executing certain methods of the editor using the plugin. <em>Name</em> is the name of the specific method that must be executed, <em>[args]</em> are the arguments that the method in use has (if it has any), and <em>callback</em> is the result that the method returns. The latter is an optional parameter. In case it is missing, the <a href="<%= Url.Action("onmethodreturn") %>">window.Asc.plugin.onMethodReturn</a> method will be used to return the result of the method execution.</p>
 
-<p>See the available <em>window.Asc.plugin.executeMethod</em> methods below to find more on each of them.</p>
+<p>See the available <em>window.Asc.plugin.executeMethod</em> methods below to find more about them.</p>
 
 <div class="header-gray">Methods and properties</div>
 
-<p>Currently, the following 6 methods are available that can be executed in this way:</p>
+<p>Currently, the following six methods are available that can be executed in this way:</p>
 
 <table class="table">
     <colgroup>
@@ -55,7 +55,7 @@
     </tbody>
 </table>
 
-<div class="note">For the plugin to work correctly, it's necessary to wait until the current method is executed before executing the next method.</div>
+<div class="note">NB: For the plugin to work correctly, it is necessary to wait until the current method is executed before executing the next method.</div>
 
 <%--<div class="header-gray">Example</div>
 

@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This method inserts a content control that contains data. The data is specified by the <em>js</em> code for <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder</a>, or by the link to a shared document.</p>
+<p class="dscr">Defines the method that inserts a content control containing data. The data is specified by the <em>js</em> code for <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder</a>, or by a link to the shared document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -31,11 +31,11 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [obj]);
 <pre>
 [ {"Props": {...}, "Url": "http://"}, {"Props": {...}, "Url": "http://."}, {...}, {...}]
 </pre>
-<p>The <em>Props</em> key has the values that can be the following:</p>
+<p>The <em>Props</em> key can have the following values:</p>
 <ul>
-    <li>"Id" (e.g. <em>{"Id": 2}</em> ) is a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in your code.</li>
-    <li>"Tag" ( e.g. <em>{"Tag": "String"}</em> ) is a tag assigned to the content control. One and the same tag can be assigned to several content controls so that you can make reference to them in your code.</li>
-    <li>"Lock" (e.g. <em>{"Lock": 0}</em> ) is a value that defines if it is possible to delete and/or edit the content control or not. The values can be the following:</li>
+    <li>"Id" (e.g. <em>{"Id": 2}</em> ) is a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.</li>
+    <li>"Tag" ( e.g. <em>{"Tag": "String"}</em> ) is a tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code.</li>
+    <li>"Lock" (e.g. <em>{"Lock": 0}</em> ) is a value which defines if it is possible to delete and/or edit the content control or not. The values can be as follows:</li>
 </ul>
 <table class="table">
        <thead>
@@ -69,7 +69,7 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [obj]);
         </tbody>
 </table>
 
-<p>Besides the <em>Props</em> key, there must be a Key/Value pair containing the <em>Url</em> or <em>Script</em> key, that defines the data that will be contained in the content control. If the <em>Url</em> key is used, its value must be a link to a shared file. If the <em>Script</em> key is used, its value must be a script that will be executed to generate the data within the content control.</p>
+<p>Besides the <em>Props</em> key, there must be a Key/Value pair containing the <em>Url</em> or <em>Script</em> key that defines the data that that the content control will contain. If the <em>Url</em> key is used, its value must be a link to the shared file. If the <em>Script</em> key is used, its value must be a script that will be executed to generate data within the content control.</p>
 
 <div class="header-gray">Example 1</div>
 

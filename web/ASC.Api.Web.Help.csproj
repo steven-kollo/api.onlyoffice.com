@@ -265,6 +265,7 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\Editor\alfresco-create.png" />
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
     <Content Include="Content\img\Editor\mentionShare.png" />
@@ -405,6 +406,8 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\Nuxeo.aspx" />
+    <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\Example\Python.ascx" />
     <Content Include="Views\Editors\Liferay.aspx" />
