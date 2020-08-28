@@ -55,10 +55,10 @@
             <param name="password">password</param>
             <param name="provider">social media provider type</param>
             <param name="accessToken">provider token</param>
-            <param name="code">sms code</param>
+            <param name="code">two-factor authentication code</param>
             <returns>tokent to use in 'Authorization' header when calling API methods</returns>
         </member>
-        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean,System.Boolean,System.String)">
             <summary>
             Request of invitation by email on personal.onlyoffice.com
             </summary>
@@ -66,6 +66,7 @@
             <param name="lang">Culture</param>
             <param name="spam">User consent to subscribe to the ONLYOFFICE newsletter</param>
             <param name="analytics">Track analytics</param>
+            <param name="recaptchaResponse">recaptcha token</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String)">
@@ -81,6 +82,11 @@
         <member name="P:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.Name">
             <summary>
             Entry point name
+            </summary>
+        </member>
+        <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesData.SsoUrl">
+            <summary>
+            if empty sso is disabled
             </summary>
         </member>
         <member name="T:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint">

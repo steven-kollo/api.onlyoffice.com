@@ -380,7 +380,9 @@
             <returns>Login url</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CloseWelcomePopup">
-            <visible>false</visible>
+            <summary>
+            
+            </summary>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveColorTheme(System.String)">
             <visible>false</visible>

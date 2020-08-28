@@ -59,14 +59,8 @@
 
 <pre>
 {
-    "changesUrl": "https://example.com/url-to-changes.zip",
-    "key": "Khirz6zTPdfd7",
-    "previous": {
-        "key": "af86C7e71Ca8",
-        "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
-    },
-    "url": "https://example.com/url-to-example-document.docx",
-    "version": 2
+    "fileType": "png",
+    "url": "https://example.com/url-to-example-image.png"
 }
 </pre>
 <p>
