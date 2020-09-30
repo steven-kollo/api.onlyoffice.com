@@ -85,8 +85,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "Liferay",
                 "Methods",
                 "Nextcloud",
+                "Nuxeo",
                 "Open",
                 "OwnCloud",
+                "Plone",
                 "Plugins",
                 "Save",
                 "Security",
@@ -290,12 +292,22 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Nuxeo()
+        {
+            return View();
+        }
+
         public ActionResult Open()
         {
             return View();
         }
 
         public ActionResult OwnCloud()
+        {
+            return View();
+        }
+
+        public ActionResult Plone()
         {
             return View();
         }

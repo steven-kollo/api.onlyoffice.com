@@ -7,7 +7,8 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This method allows to add an empty content control to the document.</p>
+<p class="dscr">Defines the method that allows adding an empty content control to 
+the document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -26,10 +27,10 @@ window.Asc.plugin.executeMethod("AddContentControl", [wrap, obj]);
     "Tag" : "{tag}"
 }
 </pre>
-<p>The <em>obj</em> object has the values that can be the following:</p>
+<p>The <em>obj</em> object can have the following values:</p>
 <ul>
-    <li>"Id" (e.g. <em>{"Id": 2}</em> ) is a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in your code.</li>
-    <li>"Tag" ( e.g. <em>{"Tag": "String"}</em> ) is a tag assigned to the content control. One and the same tag can be assigned to several content controls so that you can make reference to them in your code.</li>
+    <li>"Id" (e.g. <em>{"Id": 2}</em> ) is a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.</li>
+    <li>"Tag" ( e.g. <em>{"Tag": "String"}</em> ) is a tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.</li>
     <li>"Lock" (e.g. <em>{"Lock": 0}</em> ) is a value that defines if it is possible to delete and/or edit the content control or not. The values can be the following:</li>
 </ul>
 <table class="table">

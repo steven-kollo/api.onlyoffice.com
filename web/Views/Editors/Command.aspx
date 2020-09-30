@@ -45,7 +45,7 @@
                     <ul>
                         <li><b>drop</b> - disconnect the users with the identifiers present in the <em>users</em> parameter from the <b>document editing service</b> (these users will be able to view the document, but will not be allowed to make changes to it);</li>
                         <li><b>forcesave</b> - force saving the document being edited without closing it (the document editing might be continued after this command, so this will not be the final saved document version);</li>
-                        <li><b>info</b> - receive a document status;</li>
+                        <li><b>info</b> - receive a document status and the list of the identifiers of the users who opened the document for editing;</li>
                         <li><b>meta</b> - update the meta information of the document for all collaborative editors;</li>
                         <li><b>version</b> - receive the current version number of Document Server.</li>
                     </ul>

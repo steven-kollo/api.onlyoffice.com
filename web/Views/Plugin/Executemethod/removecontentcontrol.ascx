@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This method allows to remove currently selected content control, but leave all its contents.</p>
+<p class="dscr">Defines the method that allows removing the currently selected content control retaining all its contents.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>

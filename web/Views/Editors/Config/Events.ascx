@@ -179,6 +179,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.
             To set the bookmark link you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
             The bookmark data is received in the <em>data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
+            If the method is not declared the <em>Get Link</em> button will not be displayed.
         </p>
         <img alt="onMakeActionLink" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>"/>
         <div class="header-gray">Example</div>
@@ -254,6 +255,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onRequestCompareFile" class="copy-link">onRequestCompareFile</b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
             To select a document for comparing you must call the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.
+            If the method is not declared the <em>Document from Storage</em> button will not be displayed.
         </p>
         <img alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
         <div class="header-gray">Example</div>
@@ -332,6 +334,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onRequestHistory" class="copy-link">onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button.
             To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+            If the method and the <a href="#onRequestHistoryData">onRequestHistoryData</a> method is not declared the <em>Version History</em> button will not be displayed.
         </p>
         <img alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
         <div class="header-gray">Example</div>
@@ -404,6 +407,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history.
             To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
             The document version number is sent in the <em>data</em> parameter.
+            If the method and the <a href="#onRequestHistory">onRequestHistory</a> method is not declared the <em>Version History</em> button will not be displayed.
         </p>
         <img alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
         <div class="header-gray">Example</div>
@@ -439,6 +443,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button.
             The type of image insertion is specified in parameter <em>data.c</em>.
             To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method with the specified command.
+            If the method is not declared the <em>Image from Storage</em> button will not be displayed.
         </p>
         <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
         <div class="header-gray">Example</div>
@@ -467,6 +472,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
             To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
+            If the method is not declared the <em>Mail merge</em> button will not be displayed.
         </p>
         <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
         <div class="header-gray">Example</div>
@@ -492,10 +498,34 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
+            <b id="onRequestRename" class="copy-link">onRequestRename</b> - the function called when the user is trying to rename the file by clicking the <em>Rename...</em> button.
+        </p>
+        <div class="note">Until version 6.0 the <em>Rename...</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> is set to <b>true</b>.</div>
+        <img alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestRename = function(event) {
+    var title = event.data;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestRename": onRequestRename,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
             <b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.
             When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again.
             The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
-            Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">the history object</a>.
+            Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">history object</a>.
+            If the method is not declared the <em>Restore</em> button will not be displayed.
         </p>
         <div class="note">
             The <em>Restore</em> button is displayed for the previous document versions only and hidden for the current one.
@@ -553,6 +583,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save Copy as...</em> button.
             The title of the document and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
+            If the method is not declared the <em>Save Copy as...</em> button will not be displayed.
         </p>
         <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
         <div class="header-gray">Example</div>
@@ -607,6 +638,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p>
             <b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - the function called when the user is trying to manage document access rights by clicking <em>Change access rights</em> button.
             When the access rights is changed, you must call the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method to update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
+            If the method is not declared the <em>Change access rights</em> button will not be displayed.
         </p>
         <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
         <div class="header-gray">Example</div>

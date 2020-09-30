@@ -145,6 +145,16 @@
                 <div class="note">In case the document is edited by a user with the full access rights, the filters applied by such a user will be visible to all other users despite their local settings.</div>
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="rename" class="copy-link">rename</td>
+            <td>
+                Allows to display the <em>Rename...</em> button when using the <a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a> event.
+                The default value is <b>false</b>.
+                Deprecated since version 6.0, please add the <a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a> field instead.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
         <tr>
             <td id="review" class="copy-link">review</td>
             <td>
@@ -182,6 +192,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "modifyContentControl": true,
             "modifyFilter": true,
             "print": true,
+            "rename": true,
             "review": true
         },
         ...

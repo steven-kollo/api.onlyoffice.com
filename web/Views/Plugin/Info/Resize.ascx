@@ -8,7 +8,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Checks if the OLE object size has been changed.</p>
+<p class="dscr">Defines the method that checks if the size of the OLE object has been changed.</p>
 
 <p>In case <em>window.Asc.plugin.info.resize === true</em> the object will be redrawn.</p>
 

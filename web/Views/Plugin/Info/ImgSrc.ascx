@@ -8,7 +8,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">The link to the image (its visual representation) stored in the OLE object and used by the plugin.</p>
+<p class="dscr">Defines the link to the image (its visual representation) stored in the OLE object and used by the plugin.</p>
 
 <div class="header-gray">Returns</div>
 
