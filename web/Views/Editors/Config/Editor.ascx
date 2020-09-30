@@ -129,7 +129,8 @@
                         <b>example</b>: "John";
                     </li>
                     <li>
-                        <b>id</b> - the identification of the user,
+                        <b>id</b> - the identification of the user.
+                        The length is limited to 128 symbols,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -145,6 +146,7 @@
                     </li>
                     <li>
                         <b>name</b> - the full name of the user.
+                        The length is limited to 128 symbols.
                         Used since version 4.2,
                         <br />
                         <b>type</b>: string,
