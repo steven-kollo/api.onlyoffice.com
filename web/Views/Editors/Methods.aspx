@@ -287,6 +287,7 @@ docEditor.refreshHistory({
                 <b id="setActionLink" class="copy-link">setActionLink</b> - set the link to the document which contains a bookmark.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.
                 The integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.
+                The link is created by the software integrators who use ONLYOFFICE Document Server in their <b>document manager</b>.
             </p>
             <pre>
 docEditor.setActionLink(link);
