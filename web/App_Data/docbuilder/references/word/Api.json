@@ -1,5 +1,22 @@
 {
   "methods": {
+    "GetDocument": {
+      "memberof": "Api",
+      "name": "GetDocument",
+      "description": "<p>Get the main document</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocument"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "CreateParagraph": {
       "memberof": "Api",
       "name": "CreateParagraph",
