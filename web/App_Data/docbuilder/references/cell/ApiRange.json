@@ -345,7 +345,7 @@
       "inherits": null,
       "params": [
         {
-          "type": "'center' | 'bottom' | 'top'",
+          "type": "'center' | 'bottom' | 'top' | 'distributed' | 'justify'",
           "name": "value",
           "description": "<p>The parameters will define the vertical alignment that will be applied to the cell contents.</p>",
           "optional": false

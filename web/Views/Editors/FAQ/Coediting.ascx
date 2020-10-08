@@ -22,7 +22,7 @@
     "c": "info",
     "key": "Khirz6zTPdfd7"
 }</pre>
-        <p>In case the document is being edited, for instance, by two users, the <b>document editing service</b> will respond with the following information:</p>
+        <p>In case the document is being edited, for instance, by two users, the <b>document editing service</b> will inform the <b>document storage service</b> using the <a href="<%= Url.Action("callback") %>">callback handler</a> with the following information:</p>
         <pre>{
     "key": "Khirz6zTPdfd7",
     "status": 1,

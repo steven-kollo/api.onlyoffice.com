@@ -26,10 +26,11 @@
             </div>
         </li>
 
+        <li>
+            <p>Select the programming language and download the code for the sample of online editors integration into your web site:
         <% if (Model != null && Model.Count > 0)
            { %>
-        <li>
-            <p>Select the programming language and download the code for the sample of online editors integration into your web site:</p>
+            </p>
             <ul class="list-buttons">
                 <% foreach (var example in Model)
                    { %>
@@ -40,8 +41,12 @@
                 </li>
                 <% } %>
             </ul>
-        </li>
+            <p>
+                or find source code:
         <% } %>
+                <a href="https://github.com/ONLYOFFICE/document-server-integration" target="_blank">integration example</a>.
+            </p>
+        </li>
 
         <li><a href="<%= Url.Action("advanced") %>">Edit the configuration files</a> in the sample changing the default path for the one to the editors installed at step 1 and other advanced parameters available for editor configuration.</li>
 

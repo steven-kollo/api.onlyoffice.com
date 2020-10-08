@@ -40,14 +40,17 @@
                 Defines the unique document identifier used for document recognition by the service.
                 In case the known key is sent the document will be taken from the cache.
                 Every time the document is edited and saved, the key must be generated anew.
-                The document url can be used as the <b>key</b> but without the special characters and the length is limited to 20 symbols.
+                The document url can be used as the <b>key</b> but without the special characters and the length is limited to 128 symbols.
             </td>
             <td>string</td>
             <td>"Khirz6zTPdfd7"</td>
         </tr>
         <tr class="tablerow">
             <td id="title" class="copy-link">title<span class="required">*</span></td>
-            <td>Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded.</td>
+            <td>
+                Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded.
+                The length is limited to 128 symbols.
+            </td>
             <td>string</td>
             <td>"Example Document Title.docx"</td>
         </tr>
