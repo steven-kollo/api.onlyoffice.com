@@ -307,6 +307,26 @@
       "returns": [],
       "see": null,
       "inherits": null
+    },
+    "GetMailMergeData": {
+      "memberof": "Api",
+      "name": "GetMailMergeData",
+      "description": "<p>Get mail merge data.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "Array.<Array.<string>>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nSheet",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",

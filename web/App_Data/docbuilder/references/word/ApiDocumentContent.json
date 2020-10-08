@@ -60,7 +60,7 @@
     "AddElement": {
       "memberof": "ApiDocumentContent",
       "name": "AddElement",
-      "description": "<p>Add paragraph or table using its position in the document.</p>",
+      "description": "<p>Add a paragraph or a table or a blockLvl content control using its position in the document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -143,6 +143,37 @@
           "type": "number",
           "name": "nPos",
           "description": "<p>The element number (position) in the document or inside other element.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetRange": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetRange",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "Start",
+          "description": "<p>start character in current element</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "End",
+          "description": "<p>end character in current element</p>",
           "optional": false
         }
       ]
