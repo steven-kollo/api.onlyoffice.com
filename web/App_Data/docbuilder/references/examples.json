@@ -128,6 +128,10 @@
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oDrawing;\noParagraph = oDocument.GetElement(0);\noDrawing = Api.CreateImage(\"https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png\", 60 * 36000, 35 * 36000);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateImage.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882168&doc=MlYvQU9kVjdOdjRGWVVUT2FrSFhRd0xhY3pNMVFuRDdyVCtXbHlYK0I5WT0_IjQ4ODIxNjgi0&action=embedded"
 		},
+		"Api.createinlinelvlsdt": {
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oInlineLvlSdt = Api.CreateInlineLvlSdt();\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\nvar oRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control.\");\noInlineLvlSdt.AddElement(oRun, 0);\nbuilder.SaveFile(\"docx\", \"CreateInlineLvlSdt.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=5547652&doc=Q0ZmQVlCSVc2M0E3OWY0V2Jyc3ZlYjZNbVlKNit4Q1U1NFdLZ1hqUWFTbz0_IjU1NDc2NTIi0&action=embedded"
+		},
 		"Api.createlineargradientfill": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oGs1, oGs2, oFill, oStroke, oDrawing, oParagraph;\noParagraph = oDocument.GetElement(0);\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateLinearGradientFill.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882212&doc=MWR4dTM3amp0d1Q2RjVUYlJFYTdYZk5WSFRLTzdydW8zL1BMVEY2a0VBbz0_IjQ4ODIyMTIi0&action=embedded"
@@ -135,6 +139,10 @@
 		"Api.createnofill": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oGs1, oGs2, oFill, oStroke, oDrawing, oParagraph;\noParagraph = oDocument.GetElement(0);\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateNoFill.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882212&doc=MWR4dTM3amp0d1Q2RjVUYlJFYTdYZk5WSFRLTzdydW8zL1BMVEY2a0VBbz0_IjQ4ODIyMTIi0&action=embedded"
+		},
+		"Api.createnumbering": {
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph;\nvar oNumbering = oDocument.CreateNumbering(\"bullet\");\nvar oNumLvl;\nfor (var nLvl = 0; nLvl < 2; ++nLvl) {\n  oNumLvl = oNumbering.GetLevel(nLvl);\n  oParagraph = Api.CreateParagraph();\n  oParagraph.AddText(\"This is an example of the bulleted paragraph № \" + (nLvl + 1));\n  oParagraph.SetNumbering(oNumLvl);\n  oDocument.Push(oParagraph);\n}\nbuilder.SaveFile(\"docx\", \"CreateNumbering.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790238&doc=MWtTdHhQdGpuNDJzcE1OSXFsUDlnZkZLaWRWOXk2Mnc4ZnI0ZXFBL2RTdz0_IjY3OTAyMzgi0&action=embedded"
 		},
 		"Api.createparagraph": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oGs1, oGs2, oFill, oStroke, oDrawing, oParagraph;\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a new paragraph\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"CreateParagraph.docx\");\nbuilder.CloseFile();",
@@ -184,6 +192,10 @@
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph;\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a new paragraph\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetDocument.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882310&doc=NUdkSjVKQkU0TXhOb2JIM08vejhuOG8rR1Q4WW9QcUZkdUthMDZNcjFGUT0_IjQ4ODIzMTAi0&action=embedded"
 		},
+		"Api.save": {
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This sample text is saved to the document.\");\nApi.Save();\nbuilder.SaveFile(\"docx\", \"Save.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790240&doc=VkNrSVBrU250T05VRDNTQ1p1S0h0Smxoa1dEa2pidkZ2QjM2eXY2NnkxWT0_IjY3OTAyNDAi0&action=embedded"
+		  },
 		"ApiChart.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oDrawing;\noParagraph = oDocument.GetElement(0);\noDrawing = Api.CreateChart(\"bar3D\", [\n  [200, 240, 280],\n  [250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noDrawing.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noDrawing.SetHorAxisTitle(\"Year\", 11);\noDrawing.SetLegendPos(\"bottom\");\noDrawing.SetShowDataLabels(false, false, true, false);\noDrawing.SetTitle(\"Financial Overview\", 13);\noParagraph.AddDrawing(oDrawing);\nvar oClassType = oDrawing.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896208&doc=UHgwb3g2dVg2V2YvMWdISkRyZm5Kc1c4SDVSbGJyUFVJMitlU3RvaFlmMD0_IjQ4OTYyMDgi0&action=embedded"
