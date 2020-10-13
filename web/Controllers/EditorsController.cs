@@ -76,6 +76,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/General",
                 "FAQ/Integrating",
                 "FAQ/ManagingVersions",
+                "FAQ/Renaming",
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",

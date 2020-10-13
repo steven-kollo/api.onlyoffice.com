@@ -409,6 +409,7 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\FAQ\Renaming.ascx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />

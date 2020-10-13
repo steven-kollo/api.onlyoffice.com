@@ -204,6 +204,9 @@
             <li>
                 <a href="<%= Url.Action("faq/saving") %>">Saving</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("faq/renaming") %>">Renaming</a>
+            </li>
         </ul>
     </li>
     <li>
