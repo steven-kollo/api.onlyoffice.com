@@ -90,6 +90,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "Rename",
                 "Save",
                 "Security",
                 "SharePoint",
@@ -313,6 +314,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult Rename()
         {
             return View();
         }

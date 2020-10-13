@@ -84,6 +84,9 @@
                 <a href="<%= Url.Action("history") %>">Document history</a>
             </li>
             <li>
+                <a href="<%= Url.Action("rename") %>">Renaming file</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("security") %>">Security</a>
             </li>
         </ul>
