@@ -367,7 +367,7 @@
 <dl class="faq_block" id="sharing_9">
     <dt>How to view and change sharing settings for a certain document?</dt>
     <dd>
-        <p>The sharing settings are stored at the <b>document storage service</b> and must be defined by the integrators themselves. Document Server can display these settings using the <em>document.info.sharingSettings</em> parameter the information from which will be displayed in the document <b>File</b> -> <b>Access rights...</b> window.</p>
+        <p>The sharing settings are stored at the <b>document storage service</b> and must be defined by the software integrators themselves. Document Server can display these settings using the <em>document.info.sharingSettings</em> parameter the information from which will be displayed in the document <b>File</b> -> <b>Access rights...</b> window.</p>
         <p>This parameter is an array of objects representing a list of user names (<em>document.info.sharingSettings.user</em>) with their access rights for the current document (<em>document.info.sharingSettings.permissions</em>).</p>
         <p>The <em>document.info.sharingSettings.user</em> is a string parameter, which can display any user name passed from the <b>document storage service</b> to the Document Server.</p>
         <p>The <em>document.info.sharingSettings.permissions</em> is also a string parameter, which displays the name of the access rights corresponding to the set of rules defining the user access to the current document.</p>
