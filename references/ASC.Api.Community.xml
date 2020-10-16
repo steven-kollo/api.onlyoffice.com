@@ -9,6 +9,11 @@
             Provides access to community data api
             </summary>
         </member>
+        <member name="P:ASC.Api.Community.CommunityApi.Name">
+            <summary>
+             Starting entry point name
+            </summary>
+        </member>
         <member name="M:ASC.Api.Community.CommunityApi.#ctor(ASC.Api.Impl.ApiContext)">
             <summary>
              Constructor
@@ -976,11 +981,6 @@
             <param name="content">Comment content</param>
             <returns></returns>
             <category>Wiki</category>
-        </member>
-        <member name="P:ASC.Api.Community.CommunityApi.Name">
-            <summary>
-             Starting entry point name
-            </summary>
         </member>
     </members>
 </doc>

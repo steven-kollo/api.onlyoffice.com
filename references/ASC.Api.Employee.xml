@@ -122,7 +122,7 @@
                User list
             </returns>
         </member>
-        <member name="M:ASC.Api.Employee.EmployeeApi.AddMember(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String)">
+        <member name="M:ASC.Api.Employee.EmployeeApi.AddMember(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String,System.String)">
             <summary>
             Adds a new portal user with the first and last name, email address and several optional parameters specified in the request
             </summary>
@@ -143,6 +143,7 @@
             <param name="contacts">List of contacts</param>
             <param name="files">Avatar photo url</param>
             <param name="password" optional="true">User Password</param>
+            <param name="passwordHash" visible="false"></param>
             <returns>Newly created user</returns>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.AddMemberAsActivated(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String)">

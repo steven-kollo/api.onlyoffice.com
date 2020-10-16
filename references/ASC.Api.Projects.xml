@@ -9,6 +9,11 @@
             Projects access
             </summary>
         </member>
+        <member name="P:ASC.Api.Projects.ProjectApi.Name">
+            <summary>
+            Api name entry
+            </summary>
+        </member>
         <member name="M:ASC.Api.Projects.ProjectApi.#ctor(ASC.Api.Impl.ApiContext,ASC.Api.Documents.DocumentsApi)">
             <summary>
             Constructor
@@ -1766,11 +1771,6 @@
             <param name="timeids">IDs of time spents</param>
             <returns></returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-        </member>
-        <member name="P:ASC.Api.Projects.ProjectApi.Name">
-            <summary>
-            Api name entry
-            </summary>
         </member>
     </members>
 </doc>

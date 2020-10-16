@@ -67,16 +67,16 @@
         <member name="M:ASC.Api.Mail.MailApi.GetMailServerInfo">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ConnectMailServer(System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.ConnectMailServer(System.String,System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.SaveMailServerInfo(System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.SaveMailServerInfo(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetCommonSettings">
@@ -227,6 +227,21 @@
             <param name="toDate">End date of autoreply sending.</param>
             <param name="subject">New autoreply subject.</param>
             <param name="html">New autoreply value.</param>
+        </member>
+        <member name="P:ASC.Api.Mail.MailApi.Name">
+            <summary>
+             Api name entry
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteMaxCountPerSystem">
+            <summary>
+            Limit result per Contact System
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteTimeout">
+            <summary>
+            Timeout in milliseconds
+            </summary>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.#ctor(ASC.Api.Impl.ApiContext)">
             <summary>
@@ -1155,21 +1170,6 @@
             <short>Remove tag from messages</short> 
             <category>Tags</category>
             <exception cref="T:System.ArgumentException">Exception happens when parameters are invalid. Text description contains parameter name and text description.</exception>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.Name">
-            <summary>
-             Api name entry
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteMaxCountPerSystem">
-            <summary>
-            Limit result per Contact System
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteTimeout">
-            <summary>
-            Timeout in milliseconds
-            </summary>
         </member>
     </members>
 </doc>
