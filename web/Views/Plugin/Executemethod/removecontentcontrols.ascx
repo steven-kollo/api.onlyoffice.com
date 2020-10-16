@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">This method allows to remove several content controls.</p>
+<p class="dscr">Defines the method that allows removing several content controls.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>

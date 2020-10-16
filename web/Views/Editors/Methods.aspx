@@ -83,6 +83,7 @@ docEditor.downloadAs();
             </p>
             <pre>
 docEditor.insertImage({
+    "c": "add",
     "fileType": "png",
     "url": "https://example.com/url-to-example-image.png"
 });
@@ -108,10 +109,20 @@ docEditor.insertImage({
                 </thead>
                 <tbody>
                     <tr class="tablerow">
+                        <td>c</td>
+                        <td>
+                            Defines the type of image insertion from event.
+                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermak</em>, <em>slide</em>.
+                            The default value is "<em>add</em>".
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>fileType</td>
                         <td>
                             Defines the type of image for insert into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -136,6 +147,35 @@ docEditor.insertImage({
             <p>
                 <b id="refreshHistory" class="copy-link">refreshHistory</b> - show the document version history.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events.
+            </p>
+            <pre>
+docEditor.refreshHistory({
+    "currentVersion": 2,
+    "history": [
+        {
+            "created": "2010-07-06 10:13 AM",
+            "key": "af86C7e71Ca8",
+            "user": {
+                "id": "F89d8069ba2b",
+                "name": "Kate Cage"
+            },
+            "version": 1
+        },
+        {
+            "created": "2010-07-07 3:46 PM",
+            "key": "Khirz6zTPdfd7",
+            "user": {
+                "id": "78e1e841",
+                "name": "John Smith"
+            },
+            "version": 2
+        },
+        ...
+    ],
+});
+</pre>
+            <p>
+                If after editing and saving the document the <em>histoy</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
             </p>
             <pre>
 docEditor.refreshHistory({
@@ -257,7 +297,8 @@ docEditor.refreshHistory({
             <p>
                 <b id="setActionLink" class="copy-link">setActionLink</b> - set the link to the document which contains a bookmark.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.
-                The integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.
+                The software integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.
+                The link is created by the software integrators who use ONLYOFFICE Document Server in their <b>document manager</b>.
             </p>
             <pre>
 docEditor.setActionLink(link);
@@ -497,7 +538,7 @@ docEditor.setRevisedFile({
                 <tbody>
                     <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines the type of image for insert into the file.</td>
+                        <td>Defines the type of document for comparing.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -509,7 +550,7 @@ docEditor.setRevisedFile({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source image is stored.</td>
+                        <td>Defines the absolute URL where the source document is stored.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>

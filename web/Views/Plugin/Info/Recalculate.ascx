@@ -8,7 +8,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Force the document to recalculate its content data.</p>
+<p class="dscr">Defines the method that makes the document to recalculate its content data.</p>
 
 <p>Force the document to recalculate its content data. If the document content is changed and recalculation is needed, <em>isRecalculate</em> must be set to <em>true</em>. It is necessary because the recalculation process is asynchronous. Moreover, some other data might need to be uploaded (e.g. a font or something else).</p>
 

@@ -51,6 +51,37 @@
         }
       ]
     },
+    "GetCell": {
+      "memberof": "ApiTable",
+      "name": "GetCell",
+      "description": "<p>Get the cell by its position.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nRow",
+          "description": "<p>The row position in the current table.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "Cell",
+          "description": "<p>The cell position in the current table.</p>",
+          "optional": false
+        }
+      ]
+    },
     "MergeCells": {
       "memberof": "ApiTable",
       "name": "MergeCells",
@@ -148,6 +179,45 @@
         }
       ]
     },
+    "Split": {
+      "memberof": "ApiTable",
+      "name": "Split",
+      "description": "<p>Split the cell into a given number of rows and columns.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTableCell",
+          "name": "oCell",
+          "description": "<p>The cell which be split.</p>",
+          "optional": true
+        },
+        {
+          "type": "Number",
+          "name": "nRow",
+          "description": "<p>count of rows which the cell will be split.</p>",
+          "optional": true,
+          "defaultValue": 1
+        },
+        {
+          "type": "Number",
+          "name": "nCol",
+          "description": "<p>count of columns which the cell will be split.</p>",
+          "optional": true,
+          "defaultValue": 1
+        }
+      ]
+    },
     "AddRow": {
       "memberof": "ApiTable",
       "name": "AddRow",
@@ -180,6 +250,44 @@
         }
       ]
     },
+    "AddRows": {
+      "memberof": "ApiTable",
+      "name": "AddRows",
+      "description": "<p>Add a new rows to the current table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTableCell",
+          "name": "oCell",
+          "description": "<p>The cell after which the new rows will be added. If not specified the new rows will\nbe added at the end of the table.</p>",
+          "optional": true
+        },
+        {
+          "type": "Number",
+          "name": "nCount",
+          "description": "<p>count of rows to be added.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isBefore",
+          "description": "<p>Add a new rows before or after the specified cell. If no cell is specified then\nthis parameter will be ignored.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
     "AddColumn": {
       "memberof": "ApiTable",
       "name": "AddColumn",
@@ -205,6 +313,69 @@
           "description": "<p>Add a new column before or after the specified cell. If no cell is specified\nthen this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
+        }
+      ]
+    },
+    "AddColumns": {
+      "memberof": "ApiTable",
+      "name": "AddColumns",
+      "description": "<p>Add a new columns to the current table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTableCell",
+          "name": "oCell",
+          "description": "<p>The cell after which the new columns will be added. If not specified the new columns will be added at the end of the table.</p>",
+          "optional": true
+        },
+        {
+          "type": "Number",
+          "name": "nCount",
+          "description": "<p>count of columns to be added</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isBefore",
+          "description": "<p>Add a new columns before or after the specified cell. If no cell is specified\nthen this parameter will be ignored.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddElement": {
+      "memberof": "ApiTable",
+      "name": "AddElement",
+      "description": "<p>Add a paragraph or a table or a blockLvl content control using its position in the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>The position where the current element will be added.</p>",
+          "optional": false
+        },
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The document element which will be added at the current position.</p>",
+          "optional": false
         }
       ]
     },
@@ -276,6 +447,385 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "Select": {
+      "memberof": "ApiTable",
+      "name": "Select",
+      "description": "<p>Select a table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetRange": {
+      "memberof": "ApiTable",
+      "name": "GetRange",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the specified table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "Start",
+          "description": "<p>start character in current element</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "End",
+          "description": "<p>end character in current element</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetHAlign": {
+      "memberof": "ApiTable",
+      "name": "SetHAlign",
+      "description": "<p>Sets horizontal alignment for a table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "String",
+          "name": "sType",
+          "description": "<p>may be &quot;left&quot; or &quot;center&quot; or &quot;right&quot;</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetVAlign": {
+      "memberof": "ApiTable",
+      "name": "SetVAlign",
+      "description": "<p>Sets vertical alignment for a table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "String",
+          "name": "sType",
+          "description": "<p>may be &quot;top&quot; or &quot;center&quot; or &quot;bottom&quot;</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetPaddings": {
+      "memberof": "ApiTable",
+      "name": "SetPaddings",
+      "description": "<p>Sets table paddings.\nIf table is inline -&gt; only left padding applies.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "nLeft",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "nTop",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "nRight",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "nBottom",
+          "optional": false
+        }
+      ]
+    },
+    "SetWrappingStyle": {
+      "memberof": "ApiTable",
+      "name": "SetWrappingStyle",
+      "description": "<p>Set table wrapping style</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "isFlow",
+          "optional": false
+        }
+      ]
+    },
+    "GetParentContentControl": {
+      "memberof": "ApiTable",
+      "name": "GetParentContentControl",
+      "description": "<p>Gets the content control that contains the table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiBlockLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "InsertInContentControl": {
+      "memberof": "ApiTable",
+      "name": "InsertInContentControl",
+      "description": "<p>Wraps the table object with a content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "ApiBlockLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nType",
+          "description": "<p>if nType === 1 -&gt; returns ApiBlockLvlSdt, else return ApiTable</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetParentTable": {
+      "memberof": "ApiTable",
+      "name": "GetParentTable",
+      "description": "<p>Gets the table that contains the table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetTables": {
+      "memberof": "ApiTable",
+      "name": "GetTables",
+      "description": "<p>Gets the tables that contains the table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetNext": {
+      "memberof": "ApiTable",
+      "name": "GetNext",
+      "description": "<p>Gets the next table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevious": {
+      "memberof": "ApiTable",
+      "name": "GetPrevious",
+      "description": "<p>Gets the previous table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTableCell": {
+      "memberof": "ApiTable",
+      "name": "GetParentTableCell",
+      "description": "<p>Gets the table cell that contains the table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Delete": {
+      "memberof": "ApiTable",
+      "name": "Delete",
+      "description": "<p>Deletes the table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Clear": {
+      "memberof": "ApiTable",
+      "name": "Clear",
+      "description": "<p>Clears the content of the table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Search": {
+      "memberof": "ApiTable",
+      "name": "Search",
+      "description": "<p>Searches for the scope of a table object. The search results are a collection of ApiRange objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "isMatchCase",
+          "description": "<p>is case sensitive.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetTextPr": {
+      "memberof": "ApiTable",
+      "name": "SetTextPr",
+      "description": "<p>Applies text settings to the entire contents of the table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "optional": false
+        }
+      ]
     },
     "SetStyleColBandSize": {
       "memberof": "ApiTable",

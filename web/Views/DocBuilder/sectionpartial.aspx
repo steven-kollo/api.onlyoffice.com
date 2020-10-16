@@ -36,7 +36,7 @@
         <tbody>
             <% foreach(var p in section.Params) { %>
                 <tr class="tablerow">
-                    <td><em><%= p.Name %>></em></td>
+                    <td><em><%= p.Name %></em></td>
                     <td><%= DocBuilderDocumentation.ParamTypeToHtml(p) %></td>
                     <td><%= p.Description %></td>
                 </tr>

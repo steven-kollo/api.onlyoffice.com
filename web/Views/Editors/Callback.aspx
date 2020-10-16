@@ -84,7 +84,7 @@
                 <td id="history" class="copy-link">history</td>
                 <td>
                     Defines the object with the document changes history.
-                    The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>serverVersion</em> and <em>changes</em>, which must be sent as properties <em>serverVersion</em> and <em>changes</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+                    The object is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only. It contains the object <em>changes</em> and <em>serverVersion</em>, which must be sent as properties <em>changes</em> and <em>serverVersion</em> of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
                 </td>
                 <td>object</td>
                 <td>optional</td>
@@ -292,6 +292,7 @@ public class IndexServlet extends HttpServlet {
     <div id="nodejs" class="header-gray copy-link">Node.js document save example</div>
     <pre>
 var fs = require("fs");
+var syncRequest = require("sync-request");
 
 app.post("/track", function (req, res) {
 

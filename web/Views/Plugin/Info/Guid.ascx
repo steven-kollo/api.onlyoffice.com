@@ -8,7 +8,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">The OLE object GUID in the current document.</p>
+<p class="dscr">Defines GUID of the OLE object in the current document.</p>
 
 <div class="header-gray">Returns</div>
 

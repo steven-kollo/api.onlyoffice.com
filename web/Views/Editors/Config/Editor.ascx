@@ -42,6 +42,7 @@
             <td>
                 Defines the absolute URL of the document where it will be created and available after creation.
                 If not specified, there will be no creation button.
+                Instead of this field, you can use the <a href="<%= Url.Action("config/events") %>#onRequestCreateNew">onRequestCreateNew</a> event.
             </td>
             <td>string</td>
             <td>"https://example.com/url-to-create-document/"</td>
@@ -116,6 +117,41 @@
             <td>string</td>
             <td>"en-US"</td>
         </tr>
+        <tr>
+            <td id="templates" class="copy-link">templates</td>
+            <td>Defines the presence or absence of the templates in the <b>From Template</b> section for the <b>Create New...</b> menu option where the following document parameters can be set:
+                <ul>
+                    <li>
+                        <b>image</b> - the absolute URL to the image for template,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "https://example.com/exampletemplate1.png";
+                    </li>
+                    <li>
+                        <b>title</b> - the template title that will be displayed in the <b>From Template</b> section for the <b>Create New...</b> menu option,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "exampletemplate1.docx";
+                    </li>
+                    <li>
+                        <b>url</b> - the absolute URL to the document where it will be created and available after creation,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "https://example.com/url-to-create-template1".
+                    </li>
+                </ul>
+            </td>
+            <td>array of object</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/templates.png") %>" alt="" />
+            </td>
+        </tr>
         <tr class="tablerow">
             <td id="user" class="copy-link">user</td>
             <td>Defines the user currently viewing or editing the document:
@@ -129,7 +165,8 @@
                         <b>example</b>: "John";
                     </li>
                     <li>
-                        <b>id</b> - the identification of the user,
+                        <b>id</b> - the identification of the user.
+                        The length is limited to 128 symbols,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -145,6 +182,7 @@
                     </li>
                     <li>
                         <b>name</b> - the full name of the user.
+                        The length is limited to 128 symbols.
                         Used since version 4.2,
                         <br />
                         <b>type</b>: string,
@@ -183,6 +221,19 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             ...
         ],
         "region": "en-US",
+        "templates": [
+            {
+                "image": "https://example.com/exampletemplate1.png",
+                "title": "exampletemplate1.docx",
+                "url": "https://example.com/url-to-create-template1"
+            },
+            {
+                "image": "https://example.com/exampletemplate2.png",
+                "title": "exampletemplate2.docx",
+                "url": "https://example.com/url-to-create-template2"
+            },
+            ...
+        ],
         "user": {
             "id": "78e1e841",
             "name": "John Smith"

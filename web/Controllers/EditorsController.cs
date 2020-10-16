@@ -76,6 +76,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/General",
                 "FAQ/Integrating",
                 "FAQ/ManagingVersions",
+                "FAQ/Renaming",
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
@@ -85,9 +86,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "Liferay",
                 "Methods",
                 "Nextcloud",
+                "Nuxeo",
                 "Open",
                 "OwnCloud",
+                "Plone",
                 "Plugins",
+                "Rename",
                 "Save",
                 "Security",
                 "SharePoint",
@@ -290,6 +294,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Nuxeo()
+        {
+            return View();
+        }
+
         public ActionResult Open()
         {
             return View();
@@ -300,7 +309,17 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Plone()
+        {
+            return View();
+        }
+
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult Rename()
         {
             return View();
         }

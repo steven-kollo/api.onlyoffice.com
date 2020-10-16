@@ -52,7 +52,13 @@
                 <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("nuxeo") %>">Nuxeo integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("owncloud") %>">ownCloud integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("plone") %>">Plone integration</a>
             </li>
             <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
@@ -76,6 +82,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("history") %>">Document history</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("rename") %>">Renaming file</a>
             </li>
             <li>
                 <a href="<%= Url.Action("security") %>">Security</a>
@@ -194,6 +203,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("faq/saving") %>">Saving</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/renaming") %>">Renaming</a>
             </li>
         </ul>
     </li>

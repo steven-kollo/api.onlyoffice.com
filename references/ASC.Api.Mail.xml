@@ -67,16 +67,16 @@
         <member name="M:ASC.Api.Mail.MailApi.GetMailServerInfo">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ConnectMailServer(System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.ConnectMailServer(System.String,System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.SaveMailServerInfo(System.String,System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.SaveMailServerInfo(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String,System.String)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetCommonSettings">
@@ -151,6 +151,22 @@
             <short>Set GoNextAfterMove flag</short> 
             <category>Settings</category>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.GetEnableReplaceMessageBodyFlag">
+            <summary>
+               Returns ReplaceMessageBody flag
+            </summary>
+            <returns>boolean</returns>
+            <short>Get ReplaceMessageBody flag</short> 
+            <category>Settings</category>
+        </member>
+        <member name="M:ASC.Api.Mail.MailApi.SetEnableReplaceMessageBodyFlag(System.Boolean)">
+            <summary>
+               Set ReplaceMessageBody flag
+            </summary>
+            <param name="enabled">True or False value</param>
+            <short>Set ReplaceMessageBody flag</short> 
+            <category>Settings</category>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.ExportAttachmentsToDocuments(System.Int32,System.String)">
             <summary>
             Export all message's attachments to MyDocuments
@@ -189,6 +205,16 @@
             <returns>MailAttachment</returns>
             <category>Messages</category>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.DownloadAllAttachments(System.Int32)">
+            <summary>
+            Download all attachments from message
+            </summary>
+            <short>
+            Download all attachments from message
+            </short>
+            <param name="messageId">Id of message</param>
+            <returns>Attachment Archive</returns>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.UpdateAutoreply(System.Int32,System.Boolean,System.Boolean,System.Boolean,System.DateTime,System.DateTime,System.String,System.String)">
             <summary>
             This method needed for update or create autoreply.
@@ -201,6 +227,21 @@
             <param name="toDate">End date of autoreply sending.</param>
             <param name="subject">New autoreply subject.</param>
             <param name="html">New autoreply value.</param>
+        </member>
+        <member name="P:ASC.Api.Mail.MailApi.Name">
+            <summary>
+             Api name entry
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteMaxCountPerSystem">
+            <summary>
+            Limit result per Contact System
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteTimeout">
+            <summary>
+            Timeout in milliseconds
+            </summary>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.#ctor(ASC.Api.Impl.ApiContext)">
             <summary>
@@ -881,6 +922,16 @@
             <exception cref="T:System.ArgumentException">Exception happens when in parameters is invalid. Text description contains parameter name and text description.</exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">Exception happens when message with specified id wasn't found.</exception>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.ReassignMailMessages(System.Int32,System.String)">
+            <summary>
+               Reassigns drafts/templates to selected email.
+            </summary>
+            <param name="folder">Folder id</param>
+            <param name="email">Email to which messages will be reassigned</param>
+            <returns>none</returns>
+            <short>Reassign drafts/templates</short> 
+            <category>Messages</category>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetPrevNextMessageId(System.Int32,System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.String,System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32})">
             <summary>
             Get previous or next message id. U
@@ -971,6 +1022,9 @@
             <short>Send message</short> 
             <category>Messages</category>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.SaveMessageOld(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},System.String)">
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.SaveMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},System.String)">
             <summary>
                Saves the message with the ID specified in the request
@@ -991,6 +1045,26 @@
             <short>SaveToDraft message</short> 
             <category>Messages</category>
         </member>
+        <member name="M:ASC.Api.Mail.MailApi.SaveTemplate(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},System.String)">
+            <summary>
+               Saves the template with the ID specified in the request
+            </summary>
+            <param name="id">Template id which will be saved.</param>
+            <param name="from">From email. Format: Name&lt;name@domain&gt;</param>
+            <param name="to">List of "to" emails. Format: Name&lt;name@domain&gt; </param>
+            <param name="cc">List of "cc" emails. Format: Name&lt;name@domain&gt; </param>
+            <param name="bcc">List of "bcc" emails. Format: Name&lt;name@domain&gt; </param>
+            <param name="mimeReplyToId">Template id to which the reply answer</param>
+            <param name="importance">Importanse flag. Values: true - important, false - not important.</param>
+            <param name="subject">Template subject</param>
+            <param name="tags">List of tags id added to message</param>
+            <param name="body">Template body as html string.</param>
+            <param name="attachments">List of attachments represented as MailAttachment object</param>
+            <param name="calendarIcs">Calendar event ical-format for sending</param>
+            <returns>Saved template id</returns>
+            <short>SaveToTemplate message</short> 
+            <category>Templates</category>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.RemoveMessages(System.Collections.Generic.List{System.Int32})">
             <summary>
                Removes the selected messages
@@ -1008,13 +1082,14 @@
             <short>Get message template</short> 
             <category>Messages</category>
         </member>
-        <member name="M:ASC.Api.Mail.MailApi.AttachDocument(System.Int32,System.String,System.String)">
+        <member name="M:ASC.Api.Mail.MailApi.AttachDocument(System.Int32,System.String,System.String,System.Boolean)">
             <summary>
                Attaches Teamlab document to the specified message
             </summary>
             <param name="id"> Message id for adding attachment</param>
             <param name="fileId">Teamlab document id.</param>
             <param name="version">Teamlab document version</param>
+            <param name="needSaveToTemp">Need save to temp for templates</param>
             <returns>Attached document as MailAttachment object</returns>
             <short>Attach Teamlab document</short>
             <category>Messages</category>
@@ -1095,21 +1170,6 @@
             <short>Remove tag from messages</short> 
             <category>Tags</category>
             <exception cref="T:System.ArgumentException">Exception happens when parameters are invalid. Text description contains parameter name and text description.</exception>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.Name">
-            <summary>
-             Api name entry
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteMaxCountPerSystem">
-            <summary>
-            Limit result per Contact System
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Mail.MailApi.MailAutocompleteTimeout">
-            <summary>
-            Timeout in milliseconds
-            </summary>
         </member>
     </members>
 </doc>

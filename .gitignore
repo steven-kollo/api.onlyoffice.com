@@ -14,3 +14,4 @@ build/docbuilder_docs/jsdoc
 build/docbuilder_docs/sdkjs
 build/docbuilder_docs/tmp
 build/docbuilder_docs/out
+build/docbuilder_docs/package-lock.json

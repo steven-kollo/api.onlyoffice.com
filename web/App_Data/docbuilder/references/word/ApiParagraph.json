@@ -292,6 +292,51 @@
       "see": null,
       "inherits": null
     },
+    "Delete": {
+      "memberof": "ApiParagraph",
+      "name": "Delete",
+      "description": "<p>Delete current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetNext": {
+      "memberof": "ApiParagraph",
+      "name": "GetNext",
+      "description": "<p>Gets the next paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevious": {
+      "memberof": "ApiParagraph",
+      "name": "GetPrevious",
+      "description": "<p>Gets the Previous paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
     "Copy": {
       "memberof": "ApiParagraph",
       "name": "Copy",
@@ -405,6 +450,888 @@
           "type": "ApiInlineLvlSdt",
           "name": "oSdt",
           "description": "<p>if undefined or null, then new class ApiInlineLvlSdt will be created and added to paragraph.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddComment": {
+      "memberof": "ApiParagraph",
+      "name": "AddComment",
+      "description": "<p>Adds a comment to the paragraph.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "Comment",
+          "description": "<p>comment</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "Autor",
+          "description": "<p>autor's name (not obligatory)</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddHyperlink": {
+      "memberof": "ApiParagraph",
+      "name": "AddHyperlink",
+      "description": "<p>Add a hyperlink to a paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiHyperlink",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sLink",
+          "description": "<p>link to be add.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sScreenTipText",
+          "description": "<p>ScreenTip text</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetRange": {
+      "memberof": "ApiParagraph",
+      "name": "GetRange",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the specified paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "Start",
+          "description": "<p>start character in current element</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "End",
+          "description": "<p>end character in current element</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Push": {
+      "memberof": "ApiParagraph",
+      "name": "Push",
+      "description": "<p>Add an element to the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ParagraphContent",
+          "name": "oElement",
+          "description": "<p>The document element which will be added at the current position. Returns false if the\ntype of oElement is not supported by a paragraph.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetLastRunWithText": {
+      "memberof": "ApiParagraph",
+      "name": "GetLastRunWithText",
+      "description": "<p>Get last Run with text in the current paragraph</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRun"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetBold": {
+      "memberof": "ApiParagraph",
+      "name": "SetBold",
+      "description": "<p>Set the bold property to the text character.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isBold",
+          "description": "<p>Specifies that the contents of this paragraph are displayed bold.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetCaps": {
+      "memberof": "ApiParagraph",
+      "name": "SetCaps",
+      "description": "<p>Specify that any lowercase characters in this paragraph are formatted for display only as their capital letter character equivalents.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isCaps",
+          "description": "<p>Specifies that the contents of the current paragraph are displayed capitalized.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetColor": {
+      "memberof": "ApiParagraph",
+      "name": "SetColor",
+      "description": "<p>Set the text color for the current paragraph in the RGB format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isAuto",
+          "description": "<p>If this parameter is set to &quot;true&quot;, then r,g,b parameters will be ignored.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "SetDoubleStrikeout": {
+      "memberof": "ApiParagraph",
+      "name": "SetDoubleStrikeout",
+      "description": "<p>Specify that the contents of this paragraph is displayed with two horizontal lines through each character displayed on the line.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isDoubleStrikeout",
+          "description": "<p>Specifies that the contents of the current paragraph are displayed double struck through.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetFontFamily": {
+      "memberof": "ApiParagraph",
+      "name": "SetFontFamily",
+      "description": "<p>Set all 4 font slots with the specified font family.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sFontFamily",
+          "description": "<p>The font family or families used for the current paragraph.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetFontSize": {
+      "memberof": "ApiParagraph",
+      "name": "SetFontSize",
+      "description": "<p>Set the font size for the characters of the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "hps",
+          "name": "nSize",
+          "description": "<p>The text size value measured in half-points (1/144 of an inch).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetHighlight": {
+      "memberof": "ApiParagraph",
+      "name": "SetHighlight",
+      "description": "<p>Specify a highlighting color in the RGB format which is applied as a background for the contents of the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isNone",
+          "description": "<p>If this parameter is set to &quot;true&quot;, then r,g,b parameters will be ignored.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "SetItalic": {
+      "memberof": "ApiParagraph",
+      "name": "SetItalic",
+      "description": "<p>Set the italic property to the text character.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isItalic",
+          "description": "<p>Specifies that the contents of the current paragraph are displayed italicized.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetPosition": {
+      "memberof": "ApiParagraph",
+      "name": "SetPosition",
+      "description": "<p>Specify the amount by which text is raised or lowered for this paragraph in relation to the default\nbaseline of the surrounding non-positioned text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "hps",
+          "name": "nPosition",
+          "description": "<p>Specifies a positive (raised text) or negative (lowered text)\nmeasurement in half-points (1/144 of an inch).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetShd": {
+      "memberof": "ApiParagraph",
+      "name": "SetShd",
+      "description": "<p>Specify the shading applied to the contents of the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ShdType",
+          "name": "sType",
+          "description": "<p>The shading type applied to the contents of the current paragraph.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetSmallCaps": {
+      "memberof": "ApiParagraph",
+      "name": "SetSmallCaps",
+      "description": "<p>Specify that all small letter characters in this paragraph are formatted for display only as their capital\nletter character equivalents in a font size two points smaller than the actual font size specified for this text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isSmallCaps",
+          "description": "<p>Specifies that the contents of the current paragraph are displayed capitalized two points smaller.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetSpacing": {
+      "memberof": "ApiParagraph",
+      "name": "SetSpacing",
+      "description": "<p>Set text spacing measured in twentieths of a point.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "twips",
+          "name": "nSpacing",
+          "description": "<p>The value of the text spacing measured in twentieths of a point (1/1440 of an inch).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetStrikeout": {
+      "memberof": "ApiParagraph",
+      "name": "SetStrikeout",
+      "description": "<p>Specify that the contents of this paragraph are displayed with a single horizontal line through the center of the line.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isStrikeout",
+          "description": "<p>Specifies that the contents of the current paragraph are displayed struck through.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetUnderline": {
+      "memberof": "ApiParagraph",
+      "name": "SetUnderline",
+      "description": "<p>Specify that the contents of this paragraph are displayed along with a line appearing directly below the character\n(less than all the spacing above and below the characters on the line).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isUnderline",
+          "description": "<p>Specifies that the contents of the current paragraph are displayed underlined.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetVertAlign": {
+      "memberof": "ApiParagraph",
+      "name": "SetVertAlign",
+      "description": "<p>Specify the alignment which will be applied to the contents of this paragraph in relation to the default appearance of the paragraph text:</p>\n<ul>\n<li><b>&quot;baseline&quot;</b> - the characters in the current paragraph will be aligned by the default text baseline.</li>\n<li><b>&quot;subscript&quot;</b> - the characters in the current paragraph will be aligned below the default text baseline.</li>\n<li><b>&quot;superscript&quot;</b> - the characters in the current paragraph will be aligned above the default text baseline.</li>\n</ul>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"baseline\" | \"subscript\" | \"superscript\"",
+          "name": "sType",
+          "description": "<p>The vertical alignment type applied to the text contents.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Last": {
+      "memberof": "ApiParagraph",
+      "name": "Last",
+      "description": "<p>Get the last no empty element of the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ParagraphContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllContentControls": {
+      "memberof": "ApiParagraph",
+      "name": "GetAllContentControls",
+      "description": "<p>Gets the collection of content control objects in the Paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiInlineLvlSdt>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllDrawingObjects": {
+      "memberof": "ApiParagraph",
+      "name": "GetAllDrawingObjects",
+      "description": "<p>Gets the collection of drawing objects in the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllShapes": {
+      "memberof": "ApiParagraph",
+      "name": "GetAllShapes",
+      "description": "<p>Gets the collection of shapes objects in the Paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllImages": {
+      "memberof": "ApiParagraph",
+      "name": "GetAllImages",
+      "description": "<p>Gets the collection of image objects in the Paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiImage>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllCharts": {
+      "memberof": "ApiParagraph",
+      "name": "GetAllCharts",
+      "description": "<p>Gets the collection of chart objects in the Paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiChart>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentContentControl": {
+      "memberof": "ApiParagraph",
+      "name": "GetParentContentControl",
+      "description": "<p>Gets the content control that contains the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiBlockLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTable": {
+      "memberof": "ApiParagraph",
+      "name": "GetParentTable",
+      "description": "<p>Gets the table that contains the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTableCell": {
+      "memberof": "ApiParagraph",
+      "name": "GetParentTableCell",
+      "description": "<p>Gets the table cell that contains the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetText": {
+      "memberof": "ApiParagraph",
+      "name": "GetText",
+      "description": "<p>Gets text of the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetTextPr": {
+      "memberof": "ApiParagraph",
+      "name": "GetTextPr",
+      "description": "<p>Gets text properties of the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTextPr": {
+      "memberof": "ApiParagraph",
+      "name": "SetTextPr",
+      "description": "<p>Sets text properties of the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "optional": false
+        }
+      ]
+    },
+    "InsertInContentControl": {
+      "memberof": "ApiParagraph",
+      "name": "InsertInContentControl",
+      "description": "<p>Wraps the paragraph object with a rich text content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph",
+          "ApiBlockLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nType",
+          "description": "<p>if nType === 1 -&gt; returns ApiBlockLvlSdt</p>",
+          "optional": false
+        }
+      ]
+    },
+    "InsertParagraph": {
+      "memberof": "ApiParagraph",
+      "name": "InsertParagraph",
+      "description": "<p>Inserts a paragraph at the specified position.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string | ApiParagraph",
+          "name": "paragraph",
+          "description": "<p>text or paragraph</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sPosition",
+          "description": "<p>can be &quot;after&quot; or &quot;before&quot;</p>",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "beRNewPara",
+          "description": "<p>if &quot;true&quot; - returns new paragraph, else returns this paragraph.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Select": {
+      "memberof": "ApiParagraph",
+      "name": "Select",
+      "description": "<p>Select a paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Search": {
+      "memberof": "ApiParagraph",
+      "name": "Search",
+      "description": "<p>Searches for the scope of a paragraph object. The search results are a collection of ApiRange objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "isMatchCase",
+          "description": "<p>is case sensitive.</p>",
           "optional": false
         }
       ]
@@ -690,52 +1617,6 @@
           "type": "boolean",
           "name": "isAfterAuto",
           "description": "<p>The true value will disable the nAfter parameter.</p>",
-          "optional": true,
-          "defaultValue": false
-        }
-      ]
-    },
-    "SetShd": {
-      "memberof": "ApiParagraph",
-      "name": "SetShd",
-      "description": "<p>Specify the shading applied to the contents of the paragraph.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [],
-      "see": null,
-      "inherits": "Inherited From: {@link ApiParaPr#SetShd}",
-      "params": [
-        {
-          "type": "ShdType",
-          "name": "sType",
-          "description": "<p>The shading type which will be applied to the contents of the current paragraph.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "r",
-          "description": "<p>Red color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "g",
-          "description": "<p>Green color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "b",
-          "description": "<p>Blue color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "boolean",
-          "name": "isAuto",
-          "description": "<p>The true value will disable paragraph contents shading.</p>",
           "optional": true,
           "defaultValue": false
         }

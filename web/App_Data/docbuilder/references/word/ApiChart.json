@@ -451,6 +451,42 @@
           "optional": false
         }
       ]
+    },
+    "GetNextChart": {
+      "memberof": "ApiChart",
+      "name": "GetNextChart",
+      "description": "<p>Gets the next inline chart. Throws an error if this inline chart is the last.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiChart",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevChart": {
+      "memberof": "ApiChart",
+      "name": "GetPrevChart",
+      "description": "<p>Gets the previous inline chart. Throws an error if this inline chart is the first.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiChart",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a Chart.\r\n\t * @constructor\r\n\t *\r\n\t */",

@@ -218,6 +218,186 @@
           "optional": true
         }
       ]
+    },
+    "Push": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "Push",
+      "description": "<p>Add an element to the end of inline text content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>The position where the current element will be added.</p>",
+          "optional": false
+        },
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The document element which will be added at the current position.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddText": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "AddText",
+      "description": "<p>Adds text to the current content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "String",
+          "name": "sText",
+          "description": "<p>The text which will be add to the content control.</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "nPos",
+          "description": "<p>The specified position.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Delete": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "Delete",
+      "description": "<p>Removes content control and content. If keepContent is true, the content is not deleted.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "keepContent",
+          "optional": false
+        }
+      ]
+    },
+    "SetTextPr": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "SetTextPr",
+      "description": "<p>Applies text settings to content of content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "optional": false
+        }
+      ]
+    },
+    "GetParentContentControl": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetParentContentControl",
+      "description": "<p>Gets the content control that contains the current content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiBlockLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTable": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetParentTable",
+      "description": "<p>Gets the table that contains the content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTableCell": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetParentTableCell",
+      "description": "<p>Gets the table cell that contains the content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetRange": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetRange",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the specified content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "Start",
+          "description": "<p>start character in current element</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "End",
+          "description": "<p>end character in current element</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\r\n\t * Class represent a container for the elements of a paragraph\r\n\t * @constructor\r\n\t */",

@@ -4,21 +4,13 @@
         <name>ASC.Api.Documents</name>
     </assembly>
     <members>
-        <member name="M:ASC.Api.Documents.BlockchainApi.UpdateData(System.String,System.String)">
-            <summary>
-            
-            </summary>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.Documents.BlockchainApi.GetAccessAddresses(System.String)">
-            <summary>
-            
-            </summary>
-            <visible>false</visible>
-        </member>
         <member name="T:ASC.Api.Documents.DocumentsApi">
             <summary>
             Provides access to documents
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Documents.DocumentsApi.Name">
+            <summary>
             </summary>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.#ctor(ASC.Api.Impl.ApiContext,ASC.Web.Files.Services.WCFService.IFileStorageService)">
@@ -29,51 +21,65 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetMyFolder(System.Guid,ASC.Files.Core.FilterType)">
             <summary>
-            Returns the detailed list of files and folders located in the current user 'My Documents' section
+            Returns the detailed list of files and folders located in the current user My section
             </summary>
-            <short>
-            My folder
-            </short>
+            <short>Section My</short>
             <category>Folders</category>
             <returns>My folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetProjectsFolder(System.Guid,ASC.Files.Core.FilterType)">
             <summary>
-            Returns the detailed list of files and folders located in the current user 'Projects Documents' section
+            Returns the detailed list of files and folders located in the current user Projects section
             </summary>
-            <short>
-            Projects folder
-            </short>
+            <short>Section Projects</short>
             <category>Folders</category>
             <returns>Projects folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetCommonFolder(System.Guid,ASC.Files.Core.FilterType)">
             <summary>
-            Returns the detailed list of files and folders located in the 'Common Documents' section
+            Returns the detailed list of files and folders located in the Common section
             </summary>
-            <short>
-            Common folder
-            </short>
+            <short>Section Common</short>
             <category>Folders</category>
             <returns>Common folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetShareFolder(System.Guid,ASC.Files.Core.FilterType)">
             <summary>
-            Returns the detailed list of files and folders located in the 'Shared with Me' section
+            Returns the detailed list of files and folders located in the Shared with Me section
             </summary>
-            <short>
-            Shared folder
-            </short>
+            <short>Section Shared</short>
             <category>Folders</category>
             <returns>Shared folder contents</returns>
         </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetRecentFolder(System.Guid,ASC.Files.Core.FilterType)">
+            <summary>
+            Returns the detailed list of recent files
+            </summary>
+            <short>Section Recent</short>
+            <category>Folders</category>
+            <returns>Recent contents</returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetFavoritesFolder(System.Guid,ASC.Files.Core.FilterType)">
+            <summary>
+            Returns the detailed list of favorites files
+            </summary>
+            <short>Section Favorite</short>
+            <category>Folders</category>
+            <returns>Favorites contents</returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetTemplatesFolder(System.Guid,ASC.Files.Core.FilterType)">
+            <summary>
+            Returns the detailed list of templates files
+            </summary>
+            <short>Section Template</short>
+            <category>Folders</category>
+            <returns>Templates contents</returns>
+        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetTrashFolder(System.Guid,ASC.Files.Core.FilterType)">
             <summary>
-            Returns the detailed list of files and folders located in the 'Recycle Bin' section
+            Returns the detailed list of files and folders located in the Recycle Bin
             </summary>
-            <short>
-            Trash folder
-            </short>
+            <short>Section Trash</short>
             <category>Folders</category>
             <returns>Trash folder contents</returns>
         </member>
@@ -92,7 +98,7 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UploadFileToMy(System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
-            Uploads the file specified with single file upload or standart multipart/form-data method to 'My Documents' section
+            Uploads the file specified with single file upload or standart multipart/form-data method to My section
             </summary>
             <short>Upload to My</short>
             <category>Uploads</category>
@@ -112,7 +118,7 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UploadFileToCommon(System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
-            Uploads the file specified with single file upload or standart multipart/form-data method to 'Common Documents' section
+            Uploads the file specified with single file upload or standart multipart/form-data method to Common section
             </summary>
             <short>Upload to Common</short>
             <category>Uploads</category>
@@ -130,11 +136,11 @@
             <param name="files" visible="false">List of files when posted as multipart/form-data</param>
             <returns>Uploaded file</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.UploadFile(System.String,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Nullable{System.Boolean},System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.UploadFile(System.String,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Boolean)">
             <summary>
             Uploads the file specified with single file upload or standart multipart/form-data method to the selected folder
             </summary>
-            <short>Upload to folder</short>
+            <short>Upload file</short>
             <category>Uploads</category>
             <remarks>
             <![CDATA[
@@ -156,8 +162,9 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.InsertFileToMy(System.IO.Stream,System.String,System.Nullable{System.Boolean},System.Boolean)">
             <summary>
-            Uploads the file specified with single file upload to 'Common Documents' section
+            Uploads the file specified with single file upload to Common section
             </summary>
+            <short>Insert to My</short>
             <param name="file" visible="false">Request Input stream</param>
             <param name="title">Name of file which has to be uploaded</param>
             <param name="createNewIfExist" visible="false">Create New If Exist</param>
@@ -167,8 +174,9 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.InsertFileToCommon(System.IO.Stream,System.String,System.Nullable{System.Boolean},System.Boolean)">
             <summary>
-            Uploads the file specified with single file upload to 'Common Documents' section
+            Uploads the file specified with single file upload to Common section
             </summary>
+            <short>Insert to Common</short>
             <param name="file" visible="false">Request Input stream</param>
             <param name="title">Name of file which has to be uploaded</param>
             <param name="createNewIfExist" visible="false">Create New If Exist</param>
@@ -188,51 +196,66 @@
             <category>Uploads</category>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.SaveEditing(System.String,System.String,System.String,System.IO.Stream,System.String)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.UpdateFileStream(System.IO.Stream,System.String,System.Boolean,System.Boolean)">
             <summary>
-            
+            Update file content
             </summary>
+            <category>Files</category>
+            <param name="file">Stream of file</param>
+            <param name="fileId">File ID</param>
+            <param name="encrypted" visible="false"></param>
+            <param name="forcesave" visible="false"></param>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.SaveEditing(System.String,System.String,System.String,System.IO.Stream,System.String,System.Boolean)">
+            <summary>
+            Save file 
+            </summary>
+            <short>Editing save</short>
             <param name="fileId">File ID</param>
             <param name="fileExtension"></param>
             <param name="downloadUri"></param>
             <param name="stream"></param>
             <param name="doc"></param>
+            <param name="forcesave"></param>
             <category>Files</category>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.StartEdit(System.String,System.Boolean,System.String)">
             <summary>
-            
+            Lock file when editing
             </summary>
+            <short>Editing start</short>
             <param name="fileId">File ID</param>
-            <param name="editingAlone"></param>
-            <param name="doc"></param>
+            <param name="editingAlone" visible="false"></param>
+            <param name="doc" visible="false"></param>
             <category>Files</category>
-            <returns></returns>
+            <returns>File key for Document Service</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.TrackEditFile(System.String,System.Guid,System.String,System.String,System.Boolean)">
             <summary>
-            
+            Continue to lock file when editing
             </summary>
+            <short>Editing track</short>
             <param name="fileId">File ID</param>
-            <param name="tabId"></param>
-            <param name="docKeyForTrack"></param>
-            <param name="doc"></param>
-            <param name="isFinish"></param>
+            <param name="tabId" visible="false"></param>
+            <param name="docKeyForTrack" visible="false"></param>
+            <param name="doc" visible="false"></param>
+            <param name="isFinish">for unlock</param>
             <category>Files</category>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.OpenEdit(System.String,System.Int32,System.String)">
             <summary>
-            
+            Get initialization configuration for open editor
             </summary>
+            <short>Editing open</short>
             <param name="fileId">File ID</param>
-            <param name="version"></param>
-            <param name="doc"></param>
+            <param name="version">File version</param>
+            <param name="doc" visible="false"></param>
             <category>Files</category>
-            <returns></returns>
+            <returns>Configuration</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.CreateUploadSession(System.String,System.String,System.Int64,System.String)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.CreateUploadSession(System.String,System.String,System.Int64,System.String,System.Boolean)">
             <summary>
             Creates session to upload large files in multiple chunks.
             </summary>
@@ -242,6 +265,7 @@
             <param name="fileName">Name of file which has to be uploaded</param>
             <param name="fileSize">Length in bytes of file which has to be uploaded</param>
             <param name="relativePath">Relative folder from folderId</param>
+            <param name="encrypted" visible="false"></param>
             <remarks>
             <![CDATA[
             Each chunk can have different length but its important what length is multiple of <b>512</b> and greater or equal than <b>5 mb</b>. Last chunk can have any size.
@@ -267,72 +291,78 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateTextFileInMy(System.String,System.String)">
             <summary>
-            Creates a text (.txt) file in 'My Documents' section with the title and contents sent in the request
+            Creates a text (.txt) file in My section with the title and contents sent in the request
             </summary>
-            <short>Create txt in 'My'</short>
-            <category>File Creation</category>
+            <short>Create txt in My</short>
+            <category>Files</category>
             <param name="title">File title</param>
             <param name="content">File contents</param>
             <returns>Folder contents</returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateTextFileInCommon(System.String,System.String)">
             <summary>
-            Creates a text (.txt) file in 'Common Documents' section with the title and contents sent in the request
+            Creates a text (.txt) file in Common Documents section with the title and contents sent in the request
             </summary>
-            <short>Create txt in 'Common'</short>
-            <category>File Creation</category>
+            <short>Create txt in Common</short>
+            <category>Files</category>
             <param name="title">File title</param>
             <param name="content">File contents</param>
             <returns>Folder contents</returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateTextFile(System.String,System.String,System.String)">
             <summary>
             Creates a text (.txt) file in the selected folder with the title and contents sent in the request
             </summary>
             <short>Create txt</short>
-            <category>File Creation</category>
+            <category>Files</category>
             <param name="folderId">Folder ID</param>
             <param name="title">File title</param>
             <param name="content">File contents</param>
             <returns>Folder contents</returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateHtmlFile(System.String,System.String,System.String)">
             <summary>
             Creates an html (.html) file in the selected folder with the title and contents sent in the request
             </summary>
             <short>Create html</short>
-            <category>File Creation</category>
+            <category>Files</category>
             <param name="folderId">Folder ID</param>
             <param name="title">File title</param>
             <param name="content">File contents</param>
             <returns>Folder contents</returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateHtmlFileInMy(System.String,System.String)">
             <summary>
-            Creates an html (.html) file in 'My Documents' section with the title and contents sent in the request
+            Creates an html (.html) file in My section with the title and contents sent in the request
             </summary>
-            <short>Create html in 'My'</short>
-            <category>File Creation</category>
+            <short>Create html in My</short>
+            <category>Files</category>
             <param name="title">File title</param>
             <param name="content">File contents</param>
             <returns>Folder contents</returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateHtmlFileInCommon(System.String,System.String)">
             <summary>
-            Creates an html (.html) file in 'Common Documents' section with the title and contents sent in the request
+            Creates an html (.html) file in Common section with the title and contents sent in the request
             </summary>
-            <short>Create html in 'Common'</short>
-            <category>File Creation</category>
+            <short>Create html in Common</short>
+            <category>Files</category>
             <param name="title">File title</param>
             <param name="content">File contents</param>
-            <returns>Folder contents</returns>        
+            <returns>Folder contents</returns>
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateFolder(System.String,System.String)">
             <summary>
             Creates a new folder with the title sent in the request. The ID of a parent folder can be also specified.
             </summary>
             <short>
-            New folder
+            Create folder
             </short>
             <category>Folders</category>
             <param name="folderId">Parent folder ID</param>
@@ -341,22 +371,23 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateFile(System.String)">
             <summary>
-            Creates a new file in the 'My Documents' section with the title sent in the request
+            Creates a new file in the My section with the title sent in the request
             </summary>
-            <short>Create file</short>
-            <category>File Creation</category>
+            <short>Create file in My</short>
+            <category>Files</category>
             <param name="title" remark="Allowed values: the file must have one of the following extensions: DOCX, XLSX, PPTX">File title</param>
             <remarks>In case the extension for the file title differs from DOCX/XLSX/PPTX and belongs to one of the known text, spreadsheet or presentation formats, it will be changed to DOCX/XLSX/PPTX accordingly. If the file extension is not set or is unknown, the DOCX extension will be added to the file title.</remarks>
             <returns>New file info</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.CreateFile(System.String,System.String)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.CreateFile(System.String,System.String,System.String)">
             <summary>
             Creates a new file in the specified folder with the title sent in the request
             </summary>
             <short>Create file</short>
-            <category>File Creation</category>
+            <category>Files</category>
             <param name="folderId">Folder ID</param>
             <param name="title" remark="Allowed values: the file must have one of the following extensions: DOCX, XLSX, PPTX">File title</param>
+            <param name="templateId">File ID for using as template</param>
             <remarks>In case the extension for the file title differs from DOCX/XLSX/PPTX and belongs to one of the known text, spreadsheet or presentation formats, it will be changed to DOCX/XLSX/PPTX accordingly. If the file extension is not set or is unknown, the DOCX extension will be added to the file title.</remarks>
             <returns>New file info</returns>
         </member>
@@ -384,6 +415,7 @@
             <summary>
             Returns parent folders
             </summary>
+            <short>Folder path</short>
             <param name="folderId"></param>
             <category>Folders</category>
             <returns>Parent folders</returns>
@@ -412,7 +444,7 @@
             Deletes the file with the ID specified in the request
             </summary>
             <short>Delete file</short>
-            <category>Files</category>
+            <category>Operations</category>
             <param name="fileId">File ID</param>
             <param name="deleteAfter">Delete after finished</param>
             <param name="immediately">Don't move to the Recycle Bin</param>
@@ -420,10 +452,10 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.StartConversion(System.String)">
             <summary>
-             Start conversion
+             Start conversion operation
             </summary>
-            <short>Convert</short>
-            <category>File operations</category>
+            <short>Convert start</short>
+            <category>Operations</category>
             <param name="fileId"></param>
             <returns>Operation result</returns>
         </member>
@@ -431,8 +463,8 @@
             <summary>
              Check conversion status
             </summary>
-            <short>Convert</short>
-            <category>File operations</category>
+            <short>Convert status</short>
+            <category>Operations</category>
             <param name="fileId"></param>
             <param name="start"></param>
             <returns>Operation result</returns>
@@ -442,7 +474,7 @@
             Deletes the folder with the ID specified in the request
             </summary>
             <short>Delete folder</short>
-            <category>Folders</category>
+            <category>Operations</category>
             <param name="folderId">Folder ID</param>
             <param name="deleteAfter">Delete after finished</param>
             <param name="immediately">Don't move to the Recycle Bin</param>
@@ -452,7 +484,7 @@
             <summary>
             Checking for conflicts
             </summary>
-            <category>File operations</category>
+            <category>Operations</category>
             <param name="destFolderId">Destination folder ID</param>
             <param name="folderIds">Folder ID list</param>
             <param name="fileIds">File ID list</param>
@@ -463,7 +495,7 @@
               Moves all the selected files and folders to the folder with the ID specified in the request
             </summary>
             <short>Move to folder</short>
-            <category>File operations</category>
+            <category>Operations</category>
             <param name="destFolderId">Destination folder ID</param>
             <param name="folderIds">Folder ID list</param>
             <param name="fileIds">File ID list</param>
@@ -476,7 +508,7 @@
               Copies all the selected files and folders to the folder with the ID specified in the request
             </summary>
             <short>Copy to folder</short>
-            <category>File operations</category>
+            <category>Operations</category>
             <param name="destFolderId">Destination folder ID</param>
             <param name="folderIds">Folder ID list</param>
             <param name="fileIds">File ID list</param>
@@ -489,34 +521,34 @@
               Marks all files and folders as read
             </summary>
             <short>Mark as read</short>
-            <category>File operations</category>
+            <category>Operations</category>
             <returns>Operation result</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.TerminateTasks">
             <summary>
-             Finishes all the active file operations
+             Finishes all the active Operations
             </summary>
             <short>Finish all</short>
-            <category>File operations</category>
+            <category>Operations</category>
             <returns>Operation result</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetOperationStatuses">
             <summary>
-             Returns the list of all active file operations
+             Returns the list of all active Operations
             </summary>
-            <short>Get file operations list</short>
-            <category>File operations</category>
+            <short>Operations list</short>
+            <category>Operations</category>
             <returns>Operation result</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.BulkDownload(System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
             <summary>
             Start downlaod process of files and folders with ID
             </summary>
-            <short>Finish file operations</short>
+            <short>Finish Operations</short>
             <param name="fileConvertIds" visible="false">File ID list for download with convert to format</param>
             <param name="fileIds">File ID list</param>
             <param name="folderIds">Folder ID list</param>
-            <category>File operations</category>
+            <category>Operations</category>
             <returns>Operation result</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.DeleteBatchItems(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Boolean)">
@@ -528,7 +560,7 @@
             <param name="deleteAfter">Delete after finished</param>
             <param name="immediately">Don't move to the Recycle Bin</param>
             <short>Delete files and folders</short>
-            <category>File operations</category>
+            <category>Operations</category>
             <returns>Operation result</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.EmptyTrash">
@@ -536,7 +568,7 @@
               Deletes all files and folders from the recycle bin
             </summary>
             <short>Clear recycle bin</short>
-            <category>File operations</category>
+            <category>Operations</category>
             <returns>Operation result</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetFileVersionInfo(System.String)">
@@ -620,13 +652,20 @@
             <summary>
               Returns the external link to the shared file with the ID specified in the request
             </summary>
-            <summary>
-              File external link
-            </summary>
+            <short>Shared link</short>
             <param name="fileId">File ID</param>
             <param name="share">Access right</param>
-            <category>Files</category>
+            <category>Sharing</category>
             <returns>Shared file link</returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.Capabilities">
+            <summary>
+              Get a list of available providers
+            </summary>
+            <category>Third-Party Integration</category>
+            <returns>List of provider key</returns>
+            <remarks>List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.SaveThirdParty(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
             <summary>
@@ -643,7 +682,7 @@
             <param name="providerId">Provider ID</param>
             <category>Third-Party Integration</category>
             <returns>Folder contents</returns>
-            <remarks> List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
+            <remarks>List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdPartyAccounts">
@@ -651,15 +690,15 @@
                Returns the list of all connected third party services
             </summary>
             <category>Third-Party Integration</category>
-            <short>Get third party list</short>
+            <short>Third party list</short>
             <returns>Connected providers</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetCommonThirdPartyFolders">
             <summary>
-               Returns the list of third party services connected in the 'Common Documents' section
+               Returns the list of third party services connected in the Common section
             </summary>
             <category>Third-Party Integration</category>
-            <short>Get third party folder</short>
+            <short>Third party folder</short>
             <returns>Connected providers folder</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.DeleteThirdParty(System.Int32)">
@@ -676,23 +715,96 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.Search(System.String)">
             <summary>
-            
+            Search files
             </summary>
-            <param name="query"></param>
+            <param name="query">Queary string</param>
+            <returns>Files and folders</returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.AddFavorites(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Adding files to favorite list
+            </summary>
+            <short>Favorite add</short>
+            <category>Files</category>
+            <param name="folderIds" visible="false"></param>
+            <param name="fileIds">File IDs</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteFavorites(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Removing files from favorite list
+            </summary>
+            <short>Favorite delete</short>
+            <category>Files</category>
+            <param name="folderIds" visible="false"></param>
+            <param name="fileIds">File IDs</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.AddTemplates(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Adding files to template list
+            </summary>
+            <short>Template add</short>
+            <category>Files</category>
+            <param name="fileIds">File IDs</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteTemplates(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Removing files from template list
+            </summary>
+            <short>Template delete</short>
+            <category>Files</category>
+            <param name="fileIds">File IDs</param>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.StoreOriginal(System.Boolean)">
             <summary>
-            
+            Store file in original formats when upload and convert
             </summary>
             <param name="set"></param>
+            <category>Settings</category>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.HideConfirmConvert(System.Boolean)">
+            <summary>
+            Do not show the confirmation dialog
+            </summary>
+            <param name="save"></param>
+            <category>Settings</category>
+            <visible>false</visible>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UpdateIfExist(System.Boolean)">
             <summary>
-            
+            Update the file version if the same name is exist
             </summary>
             <param name="set"></param>
+            <category>Settings</category>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.DisplayRecent(System.Boolean)">
+            <summary>
+            Display recent folder
+            </summary>
+            <param name="set"></param>
+            <category>Settings</category>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.DisplayFavorite(System.Boolean)">
+            <summary>
+            Display favorite folder
+            </summary>
+            <param name="set"></param>
+            <category>Settings</category>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.DisplayTemplates(System.Boolean)">
+            <summary>
+            Display template folder
+            </summary>
+            <param name="set"></param>
+            <category>Settings</category>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CheckDocServiceUrl(System.String,System.String,System.String)">
@@ -702,13 +814,16 @@
             <param name="docServiceUrl">Document editing service Domain</param>
             <param name="docServiceUrlInternal">Document command service Domain</param>
             <param name="docServiceUrlPortal">Community Server Address</param>
+            <category>Settings</category>
             <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetDocServiceUrl(System.Boolean)">
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdpartyProvider">
-            <visible>false</visible>
+            <summary>
+            Get the address of connected editors
+            </summary>
+            <category>Settings</category>
+            <param name="version" visible="false"></param>
+            <returns>Address</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetWordpressInfo">
             <visible>false</visible>
@@ -730,10 +845,6 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.EasyBibCitationBook(System.String)">
             <visible>false</visible>
-        </member>
-        <member name="P:ASC.Api.Documents.DocumentsApi.Name">
-            <summary>
-            </summary>
         </member>
         <member name="T:ASC.Api.Documents.DocumentsApi.ConversationResult">
             <summary>
@@ -777,17 +888,6 @@
         </member>
         <member name="T:ASC.Api.Documents.FileEntryWrapper">
             <summary>
-            </summary>
-        </member>
-        <member name="M:ASC.Api.Documents.FileEntryWrapper.#ctor(ASC.Files.Core.FileEntry)">
-            <summary>
-            
-            </summary>
-            <param name="entry"></param>
-        </member>
-        <member name="M:ASC.Api.Documents.FileEntryWrapper.#ctor">
-            <summary>
-            
             </summary>
         </member>
         <member name="P:ASC.Api.Documents.FileEntryWrapper.Id">
@@ -834,14 +934,24 @@
             <summary>
             </summary>
         </member>
-        <member name="T:ASC.Api.Documents.FileShareParams">
+        <member name="P:ASC.Api.Documents.FileEntryWrapper.ProviderId">
             <summary>
             </summary>
         </member>
-        <member name="M:ASC.Api.Documents.FileShareParams.ToAceObject">
+        <member name="M:ASC.Api.Documents.FileEntryWrapper.#ctor(ASC.Files.Core.FileEntry)">
+            <summary>
+            
+            </summary>
+            <param name="entry"></param>
+        </member>
+        <member name="M:ASC.Api.Documents.FileEntryWrapper.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ASC.Api.Documents.FileShareParams">
             <summary>
             </summary>
-            <returns></returns>
         </member>
         <member name="P:ASC.Api.Documents.FileShareParams.ShareTo">
             <summary>
@@ -851,6 +961,11 @@
             <summary>
             </summary>
         </member>
+        <member name="M:ASC.Api.Documents.FileShareParams.ToAceObject">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:ASC.Api.Documents.FileShareWrapper">
             <summary>
             </summary>
@@ -859,11 +974,6 @@
             <summary>
             </summary>
             <param name="aceWrapper"></param>
-        </member>
-        <member name="M:ASC.Api.Documents.FileShareWrapper.GetSample">
-            <summary>
-            </summary>
-            <returns></returns>
         </member>
         <member name="P:ASC.Api.Documents.FileShareWrapper.Access">
             <summary>
@@ -881,31 +991,26 @@
             <summary>
             </summary>
         </member>
+        <member name="M:ASC.Api.Documents.FileShareWrapper.GetSample">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:ASC.Api.Documents.FileShareLink">
             <summary>
             </summary>
         </member>
         <member name="F:ASC.Api.Documents.FileShareLink.Id">
-            <summary> 
+            <summary>
             </summary>
         </member>
         <member name="F:ASC.Api.Documents.FileShareLink.ShareLink">
-            <summary> 
+            <summary>
             </summary>
         </member>
         <member name="T:ASC.Api.Documents.FileWrapper">
             <summary>
             </summary>
-        </member>
-        <member name="M:ASC.Api.Documents.FileWrapper.#ctor(ASC.Files.Core.File)">
-            <summary>
-            </summary>
-            <param name="file"></param>
-        </member>
-        <member name="M:ASC.Api.Documents.FileWrapper.GetSample">
-            <summary>
-            </summary>
-            <returns></returns>
         </member>
         <member name="P:ASC.Api.Documents.FileWrapper.FolderId">
             <summary>
@@ -957,20 +1062,19 @@
             <summary>
             </summary>
         </member>
-        <member name="T:ASC.Api.Documents.FolderContentWrapper">
+        <member name="M:ASC.Api.Documents.FileWrapper.#ctor(ASC.Files.Core.File)">
             <summary>
             </summary>
+            <param name="file"></param>
         </member>
-        <member name="M:ASC.Api.Documents.FolderContentWrapper.#ctor(ASC.Web.Files.Services.WCFService.DataWrapper,System.Int32)">
-            <summary>
-            </summary>
-            <param name="folderItems"></param>
-            <param name="startIndex"></param>
-        </member>
-        <member name="M:ASC.Api.Documents.FolderContentWrapper.GetSample">
+        <member name="M:ASC.Api.Documents.FileWrapper.GetSample">
             <summary>
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:ASC.Api.Documents.FolderContentWrapper">
+            <summary>
+            </summary>
         </member>
         <member name="P:ASC.Api.Documents.FolderContentWrapper.Files">
             <summary>
@@ -1000,23 +1104,20 @@
             <summary>
             </summary>
         </member>
-        <member name="T:ASC.Api.Documents.FileOperationWraper">
+        <member name="M:ASC.Api.Documents.FolderContentWrapper.#ctor(ASC.Web.Files.Services.WCFService.DataWrapper,System.Int32)">
             <summary>
             </summary>
+            <param name="folderItems"></param>
+            <param name="startIndex"></param>
         </member>
-        <member name="M:ASC.Api.Documents.FileOperationWraper.#ctor">
-            <summary>
-            </summary>
-        </member>
-        <member name="M:ASC.Api.Documents.FileOperationWraper.#ctor(ASC.Web.Files.Services.WCFService.FileOperations.FileOperationResult)">
-            <summary>
-            </summary>
-            <param name="o"></param>
-        </member>
-        <member name="M:ASC.Api.Documents.FileOperationWraper.GetSample">
+        <member name="M:ASC.Api.Documents.FolderContentWrapper.GetSample">
             <summary>
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:ASC.Api.Documents.FileOperationWraper">
+            <summary>
+            </summary>
         </member>
         <member name="P:ASC.Api.Documents.FileOperationWraper.Id">
             <summary>
@@ -1054,19 +1155,23 @@
             <summary>
             </summary>
         </member>
-        <member name="T:ASC.Api.Documents.FolderWrapper">
+        <member name="M:ASC.Api.Documents.FileOperationWraper.#ctor">
             <summary>
             </summary>
         </member>
-        <member name="M:ASC.Api.Documents.FolderWrapper.#ctor(ASC.Files.Core.Folder)">
+        <member name="M:ASC.Api.Documents.FileOperationWraper.#ctor(ASC.Web.Files.Services.WCFService.FileOperations.FileOperationResult)">
             <summary>
             </summary>
-            <param name="folder"></param>
+            <param name="o"></param>
         </member>
-        <member name="M:ASC.Api.Documents.FolderWrapper.GetSample">
+        <member name="M:ASC.Api.Documents.FileOperationWraper.GetSample">
             <summary>
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:ASC.Api.Documents.FolderWrapper">
+            <summary>
+            </summary>
         </member>
         <member name="P:ASC.Api.Documents.FolderWrapper.ParentId">
             <summary>
@@ -1083,6 +1188,43 @@
         <member name="P:ASC.Api.Documents.FolderWrapper.IsShareable">
             <summary>
             </summary>
+        </member>
+        <member name="M:ASC.Api.Documents.FolderWrapper.#ctor(ASC.Files.Core.Folder)">
+            <summary>
+            </summary>
+            <param name="folder"></param>
+        </member>
+        <member name="M:ASC.Api.Documents.FolderWrapper.GetSample">
+            <summary>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Documents.PrivacyRoomApi.SetKeys(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.PrivacyRoomApi.GetPublicKeysWithAccess(System.String)">
+            <summary>
+            
+            </summary>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.PrivacyRoomApi.PrivacyRoom">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Documents.PrivacyRoomApi.SetPrivacyRoom(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="enable"></param>
+            <returns></returns>
+            <visible>false</visible>
         </member>
     </members>
 </doc>
