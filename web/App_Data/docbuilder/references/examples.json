@@ -728,10 +728,6 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text aligned below the baseline vertically.\");\noParagraph.SetVertAlign(\"subscript\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with the text aligned above the baseline vertically.\");\noParagraph.SetVertAlign(\"superscript\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetVertAlign.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
-		"ApiParagraph.wrapinmailmergefield": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Paragraph wrapped in \"Mail Merge Field\"\");\noParagraph.WrapInMailMergeField();\nbuilder.SaveFile(\"docx\", \"WrapInMailMergeField.docx\");\nbuilder.CloseFile();",
-			"demo": ""
-		},
 		"ApiParaPr.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oParaPr;\nvar oMyStyle = oDocument.CreateStyle(\"My document style\");\noParaPr = oMyStyle.GetParaPr();\noParaPr.SetLeftBorder(\"single\", 24, 0, 0, 255, 0);\noParagraph = oDocument.GetElement(0);\noParagraph.SetStyle(oMyStyle);\noParagraph.AddText(\"This is the first paragraph. \");\noParagraph.AddText(\"The paragraph properties styled above set a border at its left side.\");\nvar oClassType = oParaPr.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896243&doc=cnE1T2NjVkZqZ1R2T3h2bVJYMEpBV3hlekdTOVEvcEdpMEJnYjVJWnBtcz0_IjQ4OTYyNDMi0&action=embedded"
@@ -1039,10 +1035,6 @@
 		"ApiRun.setvertalign": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"subscript\");\noRun.AddText(\"This is a text run with the text aligned below the baseline vertically. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"baseline\");\noRun.AddText(\"This is a text run with the text aligned by the baseline vertically. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"superscript\");\noRun.AddText(\"This is a text run with the text aligned above the baseline vertically.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetVertAlign.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892242&doc=OW41M3FTR2JEWTZqTHoyZGtGOUJjTE5ZWG1qdmJuVzBiYUFYNlo2QjFpND0_IjQ4OTIyNDIi0&action=embedded"
-		},
-		"ApiRun.wrapinmailmergefield": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"Name\");\noParagraph.AddElement(oRun);\noRun.WrapInMailMergeField();\noParagraph.AddLineBreak();\noRun = Api.CreateRun();\noRun.AddText(\"Surname\");\noParagraph.AddElement(oRun);\noRun.WrapInMailMergeField();\nbuilder.SaveFile(\"docx\", \"WrapInMailMergeField.docx\");\nbuilder.CloseFile();",
-			"demo": ""
 		},
 		"ApiSchemeColor.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oFill, oStroke, oDrawing, oParagraph, oSchemeColor;\noParagraph = oDocument.GetElement(0);\noSchemeColor = Api.CreateSchemeColor(\"accent6\");\noFill = Api.CreateSolidFill(oSchemeColor);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"curvedUpArrow\", 5930900, 595605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nvar oClassType = oSchemeColor.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
