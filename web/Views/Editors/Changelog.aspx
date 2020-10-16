@@ -17,6 +17,18 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="60" class="copy-link">Version 6.0</h2>
+    <ul>
+        <li>Added the type of insertion in <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">events.onRequestInsertImage</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor") %>#templates">editorConfig.templates</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#plugins">editorConfig.customization.plugins</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#macros">editorConfig.customization.macros</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#macrosMode">editorConfig.customization.macrosMode</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestCreateNew">events.onRequestCreateNew</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#copy">document.permissions.copy</a> field.</li>
+        <li>The <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> field is deprecated, please add the <a href="<%= Url.Action("config/events") %>#onRequestRename">events.onRequestRename</a> field instead.</li>
+    </ul>
+
     <h2 id="55" class="copy-link">Version 5.5</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#spellcheck">editorConfig.customization.spellcheck</a> field.</li>
@@ -104,6 +116,8 @@
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRename">events.onRequestRename</a> event.</li>
         <li>Added the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
         <li>Changed the use of callbackUrl from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>

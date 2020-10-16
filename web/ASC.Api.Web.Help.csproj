@@ -278,11 +278,14 @@
     <Content Include="Content\img\Editor\onRequestHistoryData.png" />
     <Content Include="Content\img\Editor\onRequestInsertImage.png" />
     <Content Include="Content\img\Editor\onRequestMailMergeRecipients.png" />
+    <Content Include="Content\img\Editor\onRequestRename.png" />
     <Content Include="Content\img\Editor\onRequestRestore.png" />
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
+    <Content Include="Content\img\Editor\rename.jpg" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
+    <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
     <Content Include="Content\img\Editor\help.png" />
     <Content Include="Content\img\Editor\sharing_settings.png" />
@@ -406,6 +409,7 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\FAQ\Renaming.ascx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />
@@ -427,6 +431,7 @@
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\General.ascx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
+    <Content Include="Views\Editors\Rename.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />

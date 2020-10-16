@@ -59,6 +59,216 @@
         }
       ]
     },
+    "GetIndex": {
+      "memberof": "ApiTableRow",
+      "name": "GetIndex",
+      "description": "<p>Get the row index.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTable": {
+      "memberof": "ApiTableRow",
+      "name": "GetParentTable",
+      "description": "<p>Get parent table of the row.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetNext": {
+      "memberof": "ApiTableRow",
+      "name": "GetNext",
+      "description": "<p>Get the next row.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableRow",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevious": {
+      "memberof": "ApiTableRow",
+      "name": "GetPrevious",
+      "description": "<p>Get the previous row.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableRow",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddRows": {
+      "memberof": "ApiTableRow",
+      "name": "AddRows",
+      "description": "<p>Add a new rows to the current table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "nCount",
+          "description": "<p>count of rows to be added.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isBefore",
+          "description": "<p>Add a new rows before or after the row.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "MergeCells": {
+      "memberof": "ApiTableRow",
+      "name": "MergeCells",
+      "description": "<p>Merge cells in the row.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Clear": {
+      "memberof": "ApiTableRow",
+      "name": "Clear",
+      "description": "<p>Clears the content of row.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Remove": {
+      "memberof": "ApiTableRow",
+      "name": "Remove",
+      "description": "<p>Remove the table row.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTextPr": {
+      "memberof": "ApiTableRow",
+      "name": "SetTextPr",
+      "description": "<p>Sets text properties for the row.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "optional": false
+        }
+      ]
+    },
+    "Search": {
+      "memberof": "ApiTableRow",
+      "name": "Search",
+      "description": "<p>Searches for the scope of a table row object. The search results are a collection of ApiRange objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "isMatchCase",
+          "description": "<p>is case sensitive.</p>",
+          "optional": false
+        }
+      ]
+    },
     "SetHeight": {
       "memberof": "ApiTableRow",
       "name": "SetHeight",

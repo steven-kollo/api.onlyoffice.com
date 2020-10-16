@@ -83,7 +83,6 @@
     <li><a href="<%= Url.Action("faq/managingversions") %>#versions_2">How to display a document with highlighted changes?</a></li>
 </ul>
 
-
 <h5><a class="link_in_heading" href="<%= Url.Action("faq/saving") %>">Saving questions</a></h5>
 <p class="dscr">The questions concerning saving the documents are in this section.</p>
 <ul class="faq_all_list">
@@ -93,4 +92,11 @@
     <li><a href="<%= Url.Action("faq/saving") %>#saving_4">How to enable or disable the 'Autosave' option?</a></li>
     <li><a href="<%= Url.Action("faq/saving") %>#saving_5">What is the conversion start delay time and how can it be changed?</a></li>
     <li><a href="<%= Url.Action("faq/saving") %>#saving_6">How to specify the encoding type when converting from the csv or txt formats?</a></li>
+</ul>
+
+<h5><a class="link_in_heading" href="<%= Url.Action("faq/renaming") %>">Renaming questions</a></h5>
+<p class="dscr">The questions concerning renaming the documents are in this section.</p>
+<ul class="faq_all_list">
+    <li><a href="<%= Url.Action("faq/renaming") %>#renaming_1">How to rename the created document?</a></li>
+    <li><a href="<%= Url.Action("faq/renaming") %>#renaming_2">How to update the name of the document for all collaborative editors?</a></li>
 </ul>

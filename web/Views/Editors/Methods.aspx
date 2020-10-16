@@ -83,6 +83,7 @@ docEditor.downloadAs();
             </p>
             <pre>
 docEditor.insertImage({
+    "c": "add",
     "fileType": "png",
     "url": "https://example.com/url-to-example-image.png"
 });
@@ -108,10 +109,20 @@ docEditor.insertImage({
                 </thead>
                 <tbody>
                     <tr class="tablerow">
+                        <td>c</td>
+                        <td>
+                            Defines the type of image insertion from event.
+                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermak</em>, <em>slide</em>.
+                            The default value is "<em>add</em>".
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>fileType</td>
                         <td>
                             Defines the type of image for insert into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
                         </td>
                         <td>string</td>
                         <td>required</td>

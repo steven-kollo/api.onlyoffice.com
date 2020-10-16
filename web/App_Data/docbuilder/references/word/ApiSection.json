@@ -333,6 +333,32 @@
           "optional": false
         }
       ]
+    },
+    "GetNext": {
+      "memberof": "ApiSection",
+      "name": "GetNext",
+      "description": "<p>Gets next sections if exists.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevious": {
+      "memberof": "ApiSection",
+      "name": "GetPrevious",
+      "description": "<p>Gets preious sections if exists.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a document section.\r\n\t * @constructor\r\n\t */",

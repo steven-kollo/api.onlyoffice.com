@@ -256,6 +256,11 @@
           "description": "<p>Inline insert on not (works only when the length of arrContent = 1 and it's a paragraph)</p>",
           "optional": true,
           "defaultValue": false
+        },
+        {
+          "type": "object",
+          "name": "oPr",
+          "optional": true
         }
       ]
     },
@@ -371,6 +376,298 @@
       "see": null,
       "inherits": null
     },
+    "GetRange": {
+      "memberof": "ApiDocument",
+      "name": "GetRange",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the specified document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "Start",
+          "description": "<p>start character in current element</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "End",
+          "description": "<p>end character in current element</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Last": {
+      "memberof": "ApiDocument",
+      "name": "Last",
+      "description": "<p>Get the last element of document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "DocumentElement"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Push": {
+      "memberof": "ApiDocument",
+      "name": "Push",
+      "description": "<p>Push a paragraph or a table  or a text to actually add it to the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The type of the element which will be pushed to the document.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "DeleteBookmark": {
+      "memberof": "ApiDocument",
+      "name": "DeleteBookmark",
+      "description": "<p>Removes a bookmark from the document, if one exists.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>bookmark name</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddComment": {
+      "memberof": "ApiDocument",
+      "name": "AddComment",
+      "description": "<p>Adds a comment to the document.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "Comment",
+          "description": "<p>comment</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "Autor",
+          "description": "<p>autor's name (not obligatory)</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetBookmarkRange": {
+      "memberof": "ApiDocument",
+      "name": "GetBookmarkRange",
+      "description": "<p>Gets a bookmark's range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>bookmark name</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetSections": {
+      "memberof": "ApiDocument",
+      "name": "GetSections",
+      "description": "<p>Gets the collection of section objects in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiSection>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllTablesOnPage": {
+      "memberof": "ApiDocument",
+      "name": "GetAllTablesOnPage",
+      "description": "<p>Get the collection of tables on a given absolute page</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiTable>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
+    },
+    "RemoveSelection": {
+      "memberof": "ApiDocument",
+      "name": "RemoveSelection",
+      "description": "<p>Remove current selection</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllDrawingObjects": {
+      "memberof": "ApiDocument",
+      "name": "GetAllDrawingObjects",
+      "description": "<p>Gets the collection of drawing objects in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllShapes": {
+      "memberof": "ApiDocument",
+      "name": "GetAllShapes",
+      "description": "<p>Gets the collection of shapes objects in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllImages": {
+      "memberof": "ApiDocument",
+      "name": "GetAllImages",
+      "description": "<p>Gets the collection of image objects in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiImage>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllCharts": {
+      "memberof": "ApiDocument",
+      "name": "GetAllCharts",
+      "description": "<p>Gets the collection of chart objects in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiChart>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Search": {
+      "memberof": "ApiDocument",
+      "name": "Search",
+      "description": "<p>Searches for the scope of a document object. The search results are a collection of ApiRange objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiRange>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "isMatchCase",
+          "description": "<p>is case sensitive.</p>",
+          "optional": false
+        }
+      ]
+    },
     "InsertWatermark": {
       "memberof": "ApiDocument",
       "name": "InsertWatermark",
@@ -435,7 +732,7 @@
     "AddElement": {
       "memberof": "ApiDocument",
       "name": "AddElement",
-      "description": "<p>Add paragraph or table using its position in the document.</p>",
+      "description": "<p>Add a paragraph or a table or a blockLvl content control using its position in the document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -457,29 +754,6 @@
           "type": "DocumentElement",
           "name": "oElement",
           "description": "<p>The document element which will be added at the current position.</p>",
-          "optional": false
-        }
-      ]
-    },
-    "Push": {
-      "memberof": "ApiDocument",
-      "name": "Push",
-      "description": "<p>Push a paragraph or a table to actually add it to the document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
-        ]
-      },
-      "returns": [],
-      "see": null,
-      "inherits": "Inherited From: {@link ApiDocumentContent#Push}",
-      "params": [
-        {
-          "type": "DocumentElement",
-          "name": "oElement",
-          "description": "<p>The type of the element which will be pushed to the document.</p>",
           "optional": false
         }
       ]

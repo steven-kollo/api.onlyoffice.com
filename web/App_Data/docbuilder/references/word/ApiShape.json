@@ -88,6 +88,42 @@
           "optional": false
         }
       ]
+    },
+    "GetNextShape": {
+      "memberof": "ApiShape",
+      "name": "GetNextShape",
+      "description": "<p>Gets the next inline shape. Throws an error if this inline shape is the last.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiShape",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevShape": {
+      "memberof": "ApiShape",
+      "name": "GetPrevShape",
+      "description": "<p>Gets the previous inline shape. Throws an error if this inline shape is the first.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiShape",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a shape.\r\n\t * @constructor\r\n\t * */",

@@ -281,6 +281,30 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
+            <b id="onRequestCreateNew" class="copy-link">onRequestCreateNew</b> - the function called when the user is trying to create document by clicking the <em>Create New</em> button.
+            This method is used instead of the <a href="<%= Url.Action("config/editor") %>#createUrl">createUrl</a> field.
+            If the method is not declared and the <em>createUrl</em> is not specified the <em>Create New</em> button will not be displayed.
+        </p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestCreateNew = function() {
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestCreateNew": onRequestCreateNew,
+        ...
+    },
+    ...
+});
+</pre>
+        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p>
             <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.
             When the function is called, the editor must be initialized again, in editing mode.
             If the method is not declared the <em>Edit</em> button will not be displayed.
@@ -417,14 +441,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button.
-            To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.
+            The type of image insertion is specified in parameter <em>data.c</em>.
+            To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method with the specified command.
             If the method is not declared the <em>Image from Storage</em> button will not be displayed.
         </p>
         <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestInsertImage = function() {
+var onRequestInsertImage = function(event) {
     docEditor.insertImage({
+        "c": event.data.c,
         "fileType": "png",
         "url": "https://example.com/url-to-example-image.png"
     });
@@ -468,6 +494,29 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
         Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    </li>
+
+    <li>
+        <p>
+            <b id="onRequestRename" class="copy-link">onRequestRename</b> - the function called when the user is trying to rename the file by clicking the <em>Rename...</em> button.
+        </p>
+        <div class="note">Until version 6.0 the <em>Rename...</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> is set to <b>true</b>.</div>
+        <img alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
+        <div class="header-gray">Example</div>
+        <pre>
+var onRequestRename = function(event) {
+    var title = event.data;
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onRequestRename": onRequestRename,
+        ...
+    },
+    ...
+});
+</pre>
     </li>
 
     <li>

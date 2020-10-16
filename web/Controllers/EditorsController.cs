@@ -76,6 +76,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/General",
                 "FAQ/Integrating",
                 "FAQ/ManagingVersions",
+                "FAQ/Renaming",
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
@@ -90,6 +91,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "Rename",
                 "Save",
                 "Security",
                 "SharePoint",
@@ -313,6 +315,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult Rename()
         {
             return View();
         }

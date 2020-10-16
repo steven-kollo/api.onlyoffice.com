@@ -74,6 +74,7 @@
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#copy">copy</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#download">download</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a>": true,
@@ -124,7 +125,10 @@
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://example.com"
             },
+            "<a href="<%= Url.Action("config/editor/customization") %>#macros">macros</a>": true,
+            "<a href="<%= Url.Action("config/editor/customization") %>#macrosMode">macrosMode</a>": "warn",
             "<a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a>": true,
+            "<a href="<%= Url.Action("config/editor/customization") %>#plugins">plugins</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",
             "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,
@@ -167,6 +171,19 @@
             ...
         ],
         "<a href="<%= Url.Action("config/editor") %>#region">region</a>": "en-US",
+        "<a href="<%= Url.Action("config/editor") %>#templates">templates</a>": [
+            {
+                "image": "https://example.com/exampletemplate1.png",
+                "title": "exampletemplate1.docx",
+                "url": "https://example.com/url-to-create-template1"
+            },
+            {
+                "image": "https://example.com/exampletemplate2.png",
+                "title": "exampletemplate2.docx",
+                "url": "https://example.com/url-to-create-template2"
+            },
+            ...
+        ],
         "<a href="<%= Url.Action("config/editor") %>#user">user</a>": {
             "id": "78e1e841",
             "name": "John Smith"
@@ -184,12 +201,14 @@
         "<a href="<%= Url.Action("config/events") %>#onOutdatedVersion">onOutdatedVersion</a>": onOutdatedVersion,
         "<a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a>": onRequestClose,
         "<a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a>": onRequestCompareFile,
+        "<a href="<%= Url.Action("config/events") %>#onRequestCreateNew">onRequestCreateNew</a>": onRequestCreateNew,
         "<a href="<%= Url.Action("config/events") %>#onRequestEditRights">onRequestEditRights</a>": onRequestEditRights,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a>": onRequestHistory,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryClose">onRequestHistoryClose</a>": onRequestHistoryClose,
         "<a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a>": onRequestHistoryData,
         "<a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a>": onRequestInsertImage,
         "<a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a>": onRequestMailMergeRecipients,
+        "<a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a>": onRequestRename,
         "<a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a>": onRequestRestore,
         "<a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a>": onRequestSaveAs,
         "<a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a>": onRequestSendNotify,

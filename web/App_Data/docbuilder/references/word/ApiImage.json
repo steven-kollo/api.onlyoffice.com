@@ -17,6 +17,42 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "GetNextImage": {
+      "memberof": "ApiImage",
+      "name": "GetNextImage",
+      "description": "<p>Gets the next inline image. Throws an error if this inline image is the last.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiImage",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevImage": {
+      "memberof": "ApiImage",
+      "name": "GetPrevImage",
+      "description": "<p>Gets the previous inline image. Throws an error if this inline image is the first.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiImage",
+          "false"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a image.\r\n\t * @constructor\r\n\t */",
