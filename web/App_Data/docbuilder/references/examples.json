@@ -572,6 +572,10 @@
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is the text for a text run. Nothing special.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"AddElement.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888988&doc=T0xWd3hiVkprZVhaOGYvWElSL0VWTWo4dXVjV2FjM25SNHFUR29jaXBmaz0_IjQ4ODg5ODgi0&action=embedded"
 		},
+		"ApiParagraph.addinlinelvlsdt": {
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oInlineLvlSdt = Api.CreateInlineLvlSdt();\nvar oRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control.\");\noInlineLvlSdt.AddElement(oRun, 0);\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\nbuilder.SaveFile(\"docx\", \"AddInlineLvlSdt.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790448&doc=dCthM3RjVDZ1MVJoWjFKeGZHSnpUdnlWU1N5Z1MxREgzUzdTY0R6c3Q1dz0_IjY3OTA0NDgi0&action=embedded"
+		},
 		"ApiParagraph.addlinebreak": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = oParagraph.AddText(\"This is the text for the first line. Nothing special.\");\noParagraph.AddLineBreak();\noRun = oParagraph.AddText(\"This is the text which starts from the beginning of the second line. \");\noRun = oParagraph.AddText(\"It is written in two text runs, you need a space at the end of the first run sentence to separate them.\");\nbuilder.SaveFile(\"docx\", \"ApiParagraph.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888991&doc=SHF3a1o1V2FKSkRaVWlaNzhWYU9NS0t1U1Y3YkhSd0JNeWl4bURJemZKND0_IjQ4ODg5OTEi0&action=embedded"
@@ -595,6 +599,10 @@
 		"ApiParagraph.addtext": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph;\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text. Nothing special.\");\nbuilder.SaveFile(\"docx\", \"AddText.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888995&doc=VDZZaG5jV2h1K2JTeVY3NHVFaVFnR3B2cjhqM1c3ZEJ4bERXazd3NVc4WT0_IjQ4ODg5OTUi0&action=embedded"
+		},
+		"ApiParagraph.copy": {
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is just a sample text that was copied.\");\nvar oParagraph2 = oParagraph1.Copy();\noDocument.Push(oParagraph2);\nbuilder.SaveFile(\"docx\", \"Copy.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790449&doc=MjVmbWcvYUNPNTRnbEYveUxIQXk1d2YvL1FVNnN0eXdWRkJMQUVYU2g4ST0_IjY3OTA0NDki0&action=embedded"
 		},
 		"ApiParagraph.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph;\noParagraph = oDocument.GetElement(0);\nvar oClassType = oParagraph.GetClassType();\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
