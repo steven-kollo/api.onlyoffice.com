@@ -848,6 +848,10 @@
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noRun.AddText(\"But you will not see it in the resulting document, as it will be cleared.\");\noParagraph.AddElement(oRun);\noRun.ClearContent();\noParagraph = Api.CreateParagraph();\noRun = Api.CreateRun();\noRun.AddText(\"The text in the previous paragraph cannot be seen, as it has been cleared.\");\noParagraph.AddElement(oRun);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"ClearContent.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891445&doc=VmtWSmJiRmhmOGVVT0FmcS9ya0ZmNk1Sa09BQ1NLVjF3Wks3VnNNd2Facz0_IjQ4OTE0NDUi0&action=embedded"
 		},
+		"ApiRun.copy": {
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oRun1 = Api.CreateRun();\noRun1.AddText(\"This is just a sample text that was copied.\");\noParagraph.AddElement(oRun1);\nvar oRun2 = oRun1.Copy();\noParagraph.AddElement(oRun2);\nbuilder.SaveFile(\"docx\", \"Copy.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790450&doc=N0Vtb20xTVpTVUZJVWpoTEtQRStPTXgyeFdPdHpFazZIZXhCdWpnZE5Daz0_IjY3OTA0NTAi0&action=embedded"
+		},
 		"ApiRun.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. Nothing special.\");\noParagraph.AddElement(oRun);\nvar oClassType = oRun.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896249&doc=a2F1QUxkMWVhUHQ1RVRJek9QYjBnOUZwZEs1dVh6SzBvYUN1TTJKSUhkaz0_IjQ4OTYyNDki0&action=embedded"
@@ -871,6 +875,10 @@
 		"ApiRun.setdoublestrikeout": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetDoubleStrikeout(true);\noRun.AddText(\"This is a text run with the text struck out with two lines.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetDoubleStrikeout.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4892187&doc=RGdnZTJDUmViQkU2b21tM2NlQlBRV2o1bjB4YlJIbUtkVHZRY1Z6YWJTZz0_IjQ4OTIxODci0&action=embedded"
+		},
+		"ApiRun.setfill": {
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oRun = Api.CreateRun();\noRun.AddText(\"This is a text run with the font color set to blue.\");\noFill = Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255));\noRun.SetFill(oFill);\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetFill.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790451&doc=S2RuOFlQQzJnMGlNL0Z6VVpUUU0xUnp2UEEzV1IrL3I2SHZVS0VpUVVWST0_IjY3OTA0NTEi0&action=embedded"
 		},
 		"ApiRun.setfontfamily": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetFontFamily(\"Calibri Light\");\noRun.AddText(\"This is a text run with the font family set to 'Calibri Light'.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetFontFamily.docx\");\nbuilder.CloseFile();",
