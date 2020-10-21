@@ -277,7 +277,7 @@
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
-    <Content Include="Content\img\Editor\rename.jpg" />
+    <Content Include="Content\img\Editor\rename.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
     <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
