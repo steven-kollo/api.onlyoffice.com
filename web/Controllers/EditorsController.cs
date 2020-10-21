@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.Controllers
     {
         private readonly string[] _actionMap = new[]
             {
+                "ActionLink",
                 "Advanced",
                 "Alfresco",
                 "Basic",
@@ -161,6 +162,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Basic");
         }
 
+
+        public ActionResult ActionLink()
+        {
+            return View();
+        }
 
         public ActionResult Alfresco()
         {

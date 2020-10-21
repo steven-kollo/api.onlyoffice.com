@@ -260,6 +260,8 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\Editor\actionLink-create.png" />
+    <Content Include="Content\img\Editor\actionLink-open.png" />
     <Content Include="Content\img\Editor\alfresco-create.png" />
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
@@ -403,6 +405,7 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\FAQ\Renaming.ascx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
