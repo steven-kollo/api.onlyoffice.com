@@ -84,6 +84,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "History",
                 "HowItWorks",
                 "HumHub",
+                "InlineEditors",
                 "Liferay",
                 "Mentions",
                 "Methods",
@@ -286,6 +287,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult InlineEditors()
+        {
+            return View();
+        }
+        
         public ActionResult Liferay()
         {
             return View();
