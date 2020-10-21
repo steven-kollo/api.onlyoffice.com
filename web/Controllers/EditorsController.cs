@@ -85,6 +85,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "Liferay",
+                "Mentions",
                 "Methods",
                 "Nextcloud",
                 "Nuxeo",
@@ -286,6 +287,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Liferay()
+        {
+            return View();
+        }
+
+        public ActionResult Mentions()
         {
             return View();
         }

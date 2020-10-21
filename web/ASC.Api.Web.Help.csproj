@@ -265,6 +265,7 @@
     <Content Include="Content\img\Editor\alfresco-create.png" />
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
+    <Content Include="Content\img\Editor\mentions-create.png" />
     <Content Include="Content\img\Editor\mentionShare.png" />
     <Content Include="Content\img\Editor\onMakeActionLink.png" />
     <Content Include="Content\img\Editor\onRequestCompareFile.png" />
@@ -427,6 +428,7 @@
     <Content Include="Views\Editors\FAQ\Customizing.ascx" />
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\General.ascx" />
+    <Content Include="Views\Editors\Mentions.aspx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
