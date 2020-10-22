@@ -1578,6 +1578,14 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.SetName(\"sheet 1\");\noWorksheet.GetRange(\"B1\").SetValue(\"Row 1\");\noWorksheet.GetRange(\"C1\").SetValue(\"Row 2\");\noWorksheet.GetRange(\"D1\").SetValue(\"Row 3\");\noWorksheet.GetRange(\"A2\").SetValue(\"Category 1\");\noWorksheet.GetRange(\"A3\").SetValue(\"Category 2\");\noWorksheet.GetRange(\"A4\").SetValue(\"Category 3\");\noWorksheet.GetRange(\"A5\").SetValue(\"Category 4\");\noWorksheet.GetRange(\"B2\").SetValue(\"4.3\");\noWorksheet.GetRange(\"B3\").SetValue(\"2.5\");\noWorksheet.GetRange(\"B4\").SetValue(\"3.5\");\noWorksheet.GetRange(\"B5\").SetValue(\"4.5\");\noWorksheet.GetRange(\"C2\").SetValue(\"2.4\");\noWorksheet.GetRange(\"C3\").SetValue(\"4.4\");\noWorksheet.GetRange(\"C4\").SetValue(\"1.8\");\noWorksheet.GetRange(\"C5\").SetValue(\"2.8\");\noWorksheet.GetRange(\"D2\").SetValue(\"2\");\noWorksheet.GetRange(\"D3\").SetValue(\"2\");\noWorksheet.GetRange(\"D4\").SetValue(\"3\");\noWorksheet.GetRange(\"D5\").SetValue(\"5\");\nvar oChart = oWorksheet.AddChart(\"'sheet 1'!$A$1:$D$5\", true, \"bar\", 2, 5, 0, 12, 12);\noChart.SetVerAxisTitle(\"Vertical Title\", 10);\noChart.SetHorAxisTitle(\"Horizontal Title\", 11);\noChart.SetLegendPos(\"right\");\noChart.SetShowDataLabels(false, false, true, false);\noChart.SetTitle(\"Main Chart Title\", 13);\nbuilder.SaveFile(\"xlsx\", \"AddChart.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882043&doc=aUJkTDdaZXMxUm5ETzBxSHIyZGZTRjBCN3A0VUZTbVpyNzhwVC9VOGtEST0_IjQ4ODIwNDMi0&action=embedded"
 		},
+		"Api.adddefname": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"numbers\", \"Sheet1!$A$1:$B$1\");\noWorksheet.GetRange(\"A3\").SetValue(\"We defined a name 'numbers' for a range of cells A1:B1.\");\nbuilder.SaveFile(\"xlsx\", \"AddDefName.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824610&doc=dEpSaG4xYkJZY1oveWc0ZzZ3U0xCRmRMMnNDN2ZDaUVwclp3NmVxU0d3RT0_IjY4MjQ2MTAi0&action=embedded"
+		},
+		"Api.addsheet": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oSheet = Api.AddSheet('New sheet');\noWorksheet = Api.GetActiveSheet();\nbuilder.SaveFile(\"xlsx\", \"AddSheet.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824615&doc=V1hLd0JOamJkQ2VmRHZVbjNSZlRvY2FqS25MRlI1QzhWbStLUGhrdllsST0_IjY4MjQ2MTUi0&action=embedded"
+		},
 		"Api.createblipfill": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oFill, oStroke;\noFill = Api.CreateBlipFill(\"https://api.onlyoffice.com/content/img/docbuilder/examples/icon_DocumentEditors.png\", \"tile\");\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 1, 3 * 36000);\nbuilder.SaveFile(\"xlsx\", \"CreateBlipFill.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004593&doc=bk1KamQ0bS9RL2x6ZU1NeGsxUWxXdVFFY3Z4UmdiOXBFY1lRU0VyVjNxVT0_IjUwMDQ1OTMi0&action=embedded"
@@ -1646,9 +1654,29 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oGs1, oGs2, oFill, oFill1, oStroke;\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noFill1 = Api.CreateSolidFill(Api.CreateRGBColor(255, 255, 0));\noStroke = Api.CreateStroke(3 * 36000, oFill1);\noWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 1, 3 * 36000);\nbuilder.SaveFile(\"xlsx\", \"CreateStroke.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5026742&doc=bHBTRklWUDJoMzVmSUZIU05NbTlUdFM5RWJVaytCdWVYU1ByTnI1NHhRcz0_IjUwMjY3NDIi0&action=embedded"
 		},
+		"Api.format": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oFormat = Api.Format(\"123456\", [\"$#,##0\"]);\noWorksheet.GetRange(\"A1\").SetValue(oFormat);\nbuilder.SaveFile(\"xlsx\", \"Format.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824616&doc=VWVzTkxLTEdOL2Y4S3BKc0ptaHk2U2VraXdKY3BBWWxGaU1pbExzUE1wND0_IjY4MjQ2MTYi0&action=embedded"
+		},
 		"Api.getactivesheet": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange('B1').SetValue('2');\noWorksheet.GetRange('B2').SetValue('2');\noWorksheet.GetRange('A3').SetValue('2x2=');\noWorksheet.GetRange('B3').SetValue('=B1*B2');\nbuilder.SaveFile(\"xlsx\", \"GetActiveSheet.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882026&doc=bHBrTXVQK3FmeXFnZVE4Z0pCYjZ3N2ZyVDFjNC84Q2k0Z08yQTBZd2NPbz0_IjQ4ODIwMjYi0&action=embedded"
+		},
+		"Api.getdefname": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"numbers\", \"Sheet1!$A$1:$B$1\");\nvar oDefName = Api.GetDefName(\"numbers\");\noWorksheet.GetRange(\"A3\").SetValue(\"We got an object of the name 'numbers' in variable 'DefName'.\");\nbuilder.SaveFile(\"xlsx\", \"GetDefName.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824618&doc=SnJNN3I0cklGektncW92bk0wQ0F4QkRBc2dxZ0pCbUJwTTR4SGtaRzRVWT0_IjY4MjQ2MTgi0&action=embedded"
+		},
+		"Api.getlocale": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nApi.SetLocale('en-CA');\noLocale = Api.GetLocale();\noWorksheet.GetRange(\"A1\").SetValue(\"Locale: \" + oLocale);\nbuilder.SaveFile(\"xlsx\", \"GetLocale.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824620&doc=UXVZVnNYeU80YUtCNUp0MHoraUFyRFlxQVY3WkJkYUR2bEZzemJ6WDJFbz0_IjY4MjQ2MjAi0&action=embedded"
+		},
+		"Api.getselection": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nApi.GetSelection().SetValue(\"selected\");\nbuilder.SaveFile(\"xlsx\", \"GetSelection.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824622&doc=bk1XdHJBRkIwTjlPWE5XTFRFYm0yU1dZRkl5WXd5OUpUelJ0RUhMcW1aOD0_IjY4MjQ2MjIi0&action=embedded"
+		},
+		"Api.getsheet": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetSheet('Sheet1');\noWorksheet.GetRange(\"A1\").SetValue(\"This is a sample text on 'Sheet1'.\");\nbuilder.SaveFile(\"xlsx\", \"GetSheet.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824624&doc=bXNVai96UHFHWExaWERRVWNTUVRWNm01MWhJQm9SWTZtM09FUXVtRVJVQT0_IjY4MjQ2MjQi0&action=embedded"
 		},
 		"Api.getsheets": {
 			"script": "builder.CreateFile(\"xlsx\");\nApi.AddSheet('new_sheet_name');\nvar sheets = Api.GetSheets();\nvar sheet_name1, sheet_name2;\nsheet_name1 = sheets[0].GetName();\nsheet_name2 = sheets[1].GetName();\nsheets[1].GetRange(\"A1\").SetValue(sheet_name1);\nsheets[1].GetRange(\"A2\").SetValue(sheet_name2);\nbuilder.SaveFile(\"xlsx\", \"GetSheets.xlsx\");\nbuilder.CloseFile();",
@@ -1657,6 +1685,14 @@
 		"Api.getthemescolors": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar themes = Api.GetThemesColors();\nfor (var i = 0; i < themes.length; ++i) {\n  oWorksheet.GetRange('A' + (i + 1)).SetValue(themes[i]);\n}\nbuilder.SaveFile(\"xlsx\", \"GetThemesColors.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5116480&doc=cWZ5dGY1eVBOVEljMzRVQmFjNVZDY0E5S1JHSzlVQUpkQk5QK2hkZThoRT0_IjUxMTY0ODAi0&action=embedded"
+		},
+		"Api.save": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"This sample text is saved to the worksheet.\");\nApi.Save();\nbuilder.SaveFile(\"xlsx\", \"Save.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824626&doc=bE56ajBGeEdPNzVHNWdQRVRsUzM1a0Zzdnd3ODRqNVRvVGlUdEMyckhCdz0_IjY4MjQ2MjYi0&action=embedded"
+		},
+		"Api.setlocale": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nApi.SetLocale('en-CA');\noWorksheet.GetRange(\"A1\").SetValue(\"A sample spreadsheet with the language set to English (Canada).\");\nbuilder.SaveFile(\"xlsx\", \"SetLocale.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824628&doc=NVNmVllyUU1FWkpVbXh6MjA3WjJ1M2FRczg5UGJjVnJQQVZqVXNFSytOYz0_IjY4MjQ2Mjgi0&action=embedded"
 		},
 		"Api.setthemecolors": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar themes = Api.GetThemesColors();\nfor (var i = 0; i < themes.length; ++i) {\n  oWorksheet.GetRange('A' + (i + 1)).SetValue(themes[i]);\n}\nApi.SetThemeColors(themes[3]);\nbuilder.SaveFile(\"xlsx\", \"SetThemeColors.xlsx\");\nbuilder.CloseFile();",
