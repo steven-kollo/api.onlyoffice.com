@@ -2756,6 +2756,58 @@
 			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\noTable.SetTableLook(true, false, false, false, false, true);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetTableLook.pptx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6814586&doc=am1FdmNMbTNUZHZEQzdVVFJNOUM5bXhOSkJwMVNFTDlFcWJuUlVDWHZTMD0_IjY4MTQ1ODYi0&action=embedded"
 		},
+		"ApiTableCell.getclasstype": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oContent = oCell.GetContent();\nvar oParagraph = Api.CreateParagraph();\nvar oClassType = oCell.GetClassType();\noParagraph.AddText(\"Class type: \" + oClassType);\noContent.Push(oParagraph);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"GetClassType.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824510&doc=TXFEK0RNMi9QZEFlMFJBakhPM1VlUnd0UUNTUTBiQ2dkUkNmU2tPNWF0Yz0_IjY4MjQ1MTAi0&action=embedded"
+		},
+		"ApiTableCell.getcontent": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oContent = oCell.GetContent();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a sample text in the cell.\");\noContent.Push(oParagraph);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"GetContent.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824513&doc=RW02YjNaWDFYbnFEN3kzV3RGZ1NIM2hneDhEd1Fxc0NkVGgwbGNhZ2FNUT0_IjY4MjQ1MTMi0&action=embedded"
+		},
+		"ApiTableCell.setcellborderbottom": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(520, 64, 1));\noCell.SetCellBorderBottom(2, oFill);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetCellBorderBottom.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824518&doc=eDNJZGcvd2FhVkxPRmVNK0tWWlBaQlVJUmVNRWVqMGNnc0xLZEt2TDBSUT0_IjY4MjQ1MTgi0&action=embedded"
+		},
+		"ApiTableCell.setcellborderleft": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(520, 64, 1));\noCell.SetCellBorderLeft(2, oFill);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetCellBorderLeft.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824522&doc=QmVXTTNhN3JHRXpYTTN1dVJTcnZBeG1SWGdnckpLY3lCTXNCZU9EZWUvcz0_IjY4MjQ1MjIi0&action=embedded"
+		},
+		"ApiTableCell.setcellborderright": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(520, 64, 1));\noCell.SetCellBorderRight(2, oFill);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetCellBorderRight.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824524&doc=UkhlZzNna1ZnejR0R3U4SXhlaHhNV2s0Zm9XZWFzZk53amhETG9ZTGJ5bz0_IjY4MjQ1MjQi0&action=embedded"
+		},
+		"ApiTableCell.setcellbordertop": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(520, 64, 1));\noCell.SetCellBorderTop(2, oFill);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetCellBorderTop.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824526&doc=TnVVQjFwUzJFU2VicmoyVVp6TmF4cExQWmZLbjZhRHJyTzNFMVRvRkJwTT0_IjY4MjQ1MjYi0&action=embedded"
+		},
+		"ApiTableCell.setcellmarginbottom": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oContent = oCell.GetContent();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is just a sample text.\");\noContent.Push(oParagraph);\noCell.SetCellMarginBottom(600);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetCellMarginBottom.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824527&doc=b09INHROT1d2R3lwb0tybmtsZUVOVkVPM0tXSk5XalducUdMUldzcm9MVT0_IjY4MjQ1Mjci0&action=embedded"
+		},
+		"ApiTableCell.setcellmarginleft": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oContent = oCell.GetContent();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is just a sample text.\");\noContent.Push(oParagraph);\noCell.SetCellMarginLeft(720);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetCellMarginLeft.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824534&doc=WS9qMXU4Wkx5b21rL25qWnRCaWRDZTQxQVFZV05DV0plL0hwTkVIamVmUT0_IjY4MjQ1MzQi0&action=embedded"
+		},
+		"ApiTableCell.setcellmarginright": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oContent = oCell.GetContent();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is just a sample text.\");\noContent.Push(oParagraph);\noCell.SetCellMarginRight(600);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetCellMarginRight.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824535&doc=cHVwU0N5MUVnYmVvZzQ0UGUyZzRrdTJUbk9UM1pDZXlGRTVrTHRyUi9pST0_IjY4MjQ1MzUi0&action=embedded"
+		},
+		"ApiTableCell.setcellmargintop": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oContent = oCell.GetContent();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is just a sample text.\");\noContent.Push(oParagraph);\noCell.SetCellMarginTop(720);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetCellMarginTop.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824544&doc=LzNKckt2Nmh2bUczVFBMYVJrRDlpMGFoWHZDY0RWWmZMdzNOY3V5VXhlbz0_IjY4MjQ1NDQi0&action=embedded"
+		},
+		"ApiTableCell.setshd": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\nvar oCell = oRow.GetCell(0);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(520, 64, 1));\noCell.SetShd(oFill);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetShd.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824546&doc=TmgrN0F0ZnhlV0l1QWF3akxHREFHVG81dkJOemtjU091OEdHek9jcjhFND0_IjY4MjQ1NDYi0&action=embedded"
+		},
+		"ApiTableCell.settextdirection": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(0);\noRow.SetHeight(30 * 36000);\nvar oCell = oRow.GetCell(0);\noCell.SetTextDirection(\"tbrl\");\nvar oContent = oCell.GetContent();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is just a sample text.\");\noContent.Push(oParagraph);\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetTextDirection.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824548&doc=TER6WjRyUFhDZExzTWQvNWFJZGVTUDRWSTFwK3ROK3U1dGFKV2VjMWNpMD0_IjY4MjQ1NDgi0&action=embedded"
+		},
+		"ApiTableCell.setverticalalign": {
+			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oTable = Api.CreateTable(2, 4);\nvar oRow = oTable.GetRow(1);\noRow.SetHeight(30 * 36000);\nvar oCell = oRow.GetCell(0);\nvar oContent = oCell.GetContent();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is just a sample text.\");\noContent.Push(oParagraph);\noCell.SetVerticalAlign(\"bottom\");\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noSlide.AddObject(oTable);\nbuilder.SaveFile(\"pptx\", \"SetVerticalAlign.pptx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824550&doc=ZlJVY3FPaWI5bHFKNi8zdU40YTZETmFUTWxzY3VaaURnL3gvTzRETXhWRT0_IjY4MjQ1NTAi0&action=embedded"
+		},
 		"ApiTextPr.getclasstype": {
 			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noRun = Api.CreateRun();\noTextPr = oRun.GetTextPr();\noTextPr.SetFontSize(50);\noParagraph.SetJc(\"left\");\nvar oClassType = oTextPr.GetClassType();\noRun.AddText(\"Class Type = \" + oClassType);\noParagraph.AddElement(oRun);\noSlide.AddObject(oShape);\nbuilder.SaveFile(\"pptx\", \"GetClassType.pptx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5011326&doc=UXRKNUJXUGFaNnY1RlA2ZEt2TlBTL3NldE9vaFZQS1krYlk2LzlZN2dnYz0_IjUwMTEzMjYi0&action=embedded"
