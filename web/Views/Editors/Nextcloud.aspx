@@ -139,6 +139,16 @@
     </p>
 
 
+    <h2 id="connection" class="copy-link">Checking the connection</h2>
+    <p>
+        You can check the connection to ONLYOFFICE Document Server by using the following occ command:
+    </p>
+    <span class="commandline">occ onlyoffice:documentserver --check</span>
+    <p>
+        You will see a text either with information about the successful connection or the cause of the error.
+    </p>
+
+
     <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>When creating a new file, the user navigates to a document folder within Nextcloud and clicks the <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> item in the <em>new</em> (+) menu.</p>
     <p>
