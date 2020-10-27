@@ -121,6 +121,7 @@
         <li>Added the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
         <li>Changed the use of callbackUrl from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor") %>#location">editorConfig.location</a> field.</li>
     </ul>
 
     <h2 id="43" class="copy-link">Version 4.3</h2>
