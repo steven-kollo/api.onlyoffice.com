@@ -16,6 +16,10 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="62" class="copy-link">Version 6.2</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">editorConfig.customization.toolbarHideFileName</a> field.</li>
+    </ul>
 
     <h2 id="60" class="copy-link">Version 6.0</h2>
     <ul>

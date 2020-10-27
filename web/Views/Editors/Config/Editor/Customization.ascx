@@ -483,6 +483,20 @@
         </tr>
         <% } %>
         <tr>
+            <td id="toolbarHideFileName" class="copy-link">toolbarHideFileName</td>
+            <td>
+                Defines if the document title is visible on the top toolbar (when set to <b>false</b>) or hidden (when set to <b>true</b>).
+                The default value is <b>false</b>.
+            </td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
+            </td>
+        </tr>
+        <tr>
             <td id="toolbarNoTabs" class="copy-link">toolbarNoTabs</td>
             <td>
                 Defines if the top toolbar tabs are distinctly displayed (when set to <b>false</b>) or only highlighted to see which one is selected (when set to <b>true</b>).
@@ -600,7 +614,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% if (license)
                { %>"statusBar": true,
             "toolbar": true,
-            <% } %>"toolbarNoTabs": false,
+            <% } %>"toolbarHideFileName": false,
+            "toolbarNoTabs": false,
             "unit": "cm",
             "zoom": 100
         },
