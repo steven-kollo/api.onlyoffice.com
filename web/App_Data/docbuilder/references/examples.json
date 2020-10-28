@@ -1437,8 +1437,8 @@
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4898106&doc=dklUTklHb1JPOXRrL3ZKZUxDQWlEQzBpWnR3LzMvcHBzMXpldlVOdERsZz0_IjQ4OTgxMDYi0&action=embedded"
 		},
 		"ApiTextPr.setfill": {
-			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255));\nvar oTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFill(oFill);\noParagraph.AddText(\"This is a text run with the font color set to blue.\");\nbuilder.SaveFile(\"docx\", \"SetFill.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oFill = Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255));\nvar oTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFill(oFill);\noParagraph.AddText(\"This is a text run with the font color set to blue.\");\noParagraph.SetTextPr(oTextPr);\nbuilder.SaveFile(\"docx\", \"SetFill.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6790471&doc=UDF3Z0lpL2Qyb1dYdDRWODQvYVBoeDNFUUVnWlR2WGxwcE9VTmVCWUZuYz0_IjY3OTA0NzEi0&action=embedded"
 		},
 		"ApiTextPr.setfontfamily": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oTextPr;\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontFamily(\"Comic Sans MS\");\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"A sample text with the font family set to 'Comic Sans MS' using the text properties.\");\nbuilder.SaveFile(\"docx\", \"SetFontFamily.docx\");\nbuilder.CloseFile();",
