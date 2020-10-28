@@ -1971,7 +1971,7 @@
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004573&doc=cFZUZDVFY2t6OSszd0U3SGpiT01tc2oyY0xxQWgyaXNJUXR0a0xsYWtiRT0_IjUwMDQ1NzMi0&action=embedded"
 		},
 		"ApiRange.addcomment": {
-			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\nvar oRange = oWorksheet.GetRange(\"A1\");\noRange.AddComment(\"This is just a number.\");\nbuilder.SaveFile(\"xlsx\", \"AddComment.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oRange = oWorksheet.GetRange(\"A1\");\noRange.SetValue(\"1\");\noRange.AddComment(\"This is just a number.\");\nbuilder.SaveFile(\"xlsx\", \"AddComment.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826275&doc=cVhGMGk0MFZldHBOaHAwZHZ6WUF0akNSMnA5QXVWZFhyWEdQQWhmRU9paz0_IjY4MjYyNzUi0&action=embedded"
 		},
 		"ApiRange.getaddress": {
