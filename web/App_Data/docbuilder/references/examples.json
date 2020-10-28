@@ -289,7 +289,7 @@
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887084&doc=QUJUZXVXbkIyc0tUQ3Y1YnpSVWhxTzhWQ0p1MHdKck93azhtcGVhaGp5WT0_IjQ4ODcwODQi0&action=embedded"
 		},
 		"ApiDocument.createnewhistorypoint": {
-			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddText('This is a sample text.');\noDocument.CreateNewHistoryPoint();\noParagraph = Api.CreateParagraph();\noParagraph.AddText('New history point was just created.');\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"CreateNewHistoryPoint.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a sample text.\");\noDocument.CreateNewHistoryPoint();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"New history point was just created.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"CreateNewHistoryPoint.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790283&doc=TWJLR01SUDY2ZThUSGdvUHQ1VUlGOUt3cUVUREIramFpS3FlY3FVaEZaQT0_IjY3OTAyODMi0&action=embedded"
 		},
 		"ApiDocument.createnumbering": {
@@ -305,8 +305,8 @@
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887126&doc=c0RjdlU2ZGN4dGpSMEJpM0d0YVZ2T2prM3VlajNRUnc4Q1lyRTM2MG5OYz0_IjQ4ODcxMjYi0&action=embedded"
 		},
 		"ApiDocument.getallcontentcontrols": {
-			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nfor (var num = 0; num < 2; ++num) {\n  var oInlineLvlSdt = Api.CreateInlineLvlSdt();\n  var oRun = Api.CreateRun();\n  oRun.AddText(\"This is an inline text content control № \" + (num + 1));\n  oInlineLvlSdt.AddElement(oRun, 0);\n  oParagraph.AddInlineLvlSdt(oInlineLvlSdt);\n}\noParagraph = Api.CreateParagraph();\noParagraph.AddText('These are all content controls: ');\nvar oContentControls = oDocument.GetAllContentControls();\nfor (var index = 0; index < oContentControls.length; ++index) {\n  oParagraph.AddElement(oContentControls[index]);\n}\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetAllContentControls.docx\");\nbuilder.CloseFile();",
-			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790290&doc=M1owYmhibkFYTm5pV1Qxam50Kzhpb05LUU4rYllYd0VFdEVCVGlEY1Vjdz0_IjY3OTAyOTAi0&action=embedded"
+			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oInlineLvlSdt = Api.CreateInlineLvlSdt();\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\nvar oRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control.\");\noInlineLvlSdt.AddElement(oRun, 0);\nvar oContentControls = oDocument.GetAllContentControls();\noContentControls[0].GetElement(0).SetBold(true);\nvar oClassType = oContentControls[0].GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class type: \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetAllContentControls.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6790290&doc=M1owYmhibkFYTm5pV1Qxam50Kzhpb05LUU4rYllYd0VFdEVCVGlEY1Vjdz0_IjY3OTAyOTAi0&action=embedded"
 		},
 		"ApiDocument.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph;\noParagraph = Api.CreateParagraph();\nvar oClassType = oDocument.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
