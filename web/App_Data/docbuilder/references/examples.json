@@ -1583,7 +1583,7 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824610&doc=dEpSaG4xYkJZY1oveWc0ZzZ3U0xCRmRMMnNDN2ZDaUVwclp3NmVxU0d3RT0_IjY4MjQ2MTAi0&action=embedded"
 		},
 		"Api.addsheet": {
-			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oSheet = Api.AddSheet('New sheet');\noWorksheet = Api.GetActiveSheet();\nbuilder.SaveFile(\"xlsx\", \"AddSheet.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oSheet = Api.AddSheet(\"New sheet\");\nbuilder.SaveFile(\"xlsx\", \"AddSheet.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824615&doc=V1hLd0JOamJkQ2VmRHZVbjNSZlRvY2FqS25MRlI1QzhWbStLUGhrdllsST0_IjY4MjQ2MTUi0&action=embedded"
 		},
 		"Api.createblipfill": {
@@ -1663,8 +1663,8 @@
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882026&doc=bHBrTXVQK3FmeXFnZVE4Z0pCYjZ3N2ZyVDFjNC84Q2k0Z08yQTBZd2NPbz0_IjQ4ODIwMjYi0&action=embedded"
 		},
 		"Api.getdefname": {
-			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"numbers\", \"Sheet1!$A$1:$B$1\");\nvar oDefName = Api.GetDefName(\"numbers\");\noWorksheet.GetRange(\"A3\").SetValue(\"We got an object of the name 'numbers' in variable 'DefName'.\");\nbuilder.SaveFile(\"xlsx\", \"GetDefName.xlsx\");\nbuilder.CloseFile();",
-			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824618&doc=SnJNN3I0cklGektncW92bk0wQ0F4QkRBc2dxZ0pCbUJwTTR4SGtaRzRVWT0_IjY4MjQ2MTgi0&action=embedded"
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"numbers\", \"Sheet1!$A$1:$B$1\");\nvar oDefName = Api.GetDefName(\"numbers\");\noWorksheet.GetRange(\"A3\").SetValue(\"DefName: \" + oDefName.GetName());\nbuilder.SaveFile(\"xlsx\", \"GetDefName.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6824618&doc=SnJNN3I0cklGektncW92bk0wQ0F4QkRBc2dxZ0pCbUJwTTR4SGtaRzRVWT0_IjY4MjQ2MTgi0&action=embedded"
 		},
 		"Api.getlocale": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nApi.SetLocale('en-CA');\noLocale = Api.GetLocale();\noWorksheet.GetRange(\"A1\").SetValue(\"Locale: \" + oLocale);\nbuilder.SaveFile(\"xlsx\", \"GetLocale.xlsx\");\nbuilder.CloseFile();",
