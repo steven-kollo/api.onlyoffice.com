@@ -2350,6 +2350,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oRightMargin = oWorksheet.GetRightMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Right margin: \" + oRightMargin);\nbuilder.SaveFile(\"xlsx\", \"GetRightMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826355&doc=THVoazNkaVQ3L3FWWXRqUkpqM0RFejFvZEF4aDNJZTd6c3NuRWova2JUcz0_IjY4MjYzNTUi0&action=embedded"
 		},
+		"ApiWorksheet.getrows": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oRange = oWorksheet.GetRange(\"A1:A3\");\nvar oRows = oRange.GetRows(1, 2);\noRows.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6826389&doc=d1dBdTlhOWUxbmNyWHcyeWtiQ1pPblhEQ0t0bnBUamQ1bXRQa0Z4SzZzST0_IjY4MjYzODki0&action=embedded"
+		},
 		"ApiWorksheet.getselection": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetSelection().SetValue(\"selected\");\nbuilder.SaveFile(\"xlsx\", \"GetSelection.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826517&doc=TXovQkk0K0FzYnFnSVdVSGtWS3RDS2RLcmxiZEVkQnBXQ3lKNnQxNXRLdz0_IjY4MjY1MTci0&action=embedded"
