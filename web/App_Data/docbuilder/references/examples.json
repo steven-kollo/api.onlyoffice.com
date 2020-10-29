@@ -1858,6 +1858,26 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oImage = oWorksheet.AddImage(\"https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png\", 60 * 36000, 35 * 36000, 0, 2 * 36000, 2, 3 * 36000);\nvar oClassType = oImage.GetClassType();\noWorksheet.SetColumnWidth(0, 15);\noWorksheet.SetColumnWidth(1, 10);\noWorksheet.GetRange('A1').SetValue('Class Type = ');\noWorksheet.GetRange('B1').SetValue(oClassType);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004483&doc=VEtrUk54d0QyTTc1US9DOXg1OUZHZkE3M1pkZDhIblRQaXhOWEgxWUhFOD0_IjUwMDQ0ODMi0&action=embedded"
 		},
+		"ApiName.delete": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"numbers\", \"Sheet1!$A$1:$B$1\");\nvar oDefName = Api.GetDefName(\"numbers\");\noDefName.Delete();\noWorksheet.GetRange(\"A3\").SetValue(\"The name 'numbers' of the range A1:B1 was deleted.\");\nbuilder.SaveFile(\"xlsx\", \"Delete.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6834095&doc=Qm9mSXNib3hlNyt2dld5cWxEOGc5QytXYU8yM3pva0hKQVZYbTVXY2wyWT0_IjY4MzQwOTUi0&action=embedded"
+		},
+		"ApiName.getname": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"numbers\", \"Sheet1!$A$1:$B$1\");\nvar oDefName = Api.GetDefName(\"numbers\");\noWorksheet.GetRange(\"A3\").SetValue(\"Name: \" + oDefName.GetName());\nbuilder.SaveFile(\"xlsx\", \"GetName.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6834117&doc=NWFqanFxTXNBVEJKTWI5a1JDWWRJT2xYRXBESi93RmxFa1E5Nm1xdHZaRT0_IjY4MzQxMTci0&action=embedded"
+		},
+		"ApiName.getrefersto": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"=SUM(A1:B1)\");\nApi.AddDefName(\"summa\", \"Sheet1!$A$1:$B$1\");\nvar oDefName = Api.GetDefName(\"summa\");\noDefName.SetRefersTo(\"=SUM(A1:B1)\");\noWorksheet.GetRange(\"A3\").SetValue(\"The name 'summa' refers to the formula from the cell C1.\");\noWorksheet.GetRange(\"A4\").SetValue(\"Formula: \" + oDefName.GetRefersTo());\nbuilder.SaveFile(\"xlsx\", \"GetRefersTo.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6834147&doc=ZmlzeGtZZXRKcGpyS0IzNURDanN2MVRsaVhVQUEyNWc2Y0NMY0tZNzJCVT0_IjY4MzQxNDci0&action=embedded"
+		},
+		"ApiName.setname": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"name\", \"Sheet1!$A$1:$B$1\");\nvar oDefName = Api.GetDefName(\"name\");\noDefName.SetName(\"new_name\");\nvar oNewDefName = Api.GetDefName(\"new_name\");\noWorksheet.GetRange(\"A3\").SetValue(\"The new name of the range: \" + oNewDefName.GetName());\nbuilder.SaveFile(\"xlsx\", \"SetName.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6834159&doc=ODZYT3JyeDVDaVpOdG5FZUg1K0ZhVXQxWG5pRiszb1Rnc1JrcU9lTUtrQT0_IjY4MzQxNTki0&action=embedded"
+		},
+		"ApiName.setrefersto": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"=SUM(A1:B1)\");\nApi.AddDefName(\"summa\", \"Sheet1!$A$1:$B$1\");\nvar oDefName = Api.GetDefName(\"summa\");\noDefName.SetRefersTo(\"=SUM(A1:B1)\");\noWorksheet.GetRange(\"A3\").SetValue(\"The name 'summa' refers to the formula from the cell C1.\");\nbuilder.SaveFile(\"xlsx\", \"SetRefersTo.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6834121&doc=elcxYitxcS9FWWxBMkZUNWRkNjA2QnlNaE1uRkdvMnY4ZXFxTTF6TGpyND0_IjY4MzQxMjEi0&action=embedded"
+		},
 		"ApiParagraph.addelement": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oStroke, oFill, oParagraph, oRun;\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 200 * 36000, 60 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is the text for a text run. Nothing special.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"xlsx\", \"AddElement.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006373&doc=VXZyeXQzR08wTXVjcG93QmhpRGkweTEzSW5QMysrQmRkcExIT2pnbHR3TT0_IjUwMDYzNzMi0&action=embedded"
