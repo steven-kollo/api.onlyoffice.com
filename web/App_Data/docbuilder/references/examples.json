@@ -2390,6 +2390,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A2\").SetValue(\"The sheet settings make it display no row/column headers\");\noWorksheet.SetDisplayHeadings(false);\nbuilder.SaveFile(\"xlsx\", \"SetDisplayHeadings.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115613&doc=ZCtMUzJEV2g4bnJZVG9DZ01oRGlFVXpadEdVU1dCc0FFMXE3TkY1dlZRVT0_IjUxMTU2MTMi0&action=embedded"
 		},
+		"ApiWorksheet.sethyperlink": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.SetHyperlink(\"A1\", \"https://api.onlyoffice.com/docbuilder/basic\", \"Api ONLYOFFICE\", \"ONLYOFFICE for developers\");\nbuilder.SaveFile(\"xlsx\", \"SetHyperlink.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiWorksheet.setleftmargin": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.SetLeftMargin(20.8);\nvar oLeftMargin = oWorksheet.GetLeftMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Left margin: \" + oLeftMargin);\nbuilder.SaveFile(\"xlsx\", \"SetLeftMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826545&doc=aEk0RCtSZ2dmZWdGZVlTNkM3TWxyMHVKWmN3RkFaL005RzZrMURkQ24wMD0_IjY4MjY1NDUi0&action=embedded"
