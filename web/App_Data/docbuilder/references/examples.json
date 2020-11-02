@@ -2066,6 +2066,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A3:E8\").Merge(true);\noWorksheet.GetRange(\"A9:E14\").Merge(false);\nbuilder.SaveFile(\"xlsx\", \"Merge.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5115544&doc=NlkyMEZIUmdPZ0pqU3VWUUszajJOSndBdFlvVUpKQ0lYZGlYbGVIRXRRcz0_IjUxMTU1NDQi0&action=embedded"
 		},
+		"ApiRange.select": {
+			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oRange = oWorksheet.GetRange(\"A1:C1\");\noRange.SetValue(\"1\");\noRange.Select();\nApi.GetSelection().SetValue(\"selected\");\nbuilder.SaveFile(\"xlsx\", \"Select.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRange.setalignhorizontal": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange('A2').SetValue('2');\nvar sRange = oWorksheet.GetRange(\"A1:D5\");\nsRange.SetAlignHorizontal(\"center\");\nbuilder.SaveFile(\"xlsx\", \"SetAlignHorizontal.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882017&doc=NmhVZ2tNa1dXOWZPanhBS1ZqZmFiemxsc21ERTZmTU5INHJTWUg3bE9NTT0_IjQ4ODIwMTci0&action=embedded"
