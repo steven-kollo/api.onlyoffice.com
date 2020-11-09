@@ -1044,13 +1044,29 @@
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oRun1 = Api.CreateRun();\noRun1.AddText(\"This is just a sample text that was copied.\");\noParagraph.AddElement(oRun1);\nvar oRun2 = oRun1.Copy();\noParagraph.AddElement(oRun2);\nbuilder.SaveFile(\"docx\", \"Copy.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790450&doc=N0Vtb20xTVpTVUZJVWpoTEtQRStPTXgyeFdPdHpFazZIZXhCdWpnZE5Daz0_IjY3OTA0NTAi0&action=embedded"
 		},
+		"ApiRun.delete": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun1 = Api.CreateRun();\noRun1.AddText(\"This is run №1\");\noParagraph.AddElement(oRun1);\noRun2 = Api.CreateRun();\noRun2.AddText(\"This is run №2\");\noParagraph.AddElement(oRun2);\noRun1.RemoveAllElements();\noParagraph.AddLineBreak();\noParagraph.AddText(\"The first run was removed from the document.\");\nbuilder.SaveFile(\"docx\", \"Delete.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRun.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. Nothing special.\");\noParagraph.AddElement(oRun);\nvar oClassType = oRun.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896249&doc=a2F1QUxkMWVhUHQ1RVRJek9QYjBnOUZwZEs1dVh6SzBvYUN1TTJKSUhkaz0_IjQ4OTYyNDki0&action=embedded"
 		},
+		"ApiRun.getrange": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text.\");\noParagraph.AddElement(oRun);\noRange = oRun.GetRange(0, 3);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetRange.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRun.gettextpr": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun, oTextPr;\nvar MyNewRunStyle = oDocument.CreateStyle(\"My New Run Style\", \"run\");\noTextPr = MyNewRunStyle.GetTextPr();\noTextPr.SetCaps(true);\noTextPr.SetFontFamily(\"Calibri Light\");\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noRun.AddText(\"The text properties are changed and the style is added to the paragraph. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetStyle(MyNewRunStyle);\noRun.AddText(\"This is a text run with its own style.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"GetTextPr.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891497&doc=L2hZVXhrMnJHV0RTOEl3K1JoYnIwQUgvQmR3ZVI4V3ZOV2c0TldCWGFHWT0_IjQ4OTE0OTci0&action=embedded"
+		},
+		"ApiRun.removeallelements": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun1 = Api.CreateRun();\noRun1.AddText(\"This is sample text №1\");\noParagraph.AddElement(oRun1);\noRun2 = Api.CreateRun();\noRun2.AddText(\"This is sample text №2\");\noParagraph.AddElement(oRun2);\noRun1.RemoveAllElements();\noParagraph.AddLineBreak();\noParagraph.AddText(\"The sample text №1 was removed from the document.\");\nbuilder.SaveFile(\"docx\", \"RemoveAllElements.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRun.select": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text.\");\noParagraph.AddElement(oRun);\noRun.Select();\noParagraph.AddLineBreak();\noParagraph.AddText(\"The text from the first run was selected.\");\nbuilder.SaveFile(\"docx\", \"Select.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiRun.setbold": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetBold(true);\noRun.AddText(\"This is a text run with the font set to bold.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetBold.docx\");\nbuilder.CloseFile();",
@@ -1115,6 +1131,10 @@
 		"ApiRun.setstyle": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun, oTextPr;\nvar MyNewRunStyle = oDocument.CreateStyle(\"My New Run Style\", \"run\");\noTextPr = MyNewRunStyle.GetTextPr();\noTextPr.SetCaps(true);\noTextPr.SetFontFamily(\"Calibri Light\");\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noRun.AddText(\"The text properties are changed and the style is added to the paragraph. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetStyle(MyNewRunStyle);\noRun.AddText(\"This is a text run with its own style.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetStyle.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891497&doc=L2hZVXhrMnJHV0RTOEl3K1JoYnIwQUgvQmR3ZVI4V3ZOV2c0TldCWGFHWT0_IjQ4OTE0OTci0&action=embedded"
+		},
+		"ApiRun.settextpr": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text.\");\noParagraph.AddElement(oRun);\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontSize(30);\noTextPr.SetBold(true);\noRun.SetTextPr(oTextPr);\nbuilder.SaveFile(\"docx\", \"SetTextPr.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiRun.setunderline": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph, oRun;\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetUnderline(true);\noRun.AddText(\"This is a text run with the text underlined with a single line.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetUnderline.docx\");\nbuilder.CloseFile();",
