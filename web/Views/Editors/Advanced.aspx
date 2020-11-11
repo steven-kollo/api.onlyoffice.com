@@ -86,7 +86,7 @@
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
         "<a href="<%= Url.Action("config/document") %>#url">url</a>": "https://example.com/url-to-example-document.docx"
     },
-    "<a href="<%= Url.Action("config/") %>#documentType">documentType</a>": "text",
+    "<a href="<%= Url.Action("config/") %>#documentType">documentType</a>": "word",
     "<a href="<%= Url.Action("config/editor") %>">editorConfig</a>": {
         "<a href="<%= Url.Action("config/editor") %>#actionLink">actionLink</a>": ACTION_DATA,
         "<a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a>": "https://example.com/url-to-callback.ashx",

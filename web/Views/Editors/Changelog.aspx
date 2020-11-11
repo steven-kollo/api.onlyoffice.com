@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="61" class="copy-link">Version 6.1</h2>
+    <ul>
+        <li>The <em>text</em>, <em>spreadsheet</em> and <em>presentation</em> values for <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter is deprecated, please use <em>word</em>, <em>cell</em> and <em>slide</em> values instead.</li>
+    </ul>
+
     <h2 id="60" class="copy-link">Version 6.0</h2>
     <ul>
         <li>Added the type of insertion in <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">events.onRequestInsertImage</a> event.</li>

@@ -160,7 +160,7 @@
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -196,7 +196,7 @@
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -232,7 +232,7 @@
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -268,7 +268,7 @@
                     "title": "Example Document Title.doc",
                     "url": "https://example.com/url-to-example-document.doc"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -304,7 +304,7 @@
                     "title": "Example Spreadsheet Title.xls",
                     "url": "https://example.com/url-to-example-spreadsheet.xls"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -340,7 +340,7 @@
                     "title": "Example Presentation Title.ppt",
                     "url": "https://example.com/url-to-example-presentation.ppt"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -376,7 +376,7 @@
                     "title": "Example Document Title.odt",
                     "url": "https://example.com/url-to-example-document.odt"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -412,7 +412,7 @@
                     "title": "Example Spreadsheet Title.ods",
                     "url": "https://example.com/url-to-example-spreadsheet.ods"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -448,7 +448,7 @@
                     "title": "Example Presentation Title.odp",
                     "url": "https://example.com/url-to-example-presentation.odp"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -484,7 +484,7 @@
                     "title": "Example Document Title.txt",
                     "url": "https://example.com/url-to-example-document.txt"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -520,7 +520,7 @@
                     "title": "Example Spreadsheet Title.csv",
                     "url": "https://example.com/url-to-example-spreadsheet.csv"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                 },
@@ -556,7 +556,7 @@
                     "title": "Example Document Title.pdf",
                     "url": "https://example.com/url-to-example-document.pdf"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "mode": "view"
                 },
@@ -592,7 +592,7 @@
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "mode": "view"
                 },
@@ -628,7 +628,7 @@
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "mode": "view"
                 },
@@ -664,7 +664,7 @@
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "mode": "view"
                 },
@@ -700,7 +700,7 @@
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
@@ -736,7 +736,7 @@
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
@@ -776,7 +776,7 @@
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
@@ -812,7 +812,7 @@
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
@@ -852,7 +852,7 @@
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
@@ -888,7 +888,7 @@
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
@@ -928,7 +928,7 @@
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -967,7 +967,7 @@
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -1010,7 +1010,7 @@
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -1049,7 +1049,7 @@
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -1092,7 +1092,7 @@
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -1131,7 +1131,7 @@
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -1174,7 +1174,7 @@
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -1224,7 +1224,7 @@
                     "title": "Example Spreadsheet Title.xlsx",
                     "url": "https://example.com/url-to-example-spreadsheet.xlsx"
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -1274,7 +1274,7 @@
                     "title": "Example Presentation Title.pptx",
                     "url": "https://example.com/url-to-example-presentation.pptx"
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "customization": {
@@ -1328,7 +1328,7 @@
                         "review": true
                     }
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
@@ -1369,7 +1369,7 @@
                         "fillForms": true
                     }
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
@@ -1410,7 +1410,7 @@
                         "edit": false
                     }
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
@@ -1451,7 +1451,7 @@
                         "edit": false
                     }
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
@@ -1492,7 +1492,7 @@
                         "edit": false
                     }
                 },
-                "documentType": "presentation",
+                "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"
@@ -1533,7 +1533,7 @@
                         "modifyFilter": false
                     }
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
@@ -1573,7 +1573,7 @@
                         "modifyFilter": false
                     }
                 },
-                "documentType": "spreadsheet",
+                "documentType": "cell",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "user": {
@@ -1617,7 +1617,7 @@
                         "modifyContentControl": false
                     }
                 },
-                "documentType": "text",
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"

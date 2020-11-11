@@ -43,7 +43,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "user": {
             "id": "78e1e841",
@@ -65,7 +65,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "user": {
             "id": "F89d8069ba2b",
@@ -122,7 +122,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     ...
 });
 </pre>
@@ -143,7 +143,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document 2.docx",
         "url": "https://example.com/url-to-example-document2.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     ...
 });
 </pre>
@@ -168,7 +168,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     ...
 });
 </pre>
@@ -194,7 +194,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "customization": {
             "forcesave": true 
@@ -226,7 +226,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "callbackUrl": "https://example.com/url-to-callback.ashx"
     },
@@ -250,7 +250,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "mode": "view"
     },
@@ -278,7 +278,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "mode": "edit"
     },
