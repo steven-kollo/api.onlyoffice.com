@@ -180,6 +180,13 @@
                         <b>example</b>: "John";
                     </li>
                     <li>
+                        <b>group</b> - the group the user belongs to,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Group1";
+                    </li>
+                    <li>
                         <b>id</b> - the identification of the user.
                         The length is limited to 128 symbols,
                         <br />
@@ -251,6 +258,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             ...
         ],
         "user": {
+            "group": "Group1",
             "id": "78e1e841",
             "name": "John Smith"
         }
