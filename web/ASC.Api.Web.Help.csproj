@@ -265,8 +265,7 @@
     <Content Include="Content\img\Editor\alfresco-create.png" />
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
-    <Content Include="Content\img\Editor\inlineEditors1.png" />
-    <Content Include="Content\img\Editor\inlineEditors2.png" />
+    <Content Include="Content\img\Editor\inlineEditors.png" />
     <Content Include="Content\img\Editor\mentions-create.png" />
     <Content Include="Content\img\Editor\mentionShare.png" />
     <Content Include="Content\img\Editor\onMakeActionLink.png" />
@@ -647,7 +646,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64688</DevelopmentServerPort>
+          <DevelopmentServerPort>63819</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

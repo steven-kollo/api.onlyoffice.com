@@ -63,6 +63,21 @@
             <td>"en"</td>
         </tr>
         <tr class="tablerow">
+            <td id="location" class="copy-link">location</td>
+            <td>
+                Defines the default measurement units.
+                Specify <b>us</b> or <b>ca</b> to set inches.
+                The default value is <b>""</b>.
+            </td>
+            <td>string</td>
+            <td>""</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that when <b>us</b> or <b>ca</b> values are set, the default measurement units are inches.</div>
+            </td>
+        </tr>
+        <tr class="tablerow">
             <td id="mode" class="copy-link">mode</td>
             <td>
                 Defines the editor opening mode.
@@ -206,6 +221,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "callbackUrl": "https://example.com/url-to-callback.ashx",
         "createUrl": "https://example.com/url-to-create-document/",
         "lang": "en",
+        "location": "",
         "mode": "edit",
         "recent": [
             {
