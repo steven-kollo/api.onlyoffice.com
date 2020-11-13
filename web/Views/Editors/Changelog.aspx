@@ -19,6 +19,7 @@
     <h2 id="62" class="copy-link">Version 6.2</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">editorConfig.customization.toolbarHideFileName</a> field.</li>
+        <li>The <em>callbackUrl</em> for <em>status</em> <b>6</b> is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a>.</li>
     </ul>
 
     <h2 id="60" class="copy-link">Version 6.0</h2>
@@ -49,7 +50,7 @@
         <li>Added <a href="<%= Url.Action("conversionapi") %>#error">input error</a> for conversion.</li>
         <li>The <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">events.onRequestSendNotify</a> event and the <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event can be set independently.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">editorConfig.customization.mentionShare</a> field.</li>
-        <li>The callbackUrl is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">status</a>.</li>
+        <li>The <em>callbackUrl</em> is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">status</a>.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compatibleFeatures">editorConfig.customization.compatibleFeatures</a> field.</li>
     </ul>
 
@@ -124,7 +125,7 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRename">events.onRequestRename</a> event.</li>
         <li>Added the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
-        <li>Changed the use of callbackUrl from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>
+        <li>Changed the use of <em>callbackUrl</em> from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>
         <li>Added the <a href="<%= Url.Action("config/editor") %>#location">editorConfig.location</a> field.</li>
     </ul>
 
