@@ -171,8 +171,9 @@ docEditor.setSharingSettings({
             "user": "John Smith"
         },
         {
+            "isLink": true,
             "permissions": "Read Only",
-            "user": "Kate Cage"
+            "user": "External link"
         }
     ]
 });
