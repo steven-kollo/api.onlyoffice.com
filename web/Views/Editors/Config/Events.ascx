@@ -36,10 +36,11 @@
         <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
         <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
         <li><a href="#onRequestUsers">onRequestUsers</a> - the commenter can select other users for mention in the comments.</li>
-         <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
+        <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
     </ul>
 </nav>
 
+<br />
 <ul>
     <li>
         <p><b id="onAppReady" class="copy-link">onAppReady</b> - the function called when the application is loaded into the browser.</p>

@@ -36,7 +36,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
         </ul>
     </nav>
-    
+
+    <br />
     <ul>
         <li>
             <p>
