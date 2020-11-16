@@ -15,6 +15,13 @@
         <span class="hdr">Methods</span>
     </h1>
 
+    <nav class="toc">
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
+        </ul>
+    </nav>
+
     <p class="dscr">After initializing <b>document editor</b> you will get the object that can be used to call the methods.</p>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", config);
