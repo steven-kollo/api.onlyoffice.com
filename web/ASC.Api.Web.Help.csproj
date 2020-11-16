@@ -261,6 +261,7 @@
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
     <Content Include="Content\img\Editor\accept_reject.png" />
+    <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
     <Content Include="Content\img\Editor\actionLink-open.png" />
     <Content Include="Content\img\Editor\alfresco-create.png" />
