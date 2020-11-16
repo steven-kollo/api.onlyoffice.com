@@ -343,7 +343,12 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiSection",
+          "null"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
@@ -356,7 +361,12 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiSection",
+          "null"
+        ]
+      ],
       "see": null,
       "inherits": null
     }

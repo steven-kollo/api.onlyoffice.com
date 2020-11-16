@@ -30,7 +30,7 @@
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -57,7 +57,7 @@
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         Height = "100%",
                         Width = "100%"
                     }) %>
@@ -80,7 +80,7 @@
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         Height = "100%",
                         Width = "100%"
                     }) %>
@@ -99,7 +99,7 @@
                                 Title = "Example Document Title.doc",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.doc"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -122,7 +122,7 @@
                                 Title = "Example Spreadsheet Title.xls",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xls"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -145,7 +145,7 @@
                                 Title = "Example Presentation Title.ppt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ppt"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -168,7 +168,7 @@
                                 Title = "Example Document Title.odt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odt"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -191,7 +191,7 @@
                                 Title = "Example Spreadsheet Title.ods",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ods"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -214,7 +214,7 @@
                                 Title = "Example Presentation Title.odp",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odp"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -237,7 +237,7 @@
                                 Title = "Example Document Title.txt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.txt"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -260,7 +260,7 @@
                                 Title = "Example Spreadsheet Title.csv",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.csv"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
@@ -283,7 +283,7 @@
                                 Title = "Example Document Title.pdf",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 Mode = "view"
@@ -306,7 +306,7 @@
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 Mode = "view"
@@ -329,7 +329,7 @@
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 Mode = "view"
@@ -352,7 +352,7 @@
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 Mode = "view"
@@ -375,7 +375,7 @@
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -403,7 +403,7 @@
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -431,7 +431,7 @@
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -459,7 +459,7 @@
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -491,7 +491,7 @@
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -523,7 +523,7 @@
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -555,7 +555,7 @@
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -595,7 +595,7 @@
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -635,7 +635,7 @@
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -680,7 +680,7 @@
                                         Review = true
                                     }
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -709,7 +709,7 @@
                                         FillForms = true
                                     }
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -738,7 +738,7 @@
                                         Edit = false
                                     }
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -767,7 +767,7 @@
                                         Edit = false
                                     }
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -796,7 +796,7 @@
                                         Edit = false
                                     }
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -824,7 +824,7 @@
                                         ModifyFilter = false
                                     }
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
@@ -857,7 +857,7 @@
                                         ModifyContentControl = false
                                     }
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),

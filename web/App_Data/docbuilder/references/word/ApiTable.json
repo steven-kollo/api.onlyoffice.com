@@ -26,7 +26,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "number"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
@@ -34,10 +38,15 @@
       "memberof": "ApiTable",
       "name": "GetRow",
       "description": "<p>Get the table row by its position in the table.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
-          "ApiTableRow"
+          "ApiTableRow",
+          "null"
         ]
       ],
       "see": null,
@@ -62,7 +71,8 @@
       },
       "returns": [
         [
-          "ApiTableCell"
+          "ApiTableCell",
+          "null"
         ]
       ],
       "see": null,
@@ -116,7 +126,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -190,7 +204,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTable",
+          "null"
         ]
       ],
       "see": null,
@@ -622,7 +637,8 @@
       },
       "returns": [
         [
-          "ApiBlockLvlSdt"
+          "ApiBlockLvlSdt",
+          "null"
         ]
       ],
       "see": null,
@@ -665,7 +681,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTable",
+          "null"
         ]
       ],
       "see": null,
@@ -682,7 +699,7 @@
       },
       "returns": [
         [
-          "Array"
+          "Array.<ApiTable>"
         ]
       ],
       "see": null,
@@ -699,7 +716,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTable",
+          "null"
         ]
       ],
       "see": null,
@@ -716,7 +734,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTable",
+          "null"
         ]
       ],
       "see": null,
@@ -733,7 +752,8 @@
       },
       "returns": [
         [
-          "ApiTableCell"
+          "ApiTableCell",
+          "null"
         ]
       ],
       "see": null,
@@ -784,7 +804,7 @@
       },
       "returns": [
         [
-          "Array"
+          "Array.<ApiRange>"
         ]
       ],
       "see": null,

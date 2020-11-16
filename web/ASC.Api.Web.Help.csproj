@@ -260,6 +260,8 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\Editor\accept_reject.png" />
+    <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
     <Content Include="Content\img\Editor\actionLink-open.png" />
     <Content Include="Content\img\Editor\alfresco-create.png" />
@@ -433,6 +435,7 @@
     <Content Include="Views\Editors\Mentions.aspx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
+    <Content Include="Views\Editors\Review.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />

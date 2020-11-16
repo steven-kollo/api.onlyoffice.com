@@ -425,6 +425,16 @@
                 <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="reviewPermissions" class="copy-link">reviewPermissions</td>
+            <td>
+                Defines the group access rights to review documents of users from the specific groups.
+                If the current user does not belong to any of the groups, he can review documents of all groups.
+                The <em>""</em> value of an empty group means that the group of users can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -607,6 +617,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "mentionShare": true,
             "plugins": true,
             "reviewDisplay": "original",
+            "reviewPermissions": {
+                "Group1": ["Group2"],
+                "Group2": ["Group1", "Group2", ""]
+            },
             <% if (license)
                { %>"rightMenu": true,
             <% } %>"showReviewChanges": false,

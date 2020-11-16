@@ -33,6 +33,7 @@
         "callbackUrl": "https://example.com/url-to-callback.ashx",
         "mode": "edit",
         "user": {
+            "group": "Group1",
             "id": "78e1e841",
             "name": "Smith"
         }
@@ -45,7 +46,7 @@
 </p>
 
 <div class="header-gray">Sample token</div>
-<pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicGVybWlzc2lvbnMiOnsiZG93bmxvYWQiOnRydWUsImVkaXQiOnRydWUsInByaW50Ijp0cnVlLCJyZXZpZXciOnRydWV9LCJ0aXRsZSI6IkV4YW1wbGUgRG9jdW1lbnQgVGl0bGUuZG9jeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9LCJlZGl0b3JDb25maWciOnsiY2FsbGJhY2tVcmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1jYWxsYmFjay5hc2h4IiwibW9kZSI6ImVkaXQiLCJ1c2VyIjp7ImlkIjoiNzhlMWU4NDEiLCJuYW1lIjoiU21pdGgifX19.zHrHSYqSxJFGQzDWRxwcxomcXVmyPVULW8C7_jDaIVI</pre>
+<pre>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudCI6eyJmaWxlVHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3IiwicGVybWlzc2lvbnMiOnsiZG93bmxvYWQiOnRydWUsImVkaXQiOnRydWUsInByaW50Ijp0cnVlLCJyZXZpZXciOnRydWV9LCJ0aXRsZSI6IkV4YW1wbGUgRG9jdW1lbnQgVGl0bGUuZG9jeCIsInVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9LCJlZGl0b3JDb25maWciOnsiY2FsbGJhY2tVcmwiOiJodHRwczovL2V4YW1wbGUuY29tL3VybC10by1jYWxsYmFjay5hc2h4IiwibW9kZSI6ImVkaXQiLCJ1c2VyIjp7Imdyb3VwIjoiR3JvdXAxIiwiaWQiOiI3OGUxZTg0MSIsIm5hbWUiOiJTbWl0aCJ9fX0.SHQ6p-yHw2yMoWsB7xB5sq12NSGxPrPHQ3bTgzy3OPE</pre>
 
 
 <h2 id="methods" class="copy-link">Methods</h2>

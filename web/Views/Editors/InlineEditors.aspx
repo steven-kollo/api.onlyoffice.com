@@ -52,7 +52,7 @@ var documentEditor = new DocsAPI.DocEditor("placeholder1", {
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text"
+    "documentType": "word"
 });
 
 var spreadsheetEditor = new DocsAPI.DocEditor("placeholder2", {
@@ -62,7 +62,7 @@ var spreadsheetEditor = new DocsAPI.DocEditor("placeholder2", {
         "title": "Example Spreadsheet Title.xlsx",
         "url": "https://example.com/url-to-example-spreadsheet.xlsx"
     },
-    "documentType": "spreadsheet"
+    "documentType": "cell"
 });
 
 var presentationEditor = new DocsAPI.DocEditor("placeholder3", {
@@ -72,7 +72,7 @@ var presentationEditor = new DocsAPI.DocEditor("placeholder3", {
         "title": "Example Presentation Title.pptx",
         "url": "https://example.com/url-to-example-presentation.pptx"
     },
-    "documentType": "presentation"
+    "documentType": "slide"
 });
 ...
 </pre>

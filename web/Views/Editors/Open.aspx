@@ -52,7 +52,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text"
+    "documentType": "word"
 });
 </pre>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.

@@ -90,6 +90,9 @@
                 <a href="<%= Url.Action("rename") %>">Renaming file</a>
             </li>
             <li>
+                <a href="<%= Url.Action("review") %>">Reviewing</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("inlineeditors") %>">Inline editors</a>
             </li>
             <li>
