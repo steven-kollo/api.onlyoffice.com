@@ -15,8 +15,12 @@
         <span class="hdr">Methods</span>
     </h1>
 
-    <nav class="toc">
-        <h2>Contents</h2>
+    <p class="dscr">After initializing <b>document editor</b> you will get the object that can be used to call the methods.</p>
+    <pre>
+var docEditor = new DocsAPI.DocEditor("placeholder", config);
+</pre>
+
+    <nav class="content">
         <ul>
             <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
             <li><a href="#destroyEditor">destroyEditor</a> - destroy <em>docEditor</em> object.</li>
@@ -32,12 +36,7 @@
             <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
         </ul>
     </nav>
-
-    <p class="dscr">After initializing <b>document editor</b> you will get the object that can be used to call the methods.</p>
-    <pre>
-var docEditor = new DocsAPI.DocEditor("placeholder", config);
-</pre>
-
+    
     <ul>
         <li>
             <p>
