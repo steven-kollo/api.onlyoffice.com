@@ -34,19 +34,7 @@
             <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>" />
             <pre>
 var onRequestUsers = function() {
-    docEditor.setUsers({
-        "users": [
-            {
-                "email": "john@example.com",
-                "name": "John Smith"
-            },
-            {
-                "email": "kate@example.com",
-                "name": "Kate Cage"
-            },
-            ...
-        ]
-    });
+    ...
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -140,18 +128,18 @@ docEditor.setUsers({
     </div>
     <pre>
 var onRequestSendNotify = function(event) {
-var ACTION_DATA = event.data.actionLink;
-var comment = event.data.message;
-var emails = event.data.emails;
-...
+    var ACTION_DATA = event.data.actionLink;
+    var comment = event.data.message;
+    var emails = event.data.emails;
+    ...
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-"events": {
-"onRequestSendNotify": onRequestSendNotify,
-...
-},
-...
+    "events": {
+        "onRequestSendNotify": onRequestSendNotify,
+        ...
+    },
+    ...
 });
 </pre>
 

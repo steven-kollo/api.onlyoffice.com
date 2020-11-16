@@ -182,10 +182,10 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "changes": changes,
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
@@ -207,6 +207,8 @@ docEditor.refreshHistory({
     ],
 });
 </pre>
+            <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
             <p>Show the error message explaining why the version history can not be displayed.</p>
             <pre>
 docEditor.refreshHistory({

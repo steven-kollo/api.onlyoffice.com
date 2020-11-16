@@ -344,10 +344,10 @@ var onRequestHistory = function() {
         "currentVersion": 2,
         "history": [
             {
-                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "changes": changes,
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
-                "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "serverVersion": serverVersion,
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage"
@@ -377,6 +377,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
+        <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
     </li>
 
     <li>
@@ -415,7 +417,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 var onRequestHistoryData = function(event) {
     var version = event.data;
     docEditor.setHistoryData({
-        "changesUrl": "https://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
+        "changesUrl": "https://example.com/url-to-changes.zip",
         "key": "Khirz6zTPdfd7",
         "previous": {
             "key": "af86C7e71Ca8",
@@ -434,8 +436,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <p>Where the <b>changesUrl</b> is the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
     </li>
 
     <li>
@@ -575,8 +580,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
     </li>
 
     <li>
