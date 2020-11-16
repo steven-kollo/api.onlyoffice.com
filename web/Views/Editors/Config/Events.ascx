@@ -8,6 +8,38 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
 
+<nav class="content">
+    <ul>
+        <li><a href="#onAppReady">onAppReady</a> - the application is loaded into the browser.</li>
+        <li><a href="#onCollaborativeChanges">onCollaborativeChanges</a> - the document is co-edited by the other user in the <em>strict</em> co-editing mode.</li>
+        <li><a href="#onDocumentReady">onDocumentReady</a> - the document is loaded into the document editor.</li>
+        <li><a href="#onDocumentStateChange">onDocumentStateChange</a> - the document is modified.</li>
+        <li><a href="#onDownloadAs">onDownloadAs</a> - the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called.</li>
+        <li><a href="#onError">onError</a> - an error or some other specific event occurs.</li>
+        <li><a href="#onInfo">onInfo</a> - the application opened the file.</li>
+        <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
+        <li><a href="#onMakeActionLink">onMakeActionLink</a> - the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</li>
+        <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved.</li>
+        <li><a href="#onReady">onReady</a> - the application is loaded into the browser.</li>
+        <li><a href="#onRequestClose">onRequestClose</a> - the work with the editor must be ended and the editor must be closed.</li>
+        <li><a href="#onRequestCompareFile">onRequestCompareFile</a> - the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.</li>
+        <li><a href="#onRequestCreateNew">onRequestCreateNew</a> - the user is trying to create document by clicking the <em>Create New</em> button.</li>
+        <li><a href="#onRequestEditRights">onRequestEditRights</a> - the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.</li>
+        <li><a href="#onRequestHistory">onRequestHistory</a> - the user is trying to show the document version history by clicking the <em>Version History</em> button.</li>
+        <li><a href="#onRequestHistoryClose">onRequestHistoryClose</a> - the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.</li>
+        <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - the user is trying to click the specific document version in the document version history.</li>
+        <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - the user is trying to insert an image by clicking the <em>Image from Storage</em> button.</li>
+        <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
+        <li><a href="#onRequestRename">onRequestRename</a> - the user is trying to rename the file by clicking the <em>Rename...</em> button.</li>
+        <li><a href="#onRequestRestore">onRequestRestore</a> - the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</li>
+        <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
+        <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
+        <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
+        <li><a href="#onRequestUsers">onRequestUsers</a> - the commenter can select other users for mention in the comments.</li>
+         <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
+    </ul>
+</nav>
+
 <ul>
     <li>
         <p><b id="onAppReady" class="copy-link">onAppReady</b> - the function called when the application is loaded into the browser.</p>
@@ -705,7 +737,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs.
+            <b id="onWarning" class="copy-link">onWarning</b> - the function called when a warning occurs.
             The warning message is sent in the <em>data</em> parameter.
         </p>
         <div class="header-gray">Example</div>
