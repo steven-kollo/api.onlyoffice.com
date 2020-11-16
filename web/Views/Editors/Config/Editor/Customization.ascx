@@ -431,6 +431,23 @@
                 Defines the group access rights to review documents of users from the specific groups.
                 If the current user does not belong to any of the groups, he can review documents of all groups.
                 The <em>""</em> value of an empty group means that the group of users can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
+                The <em>reviewPermissions</em> object has the following structure <em>group: accessRights</em> where:
+                <ul>
+                    <li>
+                        <b>group</b> - the group the user belongs to.
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Group1";
+                    </li>
+                    <li>
+                        <b>accessRights</b> - the list of groups whose documents the <em>group</em> can review.
+                        <br />
+                        <b>type</b>: array of string,
+                        <br />
+                        <b>example</b>: ["Group1", "Group2", ""].
+                    </li>
+                </ul>
             </td>
             <td>object</td>
             <td></td>
