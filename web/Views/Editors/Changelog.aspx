@@ -21,6 +21,7 @@
     <ul>
         <li>The <em>text</em>, <em>spreadsheet</em> and <em>presentation</em> values for <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter is deprecated, please use <em>word</em>, <em>cell</em> and <em>slide</em> values instead.</li>
         <li>Added the <em>group</em> field to the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a>.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#reviewPermissions">editorConfig.customization.reviewPermissions</a> field.</li>
     </ul>
 
     <h2 id="60" class="copy-link">Version 6.0</h2>

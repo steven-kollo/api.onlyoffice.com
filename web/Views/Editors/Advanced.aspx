@@ -130,6 +130,10 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#plugins">plugins</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",
+            "<a href="<%= Url.Action("config/editor/customization") %>#reviewPermissions">reviewPermissions</a>": {
+                "Group1": ["Group2"],
+                "Group2": ["Group1", "Group2", ""]
+            },
             "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
