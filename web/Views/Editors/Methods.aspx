@@ -19,6 +19,17 @@
         <h2>Contents</h2>
         <ul>
             <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
+            <li><a href="#destroyEditor">destroyEditor</a> - destroy <em>docEditor</em> object.</li>
+            <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
+            <li><a href="#insertImage">insertImage</a> - insert an image into the file.</li>
+            <li><a href="#refreshHistory">refreshHistory</a> - show the document version history.</li>
+            <li><a href="#setActionLink">setActionLink</a> - set the link to the document which contains a bookmark.</li>
+            <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
+            <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
+            <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
+            <li><a href="#setSharingSettings">setSharingSettings</a> - update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.</li>
+            <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
+            <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
         </ul>
     </nav>
 
@@ -182,7 +193,7 @@ docEditor.refreshHistory({
 });
 </pre>
             <p>
-                If after editing and saving the document the <em>histoy</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
+                If after editing and saving the document the <em>history</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
             </p>
             <pre>
 docEditor.refreshHistory({
@@ -567,7 +578,7 @@ docEditor.setRevisedFile({
 
         <li>
             <p>
-                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - Update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
+                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
                 This method can be called after the <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a> events.
             </p>
             <pre>
@@ -686,7 +697,7 @@ docEditor.setUsers({
 
         <li>
             <p>
-                <b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message.
+                <b id="showMessage" class="copy-link">showMessage</b> - display tooltip with the message.
                 This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
             </p>
             <pre>
