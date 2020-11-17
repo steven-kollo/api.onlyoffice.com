@@ -444,6 +444,19 @@
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
+                <td>fb2</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
                 <td>fodt</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
