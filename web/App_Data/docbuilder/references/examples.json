@@ -2286,6 +2286,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nvar oAddress = oWorksheet.GetRange(\"A1\").GetAddress(true, true, 'xlA1', false);\noWorksheet.GetRange(\"A3\").SetValue(\"Address: \");\noWorksheet.GetRange(\"B3\").SetValue(oAddress);\nbuilder.SaveFile(\"xlsx\", \"GetAddress.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826278&doc=MWkyeDlqazk4ZjllMThlTGtoOG05VVY2VVk1SUNLNWpBVXhiWEFaMGFRcz0_IjY4MjYyNzgi0&action=embedded"
 		},
+		"ApiRange.getclasstype": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1\");\noRange.SetValue(\"This is just a sample text in the cell A1.\");\noClassType = oRange.GetClassType();\noWorksheet.GetRange('A3').SetValue(\"Class type: \" + oClassType);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRange.getcol": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oRange = oWorksheet.GetRange(\"D9\").GetCol();\noWorksheet.GetRange(\"A2\").SetValue(oRange.toString());\nbuilder.SaveFile(\"xlsx\", \"GetCol.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5004446&doc=dlZubWJUTU5qOWlkK1N4QnNVMmRyYVBXcmtRMS9vYnYyUlZ5Yk01OVlhcz0_IjUwMDQ0NDYi0&action=embedded"
@@ -2298,6 +2302,14 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"3\");\nvar oCount = oWorksheet.GetRange(\"A1:C1\").GetCount();\noWorksheet.GetRange(\"A4\").SetValue(\"Count: \");\noWorksheet.GetRange(\"B4\").SetValue(oCount);\nbuilder.SaveFile(\"xlsx\", \"GetCount.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826288&doc=RnVrRUo0dUs1NlNMSXYwR3BXV1UraWZsRDJrUWs0WFdDM1JKQUJ6STcrOD0_IjY4MjYyODgi0&action=embedded"
 		},
+		"ApiRange.getfillcolor": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetColumnWidth(0, 60);\noRange = oWorksheet.GetRange(\"A1\");\noRange.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\noRange.SetValue(\"This is the cell with a color set to its background.\");\noFillColor = oRange.GetFillColor();\noWorksheet.GetRange(\"A3\").SetValue(\"This is another cell with the same color set to its background\");\noWorksheet.GetRange(\"A3\").SetFillColor(oFillColor);\nbuilder.SaveFile(\"xlsx\", \"GetFillColor.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.getformula": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"B1\").SetValue(1);\noWorksheet.GetRange(\"C1\").SetValue(2);\noRange = oWorksheet.GetRange(\"A1\");\noRange.SetValue(\"=SUM(B1:C1)\");\noFormula = oRange.GetFormula();\noWorksheet.GetRange(\"A3\").SetValue(\"Formula of cell A1: \" + oFormula);\nbuilder.SaveFile(\"xlsx\", \"GetFormula.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRange.getrow": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oRange = oWorksheet.GetRange(\"A9\").GetRow();\noWorksheet.GetRange(\"A2\").SetValue(oRange.toString());\nbuilder.SaveFile(\"xlsx\", \"GetRow.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003345&doc=V2FGcjE4SkxDREszdnVaSHBCdG14UmZIbUsyQ0I2UnlobXM1VEIzRnVjaz0_IjUwMDMzNDUi0&action=embedded"
@@ -2306,9 +2318,21 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nvar oHeight = oWorksheet.GetRange(\"A1\").GetRowHeight();\noWorksheet.GetRange(\"A1\").SetValue(\"Height: \");\noWorksheet.GetRange(\"B1\").SetValue(oHeight);\nbuilder.SaveFile(\"xlsx\", \"GetRowHeight.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826290&doc=b3hOTXp0T0cxMUJiekhGMjJCSDVubjE4cW8vbjRoSXRsMlBqeVVob2pSST0_IjY4MjYyOTAi0&action=embedded"
 		},
+		"ApiRange.gettext": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"text1\");\noWorksheet.GetRange(\"B1\").SetValue(\"text2\");\noWorksheet.GetRange(\"C1\").SetValue(\"text3\");\noRange = oWorksheet.GetRange(\"A1:C1\");\noText = oRange.GetText();\noWorksheet.GetRange(\"A3\").SetValue(\"Text from the cell A1: \" + oText);\nbuilder.SaveFile(\"xlsx\", \"GetText.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRange.getvalue": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\nvar oValue = oWorksheet.GetRange(\"A1\").GetValue();\noWorksheet.GetRange(\"A3\").SetValue(\"Value: \");\noWorksheet.GetRange(\"B3\").SetValue(oValue);\nbuilder.SaveFile(\"xlsx\", \"GetValue.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826292&doc=TXFxVkx0SUk0SW45OWo3U3NBWEt0L2p4ZWZwQXBYWTMvMURxTGlaUDN5az0_IjY4MjYyOTIi0&action=embedded"
+		},
+		"ApiRange.getvalue2": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFormat = Api.Format(\"123456\", [\"$#,##0\"]);\noRange = oWorksheet.GetRange(\"A1\");\noRange.SetValue(oFormat);\noValue2 = oRange.GetValue2();\noWorksheet.GetRange(\"A3\").SetValue(\"Value of the cell A1 without format: \" + oValue2);\nbuilder.SaveFile(\"xlsx\", \"GetValue2.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.getwraptext": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1\");\noRange.SetValue(\"This is the text wrapped to fit the cell size.\");\noRange.SetWrap(true);\noWorksheet.GetRange(\"A3\").SetValue(\"The text in the cell A1 is wrapped: \" + oRange.GetWrapText());\nbuilder.SaveFile(\"xlsx\", \"GetWrapText.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiRange.merge": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A3:E8\").Merge(true);\noWorksheet.GetRange(\"A9:E14\").Merge(false);\nbuilder.SaveFile(\"xlsx\", \"Merge.xlsx\");\nbuilder.CloseFile();",
