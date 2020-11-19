@@ -1966,6 +1966,14 @@
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nApi.SetLocale('en-CA');\noLocale = Api.GetLocale();\noWorksheet.GetRange(\"A1\").SetValue(\"Locale: \" + oLocale);\nbuilder.SaveFile(\"xlsx\", \"GetLocale.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824620&doc=UXVZVnNYeU80YUtCNUp0MHoraUFyRFlxQVY3WkJkYUR2bEZzemJ6WDJFbz0_IjY4MjQ2MjAi0&action=embedded"
 		},
+		"Api.getmailmergedata": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetColumnWidth(0, 20);\noWorksheet.GetRange(\"A1\").SetValue(\"Email address\");\noWorksheet.GetRange(\"B1\").SetValue(\"Greeting\");\noWorksheet.GetRange(\"C1\").SetValue(\"First name\");\noWorksheet.GetRange(\"D1\").SetValue(\"Last name\");\noWorksheet.GetRange(\"A2\").SetValue(\"user1@example.com\");\noWorksheet.GetRange(\"B2\").SetValue(\"Dear\");\noWorksheet.GetRange(\"C2\").SetValue(\"John\");\noWorksheet.GetRange(\"D2\").SetValue(\"Smith\");\noWorksheet.GetRange(\"A3\").SetValue(\"user2@example.com\");\noWorksheet.GetRange(\"B3\").SetValue(\"Hello\");\noWorksheet.GetRange(\"C3\").SetValue(\"Kate\");\noWorksheet.GetRange(\"D3\").SetValue(\"Cage\");\noMailMergeData = Api.GetMailMergeData(0);\noWorksheet.GetRange(\"A5\").SetValue(\"Mail merge data: \" + oMailMergeData);\nbuilder.SaveFile(\"xlsx\", \"GetMailMergeData.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"Api.getrange": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = Api.GetRange(\"A1:C1\");\noRange.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\noWorksheet.GetRange(\"A3\").SetValue(\"The color was set to the background of cells A1:C1.\");\nbuilder.SaveFile(\"xlsx\", \"GetRange.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"Api.getselection": {
 			"script": "builder.CreateFile(\"xlsx\");\nvar oWorksheet = Api.GetActiveSheet();\nApi.GetSelection().SetValue(\"selected\");\nbuilder.SaveFile(\"xlsx\", \"GetSelection.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6824622&doc=bk1XdHJBRkIwTjlPWE5XTFRFYm0yU1dZRkl5WXd5OUpUelJ0RUhMcW1aOD0_IjY4MjQ2MjIi0&action=embedded"
