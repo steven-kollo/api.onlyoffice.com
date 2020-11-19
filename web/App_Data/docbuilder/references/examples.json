@@ -976,6 +976,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = editor.GetDocument();\noFParagraph = oDocument.GetElement(0);\noFParagraph.AddText(\"First paragraph\");\noSParagraph = editor.CreateParagraph();\noSParagraph.AddText(\"Second Paragraph\");\noDocument.Push(oSParagraph);\noRange = oDocument.GetRange(0, 28);\narrParagraphs = oRange.GetAllParagraphs();\narrParagraphs[0].SetBold(\"true\");\nbuilder.SaveFile(\"docx\", \"GetAllParagraphs.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
+		"ApiRange.getclasstype": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oParagraph.GetRange(0, 9);\noClassType = oRange.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class type: \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRange.getparagraph": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noFParagraph = oDocument.GetElement(0);\noFParagraph.AddText(\"First paragraph\");\noSParagraph = Api.CreateParagraph();\noSParagraph.AddText(\"Second Paragraph\");\noDocument.Push(oSParagraph);\noRange = oDocument.GetRange(0, 28);\noRangeParagraph = oRange.GetParagraph(1);\noRangeParagraph.SetBold(\"true\");\nbuilder.SaveFile(\"docx\", \"GetParagraph.docx\");\nbuilder.CloseFile();",
 			"demo": ""
