@@ -69,7 +69,7 @@
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
     <li>Install <b>Node.js</b>:
-        <div class="commandline">curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -</div>
+        <div class="commandline">curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -</div>
         <div class="commandline">sudo apt-get install -y nodejs</div>
     </li>
     <li>Download the archive with the Node.js example and unpack the archive:
