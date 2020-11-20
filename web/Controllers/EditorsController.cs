@@ -130,6 +130,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Signature/Browser",
                 "Signature/Request",
                 "Strapi",
+                "testform",
                 "Troubleshooting",
                 "Try",
                 "Viewing",
@@ -488,6 +489,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Troubleshooting()
+        {
+            return View();
+        }
+
+        public ActionResult testform()
         {
             return View();
         }
