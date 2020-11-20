@@ -2830,6 +2830,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetVisible(true);\noVisible = oWorksheet.GetVisible();\noWorksheet.GetRange(\"A1\").SetValue(\"Visible: \");\noWorksheet.GetRange(\"B1\").SetValue(oVisible);\nbuilder.SaveFile(\"xlsx\", \"GetVisible.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826529&doc=Z1BnUnhvdXRtY3AvaW4zUG1oZVBNYzhEaEZOZ2UxTW1HUkNwUHlWVUVyND0_IjY4MjY1Mjki0&action=embedded"
 		},
+		"ApiWorksheet.setactive": {
+			"script": "builder.CreateFile(\"xlsx\");\nApi.AddSheet(\"New_sheet\");\noSheet = Api.GetSheet(\"New_sheet\");\noSheet.SetActive();\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"The current sheet is active.\");\nbuilder.SaveFile(\"xlsx\", \"SetActive.xlsx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiWorksheet.setbottommargin": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetBottomMargin(25.1);\noBottomMargin = oWorksheet.GetBottomMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Bottom margin: \" + oBottomMargin);\nbuilder.SaveFile(\"xlsx\", \"SetBottomMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826536&doc=cXBJMklDb2s3RkhQKzNiU2pENFFCS2dSV0VicjVjYjZGcTZ0cTd6dWRFTT0_IjY4MjY1MzYi0&action=embedded"
