@@ -597,7 +597,7 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790440&doc=RnJjSnhNR0VvV3NJSzVVY1JyUzg1UUVwVFRVRmIwRnZ1aWpZSUNrUlhMVT0_IjY3OTA0NDAi0&action=embedded"
 		},
 		"ApiInlineLvlSdt.getparentcontentcontrol": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt1 = Api.CreateInlineLvlSdt();\noInlineLvlSdt1.AddText(\"This is a parent inline text content control.\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt1);\noInlineLvlSdt2 = Api.CreateInlineLvlSdt();\noInlineLvlSdt2.AddText(\"This is an inline text content control added in another content control.\");\noInlineLvlSdt1.AddElement(oInlineLvlSdt2, 0);\noParentInlineLvlSdt = oInlineLvlSdt2.GetParentContentControl();\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text in a parent content control.\");\noParentInlineLvlSdt.AddElement(oRun, 1);\nbuilder.SaveFile(\"docx\", \"GetParentContentControl.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt1 = Api.CreateInlineLvlSdt();\noInlineLvlSdt1.AddText(\"This is a parent inline text content control.\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt1);\noInlineLvlSdt2 = Api.CreateInlineLvlSdt();\noInlineLvlSdt2.AddText(\"This is an inline text content control added in another content control.\");\noInlineLvlSdt1.AddElement(oInlineLvlSdt2, 0);\noParentInlineLvlSdt = oInlineLvlSdt2.GetParentContentControl();\noParentInlineLvlSdt.SetAlias(\"№1\");\nbuilder.SaveFile(\"docx\", \"GetParentContentControl.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
 		"ApiInlineLvlSdt.getrange": {
