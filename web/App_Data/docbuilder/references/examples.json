@@ -1300,6 +1300,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph, oTable, oTableStyle;\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noClassType = oTable.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896203&doc=VHRUV2Q2WHN2b0pkc2N6QU0vWGNQRldCL0k1VnpJVnBUM2x4cWwybEhzZz0_IjQ4OTYyMDMi0&action=embedded"
 		},
+		"ApiTable.getparentcontentcontrol": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noBlockLvlSdt.AddElement(oTable, 0);\noDocument.AddElement(0, oBlockLvlSdt);\noParentContentControl = oTable.GetParentContentControl();\noParentContentControl.SetAlias(\"№1\");\nbuilder.SaveFile(\"docx\", \"GetParentContentControl.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiTable.getrange": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noTable.GetCell(0, 0).GetContent().GetElement(0).AddText(\"This is just a sample text.\");\noRange = oTable.GetRange(0, 3);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetRange.docx\");\nbuilder.CloseFile();",
 			"demo": ""
