@@ -4,6 +4,10 @@
 			"script": "builder.CreateFile(\"docx\");\noPresentation = Api.GetPresentation();\noSlide = Api.CreateSlide();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noSlide.SetBackground(oFill);\noPresentation.AddSlide(oSlide);\noSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noParagraph.AddText(\"This is an example for base class methods.\");\noBullet = Api.CreateNumbering(\"ArabicParenR\", 1);\noParagraph = Api.CreateParagraph();\noParagraph.SetBullet(oBullet);\noParagraph.AddText(\" A new slide was created.\");\noDocContent.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.SetBullet(oBullet);\noParagraph.AddText(\" The background of the new slide was set to pink.\");\noDocContent.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.SetBullet(oBullet);\noParagraph.AddText(\" A blue shape was created with numbered paragraphs in it.\");\noDocContent.Push(oParagraph);\noSlide.AddObject(oShape);\nbuilder.SaveFile(\"docx\", \"Api.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
+		"apiblocklvlsdt": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the first paragraph of the content control.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noContent = oBlockLvlSdt.GetContent();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the second paragraph of the content control.\");\noContent.AddElement(oParagraph);\noContent.Push(oParagraph);\noDocument.AddElement(0, oBlockLvlSdt);\naParagraphs = oBlockLvlSdt.GetAllParagraphs();\naParagraphs[0].SetBold(true);\noBlockLvlSdt.Search(\"paragraph\")[1].SetItalic(true);\noBlockLvlSdt.SetLabel(\"2147483647\");\noBlockLvlSdt.SetLock(\"sdtContentLocked\");\noBlockLvlSdt.SetAlias(\"№1\");\noBlockLvlSdt.SetTag(\"This is a tag.\");\noLabel = oBlockLvlSdt.GetLabel();\noLock = oBlockLvlSdt.GetLock();\noAlias = oBlockLvlSdt.GetAlias();\noTag = oBlockLvlSdt.GetTag();\noClassType = oBlockLvlSdt.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class type: \" + oClassType);\noParagraph.AddLineBreak();\noParagraph.AddText(\"Lock type: \" + oLock);\noParagraph.AddLineBreak();\noParagraph.AddText(\"Label: \" + oLabel);\noParagraph.AddLineBreak();\noParagraph.AddText(\"Alias: \" + oAlias);\noParagraph.AddLineBreak();\noParagraph.AddText(\"Tag: \" + oTag);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"ApiBlockLvlSdt.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"apichart": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph, oDrawing;\noParagraph = oDocument.GetElement(0);\noDrawing = Api.CreateChart(\"bar3D\", [\n  [200, 240, 280],\n  [250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noDrawing.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noDrawing.SetHorAxisTitle(\"Year\", 11);\noDrawing.SetLegendPos(\"bottom\");\noDrawing.SetShowDataLabels(false, false, true, false);\noDrawing.SetTitle(\"Financial Overview\", 13);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"ApiChart.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4883430&doc=WVFVTFhqdEdBVzQxdWRmZW1BQS9QdmtOSGR6bzJXeVpZMUNGY1pEcWlqYz0_IjQ4ODM0MzAi0&action=embedded"
@@ -211,7 +215,95 @@
 		"Api.save": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This sample text is saved to the document.\");\nApi.Save();\nbuilder.SaveFile(\"docx\", \"Save.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790240&doc=VkNrSVBrU250T05VRDNTQ1p1S0h0Smxoa1dEa2pidkZ2QjM2eXY2NnkxWT0_IjY3OTAyNDAi0&action=embedded"
-		  },
+		},
+		"ApiBlockLvlSdt.addelement": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noDocument.AddElement(0, oBlockLvlSdt);\nbuilder.SaveFile(\"docx\", \"AddElement.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.addtext": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noBlockLvlSdt.AddText(\"This is a block text content control.\");\noDocument.AddElement(0, oBlockLvlSdt);\nbuilder.SaveFile(\"docx\", \"AddText.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getalias": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control with alias \"№1\".\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noBlockLvlSdt.SetAlias(\"№1\");\noDocument.AddElement(0, oBlockLvlSdt);\noAlias = oBlockLvlSdt.GetAlias();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Alias: \" + oAlias);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetAlias.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getallparagraphs": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph1 = Api.CreateParagraph();\noParagraph1.AddText(\"This is the first paragraph in the content control.\")\noBlockLvlSdt.AddElement(oParagraph1, 0);\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is the second paragraph in the content control.\")\noBlockLvlSdt.AddElement(oParagraph2, 1);\noDocument.AddElement(0, oBlockLvlSdt);\naParagraphs = oBlockLvlSdt.GetAllParagraphs();\naParagraphs[0].SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetAllParagraphs.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getclasstype": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noDocument.AddElement(0, oBlockLvlSdt);\noClassType = oBlockLvlSdt.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class type: \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getcontent": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noDocument.AddElement(0, oBlockLvlSdt);\noContent = oBlockLvlSdt.GetContent();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a content of the container.\");\noContent.AddElement(oParagraph);\noContent.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetContent.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getlabel": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control with a label set to it.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noBlockLvlSdt.SetLabel(\"2147483647\");\noDocument.AddElement(0, oBlockLvlSdt);\noLabel = oBlockLvlSdt.GetLabel();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Label: \" + oLabel);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetLabel.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getlock": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control with the content lock set to it.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noBlockLvlSdt.SetLock(\"sdtContentLocked\");\noDocument.AddElement(0, oBlockLvlSdt);\noLock = oBlockLvlSdt.GetLock();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Lock type: \" + oLock);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetLock.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getparentcontentcontrol": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt1 = Api.CreateBlockLvlSdt();\noBlockLvlSdt1.AddText(\"This is a parent block text content control.\");\noDocument.AddElement(0, oBlockLvlSdt1);\noBlockLvlSdt2 = Api.CreateBlockLvlSdt();\noBlockLvlSdt2.AddText(\"This is a block text content control added in another content control.\");\noBlockLvlSdt1.AddElement(oBlockLvlSdt2, 0);\noParentBlockLvlSdt = oBlockLvlSdt2.GetParentContentControl();\noParentBlockLvlSdt.SetAlias(\"№1\");\nbuilder.SaveFile(\"docx\", \"GetParentContentControl.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getparenttable": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noBlockLvlSdt.AddText(\"This is a block text content control.\");\noCell = oTable.GetRow(0).GetCell(0);\noCell.AddElement(0, oBlockLvlSdt);\noParentTable = oBlockLvlSdt.GetParentTable();\noCell = oParentTable.GetRow(2).GetCell(0);\noParentTable.RemoveRow(oCell);\nbuilder.SaveFile(\"docx\", \"GetParentTable.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getparenttablecell": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noBlockLvlSdt.AddText(\"This is a block text content control.\");\noCell = oTable.GetRow(0).GetCell(0);\noCell.AddElement(0, oBlockLvlSdt);\noParentTableCell = oBlockLvlSdt.GetParentTableCell();\noParentTableCell.SetCellBorderTop(\"single\", 32, 0, 0, 0, 255);\nbuilder.SaveFile(\"docx\", \"GetParentTableCell.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.getrange": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noBlockLvlSdt.AddText(\"This is a block text content control.\");\noDocument.AddElement(0, oBlockLvlSdt);\noRange = oBlockLvlSdt.GetRange(10, 14);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetRange.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.gettag": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control with a tag set to it.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noBlockLvlSdt.SetTag(\"This is a tag.\");\noDocument.AddElement(0, oBlockLvlSdt);\noTag = oBlockLvlSdt.GetTag();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Tag: \" + oTag);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetTag.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.push": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control.\");\noBlockLvlSdt.Push(oParagraph);\noDocument.AddElement(0, oBlockLvlSdt);\nbuilder.SaveFile(\"docx\", \"Push.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.removeallelements": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noDocument.AddElement(0, oBlockLvlSdt);\noBlockLvlSdt.RemoveAllElements();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"All elements were removed from the content control.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"RemoveAllElements.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.search": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph1 = Api.CreateParagraph();\noParagraph1.AddText(\"This is the first paragraph in the content control.\");\noBlockLvlSdt.AddElement(oParagraph1, 0);\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is the second paragraph in the content control.\");\noBlockLvlSdt.AddElement(oParagraph2, 1);\noDocument.AddElement(0, oBlockLvlSdt);\noBlockLvlSdt.Search(\"paragraph\")[1].SetBold(true);\nbuilder.SaveFile(\"docx\", \"Search.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.select": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noBlockLvlSdt.AddText(\"The block text content control is selected.\");\noDocument.AddElement(0, oBlockLvlSdt);\noBlockLvlSdt.Select();\nbuilder.SaveFile(\"docx\", \"Select.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.setalias": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control with alias \\"№1\\".\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noBlockLvlSdt.SetAlias(\"№1\");\noDocument.AddElement(0, oBlockLvlSdt);\noAlias = oBlockLvlSdt.GetAlias();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Alias: \" + oAlias);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetAlias.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.setlabel": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control with a label set to it.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noBlockLvlSdt.SetLabel(\"2147483647\");\noDocument.AddElement(0, oBlockLvlSdt);\noLabel = oBlockLvlSdt.GetLabel();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Label: \" + oLabel);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetLabel.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.setlock": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control with the content lock set to it.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noBlockLvlSdt.SetLock(\"sdtContentLocked\");\noDocument.AddElement(0, oBlockLvlSdt);\noLock = oBlockLvlSdt.GetLock();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Lock type: \" + oLock);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetLock.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.settag": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control with a tag set to it.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noBlockLvlSdt.SetTag(\"This is a tag.\");\noDocument.AddElement(0, oBlockLvlSdt);\noTag = oBlockLvlSdt.GetTag();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Tag: \" + oTag);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetTag.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiBlockLvlSdt.settextpr": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noBlockLvlSdt.AddText(\"This is a block text content control with the font size set to 30 and the font weight set to bold.\");\noDocument.AddElement(0, oBlockLvlSdt);\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontSize(30);\noTextPr.SetBold(true);\noBlockLvlSdt.SetTextPr(oTextPr);\nbuilder.SaveFile(\"docx\", \"SetTextPr.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiChart.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noDrawing = Api.CreateChart(\"bar3D\", [\n  [200, 240, 280],\n  [250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noDrawing.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noDrawing.SetHorAxisTitle(\"Year\", 11);\noDrawing.SetLegendPos(\"bottom\");\noDrawing.SetShowDataLabels(false, false, true, false);\noDrawing.SetTitle(\"Financial Overview\", 13);\noParagraph.AddDrawing(oDrawing);\noClassType = oDrawing.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896208&doc=UHgwb3g2dVg2V2YvMWdISkRyZm5Kc1c4SDVSbGJyUFVJMitlU3RvaFlmMD0_IjQ4OTYyMDgi0&action=embedded"
