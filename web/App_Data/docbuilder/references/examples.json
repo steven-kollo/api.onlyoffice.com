@@ -136,6 +136,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateBlipFill(\"https://api.onlyoffice.com/content/img/docbuilder/examples/icon_DocumentEditors.png\", \"tile\");\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"star10\", 5930900, 595605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateBlipFill.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887196&doc=QXZNWWhLV1lqNVFOMUlFdzZJMVdRdUpqK3BDZncyRnd2RTBjb3N3S0JLYz0_IjQ4ODcxOTYi0&action=embedded"
 		},
+		"Api.createblocklvlsdt": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a block text content control.\");\noBlockLvlSdt.AddElement(oParagraph, 0);\noDocument.AddElement(0, oBlockLvlSdt);\nbuilder.SaveFile(\"docx\", \"CreateBlockLvlSdt.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"Api.createchart": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noDrawing = Api.CreateChart(\"bar3D\", [\n  [200, 240, 280],\n  [250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateChart.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882140&doc=d2duSXpqNzhCRUNxT2U1dTIzbGYzYVFweENPcDk3bUQwTmtPVXEveE53Zz0_IjQ4ODIxNDAi0&action=embedded"
