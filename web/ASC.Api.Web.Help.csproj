@@ -2494,6 +2494,7 @@
     <Content Include="docspace-storybook\108.6a86def6d155efa735a9.manager.bundle.js" />
     <Content Include="docspace-storybook\167.3b6356e5c413d418be86.manager.bundle.js" />
     <Content Include="docspace-storybook\167.3b6356e5c413d418be86.manager.bundle.js.LICENSE.txt" />
+    <Content Include="Scripts\testFormJs.js" />
     <Content Include="docspace-storybook\29.f20c1913.iframe.bundle.js" />
     <Content Include="docspace-storybook\391.612ace3a.iframe.bundle.js" />
     <Content Include="docspace-storybook\391.612ace3a.iframe.bundle.js.LICENSE.txt" />
