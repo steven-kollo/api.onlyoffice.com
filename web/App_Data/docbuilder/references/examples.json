@@ -216,6 +216,26 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph;\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a new paragraph\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetDocument.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882310&doc=NUdkSjVKQkU0TXhOb2JIM08vejhuOG8rR1Q4WW9QcUZkdUthMDZNcjFGUT0_IjQ4ODIzMTAi0&action=embedded"
 		},
+		"Api.getmailmergereceptionscount": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\narrField = [\"Greeting line\", \"First name\", \"Last name\"];\nfor (let i = 0; i < 3; i++) {\n    oRun = Api.CreateRun();\n    oRun.AddText(arrField[i]);\n    oParagraph.AddElement(oRun);\n    oRun.WrapInMailMergeField();\n    oParagraph.AddLineBreak();\n}\nApi.LoadMailMergeData([arrField, [\"Dear\", \"John\", \"Smith\"], [\"Hello\", \"Lara\", \"Davis\"]]);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The number of mail merge receptions: \" + Api.GetMailMergeReceptionsCount());\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetMailMergeReceptionsCount.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"Api.getmailmergetemplatedoccontent": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\narrField = [\"Greeting line\", \"First name\", \"Last name\"];\nfor (let i = 0; i < 3; i++) {\n    oRun = Api.CreateRun();\n    oRun.AddText(arrField[i]);\n    oParagraph.AddElement(oRun);\n    oRun.WrapInMailMergeField();\n    oParagraph.AddText(\" \");\n}\noParagraph.AddText(\"!\");\nApi.LoadMailMergeData([arrField, [\"Dear\", \"John\", \"Smith\"], [\"Hello\", \"Lara\", \"Davis\"]]);\noMailMergeDocContent = Api.GetMailMergeTemplateDocContent();\nApi.MailMerge();\nApi.ReplaceDocumentContent(oMailMergeDocContent);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"We got the mail merge template document and replaced the main document with it.\")\nbuilder.SaveFile(\"docx\", \"GetMailMergeTemplateDocContent.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"Api.loadmailmergedata": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\narrField = [\"Greeting line\", \"First name\", \"Last name\"];\nfor (let i = 0; i < 3; i++) {\n    oRun = Api.CreateRun();\n    oRun.AddText(arrField[i]);\n    oParagraph.AddElement(oRun);\n    oRun.WrapInMailMergeField();\n    oParagraph.AddText(\" \");\n}\noParagraph.AddText(\"!\");\nApi.LoadMailMergeData([arrField, [\"Dear\", \"John\", \"Smith\"], [\"Hello\", \"Lara\", \"Davis\"]]);\nApi.MailMerge();\nbuilder.SaveFile(\"docx\", \"LoadMailMergeData.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"Api.mailmerge": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\narrField = [\"Greeting line\", \"First name\", \"Last name\"];\nfor (let i = 0; i < 3; i++) {\n    oRun = Api.CreateRun();\n    oRun.AddText(arrField[i]);\n    oParagraph.AddElement(oRun);\n    oRun.WrapInMailMergeField();\n    oParagraph.AddText(\" \");\n}\noParagraph.AddText(\"!\");\nApi.LoadMailMergeData([arrField, [\"Dear\", \"John\", \"Smith\"], [\"Hello\", \"Lara\", \"Davis\"]]);\nApi.MailMerge();\nbuilder.SaveFile(\"docx\", \"MailMerge.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"Api.replacedocumentcontent": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\narrField = [\"Greeting line\", \"First name\", \"Last name\"];\nfor (let i = 0; i < 3; i++) {\n    oRun = Api.CreateRun();\n    oRun.AddText(arrField[i]);\n    oParagraph.AddElement(oRun);\n    oRun.WrapInMailMergeField();\n    oParagraph.AddText(\" \");\n}\noParagraph.AddText(\"!\");\nApi.LoadMailMergeData([arrField, [\"Dear\", \"John\", \"Smith\"], [\"Hello\", \"Lara\", \"Davis\"]]);\noMailMergeDocContent = Api.GetMailMergeTemplateDocContent();\nApi.MailMerge();\nApi.ReplaceDocumentContent(oMailMergeDocContent);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"We got the mail merge template document and replaced the main document with it.\")\nbuilder.SaveFile(\"docx\", \"ReplaceDocumentContent.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"Api.save": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This sample text is saved to the document.\");\nApi.Save();\nbuilder.SaveFile(\"docx\", \"Save.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790240&doc=VkNrSVBrU250T05VRDNTQ1p1S0h0Smxoa1dEa2pidkZ2QjM2eXY2NnkxWT0_IjY3OTAyNDAi0&action=embedded"
