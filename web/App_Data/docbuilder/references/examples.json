@@ -501,11 +501,11 @@
 			"demo": ""
 		},
 		"ApiDrawing.scaleheight": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor ( i = 3; i > 0; i-- ){\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.ScaleHeight( i );} \nbuilder.SaveFile(\"docx\", \"ScaleHeight.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor ( i = 3; i > 0; i-- ){\n    oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\n    oStroke = Api.CreateStroke(0, Api.CreateNoFill());\n    oDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\n    oParagraph.AddDrawing(oDrawing);\n    oDrawing.ScaleHeight( i );\n} \nbuilder.SaveFile(\"docx\", \"ScaleHeight.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
 		"ApiDrawing.scalewidth": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\n    for (i = 1; i < 4; i++ ){\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 963295, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.ScaleWidth( i );}\nbuilder.SaveFile(\"docx\", \"ScaleWidth.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor (i = 1; i < 4; i++ ){\n    oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\n    oStroke = Api.CreateStroke(0, Api.CreateNoFill());\n    oDrawing = Api.CreateShape(\"cube\", 963295, 963295, oFill, oStroke);\n    oParagraph.AddDrawing(oDrawing);\n    oDrawing.ScaleWidth( i );\n}\nbuilder.SaveFile(\"docx\", \"ScaleWidth.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
 		"ApiDrawing.sethorflip": {
