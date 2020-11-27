@@ -35,7 +35,11 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Routing;
+using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Schema;
+using System.Xml.Serialization;
+
 using ASC.Api.Enums;
 using ASC.Api.Impl;
 using ASC.Api.Interfaces;
@@ -53,6 +57,56 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     {
         [DataMember(Name = "output")]
         public Dictionary<string, string> Outputs { get; set; }
+    }
+
+    public class result : IXmlSerializable
+    {
+        public int status = 0;
+        public Dictionary<string, object> response;
+
+        public result()
+        {
+
+        }
+
+        public XmlSchema GetSchema()
+        {
+            return null;
+        }
+
+        public void ReadXml(XmlReader reader)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void WriteXml(XmlWriter writer)
+        {
+            writer.WriteElementString("status", "0");
+            writer.WriteStartElement("response");
+            foreach (KeyValuePair<string, object> keyValue in response)
+            {
+                SaveDictionary(writer, keyValue);
+            }
+            writer.WriteEndElement();
+        }
+
+        private void SaveDictionary(XmlWriter writer, KeyValuePair<string, object> keyValue)
+        {
+            string str = "";
+            if (keyValue.Value.GetType() == str.GetType())
+            {
+                writer.WriteElementString(keyValue.Key,  keyValue.Value.ToString());
+            }
+            else
+            {
+                writer.WriteStartElement(keyValue.Key);
+                foreach (KeyValuePair<string, object> keyValue1 in (Dictionary<string,object>)keyValue.Value)
+                {
+                    SaveDictionary(writer, keyValue1);
+                }
+                writer.WriteEndElement();
+            }
+        }
     }
 
     [DataContract(Name = "entrypoint", Namespace = "")]
@@ -206,6 +260,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             Container = container;
         }
 
+        public MsDocDocumentGenerator()
+        {
+
+        }
+
         #region IApiDocumentGenerator Members
 
         public IContainer Container { get; set; }
@@ -214,74 +273,157 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             get { return _points; }
         }
-
-        public void GenerateDocForEntryPoint(IComponentRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls)
+        
+        private void SaveMembers(XElement entryPointDoc, List<XElement> memberdesc)
         {
-            //Find the document
-            var lookupDir = AppDomain.CurrentDomain.RelativeSearchPath;
-            var docFile = Path.Combine(lookupDir, Path.GetFileName(apiEntryPointRegistration.Activator.LimitType.Assembly.Location).ToLowerInvariant().Replace(".dll", ".xml"));
-
-            if (!File.Exists(docFile))
+            var root = new MsDocEntryPoint
             {
-                //Build without doc
-                BuildUndocumented(apiEntryPointRegistration, apiMethodCalls);
-                return;
+                Summary = entryPointDoc.Element("summary").ValueOrNull(),
+                Remarks = entryPointDoc.Element("remarks").ValueOrNull(),
+                Name = entryPointDoc.Element("name").ValueOrNull(),
+                Example = entryPointDoc.Element("example").ValueOrNull(),
+                Methods = new List<MsDocEntryPointMethod>()
+            };
+            for (int i = 0; i < memberdesc.Count; i++)
+            {
+                var methodParams = memberdesc[i].Elements("param").ToList();
+                var pointMethod = new MsDocEntryPointMethod
+                {
+                    Path = memberdesc[i].Element("path").ValueOrNull(),
+                    HttpMethod = memberdesc[i].Element("httpMethod").ValueOrNull(),
+                    Authentification = string.Equals(memberdesc[i].Element("requiresAuthorization").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
+                    FunctionName = GetFunctionName(memberdesc[i].Attribute("name").ValueOrNull()),
+                    Summary = memberdesc[i].Element("summary").ValueOrNull(),
+                    Visible = !string.Equals(memberdesc[i].Element("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
+                    Remarks = memberdesc[i].Element("remarks").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
+                    Returns = memberdesc[i].Element("returns").ValueOrNull(),
+                    Example = memberdesc[i].Element("example").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
+                    Response = GetResponse(memberdesc[i].Element("returns").Attribute("type").ValueOrNull()),
+                    Category = memberdesc[i].Element("category").ValueOrNull(),
+                    Notes = memberdesc[i].Element("notes").ValueOrNull(),
+                    ShortName = memberdesc[i].Element("short").ValueOrNull(),
+                    Params = new List<MsDocEntryPointMethodParams>()
+                };
+                for (int j = 0; j < methodParams.Count; j++)
+                {
+                    var param = new MsDocEntryPointMethodParams
+                    {
+                        Description = methodParams[j].ValueOrNull(),
+                        Name = methodParams[j].Attribute("name").ValueOrNull(),
+                        Remarks = methodParams[j].Attribute("remark").ValueOrNull(),
+                        IsOptional = string.Equals(methodParams[j].Attribute("optional").ValueOrNull(), bool.TrueString, StringComparison.OrdinalIgnoreCase),
+                        Visible = !string.Equals(methodParams[j].Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
+                        PureType = GetPureType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()),
+                        Type = GetPureType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()).FullName,
+                        Method = methodParams[j].Attribute("method") != null ? methodParams[j].Attribute("method").ValueOrNull() : "body"
+                    };
+                    pointMethod.Params.Add(param);
+                }
+                if (pointMethod.Visible)
+                {
+                    root.Methods.Add(pointMethod);
+                }
+            }
+            Points.Add(root);
+        }
+
+        public void GenerateDocForEntryPoint(string file)
+        {
+
+            var members = XDocument.Load(file).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + file)).Element("members").Elements("member");
+
+
+            XElement entryPointDoc = null;
+            List<XElement> memberdesc = new List<XElement>();
+            foreach (var member in members)
+            {
+                if (member.Element("name") != null) 
+                {
+                    if (entryPointDoc == null)
+                    {
+                        entryPointDoc = member;
+                    }
+                    else
+                    {
+                        if (member.Element("path") == null)
+                        {
+                            SaveMembers(entryPointDoc, memberdesc);
+                            memberdesc.Clear();
+                            entryPointDoc = member;
+                        }
+                    }
+                }
+                else if (member.Element("path") != null)
+                {
+                    memberdesc.Add(member);
+                }
             }
 
-            var members = XDocument.Load(docFile).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + docFile)).Element("members").Elements("member");
-            //Find entry point first
-            var entryPointDoc = members.SingleOrDefault(x => x.Attribute("name").ValueOrNull() == string.Format("T:{0}", apiEntryPointRegistration.Activator.LimitType.FullName))
-                                ?? new XElement("member",
-                                                new XElement("summary", "This entry point doesn't have documentation."),
-                                                new XElement("remarks", ""));
+            SaveMembers(entryPointDoc, memberdesc);
+        }
 
-            var methodCallsDoc = from apiMethodCall in apiMethodCalls
-                                 let memberdesc = (from member in members
-                                                   where member.Attribute("name").ValueOrNull() == GetMethodString(apiMethodCall.MethodCall)
-                                                   select member).FirstOrDefault()
-                                 select new { apiMethod = apiMethodCall, description = memberdesc ?? CreateEmptyParams(apiMethodCall) };
+        private List<MsDocFunctionResponse> GetResponse(string type)
+        {
+            List<MsDocFunctionResponse> response = new List<MsDocFunctionResponse>();
+            var split = type.Split(',');
+            response.Add(GetResponse(split[0], split[1]));
+            return response;
+        }
 
-            //Ughh. we got all what we need now building
-            var root = new MsDocEntryPoint
+        private MsDocFunctionResponse GetResponse(string type, string file)
+        {
+            var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file.Trim() + ".xml");
+            var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
+            var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type)).ToList();
+            var responseParam = new Dictionary<string, object>();
+            responseParam = Parse(needMembers, responseParam);
+            var response = new result
+            {
+                response = responseParam
+            };
+            var responsejson = JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented);
+            var msdoc = new MsDocFunctionResponse();
+            msdoc.Outputs = new Dictionary<string, string>();
+            msdoc.Outputs.Add("application/json", responsejson);
+            XmlSerializer xmlSerializer = new XmlSerializer(response.GetType());
+
+            using (StringWriter textWriter = new StringWriter())
+            {
+                xmlSerializer.Serialize(textWriter, response);
+                var text = textWriter.ToString();
+                text = text.Remove(0, text.IndexOf('\n') + 1);
+                msdoc.Outputs.Add("text/xml", text);
+            }
+            return msdoc;
+        }
+
+        private Dictionary<string, object> Parse (List<XElement> needMembers, Dictionary<string, object> responseParam)
+        {
+            needMembers.ForEach(member =>
+            {
+                if (member.Element("example") != null)
                 {
-                    Summary = entryPointDoc.Element("summary").ValueOrNull(),
-                    Remarks = entryPointDoc.Element("remarks").ValueOrNull(),
-                    Name = apiEntryPointRegistration.Services.OfType<KeyedService>().First().ServiceKey.ToString(),
-                    Example = entryPointDoc.Element("example").ValueOrNull(),
+                    responseParam.Add(member.Attribute("name").ValueOrNull().Split('.').Last().ToLower(), member.Element("example").ValueOrNull());
+                }
+                else
+                {
+                    var split = member.Element("type").ValueOrNull().Split(',');
+                    var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + split[1].Trim() + ".xml");
+                    var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
+                    var newMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + split[0])).ToList();
+                    Parse(needMembers, responseParam);
+                }
+            });
 
-                    Methods = (from methodCall in methodCallsDoc
-                               let pointMethod = new MsDocEntryPointMethod
-                                   {
-                                       Path = methodCall.apiMethod.FullPath,
-                                       HttpMethod = methodCall.apiMethod.HttpMethod,
-                                       Authentification = methodCall.apiMethod.RequiresAuthorization,
-                                       FunctionName = GetFunctionName(methodCall.apiMethod.MethodCall.Name),
-                                       Summary = methodCall.description.Element("summary").ValueOrNull(),
-                                       Visible = !string.Equals(methodCall.description.Element("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
-                                       Remarks = methodCall.description.Element("remarks").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
-                                       Returns = methodCall.description.Element("returns").ValueOrNull(),
-                                       Example = methodCall.description.Element("example").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
-                                       Response = TryCreateResponse(methodCall.apiMethod, Container, methodCall.description.Element("returns")),
-                                       Category = methodCall.description.Element("category").ValueOrNull(),
-                                       Notes = methodCall.description.Element("notes").ValueOrNull(),
-                                       ShortName = methodCall.description.Element("short").ValueOrNull(),
-                                       Params = (from methodParam in methodCall.description.Elements("param")
-                                                 select new MsDocEntryPointMethodParams
-                                                     {
-                                                         Description = methodParam.ValueOrNull(),
-                                                         Name = methodParam.Attribute("name").ValueOrNull(),
-                                                         Remarks = methodParam.Attribute("remark").ValueOrNull(),
-                                                         IsOptional = string.Equals(methodParam.Attribute("optional").ValueOrNull(), bool.TrueString, StringComparison.OrdinalIgnoreCase),
-                                                         Visible = !string.Equals(methodParam.Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
-                                                         Type = methodCall.apiMethod.GetParams().Where(x => x.Name == methodParam.Attribute("name").ValueOrNull()).Select(x => GetParameterTypeRepresentation(x.ParameterType)).SingleOrDefault(),
-                                                         PureType = methodCall.apiMethod.GetParams().Where(x => x.Name == methodParam.Attribute("name").ValueOrNull()).Select(x => x.ParameterType).SingleOrDefault(),
-                                                         Method = GuesMethod(methodParam.Attribute("name").ValueOrNull(), methodCall.apiMethod.RoutingUrl, methodCall.apiMethod.HttpMethod)
-                                                     }).ToList()
-                                   }
-                               where pointMethod.Visible
-                               select pointMethod).ToList()
-                };
-            Points.Add(root);
+            return responseParam;
+        }
+
+
+        private Type GetPureType(int number, string name)
+        {
+            var types = name.Split('(')[1].Split(')')[0].Split(',');
+
+            return  Type.GetType(types[number]);
         }
 
         public static void GenerateRequestExample(MsDocEntryPointMethod method)
@@ -319,7 +461,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             if (args.Any()) {
                 sb.AppendLine().AppendLine()
-                   .Append(JsonConvert.SerializeObject(args, Formatting.Indented));
+                   .Append(JsonConvert.SerializeObject(args, Newtonsoft.Json.Formatting.Indented));
             }
 
             method.Example = sb.ToString();
@@ -376,42 +518,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                        : paramType.ToString();
         }
 
-        private void BuildUndocumented(IComponentRegistration apiEntryPointRegistration, IEnumerable<IApiMethodCall> apiMethodCalls)
-        {
-            var root = new MsDocEntryPoint
-                {
-                    Name = apiEntryPointRegistration.Services.OfType<KeyedService>().First().ServiceKey.ToString(),
-                    Remarks = "This entry point doesn't have any documentation. This is generated automaticaly using metadata",
-                    Methods = (from methodCall in apiMethodCalls
-                               select new MsDocEntryPointMethod
-                                   {
-                                       Path = methodCall.FullPath,
-                                       HttpMethod = methodCall.HttpMethod,
-                                       FunctionName = GetFunctionName(methodCall.MethodCall.Name),
-                                       Authentification = methodCall.RequiresAuthorization,
-                                       Response = TryCreateResponse(methodCall, Container, null),
-                                       Params = (from methodParam in
-                                                     methodCall.GetParams()
-                                                 select new MsDocEntryPointMethodParams
-                                                     {
-                                                         Name = methodParam.Name,
-                                                         Visible = true,
-                                                         Type = GetParameterTypeRepresentation(methodParam.ParameterType),
-                                                         Method =
-                                                             GuesMethod(
-                                                                 methodParam.Name,
-                                                                 methodCall.RoutingUrl, methodCall.HttpMethod)
-                                                     }
-                                                ).ToList()
-                                   }
-                              ).ToList()
-                };
-            Points.Add(root);
-        }
-
         private static string GetFunctionName(string functionName)
         {
-            return Regex.Replace(Regex.Replace(functionName, "[a-z][A-Z]+", match => (match.Value[0] + " " + match.Value.Substring(1, match.Value.Length - 2) + (" " + match.Value[match.Value.Length - 1]).ToLowerInvariant())), @"\s+", " ");
+            var tmp = functionName.Split('(')[0].Split('.');
+            return Regex.Replace(Regex.Replace(tmp[tmp.Length - 1], "[a-z][A-Z]+", match => (match.Value[0] + " " + match.Value.Substring(1, match.Value.Length - 2) + (" " + match.Value[match.Value.Length - 1]).ToLowerInvariant())), @"\s+", " ");
         }
 
         private static XElement CreateEmptyParams(IApiMethodCall apiMethodCall)

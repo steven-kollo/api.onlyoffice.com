@@ -26,6 +26,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using ASC.Api.Interfaces;
@@ -48,30 +49,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static List<MsDocEntryPoint> GenerateDocs()
         {
-            var containerBuilder = AutofacConfigLoader.Load("api");
-
-            containerBuilder.Register(c => LogManager.GetLogger("ASC"))
-                .As<ILog>()
-                .SingleInstance();
-
-            containerBuilder.Register(c => c.Resolve<IApiRouteConfigurator>().RegisterEntryPoints())
-                .As<IEnumerable<IApiMethodCall>>()
-                .SingleInstance();
-
-            var container = containerBuilder.Build();
-
-            var entries = container.Resolve<IEnumerable<IApiMethodCall>>();
-
-            var apiEntryPoints = container.ComponentRegistry.Registrations.Where(x => typeof(IApiEntryPoint).IsAssignableFrom(x.Activator.LimitType)).ToList();
-
-            var generator = new MsDocDocumentGenerator(container);
-
-            foreach (var apiEntryPoint in entries.GroupBy(x => x.ApiClassType))
+            var lookupDir = Path.Combine( AppDomain.CurrentDomain.RelativeSearchPath, "../../xml");
+            var generator = new MsDocDocumentGenerator();
+            foreach (var file in Directory.GetFiles(lookupDir))
             {
-                var point = apiEntryPoint;
-                generator.GenerateDocForEntryPoint(
-                    apiEntryPoints.SingleOrDefault(x => x.Activator.LimitType == point.Key),
-                    apiEntryPoint.AsEnumerable());
+                generator.GenerateDocForEntryPoint(file);
             }
 
             foreach (var method in generator.Points.SelectMany(x => x.Methods))

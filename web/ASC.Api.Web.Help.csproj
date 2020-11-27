@@ -63,39 +63,6 @@
     <Reference Include="ASC.Api">
       <HintPath>..\references\ASC.Api.dll</HintPath>
     </Reference>
-    <Reference Include="ASC.Api.Calendar">
-      <HintPath>..\references\ASC.Api.Calendar.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Community">
-      <HintPath>..\references\ASC.Api.Community.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.CRM">
-      <HintPath>..\references\ASC.Api.CRM.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Documents">
-      <HintPath>..\references\ASC.Api.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Employee">
-      <HintPath>..\references\ASC.Api.Employee.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Feed">
-      <HintPath>..\references\ASC.Api.Feed.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Mail">
-      <HintPath>..\references\ASC.Api.Mail.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.MailServer">
-      <HintPath>..\references\ASC.Api.MailServer.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Portal">
-      <HintPath>..\references\ASC.Api.Portal.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Projects">
-      <HintPath>..\references\ASC.Api.Projects.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Settings">
-      <HintPath>..\references\ASC.Api.Settings.dll</HintPath>
-    </Reference>
     <Reference Include="ASC.Common">
       <HintPath>..\references\ASC.Common.dll</HintPath>
     </Reference>
@@ -116,9 +83,6 @@
     </Reference>
     <Reference Include="ASC.Mail">
       <HintPath>..\references\ASC.Mail.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Specific">
-      <HintPath>..\references\ASC.Specific.dll</HintPath>
     </Reference>
     <Reference Include="ASC.Thrdparty">
       <HintPath>..\references\ASC.Thrdparty.dll</HintPath>
