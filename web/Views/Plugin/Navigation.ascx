@@ -56,6 +56,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

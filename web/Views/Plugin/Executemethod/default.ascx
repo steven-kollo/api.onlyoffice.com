@@ -52,6 +52,10 @@
             <td><a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a></td>
             <td>This method allows to get the identifier of the selected content control.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a></td>
+            <td>This method allows to add an OLE object to the document.</td>
+        </tr>
     </tbody>
 </table>
 
