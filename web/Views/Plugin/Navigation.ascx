@@ -71,6 +71,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/pastehtml") %>">PasteHtml</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/pastetext") %>">PasteText</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

@@ -58,6 +58,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/getfontlist",
                 "executemethod/inputtext",
                 "executemethod/pastehtml",
+                "executemethod/pastetext",
                 "Example",
                 "IndexHtml",
                 "Info",
