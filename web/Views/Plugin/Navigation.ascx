@@ -74,6 +74,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/pastetext") %>">PasteText</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/getmacros") %>">GetMacros</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
