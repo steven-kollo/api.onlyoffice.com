@@ -61,6 +61,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/pastetext",
                 "executemethod/getmacros",
                 "executemethod/setmacros",
+                "executemethod/startaction",
                 "Example",
                 "IndexHtml",
                 "Info",

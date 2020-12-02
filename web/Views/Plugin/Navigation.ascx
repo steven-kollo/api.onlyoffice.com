@@ -76,8 +76,12 @@
                             </li>
                             <li>
                                 <a href="<%= Url.Action("executemethod/getmacros") %>">GetMacros</a>
-                            </li><li>
+                            </li>
+                            <li>
                                 <a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/startaction") %>">StartAction</a>
                             </li>
                         </ul>
                     </li>

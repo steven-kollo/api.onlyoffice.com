@@ -84,6 +84,10 @@
             <td><a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a></td>
             <td>This method allows to set macros to the document.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/startaction") %>">StartAction</a></td>
+            <td>This method allows to specify the start action for long operations.</td>
+        </tr>
     </tbody>
 </table>
 
