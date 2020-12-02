@@ -86,6 +86,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/endaction") %>">EndAction</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

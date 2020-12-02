@@ -63,6 +63,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/setmacros",
                 "executemethod/startaction",
                 "executemethod/endaction",
+                "executemethod/onencryption",
                 "Example",
                 "IndexHtml",
                 "Info",
