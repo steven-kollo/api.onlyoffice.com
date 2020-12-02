@@ -65,6 +65,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

@@ -64,6 +64,10 @@
             <td><a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a></td>
             <td>This method allows to get the fonts list.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a></td>
+            <td>This method allows to insert text into the document.</td>
+        </tr>
     </tbody>
 </table>
 
