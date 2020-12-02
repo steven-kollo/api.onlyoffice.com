@@ -56,6 +56,10 @@
             <td><a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a></td>
             <td>This method allows to add an OLE object to the document.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
+            <td>This method allows to edit an OLE object in the document.</td>
+        </tr>
     </tbody>
 </table>
 

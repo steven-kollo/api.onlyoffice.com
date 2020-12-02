@@ -59,6 +59,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

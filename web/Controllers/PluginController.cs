@@ -54,6 +54,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/removecontentcontrol",
                 "executemethod/getcurrentcontentcontrol",
                 "executemethod/addoleobject",
+                "executemethod/editoleobject",
                 "Example",
                 "IndexHtml",
                 "Info",
