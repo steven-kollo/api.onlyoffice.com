@@ -96,6 +96,10 @@
             <td><a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a></td>
             <td>This method allows to encrypt plugins.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/setproperties") %>">SetProperties</a></td>
+            <td>This method allows to set the properties to the document.</td>
+        </tr>
     </tbody>
 </table>
 
