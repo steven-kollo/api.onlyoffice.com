@@ -104,6 +104,10 @@
             <td><a href="<%= Url.Action("executemethod/showinputhelper") %>">ShowInputHelper</a></td>
             <td>This method allows to show the input helper.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/unshowinputhelper") %>">UnShowInputHelper</a></td>
+            <td>This method allows to unshow the input helper.</td>
+        </tr>
     </tbody>
 </table>
 

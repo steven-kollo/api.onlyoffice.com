@@ -95,6 +95,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/showinputhelper") %>">ShowInputHelper</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/unshowinputhelper") %>">UnShowInputHelper</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
