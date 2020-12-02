@@ -26,7 +26,7 @@ window.Asc.plugin.executeMethod("SetProperties", [obj]);
 <ul>
     <li>"copyoutenabled" (e.g. <em>{"copyoutenabled": true}</em>) disables copying from the editor if it is set to <b>true</b>;</li>
     <li>"hideContentControlTrack" (e.g. <em>{"hideContentControlTrack": true}</em>) disables tracking the content control if it is set to <b>true</b>;</li>
-    <li>"watermark_on_draw" (e.g. <em>{"watermark_on_draw": "{watermark"}</em>) is a string value for watermark in json format:</li>
+    <li>"watermark_on_draw" (e.g. <em>{"watermark_on_draw": "{watermark}"</em>) is a string value for watermark in json format.</li>
 </ul>
 
 <div class="header-gray">Returns</div>
@@ -67,7 +67,7 @@ initSettings = {
                                 "underline" : false
                             },
                             {
-                                "text" : "<%br%>"
+                                "text" : "&lt;%br%&gt;"
                             }
                         ]
                             }

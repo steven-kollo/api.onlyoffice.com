@@ -16,10 +16,10 @@ window.Asc.plugin.executeMethod("ShowInputHelper", [guid, w, h, isKeyboardTake])
 </pre>
 <p>Where:</p>
 <ul>
-    <li><em>guid</em> is a string value which specifies an OLE object program identifier which must be of the <em>asc.{UUID}</em> type;</li>
-    <li><em>w</em> is a number which specifies an object width measured in millimeters;</li>
-    <li><em>h</em> is a number which specifies an object height measured in millimeters;</li>
-    <li><em>isKeyboardTake</em> defines if the keyboard is caught (true) or not (false).</li>
+    <li><em>guid</em> is a string value which specifies a plugin identifier which must be of the <em>asc.{UUID}</em> type;</li>
+    <li><em>w</em> is a number which specifies a window width measured in millimeters;</li>
+    <li><em>h</em> is a number which specifies a window height measured in millimeters;</li>
+    <li><em>isKeyboardTake</em> defines if the keyboard is caught (<b>true</b>) or not (<b>false</b>).</li>
 </ul>
 
 <div class="header-gray">Returns</div>

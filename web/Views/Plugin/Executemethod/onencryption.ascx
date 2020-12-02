@@ -28,10 +28,10 @@ window.Asc.plugin.executeMethod("OnEncryption", [obj]);
 </pre>
 <p>The <em>obj</em> object can have the following values:</p>
 <ul>
-    <li>"type" (e.g. <em>{"type": "encryptData"}</em>) specifies the type of encrypting operation ("generatePassword", "getPasswordByFile", "setPasswordByFile", "encryptData", "decryptData");</li>
+    <li>"type" (e.g. <em>{"type": "encryptData"}</em>) specifies the type of encrypting operation (<em>generatePassword</em>, <em>getPasswordByFile</em>, <em>setPasswordByFile</em>, <em>encryptData</em>, <em>decryptData</em>);</li>
     <li>"password" (e.g. <em>{"password": "password"}</em>) is a string value specifying the password to access the plugin;</li>
     <li>"data" (e.g. <em>{"data": "{data}"}</em>) is plugin encryption data (internal format);</li>
-    <li>"check" (e.g. <em>{"check": true}</em>) checks if the password is valid (true) or not (false);</li>
+    <li>"check" (e.g. <em>{"check": true}</em>) checks if the password is valid (<b>true</b>) or not (<b>false</b>);</li>
     <li>"docinfo" (e.g. <em>{"docinfo": "docinfo"}</em>) is the information about the document;</li>
     <li>"hash" (e.g. <em>{"hash": "md5"}</em>) is a string value specifying the hash name;</li>
     <li>"error" (e.g. <em>{"error": "no_build"}</em>) is a string value specifying the error that occurs.</li>

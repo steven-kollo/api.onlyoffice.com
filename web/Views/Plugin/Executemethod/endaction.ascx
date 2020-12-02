@@ -17,7 +17,7 @@ window.Asc.plugin.executeMethod("EndAction", [type, description]);
 <p>Where:</p>
 <ul>
     <li><em>type</em> is a value which defines an action type which can take 0 if this is an Information action or 1 if this is a BlockInteraction action;</li>
-    <li><em>description</em> is a string value that specifies the description text for the start action of the operation.</li>
+    <li><em>description</em> is a string value that specifies the description text for the end action of the operation.</li>
 </ul>
 
 <div class="header-gray">Returns</div>

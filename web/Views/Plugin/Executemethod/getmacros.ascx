@@ -27,6 +27,6 @@ window.Asc.plugin.executeMethod("GetMacros");
 
 <p>The <em>Macros</em> object can have the following values:</p>
 <ul>
-    <li>"macrosArray" (e.g. <em>{"macrosArray": [{"name": "Macros1", "value": "{macrosCode}"}]}</em> ) is an array of macroc codes;</li>
+    <li>"macrosArray" (e.g. <em>{"macrosArray": [{"name": "Macros1", "value": "{macrosCode}"}]}</em> ) is an array of macros codes;</li>
     <li>"current" (e.g. <em>{"current": 1}</em> ) is a current macros index.</li>
 </ul>

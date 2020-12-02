@@ -23,7 +23,7 @@ window.Asc.plugin.executeMethod("SetMacros", [data]);
 </pre>
 <p>The <em>Macros</em> object can have the following values:</p>
 <ul>
-    <li>"macrosArray" (e.g. <em>{"macrosArray": [{"name": "Macros1", "value": "{macrosCode}"}]}</em>) is an array of macroc codes;</li>
+    <li>"macrosArray" (e.g. <em>{"macrosArray": [{"name": "Macros1", "value": "{macrosCode}"}]}</em>) is an array of macros codes;</li>
     <li>"current" (e.g. <em>{"current": 1}</em>) is a current macros index.</li>
 </ul>
 
@@ -34,7 +34,5 @@ window.Asc.plugin.executeMethod("SetMacros", [data]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("SetMacros", [{"macrosArray":[{"name":"Macros 1","value":"(function()\n{oDocument = Api.GetDocument();\noParagraph = Api.CreateParagraph();
-\noParagraph.AddText(\"This is a new paragraph\");\noDocument.Push(oParagraph);\n})();"},{"name":"Macros 2","value":"(function()\n{oDocument = Api.GetDocument();
-\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetBold(true);\n})();"}],"current":1}]);
+window.Asc.plugin.executeMethod("SetMacros", [{"macrosArray":[{"name":"Macros 1","value":"(function()\n{oDocument = Api.GetDocument();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a new paragraph\");\noDocument.Push(oParagraph);\n})();"},{"name":"Macros 2","value":"(function()\n{oDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetBold(true);\n})();"}],"current":1}]);
 </pre>

@@ -14,7 +14,7 @@
 <pre>
 window.Asc.plugin.executeMethod("UnShowInputHelper", [guid]);
 </pre>
-<p>Where <em>guid</em> is a string value which specifies an OLE object program identifier which must be of the <em>asc.{UUID}</em> type.</li>
+<p>Where <em>guid</em> is a string value which specifies a plugin identifier which must be of the <em>asc.{UUID}</em> type.</li>
 
 <div class="header-gray">Returns</div>
 

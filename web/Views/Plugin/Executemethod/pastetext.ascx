@@ -12,7 +12,7 @@
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod("PasteHtml", [text]);
+window.Asc.plugin.executeMethod("PasteText", [text]);
 </pre>
 <p>Where <em>text</em> is a string value that specifies the text to be pasted into the document.</p>
 
