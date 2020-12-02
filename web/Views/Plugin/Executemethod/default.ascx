@@ -68,6 +68,10 @@
             <td><a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a></td>
             <td>This method allows to insert text into the document.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/pastehtml") %>">PasteHtml</a></td>
+            <td>This method allows to paste text in <em>html</em> format into the document.</td>
+        </tr>
     </tbody>
 </table>
 

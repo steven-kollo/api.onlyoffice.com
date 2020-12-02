@@ -68,6 +68,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/pastehtml") %>">PasteHtml</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

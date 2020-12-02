@@ -57,6 +57,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/editoleobject",
                 "executemethod/getfontlist",
                 "executemethod/inputtext",
+                "executemethod/pastehtml",
                 "Example",
                 "IndexHtml",
                 "Info",
