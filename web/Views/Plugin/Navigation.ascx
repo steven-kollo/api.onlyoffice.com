@@ -62,6 +62,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a>
+                            </li>
                         </ul>
                     </li>
                     <li>

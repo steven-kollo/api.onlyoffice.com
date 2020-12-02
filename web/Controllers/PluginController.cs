@@ -55,6 +55,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/getcurrentcontentcontrol",
                 "executemethod/addoleobject",
                 "executemethod/editoleobject",
+                "executemethod/getfontlist",
                 "Example",
                 "IndexHtml",
                 "Info",

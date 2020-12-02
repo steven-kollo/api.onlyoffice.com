@@ -60,6 +60,10 @@
             <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
             <td>This method allows to edit an OLE object in the document.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a></td>
+            <td>This method allows to get the fonts list.</td>
+        </tr>
     </tbody>
 </table>
 
