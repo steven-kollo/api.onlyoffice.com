@@ -100,6 +100,10 @@
             <td><a href="<%= Url.Action("executemethod/setproperties") %>">SetProperties</a></td>
             <td>This method allows to set the properties to the document.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/showinputhelper") %>">ShowInputHelper</a></td>
+            <td>This method allows to show the input helper.</td>
+        </tr>
     </tbody>
 </table>
 

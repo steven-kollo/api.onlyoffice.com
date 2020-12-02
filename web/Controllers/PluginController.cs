@@ -65,6 +65,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/endaction",
                 "executemethod/onencryption",
                 "executemethod/setproperties",
+                "executemethod/showinputhelper",
                 "Example",
                 "IndexHtml",
                 "Info",
