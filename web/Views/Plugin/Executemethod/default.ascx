@@ -80,6 +80,10 @@
             <td><a href="<%= Url.Action("executemethod/getmacros") %>">GetMacros</a></td>
             <td>This method allows to get the document macros.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a></td>
+            <td>This method allows to set macros to the document.</td>
+        </tr>
     </tbody>
 </table>
 
