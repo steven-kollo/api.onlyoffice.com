@@ -83,6 +83,9 @@
                             <li>
                                 <a href="<%= Url.Action("executemethod/startaction") %>">StartAction</a>
                             </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/endaction") %>">EndAction</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
