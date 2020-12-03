@@ -146,10 +146,11 @@
     </entry>
 
     <entry>
-      <key>System.Collections.Generic.IEnumerable`1[System.Web.HttpPostedFileBase]</key>
+      <key>System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase}</key>
       <value>
         <Description>Files for adding using multipart/form-data</Description>
         <Example>N/A</Example>
+		<ExampleJson> []</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -201,10 +202,13 @@
       </value>
     </entry>
     <entry>
-      <key>System.Collections.Generic.List`1[ASC.Api.Calendar.CalendarApi+SharingParam]</key>
+      <key>System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam}</key>
       <value>
         <Description>list of sharing options</Description>
         <Example></Example>
+		<ExampleJson> [
+    {}
+  ]</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -219,6 +223,40 @@
       <value>
         <Description>Object with fields: AccessKeyId, SecretAccessKey, Bucket, FolderId, FilePath, Region</Description>
         <Example></Example>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Web.Core.Calendars.EventAlertType</key>
+      <value>
+        <Description>Never, FiveMinutes, FifteenMinutes, HalfHour, Hour, TwoHours, Day, Default</Description>
+		<Example></Example>
+		<ExampleJson>"never"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>System.Collections.Generic.List{System.String}</key>
+      <value>
+	  <Description>System.Collections.Generic.List{System.String}</Description>
+		<Example></Example>
+		<ExampleJson> [
+    "some text"
+  ]</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Api.Calendar.CalendarApi.EventRemoveType</key>
+      <value>
+	  <Description>Single, AllFollowing, AllSeries</Description>
+		<Example></Example>
+		<ExampleJson></ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Web.Core.Calendars.EventStatus</key>
+      <value>
+	  <Description>	Tentative, Confirmed, Cancelled</Description>
+		<Example></Example>
+		<ExampleJson>"tentative"</ExampleJson>
       </value>
     </entry>
   </Names>

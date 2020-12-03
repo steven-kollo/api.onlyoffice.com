@@ -77,8 +77,8 @@ namespace ASC.Api.Web.Help.Helpers
     [DataContract(Namespace = "")]
     public class TypeDescriptor
     {
-        internal const string SystemNullable = "System.Nullable`1[";
-        internal const string SystemIEnumerable = "System.Collections.Generic.IEnumerable`1[";
+        internal const string SystemNullable = "System.Nullable";
+        internal const string SystemIEnumerable = "System.Collections.Generic";
 
         [DataMember(Name = "Names")]
         public ItemDictionary<string, TypeDescription> Names = new ItemDictionary<string, TypeDescription>();
@@ -143,10 +143,14 @@ namespace ASC.Api.Web.Help.Helpers
             return false;
         }
 
-        public static TypeDescription ToHumanName(string typeName, Type type = null)
+        public static TypeDescription ToHumanName(string typeName)
         {
+            if(typeName == "ASC.Web.Core.Calendars.EventAlertType")
+            {
+
+            }
             var desc = _descriptor == null ? new TypeDescription(typeName, "") : _descriptor.Get(typeName);
-            if (type != null && desc.JsonParam == null && !string.IsNullOrEmpty(desc.ExampleJson))
+            if (desc.JsonParam == null && !string.IsNullOrEmpty(desc.ExampleJson))
             {
                 if (desc.ExampleJson.StartsWith("\"") && desc.ExampleJson.EndsWith("\""))
                 {
@@ -158,7 +162,7 @@ namespace ASC.Api.Web.Help.Helpers
                 }
                 else
                 {
-                    desc.JsonParam = Newtonsoft.Json.JsonConvert.DeserializeObject(desc.ExampleJson, type);
+                    desc.JsonParam = Newtonsoft.Json.JsonConvert.DeserializeObject(desc.ExampleJson);
                 }
             }
 

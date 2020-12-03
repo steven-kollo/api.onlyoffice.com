@@ -62,7 +62,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     public class result : IXmlSerializable
     {
         public int status = 0;
-        public Dictionary<string, object> response;
+        public object response;
 
         public result()
         {
@@ -82,29 +82,61 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public void WriteXml(XmlWriter writer)
         {
             writer.WriteElementString("status", "0");
-            writer.WriteStartElement("response");
-            foreach (KeyValuePair<string, object> keyValue in response)
+
+            Dictionary<string, object> dic = new Dictionary<string, object>();
+            if (response.GetType().Name == dic.GetType().Name) 
             {
-                SaveDictionary(writer, keyValue);
+                writer.WriteStartElement("response");
+                foreach (KeyValuePair<string, object> keyValue in (Dictionary<string, object>)response)
+                {
+                    SaveDictionary(writer, keyValue);
+                }
+                writer.WriteEndElement();
             }
-            writer.WriteEndElement();
+            else
+            {
+                foreach (var elem in (List<Dictionary<string, object>>)response)
+                {
+                    writer.WriteStartElement("response");
+                    foreach (KeyValuePair<string, object> keyValue1 in elem)
+                    {
+                        SaveDictionary(writer, keyValue1);
+                    }
+                    writer.WriteEndElement();
+                }
+            }
+
         }
 
         private void SaveDictionary(XmlWriter writer, KeyValuePair<string, object> keyValue)
         {
-            string str = "";
-            if (keyValue.Value.GetType() == str.GetType())
-            {
-                writer.WriteElementString(keyValue.Key,  keyValue.Value.ToString());
-            }
-            else
+
+            Dictionary<string, object> dic = new Dictionary<string, object>();
+            List<object> list = new List<object>();
+            if (keyValue.Value.GetType().Name == dic.GetType().Name)
             {
                 writer.WriteStartElement(keyValue.Key);
-                foreach (KeyValuePair<string, object> keyValue1 in (Dictionary<string,object>)keyValue.Value)
+                foreach (KeyValuePair<string, object> keyValue1 in (Dictionary<string, object>)keyValue.Value)
                 {
                     SaveDictionary(writer, keyValue1);
                 }
                 writer.WriteEndElement();
+            }
+            else if (keyValue.Value.GetType().Name == list.GetType().Name)
+            {
+                foreach (var elem in (List<Dictionary<string, object>>)keyValue.Value)
+                {
+                    writer.WriteStartElement(keyValue.Key);
+                    foreach (KeyValuePair<string, object> keyValue1 in elem)
+                    {
+                        SaveDictionary(writer, keyValue1);
+                    }
+                    writer.WriteEndElement();
+                }
+            }
+            else
+            {
+                writer.WriteElementString(keyValue.Key, keyValue.Value.ToString());
             }
         }
     }
@@ -230,9 +262,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [DataMember(Name = "type")]
         public string Type { get; set; }
 
-        [IgnoreDataMember]
-        public Type PureType { get; set; }
-
         [DataMember(Name = "sendmethod")]
         public string Method { get; set; }
 
@@ -286,19 +315,20 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             };
             for (int i = 0; i < memberdesc.Count; i++)
             {
+
                 var methodParams = memberdesc[i].Elements("param").ToList();
                 var pointMethod = new MsDocEntryPointMethod
                 {
                     Path = memberdesc[i].Element("path").ValueOrNull(),
                     HttpMethod = memberdesc[i].Element("httpMethod").ValueOrNull(),
-                    Authentification = string.Equals(memberdesc[i].Element("requiresAuthorization").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
+                    Authentification = memberdesc[i].Element("requiresAuthorization").ValueOrNull() == "true",
                     FunctionName = GetFunctionName(memberdesc[i].Attribute("name").ValueOrNull()),
                     Summary = memberdesc[i].Element("summary").ValueOrNull(),
                     Visible = !string.Equals(memberdesc[i].Element("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
                     Remarks = memberdesc[i].Element("remarks").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
                     Returns = memberdesc[i].Element("returns").ValueOrNull(),
                     Example = memberdesc[i].Element("example").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
-                    Response = GetResponse(memberdesc[i].Element("returns").Attribute("type").ValueOrNull()),
+                    Response = GetResponse(memberdesc[i].Element("returns"), memberdesc[i].Element("collection").ValueOrNull()),
                     Category = memberdesc[i].Element("category").ValueOrNull(),
                     Notes = memberdesc[i].Element("notes").ValueOrNull(),
                     ShortName = memberdesc[i].Element("short").ValueOrNull(),
@@ -313,8 +343,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         Remarks = methodParams[j].Attribute("remark").ValueOrNull(),
                         IsOptional = string.Equals(methodParams[j].Attribute("optional").ValueOrNull(), bool.TrueString, StringComparison.OrdinalIgnoreCase),
                         Visible = !string.Equals(methodParams[j].Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
-                        PureType = GetPureType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()),
-                        Type = GetPureType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()).FullName,
+                        Type = GetType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()),
                         Method = methodParams[j].Attribute("method") != null ? methodParams[j].Attribute("method").ValueOrNull() : "body"
                     };
                     pointMethod.Params.Add(param);
@@ -329,10 +358,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public void GenerateDocForEntryPoint(string file)
         {
-
             var members = XDocument.Load(file).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + file)).Element("members").Elements("member");
-
-
             XElement entryPointDoc = null;
             List<XElement> memberdesc = new List<XElement>();
             foreach (var member in members)
@@ -362,56 +388,130 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             SaveMembers(entryPointDoc, memberdesc);
         }
 
-        private List<MsDocFunctionResponse> GetResponse(string type)
+        private List<MsDocFunctionResponse> GetResponse(XElement element, string collection)
         {
             List<MsDocFunctionResponse> response = new List<MsDocFunctionResponse>();
-            var split = type.Split(',');
-            response.Add(GetResponse(split[0], split[1]));
+            if (element != null && element.Attribute("type").ValueOrNull() != "")
+            {
+                var split = element.Attribute("type").ValueOrNull().Split(',');
+                response.Add(GetResponse(split[0], split[1], collection));
+            }
             return response;
         }
+        
+        private Dictionary<string, object> Sorted(Dictionary<string,object> response, Dictionary<string, int> orders)
+        {
+            Dictionary<string, object> SortedResponse = new Dictionary<string, object>();
+            foreach (var pair in orders.OrderBy(pair => pair.Value))
+            {
+                SortedResponse.Add(pair.Key, response[pair.Key]);
+            }
+            return SortedResponse;
+        }
 
-        private MsDocFunctionResponse GetResponse(string type, string file)
+        private MsDocFunctionResponse GetResponse(string type, string file, string collection)
         {
             var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file.Trim() + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type)).ToList();
-            var responseParam = new Dictionary<string, object>();
-            responseParam = Parse(needMembers, responseParam);
-            var response = new result
-            {
-                response = responseParam
-            };
-            var responsejson = JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented);
             var msdoc = new MsDocFunctionResponse();
-            msdoc.Outputs = new Dictionary<string, string>();
-            msdoc.Outputs.Add("application/json", responsejson);
-            XmlSerializer xmlSerializer = new XmlSerializer(response.GetType());
-
-            using (StringWriter textWriter = new StringWriter())
+            if (needMembers.Count != 0)
             {
-                xmlSerializer.Serialize(textWriter, response);
-                var text = textWriter.ToString();
-                text = text.Remove(0, text.IndexOf('\n') + 1);
-                msdoc.Outputs.Add("text/xml", text);
+                var responseParam = new Dictionary<string, object>();
+                var orders = new Dictionary<string, int>();
+                responseParam = Parse(needMembers, responseParam, orders);
+                responseParam = Sorted(responseParam, orders);
+                var response = new result();
+
+                if (collection == "list")
+                {
+                    var list = new List<Dictionary<string, object>>();
+                    list.Add(responseParam);
+                    response.response = list;
+                }
+                else
+                {
+                    response.response = responseParam;
+                }
+                
+                var responsejson = JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented);
+                
+                msdoc.Outputs = new Dictionary<string, string>();
+                msdoc.Outputs.Add("application/json", responsejson);
+                XmlSerializer xmlSerializer = new XmlSerializer(response.GetType());
+
+                using (StringWriter textWriter = new StringWriter())
+                {
+                    xmlSerializer.Serialize(textWriter, response);
+                    var text = textWriter.ToString();
+                    text = text.Remove(0, text.IndexOf('\n') + 1);
+                    msdoc.Outputs.Add("text/xml", text);
+                }
             }
             return msdoc;
         }
 
-        private Dictionary<string, object> Parse (List<XElement> needMembers, Dictionary<string, object> responseParam)
+        private Dictionary<string, object> Parse (List<XElement> needMembers, Dictionary<string, object> responseParam, Dictionary<string, int> orders)
         {
             needMembers.ForEach(member =>
             {
+                int resultInt;
+                bool resultBool;
+                object result;
+                var defaultName = member.Attribute("name").ValueOrNull().Split('.').Last();
                 if (member.Element("example") != null)
                 {
-                    responseParam.Add(member.Attribute("name").ValueOrNull().Split('.').Last().ToLower(), member.Element("example").ValueOrNull());
+                    
+                    var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
+                    if (Boolean.TryParse(member.Element("example").ValueOrNull(), out resultBool))
+                    {
+                        result = resultBool;
+                    } 
+                    else if(member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out resultInt))
+                    {
+                        result = resultInt;
+                    }
+                    else
+                    {
+                        result = member.Element("example").ValueOrNull().Replace("            ","");
+                    }
+
+                    if(member.Element("collection").ValueOrNull() == "list")
+                    {
+                        var list = new List<object>();
+                        list.Add(result);
+                        responseParam.Add(name, list);
+                    }
+                    else
+                    {
+                        responseParam.Add(name, result);
+                    }
+                    var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                    orders.Add(name, order);
                 }
-                else
+                else if(member.Element("type") != null)
                 {
+                    var name = member.Element("type").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("type").Attribute("name").ValueOrNull();
                     var split = member.Element("type").ValueOrNull().Split(',');
                     var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + split[1].Trim() + ".xml");
                     var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
                     var newMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + split[0])).ToList();
-                    Parse(needMembers, responseParam);
+                    var responseParam1 = new Dictionary<string, object>();
+                    var orders1 = new Dictionary<string, int>();
+                    Parse(newMembers, responseParam1, orders1);
+                    responseParam1 = Sorted(responseParam1, orders1);
+                    if (member.Element("collection").ValueOrNull() == "list")
+                    {
+                        var list = new List<Dictionary<string, object>>();
+                        list.Add(responseParam1);
+                        responseParam.Add(name, list);
+                    }
+                    else
+                    {
+                        responseParam.Add(name, responseParam1);
+                    }
+                    var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                    orders.Add(name, order);
                 }
             });
 
@@ -419,18 +519,18 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         }
 
 
-        private Type GetPureType(int number, string name)
+        private string GetType(int number, string name)
         {
             var types = name.Split('(')[1].Split(')')[0].Split(',');
 
-            return  Type.GetType(types[number]);
+            return types[number];
         }
 
         public static void GenerateRequestExample(MsDocEntryPointMethod method)
         {
             var sb = new StringBuilder();
 
-            var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p => ClassNamePluralizer.ToHumanName(p.Type, p.PureType));
+            var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p => ClassNamePluralizer.ToHumanName(p.Type));
             var urlParams = visible.Where(p => p.Key.Method == "url").ToList();
             var bodyParams = visible.Except(urlParams).ToList();
 
@@ -439,11 +539,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             urlParams.ForEach(p => {
                 if (path.IndexOf('{' + p.Key.Name.ToLowerInvariant() + '}') > 0)
                 {
-                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', HttpUtility.UrlEncode(ParamToJson(p.Key, p.Value, true).ToString()));
+                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', HttpUtility.UrlEncode(p.Value.JsonParam.ToString()));
                 }
                 else
                 {
-                    var value = ParamToJson(p.Key, p.Value, true).ToString();
+                    var value = p.Value.JsonParam.ToString();
                     if (value == "null") return;
 
                     path += string.Format("{0}{1}={2}", query ? "&" : "?", p.Key.Name, HttpUtility.UrlEncode(value));
@@ -452,7 +552,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             });
 
             var args = new Dictionary<string, object>();
-            bodyParams.ForEach(p => args.Add(p.Key.Name, ParamToJson(p.Key, p.Value)));
+            bodyParams.ForEach(p => args.Add(p.Key.Name, p.Value.JsonParam));
 
             sb.AppendFormat("{0} {1}", method.HttpMethod, path).AppendLine()
                 .AppendLine("Host: yourportal.onlyoffice.com")
@@ -467,123 +567,13 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             method.Example = sb.ToString();
         }
 
-        private static object ParamToJson(MsDocEntryPointMethodParams param, TypeDescription desc, bool asString = false)
-        {
-            if (desc.JsonParam != null) return desc.JsonParam;
-
-            object obj;
-            if (param.Type.StartsWith("System.Collections.Generic.IEnumerable`1[")
-                || param.Type.StartsWith("System.Collections.Generic.List`1")
-                || param.Type.EndsWith("[]") && (param.PureType.IsGenericType || param.PureType.IsArray))
-            {
-                var elementType = param.PureType.IsArray ? param.PureType.GetElementType() : param.PureType.GenericTypeArguments[0];
-
-                Type listType = typeof(List<>).MakeGenericType(new [] { elementType });
-                var list = (System.Collections.IList)Activator.CreateInstance(listType);
-
-                var el = ClassNamePluralizer.ToHumanName(elementType.ToString(), elementType);
-
-                if (el != null && el.JsonParam != null && el.JsonParam.GetType() == elementType)
-                {
-                    list.Add(el.JsonParam);
-                }
-                else if (!elementType.IsAbstract)
-                {
-                    list.Add(Activator.CreateInstance(elementType));
-                }
-
-                obj = list;
-            } else {
-                obj = Activator.CreateInstance(param.PureType);
-            }
-
-            if (obj is Enum)
-            {
-                var names = param.PureType.GetEnumNames();
-                obj = names.Length > 0 ? names[0].ToLower() : obj.ToString();
-            }
-
-            if (asString)
-            {
-                return obj == null ? "null" : (obj is string ? (string)obj : JsonConvert.SerializeObject(obj)).Trim('"');
-            }
-
-            return obj;
-        }
-
-        private static string GetParameterTypeRepresentation(Type paramType)
-        {
-            return paramType.IsEnum
-                       ? string.Join(", ", Enum.GetNames(paramType))
-                       : paramType.ToString();
-        }
-
         private static string GetFunctionName(string functionName)
         {
             var tmp = functionName.Split('(')[0].Split('.');
             return Regex.Replace(Regex.Replace(tmp[tmp.Length - 1], "[a-z][A-Z]+", match => (match.Value[0] + " " + match.Value.Substring(1, match.Value.Length - 2) + (" " + match.Value[match.Value.Length - 1]).ToLowerInvariant())), @"\s+", " ");
         }
 
-        private static XElement CreateEmptyParams(IApiMethodCall apiMethodCall)
-        {
-            return new XElement("description", apiMethodCall.GetParams().Select(x => new XElement("param", new XAttribute("name", x.Name))));
-        }
-
         private readonly HashSet<Type> _alreadyRegisteredTypes = new HashSet<Type>();
-
-        private List<MsDocFunctionResponse> TryCreateResponse(IApiMethodCall apiMethod, IContainer container, XElement returns)
-        {
-            var samples = new List<MsDocFunctionResponse>();
-            var returnType = apiMethod.MethodCall.ReturnType;
-            var collection = false;
-            if (apiMethod.MethodCall.ReturnType.IsGenericType)
-            {
-                //It's collection
-                returnType = apiMethod.MethodCall.ReturnType.GetGenericArguments().FirstOrDefault();
-                collection = true;
-            }
-            if (returnType != null)
-            {
-                var sample = returnType.GetMethod("GetSample", BindingFlags.Static | BindingFlags.Public);
-                if (sample != null)
-                {
-                    samples = GetSamples(apiMethod, container, sample, collection, returnType).ToList();
-                    _alreadyRegisteredTypes.Add(returnType);
-                }
-                else if (returns != null && returns.Elements("see").Any())
-                {
-                    var cref = returns.Elements("see").Attributes("cref").FirstOrDefault().ValueOrNull();
-                    if (!string.IsNullOrEmpty(cref) && cref.StartsWith("T:"))
-                    {
-                        var classname = cref.Substring(2);
-                        //Get the type
-                        try
-                        {
-
-                            var crefType = Type.GetType(classname) ??
-                                           _alreadyRegisteredTypes.SingleOrDefault(x => x.Name.Equals(classname, StringComparison.OrdinalIgnoreCase)) ??
-                                           apiMethod.MethodCall.Module.GetType(classname, true) ??
-                                           apiMethod.MethodCall.Module.GetTypes().SingleOrDefault(x => x.Name.Equals(classname, StringComparison.OrdinalIgnoreCase)) ??
-                                           AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes()).SingleOrDefault(x => x.Name.Equals(classname, StringComparison.OrdinalIgnoreCase));
-
-                            if (crefType != null)
-                            {
-                                sample = crefType.GetMethod("GetSample", BindingFlags.Static | BindingFlags.Public);
-                                if (sample != null)
-                                {
-                                    samples = GetSamples(apiMethod, container, sample, collection, crefType).ToList();
-                                }
-                            }
-                        }
-                        catch (Exception)
-                        {
-                        }
-                    }
-                }
-            }
-
-            return samples;
-        }
 
         private IEnumerable<MsDocFunctionResponse> GetSamples(IApiMethodCall apiMethod, IContainer container, MethodInfo sample, bool collection, Type returnType)
         {
