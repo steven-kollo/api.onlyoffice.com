@@ -92,19 +92,50 @@
         </member>
         <member name="P:ASC.Specific.AuthorizationApi.AuthenticationTokenData.Token">
             <example>abcde12345</example>
+            <order>1</order>
         </member>
         <member name="P:ASC.Specific.AuthorizationApi.AuthenticationTokenData.Expires">
             <example>2020-11-24T05:36:20.4206897Z</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Specific.AuthorizationApi.AuthenticationTokenData.Sms">
+            <example>true</example>
+            <order>3</order>
+        </member>
+        <member name="P:ASC.Specific.AuthorizationApi.AuthenticationTokenData.PhoneNoise">
+            <example>8(999)999-99-99</example>
+            <order>4</order>
+        </member>
+        <member name="P:ASC.Specific.AuthorizationApi.AuthenticationTokenData.Tfa">
+            <example>true</example>
+            <order>5</order>
+        </member>
+        <member name="P:ASC.Specific.AuthorizationApi.AuthenticationTokenData.TfaKey">
+            <example>123dwa</example>
+            <order>6</order>
+        </member>
+        <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesData.LdapEnabled">
+            <example>false</example>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesData.Providers">
+            <example>google,facebook,twitter,linkedin,mailru,vk,yandex,gosuslugi</example>
+            <collection split=",">list</collection>
+        </member>
+        <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesData.SsoLabel">
+            <example></example>
         </member>
         <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesData.SsoUrl">
             <summary>
             if empty sso is disabled
             </summary>
+            <example></example>
         </member>
         <member name="T:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint">
             <summary>
             Capabilities for api
             </summary>
+            <name>capabilities</name>
         </member>
         <member name="P:ASC.Specific.CapabilitiesApi.CapabilitiesEntryPoint.Name">
             <summary>
@@ -124,7 +155,9 @@
             <short>
             Get portal capabilities
             </short>
-            <returns>CapabilitiesData</returns>
+            <returns type="ASC.Specific.CapabilitiesApi.CapabilitiesData, ASC.Specific">CapabilitiesData</returns>
+            <path>api/2.0/capabilities</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="P:ASC.Specific.WarmupApi.WarmUpEntryPoint.Name">
             <summary>

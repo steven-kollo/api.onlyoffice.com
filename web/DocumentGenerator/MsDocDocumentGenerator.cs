@@ -64,6 +64,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public int status = 0;
         public object response;
 
+        private Dictionary<string, object> dic = new Dictionary<string, object>();
+        private List<object> list = new List<object>();
+
         public result()
         {
 
@@ -83,7 +86,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             writer.WriteElementString("status", "0");
 
-            Dictionary<string, object> dic = new Dictionary<string, object>();
             if (response.GetType().Name == dic.GetType().Name) 
             {
                 writer.WriteStartElement("response");
@@ -93,16 +95,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
                 writer.WriteEndElement();
             }
-            else
+            else if (response.GetType().Name == list.GetType().Name)
             {
-                foreach (var elem in (List<Dictionary<string, object>>)response)
+                var w1 = response.GetType();
+                foreach (var elem in (List<object>)response)
                 {
-                    writer.WriteStartElement("response");
-                    foreach (KeyValuePair<string, object> keyValue1 in elem)
-                    {
-                        SaveDictionary(writer, keyValue1);
-                    }
-                    writer.WriteEndElement();
+                    SaveList(writer, elem, "response");
                 }
             }
 
@@ -110,9 +108,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private void SaveDictionary(XmlWriter writer, KeyValuePair<string, object> keyValue)
         {
-
-            Dictionary<string, object> dic = new Dictionary<string, object>();
-            List<object> list = new List<object>();
             if (keyValue.Value.GetType().Name == dic.GetType().Name)
             {
                 writer.WriteStartElement(keyValue.Key);
@@ -124,19 +119,40 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             }
             else if (keyValue.Value.GetType().Name == list.GetType().Name)
             {
-                foreach (var elem in (List<Dictionary<string, object>>)keyValue.Value)
+                foreach (var elem in (List<object>)keyValue.Value)
                 {
-                    writer.WriteStartElement(keyValue.Key);
-                    foreach (KeyValuePair<string, object> keyValue1 in elem)
-                    {
-                        SaveDictionary(writer, keyValue1);
-                    }
-                    writer.WriteEndElement();
+                    SaveList(writer, elem, keyValue.Key);
                 }
             }
             else
             {
                 writer.WriteElementString(keyValue.Key, keyValue.Value.ToString());
+            }
+        }
+
+        private void SaveList(XmlWriter writer, object elem, string nameList)
+        {
+            if (elem.GetType().Name == dic.GetType().Name) 
+            {
+                writer.WriteStartElement(nameList);
+                foreach (KeyValuePair<string, object> keyValue1 in (Dictionary<string, object>)elem)
+                {
+                    SaveDictionary(writer, keyValue1);
+                }
+                writer.WriteEndElement();
+            } 
+            else if (elem.GetType().Name == list.GetType().Name)
+            {
+                writer.WriteStartElement(nameList);
+                foreach (var elem1 in (List<object>)elem)
+                {
+                    SaveList(writer, elem1, nameList);
+                }
+                writer.WriteEndElement();
+            }
+            else
+            {
+                writer.WriteElementString(nameList, elem.ToString());
             }
         }
     }
@@ -425,7 +441,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
                 if (collection == "list")
                 {
-                    var list = new List<Dictionary<string, object>>();
+                    var list = new List<object>();
                     list.Add(responseParam);
                     response.response = list;
                 }
@@ -479,7 +495,16 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     if(member.Element("collection").ValueOrNull() == "list")
                     {
                         var list = new List<object>();
-                        list.Add(result);
+                       
+                        if (member.Element("collection").Attribute("split").ValueOrNull() != "")
+                        {
+                            var split = member.Element("collection").Attribute("split").ValueOrNull()[0];
+                            list = result.ToString().Split(split).ToList<object>();
+                        }
+                        else
+                        {
+                            list.Add(result);
+                        }
                         responseParam.Add(name, list);
                     }
                     else
@@ -502,7 +527,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     responseParam1 = Sorted(responseParam1, orders1);
                     if (member.Element("collection").ValueOrNull() == "list")
                     {
-                        var list = new List<Dictionary<string, object>>();
+                        var list = new List<object>();
                         list.Add(responseParam1);
                         responseParam.Add(name, list);
                     }
