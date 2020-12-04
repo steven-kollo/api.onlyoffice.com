@@ -586,7 +586,7 @@
 		},
 		"ApiDocumentContent.getrange": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDocContent = oDrawing.GetDocContent();\noDocContent.RemoveAllElements();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is just a sample paragraph.\");\noDocContent.AddElement(oParagraph);\noDocContent.Push(oParagraph);\noRange = oDocContent.GetRange(8, 11);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetRange.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6845283&doc=MGIyb2hRRkVZb0NLYzBlN003WG1IcHNnUEVvQ0tNdExOenRFcHZJaTFzRT0_IjY4NDUyODMi0&action=embedded"
 		},
 		"ApiDocumentContent.push": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDocContent = oDrawing.GetDocContent();\noDocContent.RemoveAllElements();\noParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it.\");\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"Push.docx\");\nbuilder.CloseFile();",
