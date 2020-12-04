@@ -421,8 +421,8 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790282&doc=RTM4WE9HWW53c29qRmVMQmlaSWJzYXB1cW5zaEZzSVp5T2N6SzJQMVhCVT0_IjY3OTAyODIi0&action=embedded"
 		},
 		"ApiDocument.addcomment": {
-			"script": "builder.CreateFile( \"docx \"); \noDocument = Api.GetDocument(); \noParagraph = oDocument.GetElement(0); \noParagraph.AddText( \"This is just a sample text.\");\noDocument.AddComment(\"This a comment to the document.\", \"Jane\");\nbuilder.SaveFile( \"docx \",  \"AddComment.docx \"); \nbuilder.CloseFile();",
-			"demo": ""
+			"script": "builder.CreateFile( \"docx \"); \noDocument = Api.GetDocument(); \noParagraph = oDocument.GetElement(0); \noParagraph.AddText( \"This is just a sample text.\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"The comment was added to this document.\");\noDocument.AddComment(\"This a comment to the document.\", \"Jane\");\nbuilder.SaveFile( \"docx \",  \"AddComment.docx \"); \nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6841583&doc=clNmNlFGTWw3eXZKelpBcnN2eWdGeVRQamRlT2dqZEVkWHpaRGg3RlRtST0_IjY4NDE1ODMi0&action=embedded"
 		},
 		"ApiDocument.addelement": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = Api.CreateParagraph();\noRun = Api.CreateRun();\noRun.AddText(\"Number of paragraph elements at this point: \");\noRun.AddTabStop();\noRun.AddText(\"\" + oParagraph.GetElementsCount());\noRun.AddLineBreak();\noParagraph.AddElement(oRun);\noRun.AddText(\"Number of paragraph elements after we added a text run: \");\noRun.AddTabStop();\noRun.AddText(\"\" + oParagraph.GetElementsCount());\noDocument.AddElement(oParagraph);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"AddElement.docx\");\nbuilder.CloseFile();",
@@ -514,7 +514,7 @@
 		},
 		"ApiDocument.getsections": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a new paragraph.\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"Scroll down to see the new section.\");\noSection1 = oDocument.CreateSection(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph in a new section\");\noDocument.Push(oParagraph);\noSections = oDocument.GetSections();\noParagraph = Api.CreateParagraph();\noClassType = oSections[1].GetClassType();\noParagraph.AddText(\"Class type: \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetSections.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6841599&doc=NDJBZ3ZRYmpEZGV4dWdSSGlPN3c1OFNXNlhaTDlUZU1QZ2RWWGhjelc1TT0_IjY4NDE1OTki0&action=embedded"
 		},
 		"ApiDocument.getstyle": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noNoSpacingStyle = oDocument.GetStyle(\"Heading 6\");\noParagraph = oDocument.GetElement(0);\noParagraph.SetStyle(oNoSpacingStyle);\noParagraph.AddText(\"This is a text in a paragraph styled with the 'Heading 6' style.\");\nbuilder.SaveFile(\"docx\", \"ApiDocument.docx\");\nbuilder.CloseFile();",
@@ -534,7 +534,7 @@
 		},
 		"ApiDocument.last": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a sample text №1.\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a sample text №2.\");\noDocument.Push(oParagraph);\noElement = oDocument.Last();\noElement.SetBold(true);\nbuilder.SaveFile(\"docx\", \"Last.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6841558&doc=R1VRR1pBaW1wOHBUbnQwMFU3R1J5aVZud054d0RrSGhINFFEaU5kKythVT0_IjY4NDE1NTgi0&action=embedded"
 		},
 		"ApiDocument.push": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph0 = oDocument.GetElement(0);\noParagraph0.AddText(\"This is paragraph #0, you must not push it to take effect.\");\nfor (nParaIncrease = 0; nParaIncrease < 5; ++nParaIncrease) {\n  oParagraph = Api.CreateParagraph();\n  oParagraph.AddText(\"This is paragraph #\" + (nParaIncrease + 1) + \", you must push it to take effect.\");\n  oDocument.Push(oParagraph);\n}\nbuilder.SaveFile(\"docx\", \"Push.docx\");\nbuilder.CloseFile();",
@@ -550,11 +550,11 @@
 		},
 		"ApiDocument.removeselection": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Api ONLYOFFICE\");\noRange = oDocument.GetRange(0, 2);\noRange.Select();\noDocument.RemoveSelection();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The selection from the word \"Api\" was removed.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"RemoveSelection.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6841767&doc=ZjljVjBRaTg4Qk5vZkd6d2EwQm1mY01OMGxYbXN1NTBWQkV4OTZLK25IWT0_IjY4NDE3Njci0&action=embedded"
 		},
 		"ApiDocument.search": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is paragraph №1.\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is paragraph №2.\");\noDocument.Push(oParagraph);\noSearch = oDocument.Search(\"paragraph\");\noSearch[0].SetBold(true);\nbuilder.SaveFile(\"docx\", \"Search.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6842056&doc=VUZEUStmaVJZd3RrNTZIcnU3UjFRZS9pNk90RWwxM2t3TTgvY2tmUFNscz0_IjY4NDIwNTYi0&action=embedded"
 		},
 		"ApiDocument.searchandreplace": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is the first sample text. The serial number of this sample text was replaced here.\");\noDocument.SearchAndReplace({\"searchString\": \"first\", \"replaceString\": \"second\"});\nbuilder.SaveFile(\"docx\", \"SearchAndReplace.docx\");\nbuilder.CloseFile();",
