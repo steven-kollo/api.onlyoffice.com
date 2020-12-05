@@ -682,11 +682,11 @@
 		},
 		"ApiInlineLvlSdt.addtext": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noInlineLvlSdt.AddText(\"This is an inline text content control.\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\nbuilder.SaveFile(\"docx\", \"AddText.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6845442&doc=NnVmd2ZwR0NxeVZQdDRaYnpzS3o5NEgwTnhTdGgwL0tQWTAwY25uRzVQWT0_IjY4NDU0NDIi0&action=embedded"
 		},
 		"ApiInlineLvlSdt.delete": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noInlineLvlSdt.AddText(\"This is an inline text content control.\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noInlineLvlSdt.Delete();\noParagraph.AddText(\"The inline text content control was removed.\");\nbuilder.SaveFile(\"docx\", \"Delete.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6845452&doc=TFdiMG5aYjJMOGVIb1FqeHJhVWw3VzFYZ0cxdzdEb3BWM1RWdVZ0R3o1UT0_IjY4NDU0NTIi0&action=embedded"
 		},
 		"ApiInlineLvlSdt.getalias": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control with alias '№1'.\");\noInlineLvlSdt.AddElement(oRun, 0);\noInlineLvlSdt.SetAlias(\"№1\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noAlias = oInlineLvlSdt.GetAlias();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Alias: \" + oAlias);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetAlias.docx\");\nbuilder.CloseFile();",
@@ -694,7 +694,7 @@
 		},
 		"ApiInlineLvlSdt.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control.\");\noInlineLvlSdt.AddElement(oRun, 0);\noClassType = oInlineLvlSdt.GetClassType();\noParagraph.AddLineBreak();\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6890811&doc=aU8vczRtMGxKMXNZNkpHcVJKOEdHYVlIbk5Fb0YvbnJ6T2ZOaE1oYlZjUT0_IjY4OTA4MTEi0&action=embedded"
 		},
 		"ApiInlineLvlSdt.getelement": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\nfor (nPos = 0; nPos < 10; ++nPos) {\ncurRun = oRun + nPos;\ncurRun = Api.CreateRun();\ncurRun.AddText(\"This is text run \" + (nPos + 1) + \". \");\noInlineLvlSdt.AddElement(curRun);\n}\nchangeRun = oInlineLvlSdt.GetElement(4);\nchangeRun.SetBold(true);\noParagraph.AddLineBreak();\noParagraph.AddLineBreak();\noParagraph.AddLineBreak();\noParagraph.AddText(\"We added 10 text runs to the above inline text content control. Then we changed the fifth run, so it is different from the others.\");\nbuilder.SaveFile(\"docx\", \"GetElement.docx\");\nbuilder.CloseFile();",
@@ -714,11 +714,11 @@
 		},
 		"ApiInlineLvlSdt.getparentcontentcontrol": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt1 = Api.CreateInlineLvlSdt();\noInlineLvlSdt1.AddText(\"This is a parent inline text content control.\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt1);\noInlineLvlSdt2 = Api.CreateInlineLvlSdt();\noInlineLvlSdt2.AddText(\"This is an inline text content control added in another content control.\");\noInlineLvlSdt1.AddElement(oInlineLvlSdt2, 0);\noParentInlineLvlSdt = oInlineLvlSdt2.GetParentContentControl();\noParentInlineLvlSdt.SetAlias(\"№1\");\nbuilder.SaveFile(\"docx\", \"GetParentContentControl.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6866575&doc=Y3pNRWdYdXlPT2RWMzMydWYvVGVzeGdLVGx6YlJub0pHclpwWmxTWTgrQT0_IjY4NjY1NzUi0&action=embedded"
 		},
 		"ApiInlineLvlSdt.getrange": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noInlineLvlSdt.AddText(\"This is an inline text content control.\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noRange = oInlineLvlSdt.GetRange(11, 16);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetRange.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847006&doc=djZxZlQyNVl0RDBSS3hhTkNSWVM2SmFPR3E2OU1OQlN5UUxOazRmWDVRST0_IjY4NDcwMDYi0&action=embedded"
 		},
 		"ApiInlineLvlSdt.gettag": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control with a tag set to it.\");\noInlineLvlSdt.AddElement(oRun, 0);\noInlineLvlSdt.SetTag(\"This is a tag\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noTag = oInlineLvlSdt.GetTag();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Tag: \" + oTag);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetTag.docx\");\nbuilder.CloseFile();",
@@ -726,7 +726,7 @@
 		},
 		"ApiInlineLvlSdt.push": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control.\");\noInlineLvlSdt.AddElement(oRun, 0);\noRun = Api.CreateRun();\noRun.AddText(\"This sentence was pushed here.\");\noInlineLvlSdt.Push(oRun);\nbuilder.SaveFile(\"docx\", \"Push.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6845426&doc=TkRmTEs0dmRKQWpDTkp0WExOTnRodktLVUZWM0hldEpFRS8xTmdCaVo3OD0_IjY4NDU0MjYi0&action=embedded"
 		},
 		"ApiInlineLvlSdt.removeallelements": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noParagraph.AddLineBreak();\noInlineLvlSdtCount = oInlineLvlSdt.RemoveAllElements();\noInlineLvlSdtCount = oInlineLvlSdt.GetElementsCount();\noParagraph.AddText(\"Number of elements in oInlineLvlSdt (with all the elements removed) = \" + oInlineLvlSdtCount);\noRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control. \");\noInlineLvlSdt.AddElement(oRun, 0);\noParagraph.AddLineBreak();\noInlineLvlSdtCount = oInlineLvlSdt.GetElementsCount();\noParagraph.AddText(\"Number of elements in oInlineLvlSdt (after adding one element) = \" + oInlineLvlSdtCount);\noRun1 = Api.CreateRun();\noRun1.AddText(\"One more element of the inline text content control.\");\noInlineLvlSdt.AddElement(oRun1, 1);\noInlineLvlSdtCount = oInlineLvlSdt.GetElementsCount();\noParagraph.AddLineBreak();\noParagraph.AddText(\"Number of elements in oInlineLvlSdt (after adding one more element) = \" + oInlineLvlSdtCount);\nbuilder.SaveFile(\"docx\", \"RemoveAllElements.docx\");\nbuilder.CloseFile();",
@@ -754,7 +754,7 @@
 		},
 		"ApiInlineLvlSdt.settextpr": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noInlineLvlSdt.AddText(\"This is an inline text content control with the font size set to 30 and the font weight set to bold.\");\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontSize(30);\noTextPr.SetBold(true);\noInlineLvlSdt.SetTextPr(oTextPr);\nbuilder.SaveFile(\"docx\", \"SetTextPr.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6845454&doc=L3JuNEtxaWxwSVFPS0laYzhUSFpDa0N2Wi9iRFJnYlNGTEpzMXBpeENnST0_IjY4NDU0NTQi0&action=embedded"
 		  },
 		"ApiNumbering.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noNumbering = oDocument.CreateNumbering(\"bullet\");\nfor (nLvl = 0; nLvl < 8; ++nLvl) {\n  oNumLvl = oNumbering.GetLevel(nLvl);\n  oParagraph = Api.CreateParagraph();\n  oParagraph.AddText(\"Default bullet lvl \" + (nLvl + 1));\n  oParagraph.SetNumbering(oNumLvl);\n  oParagraph.SetContextualSpacing(true);\n  oDocument.Push(oParagraph);\n}\noClassType = oNumbering.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
