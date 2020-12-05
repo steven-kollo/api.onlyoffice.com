@@ -1326,11 +1326,11 @@
 		},
 		"ApiShape.getnextshape": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape1 = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oShape1);\noShape2 = Api.CreateShape(\"wave\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oShape2);\noNextShape = oShape1.GetNextShape();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));\noNextShape.Fill(oFill);\nbuilder.SaveFile(\"docx\", \"GetNextShape.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6850111&doc=SGdGNHFlL3ZncTA0NzE2NzZLVzY0WWM2NVJnS2lWdlpYZnhjKzRsUlB3QT0_IjY4NTAxMTEi0&action=embedded"
 		},
 		"ApiShape.getprevshape": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape1 = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oShape1);\noShape2 = Api.CreateShape(\"wave\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oShape2);\noPrevShape = oShape2.GetPrevShape();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));\noPrevShape.Fill(oFill);\nbuilder.SaveFile(\"docx\", \"GetPrevShape.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6850122&doc=TlBkUHo1TlN5czF1bjB2NmNVL3NNWHc1czluUHUrdWhuSFB3MFl2YysxTT0_IjY4NTAxMjIi0&action=embedded"
 		},
 		"ApiShape.setpaddings": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDocContent = oDrawing.GetDocContent();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a sample text with paddings set to it.\");\noDocContent.Push(oParagraph);\noDrawing.SetPaddings(20 * 36000, 5 * 36000, 5 * 36000, 3 * 36000);\nbuilder.SaveFile(\"docx\", \"SetPaddings.docx\");\nbuilder.CloseFile();",
