@@ -809,8 +809,8 @@
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888985&doc=bmZPNFN1V3N1c1V0WWxMTmhuS25DdGJndHlUeHk1RDRBOW1tTGxIK3dZQT0_IjQ4ODg5ODUi0&action=embedded"
 		},
 		"ApiParagraph.addcomment": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample paragraph.\");\noParagraph.AddComment(\"comment\", \"Jane\");\nbuilder.SaveFile(\"docx\", \"AddComment.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample paragraph.\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"The comment was added to this document.\");\noParagraph.AddComment(\"comment\", \"Jane\");\nbuilder.SaveFile(\"docx\", \"AddComment.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847092&doc=bnhlMWllRHdFYVpKUUtZSVZXT3hCbkI4S0swTS9sMnp6VTNvaFpFanpOUT0_IjY4NDcwOTIi0&action=embedded"
 		},
 		"ApiParagraph.adddrawing": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noDrawing = Api.CreateChart(\"bar3D\", [\n  [200, 240, 280],\n  [250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noDrawing.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noDrawing.SetHorAxisTitle(\"Year\", 11);\noDrawing.SetLegendPos(\"bottom\");\noDrawing.SetShowDataLabels(false, false, true, false);\noDrawing.SetTitle(\"Financial Overview\", 13);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"AddDrawing.docx\");\nbuilder.CloseFile();",
@@ -854,19 +854,19 @@
 		},
 		"ApiParagraph.delete": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is just a sample paragraph №1.\");\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is just a sample paragraph №2.\");\noDocument.Push(oParagraph2);\noParagraph1.Delete();\noParagraph2.AddLineBreak();\noParagraph2.AddText(\"The sample paragraph №1 was removed.\");\nbuilder.SaveFile(\"docx\", \"Delete.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847064&doc=cHVlMVZha0pPUUNHckF0NW1FMURaWkZtV2VCK1FMa1NJYnI5dEN1N0pyZz0_IjY4NDcwNjQi0&action=embedded"
 		},
 		"ApiParagraph.getallcontentcontrols": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control.\");\noInlineLvlSdt.AddElement(oRun);\noContentControls = oParagraph.GetAllContentControls();\noContentControls[0].GetElement(0).SetBold(true);\noClassType = oContentControls[0].GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class type: \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetAllContentControls.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847104&doc=OENOQjBjVGZIQkFOV05zQlozQzhONzcyUktsazlFcVRvVXJzMXVQNUZVTT0_IjY4NDcxMDQi0&action=embedded"
 		},
 		"ApiParagraph.getalldrawingobjects": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing1 = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing1);\noDrawing2 = Api.CreateChart(\"bar3D\", [\n    [200, 240, 280],\n    [250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noDrawing2.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noDrawing2.SetHorAxisTitle(\"Year\", 11);\noDrawing2.SetLegendPos(\"bottom\");\noDrawing2.SetShowDataLabels(false, false, true, false);\noDrawing2.SetTitle(\"Financial Overview\", 13);\noParagraph.AddDrawing(oDrawing);\noDrawings = oParagraph.GetAllDrawingObjects();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));\noDrawings[0].Fill(oFill);\nbuilder.SaveFile(\"docx\", \"GetAllDrawingObjects.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847105&doc=Wi9FbXNZVDJaY0s2aUJDdGpFNStrUlVHOVI4OUlIN2VsdDFzcWtUSVVNOD0_IjY4NDcxMDUi0&action=embedded"
 		},
 		"ApiParagraph.getallimages": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noImage1 = Api.CreateImage(\"https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png\", 60 * 36000, 35 * 36000);\noParagraph.AddDrawing(oImage1);\noImage2 = Api.CreateImage(\"http://api.teamlab.info/content/img/editor/sharing_settings.png\", 60 * 36000, 35 * 36000);\noParagraph.AddDrawing(oImage2);\noImages = oParagraph.GetAllImages();\noClassType = oImages[0].GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class type: \" + oClassType);\noDocument.Push(oParagraph); \nbuilder.SaveFile(\"docx\", \"GetAllImages.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847129&doc=c0lQWE1ESHVGU21BR21VUG5tMGtEUzFNNEE4M1gwSzJ4UTlVY2VkZWlQZz0_IjY4NDcxMjki0&action=embedded"
 		},
 		"ApiParagraph.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noClassType = oParagraph.GetClassType();\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
@@ -882,7 +882,7 @@
 		},
 		"ApiParagraph.getnext": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is just a sample paragraph №1.\");\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is just a sample paragraph №2.\");\noDocument.Push(oParagraph2);\noNextParagraph = oParagraph1.GetNext();\noNextParagraph.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetNext.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847073&doc=aTJsb2ZxWURmdERmMmZqTjhoVGJaR2NrMTNFZjcvZ0EwaWRHRTl2WWVQZz0_IjY4NDcwNzMi0&action=embedded"
 		},
 		"ApiParagraph.getnumbering": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noNumbering = oDocument.CreateNumbering(\"numbered\");\noNumLvl = oNumbering.GetLevel(0);\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is the first element of a numbered list\");\noParagraph.SetNumbering(oNumLvl);\noParagraph.SetContextualSpacing(true);\noNumbering1 = oParagraph.GetNumbering();\noNumLvl = oNumbering.GetLevel(0);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the second element of a numbered list\");\noParagraph.SetNumbering(oNumLvl);\noParagraph.SetContextualSpacing(true);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetNumbering.docx\");\nbuilder.CloseFile();",
@@ -898,23 +898,23 @@
 		},
 		"ApiParagraph.getprevious": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is just a sample paragraph №1.\");\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is just a sample paragraph №2.\");\noDocument.Push(oParagraph2);\noPreviousParagraph = oParagraph2.GetPrevious();\noPreviousParagraph.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetPrevious.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847077&doc=TUwyMjZ2NmdWRm8za3BHMEVDOTBLU1Nsc1BsSFl2NjlGK3Z5SDN0ZDRnMD0_IjY4NDcwNzci0&action=embedded"
 		},
 		"ApiParagraph.getrange": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample paragraph.\");\noRange = oParagraph.GetRange(8, 11);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetRange.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847095&doc=djZ4UHZaYjVoK2Y2anZVR0pPTVdwdnRKRndnSEI4Mjd5VFN3TitJQ1pMRT0_IjY4NDcwOTUi0&action=embedded"
 		},
 		"ApiParagraph.gettext": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text.\");\noText = oParagraph.GetText();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The text of the first paragraph: \" + oText);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetText.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847244&doc=aTMvSjNCdTVhcGxXdWJhcTg3MERXeHBsQmkyWTh5SHZWNGlSUWMrZEt1cz0_IjY4NDcyNDQi0&action=embedded"
 		},
 		"ApiParagraph.gettextpr": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is just a sample text.\");\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is a sample text with the font size set to 30 and the font weight set to bold.\");\noDocument.Push(oParagraph2);\noParagraph2.SetColor(0, 0, 255).SetBold(true);\noTextPr = oParagraph2.GetTextPr();\noParagraph1.SetTextPr(oTextPr);\nbuilder.SaveFile(\"docx\", \"GetTextPr.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847257&doc=ZzhHd2tXYUN0NDl2bGpBSllPUE5ycDFvUnpNbWN1VjAveEVHZkhIekRVcz0_IjY4NDcyNTci0&action=embedded"
 		},
 		"ApiParagraph.insertparagraph": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is just a sample text.\");\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This paragraph was inserted here.\");\noParagraph1.InsertParagraph(oParagraph2, \"after\", true);\nbuilder.SaveFile(\"docx\", \"InsertParagraph.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847292&doc=V0R6TXhaTlJQRDVrY1VCeDVES0IyaUtmejBocmY2WEZFM3A1cWxGaDNybz0_IjY4NDcyOTIi0&action=embedded"
 		},
 		"ApiParagraph.removeallelements": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.RemoveAllElements();\noRun = Api.CreateRun();\noRun.AddText(\"This is the first document paragraph. We removed all the elements to get the number of paragraph elements at this point: \");\noRun.AddText(\"\" + oParagraph.GetElementsCount() + \". If we had not done that the number before this sentence would be '1'.\");\noParagraph.AddElement(oRun);\noParagraph = Api.CreateParagraph();\noRun = Api.CreateRun();\noRun.AddText(\"This is the second paragraph. It is created without any elements, so there is no need to remove them. The number of paragraph elements at this point: \");\noRun.AddText(\"\" + oParagraph.GetElementsCount() + \". It is '0' and should be that way.\");\noParagraph.AddElement(oRun);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"RemoveAllElements.docx\");\nbuilder.CloseFile();",
@@ -926,7 +926,7 @@
 		},
 		"ApiParagraph.search": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text. This text was added to the paragraph.\");\noSearch = oParagraph.Search(\"text\");\noSearch[0].SetBold(true);\nbuilder.SaveFile(\"docx\", \"Search.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847293&doc=eFBhdVV6d3VUaHFiRnN1SzZqcVBWQ003SVRidURaWFIyaEFUaExoVHJSTT0_IjY4NDcyOTMi0&action=embedded"
 		},
 		"ApiParagraph.setbetweenborder": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is the first paragraph. We will add a thick green border between it and the next paragraph. \");\noParagraph.AddText(\"No additional spacing between the border and the paragraphs is added.\");\noParagraph.SetBetweenBorder(\"single\", 24, 0, 0, 255, 0);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the second paragraph. We will add a thin red border between it and the next paragraph. \");\noParagraph.AddText(\"We added additional spacing between the border and the paragraphs.\");\noParagraph.SetBetweenBorder(\"single\", 12, 10, 255, 0, 0);\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the third paragraph. The border can be displayed above it only, as there are no new paragraphs after it.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetBetweenBorder.docx\");\nbuilder.CloseFile();",
@@ -942,7 +942,7 @@
 		},
 		"ApiParagraph.setfontsize": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample paragraph.\");\noParagraph.SetFontSize(24);\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847098&doc=QVNqTm1oUm5LL09LZVY1OFZmMWRWY0hUSXBnM0ZDejd3bHNGOWg1SjU0RT0_IjY4NDcwOTgi0&action=embedded"
 		},
 		"ApiParagraph.setindfirstline": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the indent of 1 inch set to the first line. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetIndFirstLine(1440);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph without any indent set to the first line. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetIndFirstLine.docx\");\nbuilder.CloseFile();",
@@ -994,7 +994,7 @@
 		},
 		"ApiParagraph.setspacing": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample paragraph.\");\noParagraph.SetSpacing(2);\nbuilder.SaveFile(\"docx\", \"SetSpacing.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847102&doc=MmZyZnRMakJFL0JWVUxEZWxOQXN6OWQ5bmg5VXFTTEdqb1g5K0Z1ald6UT0_IjY4NDcxMDIi0&action=embedded"
 		},
 		"ApiParagraph.setspacingafter": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is an example of setting a space after a paragraph. \");\noParagraph.AddText(\"The second paragraph will have an offset of one inch from the top. \");\noParagraph.AddText(\"This is due to the fact that the first paragraph has this offset enabled.\");\noParagraph.SetSpacingAfter(1440);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the second paragraph and it is one inch away from the first paragraph.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"ApiParagraph.docx\");\nbuilder.CloseFile();",
@@ -1018,7 +1018,7 @@
 		},
 		"ApiParagraph.settextpr": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a sample text with the font size set to 30 and the font weight set to bold.\");\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontSize(30);\noTextPr.SetBold(true);\noParagraph.SetTextPr(oTextPr);\nbuilder.SaveFile(\"docx\", \"SetTextPr.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847256&doc=ZjB3Y20yQXZBQVJKZDJrdnpud3Y5dFQ4M2phSWIwOXJjVzZRUEVabi9SND0_IjY4NDcyNTYi0&action=embedded"
 		},
 		"ApiParagraph.settopborder": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is the first paragraph. We will add a thick green border above it.\");\noParagraph.SetTopBorder(\"single\", 24, 0, 0, 255, 0);\nbuilder.SaveFile(\"docx\", \"SetTopBorder.docx\");\nbuilder.CloseFile();",
