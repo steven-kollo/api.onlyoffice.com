@@ -670,11 +670,11 @@
 		},
 		"ApiImage.getnextimage": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noImage1 = Api.CreateImage(\"https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png\", 60 * 36000, 35 * 36000);\noParagraph.AddDrawing(oImage1);\noImage2 = Api.CreateImage(\"https://helpcenter.onlyoffice.com/images/Help/GettingStarted/Documents/big/EditDocument.png\", 60 * 36000, 35 * 36000);\noParagraph.AddLineBreak();\noParagraph.AddDrawing(oImage2);\noNextImage = oImage1.GetNextImage();\noCopyImage = oNextImage.Copy();\noParagraph.AddLineBreak();\noParagraph.AddDrawing(oCopyImage);\nbuilder.SaveFile(\"docx\", \"GetNextImage.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6845393&doc=RThLWm1qc3ZlTUhHbUpsQVdqU3V3ME51YWFBN1lVaWhweXY3dFc3RUsxQT0_IjY4NDUzOTMi0&action=embedded"
 		},
 		"ApiImage.getprevimage": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noImage1 = Api.CreateImage(\"https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png\", 60 * 36000, 35 * 36000);\noParagraph.AddDrawing(oImage1);\noImage2 = Api.CreateImage(\"https://helpcenter.onlyoffice.com/images/Help/GettingStarted/Documents/big/EditDocument.png\", 60 * 36000, 35 * 36000);\noParagraph.AddLineBreak();\noParagraph.AddDrawing(oImage2);\noPrevImage = oImage2.GetPrevImage();\noCopyImage = oPrevImage.Copy();\noParagraph.AddLineBreak();\noParagraph.AddDrawing(oCopyImage);\nbuilder.SaveFile(\"docx\", \"GetPrevImage.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6845407&doc=bFMvL1hDaVZOUGRuYWFxQTRRcmdrQW01ZGlBVWsyMzZGK2t5VThuODRoST0_IjY4NDU0MDci0&action=embedded"
 		},
 		"ApiInlineLvlSdt.addelement": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\noRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control with a text run in it.\");\noInlineLvlSdt.AddElement(oRun, 0);\nbuilder.SaveFile(\"docx\", \"AddElement.docx\");\nbuilder.CloseFile();",
