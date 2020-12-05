@@ -642,27 +642,27 @@
 		},
 		"ApiHyperlink.getlinkedtext": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noHyperlink = oParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\");\noHyperlink.SetLink(\"https://api.onlyoffice.com/\");\noLinkedText = oHyperlink.GetLinkedText();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Linked text: \" + oLinkedText);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetLinkedText.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847405&doc=aXRycUluNnNZRHVBcHBsUWZuSXlCRlNxR2RMZHZwcCtyV3hheFZ2bFQrVT0_IjY4NDc0MDUi0&action=embedded"
 		},
 		"ApiHyperlink.getrange": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Api Document Builder\");\noHyperlink = oParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\");\noRange = oHyperlink.GetRange(0, 2);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetRange .docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6849791&doc=WjJpd1lueVIvMi9PYUFET3R1VTVLaDdKczJzMWlZQVVHSlFOOFo0c3RoRT0_IjY4NDk3OTEi0&action=embedded"
 		},
 		"ApiHyperlink.getscreentiptext": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noHyperlink = oParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\");\noHyperlink.SetScreenTipText(\"ONLYOFFICE for developers\");\noScreenTipText = oHyperlink.GetScreenTipText();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Screen tip text: \" + oScreenTipText);\nbuilder.SaveFile(\"docx\", \"GetScreenTipText.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noHyperlink = oParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\");\noHyperlink.SetScreenTipText(\"ONLYOFFICE for developers\");\noScreenTipText = oHyperlink.GetScreenTipText();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Screen tip text: \" + oScreenTipText);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetScreenTipText.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847381&doc=c3RuTE11YkdncjBIaDhOYWR2a1dHZmU2MFRJTEZJa2dJY0d5V1N6dUFlUT0_IjY4NDczODEi0&action=embedded"
 		},
 		"ApiHyperlink.setdisplayedtext": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noHyperlink = oParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\");\noHyperlink.SetDisplayedText(\"Api ONLYOFFICE DocBuilder\");\nbuilder.SaveFile(\"docx\", \"SetDisplayedText.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847370&doc=aWtaRHZWSGlha1VXdm43Zm1DT0JhUERoY0dlYVkwM3RiUWM3YldMYzhnST0_IjY4NDczNzAi0&action=embedded"
 		},
 		"ApiHyperlink.setlink": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noHyperlink = oParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\");\noHyperlink.SetLink(\"https://api.onlyoffice.com/\");\nbuilder.SaveFile(\"docx\", \"SetLink.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6845384&doc=b0dOVkU5K2JxZGtTT1VlVDZEemtaQ08ra1A3TG05Ym04RklHWCtiVWlLMD0_IjY4NDUzODQi0&action=embedded"
 		},
 		"ApiHyperlink.setscreentiptext": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noHyperlink = oParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\");\noHyperlink.SetScreenTipText(\"ONLYOFFICE for developers\");\nbuilder.SaveFile(\"docx\", \"SetScreenTipText.docx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noHyperlink = oParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\");\noHyperlink.SetScreenTipText(\"ONLYOFFICE for developers\");\noScreenTipText = oHyperlink.GetScreenTipText();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Screen tip text: \" + oScreenTipText);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetScreenTipText.docx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847375&doc=VDE5U1duQWtpOXV4L0JNSkFzWDVtWTlBQlRtQlF1OXF5bHJvTmJOaFZoST0_IjY4NDczNzUi0&action=embedded"
 		},
 		"ApiImage.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noDrawing = Api.CreateImage(\"https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png\", 60 * 36000, 35 * 36000);\noParagraph.AddDrawing(oDrawing);\noClassType = oDrawing.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
