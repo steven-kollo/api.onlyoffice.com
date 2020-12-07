@@ -295,7 +295,7 @@
     "Delete": {
       "memberof": "ApiParagraph",
       "name": "Delete",
-      "description": "<p>Delete current paragraph.</p>",
+      "description": "<p>Deletes current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -303,7 +303,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
@@ -318,7 +322,12 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiParagraph",
+          "null"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
@@ -333,7 +342,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
@@ -437,7 +450,11 @@
       "memberof": "ApiParagraph",
       "name": "AddInlineLvlSdt",
       "description": "<p>Add a inline container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiInlineLvlSdt"
@@ -458,8 +475,16 @@
       "memberof": "ApiParagraph",
       "name": "AddComment",
       "description": "<p>Adds a comment to the paragraph.</p>",
-      "tags": {},
-      "returns": [],
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -1001,7 +1026,7 @@
       "returns": [
         [
           "ApiParagraph",
-          "false"
+          "null"
         ]
       ],
       "see": null,
@@ -1128,7 +1153,8 @@
       },
       "returns": [
         [
-          "ApiBlockLvlSdt"
+          "ApiBlockLvlSdt",
+          "null"
         ]
       ],
       "see": null,
@@ -1145,7 +1171,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTable",
+          "null"
         ]
       ],
       "see": null,
@@ -1162,7 +1189,8 @@
       },
       "returns": [
         [
-          "ApiTableCell"
+          "ApiTableCell",
+          "null"
         ]
       ],
       "see": null,
@@ -1263,7 +1291,8 @@
       },
       "returns": [
         [
-          "ApiParagraph"
+          "ApiParagraph",
+          "null"
         ]
       ],
       "see": null,
@@ -1317,7 +1346,7 @@
       },
       "returns": [
         [
-          "Array"
+          "Array.<ApiRange>"
         ]
       ],
       "see": null,
@@ -1335,6 +1364,19 @@
           "optional": false
         }
       ]
+    },
+    "WrapInMailMergeField": {
+      "memberof": "ApiParagraph",
+      "name": "WrapInMailMergeField",
+      "description": "<p>Wrap paragraph content in a mail merge field.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
     },
     "SetStyle": {
       "memberof": "ApiParagraph",

@@ -46,3 +46,5 @@ if %parseDocs% NEQ Y goto skipParse
     move out %outPath%\slide
     md out
 :skipParse
+
+pause

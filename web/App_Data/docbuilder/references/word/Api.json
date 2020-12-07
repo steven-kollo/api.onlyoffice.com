@@ -41,8 +41,7 @@
       "description": "<p>Create a new paragraph.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE"
+          "CDE"
         ]
       },
       "returns": [
@@ -205,25 +204,29 @@
           "type": "EMU",
           "name": "nWidth",
           "description": "<p>The shape width in English measure units.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 914400
         },
         {
           "type": "EMU",
           "name": "nHeight",
           "description": "<p>The shape height in English measure units.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 914400
         },
         {
           "type": "ApiFill",
           "name": "oFill",
           "description": "<p>The color or pattern used to fill the shape.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.CreateNoFill()"
         },
         {
           "type": "ApiStroke",
           "name": "oStroke",
           "description": "<p>The stroke used to create the element shadow.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.CreateStroke(0, Api.CreateNoFill())"
         }
       ]
     },
@@ -687,7 +690,11 @@
       "memberof": "Api",
       "name": "CreateInlineLvlSdt",
       "description": "<p>Create a new inline container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiInlineLvlSdt"
@@ -700,7 +707,11 @@
       "memberof": "Api",
       "name": "CreateBlockLvlSdt",
       "description": "<p>Create a new block level container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiBlockLvlSdt"
@@ -840,8 +851,16 @@
       "memberof": "Api",
       "name": "AddComment",
       "description": "<p>Adds a comment to the desired element or array of elements.</p>",
-      "tags": {},
-      "returns": [],
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -869,10 +888,15 @@
       "memberof": "Api",
       "name": "GetFirstRunInArray",
       "description": "<p>Get the Run that is first in position</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
-          "ApiRun"
+          "ApiRun",
+          "null"
         ]
       ],
       "see": null,
@@ -890,10 +914,15 @@
       "memberof": "Api",
       "name": "GetLastRunInArray",
       "description": "<p>Get the Run that is last in position</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
-          "ApiRun"
+          "ApiRun",
+          "null"
         ]
       ],
       "see": null,

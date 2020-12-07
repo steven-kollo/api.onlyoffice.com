@@ -21,6 +21,7 @@
     <pre>{
     "baseUrl": "",
     "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+    "help": "",
     "name": "chess(fen)",
     "variations": [
         {
@@ -69,6 +70,12 @@
             <tr id="guid" class="tablerow">
                 <td>guid</td>
                 <td>Plugin identifier. It <b>must</b> be of the <em>asc.{UUID}</em> type.</td>
+                <td>string</td>
+                <td>""</td>
+            </tr>
+            <tr id="help" class="tablerow">
+                <td>help</td>
+                <td>Path to the plugin description page. If the parameter is specified, the <em>help</em> button is displayed in the plugin window. When the user clicks the button, he follows the link to the plugin description page.</td>
                 <td>string</td>
                 <td>""</td>
             </tr>

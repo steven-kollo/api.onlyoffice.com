@@ -4,7 +4,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetVisible",
       "description": "<p>Returns Visible of sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "bool"
@@ -17,14 +21,18 @@
       "memberof": "ApiWorksheet",
       "name": "SetVisible",
       "description": "<p>Set Visible of sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "bool",
-          "name": "value",
+          "name": "isVisible",
           "optional": false
         }
       ]
@@ -33,7 +41,11 @@
       "memberof": "ApiWorksheet",
       "name": "SetActive",
       "description": "<p>Makes the current sheet the active sheet.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null
@@ -42,7 +54,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetActiveCell",
       "description": "<p>Returns an object that represents the active cell</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiRange"
@@ -55,7 +71,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetSelection",
       "description": "<p>Returns an object that represents the selection range</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiRange"
@@ -68,7 +88,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetCells",
       "description": "<p>Returns a ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use).</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiRange"
@@ -81,7 +105,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetRows",
       "description": "<p>Returns a ApiRange that represents all the cells on the rows range.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiRange"
@@ -101,7 +129,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetCols",
       "description": "<p>Returns a ApiRange that represents all the cells on the columns range.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiRange"
@@ -121,7 +153,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetUsedRange",
       "description": "<p>Returns a ApiRange that represents the used range on the specified worksheet.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiRange"
@@ -134,7 +170,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetName",
       "description": "<p>Get sheet name</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "string"
@@ -158,7 +198,7 @@
       "params": [
         {
           "type": "string",
-          "name": "name",
+          "name": "sName",
           "description": "<p>The name which will be displayed for the current sheet at the sheet tab.</p>",
           "optional": false
         }
@@ -168,7 +208,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetIndex",
       "description": "<p>Get sheet index</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "number"
@@ -188,7 +232,8 @@
       },
       "returns": [
         [
-          "ApiRange"
+          "ApiRange",
+          "null"
         ]
       ],
       "see": null,
@@ -206,7 +251,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetRangeByNumber",
       "description": "<p>Returns an object that represents the selected range of the current sheet using the <b>row/column</b> coordinates for the cell selection.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiRange"
@@ -217,13 +266,13 @@
       "params": [
         {
           "type": "Number",
-          "name": "row",
+          "name": "nRow",
           "description": "<p>The number of the row to set the cell coordinates.</p>",
           "optional": false
         },
         {
           "type": "Number",
-          "name": "col",
+          "name": "nCol",
           "description": "<p>The number of the column to set the cell coordinates.</p>",
           "optional": false
         }
@@ -253,7 +302,7 @@
     "SetColumnWidth": {
       "memberof": "ApiWorksheet",
       "name": "SetColumnWidth",
-      "description": "<p>Set the width to the selected column of the current active sheet. The width is equal to the set number multiplied\nby 7 pixels - so if you set the width to 10 it will be equal to 70 pixels.</p>",
+      "description": "<p>Sets the width of the specified columns.\nOne unit of column width is equal to the width of one character in the Normal style.\nFor proportional fonts, the width of the character 0 (zero) is used.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -265,13 +314,13 @@
       "params": [
         {
           "type": "number",
-          "name": "column",
+          "name": "nColumn",
           "description": "<p>The number of the column to set the width to.</p>",
           "optional": false
         },
         {
           "type": "number",
-          "name": "width",
+          "name": "nWidth",
           "description": "<p>The width of the column divided by 7 pixels.</p>",
           "optional": false
         }
@@ -280,20 +329,24 @@
     "SetRowHeight": {
       "memberof": "ApiWorksheet",
       "name": "SetRowHeight",
-      "description": "<p>Set Row height</p>",
-      "tags": {},
+      "description": "<p>Sets the height of the specified row measured in points.\nA point is 1/72 inch</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "number",
-          "name": "row",
+          "name": "nRow",
           "optional": false
         },
         {
           "type": "number",
-          "name": "height",
+          "name": "nHeight",
           "optional": false
         }
       ]
@@ -313,7 +366,7 @@
       "params": [
         {
           "type": "bool",
-          "name": "value",
+          "name": "isDisplayed",
           "description": "<p>Specifies whether the current sheet gridlines must be displayed or not. The default value is <b>true</b>.</p>",
           "optional": false
         }
@@ -334,7 +387,7 @@
       "params": [
         {
           "type": "bool",
-          "name": "value",
+          "name": "isDisplayed",
           "description": "<p>Specifies whether the current sheet row/column headers must be displayed or not. The default value is <b>true</b>.</p>",
           "optional": false
         }
@@ -344,14 +397,19 @@
       "memberof": "ApiWorksheet",
       "name": "SetLeftMargin",
       "description": "<p>Set left margin sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "number",
-          "name": "value",
+          "name": "nPoints",
+          "description": "<p>in points.</p>",
           "optional": false
         }
       ]
@@ -360,7 +418,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetLeftMargin",
       "description": "<p>Get left margin sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "number"
@@ -373,14 +435,19 @@
       "memberof": "ApiWorksheet",
       "name": "SetRightMargin",
       "description": "<p>Set right margin sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "number",
-          "name": "value",
+          "name": "nPoints",
+          "description": "<p>in points.</p>",
           "optional": false
         }
       ]
@@ -389,7 +456,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetRightMargin",
       "description": "<p>Get right margin sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "number"
@@ -402,14 +473,19 @@
       "memberof": "ApiWorksheet",
       "name": "SetTopMargin",
       "description": "<p>Set top margin sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "number",
-          "name": "value",
+          "name": "nPoints",
+          "description": "<p>in points.</p>",
           "optional": false
         }
       ]
@@ -418,7 +494,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetTopMargin",
       "description": "<p>Get top margin sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "number"
@@ -431,14 +511,19 @@
       "memberof": "ApiWorksheet",
       "name": "SetBottomMargin",
       "description": "<p>Set bottom margin sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "number",
-          "name": "value",
+          "name": "nPoints",
+          "description": "<p>in points.</p>",
           "optional": false
         }
       ]
@@ -447,7 +532,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetBottomMargin",
       "description": "<p>Get bottom margin sheet</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "number"
@@ -460,14 +549,18 @@
       "memberof": "ApiWorksheet",
       "name": "SetPageOrientation",
       "description": "<p>Set page orientation</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "PageOrientation",
-          "name": "PageOrientation",
+          "name": "sPageOrientation",
           "optional": false
         }
       ]
@@ -476,7 +569,11 @@
       "memberof": "ApiWorksheet",
       "name": "GetPageOrientation",
       "description": "<p>Get page orientation</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "PageOrientation"
@@ -484,6 +581,82 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "GetPrintHeadings": {
+      "memberof": "ApiWorksheet",
+      "name": "GetPrintHeadings",
+      "description": "<p>Gets page PrintHeadings property.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetPrintHeadings": {
+      "memberof": "ApiWorksheet",
+      "name": "SetPrintHeadings",
+      "description": "<p>Sets page PrintHeadings property.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bPrint",
+          "description": "<p>Determines whether row and column headings will be printed with this page.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetPrintGridlines": {
+      "memberof": "ApiWorksheet",
+      "name": "GetPrintGridlines",
+      "description": "<p>Gets page PrintGridlines property.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetPrintGridlines": {
+      "memberof": "ApiWorksheet",
+      "name": "SetPrintGridlines",
+      "description": "<p>Sets page PrintGridlines property.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bPrint",
+          "description": "<p>Determines whether grid lines of cells are printed on the page.</p>",
+          "optional": false
+        }
+      ]
     },
     "GetDefNames": {
       "memberof": "ApiWorksheet",
@@ -496,7 +669,7 @@
       },
       "returns": [
         [
-          "ApiName"
+          "Array.<ApiName>"
         ]
       ],
       "see": null,
@@ -513,11 +686,19 @@
       },
       "returns": [
         [
-          "ApiName"
+          "ApiName",
+          "null"
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "defName",
+          "optional": false
+        }
+      ]
     },
     "AddDefName": {
       "memberof": "ApiWorksheet",
@@ -530,20 +711,43 @@
       },
       "returns": [
         [
-          "ApiName"
+          "Error",
+          "true"
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sRef",
+          "description": "<p>Must contain the sheet name, followed sign ! , followed by a range of cells.\nExample: &quot;Sheet1!$A$1:$B$2&quot;.</p>",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "isHidden",
+          "optional": false
+        }
+      ]
     },
     "GetComments": {
       "memberof": "ApiWorksheet",
       "name": "GetComments",
       "description": "<p>Returns a ApiComment.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
-          "ApiComment"
+          "Array.<ApiComment>"
         ]
       ],
       "see": null,
@@ -553,7 +757,11 @@
       "memberof": "ApiWorksheet",
       "name": "Delete",
       "description": "<p>Deletes the object.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null
@@ -562,29 +770,33 @@
       "memberof": "ApiWorksheet",
       "name": "SetHyperlink",
       "description": "<p>Add Hyperlink</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "Anchor",
-          "name": "Anchor",
+          "type": "string",
+          "name": "sRange",
           "optional": false
         },
         {
-          "type": "Address",
-          "name": "Address",
+          "type": "string",
+          "name": "sAddress",
           "optional": false
         },
         {
-          "type": "ScreenTip",
+          "type": "string",
           "name": "ScreenTip",
           "optional": false
         },
         {
-          "type": "TextToDisplay",
-          "name": "TextToDisplay",
+          "type": "string",
+          "name": "sTextToDisplay",
           "optional": false
         }
       ]
@@ -746,7 +958,11 @@
       "memberof": "ApiWorksheet",
       "name": "AddImage",
       "description": "<p>Adds the image to the current sheet with the parameters specified.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiImage"
@@ -802,10 +1018,34 @@
     "ReplaceCurrentImage": {
       "memberof": "ApiWorksheet",
       "name": "ReplaceCurrentImage",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sImageSrc",
+          "description": "<p>The image source where the image to be inserted should be taken from (currently only internet URL or Base64 encoded images are supported).</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The image width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The image height in English measure units.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\r\n\t * Class representing a sheet.\r\n\t * @constructor\r\n\t */",

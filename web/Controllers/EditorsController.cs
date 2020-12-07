@@ -95,6 +95,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Plone",
                 "Plugins",
                 "Rename",
+                "Review",
                 "Save",
                 "Security",
                 "SharePoint",
@@ -338,6 +339,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Rename()
+        {
+            return View();
+        }
+
+        public ActionResult Review()
         {
             return View();
         }

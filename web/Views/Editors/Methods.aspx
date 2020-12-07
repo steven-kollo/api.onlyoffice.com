@@ -37,7 +37,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
         </ul>
     </nav>
 
-    <br />
+    <h2>Methods and their description:</h2>
     <ul>
         <li>
             <p>
@@ -281,7 +281,7 @@ docEditor.refreshHistory({
                     </tr>
                     <tr class="tablerow">
                         <td>history.key</td>
-                        <td>Defines the unique document identifier used for document recognition by the service.</td>
+                        <td>Defines the unique document identifier used by the service to recognize the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -341,7 +341,7 @@ docEditor.setActionLink(link);
                 <tbody>
                     <tr class="tablerow">
                         <td>link</td>
-                        <td>Defines the link which allows to scroll to the bookmark position in the document.</td>
+                        <td>Defines the link which allows scrolling to the bookmark position in the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -616,7 +616,7 @@ docEditor.setSharingSettings({
                 <tbody>
                     <tr class="tablerow">
                         <td>sharingSettings</td>
-                        <td>Defines the settings which allow to share the document with other users.</td>
+                        <td>Defines the settings which allow sharing the document with other users.</td>
                         <td>array of object</td>
                         <td>optional</td>
                     </tr>
@@ -628,7 +628,7 @@ docEditor.setSharingSettings({
                     </tr>
                     <tr class="tablerow">
                         <td>sharingSettings.user</td>
-                        <td>Defines the name of the user the document will be shared with.</td>
+                        <td>Defines the name of the user with whom the document will be shared.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
