@@ -30,7 +30,7 @@
             ],
             "description": "chess",
             "EditorsSupport": ["word", "cell", "slide"],
-            "icons": ["chess/icon.png", "chess/icon@2x.png"],
+            "icons": ["chess/icon.png", "chess/icon@2x.png", "chess/icon2.png", "chess/icon2@2x.png"],
             "initData": "",
             "initDataType": "ole",
             "initOnSelectionChanged": true,
@@ -104,7 +104,17 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.icons</td>
-                <td>Plugin icon image files used in the editors: for common screens and with doubled resolution for retina screens.</td>
+                <td>
+                    Plugin icon image files used in the editors: for common screens and with doubled resolution for retina screens.
+                    Icons with the lowest ID value are placed first to specify the application icons.
+                    Icons must be of the following sizes:
+                    <ul>
+                        <li><b>icon.png</b> - 40x40;</li>
+                        <li><b>icon@2x.png</b> - 80x80;</li>
+                        <li><b>icon2.png</b> - 26x26;</li>
+                        <li><b>icon2@2x.png</b> - 52x52.</li>
+                    </ul>
+                </td>
                 <td>array</td>
                 <td>[]</td>
             </tr>
