@@ -108,51 +108,65 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private void SaveDictionary(XmlWriter writer, KeyValuePair<string, object> keyValue)
         {
-            if (keyValue.Value.GetType().Name == dic.GetType().Name)
+            if (keyValue.Value != null)
             {
-                writer.WriteStartElement(keyValue.Key);
-                foreach (KeyValuePair<string, object> keyValue1 in (Dictionary<string, object>)keyValue.Value)
+                if (keyValue.Value.GetType().Name == dic.GetType().Name)
                 {
-                    SaveDictionary(writer, keyValue1);
+                    writer.WriteStartElement(keyValue.Key);
+                    foreach (KeyValuePair<string, object> keyValue1 in (Dictionary<string, object>)keyValue.Value)
+                    {
+                        SaveDictionary(writer, keyValue1);
+                    }
+                    writer.WriteEndElement();
                 }
-                writer.WriteEndElement();
-            }
-            else if (keyValue.Value.GetType().Name == list.GetType().Name)
-            {
-                foreach (var elem in (List<object>)keyValue.Value)
+                else if (keyValue.Value.GetType().Name == list.GetType().Name)
                 {
-                    SaveList(writer, elem, keyValue.Key);
+                    foreach (var elem in (List<object>)keyValue.Value)
+                    {
+                        SaveList(writer, elem, keyValue.Key);
+                    }
+                }
+                else
+                {
+                    writer.WriteElementString(keyValue.Key, keyValue.Value.ToString());
                 }
             }
             else
             {
-                writer.WriteElementString(keyValue.Key, keyValue.Value.ToString());
+                writer.WriteElementString(keyValue.Key, null);
             }
         }
 
         private void SaveList(XmlWriter writer, object elem, string nameList)
         {
-            if (elem.GetType().Name == dic.GetType().Name) 
+            if (elem != null)
             {
-                writer.WriteStartElement(nameList);
-                foreach (KeyValuePair<string, object> keyValue1 in (Dictionary<string, object>)elem)
+                if (elem.GetType().Name == dic.GetType().Name)
                 {
-                    SaveDictionary(writer, keyValue1);
+                    writer.WriteStartElement(nameList);
+                    foreach (KeyValuePair<string, object> keyValue1 in (Dictionary<string, object>)elem)
+                    {
+                        SaveDictionary(writer, keyValue1);
+                    }
+                    writer.WriteEndElement();
                 }
-                writer.WriteEndElement();
-            } 
-            else if (elem.GetType().Name == list.GetType().Name)
-            {
-                writer.WriteStartElement(nameList);
-                foreach (var elem1 in (List<object>)elem)
+                else if (elem.GetType().Name == list.GetType().Name)
                 {
-                    SaveList(writer, elem1, nameList);
+                    writer.WriteStartElement(nameList);
+                    foreach (var elem1 in (List<object>)elem)
+                    {
+                        SaveList(writer, elem1, nameList);
+                    }
+                    writer.WriteEndElement();
                 }
-                writer.WriteEndElement();
+                else
+                {
+                    writer.WriteElementString(nameList, elem.ToString());
+                }
             }
             else
             {
-                writer.WriteElementString(nameList, elem.ToString());
+                writer.WriteElementString(nameList, null);
             }
         }
     }
@@ -331,7 +345,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             };
             for (int i = 0; i < memberdesc.Count; i++)
             {
-
                 var methodParams = memberdesc[i].Elements("param").ToList();
                 var pointMethod = new MsDocEntryPointMethod
                 {
@@ -369,6 +382,14 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     root.Methods.Add(pointMethod);
                 }
             }
+            foreach(var point in Points)
+            {
+                if (point.Name == root.Name)
+                {
+                    point.Methods.Union(root.Methods);
+                    return;
+                }
+            }
             Points.Add(root);
         }
 
@@ -400,8 +421,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     memberdesc.Add(member);
                 }
             }
-
-            SaveMembers(entryPointDoc, memberdesc);
+            if (entryPointDoc != null)
+            {
+                SaveMembers(entryPointDoc, memberdesc);
+            }
         }
 
         private List<MsDocFunctionResponse> GetResponse(XElement element, string collection)
@@ -410,7 +433,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             if (element != null && element.Attribute("type").ValueOrNull() != "")
             {
                 var split = element.Attribute("type").ValueOrNull().Split(',');
-                response.Add(GetResponse(split[0], split[1], collection));
+                response.Add(GetResponse(split[0].Trim(), split[1].Trim(), collection));
             }
             return response;
         }
@@ -427,7 +450,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private MsDocFunctionResponse GetResponse(string type, string file, string collection)
         {
-            var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file.Trim() + ".xml");
+            var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type)).ToList();
             var msdoc = new MsDocFunctionResponse();
@@ -490,6 +513,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     else
                     {
                         result = member.Element("example").ValueOrNull().Replace("            ","");
+                        
+                        if (result.Equals("null"))
+                        {
+                            result = null;
+                        }
                     }
 
                     if(member.Element("collection").ValueOrNull() == "list")
