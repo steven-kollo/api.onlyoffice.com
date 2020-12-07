@@ -1726,7 +1726,7 @@
 		},
 		"ApiTableCellPr.setwidth": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"All cells are at least 2 inches wide:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTableCellPr = oTableStyle.GetTableCellPr();\noTableCellPr.SetWidth(\"twips\", 2880);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetWidth.docx\");\nbuilder.CloseFile();",
-			"demo": null
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6796095&doc=VUhxNVhldEtlVlpsZGZzVklwU3U4ZVJEa3czR2ZYdmtUUis4QjVmQmM3QT0_IjY3OTYwOTUi0&action=embedded"
 		},
 		"ApiTablePr.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTablePr = oTableStyle.GetTablePr();\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noClassType = oTablePr.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
