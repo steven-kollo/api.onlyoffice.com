@@ -2770,10 +2770,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\nbuilder.SaveFile(\"xlsx\", \"AddShape.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003261&doc=SWpKN2RWYk93aU9lSjNNWGw4MTJsNTBvUXhyR1pSMDNDcjhHVFZwQk5OUT0_IjUwMDMyNjEi0&action=embedded"
 		},
-		"ApiWorksheet.delete": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.Delete();\noWorksheet.GetRange(\"A3\").SetValue(\"This method just deleted the object 'Worksheet'.\");\nbuilder.SaveFile(\"xlsx\", \"Delete.xlsx\");\nbuilder.CloseFile();",
-			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826302&doc=WkpwUFJGWlQrQnFUYVNOOWsvWTl6R2RXalB4YjVLK1dZc1VWVC9weXpXQT0_IjY4MjYzMDIi0&action=embedded"
-		},
+		//"ApiWorksheet.delete": {
+		//	"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.Delete();\noWorksheet.GetRange(\"A3\").SetValue(\"This method just deleted the object 'Worksheet'.\");\nbuilder.SaveFile(\"xlsx\", \"Delete.xlsx\");\nbuilder.CloseFile();",
+		//	"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826302&doc=WkpwUFJGWlQrQnFUYVNOOWsvWTl6R2RXalB4YjVLK1dZc1VWVC9weXpXQT0_IjY4MjYzMDIi0&action=embedded"
+		//},
 		"ApiWorksheet.formatastable": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.FormatAsTable(\"A1:E10\");\nbuilder.SaveFile(\"xlsx\", \"FormatAsTable.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882045&doc=UzJWYkJUT2NvUU5lYzlNV2g3SkxCVlJCMmk1ZjMrb09ka0Y3aDhTSHZBMD0_IjQ4ODIwNDUi0&action=embedded"
