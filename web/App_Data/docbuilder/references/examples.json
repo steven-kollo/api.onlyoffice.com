@@ -2770,10 +2770,6 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\nbuilder.SaveFile(\"xlsx\", \"AddShape.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003261&doc=SWpKN2RWYk93aU9lSjNNWGw4MTJsNTBvUXhyR1pSMDNDcjhHVFZwQk5OUT0_IjUwMDMyNjEi0&action=embedded"
 		},
-		//"ApiWorksheet.delete": {
-		//	"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.Delete();\noWorksheet.GetRange(\"A3\").SetValue(\"This method just deleted the object 'Worksheet'.\");\nbuilder.SaveFile(\"xlsx\", \"Delete.xlsx\");\nbuilder.CloseFile();",
-		//	"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826302&doc=WkpwUFJGWlQrQnFUYVNOOWsvWTl6R2RXalB4YjVLK1dZc1VWVC9weXpXQT0_IjY4MjYzMDIi0&action=embedded"
-		//},
 		"ApiWorksheet.formatastable": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.FormatAsTable(\"A1:E10\");\nbuilder.SaveFile(\"xlsx\", \"FormatAsTable.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4882045&doc=UzJWYkJUT2NvUU5lYzlNV2g3SkxCVlJCMmk1ZjMrb09ka0Y3aDhTSHZBMD0_IjQ4ODIwNDUi0&action=embedded"
@@ -2783,7 +2779,7 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826303&doc=c0pGcnliUGR2NUg0dFY0L3g0c3pma0l6TEZXZnFueHhGKy9qVjB0N0NRZz0_IjY4MjYzMDMi0&action=embedded"
 		},
 		"ApiWorksheet.getbottommargin": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noBottomMargin = oWorksheet.GetBottomMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Bottom margin: \" + oBottomMargin);\nbuilder.SaveFile(\"xlsx\", \"GetBottomMargin.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noBottomMargin = oWorksheet.GetBottomMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Bottom margin: \" + oBottomMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"GetBottomMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826304&doc=d0JDMmV5bDF6NnZ3QkwwYWg0aEZCeDYzV3hqcDRaa1JZOXMxMkFVU09WOD0_IjY4MjYzMDQi0&action=embedded"
 		},
 		"ApiWorksheet.getcells": {
@@ -2811,7 +2807,7 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826344&doc=ZkIvQUcwQ1RXUFpQMjdJcitDYm5lTkxXV20zbDNkclJoQ0hkUG8wUk1obz0_IjY4MjYzNDQi0&action=embedded"
 		},
 		"ApiWorksheet.getleftmargin": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noLeftMargin = oWorksheet.GetLeftMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Left margin: \" + oLeftMargin);\nbuilder.SaveFile(\"xlsx\", \"GetLeftMargin.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noLeftMargin = oWorksheet.GetLeftMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Left margin: \" + oLeftMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"GetLeftMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826348&doc=Vy9JZVBRTElkbmdBZndmUHFnZThwZ2c1S0I0YTJSMW5vbGppUlppbkZtVT0_IjY4MjYzNDgi0&action=embedded"
 		},
 		"ApiWorksheet.getname": {
@@ -2831,7 +2827,7 @@
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5003326&doc=SnBCdGE5dVVScXJSbG1kc2lNdkhwa3pON3ZJeDJ1d1R5cDdlRzhoUjJHUT0_IjUwMDMzMjYi0&action=embedded"
 		},
 		"ApiWorksheet.getrightmargin": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRightMargin = oWorksheet.GetRightMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Right margin: \" + oRightMargin);\nbuilder.SaveFile(\"xlsx\", \"GetRightMargin.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRightMargin = oWorksheet.GetRightMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Right margin: \" + oRightMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"GetRightMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826355&doc=THVoazNkaVQ3L3FWWXRqUkpqM0RFejFvZEF4aDNJZTd6c3NuRWova2JUcz0_IjY4MjYzNTUi0&action=embedded"
 		},
 		"ApiWorksheet.getrows": {
@@ -2843,7 +2839,7 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826517&doc=TXovQkk0K0FzYnFnSVdVSGtWS3RDS2RLcmxiZEVkQnBXQ3lKNnQxNXRLdz0_IjY4MjY1MTci0&action=embedded"
 		},
 		"ApiWorksheet.gettopmargin": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noTopMargin = oWorksheet.GetTopMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Top margin: \" + oTopMargin);\nbuilder.SaveFile(\"xlsx\", \"GetTopMargin.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noTopMargin = oWorksheet.GetTopMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Top margin: \" + oTopMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"GetTopMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826519&doc=NGN4STRiN0dOaGg4WlRHbU5RLzJ4OVV1WXg0bVB3SmhVbmtUYzJ5Rk1wcz0_IjY4MjY1MTki0&action=embedded"
 		},
 		"ApiWorksheet.getusedrange": {
@@ -2859,7 +2855,7 @@
 			"demo": ""
 		},
 		"ApiWorksheet.setbottommargin": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetBottomMargin(25.1);\noBottomMargin = oWorksheet.GetBottomMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Bottom margin: \" + oBottomMargin);\nbuilder.SaveFile(\"xlsx\", \"SetBottomMargin.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetBottomMargin(25.1);\noBottomMargin = oWorksheet.GetBottomMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Bottom margin: \" + oBottomMargin  + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"SetBottomMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826536&doc=cXBJMklDb2s3RkhQKzNiU2pENFFCS2dSV0VicjVjYjZGcTZ0cTd6dWRFTT0_IjY4MjY1MzYi0&action=embedded"
 		},
 		"ApiWorksheet.setcolumnwidth": {
@@ -2879,7 +2875,7 @@
 			"demo": ""
 		},
 		"ApiWorksheet.setleftmargin": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetLeftMargin(20.8);\noLeftMargin = oWorksheet.GetLeftMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Left margin: \" + oLeftMargin);\nbuilder.SaveFile(\"xlsx\", \"SetLeftMargin.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetLeftMargin(20.8);\noLeftMargin = oWorksheet.GetLeftMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Left margin: \" + oLeftMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"SetLeftMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826545&doc=aEk0RCtSZ2dmZWdGZVlTNkM3TWxyMHVKWmN3RkFaL005RzZrMURkQ24wMD0_IjY4MjY1NDUi0&action=embedded"
 		},
 		"ApiWorksheet.setname": {
@@ -2891,7 +2887,7 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826551&doc=NGtVNThvWG1wMFpQNmUwcElDZ0hKWU9xbnVJNDRuMytXaVUycmI0T3dybz0_IjY4MjY1NTEi0&action=embedded"
 		},
 		"ApiWorksheet.setrightmargin": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetRightMargin(20.8);\noRightMargin = oWorksheet.GetRightMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Right margin: \" + oRightMargin);\nbuilder.SaveFile(\"xlsx\", \"SetRightMargin.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetRightMargin(20.8);\noRightMargin = oWorksheet.GetRightMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Right margin: \" + oRightMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"SetRightMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826556&doc=S1JGcjJqRE5uWWt2dnRIeEFySzZoMmZFUWRpL3RlVC9nRGpNWmRKekN5Zz0_IjY4MjY1NTYi0&action=embedded"
 		},
 		"ApiWorksheet.setrowheight": {
@@ -2899,7 +2895,7 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826558&doc=UkxWUzVQc1ZaK2tHMzhWYXkvcERGeHM4WllpdjB5MEtwalhMbE9LcEI1OD0_IjY4MjY1NTgi0&action=embedded"
 		},
 		"ApiWorksheet.settopmargin": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetTopMargin(25.1);\noTopMargin = oWorksheet.GetTopMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Top margin: \" + oTopMargin);\nbuilder.SaveFile(\"xlsx\", \"SetTopMargin.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetTopMargin(25.1);\noTopMargin = oWorksheet.GetTopMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Top margin: \" + oTopMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"SetTopMargin.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826561&doc=RWdrQ3NvOHZXMmhwNDZzYWttRkJPSUJvbzhISjM0MFF0dUVsU0VZdGhLcz0_IjY4MjY1NjEi0&action=embedded"
 		},
 		"ApiWorksheet.setvisible": {
