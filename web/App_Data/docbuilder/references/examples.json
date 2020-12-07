@@ -1862,7 +1862,7 @@
 		},
 		"ApiTableStylePr.gettype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.GetStyle(\"Bordered - Accent 5\");\noTableStyle.SetName(\"My Custom Style\");\noTable = Api.CreateTable(2, 2);\noTable.SetWidth(\"percent\", 100);\noTableStylePr = oTableStyle.GetConditionalTableStyle(\"topLeftCell\");\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noTableStylePrType = oTableStylePr.GetType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Style type = \" + oTableStylePrType);\nbuilder.SaveFile(\"docx\", \"GetType.docx\");\nbuilder.CloseFile();",
-			"demo": null
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6796097&doc=YmpDeWZBTkcyS3ZZM1lUWElvTzJCa1lZTEZhNm80b0pSNDZDQ05aUU9Zbz0_IjY3OTYwOTci0&action=embedded"
 		},
 		"ApiTextPr.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTextPr = oDocument.GetDefaultTextPr();\noClassType = oTextPr.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
