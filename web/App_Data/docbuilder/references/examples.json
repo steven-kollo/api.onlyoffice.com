@@ -1798,11 +1798,11 @@
 		},
 		"ApiTablePr.settablelayout": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"We set the table cells to preserve their size:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTablePr = oTableStyle.GetTablePr();\noTable = Api.CreateTable(3, 3);\noTablePr.SetTableLayout(\"fixed\");\noTable.SetTableLook(true, true, true, true, false, false);\noTable.SetStyle(oTableStyle);\noCell = oTable.GetRow(0).GetCell(0);\noCell.GetContent().GetElement(0).AddText(\"Fixed layout\");\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetTableLayout.docx\");\nbuilder.CloseFile();",
-			"demo": null
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6796006&doc=Nzd5clNCeHFlYTJha3NCS0tuQStBK096YmswdW5oTzFNdWdzZWJTd3hBUT0_IjY3OTYwMDYi0&action=embedded"
 		},
 		"ApiTablePr.setwidth": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"We set the table cells to preserve their size:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTablePr = oTableStyle.GetTablePr();\noTable = Api.CreateTable(3, 3);\noTablePr.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetWidth.docx\");\nbuilder.CloseFile();",
-			"demo": null
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6796005&doc=a291R1NtbklHa1FmNHBYK3hnTWNac2x5MHV6VU91K25FVmEvdTFvYVJnUT0_IjY3OTYwMDUi0&action=embedded"
 		},
 		"ApiTableRow.getcell": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTableRow.SetHeight(\"atLeast\", 1440);\noCell = oTableRow.GetCell(1);\noCell.SetVerticalAlign(\"bottom\");\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Align bottom\");\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetCell.docx\");\nbuilder.CloseFile();",
