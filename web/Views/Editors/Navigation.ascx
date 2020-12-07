@@ -87,7 +87,7 @@
                 <a href="<%= Url.Action("mentions") %>">Mentions</a>
             </li>
             <li>
-                <a href="<%= Url.Action("rename") %>">Renaming file</a>
+                <a href="<%= Url.Action("rename") %>">Renaming files</a>
             </li>
             <li>
                 <a href="<%= Url.Action("review") %>">Reviewing</a>

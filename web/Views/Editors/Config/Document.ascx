@@ -37,7 +37,7 @@
         <tr class="tablerow">
             <td id="key" class="copy-link">key<span class="required">*</span></td>
             <td>
-                Defines the unique document identifier used for document recognition by the service.
+                Defines the unique document identifier used by the service to recognize the document.
                 In case the known key is sent the document will be taken from the cache.
                 Every time the document is edited and saved, the key must be generated anew.
                 The document url can be used as the <b>key</b> but without the special characters and the length is limited to 128 symbols.
