@@ -28,7 +28,8 @@
       },
       "returns": [
         [
-          "Error"
+          "Error",
+          "true"
         ]
       ],
       "see": null,
@@ -36,8 +37,8 @@
       "params": [
         {
           "type": "string",
-          "name": "Name",
-          "description": "<p>// new name for range</p>",
+          "name": "sName",
+          "description": "<p>new name for range</p>",
           "optional": false
         }
       ]
@@ -70,8 +71,8 @@
       "params": [
         {
           "type": "string",
-          "name": "Ref",
-          "description": "<p>// new refers to defined name</p>",
+          "name": "sRef",
+          "description": "<p>Must contain the sheet name, followed sign ! , followed by a range of cells.\nExample: &quot;Sheet1!$A$1:$B$2&quot;.</p>",
           "optional": false
         }
       ]
@@ -88,6 +89,23 @@
       "returns": [
         [
           "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetRefersToRange": {
+      "memberof": "ApiName",
+      "name": "GetRefersToRange",
+      "description": "<p>Returns an ApiRange object by reference</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
         ]
       ],
       "see": null,

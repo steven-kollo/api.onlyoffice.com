@@ -78,13 +78,25 @@
                 <a href="<%= Url.Action("coedit") %>">Co-editing</a>
             </li>
             <li>
-                <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
-            </li>
-            <li>
                 <a href="<%= Url.Action("history") %>">Document history</a>
             </li>
             <li>
-                <a href="<%= Url.Action("rename") %>">Renaming file</a>
+                <a href="<%= Url.Action("actionlink") %>">Action link</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("mentions") %>">Mentions</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("rename") %>">Renaming files</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("review") %>">Reviewing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("inlineeditors") %>">Inline editors</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
             </li>
             <li>
                 <a href="<%= Url.Action("security") %>">Security</a>

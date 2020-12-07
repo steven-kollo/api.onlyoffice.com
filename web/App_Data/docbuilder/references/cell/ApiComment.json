@@ -9,7 +9,11 @@
           "CSE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "string"
+        ]
+      ],
       "see": null,
       "inherits": null
     },

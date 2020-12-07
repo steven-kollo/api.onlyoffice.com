@@ -260,9 +260,15 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\Editor\accept_reject.png" />
+    <Content Include="Content\img\Editor\changes-url.png" />
+    <Content Include="Content\img\Editor\actionLink-create.png" />
+    <Content Include="Content\img\Editor\actionLink-open.png" />
     <Content Include="Content\img\Editor\alfresco-create.png" />
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
+    <Content Include="Content\img\Editor\inlineEditors.png" />
+    <Content Include="Content\img\Editor\mentions-create.png" />
     <Content Include="Content\img\Editor\mentionShare.png" />
     <Content Include="Content\img\Editor\onMakeActionLink.png" />
     <Content Include="Content\img\Editor\onRequestCompareFile.png" />
@@ -277,7 +283,7 @@
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
-    <Content Include="Content\img\Editor\rename.jpg" />
+    <Content Include="Content\img\Editor\rename.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
     <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
@@ -332,6 +338,7 @@
     <Content Include="Content\img\php\php-version-2.jpg" />
     <Content Include="Content\img\plugin.png" />
     <Content Include="Content\img\plugins\macros.png" />
+    <Content Include="Content\img\plugins\youtube-plugin.png" />
     <Content Include="Content\img\portals.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
@@ -403,11 +410,13 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\FAQ\Renaming.ascx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\Example\Python.ascx" />
+    <Content Include="Views\Editors\InlineEditors.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
@@ -424,8 +433,10 @@
     <Content Include="Views\Editors\FAQ\Customizing.ascx" />
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\General.ascx" />
+    <Content Include="Views\Editors\Mentions.aspx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
+    <Content Include="Views\Editors\Review.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
@@ -460,6 +471,7 @@
     <Content Include="Views\Plugin\Info\EditorType.ascx" />
     <Content Include="Views\Plugin\Info\Default.ascx" />
     <Content Include="Views\Plugin\Localization.aspx" />
+    <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Macros\Macros.aspx" />
     <Content Include="Views\Plugin\OnExternalMouseUp.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
@@ -629,7 +641,7 @@
     <Content Include="Views\Shared\Analytic.ascx" />
   </ItemGroup>
   <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -639,7 +651,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64688</DevelopmentServerPort>
+          <DevelopmentServerPort>63819</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
@@ -655,6 +667,4 @@
   <PropertyGroup>
     <PostBuildEvent>if exist "C:\Program Files\Git\bin\git.exe" ("C:\Program Files\Git\bin\git.exe" rev-parse HEAD &gt; "$(ProjectDir)\version.txt")</PostBuildEvent>
   </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets" Condition=" Exists( '$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets' ) " />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" Condition=" Exists( '$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets' ) " />
 </Project>

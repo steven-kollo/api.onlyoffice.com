@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.Controllers
     {
         private readonly string[] _actionMap = new[]
             {
+                "ActionLink",
                 "Advanced",
                 "Alfresco",
                 "Basic",
@@ -83,7 +84,9 @@ namespace ASC.Api.Web.Help.Controllers
                 "History",
                 "HowItWorks",
                 "HumHub",
+                "InlineEditors",
                 "Liferay",
+                "Mentions",
                 "Methods",
                 "Nextcloud",
                 "Nuxeo",
@@ -92,6 +95,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Plone",
                 "Plugins",
                 "Rename",
+                "Review",
                 "Save",
                 "Security",
                 "SharePoint",
@@ -161,6 +165,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Basic");
         }
 
+
+        public ActionResult ActionLink()
+        {
+            return View();
+        }
 
         public ActionResult Alfresco()
         {
@@ -279,7 +288,17 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult InlineEditors()
+        {
+            return View();
+        }
+        
         public ActionResult Liferay()
+        {
+            return View();
+        }
+
+        public ActionResult Mentions()
         {
             return View();
         }
@@ -320,6 +339,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Rename()
+        {
+            return View();
+        }
+
+        public ActionResult Review()
         {
             return View();
         }

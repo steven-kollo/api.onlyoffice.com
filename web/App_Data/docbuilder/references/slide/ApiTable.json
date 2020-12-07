@@ -196,14 +196,37 @@
       "memberof": "ApiTable",
       "name": "SetShd",
       "description": "<p>Specify the shading which shall be applied to the extents of the current table.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "ApiFill",
-          "name": "oApiFill",
+          "type": "ShdType | ApiFill",
+          "name": "sType",
+          "description": "<p>The shading type applied to the contents of the current table. Can be ShdType or ApiFill.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
           "optional": false
         }
       ]

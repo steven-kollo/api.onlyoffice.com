@@ -6,18 +6,19 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Renaming File
+    Renaming Files
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Renaming file</span>
+        <span class="hdr">Renaming files</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of renaming the document in ONLYOFFICE Document Server.</p>
-    <img alt="Renaming File" src="<%= Url.Content("~/content/img/editor/rename.jpg") %>" />
+    <p class="dscr">The reference figure and the steps below explain the process of renaming a document in ONLYOFFICE Document Server.</p>
+    <img alt="Renaming File" src="<%= Url.Content("~/content/img/editor/rename.png") %>" />
     <ol>
         <li>The user gives a new name to the document in the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> sends the new name of the document to the <b>document storage service</b> where the software integrators rename the document.</li>
+        <li>The <b>document editor</b> informs the <b>document manager</b> about the new name of the document.</li>
+        <li>The <b>document manager</b> sends the new name of the document to the <b>document storage service</b> where the software integrators rename the document.</li>
         <li>The <b>document storage service</b> informs the <b>document editing  service</b> about the new name of the document.</li>
         <li>The <b>document editing  service</b> sends the new name of the document to the <b>document editor</b> of each user.</li>
         <li>Now the new name becomes visible to all users.</li>
@@ -28,8 +29,8 @@
         <li>Create an <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
         <li>
             <p>
-                Specify the event handler for opening the <em>Rename...</em> menu in the configuration script for Document Editor initialization. 
-                When the <a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a> event is called, the new name of the document is sent to the software integrators who rename the document in the document storage service.
+                Specify the event handler for opening the <em>Rename...</em> menu in the configuration script for Document Editor initialization.
+                When the <a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a> event is called, the new name of the document is sent to the software integrators which rename the document in the document storage service.
             </p>
             <img alt="Renaming File" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>" />
             <pre>

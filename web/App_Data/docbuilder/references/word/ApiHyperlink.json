@@ -1,5 +1,22 @@
 {
   "methods": {
+    "GetClassType": {
+      "memberof": "ApiHyperlink",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "\"hyperlink\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetLink": {
       "memberof": "ApiHyperlink",
       "name": "SetLink",

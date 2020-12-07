@@ -5,9 +5,41 @@
     <span class="hdr">Events</span>
 </h1>
 
-<div class="header-gray">Description</div>
 <p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
 
+<nav class="content">
+    <ul>
+        <li><a href="#onAppReady">onAppReady</a> - the application is loaded into the browser.</li>
+        <li><a href="#onCollaborativeChanges">onCollaborativeChanges</a> - the document is co-edited by the other user in the <em>strict</em> co-editing mode.</li>
+        <li><a href="#onDocumentReady">onDocumentReady</a> - the document is loaded into the document editor.</li>
+        <li><a href="#onDocumentStateChange">onDocumentStateChange</a> - the document is modified.</li>
+        <li><a href="#onDownloadAs">onDownloadAs</a> - the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called.</li>
+        <li><a href="#onError">onError</a> - an error or some other specific event occurs.</li>
+        <li><a href="#onInfo">onInfo</a> - the application opened the file.</li>
+        <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
+        <li><a href="#onMakeActionLink">onMakeActionLink</a> - the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</li>
+        <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved.</li>
+        <li><a href="#onReady">onReady</a> - the application is loaded into the browser.</li>
+        <li><a href="#onRequestClose">onRequestClose</a> - the work with the editor must be ended and the editor must be closed.</li>
+        <li><a href="#onRequestCompareFile">onRequestCompareFile</a> - the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.</li>
+        <li><a href="#onRequestCreateNew">onRequestCreateNew</a> - the user is trying to create document by clicking the <em>Create New</em> button.</li>
+        <li><a href="#onRequestEditRights">onRequestEditRights</a> - the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.</li>
+        <li><a href="#onRequestHistory">onRequestHistory</a> - the user is trying to show the document version history by clicking the <em>Version History</em> button.</li>
+        <li><a href="#onRequestHistoryClose">onRequestHistoryClose</a> - the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.</li>
+        <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - the user is trying to click the specific document version in the document version history.</li>
+        <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - the user is trying to insert an image by clicking the <em>Image from Storage</em> button.</li>
+        <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
+        <li><a href="#onRequestRename">onRequestRename</a> - the user is trying to rename the file by clicking the <em>Rename...</em> button.</li>
+        <li><a href="#onRequestRestore">onRequestRestore</a> - the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</li>
+        <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
+        <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
+        <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
+        <li><a href="#onRequestUsers">onRequestUsers</a> - the commenter can select other users for mention in the comments.</li>
+        <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
+    </ul>
+</nav>
+
+<h2>Events and their description:</h2>
 <ul>
     <li>
         <p><b id="onAppReady" class="copy-link">onAppReady</b> - the function called when the application is loaded into the browser.</p>
@@ -344,10 +376,10 @@ var onRequestHistory = function() {
         "currentVersion": 2,
         "history": [
             {
-                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "changes": changes,
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
-                "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "serverVersion": serverVersion,
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage"
@@ -377,6 +409,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
+        <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
     </li>
 
     <li>
@@ -415,7 +449,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 var onRequestHistoryData = function(event) {
     var version = event.data;
     docEditor.setHistoryData({
-        "changesUrl": "https://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
+        "changesUrl": "https://example.com/url-to-changes.zip",
         "key": "Khirz6zTPdfd7",
         "previous": {
             "key": "af86C7e71Ca8",
@@ -434,8 +468,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <p>Where the <b>changesUrl</b> is the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
     </li>
 
     <li>
@@ -575,8 +612,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
     </li>
 
     <li>
@@ -612,8 +653,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
         </p>
         <div class="note">
-            In version 5.4 <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
-            Since version 5.5 there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
+            In version 5.4, <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
+            Starting from version 5.5, there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
         </div>
         <div class="header-gray">Example</div>
         <pre>
@@ -651,8 +692,9 @@ var onRequestSharingSettings = function() {
                 "user": "John Smith"
             },
             {
+                "isLink": true,
                 "permissions": "Read Only",
-                "user": "Kate Cage"
+                "user": "External link"
             }
         ]
     });
@@ -705,7 +747,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs.
+            <b id="onWarning" class="copy-link">onWarning</b> - the function called when a warning occurs.
             The warning message is sent in the <em>data</em> parameter.
         </p>
         <div class="header-gray">Example</div>

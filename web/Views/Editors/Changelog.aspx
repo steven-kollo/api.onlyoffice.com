@@ -17,6 +17,14 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
 
+    <h2 id="61" class="copy-link">Version 6.1</h2>
+    <ul>
+        <li>The <em>text</em>, <em>spreadsheet</em> and <em>presentation</em> values for <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter is deprecated, please use <em>word</em>, <em>cell</em> and <em>slide</em> values instead.</li>
+        <!--<li>Added the <em>group</em> field to the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a>.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#reviewPermissions">editorConfig.customization.reviewPermissions</a> field.</li>-->
+        <li>Added conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">fb2</a> format.</li>
+    </ul>
+
     <h2 id="60" class="copy-link">Version 6.0</h2>
     <ul>
         <li>Added the type of insertion in <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">events.onRequestInsertImage</a> event.</li>
@@ -32,7 +40,7 @@
     <h2 id="55" class="copy-link">Version 5.5</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#spellcheck">editorConfig.customization.spellcheck</a> field.</li>
-        <li>Conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">document</a>, <a href="<%= Url.Action("conversionapi") %>#spreadsheet-matrix">spreadsheet</a>, <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">presentation</a> to <em>pdfa</em> format.</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdfa</a> format.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">events.onRequestCompareFile</a> event.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.</li>
         <li>Token in <a href="<%= Url.Action("signature/browser") %>#methods">methods</a> parameters.</li>
@@ -93,7 +101,7 @@
     <h2 id="51" class="copy-link">Version 5.1</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">document.permissions.modifyContentControl</a> field.</li>
-        <li>Added support for OpenDocument Template <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
+        <li>Added conversion for <a href="<%= Url.Action("conversionapi") %>#text-matrix">OpenDocument Template</a> formats.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestClose">events.onRequestClose</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#goback">editorConfig.customization.goback.blank</a> field.</li>
     </ul>
@@ -101,7 +109,7 @@
     <h2 id="50" class="copy-link">Version 5.0</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#modifyFilter">document.permissions.modifyFilter</a> field.</li>
-        <li>Added support for macro-enabled document, document template and flat document <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
+        <li>Added conversion for macro-enabled document, document template and flat document <a href="<%= Url.Action("conversionapi") %>#text-matrix">formats</a>.</li>
         <li>The <a href="<%= Url.Action("config/events") %>#onReady">events.onReady</a> event is deprecated, please use the <a href="<%= Url.Action("config/events") %>#onAppReady">events.onAppReady</a> events instead.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onDocumentReady">events.onDocumentReady</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/plugins") %>#autostart">editorConfig.plugins.autostart</a> field.</li>
@@ -112,7 +120,7 @@
     <h2 id="44" class="copy-link">Version 4.4</h2>
     <ul>
         <li>Changed the <a href="<%= Url.Action("methods") %>#showMessage">showMessage</a> method.</li>
-        <li>Conversion <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">presentation</a> to <em>odp</em> format.</li>
+        <li>Added conversion presentation to <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">odp</a> format.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> event.</li>
@@ -120,7 +128,8 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRename">events.onRequestRename</a> event.</li>
         <li>Added the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
-        <li>Changed the use of callbackUrl from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>
+        <li>Changed the use of <em>callbackUrl</em> from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor") %>#location">editorConfig.location</a> field.</li>
     </ul>
 
     <h2 id="43" class="copy-link">Version 4.3</h2>

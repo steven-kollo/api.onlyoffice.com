@@ -49,7 +49,7 @@ config = {
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "callbackUrl": "https://example.com/url-to-callback.ashx"
     }

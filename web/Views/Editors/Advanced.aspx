@@ -64,8 +64,9 @@
                     "user": "John Smith"
                 },
                 {
+                    "isLink": true,
                     "permissions": "Read Only",
-                    "user": "Kate Cage"
+                    "user": "External link"
                 },
                 ...
             ],
@@ -86,7 +87,7 @@
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
         "<a href="<%= Url.Action("config/document") %>#url">url</a>": "https://example.com/url-to-example-document.docx"
     },
-    "<a href="<%= Url.Action("config/") %>#documentType">documentType</a>": "text",
+    "<a href="<%= Url.Action("config/") %>#documentType">documentType</a>": "word",
     "<a href="<%= Url.Action("config/editor") %>">editorConfig</a>": {
         "<a href="<%= Url.Action("config/editor") %>#actionLink">actionLink</a>": ACTION_DATA,
         "<a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a>": "https://example.com/url-to-callback.ashx",
@@ -129,7 +130,11 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#macrosMode">macrosMode</a>": "warn",
             "<a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#plugins">plugins</a>": true,
-            "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",
+            "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",<!--
+            "<a href="<%= Url.Action("config/editor/customization") %>#reviewPermissions">reviewPermissions</a>": {
+                "Group1": ["Group2"],
+                "Group2": ["Group1", "Group2", ""]
+            },-->
             "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
@@ -144,6 +149,7 @@
             "<a href="<%= Url.Action("config/editor/embedded") %>#toolbarDocked">toolbarDocked</a>": "top"
         },
         "<a href="<%= Url.Action("config/editor") %>#lang">lang</a>": "en",
+        "<a href="<%= Url.Action("config/editor") %>#location">location</a>": "us",
         "<a href="<%= Url.Action("config/editor") %>#mode">mode</a>": "edit",
         "<a href="<%= Url.Action("config/editor/plugins") %>">plugins</a>": {
              "<a href="<%= Url.Action("config/editor/plugins") %>#autostart">autostart</a>": [
@@ -185,7 +191,8 @@
             ...
         ],
         "<a href="<%= Url.Action("config/editor") %>#user">user</a>": {
-            "id": "78e1e841",
+            <!--"group": "Group1",
+            -->"id": "78e1e841",
             "name": "John Smith"
         }
     },
