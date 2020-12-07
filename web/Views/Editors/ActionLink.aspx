@@ -27,7 +27,7 @@
         <li>
             <p>
                 Specify the event handler for the <em>Get link</em> button to be displayed in the bookmark editing menu in the configuration script for Document Editor initialization.
-                When the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event is called, the user’s request is sent to the software integrators which create the link in the document storage service.
+                When the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event is called, the user request is sent to the software integrators which create the link in the document storage service.
             </p>
             <img alt="Action link" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>" />
             <pre>
@@ -72,7 +72,7 @@ docEditor.setActionLink(link);
                 <tbody>
                     <tr class="tablerow">
                         <td>link</td>
-                        <td>Defines the link which allows to scrolling to the bookmark position in the document.</td>
+                        <td>Defines the link which allows scrolling to the bookmark position in the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -85,12 +85,12 @@ docEditor.setActionLink(link);
     <img alt="Action link" src="<%= Url.Content("~/content/img/editor/actionLink-open.png") %>" />
     <ol>
         <li>The user follows the link in the <b>document manager</b>.</li>
-        <li>The <b>document manager</b> sends the <em>editorConfig</em> of initialization to the <b>document editor</b>.</li>
+        <li>The <b>document manager</b> sends the initialization <em>editorConfig</em> to the <b>document editor</b>.</li>
         <li>The <b>document editor</b> scrolls the document to the bookmark.</li>
     </ol>
     <p>
-        When the user follows the link, the <b>document editor</b> sends the <em>editorConfig</em> of initialization to the <b>document editing service</b>.
-        The ACTION_DATA received from the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event is specified in <a href="<%= Url.Action("config/editor") %>#actionLink">data.actionLink</a> parameter of the <em>editorConfig</em>:
+        When the user follows the link, the <b>document editor</b> sends the initialization <em>editorConfig</em> to the <b>document editing service</b>.
+        The ACTION_DATA received from the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event is specified in the <a href="<%= Url.Action("config/editor") %>#actionLink">data.actionLink</a> parameter of the <em>editorConfig</em>:
     </p>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -101,5 +101,5 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-    <div class="note">The link is generated in the same way for <a href="<%= Url.Action("mentions") %>#apply">mentioning</a> users in the comments.</div>
+    <div class="note">The link is generated in the same way when <a href="<%= Url.Action("mentions") %>#apply">mentioning</a> users in the comments.</div>
 </asp:Content>

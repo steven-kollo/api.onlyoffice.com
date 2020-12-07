@@ -170,7 +170,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -293,7 +297,8 @@
       "returns": [
         [
           "ApiBlockLvlSdt",
-          "ApiInlineLvlSdt"
+          "ApiInlineLvlSdt",
+          "null"
         ]
       ],
       "see": null,
@@ -310,7 +315,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTable",
+          "null"
         ]
       ],
       "see": null,
@@ -327,7 +333,8 @@
       },
       "returns": [
         [
-          "ApiTableCell"
+          "ApiTableCell",
+          "null"
         ]
       ],
       "see": null,
@@ -339,7 +346,9 @@
       "description": "<p>Sets text properties of the paragraph.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
       "returns": [
@@ -368,7 +377,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -391,7 +404,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -409,10 +426,16 @@
       "description": "<p>Set the text color for the current text run in the RGB format.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -454,7 +477,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -476,7 +503,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -499,7 +530,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -522,7 +557,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -540,10 +579,16 @@
       "description": "<p>Specify a highlighting color in the RGB format which is applied as a background for the contents of the current run.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -585,7 +630,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -603,10 +652,16 @@
       "description": "<p>Specify the languages which will be used to check spelling and grammar (if requested) when processing\nthe contents of this text run.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -624,10 +679,16 @@
       "description": "<p>Specify the amount by which text is raised or lowered for this run in relation to the default\nbaseline of the surrounding non-positioned text.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -645,10 +706,16 @@
       "description": "<p>Specify the shading applied to the contents of the current text run.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -689,7 +756,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -712,7 +783,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -735,7 +810,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -753,10 +832,16 @@
       "description": "<p>Set style for the current Run.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -779,7 +864,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -802,7 +891,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -813,6 +906,19 @@
           "optional": false
         }
       ]
+    },
+    "WrapInMailMergeField": {
+      "memberof": "ApiRun",
+      "name": "WrapInMailMergeField",
+      "description": "<p>Wrap run in a mail merge field.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a small text block calling 'run'.\r\n\t * @constructor\r\n\t * @extends {ApiTextPr}\r\n\t */",

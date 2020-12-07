@@ -228,7 +228,8 @@
       },
       "returns": [
         [
-          "ApiParagraph"
+          "ApiParagraph",
+          "null"
         ]
       ],
       "see": null,
@@ -245,7 +246,8 @@
       },
       "returns": [
         [
-          "ApiBlockLvlSdt"
+          "ApiBlockLvlSdt",
+          "null"
         ]
       ],
       "see": null,
@@ -262,7 +264,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTable",
+          "null"
         ]
       ],
       "see": null,
@@ -279,7 +282,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTableCell",
+          "null"
         ]
       ],
       "see": null,
@@ -296,7 +300,7 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "bool"
         ]
       ],
       "see": null,
@@ -405,7 +409,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -452,7 +460,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -472,7 +484,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -492,7 +508,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -514,7 +534,7 @@
       },
       "returns": [
         [
-          "ApiDrawing"
+          "bool"
         ]
       ],
       "see": null,
@@ -538,7 +558,7 @@
       },
       "returns": [
         [
-          "ApiDrawing"
+          "bool"
         ]
       ],
       "see": null,
@@ -554,7 +574,7 @@
     "GetNextDrawing": {
       "memberof": "ApiDrawing",
       "name": "GetNextDrawing",
-      "description": "<p>Gets the next inline drawing object. Throws an error if this inline drawing object is the last.</p>",
+      "description": "<p>Gets the next inline drawing object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -562,8 +582,8 @@
       },
       "returns": [
         [
-          "ApiImage",
-          "false"
+          "ApiDrawing",
+          "null"
         ]
       ],
       "see": null,
@@ -572,7 +592,7 @@
     "GetPrevDrawing": {
       "memberof": "ApiDrawing",
       "name": "GetPrevDrawing",
-      "description": "<p>Gets the previous inline drawing object. Throws an error if this inline drawing object is the first.</p>",
+      "description": "<p>Gets the previous inline drawing object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -580,8 +600,8 @@
       },
       "returns": [
         [
-          "ApiImage",
-          "false"
+          "ApiDrawing",
+          "null"
         ]
       ],
       "see": null,

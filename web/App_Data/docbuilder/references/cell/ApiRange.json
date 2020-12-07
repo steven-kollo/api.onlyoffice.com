@@ -1,5 +1,22 @@
 {
   "methods": {
+    "GetClassType": {
+      "memberof": "ApiRange",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "\"range\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetRow": {
       "memberof": "ApiRange",
       "name": "GetRow",
@@ -66,7 +83,7 @@
       "params": [
         {
           "type": "number",
-          "name": "number",
+          "name": "nRow",
           "description": "<p>The number of the row. *</p>",
           "optional": false
         }
@@ -76,19 +93,23 @@
       "memberof": "ApiRange",
       "name": "SetOffset",
       "description": "<p>Set cell offset</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "Number",
-          "name": "row",
+          "name": "nRow",
           "optional": false
         },
         {
           "type": "Number",
-          "name": "col",
+          "name": "nCol",
           "optional": false
         }
       ]
@@ -97,22 +118,27 @@
       "memberof": "ApiRange",
       "name": "GetAddress",
       "description": "<p>Get cell adress</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
-          "string"
+          "string",
+          "null"
         ]
       ],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "RowAbs",
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "ColAbs",
           "optional": false
         },
@@ -122,7 +148,7 @@
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "External",
           "optional": false
         },
@@ -137,7 +163,11 @@
       "memberof": "ApiRange",
       "name": "GetCount",
       "description": "<p>Get count rows or columns</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "Number"
@@ -149,8 +179,12 @@
     "GetValue": {
       "memberof": "ApiRange",
       "name": "GetValue",
-      "description": "<p>Set cell value</p>",
-      "tags": {},
+      "description": "<p>Gets the value of the first cell in range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "string"
@@ -168,17 +202,72 @@
           "CSE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "string",
-          "name": "value",
+          "name": "sValue",
           "description": "<p>The general value for the cell or cell range in string format.</p>",
           "optional": false
         }
       ]
+    },
+    "GetFormula": {
+      "memberof": "ApiRange",
+      "name": "GetFormula",
+      "description": "<p>Gets the formula of the first cell in range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetValue2": {
+      "memberof": "ApiRange",
+      "name": "GetValue2",
+      "description": "<p>Gets the value2 of the first cell in range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetText": {
+      "memberof": "ApiRange",
+      "name": "GetText",
+      "description": "<p>Gets the text of the first cell in range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "SetFontColor": {
       "memberof": "ApiRange",
@@ -195,7 +284,7 @@
       "params": [
         {
           "type": "ApiColor",
-          "name": "color",
+          "name": "oColor",
           "description": "<p>The color object previously created to set the color to the text in the cell/cell range.</p>",
           "optional": false
         }
@@ -205,10 +294,14 @@
       "memberof": "ApiRange",
       "name": "GetHidden",
       "description": "<p>Get hidden value</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
-          "boolean"
+          "bool"
         ]
       ],
       "see": null,
@@ -218,14 +311,18 @@
       "memberof": "ApiRange",
       "name": "SetHidden",
       "description": "<p>Set hidden value</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "boolean",
-          "name": "value",
+          "type": "bool",
+          "name": "isHidden",
           "optional": false
         }
       ]
@@ -234,7 +331,11 @@
       "memberof": "ApiRange",
       "name": "GetColumnWidth",
       "description": "<p>Get columns width value</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "number"
@@ -246,15 +347,19 @@
     "SetColumnWidth": {
       "memberof": "ApiRange",
       "name": "SetColumnWidth",
-      "description": "<p>Set columns width value</p>",
-      "tags": {},
+      "description": "<p>Sets the width of all columns in the specified range.\nOne unit of column width is equal to the width of one character in the Normal style.\nFor proportional fonts, the width of the character 0 (zero) is used.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "number",
-          "name": "width",
+          "name": "nWidth",
           "optional": false
         }
       ]
@@ -263,7 +368,11 @@
       "memberof": "ApiRange",
       "name": "GetRowHeight",
       "description": "<p>Get rows height value</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "pt"
@@ -276,14 +385,18 @@
       "memberof": "ApiRange",
       "name": "SetRowHeight",
       "description": "<p>Set rows height value</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "pt",
-          "name": "height",
+          "name": "nHeight",
           "description": "<p>The height the row in the range specified, measured in points.</p>",
           "optional": false
         }
@@ -304,7 +417,7 @@
       "params": [
         {
           "type": "number",
-          "name": "size",
+          "name": "nSize",
           "description": "<p>The font size value measured in points.</p>",
           "optional": false
         }
@@ -325,7 +438,7 @@
       "params": [
         {
           "type": "string",
-          "name": "name",
+          "name": "sName",
           "description": "<p>The font family name used for the current cell range.</p>",
           "optional": false
         }
@@ -340,13 +453,17 @@
           "CSE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "'center' | 'bottom' | 'top' | 'distributed' | 'justify'",
-          "name": "value",
+          "name": "sAligment",
           "description": "<p>The parameters will define the vertical alignment that will be applied to the cell contents.</p>",
           "optional": false
         }
@@ -361,13 +478,17 @@
           "CSE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "'left' | 'right' | 'center' | 'justify'",
-          "name": "value",
+          "name": "sAlignment",
           "description": "<p>Set the horizontal alignment of the text in the current cell range.</p>",
           "optional": false
         }
@@ -388,7 +509,7 @@
       "params": [
         {
           "type": "bool",
-          "name": "value",
+          "name": "isBold",
           "description": "<p>Specifies that the contents of this cell/cell range are displayed bold.</p>",
           "optional": false
         }
@@ -409,7 +530,7 @@
       "params": [
         {
           "type": "bool",
-          "name": "value",
+          "name": "isItalic",
           "description": "<p>Specifies that the contents of this cell/cell range are displayed italicized.</p>",
           "optional": false
         }
@@ -430,7 +551,7 @@
       "params": [
         {
           "type": "'none' | 'single' | 'singleAccounting' | 'double' | 'doubleAccounting'",
-          "name": "value",
+          "name": "undelineType",
           "description": "<p>Specifies the type of the\nline displayed under the characters. The following values are available:</p>\n<ul>\n<li><b>&quot;none&quot;</b> - for no underlining;</li>\n<li><b>&quot;single&quot;</b> - for the single line underlining the cell contents;</li>\n<li><b>&quot;singleAccounting&quot;</b> - for the single line underlining the cell contents but not protruding beyond the cell borders;</li>\n<li><b>&quot;double&quot;</b> - for the double line underlining the cell contents;</li>\n<li><b>&quot;doubleAccounting&quot;</b> - for the double line underlining the cell contents but not protruding beyond the cell borders.</li>\n</ul>",
           "optional": false
         }
@@ -451,7 +572,7 @@
       "params": [
         {
           "type": "bool",
-          "name": "value",
+          "name": "isStrikeout",
           "description": "<p>Specifies that the contents of the current cell/cell range are displayed struck through.</p>",
           "optional": false
         }
@@ -472,16 +593,33 @@
       "params": [
         {
           "type": "bool",
-          "name": "value",
+          "name": "isWrap",
           "description": "<p>When set to <b>true</b> the words in the cell will be wrapped to fit the cell size.</p>",
           "optional": false
         }
       ]
     },
+    "GetWrapText": {
+      "memberof": "ApiRange",
+      "name": "GetWrapText",
+      "description": "<p>Returns whether the words in a cell have been wrapped to fit the cell size.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetFillColor": {
       "memberof": "ApiRange",
       "name": "SetFillColor",
-      "description": "<p>Set the background color for the current cell range with the previously created color object.</p>",
+      "description": "<p>Set the background color for the current cell range with the previously created color object.\nSet 'No Fill' when previously created color object is null</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -493,11 +631,29 @@
       "params": [
         {
           "type": "ApiColor",
-          "name": "color",
+          "name": "oColor",
           "description": "<p>The color object previously created to set the color to the background in the cell/cell range.</p>",
           "optional": false
         }
       ]
+    },
+    "GetFillColor": {
+      "memberof": "ApiRange",
+      "name": "GetFillColor",
+      "description": "<p>Get the background color for the current cell range</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiColor",
+          "'No Fill'"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "SetNumberFormat": {
       "memberof": "ApiRange",
@@ -514,7 +670,7 @@
       "params": [
         {
           "type": "string",
-          "name": "value",
+          "name": "sFormat",
           "description": "<p>Specifies the mask applied to the number in the cell.</p>",
           "optional": false
         }
@@ -547,7 +703,7 @@
         },
         {
           "type": "ApiColor",
-          "name": "color",
+          "name": "oColor",
           "description": "<p>The color object previously created to set the color to the cell border.</p>",
           "optional": false
         }
@@ -568,7 +724,7 @@
       "params": [
         {
           "type": "bool",
-          "name": "across",
+          "name": "isAcross",
           "description": "<p>When set to <b>true</b>, the cells within the selected range will be merged along the rows,\nbut remain split in the columns. When set to <b>false</b>, the whole selected range of cells will be merged into a single cell.</p>",
           "optional": false
         }
@@ -591,15 +747,6 @@
       "memberof": "ApiRange",
       "name": "ForEach",
       "description": "<p>The ForEach() method executes a provided function once for each cell</p>",
-      "tags": {},
-      "returns": [],
-      "see": null,
-      "inherits": null
-    },
-    "AddComment": {
-      "memberof": "ApiRange",
-      "name": "AddComment",
-      "description": "<p>Adds a comment to the range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -610,8 +757,32 @@
       "inherits": null,
       "params": [
         {
+          "type": "function",
+          "name": "fCallback",
+          "optional": false
+        }
+      ]
+    },
+    "AddComment": {
+      "memberof": "ApiRange",
+      "name": "AddComment",
+      "description": "<p>Adds a comment to the range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
           "type": "string",
-          "name": "text",
+          "name": "sText",
           "description": "<p>The comment text.</p>",
           "optional": false
         }
@@ -626,7 +797,11 @@
           "CSE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiWorksheet"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
@@ -651,10 +826,15 @@
       "memberof": "ApiRange",
       "name": "GetComment",
       "description": "<p>Returns a ApiComment.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
-          "ApiComment"
+          "ApiComment",
+          "null"
         ]
       ],
       "see": null,
@@ -664,7 +844,11 @@
       "memberof": "ApiRange",
       "name": "Select",
       "description": "<p>Selects the object.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null

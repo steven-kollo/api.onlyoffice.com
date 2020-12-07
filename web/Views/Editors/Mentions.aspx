@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Mentions</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of mentioning users in the comments in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Document Server.</p>
     <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/mentions-create.png") %>" />
     <ol>
         <li>The user sends a request to get a list of users to mention by typing <b>+</b> sign in the comment field in the <b>document editor</b>.</li>
@@ -112,19 +112,19 @@ docEditor.setUsers({
     <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/actionLink-open.png") %>" />
     <ol>
         <li>The user follows the link in the <b>document manager</b>.</li>
-        <li>The <b>document manager</b> sends the <em>editorConfig</em> of initialization to the <b>document editor</b>.</li>
+        <li>The <b>document manager</b> sends the initialization <em>editorConfig</em> to the <b>document editor</b>.</li>
         <li>The <b>document editor</b> scrolls the document to the comment.</li>
     </ol>
     <p>
         Specify the event handler for the comment message and the list of emails to be sent in the configuration script for Document Editor initialization.
         When the user adds the comment, the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is called.
-        The message and the list of emails is sent in the <em>data</em> parameter.
+        The message and the list of emails are sent in the <em>data</em> parameter.
         The comment data is received in the <em>data.actionLink</em> parameter.
         As in the case of adding an <a href="<%= Url.Action("actionlink") %>#apply">action link</a> to a bookmark, an <em>actionLink</em> object must be used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
     </p>
     <div class="note">
-        In version 5.4 <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
-        Since version 5.5 there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
+        In version 5.4, <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
+        Starting from version 5.5, there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
     </div>
     <pre>
 var onRequestSendNotify = function(event) {
@@ -145,7 +145,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <h2 id="apply-changes" class="copy-link">Sharing settings</h2>
     <p>
-        When the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is called, the software integrators provide access to the file, send notify to the mentioned users with the action link which allows to scrolling to the comment position in the document.
+        When the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is called, the software integrators provide access to the file, send notifications to the mentioned users with the action link which allows scrolling to the comment position in the document.
     </p>
     <p>
         In the case when the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">document.info.sharingSettings</a> field is used in the document initialization but the list of the users from the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is different, the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method must be called.
@@ -184,7 +184,7 @@ docEditor.setSharingSettings({
                 <tbody>
                     <tr class="tablerow">
                         <td>sharingSettings</td>
-                        <td>Defines the settings which allow to share the document with other users.</td>
+                        <td>Defines the settings which allow sharing the document with other users.</td>
                         <td>array of object</td>
                         <td>optional</td>
                     </tr>
@@ -196,7 +196,7 @@ docEditor.setSharingSettings({
                     </tr>
                     <tr class="tablerow">
                         <td>sharingSettings.user</td>
-                        <td>Defines the name of the user the document will be shared with.</td>
+                        <td>Defines the name of the user with whom the document will be shared.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>

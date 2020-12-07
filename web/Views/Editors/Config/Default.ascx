@@ -24,15 +24,20 @@
         </tr>
     </thead>
     <tbody>
-        <tr class="tablerow">
+        <tr>
             <td id="documentType" class="copy-link">documentType</td>
             <td>Defines the document type to be opened:
-                <em>open a text document (.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fodt, .htm, .html, .mht, .odt, .ott, .pdf, .rtf, .txt, .djvu, .xps) for viewing or editing</em> - <b>text</b>,
-                <em>open a spreadsheet (.csv, .fods, .ods, .ots, .xls, .xlsm, .xlsx, .xlt, .xltm, .xltx) for viewing or editing</em> - <b>spreadsheet</b>,
-                <em>open a presentation (.fodp, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx) for viewing  or editing</em> - <b>presentation</b>.
+                <em>open a text document (.doc, .docm, .docx, .dot, .dotm, .dotx, .epub, .fodt, .htm, .html, .mht, .odt, .ott, .pdf, .rtf, .txt, .djvu, .xps) for viewing or editing</em> - <b>word</b>,
+                <em>open a spreadsheet (.csv, .fods, .ods, .ots, .xls, .xlsm, .xlsx, .xlt, .xltm, .xltx) for viewing or editing</em> - <b>cell</b>,
+                <em>open a presentation (.fodp, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx) for viewing  or editing</em> - <b>slide</b>.
             </td>
             <td>string</td>
-            <td>"spreadsheet"</td>
+            <td>"cell"</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note"><b>text</b>, <b>spreadsheet</b> and <b>presentation</b> values are deprecated since version 6.1. Please use new values instead.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="height" class="copy-link">height</td>
@@ -71,7 +76,7 @@
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "documentType": "text",
+    "documentType": "word",
     "height": "100%",
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M",
     "type": "desktop",
