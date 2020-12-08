@@ -1964,7 +1964,7 @@
 		},
 		"apicomment": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noRange = oWorksheet.GetRange(\"A1\");\noRange.AddComment(\"This is just a number.\");\noComment = oRange.GetComment();\noWorksheet.GetRange(\"A3\").SetValue(\"Comment: \" + oComment.GetText());\nbuilder.SaveFile(\"xlsx\", \"AddComment.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6839976&doc=dUc5cXN6RGNtWDB6emgzV1BjTUV6SGJFelRscHRZL1QwRUd3SW93ODJuZz0_IjY4Mzk5NzYi0&action=embedded"
 		},
 		"apidocumentcontent": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 200 * 36000, 60 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noParagraph.AddText(\"This is paragraph #1.\");\nfor (nParaIncrease = 1; nParaIncrease < 5; ++nParaIncrease) {\n  oParagraph = Api.CreateParagraph();\n  oParagraph.AddText(\"This is paragraph #\" + (nParaIncrease + 1) + \".\");\n  oDocContent.Push(oParagraph);\n}\noDocContent.RemoveElement(2);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"We removed paragraph #3, check that out above.\");\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"xlsx\", \"ApiDocumentContent.xlsx\");\nbuilder.CloseFile();",
@@ -1988,7 +1988,7 @@
 		},
 		"apiname": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"=SUM(A1:B1)\");\nApi.AddDefName(\"numbers\", \"Sheet1!$A$1:$B$1\");\noDefName = Api.GetDefName(\"numbers\");\noDefName.SetName(\"summa\");\noDefName.SetRefersTo(\"=SUM(A1:B1)\");\noNewDefName = Api.GetDefName(\"summa\");\noWorksheet.GetRange(\"A3\").SetValue(\"The new name of the range: \" + oNewDefName.GetName());\noWorksheet.GetRange(\"A4\").SetValue(\"The name 'summa' refers to the formula from the cell C1.\");\noWorksheet.GetRange(\"A5\").SetValue(\"Formula: \" + oDefName.GetRefersTo());\nbuilder.SaveFile(\"xlsx\", \"ApiName.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6835941&doc=WUJISndXYVlLbDJBclJVTmdSQ3VqR0dVL2FSbktSczA3SzdHMzlwL0FmTT0_IjY4MzU5NDEi0&action=embedded"
 		},
 		"apiparagraph": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 200 * 36000, 60 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text in it aligned by the center. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetJc(\"center\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with the text in it aligned by the right side. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetJc(\"right\");\noDocContent.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with the text in it aligned by the left side. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetJc(\"left\");\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"xlsx\", \"ApiParagraph.xlsx\");\nbuilder.CloseFile();",
@@ -2352,7 +2352,7 @@
 		},
 		"ApiParagraph.delete": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noDocContent.RemoveAllElements();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is just a sample text.\");\noDocContent.Push(oParagraph);\noParagraph.Delete();\noWorksheet.GetRange(\"A1\").SetValue(\"The paragraph from the shape content was removed.\");\nbuilder.SaveFile(\"xlsx\", \"Delete.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6868072&doc=andreU05T0pkR2FsVEtFR2l2Y2RpNmtoMjQwVVNnaVlxbDA3RWs5NG9OWT0_IjY4NjgwNzIi0&action=embedded"
 		},
 		"ApiParagraph.getclasstype": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 200 * 36000, 60 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noClassType = oParagraph.GetClassType();\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
@@ -2368,7 +2368,7 @@
 		},
 		"ApiParagraph.getnext": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noDocContent.RemoveAllElements();\noParagraph1 = Api.CreateParagraph();\noParagraph1.AddText(\"This is the first paragraph.\");\noDocContent.Push(oParagraph1);\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is the second paragraph.\");\noDocContent.Push(oParagraph2);\noNextParagraph = oParagraph1.GetNext();\noNextParagraph.SetBold(true);\nbuilder.SaveFile(\"xlsx\", \"GetNext.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6868078&doc=d2w1VWc2eVg1RGxXMTBDTmJreTlHMTdvMDNLb01xSlVsNC9XY1dVMVhtOD0_IjY4NjgwNzgi0&action=embedded"
 		},
 		"ApiParagraph.getparapr": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 200 * 36000, 60 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noParaPr = oParagraph.GetParaPr();\noParaPr.SetSpacingAfter(1440);\noParagraph.AddText(\"This is an example of setting a space after a paragraph. \");\noParagraph.AddText(\"The second paragraph will have an offset of one inch from the top. \");\noParagraph.AddText(\"This is due to the fact that the first paragraph has this offset enabled.\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the second paragraph and it is one inch away from the first paragraph.\");\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"xlsx\", \"GetParaPr.xlsx\");\nbuilder.CloseFile();",
@@ -2376,7 +2376,7 @@
 		},
 		"ApiParagraph.getprevious": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noDocContent.RemoveAllElements();\noParagraph1 = Api.CreateParagraph();\noParagraph1.AddText(\"This is the first paragraph.\");\noDocContent.Push(oParagraph1);\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is the second paragraph.\");\noDocContent.Push(oParagraph2);\noPreviousParagraph = oParagraph2.GetPrevious();\noPreviousParagraph.SetBold(true);\nbuilder.SaveFile(\"xlsx\", \"GetPrevious.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6868081&doc=aDc4RHk4OU95M3B1aXZEZ1JnSG9iMDRPMWg3VTlRUkJBZGE2R0ZFa0pSQT0_IjY4NjgwODEi0&action=embedded"
 		},
 		"ApiParagraph.removeallelements": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 200 * 36000, 60 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noParagraph.RemoveAllElements();\noRun = Api.CreateRun();\noRun.AddText(\"This is the first document paragraph. We removed all the elements to get the number of paragraph elements at this point: \");\noRun.AddText(\"\" + oParagraph.GetElementsCount() + \". If we had not done that the number before this sentence would be '1'.\");\noParagraph.AddElement(oRun);\noParagraph = Api.CreateParagraph();\noRun = Api.CreateRun();\noRun.AddText(\"This is the second paragraph. It is created without any elements, so there is no need to remove them. The number of paragraph elements at this point: \");\noRun.AddText(\"\" + oParagraph.GetElementsCount() + \". It is \"0\" and should be that way.\");\noParagraph.AddElement(oRun);\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"xlsx\", \"RemoveAllElements.xlsx\");\nbuilder.CloseFile();",
@@ -2524,7 +2524,7 @@
 		},
 		"ApiRange.select": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:C1\");\noRange.SetValue(\"1\");\noRange.Select();\nApi.GetSelection().SetValue(\"selected\");\nbuilder.SaveFile(\"xlsx\", \"Select.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6834466&doc=K0IzV1E4TE8yVVNnT1h5ZW1FWWhZMis4RGlCV0JFMkh2ZHdtVFBVdFEyTT0_IjY4MzQ0NjYi0&action=embedded"
 		},
 		"ApiRange.setalignhorizontal": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A2\").SetValue(\"2\");\nsRange = oWorksheet.GetRange(\"A1:D5\");\nsRange.SetAlignHorizontal(\"center\");\nbuilder.SaveFile(\"xlsx\", \"SetAlignHorizontal.xlsx\");\nbuilder.CloseFile();",
@@ -2612,11 +2612,11 @@
 		},
 		"ApiRun.copy": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 120 * 36000, 70 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text that was copied. \");\noParagraph.AddElement(oRun);\noCopyRun = oRun.Copy();\noParagraph.AddElement(oCopyRun);\nbuilder.SaveFile(\"xlsx\", \"Copy.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6835859&doc=a0o0ZDVGVnZzQlA1ZHpaWVNqaUpXUHlMcWxsVWozMXl3aTBLWWROaUpnWT0_IjY4MzU4NTki0&action=embedded"
 		},
 		"ApiRun.delete": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text.\");\noParagraph.AddElement(oRun);\noRun.Delete();\noWorksheet.GetRange(\"A9\").SetValue(\"The run from the shape content was removed.\")\nbuilder.SaveFile(\"xlsx\", \"Delete.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6868096&doc=NHpSVWtVelN6SzNNeEdCcFdLN3BlT1dSejhlV1Jzc0pLNDcyRFdKRjlBYz0_IjY4NjgwOTYi0&action=embedded"
 		},
 		"ApiRun.getclasstype": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 120 * 36000, 70 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noRun = Api.CreateRun();\noClassType = oRun.GetClassType();\noRun.SetFontSize(30);\noRun.AddText(\"Class Type = \" + oClassType);\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
@@ -2628,7 +2628,7 @@
 		},
 		"ApiRun.removeallelements": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text.\");\noRun.RemoveAllElements();\noRun.AddText(\"All elements from this run were removed before adding this text.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"xlsx\", \"RemoveAllElements.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6868098&doc=ZVBoUy9OdHVZQ0IvMllVb1UxQXBQKzRVMkFyVHk4dk9KczZPSXU1SXRicz0_IjY4NjgwOTgi0&action=embedded"
 		},
 		"ApiRun.setbold": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 120 * 36000, 70 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetBold(true);\noRun.AddText(\"This is a text run with the font set to bold.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"xlsx\", \"SetBold.xlsx\");\nbuilder.CloseFile();",
@@ -2852,7 +2852,7 @@
 		},
 		"ApiWorksheet.setactive": {
 			"script": "builder.CreateFile(\"xlsx\");\nApi.AddSheet(\"New_sheet\");\noSheet = Api.GetSheet(\"New_sheet\");\noSheet.SetActive();\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"The current sheet is active.\");\nbuilder.SaveFile(\"xlsx\", \"SetActive.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6835923&doc=cDhmaDQrMUdjU1U3dDlWdDBzZHNVMGpHbDV4Yi9QSFB0MFd3VkR1bkhVVT0_IjY4MzU5MjMi0&action=embedded"
 		},
 		"ApiWorksheet.setbottommargin": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetBottomMargin(25.1);\noBottomMargin = oWorksheet.GetBottomMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Bottom margin: \" + oBottomMargin  + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"SetBottomMargin.xlsx\");\nbuilder.CloseFile();",
@@ -2872,7 +2872,7 @@
 		},
 		"ApiWorksheet.sethyperlink": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetHyperlink(\"A1\", \"https://api.onlyoffice.com/docbuilder/basic\", \"Api ONLYOFFICE\", \"ONLYOFFICE for developers\");\nbuilder.SaveFile(\"xlsx\", \"SetHyperlink.xlsx\");\nbuilder.CloseFile();",
-			"demo": ""
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6835939&doc=M1ZXRTIvbkhVZjJLc2Yrcmw5alV6VHIrTmhuSWFZWlhsMVV2WEZFc0hVYz0_IjY4MzU5Mzki0&action=embedded"
 		},
 		"ApiWorksheet.setleftmargin": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetLeftMargin(20.8);\noLeftMargin = oWorksheet.GetLeftMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Left margin: \" + oLeftMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"SetLeftMargin.xlsx\");\nbuilder.CloseFile();",
