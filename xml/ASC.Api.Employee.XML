@@ -430,7 +430,7 @@
             <returns>Remove Progress</returns>
         </member>
         <member name="P:ASC.Api.Employee.EmployeeWraper.Id">
-            <example></example>
+            <example>00000000-0000-0000-0000-000000000000</example>
             <order>1</order>
         </member>
         <member name="P:ASC.Api.Employee.EmployeeWraper.DisplayName">

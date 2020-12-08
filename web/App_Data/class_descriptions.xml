@@ -111,9 +111,8 @@
     <entry>
       <key>ASC.Forum.TopicType</key>
       <value>
-        <Description>topic type</Description>
-        <Example>Informational=0,Poll=1</Example>
-        <Note>What is this?</Note>
+        <Description>Informational, Poll</Description>
+		<ExampleJson>"Informational"</ExampleJson>
       </value>
     </entry>
 
@@ -257,6 +256,14 @@
 	  <Description>	Tentative, Confirmed, Cancelled</Description>
 		<Example></Example>
 		<ExampleJson>"tentative"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Web.Community.News.Code.FeedType</key>
+      <value>
+	  <Description>	None, News, Order, Advert, AllNews, Poll, All</Description>
+		<Example></Example>
+		<ExampleJson>"None"</ExampleJson>
       </value>
     </entry>
   </Names>

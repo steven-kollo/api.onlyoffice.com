@@ -386,7 +386,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 if (point.Name == root.Name)
                 {
-                    point.Methods.Union(root.Methods);
+                    point.Methods = point.Methods.Union(root.Methods).ToList();
                     return;
                 }
             }
@@ -452,13 +452,24 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
-            var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type)).ToList();
+
+            
+
+            var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".")).ToList();
+            var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + type )).SingleOrDefault().ValueOrNull();
+
+            if (inherited != "")
+            {
+                var split = inherited.Split(',');
+                needMembers = GetInherited(split[0].Trim(), split[1].Trim(), needMembers);
+            }
             var msdoc = new MsDocFunctionResponse();
             if (needMembers.Count != 0)
             {
                 var responseParam = new Dictionary<string, object>();
                 var orders = new Dictionary<string, int>();
                 responseParam = Parse(needMembers, responseParam, orders);
+
                 responseParam = Sorted(responseParam, orders);
                 var response = new result();
 
@@ -571,6 +582,14 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return responseParam;
         }
 
+        private List<XElement> GetInherited(string type, string file, List<XElement> needMembers)
+        {
+            var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
+            var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
+
+            var needMembers1 = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".")).ToList();
+            return needMembers.Union(needMembers1).ToList();
+        }
 
         private string GetType(int number, string name)
         {
