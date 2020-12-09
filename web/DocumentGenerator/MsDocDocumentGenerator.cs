@@ -456,11 +456,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             
 
             var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".")).ToList();
-            var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + type )).SingleOrDefault().ValueOrNull();
+            var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + type )).SingleOrDefault();
 
-            if (inherited != "")
+            if (inherited != null && inherited.Element("inherited") != null)
             {
-                var split = inherited.Split(',');
+                var split = inherited.Element("inherited").ValueOrNull().Split(',');
                 needMembers = GetInherited(split[0].Trim(), split[1].Trim(), needMembers);
             }
             var msdoc = new MsDocFunctionResponse();
@@ -560,6 +560,13 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + split[1].Trim() + ".xml");
                     var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
                     var newMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + split[0])).ToList();
+                    var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + split[0])).SingleOrDefault();
+
+                    if (inherited != null && inherited.Element("inherited") != null)
+                    {
+                        var split1 = inherited.Element("inherited").ValueOrNull().Split(',');
+                        newMembers = GetInherited(split1[0].Trim(), split1[1].Trim(), newMembers);
+                    }
                     var responseParam1 = new Dictionary<string, object>();
                     var orders1 = new Dictionary<string, int>();
                     Parse(newMembers, responseParam1, orders1);
@@ -586,8 +593,15 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
-
             var needMembers1 = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".")).ToList();
+            var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + type)).SingleOrDefault();
+
+            if (inherited != null && inherited.Element("inherited") != null)
+            {
+                var split = inherited.ValueOrNull().Split(',');
+                needMembers = GetInherited(split[0].Trim(), split[1].Trim(), needMembers);
+            }
+
             return needMembers.Union(needMembers1).ToList();
         }
 

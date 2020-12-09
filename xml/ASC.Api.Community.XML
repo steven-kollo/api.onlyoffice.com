@@ -10,6 +10,9 @@
             </summary>
             <name>community</name>
             <name>community</name>
+            <name>community</name>
+            <name>community</name>
+            <name>community</name>
         </member>
         <member name="P:ASC.Api.Community.CommunityApi.Name">
             <summary>
@@ -1080,6 +1083,17 @@
             <path>api/2.0/community/birthday</path>
             <requiresAuthorization>true</requiresAuthorization>
         </member>
+        <member name="M:ASC.Api.Community.CommunityApi.GetPreview(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="title"></param>
+            <param name="content"></param>
+            <returns ></returns>
+            <path>api/2.0/community/preview</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+        </member>
         <member name="M:ASC.Api.Community.CommunityApi.CreatePage(System.String,System.String)">
             <summary>
             Creates a new wiki page with the page name and content specified in the request
@@ -1087,8 +1101,11 @@
             <short>Create page</short>
             <param name="name">Page name</param>
             <param name="body">Page content</param>
-            <returns>page info</returns>
+            <returns type="ASC.Api.Wiki.Wrappers.PageWrapper, ASC.Api.Community">page info</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetPages(System.String)">
             <summary>
@@ -1096,9 +1113,13 @@
             </summary>
             <short>Pages</short>
             <section>Pages</section>
-            <param name="category">Category name</param>
-            <returns></returns>
+            <param method="url" name="category">Category name</param>
+            <returns type="ASC.Api.Wiki.Wrappers.PageWrapper, ASC.Api.Community"></returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetPage(System.String,System.Nullable{System.Int32})">
             <summary>
@@ -1106,10 +1127,13 @@
             </summary>
             <short>Page</short>
             <section>Pages</section>
-            <param name="name">Page name</param>
-            <param name="version">Page version</param>
-            <returns>Page info</returns>
+            <param method="url" name="name">Page name</param>
+            <param method="url" name="version">Page version</param>
+            <returns type="ASC.Api.Wiki.Wrappers.PageWrapper, ASC.Api.Community">Page info</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/{name}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetHistory(System.String)">
             <summary>
@@ -1117,9 +1141,13 @@
             </summary>
             <short>History</short>
             <section>Pages</section>
-            <param name="page">Page name</param>
-            <returns>List of pages</returns>
+            <param method="url" name="page">Page name</param>
+            <returns type="ASC.Api.Wiki.Wrappers.PageWrapper, ASC.Api.Community">List of pages</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/{page}/story</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.SearchPages(System.String)">
             <summary>
@@ -1127,9 +1155,13 @@
             </summary>
             <short>Search</short>
             <section>Pages</section>
-            <param name="name">Part of the page name</param>
-            <returns>List of pages</returns>
+            <param method="url" name="name">Part of the page name</param>
+            <returns type="ASC.Api.Wiki.Wrappers.PageWrapper, ASC.Api.Community">List of pages</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/search/byname/{name}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.SearchPagesByContent(System.String)">
             <summary>
@@ -1137,9 +1169,13 @@
             </summary>
             <short>Search</short>
             <section>Pages</section>
-            <param name="content">Part of the page content</param>
-            <returns>List of pages</returns>
+            <param method="url" name="content">Part of the page content</param>
+            <returns type="ASC.Api.Wiki.Wrappers.PageWrapper, ASC.Api.Community">List of pages</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/search/bycontent/{content}</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdatePage(System.String,System.String)">
             <summary>
@@ -1147,10 +1183,13 @@
             </summary>
             <short>Update page</short>
             <section>Pages</section>
-            <param name="name">Page name</param>
+            <param method="url" name="name">Page name</param>
             <param name="body">Page content</param>
-            <returns>Page info</returns>
+            <returns type="ASC.Api.Wiki.Wrappers.PageWrapper, ASC.Api.Community">Page info</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/{name}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeletePage(System.String)">
             <summary>
@@ -1158,8 +1197,11 @@
             </summary>
             <short>Delete page</short>
             <section>Pages</section>
-            <param name="name">Page name</param>
+            <param method="url" name="name">Page name</param>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/{name}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.CreateComment(System.String,System.String,System.String)">
             <summary>
@@ -1167,11 +1209,14 @@
             </summary>
             <short>Create comment</short>
             <section>Comments</section>
-            <param name="page">Page name</param>
+            <param method="url" name="page">Page name</param>
             <param name="content">Comment content</param>
             <param name="parentId">Comment parent id</param>
-            <returns>Comment info</returns>
+            <returns type="ASC.Api.Wiki.Wrappers.CommentWrapper, ASC.Api.Community">Comment info</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/{page}/comment</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetComments(System.String)">
             <summary>
@@ -1179,9 +1224,13 @@
             </summary>
             <short>All comments</short>
             <section>Comments</section>
-            <param name="page">Page name</param>
-            <returns>List of comments</returns>
+            <param method="url" name="page">Page name</param>
+            <returns type="ASC.Api.Wiki.Wrappers.CommentWrapper, ASC.Api.Community">List of comments</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/{page}/comment</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UploadFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
@@ -1189,8 +1238,12 @@
             </summary>
             <short>Upload files</short>
             <param name="files">List of files to upload</param>
-            <returns>List of files</returns>
+            <returns type="ASC.Api.Wiki.Wrappers.FileWrapper, ASC.Api.Community">List of files</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/file</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetFile(System.String)">
             <summary>
@@ -1198,17 +1251,23 @@
             </summary>
             <short>File</short>
             <section>Files</section>
-            <param name="name">File name</param>
-            <returns>File info</returns>
+            <param method="url" name="name">File name</param>
+            <returns type="ASC.Api.Wiki.Wrappers.FileWrapper, ASC.Api.Community">File info</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/file/{name}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeleteFile(System.String)">
             <summary>
             Deletes the files with the specified name from the wiki 'Files' section
             </summary>
             <short>Delete file</short>
-            <param name="name">File name</param>
+            <param method="url" name="name">File name</param>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/file/{name}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetWikiCommentPreview(System.String,System.String)">
             <summary>
@@ -1218,8 +1277,11 @@
             <section>Comments</section>
             <param name="commentid">Comment ID</param>
             <param name="htmltext">Comment content</param>
-            <returns>Comment info</returns>
+            <returns type="ASC.Web.Studio.UserControls.Common.Comments.CommentInfo, ASC.Web.Studio">Comment info</returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/comment/preview</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.RemoveWikiComment(System.String)">
              <summary>
@@ -1227,12 +1289,25 @@
              </summary>
              <short>Remove comment</short>
              <section>Comments</section>
-             <param name="commentid">Comment ID</param>
+             <param method="url" name="commentid">Comment ID</param>
              <returns>Comment info</returns>
              <category>Wiki</category>
+             <path>api/2.0/community/wiki/comment/{commentid}</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.AddWikiComment(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
             <category>Wiki</category>
+            <param name="parentcommentid"></param>
+            <param name="entityid"></param>
+            <param name="content"></param>
+            <path>api/2.0/community/wiki/comment</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <returns type="ASC.Web.Studio.UserControls.Common.Comments.CommentInfo, ASC.Web.Studio"></returns>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateWikiComment(System.String,System.String)">
             <summary>
@@ -1240,10 +1315,13 @@
             </summary>
             <short>Update comment</short>
             <section>Comments</section>
-            <param name="commentid">Comment ID</param>
+            <param method="url" name="commentid">Comment ID</param>
             <param name="content">Comment content</param>
             <returns></returns>
             <category>Wiki</category>
+            <path>api/2.0/community/wiki/comment/{commentid}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="P:ASC.Api.Blogs.BlogPostCommentWrapper.Text">
             <example>comment text</example>
@@ -1670,6 +1748,66 @@
             <type>ASC.Api.Forums.ForumCategoryWrapper, ASC.Api.Community</type>
             <order>100</order>
             <collection>list</collection>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.CommentWrapper.Id">
+            <example>00000000-0000-0000-0000-000000000000</example>
+            <order>0</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.CommentWrapper.ParentId">
+            <example>00000000-0000-0000-0000-000000000000</example>
+            <order>1</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.CommentWrapper.Page">
+            <example>Some page</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.CommentWrapper.Content">
+            <example>Comment content</example>
+            <order>3</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.CommentWrapper.Author">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+            <order>4</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.CommentWrapper.LastModified">
+            <example>2020-12-08T17:37:03.3304954Z</example>
+            <order>4</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.CommentWrapper.Inactive">
+            <example>false</example>
+            <order>5</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.FileWrapper.Name">
+            <example>File name</example>
+            <order>0</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.FileWrapper.UpdatedBy">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+            <order>1</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.FileWrapper.Updated">
+            <example>2020-12-08T17:37:03.3424957Z</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.FileWrapper.Location">
+            <example>4\\46\\File name</example>
+            <order>3</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.PageWrapper.Name">
+            <example>Page name</example>
+            <order>0</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.PageWrapper.Content">
+            <example>Page content</example>
+            <order>1</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.PageWrapper.UpdatedBy">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.Wiki.Wrappers.PageWrapper.Updated">
+            <example>2020-12-08T17:37:03.3164965Z</example>
+            <order>3</order>
         </member>
     </members>
 </doc>

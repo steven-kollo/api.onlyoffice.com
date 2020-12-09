@@ -32,6 +32,14 @@
         <ExampleJson>1234</ExampleJson>
       </value>
     </entry>
+	<entry>
+      <key>System.Nullable{System.Int32}</key>
+      <value>
+        <Description>number</Description>
+        <Example>1234</Example>
+        <ExampleJson>1234</ExampleJson>
+      </value>
+    </entry>
     <entry>
       <key>System.Single</key>
       <value>
