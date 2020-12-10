@@ -36,6 +36,24 @@
       "see": null,
       "inherits": null
     },
+    "GetContent": {
+      "memberof": "ApiShape",
+      "name": "GetContent",
+      "description": "<p>Get the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetVerticalTextAlign": {
       "memberof": "ApiShape",
       "name": "SetVerticalTextAlign",
@@ -62,7 +80,12 @@
       "memberof": "ApiShape",
       "name": "SetPaddings",
       "description": "<p>Set text paddings</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -92,7 +115,7 @@
     "GetNextShape": {
       "memberof": "ApiShape",
       "name": "GetNextShape",
-      "description": "<p>Gets the next inline shape. Throws an error if this inline shape is the last.</p>",
+      "description": "<p>Gets the next inline shape.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -101,7 +124,7 @@
       "returns": [
         [
           "ApiShape",
-          "false"
+          "null"
         ]
       ],
       "see": null,
@@ -110,7 +133,7 @@
     "GetPrevShape": {
       "memberof": "ApiShape",
       "name": "GetPrevShape",
-      "description": "<p>Gets the previous inline shape. Throws an error if this inline shape is the first.</p>",
+      "description": "<p>Gets the previous inline shape.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -119,7 +142,7 @@
       "returns": [
         [
           "ApiShape",
-          "false"
+          "null"
         ]
       ],
       "see": null,

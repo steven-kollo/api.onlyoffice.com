@@ -53,7 +53,7 @@
 
     <p class="list-header">
         Please note, that ONLYOFFICE Document Server includes the <b>document editor</b>, <b>document editing service</b>, <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.
-        The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators who use ONLYOFFICE Document Server on their own server.
+        The <b>document manager</b> and <b>document storage service</b> are either included to Community Server or must be implemented by the software integrators which use ONLYOFFICE Document Server on their own server.
     </p>
 
 </asp:Content>

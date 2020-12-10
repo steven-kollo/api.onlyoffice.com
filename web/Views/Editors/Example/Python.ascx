@@ -23,7 +23,7 @@
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
-    <li>Python comes preinstalled on most Linux distributions, and is available as a package on all others. Python 3.6+ is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html">official documentation</a> if you have any troubles.</li>
+    <li>Python comes preinstalled on most Linux distributions, and is available as a package on all others. Python 3.9 is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html">official documentation</a> if you have any troubles.</li>
     <li>Download the archive with the Python example and unpack the archive:
         <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Python%20Example.zip"</div>
         <div class="commandline">unzip Python\ Example.zip</div>
@@ -32,8 +32,8 @@
         <div class="commandline">cd Python\ Example</div>
     </li>
     <li>Install the dependencies:
-        <div class="commandline">pip install Django==2.2.6</div>
-        <div class="commandline">pip install requests==2.22.0</div>
+        <div class="commandline">pip install Django==3.1.3</div>
+        <div class="commandline">pip install requests==2.25.0</div>
         <div class="commandline">pip install pyjwt==1.7.1</div>
     </li>
     <li>Edit the <em>config.py</em> configuration file.
@@ -53,7 +53,7 @@ EXAMPLE_DOMAIN = 'https://exampleserver/'
         <p>And the <b>exampleserver</b> is the name of the server with the Python Example.</p>
     </li>
     <li>Run the <b>Python</b> server:
-        <div class="commandline">python manage.py runserver 0.0.0.0:80</div>
+        <div class="commandline">python manage.py runserver 0.0.0.0:8000</div>
     </li>
     <li>See the result in your browser using the address:
         <div class="commandline">http://localhost</div>

@@ -141,7 +141,11 @@
       "memberof": "ApiChart",
       "name": "SetHorAxisMajorTickMark",
       "description": "<p>Specifies major tick mark for horizontal axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -157,7 +161,11 @@
       "memberof": "ApiChart",
       "name": "SetHorAxisMinorTickMark",
       "description": "<p>Specifies minor tick mark for horizontal axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -173,7 +181,11 @@
       "memberof": "ApiChart",
       "name": "SetVertAxisMajorTickMark",
       "description": "<p>Specifies major tick mark for vertical axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -189,7 +201,11 @@
       "memberof": "ApiChart",
       "name": "SetVertAxisMinorTickMark",
       "description": "<p>Specifies minor tick mark for vertical axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -248,11 +264,20 @@
       "name": "SetLegendFontSize",
       "description": "<p>Specifies a legend position</p>",
       "tags": {
-        "number": "nFontSize"
+        "typeofeditors": [
+          "CSE"
+        ]
       },
       "returns": [],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nFontSize",
+          "optional": false
+        }
+      ]
     },
     "SetShowDataLabels": {
       "memberof": "ApiChart",
@@ -268,25 +293,25 @@
       "inherits": null,
       "params": [
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "bShowSerName",
           "description": "<p>Whether to show or hide the source table column names used for the data which the chart will be build from.</p>",
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "bShowCatName",
           "description": "<p>Whether to show or hide the source table row names used for the data which the chart will be build from.</p>",
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "bShowVal",
           "description": "<p>Whether to show or hide the chart data values.</p>",
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "bShowPercent",
           "description": "<p>Whether to show or hide the percent for the data values (works with stacked chart types).</p>",
           "optional": false
@@ -297,7 +322,11 @@
       "memberof": "ApiChart",
       "name": "SetShowPointDataLabel",
       "description": "<p>Spicifies a show options for data labels</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -313,22 +342,22 @@
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "bShowSerName",
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "bShowCatName",
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "bShowVal",
           "optional": false
         },
         {
-          "type": "boolean",
+          "type": "bool",
           "name": "bShowPercent",
           "optional": false
         }
@@ -380,7 +409,11 @@
       "memberof": "ApiChart",
       "name": "SetMajorVerticalGridlines",
       "description": "<p>Specifies major vertical gridline's visual properties</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -396,7 +429,11 @@
       "memberof": "ApiChart",
       "name": "SetMinorVerticalGridlines",
       "description": "<p>Specifies minor vertical gridline's visual properties</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -412,7 +449,11 @@
       "memberof": "ApiChart",
       "name": "SetMajorHorizontalGridlines",
       "description": "<p>Specifies major horizontal gridline's visual properties</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -428,7 +469,11 @@
       "memberof": "ApiChart",
       "name": "SetMinorHorizontalGridlines",
       "description": "<p>Specifies minor vertical gridline's visual properties</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -444,7 +489,11 @@
       "memberof": "ApiChart",
       "name": "SetHorAxisLablesFontSize",
       "description": "<p>Specifies font size for labels of horizontal axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -460,7 +509,11 @@
       "memberof": "ApiChart",
       "name": "SetVertAxisLablesFontSize",
       "description": "<p>Specifies font size for labels of vertical axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -476,7 +529,11 @@
       "memberof": "ApiChart",
       "name": "ApplyChartStyle",
       "description": "<p>Apply set of visual settings for chart</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,

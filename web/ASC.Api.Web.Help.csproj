@@ -260,6 +260,7 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\Editor\accept_reject.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
     <Content Include="Content\img\Editor\actionLink-open.png" />
@@ -337,6 +338,7 @@
     <Content Include="Content\img\php\php-version-2.jpg" />
     <Content Include="Content\img\plugin.png" />
     <Content Include="Content\img\plugins\macros.png" />
+    <Content Include="Content\img\plugins\youtube-plugin.png" />
     <Content Include="Content\img\portals.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
@@ -434,6 +436,7 @@
     <Content Include="Views\Editors\Mentions.aspx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
+    <Content Include="Views\Editors\Review.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
@@ -482,6 +485,7 @@
     <Content Include="Views\Plugin\Info\EditorType.ascx" />
     <Content Include="Views\Plugin\Info\Default.ascx" />
     <Content Include="Views\Plugin\Localization.aspx" />
+    <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Macros\Macros.aspx" />
     <Content Include="Views\Plugin\OnExternalMouseUp.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
@@ -651,7 +655,7 @@
     <Content Include="Views\Shared\Analytic.ascx" />
   </ItemGroup>
   <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -677,6 +681,4 @@
   <PropertyGroup>
     <PostBuildEvent>if exist "C:\Program Files\Git\bin\git.exe" ("C:\Program Files\Git\bin\git.exe" rev-parse HEAD &gt; "$(ProjectDir)\version.txt")</PostBuildEvent>
   </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets" Condition=" Exists( '$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets' ) " />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" Condition=" Exists( '$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets' ) " />
 </Project>

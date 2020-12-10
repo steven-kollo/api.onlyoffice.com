@@ -142,7 +142,7 @@
       "returns": [
         [
           "ApiTable",
-          "false"
+          "null"
         ]
       ],
       "see": null,
@@ -175,7 +175,7 @@
       "returns": [
         [
           "ApiTableCell",
-          "false"
+          "null"
         ]
       ],
       "see": null,
@@ -209,7 +209,7 @@
       },
       "returns": [
         [
-          "boolean"
+          "bool"
         ]
       ],
       "see": null,
@@ -226,7 +226,7 @@
       },
       "returns": [
         [
-          "boolean"
+          "bool"
         ]
       ],
       "see": null,
@@ -250,7 +250,7 @@
       },
       "returns": [
         [
-          "Array"
+          "Array.<ApiRange>"
         ]
       ],
       "see": null,

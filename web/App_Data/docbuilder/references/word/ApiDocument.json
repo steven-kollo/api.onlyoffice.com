@@ -235,7 +235,11 @@
       "memberof": "ApiDocument",
       "name": "InsertContent",
       "description": "<p>Insert an array of elements in the current position of the document.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "boolean"
@@ -302,7 +306,11 @@
       "memberof": "ApiDocument",
       "name": "SearchAndReplace",
       "description": "<p>Find and replace text.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -337,7 +345,11 @@
       "memberof": "ApiDocument",
       "name": "GetAllContentControls",
       "description": "<p>Get the list of all content controls in the document</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "Array.<ApiBlockLvlSdt>",
@@ -351,7 +363,11 @@
       "memberof": "ApiDocument",
       "name": "SetTrackRevisions",
       "description": "<p>Set to track changes or not</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -367,7 +383,11 @@
       "memberof": "ApiDocument",
       "name": "IsTrackRevisions",
       "description": "<p>Is change tracking enabled</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "boolean"
@@ -407,6 +427,24 @@
         }
       ]
     },
+    "GetRangeBySelect": {
+      "memberof": "ApiDocument",
+      "name": "GetRangeBySelect",
+      "description": "<p>Gets a range object by the current selection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "Last": {
       "memberof": "ApiDocument",
       "name": "Last",
@@ -426,33 +464,6 @@
       "see": null,
       "inherits": null
     },
-    "Push": {
-      "memberof": "ApiDocument",
-      "name": "Push",
-      "description": "<p>Push a paragraph or a table  or a text to actually add it to the document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "DocumentElement",
-          "name": "oElement",
-          "description": "<p>The type of the element which will be pushed to the document.</p>",
-          "optional": false
-        }
-      ]
-    },
     "DeleteBookmark": {
       "memberof": "ApiDocument",
       "name": "DeleteBookmark",
@@ -462,7 +473,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -478,8 +493,16 @@
       "memberof": "ApiDocument",
       "name": "AddComment",
       "description": "<p>Adds a comment to the document.</p>",
-      "tags": {},
-      "returns": [],
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -508,7 +531,8 @@
       },
       "returns": [
         [
-          "ApiRange"
+          "ApiRange",
+          "null"
         ]
       ],
       "see": null,
@@ -672,7 +696,11 @@
       "memberof": "ApiDocument",
       "name": "InsertWatermark",
       "description": "<p>Insert watermark on each page of document</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -754,6 +782,29 @@
           "type": "DocumentElement",
           "name": "oElement",
           "description": "<p>The document element which will be added at the current position.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Push": {
+      "memberof": "ApiDocument",
+      "name": "Push",
+      "description": "<p>Push a paragraph or a table to actually add it to the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiDocumentContent#Push}",
+      "params": [
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The type of the element which will be pushed to the document.</p>",
           "optional": false
         }
       ]
