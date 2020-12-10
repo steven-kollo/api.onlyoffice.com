@@ -145,10 +145,6 @@ namespace ASC.Api.Web.Help.Helpers
 
         public static TypeDescription ToHumanName(string typeName)
         {
-            if(typeName == "ASC.Web.Core.Calendars.EventAlertType")
-            {
-
-            }
             var desc = _descriptor == null ? new TypeDescription(typeName, "") : _descriptor.Get(typeName);
             if (desc.JsonParam == null && !string.IsNullOrEmpty(desc.ExampleJson))
             {

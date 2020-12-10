@@ -607,15 +607,22 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private string GetType(int number, string name)
         {
-            var types = name.Split('(')[1].Split(')')[0].Split(',');
-
+            var types = name.Split('(')[1].Split(')')[0].Split(',').ToList();
+            for (int i = 0; i < types.Count; i++)
+            {
+                if (types[i].Contains("{") && !types[i].Contains("}"))
+                {
+                    types[i] = types[i] + "," + types[i + 1];
+                    types.RemoveAt(i + 1);
+                }
+            }
             return types[number];
         }
 
         public static void GenerateRequestExample(MsDocEntryPointMethod method)
         {
             var sb = new StringBuilder();
-
+           
             var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p => ClassNamePluralizer.ToHumanName(p.Type));
             var urlParams = visible.Where(p => p.Key.Method == "url").ToList();
             var bodyParams = visible.Except(urlParams).ToList();

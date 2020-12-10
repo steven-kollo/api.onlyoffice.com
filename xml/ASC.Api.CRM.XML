@@ -517,12 +517,15 @@
             </summary>
             <short>Resume case</short> 
             <category>Cases</category>
-            <param name="caseid" optional="false">Case ID</param>
+            <param method="url" name="caseid" optional="false">Case ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
               Case
             </returns>
+            <path>api/2.0/crm/case/{caseid}/reopen</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCases(System.String,System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
             <summary>
@@ -535,7 +538,7 @@
             <param name="isPrivate" optional="true">Case privacy: private or not</param>
             <param name="accessList" optional="true">List of users with access to the case</param>
             <param name="isNotify" optional="true">Notify users in accessList about the case</param>
-            <returns>Case</returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">Case</returns>
             <category>Cases</category>
             <exception cref="T:System.ArgumentException"></exception>
             <example>
@@ -551,13 +554,16 @@
             
             ]]>
             </example>
+            <path>api/2.0/crm/case</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCases(System.Int32,System.String,System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
             <summary>
               Updates the selected case with the parameters specified in the request
             </summary>
             <short>Update case</short> 
-            <param name="caseid" optional="false">Case ID</param>
+            <param method="url" name="caseid" optional="false">Case ID</param>
             <param name="title" optional="false">Case title</param>
             <param name="members" optional="true">Participants</param>
             <param name="customFieldList" optional="true">User field list</param>
@@ -565,7 +571,7 @@
             <param name="accessList" optional="true">List of users with access to the case</param>
             <param name="isNotify" optional="true">Notify users in accessList about the case</param>
             <category>Cases</category>
-            <returns>Case</returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">Case</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <example>
@@ -582,21 +588,27 @@
             
             ]]>
             </example>
+            <path>api/2.0/crm/case/{caseid}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToCases(System.Int32,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
               Sets access rights for the selected case with the parameters specified in the request
             </summary>
-            <param name="caseid" optional="false">Case ID</param>
+            <param method="url" name="caseid" optional="false">Case ID</param>
             <param name="isPrivate" optional="false">Case privacy: private or not</param>
             <param name="accessList" optional="false">List of users with access to the case</param>
             <short>Set rights to case</short> 
             <category>Cases</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
               Case 
             </returns>
+            <path>api/2.0/crm/case/{caseid}/access</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchCases(System.Collections.Generic.IEnumerable{System.Int32},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -609,26 +621,34 @@
             <category>Cases</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
               Case list
             </returns>
+            <path>api/2.0/crm/case/access</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
-            <summary>
-              Sets access rights for other users to the list of all cases matching the parameters specified in the request
-            </summary>
-            <param optional="true" name="contactid">Contact ID</param>
-            <param optional="true" name="isClosed">Case status</param>
-            <param optional="true" name="tags">Tags</param>
-            <param name="isPrivate">Case privacy: private or not</param>
-            <param name="accessList">List of users with access</param>
-            <short>Set case access rights</short> 
-            <category>Cases</category>
-            <exception cref="T:System.ArgumentException"></exception>
-            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
-              Case list
-            </returns>
+             <summary>
+               Sets access rights for other users to the list of all cases matching the parameters specified in the request
+             </summary>
+             <param optional="true" name="contactid">Contact ID</param>
+             <param optional="true" name="isClosed">Case status</param>
+             <param optional="true" name="tags">Tags</param>
+             <param name="isPrivate">Case privacy: private or not</param>
+             <param name="accessList">List of users with access</param>
+             <short>Set case access rights</short> 
+             <category>Cases</category>
+             <exception cref="T:System.ArgumentException"></exception>
+             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+             <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
+               Case list
+             </returns>
+             <path>api/2.0/crm/case/filter/access</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCaseByID(System.Int32)">
              <summary>
@@ -636,35 +656,46 @@
              </summary>
              <short>Get case by ID</short> 
              <category>Cases</category>
-             <param name="caseid">Case ID</param>
+             <param method="url" name="caseid">Case ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/case/{caseid}</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM"></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})">
             <summary>
                 Returns the list of all cases matching the parameters specified in the request
             </summary>
             <short>Get case list</short> 
-            <param optional="true" name="contactid">Contact ID</param>
-            <param optional="true" name="isClosed">Case status</param>
-            <param optional="true" name="tags">Tags</param>
+            <param method="url" optional="true" name="contactid">Contact ID</param>
+            <param method="url" optional="true" name="isClosed">Case status</param>
+            <param method="url" optional="true" name="tags">Tags</param>
             <category>Cases</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
                Case list
             </returns>
+            <path>api/2.0/crm/case/filter</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCase(System.Int32)">
             <summary>
               Deletes the case with the ID specified in the request
             </summary>
             <short>Delete case</short> 
-            <param name="caseid">Case ID</param>
+            <param method="url" name="caseid">Case ID</param>
             <category>Cases</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
                Case
             </returns>
+            <path>api/2.0/crm/case/{caseid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchCases(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -675,9 +706,13 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <short>Delete case group</short> 
             <category>Cases</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
               Case list
             </returns>
+            <path>api/2.0/crm/case</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -690,19 +725,27 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <short>Delete case group</short> 
             <category>Cases</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">
               Case list
             </returns>
+            <path>api/2.0/crm/case/filter</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCasesMembers(System.Int32)">
              <summary>
                 Returns the list of all contacts associated with the case with the ID specified in the request
              </summary>
              <short>Get all case contacts</short> 
-             <param name="caseid">Case ID</param>
+             <param method="url" name="caseid">Case ID</param>
              <category>Cases</category>
-             <returns>Contact list</returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">Contact list</returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/case/{caseid}/contact</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddMemberToCases(System.Int32,System.Int32)">
             <summary>
@@ -727,13 +770,16 @@
             </summary>
             <short>Delete case contact</short> 
             <category>Cases</category>
-            <param name="caseid">Case ID</param>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="caseid">Case ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                Participant
             </returns>
+            <path>api/2.0/crm/case/{caseid}/contact/{contactid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCasesByPrefix(System.String,System.Int32)">
             <summary>
@@ -3763,7 +3809,9 @@
         <member name="T:ASC.Api.CRM.Wrappers.ListItemWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:ASC.Api.CRM.Wrappers.ListItemWrapper.Title" -->
+        <member name="P:ASC.Api.CRM.Wrappers.ListItemWrapper.Title">
+            <example>Title</example>
+        </member>
         <member name="P:ASC.Api.CRM.Wrappers.ListItemWrapper.Description">
             <example>Description</example>
         </member>

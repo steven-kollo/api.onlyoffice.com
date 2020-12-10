@@ -40,6 +40,14 @@
         <ExampleJson>1234</ExampleJson>
       </value>
     </entry>
+	<entry>
+      <key>System.Nullable{System.Boolean}</key>
+      <value>
+        <Description>Bool value</Description>
+        <Example>true</Example>
+        <ExampleJson>true</ExampleJson>
+      </value>
+    </entry>
     <entry>
       <key>System.Single</key>
       <value>
@@ -133,7 +141,6 @@
         <Note></Note>
       </value>
     </entry>
-
     <entry>
       <key>System.Net.Mime.ContentType</key>
       <value>
@@ -142,7 +149,6 @@
         <Note>Set Content-Type header</Note>
       </value>
     </entry>
-
     <entry>
       <key>System.Net.Mime.ContentDisposition</key>
       <value>
@@ -151,7 +157,6 @@
         <Note>Set Content-Disposition header</Note>
       </value>
     </entry>
-
     <entry>
       <key>System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase}</key>
       <value>
@@ -164,6 +169,16 @@
       <key>System.Collections.Generic.IEnumerable`1[ASC.Mail.Data.Contracts.CrmContactData]</key>
       <value>
         <ExampleJson>![{"entity_id": 0, "entity_type": 1}]</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>System.Collections.Generic.IEnumerable{System.String}</key>
+      <value>
+	  <Description>Collection of strings</Description>
+		<Example>some text</Example>
+		<ExampleJson>[
+    "some text"
+  ]</ExampleJson>
       </value>
     </entry>
     <entry>
@@ -193,10 +208,10 @@
       </value>
     </entry>
     <entry>
-      <key>System.Guid[]</key>
+      <key>System.Collections.Generic.IEnumerable{System.Guid}</key>
       <value>
-        <Description>Collection of Guids</Description>
-        <Example></Example>
+        <Description>Collection of guids</Description>
+        <Example>9924256A-739C-462b-AF15-E652A3B1B6EB</Example>
         <ExampleJson>["9924256A-739C-462b-AF15-E652A3B1B6EB", "98777E9C-F2A7-4E97-B314-BA9F92C2E882"]</ExampleJson>
       </value>
     </entry>
@@ -242,10 +257,10 @@
     </entry>
 	<entry>
       <key>System.Collections.Generic.List{System.String}</key>
-      <value>
-	  <Description>System.Collections.Generic.List{System.String}</Description>
-		<Example></Example>
-		<ExampleJson> [
+	  <value>
+	  <Description>Collection of strings</Description>
+		<Example>some text</Example>
+		<ExampleJson>[
     "some text"
   ]</ExampleJson>
       </value>
@@ -272,6 +287,24 @@
 	  <Description>	None, News, Order, Advert, AllNews, Poll, All</Description>
 		<Example></Example>
 		<ExampleJson>"None"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>System.Collections.Generic.IEnumerable{System.Int32}</key>
+      <value>
+	  <Description>Collection of numbers</Description>
+		<Example>1234</Example>
+		<ExampleJson>[
+    1234
+  ]</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}}</key>
+      <value>
+	  <Description>Dictionary(key:int, value:string)</Description>
+		<Example></Example>
+		<ExampleJson></ExampleJson>
       </value>
     </entry>
   </Names>
