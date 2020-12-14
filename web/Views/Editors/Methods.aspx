@@ -20,6 +20,24 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
+    <nav class="content">
+        <ul>
+            <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
+            <li><a href="#destroyEditor">destroyEditor</a> - destroy <em>docEditor</em> object.</li>
+            <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
+            <li><a href="#insertImage">insertImage</a> - insert an image into the file.</li>
+            <li><a href="#refreshHistory">refreshHistory</a> - show the document version history.</li>
+            <li><a href="#setActionLink">setActionLink</a> - set the link to the document which contains a bookmark.</li>
+            <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
+            <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
+            <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
+            <li><a href="#setSharingSettings">setSharingSettings</a> - update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.</li>
+            <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
+            <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
+        </ul>
+    </nav>
+
+    <h2>Methods and their description:</h2>
     <ul>
         <li>
             <p>
@@ -83,6 +101,7 @@ docEditor.downloadAs();
             </p>
             <pre>
 docEditor.insertImage({
+    "c": "add",
     "fileType": "png",
     "url": "https://example.com/url-to-example-image.png"
 });
@@ -108,10 +127,20 @@ docEditor.insertImage({
                 </thead>
                 <tbody>
                     <tr class="tablerow">
+                        <td>c</td>
+                        <td>
+                            Defines the type of image insertion from event.
+                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermak</em>, <em>slide</em>.
+                            The default value is "<em>add</em>".
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>fileType</td>
                         <td>
                             Defines the type of image for insert into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -142,10 +171,39 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "user": {
+                "id": "F89d8069ba2b",
+                "name": "Kate Cage"
+            },
+            "version": 1
+        },
+        {
+            "created": "2010-07-07 3:46 PM",
+            "key": "Khirz6zTPdfd7",
+            "user": {
+                "id": "78e1e841",
+                "name": "John Smith"
+            },
+            "version": 2
+        },
+        ...
+    ],
+});
+</pre>
+            <p>
+                If after editing and saving the document the <em>history</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
+            </p>
+            <pre>
+docEditor.refreshHistory({
+    "currentVersion": 2,
+    "history": [
+        {
+            "changes": changes,
+            "created": "2010-07-06 10:13 AM",
+            "key": "af86C7e71Ca8",
+            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
@@ -167,6 +225,8 @@ docEditor.refreshHistory({
     ],
 });
 </pre>
+            <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
             <p>Show the error message explaining why the version history can not be displayed.</p>
             <pre>
 docEditor.refreshHistory({
@@ -221,7 +281,7 @@ docEditor.refreshHistory({
                     </tr>
                     <tr class="tablerow">
                         <td>history.key</td>
-                        <td>Defines the unique document identifier used for document recognition by the service.</td>
+                        <td>Defines the unique document identifier used by the service to recognize the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -257,7 +317,8 @@ docEditor.refreshHistory({
             <p>
                 <b id="setActionLink" class="copy-link">setActionLink</b> - set the link to the document which contains a bookmark.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.
-                The integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.
+                The software integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.
+                The link is created by the software integrators who use ONLYOFFICE Document Server in their <b>document manager</b>.
             </p>
             <pre>
 docEditor.setActionLink(link);
@@ -280,7 +341,7 @@ docEditor.setActionLink(link);
                 <tbody>
                     <tr class="tablerow">
                         <td>link</td>
-                        <td>Defines the link which allows to scroll to the bookmark position in the document.</td>
+                        <td>Defines the link which allows scrolling to the bookmark position in the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -497,7 +558,7 @@ docEditor.setRevisedFile({
                 <tbody>
                     <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines the type of image for insert into the file.</td>
+                        <td>Defines the type of document for comparing.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -509,7 +570,7 @@ docEditor.setRevisedFile({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source image is stored.</td>
+                        <td>Defines the absolute URL where the source document is stored.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -519,7 +580,7 @@ docEditor.setRevisedFile({
 
         <li>
             <p>
-                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - Update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
+                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
                 This method can be called after the <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a> events.
             </p>
             <pre>
@@ -530,8 +591,9 @@ docEditor.setSharingSettings({
             "user": "John Smith"
         },
         {
+            "isLink": true,
             "permissions": "Read Only",
-            "user": "Kate Cage"
+            "user": "External link"
         }
     ]
 });
@@ -554,7 +616,7 @@ docEditor.setSharingSettings({
                 <tbody>
                     <tr class="tablerow">
                         <td>sharingSettings</td>
-                        <td>Defines the settings which allow to share the document with other users.</td>
+                        <td>Defines the settings which allow sharing the document with other users.</td>
                         <td>array of object</td>
                         <td>optional</td>
                     </tr>
@@ -566,7 +628,7 @@ docEditor.setSharingSettings({
                     </tr>
                     <tr class="tablerow">
                         <td>sharingSettings.user</td>
-                        <td>Defines the name of the user the document will be shared with.</td>
+                        <td>Defines the name of the user with whom the document will be shared.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
@@ -638,7 +700,7 @@ docEditor.setUsers({
 
         <li>
             <p>
-                <b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message.
+                <b id="showMessage" class="copy-link">showMessage</b> - display tooltip with the message.
                 This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
             </p>
             <pre>

@@ -120,7 +120,11 @@
       "memberof": "ApiChart",
       "name": "SetVerAxisOrientation",
       "description": "<p>Specifies a  vertical axis orientation</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -136,7 +140,11 @@
       "memberof": "ApiChart",
       "name": "SetHorAxisOrientation",
       "description": "<p>Specifies a  horizontal axis orientation</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -174,6 +182,9 @@
       "name": "SetLegendFontSize",
       "description": "<p>Specifies a legend position</p>",
       "tags": {
+        "typeofeditors": [
+          "CDE"
+        ],
         "number": "nFontSize"
       },
       "returns": [],
@@ -223,7 +234,11 @@
       "memberof": "ApiChart",
       "name": "SetShowPointDataLabel",
       "description": "<p>Spicifies a show options for data labels</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -264,7 +279,11 @@
       "memberof": "ApiChart",
       "name": "SetVertAxisTickLabelPosition",
       "description": "<p>Spicifies tick labels position vertical axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -280,7 +299,11 @@
       "memberof": "ApiChart",
       "name": "SetHorAxisTickLabelPosition",
       "description": "<p>Spicifies tick labels position horizontal axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -296,7 +319,11 @@
       "memberof": "ApiChart",
       "name": "SetHorAxisMajorTickMark",
       "description": "<p>Specifies major tick mark for horizontal axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -312,7 +339,11 @@
       "memberof": "ApiChart",
       "name": "SetHorAxisMinorTickMark",
       "description": "<p>Specifies minor tick mark for horizontal axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -328,7 +359,11 @@
       "memberof": "ApiChart",
       "name": "SetVertAxisMajorTickMark",
       "description": "<p>Specifies major tick mark for vertical axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -344,7 +379,11 @@
       "memberof": "ApiChart",
       "name": "SetVertAxisMinorTickMark",
       "description": "<p>Specifies minor tick mark for vertical axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -360,7 +399,11 @@
       "memberof": "ApiChart",
       "name": "SetMajorVerticalGridlines",
       "description": "<p>Specifies major vertical gridline's visual properties</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -376,7 +419,11 @@
       "memberof": "ApiChart",
       "name": "SetMinorVerticalGridlines",
       "description": "<p>Specifies minor vertical gridline's visual properties</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -392,7 +439,11 @@
       "memberof": "ApiChart",
       "name": "SetMajorHorizontalGridlines",
       "description": "<p>Specifies major horizontal gridline's visual properties</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -408,7 +459,11 @@
       "memberof": "ApiChart",
       "name": "SetMinorHorizontalGridlines",
       "description": "<p>Specifies minor vertical gridline's visual properties</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -424,7 +479,11 @@
       "memberof": "ApiChart",
       "name": "SetHorAxisLablesFontSize",
       "description": "<p>Specifies font size for labels of horizontal axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -440,7 +499,11 @@
       "memberof": "ApiChart",
       "name": "SetVertAxisLablesFontSize",
       "description": "<p>Specifies font size for labels of vertical axis</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -451,6 +514,42 @@
           "optional": false
         }
       ]
+    },
+    "GetNextChart": {
+      "memberof": "ApiChart",
+      "name": "GetNextChart",
+      "description": "<p>Gets the next inline chart.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiChart",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevChart": {
+      "memberof": "ApiChart",
+      "name": "GetPrevChart",
+      "description": "<p>Gets the previous inline chart.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiChart",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a Chart.\r\n\t * @constructor\r\n\t *\r\n\t */",

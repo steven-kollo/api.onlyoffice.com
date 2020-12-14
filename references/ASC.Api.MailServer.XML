@@ -4,6 +4,11 @@
         <name>ASC.Api.MailServer</name>
     </assembly>
     <members>
+        <member name="P:ASC.Api.MailServer.MailServerApi.Name">
+            <summary>
+             Api name entry
+            </summary>
+        </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.CreateMailbox(System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean)">
             <summary>
                Create mailbox
@@ -256,11 +261,6 @@
             <returns>True if user is owner of this domain.</returns>
             <short>Check domain ownership.</short> 
             <category>Domains</category>
-        </member>
-        <member name="P:ASC.Api.MailServer.MailServerApi.Name">
-            <summary>
-             Api name entry
-            </summary>
         </member>
     </members>
 </doc>

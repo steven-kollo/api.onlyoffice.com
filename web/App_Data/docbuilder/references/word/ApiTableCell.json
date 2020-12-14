@@ -34,6 +34,374 @@
       "see": null,
       "inherits": null
     },
+    "GetIndex": {
+      "memberof": "ApiTableCell",
+      "name": "GetIndex",
+      "description": "<p>Get the cell index.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetRowIndex": {
+      "memberof": "ApiTableCell",
+      "name": "GetRowIndex",
+      "description": "<p>Gets the index of the parent row.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentRow": {
+      "memberof": "ApiTableCell",
+      "name": "GetParentRow",
+      "description": "<p>Gets the parent row of the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableRow",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTable": {
+      "memberof": "ApiTableCell",
+      "name": "GetParentTable",
+      "description": "<p>Gets the parent table of the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddRows": {
+      "memberof": "ApiTableCell",
+      "name": "AddRows",
+      "description": "<p>Add a new rows to the current table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "nCount",
+          "description": "<p>count of rows to be added.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isBefore",
+          "description": "<p>Add a new rows before or after the cell.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddColumns": {
+      "memberof": "ApiTableCell",
+      "name": "AddColumns",
+      "description": "<p>Add a new columns to the current table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "nCount",
+          "description": "<p>count of columns to be added</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isBefore",
+          "description": "<p>Add a new columns before or after the cell.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "RemoveColumn": {
+      "memberof": "ApiTableCell",
+      "name": "RemoveColumn",
+      "description": "<p>Remove the column containing the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "RemoveRow": {
+      "memberof": "ApiTableCell",
+      "name": "RemoveRow",
+      "description": "<p>Remove the row containing the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Search": {
+      "memberof": "ApiTableCell",
+      "name": "Search",
+      "description": "<p>Searches for the scope of a cell object. The search results are a collection of ApiRange objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiRange>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "isMatchCase",
+          "description": "<p>is case sensitive.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetNext": {
+      "memberof": "ApiTableCell",
+      "name": "GetNext",
+      "description": "<p>Get the next cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevious": {
+      "memberof": "ApiTableCell",
+      "name": "GetPrevious",
+      "description": "<p>Get the previous cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Split": {
+      "memberof": "ApiTableCell",
+      "name": "Split",
+      "description": "<p>Split the cell into a given number of rows and columns.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "nRow",
+          "description": "<p>count of rows which the cell will be split.</p>",
+          "optional": true,
+          "defaultValue": 1
+        },
+        {
+          "type": "Number",
+          "name": "nCol",
+          "description": "<p>count of columns which the cell will be split.</p>",
+          "optional": true,
+          "defaultValue": 1
+        }
+      ]
+    },
+    "SetCellPr": {
+      "memberof": "ApiTableCell",
+      "name": "SetCellPr",
+      "description": "<p>Sets properties of the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTableCellPr",
+          "name": "oApiTableCellPr",
+          "optional": false
+        }
+      ]
+    },
+    "SetTextPr": {
+      "memberof": "ApiTableCell",
+      "name": "SetTextPr",
+      "description": "<p>Applies text settings to the entire contents of the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "optional": false
+        }
+      ]
+    },
+    "Clear": {
+      "memberof": "ApiTableCell",
+      "name": "Clear",
+      "description": "<p>Clears the content of the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddElement": {
+      "memberof": "ApiTableCell",
+      "name": "AddElement",
+      "description": "<p>Add a paragraph or a table or a blockLvl content control using its position in the cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>The position where the current element will be added.</p>",
+          "optional": false
+        },
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The document element which will be added at the current position.</p>",
+          "optional": false
+        }
+      ]
+    },
     "SetShd": {
       "memberof": "ApiTableCell",
       "name": "SetShd",

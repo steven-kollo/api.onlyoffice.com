@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ASC.Api.Web.Help</RootNamespace>
     <AssemblyName>ASC.Api.Web.Help</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <MvcBuildViews>true</MvcBuildViews>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -26,6 +26,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -116,15 +117,6 @@
     <Reference Include="ASC.Mail">
       <HintPath>..\references\ASC.Mail.dll</HintPath>
     </Reference>
-    <Reference Include="ASC.Mail.Aggregator">
-      <HintPath>..\references\ASC.Mail.Aggregator.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Mail.Aggregator.Common">
-      <HintPath>..\references\ASC.Mail.Aggregator.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.SingleSignOn">
-      <HintPath>..\references\ASC.SingleSignOn.dll</HintPath>
-    </Reference>
     <Reference Include="ASC.Specific">
       <HintPath>..\references\ASC.Specific.dll</HintPath>
     </Reference>
@@ -152,11 +144,8 @@
     <Reference Include="ASC.Web.Studio">
       <HintPath>..\references\ASC.Web.Studio.dll</HintPath>
     </Reference>
-    <Reference Include="ASC.Web.UserControls.SocialMedia">
-      <HintPath>..\references\ASC.Web.UserControls.SocialMedia.dll</HintPath>
-    </Reference>
     <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
+      <HintPath>..\packages\Autofac.5.1.2\lib\net461\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.9.5\lib\Net45\HtmlAgilityPack.dll</HintPath>
@@ -166,6 +155,9 @@
     </Reference>
     <Reference Include="log4net">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.1\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -178,12 +170,15 @@
       <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
@@ -265,8 +260,15 @@
     <Content Include="Content\img\docbuilder\file_pdf.png" />
     <Content Include="Content\img\docbuilder\file_xlsx.png" />
     <Content Include="Content\img\docbuilder\php-add.png" />
+    <Content Include="Content\img\Editor\accept_reject.png" />
+    <Content Include="Content\img\Editor\changes-url.png" />
+    <Content Include="Content\img\Editor\actionLink-create.png" />
+    <Content Include="Content\img\Editor\actionLink-open.png" />
+    <Content Include="Content\img\Editor\alfresco-create.png" />
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
+    <Content Include="Content\img\Editor\inlineEditors.png" />
+    <Content Include="Content\img\Editor\mentions-create.png" />
     <Content Include="Content\img\Editor\mentionShare.png" />
     <Content Include="Content\img\Editor\onMakeActionLink.png" />
     <Content Include="Content\img\Editor\onRequestCompareFile.png" />
@@ -276,11 +278,14 @@
     <Content Include="Content\img\Editor\onRequestHistoryData.png" />
     <Content Include="Content\img\Editor\onRequestInsertImage.png" />
     <Content Include="Content\img\Editor\onRequestMailMergeRecipients.png" />
+    <Content Include="Content\img\Editor\onRequestRename.png" />
     <Content Include="Content\img\Editor\onRequestRestore.png" />
     <Content Include="Content\img\Editor\onRequestSaveAs.png" />
     <Content Include="Content\img\Editor\onRequestSharingSettings.png" />
     <Content Include="Content\img\Editor\onRequestUsers.png" />
+    <Content Include="Content\img\Editor\rename.png" />
     <Content Include="Content\img\Editor\reviewDisplay.png" />
+    <Content Include="Content\img\Editor\templates.png" />
     <Content Include="Content\img\Editor\toolbarNoTabs.png" />
     <Content Include="Content\img\Editor\help.png" />
     <Content Include="Content\img\Editor\sharing_settings.png" />
@@ -333,6 +338,7 @@
     <Content Include="Content\img\php\php-version-2.jpg" />
     <Content Include="Content\img\plugin.png" />
     <Content Include="Content\img\plugins\macros.png" />
+    <Content Include="Content\img\plugins\youtube-plugin.png" />
     <Content Include="Content\img\portals.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
@@ -404,8 +410,13 @@
     <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
     <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
     <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
+    <Content Include="Views\Editors\ActionLink.aspx" />
+    <Content Include="Views\Editors\FAQ\Renaming.ascx" />
+    <Content Include="Views\Editors\Nuxeo.aspx" />
+    <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\Example\Python.ascx" />
+    <Content Include="Views\Editors\InlineEditors.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
@@ -422,7 +433,10 @@
     <Content Include="Views\Editors\FAQ\Customizing.ascx" />
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\General.ascx" />
+    <Content Include="Views\Editors\Mentions.aspx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
+    <Content Include="Views\Editors\Rename.aspx" />
+    <Content Include="Views\Editors\Review.aspx" />
     <Content Include="Views\Editors\SharePoint.aspx" />
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Security.aspx" />
@@ -457,6 +471,7 @@
     <Content Include="Views\Plugin\Info\EditorType.ascx" />
     <Content Include="Views\Plugin\Info\Default.ascx" />
     <Content Include="Views\Plugin\Localization.aspx" />
+    <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Macros\Macros.aspx" />
     <Content Include="Views\Plugin\OnExternalMouseUp.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
@@ -626,7 +641,7 @@
     <Content Include="Views\Shared\Analytic.ascx" />
   </ItemGroup>
   <PropertyGroup>
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -636,7 +651,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64688</DevelopmentServerPort>
+          <DevelopmentServerPort>63819</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

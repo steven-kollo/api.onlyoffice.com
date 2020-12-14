@@ -293,11 +293,24 @@
             Creates the new task in the selected calendar with the parameters specified in the request
             </summary>
             <short>
-            Create new event
+            Create new task
             </short>
             <param name="ics">Task in iCal format</param>
             <param name="todoUid">Task uid</param>
             <returns>Todo</returns>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.UpdateTodo(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Updates the existing task with the parameters specified in the request
+            </summary>
+            <short>
+            Update task
+            </short>
+            <param name="todoId">Task ID</param>
+            <param name="calendarId">ID of the calendar where the task belongs</param>
+            <param name="ics">Task in iCal format</param>
+            <param name="fromCalDavServer">bool flag says that request from caldav server</param>
+            <returns>Updated task</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.RemoveTodo(System.Int32,System.Boolean)">
             <summary>
@@ -308,6 +321,39 @@
             </short>
             <param name="todoId">Task ID</param>
             <param name="fromCaldavServer">Bool flag says that request from caldav server</param>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.DeleteCaldavCalendar(System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Deletes the project calendar with the ID specified in the request
+            </summary>
+            <short>
+            Delete project calendar
+            </short>
+            <param name="calendarId">Calendar ID</param>
+            <param name="team">Project team</param>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.DeleteCaldavEvent(System.String,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            Deletes the whole caldav event from the calendar
+            </summary>
+            <short>
+            Delete event
+            </short>
+            <param name="calendarId">ID of the calendar where the event belongs</param>
+            <param name="uid">Event uid</param>
+            <param name="responsibles">Task responsibles</param>
+        </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.UpdateCaldavEvent(System.String,System.String,System.Int32,System.Collections.Generic.List{System.String})">
+            <summary>
+            Create/update the existing caldav event in the selected calendar
+            </summary>
+            <short>
+            Update caldav event
+            </short>
+            <param name="calendarId">ID of the calendar where the event belongs</param>
+            <param name="uid">Event uid</param>
+            <param name="alert">Event notification type</param>
+            <param name="responsibles">Task responsibles</param>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.AddEvent(System.Int32,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String)">
             <summary>
@@ -348,7 +394,7 @@
             </short>
             <param name="eventId">Event ID</param>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.RemoveEvent(System.Int32,ASC.Specific.ApiDateTime,ASC.Api.Calendar.CalendarApi.EventRemoveType,System.Boolean)">
+        <member name="M:ASC.Api.Calendar.CalendarApi.RemoveEvent(System.Int32,ASC.Specific.ApiDateTime,ASC.Api.Calendar.CalendarApi.EventRemoveType,System.Uri,System.Boolean)">
             <summary>
             Deletes one event from the series of recurrent events
             </summary>
@@ -359,6 +405,7 @@
             <param name="date">Date to be deleted from the recurrent event</param>
             <param name="type">Recurrent event deletion type</param>
             <param name="fromCaldavServer">Bool flag says that request from caldav server</param>
+            <param name="uri" visible="false">Current uri</param>
             <returns>Updated event series collection</returns>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.UnsubscribeEvent(System.Int32)">
@@ -552,11 +599,15 @@
              
              
             &quot;$UserName&quot;:&quot;$UserLink&quot; has granted you the access to the calendar: $CalendarName 
-             
-            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the notifications about the calendars shared with you, please manage your &quot;subscription settings&quot;:&quot;$RecipientSubscriptionConfigURL&quot;.^
+            
             #end
             #if($SharingType == &quot;event&quot;)
-            h1.Access Granted to Event: $ [rest of string was truncated]&quot;;.
+            h1.Access Granted to Event: $EventName
+             
+             
+            &quot;$UserName&quot;:&quot;$UserLink&quot; has granted you the access to the event: $EventName
+            
+            #end.
              </summary>
         </member>
         <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.CalendarSharingJabberPattern">
@@ -590,10 +641,7 @@
              Event Description:
              
             $EventDescription
-            #end
-             
-             
-            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the event reminders, please manage your &quot;subscription settings&quot;:&quot;$RecipientSubscriptionConfigURL&quot;.^.
+            #end.
              </summary>
         </member>
         <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAlertJabberPattern">

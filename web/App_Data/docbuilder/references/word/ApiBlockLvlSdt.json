@@ -4,7 +4,11 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "GetClassType",
       "description": "<p>Get the type of this class.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "\"blockLvlSdt\""
@@ -16,15 +20,20 @@
     "SetLock": {
       "memberof": "ApiBlockLvlSdt",
       "name": "SetLock",
-      "description": "<p>Set the lock type of this container</p>",
-      "tags": {},
+      "description": "<p>Set the lock to the current inline text content control.\n<b>&quot;contentLocked&quot;</b> - content cannot be edited\n<b>&quot;sdtContentLocked&quot;</b> - content cannot be edited and BlockLvlSdt cannot be deleted.\n<b>&quot;sdtLocked&quot;</b> - BlockLvlSdt cannot be deleted.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "SdtLock",
+          "type": "\"contentLocked\" | \"sdtContentLocked\" | \"sdtLocked\"",
           "name": "sLockType",
+          "description": "<p>The type of the lock applied to the inline text content control.</p>",
           "optional": false
         }
       ]
@@ -33,7 +42,11 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "GetLock",
       "description": "<p>Get the lock type of this container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "SdtLock"
@@ -46,7 +59,11 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "SetTag",
       "description": "<p>Set the tag attribute for this container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -62,7 +79,11 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "GetTag",
       "description": "<p>Get the tag attribute for this container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "string"
@@ -75,7 +96,11 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "SetLabel",
       "description": "<p>Set the label attribute for this container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -91,7 +116,11 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "GetLabel",
       "description": "<p>Get the label attribute for this container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "string"
@@ -104,7 +133,11 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "SetAlias",
       "description": "<p>Set the alias attribute for this container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -120,7 +153,11 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "GetAlias",
       "description": "<p>Get the alias attribute for this container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "string"
@@ -133,12 +170,356 @@
       "memberof": "ApiBlockLvlSdt",
       "name": "GetContent",
       "description": "<p>Get the content of this container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiDocumentContent"
         ]
       ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllContentControls": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetAllContentControls",
+      "description": "<p>Gets the collection of content control objects in the content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiBlockLvlSdt>",
+          "Array.<ApiInlineLvlSdt>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllParagraphs": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetAllParagraphs",
+      "description": "<p>Get a collection of paragraph objects in a content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiParagraph>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllTablesOnPage": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetAllTablesOnPage",
+      "description": "<p>Get the collection of tables on a given absolute page</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiTable>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
+    },
+    "RemoveAllElements": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "RemoveAllElements",
+      "description": "<p>Clears the contents of a content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Delete": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "Delete",
+      "description": "<p>Removes content control and content. If keepContent is true, the content is not deleted.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "keepContent",
+          "optional": false
+        }
+      ]
+    },
+    "SetTextPr": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "SetTextPr",
+      "description": "<p>Applies text settings to content of content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "optional": false
+        }
+      ]
+    },
+    "GetAllDrawingObjects": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetAllDrawingObjects",
+      "description": "<p>Gets the collection of drawing objects in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentContentControl": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetParentContentControl",
+      "description": "<p>Gets the content control that contains the current content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiBlockLvlSdt",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTable": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetParentTable",
+      "description": "<p>Gets the table that contains the content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTableCell": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetParentTableCell",
+      "description": "<p>Gets the table cell that contains the content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Push": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "Push",
+      "description": "<p>Push a paragraph or a table or BlockLvl content control to actually add it to the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The type of the element which will be pushed to the document.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddElement": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "AddElement",
+      "description": "<p>Push a paragraph or a table or a blocklvl content control to actually add it to the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The type of the element which will be pushed to the document.</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "nPos",
+          "description": "<p>The specified position.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddText": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "AddText",
+      "description": "<p>Adds a text to the current content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "String",
+          "name": "sText",
+          "description": "<p>The text which will be add to the content control.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetRange": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetRange",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the specified content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "Start",
+          "description": "<p>start character in current element</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "End",
+          "description": "<p>end character in current element</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Search": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "Search",
+      "description": "<p>Searches for the scope of a content control object. The search results are a collection of ApiRange objects.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiRange>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "isMatchCase",
+          "description": "<p>is case sensitive.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Select": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "Select",
+      "description": "<p>Select a content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
       "see": null,
       "inherits": null
     }

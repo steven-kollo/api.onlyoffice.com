@@ -9,6 +9,11 @@
              Portal info access
             </summary>
         </member>
+        <member name="P:ASC.Api.Portal.PortalApi.Name">
+            <summary>
+             Api name entry
+            </summary>
+        </member>
         <member name="M:ASC.Api.Portal.PortalApi.Get">
             <summary>
             Returns the current portal
@@ -70,6 +75,18 @@
             </short>
              <category>Users</category>
             <returns>Users count</returns>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.UploadLicense(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.ActivateLicense">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.ActivateTrial">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.GetTenantExtra">
+            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.GetTariff">
             <summary>
@@ -263,10 +280,15 @@
              <short>Get random password</short>
             <visible>false</visible>
         </member>
-        <member name="P:ASC.Api.Portal.PortalApi.Name">
-            <summary>
-             Api name entry
-            </summary>
+        <member name="M:ASC.Api.Portal.PortalApi.GetIPInformation(System.String)">
+             <summary>
+                Get information by IP address
+             </summary>
+             <short>Get information by IP address</short>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Portal.PortalApi.MarkGiftAsReaded">
+            <visible>false</visible>
         </member>
     </members>
 </doc>

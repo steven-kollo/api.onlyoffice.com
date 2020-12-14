@@ -112,6 +112,16 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="compatibleFeatures" class="copy-link">compatibleFeatures</td>
+            <td>
+                Defines the use of functionality only compatible with the OOXML format.
+                For example, do not use comments on the entire document.
+                The default value is <b>false</b>.
+            </td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
             <td id="customer" class="copy-link">customer<span class="required">*</span></td>
             <td>
                 Contains the information which will be displayed int the editor <b>About</b> section and visible to all the editor users.
@@ -338,6 +348,35 @@
             <td>object</td>
             <td></td>
         </tr>
+        <tr class="tablerow">
+            <td id="macros" class="copy-link">macros</td>
+            <td>
+                Defines if document macros will be run and available macros settings.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td id="macrosMode" class="copy-link">macrosMode</td>
+            <td>
+                Defines if document macros will be run.
+                Can take the following values:
+                <ul>
+                    <li><b>disable</b> - don't run at all;</li>
+                    <li><b>enable</b> - run all macros automatically;</li>
+                    <li><b>warn</b> - warn about macros and ask permission to run.</li>
+                </ul>
+                The default value is <b>original</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.macrosMode</em> parameter.</div>
+            </td>
+        </tr>
         <tr>
             <td id="mentionShare" class="copy-link">mentionShare</td>
             <td>
@@ -354,6 +393,15 @@
                 <div class="note">Please note that it will only be available for the comments if the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is set.</div>
                 <img src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" alt="" />
             </td>
+        </tr>
+        <tr class="tablerow">
+            <td id="plugins" class="copy-link">plugins</td>
+            <td>
+                Defines if <a href="<%= Url.Action("basic", "plugin") %>">plugins</a> will be launched and available.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
         </tr>
         <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
@@ -377,6 +425,33 @@
                 <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
+        <!--<tr class="tablerow">
+            <td id="reviewPermissions" class="copy-link">reviewPermissions</td>
+            <td>
+                Defines the group access rights to review documents of users from the specific groups.
+                If the current user does not belong to any of the groups, he can review documents of all groups.
+                The <em>""</em> value of an empty group means that the group of users can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
+                The <em>reviewPermissions</em> object has the following structure <em>group: accessRights</em> where:
+                <ul>
+                    <li>
+                        <b>group</b> - the group the user belongs to.
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Group1";
+                    </li>
+                    <li>
+                        <b>accessRights</b> - the list of groups whose documents the <em>group</em> can review.
+                        <br />
+                        <b>type</b>: array of string,
+                        <br />
+                        <b>example</b>: ["Group1", "Group2", ""].
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>-->
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -509,6 +584,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "comments": true,
             "compactHeader": false,
             "compactToolbar": false,
+            "compatibleFeatures": false,
             "customer": {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
@@ -539,8 +615,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
             },
+            "macros": true,
+            "macrosMode": "warn",
             "mentionShare": true,
-            "reviewDisplay": "original",
+            "plugins": true,
+            "reviewDisplay": "original",<!--
+            "reviewPermissions": {
+                "Group1": ["Group2"],
+                "Group2": ["Group1", "Group2", ""]
+            },-->
             <% if (license)
                { %>"rightMenu": true,
             <% } %>"showReviewChanges": false,

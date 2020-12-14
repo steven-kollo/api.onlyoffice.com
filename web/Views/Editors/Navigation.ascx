@@ -52,7 +52,13 @@
                 <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("nuxeo") %>">Nuxeo integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("owncloud") %>">ownCloud integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("plone") %>">Plone integration</a>
             </li>
             <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
@@ -72,10 +78,25 @@
                 <a href="<%= Url.Action("coedit") %>">Co-editing</a>
             </li>
             <li>
-                <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
+                <a href="<%= Url.Action("history") %>">Document history</a>
             </li>
             <li>
-                <a href="<%= Url.Action("history") %>">Document history</a>
+                <a href="<%= Url.Action("actionlink") %>">Action link</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("mentions") %>">Mentions</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("rename") %>">Renaming files</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("review") %>">Reviewing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("inlineeditors") %>">Inline editors</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
             </li>
             <li>
                 <a href="<%= Url.Action("security") %>">Security</a>
@@ -194,6 +215,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("faq/saving") %>">Saving</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/renaming") %>">Renaming</a>
             </li>
         </ul>
     </li>

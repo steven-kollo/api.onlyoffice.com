@@ -151,7 +151,7 @@
             "edit": false,
             "review": false,
             "fillForms": true,
-            "comment": false // optional, the commenting is disabled anyway with the 'fillForms' parameter enabled and 'edit' and 'review' parameters disabled
+            "comment": false
         },
         ...
     },
@@ -161,6 +161,7 @@
     },
     ...
 });</pre>
+        <p>The <em>comment</em> field is optional because the commenting is disabled anyway with the <em>fillForms</em> parameter enabled and <em>edit</em> and <em>review</em> parameters disabled.</p>
         <p>With the configuration above the document will be opened with the form filling mode enabled and all the other modes disabled, giving the users who have access to it only the possibility to fill the fields in the special <a target="_blank" href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx">content controls</a>.</p>
         <p>It is then up to you to decide what is done next: either the changes to the editable fields will be saved to the same document or a new document will be created each time the original one is accessed and altered by a new user.</p>
         <p>The first scenario can be used if the access to the document will be given only once to a certain user with <em>fillForms</em> permissions, then it is saved with all the changes and no other user will have to fill it again.</p>
@@ -367,7 +368,7 @@
 <dl class="faq_block" id="sharing_9">
     <dt>How to view and change sharing settings for a certain document?</dt>
     <dd>
-        <p>The sharing settings are stored at the <b>document storage service</b> and must be defined by the integrators themselves. Document Server can display these settings using the <em>document.info.sharingSettings</em> parameter the information from which will be displayed in the document <b>File</b> -> <b>Access rights...</b> window.</p>
+        <p>The sharing settings are stored at the <b>document storage service</b> and must be defined by the software integrators themselves. Document Server can display these settings using the <em>document.info.sharingSettings</em> parameter the information from which will be displayed in the document <b>File</b> -> <b>Access rights...</b> window.</p>
         <p>This parameter is an array of objects representing a list of user names (<em>document.info.sharingSettings.user</em>) with their access rights for the current document (<em>document.info.sharingSettings.permissions</em>).</p>
         <p>The <em>document.info.sharingSettings.user</em> is a string parameter, which can display any user name passed from the <b>document storage service</b> to the Document Server.</p>
         <p>The <em>document.info.sharingSettings.permissions</em> is also a string parameter, which displays the name of the access rights corresponding to the set of rules defining the user access to the current document.</p>
@@ -382,8 +383,9 @@
                     "user": "John Smith"
                 },
                 {
+                    "isLink": true,
                     "permissions": "Read Only",
-                    "user": "Kate Cage"
+                    "user": "External link"
                 },
                 ...
             ]

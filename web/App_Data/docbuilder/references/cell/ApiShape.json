@@ -4,7 +4,11 @@
       "memberof": "ApiShape",
       "name": "GetClassType",
       "description": "<p>Get the type of this class.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "\"shape\""
@@ -17,7 +21,28 @@
       "memberof": "ApiShape",
       "name": "GetDocContent",
       "description": "<p>Get the shape inner contents where a paragraph or text runs can be inserted.</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetContent": {
+      "memberof": "ApiShape",
+      "name": "GetContent",
+      "description": "<p>Get the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiDocumentContent"
@@ -30,14 +55,22 @@
       "memberof": "ApiShape",
       "name": "SetVerticalTextAlign",
       "description": "<p>Set the vertical alignment for the shape content where a paragraph or text runs can be inserted.</p>",
-      "tags": {},
-      "returns": [],
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "VerticalTextAlign",
-          "name": "VerticalAlign",
+          "type": "\"top\" | \"center\" | \"bottom\"",
+          "name": "sVerticalAlign",
           "description": "<p>The type of the vertical alignment for the shape inner contents.</p>",
           "optional": false
         }

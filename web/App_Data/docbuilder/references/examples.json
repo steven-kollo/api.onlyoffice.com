@@ -580,9 +580,65 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 1926590, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDocContent = oDrawing.GetDocContent();\noDocContent.RemoveAllElements();\noParagraph = oDocContent.GetElement(0);\noParagraph.AddText(\"This is paragraph #1.\");\nfor (nParaIncrease = 1; nParaIncrease < 5; ++nParaIncrease) {\n  oParagraph = Api.CreateParagraph();\n  oParagraph.AddText(\"This is paragraph #\" + (nParaIncrease + 1) + \".\");\n  oDocContent.Push(oParagraph);\n}\noDocContent.RemoveElement(2);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"We removed paragraph #3, check that out above.\");\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"RemoveElement.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4911014&doc=aXZGU2F1R01wNFh2TmhianNBSWtZREhsaTF5NDUvb2dTQkg0My9mQlJSUT0_IjQ5MTEwMTQi0&action=embedded"
 		},
+		"ApiDrawing.addbreak": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.InsertParagraph(\"Added an LineBreak after this paragraph.\", \"before\", false);\noDrawing.AddBreak(1, \"before\");\nbuilder.SaveFile(\"docx\", \"AddBreak.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.copy": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noCopyDrawing.Fill(oFill);\noParagraph.AddDrawing(oCopyDrawing);\nbuilder.SaveFile(\"docx\", \"Copy.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.delete": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.Delete();\noParentParagraph.AddLineBreak();\noParentParagraph.AddText(\"In this paragraph, the object Drawing has been deleted\");\nbuilder.SaveFile(\"docx\", \"Delete.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.fill": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noCopyDrawing.Fill(oFill);\noParagraph.AddDrawing(oCopyDrawing);\nbuilder.SaveFile(\"docx\", \"Fill.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiDrawing.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDocContent = oDrawing.GetDocContent();\noDrawing.SetVerticalTextAlign(\"top\");\noDocContent.RemoveAllElements();\noParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it, aligned top.\");\noDocContent.Push(oParagraph);\noClassType = oDrawing.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896252&doc=KytIYWJKQ1QzV3ZZcUJlYzN0VEhXTzNaWjlycFRYNnJuL3JhdDBSaERpcz0_IjQ4OTYyNTIi0&action=embedded"
+		},
+		"ApiDrawing.getnextdrawing": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noParagraph.AddDrawing(oCopyDrawing);\noNextDrawing = oDrawing.GetNextDrawing();\noNextDrawing.SetHorFlip(true);\nbuilder.SaveFile(\"docx\", \"GetNextDrawing.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.getparentparagraph": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noParentParagraph = oDrawing.GetParentParagraph();\noParentParagraph.AddLineBreak();\noParentParagraph.AddText(\"This is a parent paragraph\");\nbuilder.SaveFile(\"docx\", \"GetParentParagraph.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.getparenttable": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = Api.CreateParagraph();\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noCell = oTable.GetCell(1, 1);\noCell.GetContent().GetElement(0).AddDrawing(oDrawing);\noDocument.Push(oTable);\noParentTable = oDrawing.GetParentTable();\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Table Grid\"));\noParentTable.SetStyle(oTableStyle);\nbuilder.SaveFile(\"docx\", \"GetParentTable.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.getparenttablecell": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = Api.CreateParagraph();\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noCell = oTable.GetCell(1, 1);\noCell.GetContent().GetElement(0).AddDrawing(oDrawing);\noDocument.Push(oTable);\noParentCell = oDrawing.GetParentTableCell();\noCellContent = oParentCell.GetContent().GetElement(0);\noCellContent.AddLineBreak();\noCellContent.AddText(\"This is a parent cell\");\nbuilder.SaveFile(\"docx\", \"GetParentTableCell.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.getprevdrawing": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noParagraph.AddDrawing(oCopyDrawing);\noNextDrawing = oCopyDrawing.GetPrevDrawing();\noNextDrawing.SetHorFlip(true);\nbuilder.SaveFile(\"docx\", \"GetPrevDrawing.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.insertincontentcontrol": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This graphic object was wrapped in content control\");\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.InsertInContentControl(1);\nbuilder.SaveFile(\"docx\", \"InsertInContentControl.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.insertparagraph": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.InsertParagraph(\"This is inserted paragraph.\", \"before\", true);\nbuilder.SaveFile(\"docx\", \"InsertParagraph.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.scaleheight": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor ( i = 3; i > 0; i-- ){\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.ScaleHeight( i );} \nbuilder.SaveFile(\"docx\", \"ScaleHeight.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.scalewidth": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\n    for (i = 1; i < 4; i++ ){\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 963295, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.ScaleWidth( i );}\nbuilder.SaveFile(\"docx\", \"ScaleWidth.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiDrawing.select": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.InsertParagraph(\"The Select property is applied to the drawing object\", \"before\", false);\noDrawing.Select();\nbuilder.SaveFile(\"docx\", \"Select.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiDrawing.setdistances": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with a shape. \");\noParagraph.AddText(\"The text wraps the rectangular box that bounds the object. \");\noParagraph.AddText(\"The distance between the shape and the text is 1 inch (914400 English measure units).\");\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 1908000, 1404000, oFill, oStroke);\noDrawing.SetDistances(914400, 0, 914400, 0);\noDrawing.SetWrappingStyle(\"square\");\noParagraph.AddDrawing(oDrawing);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is another paragraph.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetDistances.docx\");\nbuilder.CloseFile();",
@@ -592,9 +648,17 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with a shape. \");\noParagraph.AddText(\"The text wraps the rectangular box that bounds the object. \");\noParagraph.AddText(\"The distance between the shape and the text is half an inch (457200 English measure units).\");\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 1908000, 1404000, oFill, oStroke);\noDrawing.SetDistances(457200, 457200, 457200, 0);\noDrawing.SetWrappingStyle(\"square\");\noDrawing.SetHorAlign(\"page\", \"center\");\noParagraph.AddDrawing(oDrawing);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is another paragraph.\");\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The shape is aligned at the center of the page horizontally.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetHorAlign.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887449&doc=VjhhN2NzRi8wMFovbng2YXJuQy9GeTdCeXFOQU9hdEgrdjBtSlVKRS9iZz0_IjQ4ODc0NDki0&action=embedded"
 		},
+		"ApiDrawing.sethorflip": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.SetHorFlip(true);\nbuilder.SaveFile(\"docx\", \"SetHorFlip.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiDrawing.sethorposition": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with a shape. \");\noParagraph.AddText(\"The text wraps the rectangular box that bounds the object. \");\noParagraph.AddText(\"The distance between the shape and the text is half an inch (457200 English measure units).\");\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 1908000, 1404000, oFill, oStroke);\noDrawing.SetDistances(457200, 457200, 457200, 0);\noDrawing.SetWrappingStyle(\"square\");\noDrawing.SetHorPosition(\"rightMargin\", 0);\noParagraph.AddDrawing(oDrawing);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is another paragraph.\");\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The shape is aligned next to the right margin horizontally.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetHorPosition.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887475&doc=YitvVGsvU3Y1VDZ5OTdpWWFzRC9sRVZBU0E0OUEzWGxOUjlSNEZEK0hQTT0_IjQ4ODc0NzUi0&action=embedded"
+		},
+		"ApiDrawing.setoutline": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing); \noCopyDrawing = oDrawing.Copy();\noStroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 0)));\noCopyDrawing.SetOutLine(oStroke);\noParagraph.AddDrawing(oCopyDrawing);\nbuilder.SaveFile(\"docx\", \"SetOutLine.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiDrawing.setsize": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with a shape. \");\noParagraph.AddText(\"The text wraps the rectangular box that bounds the object. \");\noParagraph.AddText(\"The distance between the shape and the text is half an inch (457200 English measure units).\");\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 1908000, 1404000, oFill, oStroke);\noDrawing.SetDistances(457200, 457200, 457200, 0);\noDrawing.SetWrappingStyle(\"square\");\noDrawing.SetSize(2 * 914400, 2 * 914400);\noParagraph.AddDrawing(oDrawing);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The shape was created with a size of 53x39 millimeters, then resized to the size of 2x2 inches.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetSize.docx\");\nbuilder.CloseFile();",
@@ -607,6 +671,10 @@
 		"ApiDrawing.setverposition": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with a shape. \");\noParagraph.AddText(\"The text wraps the rectangular box that bounds the object. \");\noParagraph.AddText(\"The distance between the shape and the text (horizontally) is half an inch (457200 English measure units).\");\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 1908000, 1404000, oFill, oStroke);\noDrawing.SetDistances(457200, 457200, 457200, 0);\noDrawing.SetWrappingStyle(\"square\");\noDrawing.SetVerPosition(\"page\", 914400);\noParagraph.AddDrawing(oDrawing);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The shape is aligned to the top of the page, and outstands from the page top 1 inch.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetVerPosition.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887521&doc=ajNKM1lWbUhYODFrTHZKTm9lWDFWejBVSlQ2Q3RmZjM2NXpzdmQ1Q0FyOD0_IjQ4ODc1MjEi0&action=embedded"
+		},
+		"ApiDrawing.setvertflip": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.SetVertFlip(true);\nbuilder.SaveFile(\"docx\", \"SetVertFlip.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiDrawing.setwrappingstyle": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with a shape. \");\noParagraph.AddText(\"The text wraps the rectangular box that bounds the object. \");\noParagraph.AddText(\"The distance between the shape and the text (horizontally) is half an inch (457200 English measure units).\");\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 1908000, 1404000, oFill, oStroke);\noDrawing.SetDistances(457200, 457200, 457200, 0);\noDrawing.SetWrappingStyle(\"square\");\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"SetWrappingStyle.docx\");\nbuilder.CloseFile();",
@@ -800,6 +868,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is the text for a text run. Nothing special.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"AddElement.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4888988&doc=T0xWd3hiVkprZVhaOGYvWElSL0VWTWo4dXVjV2FjM25SNHFUR29jaXBmaz0_IjQ4ODg5ODgi0&action=embedded"
 		},
+		"ApiParagraph.addhyperlink": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noParagraph.AddHyperlink(\"http://api.teamlab.info/docbuilder/basic\", \"docbuilder\");\nbuilder.SaveFile(\"docx\", \"AddHyperlink.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParagraph.addinlinelvlsdt": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noInlineLvlSdt = Api.CreateInlineLvlSdt();\noRun = Api.CreateRun();\noRun.AddText(\"This is an inline text content control.\");\noInlineLvlSdt.AddElement(oRun, 0);\noParagraph.AddInlineLvlSdt(oInlineLvlSdt);\nbuilder.SaveFile(\"docx\", \"AddInlineLvlSdt.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6790448&doc=dCthM3RjVDZ1MVJoWjFKeGZHSnpUdnlWU1N5Z1MxREgzUzdTY0R6c3Q1dz0_IjY3OTA0NDgi0&action=embedded"
@@ -860,6 +932,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.RemoveAllElements();\noRun = Api.CreateRun();\noRun.AddText(\"Number of paragraph elements at this point: \");\noRun.AddTabStop();\noRun.AddText(\"\" + oParagraph.GetElementsCount());\noRun.AddLineBreak();\noParagraph.AddElement(oRun);\noRun.AddText(\"Number of paragraph elements after we added a text run: \");\noRun.AddTabStop();\noRun.AddText(\"\" + oParagraph.GetElementsCount());\nbuilder.SaveFile(\"docx\", \"GetElementsCount.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889009&doc=Y1pyY3ZlTjd6Y1ladjZOT255cnlleHh1bVZBU2JSMkN5dmNLYU9QMno5VT0_IjQ4ODkwMDki0&action=embedded"
 		},
+		"ApiParagraph.getlastrunwithtext": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor (nRunIncrease = 0; nRunIncrease < 5; ++nRunIncrease) {\n    oRun = Api.CreateRun();\n    oRun.AddText(\"This run # \" + (nRunIncrease + 1) );\n    oParagraph.Push(oRun);\n    oParagraph.AddLineBreak();\n}\noLastRun = oParagraph.GetLastRunWithText();\noLastRun.AddText(\" Last run.\");\nbuilder.SaveFile(\"docx\", \"GetLastRunWithText.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParagraph.getnext": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is just a sample paragraph №1.\");\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is just a sample paragraph №2.\");\noDocument.Push(oParagraph2);\noNextParagraph = oParagraph1.GetNext();\noNextParagraph.SetBold(true);\nbuilder.SaveFile(\"docx\", \"GetNext.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847073&doc=aTJsb2ZxWURmdERmMmZqTjhoVGJaR2NrMTNFZjcvZ0EwaWRHRTl2WWVQZz0_IjY4NDcwNzMi0&action=embedded"
@@ -896,6 +972,14 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is just a sample text.\");\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This paragraph was inserted here.\");\noParagraph1.InsertParagraph(oParagraph2, \"after\", true);\nbuilder.SaveFile(\"docx\", \"InsertParagraph.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847292&doc=V0R6TXhaTlJQRDVrY1VCeDVES0IyaUtmejBocmY2WEZFM3A1cWxGaDNybz0_IjY4NDcyOTIi0&action=embedded"
 		},
+		"ApiParagraph.last": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun_1 = Api.CreateRun();\noRun_1.AddText(\"This is an Run with text. \");\noParagraph.Push(oRun_1);\noRun_2 = Api.CreateRun();\noRun_2.AddText(\"And this is the last Run in the paragraph.\");\noParagraph.Push(oRun_2);\noLastRun = oParagraph.Last();\noLastRun.SetBold(true);\nbuilder.SaveFile(\"docx\", \"Last.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiParagraph.push": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is run #0, you must not push it to take effect.\");\noParagraph.AddElement(oRun);\noParagraph.AddLineBreak();\nfor (nRunIncrease = 0; nRunIncrease < 5; ++nRunIncrease) {\n  oRun = Api.CreateRun();\n  oRun.AddText(\"This is run #\" + (nRunIncrease + 1) + \", you must push it to take effect.\");\n  oParagraph.AddLineBreak();\n  oParagraph.Push(oRun);\n}\nbuilder.SaveFile(\"docx\", \"Push.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParagraph.removeallelements": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.RemoveAllElements();\noRun = Api.CreateRun();\noRun.AddText(\"This is the first document paragraph. We removed all the elements to get the number of paragraph elements at this point: \");\noRun.AddText(\"\" + oParagraph.GetElementsCount() + \". If we had not done that the number before this sentence would be '1'.\");\noParagraph.AddElement(oRun);\noParagraph = Api.CreateParagraph();\noRun = Api.CreateRun();\noRun.AddText(\"This is the second paragraph. It is created without any elements, so there is no need to remove them. The number of paragraph elements at this point: \");\noRun.AddText(\"\" + oParagraph.GetElementsCount() + \". It is '0' and should be that way.\");\noParagraph.AddElement(oRun);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"RemoveAllElements.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889044&doc=R0ttQVJzcmYxZ2dndm91bHl5bW4wZGNhcE1XOG9vcEx0R3R4ci96TThlOD0_IjQ4ODkwNDQi0&action=embedded"
@@ -908,21 +992,49 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text. This text was added to the paragraph.\");\noSearch = oParagraph.Search(\"text\");\noSearch[0].SetBold(true);\nbuilder.SaveFile(\"docx\", \"Search.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847293&doc=eFBhdVV6d3VUaHFiRnN1SzZqcVBWQ003SVRidURaWFIyaEFUaExoVHJSTT0_IjY4NDcyOTMi0&action=embedded"
 		},
+		"ApiParagraph.select": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = editor.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\nbResult = oParagraph.Select();\nif (bResult === true) {\n    oParagraph.SetItalic(true);\n}\nbuilder.SaveFile(\"docx\", \"Select.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParagraph.setbetweenborder": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is the first paragraph. We will add a thick green border between it and the next paragraph. \");\noParagraph.AddText(\"No additional spacing between the border and the paragraphs is added.\");\noParagraph.SetBetweenBorder(\"single\", 24, 0, 0, 255, 0);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the second paragraph. We will add a thin red border between it and the next paragraph. \");\noParagraph.AddText(\"We added additional spacing between the border and the paragraphs.\");\noParagraph.SetBetweenBorder(\"single\", 12, 10, 255, 0, 0);\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the third paragraph. The border can be displayed above it only, as there are no new paragraphs after it.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetBetweenBorder.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889071&doc=d0MvaWNTVUlvL0xrYjMzdHkyYTh2dURSUWc5OWN3QVNaSTZNeTNYQ00xST0_IjQ4ODkwNzEi0&action=embedded"
+		},
+		"ApiParagraph.setbold": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = editor.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the font set to bold.\");\noParagraph.SetBold(true);\nbuilder.SaveFile(\"docx\", \"SetBold.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiParagraph.setbottomborder": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is the first paragraph. We will add a thin red border below it.\");\noParagraph.SetBottomBorder(\"single\", 8, 0, 255, 0, 0);\nbuilder.SaveFile(\"docx\", \"SetBottomBorder.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889076&doc=MHoxSGI5eDlISkFZakJ6dUdrRlMxeEtLd3dCdWlqR3JFQkEwcnh3ejYvRT0_IjQ4ODkwNzYi0&action=embedded"
 		},
+		"ApiParagraph.setcaps": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the font set to capitalized letters.\");\noParagraph.SetCaps(true);\nbuilder.SaveFile(\"docx\", \"SetCaps.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiParagraph.setcolor": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the font color set to blue.\");\noParagraph.SetColor(0, 0, 255);\nbuilder.SaveFile(\"docx\", \"SetColor.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParagraph.setcontextualspacing": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with contextual spacing set to 'false'.\");\noParagraph.SetContextualSpacing(false);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with contextual spacing set to 'false'.\");\noParagraph.SetContextualSpacing(false);\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with contextual spacing set to 'false'.\");\noParagraph.SetContextualSpacing(false);\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with contextual spacing set to 'true'.\");\noParagraph.SetContextualSpacing(true);\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with contextual spacing set to 'true'.\");\noParagraph.SetContextualSpacing(true);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetContextualSpacing.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889079&doc=dXYzSnROSyt5di9mNU82UFp5dEcrUjhicWFiY1lnSS9uVWZ6andZUzBqUT0_IjQ4ODkwNzki0&action=embedded"
 		},
+		"ApiParagraph.setdoublestrikeout": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text struck out with two lines.\");\noParagraph.SetDoubleStrikeout(true);\nbuilder.SaveFile(\"docx\", \"SetDoubleStrikeout.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiParagraph.setfontfamily": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the font family set to 'Calibri Light'.\");\noParagraph.SetFontFamily(\"Calibri Light\");\nbuilder.SaveFile(\"docx\", \"SetFontFamily.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParagraph.setfontsize": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample paragraph.\");\noParagraph.SetFontSize(24);\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6847098&doc=QVNqTm1oUm5LL09LZVY1OFZmMWRWY0hUSXBnM0ZDejd3bHNGOWg1SjU0RT0_IjY4NDcwOTgi0&action=embedded"
+		},
+		"ApiParagraph.sethighlight": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text highlighted with yellow color.\");\noParagraph.SetHighlight(255, 255, 0);\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiParagraph.setindfirstline": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the indent of 1 inch set to the first line. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetIndFirstLine(1440);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph without any indent set to the first line. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetIndFirstLine.docx\");\nbuilder.CloseFile();",
@@ -935,6 +1047,10 @@
 		"ApiParagraph.setindright": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the right offset of 2 inches set to it. \");\noParagraph.AddText(\"We also aligned the text in it by the right side. \");\noParagraph.AddText(\"This sentence is used to add lines for demonstrative purposes.\");\noParagraph.SetJc(\"right\");\noParagraph.SetIndRight(2880);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph without any offset set to it. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetIndRight.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4889098&doc=VTU3bDJiNjFxZk5OUzl2Unp6amdyQmlFbXUxeCs4QnNKaGMyMWwyWXdiZz0_IjQ4ODkwOTgi0&action=embedded"
+		},
+		"ApiParagraph.setitalic": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a text run with the font set to italicized letters.\");\noParagraph.SetItalic(true);\nbuilder.SaveFile(\"docx\", \"SetItalic.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiParagraph.setjc": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text in it aligned by the left side. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetJc(\"left\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with the text in it aligned by the right side. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetJc(\"right\");\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with the text in it aligned by the center. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetJc(\"center\");\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with the text in it aligned by both sides (justified). \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetJc(\"both\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetJc.docx\");\nbuilder.CloseFile();",
@@ -964,6 +1080,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is an example of setting a page break before a paragraph. \");\noParagraph.AddText(\"The second paragraph will start from a new page, as it has a page break before it. \");\noParagraph.AddText(\"Scroll down to the second page to see it. \");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the second paragraph and it has page break before it enabled.\");\noParagraph.SetPageBreakBefore(true);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetPageBreakBefore.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891090&doc=TEM1eEVkTjYwK0tOb2FiaFdxaVNEeGJlT1RNYjh0QnFhWU85Ukx3Z1Eycz0_IjQ4OTEwOTAi0&action=embedded"
 		},
+		"ApiParagraph.setposition": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text. \");\noParagraph_2 = Api.CreateParagraph();\noParagraph_2.SetPosition(-5);\noParagraph_2.AddText(\"This is a paragraph with the text lowered 5 points (10 half-points).\");\noDocument.Push(oParagraph_2);\nbuilder.SaveFile(\"docx\", \"SetPosition.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParagraph.setrightborder": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is the first paragraph. We will add a two point red border at its right side. \");\noParagraph.AddText(\"The space between the right side of the paragraph and the border is 8 points. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetRightBorder(\"single\", 16, 8, 255, 0, 0);\nbuilder.SaveFile(\"docx\", \"SetRightBorder.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891077&doc=cmRUZDJERHdMUU1UUEVhRk1Vb1hMd0dsenBtL0pCZFZmZlFoRG9uS3ozOD0_IjQ4OTEwNzci0&action=embedded"
@@ -971,6 +1091,10 @@
 		"ApiParagraph.setshd": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is an example of setting a shade to a paragraph. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.SetShd(\"clear\", 255, 0, 0, false);\nbuilder.SaveFile(\"docx\", \"SetShd.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891094&doc=c3Z0eDdyb3NGNzhSWHg0UkdCSnp6RzVSYmVKNURqNXV0a0tibi9xTGJQbz0_IjQ4OTEwOTQi0&action=embedded"
+		},
+		"ApiParagraph.setsmallcaps": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the font set to small capitalized letters.\");\noParagraph.SetSmallCaps(true);\nbuilder.SaveFile(\"docx\", \"SetSmallCaps.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiParagraph.setspacing": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample paragraph.\");\noParagraph.SetSpacing(2);\nbuilder.SaveFile(\"docx\", \"SetSpacing.docx\");\nbuilder.CloseFile();",
@@ -988,6 +1112,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.SetSpacingLine(3 * 240, \"auto\");\noParagraph.AddText(\"Paragraph 1. Spacing: 3 times of a common paragraph line spacing.\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph = Api.CreateParagraph();\noParagraph.SetSpacingLine(200, \"exact\");\noParagraph.AddText(\"Paragraph 2. Spacing: exact 10 points.\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noDocument.Push(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.SetSpacingLine(400, \"atLeast\");\noParagraph.AddText(\"Paragraph 3. Spacing: atLeast 20 points.\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetSpacingLine.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891100&doc=L1pmcnU2SGhVeGJYK25TcWwycGhSOURnUE5xbEE5SmxLQmxFeEVMdThXcz0_IjQ4OTExMDAi0&action=embedded"
 		},
+		"ApiParagraph.setstrikeout": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text struck out with a single line.\");\noParagraph.SetStrikeout(true);\nbuilder.SaveFile(\"docx\", \"SetStrikeout.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParagraph.setstyle": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noNewDocumentStyle = oDocument.GetStyle(\"Heading 6\");\noParagraph = oDocument.GetElement(0);\noParagraph.SetStyle(oNewDocumentStyle);\noParagraph.AddText(\"This is a text in a paragraph styled with the 'Heading 6' style.\");\nbuilder.SaveFile(\"docx\", \"SetStyle.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4887257&doc=WTRZYWZtSmJUSmNvQnA4RlhuQ1FQTVUzYUczVjNzbml0bGRjZFRxUEE0dz0_IjQ4ODcyNTci0&action=embedded"
@@ -1003,6 +1131,14 @@
 		"ApiParagraph.settopborder": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is the first paragraph. We will add a thick green border above it.\");\noParagraph.SetTopBorder(\"single\", 24, 0, 0, 255, 0);\nbuilder.SaveFile(\"docx\", \"SetTopBorder.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891156&doc=U21JRjRJbENhcS92dHZjWWpNSEppR1lTZTVBL0hJbFM2a2RMdllreWZZOD0_IjQ4OTExNTYi0&action=embedded"
+		},
+		"ApiParagraph.setunderline": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text underlined with a single line.\");\noParagraph.SetUnderline(true);\nbuilder.SaveFile(\"docx\", \"SetUnderline.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiParagraph.setvertalign": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text aligned below the baseline vertically.\");\noParagraph.SetVertAlign(\"subscript\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph with the text aligned above the baseline vertically.\");\noParagraph.SetVertAlign(\"superscript\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetVertAlign.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiParagraph.setwidowcontrol": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"The single line of the last paragraph on this page will be prevented from being displayed on a separate page. \");\nfor (x = 0; x < 5; ++x) {\n  oParagraph = Api.CreateParagraph();\n  for (i = 0; i < 10; ++i) {\n    oParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\n  }\n  oDocument.Push(oParagraph);\n}\noParagraph = Api.CreateParagraph();\nfor (i = 0; i < 4; ++i) {\n  oParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\n}\noParagraph.SetWidowControl(true);\noParagraph.AddText(\"This last line is displayed on the next page, because we used the set widow control method set to \"true\".\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetWidowControl.docx\");\nbuilder.CloseFile();",
@@ -1100,10 +1236,114 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noPresetColor = Api.CreatePresetColor(\"lightYellow\");\noGs1 = Api.CreateGradientStop(oPresetColor, 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noClassType = oPresetColor.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896244&doc=elptakl2d1hOazdFUy9OeXZTaGFidmVRNHU1cC9QS3JFOGhiMExHemtNbz0_IjQ4OTYyNDQi0&action=embedded"
 		},
+		"ApiRange.addbookmark": {
+			"script": "builder.CreateFile( \"docx \"); \noDocument = Api.GetDocument(); \noParagraph = oDocument.GetElement(0); \noParagraph.AddText( \"ONLYOFFICE Document Builder \"); \noRange = oDocument.GetRange(0, 9); \noRange.AddBookmark( \"Bookmark \"); \nbuilder.SaveFile( \"docx \",  \"AddBookmark.docx \"); \nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.addhyperlink": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 9);\noRange.AddHyperlink(\"https://www.onlyoffice.com/\", \"Main portal\"); \nbuilder.SaveFile(\"docx\", \"AddHyperlinkRange.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.addtext": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Document\");\noRange = oDocument.GetRange(0, 7);\noRange.AddText(\"ONLYOFFICE \", \"before\");\noRange.AddText(\" Builder\", \"after\")\nbuilder.SaveFile(\"docx\", \"AddText.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.delete": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE delete text Document Builder\");\noRange = oDocument.GetRange(10, 19);\noRange.Delete();\nbuilder.SaveFile(\"docx\", \"Delete.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.expandto": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Lorem ipsum dolor sit amet,\");\noParagraph.AddText(\" consectetuer adipiscing elit,\");\noParagraph.AddText(\" sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.\");\noRangeFirst = oDocument.GetRange(0, 22);\noRangeSecond = oDocument.GetRange(49, 123);\noRange = oRangeFirst.ExpandTo(oRangeSecond);\noRange.SetItalic(true);\nbuilder.SaveFile(\"docx\", \"ExpandTo.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.getallparagraphs": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = editor.GetDocument();\noFParagraph = oDocument.GetElement(0);\noFParagraph.AddText(\"First paragraph\");\noSParagraph = editor.CreateParagraph();\noSParagraph.AddText(\"Second Paragraph\");\noDocument.Push(oSParagraph);\noRange = oDocument.GetRange(0, 28);\narrParagraphs = oRange.GetAllParagraphs();\narrParagraphs[0].SetBold(\"true\");\nbuilder.SaveFile(\"docx\", \"GetAllParagraphs.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.getparagraph": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noFParagraph = oDocument.GetElement(0);\noFParagraph.AddText(\"First paragraph\");\noSParagraph = Api.CreateParagraph();\noSParagraph.AddText(\"Second Paragraph\");\noDocument.Push(oSParagraph);\noRange = oDocument.GetRange(0, 28);\noRangeParagraph = oRange.GetParagraph(1);\noRangeParagraph.SetBold(\"true\");\nbuilder.SaveFile(\"docx\", \"GetParagraph.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.gettext": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noParagraph_2 = Api.CreateParagraph();\noParagraph_2.AddText(oRange.GetText());\noDocument.Push(oParagraph_2);\nbuilder.SaveFile(\"docx\", \"GetText.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.intersectwith": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Lorem ipsum dolor sit amet,\");\noParagraph.AddText(\" consectetuer adipiscing elit,\");\noParagraph.AddText(\" sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.\");\noRangeFirst = oDocument.GetRange(0, 49);\noRangeSecond = oDocument.GetRange(22, 123);\noRange = oRangeFirst.IntersectWith(oRangeSecond);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"IntersectWith.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRange.select": {
             "script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oParagraph.GetRange(0, 9);\noRange.Select();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The word 'ONLYOFFICE' was just selected.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"Select.docx\");\nbuilder.CloseFile();",
             "demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6849865&doc=SDF4amZCb2t2RmpLSGdVVTgrblRiNkZYbnAyc0J6T2t6dDlTOUJxalk2WT0_IjY4NDk4NjUi0&action=embedded"
         },
+		"ApiRange.setbold": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"SetBold.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setcaps": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(10, 17);\noRange.SetCaps(true);\nbuilder.SaveFile(\"docx\", \"SetCaps.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setcolor": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetColor(255, 164, 101);\nbuilder.SaveFile(\"docx\", \"SetColor.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setdoublestrikeout": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Server Builder\");\noRange = oDocument.GetRange(18, 23);\noRange.SetDoubleStrikeout(true);\nbuilder.SaveFile(\"docx\", \"SetDoubleStrikeout.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setfontfamily": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text. \");\noParagraph.AddText(\"This is a text run with the font family set to 'Comic Sans MS'.\");\noRange = oDocument.GetRange(22, 71);\noRange.SetFontFamily(\"Comic Sans MS\");\nbuilder.SaveFile(\"docx\", \"SetFontFamily.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setfontsize": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetFontSize(14);\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.sethighlight": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 26);\noRange.SetHighlight(255, 164, 101);\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setitalic": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetItalic(true);\nbuilder.SaveFile(\"docx\", \"SetItalic.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setposition": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text. \");\noParagraph.AddText(\"This is a text run with the text raised 5 points (10 half-points).\");\noRange = oDocument.GetRange(22, 75);\noRange.SetPosition(10);\nbuilder.SaveFile(\"docx\", \"SetPosition.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setshd": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetShd(\"clear\", 255, 224, 204);\nbuilder.SaveFile(\"docx\", \"SetShd.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setsmallcaps": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(10, 24);\noRange.SetSmallCaps(true);\nbuilder.SaveFile(\"docx\", \"SetSmallCaps.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setspacing": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetSpacing(2);\nbuilder.SaveFile(\"docx\", \"SetSpacing.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setstrikeout": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Server Builder\");\noRange = oDocument.GetRange(18, 23);\noRange.SetStrikeout(true);\nbuilder.SaveFile(\"docx\", \"SetStrikeout.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setstyle": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 26);\noStyle = oDocument.GetStyle(\"Heading 2\");\noRange.SetStyle(oStyle);\nbuilder.SaveFile(\"docx\", \"SetStyle.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.settextpr": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noTextPr = oParagraph.GetTextPr();\noTextPr.SetItalic(true);\noRange = oDocument.GetRange(0, 24);\noRange.SetTextPr(oTextPr);\nbuilder.SaveFile(\"docx\", \"SetTextPr.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setunderline": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetUnderline(true);\nbuilder.SaveFile(\"docx\", \"SetUnderline.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiRange.setvertalign": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Copyright Document Builder\");\noRange = oDocument.GetRange(10, 18);\noRange.SetVertAlign(\"superscript\");\nbuilder.SaveFile(\"docx\", \"SetVertAlign.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiRGBColor.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRGBColor = Api.CreateRGBColor(255, 164, 101);\noGs1 = Api.CreateGradientStop(Api.CreatePresetColor(\"lightYellow\"), 0);\noGs2 = Api.CreateGradientStop(oRGBColor, 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noClassType = oRGBColor.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896248&doc=aTNBakppcjlNb0NXMExjcTJjQk1LbGROS21VYXQrQVhxK3doMGhERWEwZz0_IjQ4OTYyNDgi0&action=embedded"
@@ -1115,6 +1355,10 @@
 		"ApiRun.adddrawing": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noDrawing = Api.CreateChart(\"bar3D\", [\n  [200, 240, 280],\n  [250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noDrawing.SetVerAxisTitle(\"USD In Hundred Thousands\", 10);\noDrawing.SetHorAxisTitle(\"Year\", 11);\noDrawing.SetLegendPos(\"bottom\");\noDrawing.SetShowDataLabels(false, false, true, false);\noDrawing.SetTitle(\"Financial Overview\", 13);\noRun.AddDrawing(oDrawing);\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"AddDrawing.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4891434&doc=NXBMSzRjUUd3aUNPR2U5dXNBOXNCR2hSWFkrVitIckN2TXZ5NW1VUmJXRT0_IjQ4OTE0MzQi0&action=embedded"
+		},
+		"ApiRun.addhyperlink": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"ONLYOFFICE Document Builder\");\noParagraph.AddElement(oRun);\noRun.AddHyperlink(\"https://www.onlyoffice.com\", \"main page\");\nbuilder.SaveFile(\"docx\", \"AddHyperlink.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiRun.addlinebreak": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is the text for the first line. Nothing special.\");\noRun.AddLineBreak();\noRun.AddText(\"This is the text which starts from the beginning of the second line. \");\noRun.AddText(\"It is written in two text runs, you need a space at the end of the first run sentence to separate them.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"AddLineBreak.docx\");\nbuilder.CloseFile();",
@@ -1784,6 +2028,14 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"We set the table cells to preserve their size:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTablePr = oTableStyle.GetTablePr();\noTable = Api.CreateTable(3, 3);\noTablePr.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetWidth.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6796005&doc=a291R1NtbklHa1FmNHBYK3hnTWNac2x5MHV6VU91K25FVmEvdTFvYVJnUT0_IjY3OTYwMDUi0&action=embedded"
 		},
+		"ApiTableRow.addrows": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"Second row\");\noTable.SetWidth(\"percent\", 100);\noRow.AddRows(1, true);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"AddRows.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.clear": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"Clear content\");\noRow.Clear();\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"Clear.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		}, 
 		"ApiTableRow.getcell": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTableRow.SetHeight(\"atLeast\", 1440);\noCell = oTableRow.GetCell(1);\noCell.SetVerticalAlign(\"bottom\");\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Align bottom\");\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetCell.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896826&doc=dHRqVTRwMUtjTCs5RjRtQ204TTErWGRUaUVJNUVyeFBxU0MzYXE5R2tTUT0_IjQ4OTY4MjYi0&action=embedded"
@@ -1796,6 +2048,34 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noClassType = oTableRow.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896837&doc=Mm5rNnZWaTJMc29SUGQybldnT2IyZ0REZ2dvMFBnalp5OEFscVFIcDJMOD0_IjQ4OTY4Mzci0&action=embedded"
 		},
+		"ApiTableRow.getindex": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noRow = oTable.GetRow(1);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"Row index: \" + oRow.GetIndex());\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetIndex.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.getnext": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"First row\");\noRow.GetNext().GetCell(0).GetContent().GetElement(0).AddText(\"Second row\");\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetNext.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.getparenttable": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noRow = oTable.GetRow(0);\noParentTable = oRow.GetParentTable();\noDocument.Push(oParentTable);\nbuilder.SaveFile(\"docx\", \"GetParentTable.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.getprevious": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(1);\noRow.GetCell(1).GetContent().GetElement(0).AddText(\"Second row\");\noRow.GetPrevious().GetCell(1).GetContent().GetElement(0).AddText(\"First row\");\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"GetPrevious.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.mergecells": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noTableStyle = oDocument.GetStyle(\"Table Grid\");\noTable.SetStyle(oTableStyle);\noTable.SetWidth(\"percent\", 100);\noRow.MergeCells();\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"MergeCells.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.remove": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"First row\");\noRow.Remove();\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"Remove.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
+		"ApiTableRow.search": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"text\");\noRow.GetCell(1).GetContent().GetElement(0).AddText(\"text\");\noRow.GetCell(2).GetContent().GetElement(0).AddText(\"text\");\noDocument.Push(oTable);\noRowSearch = oRow.Search(\"tex\", true);\noRowSearch[1].SetBold(\"true\");\nbuilder.SaveFile(\"docx\", \"Search.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiTableRow.setheight": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"We create a 3x3 table and set the height of half an inch to row #1:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTableRow.SetHeight(\"atLeast\", 720);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetHeight.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896841&doc=RUc3Q1lnNUUzT2ZWSS80bXNHeitHbEcwZEVDcHZvckxKc3JQYS9oeWVVTT0_IjQ4OTY4NDEi0&action=embedded"
@@ -1803,6 +2083,10 @@
 		"ApiTableRow.settableheader": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"We create a 3x90 table and set row #1 as the table header:\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 90);\noTable.SetWidth(\"percent\", 100);\noTableRow = oTable.GetRow(0);\noTableRow.SetTableHeader(true);\noCell = oTableRow.GetCell(0);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Header cell #1\");\noCell = oTableRow.GetCell(1);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Header cell #2\");\noCell = oTableRow.GetCell(2);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"Header cell #3\");\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetTableHeader.docx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=4896846&doc=TmZJcTFlaVVNbnN0QkxQeWl6ZlBEL0wyTXRKNE1Sd2U2dlB3L1psNzV1TT0_IjQ4OTY4NDYi0&action=embedded"
+		},
+		"ApiTableRow.settextpr": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTable = Api.CreateTable(3, 3);\noRow = oTable.GetRow(0);\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetBold(true);\noRow.GetCell(0).GetContent().GetElement(0).AddText(\"First row\");\noRow.SetTextPr(oTextPr);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetTextPr.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiTableRowPr.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableRowPr = oTableStyle.GetTableRowPr();\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noClassType = oTableRowPr.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
@@ -2402,6 +2686,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 200 * 36000, 60 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noParagraph.SetTabs([1440, 4320, 7200], [\"left\", \"center\", \"right\"]);\noParagraph.AddTabStop();\noParagraph.AddText(\"Custom tab - 1 inch left\");\noParagraph.AddLineBreak();\noParagraph.AddTabStop();\noParagraph.AddTabStop();\noParagraph.AddText(\"Custom tab - 3 inches center\");\noParagraph.AddLineBreak();\noParagraph.AddTabStop();\noParagraph.AddTabStop();\noParagraph.AddTabStop();\noParagraph.AddText(\"Custom tab - 5 inches right\");\nbuilder.SaveFile(\"xlsx\", \"SetTabs.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006317&doc=VzNiMWV3UEpMTkp0QkErOVJLY1NnNWE5NlQ1N2xsYjlZenJTd1AxbGNkaz0_IjUwMDYzMTci0&action=embedded"
 		},
+		"ApiParagraph.wrapinmailmergefield": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Paragraph wrapped in \"Mail Merge Field\"\");\noParagraph.WrapInMailMergeField();\nbuilder.SaveFile(\"docx\", \"WrapInMailMergeField.docx\");\nbuilder.CloseFile();",
+			"demo": ""
+		},
 		"ApiParaPr.getclasstype": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 200 * 36000, 60 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noParaPr = oParagraph.GetParaPr();\noClassType = oParaPr.GetClassType();\noParaPr.SetIndFirstLine(1440);\noParagraph.AddText(\"This is the first paragraph with the indent of 1 inch set to the first line. \");\noParagraph.AddText(\"This indent is set by the paragraph style. No paragraph inline style is applied. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006315&doc=N3ptdU82OEpPRW1zd1d4RWhHck81aWp6NUF4TXAvdklrT0k1aWNlcC9nOD0_IjUwMDYzMTUi0&action=embedded"
@@ -2657,6 +2945,10 @@
 		"ApiRun.setvertalign": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noStroke, oFill, oParagraph, oRun;\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 120 * 36000, 70 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"subscript\");\noRun.AddText(\"This is a text run with the text aligned below the baseline vertically. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"baseline\");\noRun.AddText(\"This is a text run with the text aligned by the baseline vertically. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"superscript\");\noRun.AddText(\"This is a text run with the text aligned above the baseline vertically.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"xlsx\", \"SetVertAlign.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5006262&doc=YmZ1VXZRSWk0Rm1SQjhoZG9pRjRKb0RlOXdMZDkyYnJ1Z215VXZsMys0UT0_IjUwMDYyNjIi0&action=embedded"
+		},
+		"ApiRun.wrapinmailmergefield": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"Name\");\noParagraph.AddElement(oRun);\noRun.WrapInMailMergeField();\noParagraph.AddLineBreak();\noRun = Api.CreateRun();\noRun.AddText(\"Surname\");\noParagraph.AddElement(oRun);\noRun.WrapInMailMergeField();\nbuilder.SaveFile(\"docx\", \"WrapInMailMergeField.docx\");\nbuilder.CloseFile();",
+			"demo": ""
 		},
 		"ApiSchemeColor.getclasstype": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noSchemeColor = Api.CreateSchemeColor(\"accent6\");\noGs1 = Api.CreateGradientStop(oSchemeColor, 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 1, 3 * 36000);\noClassType = oSchemeColor.GetClassType();\noWorksheet.SetColumnWidth(0, 15);\noWorksheet.SetColumnWidth(1, 10);\noWorksheet.GetRange(\"A1\").SetValue(\"Class Type = \");\noWorksheet.GetRange(\"B1\").SetValue(oClassType);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
@@ -3255,7 +3547,7 @@
 		"ApiParagraph.getprevious": {
 			"script": "builder.CreateFile(\"pptx\");\noPresentation = Api.GetPresentation();\noSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(61, 74, 107));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noDocContent = oShape.GetDocContent();\noDocContent.RemoveAllElements();\noParagraph1 = Api.CreateParagraph();\noParagraph1.AddText(\"This is the first paragraph.\");\noDocContent.Push(oParagraph1);\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is the second paragraph.\");\noDocContent.Push(oParagraph2);\noSlide.AddObject(oShape);\noPreviousParagraph = oParagraph2.GetPrevious();\noPreviousParagraph.SetBold(true);\nbuilder.SaveFile(\"pptx\", \"GetPrevious.pptx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6868128&doc=ZTdmOVQxRG9sNzNoamJPNmdFdlpINE1FOXJ5RklTY3FDc0k3YlBUUTliMD0_IjY4NjgxMjgi0&action=embedded"
-		},		
+		},
 		"ApiParagraph.removeallelements": {
 			"script": "builder.CreateFile(\"pptx\");\noPresentation = Api.GetPresentation();\noSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(0, 0, 255), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(61, 74, 107), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noDocContent = oShape.GetDocContent();\noParagraph = oDocContent.GetElement(0);\noParagraph.RemoveAllElements();\noRun = Api.CreateRun();\noRun.AddText(\"This is the first document paragraph. We removed all the elements to get the number of paragraph elements at this point: \");\noRun.AddText(\"\" + oParagraph.GetElementsCount() + \". If we had not done that the number before this sentence would be '1'.\");\noParagraph.AddElement(oRun);\noParagraph = Api.CreateParagraph();\noRun = Api.CreateRun();\noRun.AddText(\"This is the second paragraph. It is created without any elements, so there is no need to remove them. The number of paragraph elements at this point: \");\noRun.AddText(\"\" + oParagraph.GetElementsCount() + \". It is '0' and should be that way.\");\noParagraph.AddElement(oRun);\noDocContent.Push(oParagraph);\noSlide.AddObject(oShape);\nbuilder.SaveFile(\"pptx\", \"RemoveAllElements.pptx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/products/files/doceditor.aspx?fileid=5009942&doc=NFBkM1I1dC9kNFNGeEduS2llWmhyaXJZYmc1Rmw0UGpmdDMyNjFjZWhRND0_IjUwMDk5NDIi0&action=embedded"

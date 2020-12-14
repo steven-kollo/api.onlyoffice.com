@@ -99,25 +99,29 @@
           "type": "EMU",
           "name": "nWidth",
           "description": "<p>The shape width in English measure units.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 914400
         },
         {
           "type": "EMU",
           "name": "nHeight",
           "description": "<p>The shape height in English measure units.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 914400
         },
         {
           "type": "ApiFill",
           "name": "oFill",
           "description": "<p>The color or pattern used to fill the shape.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.CreateNoFill()"
         },
         {
           "type": "ApiStroke",
           "name": "oStroke",
           "description": "<p>The stroke used to create the element shadow.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.CreateStroke(0, Api.CreateNoFill())"
         }
       ]
     },

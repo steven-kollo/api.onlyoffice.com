@@ -45,12 +45,12 @@
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
-        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Nextcloud and any end clients (version 4.2.7 and later are supported for use with the app).
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Nextcloud and any end clients.
         If that is not the case, use the official ONLYOFFICE Document Server documentation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
         ONLYOFFICE Document Server must also be able to POST to Nextcloud directly.
     </p>
     <p>
-        Starting with version 4.3.0, ONLYOFFICE Document Server and Nextcloud can be installed either on different computers, or on the same machine.
+        ONLYOFFICE Document Server and Nextcloud can be installed either on different computers, or on the same machine.
         In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Document Server and Nextcloud work on port 80.
         Or you can use Document Server behind a proxy, please refer to <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">this article</a> to learn how you can configure it.
     </p>
@@ -86,13 +86,13 @@
         <li>Change the owner to update the application right from Nextcloud web interface:
             <span class="commandline">chown -R www-data:www-data onlyoffice</span>
         </li>
-        <li>In Nextcloud open the <span class="fakelink">~/index.php/settings/apps?category=disabled</span> page with <em>Not enabled</em> apps by administrator and click <em>Enable</em> for the <b>ONLYOFFICE</b> application.</li>
+        <li>In Nextcloud open the <span class="fakelink">~/settings/apps/disabled</span> page with <em>Not enabled</em> apps by administrator and click <em>Enable</em> for the <b>ONLYOFFICE</b> application.</li>
     </ol>
 
 
     <h2 id="settings" class="copy-link">Configuring Nextcloud ONLYOFFICE integration app</h2>
     <p>
-        In Nextcloud open the <span class="fakelink">~/index.php/settings/admin#onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
+        In Nextcloud open the <span class="fakelink">~/settings/admin/onlyoffice</span> page with administrative settings for <b>ONLYOFFICE</b> section.
         Enter the following address to connect ONLYOFFICE Document Server:
     </p>
     <span class="commandline">https://&lt;documentserver&gt;/</span>
@@ -136,6 +136,16 @@
         That is why all the non-OOXML files by default are opened for viewing only, although there is an option to convert the file in the context menu.
         If you realise the data/formatting loss risks after the conversion, but still want to open non-OOXML files for editing, you can check them in the list in the settings.
         Editing for <em>csv</em> and <em>txt</em> files is available by default.
+    </p>
+
+
+    <h2 id="connection" class="copy-link">Checking the connection</h2>
+    <p>
+        You can check the connection to ONLYOFFICE Document Server by using the following occ command:
+    </p>
+    <span class="commandline">occ onlyoffice:documentserver --check</span>
+    <p>
+        You will see a text either with information about the successful connection or the cause of the error.
     </p>
 
 

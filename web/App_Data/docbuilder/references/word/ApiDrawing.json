@@ -216,6 +216,396 @@
           "optional": false
         }
       ]
+    },
+    "GetParentParagraph": {
+      "memberof": "ApiDrawing",
+      "name": "GetParentParagraph",
+      "description": "<p>Gets the parent paragraph that contains the graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentContentControl": {
+      "memberof": "ApiDrawing",
+      "name": "GetParentContentControl",
+      "description": "<p>Gets the parent content control that contains the graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiBlockLvlSdt",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTable": {
+      "memberof": "ApiDrawing",
+      "name": "GetParentTable",
+      "description": "<p>Gets the parent table that contains the graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTable",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentTableCell": {
+      "memberof": "ApiDrawing",
+      "name": "GetParentTableCell",
+      "description": "<p>Gets the parent table cell that contains the graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTableCell",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Delete": {
+      "memberof": "ApiDrawing",
+      "name": "Delete",
+      "description": "<p>Deletes the graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Copy": {
+      "memberof": "ApiDrawing",
+      "name": "Copy",
+      "description": "<p>Copy the graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDrawing"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "InsertInContentControl": {
+      "memberof": "ApiDrawing",
+      "name": "InsertInContentControl",
+      "description": "<p>Wraps the graphic object with a rich text content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDrawing",
+          "ApiBlockLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nType",
+          "description": "<p>if nType === 1 -&gt; returns ApiBlockLvlSdt, else -&gt; return ApiDrawing</p>",
+          "optional": false
+        }
+      ]
+    },
+    "InsertParagraph": {
+      "memberof": "ApiDrawing",
+      "name": "InsertParagraph",
+      "description": "<p>Inserts a paragraph at the specified position.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph",
+          "ApiDrawing"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string | ApiParagraph",
+          "name": "paragraph",
+          "description": "<p>text or paragraph</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sPosition",
+          "description": "<p>can be &quot;after&quot; or &quot;before&quot;</p>",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "beRNewPara",
+          "description": "<p>if &quot;true&quot; - returns new paragraph, else returns this ApiDrawing.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Select": {
+      "memberof": "ApiDrawing",
+      "name": "Select",
+      "description": "<p>Selects the graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "AddBreak": {
+      "memberof": "ApiDrawing",
+      "name": "AddBreak",
+      "description": "<p>Inserts a break at the specified location in the main document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "breakType",
+          "description": "<p>0 -&gt; page break, 1 -&gt; line break.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "position",
+          "description": "<p>can bet &quot;after&quot; or &quot;before&quot;</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetHorFlip": {
+      "memberof": "ApiDrawing",
+      "name": "SetHorFlip",
+      "description": "<p>Horizontal Reflection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bFlip",
+          "optional": false
+        }
+      ]
+    },
+    "SetVertFlip": {
+      "memberof": "ApiDrawing",
+      "name": "SetVertFlip",
+      "description": "<p>Vertical reflection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bFlip",
+          "optional": false
+        }
+      ]
+    },
+    "ScaleHeight": {
+      "memberof": "ApiDrawing",
+      "name": "ScaleHeight",
+      "description": "<p>Scales the height of the figure using the specified coefficient.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "coefficient",
+          "optional": false
+        }
+      ]
+    },
+    "ScaleWidth": {
+      "memberof": "ApiDrawing",
+      "name": "ScaleWidth",
+      "description": "<p>Scales the width of the graphic object using the specified ratio.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "coefficient",
+          "optional": false
+        }
+      ]
+    },
+    "Fill": {
+      "memberof": "ApiDrawing",
+      "name": "Fill",
+      "description": "<p>Sets the fill formatting properties for the specified graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "optional": false
+        }
+      ]
+    },
+    "SetOutLine": {
+      "memberof": "ApiDrawing",
+      "name": "SetOutLine",
+      "description": "<p>Sets the outline properties for the specified graphic object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "optional": false
+        }
+      ]
+    },
+    "GetNextDrawing": {
+      "memberof": "ApiDrawing",
+      "name": "GetNextDrawing",
+      "description": "<p>Gets the next inline drawing object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDrawing",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevDrawing": {
+      "memberof": "ApiDrawing",
+      "name": "GetPrevDrawing",
+      "description": "<p>Gets the previous inline drawing object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDrawing",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a graphical object.\r\n\t * @constructor\r\n\t */",

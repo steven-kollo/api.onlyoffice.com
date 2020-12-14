@@ -1,5 +1,22 @@
 {
   "methods": {
+    "GetDocument": {
+      "memberof": "Api",
+      "name": "GetDocument",
+      "description": "<p>Get the main document</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocument"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "CreateParagraph": {
       "memberof": "Api",
       "name": "CreateParagraph",
@@ -8,6 +25,23 @@
         "typeofeditors": [
           "CDE",
           "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "CreateRange": {
+      "memberof": "Api",
+      "name": "CreateRange",
+      "description": "<p>Create a new paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
         ]
       },
       "returns": [
@@ -67,6 +101,43 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "CreateHyperlink": {
+      "memberof": "Api",
+      "name": "CreateHyperlink",
+      "description": "<p>Create a new hyperlink text block to be inserted to the current paragraph or table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiHyperlink"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sLink",
+          "description": "<p>link to</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sDisplay",
+          "description": "<p>display text</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sScreenTipText",
+          "description": "<p>ScreenTip text</p>",
+          "optional": false
+        }
+      ]
     },
     "CreateImage": {
       "memberof": "Api",
@@ -133,25 +204,29 @@
           "type": "EMU",
           "name": "nWidth",
           "description": "<p>The shape width in English measure units.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 914400
         },
         {
           "type": "EMU",
           "name": "nHeight",
           "description": "<p>The shape height in English measure units.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 914400
         },
         {
           "type": "ApiFill",
           "name": "oFill",
           "description": "<p>The color or pattern used to fill the shape.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.CreateNoFill()"
         },
         {
           "type": "ApiStroke",
           "name": "oStroke",
           "description": "<p>The stroke used to create the element shadow.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.CreateStroke(0, Api.CreateNoFill())"
         }
       ]
     },
@@ -615,7 +690,11 @@
       "memberof": "Api",
       "name": "CreateInlineLvlSdt",
       "description": "<p>Create a new inline container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiInlineLvlSdt"
@@ -628,7 +707,11 @@
       "memberof": "Api",
       "name": "CreateBlockLvlSdt",
       "description": "<p>Create a new block level container</p>",
-      "tags": {},
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiBlockLvlSdt"
@@ -649,6 +732,209 @@
       "returns": [],
       "see": null,
       "inherits": null
+    },
+    "LoadMailMergeData": {
+      "memberof": "Api",
+      "name": "LoadMailMergeData",
+      "description": "<p>Loads data for the mail merge.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<Array.<String>>",
+          "name": "aList",
+          "description": "<p>mail merge data. The first element of the array is the array with names of the merge fields.\nThe rest of the array elements are arrays with values for the merge fields.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetMailMergeTemplateDocContent": {
+      "memberof": "Api",
+      "name": "GetMailMergeTemplateDocContent",
+      "description": "<p>Gets the mail merge template doc.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetMailMergeReceptionsCount": {
+      "memberof": "Api",
+      "name": "GetMailMergeReceptionsCount",
+      "description": "<p>Gets the mail merge template doc.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ReplaceDocumentContent": {
+      "memberof": "Api",
+      "name": "ReplaceDocumentContent",
+      "description": "<p>Replaces the content of the main document with the another document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiDocumentContent",
+          "name": "oApiDocumentContent",
+          "optional": false
+        }
+      ]
+    },
+    "MailMerge": {
+      "memberof": "Api",
+      "name": "MailMerge",
+      "description": "<p>Starts the mail merge process</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nStartIndex",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nEndIndex",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "bAll",
+          "description": "<p>if true -&gt; be mail merge all recipients</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddComment": {
+      "memberof": "Api",
+      "name": "AddComment",
+      "description": "<p>Adds a comment to the desired element or array of elements.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array | ApiParagraph | ApiDocument",
+          "name": "oElement",
+          "description": "<p>may be Document, Paragraph or Run[]</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "Comment",
+          "description": "<p>comment</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "Autor",
+          "description": "<p>autor's name (not obligatory)</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetFirstRunInArray": {
+      "memberof": "Api",
+      "name": "GetFirstRunInArray",
+      "description": "<p>Get the Run that is first in position</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRun",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array",
+          "name": "Runs",
+          "description": "<p>Array of Runs</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetLastRunInArray": {
+      "memberof": "Api",
+      "name": "GetLastRunInArray",
+      "description": "<p>Get the Run that is last in position</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRun",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array",
+          "name": "Runs",
+          "description": "<p>Array of Runs</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\r\n\t * Base class\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",

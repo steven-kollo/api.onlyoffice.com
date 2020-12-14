@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.Controllers
     {
         private readonly string[] _actionMap = new[]
             {
+                "ActionLink",
                 "Advanced",
                 "Alfresco",
                 "Basic",
@@ -76,18 +77,25 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/General",
                 "FAQ/Integrating",
                 "FAQ/ManagingVersions",
+                "FAQ/Renaming",
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
                 "History",
                 "HowItWorks",
                 "HumHub",
+                "InlineEditors",
                 "Liferay",
+                "Mentions",
                 "Methods",
                 "Nextcloud",
+                "Nuxeo",
                 "Open",
                 "OwnCloud",
+                "Plone",
                 "Plugins",
+                "Rename",
+                "Review",
                 "Save",
                 "Security",
                 "SharePoint",
@@ -157,6 +165,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Basic");
         }
 
+
+        public ActionResult ActionLink()
+        {
+            return View();
+        }
 
         public ActionResult Alfresco()
         {
@@ -275,7 +288,17 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult InlineEditors()
+        {
+            return View();
+        }
+        
         public ActionResult Liferay()
+        {
+            return View();
+        }
+
+        public ActionResult Mentions()
         {
             return View();
         }
@@ -290,6 +313,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Nuxeo()
+        {
+            return View();
+        }
+
         public ActionResult Open()
         {
             return View();
@@ -300,7 +328,22 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Plone()
+        {
+            return View();
+        }
+
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult Rename()
+        {
+            return View();
+        }
+
+        public ActionResult Review()
         {
             return View();
         }

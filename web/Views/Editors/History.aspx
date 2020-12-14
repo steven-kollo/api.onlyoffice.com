@@ -124,10 +124,10 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "changes": changes,
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
@@ -149,6 +149,8 @@ docEditor.refreshHistory({
     ],
 });
 </pre>
+            <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
         </li>
         <li>
             <p>
@@ -168,7 +170,7 @@ docEditor.setHistoryData({
     "version": 2
 });
 </pre>
-            <div class="note">
+            <div id="changesurl-cors" class="note">
                 The <em>changesurl</em> request is made in the browser from the added iframe with the <b>documentserver</b> domain, where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
                 For its correct work the cross-origin HTTP requests must be allowed (CORS).
                 This can be achieved using the <em>Access-Control-Allow-Origin</em> header.

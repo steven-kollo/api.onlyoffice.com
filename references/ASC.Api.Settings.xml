@@ -299,22 +299,22 @@
             </short>
             <returns>Portal logo image URL</returns>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettings(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}})">
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettings(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettingsFromFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettingsFromFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelSizes">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogos(System.Boolean)">
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogos(System.Boolean,System.Boolean)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText">
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText(System.Boolean)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelOptions">
+        <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelOptions(System.Boolean)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetIpRestrictions">
@@ -379,6 +379,24 @@
             </summary>
             <returns>Login url</returns>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TelegramLink">
+            <visible>false</visible>
+            <summary>
+            Gets a link that will connect TelegramBot to your account
+            </summary>
+            <returns>url</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TelegramIsConnected">
+            <summary>
+            Checks if user has connected TelegramBot
+            </summary>
+            <returns>0 - not connected, 1 - connected, 2 - awaiting confirmation</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.TelegramDisconnect">
+            <summary>
+            Unlinks TelegramBot from your account
+            </summary>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CloseWelcomePopup">
             <visible>false</visible>
         </member>
@@ -436,7 +454,7 @@
             <param name="show">show email activation panel for user</param>
             <returns></returns>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetCompanyWhiteLabelSettings">
+        <member name="M:ASC.Api.Settings.SettingsApi.GetLicensorData">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSpaceUsageStatistics(System.Guid)">
@@ -489,6 +507,60 @@
             Get Storage
             </summary>
             <returns>Consumer</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetTenantControlPanelSettings">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveCompanyWhiteLabelSettings(ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCompanyWhiteLabelSettings">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.DeleteCompanyWhiteLabelSettings">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveAdditionalWhiteLabelSettings(ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetAdditionalWhiteLabelSettings">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.DeleteAdditionalWhiteLabelSettings">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SaveMailWhiteLabelSettings(ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.UpdateMailWhiteLabelSettings(System.Boolean)">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetMailWhiteLabelSettings">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.DeleteMailWhiteLabelSettings">
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetStorageEncryptionSettings">
+            <summary>
+            Get storage encryption settings
+            </summary>
+            <returns>EncryptionSettings</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetStorageEncryptionProgress">
+            <summary>
+            Get storage encryption progress
+            </summary>
+            <returns>Progress</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.StartStorageEncryption(System.Boolean)">
+            <summary>
+            Start storage encryption process
+            </summary>
+            <returns></returns>
+            <visible>false</visible>
         </member>
     </members>
 </doc>

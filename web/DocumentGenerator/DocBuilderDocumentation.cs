@@ -362,12 +362,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                     }
                                     else
                                     {
-                                        _logger.InfoFormat("Found example for {0} but the method is missing", ex.Key);
+                                        _logger.InfoFormat("Found example for {0}.{1} but the method is missing", module.Key, ex.Key);
                                     }
                                 }
                                 else
                                 {
-                                    _logger.InfoFormat("Found example for {0} but the class is missing", ex.Key);
+                                    _logger.InfoFormat("Found example for {0}.{1} but the class is missing", module.Key, ex.Key);
                                 }
                             }
                             else
@@ -378,7 +378,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 }
                                 else
                                 {
-                                    _logger.InfoFormat("Found example for {0} but the class is missing", ex.Key);
+                                    _logger.InfoFormat("Found example for {0}.{1} but the class is missing", module.Key, ex.Key);
                                 }
                             }
                         }
