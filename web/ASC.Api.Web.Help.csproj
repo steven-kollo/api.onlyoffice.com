@@ -667,4 +667,6 @@
   <PropertyGroup>
     <PostBuildEvent>if exist "C:\Program Files\Git\bin\git.exe" ("C:\Program Files\Git\bin\git.exe" rev-parse HEAD &gt; "$(ProjectDir)\version.txt")</PostBuildEvent>
   </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets" Condition=" Exists( '$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v11.0\WebApplications\Microsoft.WebApplication.targets' ) " />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets" Condition=" Exists( '$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0\WebApplications\Microsoft.WebApplication.targets' ) " />
 </Project>
