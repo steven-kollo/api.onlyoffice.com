@@ -24,6 +24,14 @@
         <ExampleJson>"some text"</ExampleJson>
       </value>
     </entry>
+	<entry>
+      <key>System.Decimal</key>
+      <value>
+        <Description>decimal</Description>
+        <Example>1.1</Example>
+        <ExampleJson>1.1</ExampleJson>
+      </value>
+    </entry>
     <entry>
       <key>System.Int32</key>
       <value>
@@ -290,6 +298,14 @@
       </value>
     </entry>
 	<entry>
+      <key>ASC.CRM.Core.ContactInfoType</key>
+      <value>
+	  <Description>	Phone, Email, Website, Skype, Twitter, LinkedIn, Facebook, Address, LiveJournal, MySpace, GMail, Blogger, Yahoo, MSN, ICQ, Jabber, AIM, VK</Description>
+		<Example></Example>
+		<ExampleJson>"phone"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
       <key>System.Collections.Generic.IEnumerable{System.Int32}</key>
       <value>
 	  <Description>Collection of numbers</Description>
@@ -303,8 +319,83 @@
       <key>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}}</key>
       <value>
 	  <Description>Dictionary(key:int, value:string)</Description>
+		<Example>[{"Key": 0,"Value": "some text"}]</Example>
+		<ExampleJson>[
+    {
+      "Key": 0,
+      "Value": "some text"
+    }
+  ]</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}}</key>
+      <value>
+	  <Description>Dictionary(key:string, value:string)</Description>
+		<Example>[{"Key": "some text","Value": "some text"}]</Example>
+		<ExampleJson>[
+    {
+      "Key": "some text",
+      "Value": "some text"
+    }
+  ]</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.CRM.Core.ContactListViewType</key>
+      <value>
+	  <Description>All, Company, Person, WithOpportunity</Description>
 		<Example></Example>
-		<ExampleJson></ExampleJson>
+		<ExampleJson>"da"</ExampleJson>
+      </value>
+    </entry>
+		<entry>
+      <key>System.Nullable{System.Guid}</key>
+      <value>
+	  <Description>guid</Description>
+		<Example>9924256A-739C-462b-AF15-E652A3B1B6EB</Example>
+		<ExampleJson>"9924256A-739C-462b-AF15-E652A3B1B6EB"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>System.Nullable{ASC.CRM.Core.ContactInfoType}</key>
+      <value>
+	  <Description>Phone, Email, Website, Skype, Twitter, LinkedIn, Facebook, Address, LiveJournal, MySpace, GMail, Blogger, Yahoo, MSN, ICQ, Jabber, AIM, VK</Description>
+		<Example>Phone</Example>
+		<ExampleJson>"phone"</ExampleJson>
+      </value>
+    </entry>
+		<entry>
+      <key>ASC.Api.CRM.Wrappers.Address</key>
+      <value>
+	  <Description>ASC.Api.CRM.Wrappers.Address</Description>
+		<Example></Example>
+		<ExampleJson>{}</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Web.CRM.Core.Enums.ShareType</key>
+      <value>
+	  <Description>None, ReadWrite, Read</Description>
+		<Example>none</Example>
+		<ExampleJson>"none"</ExampleJson>
+      </value>
+    </entry>
+		<entry>
+      <key>System.Collections.Generic.List{ASC.Api.CRM.Wrappers.ContactInfoWrapper}</key>
+      <value>
+	  <Description>list of ContactInfoWrapper</Description>
+		<Example></Example>
+		<ExampleJson>[
+    {
+      "id": 0,
+      "InfoType": 0,
+      "Category": 0,
+      "Data": "support@onlyoffice.com",
+      "CategoryName": "Home",
+      "IsPrimary": false
+    }
+  ]</ExampleJson>
       </value>
     </entry>
   </Names>

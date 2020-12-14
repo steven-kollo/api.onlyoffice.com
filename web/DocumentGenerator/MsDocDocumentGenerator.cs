@@ -455,7 +455,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             
 
-            var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".")).ToList();
+            var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".") || mem.Attribute("name").ValueOrNull().Contains("F:" + type + ".")).ToList();
             var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + type )).SingleOrDefault();
 
             if (inherited != null && inherited.Element("inherited") != null)
@@ -498,6 +498,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     msdoc.Outputs.Add("text/xml", text);
                 }
             }
+            if(msdoc.Outputs == null)
+            {
+
+            }
             return msdoc;
         }
 
@@ -507,19 +511,24 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 int resultInt;
                 bool resultBool;
+                double resultdouble;
                 object result;
                 var defaultName = member.Attribute("name").ValueOrNull().Split('.').Last();
                 if (member.Element("example") != null)
                 {
                     
                     var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
-                    if (Boolean.TryParse(member.Element("example").ValueOrNull(), out resultBool))
+                if (Boolean.TryParse(member.Element("example").ValueOrNull(), out resultBool))
+                {
+                    result = resultBool;
+                }
+                else if (member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out resultInt))
+                {
+                    result = resultInt;
+                }
+                else if (member.Element("example").Attribute("type").ValueOrNull() == "double" && Double.TryParse(member.Element("example").ValueOrNull().Replace('.',','), out resultdouble))
                     {
-                        result = resultBool;
-                    } 
-                    else if(member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out resultInt))
-                    {
-                        result = resultInt;
+                        result = resultdouble;
                     }
                     else
                     {
@@ -593,7 +602,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
-            var needMembers1 = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".")).ToList();
+            var needMembers1 = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".") || mem.Attribute("name").ValueOrNull().Contains("F:" + type + ".")).ToList();
             var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + type)).SingleOrDefault();
 
             if (inherited != null && inherited.Element("inherited") != null)

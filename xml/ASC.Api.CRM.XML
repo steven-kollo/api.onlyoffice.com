@@ -6,6 +6,9 @@
     <members>
         <member name="T:ASC.Api.CRM.CRMApi">
             <name>crm</name>
+            <name>crm</name>
+            <name>crm</name>
+            <name>crm</name>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCurrencyRates">
             <summary>
@@ -13,9 +16,13 @@
             </summary>
             <short>Get currency rates list</short> 
             <category>Common</category>
-            <returns>
+            <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM">
                List of currency rates
             </returns>
+            <path>api/2.0/crm/currency/rates</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCurrencyRate(System.Int32)">
             <summary>
@@ -23,10 +30,14 @@
             </summary>
             <short>Get currency rate</short> 
             <category>Common</category>
-            <returns>
+            <param method="url" name="id"></param>
+            <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM">
                Currency rate
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/currency/rates/{id}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCurrencyRate(System.String,System.String)">
             <summary>
@@ -34,34 +45,58 @@
             </summary>
             <short>Get currency rate</short> 
             <category>Common</category>
-            <returns>
+            <param method="url" name="fromCurrency"></param>
+            <param method="url" name="toCurrency"></param>    
+            <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM">
                Currency rate
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/currency/rates/{fromCurrency}/{toCurrency}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCurrencyRate(System.String,System.String,System.Decimal)">
             <summary>
                Create new currency rate object
             </summary>
+            <param name="fromCurrency"></param>
+            <param name="toCurrency"></param>
+            <param name="rate"></param>
             <short></short>
             <category>Common</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM"></returns>
+            <path>api/2.0/crm/currency/rates</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCurrencyRate(System.Int32,System.String,System.String,System.Decimal)">
             <summary>
                Update currency rate object
             </summary>
             <short></short>
+            <param method="url" name="id"></param>
+            <param name="fromCurrency"></param>
+            <param name="toCurrency"></param>
+            <param name="rate"></param>
             <category>Common</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM"></returns>
+            <path>api/2.0/crm/currency/rates/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetCurrencyRates(System.String,System.Collections.Generic.List{ASC.CRM.Core.CurrencyRate})">
             <summary>
                Set currency rates
             </summary>
             <short></short>
+            <param name="currency"></param>
+            <param name="rates"></param>
             <category>Common</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM"></returns>
+            <path>api/2.0/crm/currency/setrates</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddCurrencyRates(System.Collections.Generic.List{ASC.CRM.Core.CurrencyRate})">
             <summary>
@@ -69,15 +104,23 @@
             </summary>
             <short></short>
             <category>Common</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM"></returns>
+            <path>api/2.0/crm/currency/addrates</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCurrencyRate(System.Int32)">
             <summary>
                Delete currency rate object
             </summary>
+            <param method="url" name="id"></param>
             <short></short>
             <category>Common</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM"></returns>
+            <path>api/2.0/crm/currency/rates/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceByID(System.Int32)">
             <summary>
@@ -797,7 +840,7 @@
             <summary>
               Returns the list of all available contact categories
             </summary>
-            <param name="infoType">
+            <param method="url" name="infoType">
                Contact information type
             </param>
             <short>Get all categories</short> 
@@ -805,6 +848,10 @@
             <returns>
               List of all available contact categories
             </returns>
+            <path>api/2.0/crm/contact/data/{infoType}/category</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactInfoType">
             <summary>
@@ -813,62 +860,79 @@
             <short>Get all contact info types</short> 
             <category>Contacts</category>
             <returns></returns>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
+            <path>api/2.0/crm/contact/data/infoType</path>
+            <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactInfo(System.Int32)">
             <summary>
                Returns the detailed information for the contact
             </summary>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <short>Get contact information</short> 
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactInfoWrapper, ASC.Api.CRM">
               Contact information
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/data</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactInfoByID(System.Int32,System.Int32)">
              <summary>
                Returns the detailed list of all information available for the contact with the ID specified in the request
              </summary>
-             <param name="contactid">Contact ID</param>
-             <param name="id">Contact information ID</param>
+             <param method="url" name="contactid">Contact ID</param>
+             <param method="url" name="id">Contact information ID</param>
              <short>Get contact info</short> 
              <category>Contacts</category>
-             <returns>Contact information</returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactInfoWrapper, ASC.Api.CRM">Contact information</returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/contact/{contactid}/data/{id}</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactInfo(System.Int32,ASC.CRM.Core.ContactInfoType,System.String,System.Boolean,System.String)">
              <summary>
                 Adds the information with the parameters specified in the request to the contact with the selected ID
              </summary>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <param name="infoType">Contact information type</param>
             <param name="data">Data</param>
             <param name="isPrimary">Contact importance: primary or not</param>
-            <param   name="category">Category</param>
+            <param name="category">Category</param>
             <short> Add contact info</short> 
             <category>Contacts</category>
              <seealso cref="M:ASC.Api.CRM.CRMApi.GetContactInfoType"/>
              <seealso cref="M:ASC.Api.CRM.CRMApi.GetContactInfoCategory(ASC.CRM.Core.ContactInfoType)"/>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactInfoWrapper,  ASC.Api.CRM">
                 Contact information
              </returns> 
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/contact/{contactid}/data</path>
+            <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactInfoAddress(System.Int32,ASC.Api.CRM.Wrappers.Address)">
             <summary>
                Adds the address information to the contact with the selected ID
             </summary>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <param name="address">Address data</param>
             <short>Add address info</short> 
             <category>Contacts</category>
             <seealso cref="M:ASC.Api.CRM.CRMApi.GetContactInfoType"/>
             <seealso cref="M:ASC.Api.CRM.CRMApi.GetContactInfoCategory(ASC.CRM.Core.ContactInfoType)"/>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactInfoWrapper, ASC.Api.CRM">
                Contact information
             </returns> 
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/contact/{contactid}/addressdata</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateBatchContactInfo(System.Int32,System.Collections.Generic.IEnumerable{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
              <summary>
@@ -894,8 +958,8 @@
              <summary>
                Updates the information with the parameters specified in the request for the contact with the selected ID
              </summary>
-            <param name="id">Contact information record ID</param>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="id">Contact information record ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <param optional="true" name="infoType">Contact information type</param>
             <param name="data">Data</param>
             <param optional="true" name="isPrimary">Contact importance: primary or not</param>
@@ -903,24 +967,30 @@
             <short>Update contact info</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactInfoWrapper, ASC.Api.CRM">
                Contact information
              </returns>
+             <path>api/2.0/crm/contact/{contactid}/data/{id}</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactInfoAddress(System.Int32,System.Int32,ASC.Api.CRM.Wrappers.Address)">
             <summary>
               Updates the address information with the parameters specified in the request for the contact with the selected ID
             </summary>
-            <param name="id">Contact information record ID</param>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="id">Contact information record ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <param name="address">Address data</param>
             <short>Update address info</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactInfoWrapper, ASC.Api.CRM">
               Contact information
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/addressdata/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateBatchContactInfo(System.Int32,System.Collections.Generic.IEnumerable{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
              <summary>
@@ -944,38 +1014,48 @@
             <summary>
                Returns the detailed information for the contact with the selected ID by the information type specified in the request
             </summary>
-            <param name="contactid">Contact ID</param>
-            <param name="infoType">Contact information type</param>
+            <param method="url" name="contactid">Contact ID</param>
+            <param method="url" name="infoType">Contact information type</param>
             <short>Get contact information by type</short> 
             <category>Contacts</category>
             <returns>
               Contact information
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/data/{infoType}</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactInfo(System.Int32,System.Int32)">
             <summary>
               Deletes the contact information for the contact with the ID specified in the request
             </summary>
-            <param name="contactid">Contact ID</param>
-            <param name="id">Contact information record ID</param>
+            <param method="url" name="contactid">Contact ID</param>
+            <param method="url" name="id">Contact information record ID</param>
             <short>Delete contact info</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactInfoWrapper, ASC.Api.CRM">
               Contact information
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/data/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactByID(System.Int32)">
             <summary>
                Returns the detailed information about the contact with the ID specified in the request
             </summary>
-            <param name="contactid">Contact ID</param>
-            <returns>Contact</returns>
+            <param method="url" name="contactid">Contact ID</param>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">Contact</returns>
             <short>Get contact by ID</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/contact/{contactid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactsByProjectID(System.Int32)">
              <summary>
@@ -984,94 +1064,118 @@
              <short>
               Get contacts by project ID
              </short>
-             <param name="projectid">Project ID</param>
+             <param method="url" name="projectid">Project ID</param>
              <category>Contacts</category>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                  Contact list
              </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/contact/project/{projectid}</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetRelativeContactToProject(System.Int32,System.Int32)">
             <summary>
              Links the selected contact to the project with the ID specified in the request
             </summary>
-            <param name="contactid">Contact ID</param>
-            <param name="projectid">Project ID</param>
+            <param method="url" name="contactid">Contact ID</param>
+            <param method="url" name="projectid">Project ID</param>
             <category>Contacts</category>
             <short>Link contact with project</short> 
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>Contact Info</returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">Contact Info</returns>
+            <path>api/2.0/crm/contact/{contactid}/project/{projectid}</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetRelativeContactListToProject(System.Collections.Generic.IEnumerable{System.Int32},System.Int32)">
             <summary>
              Links the selected contacts to the project with the ID specified in the request
             </summary>
             <param name="contactid">Contact IDs array</param>
-            <param name="projectid">Project ID</param>
+            <param method="url" name="projectid">Project ID</param>
             <category>Contacts</category>
             <short>Link contact list with project</short> 
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                Contact list
             </returns>
+            <path>api/2.0/crm/contact/project/{projectid}</path>
+            <httpMethod>POST</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.RemoveRelativeContactToProject(System.Int32,System.Int32)">
             <summary>
              Removes the link with the selected project from the contact with the ID specified in the request
             </summary>
-            <param name="contactid">Contact ID</param>
-            <param name="projectid">Project ID</param>
+            <param method="url" name="contactid">Contact ID</param>
+            <param method="url" name="projectid">Project ID</param>
             <category>Contacts</category>
             <short>Remove contact from project</short> 
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM">
                Contact info
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/project/{projectid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddDealToContact(System.Int32,System.Int32)">
             <summary>
               Adds the selected opportunity to the contact with the ID specified in the request. The same as AddMemberToDeal
             </summary>
-            <param name="opportunityid">Opportunity ID</param>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="opportunityid">Opportunity ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <short>Add contact opportunity</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
                Opportunity
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/opportunity/{opportunityid}</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteDealFromContact(System.Int32,System.Int32)">
             <summary>
-              Deletes the selected opportunity from the contact with the ID specified in the request
+                Deletes the selected opportunity from the contact with the ID specified in the request
             </summary>
-            <param name="opportunityid">Opportunity ID</param>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="opportunityid">Opportunity ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <short>Delete contact opportunity</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
                Opportunity
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/opportunity/{opportunityid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContacts(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},ASC.CRM.Core.ContactListViewType,System.Nullable{System.Guid},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
             <summary>
                Returns the list of all contacts in the CRM module matching the parameters specified in the request
             </summary>
-            <param optional="true" name="tags">Tag</param>
-            <param optional="true" name="contactStage">Contact stage ID (warmth)</param>
-            <param optional="true" name="contactType">Contact type ID</param>
-            <param optional="true" name="contactListView" remark="Allowed values: Company, Person, WithOpportunity"></param>
-            <param optional="true" name="fromDate">Start date</param>
-            <param optional="true" name="toDate">End date</param>
-            <param optional="true" name="responsibleid">Responsible ID</param>
-            <param optional="true" name="isShared">Responsible ID</param>
+            <param method="url" optional="true" name="tags">Tag</param>
+            <param method="url" optional="true" name="contactStage">Contact stage ID (warmth)</param>
+            <param method="url" optional="true" name="contactType">Contact type ID</param>
+            <param method="url" optional="true" name="contactListView" remark="Allowed values: Company, Person, WithOpportunity"></param>
+            <param method="url" optional="true" name="responsibleid">Responsible ID</param>
+            <param method="url" optional="true" name="isShared">Responsible ID</param>
+             <param method="url" optional="true" name="fromDate">Start date</param>
+            <param method="url" optional="true" name="toDate">End date</param>
             <short>Get contact list</short> 
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                Contact list
             </returns>
+            <path>api/2.0/crm/contact/filter</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SearchContactsByEmail(System.String,System.Int32)">
             <summary>
@@ -1133,49 +1237,63 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <short>Delete the list of all contacts </short> 
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM">
               Contact list
             </returns>
+            <path>api/2.0/crm/contact/filter</path>
+            <httpMethod>DELETE</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetPeopleFromCompany(System.Int32)">
             <summary>
                Returns the list of all the persons linked to the company with the ID specified in the request
             </summary>
-            <param name="companyid">Company ID</param>
+            <param method="url" name="companyid">Company ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <short>Get company linked persons list</short> 
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
               Linked persons
             </returns>
+            <path>api/2.0/crm/contact/company/{companyid}/person</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddPeopleToCompany(System.Int32,System.Int32)">
             <summary>
               Adds the selected person to the company with the ID specified in the request
             </summary>
-            <param optional="true"  name="companyid">Company ID</param>
+            <param method="url" optional="true"  name="companyid">Company ID</param>
             <param optional="true" name="personid">Person ID</param>
             <short>Add person to company</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.PersonWrapper, ASC.Api.CRM">
                Person
             </returns>
+            <path>api/2.0/crm/contact/company/{companyid}/person</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeletePeopleFromCompany(System.Int32,System.Int32)">
             <summary>
               Deletes the selected person from the company with the ID specified in the request
             </summary>
-            <param optional="true"  name="companyid">Company ID</param>
+            <param method="url" optional="true"  name="companyid">Company ID</param>
             <param optional="true" name="personid">Person ID</param>
             <short>Delete person from company</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.PersonWrapper, ASC.Api.CRM">
                Person
             </returns>
+            <path>api/2.0/crm/contact/company/{companyid}/person</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreatePerson(System.String,System.String,System.String,System.Int32,System.String,ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
@@ -1192,14 +1310,17 @@
             <param optional="true" name="photo">Contact photo (upload using multipart/form-data)</param>
             <short>Create person</short> 
             <category>Contacts</category>
-            <returns>Person</returns>
+            <returns type="ASC.Api.CRM.Wrappers.PersonWrapper, ASC.Api.CRM">Person</returns>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <path>api/2.0/crm/contact/person</path>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ChangeContactPhoto(System.Int32,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
                Changes the photo for the contact with the ID specified in the request
             </summary>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <param name="photo">Contact photo (upload using multipart/form-data)</param>
             <short> Change contact photo</short> 
             <category>Contacts</category>
@@ -1207,12 +1328,15 @@
             <returns>
                Path to contact photo
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/changephoto</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ChangeContactPhoto(System.Int32,System.String)">
             <summary>
                Changes the photo for the contact with the ID specified in the request
             </summary>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <param name="photourl">contact photo url</param>
             <short> Change contact photo</short> 
             <category>Contacts</category>
@@ -1220,6 +1344,9 @@
             <returns>
                Path to contact photo
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/changephotobyurl</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.MergeContacts(System.Int32,System.Int32)">
             <summary>
@@ -1232,15 +1359,18 @@
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                Contact
             </returns>
+            <path>api/2.0/crm/contact/merge</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdatePerson(System.Int32,System.String,System.String,System.String,System.Int32,System.String,ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
                Updates the selected person with the parameters (first name, last name, description, etc.) specified in the request
             </summary>
-            <param name="personid">Person ID</param>
+            <param method="url" name="personid">Person ID</param>
             <param name="firstName">First name</param>
             <param name="lastName">Last name</param>
             <param optional="true"  name="jobTitle">Post</param>
@@ -1252,15 +1382,18 @@
             <param optional="true" name="photo">Contact photo (upload using multipart/form-data)</param>
             <short>Update person</short> 
             <category>Contacts</category>
-            <returns>Person</returns>
+            <returns type="ASC.Api.CRM.Wrappers.PersonWrapper, ASC.Api.CRM">Person</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/contact/person/{personid}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCompany(System.String,System.String,System.Collections.Generic.IEnumerable{System.Int32},ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
                Creates the company with the parameters specified in the request
             </summary>
-            <param  name="companyName">Company name</param>
+            <param name="companyName">Company name</param>
             <param optional="true" name="about">Company description text</param>
             <param optional="true" name="personList">Linked person list</param>
             <param name="shareType">Company privacy: 0 - not shared, 1 - shared for read/write, 2 - shared for read only</param>
@@ -1269,7 +1402,10 @@
             <param optional="true" name="photo">Contact photo (upload using multipart/form-data)</param>
             <short>Create company</short> 
             <category>Contacts</category>
-            <returns>Company</returns>
+            <returns type="ASC.Api.CRM.Wrappers.CompanyWrapper, ASC.Api.CRM">Company</returns>
+            <path>api/2.0/crm/contact/company</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCompany(System.Collections.Generic.IEnumerable{System.String})">
@@ -1281,8 +1417,12 @@
             </short>
             <param name="companyName">Company name</param>
             <category>Contacts</category>
-            <returns>Contact list</returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM">Contact list</returns>
+            <path>api/2.0/crm/contact/company/quick</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreatePerson(System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.String}})">
             <summary>
@@ -1299,15 +1439,19 @@
             ]]>
             </remarks>
             <category>Contacts</category>
-            <returns>Contact list</returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM">Contact list</returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/contact/person/quick</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCompany(System.Int32,System.String,System.String,ASC.Web.CRM.Core.Enums.ShareType,System.Collections.Generic.IEnumerable{System.Guid},System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}})">
             <summary>
                Updates the selected company with the parameters specified in the request
             </summary>
-            <param name="companyid">Company ID</param>
-            <param  name="companyName">Company name</param>
+            <param method="url" name="companyid">Company ID</param>
+            <param name="companyName">Company name</param>
             <param optional="true" name="about">Company description text</param>
             <param name="shareType">Company privacy: 0 - not shared, 1 - shared for read/write, 2 - shared for read only</param>
             <param optional="true" name="managerList">List of company managers</param>
@@ -1315,51 +1459,63 @@
             <short>Update company</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CompanyWrapper, ASC.Api.CRM">
               Company
             </returns>
+            <path>api/2.0/crm/contact/company/{companyid}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactStatus(System.Int32,System.Int32)">
             <summary>
                Updates the selected contact status
             </summary>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <param  name="contactStatusid">Contact status ID</param>
             <short>Update status in contact by id</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
               Company
             </returns>
+            <path>api/2.0/crm/contact/{contactid}/status</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCompanyAndParticipantsStatus(System.Int32,System.Int32)">
             <summary>
                Updates status of the selected company and all its participants
             </summary>
-            <param name="companyid">Company ID</param>
+            <param method="url" name="companyid">Company ID</param>
             <param  name="contactStatusid">Contact status ID</param>
             <short>Update company and participants status</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
               Company
             </returns>
+            <path>api/2.0/crm/contact/company/{companyid}/status</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdatePersonAndItsCompanyStatus(System.Int32,System.Int32)">
             <summary>
                Updates status of the selected person, related company and all its participants
             </summary>
-            <param name="personid">Person ID</param>
+            <param method="url" name="personid">Person ID</param>
             <param  name="contactStatusid">Contact status ID</param>
             <short>Update person, related company and participants status</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
               Person
             </returns>
+            <path>api/2.0/crm/contact/person/{personid}/status</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactAccessList(System.Int32)">
              <summary>
@@ -1367,16 +1523,21 @@
              </summary>
              <short>Get contact access rights</short> 
              <category>Contacts</category>
+             <param method="url" name="contactid"></param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
-             <returns>User list</returns>
+             <returns type="ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee">User list</returns>
+             <path>api/2.0/crm/contact/{contactid}/access</path>
+             <httpMethod>GET</httpMethod>
+             <collection>list</collection>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToContact(System.Int32,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
              <summary>
                Sets access rights for other users to the contact with the ID specified in the request
              </summary>
-             <param name="contactid">Contact ID</param>
+             <param method="url" name="contactid">Contact ID</param>
              <param name="isShared">Contact privacy: private or not</param>
              <param name="managerList">List of managers</param>
              <short>Set contact access rights</short> 
@@ -1384,9 +1545,12 @@
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                Contact
              </returns>
+             <path>api/2.0/crm/contact/{contactid}/access</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchContact(System.Collections.Generic.IEnumerable{System.Int32},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -1399,29 +1563,37 @@
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
               Contact list
             </returns>
+            <path>api/2.0/crm/contact/access</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchContact(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},ASC.CRM.Core.ContactListViewType,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
               Sets access rights for the selected user to the list of contacts with the parameters specified in the request
             </summary>
-            <param name="isPrivate">Contact privacy: private or not</param>
-            <param name="managerList">List of managers</param>
             <param optional="true" name="tags">Tag</param>
             <param optional="true" name="contactStage">Contact stage ID (warmth)</param>
             <param optional="true" name="contactType">Contact type ID</param>
             <param optional="true" name="contactListView" remark="Allowed values: Company, Person, WithOpportunity"></param>
             <param optional="true" name="fromDate">Start date</param>
             <param optional="true" name="toDate">End date</param>
+            <param name="isPrivate">Contact privacy: private or not</param>
+            <param name="managerList">List of managers</param>
             <short>Set contact access rights</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
               Contact list
             </returns>
+            <path>api/2.0/crm/contact/filter/access</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContact(System.Int32)">
             <summary>
@@ -1429,12 +1601,15 @@
             </summary>
             <short>Delete contact</short> 
             <category>Contacts</category>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
               Contact
             </returns>
+            <path>api/2.0/crm/contact/{contactid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchContacts(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -1445,9 +1620,13 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <short>Delete contact group</short> 
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM">
               Contact list
             </returns>
+            <path>api/2.0/crm/contact</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactsByPrefix(System.String,System.Int32,ASC.CRM.Core.EntityType,System.Int32)">
             <summary>
@@ -1467,49 +1646,68 @@
             <summary>
                Returns the list contacts in the CRM module with contact information
             </summary>
-            <param optional="false" name="infoType">Contact information type</param>
-            <param optional="false" name="data">Data</param>
-            <param optional="true" name="category">Category</param>
-            <param optional="true" name="isPrimary">Contact importance: primary or not</param>
+            <param method="url" optional="false" name="infoType">Contact information type</param>
+            <param method="url" optional="false" name="data">Data</param>
+            <param method="url" optional="true" name="category">Category</param>
+            <param method="url" optional="true" name="isPrimary">Contact importance: primary or not</param>
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                Contact list
             </returns>
+            <path>api/2.0/crm/contact/bycontactinfo</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetUserTweets(System.Int32,System.Int32)">
             <summary>
             
             </summary>
-            <param name="contactid"></param>
-            <param name="count"></param>
+            <param method="url" name="contactid"></param>
+            <param method="url" name="count"></param>
             <category>Contacts</category>
-            <returns></returns>
+            <returns type="ASC.Thrdparty.Message, ASC.Thrdparty"></returns>
+            <path>api/2.0/crm/contact/{contactid}/tweets</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.FindTwitterProfiles(System.String)">
             <summary>
             
             </summary>
-            <param name="searchText"></param>
+            <param method="url" name="searchText"></param>
             <category>Contacts</category>
-            <returns></returns>
+            <returns type="ASC.Thrdparty.Twitter.TwitterUserInfo, ASC.Thrdparty"></returns>
+            <path>api/2.0/crm/contact/twitterprofile</path>
+            <httpMethod>GET</httpMethod>
+            <collection>List</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactAvatar(System.Int32,System.String,System.Boolean)">
             <summary>
             
             </summary>
-            <param name="contactId"></param>
+            <param method="url" name="contactId"></param>
             <param name="contactType"></param>
             <param name="uploadOnly"></param>
             <category>Contacts</category>
             <returns></returns>
+            <path>api/2.0/crm/contact/{contactid}/avatar</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImages(System.Int32)">
             <summary>
             
             </summary>
-            <param name="contactId"></param>
+            <param method="url" name="contactId"></param>
             <category>Contacts</category>
-            <returns></returns>
+            <returns type="ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription, ASC.Web.CRM"></returns>
+            <path>api/2.0/crm/contact/{contactid}/socialmediaavatar</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactSMImagesByNetworks(System.Collections.Generic.List{ASC.Api.CRM.Wrappers.ContactInfoWrapper})">
             <summary>
@@ -1517,19 +1715,26 @@
             </summary>
             <param name="socialNetworks"></param>
             <category>Contacts</category>
-            <returns></returns>
+            <returns type="ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription, ASC.Web.CRM"></returns>
+            <path>api/2.0/crm/contact/socialmediaavatar</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UploadUserAvatarFromSocialNetwork(System.Int32,ASC.Thrdparty.SocialNetworks,System.String,System.Boolean,System.String)">
             <summary>
             
             </summary>
-            <param name="contactId"></param>
+            <param method="url" name="contactId"></param>
             <param name="socialNetwork"></param>
             <param name="userIdentity"></param>
             <param name="uploadOnly"></param>
             <param name="tmpDirName" visible="false"></param>
             <category>Contacts</category>
-            <returns></returns>
+            <returns type="ASC.Web.CRM.Classes.ContactPhotoManager.PhotoData, ASC.Web.CRM"></returns>
+            <path>api/2.0/crm/contact/{contactid}/avatar</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SendMailSMTPToContacts(System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.Int32},System.String,System.String,System.Boolean)">
             <visible>false</visible>
@@ -2244,19 +2449,21 @@
             <param name="description">Description</param>
             <param name="color">Color</param>
             <param name="sortOrder">Order</param>
-            <returns>Contact status</returns>
              <short>Create contact status</short> 
              <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">
                 Contact status
              </returns>
+             <path>api/2.0/crm/contact/status</path>
+             <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactStatus(System.Int32,System.String,System.String,System.String,System.Int32)">
              <summary>
                Updates the selected contact status with the parameters (title, description, etc.) specified in the request
              </summary>
-            <param name="id">Contact status ID</param>
+            <param method="url" name="id">Contact status ID</param>
             <param name="title">Title</param>
             <param name="description">Description</param>
             <param name="color">Color</param>
@@ -2267,23 +2474,29 @@
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
              <exception cref="T:System.Security.SecurityException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">
                 Contact status
              </returns>
+             <path>api/2.0/crm/contact/status/{id}</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactStatusColor(System.Int32,System.String)">
             <summary>
                Updates the color of the selected contact status with the new color specified in the request
             </summary>
-            <param name="id">Contact status ID</param>
+            <param method="url" name="id">Contact status ID</param>
             <param name="color">Color</param>
             <short>Update contact status color</short> 
             <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">
                Contact status
             </returns>
+            <path>api/2.0/crm/contact/status/{id}/color</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactStatusesOrder(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -2294,12 +2507,16 @@
             </short>
             <param name="titles">Contact status title list</param>
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">
                Contact statuses
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/contact/status/reorder</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactStatus(System.Int32)">
              <summary>
@@ -2307,24 +2524,30 @@
              </summary>
              <short>Delete contact status</short> 
              <category>Contacts</category>
-             <param name="contactStatusid">Contact status ID</param>
+             <param method="url" name="contactStatusid">Contact status ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">
               Contact status
              </returns>
+             <path>api/2.0/crm/contact/status/{contactStatusid}</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactStatusByID(System.Int32)">
              <summary>
                Returns the status of the contact for the ID specified in the request
              </summary>
-             <param name="contactStatusid">Contact status ID</param>
-             <returns>Contact status</returns>
+             <param method="url" name="contactStatusid">Contact status ID</param>
+             <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">Contact status</returns>
              <short>Get contact status</short> 
              <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/contact/status/{contactStatusid}</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactType(System.String,System.Int32)">
              <summary>
@@ -2332,19 +2555,21 @@
              </summary>
             <param name="title">Title</param>
             <param name="sortOrder">Order</param>
-            <returns>Contact type</returns>
              <short>Create contact type</short> 
              <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactTypeWrapper, ASC.Api.CRM">
                 Contact type
              </returns>
+             <path>api/2.0/crm/contact/type</path>
+             <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactType(System.Int32,System.String,System.Int32)">
              <summary>
                Updates the selected contact type with the parameters (title, description, etc.) specified in the request
              </summary>
-            <param name="id">Contact type ID</param>
+            <param method="url" name="id">Contact type ID</param>
             <param name="title">Title</param>
             <param name="sortOrder">Order</param>
             <returns>Contact type</returns>
@@ -2353,9 +2578,12 @@
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
              <exception cref="T:System.Security.SecurityException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactTypeWrapper, ASC.Api.CRM">
                 Contact type
              </returns>
+             <path>api/2.0/crm/contact/type/{id}</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactTypesOrder(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -2366,12 +2594,16 @@
             </short>
             <param name="titles">Contact type title list</param>
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactTypeWrapper, ASC.Api.CRM">
                Contact types
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/contact/type/reorder</path>
+            <httpMethod>PUT</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactType(System.Int32)">
              <summary>
@@ -2379,24 +2611,30 @@
              </summary>
              <short>Delete contact type</short> 
              <category>Contacts</category>
-             <param name="contactTypeid">Contact type ID</param>
+             <param method="url" name="contactTypeid">Contact type ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactTypeWrapper, ASC.Api.CRM">
               Contact type
              </returns>
+             <path>api/2.0/crm/contact/type/{contactTypeid}</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactTypeByID(System.Int32)">
              <summary>
                Returns the type of the contact for the ID specified in the request
              </summary>
-             <param name="contactTypeid">Contact type ID</param>
-             <returns>Contact type</returns>
+             <param method="url" name="contactTypeid">Contact type ID</param>
+             <returns type="ASC.Api.CRM.Wrappers.ContactTypeWrapper, ASC.Api.CRM">Contact type</returns>
              <short>Get contact type</short> 
              <category>Contacts</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/contact/type/{contactTypeid}</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealMilestoneByID(System.Int32)">
              <summary>
@@ -2446,9 +2684,13 @@
             </summary>
             <short>Get all contact statuses</short> 
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactStatusWrapper, ASC.Api.CRM">
                List of all contact statuses
             </returns>
+            <path>api/2.0/crm/contact/status</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactTypes">
             <summary>
@@ -2456,9 +2698,13 @@
             </summary>
             <short>Get all contact types</short> 
             <category>Contacts</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactTypeWrapper, ASC.Api.CRM">
                List of all contact types
             </returns>
+            <path>api/2.0/crm/contact/type</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealMilestones">
             <summary>
@@ -3146,34 +3392,45 @@
             </summary>
             <short>Get currency list</short> 
             <category>Common</category>
-            <returns>
+            <returns type="ASC.Api.CRM.CurrencyInfoWrapper, ASC.Api.CRM">
                List of available currencies
             </returns>
+            <path>api/2.0/crm/settings/currency</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ConvertAmount(System.Decimal,System.String,System.String)">
             <summary>
                 Returns the result of convertation from one currency to another
             </summary>
-            <param name="amount">Amount to convert</param>
-            <param name="fromcurrency">Old currency key</param>
-            <param name="tocurrency">New currency key</param>
+            <param method="url" name="amount">Amount to convert</param>
+            <param method="url" name="fromcurrency">Old currency key</param>
+            <param method="url" name="tocurrency">New currency key</param>
             <short>Get the result of convertation</short> 
             <category>Common</category>
             <returns>
                Decimal result of convertation
             </returns>
+            <path>api/2.0/crm/settings/currency/convert</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetSummaryTable(System.String)">
             <summary>
                 Returns the summary table with rates for selected currency
             </summary>
-            <param name="currency" remark="Allowed values: EUR, RUB etc. You can get the whole list of available currencies by api">Currency (Abbreviation)</param>
+            <param method="url" name="currency" remark="Allowed values: EUR, RUB etc. You can get the whole list of available currencies by api">Currency (Abbreviation)</param>
             <short>Get the summary table</short> 
             <category>Common</category>
-            <returns>
+            <returns type = "ASC.Api.CRM.CurrencyRateInfoWrapper, ASC.Api.CRM">
                Dictionary of currencies and rates
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/settings/currency/summarytable</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCRMContactStatusSettings(System.Nullable{System.Boolean})">
             <summary>
@@ -3186,6 +3443,9 @@
                ChangeContactStatusGroupAuto setting value (true, false or null)
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/contact/status/settings</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCRMWriteMailToHistorySettings(System.Boolean)">
             <summary>
@@ -3198,6 +3458,9 @@
                WriteMailToHistoryAuto setting value (true or false)
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/contact/mailtohistory/settings</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCRMContactTagSettings(System.Nullable{System.Boolean})">
             <summary>
@@ -3210,6 +3473,9 @@
                AddTagToContactGroupAuto setting value (true, false or null)
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/contact/tag/settings</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetIsPortalConfigured(System.Nullable{System.Boolean},System.Nullable{System.Guid})">
             <summary>
@@ -3220,6 +3486,11 @@
             <returns>
                IsConfiguredPortal setting value (true or false)
             </returns>
+            <param name="configured"></param>
+            <param name="webFormKey"></param>
+            <path>api/2.0/crm/settings</path>
+            <httpMethod>PUR</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsCompanyName(System.String)">
             <summary>
@@ -3274,6 +3545,9 @@
             <category>Common</category>
             <returns>Web form key</returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/settings/webformkey/change</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCRMCurrency(System.String)">
             <summary>
@@ -3282,9 +3556,12 @@
             <param name="currency" remark="Allowed values: EUR, RUB etc. You can get the whole list of available currencies by api">Currency (Abbreviation)</param>
             <short>Change currency</short>
             <category>Common</category>
-            <returns>currency</returns>
+            <returns type="ASC.Api.CRM.CurrencyInfoWrapper, ASC.Api.CRM">currency</returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/settings/currency</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.StartImportFromCSV(System.String,System.String,System.String)">
             <visible>false</visible>
@@ -3649,14 +3926,38 @@
             <order>5</order>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.PersonWrapper">
-            <summary>
-              Person
-            </summary>
+             <summary>
+               Person
+             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.PersonWrapper.FirstName">
+            <example>Tadjeddine</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.PersonWrapper.LastName">
+            <example>Bachir</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.PersonWrapper.Company">
+            <type>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.PersonWrapper.Title">
+            <example>Programmer</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.CompanyWrapper">
             <summary>
              Company
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.CompanyWrapper.CompanyName">
+            <example>Food and Culture Project</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.CompanyWrapper.Persons">
+            <type>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</type>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.CompanyWrapper.PersonsCount">
+            <example type="int">33</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.ContactWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</inherited>
@@ -3799,12 +4100,94 @@
             <summary>
              Opportunity
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.CreateBy">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.Created">
+            <example>2020-12-11T03:36:09.7011881Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.Members">
+            <type>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</type>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.Contact">
+            <type>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.Title">
+            <example>Hotel catalogue</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.Description">
+            <example>description</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.Responsible">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.BidType">
+            <example type="int">0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.BidValue">
+            <example type="double">1,1</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.BidCurrency">
+            <type>ASC.Api.CRM.CurrencyInfoWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.PerPeriodValue">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.Stage">
+            <type>ASC.Api.CRM.Wrappers.DealMilestoneBaseWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.SuccessProbability">
+            <example type="int">65</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.ActualCloseDate">
+            <example>2020-12-11T03:36:09.7011881Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.ExpectedCloseDate">
+            <example>2020-12-11T03:36:09.7011881Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.IsPrivate">
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.AccessList">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.CanEdit">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.OpportunityWrapper.CustomFields">
+            <type>ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper, ASC.Api.CRM</type>
+            <collection>list</collection>
+        </member>
+        <member name="T:ASC.Api.CRM.Wrappers.DealMilestoneBaseWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.ListItemWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.DealMilestoneBaseWrapper.SuccessProbability">
+            <example type="int">20</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.DealMilestoneBaseWrapper.StageType">
+            <example type="int">0</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.ContactStatusBaseWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ListItemWrapper, ASC.Api.CRM</inherited>
         </member>
+        <member name="T:ASC.Api.CRM.Wrappers.ContactStatusWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.ContactStatusBaseWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.ContactStatusWrapper.RelativeItemsCount">
+            <example type="int">1</example>
+        </member>
         <member name="T:ASC.Api.CRM.Wrappers.ContactTypeBaseWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ListItemWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="T:ASC.Api.CRM.Wrappers.ContactTypeWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.ContactTypeBaseWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.ContactTypeWrapper.RelativeItemsCount">
+            <example type="int">1</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.ListItemWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
@@ -3833,6 +4216,16 @@
             <summary>
              Currency rate
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.CurrencyRateWrapper.FromCurrency">
+            <example>EUR</example>
+        </member>
+        <member name="P:ASC.Api.CRM.CurrencyRateWrapper.ToCurrency">
+            <example>USD</example>
+        </member>
+        <member name="P:ASC.Api.CRM.CurrencyRateWrapper.Rate">
+            <example type="decimal">1.1</example>
         </member>
         <member name="T:ASC.Api.CRM.CurrencyInfoWrapper">
             <summary>
@@ -3861,6 +4254,10 @@
             <summary>
              Currency rate information
             </summary>
+            <inherited>ASC.Api.CRM.CurrencyInfoWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.CurrencyRateInfoWrapper.Rate">
+            <example type="double">1,1</example>
         </member>
     </members>
 </doc>
