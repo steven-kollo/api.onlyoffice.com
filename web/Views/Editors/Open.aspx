@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Opening file</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of opening the document in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of opening a document in ONLYOFFICE Document Server.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/opening.jpg") %>" />
     <ol>
         <li>The user uses the <b>document manager</b> (found in his/her browser) to open the document for viewing or editing.

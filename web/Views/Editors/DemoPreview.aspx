@@ -110,7 +110,7 @@
                                         Print = false
                                     }
                             },
-                        DocumentType = Request["type"] ?? "word",
+                        DocumentType = Request["type"] ?? "text",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),

@@ -5,7 +5,6 @@
     <span class="hdr">Events</span>
 </h1>
 
-<div class="header-gray">Description</div>
 <p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
 
 <nav class="content">
@@ -40,7 +39,7 @@
     </ul>
 </nav>
 
-<br />
+<h2>Events and their description:</h2>
 <ul>
     <li>
         <p><b id="onAppReady" class="copy-link">onAppReady</b> - the function called when the application is loaded into the browser.</p>
@@ -654,8 +653,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
         </p>
         <div class="note">
-            In version 5.4 <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
-            Since version 5.5 there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
+            In version 5.4, <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
+            Starting from version 5.5, there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
         </div>
         <div class="header-gray">Example</div>
         <pre>

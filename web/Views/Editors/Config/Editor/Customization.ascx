@@ -425,7 +425,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <!--<tr class="tablerow">
             <td id="reviewPermissions" class="copy-link">reviewPermissions</td>
             <td>
                 Defines the group access rights to review documents of users from the specific groups.
@@ -451,7 +451,7 @@
             </td>
             <td>object</td>
             <td></td>
-        </tr>
+        </tr>-->
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -619,11 +619,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "macrosMode": "warn",
             "mentionShare": true,
             "plugins": true,
-            "reviewDisplay": "original",
+            "reviewDisplay": "original",<!--
             "reviewPermissions": {
                 "Group1": ["Group2"],
                 "Group2": ["Group1", "Group2", ""]
-            },
+            },-->
             <% if (license)
                { %>"rightMenu": true,
             <% } %>"showReviewChanges": false,
