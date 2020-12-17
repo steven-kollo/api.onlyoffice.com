@@ -104,6 +104,17 @@
         <ExampleJson>"9924256A-739C-462b-AF15-E652A3B1B6EB"</ExampleJson>
       </value>
     </entry>
+	<entry>
+      <key>System.Guid[]</key>
+      <value>
+        <Description>Collection of Guids</Description>
+        <Example>9924256A-739C-462b-AF15-E652A3B1B6EB</Example>
+        <ExampleJson>[
+    "9924256a-739c-462b-af15-e652a3b1b6eb",
+    "98777e9c-f2a7-4e97-b314-ba9f92c2e882"
+  ]</ExampleJson>
+      </value>
+    </entry>
     <entry>
       <key>ASC.Projects.Core.Domain.TaskPriority</key>
       <value>
@@ -396,6 +407,86 @@
       "IsPrimary": false
     }
   ]</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Thrdparty.SocialNetworks</key>
+      <value>
+	  <Description>Twitter</Description>
+		<Example>twitter</Example>
+		<ExampleJson>"twitter"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>System.Nullable{ASC.CRM.Core.InvoiceStatus}</key>
+      <value>
+	  <Description>Draft, Sent, Rejected, Paid, Archived</Description>
+		<Example>Draft</Example>
+		<ExampleJson>"Draft"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.CRM.Core.InvoiceStatus</key>
+      <value>
+	  <Description>Draft, Sent, Rejected, Paid, Archived</Description>
+		<Example>Draft</Example>
+		<ExampleJson>"Draft"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>System.Nullable{ASC.CRM.Core.DealMilestoneStatus}</key>
+      <value>
+	  <Description>Open, ClosedAndWon, ClosedAndLost</Description>
+		<Example>Open</Example>
+		<ExampleJson>"Open"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.CRM.Core.DealMilestoneStatus</key>
+      <value>
+	  <Description>Open, ClosedAndWon, ClosedAndLost</Description>
+		<Example>Open</Example>
+		<ExampleJson>"Open"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.CRM.Core.BidType</key>
+      <value>
+	  <Description>FixedBid, PerHour, PerDay, PerWeek, PerMonth, PerYear</Description>
+		<Example>FixedBid</Example>
+		<ExampleJson>"FixedBid"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.CRM.Core.ReportType</key>
+      <value>
+	  <Description>SalesByManagers, SalesForecast, SalesFunnel, WorkloadByContacts, WorkloadByTasks, WorkloadByDeals, WorkloadByInvoices, WorkloadByVoip, SummaryForThePeriod, SummaryAtThisMoment</Description>
+		<Example>SalesByManagers</Example>
+		<ExampleJson>"FixedBid"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.CRM.Core.ReportTimePeriod</key>
+      <value>
+	  <Description>Today, Yesterday, Tomorrow, CurrentWeek, PreviousWeek, NextWeek, CurrentMonth, PreviousMonth, NextMonth, CurrentQuarter, PreviousQuarter, NextQuarter, CurrentYear, PreviousYear, NextYear, DuringAllTime</Description>
+		<Example>Today</Example>
+		<ExampleJson>"Today"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Files.Core.FilterType</key>
+      <value>
+	  <Description>None, FilesOnly, FoldersOnly, DocumentsOnly, PresentationsOnly, SpreadsheetsOnly, ImagesOnly,  ByUser, ByDepartment, ArchiveOnly, ByExtension, MediaOnly</Description>
+		<Example>None</Example>
+		<ExampleJson>"None"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Web.Files.Services.WCFService.FileOperations.FileConflictResolveType</key>
+      <value>
+	  <Description>Skip, Overwrite, Duplicate</Description>
+		<Example>Skip</Example>
+		<ExampleJson>"Skip"</ExampleJson>
       </value>
     </entry>
   </Names>

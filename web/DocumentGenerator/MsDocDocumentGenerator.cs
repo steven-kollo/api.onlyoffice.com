@@ -455,8 +455,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             
 
-            var needMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".") || mem.Attribute("name").ValueOrNull().Contains("F:" + type + ".")).ToList();
-            var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + type )).SingleOrDefault();
+            var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
+            var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
 
             if (inherited != null && inherited.Element("inherited") != null)
             {
@@ -468,7 +468,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 var responseParam = new Dictionary<string, object>();
                 var orders = new Dictionary<string, int>();
-                responseParam = Parse(needMembers, responseParam, orders);
+                Parse(needMembers, responseParam, orders);
 
                 responseParam = Sorted(responseParam, orders);
                 var response = new result();
@@ -505,7 +505,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return msdoc;
         }
 
-        private Dictionary<string, object> Parse (List<XElement> needMembers, Dictionary<string, object> responseParam, Dictionary<string, int> orders)
+        private void Parse (List<XElement> needMembers, Dictionary<string, object> responseParam, Dictionary<string, int> orders)
         {
             needMembers.ForEach(member =>
             {
@@ -513,11 +513,15 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 bool resultBool;
                 double resultdouble;
                 object result;
-                var defaultName = member.Attribute("name").ValueOrNull().Split('.').Last();
+                var defaultName = "";
+                if (member.Attribute("name").ValueOrNull()!="") 
+                {
+                    defaultName = member.Attribute("name").ValueOrNull().Split('.').Last();
+                }
                 if (member.Element("example") != null)
                 {
                     
-                    var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
+                var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
                 if (Boolean.TryParse(member.Element("example").ValueOrNull(), out resultBool))
                 {
                     result = resultBool;
@@ -527,40 +531,40 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     result = resultInt;
                 }
                 else if (member.Element("example").Attribute("type").ValueOrNull() == "double" && Double.TryParse(member.Element("example").ValueOrNull().Replace('.',','), out resultdouble))
-                    {
-                        result = resultdouble;
-                    }
-                    else
-                    {
-                        result = member.Element("example").ValueOrNull().Replace("            ","");
+                {
+                    result = resultdouble;
+                }
+                else
+                {
+                    result = member.Element("example").ValueOrNull().Replace("            ","");
                         
-                        if (result.Equals("null"))
-                        {
-                            result = null;
-                        }
-                    }
-
-                    if(member.Element("collection").ValueOrNull() == "list")
+                    if (result.Equals("null"))
                     {
-                        var list = new List<object>();
+                        result = null;
+                    }
+                }
+
+                if(member.Element("collection").ValueOrNull() == "list")
+                {
+                    var list = new List<object>();
                        
-                        if (member.Element("collection").Attribute("split").ValueOrNull() != "")
-                        {
-                            var split = member.Element("collection").Attribute("split").ValueOrNull()[0];
-                            list = result.ToString().Split(split).ToList<object>();
-                        }
-                        else
-                        {
-                            list.Add(result);
-                        }
-                        responseParam.Add(name, list);
+                    if (member.Element("collection").Attribute("split").ValueOrNull() != "")
+                    {
+                        var split = member.Element("collection").Attribute("split").ValueOrNull()[0];
+                        list = result.ToString().Split(split).ToList<object>();
                     }
                     else
                     {
-                        responseParam.Add(name, result);
+                        list.Add(result);
                     }
-                    var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
-                    orders.Add(name, order);
+                    responseParam.Add(name, list);
+                }
+                else
+                {
+                    responseParam.Add(name, result);
+                }
+                var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                orders.Add(name, order);
                 }
                 else if(member.Element("type") != null)
                 {
@@ -568,8 +572,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     var split = member.Element("type").ValueOrNull().Split(',');
                     var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + split[1].Trim() + ".xml");
                     var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
-                    var newMembers = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + split[0])).ToList();
-                    var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + split[0])).SingleOrDefault();
+                    var newMembers = members.Where(mem => IsMember(mem, split[0])).ToList();
+                    var inherited = members.Where(mem => IsInherited(mem, split[0])).SingleOrDefault();
 
                     if (inherited != null && inherited.Element("inherited") != null)
                     {
@@ -593,21 +597,61 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
                     orders.Add(name, order);
                 }
-            });
+                else if (member.Element("object") != null)
+                {
+                    var name = member.Element("object").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("object").Attribute("name").ValueOrNull();
+                    var elements = member.Element("object").Elements().ToList();
+                    var responseParam1 = new Dictionary<string, object>();
+                    var orders1 = new Dictionary<string, int>();
+                    Parse(elements, responseParam1, orders1);
+                    if (member.Element("collection").ValueOrNull() == "list")
+                    {
+                        var list = new List<object>();
+                        list.Add(responseParam1);
+                        responseParam.Add(name, list);
+                    }
+                    else
+                    {
+                        responseParam.Add(name, responseParam1);
+                    }
+                    var order = member.Element("order").ValueOrNull() == "" ? 1000 : Int32.Parse(member.Element("order").ValueOrNull());
+                    orders.Add(name, order);
+                }
+                });
+        }
 
-            return responseParam;
+        private bool IsMember(XElement mem, string type)
+        {
+            var member = mem.Attribute("name").ValueOrNull();
+            if (member.Contains("P:" + type + ".") || member.Contains("F:" + type + ".")) 
+            {
+                return member.Split('.').Length == type.Split('.').Length + 1;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool IsInherited(XElement mem, string type)
+        {
+            return mem.Attribute("name").ValueOrNull().Equals("T:" + type);
         }
 
         private List<XElement> GetInherited(string type, string file, List<XElement> needMembers)
         {
+            if (type.Contains("ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper"))
+            {
+
+            }
             var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
-            var needMembers1 = members.Where(mem => mem.Attribute("name").ValueOrNull().Contains("P:" + type + ".") || mem.Attribute("name").ValueOrNull().Contains("F:" + type + ".")).ToList();
-            var inherited = members.Where(mem => mem.Attribute("name").ValueOrNull().Equals("T:" + type)).SingleOrDefault();
+            var needMembers1 = members.Where(mem => IsMember(mem, type)).ToList();
+            var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
 
             if (inherited != null && inherited.Element("inherited") != null)
             {
-                var split = inherited.ValueOrNull().Split(',');
+                var split = inherited.Element("inherited").ValueOrNull().Split(',');
                 needMembers = GetInherited(split[0].Trim(), split[1].Trim(), needMembers);
             }
 

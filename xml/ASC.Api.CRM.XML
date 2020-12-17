@@ -126,10 +126,13 @@
             <summary>
              Returns the detailed information about the invoice with the ID specified in the request
             </summary>
-            <param name="invoiceid">Invoice ID</param>
+            <param method="url" name="invoiceid">Invoice ID</param>
             <short>Get invoice by ID</short> 
             <category>Invoices</category>
-            <returns>Invoice</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceWrapper, ASC.Api.CRM">Invoice</returns>
+            <path>api/2.0/crm/invoice/{invoiceid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceSample">
             <summary>
@@ -137,61 +140,82 @@
             </summary>
             <short>Get invoice sample</short> 
             <category>Invoices</category>
-            <returns>Invoice</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceWrapper, ASC.Api.CRM">Invoice</returns>
+            <path>api/2.0/crm/invoice/sample</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceJsonData(System.Int32)">
             <summary>
              Returns the json data of the invoice with the ID specified in the request
             </summary>
-            <param name="invoiceid">Invoice ID</param>
+            <param method="url" name="invoiceid">Invoice ID</param>
             <short>Get invoice json data</short> 
             <category>Invoices</category>
             <returns>Json Data</returns>
+            <path>api/2.0/crm/invoice/jsondata/{invoiceid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoices(System.Nullable{ASC.CRM.Core.InvoiceStatus},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Int32,System.String)">
             <summary>
               Returns the list of invoices matching the creteria specified in the request
             </summary>
-            <param name="status">Invoice status</param>
-            <param name="issueDateFrom">Invoice issue date from</param>
-            <param name="issueDateTo">Invoice issue date to</param>
-            <param name="dueDateFrom">Invoice due date from</param>
-            <param name="dueDateTo">Invoice due date to</param>
-            <param name="entityType">Invoice entity type</param>
-            <param name="entityid">Invoice entity ID</param>
-            <param name="currency" remark="Allowed values: EUR, RUB etc. You can get the whole list of available currencies by api">Invoice currency</param>
+            <param method="url" name="status">Invoice status</param>
+            <param method="url" name="issueDateFrom">Invoice issue date from</param>
+            <param method="url" name="issueDateTo">Invoice issue date to</param>
+            <param method="url" name="dueDateFrom">Invoice due date from</param>
+            <param method="url" name="dueDateTo">Invoice due date to</param>
+            <param method="url" name="entityType">Invoice entity type</param>
+            <param method="url" name="entityid">Invoice entity ID</param>
+            <param method="url" name="currency" remark="Allowed values: EUR, RUB etc. You can get the whole list of available currencies by api">Invoice currency</param>
             <short>Get invoice list</short> 
             <category>Invoices</category>
-            <returns>Invoice list</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceBaseWrapper, ASC.Api.CRM">Invoice list</returns>
+            <path>api/2.0/crm/invoice/filter</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetEntityInvoices(System.String,System.Int32)">
             <summary>
              Returns the list of all invoices associated with the entity with the ID and type specified in the request
             </summary>
-            <param name="entityType">Invoice entity type</param>
-            <param name="entityid">Invoice entity ID</param>
+            <param method="url" name="entityType">Invoice entity type</param>
+            <param method="url" name="entityid">Invoice entity ID</param>
             <short>Get entity invoices</short> 
             <category>Invoices</category>
-            <returns>Invoice list</returns>
+            <returns type="ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM">Invoice list</returns>
+            <path>api/2.0/crm/{entityType}/invoicelist/{entityid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceBatchStatus(System.Int32[],ASC.CRM.Core.InvoiceStatus)">
             <summary>
               Updates the status of invoices with the IDs specified in the request
             </summary>
             <param name="invoiceids">Invoice ID list</param>
-            <param name="status">Status</param>
+            <param method="url" name="status">Status</param>
             <short>Update invoice group status</short> 
             <category>Invoices</category>
             <returns>KeyValuePair of Invoices and InvoiceItems</returns>
+            <path>api/2.0/crm/invoice/status/{status}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteInvoice(System.Int32)">
             <summary>
               Delete the invoice with the ID specified in the request
             </summary>
-            <param name="invoiceid">Invoice ID</param>
+            <param method="url" name="invoiceid">Invoice ID</param>
             <short>Delete invoice</short> 
             <category>Invoices</category>
-            <returns>Invoice</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceBaseWrapper, ASC.Api.CRM">Invoice</returns>
+            <path>api/2.0/crm/invoice/{invoiceid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchInvoices(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -200,7 +224,11 @@
             <param name="invoiceids">Invoice ID list</param>
             <short>Delete invoice group</short> 
             <category>Invoices</category>
-            <returns>Invoice list</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceBaseWrapper, ASC.Api.CRM">Invoice list</returns>
+            <path>api/2.0/crm/invoice</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoice(System.String,ASC.Specific.ApiDateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,ASC.Specific.ApiDateTime,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{ASC.CRM.Core.Entities.InvoiceLine})">
             <summary>
@@ -224,7 +252,7 @@
             <param optional="false" name="invoiceLines">Invoice lines list</param>
             <short>Create invoice</short> 
             <category>Invoices</category>
-            <returns>Invoice</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceWrapper, ASC.Api.CRM">Invoice</returns>
             <example>
             <![CDATA[
             
@@ -256,12 +284,15 @@
             
             ]]>
             </example>
+            <path>api/2.0/crm/invoice</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoice(System.Int32,ASC.Specific.ApiDateTime,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,ASC.Specific.ApiDateTime,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{ASC.CRM.Core.Entities.InvoiceLine})">
             <summary>
               Updates the selected invoice with the parameters (contactId, consigneeId, etc.) specified in the request
             </summary>
-            <param optional="false" name="id">Invoice ID</param>
+            <param method="url" optional="false" name="id">Invoice ID</param>
             <param optional="false" name="issueDate">Invoice issue date</param>
             <param optional="true" name="templateType">Invoice template type</param>
             <param optional="false" name="contactId">Invoice contact ID</param>
@@ -279,7 +310,7 @@
             <param optional="false" name="invoiceLines">Invoice lines list</param>
             <short>Update invoice</short> 
             <category>Invoices</category>
-            <returns>Invoice</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceWrapper, ASC.Api.CRM">Invoice</returns>
             <example>
             <![CDATA[
             
@@ -311,15 +342,21 @@
             
             ]]>
             </example>
+            <path>api/2.0/crm/invoice/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoicePdfExistOrCreate(System.Int32)">
             <summary>
              Returns the pdf file associated with the invoice with the ID specified in the request
             </summary>
-            <param name="invoiceid">Invoice ID</param>
+            <param method="url" name="invoiceid">Invoice ID</param>
             <short>Get invoice pdf file</short> 
             <category>Invoices</category>
-            <returns>File</returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">File</returns>
+            <path>api/2.0/crm/invoice/{invoiceid}/pdf</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceConverterData(System.Int32,System.String,System.String)">
             <summary>
@@ -330,44 +367,60 @@
             <param name="revisionId">Revision ID</param>
             <short>Check invoice pdf file</short> 
             <category>Invoices</category>
-            <returns>ConverterData</returns>
+            <returns type="ASC.Web.CRM.Classes.ConverterData, ASC.Web.CRM">ConverterData</returns>
+            <path>api/2.0/crm/invoice/converter/data</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceByNumberExistence(System.String)">
             <summary>
              Returns the existence of the invoice with the Number specified in the request
             </summary>
-            <param name="number">Invoice number</param>
+            <param method="url" name="number">Invoice number</param>
             <short>Check invoice existence by number</short> 
             <category>Invoices</category>
             <returns>IsExist</returns>
+            <path>api/2.0/crm/invoice/bynumber/exist</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceByNumber(System.String)">
             <summary>
              Returns the detailed information about the invoice with the Number specified in the request
             </summary>
-            <param name="number">Invoice number</param>
+            <param method="url" name="number">Invoice number</param>
             <short>Get invoice by number</short> 
             <category>Invoices</category>
-            <returns>Invoice</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceWrapper, ASC.Api.CRM">Invoice</returns>
+            <path>api/2.0/crm/invoice/bynumber</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceItems(System.Int32,System.Nullable{System.Boolean})">
             <summary>
               Returns the list of invoice items matching the creteria specified in the request
             </summary>
-            <param name="status">Status</param>
-            <param optional="true" name="inventoryStock">InventoryStock</param>
+            <param method="url" name="status">Status</param>
+            <param method="url" optional="true" name="inventoryStock">InventoryStock</param>
             <short>Get invoice item list</short> 
             <category>Invoices</category>
-            <returns>InvoiceItem list</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">InvoiceItem list</returns>
+            <path>api/2.0/crm/invoiceitem/filter</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceItemByID(System.Int32)">
             <summary>
              Returns the detailed information about the invoice item with the ID specified in the request
             </summary>
-            <param name="invoiceitemid">Invoice Item ID</param>
+            <param method="url" name="invoiceitemid">Invoice Item ID</param>
             <short>Get invoice item by ID</short> 
             <category>Invoices</category>
-            <returns>Invoice Item</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">Invoice Item</returns>
+            <path>api/2.0/crm/invoiceitem/{invoiceitemid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal)">
             <summary>
@@ -384,13 +437,16 @@
             <param optional="true" name="discount">Discount</param>
             <short>Create invoice line</short> 
             <category>Invoices</category>
-            <returns>InvoiceLine</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceLineWrapper, ASC.Api.CRM">InvoiceLine</returns>
+            <path>api/2.0/crm/invoiceline</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal)">
             <summary>
               Updates the selected invoice line with the parameters (invoiceId, invoiceItemId, etc.) specified in the request
             </summary>
-            <param optional="false" name="id">Line ID</param>
+            <param method="url" optional="false" name="id">Line ID</param>
             <param optional="false" name="invoiceId">Invoice ID</param>
             <param optional="false" name="invoiceItemId">Invoice item ID</param>
             <param optional="true" name="invoiceTax1Id">First invoice tax ID</param>
@@ -402,16 +458,22 @@
             <param optional="true" name="discount">Discount</param>
             <short>Update invoice line</short>
             <category>Invoices</category>
-            <returns>InvoiceLine</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceLineWrapper, ASC.Api.CRM">InvoiceLine</returns>
+            <path>api/2.0/crm/invoiceline/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteInvoiceLine(System.Int32)">
             <summary>
                Deletes the invoice line with the ID specified in the request
             </summary>
-            <param optional="false" name="id">Line ID</param>
+            <param method="url" optional="false" name="id">Line ID</param>
             <short>Delete invoice line</short> 
             <category>Invoices</category>
             <returns>Line ID</returns>
+            <path>api/2.0/crm/invoiceline/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceItem(System.String,System.String,System.Decimal,System.String,System.Decimal,System.Boolean,System.Int32,System.Int32)">
             <summary>
@@ -427,13 +489,16 @@
             <param optional="true" name="invoiceTax2id">Item second invoice tax ID</param>
             <short>Create invoice item</short> 
             <category>Invoices</category>
-            <returns>InvoiceItem</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">InvoiceItem</returns>
+            <path>api/2.0/crm/invoiceitem</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceItem(System.Int32,System.String,System.String,System.Decimal,System.String,System.Decimal,System.Boolean,System.Int32,System.Int32)">
             <summary>
               Updates the selected invoice item with the parameters (title, description, price, etc.) specified in the request
             </summary>
-            <param optional="false" name="id">Item ID</param>
+            <param method="url" optional="false" name="id">Item ID</param>
             <param optional="false" name="title">Item title</param>
             <param optional="true" name="description">Item description</param>
             <param optional="false" name="price">Item price</param>
@@ -444,16 +509,22 @@
             <param optional="true" name="invoiceTax2id">Item second invoice tax ID</param>
             <short>Update invoice item</short>
             <category>Invoices</category>
-            <returns>InvoiceItem</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">InvoiceItem</returns>
+            <path>api/2.0/crm/invoiceitem/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteInvoiceItem(System.Int32)">
             <summary>
                Deletes the invoice item with the ID specified in the request
             </summary>
-            <param name="id">Item ID</param>
+            <param method="url" name="id">Item ID</param>
             <short>Delete invoice item</short> 
             <category>Invoices</category>
-            <returns>InvoiceItem</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">InvoiceItem</returns>
+            <path>api/2.0/crm/invoiceitem/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchItems(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -462,7 +533,11 @@
             <param name="ids">Item ID list</param>
             <short>Delete Invoice item group</short> 
             <category>Invoices</category>
-            <returns>InvoiceItem list</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceItemWrapper, ASC.Api.CRM">InvoiceItem list</returns>
+            <path>api/2.0/crm/invoiceitem</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetInvoiceTaxes">
             <summary>
@@ -470,7 +545,11 @@
             </summary>
             <short>Get invoice taxes list</short> 
             <category>Invoices</category>
-            <returns>InvoiceTax list</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM">InvoiceTax list</returns>
+            <path>api/2.0/crm/invoice/tax</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateInvoiceTax(System.String,System.String,System.Decimal)">
             <summary>
@@ -481,28 +560,37 @@
             <param name="rate">Tax rate</param>
             <short>Create invoice tax</short> 
             <category>Invoices</category>
-            <returns>InvoiceTax</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM">InvoiceTax</returns>
+            <path>api/2.0/crm/invoice/tax</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateInvoiceTax(System.Int32,System.String,System.String,System.Decimal)">
             <summary>
               Updates the selected invoice tax with the parameters (name, description, rate) specified in the request
             </summary>
-            <param name="id">Tax ID</param>
+            <param method="url" name="id">Tax ID</param>
             <param name="name">Tax name</param>
             <param name="description">Tax description</param>
             <param name="rate">Tax rate</param>
             <short>Update invoice tax</short>
             <category>Invoices</category>
-            <returns>InvoiceTax</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM">InvoiceTax</returns>
+            <path>api/2.0/crm/invoice/tax/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteInvoiceTax(System.Int32)">
             <summary>
               Delete the invoice tax with the ID specified in the request
             </summary>
-            <param name="id">Tax ID</param>
+            <param method="url" name="id">Tax ID</param>
             <short>Delete invoice tax</short> 
             <category>Invoices</category>
-            <returns>InvoiceTax</returns>
+            <returns type="ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM">InvoiceTax</returns>
+            <path>api/2.0/crm/invoice/tax/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetSettings">
             <summary>
@@ -510,7 +598,10 @@
             </summary>
             <short>Get default invoice settings</short>
             <category>Invoices</category>
-            <returns>InvoiceSetting</returns>
+            <returns type="ASC.Web.CRM.Classes.InvoiceSetting, ASC.Web.CRM">InvoiceSetting</returns>
+            <path>api/2.0/crm/invoice/settings</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SaveNumberSettings(System.Boolean,System.String,System.String)">
             <summary>
@@ -521,7 +612,10 @@
             <param name="number">Number</param>
             <short>Save default invoice number</short>
             <category>Invoices</category>
-            <returns>InvoiceSetting</returns>
+            <returns type="ASC.Web.CRM.Classes.InvoiceSetting, ASC.Web.CRM">InvoiceSetting</returns>
+            <path>api/2.0/crm/invoice/settings/name</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SaveTermsSettings(System.String)">
             <summary>
@@ -530,7 +624,10 @@
             <param name="terms">Terms</param>
             <short>Save default invoice terms</short>
             <category>Invoices</category>
-            <returns>InvoiceSetting</returns>
+            <returns type="ASC.Web.CRM.Classes.InvoiceSetting, ASC.Web.CRM">InvoiceSetting</returns>
+            <path>api/2.0/crm/invoice/settings/terms</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetInvoiceCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
             <visible>false</visible>
@@ -1769,43 +1866,54 @@
              <summary>
                 Returns the list of descriptions for all existing user fields
              </summary>
-             <param name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Type</param>
+             <param method="url" name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Type</param>
              <short>Get user field list</short> 
              <category>User fields</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CustomFieldWrapper, ASC.Api.CRM">
                 User field list
              </returns>
+             <path>api/2.0/crm/{entityType}/customfield/definitions</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCustomFieldForSubject(System.String,System.Int32)">
             <summary>
               Returns the list of all user field values using the entity type and entity ID specified in the request
             </summary>
-            <param name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Type</param>
-            <param name="entityid">ID</param>
+            <param method="url" name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Type</param>
+            <param method="url" name="entityid">ID</param>
             <short>Get user field values</short> 
             <category>User fields</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper, ASC.Api.CRM"></returns>
+            <path>api/2.0/crm/{entityType}/{entityid}/customfield</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetEntityCustomFieldValue(System.String,System.Int32,System.Int32,System.String)">
             <summary>
                Sets the new user field value using the entity type, ID, field ID and value specified in the request
             </summary>
-            <param name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Type</param>
-            <param name="entityid">ID</param>
-            <param name="fieldid">Field ID</param>
+            <param method="url" name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Type</param>
+            <param method="url" name="entityid">ID</param>
+            <param method="url" name="fieldid">Field ID</param>
             <param name="fieldValue">Field Value</param>
             <short>Set user field value</short> 
             <category>User fields</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper, ASC.Api.CRM">
                User field
             </returns>
+            <path>api/2.0/crm/{entityType}/{entityid}/customfield/{fieldid}</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateCustomFieldValue(System.String,System.String,System.Int32,System.Int32,System.String)">
              <summary>
                 Creates a new user field with the parameters (entity type, field title, type, etc.) specified in the request
              </summary>
-             <param optional="false" name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Entity type</param>
+             <param method="url" optional="false" name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Entity type</param>
              <param optional="false" name="label">Field title</param>
              <param name="fieldType" 
              remark="Allowed values: TextField, TextArea, SelectBox, CheckBox, Heading or Date">
@@ -1815,7 +1923,7 @@
              <param optional="true" name="mask" remark="Sent in json format only" >Mask</param>
              <short>Create user field</short> 
              <category>User fields</category>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.CustomFieldWrapper, ASC.Api.CRM">
                 User field
              </returns>
             <example>
@@ -1894,13 +2002,16 @@
              
              ]]>
              </example>
+             <path>api/2.0/crm/{entityType}/customfield</path>
+             <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCustomFieldValue(System.Int32,System.String,System.String,System.Int32,System.Int32,System.String)">
              <summary>
                 Updates the selected user field with the parameters (entity type, field title, type, etc.) specified in the request
              </summary>
-             <param name="id">User field id</param>
-             <param name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Entity type</param>
+             <param method="url" name="id">User field id</param>
+             <param method="url" name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Entity type</param>
              <param optional="false" name="label">Field title</param>
              <param name="fieldType" 
              remark="Allowed values: 0 (TextField),1 (TextArea),2 (SelectBox),3 (CheckBox),4 (Heading) or 5 (Date)">
@@ -1910,7 +2021,7 @@
              <param optional="true" name="mask" remark="Sent in json format only" >Mask</param>
              <short> Updates the selected user field</short> 
              <category>User fields</category>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.CustomFieldWrapper, ASC.Api.CRM">
                 User field
              </returns>
             <remarks>
@@ -1920,76 +2031,95 @@
              </remarks>
              <exception cref="T:System.ArgumentException"></exception>
              <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+             <path>api/2.0/crm/{entityType}/customfield/{id}</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCustomField(System.String,System.Int32)">
             <summary>
                Deletes the user field with the ID specified in the request
             </summary>
-            <param name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Type</param>
-            <param name="fieldid">Field ID</param>
+            <param method="url" name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Type</param>
+            <param method="url" name="fieldid">Field ID</param>
             <short>Delete user field</short> 
             <category>User fields</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CustomFieldWrapper, ASC.Api.CRM">
                User field
             </returns>
+            <path>api/2.0/crm/{entityType}/customfield/{fieldid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateCustomFieldsOrder(System.Collections.Generic.IEnumerable{System.Int32},System.String)">
             <summary>
                Updates user fields order
             </summary>
-            <param name="fieldids">User field ID list</param>
+            <param method="url" name="fieldids">User field ID list</param>
             <param name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Entity type</param>
             <category>User fields</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper, ASC.Api.CRM">
                User fields
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/{entityType}/customfield/reorder</path>
+            <httpMethod>PUT</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealByID(System.Int32)">
              <summary>
                 Returns the detailed information about the opportunity with the ID specified in the request
              </summary>
-             <param name="opportunityid">Opportunity ID</param>
-             <returns>
+             <param method="url" name="opportunityid">Opportunity ID</param>
+             <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
                 Opportunity
              </returns>
              <short>Get opportunity by ID</short> 
              <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/opportunity/{opportunityid}</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateToDealMilestone(System.Int32,System.Int32)">
              <summary>
                 Updates the selected opportunity to the stage with the ID specified in the request
              </summary>
-             <param name="opportunityid">Opportunity ID</param>
+             <param method="url" name="opportunityid">Opportunity ID</param>
              <param name="stageid">Opportunity stage ID</param>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM">
                 Opportunity
              </returns>
              <short>Update opportunity stage</short> 
              <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/opportunity/{opportunityid}/stage/{id}</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToDeal(System.Int32,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
              <summary>
                Sets access rights for the selected opportunity with the parameters specified in the request
              </summary>
-             <param name="opportunityid">Opportunity ID</param>
+             <param method="url" name="opportunityid">Opportunity ID</param>
              <param name="isPrivate">Opportunity privacy: private or not</param>
              <param name="accessList">List of users with access</param>
              <short>Set rights to opportunity</short> 
              <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
                Opportunity 
              </returns>
+             <path>api/2.0/crm/opportunity/{opportunityid}/access</path>
+             <httpMethod>PUT</httpMethod>
+              <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchDeal(System.Guid,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{ASC.CRM.Core.DealMilestoneStatus},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -1999,19 +2129,23 @@
             <param optional="true" name="opportunityStagesid">Opportunity stage ID</param>
             <param optional="true" name="tags">Tags</param>
             <param optional="true" name="contactid">Contact ID</param>
+            <param optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
             <param optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
             <param optional="true" name="fromDate">Start date</param>
             <param optional="true" name="toDate">End date</param>
-            <param optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
             <param name="isPrivate">Opportunity privacy: private or not</param>
             <param name="accessList">List of users with access</param>
             <short>Set opportunity access rights</short> 
             <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
               Opportunity list
             </returns>
+            <path>api/2.0/crm/opportunity/filter/access</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetAccessToBatchDeal(System.Collections.Generic.IEnumerable{System.Int32},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -2024,9 +2158,13 @@
             <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
               Opportunity list
             </returns>
+            <path>api/2.0/crm/opportunity/access</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchDeals(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -2037,9 +2175,13 @@
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <short>Delete opportunity group</short> 
             <category>Opportunities</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
               Opportunity list
             </returns>
+            <path>api/2.0/crm/opportunity</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchDeals(System.Guid,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{ASC.CRM.Core.DealMilestoneStatus},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
             <summary>
@@ -2049,48 +2191,59 @@
             <param optional="true" name="opportunityStagesid">Opportunity stage ID</param>
             <param optional="true" name="tags">Tags</param>
             <param optional="true" name="contactid">Contact ID</param>
+            <param optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
             <param optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
             <param optional="true" name="fromDate">Start date</param>
             <param optional="true" name="toDate">End date</param>
-            <param optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <short>Delete opportunity group</short> 
             <category>Opportunities</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
               Opportunity list
             </returns>
+            <path>api/2.0/crm/opportunity/filter</path>
+            <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDeals(System.Guid,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{ASC.CRM.Core.DealMilestoneStatus},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
             <summary>
               Returns the list of all opportunities matching the parameters specified in the request
             </summary>
-            <param optional="true" name="responsibleid">Opportunity responsible</param>
-            <param optional="true" name="opportunityStagesid">Opportunity stage ID</param>
-            <param optional="true" name="tags">Tags</param>
-            <param optional="true" name="contactid">Contact ID</param>
-            <param optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
-            <param optional="true" name="fromDate">Start date</param>
-            <param optional="true" name="toDate">End date</param>
-            <param optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
+            <param method="url" optional="true" name="responsibleid">Opportunity responsible</param>
+            <param method="url" optional="true" name="opportunityStagesid">Opportunity stage ID</param>
+            <param method="url" optional="true" name="tags">Tags</param>
+            <param method="url" optional="true" name="contactid">Contact ID</param>
+            <param method="url" optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
+            <param method="url" optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
+            <param method="url" optional="true" name="fromDate">Start date</param>
+            <param method="url" optional="true" name="toDate">End date</param>
             <short>Get opportunity list</short> 
             <category>Opportunities</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
               Opportunity list
             </returns>
+            <path>api/2.0/crm/opportunity/filter</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteDeal(System.Int32)">
              <summary>
                 Deletes the opportunity with the ID specified in the request
              </summary>
-             <param name="opportunityid">Opportunity ID</param>
+             <param method="url" name="opportunityid">Opportunity ID</param>
              <short>Delete opportunity</short> 
              <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
                Opportunity
              </returns>
+             <path>api/2.0/crm/opportunity/{opportunityid}</path>
+             <httpMethod>DELETE</httpMethod>
+              <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateDeal(System.Int32,System.Collections.Generic.IEnumerable{System.Int32},System.String,System.String,System.Guid,ASC.CRM.Core.BidType,System.Decimal,System.String,System.Int32,System.Int32,System.Int32,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
              <summary>
@@ -2115,17 +2268,20 @@
              <param optional="true" name="accessList">List of users with access to the opportunity</param>
              <param name="isNotify" optional="true">Notify users in accessList about the opportunity</param>
              <category>Opportunities</category>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
               Opportunity
              </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/opportunity</path>
+            <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateDeal(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32},System.String,System.String,System.Guid,ASC.CRM.Core.BidType,System.Decimal,System.String,System.Int32,System.Int32,System.Int32,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean,System.Collections.Generic.IEnumerable{System.Guid},System.Boolean)">
              <summary>
                 Updates the selected opportunity with the parameters specified in the request
              </summary>
              <short>Update opportunity</short>
-            <param name="opportunityid">Opportunity ID</param>
+            <param method="url" name="opportunityid">Opportunity ID</param>
             <param name="contactid">Opportunity primary contact</param>
              <param optional="true" name="members">Participants</param>
              <param name="title">Opportunity title</param>
@@ -2144,48 +2300,61 @@
              <param optional="true" name="accessList">List of users with access to the opportunity</param>
              <param name="isNotify" optional="true">Notify users in accessList about the opportunity</param>
              <category>Opportunities</category>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
               Opportunity
              </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/opportunity/{opportunityid}</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealMembers(System.Int32)">
              <summary>
                 Returns the list of all contacts associated with the opportunity with the ID specified in the request
              </summary>
-             <param name="opportunityid">Opportunity ID</param>
+             <param method="url" name="opportunityid">Opportunity ID</param>
              <short>Get all opportunity contacts</short> 
              <category>Opportunities</category>
-             <returns>Contact list</returns>
+             <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">Contact list</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/opportunity/{opportunityid}/contact</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddMemberToDeal(System.Int32,System.Int32)">
             <summary>
               Adds the selected contact to the opportunity with the ID specified in the request
             </summary>
-            <param name="opportunityid">Opportunity ID</param>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="opportunityid">Opportunity ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <short>Add opportunity contact</short> 
             <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                Participant
             </returns>
+            <path>api/2.0/crm/opportunity/{opportunityid}/contact/{contactid}</path>
+            <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteMemberFromDeal(System.Int32,System.Int32)">
             <summary>
               Deletes the selected contact from the opportunity with the ID specified in the request
             </summary>
-            <param name="opportunityid">Opportunity ID</param>
-            <param name="contactid">Contact ID</param>
+            <param method="url" name="opportunityid">Opportunity ID</param>
+            <param method="url" name="contactid">Contact ID</param>
             <short>Delete opportunity contact</short> 
             <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM">
                Participant
             </returns>
+            <path>api/2.0/crm/opportunity/{opportunityid}/contact/{contactid}</path>
+            <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDealsByPrefix(System.String,System.Int32,System.Boolean)">
             <summary>
@@ -2204,12 +2373,16 @@
             <summary>
               Returns the list of all contact opportunities
             </summary>
-            <param optional="true" name="contactid">Contact ID</param>
+            <param method="url" optional="true" name="contactid">Contact ID</param>
             <short>Get opportunity list</short> 
             <category>Opportunities</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.OpportunityWrapper, ASC.Api.CRM">
               Opportunity list
             </returns>
+            <path>api/2.0/crm/opportunity/bycontact/{contactid}</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetDealCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
             <visible>false</visible>
@@ -2232,12 +2405,15 @@
             <returns>
                Opportunity stage
             </returns>
+            <path>api/2.0/crm/opportunity/stage</path>
+            <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateDealMilestone(System.Int32,System.String,System.String,System.String,System.Int32,ASC.CRM.Core.DealMilestoneStatus)">
             <summary>
                Updates the selected opportunity stage with the parameters (title, description, success probability, etc.) specified in the request
             </summary>
-            <param name="id">Opportunity stage ID</param>
+            <param method="url" name="id">Opportunity stage ID</param>
             <param name="title">Title</param>
             <param name="description">Description</param>
             <param name="color">Color</param>
@@ -2247,23 +2423,29 @@
             <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.DealMilestoneWrapper, ASC.Api.CRM">
                Opportunity stage
             </returns>
+            <path>api/2.0/crm/opportunity/stage/{id}</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateDealMilestoneColor(System.Int32,System.String)">
             <summary>
                Updates the selected opportunity stage with the color specified in the request
             </summary>
-            <param name="id">Opportunity stage ID</param>
+            <param method="url" name="id">Opportunity stage ID</param>
             <param name="color">Color</param>
             <short>Update opportunity stage color</short> 
             <category>Opportunities</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.DealMilestoneWrapper, ASC.Api.CRM">
                Opportunity stage
             </returns>
+            <path>api/2.0/crm/opportunity/stage/{id}/color</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateDealMilestonesOrder(System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -2274,12 +2456,16 @@
             </short>
             <param name="ids">Opportunity stage ID list</param>
             <category>Opportunities</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.DealMilestoneWrapper, ASC.Api.CRM">
                Opportunity stages
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/opportunity/stage/reorder</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteDealMilestone(System.Int32)">
             <summary>
@@ -2287,12 +2473,15 @@
             </summary>
             <short>Delete opportunity stage</short> 
             <category>Opportunities</category>
-            <param name="id">Opportunity stage ID</param>
+            <param method="url" name="id">Opportunity stage ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.DealMilestoneWrapper, ASC.Api.CRM">
               Opportunity stage
             </returns>
+            <path>api/2.0/crm/opportunity/stage/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateHistoryCategory(System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -2300,41 +2489,50 @@
              </summary>
             <param name="title">Title</param>
             <param name="description">Description</param>
-            <param name="sortOrder">Order</param>
             <param name="imageName">Image name</param>
+            <param name="sortOrder">Order</param>
             <short>Create history category</short> 
              <category>History</category>
-            <returns>History category</returns>
+            <returns type="ASC.Api.CRM.Wrappers.HistoryCategoryWrapper, ASC.Api.CRM">History category</returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/history/category</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateHistoryCategory(System.Int32,System.String,System.String,System.String,System.Int32)">
              <summary>
                Updates the selected history category with the parameters (title, description, etc.) specified in the request
              </summary>
-            <param name="id">History category ID</param>
+            <param method="url" name="id">History category ID</param>
             <param name="title">Title</param>
             <param name="description">Description</param>
-            <param name="sortOrder">Order</param>
             <param name="imageName">Image name</param>
+            <param name="sortOrder">Order</param>
             <short>Update history category</short> 
             <category>History</category>
-            <returns>History category</returns>
+            <returns type="ASC.Api.CRM.Wrappers.HistoryCategoryWrapper, ASC.Api.CRM">History category</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/history/category/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateHistoryCategoryIcon(System.Int32,System.String)">
             <summary>
                Updates the icon of the selected history category
             </summary>
-            <param name="id">History category ID</param>
+            <param method="url" name="id">History category ID</param>
             <param name="imageName">icon name</param>
             <short>Update history category icon</short> 
             <category>History</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.HistoryCategoryWrapper, ASC.Api.CRM">
                History category
             </returns>
+            <path>api/2.0/crm/history/category/{id}/icon</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateHistoryCategoriesOrder(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -2345,12 +2543,16 @@
             </short>
             <param name="titles">History category title list</param>
             <category>History</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.HistoryCategoryWrapper, ASC.Api.CRM">
                History categories
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/history/category/reorder</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteHistoryCategory(System.Int32)">
             <summary>
@@ -2358,11 +2560,14 @@
             </summary>
             <short>Delete history category</short> 
             <category>History</category>
-            <param name="id">History category ID</param>
+            <param method="url" name="id">History category ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
-            <returns>History category</returns>
+            <returns type="ASC.Api.CRM.Wrappers.HistoryCategoryWrapper, ASC.Api.CRM">History category</returns>
+            <path>api/2.0/crm/history/category/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskCategory(System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -2370,48 +2575,56 @@
              </summary>
             <param name="title">Title</param>
             <param name="description">Description</param>
-            <param name="sortOrder">Order</param>
             <param name="imageName">Image name</param>
+            <param name="sortOrder">Order</param>
             <short>Create task category</short> 
             <category>Tasks</category>
-            <returns>Task category</returns>
             <exception cref="T:System.ArgumentException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">
                 Task category
             </returns>
+            <path>api/2.0/crm/task/category</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskCategory(System.Int32,System.String,System.String,System.String,System.Int32)">
              <summary>
                Updates the selected task category with the parameters (title, description, etc.) specified in the request
              </summary>
-            <param name="id">Task category ID</param>
+            <param method="url" name="id">Task category ID</param>
             <param name="title">Title</param>
             <param name="description">Description</param>
-            <param name="sortOrder">Order</param>
             <param name="imageName">Image name</param>
+            <param name="sortOrder">Order</param>
             <short>Update task category</short> 
             <category>Tasks</category>
             <returns>Task category</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
              <exception cref="T:System.Security.SecurityException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">
                 Task category
             </returns>
+            <path>api/2.0/crm/task/category/{id}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskCategoryIcon(System.Int32,System.String)">
             <summary>
                Updates the icon of the task category with the ID specified in the request
             </summary>
-            <param name="id">Task category ID</param>
+            <param method="url" name="id">Task category ID</param>
             <param name="imageName">icon name</param>
             <short>Update task category icon</short> 
             <category>Tasks</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">
                Task category
             </returns>
+            <path>api/2.0/crm/task/category/{id}/icon</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskCategoriesOrder(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -2422,12 +2635,16 @@
             </short>
             <param name="titles">Task category title list</param>
             <category>Tasks</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">
                Task categories
             </returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/task/category/reorder</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTaskCategory(System.Int32,System.Int32)">
              <summary>
@@ -2435,11 +2652,15 @@
              </summary>
              <short>Delete task category</short> 
              <category>Tasks</category>
-             <param name="categoryid">Task category ID</param>
+             <param method="url" name="categoryid">Task category ID</param>
              <param name="newcategoryid">Task category ID for replace in task with current category stage</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/task/category/{categoryid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM"></returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactStatus(System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -2640,23 +2861,29 @@
              <summary>
               Returns the stage of the opportunity with the ID specified in the request
              </summary>
-             <param name="stageid">Opportunity stage ID</param>
-             <returns>Opportunity stage</returns>
+             <param method="url" name="stageid">Opportunity stage ID</param>
+             <returns type="ASC.Api.CRM.Wrappers.DealMilestoneWrapper, ASC.Api.CRM">Opportunity stage</returns>
              <short>Get opportunity stage</short> 
              <category>Opportunities</category>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/opportunity/stage/{stageid}</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskCategoryByID(System.Int32)">
              <summary>
                 Returns the category of the task with the ID specified in the request
              </summary>
-             <param name="categoryid">Task category ID</param>
-             <returns>Task category</returns>
+             <param method="url" name="categoryid">Task category ID</param>
+             <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">Task category</returns>
              <short>Get task category</short> 
              <category>Tasks</category>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/task/category/{categoryid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetHistoryCategoryWrapper">
             <summary>
@@ -2664,9 +2891,13 @@
             </summary>
             <short>Get all history categories</short> 
             <category>History</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.HistoryCategoryWrapper, ASC.Api.CRM">
                List of all history categories
             </returns>
+            <path>api/2.0/crm/history/category</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskCategories">
             <summary>
@@ -2674,9 +2905,13 @@
             </summary>
             <short>Get all task categories</short> 
             <category>Tasks</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">
                List of all task categories
             </returns>
+            <path>api/2.0/crm/task/category</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactStatuses">
             <summary>
@@ -2712,9 +2947,13 @@
             </summary>
             <short>Get all opportunity stages</short> 
             <category>Opportunities</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.DealMilestoneWrapper, ASC.Api.CRM">
               List of all opportunity stages
             </returns>
+            <path>api/2.0/crm/opportunity/stage</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetHistory(System.String,System.Int32,System.Int32,System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
             <summary>
@@ -2724,15 +2963,19 @@
               Get event list
             </short>
             <category>History</category>
-            <param optional="true" name="entityType" remark="Allowed values: opportunity, contact or case">Related entity type</param>
-            <param optional="true" name="entityId">Related entity ID</param>
-            <param optional="true" name="categoryId">Task category ID</param>
-            <param optional="true" name="createBy">Event author</param>
-            <param optional="true" name="fromDate">Earliest task due date</param>
-            <param optional="true" name="toDate">Latest task due date</param>
-            <returns>
+            <param method="url" optional="true" name="entityType" remark="Allowed values: opportunity, contact or case">Related entity type</param>
+            <param method="url" optional="true" name="entityId">Related entity ID</param>
+            <param method="url" optional="true" name="categoryId">Task category ID</param>
+            <param method="url" optional="true" name="createBy">Event author</param>
+            <param method="url" optional="true" name="fromDate">Earliest task due date</param>
+            <param method="url" optional="true" name="toDate">Latest task due date</param>
+            <returns type="ASC.Api.CRM.Wrappers.RelationshipEventWrapper, ASC.Api.CRM">
               Event list
             </returns>
+            <path>api/2.0/crm/history/filter</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteHistory(System.Int32)">
             <summary>
@@ -2742,12 +2985,15 @@
                 Delete event and related files
             </short>
             <category>History</category>
-            <param name="id">Event ID</param>
+            <param method="url" name="id">Event ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.RelationshipEventWrapper, ASC.Api.CRM">
               Event
             </returns>
+            <path>api/2.0/crm/history/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTextFile(System.String,System.Int32,System.String,System.String)">
             <summary>
@@ -2755,13 +3001,16 @@
             </summary>
             <short>Create txt</short>
             <category>Files</category>
-            <param name="entityType">Entity type</param>
-            <param name="entityid">Entity ID</param>
+            <param method="url" name="entityType">Entity type</param>
+            <param method="url" name="entityid">Entity ID</param>
             <param name="title">File title</param>
             <param name="content">File contents</param>
-            <returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">
                 File info
             </returns>
+            <path>api/2.0/crm/{entityType}/{entityid}/files/text</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UploadFileInCRM(System.String,System.Int32,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean)">
             <summary>
@@ -2777,16 +3026,19 @@
             <li>Using standart multipart/form-data method</li>
             </ol>]]>
             </remarks>
-            <param name="entityType">Entity type</param>
-            <param name="entityid">Entity ID</param>
+            <param method="url" name="entityType">Entity type</param>
+            <param method="url" name="entityid">Entity ID</param>
             <param name="file" visible="false">Request Input stream</param>
             <param name="contentType" visible="false">Content-Type Header</param>
             <param name="contentDisposition" visible="false">Content-Disposition Header</param>
             <param name="files" visible="false">List of files when posted as multipart/form-data</param>
             <param name="storeOriginalFileFlag" visible="false">If True, upload documents in original formats as well</param>
-            <returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">
             File info
             </returns>
+            <path>api/2.0/crm/{entityType}/{entityid}/files/upload</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddHistoryTo(System.String,System.Int32,System.Int32,System.String,System.Int32,ASC.Specific.ApiDateTime,System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -2796,9 +3048,9 @@
               Create event
             </short>
             <category>History</category>
-            <param optional="true" name="contactId">Contact ID</param>
             <param optional="true" name="entityType" remark="Allowed values: opportunity or case">Related entity type</param>
             <param optional="true" name="entityId">Related entity ID</param>
+            <param optional="true" name="contactId">Contact ID</param>
             <remarks>
             <![CDATA[
              You should obligatorily set the value for 'contactId' if 'entityId' is not set or the value for parameters 'entityId' and 'entityType' if 'contactId' is not set.
@@ -2809,9 +3061,12 @@
             <param optional="true" name="created">Event creation date</param>
             <param optional="true" name="fileId">List of IDs of the files associated with the event</param>
             <param optional="true" name="notifyUserList">User field list</param>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.RelationshipEventWrapper, ASC.Api.CRM">
               Created event
             </returns>
+            <path>api/2.0/crm/history</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AttachFiles(System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
             <summary>
@@ -2820,11 +3075,14 @@
             <short>
                 Associate file with entity
             </short>
-            <param name="entityType">Entity type</param>
-            <param name="entityid">Entity ID</param>
+            <param method="url" name="entityType">Entity type</param>
+            <param method="url" name="entityid">Entity ID</param>
             <param name="fileids">List of IDs of the files</param>
             <category>Files</category>
-            <returns>Entity with the file attached</returns>
+            <returns type="ASC.Api.CRM.Wrappers.RelationshipEventWrapper, ASC.Api.CRM">Entity with the file attached</returns>
+            <path>api/2.0/crm/{entityType}/{entityid}/files</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetRootFolderID">
             <summary>
@@ -2835,18 +3093,25 @@
             <returns>
               Root folder ID
             </returns>
+            <path>api/2.0/crm/files/root</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetFiles(System.String,System.Int32)">
             <summary>
                Returns the list of all files for the entity with the ID or type specified in the request
             </summary>
-            <param name="entityType">Entity type</param>
-            <param name="entityid">Entity ID</param>
+            <param method="url" name="entityType">Entity type</param>
+            <param method="url" name="entityid">Entity ID</param>
             <short>Get file list</short> 
             <category>Files</category>
-            <returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">
                File list
             </returns>
+            <path>api/2.0/crm/{entityType}/{entityid}/files</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCRMFile(System.Int32)">
             <summary>
@@ -2854,41 +3119,57 @@
             </summary>
             <short>Delete file</short> 
             <category>Files</category>
-            <param name="fileid">File ID</param>
+            <param method="url" name="fileid">File ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">
                File Info
             </returns>
+            <path>api/2.0/crm/files/{fileid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetFiles">
             <summary>Returns a list of all user report files</summary>
             <short>Get report files</short>
             <category>Reports</category>
-            <returns>Report files</returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">Report files</returns>
             <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+            <path>api/2.0/crm/report/files</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteFile(System.Int32)">
             <summary>Delete the report file with the ID specified in the request</summary>
-            <param name="fileid">File ID</param>
+            <param method="url" name="fileid">File ID</param>
             <short>Delete report file</short>
             <category>Reports</category>
             <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
             <exception cref="T:System.ArgumentException">if fileid les than 0</exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">if file not found</exception>
+            <path>api/2.0/crm/report/file/{fileid}</path>
+            <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetStatus">
             <summary>Get the state of the report generation task</summary>
             <short>Get report generation state</short>
             <category>Reports</category>
-            <returns>Report state</returns>
+            <returns type="ASC.Web.Files.Services.DocumentService.ReportState, ASC.Web.Files">Report state</returns>
             <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+            <path>api/2.0/crm/report/status</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.Terminate">
             <summary>Terminate the report generation task</summary>
             <short>Terminate report generation</short>
             <category>Reports</category>
             <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+            <path>api/2.0/crm/report/terminate</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CheckReportData(ASC.CRM.Core.ReportType,ASC.CRM.Core.ReportTimePeriod,System.Guid[])">
             <summary>Check data availability for a report</summary>
@@ -2898,6 +3179,9 @@
             <short>Check report data</short>
             <category>Reports</category>
             <returns>Object</returns>
+            <path>api/2.0/crm/report/check</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GenerateReport(ASC.CRM.Core.ReportType,ASC.CRM.Core.ReportTimePeriod,System.Guid[])">
@@ -2907,21 +3191,28 @@
             <param name="managers">Managers</param>
             <short>Generate report</short>
             <category>Reports</category>
-            <returns>Report state</returns>
+            <returns type="ASC.Web.Files.Services.DocumentService.ReportState, ASC.Web.Files">Report state</returns>
             <exception cref="T:System.Security.SecurityException">if user can't create reports</exception>
+            <path>api/2.0/crm/report/generate</path>
+            <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetEntityTags(System.String,System.Int32)">
              <summary>
               Returns the list of all tags associated with the entity with the ID and type specified in the request
              </summary>
-             <param name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
-             <param name="entityid">Entity ID</param>
+             <param method="url" name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
+             <param method="url" name="entityid">Entity ID</param>
              <short>Get entity tags</short> 
              <category>Tags</category>
              <returns>
                Tag
              </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/{entityType}/tag/{entityid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactTags(System.Int32)">
              <summary>
@@ -2933,32 +3224,43 @@
              <returns>
                List of contact tags
              </returns>
+             <path>api/2.0/crm/contact/{contactid}/tag</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTag(System.String,System.String)">
              <summary>
               Creates the tag for the selected entity with the tag name specified in the request
              </summary>
-             <param name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
+             <param method="url" name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
              <param name="tagName">Tag name</param>
              <short>Create tag</short> 
              <category>Tags</category>
              <returns>
                Tag
              </returns>
+             <path>api/2.0/crm/{entityType}/tag</path>
+             <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.ArgumentException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAllTags(System.String)">
              <summary>
               Returns the list of all tags associated with the entity type specified in the request
              </summary>
-             <param name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
+             <param method="url" name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
              <short>Get tags for entity type</short> 
              <category>Tags</category>
-             <returns>
+             <returns type="ASC.Api.CRM.Wrappers.TagWrapper, ASC.Api.CRM">
                Tag
              </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/{entityType}/tag</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagToBatch(System.String,System.Collections.Generic.IEnumerable{System.Int32},System.String)">
             <summary>
@@ -2966,13 +3268,16 @@
             </summary>
             <short>Add tag group to entity</short> 
             <category>Tags</category>
-            <param name="entityType" remark="Allowed values: contact,opportunity,case">Tag type</param>
+            <param method="url" name="entityType" remark="Allowed values: contact,opportunity,case">Tag type</param>
             <param name="entityid">Entity ID</param>
             <param name="tagName">Tag name</param>
             <exception cref="T:System.ArgumentException"></exception>
             <returns>
                Tag
             </returns> 
+            <path>api/2.0/crm/{entityType}/taglist</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagToBatchContacts(System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Int32,ASC.CRM.Core.ContactListViewType,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String)">
             <summary>
@@ -2991,6 +3296,9 @@
             <returns>
                Tag
             </returns> 
+            <path>api/2.0/crm/contact/filter/taglist</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagToBatchDeals(System.Guid,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Int32,System.Nullable{ASC.CRM.Core.DealMilestoneStatus},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String)">
             <summary>
@@ -3002,15 +3310,18 @@
             <param optional="true" name="opportunityStagesid">Opportunity stage ID</param>
             <param optional="true" name="tags">Tags</param>
             <param optional="true" name="contactid">Contact ID</param>
+            <param optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
             <param optional="true" name="contactAlsoIsParticipant">Participation status: take into account opportunities where the contact is a participant or not</param>
             <param optional="true" name="fromDate">Start date</param>
             <param optional="true" name="toDate">End date</param>
-            <param optional="true" name="stageType" remark="Allowed values: {Open, ClosedAndWon, ClosedAndLost}">Opportunity stage type</param>
             <param name="tagName">Tag name</param>
             <exception cref="T:System.ArgumentException"></exception>
             <returns>
                Tag
             </returns> 
+            <path>api/2.0/crm/opportunity/filter/taglist</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagToBatchCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String},System.String)">
             <summary>
@@ -3026,6 +3337,9 @@
             <returns>
                Tag
             </returns> 
+            <path>api/2.0/crm/case/filter/taglist</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteUnusedTag(System.String)">
             <summary>
@@ -3033,8 +3347,12 @@
             </summary>
             <short>Delete unused tags</short> 
             <category>Tags</category>
-            <param name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
+            <param method="url" name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
             <returns>Tags</returns>
+            <path>api/2.0/crm/{entityType}/tag/unused</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddTagTo(System.String,System.Int32,System.String)">
             <summary>
@@ -3042,21 +3360,24 @@
             </summary>
             <short>Add tag</short> 
             <category>Tags</category>
-            <param name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
-            <param name="entityid">Entity ID</param>
+            <param method="url" name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
+            <param method="url" name="entityid">Entity ID</param>
             <param name="tagName">Tag name</param>
             <exception cref="T:System.ArgumentException"></exception>
             <returns>
               Tag
             </returns> 
+            <path>api/2.0/crm/{entityType}/{entityid}/tag</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddContactTagToGroup(System.String,System.Int32,System.String)">
             <summary>
               Adds the selected tag to the entity (company or person) specified in the request and to all related contacts
             </summary>
             <short>Add tag</short> 
-            <param name="entityType" remark="Allowed values: company,person">Entity type</param>
-            <param name="entityid">Entity ID</param>
+            <param method="url" name="entityType" remark="Allowed values: company,person">Entity type</param>
+            <param method="url" name="entityid">Entity ID</param>
             <param name="tagName">Tag name</param>
             <category>Tags</category>
             <exception cref="T:System.ArgumentException"></exception>
@@ -3065,13 +3386,16 @@
             <returns>
               Tag
             </returns>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <path>api/2.0/crm/{entityType}/{entityid}/tag/group</path>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTag(System.String,System.String)">
              <summary>
                Deletes the selected tag from the entity with the type specified in the request
              </summary>
              <short>Delete tag</short> 
-             <param name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
+             <param method="url" name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
              <param name="tagName">Tag name</param>
              <category>Tags</category>
              <exception cref="T:System.ArgumentException"></exception>
@@ -3079,6 +3403,9 @@
              <returns>
                Tag
              </returns>
+             <path>api/2.0/crm/{entityType}/tag</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTagFrom(System.String,System.Int32,System.String)">
             <summary>
@@ -3086,21 +3413,24 @@
             </summary>
             <short>Remove tag</short> 
             <category>Tags</category>
-            <param name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
-            <param name="entityid">Entity ID</param>
+            <param method="url" name="entityType" remark="Allowed values: contact,opportunity,case">Entity type</param>
+            <param method="url" name="entityid">Entity ID</param>
             <param name="tagName">Tag name</param>
             <exception cref="T:System.ArgumentException"></exception>
             <returns>
               Tag
             </returns> 
+            <path>api/2.0/crm/{entityType}/{entityid}/tag</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactTagFromGroup(System.String,System.Int32,System.String)">
             <summary>
               Deletes the selected tag from the entity (company or person) specified in the request and from all related contacts
             </summary>
             <short>Delete tag</short> 
-            <param name="entityType" remark="Allowed values: company,person">Entity type</param>
-            <param name="entityid">Entity ID</param>
+            <param method="url" name="entityType" remark="Allowed values: company,person">Entity type</param>
+            <param method="url" name="entityid">Entity ID</param>
             <param name="tagName">Tag name</param>
             <category>Tags</category>
             <exception cref="T:System.ArgumentException"></exception>
@@ -3109,35 +3439,45 @@
             <returns>
               Tag
             </returns>
+            <path>api/2.0/crm/{entityType}/{entityid}/tag/group</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskByID(System.Int32)">
              <summary>
               Returns the detailed information about the task with the ID specified in the request
              </summary>
-             <param name="taskid">Task ID</param>
-             <returns>Task</returns>
+             <param method="url" name="taskid">Task ID</param>
+             <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">Task</returns>
              <short>Get task by ID</short> 
              <category>Tasks</category>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/task/{taskid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAllTasks(System.Guid,System.Int32,System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Int32)">
             <summary>
               Returns the list of tasks matching the creteria specified in the request
             </summary>
-            <param optional="true" name="responsibleid">Task responsible</param>
-            <param optional="true" name="categoryid">Task category ID</param>
-            <param optional="true" name="isClosed">Show open or closed tasks only</param>
-            <param optional="true" name="fromDate">Earliest task due date</param>
-            <param optional="true" name="toDate">Latest task due date</param>
-            <param name="entityType" remark="Allowed values: opportunity, contact or case">Related entity type</param>
-            <param name="entityid">Related entity ID</param>
+            <param method="url" optional="true" name="responsibleid">Task responsible</param>
+            <param method="url" optional="true" name="categoryid">Task category ID</param>
+            <param method="url" optional="true" name="isClosed">Show open or closed tasks only</param>
+            <param method="url" optional="true" name="fromDate">Earliest task due date</param>
+            <param method="url" optional="true" name="toDate">Latest task due date</param>
+            <param method="url" name="entityType" remark="Allowed values: opportunity, contact or case">Related entity type</param>
+            <param method="url" name="entityid">Related entity ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <short>Get task list</short> 
             <category>Tasks</category>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">
               Task list
             </returns>
+            <path>api/2.0/crm/task/filter</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ReOpenTask(System.Int32)">
             <summary>
@@ -3145,11 +3485,14 @@
             </summary>
             <short>Resume task</short> 
             <category>Tasks</category>
-            <param name="taskid">Task ID</param>
+            <param method="url" name="taskid">Task ID</param>
             <exception cref="T:System.ArgumentException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">
               Task
             </returns>
+            <path>api/2.0/crm/task/{taskid}/reopen</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CloseTask(System.Int32)">
             <summary>
@@ -3157,11 +3500,14 @@
             </summary>
             <short>Close task</short> 
             <category>Tasks</category>
-            <param name="taskid">Task ID</param>
+            <param method="url" name="taskid">Task ID</param>
             <exception cref="T:System.ArgumentException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">
               Task
             </returns>
+            <path>api/2.0/crm/task/{taskid}/close</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTask(System.Int32)">
             <summary>
@@ -3169,12 +3515,15 @@
             </summary>
             <short>Delete task</short> 
             <category>Tasks</category>
-            <param name="taskid">Task ID</param>
+            <param method="url" name="taskid">Task ID</param>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
-            <returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">
              Deleted task
             </returns>
+            <path>api/2.0/crm/task/{taskid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTask(System.String,System.String,ASC.Specific.ApiDateTime,System.Guid,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Int32)">
             <summary>
@@ -3193,7 +3542,10 @@
             <exception cref="T:System.ArgumentException"></exception>
             <short>Create task</short> 
             <category>Tasks</category>
-            <returns>Task</returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">Task</returns>
+            <path>api/2.0/crm/task</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskGroup(System.String,System.String,ASC.Specific.ApiDateTime,System.Guid,System.Int32,System.Int32[],System.String,System.Int32,System.Boolean,System.Int32)">
             <summary>
@@ -3219,7 +3571,7 @@
             <summary>
               Updates the selected task with the parameters (title, description, due date, etc.) specified in the request
             </summary>
-            <param name="taskid">Task ID</param>
+            <param method="url" name="taskid">Task ID</param>
             <param name="title">Task title</param>
             <param name="description">Task description</param>
             <param name="deadline">Task due date</param>
@@ -3232,7 +3584,10 @@
             <param optional="true"  name="alertValue">Time period in minutes for reminder to the responsible about the task</param>
             <short> Update task</short> 
             <category>Tasks</category>
-            <returns>Task</returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskWrapper, ASC.Api.CRM">Task</returns>
+            <path>api/2.0/crm/task/{taskid}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetTaskCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
             <visible>false</visible>
@@ -3500,6 +3855,9 @@
             <short>Save organisation company name</short>
             <category>Organisation</category>
             <returns>Organisation company name</returns>
+            <path>api/2.0/crm/settings/organisation/base</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:System.Security.SecurityException"></exception>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsCompanyAddress(System.String,System.String,System.String,System.String,System.String)">
@@ -3515,6 +3873,9 @@
             <category>Organisation</category>
             <returns>Returns a JSON object with the organization company address details</returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/settings/organisation/address</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOrganisationSettingsLogo(System.Boolean)">
             <summary>
@@ -3526,16 +3887,22 @@
             <returns>Organisation logo ID</returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.Exception"></exception>
+            <path>api/2.0/crm/settings/organisation/logo</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetOrganisationSettingsLogo(System.Int32)">
             <summary>
-             Get organisation logo in base64 format  (if 'id' is 0 then take current logo)
+             Get organisation logo in base64 format (if 'id' is 0 then take current logo)
             </summary>
-            <param name="id">organisation logo id</param>
+            <param method="url" name="id">organisation logo id</param>
             <short>Get organisation logo</short>
             <category>Organisation</category>
             <returns>Organisation logo content in base64</returns>
             <exception cref="T:System.Exception"></exception>
+            <path>api/2.0/crm/settings/organisation/logo</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ChangeWebToLeadFormKey">
             <summary>
@@ -4002,6 +4369,12 @@
         <member name="P:ASC.Api.CRM.Wrappers.ContactWrapper.HaveLateTasks">
             <example>true</example>
         </member>
+        <member name="T:ASC.Api.CRM.Wrappers.ContactBaseWithEmailWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.ContactBaseWithEmailWrapper.Email">
+            <type>ASC.Api.CRM.Wrappers.ContactInfoWrapper, ASC.Api.CRM</type>
+        </member>
         <member name="T:ASC.Api.CRM.Wrappers.ContactBaseWrapper">
              <summary>
               Contact base information
@@ -4046,31 +4419,197 @@
             <summary>
              Invoice
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Status">
+            <type>ASC.Api.CRM.Wrappers.InvoiceStatusWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Number">
+            <example></example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.IssueDate">
+            <example>2020-12-14T22:13:41.5378233Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.TemplateType">
+            <example type="int">0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Contact">
+            <type>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Consignee">
+            <type>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Entity">
+            <type>ASC.Api.CRM.Wrappers.EntityWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.DueDate">
+            <example>2020-12-14T22:13:41.5378233Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Language">
+            <example></example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Currency">
+            <type>ASC.Api.CRM.CurrencyInfoWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.ExchangeRate">
+            <example type="double">1,0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.PurchaseOrderNumber">
+            <example></example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Terms">
+            <example></example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Description">
+            <example></example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.FileID">
+            <example type="int">-1</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.CreateOn">
+            <example>2020-12-14T22:13:41.5378233Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.CreateBy">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.Cost">
+            <example type="double">0,0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.CanEdit">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceBaseWrapper.CanDelete">
+            <example>true</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.InvoiceWrapper">
             <summary>
              Invoice
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.InvoiceBaseWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceWrapper.InvoiceLines">
+            <type>ASC.Api.CRM.Wrappers.InvoiceLineWrapper, ASC.Api.CRM</type>
+            <collection>list</collection>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.InvoiceItemWrapper">
             <summary>
              Invoice Item
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.Title">
+            <example>Title</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.StockKeepingUnit">
+            <example>StockKeepingUnit</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.Description">
+            <example>Description</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.Price">
+            <example type="double">1.2</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.Currency">
+            <type>ASC.Api.CRM.CurrencyInfoWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.StockQuantity">
+            <example type="decimal">2.2</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.TrackInvenory">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.InvoiceTax1">
+            <type>ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.InvoiceTax2">
+            <type>ASC.Api.CRM.Wrappers.InvoiceTaxWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.CreateOn">
+            <example>2020-12-14T22:13:41.5378233Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.CreateBy">
+            <example>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.CanEdit">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceItemWrapper.CanDelete">
+            <example>true</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.InvoiceTaxWrapper">
             <summary>
              Invoice Tax
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceTaxWrapper.Name">
+            <example>Name</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceTaxWrapper.Description">
+            <example>Description</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceTaxWrapper.Rate">
+            <example type="double">Rate</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceTaxWrapper.CreateOn">
+            <example>2020-12-14T22:13:41.5378233Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceTaxWrapper.CreateBy">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceTaxWrapper.CanEdit">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceTaxWrapper.CanDelete">
+            <example>true</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.InvoiceLineWrapper">
             <summary>
              Invoice Line
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.InvoiceID">
+            <example type="int">0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.InvoiceItemID">
+            <example type="int">0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.InvoiceTax1ID">
+            <example type="int">0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.InvoiceTax2ID">
+            <example type="int">0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.SortOrder">
+            <example type="int">0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.Description">
+            <example>Description</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.Quantity">
+            <example type="double">0,0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.Price">
+            <example type="double">0,0</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceLineWrapper.Discount">
+            <example type="double">0,0</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.InvoiceStatusWrapper">
             <summary>
              Invoice Status
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.InvoiceStatusWrapper.Title">
+            <example>Title</example>
+        </member>
+        <member name="T:ASC.Api.CRM.Wrappers.CustomFieldWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.CustomFieldWrapper.RelativeItemsCount">
+            <example type="int"></example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper">
             <summary>
@@ -4091,7 +4630,7 @@
             <example type="int">5</example>
         </member>
         <member name="P:ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper.Position">
-            <example type="10">10</example>
+            <example type="int">10</example>
         </member>
         <member name="P:ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper.Mask">
             <example></example>
@@ -4162,6 +4701,18 @@
             <type>ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper, ASC.Api.CRM</type>
             <collection>list</collection>
         </member>
+        <member name="T:ASC.Api.CRM.Wrappers.HistoryCategoryBaseWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.ListItemWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.HistoryCategoryBaseWrapper.ImagePath">
+            <example>path to image</example>
+        </member>
+        <member name="T:ASC.Api.CRM.Wrappers.HistoryCategoryWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.HistoryCategoryBaseWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.HistoryCategoryWrapper.RelativeItemsCount">
+            <example>1</example>
+        </member>
         <member name="T:ASC.Api.CRM.Wrappers.DealMilestoneBaseWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ListItemWrapper, ASC.Api.CRM</inherited>
         </member>
@@ -4170,6 +4721,24 @@
         </member>
         <member name="P:ASC.Api.CRM.Wrappers.DealMilestoneBaseWrapper.StageType">
             <example type="int">0</example>
+        </member>
+        <member name="T:ASC.Api.CRM.Wrappers.DealMilestoneWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.DealMilestoneBaseWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.DealMilestoneWrapper.RelativeItemsCount">
+            <example type="int">1</example>
+        </member>
+        <member name="T:ASC.Api.CRM.Wrappers.TaskCategoryBaseWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.ListItemWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskCategoryBaseWrapper.ImagePath">
+            <example>path to image</example>
+        </member>
+        <member name="T:ASC.Api.CRM.Wrappers.TaskCategoryWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.TaskCategoryBaseWrapper, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskCategoryWrapper.RelativeItemsCount">
+            <example type="int">1</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.ContactStatusBaseWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ListItemWrapper, ASC.Api.CRM</inherited>
@@ -4187,6 +4756,12 @@
             <inherited>ASC.Api.CRM.Wrappers.ContactTypeBaseWrapper, ASC.Api.CRM</inherited>
         </member>
         <member name="P:ASC.Api.CRM.Wrappers.ContactTypeWrapper.RelativeItemsCount">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TagWrapper.Title">
+            <example>Tag</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TagWrapper.RelativeItemsCount">
             <example type="int">1</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.ListItemWrapper">
@@ -4207,10 +4782,84 @@
         <member name="P:ASC.Api.CRM.Wrappers.ObjectWrapperBase.ID">
             <example name="id" type="int">1234</example>
         </member>
+        <member name="P:ASC.Api.CRM.Wrappers.EntityWrapper.EntityType">
+            <example>opportunity</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.EntityWrapper.EntityId">
+            <example type="int">123445</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.EntityWrapper.EntityTitle">
+            <example>Household appliances internet shop</example>
+        </member>
+        <member name="T:ASC.Api.CRM.Wrappers.RelationshipEventWrapper">
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.RelationshipEventWrapper.CreateBy">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.RelationshipEventWrapper.Created">
+            <example>2020-12-13T17:13:31.5902727Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.RelationshipEventWrapper.Content">
+            <example>Agreed to meet at lunch and discuss the client commercial offer</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.RelationshipEventWrapper.Category">
+            <type>ASC.Api.CRM.Wrappers.HistoryCategoryBaseWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.RelationshipEventWrapper.Contact">
+            <type>ASC.Api.CRM.Wrappers.ContactBaseWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.RelationshipEventWrapper.Entity">
+            <type>ASC.Api.CRM.Wrappers.EntityWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.RelationshipEventWrapper.CanEdit">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.RelationshipEventWrapper.Files">
+            <type>ASC.Api.Documents.FileWrapper, ASC.Api.Documents</type>
+            <collection>list</collection>
+        </member>
         <member name="T:ASC.Api.CRM.Wrappers.TaskWrapper">
             <summary>
              Task
             </summary>
+            <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.CreateBy">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.Created">
+            <example>2020-12-16T03:11:54.3573531Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.Contact">
+            <type>ASC.Api.CRM.Wrappers.ContactBaseWithEmailWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.Title">
+            <example>Send a commercial offer</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.Description">
+            <example>Description</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.DeadLine">
+            <example>2020-12-16T03:11:54.3573531Z</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.AlertValue">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.Responsible">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.IsClosed">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.Category">
+            <type>ASC.Api.CRM.Wrappers.TaskCategoryBaseWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.Entity">
+            <type>ASC.Api.CRM.Wrappers.EntityWrapper, ASC.Api.CRM</type>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.CanEdit">
+            <example>true</example>
         </member>
         <member name="T:ASC.Api.CRM.CurrencyRateWrapper">
             <summary>

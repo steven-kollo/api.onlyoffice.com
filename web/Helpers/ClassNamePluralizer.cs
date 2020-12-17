@@ -78,7 +78,7 @@ namespace ASC.Api.Web.Help.Helpers
     public class TypeDescriptor
     {
         internal const string SystemNullable = "System.Nullable";
-        internal const string SystemIEnumerable = "System.Collections.Generic";
+        internal const string SystemIEnumerable = "System.Collections.Generic.IEnumerable{";
 
         [DataMember(Name = "Names")]
         public ItemDictionary<string, TypeDescription> Names = new ItemDictionary<string, TypeDescription>();
