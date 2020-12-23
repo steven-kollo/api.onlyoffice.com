@@ -477,6 +477,21 @@
         <member name="P:ASC.Web.Files.Services.WCFService.AceShortWrapper.IsLink">
             <example name="isLink">true</example>
         </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.AuthData">
+            <type name="auth_data">ASC.Files.Core.AuthData, ASC.Web.Files</type>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.Corporate">
+            <example name="corporate">false</example>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.CustomerTitle">
+            <example name="customer_title">customer_title</example>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.ProviderId">
+            <example name="provider_id">provider_id</example>
+        </member>
+        <member name="P:ASC.Web.Files.Services.WCFService.ThirdPartyParams.ProviderKey">
+            <example name="provider_key">provider_key</example>
+        </member>
         <member name="T:ASC.Web.Files.Services.NotifyService.FilesPatternResource">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -4437,6 +4452,76 @@
               Looks up a localized string similar to Users.
             </summary>
         </member>
+        <member name="P:ASC.Files.Core.AuthData.Login">
+            <example name="login">login</example>
+        </member>
+        <member name="P:ASC.Files.Core.AuthData.Password">
+            <example name="password">password</example>
+        </member>
+        <member name="P:ASC.Files.Core.AuthData.Token">
+            <example name="token">token</example>
+        </member>
+        <member name="P:ASC.Files.Core.AuthData.Url">
+            <example name="url">url</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.ID">
+            <example name="id">123wda-wdaw</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.Title">
+            <example name="title">title</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.CreateBy">
+            <example name="create_by_id">d40b68d0-5b86-4823-b22a-f57f429f5aff</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.CreateByString">
+            <example name="create_by">admin</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.CreateOnString">
+            <example name="create_on">create_on</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.ModifiedOnString">
+            <example name="modified_on">modified_on</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.ModifiedBy">
+            <example name="modified_by_id">d40b68d0-5b86-4823-b22a-f57f429f5aff</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.ModifiedByString">
+            <example name="modified_by">admin</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.Error">
+            <example name="error"></example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.Access">
+            <example name="access" type="int">3</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.Shared">
+            <example name="shared">true</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.ProviderId">
+            <example name="provider_id" type="int">3</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.ProviderKey">
+            <example name="provider_key">provider_key</example>
+        </member>
+        <member name="P:ASC.Files.Core.FileEntry.FolderIdDisplay">
+            <example name="folder_id">123wda5</example>
+        </member>
+        <member name="T:ASC.Files.Core.Folder">
+            <inherited>ASC.Files.Core.FileEntry, ASC.Web.Files</inherited>
+        </member>
+        <member name="P:ASC.Files.Core.Folder.TotalFiles">
+            <example name="total_files" type="int">5</example>
+        </member>
+        <member name="P:ASC.Files.Core.Folder.TotalSubFolders">
+            <example name="total_sub_folder" type="int">5</example>
+        </member>
+        <member name="P:ASC.Files.Core.Folder.Shareable">
+            <example name="shareable">true</example>
+        </member>
+        <member name="P:ASC.Files.Core.Folder.NewForMe">
+            <example name="isnew" type="int">3</example>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:ASC.Files.Core.Folder.FolderUrl" -->
         <member name="T:ASC.Files.Core.IFileDao">
             <summary>
                Interface encapsulates access toFolderId files

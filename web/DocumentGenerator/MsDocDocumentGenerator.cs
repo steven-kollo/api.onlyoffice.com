@@ -286,6 +286,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     [DataContract(Name = "param", Namespace = "")]
     public class MsDocEntryPointMethodParams
     {
+
         [DataMember(Name = "name")]
         public string Name { get; set; }
 
@@ -310,6 +311,10 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
     public class MsDocDocumentGenerator
     {
+        internal const string SystemNullable = "System.Nullable{";
+        internal const string SystemIEnumerable = "System.Collections.Generic.IEnumerable{";
+        internal const string SystemList = "System.Collections.Generic.List{";
+
         private static readonly Regex RouteRegex = new Regex(@"\{([^\}]+)\}", RegexOptions.Compiled);
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
         private readonly string[] _responseFormats = (ConfigurationManager.AppSettings["enabled_response_formats"] ?? "").Split('|');
@@ -452,9 +457,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
-
-            
-
             var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
             var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
 
@@ -543,7 +545,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         result = null;
                     }
                 }
-
                 if(member.Element("collection").ValueOrNull() == "list")
                 {
                     var list = new List<object>();
@@ -640,10 +641,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private List<XElement> GetInherited(string type, string file, List<XElement> needMembers)
         {
-            if (type.Contains("ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper"))
-            {
-
-            }
             var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers1 = members.Where(mem => IsMember(mem, type)).ToList();
@@ -654,7 +651,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 var split = inherited.Element("inherited").ValueOrNull().Split(',');
                 needMembers = GetInherited(split[0].Trim(), split[1].Trim(), needMembers);
             }
-
             return needMembers.Union(needMembers1).ToList();
         }
 
@@ -683,22 +679,52 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var path = method.Path.ToLowerInvariant();
             var query = false;
             urlParams.ForEach(p => {
-                if (path.IndexOf('{' + p.Key.Name.ToLowerInvariant() + '}') > 0)
+                object jsonParam = null;
+                if (p.Value.JsonParam == null)
                 {
-                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', HttpUtility.UrlEncode(p.Value.JsonParam.ToString()));
+                    jsonParam = GetJsonParam(p.Key.Type);
+                    if (jsonParam != null)
+                    {
+                        jsonParam = HttpUtility.UrlEncode(JsonConvert.SerializeObject(jsonParam, Newtonsoft.Json.Formatting.Indented));
+                    }
                 }
                 else
                 {
-                    var value = p.Value.JsonParam.ToString();
-                    if (value == "null") return;
+                    jsonParam = p.Value.JsonParam;
+                }
+                if (path.IndexOf('{' + p.Key.Name.ToLowerInvariant() + '}') > 0)
+                {
+                    if(jsonParam == null)
+                    {
+                        return;
+                    }
+                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', HttpUtility.UrlEncode(jsonParam.ToString()));
+                }
+                else
+                {
+                    if (jsonParam == null)
+                    {
+                        return;
+                    }
 
-                    path += string.Format("{0}{1}={2}", query ? "&" : "?", p.Key.Name, HttpUtility.UrlEncode(value));
+                    path += string.Format("{0}{1}={2}", query ? "&" : "?", p.Key.Name, HttpUtility.UrlEncode(jsonParam.ToString()));
                     query = true;
                 }
             });
 
             var args = new Dictionary<string, object>();
-            bodyParams.ForEach(p => args.Add(p.Key.Name, p.Value.JsonParam));
+            bodyParams.ForEach(p => 
+            {
+                if (p.Value.JsonParam == null)
+                {
+                    var jsonParam = GetJsonParam(p.Key.Type);
+                    args.Add(p.Key.Name, jsonParam);
+                }
+                else
+                {
+                    args.Add(p.Key.Name, p.Value.JsonParam);
+                }
+            });
 
             sb.AppendFormat("{0} {1}", method.HttpMethod, path).AppendLine()
                 .AppendLine("Host: yourportal.onlyoffice.com")
@@ -711,6 +737,36 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             }
 
             method.Example = sb.ToString();
+        }
+
+        private static object GetJsonParam(string typeName)
+        {
+            object jsonParam = null;
+            TypeDescription typeDescription = null;
+            if (typeName.StartsWith(SystemNullable))
+            {
+                jsonParam = ClassNamePluralizer.ToHumanName(typeName.Substring(SystemNullable.Length, typeName.Length - 1 - SystemNullable.Length)).JsonParam;
+            }
+            if (typeName.StartsWith(SystemIEnumerable))
+            {
+                 typeDescription = ClassNamePluralizer.ToHumanName(typeName.Substring(SystemIEnumerable.Length, typeName.Length - 1 - SystemIEnumerable.Length));
+            }
+            if (typeName.StartsWith(SystemList))
+            {
+                 typeDescription =  ClassNamePluralizer.ToHumanName(typeName.Substring(SystemList.Length, typeName.Length - 1 - SystemList.Length));
+            }
+            if (typeName.EndsWith("[]"))
+            {
+                 typeDescription = ClassNamePluralizer.ToHumanName(typeName.Substring(0, typeName.Length - 2));
+            }
+
+            if (typeDescription !=null && typeDescription.JsonParam != null)
+            {
+                var list = new List<object>();
+                list.Add(typeDescription.JsonParam);
+                jsonParam = list;
+            }
+            return jsonParam;
         }
 
         private static string GetFunctionName(string functionName)

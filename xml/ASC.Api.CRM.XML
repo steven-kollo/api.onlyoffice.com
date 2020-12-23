@@ -2056,8 +2056,8 @@
             <summary>
                Updates user fields order
             </summary>
-            <param method="url" name="fieldids">User field ID list</param>
-            <param name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Entity type</param>
+            <param name="fieldids">User field ID list</param>
+            <param method="url" name="entityType" remark="Allowed values: contact,person,company,opportunity,case">Entity type</param>
             <category>User fields</category>
             <returns type="ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper, ASC.Api.CRM">
                User fields
@@ -3966,9 +3966,15 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
+            <param name="isoCountryCode"></param>
+            <param name="numberType"></param>
+            <path>api/2.0/crm/voip/numbers/available</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetUnlinkedPhoneNumbers">
             <summary>
@@ -3976,8 +3982,12 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/voip/numbers/unlinked</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetExistingPhoneNumbers">
             <summary>
@@ -3985,8 +3995,12 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/voip/numbers/existing</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.BuyNumber(System.String)">
             <summary>
@@ -3994,8 +4008,11 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/voip/numbers</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.LinkNumber(System.String)">
             <summary>
@@ -4003,8 +4020,11 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/voip/numbers/link</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteNumber(System.String)">
             <summary>
@@ -4012,8 +4032,12 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <param method="url" name="numberId"></param>
+            <path>api/2.0/crm/voip/numbers/{numberId}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetNumber(System.String)">
             <summary>
@@ -4021,8 +4045,12 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <param name="numberId" method="url"></param>
+            <path>api/2.0/crm/voip/numbers/{numberId}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCurrentNumber">
             <summary>
@@ -4030,7 +4058,10 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
+            <path>api/2.0/crm/voip/numbers/current</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetToken">
             <summary>
@@ -4039,15 +4070,29 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <path>api/2.0/crm/voip/token</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateSettings(System.String,System.String,System.String,System.String,System.String,ASC.VoipService.WorkingHours,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String)">
             <summary>
-             
+            
             </summary>
-            <short></short>
+            <param method="url" name="numberId"></param>
+            <param name="greeting"></param>
+            <param name="holdUp"></param>
+            <param name="wait"></param>
+            <param name="voiceMail"></param>
+            <param name="workingHours"></param>
+            <param name="allowOutgoingCalls"></param>
+            <param name="record"></param>
+            <param name="alias"></param>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipPhone, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/voip/numbers/{numberId}/settings</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateSettings(ASC.VoipService.Queue,System.Boolean)">
             <summary>
@@ -4057,6 +4102,11 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <param name="queue"></param>
+            <param name="pause"></param>
+            <path>api/2.0/crm/voip/numbers/settings</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetVoipSettings">
             <summary>
@@ -4066,6 +4116,9 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/voip/numbers/settings</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetUploadedFilesUri">
             <summary>
@@ -4073,8 +4126,12 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipUpload, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/voip/uploads</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteUploadedFile(ASC.VoipService.AudioType,System.String)">
             <summary>
@@ -4082,9 +4139,14 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.VoipUpload, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <param name="audioType"></param>
+            <param name="fileName"></param>
+            <path>api/2.0/crm/voip/uploads</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetOperators(System.String)">
             <summary>
@@ -4094,6 +4156,10 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <param name="numberId" method="url"></param>
+            <path>api/2.0/crm/voip/numbers/{numberId}/oper</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AddOperators(System.String,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -4101,9 +4167,15 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.Agent, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <exception cref="T:System.ArgumentException"></exception>
+            <param name="numberId"></param>
+            <param name="operators"></param>
+            <path>api/2.0/crm/voip/numbers/{numberId}/oper</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteOperator(System.String,System.Guid)">
             <summary>
@@ -4113,15 +4185,27 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <param method="url" name="numberId"></param>
+            <param name="oper"></param>
+            <path>api/2.0/crm/voip/numbers/{numberId}/oper</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateOperator(System.Guid,System.Nullable{ASC.VoipService.AgentStatus},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{ASC.VoipService.AnswerType},System.String)">
             <summary>
-             
+            
             </summary>
-            <short></short>
+            <param method="url" name="operatorId"></param>
+            <param name="status"></param>
+            <param name="allowOutgoingCalls"></param>
+            <param name="record"></param>
+            <param name="answerType"></param>
+            <param name="redirectToNumber"></param>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.VoipService.Agent, ASC.VoipService"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <path>api/2.0/crm/voip/opers/{operatorId}</path>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.MakeCall(System.String,System.String)">
             <summary>
@@ -4129,8 +4213,13 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM"></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
+            <param name="to"></param>
+            <param name="contactId"></param>
+            <path>api/2.0/crm/voip/call</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.AnswerCall(System.String)">
             <summary>
@@ -4138,7 +4227,11 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM"></returns>
+            <param name="callId"></param>
+            <path>api/2.0/crm/voip/call/{callId}/answer</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.RejectCall(System.String)">
             <summary>
@@ -4146,7 +4239,11 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM"></returns>
+            <param name="callId" method="url"></param>
+            <path>api/2.0/crm/voip/call/{callId}/reject</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ReditectCall(System.String,System.String)">
             <summary>
@@ -4154,15 +4251,29 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM"></returns>
+            <param name="callId" method="url"></param>
+            <param name="to"></param>
+            <path>api/2.0/crm/voip/call/{callId}/redirect</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SaveCall(System.String,System.String,System.String,System.Guid,System.Nullable{ASC.VoipService.VoipCallStatus},System.String,System.Nullable{System.Decimal})">
             <summary>
-             
+            
             </summary>
-            <short></short>
+            <param method="url" name="callId"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="answeredBy"></param>
+            <param name="status"></param>
+            <param name="contactId"></param>
+            <param name="price"></param>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM"></returns>
+            <path>api/2.0/crm/voip/call/{callId}</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SavePrice(System.String)">
             <summary>
@@ -4171,6 +4282,10 @@
             <short></short>
             <category>Voip</category>
             <returns></returns>
+            <param name="callId" method="url"></param>
+            <path>api/2.0/crm/voip/price/{callId}</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCalls(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32})">
             <summary>
@@ -4178,7 +4293,17 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM"></returns>
+            <param name="callType"></param>
+            <param name="from"></param>
+            <param name="to"></param>
+            <param name="agent"></param>
+            <param name="client"></param>
+            <param name="contactID"></param>
+            <path>api/2.0/crm/voip/call</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetMissedCalls">
             <summary>
@@ -4186,15 +4311,23 @@
             </summary>
             <short></short>
             <category>Voip</category>
-            <returns></returns>
+            <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM"></returns>
+            <path>api/2.0/crm/voip/call/missed</path>
+            <httpMethod>GET</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCall(System.String)">
             <summary>
              
             </summary>
             <short></short>
-            <category>Voip</category>
-            <returns></returns>
+            <category>Voip</category> 
+            <returns type="ASC.Api.CRM.Wrappers.VoipCallWrapper, ASC.Api.CRM"></returns>
+            <param method="url" name="callId"></param>
+            <path>api/2.0/crm/voip/call/{callId}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.CasesWrapper">
             <inherited>ASC.Api.CRM.Wrappers.ObjectWrapperBase, ASC.Api.CRM</inherited>
@@ -4609,7 +4742,7 @@
             <inherited>ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper, ASC.Api.CRM</inherited>
         </member>
         <member name="P:ASC.Api.CRM.Wrappers.CustomFieldWrapper.RelativeItemsCount">
-            <example type="int"></example>
+            <example type="int">0</example>
         </member>
         <member name="T:ASC.Api.CRM.Wrappers.CustomFieldBaseWrapper">
             <summary>
@@ -4860,6 +4993,54 @@
         </member>
         <member name="P:ASC.Api.CRM.Wrappers.TaskWrapper.CanEdit">
             <example>true</example>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.Id">
+            <example>Id</example>
+            <order>1</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.From">
+            <example>From</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.To">
+            <example>To</example>
+            <order>3</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.Status">
+            <example type="int">1</example>
+            <order>4</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.AnsweredBy">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+            <order>5</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.DialDate">
+            <example>2020-12-23T04:11:57.1649297Z</example>
+            <order>6</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.DialDuration">
+            <example type="int">1</example>
+            <order>7</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.Cost">
+            <example type="double">5.3</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.Contact">
+            <type>ASC.Api.CRM.Wrappers.ContactWrapper, ASC.Api.CRM</type>
+            <order>11</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.Calls">
+            <example>null</example>
+            <order>11</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.RecordUrl">
+            <example>RecordUrl</example>
+            <order>13</order>
+        </member>
+        <member name="P:ASC.Api.CRM.Wrappers.VoipCallWrapper.RecordDuration">
+            <example type="int">2</example>
+            <order>14</order>
         </member>
         <member name="T:ASC.Api.CRM.CurrencyRateWrapper">
             <summary>

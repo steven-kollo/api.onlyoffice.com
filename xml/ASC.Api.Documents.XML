@@ -159,6 +159,9 @@
             <param name="contentDisposition" visible="false">Content-Disposition Header</param>
             <param name="files" visible="false">List of files when posted as multipart/form-data</param>
             <returns>Uploaded file</returns>
+            <path>api/2.0/files/@my/upload</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UploadFileToCommon(System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
@@ -179,6 +182,9 @@
             <param name="contentDisposition" visible="false">Content-Disposition Header</param>
             <param name="files" visible="false">List of files when posted as multipart/form-data</param>
             <returns>Uploaded file</returns>
+            <path>api/2.0/files/@common/upload</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UploadFile(System.String,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Boolean)">
             <summary>
@@ -194,7 +200,7 @@
             <li>Using standart multipart/form-data method</li>
             </ol>]]>
             </remarks>
-            <param name="folderId">Folder ID to upload to</param>
+            <param method="url" name="folderId">Folder ID to upload to</param>
             <param name="file" visible="false">Request Input stream</param>
             <param name="contentType" visible="false">Content-Type Header</param>
             <param name="contentDisposition" visible="false">Content-Disposition Header</param>
@@ -203,6 +209,9 @@
             <param name="storeOriginalFileFlag" visible="false">If True, upload documents in original formats as well</param>
             <param name="keepConvertStatus" visible="false">Keep status conversation after finishing</param>
             <returns>Uploaded file</returns>
+            <path>api/2.0/files/{folderId}/upload</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.InsertFileToMy(System.IO.Stream,System.String,System.Nullable{System.Boolean},System.Boolean)">
             <summary>
@@ -214,7 +223,10 @@
             <param name="createNewIfExist" visible="false">Create New If Exist</param>
             <param name="keepConvertStatus" visible="false">Keep status conversation after finishing</param>
             <category>Uploads</category>
-            <returns></returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents"></returns>
+            <path>api/2.0/files/@my/insert</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.InsertFileToCommon(System.IO.Stream,System.String,System.Nullable{System.Boolean},System.Boolean)">
             <summary>
@@ -226,19 +238,25 @@
             <param name="createNewIfExist" visible="false">Create New If Exist</param>
             <param name="keepConvertStatus" visible="false">Keep status conversation after finishing</param>
             <category>Uploads</category>
-            <returns></returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents"></returns>
+            <path>api/2.0/files/@common/insert</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.InsertFile(System.String,System.IO.Stream,System.String,System.Nullable{System.Boolean},System.Boolean)">
             <summary>
             Uploads the file specified with single file upload
             </summary>
-            <param name="folderId">Folder ID to upload to</param>
+            <param method="url" name="folderId">Folder ID to upload to</param>
             <param name="file" visible="false">Request Input stream</param>
             <param name="title">Name of file which has to be uploaded</param>
             <param name="createNewIfExist" visible="false">Create New If Exist</param>
             <param name="keepConvertStatus" visible="false">Keep status conversation after finishing</param>
             <category>Uploads</category>
-            <returns></returns>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents"></returns>
+            <path>api/2.0/files/{folderId}/insert</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UpdateFileStream(System.IO.Stream,System.String,System.Boolean,System.Boolean)">
             <summary>
@@ -321,7 +339,7 @@
             </summary>
             <short>Chunked upload</short>
             <category>Uploads</category>
-            <param name="folderId">Id of the folder in which file will be uploaded</param>
+            <param method="url" name="folderId">Id of the folder in which file will be uploaded</param>
             <param name="fileName">Name of file which has to be uploaded</param>
             <param name="fileSize">Length in bytes of file which has to be uploaded</param>
             <param name="relativePath">Relative folder from folderId</param>
@@ -348,6 +366,9 @@
             </ul>
             ]]>
             </returns>
+            <path>api/2.0/files/{folderId}/upload/create_session</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateTextFileInMy(System.String,System.String)">
             <summary>
@@ -834,6 +855,9 @@
             <returns>List of provider key</returns>
             <remarks>List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
             <returns></returns>
+            <path>api/2.0/files/thirdparty/capabilities</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.SaveThirdParty(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
             <summary>
@@ -849,9 +873,12 @@
             <param name="providerKey">Provider Key</param>
             <param name="providerId">Provider ID</param>
             <category>Third-Party Integration</category>
-            <returns>Folder contents</returns>
+            <returns type="ASC.Api.Documents.FolderWrapper, ASC.Api.Documents">Folder contents</returns>
             <remarks>List of provider key: DropboxV2, Box, WebDav, Yandex, OneDrive, SharePoint, GoogleDrive</remarks>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/files/thirdparty</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetThirdPartyAccounts">
             <summary>
@@ -859,7 +886,11 @@
             </summary>
             <category>Third-Party Integration</category>
             <short>Third party list</short>
-            <returns>Connected providers</returns>
+            <returns type="ASC.Web.Files.Services.WCFService.ThirdPartyParams, ASC.Web.Files">Connected providers</returns>
+            <path>api/2.0/files/thirdparty</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetCommonThirdPartyFolders">
             <summary>
@@ -867,26 +898,37 @@
             </summary>
             <category>Third-Party Integration</category>
             <short>Third party folder</short>
-            <returns>Connected providers folder</returns>
+            <returns type="ASC.Files.Core.Folder, ASC.Web.Files">Connected providers folder</returns>
+            <path>api/2.0/files/thirdparty/common</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.DeleteThirdParty(System.Int32)">
              <summary>
                Removes the third party file storage service account with the ID specified in the request
              </summary>
-             <param name="providerId">Provider ID. Provider id is part of folder id.
+             <param method="url" name="providerId">Provider ID. Provider id is part of folder id.
              Example, folder id is "sbox-123", then provider id is "123"
              </param>
              <short>Remove third party account</short>
              <category>Third-Party Integration</category>
              <returns>Folder id</returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/files/thirdparty/{providerId}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.Search(System.String)">
             <summary>
             Search files
             </summary>
-            <param name="query">Queary string</param>
-            <returns>Files and folders</returns>
+            <param method="url" name="query">Queary string</param>
+            <returns type="ASC.Api.Documents.FileWrapper, ASC.Api.Documents">Files and folders</returns>
+            <path>api/2.0/files/@search/{query}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.AddFavorites(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -1023,7 +1065,7 @@
             <category>Settings</category>
             <param name="version" visible="false"></param>
             <returns>Address</returns>
-            <path>Get the address of connected editors</path>
+            <path>api/2.0/files/docservice</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
         </member>

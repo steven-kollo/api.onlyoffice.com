@@ -4,10 +4,49 @@
         <name>ASC.Api.Employee</name>
     </assembly>
     <members>
+        <member name="P:ASC.Api.Employee.Contact.Type">
+            <example>GTalk</example>
+            <order>1</order>
+        </member>
+        <member name="P:ASC.Api.Employee.Contact.Value">
+            <example>my@gmail.com</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.Employee.ThumbnailsDataWrapper.Original">
+            <example>default_user_photo_size_1280-1280.png</example>
+        </member>
+        <member name="P:ASC.Api.Employee.ThumbnailsDataWrapper.Retina">
+            <example>default_user_photo_size_360-360.png</example>
+        </member>
+        <member name="P:ASC.Api.Employee.ThumbnailsDataWrapper.Max">
+            <example>default_user_photo_size_200-200.png</example>
+        </member>
+        <member name="P:ASC.Api.Employee.ThumbnailsDataWrapper.Big">
+            <example>default_user_photo_size_82-82.png</example>
+        </member>
+        <member name="P:ASC.Api.Employee.ThumbnailsDataWrapper.Medium">
+            <example>"default_user_photo_size_48-48.png</example>
+        </member>
+        <member name="P:ASC.Api.Employee.ThumbnailsDataWrapper.Small">
+            <example>default_user_photo_size_32-32.png</example>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperSummary.Name">
+            <example>Group Name</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperSummary.Id">
+            <example>00000000-0000-0000-0000-000000000000</example>
+            <order>1</order>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperSummary.Manager">
+            <example>Jake.Zazhitski</example>
+            <order>9</order>
+        </member>
         <member name="T:ASC.Api.Employee.EmployeeApi">
             <summary>
             User profiles access
             </summary>
+            <name>people</name>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetMe">
             <summary>
@@ -16,7 +55,10 @@
             <short>
             My profile
             </short>
-            <returns>Profile</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">Profile</returns>
+            <path>api/2.0/people/@self</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetAll">
             <summary>
@@ -25,8 +67,23 @@
             <short>
             All profiles
             </short>
-            <returns>List of profiles</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">List of profiles</returns>
              <remarks>This method returns a partial profile. Use more specific method to get full profile</remarks>
+             <path>api/2.0/people</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetByStatus(ASC.Core.Users.EmployeeStatus)">
+            <summary>
+            
+            </summary>
+            <param method="url" name="status"></param>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee"></returns>
+            <path>api/2.0/people/status/{status}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetById(System.String)">
             <summary>
@@ -35,8 +92,11 @@
             <short>
             Specific profile
             </short>
-            <param name="username">User name</param>
-            <returns>User profile</returns>
+            <param method="url" name="username">User name</param>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">User profile</returns>
+            <path>api/2.0/people/{username}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetByEmail(System.String)">
             <summary>
@@ -45,8 +105,11 @@
             <short>
             Specific profile
             </short>
-            <param name="email">User email</param>
-            <returns>User profile</returns>
+            <param method="url" name="email">User email</param>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">User profile</returns>
+            <path>api/2.0/people/email</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetSearch(System.String)">
             <summary>
@@ -55,8 +118,12 @@
             <short>
             Search users
             </short>
-            <param name="query">Query</param>
-            <returns>List of users</returns>
+            <param method="url" name="query">Query</param>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">List of users</returns>
+            <path>api/2.0/people/@search/{query}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetPeopleSearch(System.String)">
             <summary>
@@ -65,8 +132,12 @@
             <short>
             User search
             </short>
-            <param name="query">Search text</param>
-            <returns>User list</returns>
+            <param method="url" name="query">Search text</param>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">User list</returns>
+            <path>api/2.0/people/search</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetAdvanced(ASC.Core.Users.EmployeeStatus,System.String)">
             <summary>
@@ -75,9 +146,13 @@
             <short>
             User search by filter
             </short>
-            <param name="status">User status</param>
-            <param name="query">Search text</param>
-            <returns>User list</returns>
+            <param method="url" name="status">User status</param>
+            <param method="url" name="query">Search text</param>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">User list</returns>
+            <path>api/2.0/people/status/{status}/search</path>
+            <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.SaveUsers(System.String,System.Boolean)">
             <summary>
@@ -89,6 +164,18 @@
             <param name="userList">The list of users to add</param>
             <param name="importUsersAsCollaborators" optional="true">Add users as guests (bool type: false|true)</param>
             <returns>Newly created users</returns>
+            <path>api/2.0/people/import/save</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.GetStatus">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+            <path>api/2.0/people/import/status</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetFullByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean})">
             <summary>
@@ -97,14 +184,18 @@
             <short>
                User search by extended filter
             </short>
-            <param optional="true" name="employeeStatus">User status</param>
-            <param optional="true" name="groupId">Group ID</param>
-            <param optional="true" name="activationStatus">Activation status</param>
-            <param optional="true" name="employeeType">User type</param>
-             <param optional="true" name="isAdministrator">Administrator(bool type)</param>
-            <returns>
+            <param method="url" optional="true" name="employeeStatus">User status</param>
+            <param method="url" optional="true" name="groupId">Group ID</param>
+            <param method="url" optional="true" name="activationStatus">Activation status</param>
+            <param method="url" optional="true" name="employeeType">User type</param>
+            <param method="url" optional="true" name="isAdministrator">Administrator(bool type)</param>
+            <returns type="ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee">
                User list
             </returns>
+            <path>api/2.0/people/filter</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetSimpleByFilter(System.Nullable{ASC.Core.Users.EmployeeStatus},System.Nullable{System.Guid},System.Nullable{ASC.Core.Users.EmployeeActivationStatus},System.Nullable{ASC.Core.Users.EmployeeType},System.Nullable{System.Boolean})">
             <summary>
@@ -113,14 +204,18 @@
             <short>
                User search by extended filter
             </short>
-            <param optional="true" name="employeeStatus">User status</param>
-            <param optional="true" name="groupId">Group ID</param>
-            <param optional="true" name="activationStatus">Activation status</param>
-            <param optional="true" name="employeeType">User type</param>
-             <param optional="true" name="isAdministrator">Administrator(bool type)</param>
-            <returns>
+            <param method="url" optional="true" name="employeeStatus">User status</param>
+            <param method="url" optional="true" name="groupId">Group ID</param>
+            <param method="url" optional="true" name="activationStatus">Activation status</param>
+            <param method="url" optional="true" name="employeeType">User type</param>
+            <param method="url" optional="true" name="isAdministrator">Administrator(bool type)</param>
+            <returns type="ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee">
                User list
             </returns>
+            <path>api/2.0/people/simple/filter</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.AddMember(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String,System.String)">
             <summary>
@@ -144,7 +239,10 @@
             <param name="files">Avatar photo url</param>
             <param name="password" optional="true">User Password</param>
             <param name="passwordHash" visible="false"></param>
-            <returns>Newly created user</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">Newly created user</returns>
+            <path>api/2.0/people</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.AddMemberAsActivated(System.Boolean,System.String,System.String,System.String,System.Guid[],System.String,System.String,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact},System.String,System.String)">
             <summary>
@@ -178,7 +276,7 @@
             Update user
             </short>
             <param name="isVisitor">User or Visitor (bool type: false|true)</param>
-            <param name="userid">User ID to update</param>
+            <param method="url" name="userid">User ID to update</param>
             <param name="firstname">First name</param>
             <param name="lastname">Last name</param>
             <param name="comment" optional="true">Comment for user</param>
@@ -191,7 +289,10 @@
             <param name="contacts">List fo contacts</param>
             <param name="files">Avatar photo url</param>
             <param name="disable"></param>
-            <returns>Newly created user</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">Newly created user</returns>
+            <path>api/2.0/people/{userid}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.DeleteMember(System.String)">
             <summary>
@@ -200,8 +301,11 @@
             <short>
             Delete user
             </short>
-            <param name="userid">ID of user to delete</param>
-            <returns></returns>
+            <param method="url" name="userid">ID of user to delete</param>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee"></returns>
+            <path>api/2.0/people/{userid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.UpdateMemberContacts(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact})">
             <summary>
@@ -210,9 +314,12 @@
             <short>
             Update user contacts
             </short>
-            <param name="userid">User ID</param>
+            <param method="url" name="userid">User ID</param>
             <param name="contacts">Contacts list</param>
-            <returns>Updated user profile</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">Updated user profile</returns>
+            <path>api/2.0/people/{userid}/contacts</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.SetMemberContacts(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact})">
             <summary>
@@ -221,9 +328,12 @@
             <short>
             Set user contacts
             </short>
-            <param name="userid">User ID</param>
+            <param method="url" name="userid">User ID</param>
             <param name="contacts">Contacts list</param>
-            <returns>Updated user profile</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">Updated user profile</returns>
+            <path>api/2.0/people/{userid}/contacts</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.DeleteMemberContacts(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Employee.Contact})">
             <summary>
@@ -232,9 +342,12 @@
             <short>
             Delete user contacts
             </short>
-            <param name="userid">User ID</param>
+            <param method="url" name="userid">User ID</param>
             <param name="contacts">Contacts list</param>
-            <returns>Updated user profile</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">Updated user profile</returns>
+            <path>api/2.0/people/{userid}/contacts</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetMemberPhoto(System.String)">
             <summary>
@@ -243,8 +356,11 @@
             <short>
             Get user photoes
             </short>
-            <param name="userid">User ID</param>
-            <returns></returns>
+            <param method="url" name="userid">User ID</param>
+            <returns type="ASC.Api.Employee.ThumbnailsDataWrapper, ASC.Api.Employee"></returns>
+            <path>api/2.0/people/{userid}/photo</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.UpdateMemberPhoto(System.String,System.String)">
             <summary>
@@ -253,9 +369,12 @@
             <short>
             Update user photo
             </short>
-            <param name="userid">User ID</param>
+            <param method="url" name="userid">User ID</param>
             <param name="files">Avatar photo url</param>
-            <returns></returns>
+            <returns type="ASC.Api.Employee.ThumbnailsDataWrapper, ASC.Api.Employee"></returns>
+            <path>api/2.0/people/{userid}/photo</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.DeleteMemberPhoto(System.String)">
             <summary>
@@ -264,8 +383,11 @@
             <short>
             Delete user photo
             </short>
-            <param name="userid">User ID</param>
-            <returns></returns>
+            <param method="url" name="userid">User ID</param>
+            <returns type="ASC.Api.Employee.ThumbnailsDataWrapper,  ASC.Api.Employee"></returns>
+            <path>api/2.0/people/{userid}/photo</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.CreateMemberPhotoThumbnails(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
@@ -274,13 +396,16 @@
             <short>
             Create user photo thumbnails
             </short>
-            <param name="userid">User ID</param>
+            <param method="url" name="userid">User ID</param>
             <param name="tmpFile">Path to the temporary file</param>
             <param name="x">X</param>
             <param name="y">Y</param>
             <param name="width">Width</param>
             <param name="height">Height</param>
-            <returns></returns>
+            <path>api/2.0/people/{userid}/photo/thumbnails</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <returns type="ASC.Api.Employee.ThumbnailsDataWrapper, ASC.Api.Employee"></returns>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.SendUserPassword(System.String)">
             <summary>
@@ -322,9 +447,13 @@
             <short>
             User type change
             </short>
-            <param name="type">New user type</param>
+            <param method="url" name="type">New user type</param>
             <param name="userIds">User ID list</param>
-            <returns>User list</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">User list</returns>
+            <path>api/2.0/people/type/{type}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.UpdateUserStatus(ASC.Core.Users.EmployeeStatus,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -333,9 +462,13 @@
             <short>
             User status change
             </short>
-            <param name="status">New user status</param>
+            <param method="url" name="status">New user status</param>
             <param name="userIds">User ID list</param>
-            <returns>User list</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">User list</returns>
+            <path>api/2.0/people/status/{status}</path>
+            <httpMethod>PUT</httpMethod>
+            <collection>list</collection>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.ResendUserInvites(System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -345,7 +478,11 @@
             Send activation email
             </short>
             <param name="userIds">User ID list</param>
-            <returns>User list</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">User list</returns>
+            <path>api/2.0/people/invite</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.RemoveUsers(System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -355,7 +492,11 @@
             Delete users
             </short>
             <param name="userIds">User ID list</param>
-            <returns>User list</returns>
+            <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee">User list</returns>
+            <path>api/2.0/people/delete</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.SendInstructionsToDelete">
             <summary>
@@ -365,6 +506,9 @@
             Send delete instructions
             </short>
             <returns>Info message</returns>
+            <path>api/2.0/people/self/delete</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.JoinToAffiliateProgram">
             <summary>
@@ -374,6 +518,9 @@
             Join to affiliate programm
             </short>
             <returns>Link to affiliate programm</returns>
+            <path>api/2.0/people/self/joinaffiliate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.LinkAccount(System.String)">
             <visible>false</visible>
@@ -385,9 +532,12 @@
             <summary>
             Returns the progress of the started reassign process
             </summary>
-            <param name="userId">User ID whose data is reassigned</param>
+            <param method="url" name="userId">User ID whose data is reassigned</param>
             <category>Reassign user data</category>
-            <returns>Reassign Progress</returns>
+            <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassign Progress</returns>
+            <path>api/2.0/people/reassign/progress</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.TerminateReassign(System.Guid)">
             <summary>
@@ -395,6 +545,9 @@
             </summary>
             <param name="userId">User ID whose data is reassigned</param>
             <category>Reassign user data</category>
+            <path>api/2.0/people/reassign/terminate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.StartReassign(System.Guid,System.Guid,System.Boolean)">
             <summary>
@@ -404,15 +557,21 @@
             <param name="toUserId">To User ID</param>
             <param name="deleteProfile">Delete profile when reassignment will be finished</param>
             <category>Reassign user data</category>
-            <returns>Reassign Progress</returns>
+            <returns type="ASC.Data.Reassigns.ReassignProgressItem, ASC.Data.Reassigns">Reassign Progress</returns>
+            <path>api/2.0/people/reassign/start</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.GetRemoveProgress(System.Guid)">
             <summary>
             Returns the progress of the started remove process
             </summary>
-            <param name="userId">User ID</param>
+            <param method="url" name="userId">User ID</param>
             <category>Remove user data</category>
-            <returns>Remove Progress</returns>
+            <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Remove Progress</returns>
+            <path>api/2.0/people/remove/progress</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.TerminateRemove(System.Guid)">
             <summary>
@@ -420,6 +579,9 @@
             </summary>
             <param name="userId">User ID</param>
             <category>Remove user data</category>
+            <path>api/2.0/people/remove/terminate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.StartRemove(System.Guid)">
             <summary>
@@ -427,14 +589,125 @@
             </summary>
             <param name="userId">User ID</param>
             <category>Remove user data</category>
-            <returns>Remove Progress</returns>
+            <returns type="ASC.Data.Reassigns.RemoveProgressItem, ASC.Data.Reassigns">Remove Progress</returns>
+            <path>api/2.0/people/remove/start</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+        </member>
+        <member name="T:ASC.Api.Employee.EmployeeWraperFull">
+            <inherited>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</inherited>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.FirstName">
+            <example>Mike</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.LastName">
+            <example>Zanyatski</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.UserName">
+            <example>Mike.Zanyatski</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Email">
+            <example>my@domain.com</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Contacts">
+            <type>ASC.Api.Employee.Contact, ASC.Api.Employee</type>
+            <order>12</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Birthday">
+            <example>2008-04-10T06-30-00.000Z</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Sex">
+            <example>male</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Status">
+            <example type="int">1</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.ActivationStatus">
+            <example type="int">0</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Terminated">
+            <example>2008-04-10T06-30-00.000Z</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Department">
+            <example>Marketing</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.WorkFrom">
+            <example>2008-04-10T06-30-00.000Z</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Groups">
+            <type>ASC.Api.Employee.GroupWrapperSummary, ASC.Api.Employee</type>
+            <order>20</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Location">
+            <example>Palo Alto</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Notes">
+            <example>Notes to worker</example>
+            <order>10</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.AvatarMedium">
+            <example>url to medium avatar</example>
+            <order>20</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.Avatar">
+            <example>url to big avatar</example>
+            <order>20</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.IsAdmin">
+            <example>false</example>
+            <order>20</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.IsLDAP">
+            <example>false</example>
+            <order>20</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.ListAdminModules">
+            <example>projects,crm</example>
+            <order>20</order>
+            <collection split=",">list</collection>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.IsOwner">
+            <example>false</example>
+            <order>20</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.IsVisitor">
+            <example>false</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.CultureName">
+            <example>en-EN</example>
+            <order>20</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.MobilePhone">
+            <example>MobilePhone</example>
+            <order>11</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.MobilePhoneActivationStatus">
+            <example>1</example>
+            <order>11</order>
+        </member>
+        <member name="P:ASC.Api.Employee.EmployeeWraperFull.IsSSO">
+            <example>false</example>
+            <order>20</order>
         </member>
         <member name="P:ASC.Api.Employee.EmployeeWraper.Id">
             <example>00000000-0000-0000-0000-000000000000</example>
             <order>1</order>
         </member>
         <member name="P:ASC.Api.Employee.EmployeeWraper.DisplayName">
-            <example>DisplayName</example>
+            <example>Mike Zanyatski</example>
             <order>10</order>
         </member>
         <member name="P:ASC.Api.Employee.EmployeeWraper.Title">
@@ -445,11 +718,15 @@
             <example>url to small avatar</example>
             <order>20</order>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:ASC.Api.Employee.EmployeeWraper.ProfileUrl" -->
+        <member name="P:ASC.Api.Employee.EmployeeWraper.ProfileUrl">
+            <example>\/Products\/People\/Profile.aspx?user=administrator</example>
+            <order>30</order>
+        </member>
         <member name="T:ASC.Api.Employee.GroupsApi">
             <summary>
             Groups access
             </summary>
+            <name>group</name>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.GetAll">
             <summary>
@@ -458,10 +735,14 @@
             <short>
             All groups
             </short>
-            <returns>List of groups</returns>
+            <returns type="ASC.Api.Employee.GroupWrapperSummary, ASC.Api.Employee">List of groups</returns>
              <remarks>
              This method returns partial group info
              </remarks>
+             <path>api/2.0/group</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.GetById(System.Guid)">
             <summary>
@@ -470,11 +751,14 @@
             <short>
             Specific group
             </short>
-            <param name="groupid">Group ID</param>
-            <returns>Group</returns>
+            <param method="url" name="groupid">Group ID</param>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee">Group</returns>
              <remarks>
              That method returns full group info
              </remarks>
+             <path>api/2.0/group/{groupid}</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.GetByUserId(System.Guid)">
             <summary>
@@ -483,11 +767,15 @@
             <short>
             User groups
             </short>
-            <param name="userid">User ID</param>
-            <returns>Group</returns>
+            <param method="url" name="userid">User ID</param>
+            <returns type="ASC.Api.Employee.GroupWrapperSummary, ASC.Api.Employee">Group</returns>
              <remarks>
              That method returns user groups
              </remarks>
+             <path>api/2.0/group/user/{userid}</path>
+             <httpMethod>GET</httpMethod>
+              <requiresAuthorization>true</requiresAuthorization>
+              <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.AddGroup(System.Guid,System.String,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -499,7 +787,10 @@
             <param name="groupManager">Group manager</param>
             <param name="groupName">Group name</param>
             <param name="members">List of group users</param>
-            <returns>Newly created group</returns>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee">Newly created group</returns>
+            <path>api/2.0/group</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.UpdateGroup(System.Guid,System.Guid,System.String,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -508,11 +799,14 @@
             <short>
             Update existing group
             </short>
-            <param name="groupid">Group ID</param>
+            <param method="url" name="groupid">Group ID</param>
             <param name="groupManager">Group manager</param>
             <param name="groupName">Group name</param>
             <param name="members">List of group users</param>
-            <returns>Newly created group</returns>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee">Newly created group</returns>
+            <path>api/2.0/group/{groupid}</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.DeleteGroup(System.Guid)">
             <summary>
@@ -521,8 +815,11 @@
             <short>
             Delete group
             </short>
-            <param name="groupid">Group ID</param>
-            <returns></returns>
+            <param method="url" name="groupid">Group ID</param>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee"></returns>
+            <path>api/2.0/group/{groupid}</path>
+            <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.TransferMembersTo(System.Guid,System.Guid)">
             <summary>
@@ -531,20 +828,26 @@
             <short>
             Move group users
             </short>
-            <param name="groupid">ID of group to move from</param>
-            <param name="newgroupid">ID of group to move to</param>
-            <returns>Group info which users were moved</returns>
+            <param method="url" name="groupid">ID of group to move from</param>
+            <param method="url" name="newgroupid">ID of group to move to</param>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee">Group info which users were moved</returns>
+            <path>api/2.0/group/{groupid}/members/{newgroupid}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.SetMembersTo(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})">
-            <summary>
+            <summary>Add new group users keeping the current users and adding new ones
             Manages the group users deleting the current users and setting new ones instead
             </summary>
             <short>
             Set group users
             </short>
-            <param name="groupid">Group ID</param>
+            <param method="url" name="groupid">Group ID</param>
             <param name="members">User list</param>
-            <returns></returns>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee"></returns>
+            <path>api/2.0/group/{groupid}/members</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.AddMembersTo(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
@@ -553,9 +856,12 @@
             <short>
             Add group users
             </short>
-            <param name="groupid">Group ID</param>
+            <param method="url" name="groupid">Group ID</param>
             <param name="members">User list</param>
-            <returns></returns>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee"></returns>
+            <path>api/2.0/group/{groupid}/members</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.SetManager(System.Guid,System.Guid)">
             <summary>
@@ -564,9 +870,12 @@
             <short>
             Set group manager
             </short>
-            <param name="groupid">Group ID</param>
+            <param method="url" name="groupid">Group ID</param>
             <param name="userid">User ID to become manager</param>
-            <returns></returns>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee"></returns>
+            <path>api/2.0/group/{groupid}/manager</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.RemoveMembersFrom(System.Guid,System.Collections.Generic.IEnumerable{System.Guid})">
@@ -576,9 +885,41 @@
             <short>
             Remove group users
             </short>
-            <param name="groupid">Group ID</param>
+            <param method="url" name="groupid">Group ID</param>
             <param name="members">User list</param>
-            <returns></returns>
+            <path>api/2.0/group/{groupid}/members</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <returns type="ASC.Api.Employee.GroupWrapperFull, ASC.Api.Employee"></returns>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperFull.Description">
+            <example>Description</example>
+            <order>5</order>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperFull.Name">
+            <example>Sample group</example>
+            <order>2</order>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperFull.Parent">
+            <example>852d4b63-997a-4bae-aa7b-89bb87d85dbf</example>
+            <order>4</order>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperFull.Category">
+            <example>74f31a85-991b-4e9b-b9e8-ae8e80d468f5</example>
+            <order>3</order>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperFull.Id">
+            <example>fadd9f49-2431-4610-a518-3ca9b3843c88</example>
+            <order>1</order>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperFull.Manager">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+            <order>9</order>
+        </member>
+        <member name="P:ASC.Api.Employee.GroupWrapperFull.Members">
+            <type>ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee</type>
+            <order>10</order>
+            <collection>list</collection>
         </member>
     </members>
 </doc>

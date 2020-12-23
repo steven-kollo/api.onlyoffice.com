@@ -77,7 +77,7 @@ namespace ASC.Api.Web.Help.Helpers
     [DataContract(Namespace = "")]
     public class TypeDescriptor
     {
-        internal const string SystemNullable = "System.Nullable";
+        internal const string SystemNullable = "System.Nullable{";
         internal const string SystemIEnumerable = "System.Collections.Generic.IEnumerable{";
 
         [DataMember(Name = "Names")]
@@ -161,7 +161,6 @@ namespace ASC.Api.Web.Help.Helpers
                     desc.JsonParam = Newtonsoft.Json.JsonConvert.DeserializeObject(desc.ExampleJson);
                 }
             }
-
             return desc;
         }
 

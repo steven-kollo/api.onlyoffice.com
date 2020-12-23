@@ -2543,6 +2543,81 @@
              [rest of string was truncated]&quot;;.
              </summary>
         </member>
+        <member name="P:ASC.Web.Studio.Core.EmailActivationSettings.Show">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.Id">
+            <example>00000000-0000-0000-0000-000000000000</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.Label">
+            <example>Label</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.Url">
+            <example>Url</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.BigImg">
+            <example>data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAgMAAAANjH3HAAAADFBMVEUAAADJycnJycnJycmiuNtHAAAAA3RSTlMAf4C\/aSLHAAAAyElEQVR4Xu3NsQ3CMBSE4YubFB4ilHQegdGSjWACvEpGoEyBYiL05AdnXUGHolx10lf82MmOpfLeo5UoJUhBlpKkRCnhUy7b9XCWkqQMUkYlXVHSf8kTvkHKqKQrSnopg5SRxTMklLmS1MwaSWpmCSQ1MyOzWGZCYrEMEFksA4QqlAFuJJYBcCKxjM3FMySeIfEMC2dMOONCGZZgmdr1ly3TSrJMK9EyJBaaGrHQikYstAiJZRYSyiQEdyg5S8Evckih\/YPscsdej0H6dc0TYw4AAAAASUVORK5CYII=</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.SmallImg">
+            <example>data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAAUUlEQVR4AWMY\/KC5o\/cAEP9HxxgKcSpCGELYADyu2E6mAQjNxBlAWPNxkHdwGkBIM3KYYDUAr2ZCAE+oH8eujrAXDsA0k2EAAtDXAGLx4MpsADUgvkRKUlqfAAAAAElFTkSuQmCC</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.ShowInMenu">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.CustomNavigationItem.ShowOnHomePage">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.StorageSize">
+            <example type="int" name="storageSize">1073741824</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxFileSize">
+            <example type="int" name="maxFileSize">26214400</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsedSize">
+            <example type="int" name="usedSize">262144000</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.MaxUsersCount">
+            <example type="int" name="maxUsersCount">0</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.UsersCount">
+            <example type="int" name="usersCount">0</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Quota.QuotaWrapper.AvailableSize">
+            <example type="int" name="availableSize">0</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule.StorageType">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule.StorageParams">
+            <example>null</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule.CronParams">
+            <type>ASC.Web.Studio.Core.Backup.CronParams, ASC.Web.Studio</type>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule.BackupMail">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule.BackupsStored">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.Schedule.LastBackupTime">
+            <example>2019-07-26T00:00:00</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.CronParams.Period">
+            <example type="int">0</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.CronParams.Hour">
+            <example type="Hour">5</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.Backup.BackupAjaxHandler.CronParams.Day">
+            <example type="Day">4</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.IPRestrictionsSettings.Enable">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.Core.TipsSettings.Show">
+            <example>true</example>
+        </member>
         <member name="P:ASC.Web.Studio.Core.FileSizeComment.FileSizeException">
             <summary>
             The maximum file size is exceeded (25 MB).
@@ -5150,6 +5225,18 @@
             To modify move field declaration from designer file to code-behind file.
             </remarks>
         </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.AuthKey.Name">
+            <example>name</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.AuthKey.Value">
+            <example>Value</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.AuthKey.Title">
+            <example>Title</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.AuthKey.Description">
+            <example>Description</example>
+        </member>
         <member name="F:ASC.Web.Studio.UserControls.Management.Backup.FolderSelectorHolder">
             <summary>
             FolderSelectorHolder control.
@@ -5185,6 +5272,129 @@
             Auto-generated field.
             To modify move field declaration from designer file to code-behind file.
             </remarks>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.EnableSso">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.IdpSettings">
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings, ASC.Web.Studio</type>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.IdpCertificates">
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate, ASC.Web.Studio</type>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.IdpCertificateAdvanced">
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced, ASC.Web.Studio</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.SpLoginLabel">
+            <example>SpLoginLabel</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.SpCertificates">
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate, ASC.Web.Studio</type>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.SpCertificateAdvanced">
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced, ASC.Web.Studio</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.FieldMapping">
+            <type>ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoFieldMapping, ASC.Web.Studio</type>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2.HideAuthPage">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.EntityId">
+            <example>EntityId</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.SsoUrl">
+            <example>SsoUrl</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.SsoBinding">
+            <example>SsoBinding</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.SloUrl">
+            <example>SloUrl</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.SloBinding">
+            <example>SloBinding</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpSettings.NameIdFormat">
+            <example>NameIdFormat</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoFieldMapping.FirstName">
+            <example>FirstName</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoFieldMapping.LastName">
+            <example>LastName</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoFieldMapping.Email">
+            <example>Email</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoFieldMapping.Title">
+            <example>Title</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoFieldMapping.Location">
+            <example>Location</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoFieldMapping.Phone">
+            <example>Phone</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.SelfSigned">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.Crt">
+            <example>Crt</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.Key">
+            <example>Key</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.Action">
+            <example>Action</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.DomainName">
+            <example>DomainName</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.StartDate">
+            <example>2019-07-26T00:00:00</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoCertificate.ExpiredDate">
+            <example>2019-07-26T00:00:00</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.VerifyAlgorithm">
+            <example>VerifyAlgorithm</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.VerifyAuthResponsesSign">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.VerifyLogoutRequestsSign">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.VerifyLogoutResponsesSign">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.DecryptAlgorithm">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoIdpCertificateAdvanced.DecryptAssertions">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.SigningAlgorithm">
+            <example>SigningAlgorithm</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.SignAuthRequests">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.SignLogoutRequests">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.SignLogoutResponses">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.EncryptAlgorithm">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSpCertificateAdvanced.EncryptAssertions">
+            <example>true</example>
         </member>
         <member name="F:ASC.Web.Studio.UserControls.Management.ResetAppDialog._showBackupCodesContainer">
             <summary>
