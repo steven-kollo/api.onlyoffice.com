@@ -788,7 +788,7 @@
             Sets sharing settings for the file with the ID specified in the request
             </summary>
             <param method="url" name="fileId">File ID</param>
-            <param name="share">Collection of sharing rights</param>
+            <param file="ASC.Api.Documents" name="share">Collection of sharing rights</param>
             <param name="notify">Should notify people</param>
             <param name="sharingMessage">Sharing message to send when notifying</param>
             <short>Share file</short>
@@ -808,7 +808,7 @@
             </summary>
             <short>Share folder</short>
             <param method="url" name="folderId">Folder ID</param>
-            <param name="share">Collection of sharing rights</param>
+            <param file="ASC.Api.Documents" name="share">Collection of sharing rights</param>
             <param name="notify">Should notify people</param>
             <param name="sharingMessage">Sharing message to send when notifying</param>
             <remarks>
@@ -1227,10 +1227,14 @@
         <member name="P:ASC.Api.Documents.FileShareParams.ShareTo">
             <summary>
             </summary>
+            <example name="shareTo">2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+            <order>0</order>
         </member>
         <member name="P:ASC.Api.Documents.FileShareParams.Access">
             <summary>
             </summary>
+            <example name="access">0</example>
+            <order>1</order>
         </member>
         <member name="M:ASC.Api.Documents.FileShareParams.ToAceObject">
             <summary>

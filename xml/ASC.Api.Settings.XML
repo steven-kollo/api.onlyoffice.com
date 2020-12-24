@@ -98,7 +98,7 @@
             <short>
             Save SMTP settings
             </short>
-            <param name="smtpSettings">SMTP settings data</param>
+            <param file="ASC.Api.Settings" name="smtpSettings">SMTP settings data</param>
             <returns type="ASC.Api.Settings.Smtp.SmtpSettingsWrapper, ASC.Api.Settings">SmtpSettings data</returns>
             <path>api/2.0/settings/smtp</path>
             <requiresAuthorization>true</requiresAuthorization>
@@ -688,7 +688,7 @@
             <summary>
             Add Custom Navigation Item
             </summary>
-            <param name="item">Item</param>
+            <param file="ASC.Web.Studio" name="item">Item</param>
             <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio">CustomNavigationItem</returns>
             <path>api/2.0/settings/customnavigation/create</path>
             <httpMethod>POST</httpMethod>

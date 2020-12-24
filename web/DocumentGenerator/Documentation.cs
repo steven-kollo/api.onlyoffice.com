@@ -62,7 +62,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 {
                     try
                     {
-                        MsDocDocumentGenerator.GenerateRequestExample(method);
+                        generator.GenerateRequestExample(method);
                     }
                     catch { }
                 }

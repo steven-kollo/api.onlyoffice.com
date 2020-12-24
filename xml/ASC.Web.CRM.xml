@@ -9444,5 +9444,20 @@
             <param name="taskId"></param>
             <param name="lastModifedDate"></param>
         </member>
+        <member name="T:ASC.CRM.Core.CurrencyRate">
+            <inherited>ASC.CRM.Core.DomainObject,ASC.WEB.CRM</inherited>
+        </member>
+        <member name="P:ASC.CRM.Core.CurrencyRate.FromCurrency">
+            <example name="fromCurrency">fromCurrency</example>
+        </member>
+        <member name="P:ASC.CRM.Core.CurrencyRate.ToCurrency">
+            <example name="toCurrency">toCurrency</example>
+        </member>
+        <member name="P:ASC.CRM.Core.CurrencyRate.Rate">
+            <example name="rate" type="double">1.1</example>
+        </member>
+        <member name="P:ASC.CRM.Core.DomainObject.ID">
+            <example name="id">1234</example>
+        </member>
     </members>
 </doc>

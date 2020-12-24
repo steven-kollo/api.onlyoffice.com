@@ -543,7 +543,7 @@
             <summary>
             
             </summary>
-            <param name="status"></param>
+            <param file="ASC.Web.Projects" name="status"></param>
             <returns type="ASC.Web.Projects.CustomTaskStatus, ASC.Web.Projects"></returns>
             <path>api/2.0/project/status</path>
             <httpMethod>POST</httpMethod>
@@ -553,7 +553,7 @@
             <summary>
             
             </summary>
-            <param name="newStatus"></param>
+            <param file="ASC.Web.Projects" name="newStatus"></param>
             <returns type="ASC.Web.Projects.CustomTaskStatus, ASC.Web.Projects"></returns>
             <path>api/2.0/project/status</path>
             <httpMethod>POST</httpMethod>
@@ -563,7 +563,7 @@
             <summary>
             
             </summary>
-            <param name="statuses"></param>
+            <param file="ASC.Web.Projects" name="statuses"></param>
             <returns type="ASC.Web.Projects.CustomTaskStatus, ASC.Web.Projects"></returns>
             <path>api/2.0/project/statuses</path>
             <httpMethod>PUT</httpMethod>
@@ -1157,8 +1157,8 @@
             <param name="private">Is project private</param>
             <param name="participants" optional="true">Project participants</param>
             <param name="notify" optional="true">Notify project manager</param>
-            <param name="tasks"></param>
-            <param name="milestones"></param>
+            <param file="ASC.Web.Projects" name="tasks"></param>
+            <param file="ASC.Web.Projects" name="milestones"></param>
             <param name="notifyResponsibles"></param>
             <returns type="ASC.Api.Projects.Wrappers.ProjectWrapperFull, ASC.Api.Projects">Newly created project</returns>
             <exception cref="T:System.ArgumentException"></exception>
@@ -1175,10 +1175,10 @@
             <param name="responsibleId"></param>
             <param name="tags"></param>
             <param name="private"></param>
-            <param name="participants"></param>
+            <param file="ASC.Web.Projects" name="participants"></param>
             <param name="notify"></param>
-            <param name="tasks"></param>
-            <param name="milestones"></param>
+            <param file="ASC.Web.Projects" name="tasks"></param>
+            <param file="ASC.Web.Projects" name="milestones"></param>
             <param name="notifyResponsibles"></param>
             <returns type="ASC.Api.Projects.Wrappers.ProjectWrapperFull, ASC.Api.Projects"></returns>
             <path>api/2.0/project/withSecurity</path>
@@ -1218,7 +1218,7 @@
             <param name="description"></param>
             <param name="responsibleId"></param>
             <param name="tags"></param>
-            <param name="participants"></param>
+            <param file="ASC.Web.Projects" name="participants"></param>
             <param name="status"></param>
             <param name="private"></param>
             <param name="notify"></param>

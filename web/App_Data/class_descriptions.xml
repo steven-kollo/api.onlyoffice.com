@@ -1,6 +1,22 @@
 <TypeDescriptor xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
   <Names>
     <entry>
+      <key>ASC.Files.Core.Security.FileShare</key>
+      <value>
+        <Description>None, ReadWrite, Read, Restrict, Varies, Review, Comment, FillForms, CustomFilter,</Description>
+        <Example>true</Example>
+        <ExampleJson>true</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.VoipService.AgentStatus</key>
+      <value>
+        <Description>Online, Paused, Offline</Description>
+        <Example>Online</Example>
+        <ExampleJson>"Online"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
       <key>System.Boolean</key>
       <value>
         <Description>Bool value</Description>
@@ -207,24 +223,6 @@
       </value>
     </entry>
     <entry>
-      <key>System.Collections.Generic.IEnumerable`1[ASC.Projects.Core.Domain.Task]</key>
-      <value>
-        <ExampleJson>![]</ExampleJson>
-      </value>
-    </entry>
-    <entry>
-      <key>System.Collections.Generic.IEnumerable`1[ASC.Projects.Core.Domain.Milestone]</key>
-      <value>
-        <ExampleJson>![]</ExampleJson>
-      </value>
-    </entry>
-    <entry>
-      <key>System.Collections.Generic.List`1[ASC.Mail.Data.Contracts.MailAttachmentData]</key>
-      <value>
-        <ExampleJson>![]</ExampleJson>
-      </value>
-    </entry>
-    <entry>
       <key>ASC.Api.Employee.Contact</key>
       <value>
         <Description>Contact</Description>
@@ -251,13 +249,6 @@
       </value>
     </entry>
     <entry>
-      <key>ASC.Api.Documents.FileShareParams</key>
-      <value>
-        <Description>FileShareParams</Description>
-        <Example>share[0].ShareTo=9924256A-739C-462b-AF15-E652A3B1B6EB&amp;share[0].Access=0</Example>
-      </value>
-    </entry>
-    <entry>
       <key>ASC.Web.Studio.Core.Backup.BackupAjaxHandler+StorageParams</key>
       <value>
         <Description>Object with fields: AccessKeyId, SecretAccessKey, Bucket, FolderId, FilePath, Region</Description>
@@ -268,7 +259,7 @@
       <key>ASC.Web.Core.Calendars.EventAlertType</key>
       <value>
         <Description>Never, FiveMinutes, FifteenMinutes, HalfHour, Hour, TwoHours, Day, Default</Description>
-		<Example></Example>
+		<Example>Never</Example>
 		<ExampleJson>"never"</ExampleJson>
       </value>
     </entry>
@@ -286,15 +277,15 @@
       <key>ASC.Api.Calendar.CalendarApi.EventRemoveType</key>
       <value>
 	  <Description>Single, AllFollowing, AllSeries</Description>
-		<Example></Example>
-		<ExampleJson></ExampleJson>
+		<Example>Single</Example>
+		<ExampleJson>Single</ExampleJson>
       </value>
     </entry>
 	<entry>
       <key>ASC.Web.Core.Calendars.EventStatus</key>
       <value>
 	  <Description>	Tentative, Confirmed, Cancelled</Description>
-		<Example></Example>
+		<Example>Tentative</Example>
 		<ExampleJson>"tentative"</ExampleJson>
       </value>
     </entry>
@@ -302,7 +293,7 @@
       <key>ASC.Web.Community.News.Code.FeedType</key>
       <value>
 	  <Description>	None, News, Order, Advert, AllNews, Poll, All</Description>
-		<Example></Example>
+		<Example>None</Example>
 		<ExampleJson>"None"</ExampleJson>
       </value>
     </entry>
@@ -310,7 +301,7 @@
       <key>ASC.CRM.Core.ContactInfoType</key>
       <value>
 	  <Description>	Phone, Email, Website, Skype, Twitter, LinkedIn, Facebook, Address, LiveJournal, MySpace, GMail, Blogger, Yahoo, MSN, ICQ, Jabber, AIM, VK</Description>
-		<Example></Example>
+		<Example>Phone</Example>
 		<ExampleJson>"phone"</ExampleJson>
       </value>
     </entry>
@@ -625,6 +616,46 @@
 	  <Description>Absolute, Relative, Today, Yesterday, Tomorrow, CurrWeek, PrevWeek, NextWeek, CurrMonth, PrevMonth, NextMonth, CurrYear, PrevYear, NextYear</Description>
 		<Example>Absolute</Example>
 		<ExampleJson>"Absolute"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.VoipService.Twilio.PhoneNumberType</key>
+      <value>
+	  <Description>Local, TollFreeNextYear</Description>
+		<Example>Local</Example>
+		<ExampleJson>"Local"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.VoipService.AudioType</key>
+      <value>
+	  <Description>Greeting, HoldUp, VoiceMail, Queue</Description>
+		<Example>Greeting</Example>
+		<ExampleJson>"Greeting"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.Api.CRM.CRMApi.UpdateOperator</key>
+      <value>
+	  <Description>Online, Paused, Offline</Description>
+		<Example>Online</Example>
+		<ExampleJson>"Online"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.VoipService.AnswerType</key>
+      <value>
+	  <Description>Number, Sip, Client</Description>
+		<Example>Number</Example>
+		<ExampleJson>"Number"</ExampleJson>
+      </value>
+    </entry>
+	<entry>
+      <key>ASC.VoipService.VoipCallStatus</key>
+      <value>
+	  <Description>Incoming, Outcoming, Answered, Missed</Description>
+		<Example>Incoming</Example>
+		<ExampleJson>"Incoming"</ExampleJson>
       </value>
     </entry>
   </Names>

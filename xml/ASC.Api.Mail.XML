@@ -1272,7 +1272,7 @@
             <param name="subject">Message subject</param>
             <param name="tags">List of tags id added to message</param>
             <param name="body">Message body as html string.</param>
-            <param name="attachments">List of attachments represented as MailAttachment object</param>
+            <param file="ASC.Mail" name="attachments">List of attachments represented as MailAttachment object</param>
             <param name="fileLinksShareMode">Share mode for attached file links</param>
             <param name="calendarIcs">Calendar event ical-format for sending</param>
             <param name="isAutoreply">Indicate that message is autoreply or not</param>
@@ -1302,7 +1302,7 @@
             <param name="subject">Message subject</param>
             <param name="tags">List of tags id added to message</param>
             <param name="body">Message body as html string.</param>
-            <param name="attachments">List of attachments represented as MailAttachment object</param>
+            <param file="ASC.Mail" name="attachments">List of attachments represented as MailAttachment object</param>
             <param name="calendarIcs">Calendar event ical-format for sending</param>
             <returns type="ASC.Mail.Data.Contracts.MailMessageData, ASC.Mail">Saved message id</returns>
             <short>SaveToDraft message</short> 
@@ -1325,7 +1325,7 @@
             <param name="subject">Template subject</param>
             <param name="tags">List of tags id added to message</param>
             <param name="body">Template body as html string.</param>
-            <param name="attachments">List of attachments represented as MailAttachment object</param>
+            <param file="ASC.Mail" name="attachments">List of attachments represented as MailAttachment object</param>
             <param name="calendarIcs">Calendar event ical-format for sending</param>
             <returns type="ASC.Mail.Data.Contracts.MailMessageData, ASC.Mail">Saved template id</returns>
             <short>SaveToTemplate message</short> 

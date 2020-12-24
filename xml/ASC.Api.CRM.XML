@@ -90,7 +90,7 @@
             </summary>
             <short></short>
             <param name="currency"></param>
-            <param name="rates"></param>
+            <param file="ASC.Web.CRM" name="rates"></param>
             <category>Common</category>
             <returns type="ASC.Api.CRM.CurrencyRateWrapper, ASC.Api.CRM"></returns>
             <path>api/2.0/crm/currency/setrates</path>
@@ -109,6 +109,7 @@
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
+            <param file="ASC.Web.CRM" name="rates"></param>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteCurrencyRate(System.Int32)">
             <summary>
@@ -4083,7 +4084,7 @@
             <param name="holdUp"></param>
             <param name="wait"></param>
             <param name="voiceMail"></param>
-            <param name="workingHours"></param>
+            <param file="ASC.VoipService" name="workingHours"></param>
             <param name="allowOutgoingCalls"></param>
             <param name="record"></param>
             <param name="alias"></param>
@@ -4102,7 +4103,7 @@
             <category>Voip</category>
             <returns></returns>
             <exception cref="T:System.Security.SecurityException"></exception>
-            <param name="queue"></param>
+            <param file="ASC.VoipService" name="queue"></param>
             <param name="pause"></param>
             <path>api/2.0/crm/voip/numbers/settings</path>
             <httpMethod>PUT</httpMethod>

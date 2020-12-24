@@ -307,6 +307,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [DataMember(Name = "visible")]
         public bool Visible { get; set; }
+
+        [DataMember(Name = "file")]
+        public string File { get; set; }
     }
 
     public class MsDocDocumentGenerator
@@ -378,7 +381,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         IsOptional = string.Equals(methodParams[j].Attribute("optional").ValueOrNull(), bool.TrueString, StringComparison.OrdinalIgnoreCase),
                         Visible = !string.Equals(methodParams[j].Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
                         Type = GetType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()),
-                        Method = methodParams[j].Attribute("method") != null ? methodParams[j].Attribute("method").ValueOrNull() : "body"
+                        Method = methodParams[j].Attribute("method") != null ? methodParams[j].Attribute("method").ValueOrNull() : "body",
+                        File = methodParams[j].Attribute("file").ValueOrNull()
                     };
                     pointMethod.Params.Add(param);
                 }
@@ -435,10 +439,44 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private List<MsDocFunctionResponse> GetResponse(XElement element, string collection)
         {
             List<MsDocFunctionResponse> response = new List<MsDocFunctionResponse>();
+            var msdoc = new MsDocFunctionResponse();
             if (element != null && element.Attribute("type").ValueOrNull() != "")
             {
                 var split = element.Attribute("type").ValueOrNull().Split(',');
-                response.Add(GetResponse(split[0].Trim(), split[1].Trim(), collection));
+                var resp = GetResponse(split[0].Trim(), split[1].Trim());
+                if (resp != null)
+                {
+                    var result = new result();
+                    if (collection == "list")
+                    {
+                        var list = new List<object>();
+                        list.Add(resp);
+                        result.response = list;
+                    }
+                    else
+                    {
+                        result.response = resp;
+                    }
+
+                    var responsejson = JsonConvert.SerializeObject(result, Newtonsoft.Json.Formatting.Indented);
+
+                    msdoc.Outputs = new Dictionary<string, string>();
+                    msdoc.Outputs.Add("application/json", responsejson);
+                    XmlSerializer xmlSerializer = new XmlSerializer(result.GetType());
+
+                    using (StringWriter textWriter = new StringWriter())
+                    {
+                        xmlSerializer.Serialize(textWriter, result);
+                        var text = textWriter.ToString();
+                        text = text.Remove(0, text.IndexOf('\n') + 1);
+                        msdoc.Outputs.Add("text/xml", text);
+                    }
+                }
+                else
+                {
+                    msdoc = null;
+                }
+                response.Add(msdoc);
             }
             return response;
         }
@@ -453,67 +491,33 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return SortedResponse;
         }
 
-        private MsDocFunctionResponse GetResponse(string type, string file, string collection)
+        private Dictionary<string, object> GetResponse(string type, string file)
         {
             var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
             var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
-
+            Dictionary<string, object> responseParam = null;
             if (inherited != null && inherited.Element("inherited") != null)
             {
                 var split = inherited.Element("inherited").ValueOrNull().Split(',');
                 needMembers = GetInherited(split[0].Trim(), split[1].Trim(), needMembers);
             }
-            var msdoc = new MsDocFunctionResponse();
             if (needMembers.Count != 0)
             {
-                var responseParam = new Dictionary<string, object>();
+                responseParam = new Dictionary<string, object>();
                 var orders = new Dictionary<string, int>();
                 Parse(needMembers, responseParam, orders);
 
                 responseParam = Sorted(responseParam, orders);
-                var response = new result();
-
-                if (collection == "list")
-                {
-                    var list = new List<object>();
-                    list.Add(responseParam);
-                    response.response = list;
-                }
-                else
-                {
-                    response.response = responseParam;
-                }
-                
-                var responsejson = JsonConvert.SerializeObject(response, Newtonsoft.Json.Formatting.Indented);
-                
-                msdoc.Outputs = new Dictionary<string, string>();
-                msdoc.Outputs.Add("application/json", responsejson);
-                XmlSerializer xmlSerializer = new XmlSerializer(response.GetType());
-
-                using (StringWriter textWriter = new StringWriter())
-                {
-                    xmlSerializer.Serialize(textWriter, response);
-                    var text = textWriter.ToString();
-                    text = text.Remove(0, text.IndexOf('\n') + 1);
-                    msdoc.Outputs.Add("text/xml", text);
-                }
             }
-            if(msdoc.Outputs == null)
-            {
-
-            }
-            return msdoc;
+            return responseParam;
         }
 
         private void Parse (List<XElement> needMembers, Dictionary<string, object> responseParam, Dictionary<string, int> orders)
         {
             needMembers.ForEach(member =>
             {
-                int resultInt;
-                bool resultBool;
-                double resultdouble;
                 object result;
                 var defaultName = "";
                 if (member.Attribute("name").ValueOrNull()!="") 
@@ -524,15 +528,15 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 {
                     
                 var name = member.Element("example").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("example").Attribute("name").ValueOrNull();
-                if (Boolean.TryParse(member.Element("example").ValueOrNull(), out resultBool))
+                if (Boolean.TryParse(member.Element("example").ValueOrNull(), out bool resultBool))
                 {
                     result = resultBool;
                 }
-                else if (member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out resultInt))
+                else if (member.Element("example").Attribute("type").ValueOrNull() == "int" && Int32.TryParse(member.Element("example").ValueOrNull(), out int resultInt))
                 {
                     result = resultInt;
                 }
-                else if (member.Element("example").Attribute("type").ValueOrNull() == "double" && Double.TryParse(member.Element("example").ValueOrNull().Replace('.',','), out resultdouble))
+                else if (member.Element("example").Attribute("type").ValueOrNull() == "double" && Double.TryParse(member.Element("example").ValueOrNull().Replace('.',','), out double resultdouble))
                 {
                     result = resultdouble;
                 }
@@ -668,63 +672,61 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return types[number];
         }
 
-        public static void GenerateRequestExample(MsDocEntryPointMethod method)
+        public void GenerateRequestExample(MsDocEntryPointMethod method)
         {
             var sb = new StringBuilder();
-           
-            var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p => ClassNamePluralizer.ToHumanName(p.Type));
+            var visible = method.Params.Where(p => p.Visible).ToDictionary(p => p, p =>
+            {
+                if (p.File == "")
+                {
+                    var humanName = ClassNamePluralizer.ToHumanName(p.Type);
+                    if (humanName.JsonParam == null)
+                    {
+                        var jsonParam = GetJsonParam(p.Type);
+                        if (jsonParam != null)
+                        {
+                            humanName.JsonParam = jsonParam;
+                        }
+                    }
+                    return humanName;
+                }
+                else
+                {
+                    var responseParam = new Dictionary<string, object>();
+                    var orders = new Dictionary<string, int>();
+                    var humanName = new TypeDescription(p.Type, "");
+                    humanName.JsonParam = GetResponse(GetOnlyName(p.Type), p.File);
+                    if (p.Type.StartsWith(SystemIEnumerable) || p.Type.StartsWith(SystemList))
+                    {
+                        var list = new List<object>();
+                        list.Add(humanName.JsonParam);
+                        humanName.JsonParam = list;
+                    }
+                    return humanName;
+                }
+            });
             var urlParams = visible.Where(p => p.Key.Method == "url").ToList();
             var bodyParams = visible.Except(urlParams).ToList();
-
             var path = method.Path.ToLowerInvariant();
             var query = false;
             urlParams.ForEach(p => {
-                object jsonParam = null;
                 if (p.Value.JsonParam == null)
                 {
-                    jsonParam = GetJsonParam(p.Key.Type);
-                    if (jsonParam != null)
-                    {
-                        jsonParam = HttpUtility.UrlEncode(JsonConvert.SerializeObject(jsonParam, Newtonsoft.Json.Formatting.Indented));
-                    }
-                }
-                else
-                {
-                    jsonParam = p.Value.JsonParam;
+                    return;
                 }
                 if (path.IndexOf('{' + p.Key.Name.ToLowerInvariant() + '}') > 0)
                 {
-                    if(jsonParam == null)
-                    {
-                        return;
-                    }
-                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', HttpUtility.UrlEncode(jsonParam.ToString()));
+                    path = path.Replace('{' + p.Key.Name.ToLowerInvariant() + '}', HttpUtility.UrlEncode(JsonConvert.SerializeObject(p.Value.JsonParam, Newtonsoft.Json.Formatting.Indented)));
                 }
                 else
                 {
-                    if (jsonParam == null)
-                    {
-                        return;
-                    }
-
-                    path += string.Format("{0}{1}={2}", query ? "&" : "?", p.Key.Name, HttpUtility.UrlEncode(jsonParam.ToString()));
+                    path += string.Format("{0}{1}={2}", query ? "&" : "?", p.Key.Name, HttpUtility.UrlEncode(JsonConvert.SerializeObject(p.Value.JsonParam, Newtonsoft.Json.Formatting.Indented)));
                     query = true;
                 }
             });
 
             var args = new Dictionary<string, object>();
-            bodyParams.ForEach(p => 
-            {
-                if (p.Value.JsonParam == null)
-                {
-                    var jsonParam = GetJsonParam(p.Key.Type);
-                    args.Add(p.Key.Name, jsonParam);
-                }
-                else
-                {
-                    args.Add(p.Key.Name, p.Value.JsonParam);
-                }
-            });
+            bodyParams.ForEach(p => args.Add(p.Key.Name, p.Value.JsonParam));
 
             sb.AppendFormat("{0} {1}", method.HttpMethod, path).AppendLine()
                 .AppendLine("Host: yourportal.onlyoffice.com")
@@ -739,34 +741,40 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             method.Example = sb.ToString();
         }
 
-        private static object GetJsonParam(string typeName)
+        private string GetOnlyName(string typeName)
         {
-            object jsonParam = null;
-            TypeDescription typeDescription = null;
             if (typeName.StartsWith(SystemNullable))
             {
-                jsonParam = ClassNamePluralizer.ToHumanName(typeName.Substring(SystemNullable.Length, typeName.Length - 1 - SystemNullable.Length)).JsonParam;
+                return typeName.Substring(SystemNullable.Length, typeName.Length - 1 - SystemNullable.Length);
             }
             if (typeName.StartsWith(SystemIEnumerable))
             {
-                 typeDescription = ClassNamePluralizer.ToHumanName(typeName.Substring(SystemIEnumerable.Length, typeName.Length - 1 - SystemIEnumerable.Length));
+                return typeName.Substring(SystemIEnumerable.Length, typeName.Length - 1 - SystemIEnumerable.Length);
             }
             if (typeName.StartsWith(SystemList))
             {
-                 typeDescription =  ClassNamePluralizer.ToHumanName(typeName.Substring(SystemList.Length, typeName.Length - 1 - SystemList.Length));
+                return typeName.Substring(SystemList.Length, typeName.Length - 1 - SystemList.Length);
             }
             if (typeName.EndsWith("[]"))
             {
-                 typeDescription = ClassNamePluralizer.ToHumanName(typeName.Substring(0, typeName.Length - 2));
+                return typeName.Substring(0, typeName.Length - 2);
             }
+            return typeName;
+        }
 
-            if (typeDescription !=null && typeDescription.JsonParam != null)
+        private object GetJsonParam(string typeName)
+        {
+            TypeDescription typeDescription = null;
+            var name = GetOnlyName(typeName);
+
+            typeDescription = ClassNamePluralizer.ToHumanName(name);
+            if (typeDescription !=null && typeDescription.JsonParam != null && !typeName.StartsWith(SystemNullable))
             {
                 var list = new List<object>();
                 list.Add(typeDescription.JsonParam);
-                jsonParam = list;
+                return list;
             }
-            return jsonParam;
+            return typeDescription.JsonParam;
         }
 
         private static string GetFunctionName(string functionName)

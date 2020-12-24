@@ -46,6 +46,21 @@
         <member name="P:ASC.Web.Projects.Classes.ProjectSecurityInfo.IsInTeam">
             <example>false</example>
         </member>
+        <member name="P:ASC.Web.Projects.Classes.TaskSecurityInfo.CanEdit">
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Web.Projects.Classes.TaskSecurityInfo.CanCreateSubtask">
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Web.Projects.Classes.TaskSecurityInfo.CanCreateTimeSpend">
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Web.Projects.Classes.TaskSecurityInfo.CanDelete">
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Web.Projects.Classes.TaskSecurityInfo.CanReadFiles">
+            <example>false</example>
+        </member>
         <member name="P:ASC.Web.Projects.ProjectsCommonSettings.EverebodyCanCreate">
             <example>true</example>
         </member>
@@ -5547,6 +5562,18 @@
               Looks up a localized string similar to The project is closed.
             </summary>
         </member>
+        <member name="P:ASC.Projects.Core.Domain.DomainObject`1.EntityType">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.DomainObject`1.ID">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.DomainObject`1.UniqID">
+            <example>UniqID</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.DomainObject`1.ItemPath">
+            <example>ItemPath</example>
+        </member>
         <member name="T:ASC.Projects.Core.Domain.LocalizedEnumConverter">
             <summary>
             Defines a type converter for enum values that converts enum values to 
@@ -5672,15 +5699,260 @@
             the DataValueField to "Key" and theDataTextField to "Value". 
             </remarks>
         </member>
+        <member name="T:ASC.Projects.Core.Domain.Milestone">
+            <inherited>ASC.Projects.Core.Domain.ProjectEntity, ASC.Web.Projects</inherited>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Milestone.Responsible">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Milestone.Status">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Milestone.IsNotify">
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Milestone.IsKey">
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Milestone.DeadLine">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Milestone.ActiveTaskCount">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Milestone.ClosedTaskCount">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Milestone.StatusChangedOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.ID">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.ProjectID">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.CanReadFiles">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.CanReadMilestones">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.CanReadMessages">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.CanReadTasks">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.CanReadContacts">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.IsVisitor">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.IsFullAdmin">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.UserInfo">
+            <type>ASC.Core.Users.UserInfo, ASC.Core.Common</type>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.IsAdmin">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.IsManager">
+            <example>true</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Participant.IsRemovedFromTeam">
+            <example>true</example>
+        </member>
+        <member name="T:ASC.Projects.Core.Domain.Project">
+            <inherited>ASC.Projects.Core.Domain.DomainObject`1, ASC.Web.Projects</inherited>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.Title">
+            <example>Title</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.HtmlTitle">
+            <example>HtmlTitle</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.Description">
+            <example>Description</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.Status">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.Responsible">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.Private">
+            <example>false</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.Security">
+            <type>ASC.Web.Projects.Classes.ProjectSecurityInfo, ASC.Web.Projects</type>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.CreateBy">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.CreateOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.LastModifiedBy">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.LastModifiedOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
         <member name="P:ASC.Projects.Core.Domain.Project.TaskCount">
-            <summary>
-            Opened
-            </summary>
+             <summary>
+             Opened
+             </summary>
+            <example type="int">1</example>
         </member>
         <member name="P:ASC.Projects.Core.Domain.Project.TaskCountTotal">
-            <summary>
-            Total
-            </summary>
+             <summary>
+             Total
+             </summary>
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.MilestoneCount">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.ParticipantCount">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.DiscussionCount">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.TimeTrackingTotal">
+            <example>TimeTrackingTotal</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.DocumentsCount">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Project.StatusChangedOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="T:ASC.Projects.Core.Domain.Subtask">
+            <inherited>ASC.Projects.Core.Domain.DomainObject`1, ASC.Web.Projects</inherited>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.Title">
+            <example>Title</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.Responsible">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.Status">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.Task">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.ParentTask">
+            <example>null</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.CreateBy">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.CreateOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.LastModifiedOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.LastModifiedBy">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Subtask.StatusChangedOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="T:ASC.Projects.Core.Domain.Task">
+            <inherited>ASC.Projects.Core.Domain.ProjectEntity, ASC.Web.Projects</inherited>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.Priority">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.Status">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.CustomTaskStatus">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.Milestone">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.SortOrder">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.Deadline">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.SubTasks">
+            <type>ASC.Projects.Core.Domain.Subtask, ASC.Web.Projects</type>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.Responsibles">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.Links">
+            <type>ASC.Projects.Core.Domain.TaskLink, ASC.Web.Projects</type>
+            <collection>list</collection>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.MilestoneDesc">
+            <type>ASC.Projects.Core.Domain.TaskLink, ASC.Web.Projects</type>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.StatusChangedOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.StartDate">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.Security">
+            <type>ASC.Web.Projects.Classes.TaskSecurityInfo, ASC.Web.Projects</type>
+        </member>
+        <member name="F:ASC.Projects.Core.Domain.Task.progress">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.Task.Progress">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.TaskLink.ParentTaskId">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.TaskLink.DependenceTaskId">
+            <example type="int">1</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.TaskLink.LinkType">
+            <example type="int">1</example>
+        </member>
+        <member name="T:ASC.Projects.Core.Domain.ProjectEntity">
+            <inherited>ASC.Projects.Core.Domain.DomainObject`1, ASC.Web.Projects</inherited>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.Title">
+            <example>Title</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.Description">
+            <example>Description</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.HtmlTitle">
+            <example>HtmlTitle</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.Project">
+            <type>ASC.Projects.Core.Domain.Project, ASC.Web.Projects</type>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.CreateBy">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.CreateOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.LastModifiedOn">
+            <example>2020-12-22T04:11:57.0469085+00:00</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.LastModifiedBy">
+            <example>2fdfe577-3c26-4736-9df9-b5a683bb8520</example>
+        </member>
+        <member name="P:ASC.Projects.Core.Domain.ProjectEntity.NotifyId">
+            <example>NotifyId</example>
         </member>
         <member name="P:ASC.Projects.Core.Domain.Reports.ReportFile.Id">
             <example type="int">123</example>
