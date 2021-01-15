@@ -46,7 +46,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     <div class="note">Please note that the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.</div>
 
-    <!--<h2 id="group-rights" class="copy-link">Differentiation of reviewing rights by groups</h2>
+    <h2 id="group-rights" class="copy-link">Differentiation of reviewing rights by groups</h2>
     <ol>
         <li>
             <p>
@@ -127,5 +127,5 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 <em>"Group1": ["Group2", ""]</em> means that users from <em>Group1</em> can review changes made by users from <em>Group2</em> and users who do not belong to any of the groups.
             </p>
         </li>
-    </ol>-->
+    </ol>
 </asp:Content>
