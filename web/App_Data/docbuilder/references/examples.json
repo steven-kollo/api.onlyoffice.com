@@ -2778,6 +2778,10 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:B1\");\noRange.SetValue(\"1\");\noRange.Clear();\noWorksheet.GetRange(\"A2\").SetValue(\"The range A1:B1 was just cleared.\");\nbuilder.SaveFile(\"xlsx\", \"Clear.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6834267&doc=LzlsRzNjaXEwNi9zMDlsVWFHbnd3b2tKZUc5c2t0OGR6enVlVWk2dzVPTT0_IjY4MzQyNjci0&action=embedded"
 		},
+		"ApiRange.foreach": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"3\");\noRange = oWorksheet.GetRange(\"A1:C1\");\noRange.ForEach(function (range) {\n    sValue = range.GetValue();\n    if (sValue != \"1\") {\n        range.SetBold(true);\n    }\n});\nbuilder.SaveFile(\"xlsx\", \"ForEach.xlsx\");\nbuilder.CloseFile();",
+			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6834272&doc=a0ZDY3ZnTEpFZ0dUNVkzSzZZazYrZGlaSUw3SWtJS2lFV1VKeVNBcExJST0_IjY4MzQyNzIi0&action=embedded"
+		},
 		"ApiRange.getaddress": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noAddress = oWorksheet.GetRange(\"A1\").GetAddress(true, true, \"xlA1\", false);\noWorksheet.GetRange(\"A3\").SetValue(\"Address: \");\noWorksheet.GetRange(\"B3\").SetValue(oAddress);\nbuilder.SaveFile(\"xlsx\", \"GetAddress.xlsx\");\nbuilder.CloseFile();",
 			"demo": "https://help.onlyoffice.com/Products/Files/doceditor.aspx?fileid=6826278&doc=MWkyeDlqazk4ZjllMThlTGtoOG05VVY2VVk1SUNLNWpBVXhiWEFaMGFRcz0_IjY4MjYyNzgi0&action=embedded"
