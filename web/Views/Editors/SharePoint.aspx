@@ -26,7 +26,7 @@
         This allows multiple users to collaborate in real time and to save back those changes to SharePoint.
     </p>
 
-    <p>Tested with SharePoint 2010, 2013 and 2016.</p>
+    <p>Tested with SharePoint 2019.</p>
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
     <p>
@@ -44,22 +44,9 @@
         If you do not want to do that and plan to use the already compiled solution package, please skip to the <b>Installation</b> section directly.
         The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-sharepoint/releases">here</a>.
     </p>
-    <h5>Compiling ONLYOFFICE SharePoint integration solution</h5>
+
+    <h2>Compiling ONLYOFFICE SharePoint integration solution</h2>
     <p></p>
-    <p>
-        If you have SharePoint with version later than 2010, you will not need to change anything, you can compile the project.
-        In case you have SharePoint 2010 and want to build the project for this version, you will need to open the <em>ONLYOFFICE.csproj</em> file and find the lines:
-    </p>
-    <pre>&lt;Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"&gt;
-  &lt;PropertyGroup&gt;
-    &lt;TargetFrameworkVersion&gt;v4.5.2&lt;/TargetFrameworkVersion&gt;
-    &lt;TargetOfficeVersion&gt;15.0&lt;/TargetOfficeVersion&gt;</pre>
-    <p>Replace these lines with the following ones:</p>
-    <pre>&lt;Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"&gt;
-  &lt;PropertyGroup&gt;
-    &lt;TargetFrameworkVersion&gt;v3.5&lt;/TargetFrameworkVersion&gt;
-    &lt;TargetOfficeVersion&gt;14.0&lt;/TargetOfficeVersion&gt;</pre>
-    <p>And go to the steps below after that.</p>
     <p>There are two ways to compile ONLYOFFICE SharePoint integration solution:</p>
     <ol style="list-style-type: lower-alpha;">
         <li>Using MS Visual Studio:
@@ -82,7 +69,8 @@
             </ol>
         </li>
     </ol>
-    <h5>Installing ONLYOFFICE SharePoint integration solution</h5>
+
+    <h2>Installing ONLYOFFICE SharePoint integration solution</h2>
     <ol>
         <li>Click <b>Start</b>, point to <b>All Programs</b>, point to <b>Administrative Tools</b>, and then click <b>Services</b>, and make sure that <b>SharePoint Administration</b> service is started.</li>
         <li>Click <b>Start</b>, click <b>SharePoint Management Shell</b>, go to the directory with the <em>.wsp</em> file.</li>
