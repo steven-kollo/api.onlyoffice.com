@@ -268,7 +268,7 @@
             <param name="encrypted" visible="false"></param>
             <remarks>
             <![CDATA[
-            Each chunk can have different length but its important what length is multiple of <b>512</b> and greater or equal than <b>5 mb</b>. Last chunk can have any size.
+            Each chunk can have different length but its important what length is multiple of <b>512</b> and greater or equal than <b>10 mb</b>. Last chunk can have any size.
             After initial request respond with status 200 OK you must obtain value of 'location' field from the response. Send all your chunks to that location.
             Each chunk must be sent in strict order in which chunks appears in file.
             After receiving each chunk if no errors occured server will respond with current information about upload session.
@@ -825,6 +825,16 @@
             <param name="version" visible="false"></param>
             <returns>Address</returns>
         </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.CreateThumbnails(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Create thumbnails for files with the IDs specified in the request
+            </summary>
+            <short>Create thumbnails</short>
+            <category>Files</category>
+            <param name="fileIds">File IDs</param>
+            <visible>false</visible>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetWordpressInfo">
             <visible>false</visible>
         </member>
@@ -1059,6 +1069,10 @@
             </summary>
         </member>
         <member name="P:ASC.Api.Documents.FileWrapper.Encrypted">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Documents.FileWrapper.ThumbnailUrl">
             <summary>
             </summary>
         </member>
