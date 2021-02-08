@@ -1,6 +1,10 @@
 # Change Log
 
 ## Changed
+- editors: added editorConfig.customization.toolbarHideFileName
+- editors: the callbackUrl depends on forcesavetype
+
+## Changed
 - updated builder examples
 - support sharepoint 2019
 
