@@ -110,8 +110,21 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("installation") %>">Plugin installation</a>
-    </li>
+        <a href="<%= Url.Action("addingplugins") %>">Adding plugins</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("addingplugins/desktop") %>">ONLYOFFICE Desktop Editors</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("addingplugins/onpremises") %>">ONLYOFFICE Docs on-premises</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("addingplugins/cloud") %>">ONLYOFFICE Cloud</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("addingplugins/uninstalling") %>">Uninstalling plugins</a>
+            </li>
+        </ul>
     <li>
         <a href="<%= Url.Action("localization") %>">Plugin localization</a>
     </li>

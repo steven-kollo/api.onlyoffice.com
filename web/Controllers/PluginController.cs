@@ -40,6 +40,11 @@ namespace ASC.Api.Web.Help.Controllers
     {
         private readonly string[] _actionMap = new[]
             {
+                "addingplugins",
+                "addingplugins/desktop",
+                "addingplugins/onpremises",
+                "addingplugins/cloud",
+                "addingplugins/uninstalling",
                 "Basic",
                 "Button",
                 "Code",
@@ -67,7 +72,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Info/resize",
                 "Info/width",
                 "Init",
-                "Installation",
                 "Localization",
                 "OnExternalMouseUp",
                 "onmethodreturn",
@@ -137,6 +141,15 @@ namespace ASC.Api.Web.Help.Controllers
             return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
         }
 
+        public ActionResult Addingplugins(string catchall)
+        {
+            if (!_actionMap.Contains("addingplugins/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Addingplugins", (object)catchall);
+        }
+
         public ActionResult Basic()
         {
             return View();
@@ -196,11 +209,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Init()
-        {
-            return View();
-        }
-
-        public ActionResult Installation()
         {
             return View();
         }
