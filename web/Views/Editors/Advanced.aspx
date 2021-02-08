@@ -139,6 +139,7 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
+            "<a href="<%= Url.Action("config/editor/customization") %>#trackChanges">trackChanges</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#unit">unit</a>": "cm",
             "<a href="<%= Url.Action("config/editor/customization") %>#zoom">zoom</a>": 100
         },

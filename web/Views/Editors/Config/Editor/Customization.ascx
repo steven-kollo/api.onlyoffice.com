@@ -537,6 +537,15 @@
                 <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="trackChanges" class="copy-link">trackChanges</td>
+            <td>
+                Defines if the review editing mode is automatically switched on (<b>true</b>) or off (<b>false</b>) when the editor is loaded. 
+                If the parameter is <em>undefined</em>, then the current opening mode is used (it is stored in the browser local storage).
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
         <tr>
             <td id="unit" class="copy-link">unit</td>
             <td>
@@ -647,6 +656,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "toolbar": true,
             <% } %>"toolbarHideFileName": false,
             "toolbarNoTabs": false,
+            "trackChanges": false,
             "unit": "cm",
             "zoom": 100
         },
