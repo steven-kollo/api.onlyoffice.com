@@ -16,6 +16,11 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="63" class="copy-link">Version 6.3</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroup">document.permissions.reviewGroup</a> field.</li>
+    </ul>
+
     <h2 id="62" class="copy-link">Version 6.2</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">editorConfig.customization.toolbarHideFileName</a> field.</li>
@@ -26,7 +31,6 @@
     <ul>
         <li>The <em>text</em>, <em>spreadsheet</em> and <em>presentation</em> values for <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter is deprecated, please use <em>word</em>, <em>cell</em> and <em>slide</em> values instead.</li>
         <li>Added the <em>group</em> field to the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a>.</li>
-        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#reviewPermissions">editorConfig.customization.reviewPermissions</a> field.</li>
         <li>Added conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">fb2</a> format.</li>
     </ul>
 

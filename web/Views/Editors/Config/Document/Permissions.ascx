@@ -175,6 +175,15 @@
                 <img src="<%= Url.Content("~/content/img/editor/review.png") %>" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="reviewGroup" class="copy-link">reviewGroup</td>
+            <td>
+                Defines the list of <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose documents the user can review.
+                The <em>""</em> value means that the user can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
+            </td>
+            <td>array of string</td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -193,7 +202,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "modifyFilter": true,
             "print": true,
             "rename": true,
-            "review": true
+            "review": true,
+            "reviewGroup": ["Group1", "Group2", ""]
         },
         ...
     },

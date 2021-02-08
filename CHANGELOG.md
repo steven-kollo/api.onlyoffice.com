@@ -1,6 +1,9 @@
 # Change Log
 
 ## Changed
+- editors: added document.permissions.reviewGroup
+
+## Changed
 - editors: added editorConfig.customization.toolbarHideFileName
 - editors: the callbackUrl depends on forcesavetype
 
