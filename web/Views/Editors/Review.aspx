@@ -78,17 +78,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                Specify the access rights using the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroup">reviewGroup</a> parameter in the permissions section of the editor initialization.
+                Specify the access rights using the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a> parameter in the permissions section of the editor initialization.
             </p>
             <div class="note">
-                If the <b>reviewGroup</b> parameter is specified in the editor config, the access rights to reviewing all changes are disabled.
+                If the <b>reviewGroups</b> parameter is specified in the editor config, the access rights to reviewing all changes are disabled.
                 Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
             </div>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
-            "reviewGroup": ["Group1", "Group2"],
+            "reviewGroups": ["Group1", "Group2"],
             ...
         }
         ...
@@ -100,14 +100,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 <em>["Group1", "Group2"]</em> means that user can review changes made by users from <em>Group1</em> and <em>Group2</em>.
             </p>
             <p>
-                The <a href="<%= Url.Action("config/document/permissions") %>#reviewGroup">reviewGroup</a> parameter can take the value of an empty group.
+                The <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a> parameter can take the value of an empty group.
                 This means that the user can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
             </p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
-            "reviewGroup": ["Group2", ""],
+            "reviewGroups": ["Group2", ""],
             ...
         }
         ...

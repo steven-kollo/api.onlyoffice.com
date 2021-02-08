@@ -1,7 +1,7 @@
 # Change Log
 
 ## Changed
-- editors: added document.permissions.reviewGroup
+- editors: added document.permissions.reviewGroups
 
 ## Changed
 - editors: added editorConfig.customization.toolbarHideFileName
