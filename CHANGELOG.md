@@ -10,6 +10,7 @@
 - portals api v11.1
 - plugins: updated plugin styles information
 - plugins: added plugin types page
+- plugins: added faq
 
 ## 1.0.0
 - Initial changelog

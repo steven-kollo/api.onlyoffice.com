@@ -503,6 +503,8 @@
     <Content Include="Views\Plugin\IndexHtml.aspx" />
     <Content Include="Views\Plugin\Structure.aspx" />
     <Content Include="Views\Plugin\Installation.aspx" />
+    <Content Include="Views\Plugin\FAQ.aspx" />
+    <Content Include="Views\Plugin\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
     <Content Include="Views\Plugin\Types.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />

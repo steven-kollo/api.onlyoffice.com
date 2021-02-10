@@ -54,6 +54,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/removecontentcontrol",
                 "executemethod/getcurrentcontentcontrol",
                 "Example",
+                "FAQ",
                 "IndexHtml",
                 "Info",
                 "Info/data",
@@ -178,6 +179,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Example()
+        {
+            return View();
+        }
+
+        public ActionResult FAQ()
         {
             return View();
         }

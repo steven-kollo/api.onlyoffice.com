@@ -140,3 +140,9 @@
         <a href="<%= Url.Action("macrosamples") %>">Macro samples</a>
     </li>
 </ul>
+<div class="treeheader">More information</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("faq") %>">FAQ</a>
+    </li>
+</ul>
