@@ -350,6 +350,13 @@
     <Content Include="Content\img\plugins\plugin-button.png" />
     <Content Include="Content\img\plugins\plugin-manager.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
+    <Content Include="Content\img\plugins\autocomplete.png" />
+    <Content Include="Content\img\plugins\count-words-and-characters.png" />
+    <Content Include="Content\img\plugins\encryption.png" />
+    <Content Include="Content\img\plugins\highlight.png" />
+    <Content Include="Content\img\plugins\speech.png" />
+    <Content Include="Content\img\plugins\telegram.png" />
+    <Content Include="Content\img\plugins\youtube.png" />
     <Content Include="Content\img\plugins\controls-example.png" />
     <Content Include="Content\img\plugins\button1.png" />
     <Content Include="Content\img\plugins\button2.png" />
@@ -496,6 +503,7 @@
     <Content Include="Views\Plugin\Structure.aspx" />
     <Content Include="Views\Plugin\Installation.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
+    <Content Include="Views\Plugin\Types.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />
     <Content Include="Views\Editors\Config\Default.ascx" />
     <Content Include="Views\Editors\Conversion.aspx" />

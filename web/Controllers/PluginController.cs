@@ -75,6 +75,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "scope",
                 "Structure",
                 "Styles",
+                "Types",
                 "macros/Macros",
                 "macros/Writing",
                 "macros/ConvertingVBA",
@@ -236,6 +237,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Styles()
+        {
+            return View();
+        }
+
+        public ActionResult Types()
         {
             return View();
         }

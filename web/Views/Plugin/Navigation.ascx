@@ -7,6 +7,9 @@
     <li>
         <a href="<%= Url.Action("basic") %>">Overview</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("types") %>">Plugin types</a>
+    </li>
 </ul>
 
 <div class="treeheader">Documentation</div>
