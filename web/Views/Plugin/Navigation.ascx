@@ -5,7 +5,7 @@
 <div class="treeheader">Get Started</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("basic") %>">Introduction</a>
+        <a href="<%= Url.Action("basic") %>">Overview</a>
     </li>
 </ul>
 
