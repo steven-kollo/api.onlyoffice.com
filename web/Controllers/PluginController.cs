@@ -55,6 +55,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/getcurrentcontentcontrol",
                 "Example",
                 "FAQ",
+                "GettingStarted",
                 "IndexHtml",
                 "Info",
                 "Info/data",
@@ -179,6 +180,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Example()
+        {
+            return View();
+        }
+
+        public ActionResult GettingStarted()
         {
             return View();
         }
