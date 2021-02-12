@@ -39,6 +39,32 @@
             <td>true</td>
         </tr>
         <% } %>
+        <tr class="tablerow">
+            <td id="anonymous" class="copy-link">anonymous</td>
+            <td>
+                Adds a request for the anonymous name:
+                <ul>
+                    <li>
+                        <b>request</b> - defines if the request is sent or not.
+                        The default value is <em>true</em>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>label</b> - the anonymous user label.
+                        The default value is <em>Guest</em>,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Guest";
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
         <tr>
             <td id="autosave" class="copy-link">autosave</td>
             <td>
@@ -574,6 +600,10 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {
+            "anonymous": {
+                "request": true,
+                "label": "Guest"
+            },
             <% if (license)
                { %>"about": true,
             <% } %>"chat": true,

@@ -97,6 +97,10 @@
         "<a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a>": "https://example.com/url-to-callback.ashx",
         "<a href="<%= Url.Action("config/editor") %>#createUrl">createUrl</a>": "https://example.com/url-to-create-document/",
         "<a href="<%= Url.Action("config/editor/customization") %>">customization</a>": {
+            "<a href="<%= Url.Action("config/editor/customization") %>#anonymous">anonymous</a>": {
+                "request": true,
+                "label": "Guest"
+            },
             "<a href="<%= Url.Action("config/editor/customization") %>#autosave">autosave</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#chat">chat</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a>": true,

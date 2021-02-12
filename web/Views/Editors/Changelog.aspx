@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="63" class="copy-link">Version 6.3</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> field.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> field is deprecated, please use the <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">document.permissions.editCommentAuthorOnly</a> and <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">document.permissions.deleteCommentAuthorOnly</a> fields.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method.</li>
         <li>Added the <em>data.favorite</em> parameter to the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
