@@ -4,32 +4,32 @@
     <a class="up" href="<%= Url.Action("addingplugins/") %>"></a>
     <span class="hdr">Adding plugins to ONLYOFFICE Desktop Editors</span>
 </h1>
-<p>There are two ways to add the plugins to <b>ONLYOFFICE Desktop Editors</b>:</p>
+<p>There are two ways to add plugins: through the plugin manager and through the plugin folder.</p>
 
-    <p><b>Through the plugin manager</b></p>
-    <p><b>Step 1.</b> Take all the <a href="<%= Url.Action("structure") %>">plugin files</a>, archive them and change the file extension to <em>.plugin</em>.</p>
-    <note>When you download a plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">GitHub</a>, 
+    <h2>Adding plugins through the plugin manager</h2>
+
+    <p><b>Step 1.</b> Archive all the <a href="<%= Url.Action("structure") %>">plugin files</a> and change the archive extension to <em>.plugin</em>.</p>
+    <note>If you download a plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">GitHub</a>, 
         unpack the plugin folder first and then archive its elements only.</note>
 
-    <p><b>Step 2.</b> Click the <b>Settings</b> button on the <b>Plugins</b> tab. The plugin settings window will be opened:</p>
+    <p><b>Step 2.</b> Click the <b>Settings</b> button on the <b>Plugins</b> tab.</p>
     <img alt="Plugin settings" src="<%= Url.Content("~/content/img/plugins/plugin-settings.png") %>" />
 
-    <p><b>Step 3.</b> Use the <b>Add plugin</b> button to load your created plugin:</p>
+    <p><b>Step 3.</b> In the plugin <b>Settings</b> window, click the <b>Add plugin</b> button to load your created archive:</p>
     <img alt="Adding plugin" src="<%= Url.Content("~/content/img/plugins/adding-plugins.png") %>" />
 
-    <p>The plugin will be added immediately to the opened editors and all the editors you will open afterwords. The plugin icon will be displayed on the <b>Plugins</b> tab.</p>
+    <p>The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the <b>Plugins</b> tab.</p>
     <img alt="Plugins tab" src="<%= Url.Content("~/content/img/plugins/plugins-tab.png") %>" />
 
-    <p></p>
-    <br />
-    <p><b>Through the plugin folder</b></p>
-    <p><b>Step 1.</b> Create a new folder in the <em>sdkjs-plugins</em> directory. The path to the folder depends on your operating system you use:</p>
+
+    <h2>Adding plugins through the plugin folder</h2>
+    <p><b>Step 1.</b> Create a new folder in the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
     <ul style="list-style: none;">
         <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
         <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\</em></li>
     </ul>
 
-    <p><b>Step 2.</b> Use a plugin <b>GUID</b> as a folder name. You can find the plugin GUID in the <em>config.json</em> file.</p>
+    <p><b>Step 2.</b> Use a plugin <b>GUID</b> as the folder name. You can find the plugin GUID in the <em>config.json</em> file.</p>
     <p>For example, for the <b>Extended comments</b> plugin the <em>guid</em> parameter will look the following way:</p>
     <pre>
 {
@@ -38,9 +38,11 @@
     ...
 }
 </pre>
-    <p>So, the folder name of this plugin is <em>{91EAC419-EF8B-440C-A960-B451C7DF3A37}</em>.</p>
+    <p>So, the folder name of this plugin will be <em>{91EAC419-EF8B-440C-A960-B451C7DF3A37}</em>.</p>
+    
     <p><b>Step 3.</b> Put all the plugin files to this folder:</p>
     <img alt="Plugin folder" src="<%= Url.Content("~/content/img/plugins/plugins-folder.png") %>" />
+    
     <p><b>Step 4.</b> Start ONLYOFFICE Desktop Editors. If everything is done correctly, the plugin will be displayed within the <b>Plugins</b> tab:</p>
     <img alt="Extended comments" src="<%= Url.Content("~/content/img/plugins/extended-comments.png") %>" />
 
@@ -53,10 +55,10 @@
         <li>Go to the plugin <b>Settings</b>.</li>
         <li>Click the <img alt="Remove plugin button" src="<%= Url.Content("~/content/img/plugins/remove-plugin-button.png") %>" /> <b>Remove</b> button near the corresponding plugin.</li>
     </ol>
-    <note>This option is not available for the default plugins and the plugins added via plugins folder.</note>
+    <note>This option is not available for the default plugins and the plugins added via the plugin folder.</note>
 
     <p>If you need to uninstall the default plugins, go to the <em>sdkjs-plugins</em> folder and remove the corresponding plugin folder from this directory.</p>
-    <p>A table below contains default plugins guids to make it easier for you to find them:</p>
+    <p>The table below contains default plugins guids to make it easier for you to find them:</p>
             
     <h2>Default plugins guid&#8217;s</h2>
     <table class="try-now-table">
