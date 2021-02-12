@@ -243,9 +243,6 @@
         <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalName(System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalAnalytics(System.Boolean)">
-            <visible>false</visible>
-        </member>
         <member name="M:ASC.Api.Portal.PortalApi.SendCongratulations(System.Guid,System.String)">
             <visible>false</visible>
         </member>
@@ -264,7 +261,7 @@
         <member name="M:ASC.Api.Portal.PortalApi.MarkBarPromotion(System.String)">
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Portal.PortalApi.GetBarTips(System.String,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Portal.PortalApi.GetBarTips(System.String,System.String,System.Boolean,System.Boolean)">
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Portal.PortalApi.MarkBarTip(System.String)">

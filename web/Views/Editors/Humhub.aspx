@@ -29,19 +29,28 @@
 
     <h2 id="installing-doc-serv" class="copy-link">Installing ONLYOFFICE Document Server</h2>
 
-    <p>You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from HumHub and any end clients. If that is not the case, use the official ONLYOFFICE Document Server documetnation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to HumHub directly.</p>
+    <p>
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from HumHub and any end clients.
+        If that is not the case, use the official ONLYOFFICE Document Server documetnation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>. ONLYOFFICE Document Server must also be able to POST to HumHub directly.
+    </p>
 
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
     <h2 id="installing-plugin" class="copy-link">Installing ONLYOFFICE Connector for HumHub</h2>
 
-    <p>Either install it from HumHub Marketplace or simply clone the repository inside one of the folder specified by <em>moduleAutoloadPaths</em> parameter. Please see <a href="http://docs.humhub.org/dev-environment.html#external-modules-directory" target="_blank">HumHub Documentation</a> for more information.</p>
+    <p>
+        Either install it from HumHub Marketplace or simply clone the repository inside one of the folder specified by <em>moduleAutoloadPaths</em> parameter.
+        Please see <a href="http://docs.humhub.org/dev-environment.html#external-modules-directory" target="_blank">HumHub Documentation</a> for more information.
+    </p>
 
 
     <h2 id="configuring" class="copy-link">Configuring ONLYOFFICE Connector for HumHub</h2>
 
-    <p>In order to configure plugin you must navigate to <em>Administation -> Modules</em>. Find ONLYOFFICE plugin and click <em>Configure</em>.</p>
+    <p>
+        In order to configure plugin you must navigate to <em>Administation -> Modules</em>.
+        Find ONLYOFFICE plugin and click <em>Configure</em>.
+    </p>
 
 
     <h2 id="how-it-works" class="copy-link">How it works</h2>

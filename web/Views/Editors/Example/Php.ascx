@@ -24,7 +24,7 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP example</a> from our site.</p>
-<p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>config.php</em> file:</p>
+<p>You need to connect the editors to your web site. For that specify the path to the editors installation in the <em>config.php</em> file:</p>
 <pre>
 $GLOBALS['DOC_SERV_CONVERTER_URL'] = "https://documentserver/ConvertService.ashx";
 $GLOBALS['DOC_SERV_API_URL'] = "https://documentserver/web-apps/apps/api/documents/api.js";

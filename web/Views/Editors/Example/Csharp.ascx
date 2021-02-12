@@ -20,7 +20,10 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) example</a> from our site.</p>
-<p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>settings.config</em> file:</p>
+<p>
+    You need to connnect the editors to your web site.
+    For that specify the path to the editors installation in the <em>settings.config</em> file:
+</p>
 <pre>
 &lt;add key="files.docservice.url.converter" value="https://documentserver/ConvertService.ashx" /&gt;
 &lt;add key="files.docservice.url.api" value="https://documentserver/web-apps/apps/api/documents/api.js" /&gt;
@@ -55,7 +58,10 @@
         <img alt="" src="<%= Url.Content("~/content/img/csharp/sitename.png") %>" />
     </li>
     <li>
-        <p>Check for the .NET platform version specified in IIS manager for you web site. Choose <b>v4.0.</b> version.</p>
+        <p>
+            Check for the .NET platform version specified in IIS manager for you web site.
+            Choose <b>v4.0.</b> version.
+        </p>
         <p>Click the <b>Application Pool</b> -> right-click the platform name -> <b>Set application Pool defaults</b> -> <b>.NET CLR version</b></p>
         <img alt="" src="<%= Url.Content("~/content/img/csharp/platform.png") %>" />
     </li>

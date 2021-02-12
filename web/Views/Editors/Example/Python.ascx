@@ -23,7 +23,10 @@
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
-    <li>Python comes preinstalled on most Linux distributions, and is available as a package on all others. Python 3.9 is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html">official documentation</a> if you have any troubles.</li>
+    <li>
+        Python comes preinstalled on most Linux distributions, and is available as a package on all others.
+        Python 3.9 is required. Please proceed to <a href="https://docs.python.org/3/using/unix.html">official documentation</a> if you have any troubles.
+    </li>
     <li>Download the archive with the Python example and unpack the archive:
         <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Python%20Example.zip"</div>
         <div class="commandline">unzip Python\ Example.zip</div>
@@ -37,7 +40,8 @@
         <div class="commandline">pip install pyjwt==1.7.1</div>
     </li>
     <li>Edit the <em>config.py</em> configuration file.
-        Specify the name of your local server with the ONLYOFFICE Document Server installed. And specify the name of the server on which example is installed.
+        Specify the name of your local server with the ONLYOFFICE Document Server installed.
+        And specify the name of the server on which example is installed.
         <div class="commandline">nano config.py</div>
         <p>Edit the following lines:</p>
 

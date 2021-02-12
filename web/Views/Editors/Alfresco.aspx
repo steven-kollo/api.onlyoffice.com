@@ -123,7 +123,8 @@ sudo ./alfresco.sh start</span>
     </ul>
     <p>
         To convert one specific file you can simply select <b>Convert using ONLYOFFICE</b> action.
-        Resulting file will be placed in the same folder. You can also configure rules for a folder, that will automatically convert files on upload or on change. You can read how such rules can be configured <a href="https://docs.alfresco.com/5.1/tasks/library-folder-rules-define-create.html">here</a>.
+        Resulting file will be placed in the same folder.
+        You can also configure rules for a folder, that will automatically convert files on upload or on change. You can read how such rules can be configured <a href="https://docs.alfresco.com/5.1/tasks/library-folder-rules-define-create.html">here</a>.
     </p>
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
