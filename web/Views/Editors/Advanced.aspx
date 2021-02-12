@@ -56,6 +56,7 @@
     "<a href="<%= Url.Action("config/document") %>">document</a>": {
         "<a href="<%= Url.Action("config/document") %>#fileType">fileType</a>": "docx",
         "<a href="<%= Url.Action("config/document/info") %>">info</a>": {
+            "<a href="<%= Url.Action("config/document/info") %>#favorite">favorite</a>": true,
             "<a href="<%= Url.Action("config/document/info") %>#folder">folder</a>": "Example Files",
             "<a href="<%= Url.Action("config/document/info") %>#owner">owner</a>": "John Smith",
             "<a href="<%= Url.Action("config/document/info") %>#sharingSettings">sharingSettings</a>": [

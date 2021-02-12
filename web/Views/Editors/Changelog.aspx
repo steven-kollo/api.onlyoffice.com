@@ -18,6 +18,9 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="63" class="copy-link">Version 6.3</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method.</li>
+        <li>Added the <em>data.favorite</em> parameter to the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/info") %>#favorite">document.info.favorite</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">document.permissions.reviewGroups</a> field.</li>
     </ul>
 

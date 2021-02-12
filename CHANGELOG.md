@@ -2,6 +2,9 @@
 
 ## Changed
 - editors: added document.permissions.reviewGroups
+- editors: added document.info.favorite
+- editors: added setFavorite method
+- editors: added events.onMetaChange
 
 ## Changed
 - editors: added editorConfig.customization.toolbarHideFileName

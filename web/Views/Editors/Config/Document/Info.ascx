@@ -44,6 +44,13 @@
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
         <tr class="tablerow">
+            <td id="favorite" class="copy-link">favorite</td>
+            <td>Defines the highlighting state of the <em>Favorite</em> icon.
+            If the parameter is <em>undefined</em>, then <em>Favorite</em> icon is not displayed at the editor window header.</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
             <td id="folder" class="copy-link">folder</td>
             <td>Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).</td>
             <td>string</td>
@@ -110,6 +117,7 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "info": {
+            "favorite": true,
             "folder": "Example Files",
             "owner": "John Smith",
             "sharingSettings": [
