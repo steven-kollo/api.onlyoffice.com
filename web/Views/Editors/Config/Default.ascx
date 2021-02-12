@@ -36,7 +36,10 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note"><b>text</b>, <b>spreadsheet</b> and <b>presentation</b> values are deprecated since version 6.1. Please use new values instead.</div>
+                <div class="note">
+                    <b>text</b>, <b>spreadsheet</b> and <b>presentation</b> values are deprecated since version 6.1.
+                    Please use new values instead.
+                </div>
             </td>
         </tr>
         <tr class="tablerow">
