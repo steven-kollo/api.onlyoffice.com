@@ -34,7 +34,10 @@
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Document Server</h2>
 
-    <p>You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Plone and any end-clients. ONLYOFFICE Document Server must also be able to POST to Plone directly.</p>
+    <p>
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Plone and any end-clients.
+        ONLYOFFICE Document Server must also be able to POST to Plone directly.
+    </p>
 
     <p>You can install free Community version of ONLYOFFICE Document Server or scalable enterprise-level Integration Edition.</p>
 
@@ -61,7 +64,10 @@ onlyoffice.connector
 
     <h2 id="configuration" class="copy-link">Configuring Plone ONLYOFFICE integration plugin</h2>
 
-    <p>To configure plugin go to <em>Site Setup</em>. Scroll down to <em>Add-ons Configuration</em> section and press the <em>ONLYOFFICE Configuration</em> button.</p>
+    <p>
+        To configure plugin go to <em>Site Setup</em>.
+        Scroll down to <em>Add-ons Configuration</em> section and press the <em>ONLYOFFICE Configuration</em> button.
+    </p>
 
     <h2 id="how-it-works" class="copy-link">How it works</h2>
 
@@ -111,5 +117,8 @@ virtualenv --clear .
 ./bin/instance fg
     </span>
 
-    <p>Note that Plone is based on Zope server and will not run as <em>root</em> user. If you intend to run it as <em>root</em> user. You must supply <a target="_blank" href="https://zope.readthedocs.io/en/2.12/SETUID.html">effective-user directive</a>. In order to do so add <em>effective-user &lt;username&gt;</em> line to <em>./parts/instance/etc/zope.conf</em>.</p>
+    <p>
+        Note that Plone is based on Zope server and will not run as <em>root</em> user.
+        If you intend to run it as <em>root</em> user. You must supply <a target="_blank" href="https://zope.readthedocs.io/en/2.12/SETUID.html">effective-user directive</a>. In order to do so add <em>effective-user &lt;username&gt;</em> line to <em>./parts/instance/etc/zope.conf</em>.
+    </p>
 </asp:Content>

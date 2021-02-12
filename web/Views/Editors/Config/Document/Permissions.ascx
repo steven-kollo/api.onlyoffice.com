@@ -210,7 +210,6 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
-            "changeHistory": true,
             "comment": true,
             "copy": true,
             "deleteCommentAuthorOnly": false,
@@ -221,7 +220,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "modifyContentControl": true,
             "modifyFilter": true,
             "print": true,
-            "rename": true,
             "review": true,
             "reviewGroups": ["Group1", "Group2", ""]
         },

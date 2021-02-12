@@ -25,7 +25,7 @@
             <div class="note">
                 Please note that since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected based on <a href="<%= Url.Action("callback") %>#status">status</a> of the request.
                 Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
-                Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.                
+                Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.
             </div>
         </li>
         <li>The <b>document storage service</b> downloads the document file with all the saved changes from the <b>document editing service</b> and stores it.</li>
