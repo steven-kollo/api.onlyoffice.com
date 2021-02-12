@@ -5,6 +5,7 @@
 - editors: added document.info.favorite
 - editors: added setFavorite method
 - editors: added events.onMetaChange
+- editors: added document.permissions.editCommentAuthorOnly and document.permissions.deleteCommentAuthorOnly
 
 ## Changed
 - editors: added editorConfig.customization.toolbarHideFileName

@@ -69,6 +69,7 @@
             <td>
                 Defines if the user can edit and delete only his comments.
                 The default value is <b>false</b>.
+                Deprecated since version 6.3, please use the <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">document.permissions.editCommentAuthorOnly</a> and <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">document.permissions.deleteCommentAuthorOnly</a> fields instead. 
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -567,7 +568,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% if (license)
                { %>"about": true,
             <% } %>"chat": true,
-            "commentAuthorOnly": false,
             "comments": true,
             "compactHeader": false,
             "compactToolbar": false,

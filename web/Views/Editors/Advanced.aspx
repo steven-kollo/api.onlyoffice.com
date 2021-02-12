@@ -77,8 +77,10 @@
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#copy">copy</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">deleteCommentAuthorOnly</a>": false,
             "<a href="<%= Url.Action("config/document/permissions") %>#download">download</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">editCommentAuthorOnly</a>": false,
             "<a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">modifyContentControl</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#modifyFilter">modifyFilter</a>": true,
@@ -97,7 +99,6 @@
         "<a href="<%= Url.Action("config/editor/customization") %>">customization</a>": {
             "<a href="<%= Url.Action("config/editor/customization") %>#autosave">autosave</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#chat">chat</a>": true,
-            "<a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">commentAuthorOnly</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactToolbar">compactToolbar</a>": false,

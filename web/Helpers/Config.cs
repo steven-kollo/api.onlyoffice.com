@@ -218,9 +218,6 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "chat", EmitDefaultValue = false)]
                 public bool? Chat;
 
-                [DataMember(Name = "commentAuthorOnly", EmitDefaultValue = false)]
-                public bool? CommentAuthorOnly;
-
                 [DataMember(Name = "compactToolbar", EmitDefaultValue = false)]
                 public bool? CompactToolbar;
 
