@@ -1,6 +1,7 @@
 # Change Log
 
 ## Changed
+- editors: added editorConfig.customization.hideRulers
 - editors: added document.permissions.reviewGroups
 - editors: added document.info.favorite
 - editors: added setFavorite method

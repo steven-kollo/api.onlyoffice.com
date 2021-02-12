@@ -312,6 +312,15 @@
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.hideRightMenu</em> parameter.</div>
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="hideRulers" class="copy-link">hideRulers</td>
+            <td>
+                Defines if the editor rulers are displayed (<b>true</b>) or hidden (<b>false</b>). 
+                This parameter is available for the document and presentation editors. The default value is <b>false</b> for the document editor and <b>true</b> for presentations.
+            </td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -649,6 +658,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "loaderLogo": "https://example.com/loader-logo.png",
             "loaderName": "The document is loading, please wait...",
             <% } %>"hideRightMenu": false,
+            "hideRulers": false,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",

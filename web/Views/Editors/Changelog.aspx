@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="63" class="copy-link">Version 6.3</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRulers">editorConfig.customization.hideRulers</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">editorConfig.customization.submitForm</a> field.</li>
         <li>Added a new <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a> (<em>forcesavetype = 3</em>).</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> field.</li>
