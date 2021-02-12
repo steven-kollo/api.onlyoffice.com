@@ -499,6 +499,19 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
+        <% } %>
+        <tr class="tablerow">
+            <td id="submitForm" class="copy-link">submitForm</td>
+            <td>
+                Defines if the <b>Submit form</b> button is displayed or hidden.
+                Button will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b> and at least one of the <a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>, <a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a> or <a href="<%= Url.Action("config/document/permissions") %>#review">review</a> permissions is set to <b>true</b>.
+                The default value is <b>false</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <% if (license)
+            { %>
         <tr class="tablerow">
             <td id="toolbar" class="copy-link">toolbar<span class="required">**</span></td>
             <td>
@@ -652,7 +665,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "spellcheck": true,
             <% if (license)
                { %>"statusBar": true,
-            "toolbar": true,
+            <% } %>"submitForm": true,
+            <% if (license)
+                { %>"toolbar": true,
             <% } %>"toolbarHideFileName": false,
             "toolbarNoTabs": false,
             "trackChanges": false,
