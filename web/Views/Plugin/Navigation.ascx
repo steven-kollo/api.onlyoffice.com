@@ -118,6 +118,9 @@
             <li>
                 <a href="<%= Url.Action("addingplugins/onpremises") %>">ONLYOFFICE Docs on-premises</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("addingplugins/cloud") %>">ONLYOFFICE Cloud</a>
+            </li>
         </ul>
     <li>
         <a href="<%= Url.Action("localization") %>">Plugin localization</a>

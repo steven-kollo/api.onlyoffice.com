@@ -43,6 +43,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "addingplugins",
                 "addingplugins/desktop",
                 "addingplugins/onpremises",
+                "addingplugins/cloud",
                 "Basic",
                 "Button",
                 "Code",
