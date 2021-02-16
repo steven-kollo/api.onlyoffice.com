@@ -445,7 +445,7 @@ li b.copy-link[id]:hover:before {
 .bottommenu {
     float: left;
     font-size: 13px;
-    margin: 21px 0 0 10%;
+    margin: 21px 0 0 20%;
     padding: 0;
 }
 
@@ -472,7 +472,7 @@ li b.copy-link[id]:hover:before {
 
 .copyReserved {
     float: right;
-    margin: 21px 10% 0 0;
+    margin: 21px 20% 0 0;
     font-size: 13px;
     color: #808080;
 }
