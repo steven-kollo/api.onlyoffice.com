@@ -12,47 +12,245 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="products-info">
         <h1>
-            <span class="hdr">Welcome to ONLYOFFICE API</span>
+            <span class="hdr title-main">Welcome to ONLYOFFICE API</span>
         </h1>
-        <p>
-            ONLYOFFICE API describes the main methods that allow you to interact with different ONLYOFFICE components.
-                <br />
-            Please select the necessary section below to learn more about which API methods are available for it.
-        </p>
     </div>
 
-    <div class="product-list clearfix">
-        <% var products = Products.EnabledProducts();
-           foreach (var product in products)
-           { %>
-        <div class="product">
-            <a href="<%= Url.Action("basic", product.Id) %>">
-                <img src="<%= Url.Content("~/content/img/" + product.Id + ".png") %>" alt="<%= product.Title %>">
-                <%= product.Title %>
-            </a>
+
+     <div class="icon-program-block">
+        <div class="img-title-docs">
+            <p class="name-icon-program"><a href=<%=VirtualPathUtility.ToAbsolute("~/editors/basic")%>>Document Server</a></p>
         </div>
-        <% } %>
-    </div>
-    <div class="main-page main-faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="qa-blocks-wrapper">
-            <div class="qa-blocks">
-                <div class="qa-block qa-questions">
-                    <div class="qa-block-question selected"><a class="qa-question-link">I am new to Document Server API. Where should I start?</a></div>
-                    <div class="qa-block-question"><a class="qa-question-link">How to find out the current version number of Document Server?</a></div>
-                    <div class="qa-block-question"><a class="qa-question-link">How can I change some Document Server parameters?</a></div>
-                    <div class="qa-block-question"><a class="qa-question-link">How to limit access to my Document Server?</a></div>
-                    <div class="qa-block-question"><a class="qa-question-link">What's the difference between sending the token in header and in body?</a></div>
-                    <div class="qa-more-questions"><a class="qa-more-questions-link" href="<%= Url.Action("faq", "editors") %>">More questions...</a></div>
+        <div class="img-title-plugins">
+            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/plugin/basic")%>'>Plugins and Macros</a></p>
+        </div>
+        <div class="img-title-builder">
+            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/docbuilder/basic")%>'>Document Builder</a></p>
+        </div>
+        <div class="img-title-groups">
+            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/portals/basic")%>'>Community Server</a></p>
+        </div>
+        <div class="img-title-host">
+            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/apisystem/basic")%>'>Hosted Solution</a></p>
+        </div>
+        <div class="img-title-editors">
+            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/")%>'>Desktop</a></p>
+         </div>
+        </div>
+
+        <div class="body-block">
+    <div class="ip_main_part">
+        <div class="first-block">
+        <div class="docs_block">
+            <div class="pp_title long">
+              <div class="img-title-docs"></div>
+                <p class="title-block">ONLYOFFICE Docs</p>
+            </div>
+            <div class="pp_info_block">
+                Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.
+                <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/basic")%>">More</a></p>
+            </div>
+            <div class="pp_users_recommendation">
+                <div class="pp_users_block">
+                 <div class="first-column">
+                    <p class="programs-list-title">Get started</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/basic")%>">Basic concepts</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/try")%>">Try now</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/demopreview")%>">Integration examples</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/plugins")%>">Integration connectors</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/howitworks")%>">How it works</a></p>
+                  </div>
+                  <div class="second-column">                    
+                    <p class="programs-list-title">Documentation</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/advanced")%>">Advanced parameters</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/config")%>">Config</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/methods")%>">Methods</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/callback")%>">Callback handler</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/command")%>">Command service</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/conversionapi")%>">Conversion API</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/documentbuilderapi")%>">Document Builder API</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/signature/")%>">Signature</a></p>
+                  </div>
+                 <div class="third-column">                    
+                    <p class="programs-list-title">More info</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/changelog")%>">Changelog</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/faq")%>">FAQ</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/troubleshooting")%>">Troubleshooting</a></p>
+                  </div>
                 </div>
-                <div class="qa-block qa-answers">
-                    <div class="qa-block-answer active">If you do not know where to start with Document Server API, we suggest that you first read the Basic concepts and How it works sections to have better understanding of how Document Server API is built. Once you are familiar with the main concepts, you can visit the Try now section to see the live examples of the main Document Server features in action... <a class="qa-read-more" href="<%= Url.Action("faq/general", "editors") %>#general_1">Read more</a></div>
-                    <div class="qa-block-answer" style="display: none;">The current Document Server version number can be found at the About page of the Document, Presentation or Spreadsheet Editor, right below the logo and the editor name. You can use the API to send a POST request to the document command service. Use the c parameter for that with the version value, which is sent as a JSON object in the request body... <a class="qa-read-more" href="<%= Url.Action("faq/general", "editors") %>#general_2">Read more</a></div>
-                    <div class="qa-block-answer" style="display: none;">All the main settings for Document Sever are stored in the default.json configuration file which is available in the /etc/onlyoffice/documentserver/ folder (for Linux) or %ProgramFiles%\ONLYOFFICE\DocumentServer\config\ (for Windows). There is also the platform-specific production.json file in the same folder... <a class="qa-read-more" href="<%= Url.Action("faq/general", "editors") %>#general_3">Read more</a></div>
-                    <div class="qa-block-answer" style="display: none;">To prevent an unauthorized access to your documents and the substitution of important parameters in ONLYOFFICE Document Server requests, it uses a JSON Web Token (JWT) compatible tokens to ensure security. The tokens are signed by the server key, so the client is able to verify that the token is legitimate... <a class="qa-read-more" href="<%= Url.Action("faq/security", "editors") %>#security_1">Read more</a></div>
-                    <div class="qa-block-answer" style="display: none;">Starting with version 5.2 of Document Server it is possible to send token both in the request header and body. The main difference between these two methods is in the length limitation: a HTTP header has length limitation and some servers (such as some NGINX versions) do not accept the requests with the header longer than 4 kilobytes... <a class="qa-read-more" href="<%= Url.Action("faq/security", "editors") %>#security_2">Read more</a></div>
+            </div>
+        </div>
+
+
+
+            <div class="docs_block">
+            <div class="pp_title long">
+            <div class="img-title-builder"></div>
+                <p class="title-block">ONLYOFFICE Document Builder</p>
+            </div>
+            <div class="pp_info_block">
+                    Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc. 
+             <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/basic")%>">More</a></p>
+            </div>
+            <div class="pp_users_recommendation">
+                <div class="pp_users_block">
+                 <div class="first-column">
+                    <p class="programs-list-title">Get started</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/basic")%>">Introduction</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/gettingstarted")%>">Getting started</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/integratingdocumentbuilder")%>">Integrating Document</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/integratingdocumentbuilder")%>">Builder</a></p>
+                 </div>
+                 <div class="second-column">
+                    <p class="programs-list-title">Documentation</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/integrationapi")%>">Integration API</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/textdocumentapi")%>">Text document API</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/spreadsheetapi")%>">Spreadsheet API</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/presentationapi")%>">Presentation API</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/global")%>">Global</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/classlist")%>">List of classes</a></p>
+                 </div>
+                 <div class="third-column">
+                  </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="docs_block">
+            <div class="pp_title long">
+            <div class="img-title-host"></div>
+                <p class="title-block">Hosted solution</p>
+            </div>
+            <div class="pp_info_block">
+                    Host ONLYOFFICE Groups to make your collaboration platform online. In this section you will learn how to make GET and POST requests to manage portals, set tariff plans and pass authentication. 
+            <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/basic")%>">More</a></p>
+            </div>
+            <div class="pp_users_recommendation">
+                <div class="pp_users_block">
+                 <div class="first-column">
+                    <p class="programs-list-title">Get started</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/basic")%>">Changelog</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/authentication")%>">Authentication</a></p>
+                 </div>
+                 <div class="second-column">
+                    <p class="programs-list-title">Methods</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/section/portal")%>">Portals</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/section/tariff")%>">Billing</a></p>
+                 </div>
+                 <div class="third-column">
+                  </div>
                 </div>
             </div>
         </div>
     </div>
+            
+        <div class="second-block">
+            <div class="docs_block">
+            <div class="pp_title long">
+            <div class="img-title-plugins"></div>
+                <p class="title-block">Plugins and macros</p>
+            </div>
+            <div class="pp_info_block">
+                    Extend the ONLYOFFICE Docs functionality. In this section you will learn how to create your own plugins/macros:  its structure, development lifecycle, and examples.
+            <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/basic")%>">More</a></p>
+            </div>
+            <div class="pp_users_recommendation">
+                <div class="pp_users_block"> 
+                   <div class="first-column">
+                    <p class="programs-list-title">Get started</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/basic")%>">Introduction</a></p>
+                   </div>
+                   <div class="second-column">
+                    <p class="programs-list-title">Documentation</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/structure")%>">Plugin structure</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/installation")%>">Plugin installation</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/localization")%>">Plugin localization</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/styles")%>">Plugin styles</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/example")%>">Plugin example</a></p>
+                   </div>
+                   <div class="third-column">                    
+                    <p class="programs-list-title">Macros</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/installation/plugin/macros")%>">ONLYOFFICE macros</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/writingmacros")%>">Writing macros</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/convertingvbamacros")%>">Converting macros</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/macrosamples")%>">Macro samples</a></p>
+                  </div>
+                </div>
+           </div>
+</div>
+
+
+            <div class="docs_block">
+            <div class="pp_title long">
+            <div class="img-title-groups"></div>
+                <p class="title-block">ONLYOFFICE Groups</p>
+            </div>
+            <div class="pp_info_block">
+                    Create your own productivity platform based on ONLYOFFICE Groups. In this section you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication. 
+            <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/basic")%>">More</a></p>
+            </div>
+            <div class="pp_users_recommendation">
+                <div class="pp_users_block">
+                   <div class="first-column">
+                    <p class="programs-list-title">Get started</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/basic")%>">Basic concepts</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/auth")%>">Passing authentication</a></p>
+                   </div>
+                   <div class="second-column">
+                    <p class="programs-list-title">Documentation</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/authentication")%>">authentication</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/calendar")%>">calendar</a> | <a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/capabilities")%>">capabilities</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/community")%>">community</a> | <a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/crm/cases")%>">crm</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/feed")%>">feed</a> | <a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/files")%>">files</a> | <a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/group")%>">group</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/mail")%>">mail</a> | <a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/mailserver/addressdata")%>">mailserver</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/people")%>">people</a> | <a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/portal")%>">portal</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/project")%>">project</a> | <a href="<%=VirtualPathUtility.ToAbsolute("~/portals/section/settings")%>">settings</a></p>
+                   </div>
+                   <div class="third-column">                    
+                    <p class="programs-list-title">Help</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/faq")%>">F.A.Q.</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/filters")%>">Filtering</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/batch")%>">Batching</a></p>
+                  </div>
+                </div>
+            </div>
+       </div>
+
+        <div class="docs_block">
+            <div class="pp_title long">
+              <div class="img-title-editors"></div>
+                <p class="title-block">ONLYOFFICE Desktop Editors</p>
+            </div>
+            <div class="pp_info_block">
+                Extent the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.
+            <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">More</a></p>
+            </div>
+            <div class="pp_users_recommendation">
+                <div class="pp_users_block">
+                 <div class="first-column">
+                    <p class="programs-list-title">Get started</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Overview</a></p>
+                  </div>
+                  <div class="second-column">                    
+                    <p class="programs-list-title">Documentation</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Adding a DMS provider to the list of connections</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Opening in DMS</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">DMS encryption</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Enable debug mode</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Adding plugins</a></p>
+                  </div>
+                 <div class="third-column">                    
+                    <p class="programs-list-title">More info</p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Changelog</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">FAQ</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Troubleshooting</a></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
 </asp:Content>

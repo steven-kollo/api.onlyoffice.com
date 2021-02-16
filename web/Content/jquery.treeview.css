@@ -19,7 +19,7 @@ ul.side-nav,
 }
 
 .treeview .selected {
-    color: #5891d0;
+    color: #FF6F3D;
     max-width: 150px;
     text-decoration: none;
     text-overflow: ellipsis;
@@ -58,7 +58,7 @@ ul.side-nav,
 }
 
 .treeview a.selected {
-    color: #5891d0;
+    color: #FF6F3D;
 }
 
 .treeview a:hover {
