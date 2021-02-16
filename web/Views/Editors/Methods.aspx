@@ -529,7 +529,10 @@ docEditor.setMailMergeRecipients({
         </li>
 
         <li>
-            <p><b id="setRevisedFile" class="copy-link">setRevisedFile</b> - select a document for comparing. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.</p>
+            <p>
+                <b id="setRevisedFile" class="copy-link">setRevisedFile</b> - select a document for comparing.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.
+            </p>
             <pre>
 docEditor.setRevisedFile({
     "fileType": "docx",

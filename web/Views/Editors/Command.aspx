@@ -16,7 +16,8 @@
 
     <p class="dscr">
         For the interaction with the <b>document command service</b> the POST requests are used.
-        The request parameters are entered in JSON format in the request body. The requests are sent to the <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        The request parameters are entered in JSON format in the request body.
+        The requests are sent to the <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
     </p>
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>

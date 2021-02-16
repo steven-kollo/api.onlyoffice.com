@@ -980,7 +980,7 @@
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;EndConvert&gt;True&lt;/EndConvert&gt;
-    &lt;FileUrl&gt;https://documentserver/ResourceService.ashx?filename=output.doc&lt;/FileUrl&gt;
+    &lt;FileUrl&gt;https://documentserver/url-to-converted-document.pdf&lt;/FileUrl&gt;
     &lt;Percent&gt;100&lt;/Percent&gt;
 &lt;/FileResult&gt;
 </pre>
@@ -989,7 +989,7 @@
     <pre>
 {
     "endConvert": true,
-    "fileUrl": "https://documentserver/ResourceService.ashx?filename=output.doc",
+    "fileUrl": "https://documentserver/url-to-converted-document.pdf",
     "percent": 100
 }
 </pre>

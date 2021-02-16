@@ -28,7 +28,6 @@
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
 
 <pre>files.docservice.url.converter=https://documentserver/ConvertService.ashx
-files.docservice.url.tempstorage=https://documentserver/ResourceService.ashx
 files.docservice.url.api=https://documentserver/web-apps/apps/api/documents/api.js
 files.docservice.url.preloader=https://documentserver/web-apps/apps/api/documents/cache-scripts.html</pre>
 

@@ -33,10 +33,13 @@
 
     <h2 id="installing-onlyoffice-document-server" class="copy-link">Installing ONLYOFFICE Document Server</h2>
 
-    <p>You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Nuxeo and any end-clients. ONLYOFFICE Document Server must also be able to POST to Nuxeo directly.</p>
+    <p>
+        You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Nuxeo and any end-clients.
+        ONLYOFFICE Document Server must also be able to POST to Nuxeo directly.
+    </p>
     <p>You can install free Community version of ONLYOFFICE Document Server or scalable enterprise-level Integration Edition.</p>
 
-    <p>To install free Community version, use <a href="https://github.com/onlyoffice/Docker-DocumentServer">Docker</a> (recommended) or follow <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">these instructions</a> for Debian, Ubuntu, or derivatives.  </p>
+    <p>To install free Community version, use <a href="https://github.com/onlyoffice/Docker-DocumentServer">Docker</a> (recommended) or follow <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx">these instructions</a> for Debian, Ubuntu, or derivatives.</p>
 
     <p>To install Integration Edition, follow instructions <a href="https://helpcenter.onlyoffice.com/server/integration-edition/index.aspx">here</a>.</p>
 
@@ -59,14 +62,17 @@ onlyoffice.jwt.secret=</pre>
 
     <p>If you used Docker to install ONLYOFFICE Document Server, use information from <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer/#available-configuration-parameters">this repo</a> to configure JWT.</p>
 
-    <p>If you used other installation options, check the <a href="https://api.onlyoffice.com/editors/signature/">API documentation</a> for configuring JWT on the Document Server side.  </p>
+    <p>If you used other installation options, check the <a href="https://api.onlyoffice.com/editors/signature/">API documentation</a> for configuring JWT on the Document Server side.</p>
 
     <h2 id="compiling-nuxeo-onlyoffice-plugin" class="copy-link">Compiling Nuxeo ONLYOFFICE plugin</h2>
 
     <p>To build Nuxeo plugin, the following steps must be performed for Ubuntu:</p>
     <ol>
         <li>
-            <p>The stable Java version is necessary for the successful build. If you do not have it installed, use the following commands to install Open JDK 8:</p>
+            <p>
+                The stable Java version is necessary for the successful build.
+                If you do not have it installed, use the following commands to install Open JDK 8:
+            </p>
             <pre>sudo apt-get update
 sudo apt-get install openjdk-8-jdk</pre>
         </li>
@@ -94,6 +100,6 @@ mvn clean install</pre>
 
     <h2 id="how-it-works" class="copy-link">How it works</h2>
 
-    <p>The ONLYOFFICE integration follows the API documented <a href="https://api.onlyoffice.com/editors/basic">here</a>. </p>
+    <p>The ONLYOFFICE integration follows the API documented <a href="https://api.onlyoffice.com/editors/basic">here</a>.</p>
 
 </asp:Content>
