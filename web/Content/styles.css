@@ -412,7 +412,7 @@ li b.copy-link[id]:hover:before {
 .top-nav li {
     display: block;
     float: left;
-    padding: 0px 12px 0 12px;
+    /*padding: 0px 12px 0 12px;*/
 }
 
 .top-nav li.active a {
