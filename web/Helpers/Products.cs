@@ -45,7 +45,6 @@ namespace ASC.Api.Web.Help.Helpers
                 new Product {Id = "editors", Title = "Document Server"},
                 new Product {Id = "plugin", Title = "Plugins and Macros"},
                 new Product {Id = "docbuilder", Title = "Document Builder"},
-                new Product {Id = "desktop", Title = "Desktop"},
             };
 
         public static List<Product> EnabledProducts()
@@ -56,6 +55,21 @@ namespace ASC.Api.Web.Help.Helpers
 
             var enabled = (from product in products where map.ContainsKey(product) select map[product]).ToList();
             return enabled;
+        }
+
+        public static bool hasProduct(string productId, List<Product> products)
+        {
+            bool hasProduct = false;
+
+            foreach(var product in products)
+            {
+                if(product.Id == productId)
+                {
+                    return true;
+                }
+            }
+
+            return hasProduct;
         }
     }
 }

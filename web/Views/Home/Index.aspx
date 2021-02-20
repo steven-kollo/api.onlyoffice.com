@@ -16,35 +16,28 @@
         </h1>
     </div>
 
+        <div class="product-list clearfix">
+    </div>
+
 
      <div class="icon-program-block">
-        <div class="img-title-docs">
-            <p class="name-icon-program"><a href=<%=VirtualPathUtility.ToAbsolute("~/editors/basic")%>>Document Server</a></p>
+         <% var products = Products.EnabledProducts();
+           foreach (var product in products)
+           { %>
+            <div class="img-title-<%= product.Id %>" style="width: auto;">
+            <p class="name-icon-program"><a href=<%= Url.Action("basic", product.Id) %>><%= product.Title %></a></p>
         </div>
-        <div class="img-title-plugins">
-            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/plugin/basic")%>'>Plugins and Macros</a></p>
-        </div>
-        <div class="img-title-builder">
-            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/docbuilder/basic")%>'>Document Builder</a></p>
-        </div>
-        <div class="img-title-groups">
-            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/portals/basic")%>'>Community Server</a></p>
-        </div>
-        <div class="img-title-host">
-            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/apisystem/basic")%>'>Hosted Solution</a></p>
-        </div>
-        <div class="img-title-editors">
-            <p class="name-icon-program"><a href='<%=VirtualPathUtility.ToAbsolute("~/")%>'>Desktop</a></p>
-         </div>
+        <% } %>
         </div>
 
         <div class="body-block">
     <div class="ip_main_part">
         <div class="first-block">
+<%  if(Products.hasProduct("editors", products)) { %>
         <div class="docs_block">
             <div class="pp_title long">
-              <div class="img-title-docs"></div>
-                <p class="title-block">ONLYOFFICE Docs</p>
+              <div class="img-title-editors"></div>
+                <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/basic")%>">ONLYOFFICE Docs</a></p>
             </div>
             <div class="pp_info_block">
                 Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.
@@ -80,13 +73,14 @@
                 </div>
             </div>
         </div>
+         <% } %>
 
 
-
+        <%  if(Products.hasProduct("docbuilder", products)) { %>
             <div class="docs_block">
             <div class="pp_title long">
-            <div class="img-title-builder"></div>
-                <p class="title-block">ONLYOFFICE Document Builder</p>
+            <div class="img-title-docbuilder"></div>
+                <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/basic")%>">ONLYOFFICE Document Builder</a></p>
             </div>
             <div class="pp_info_block">
                     Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc. 
@@ -115,11 +109,13 @@
                 </div>
             </div>
         </div>
+        <% } %>
 
+        <%  if(Products.hasProduct("apisystem", products)) { %>
             <div class="docs_block">
             <div class="pp_title long">
-            <div class="img-title-host"></div>
-                <p class="title-block">Hosted solution</p>
+            <div class="img-title-apisystem"></div>
+                <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/basic")%>">Hosted solution</a></p>
             </div>
             <div class="pp_info_block">
                     Host ONLYOFFICE Groups to make your collaboration platform online. In this section you will learn how to make GET and POST requests to manage portals, set tariff plans and pass authentication. 
@@ -142,13 +138,15 @@
                 </div>
             </div>
         </div>
+            <% } %>
     </div>
             
         <div class="second-block">
+            <%  if(Products.hasProduct("plugin", products)) { %>
             <div class="docs_block">
             <div class="pp_title long">
-            <div class="img-title-plugins"></div>
-                <p class="title-block">Plugins and macros</p>
+            <div class="img-title-plugin"></div>
+                <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/basic")%>">Plugins and macros</a></p>
             </div>
             <div class="pp_info_block">
                     Extend the ONLYOFFICE Docs functionality. In this section you will learn how to create your own plugins/macros:  its structure, development lifecycle, and examples.
@@ -176,14 +174,15 @@
                     <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/macrosamples")%>">Macro samples</a></p>
                   </div>
                 </div>
-           </div>
-</div>
+             </div>
+          </div>
+          <% } %>
 
-
+            <%  if(Products.hasProduct("portals", products)) { %>
             <div class="docs_block">
             <div class="pp_title long">
-            <div class="img-title-groups"></div>
-                <p class="title-block">ONLYOFFICE Groups</p>
+            <div class="img-title-portals"></div>
+                <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/basic")%>">ONLYOFFICE Groups</a></p>
             </div>
             <div class="pp_info_block">
                     Create your own productivity platform based on ONLYOFFICE Groups. In this section you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication. 
@@ -215,11 +214,13 @@
                 </div>
             </div>
        </div>
+       <% } %>
 
+       <%  if(Products.hasProduct("desktop", products)) { %>
         <div class="docs_block">
             <div class="pp_title long">
-              <div class="img-title-editors"></div>
-                <p class="title-block">ONLYOFFICE Desktop Editors</p>
+              <div class="img-title-desktop"></div>
+                <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">ONLYOFFICE Desktop Editors</a></p>
             </div>
             <div class="pp_info_block">
                 Extent the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.
@@ -248,9 +249,11 @@
                 </div>
             </div>
         </div>
+            <% } %>
         </div>
     </div>
 </div>
+
 
 
 </asp:Content>

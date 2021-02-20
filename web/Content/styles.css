@@ -1504,30 +1504,13 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 }
 
 .icon-program-block {
-    display: inline-flex;
-    width: 1120px;
-    margin-top: 70px;
+    display: flex;
+    max-width: 1120px;
+    margin: 70px auto auto auto;
+    justify-content: space-between;
 }
 
-.icon-program-block .img-title-docs {
-       width: 16.6%;
-}
-.icon-program-block .img-title-plugins {
-       width: 16.6%;
-}
-.icon-program-block .img-title-builder {
-       width: 16.6%;
-}
-.icon-program-block .img-title-groups {
-       width: 16.6%;
-}
-.icon-program-block .img-title-host {
-       width: 16.6%;
-}
-.icon-program-block .img-title-editors {
-       width: 16.6%;
-}
-    .name-icon-program a{
+.name-icon-program a {
     text-align: center;
     padding-top: 120px;
     text-transform: uppercase;
@@ -1537,7 +1520,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
     text-decoration: none;
 }
 
-    .name-icon-program{
+.name-icon-program {
     margin-top: 120px;
     font-size: 12px;
     letter-spacing: 0.08em;
@@ -1568,7 +1551,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
     letter-spacing: -0.02em;
 }
 
-.img-title-docs {
+.img-title-editors {
     background-image: url(img/main-page/document_server.svg);
     background-repeat: no-repeat;
     width: 115px;
@@ -1576,16 +1559,15 @@ table.parameters_permissions td p, table.parameters_permissions th p {
     background-position: center;
 }
 
-.img-title-builder {
+.img-title-docbuilder {
     background-image: url(img/main-page/document_builder.svg);
     background-repeat: no-repeat;
     width: 115px;
     height: 100px;
     background-position: center;
-
 }
 
-.img-title-host {
+.img-title-apisystem {
     background-image: url(img/main-page/hosted_solution.svg);
     background-repeat: no-repeat;
     width: 115px;
@@ -1593,7 +1575,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
     background-position: center;
 }
 
-.img-title-plugins {
+.img-title-plugin {
     background-image: url(img/main-page/plugins_and_macros.svg);
     background-repeat: no-repeat;
     width: 115px;
@@ -1601,7 +1583,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
     background-position: center;
 }
 
-.img-title-groups {
+.img-title-portals {
     background-image: url(img/main-page/community_server.svg);
     background-repeat: no-repeat;
     width: 115px;
@@ -1609,7 +1591,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
     background-position: center;
 }
 
-.img-title-editors {
+.img-title-desktop {
     background-image: url(img/main-page/desktop.svg);
     background-repeat: no-repeat;
     width: 115px;
@@ -1650,7 +1632,7 @@ article {
     display: table;
     margin: auto;
     width: 1120px;
-    margin-top: 100px;
+    margin-top: 170px;
 }
 
 .ip_main_part {
@@ -1723,14 +1705,16 @@ article {
     line-height: 1.2em;
     padding-top: 20px;
     text-align: left;
-  }  
+  }
 .pp_title a {
     color: #333333;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .pp_title a {
-    text-decoration: underline;
+    text-decoration: none;
+    padding-top: 150px;
 }
 
 .long {
