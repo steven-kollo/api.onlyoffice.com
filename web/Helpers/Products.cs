@@ -45,6 +45,7 @@ namespace ASC.Api.Web.Help.Helpers
                 new Product {Id = "editors", Title = "Document Server"},
                 new Product {Id = "plugin", Title = "Plugins and Macros"},
                 new Product {Id = "docbuilder", Title = "Document Builder"},
+                new Product {Id = "desktop", Title = "Desktop Editors"},
             };
 
         public static List<Product> EnabledProducts()

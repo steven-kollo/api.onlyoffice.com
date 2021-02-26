@@ -1,6 +1,7 @@
 # Change Log
 
 ## Changed
+- added Desktop Editors section
 - updated builder examples
 - support sharepoint 2019
 - portals api v11.1
