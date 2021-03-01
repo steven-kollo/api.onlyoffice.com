@@ -6,13 +6,13 @@
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("basic") %>">Overview</a>
-    </li>
+    </li><!--
     <li>
         <a href="<%= Url.Action("gettingstarted") %>">Getting started with plugins</a>
     </li>
     <li>
         <a href="<%= Url.Action("types") %>">Plugin types</a>
-    </li>
+    </li>-->
 </ul>
 
 <div class="treeheader">Documentation</div>
@@ -181,10 +181,10 @@
     </li>
 </ul>
 <div class="treeheader">Macros</div>
-<ul class="side-nav root">
+<ul class="side-nav root"><!--
     <li>
         <a href="<%= Url.Action("macros") %>">Getting started with macros</a>
-    </li>
+    </li>-->
     <li>
         <a href="<%= Url.Action("writingmacros") %>">Writing macros</a>
     </li>

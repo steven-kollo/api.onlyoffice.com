@@ -9,7 +9,6 @@
 - docbuilder: updated builder examples
 - portals: api v11.1
 - plugins: updated plugin styles information
-- plugins: added plugin types page
 - plugins: added faq
 - plugins: added getting started page
 - plugins: expanded installation
