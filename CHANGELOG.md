@@ -11,6 +11,8 @@
 - plugins: updated plugin styles information
 - plugins: added plugin types page
 - plugins: added faq
+- plugins: added getting started page
+- plugins: expanded installation
 
 ## 1.0.0
 - Initial changelog
