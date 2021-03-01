@@ -52,6 +52,62 @@
             <td><a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a></td>
             <td>This method allows to get the identifier of the selected content control.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a></td>
+            <td>This method allows to add an OLE object to the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
+            <td>This method allows to edit an OLE object in the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a></td>
+            <td>This method allows to get the fonts list.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a></td>
+            <td>This method allows to insert text into the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/pastehtml") %>">PasteHtml</a></td>
+            <td>This method allows to paste text in <em>html</em> format into the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/pastetext") %>">PasteText</a></td>
+            <td>This method allows to paste text into the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getmacros") %>">GetMacros</a></td>
+            <td>This method allows to get the document macros.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a></td>
+            <td>This method allows to set macros to the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/startaction") %>">StartAction</a></td>
+            <td>This method allows to specify the start action for long operations.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/endaction") %>">EndAction</a></td>
+            <td>This method allows to specify the end action for long operations.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a></td>
+            <td>This method allows to encrypt plugins.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/setproperties") %>">SetProperties</a></td>
+            <td>This method allows to set the properties to the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/showinputhelper") %>">ShowInputHelper</a></td>
+            <td>This method allows to show the input helper.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/unshowinputhelper") %>">UnShowInputHelper</a></td>
+            <td>This method allows to unshow the input helper.</td>
+        </tr>
     </tbody>
 </table>
 
