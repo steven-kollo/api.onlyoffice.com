@@ -4,6 +4,7 @@
 - editors: added editorConfig.customization.toolbarHideFileName
 - editors: the callbackUrl depends on forcesavetype
 - editors: added editorConfig.customization.trackChanges
+- editors: converting xml
 
 ## Changed
 - updated builder examples
