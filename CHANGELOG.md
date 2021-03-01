@@ -13,6 +13,7 @@
 - plugins: added faq
 - plugins: added getting started page
 - plugins: expanded installation
+- plugins: new methods
 
 ## 1.0.0
 - Initial changelog
