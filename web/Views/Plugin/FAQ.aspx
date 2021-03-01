@@ -67,6 +67,14 @@
             Feel free to fork them and use them as examples to create your own plugin.</p>
     </dd>
 </dl>
+<dl class="faq_block" id="plugins_6">
+    <dt>I packed the plugin folder to the archive, changed its extension to <em>.plugin</em> and added it to the editors. But it doesn&#8217;t work. What should I do?</dt>
+    <dd>
+        <p>Please make sure that your plugin archive <b>doesn&#8217;t</b> look the following way:</p>
+        <img alt="Plugin archive" src="<%= Url.Content("~/content/img/plugins/plugin_archive.png") %>" />
+        <p>All the plugin files should be at the archive root, not in the subfolder. To do it, unpack the plugin folder first and then archive its elements only.</p>
+    </dd>
+</dl>
 <dl class="faq_block" id="macros_1">
     <dt>Can I use Microsoft Office macros in ONLYOFFICE editors?</dt>
     <dd>
