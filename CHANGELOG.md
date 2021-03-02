@@ -4,7 +4,6 @@
 - editors: added editorConfig.customization.toolbarHideFileName
 - editors: the callbackUrl depends on forcesavetype
 - editors: added editorConfig.customization.trackChanges
-- editors: converting xml
 - editors: support sharepoint 2019
 - docbuilder: updated builder examples
 - portals: api v11.1
