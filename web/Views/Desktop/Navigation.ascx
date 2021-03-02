@@ -24,10 +24,13 @@
         <a href="<%= Url.Action("loginlogout") %>">Login/logout</a>
     </li>
     <li>
-        <a href="<%= Url.Action("opening") %>">Opening documents</a>
+        <a href="<%= Url.Action("notifications") %>">Sending notifications</a>
     </li>
     <li>
         <a href="<%= Url.Action("encryption") %>">Encryption</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("opening") %>">Opening documents</a>
     </li>
 </ul>
 <div class="treeheader">More information</div>

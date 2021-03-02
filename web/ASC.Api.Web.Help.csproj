@@ -392,6 +392,7 @@
     <Content Include="Views\Desktop\FAQ.aspx" />
     <Content Include="Views\Desktop\LoginLogout.aspx" />
     <Content Include="Views\Desktop\Navigation.ascx" />
+    <Content Include="Views\Desktop\Notifications.aspx" />
     <Content Include="Views\Desktop\Opening.aspx" />
     <Content Include="Views\Desktop\Plugins.aspx" />
     <Content Include="Views\Desktop\Encryption.aspx" />

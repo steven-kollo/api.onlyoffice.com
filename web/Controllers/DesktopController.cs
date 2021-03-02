@@ -47,6 +47,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "encryption",
                 "faq",
                 "loginlogout",
+                "notifications",
                 "opening",
                 "plugins"
             };
@@ -138,6 +139,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Loginlogout()
+        {
+            return View();
+        }
+
+        public ActionResult Notifications()
         {
             return View();
         }
