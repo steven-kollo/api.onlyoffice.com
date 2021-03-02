@@ -9,6 +9,7 @@
 - editors: added editorConfig.customization.anonymous
 - editors: added editorConfig.customization.submitForm
 - editors: added new forcesave type
+- editors: epub, fb2, html conversion
 
 ## 1.1.0
 - editors: added editorConfig.customization.toolbarHideFileName

@@ -27,6 +27,7 @@
         <li>Added the <em>data.favorite</em> parameter to the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/document/info") %>#favorite">document.info.favorite</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">document.permissions.reviewGroups</a> field.</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">epub, fb2, html</a> formats.</li>
     </ul>
 
     <h2 id="62" class="copy-link">Version 6.2</h2>
@@ -139,7 +140,7 @@
     <h2 id="44" class="copy-link">Version 4.4</h2>
     <ul>
         <li>Changed the <a href="<%= Url.Action("methods") %>#showMessage">showMessage</a> method.</li>
-        <li>Added conversion presentation to <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">odp</a> format.</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">odp</a> format.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> event.</li>
