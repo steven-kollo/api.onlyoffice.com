@@ -28,6 +28,7 @@
         <li>Added the <a href="<%= Url.Action("config/document/info") %>#favorite">document.info.favorite</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">document.permissions.reviewGroups</a> field.</li>
         <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">epub, fb2, html</a> formats.</li>
+        <li>Added conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">xml</a> format.</li>
     </ul>
 
     <h2 id="62" class="copy-link">Version 6.2</h2>
