@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <a class="up" href="<%= Url.Action("addingplugins/") %>"></a>
+    <a class="up" href="<%= Url.Action("installation/") %>"></a>
     <span class="hdr">Adding plugins to ONLYOFFICE Desktop Editors</span>
 </h1>
 <p>There are two ways to add plugins: through the plugin manager and through the plugin folder.</p>

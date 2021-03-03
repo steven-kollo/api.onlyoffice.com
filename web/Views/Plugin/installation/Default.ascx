@@ -9,9 +9,10 @@
 <p>All the plugins that you've already installed appear in the <b>Plugins</b> tab on the top toolbar. 
 If you&#8217;ve installed an unpublished plugin you are currently developing, it appears here as well.</p>
 
+
 <p>Learn how to add and remove plugins for:</p>
 <ul>
-    <li><a href="<%= Url.Action("addingplugins/desktop") %>">ONLYOFFICE Desktop Editors</a></li>
-    <li><a href="<%= Url.Action("addingplugins/onpremises") %>">ONLYOFFICE Docs on-premises</a></li>
-    <li><a href="<%= Url.Action("addingplugins/cloud") %>">ONLYOFFICE Cloud</a></li>
+    <li><a href="<%= Url.Action("installation/desktop") %>">ONLYOFFICE Desktop Editors</a></li>
+    <li><a href="<%= Url.Action("installation/onpremises") %>">ONLYOFFICE Docs on-premises</a></li>
+    <li><a href="<%= Url.Action("installation/cloud") %>">ONLYOFFICE Cloud</a></li>
 </ul>
