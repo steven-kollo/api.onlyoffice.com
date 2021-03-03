@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <a class="up" href="<%= Url.Action("addingplugins/") %>"></a>
+    <a class="up" href="<%= Url.Action("installation/") %>"></a>
     <span class="hdr">Adding plugins to ONLYOFFICE Cloud</span>
 </h1>
 <p>You can add a plugin to the <b>Cloud service</b> as a <b>Chrome extension</b>.</p>

@@ -158,16 +158,16 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("addingplugins") %>">Adding plugins</a>
+        <a href="<%= Url.Action("installation") %>">Adding plugins</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("addingplugins/desktop") %>">ONLYOFFICE Desktop Editors</a>
+                <a href="<%= Url.Action("installation/desktop") %>">ONLYOFFICE Desktop Editors</a>
             </li>
             <li>
-                <a href="<%= Url.Action("addingplugins/onpremises") %>">ONLYOFFICE Docs on-premises</a>
+                <a href="<%= Url.Action("installation/onpremises") %>">ONLYOFFICE Docs on-premises</a>
             </li>
             <li>
-                <a href="<%= Url.Action("addingplugins/cloud") %>">ONLYOFFICE Cloud</a>
+                <a href="<%= Url.Action("installation/cloud") %>">ONLYOFFICE Cloud</a>
             </li>
         </ul>
     <li>
