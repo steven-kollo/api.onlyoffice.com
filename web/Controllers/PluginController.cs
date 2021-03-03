@@ -40,6 +40,10 @@ namespace ASC.Api.Web.Help.Controllers
     {
         private readonly string[] _actionMap = new[]
             {
+                "addingplugins",
+                "addingplugins/desktop",
+                "addingplugins/onpremises",
+                "addingplugins/cloud",
                 "Basic",
                 "Button",
                 "Code",
@@ -53,7 +57,23 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/addcontentcontrol",
                 "executemethod/removecontentcontrol",
                 "executemethod/getcurrentcontentcontrol",
+                "executemethod/addoleobject",
+                "executemethod/editoleobject",
+                "executemethod/getfontlist",
+                "executemethod/inputtext",
+                "executemethod/pastehtml",
+                "executemethod/pastetext",
+                "executemethod/getmacros",
+                "executemethod/setmacros",
+                "executemethod/startaction",
+                "executemethod/endaction",
+                "executemethod/onencryption",
+                "executemethod/setproperties",
+                "executemethod/showinputhelper",
+                "executemethod/unshowinputhelper",
                 "Example",
+                "FAQ",
+                "GettingStarted",
                 "IndexHtml",
                 "Info",
                 "Info/data",
@@ -67,7 +87,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Info/resize",
                 "Info/width",
                 "Init",
-                "Installation",
                 "Localization",
                 "OnExternalMouseUp",
                 "onmethodreturn",
@@ -75,6 +94,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "scope",
                 "Structure",
                 "Styles",
+                "Types",
                 "macros/Macros",
                 "macros/Writing",
                 "macros/ConvertingVBA",
@@ -137,6 +157,15 @@ namespace ASC.Api.Web.Help.Controllers
             return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
         }
 
+        public ActionResult Addingplugins(string catchall)
+        {
+            if (!_actionMap.Contains("addingplugins/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Addingplugins", (object)catchall);
+        }
+
         public ActionResult Basic()
         {
             return View();
@@ -181,6 +210,16 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult GettingStarted()
+        {
+            return View();
+        }
+
+        public ActionResult FAQ()
+        {
+            return View();
+        }
+
         public ActionResult IndexHtml()
         {
             return View();
@@ -196,11 +235,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Init()
-        {
-            return View();
-        }
-
-        public ActionResult Installation()
         {
             return View();
         }
@@ -236,6 +270,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Styles()
+        {
+            return View();
+        }
+
+        public ActionResult Types()
         {
             return View();
         }

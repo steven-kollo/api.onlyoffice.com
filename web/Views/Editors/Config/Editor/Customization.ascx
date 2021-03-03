@@ -510,6 +510,20 @@
         </tr>
         <% } %>
         <tr>
+            <td id="toolbarHideFileName" class="copy-link">toolbarHideFileName</td>
+            <td>
+                Defines if the document title is visible on the top toolbar (when set to <b>false</b>) or hidden (when set to <b>true</b>).
+                The default value is <b>false</b>.
+            </td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
+            </td>
+        </tr>
+        <tr>
             <td id="toolbarNoTabs" class="copy-link">toolbarNoTabs</td>
             <td>
                 Defines if the top toolbar tabs are distinctly displayed (when set to <b>false</b>) or only highlighted to see which one is selected (when set to <b>true</b>).
@@ -522,6 +536,15 @@
             <td colspan="4">
                 <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
+        </tr>
+        <tr class="tablerow">
+            <td id="trackChanges" class="copy-link">trackChanges</td>
+            <td>
+                Defines if the review editing mode is automatically switched on (<b>true</b>) or off (<b>false</b>) when the editor is loaded. 
+                If the parameter is <em>undefined</em>, then the current opening mode is used (it is stored in the browser local storage).
+            </td>
+            <td>boolean</td>
+            <td>true</td>
         </tr>
         <tr>
             <td id="unit" class="copy-link">unit</td>
@@ -631,7 +654,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% if (license)
                { %>"statusBar": true,
             "toolbar": true,
-            <% } %>"toolbarNoTabs": false,
+            <% } %>"toolbarHideFileName": false,
+            "toolbarNoTabs": false,
+            "trackChanges": false,
             "unit": "cm",
             "zoom": 100
         },

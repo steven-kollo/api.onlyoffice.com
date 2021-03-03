@@ -13,7 +13,8 @@
 
 <div class="note">
     The default values are available in the <em>default.json</em> configuration file, which is available in the folders above (for Linux and Windows).
-    Please do not edit the contents of the <em>default.json</em> file directly. The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+    Please do not edit the contents of the <em>default.json</em> file directly.
+    The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
 </div>
 
 <p>Restart the services for the config changes to take effect:</p>

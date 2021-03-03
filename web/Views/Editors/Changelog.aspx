@@ -16,6 +16,12 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="62" class="copy-link">Version 6.2</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#trackChanges">editorConfig.customization.trackChanges</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">editorConfig.customization.toolbarHideFileName</a> field.</li>
+        <li>The <em>callbackUrl</em> for <em>status</em> <b>6</b> is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a>.</li>
+    </ul>
 
     <h2 id="61" class="copy-link">Version 6.1</h2>
     <ul>
@@ -53,7 +59,7 @@
         <li>Added <a href="<%= Url.Action("conversionapi") %>#error">input error</a> for conversion.</li>
         <li>The <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">events.onRequestSendNotify</a> event and the <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event can be set independently.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">editorConfig.customization.mentionShare</a> field.</li>
-        <li>The callbackUrl is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">status</a>.</li>
+        <li>The <em>callbackUrl</em> is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">status</a>.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compatibleFeatures">editorConfig.customization.compatibleFeatures</a> field.</li>
     </ul>
 

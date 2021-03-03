@@ -129,7 +129,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="users" class="copy-link">users</td>
-                <td>Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the <b>users</b> will return the identifier of the user who was the last to edit the document (for status <b>2</b> and status <b>6</b> replies).</td>
+                <td>Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the <b>users</b> will return the identifier of the user who was the last to edit the document (for <em>status</em> <b>2</b> and <em>status</em> <b>6</b> replies).</td>
                 <td>array of string</td>
                 <td>optional</td>
             </tr>
@@ -155,7 +155,10 @@
     </p>
     <p>
         <em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed.
-        The <em>callbackUrl</em> from the user who made the last changes to the file is used.
+        Since version version 6.2, the <em>callbackUrl</em> depends on <em>forcesavetype</em> parameter.
+        If <em>forcesavetype</em> parameter is set to <b>1</b>, the <em>callbackUrl</em> from the user who clicked <b>Save</b> button is used.
+        If <em>forcesavetype</em> parameter is set to <b>0</b> or <b>2</b>, the <em>callbackUrl</em> from the user who made the last changes to the file is used.
+        Starting from version 5.5 to version 6.1, the <em>callbackUrl</em> from the user who made the last changes to the file is always used.
     </p>
 
     <div id="status-1" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>

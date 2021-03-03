@@ -183,7 +183,6 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
-            "changeHistory": true,
             "comment": true,
             "copy": true,
             "download": true,
@@ -192,7 +191,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "modifyContentControl": true,
             "modifyFilter": true,
             "print": true,
-            "rename": true,
             "review": true
         },
         ...

@@ -378,7 +378,7 @@
             <short>
              Add bookmark
             </short>
-            <param name="url">url of bookmarking page</param>
+            <param name="url">absolute url of bookmarking page</param>
             <param name="title">title to show</param>
             <param name="description">description</param>
             <param name="tags">tags. separated by semicolon</param>
@@ -388,14 +388,14 @@
              Sending data in application/json:
              
              {
-                 url:"www.teamlab.com",
+                 url:"https://www.teamlab.com",
                  title: "TeamLab",
                  description: "best site i've ever seen",
                  tags: "project management, collaboration"
              }
              
              Sending data in application/x-www-form-urlencoded
-             url="www.teamlab.com"&title="TeamLab"&description="best site i've ever seen"&tags="project management, collaboration"
+             url="https://www.teamlab.com"&title="TeamLab"&description="best site i've ever seen"&tags="project management, collaboration"
              ]]>
              </example>
              <category>Bookmarks</category>
