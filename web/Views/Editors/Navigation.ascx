@@ -63,6 +63,9 @@
             <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("chamilo") %>">Chamilo integration</a>
+            </li>
         </ul>
     </li>
     <li>

@@ -46,6 +46,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Alfresco",
                 "Basic",
                 "Callback",
+                "Chamilo",
                 "Changelog",
                 "Coedit",
                 "Command",
@@ -195,6 +196,11 @@ namespace ASC.Api.Web.Help.Controllers
         public JsonResult Callback(string data)
         {
             return Json(new { error = 0 });
+        }
+
+        public ActionResult Chamilo()
+        {
+            return View();
         }
 
         public ActionResult Changelog()
