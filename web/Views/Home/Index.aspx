@@ -24,7 +24,7 @@
          <% var products = Products.EnabledProducts();
            foreach (var product in products)
            { %>
-            <div class="img-title-<%= product.Id %>" style="width: auto;">
+            <div class="img-title-<%= product.Id %>">
             <p class="name-icon-program"><a href=<%= Url.Action("basic", product.Id) %>><%= product.Title %></a></p>
         </div>
         <% } %>
@@ -35,16 +35,16 @@
         <div class="first-block">
 <%  if(Products.hasProduct("editors", products)) { %>
         <div class="docs_block">
-            <div class="pp_title long">
-              <div class="img-title-editors"></div>
+            <div class="api_title long">
+              <div class="img-title-editors block-img"></div>
                 <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/basic")%>">ONLYOFFICE Docs</a></p>
             </div>
             <div class="pp_info_block">
                 Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.
                 <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/basic")%>">More</a></p>
             </div>
-            <div class="pp_users_recommendation">
-                <div class="pp_users_block">
+            <div class="api_block_links">
+                <div class="api_users_block">
                  <div class="first-column">
                     <p class="programs-list-title">Get started</p>
                     <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/editors/basic")%>">Basic concepts</a></p>
@@ -78,16 +78,16 @@
 
         <%  if(Products.hasProduct("docbuilder", products)) { %>
             <div class="docs_block">
-            <div class="pp_title long">
-            <div class="img-title-docbuilder"></div>
+            <div class="api_title long">
+            <div class="img-title-docbuilder block-img"></div>
                 <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/basic")%>">ONLYOFFICE Document Builder</a></p>
             </div>
             <div class="pp_info_block">
                     Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc. 
              <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/basic")%>">More</a></p>
             </div>
-            <div class="pp_users_recommendation">
-                <div class="pp_users_block">
+            <div class="api_block_links">
+                <div class="api_users_block">
                  <div class="first-column">
                     <p class="programs-list-title">Get started</p>
                     <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/docbuilder/basic")%>">Introduction</a></p>
@@ -113,16 +113,16 @@
 
         <%  if(Products.hasProduct("apisystem", products)) { %>
             <div class="docs_block">
-            <div class="pp_title long">
-            <div class="img-title-apisystem"></div>
+            <div class="api_title long">
+            <div class="img-title-apisystem block-img"></div>
                 <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/basic")%>">Hosted solution</a></p>
             </div>
             <div class="pp_info_block">
                     Host ONLYOFFICE Groups to make your collaboration platform online. In this section you will learn how to make GET and POST requests to manage portals, set tariff plans and pass authentication. 
             <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/basic")%>">More</a></p>
             </div>
-            <div class="pp_users_recommendation">
-                <div class="pp_users_block">
+            <div class="api_block_links">
+                <div class="api_users_block">
                  <div class="first-column">
                     <p class="programs-list-title">Get started</p>
                     <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/apisystem/basic")%>">Changelog</a></p>
@@ -144,16 +144,16 @@
         <div class="second-block">
             <%  if(Products.hasProduct("plugin", products)) { %>
             <div class="docs_block">
-            <div class="pp_title long">
-            <div class="img-title-plugin"></div>
+            <div class="api_title long">
+            <div class="img-title-plugin block-img"></div>
                 <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/basic")%>">Plugins and macros</a></p>
             </div>
             <div class="pp_info_block">
                     Extend the ONLYOFFICE Docs functionality. In this section you will learn how to create your own plugins/macros:  its structure, development lifecycle, and examples.
             <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/basic")%>">More</a></p>
             </div>
-            <div class="pp_users_recommendation">
-                <div class="pp_users_block"> 
+            <div class="api_block_links">
+                <div class="api_users_block"> 
                    <div class="first-column">
                     <p class="programs-list-title">Get started</p>
                     <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/plugin/basic")%>">Introduction</a></p>
@@ -180,16 +180,16 @@
 
             <%  if(Products.hasProduct("portals", products)) { %>
             <div class="docs_block">
-            <div class="pp_title long">
-            <div class="img-title-portals"></div>
+            <div class="api_title long">
+            <div class="img-title-portals block-img"></div>
                 <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/basic")%>">ONLYOFFICE Groups</a></p>
             </div>
             <div class="pp_info_block">
                     Create your own productivity platform based on ONLYOFFICE Groups. In this section you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication. 
             <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/basic")%>">More</a></p>
             </div>
-            <div class="pp_users_recommendation">
-                <div class="pp_users_block">
+            <div class="api_block_links">
+                <div class="api_users_block">
                    <div class="first-column">
                     <p class="programs-list-title">Get started</p>
                     <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/portals/basic")%>">Basic concepts</a></p>
@@ -218,16 +218,16 @@
 
        <%  if(Products.hasProduct("desktop", products)) { %>
         <div class="docs_block">
-            <div class="pp_title long">
-              <div class="img-title-desktop"></div>
+            <div class="api_title long">
+              <div class="img-title-desktop block-img"></div>
                 <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">ONLYOFFICE Desktop Editors</a></p>
             </div>
             <div class="pp_info_block">
                 Extent the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.
             <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">More</a></p>
             </div>
-            <div class="pp_users_recommendation">
-                <div class="pp_users_block">
+            <div class="api_block_links">
+                <div class="api_users_block">
                  <div class="first-column">
                     <p class="programs-list-title">Get started</p>
                     <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Overview</a></p>
