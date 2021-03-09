@@ -7,6 +7,9 @@
     <li>
         <a href="<%= Url.Action("basic") %>">Overview</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("gettingstarted") %>">Getting started</a>
+    </li>
 </ul>
 
 <div class="treeheader">Documentation</div>

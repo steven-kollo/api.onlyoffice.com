@@ -390,6 +390,7 @@
     <Content Include="Views\Desktop\Changelog.aspx" />
     <Content Include="Views\Desktop\Debugging.aspx" />
     <Content Include="Views\Desktop\FAQ.aspx" />
+    <Content Include="Views\Desktop\Gettingstarted.aspx" />
     <Content Include="Views\Desktop\LoginLogout.aspx" />
     <Content Include="Views\Desktop\Navigation.ascx" />
     <Content Include="Views\Desktop\Notifications.aspx" />

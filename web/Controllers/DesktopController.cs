@@ -46,6 +46,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "debugging",
                 "encryption",
                 "faq",
+                "gettingstarted",
                 "loginlogout",
                 "notifications",
                 "opening",
@@ -134,6 +135,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Faq()
+        {
+            return View();
+        }
+
+        public ActionResult Gettingstarted()
         {
             return View();
         }
