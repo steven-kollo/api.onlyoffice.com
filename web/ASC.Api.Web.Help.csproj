@@ -338,7 +338,7 @@
     <Content Include="Content\img\php\php-version-2.jpg" />
     <Content Include="Content\img\plugin.png" />
     <Content Include="Content\img\plugins\macros.png" />
-    <Content Include="Content\img\plugins\youtube-plugin.png" />
+    <Content Include="Content\img\plugins\youtube-interface.png" />
     <Content Include="Content\img\portals.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
@@ -360,12 +360,10 @@
     <Content Include="Content\img\plugins\button1.png" />
     <Content Include="Content\img\plugins\button2.png" />
     <Content Include="Content\img\plugins\button3.png" />
-    <Content Include="Content\img\plugins\edit-button.png" />
+    <Content Include="Content\img\plugins\editbutton.png" />
     <Content Include="Content\img\plugins\textarea.png" />
     <Content Include="Content\img\plugins\text-field.png" />
-    <Content Include="Content\img\plugins\checkbox.png" />
-    <Content Include="Content\img\plugins\header.png" />
-    <Content Include="Content\img\plugins\link.png" />
+    <Content Include="Content\img\plugins\check.png" />
     <Content Include="Content\img\plugins\combobox.png" />
     <Content Include="Content\img\plugins\loader.png" />
     <Content Include="Content\img\plugins\macro-window.png" />
@@ -379,6 +377,7 @@
     <Content Include="Content\img\plugins\helloworld.png" />
     <Content Include="Content\img\plugins\remove_extension.png" />
     <Content Include="Content\img\plugins\plugin_archive.png" />
+    <Content Include="Content\img\plugins\youtube-interface.png" />
     <Content Include="Scripts\faq.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />
