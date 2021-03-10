@@ -15,8 +15,7 @@
         <span class="hdr">Chamilo ONLYOFFICE integration plugin</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-chamilo/tree/master" target="_blank">plugin</a> enables users to edit office documents within 
-        <a href="https://chamilo.org/en/" target="_blank">Chamilo</a> using ONLYOFFICE Docs.</p>
+    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-chamilo" target="_blank">plugin</a> enables users to edit office documents within <a href="https://chamilo.org/en/" target="_blank">Chamilo</a> using ONLYOFFICE Docs.</p>
 
     <p>The app is compatible with Chamilo v1.11.14 or higher.</p>
 
@@ -30,11 +29,11 @@
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
     <p>
-        You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Chamilo and any end clients. 
+        You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Chamilo and any end clients.
         ONLYOFFICE Docs must also be able to POST to Chamilo directly.
     </p>
     <p>
-        Starting from version 4.3.0, ONLYOFFICE Docs and Chamilo can be installed either on different computers, or on the same machine. 
+        Starting from version 4.3.0, ONLYOFFICE Docs and Chamilo can be installed either on different computers, or on the same machine.
         If you use one machine, set up a custom port for Document Server as by default both ONLYOFFICE Docs and Chamilo work on port 80.
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
@@ -62,10 +61,10 @@
 
     <h2 id="howitworks" class="copy-link">How it works</h2>
     <p>To create a new file, the user opens the necessary folder and clicks the <b>Create new</b> ONLYOFFICE icon.</p>
-    <p>The user is redirected to the file creation page where they need to enter the file name and format (text document, spreadsheet, or presentation). 
+    <p>The user is redirected to the file creation page where they need to enter the file name and format (text document, spreadsheet, or presentation).
         The browser calls the <em>/plugin/onlyoffice/create.php</em> method. It adds the copy of the empty file to the user folder.</p>
     <p>To open an existing file, the user chooses the <b>Open with ONLYOFFICE</b> icon.</p>
-    <p>The request is sent to <em>/plugin/onlyoffice/editor.php?docId="document identificator"</em>. 
+    <p>The request is sent to <em>/plugin/onlyoffice/editor.php?docId="document identificator"</em>.
         The server processes the request, generates the editor initialization configuration with the following properties:</p>
     <ul>
         <li><b>url</b> - the URL that ONLYOFFICE Docs uses to download the document;</li>

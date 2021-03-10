@@ -1,7 +1,8 @@
 # Change Log
 
+- editors: added chamilo plugin
+
 ## 1.1.0
-- editors: support chamilo
 - editors: added editorConfig.customization.toolbarHideFileName
 - editors: the callbackUrl depends on forcesavetype
 - editors: added editorConfig.customization.trackChanges
