@@ -1,0 +1,187 @@
+/*
+    Copyright (c) Ascensio System SIA 2019. All rights reserved.
+    https://www.onlyoffice.com
+*/
+@import "base.less";
+@media screen and (max-width: 1024px) {
+    .pushy {
+        -webkit-overflow-scrolling: touch;
+        background: #fff;
+        border-right: 1px solid @commonBorderColor;
+        height: 100%;
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+        visibility: hidden;
+        width: 300px;
+        z-index: 9999999;
+        a {
+            color: #b3b3b1;
+            display: block;
+            outline: 0;
+            padding: 15px 30px;
+            text-decoration: none;
+            &:hover {
+                color: #ffffff;
+            }
+        }
+    }
+    .pushy.pushy-left {
+        left: 0;
+    }
+    .pushy.pushy-right {
+        right: 0;
+    }
+    .pushy-left {
+        -ms-transform: translate3d(-300px, 0, 0);
+        -webkit-transform: translate3d(-300px, 0, 0);
+        transform: translate3d(-300px, 0, 0);
+    }
+    .pushy-open-left {
+        #container {
+            -ms-transform: translate3d(300px, 0, 0);
+            -webkit-transform: translate3d(300px, 0, 0);
+            transform: translate3d(300px, 0, 0);
+        }
+        .push {
+            -ms-transform: translate3d(300px, 0, 0);
+            -webkit-transform: translate3d(300px, 0, 0);
+            transform: translate3d(300px, 0, 0);
+        }
+        .pushy {
+            -ms-transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        .site-overlay {
+            -webkit-animation: fade 500ms;
+            animation: fade 500ms;
+            background-color: rgba(0, 0, 0, 0.5);
+            bottom: 0;
+            display: block;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 999;
+        }
+    }
+    .pushy-right {
+        -ms-transform: translate3d(300px, 0, 0);
+        -webkit-transform: translate3d(300px, 0, 0);
+        transform: translate3d(300px, 0, 0);
+    }
+    .pushy-open-right {
+        #container {
+            -ms-transform: translate3d(-300px, 0, 0);
+            -webkit-transform: translate3d(-300px, 0, 0);
+            transform: translate3d(-300px, 0, 0);
+        }
+        .push {
+            -ms-transform: translate3d(-300px, 0, 0);
+            -webkit-transform: translate3d(-300px, 0, 0);
+            transform: translate3d(-300px, 0, 0);
+        }
+        .pushy {
+            -ms-transform: translate3d(0, 0, 0);
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        .site-overlay {
+            -webkit-animation: fade 500ms;
+            animation: fade 500ms;
+            background-color: rgba(0, 0, 0, 0.5);
+            bottom: 0;
+            display: block;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 999;
+        }
+    }
+    #container {
+        transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+    }
+    .push {
+        transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+    }
+    .site-overlay {
+        display: none;
+    }
+    @keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+    @-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    }
+    .pushy-submenu {
+        ul {
+            transition: max-height 0.2s ease-in-out;
+            .pushy-link {
+                transition: opacity 0.2s ease-in-out;
+            }
+        }
+    }
+    .pushy-submenu>a {
+        position: relative;
+        &::after {
+            -ms-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            content: '';
+            display: block;
+            height: 11px;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.2s;
+            width: 8px;
+        }
+    }
+    .pushy-submenu-closed {
+        ul {
+            max-height: 0;
+            overflow: hidden;
+        }
+        .pushy-link {
+            opacity: 0;
+        }
+    }
+    .pushy-submenu-open {
+        ul {
+            display: block;
+            max-height: 1000px;
+            position: relative;
+        }
+        .pushy-link {
+            opacity: 1;
+        }
+        a {
+            &::after {
+                -ms-transform: translateY(-50%) rotate(90deg);
+                -webkit-transform: translateY(-50%) rotate(90deg);
+                transform: translateY(-50%) rotate(90deg);
+            }
+        }
+    }
+    .no-csstransforms3d {
+        .pushy-submenu-closed {
+            ul {
+                display: none;
+                max-height: none;
+            }
+        }
+    }
+}
