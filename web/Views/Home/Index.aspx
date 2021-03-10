@@ -10,6 +10,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<div class="background-body mainBody">    
     <div class="products-info">
         <h1>
             <span class="hdr title-main">Welcome to ONLYOFFICE API</span>
@@ -252,6 +253,7 @@
             <% } %>
         </div>
     </div>
+</div>
 </div>
 
 

@@ -37,11 +37,12 @@
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
-<body>
-    <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
-        <tr class="layout-table-header">
+<body class="<%= Html.IfController("Home") ? "main-body" : string.Empty %>">
+   <div class="layout-table-header main-page">
             <% Html.RenderPartial("TopNavigation");%>
-        </tr>
+   </div>
+    <div class="background-body <%= Html.IfController("Home") ? "mainBody" : string.Empty %>">
+    <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
         <tr>
             <% if (!Html.IfController("Home"))
                { %>
@@ -60,8 +61,11 @@
                 </div>
             </td>
         </tr>
-        <tr>
-            <td class="layout-table-footer" colspan="2">
+    </table>
+</div>
+        <div>
+            <div class="layout-table-footer">
+                <div class="layout-footer">
                 <div class="bottommenu">
                     <ul>
                         <li><a target="_blank" href="https://www.onlyoffice.com/">Home site</a></li>
@@ -74,9 +78,9 @@
                     </ul>
                 </div>
                 <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>
-            </td>
-        </tr>
-    </table>
+                </div>
+            </div>
+        </div>
 
     <asp:ContentPlaceHolder ID="ScriptPlaceholder" runat="server"></asp:ContentPlaceHolder>
 

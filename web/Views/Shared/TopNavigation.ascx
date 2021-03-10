@@ -1,10 +1,9 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
-
-<td class="layout-header">
+<div class="layout-header">
     <a class="logo" href="<%= Url.Action("index", "home") %>"></a>
-</td>
-<td>
-    <ul class="top-nav">
+ <nav class="pushy pushy-left">
+    <div class="pushy-content">
+    <ul class="top-nav all-menu-items">
         <% var subControllerObj = ViewContext.RequestContext.RouteData.Values["id"];
            var subControllerStr = subControllerObj != null ? subControllerObj.ToString() : string.Empty;
 
@@ -16,4 +15,11 @@
         </li>
         <% } %>
     </ul>
-</td>
+</div>
+</nav>
+</div>
+<div class="ham_menu push menu-btn pushy-link">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>

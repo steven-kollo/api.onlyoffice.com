@@ -118,12 +118,15 @@ tr {
 
 /*logo*/
 .logo {
-    background: url("img/logo-header.svg") no-repeat 0 16px transparent;
+    background: url("img/sprite_1x.png") no-repeat 0 16px transparent;
     display: inline-block;
     float: left;
     height: 71px;
     outline: none;
     width: 174px;
+    background-position-x: 50%;
+    margin-right: 115px;
+    padding-left: 15px;
 }
 
 /*layout*/
@@ -140,13 +143,27 @@ html {
     background: #fff;
 }
 
+body {
+    min-width: 795px;
+}
+
+body.main-body {
+    min-width: 0;
+}
+
 .layout-table {
     border: medium none;
     height: 100%;
     margin: 0;
-    //min-width: 1024px;
     padding: 0;
     width: 100%;
+    max-width: 1120px;
+    margin: auto;
+}
+
+.header-navigation {
+    max-width: 1120px;
+    margin: auto;
 }
 
 .layout-table-header {
@@ -157,20 +174,34 @@ html {
     background-color: #333;
 }
 
-.home .layout-table-header {
+.main-page .layout-table-header {
     display: flex;
 }
 
-.layout-header {
-    width: auto;
+.main-page .layout-header {
+    max-width: 1120px;
+    margin: auto;
+}
+
+.layout-header{
+    display: block;
 }
 
 .layout-table-side {
     height: 100%;
     margin: 0;
-    padding: 28px 0 30px 160px;
+    padding: 28px 0 30px 10px;
     width: 261px;
     background-color: #F5F5F5;
+}
+
+.background-body {
+    width: 100%;
+    background: linear-gradient( 90deg, #f5f5f5 25%, #fff 0%);
+}
+.mainBody {
+    background: #fff;
+    width: 100%;
 }
 
 .layout-side {
@@ -190,7 +221,6 @@ html {
 .layout-content {
     margin-top: 20px;
     max-width: 1120px;
-    min-width: 691px;
     width: 100%;
 }
 
@@ -333,7 +363,7 @@ h1 .up:hover {
 }
 
 h1 .up:after {
-    background: url("img/sprite.png") no-repeat scroll 0 -150px transparent;
+    background: url("img/sprite_1x.png") no-repeat scroll 0 -150px transparent;
     content: "";
     display: block;
     height: 12px;
@@ -380,7 +410,7 @@ h5 {
     cursor: pointer;
 }
 .copy-link[id]:hover:before {
-    background: url("img/sprite.png") no-repeat scroll 0 -125px transparent;
+    background: url("img/sprite_1x.png") no-repeat scroll 0 -125px transparent;
     content: " ";
     display: inline-block;
     height: 16px;
@@ -408,9 +438,10 @@ li b.copy-link[id]:hover:before {
 
 /*top navigation*/
 .top-nav {
-    float: left;
     height: 71px;
     margin: 0;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 .top-nav li {
@@ -445,6 +476,10 @@ li b.copy-link[id]:hover:before {
 .layout-table-footer {
     height: 88px;
     background-color: #333333;
+}
+.layout-footer {
+    max-width: 1120px;
+    margin: auto;
 }
 .bottommenu {
     float: left;
@@ -521,7 +556,7 @@ li b.copy-link[id]:hover:before {
 
 .search-clear {
     display: inline-block;
-    background: url("img/sprite.png") no-repeat scroll 0 -168px transparent;
+    background: url("img/sprite_1x.png") no-repeat scroll 0 -168px transparent;
     width: 16px;
     height: 22px;
     position: absolute;
@@ -534,7 +569,7 @@ li b.copy-link[id]:hover:before {
 }
 
 .search-box .btn {
-    background: url("img/sprite.png") no-repeat scroll 0 -59px transparent;
+    background: url("img/sprite_1x.png") no-repeat scroll 0 -59px transparent;
     border: 0 none;
     height: 23px;
     margin: 2px 0 0 10px;
@@ -1513,15 +1548,16 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 }
 
 .icon-program-block {
-    display: block;
     max-width: 1120px;
-    margin: 70px auto auto auto;
+    margin: 70px auto 110px auto;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 .name-icon-program a {
     text-align: center;
-    padding-top: 120px;
+    padding: 120px 0 0 0;
     text-transform: uppercase;
     color: #333;
     font-size: 12px;
@@ -1793,10 +1829,33 @@ article {
     padding: 0 14px;
 }
 
+@media screen and (min-width: 2250px) {
+    .background-body {
+        background: linear-gradient( 90deg, #f5f5f5 35%, #fff 0%);
+    }
+    .mainBody {
+        background: #fff;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 3740px) {
+    .background-body {
+        background: linear-gradient( 90deg, #f5f5f5 40%, #fff 0%);
+    }
+    .mainBody {
+        background: #fff;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 1024px) {
 
     .icon-program-block {
         max-width: 928px;
+        display: block;
+        line-height: 100px;
+        margin: 70px auto auto auto;
     }
 
     .layout-content {
@@ -1806,9 +1865,21 @@ article {
     .body-block {
         max-width: 928px;
     }
+
+    .bottommenu {
+        padding: 21px 0 0 0;
+        text-align: center;
+        float: none;
+    }
+
+    .copyReserved {
+        text-align: center;
+        float: none;
+    }
 }
 
 @media screen and (max-width: 769px) {
+
     .layout-table{
         min-width: 0px;
     }
@@ -1822,8 +1893,8 @@ article {
         min-width: 0px;
     }
 
-    .layout-table-header{
-        min-width: 0px;
+    .layout-table-footer {
+        height: 100%;
     }
 
     .body-block {

@@ -99,6 +99,7 @@ namespace ASC.Api.Web.Help
                                 "~/scripts/jquery/jquery.treeview.js",
                                 "~/scripts/highlight.pack.js",
                                 "~/scripts/clipboard.js",
+                                "~/scripts/navigation-menu.js",
                                 "~/scripts/scripts.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/faq")
@@ -108,6 +109,7 @@ namespace ASC.Api.Web.Help
             bundles.Add(new Bundle("~/content/styles", new CssMinify())
                             .Include(
                                 "~/content/styles.css",
+                                "~/content/pushy_.less",
                                 "~/content/jquery.treeview.css",
                                 "~/content/hightlight.css"));
         }
