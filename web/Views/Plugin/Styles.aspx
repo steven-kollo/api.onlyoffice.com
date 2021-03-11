@@ -37,7 +37,6 @@
             <pre>
 &lt;button class="btn-text-default" style="width:75px;"&gt;Button 1&lt;/button&gt;
 </pre>
-            <img alt="Button 1" src="<%= Url.Content("~/content/img/plugins/button1.png") %>" />
             <p>This class has the following parameters:</p>
             <pre>
 .btn-text-default {
@@ -51,13 +50,13 @@
     cursor: pointer;
 }
 </pre>
+        <img alt="Button 1" src="<%= Url.Content("~/content/img/plugins/button1.png") %>" />
         </li>
         <li>
             <p>Use the <em>btn-text-default.submit.primary</em> class to add <b>Button 2</b> to your plugin:</p>
             <pre>
 &lt;button class="btn-text-default submit primary" style="width:75px;"&gt;Button 2&lt;/button&gt;
 </pre>
-            <img alt="Button 2" src="<%= Url.Content("~/content/img/plugins/button2.png") %>" />
             <p>This class has the following parameters:</p>
             <pre>
 .btn-text-default.submit.primary {
@@ -65,13 +64,13 @@
     background-color: #7d858c;
 }
 </pre>
+        <img alt="Button 2" src="<%= Url.Content("~/content/img/plugins/button2.png") %>" />
         </li>
         <li>
             <p>Use the <em>btn-text-default.submit</em> class to add <b>Button 3</b> to your plugin:</p>
             <pre>
 &lt;button class="btn-text-default submit" style="width:75px;"&gt;Button 3&lt;/button&gt;
 </pre>
-            <img alt="Button 3" src="<%= Url.Content("~/content/img/plugins/button3.png") %>" />
             <p>This class has the following parameters:</p>
             <pre>
 .btn-text-default.submit {
@@ -80,13 +79,17 @@
     border: 1px solid transparent;
 }               
 </pre>
+        <img alt="Button 3" src="<%= Url.Content("~/content/img/plugins/button3.png") %>" />
+
+        <note>The button color is chosen by the developer. The darker the button, the more important it is. 
+            As a rule, the button of the <em>btn-text-default.submit.primary</em> class is used to confirm the action and send the result (for example, the <b>Ok</b> button).</note>
+        
         </li>
         <li>
-            <p>Use the <em>btn-edit</em> class to add <b>Edit button</b> to your plugin:</p>
+            <p>Use the <em>btn-edit</em> class to add <img alt="Edit button" src="<%= Url.Content("~/content/img/plugins/editbutton.png") %>" /> <b>Edit button</b> to your plugin:</p>
             <pre>
 &lt;label class="for-combo"&gt;Edit button&lt;/label&gt;&lt;div class="btn-edit" style="display: inline-block; margin-left: 10px;"&gt;&lt;/div&gt;
 </pre>
-            <img alt="Edit button" src="<%= Url.Content("~/content/img/plugins/edit-button.png") %>" />
             <p>This class has the following parameters:</p>
             <pre>
 .btn-edit {
@@ -102,9 +105,28 @@
 
     <br />
     <p><b>Input controls</b></p>
-
-    <p>Use the <em>form-control</em> class to add <b>input controls</b> to your plugin. This class has the following parameters:</p>
-    <pre>
+    
+    <ol>
+        <li>
+            <p>Use the <em>textarea</em> form element to add a <b>text area</b> to your plugin:</p>
+            <pre>
+&lt;textarea style="height:45px;width: 100%;" class="form-control" placeholder="textarea control"&gt;&lt;/textarea&gt;
+</pre>
+            <p>This class has the following parameters:</p>
+            <pre>
+textarea.form-control {
+    resize: none;
+}               
+</pre>
+        <img alt="Textarea" src="<%= Url.Content("~/content/img/plugins/textarea.png") %>" />
+        </li>
+        <li>
+            <p>Use the <em>input </em> form element with the <em>text</em> type to add a <b>text field</b> to your plugin:</p>
+            <pre>
+&lt;input type="text" class="form-control" placeholder="text field" style="width: 100%;margin-bottom: 2px;"&gt;
+</pre>
+            <p>This class has the following parameters:</p> 
+            <pre>
 .form-control {
     border: 1px solid #cfcfcf;
     border-radius: 2px;
@@ -120,35 +142,14 @@
     -ms-user-select: text;
     user-select: text;
 }        
-</pre>
-    
-    <ol>
-        <li>
-            <p>Use the <em>textarea</em> form element to add a <b>text area</b> to your plugin:</p>
-            <pre>
-&lt;textarea style="height:45px;width: 100%;" class="form-control" placeholder="textarea control"&gt;&lt;/textarea&gt;
-</pre>
-            <img alt="Textarea" src="<%= Url.Content("~/content/img/plugins/textarea.png") %>" />
-            <p>This class has the following parameters:</p>
-            <pre>
-textarea.form-control {
-    resize: none;
-}               
-</pre>
-        </li>
-        <li>
-            <p>Use the <em>input </em> form element with the <em>text</em> type to add a <b>text field</b> to your plugin:</p>
-            <pre>
-&lt;input type="text" class="form-control" placeholder="text field" style="width: 100%;margin-bottom: 2px;"&gt;
-</pre>
+</pre>           
             <img alt="Text field" src="<%= Url.Content("~/content/img/plugins/text-field.png") %>" />
         </li>
         <li>
-            <p>Use the <em>input </em> form element with the <em>checkbox</em> type to add a <b>checkbox</b> to your plugin:</p>
+            <p>Use the <em>input </em> form element with the <em>checkbox</em> type to add a <img alt="Checkbox" src="<%= Url.Content("~/content/img/plugins/check.png") %>" /> <b>checkbox</b> to your plugin:</p>
             <pre>
 &lt;input type="checkbox" class="form-control" style="vertical-align: middle;"&gt;&lt;label style="margin-left: 5px;vertical-align: middle;"&gt;Checkbox&lt;/label&gt;
 </pre>
-            <img alt="Checkbox" src="<%= Url.Content("~/content/img/plugins/checkbox.png") %>" />
             <p>This class has the following parameters:</p>
             <pre>
 input[type='checkbox '].form-control {
@@ -165,11 +166,10 @@ input[type='checkbox '].form-control {
 
     <ol>
         <li>
-            <p>Use the <em>label.header</em> class to add a <b>header</b> to your plugin:</p>
+            <p>Use the <em>label.header</em> class to add a <b>bold header</b> to your plugin:</p>
             <pre>
 &lt;label class="header"&gt;Header label&lt;/label&gt;
 </pre>
-            <img alt="Header" src="<%= Url.Content("~/content/img/plugins/header.png") %>" />
             <p>This class has the following parameters:</p>
             <pre>
 label.header {
@@ -178,11 +178,16 @@ label.header {
 </pre>
         </li>
         <li>
-            <p>Use the <em>label.link</em> class to add a <b>link</b> to your plugin:</p>
+            <style>
+                label.link {
+                    border-bottom: 1px dotted #aaa;
+                    cursor: pointer;
+                }
+            </style>
+            <p>Use the <em>label.link</em> class to add a <label class="link">link</label> to your plugin:</p>
             <pre>
 &lt;label class="link"&gt;Link label&lt;/label&gt;
 </pre>
-            <img alt="Link" src="<%= Url.Content("~/content/img/plugins/link.png") %>" />
             <p>This class has the following parameters:</p>
             <pre>
 label.link {
@@ -197,7 +202,7 @@ label.link {
     <br />
     <p><b>ComboBox</b></p>
 
-    <p>Use the <em>select2</em> function to add a <b>combo box</b> to your plugin:</p>
+    <p>Use the <a href="https://select2.org/" target="_blank">select2</a> function to add a <b>combo box</b> to your plugin:</p>
     <pre>
 &lt;select id="select_example" class="" &gt;&lt;/select&gt;
 $('#select_example').select2({
@@ -217,28 +222,26 @@ $('#select_example').select2({
     <pre>
 &lt;div id="loader-container" class="asc-loader-container" style="margin: 10px; height: 40px; border: 1px solid #cfcfcf;"&gt;&lt;/div&gt;
 </pre>
-    <img alt="Loader" src="<%= Url.Content("~/content/img/plugins/loader.png") %>" />
     <p>This class has the following parameters:</p>
     <pre>
 .asc-loader-container {
     position: relative;
 }        
 </pre>
+    <img alt="Loader" src="<%= Url.Content("~/content/img/plugins/loader.png") %>" />
  
     
-    <h2>Adding interface elements to the YouTube plugin</h2>
+    <p></p>
+    </br >
+    <h1>Example</h1>
 
-    <p>Have a look at the YouTube plugin interface as an example of using these styles.</p>
-    <img alt="YouTube plugin" src="<%= Url.Content("~/content/img/plugins/youtube-plugin.png") %>" />
+    <p>Let&#8217;s have a look at how to add interface elements in the ONLYOFFICE style to the YouTube plugin.</p>
+    <img alt="YouTube plugin" src="<%= Url.Content("~/content/img/plugins/youtube-interface.png") %>" />
 
     <ol>
         <li>
             <p>
-                To add a button in the ONLYOFFICE style, you need to use the <em>btn-text-default</em> class. 
-                The <em>btn-text-default.primary</em> class defines a button with a dark background and indicates that this button is important.
-            </p>
-            <p>
-                The following code adds the <b>OK</b> button to the plugin in the ONLYOFFICE style (button width - 30 pixels):
+                To add the simple white <b>OK</b> button, use the <em>btn-text-default</em> class (button width - 30 pixels): 
             </p>
             <pre>
 &lt;button class="btn-text-default" style="width:30px;"&gt;OK&lt;/button&gt;
@@ -246,13 +249,26 @@ $('#select_example').select2({
         </li>
         <li>
             <p>
-                To add a form in the ONLYOFFICE style, you need to use the <em>form-control</em> class.
-            </p>
-            <p>
-                The following code adds the form to the plugin in the ONLYOFFICE style (form width - 100%, i.e. it is adjusted to the width of the parent element):
+                To add a field, use the <em>form-control</em> class (form width - 100%, i.e. it is adjusted to the width of the parent element):
             </p>
             <pre>
 &lt;input type="text" class="form-control" style="width:100%;"&gt;
+</pre>
+        </li>
+        <li>
+            <p>
+                To add the dark grey <b>Ok</b> button, use the <em>btn-text-default.submit.primary</em> class (button width - 90 pixels): 
+            </p>
+            <pre>
+&lt;button class="btn-text-default submit primary" style="width:90px;"&gt;Ok&lt;/button&gt;
+</pre>
+        </li>
+        <li>
+            <p>
+                To add the light grey <b>Cancel</b> button, use the <em>btn-text-default.submit</em> class (button width - 90 pixels): 
+            </p>
+            <pre>
+&lt;button class="btn-text-default submit" style="margin-left:5px; width:90px;"&gt;Cancel&lt;/button&gt;
 </pre>
         </li>
     </ol>

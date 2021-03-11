@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <a class="up" href="<%= Url.Action("addingplugins/") %>"></a>
+    <a class="up" href="<%= Url.Action("installation/") %>"></a>
     <span class="hdr">Adding plugins to ONLYOFFICE Docs on-premises</span>
 </h1>
 <p>There are two ways to add plugins: through the <em>sdkjs-plugins</em> folder and through the <em>config.json</em> file.</p>

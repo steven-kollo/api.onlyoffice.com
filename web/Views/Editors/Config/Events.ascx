@@ -285,9 +285,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestCompareFile" class="copy-link">onRequestCompareFile</b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
+            <b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
             To select a document for comparing you must call the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.
             If the method is not declared the <em>Document from Storage</em> button will not be displayed.
+            <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
         </p>
         <img alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
         <div class="header-gray">Example</div>
