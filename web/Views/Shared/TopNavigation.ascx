@@ -10,16 +10,11 @@
            var enabledProducts = Products.EnabledProducts();
            foreach (var product in enabledProducts)
            { %>
-        <li class="<%= Html.IfController(product.Id) || subControllerStr.Equals(product.Id, StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
-            <a href="<%= Url.Action("basic", product.Id) %>"><%= product.Title %></a>
+        <li class="pushy-submenu <%= Html.IfController(product.Id) || subControllerStr.Equals(product.Id, StringComparison.OrdinalIgnoreCase) ? "active" : "" %>">
+            <a href="menuitem <%= Url.Action("basic", product.Id) %>"><%= product.Title %></a>
         </li>
         <% } %>
     </ul>
 </div>
 </nav>
-</div>
-<div class="ham_menu push menu-btn pushy-link">
-    <span></span>
-    <span></span>
-    <span></span>
 </div>

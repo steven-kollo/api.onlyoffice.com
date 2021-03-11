@@ -40,6 +40,11 @@
 <body class="<%= Html.IfController("Home") ? "main-body" : string.Empty %>">
    <div class="layout-table-header main-page">
             <% Html.RenderPartial("TopNavigation");%>
+<div class="ham_menu push menu-btn pushy-link">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
    </div>
     <div class="background-body <%= Html.IfController("Home") ? "mainBody" : string.Empty %>">
     <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
