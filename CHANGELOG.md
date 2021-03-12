@@ -1,6 +1,7 @@
 # Change Log
 
 - thirdparty licenses
+- editors: opening fb2
 
 ## 1.1.0
 - editors: added editorConfig.customization.toolbarHideFileName
