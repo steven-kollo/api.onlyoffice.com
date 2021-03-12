@@ -1,5 +1,7 @@
 # Change Log
 
+- thirdparty licenses
+
 ## 1.1.0
 - editors: added editorConfig.customization.toolbarHideFileName
 - editors: the callbackUrl depends on forcesavetype
