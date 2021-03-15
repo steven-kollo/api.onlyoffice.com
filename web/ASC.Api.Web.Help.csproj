@@ -384,12 +384,12 @@
     <Content Include="Content\img\main-page\document_server.svg" />
     <Content Include="Content\img\main-page\hosted_solution.svg" />
     <Content Include="Content\img\main-page\plugins_and_macros" />
+    <Content Include="Content\pushy.css" />
     <Content Include="Scripts\faq.js" />
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
-    <Content Include="Content\pushy_.less" />
     <Content Include="robots.txt" />
     <Content Include="Scripts\clipboard.js" />
     <Content Include="Scripts\highlight.pack.js" />
@@ -678,6 +678,7 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\editor\Python Example.zip" />
+    <Content Include="Content\navigation.less" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />

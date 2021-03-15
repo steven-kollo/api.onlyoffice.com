@@ -1851,6 +1851,10 @@ article {
 
 @media screen and (max-width: 1024px) {
 
+    .top-nav a:hover {
+        border-bottom: 0px;
+    }
+
     .layout-table-header{
         position:relative;
     }
