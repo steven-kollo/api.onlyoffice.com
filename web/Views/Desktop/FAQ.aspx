@@ -53,7 +53,7 @@
     <dt>Can I add my DMS provider to the default connection list?</dt>
     <dd>
         <p>
-            Yes, you can. Follow the instructions <a href="<%= Url.Action("addingdms") %>">on this page</a>.
+            Yes, you can. Follow the instructions <a href="<%= Url.Action("addingdms/") %>">on this page</a>.
         </p>
         <p>
             In this way, you can add the DMS provider only to your own connection list. 
@@ -65,7 +65,7 @@
     <dt>How to check DMS portal availability?</dt>
     <dd>
         <p>To check the portal availability, you need to send the GET request. If the portal is available, then the <em>HTTP_STATUS_CODE = 200</em> response is expected.</p>
-        <p>These two parameters should be specified in the integration <a href="<%= Url.Action("addingdms") %>">config</a> to create this request:</p>
+        <p>These two parameters should be specified in the integration <a href="<%= Url.Action("addingdms/") %>">config</a> to create this request:</p>
         <ul>
             <li><em>check.url</em> - the URL used in the request,</li>
             <li><em>check.headers</em> - the headers added to the <em>ajax</em> request.</li>
@@ -109,7 +109,7 @@ window.DesktopUpdateFile = function ()
     <dd>
         <p>You can&#8217;t open new windows in the desktop editors because it is blocked (for example, for <em>OAuth</em>).</p>
         <p>To open the document in a new window / tab correctly, you need to use the <em>window.open("http://url.to.document")</em> JavaScript command 
-            or the <em>open:document</em> command of the <b>execCommand</b> method. The details on how to open documents in the desktop editors can be found <a href="<%= Url.Action("opening") %>">in this section</a>.</p>
+            or the <em>open:document</em> command of the <b>execCommand</b> method. The details on how to open documents in the desktop editors can be found <a href="<%= Url.Action("addingdms/opening") %>">in this section</a>.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="desktop_9">

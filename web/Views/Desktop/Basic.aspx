@@ -25,8 +25,8 @@
     <ul>
         <li>How to enable <a href="<%= Url.Action("debugging") %>">debug mode</a> to detect and fix all the possible errors</li>
         <li>How to extend editor functionality with ready-to-use <a href="<%= Url.Action("plugins") %>">plugins</a> or creating your own ones</li>
-        <li>How to integrate desktop editors into the <a href="<%= Url.Action("addingdms") %>">document management systems (DMS) providers</a>, 
-            <a href="<%= Url.Action("opening") %>">open</a> and <a href="<%= Url.Action("encryption") %>">encrypt</a> documents in them</li>
+        <li>How to integrate desktop editors into the <a href="<%= Url.Action("addingdms/") %>">document management systems (DMS) providers</a>, 
+            <a href="<%= Url.Action("addingdms/opening") %>">open</a> and <a href="<%= Url.Action("addingdms/encryption") %>">encrypt</a> documents in them</li>
         <!--<li>What the <a href="<%= Url.Action("troubleshooting") %>">most common problems</a> are and how to avoid them</li>-->
     </ul>
 

@@ -44,12 +44,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "basic",
                 "changelog",
                 "debugging",
-                "encryption",
                 "faq",
-                "gettingstarted",
-                "loginlogout",
-                "notifications",
-                "opening",
+                "addingdms/configuring",
+                "addingdms/loginlogout",
+                "addingdms/notifications",
+                "addingdms/opening",
+                "addingdms/encryption",
                 "plugins"
             };
 
@@ -109,10 +109,6 @@ namespace ASC.Api.Web.Help.Controllers
             return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
         }
 
-        public ActionResult Addingdms()
-        {
-            return View();
-        }
 
         public ActionResult Basic()
         {
@@ -139,9 +135,13 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Gettingstarted()
+        public ActionResult Addingdms(string catchall)
         {
-            return View();
+            if (!_actionMap.Contains("addingdms/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Addingdms", (object) catchall);
         }
 
         public ActionResult Loginlogout()

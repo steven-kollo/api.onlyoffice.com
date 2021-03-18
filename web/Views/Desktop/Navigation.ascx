@@ -7,9 +7,6 @@
     <li>
         <a href="<%= Url.Action("basic") %>">Overview</a>
     </li>
-    <li>
-        <a href="<%= Url.Action("gettingstarted") %>">Getting started</a>
-    </li>
 </ul>
 
 <div class="treeheader">Documentation</div>
@@ -22,18 +19,23 @@
     </li>
     <li>
         <a href="<%= Url.Action("addingdms") %>">Adding a DMS provider</a>
-    </li>
-    <li>
-        <a href="<%= Url.Action("loginlogout") %>">Login/logout</a>
-    </li>
-    <li>
-        <a href="<%= Url.Action("notifications") %>">Sending notifications</a>
-    </li>
-    <li>
-        <a href="<%= Url.Action("encryption") %>">Encryption</a>
-    </li>
-    <li>
-        <a href="<%= Url.Action("opening") %>">Opening documents</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("addingdms/configuring") %>">Configuring the interaction</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("addingdms/loginlogout") %>">Login/logout</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("addingdms/opening") %>">Opening documents</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("addingdms/notifications") %>">Sending notifications</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("addingdms/encryption") %>">Encryption</a>
+            </li>
+        </ul>
     </li>
 </ul>
 <div class="treeheader">More information</div>
