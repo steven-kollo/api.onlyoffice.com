@@ -10,5 +10,5 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%= Html.Partial("Addingplugins/"+ (Model ?? "Default")) %>
+    <%= Html.Partial("installation/"+ (Model ?? "Default")) %>
 </asp:Content>

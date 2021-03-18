@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -40,10 +40,6 @@ namespace ASC.Api.Web.Help.Controllers
     {
         private readonly string[] _actionMap = new[]
             {
-                "addingplugins",
-                "addingplugins/desktop",
-                "addingplugins/onpremises",
-                "addingplugins/cloud",
                 "Basic",
                 "Button",
                 "Code",
@@ -87,6 +83,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "Info/resize",
                 "Info/width",
                 "Init",
+                "installation",
+                "installation/desktop",
+                "installation/onpremises",
+                "installation/cloud",
                 "Localization",
                 "OnExternalMouseUp",
                 "onmethodreturn",
@@ -155,15 +155,6 @@ namespace ASC.Api.Web.Help.Controllers
             ViewData["query"] = query ?? string.Empty;
             ViewData["result"] = result;
             return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
-        }
-
-        public ActionResult Addingplugins(string catchall)
-        {
-            if (!_actionMap.Contains("addingplugins/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("Addingplugins", (object)catchall);
         }
 
         public ActionResult Basic()
@@ -237,6 +228,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Init()
         {
             return View();
+        }
+
+        public ActionResult Installation(string catchall)
+        {
+            if (!_actionMap.Contains("installation/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Installation", (object)catchall);
         }
 
         public ActionResult Localization()

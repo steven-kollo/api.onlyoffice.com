@@ -35,7 +35,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#trackChanges">editorConfig.customization.trackChanges</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">editorConfig.customization.toolbarHideFileName</a> field.</li>
         <li>The <em>callbackUrl</em> for <em>status</em> <b>6</b> is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a>.</li>
-        <li>Added conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">xml</a> format.</li>
+        <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">fb2</a> format.</li>
     </ul>
 
     <h2 id="61" class="copy-link">Version 6.1</h2>

@@ -565,8 +565,9 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
-                <b id="setRevisedFile" class="copy-link">setRevisedFile</b> - select a document for comparing.
+                <b id="setRevisedFile" class="copy-link">setRevisedFile<span class="required">*</span></b> - select a document for comparing.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.
+                <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
             </p>
             <pre>
 docEditor.setRevisedFile({

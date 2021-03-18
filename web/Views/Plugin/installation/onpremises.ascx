@@ -1,7 +1,7 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <a class="up" href="<%= Url.Action("addingplugins/") %>"></a>
+    <a class="up" href="<%= Url.Action("installation/") %>"></a>
     <span class="hdr">Adding plugins to ONLYOFFICE Docs on-premises</span>
 </h1>
 <p>There are two ways to add plugins: through the <em>sdkjs-plugins</em> folder and through the <em>config.json</em> file.</p>
@@ -17,7 +17,7 @@
 <a href="https://nodejs.org/docs/latest/api/fs.html#fs_availability" target="_blank">In some cases</a>, service restart is required.</p>
 <p>For debugging, start ONLYOFFICE Docs together with the shared <em>sdkjs-plugins</em> folder:</p>
 <pre>
-docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/documentserver-ie:latest
+docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/documentserver-ee:latest
 </pre>
 
 <h2>Adding plugins through the config.json file</h2>

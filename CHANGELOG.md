@@ -1,5 +1,7 @@
 # Change Log
 
+- thirdparty licenses
+- editors: opening fb2
 - editors: added editorConfig.customization.hideRulers
 - editors: added document.permissions.reviewGroups
 - editors: added document.info.favorite
@@ -15,7 +17,6 @@
 - editors: added editorConfig.customization.toolbarHideFileName
 - editors: the callbackUrl depends on forcesavetype
 - editors: added editorConfig.customization.trackChanges
-- editors: converting xml
 - editors: support sharepoint 2019
 - docbuilder: updated builder examples
 - portals: api v11.1
