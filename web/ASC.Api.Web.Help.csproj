@@ -247,6 +247,7 @@
     <Content Include="500.aspx" />
     <Content Include="Content\hightlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
+    <Content Include="Content\img\desktop.png" />
     <Content Include="Content\img\desktop\adding-plugins.png" />
     <Content Include="Content\img\desktop\connection-list.png" />
     <Content Include="Content\img\desktop\debug.png" />
