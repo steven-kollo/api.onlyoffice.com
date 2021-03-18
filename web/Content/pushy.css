@@ -13,10 +13,14 @@
 
 @media screen and (max-width: 1024px) {
 
+    .all-menu-items {
+        display: inline-block;
+    }
+
     .pushy {
         -webkit-overflow-scrolling: touch;
         background: #fff;
-        border-left: 1px solid #FF6F3D;
+        border-left: 1px solid #d9d9d9;
         height: 100%;
         overflow: auto;
         position: fixed;
@@ -34,12 +38,38 @@
         display: block;
     }
 
+    .pushy-submenu {
+        border-bottom: 1px solid #f2f2f2;
+    }
+
+    .all-menu-items:before {
+        display: block;
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-image: url("img/arrow-gray.svg");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        position: absolute;
+        left: 17px;
+        top: 14px;
+        -webkit-transition: 0.1s linear;
+        -moz-transition: 0.1s linear;
+        -o-transition: 0.1s linear;
+        transition: 0.1s linear;
+    }
+
     .pushy a {
         color: #333;
         display: block;
         outline: 0;
-        padding: 0px 30px;
+        padding: 15px 25px 15px 40px;
         text-decoration: none;
+        width: 300px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
     }
 
     .pushy a:hover {
@@ -92,9 +122,9 @@
     }
 
     .pushy-right {
-        -ms-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0px, 0, 0);
+        -webkit-transform: translate3d(0px, 0, 0);
+        transform: translate3d(0px, 0, 0);
     }
 
     .pushy-open-right #container {
@@ -119,7 +149,7 @@
         transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
     }
 
-    .pushy {
+    .pushy-right {
         transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
     }
 
