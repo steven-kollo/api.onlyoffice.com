@@ -125,7 +125,7 @@ tr {
     outline: none;
     width: 174px;
     background-position-x: 50%;
-    margin-right: 115px;
+    margin-right: 81px;
     padding-left: 15px;
 }
 
@@ -441,7 +441,8 @@ li b.copy-link[id]:hover:before {
     height: 71px;
     margin: 0;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
+    text-align: center;
 }
 
 .top-nav li {
@@ -1548,11 +1549,11 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 }
 
 .icon-program-block {
-    max-width: 1120px;
     margin: 70px auto 110px auto;
     justify-content: space-between;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
+    max-width: 1120px;
 }
 
 .name-icon-program a {
@@ -1599,7 +1600,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 .img-title-editors {
     background-image: url(img/main-page/document_server.svg);
     background-repeat: no-repeat;
-    width: 212px;
+    width: 186px;
     height: 100px;
     background-position: center;
     display: inline-block;
@@ -1608,7 +1609,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 .img-title-docbuilder {
     background-image: url(img/main-page/document_builder.svg);
     background-repeat: no-repeat;
-    width: 212px;
+    width: 186px;
     height: 100px;
     background-position: center;
     display: inline-block;
@@ -1617,7 +1618,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 .img-title-apisystem {
     background-image: url(img/main-page/hosted_solution.svg);
     background-repeat: no-repeat;
-    width: 212px;
+    width: 186px;
     height: 100px;
     background-position: center;
     display: inline-block;
@@ -1626,7 +1627,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 .img-title-plugin {
     background-image: url(img/main-page/plugins_and_macros.svg);
     background-repeat: no-repeat;
-    width: 212px;
+    width: 186px;
     height: 100px;
     background-position: center;
     display: inline-block;
@@ -1635,7 +1636,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 .img-title-portals {
     background-image: url(img/main-page/community_server.svg);
     background-repeat: no-repeat;
-    width: 212px;
+    width: 186px;
     height: 100px;
     background-position: center;
     display: inline-block;
@@ -1644,7 +1645,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 .img-title-desktop {
     background-image: url(img/main-page/desktop.svg);
     background-repeat: no-repeat;
-    width: 212px;
+    width: 186px;
     height: 100px;
     background-position: center;
     display: inline-block;
@@ -1825,8 +1826,8 @@ article {
     width: 100%;
     margin-bottom: 30px;
     box-sizing: border-box;
-    grid-gap: 10px;
-    padding: 0 14px;
+    grid-gap: 20px;
+    padding: 0 32px 0 32px;
 }
 
 @media screen and (min-width: 2250px) {
