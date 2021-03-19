@@ -38,4 +38,9 @@
 		}
 	};
 
+    //todo: remove
+    window.Asc.plugin.event_onDocumentContentReady = function () {
+        parent.parent.postMessage("externallistenerReady");
+    };
+
 })(window, undefined);

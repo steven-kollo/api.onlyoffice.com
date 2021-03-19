@@ -16,7 +16,9 @@
             "initDataType"        : "none",
             "initData"            : "",
             "isUpdateOleOnResize" : true,
-            "buttons"             : []
+            "buttons"             : [],
+
+            "events"              : ["onDocumentContentReady"]
         }
     ]
 }

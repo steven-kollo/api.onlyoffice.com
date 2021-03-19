@@ -123,8 +123,8 @@
                     Width = "100%"
                 }) %>;
 
-        config.events = {
-            "onDocumentReady": function () {
+        window.addEventListener("message", function (message) {
+            if (message && message.data == "externallistenerReady") {
                 document.getElementsByName("frameEditor")[0].contentWindow.postMessage(JSON.stringify({
                     guid : "asc.{A8705DEE-7544-4C33-B3D5-168406D92F72}",
                     type : "onExternalPluginMessage",
@@ -134,7 +134,7 @@
                     }
                 }), "<%= ConfigurationManager.AppSettings["editor_url"] ?? "*" %>");
             }
-        };
+        }, false);
 
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
     </script>
