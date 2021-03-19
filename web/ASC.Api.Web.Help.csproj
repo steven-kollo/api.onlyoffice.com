@@ -378,6 +378,11 @@
     <Content Include="Content\img\plugins\remove_extension.png" />
     <Content Include="Content\img\plugins\plugin_archive.png" />
     <Content Include="Content\img\plugins\youtube-interface.png" />
+    <Content Include="externallistener\config.json" />
+    <Content Include="externallistener\index.html" />
+    <Content Include="externallistener\resources\img\icon%402x.png" />
+    <Content Include="externallistener\resources\img\icon.png" />
+    <Content Include="externallistener\scripts\code.js" />
     <Content Include="Scripts\faq.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />
