@@ -16,6 +16,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+    <h1>
+        <span class="hdr">Frequently asked questions: Desktop Editors</span>
+    </h1>
+
     <% Html.RenderPartial("FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="desktop_1">
     <dt>How to install ONLYOFFICE Desktop Editors?</dt>
