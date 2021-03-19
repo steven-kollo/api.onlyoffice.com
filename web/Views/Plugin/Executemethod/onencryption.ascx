@@ -29,8 +29,8 @@ window.Asc.plugin.executeMethod("OnEncryption", [obj]);
 <p>The <em>obj</em> object can have the following values:</p>
 <ul>
     <li>"type" (e.g. <em>{"type": "encryptData"}</em>) specifies the type of encrypting operation 
-    (<b>generatePassword</b> - generates a password for the document, <b>getPasswordByFile</b> - sends the password when opening the document, 
-    <b>setPasswordByFile</b> - sets a password to the document, <b>encryptData</b> - encrypts changes when co-editing, <b>decryptData</b> - decrypts changes when co-editing);</li>
+    (<em>generatePassword</em> - generates a password for the document, <em>getPasswordByFile</em> - sends the password when opening the document, 
+    <em>setPasswordByFile</em> - sets a password to the document, <em>encryptData</em> - encrypts changes when co-editing, <em>decryptData</em> - decrypts changes when co-editing);</li>
     <li>"password" (e.g. <em>{"password": "password"}</em>) is a string value specifying the password to access the document;</li>
     <li>"data" (e.g. <em>{"data": "{data}"}</em>) is encrypted/decrypted changes;</li>
     <li>"check" (e.g. <em>{"check": true}</em>) checks if the encryption/decryption operation is successful or not (used only for encryptData/decryptData types);</li>

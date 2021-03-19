@@ -37,7 +37,7 @@
         <tbody>
             <tr class="tablerow">
                 <td>data</td>
-                <td>Defines the data parameter that depends on the <em>"initDataType"</em> setting specified in the plugin configuration <a href="<%= Url.Action("config") %>">config.json</a> file. The type of the data is as follows: <em>"none"</em> - an empty string, <em>"text"</em> - the text of the selected document, <em>"html"</em> - a fragment of the selected document, <em>"ole"</em> - the data of the OLE object.</td>
+                <td>Defines the data parameter that depends on the <em>initDataType</em> setting specified in the plugin configuration <a href="<%= Url.Action("config") %>">config.json</a> file. The type of the data is as follows: <em>none</em> - an empty string, <em>text</em> - the text of the selected document, <em>html</em> - a fragment of the selected document, <em>ole</em> - the data of the OLE object.</td>
                 <td>string</td>
             </tr>
         </tbody>
