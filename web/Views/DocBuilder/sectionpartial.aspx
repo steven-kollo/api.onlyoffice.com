@@ -72,8 +72,10 @@
     <h2>Resulting document</h2>
 
     <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
-
-    <div id="placeholder"></div>
+    
+    <div id="editorSpace">
+        <div id="placeholder"></div>
+    </div>
 
     <script type="text/javascript">
         <%
