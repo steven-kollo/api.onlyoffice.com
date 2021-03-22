@@ -9,10 +9,10 @@
     </li><!--
     <li>
         <a href="<%= Url.Action("gettingstarted") %>">Getting started with plugins</a>
-    </li>
+    </li>-->
     <li>
         <a href="<%= Url.Action("types") %>">Plugin types</a>
-    </li>-->
+    </li>
 </ul>
 
 <div class="treeheader">Documentation</div>
