@@ -41,7 +41,7 @@
         <tbody>
             <tr class="tablerow">
                 <td>type</td>
-                <td>Defines the type of the command. The <em>"close"</em> is used to close the plugin window after executing the function in the <em>command</em> parameter. The <em>"command"</em> is used to execute the command and leave the window open waiting for the next command.</td>
+                <td>Defines the type of the command. The <em>close</em> is used to close the plugin window after executing the function in the <em>command</em> parameter. The <em>command</em> is used to execute the command and leave the window open waiting for the next command.</td>
                 <td>string</td>
             </tr>
             <tr class="tablerow">
