@@ -20,14 +20,15 @@
     .pushy {
         -webkit-overflow-scrolling: touch;
         background: #fff;
-        border-left: 1px solid #d9d9d9;
+        border-right: 1px solid #d9d9d9;
         height: 100%;
         overflow: auto;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         width: 300px;
-        z-index: 9999999;
+        z-index: 100;
+        -webkit-overflow-scrolling: touch;
     }
 
     .pushy.pushy-submenu-closed {
@@ -70,6 +71,7 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 16px;
+        text-align: left;
     }
 
     .pushy a:hover {
@@ -85,15 +87,15 @@
     }
 
     .pushy-left {
-        -ms-transform: translate3d(-300px, 0, 0);
         -webkit-transform: translate3d(-300px, 0, 0);
+        -ms-transform: translate3d(-300px, 0, 0);
         transform: translate3d(-300px, 0, 0);
     }
 
-    .pushy-open-left #container {
-        -ms-transform: translate3d(300px, 0, 0);
-        -webkit-transform: translate3d(300px, 0, 0);
-        transform: translate3d(300px, 0, 0);
+    .pushy-submenu-open {
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     .pushy-open-left .push {
@@ -149,7 +151,7 @@
         transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
     }
 
-    .pushy-right {
+    .push {
         transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
     }
 

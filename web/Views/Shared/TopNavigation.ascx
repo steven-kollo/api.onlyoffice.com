@@ -6,7 +6,7 @@
     <span></span>
     <span></span>
 </div>
- <nav class="pushy pushy-right pushy-submenu-closed">
+ <nav class="pushy pushy-left pushy-submenu-closed">
     <div class="pushy-content">
     <ul class="top-nav all-menu-items">
         <% var subControllerObj = ViewContext.RequestContext.RouteData.Values["id"];

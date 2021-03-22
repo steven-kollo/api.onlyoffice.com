@@ -6,13 +6,13 @@
     if ($("div.ham_menu").length) {
         $(".ham_menu").on("click", function () {
 
-            if ($(".pushy-right").hasClass("pushy-submenu-closed")) {
-                $(".pushy-right")
+            if ($(".pushy-left").hasClass("pushy-submenu-closed")) {
+                $(".pushy-left")
                     .removeClass('pushy-submenu-closed')
                     .addClass('pushy-submenu-open');
                 $(".site-overlay").removeClass('hidden');
             } else {
-                $(".pushy-right")
+                $(".pushy-left")
                     .addClass('pushy-submenu-closed')
                     .removeClass('pushy-submenu-open');
                 $(".site-overlay").addClass('hidden');
@@ -21,7 +21,7 @@
     }
 
     $(".site-overlay").on("click", function () {
-        $(".pushy-right")
+        $(".pushy-left")
             .addClass('pushy-submenu-closed')
             .removeClass('pushy-submenu-open');
         $(".site-overlay").addClass('hidden');
