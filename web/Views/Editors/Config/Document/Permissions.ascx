@@ -67,7 +67,7 @@
         <tr class="tablerow">
             <td id="deleteCommentAuthorOnly" class="copy-link">deleteCommentAuthorOnly</td>
             <td>
-                Defines if the user can delete only his comments.
+                Defines if the user can delete only his/her comments.
                 The default value is <b>false</b>.
             </td>
             <td>boolean</td>
@@ -96,7 +96,7 @@
         <tr class="tablerow">
             <td id="editCommentAuthorOnly" class="copy-link">editCommentAuthorOnly</td>
             <td>
-                Defines if the user can edit only his comments.
+                Defines if the user can edit only his/her comments.
                 The default value is <b>false</b>.
             </td>
             <td>boolean</td>

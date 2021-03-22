@@ -53,7 +53,7 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>label</b> - the anonymous user label.
+                        <b>label</b> - a postfix added to the user name.
                         The default value is <em>Guest</em>,
                         <br />
                         <b>type</b>: string,
@@ -562,8 +562,8 @@
         <tr class="tablerow">
             <td id="trackChanges" class="copy-link">trackChanges</td>
             <td>
-                Defines if the review editing mode is automatically switched on (<b>true</b>) or off (<b>false</b>) when the editor is loaded. 
-                If the parameter is <em>undefined</em>, then the current opening mode is used (it is stored in the browser local storage).
+                Defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
+                If the parameter is <em>undefined</em>, the <em>document.permissions.review</em> value is used (for all the document users).
             </td>
             <td>boolean</td>
             <td>true</td>
