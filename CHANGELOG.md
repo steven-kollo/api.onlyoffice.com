@@ -1,5 +1,6 @@
 # Change Log
 
+- changed highlighting style
 - thirdparty licenses
 - editors: opening fb2
 

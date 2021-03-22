@@ -244,7 +244,7 @@
   <ItemGroup>
     <Content Include="404.aspx" />
     <Content Include="500.aspx" />
-    <Content Include="Content\hightlight.css" />
+    <Content Include="Content\highlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\docbuilder.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />

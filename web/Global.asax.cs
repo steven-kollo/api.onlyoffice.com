@@ -109,7 +109,7 @@ namespace ASC.Api.Web.Help
                             .Include(
                                 "~/content/styles.css",
                                 "~/content/jquery.treeview.css",
-                                "~/content/hightlight.css"));
+                                "~/content/highlight.css"));
         }
 
         protected void Application_Start()
