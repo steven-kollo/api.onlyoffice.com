@@ -257,7 +257,7 @@
         {
           "type": "boolean",
           "name": "isInline",
-          "description": "<p>Inline insert on not (works only when the length of arrContent = 1 and it's a paragraph)</p>",
+          "description": "<p>Inline insert or not (works only for the last and the first element and only if it's a paragraph)</p>",
           "optional": true,
           "defaultValue": false
         },
