@@ -223,10 +223,10 @@
                 -ms-transform: translateY(-50%) rotate(90deg);
                 -webkit-transform: translateY(-50%) rotate(90deg);
                 transform: translateY(-50%) rotate(90deg); */
-}
 
      .pushy-submenu-closed ul {
                 display: none;
                 max-height: none;
             }
-     }
+    }
+

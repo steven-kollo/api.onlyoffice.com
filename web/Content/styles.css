@@ -1852,6 +1852,9 @@ article {
 }
 
 @media screen and (max-width: 1024px) {
+    img {
+        max-width: 100%;
+    }
 
     .table td:first-child {
         word-break: break-word;
@@ -1924,7 +1927,7 @@ article {
 @media screen and (max-width: 769px) {
 
     img {
-        max-width: 470px;
+        max-width: 100%;
     }
 
     body.main-body {

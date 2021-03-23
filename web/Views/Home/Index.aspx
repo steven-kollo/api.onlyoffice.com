@@ -221,30 +221,30 @@
         <div class="docs_block">
             <div class="api_title long">
               <div class="img-title-desktop block-img"></div>
-                <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">ONLYOFFICE Desktop Editors</a></p>
+                <p class="title-block"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/basic")%>">ONLYOFFICE Desktop Editors</a></p>
             </div>
             <div class="pp_info_block">
                 Extent the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.
-            <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">More</a></p>
+            <p class="pp_info_block_more"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/basic")%>">More</a></p>
             </div>
             <div class="api_block_links">
                 <div class="api_users_block">
                  <div class="first-column">
                     <p class="programs-list-title">Get started</p>
-                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Overview</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/basic")%>">Overview</a></p>
                   </div>
                   <div class="second-column">                    
                     <p class="programs-list-title">Documentation</p>
-                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Adding a DMS provider to the list of connections</a></p>
-                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Opening in DMS</a></p>
-                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">DMS encryption</a></p>
-                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Enable debug mode</a></p>
-                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Adding plugins</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/addingdms")%>">Adding a DMS provider to the list of connections</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/loginlogout")%>">Opening in DMS</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/encryption")%>">DMS encryption</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/debugging")%>">Enable debug mode</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/plugins")%>">Adding plugins</a></p>
                   </div>
                  <div class="third-column">                    
                     <p class="programs-list-title">More info</p>
-                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Changelog</a></p>
-                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">FAQ</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/changelog")%>">Changelog</a></p>
+                    <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/desktop/faq")%>">FAQ</a></p>
                     <p class="programs-list"><a href="<%=VirtualPathUtility.ToAbsolute("~/")%>">Troubleshooting</a></p>
                   </div>
                 </div>
