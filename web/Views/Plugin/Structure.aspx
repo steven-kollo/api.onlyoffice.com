@@ -30,5 +30,6 @@
         </li>
     </ul>
 
+    </br >
     <img alt="Structure" src="<%= Url.Content("~/content/img/plugins/plugins-structure.png") %>" />
 </asp:Content>
