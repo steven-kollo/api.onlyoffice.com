@@ -1606,16 +1606,6 @@ table.parameters_permissions td p, table.parameters_permissions th p {
     background-color: #dedede;
 }
 
-.first-block {
-    width: 100%;
-    margin-bottom: 32px;
-}
-
-.second-block {
-    width: 100%;
-    margin-bottom: 32px;
-}
-
 .icon-program-block {
     margin: 70px auto 110px auto;
     justify-content: space-between;
@@ -1724,17 +1714,7 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 }
 
 
-.first-column {
-    display: table-cell;
-    box-sizing: border-box;
-}
-
-.second-column {
-    display: table-cell;
-    box-sizing: border-box;
-}
-
-.third-column {
+.product-link-column {
     display: table-cell;
     box-sizing: border-box;
 }
@@ -1776,7 +1756,7 @@ article {
     display: inline-block;
     width: auto;
     position: relative;
-    margin-bottom: 32px;
+    margin-bottom: 18px;
     vertical-align: top;
     border: 1px solid rgba(85, 85, 85, 0.15);
     border-radius: 5px;
