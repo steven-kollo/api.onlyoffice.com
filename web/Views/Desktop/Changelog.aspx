@@ -24,6 +24,11 @@
         <li>Added commands for <a href="<%= Url.Action("addingdms/opening") %>#open-command">document opening</a>.</li>
     </ul>
 
+    <h2 id="61" class="copy-link">Version 6.1</h2>
+    <ul>
+        <li>Added <a href="<%= Url.Action("addingdms/configuring") %>#recognize">AscDesktopEditor</a> label to userAgent.</li>
+    </ul>
+
     <h2 id="56" class="copy-link">Version 5.6</h2>
     <ul>
         <li>Added <a href="<%= Url.Action("addingdms/encryption") %>">encryption</a>.</li>
