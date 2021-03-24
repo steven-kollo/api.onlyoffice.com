@@ -247,7 +247,7 @@
     <Content Include="500.aspx" />
     <Content Include="Content\highlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
-    <Content Include="Content\img\desktop.png" />
+    <Content Include="Content\img\arrow-gray.svg" />
     <Content Include="Content\img\desktop\adding-plugins.png" />
     <Content Include="Content\img\desktop\connection-list.png" />
     <Content Include="Content\img\desktop\debug.png" />
@@ -259,7 +259,6 @@
     <Content Include="Content\img\desktop\plugins-tab.png" />
     <Content Include="Content\img\desktop\provider-button.png" />
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
-    <Content Include="Content\img\docbuilder.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
     <Content Include="Content\img\docbuilder\csharp\net46.png" />
@@ -312,7 +311,6 @@
     <Content Include="Content\img\Editor\coedit.jpg" />
     <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\csharp\add.png" />
-    <Content Include="Content\img\editors.png" />
     <Content Include="Content\img\Editor\create.png" />
     <Content Include="Content\img\Editor\customization.png" />
     <Content Include="Content\img\Editor\e-coedit.png" />
@@ -341,7 +339,6 @@
     <Content Include="Content\img\java\upload-app.jpg" />
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\Editor\opening.jpg" />
-    <Content Include="Content\img\apisystem.png" />
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
@@ -349,10 +346,8 @@
     <Content Include="Content\img\php\manager.png" />
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
-    <Content Include="Content\img\plugin.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\plugins\youtube-interface.png" />
-    <Content Include="Content\img\portals.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
     <Content Include="Content\img\csharp\platform.png" />
@@ -397,7 +392,7 @@
     <Content Include="Content\img\main-page\document_builder.svg" />
     <Content Include="Content\img\main-page\document_server.svg" />
     <Content Include="Content\img\main-page\hosted_solution.svg" />
-    <Content Include="Content\img\main-page\plugins_and_macros" />
+    <Content Include="Content\img\main-page\plugins_and_macros.svg" />
     <Content Include="Content\pushy.css" />
     <Content Include="Scripts\faq.js" />
     <Content Include="Scripts\navigation-menu.js" />
@@ -707,7 +702,6 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\editor\Python Example.zip" />
-    <Content Include="Content\navigation.less" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />

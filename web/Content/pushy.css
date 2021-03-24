@@ -3,12 +3,12 @@
     https://www.onlyoffice.com
 */
 
-.site-overlay{
-    display:none;
+.site-overlay {
+    display: none;
 }
 
-.pushy-submenu-closed ul{
-    display:grid !important;
+.pushy-submenu-closed ul {
+    display: grid !important;
 }
 
 @media screen and (max-width: 1024px) {
@@ -224,9 +224,8 @@
                 -webkit-transform: translateY(-50%) rotate(90deg);
                 transform: translateY(-50%) rotate(90deg); */
 
-     .pushy-submenu-closed ul {
-                display: none;
-                max-height: none;
-            }
+    .pushy-submenu-closed ul {
+        display: none;
+        max-height: none;
     }
-
+}

@@ -3,8 +3,7 @@
 <%@ Import Namespace="System.Web.Optimization" %>
 <!DOCTYPE html>
 <html lang="en" class="no-js"
-    <% if (string.Equals(ConfigurationManager.AppSettings["offline_cache"], bool.TrueString, StringComparison.OrdinalIgnoreCase)){ %>manifest="<%= Url.RouteUrl("Cache") %>"<% } %>
->
+    <% if (string.Equals(ConfigurationManager.AppSettings["offline_cache"], bool.TrueString, StringComparison.OrdinalIgnoreCase)){ %>manifest="<%= Url.RouteUrl("Cache") %>" <% } %>>
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="ONLYOFFICE Developer API" />
@@ -32,35 +31,35 @@
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
 <body class="<%= Html.IfController("Home") ? "main-body" : string.Empty %>">
-   <div class="site-overlay hidden"></div>
-   <div class="layout-table-header main-page">
-            <% Html.RenderPartial("TopNavigation");%>
-   </div>
+    <div class="site-overlay hidden"></div>
+    <div class="layout-table-header main-page">
+        <% Html.RenderPartial("TopNavigation");%>
+    </div>
     <div class="background-body <%= Html.IfController("Home") ? "mainBody" : string.Empty %>">
-    <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
-        <tr>
-            <% if (!Html.IfController("Home"))
-               { %>
-            <td class="layout-table-side">
-                <div class="layout-side">
-                    <% Html.RenderPartial("SearchForm"); %>
-                    <% Html.RenderAction("Navigation"); %>
-                </div>
-            </td>
-            <% } %>
+        <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
+            <tr>
+                <% if (!Html.IfController("Home"))
+                   { %>
+                <td class="layout-table-side">
+                    <div class="layout-side">
+                        <% Html.RenderPartial("SearchForm"); %>
+                        <% Html.RenderAction("Navigation"); %>
+                    </div>
+                </td>
+                <% } %>
 
-            <td class="layout-table-content" <%= Html.IfController("Home") ? "colspan=\"2\"" : ""  %> >
-                <div class="layout-content">
-                    <%--<% Html.RenderPartial("BreadCrumbs");%>--%>
-                    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
-                </div>
-            </td>
-        </tr>
-    </table>
-</div>
-        <div>
-            <div class="layout-table-footer">
-                <div class="layout-footer">
+                <td class="layout-table-content" <%= Html.IfController("Home") ? "colspan=\"2\"" : ""  %>>
+                    <div class="layout-content">
+                        <%--<% Html.RenderPartial("BreadCrumbs");%>--%>
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div class="layout-table-footer">
+            <div class="layout-footer">
                 <div class="bottommenu">
                     <ul>
                         <li><a target="_blank" href="https://www.onlyoffice.com/">Home site</a></li>
@@ -73,9 +72,9 @@
                     </ul>
                 </div>
                 <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>
-                </div>
             </div>
         </div>
+    </div>
 
     <asp:ContentPlaceHolder ID="ScriptPlaceholder" runat="server"></asp:ContentPlaceHolder>
 
