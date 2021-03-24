@@ -415,14 +415,14 @@ li b.copy-link[id]:hover:before {
 
 .top-nav a {
     color: #555;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 71px;
     outline: none;
     text-decoration: none;
     text-transform: uppercase;
     display: block;
-    padding: 0 10px;
+    padding: 0 7px;
 }
 
 .top-nav a:hover {

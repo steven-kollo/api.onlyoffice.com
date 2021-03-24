@@ -22,7 +22,7 @@
     <dd>
         <p>
             Some plugins are installed by default. Switch to the <b>Plugins</b> tab to see the available ones. 
-            To install additional plugins, see the desktop or server <a href="<%= Url.Action("installation") %>">installation instructions</a>.
+            To install additional plugins, see the <a href="<%= Url.Action("installation/desktop") %>">desktop</a> or <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a> installation instructions.
         </p>
     </dd>
 </dl>
