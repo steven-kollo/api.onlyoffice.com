@@ -19,10 +19,10 @@
 
     <h2 id="62" class="copy-link">Version 6.2</h2>
     <ul>
-        <li>Added <a href="<%= Url.Action("addingdms/") %>">config</a> with DMS integration parameters</li>
-        <li>Added <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method</li>
-        <li>Added <a href="<%= Url.Action("addingdms/encryption") %>">encryption</a></li>
-        <li>Added commands for <a href="<%= Url.Action("addingdms/opening") %>">document opening</a></li>
+        <li>Added <a href="<%= Url.Action("addingdms/") %>">config</a> with DMS integration parameters.</li>
+        <li>Added <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method.</li>
+        <li>Added <a href="<%= Url.Action("addingdms/encryption") %>">encryption</a>.</li>
+        <li>Added commands for <a href="<%= Url.Action("addingdms/opening") %>#open-command">document opening</a>.</li>
 
     </ul>
 

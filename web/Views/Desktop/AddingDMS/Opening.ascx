@@ -7,7 +7,7 @@
 
 
 <p>After <a href="<%= Url.Action("addingdms/loginlogout") %>">registering</a> in the cloud, you can start working on documents stored there.</p>
-<p>Connecting ONLYOFFICE Desktop Editors to your cloud allows you to edit text documents, spreadsheets, and presentations without having a constant Internet connection 
+<p>Connecting ONLYOFFICE Desktop Editors to your cloud allows you to edit text documents, spreadsheets, and presentations without having a constant Internet connection
     and easily switch to the online mode for real-time co-editing (in case <a href="<%= Url.Action("basic", "editors") %>">ONLYOFFICE Docs</a> is integrated with your cloud).</p>
 <p>Besides, using ONLYOFFICE Desktop Editors you are no longer limited by your browser resources. It means you can:</p>
 <ul>
@@ -18,10 +18,14 @@
 </ul>
 
 <p>To open a document in a new window / tab correctly:</p>
-<p><b>Option 1.</b> Use the <em>window.open("http://url.to.document")</em> JavaScript command, where URL to the document is validated by the <em>editorPage</em> value of the <a href="<%= Url.Action("addingdms/") %>">config</a>. 
-    The document will be opened upon successful validation.</p>
-<p><b>Option 2.</b> Use the <em>open:document</em> command of the <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method. When this command is sent, the document is opened. 
-    Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
+<p id="window-open" class="copy-link">
+    <b>Option 1.</b> Use the <em>window.open("http://url.to.document")</em> JavaScript command, where URL to the document is validated by the <em>editorPage</em> value of the <a href="<%= Url.Action("addingdms/") %>">config</a>.
+    The document will be opened upon successful validation.
+</p>
+<p id="open-command" class="copy-link">
+    <b>Option 2.</b> Use the <em>open:document</em> command of the <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method. When this command is sent, the document is opened.
+    Parameters are specified in the format of a string with the serialized <em>json</em> as follows:
+</p>
 <pre>
 {
     "url" : "url to document",
@@ -81,5 +85,5 @@ const params = {
     "type" : "word",
     "provider" : "onlyoffice"
 }
-AscDesktopEditor.execCommand("open:document", JSON.stringify(params))                     
+AscDesktopEditor.execCommand("open:document", JSON.stringify(params))
 </pre>
