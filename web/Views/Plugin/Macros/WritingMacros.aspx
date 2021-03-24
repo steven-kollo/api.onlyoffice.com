@@ -17,7 +17,7 @@
     <p class="dscr">Now that you know how macros work, let us try and write your own macro. Say, we have a table and need to color the alternate table rows (odd will be colored green, even will become red). The table contains 200 rows (would take quite some time to do that manually) and columns from <b>A</b> to <b>S</b>.</p>
 
     <ol>
-        <li>Open <b>ONLYOFFICE Desktop Editors</b> and create a new spreadsheet.</li>
+        <li>Open <a href="<%= Url.Action("basic", "desktop") %>">ONLYOFFICE Desktop Editors</a> and create a new spreadsheet.</li>
         <li>Now open the plugins and select <b>Macros</b>. The macros window will popup.</li>
         <li>Click <b>New</b>. You will be presented with the basic function wrapper which will allow you to enter the necessary code:
 

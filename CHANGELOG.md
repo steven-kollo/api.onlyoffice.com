@@ -1,5 +1,11 @@
 # Change Log
 
+- added Desktop Editors section
+- editors: added chamilo plugin
+- changed highlighting style
+- thirdparty licenses
+- editors: opening fb2
+
 ## 1.1.0
 - editors: added editorConfig.customization.toolbarHideFileName
 - editors: the callbackUrl depends on forcesavetype
