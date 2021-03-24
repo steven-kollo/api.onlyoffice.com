@@ -43,7 +43,7 @@
     <p><b>Step 3.</b> Put all the plugin files to this folder:</p>
     <img alt="Plugin folder" src="<%= Url.Content("~/content/img/plugins/plugins-folder.png") %>" />
     
-    <p><b>Step 4.</b> Start ONLYOFFICE Desktop Editors. If everything is done correctly, the plugin will be displayed within the <b>Plugins</b> tab:</p>
+    <p><b>Step 4.</b> Start <a href="<%= Url.Action("basic", "desktop") %>">ONLYOFFICE Desktop Editors</a>. If everything is done correctly, the plugin will be displayed within the <b>Plugins</b> tab:</p>
     <img alt="Extended comments" src="<%= Url.Content("~/content/img/plugins/extended-comments.png") %>" />
 
 
