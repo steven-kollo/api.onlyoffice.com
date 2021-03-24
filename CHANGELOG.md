@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: api v6.2.0
 - changed highlighting style
 - thirdparty licenses
 - editors: opening fb2
