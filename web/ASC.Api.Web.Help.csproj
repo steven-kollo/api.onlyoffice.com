@@ -446,6 +446,7 @@
     <Content Include="Views\Editors\Example\Python.ascx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
+    <Content Include="Views\Editors\Chamilo.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
     <Content Include="Views\Editors\FAQ.aspx" />

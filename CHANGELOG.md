@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added chamilo plugin
 - changed highlighting style
 - thirdparty licenses
 - editors: opening fb2
