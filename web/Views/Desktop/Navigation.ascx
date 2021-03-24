@@ -18,7 +18,7 @@
         <a href="<%= Url.Action("plugins") %>">Adding plugins</a>
     </li>
     <li>
-        <a href="<%= Url.Action("addingdms") %>">Adding a DMS provider</a>
+        <a href="<%= Url.Action("addingdms/") %>">Adding a DMS provider</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("addingdms/configuring") %>">Configuring the interaction</a>
