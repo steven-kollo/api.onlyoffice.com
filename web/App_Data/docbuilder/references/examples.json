@@ -593,7 +593,7 @@
 			"demo": "https://help.onlyoffice.com/Products/Files/DocEditor.aspx?fileid=6894416&doc=dWY2SElxcG5ENys5YWwyektYTldUZzJqdXdpR0pVbXVPZ3M1czArbEZFND0_IjY4OTQ0MTYi0&action=embedded"
 		},
 		"ApiDrawing.delete": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.Delete();\noParentParagraph.AddLineBreak();\noParentParagraph.AddText(\"In this paragraph, the object Drawing has been deleted\");\nbuilder.SaveFile(\"docx\", \"Delete.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.Delete();\noParagraph.AddLineBreak();\noParagraph.AddText(\"In this paragraph, the object Drawing has been deleted\");\nbuilder.SaveFile(\"docx\", \"Delete.docx\");\nbuilder.CloseFile();",
 			"demo": ""
 		},
 		"ApiDrawing.fill": {
