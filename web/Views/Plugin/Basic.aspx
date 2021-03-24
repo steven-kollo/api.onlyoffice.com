@@ -1,4 +1,4 @@
-﻿<%@ Page
+﻿<%@  Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,44 +6,57 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Introduction
+    Overview
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Introduction</span>
+        <span class="hdr">Overview</span>
     </h1>
 
-    <div class="video-link" title="Show video">
-        <img src="<%= Url.Content("~/content/img/video/plugin.png") %>" alt="Show video" />
-
-        <div class="popap-dialog">
-            <div class="popap-container">
-                <div class="popap-header">Document Server Plugins</div>
-                <iframe src="https://www.youtube.com/embed/n_s5Tg6_ov0?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
-                <a class="button-close button">Close</a>
-            </div>
-            <div class="button-close popap-close" title="Close">&times;</div>
-        </div>
-    </div>
-
-    <p class="dscr">The new version of Document Server and desktop document editors introduced support for plugins: both visual and non-visual. These plugins can be used for the developers to add specific functions to the editors which are not directly related to the OOXML format. This is a first version which provides the developers with some API for the interaction with the document editors.</p>
-
-    <p>The plugins can be both visual and non-visual. The visual plugins will open a window for some action, or introduce some additions to the editor panel interface. The non-visual plugins will provide a button (or buttons) which is going to apply some transformations or manipulations to the document.</p>
-
-    <p>In addition to a simple document manipulation or editing of document contents the plugin can embed an OLE object. This is the only way which allows a third-party developer to access the document format, i.e. write own information not only while working with the editor, but to save it to the resulting file.</p>
-
-    <p>The plugins can be added to any document editor (text document, spreadsheet or presentation). Please see the sections below to find out what the plugin contents must be and how it is added to the editors:</p>
-
+    <p>
+        ONLYOFFICE <a href="https://www.onlyoffice.com/office-suite.aspx" target="_blank">Docs</a> and <a href="https://www.onlyoffice.com/desktop.aspx" target="_blank">Desktop Editors</a> offer support for plugins allowing developers to add specific features to the editors that are not directly related to the OOXML format.
+    </p>
+    <p>
+        This documentation describes:
+    </p>
     <ul>
-        <li><a href="<%= Url.Action("structure") %>">Plugin structure</a></li>
-        <li><a href="<%= Url.Action("installation") %>">Plugin installation</a></li>
+        <li>How to <a href="<%= Url.Action("structure") %>">build</a>, <a href="<%= Url.Action("localization") %>">localize</a>, run, test and publish a plugin</li>
+        <li>How to <a href="<%= Url.Action("writingmacros") %>">write</a> and run a macro 
+            or <a href="<%= Url.Action("convertingvbamacros") %>">convert</a> VBA macros to use in ONLYOFFICE</li>
+        <li>How to use ONLYOFFICE methods and events</li>
+        <li>Where to find guides and plugin/macro code samples to get started</li>
     </ul>
 
-    <p>All the currently existing open source plugin examples are available here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>. Feel free to fork them, use them with your editors and create your own plugins.</p>
 
-    <h2>Support</h2>
-    <p>
-        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
-    </p>
+    <h2>What plugins can do</h2>
+
+    <p>Here are some examples of what you can do with ONLYOFFICE plugins:</p>
+    <ul>
+        <li>connect third-party services, like Telegram, YouTube, Thesaurus, Translator, Zotero, OCR, etc.;</li>
+        <li>add custom components & controls in the UI, like Trackchanges, Trackchanges_off;</li>
+        <li>enhance the existing user experience and the editors&#8217; functionality: Autocomplete, Search & Replace, Move cursor, Extended comments;</li>
+        <li>automate tasks in documents with Macros.</li>
+    </ul>
+    <p>Code samples are available at <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>.</p>
+    <p>If you are looking for ready-to-use plugins, please visit <a href="https://www.onlyoffice.com/en/app-directory" target="_blank">ONLYOFFICE App Directory</a>.</p>
+
+
+    <h2>How to create plugins</h2>
+
+    <p>To create your own plugin, you need to follow a few steps:</p>
+    <ol>
+        <li>Learn the fundamental concepts for building plugins on the Getting started with plugins page 
+            and write code that defines the plugin appearance and behavior.</li>
+        <li>After building the plugin, test it thoroughly and make sure the plugin looks and works as you expected. 
+            Try to anticipate the problems that might occur and suggest your solutions to them.</li>
+        <li>Now you can use the plugin on your own or suggest it for publishing by contacting us at <a href="mailto:marketing@onlyoffice.com" target="_blank">marketing@onlyoffice.com</a>.</li>
+    </ol>
+
+
+    <h2>How to get help</h2>
+
+    <p>If you have any questions about plugins, try to find them in the FAQ section first.</p>
+    <p>You can also request a feature or report a bug by posting an issue <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
+
 </asp:Content>

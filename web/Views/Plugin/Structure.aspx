@@ -11,10 +11,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">What is the structure of the plugins?</span>
+        <span class="hdr">Plugin structure</span>
     </h1>
 
-    <p>Each plugin for the server version is a folder with files. To use the plugins with the desktop version you need to pack this folder into a single zip archive file (see the <a href="<%= Url.Action("installation") %>">Installing plugins to document editors</a> section for more information on how to add plugins to the editors).</p>
+    <p>Each plugin for the server version is a folder with files. To use the plugins with the desktop version you need to pack this folder into a single zip archive file (see the <a href="<%= Url.Action("installation") %>">Adding plugins</a> section for more information on how to add plugins to the editors).</p>
 
     <p>The folder must contain the following files:</p>
 
@@ -23,10 +23,13 @@
             <a href="<%= Url.Action("config") %>">config.json</a> - plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.
         </li>
         <li>
-            <a href="<%= Url.Action("indexhtml") %>">index.html</a> - plugin entry point, connecting the <em>config.json</em> and <em>pluginBase.j</em>s (the base file needed for work with plugins) files.
+            <a href="<%= Url.Action("indexhtml") %>">index.html</a> - plugin entry point, connecting the <em>config.json</em> and <em>plugin.js</em> (the base file needed for work with plugins) files.
         </li>
         <li>
             <a href="<%= Url.Action("code") %>">pluginCode.js</a> - the plugin code file itself containing the JavaScript code of the plugin you want to connect to the editors.
         </li>
     </ul>
+
+    </br >
+    <img alt="Structure" src="<%= Url.Content("~/content/img/plugins/plugins-structure.png") %>" />
 </asp:Content>

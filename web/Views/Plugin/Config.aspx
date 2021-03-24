@@ -16,7 +16,7 @@
 
     <p class="dscr">The <em>config.json</em> file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.</p>
 
-    <p>Below is an example code for the <em>config.json</em> file (this one is used for <b>Chess</b> plugin, but any other <em>config.json</em> file can be created the same way):</p>
+    <p>Below is an example code for the <em>config.json</em> file (this one is used for the <b>Chess</b> plugin, but any other <em>config.json</em> file can be created the same way):</p>
 
     <pre>{
     "baseUrl": "",
@@ -188,7 +188,7 @@
             <tr class="tablerow">
                 <td>variations.url</td>
                 <td>
-                    Plugin entry point, i.e. HTML file which connects the <em>pluginBase.js</em> (the base file needed for work with plugins) file and launches the plugin code.
+                    Plugin entry point, i.e. HTML file which connects the <em>plugin.js</em> (the base file needed for work with plugins) file and launches the plugin code.
                     See the <a href="<%= Url.Action("indexhtml") %>">index.html</a> section for the detailed information.
                 </td>
                 <td>string</td>
@@ -199,7 +199,7 @@
 
     <h2 id="pluginVariations" class="copy-link">Plugin variations</h2>
 
-    <p>Why would one plugin might need some variations? The answer is simple enough: the plugin can not only perform some actions but also contain some settings, or 'About' window, or something like that. For example, translation plugin: the plugin itself does not need a visual window for translation as it can be done just pressing a single button, but its settings (the translation direction) and 'About' window must be visual. So we will need to have at least two plugin variations (translation itself and settings), or three, in case we want to add an 'About' window with the information about the plugin and its authors or the software used for the plugin creation.</p>
+    <p>Why would one plugin might need some variations? The answer is simple enough: the plugin can not only perform some actions but also contain some settings, or an <b>About</b> window, or something like that. For example, translation plugin: the plugin itself does not need a visual window for translation as it can be done just pressing a single button, but its settings (the translation direction) and an <b>About</b> window must be visual. So we will need to have at least two plugin variations (translation itself and settings), or three, in case we want to add an <b>About</b> window with the information about the plugin and its authors or the software used for the plugin creation.</p>
 
     <div class="note">The <em>.html</em> files for <b>all</b> variations must be placed to the plugin root folder together with the <em>config.json</em> configuration file for the plugin to work correctly.</div>
 

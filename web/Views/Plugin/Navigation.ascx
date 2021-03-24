@@ -5,8 +5,14 @@
 <div class="treeheader">Get Started</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("basic") %>">Introduction</a>
+        <a href="<%= Url.Action("basic") %>">Overview</a>
+    </li><!--
+    <li>
+        <a href="<%= Url.Action("gettingstarted") %>">Getting started with plugins</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("types") %>">Plugin types</a>
+    </li>-->
 </ul>
 
 <div class="treeheader">Documentation</div>
@@ -55,6 +61,48 @@
                             </li>
                             <li>
                                 <a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/pastehtml") %>">PasteHtml</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/pastetext") %>">PasteText</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/getmacros") %>">GetMacros</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/startaction") %>">StartAction</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/endaction") %>">EndAction</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/setproperties") %>">SetProperties</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/showinputhelper") %>">ShowInputHelper</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("executemethod/unshowinputhelper") %>">UnShowInputHelper</a>
                             </li>
                         </ul>
                     </li>
@@ -110,8 +158,18 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("installation") %>">Plugin installation</a>
-    </li>
+        <a href="<%= Url.Action("installation") %>">Adding plugins</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("installation/desktop") %>">ONLYOFFICE Desktop Editors</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("installation/onpremises") %>">ONLYOFFICE Docs on-premises</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("installation/cloud") %>">ONLYOFFICE Cloud</a>
+            </li>
+        </ul>
     <li>
         <a href="<%= Url.Action("localization") %>">Plugin localization</a>
     </li>
@@ -123,10 +181,10 @@
     </li>
 </ul>
 <div class="treeheader">Macros</div>
-<ul class="side-nav root">
+<ul class="side-nav root"><!--
     <li>
-        <a href="<%= Url.Action("macros") %>">ONLYOFFICE macros</a>
-    </li>
+        <a href="<%= Url.Action("macros") %>">Getting started with macros</a>
+    </li>-->
     <li>
         <a href="<%= Url.Action("writingmacros") %>">Writing macros</a>
     </li>
@@ -135,5 +193,11 @@
     </li>
     <li>
         <a href="<%= Url.Action("macrosamples") %>">Macro samples</a>
+    </li>
+</ul>
+<div class="treeheader">More information</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("faq") %>">FAQ</a>
     </li>
 </ul>
