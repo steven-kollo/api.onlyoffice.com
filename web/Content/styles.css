@@ -119,7 +119,7 @@ tr {
 
 /*logo*/
 .logo {
-    background: url("img/sprite_1x.png") no-repeat 0 16px transparent;
+    background: url("img/sprite.png") no-repeat 0 16px transparent;
     display: inline-block;
     float: left;
     height: 71px;
@@ -369,7 +369,7 @@ h1 .up:hover {
 }
 
 h1 .up:after {
-    background: url("img/sprite_1x.png") no-repeat scroll 0 -150px transparent;
+    background: url("img/sprite.png") no-repeat scroll 0 -150px transparent;
     content: "";
     display: block;
     height: 12px;
@@ -417,7 +417,7 @@ h5 {
 }
 
 .copy-link[id]:hover:before {
-    background: url("img/sprite_1x.png") no-repeat scroll 0 -125px transparent;
+    background: url("img/sprite.png") no-repeat scroll 0 -125px transparent;
     content: " ";
     display: inline-block;
     height: 16px;
@@ -569,7 +569,7 @@ li b.copy-link[id]:hover:before {
 
 .search-clear {
     display: inline-block;
-    background: url("img/sprite_1x.png") no-repeat scroll 0 -168px transparent;
+    background: url("img/sprite.png") no-repeat scroll 0 -168px transparent;
     width: 16px;
     height: 22px;
     position: absolute;
@@ -582,7 +582,7 @@ li b.copy-link[id]:hover:before {
 }
 
 .search-box .btn {
-    background: url("img/sprite_1x.png") no-repeat scroll 0 -59px transparent;
+    background: url("img/sprite.png") no-repeat scroll 0 -59px transparent;
     border: 0 none;
     height: 23px;
     margin: 2px 0 0 10px;
