@@ -226,8 +226,60 @@
          ],
          "Documentation":[
             {
-               "Item1":"Groups API",
-               "Item2":"section"
+               "Item1":"authentication",
+               "Item2":"section/authentication"
+            },
+            {
+               "Item1":"calendar",
+               "Item2":"section/calendar"
+            },
+            {
+               "Item1":"capabilities",
+               "Item2":"section/capabilities"
+            },
+            {
+               "Item1":"community",
+               "Item2":"section/community"
+            },
+            {
+               "Item1":"crm",
+               "Item2":"section/crm"
+            },
+            {
+               "Item1":"feed",
+               "Item2":"section/feed"
+            },
+            {
+               "Item1":"files",
+               "Item2":"section/files"
+            },
+            {
+               "Item1":"group",
+               "Item2":"section/group"
+            },
+            {
+               "Item1":"mail",
+               "Item2":"section/mail"
+            },
+            {
+               "Item1":"mailserver",
+               "Item2":"section/mailserver"
+            },
+            {
+               "Item1":"people",
+               "Item2":"section/people"
+            },
+            {
+               "Item1":"portal",
+               "Item2":"section/portal"
+            },
+            {
+               "Item1":"project",
+               "Item2":"section/project"
+            },
+            {
+               "Item1":"settings",
+               "Item2":"section/settings"
             }
          ],
          "Help":[
@@ -263,8 +315,12 @@
          ],
          "Methods":[
             {
-               "Item1":"Host API",
-               "Item2":"section"
+               "Item1":"Portals",
+               "Item2":"section/portal"
+            },
+            {
+               "Item1":"Billing",
+               "Item2":"section/tariff"
             }
          ]
       }
