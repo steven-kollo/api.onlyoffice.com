@@ -1,5 +1,8 @@
 # Change Log
 
+- added Desktop Editors section
+- editors: added chamilo plugin
+- changed highlighting style
 - thirdparty licenses
 - editors: opening fb2
 - editors: added editorConfig.customization.hideRulers
