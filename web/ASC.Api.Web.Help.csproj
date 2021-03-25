@@ -630,7 +630,7 @@
     <Content Include="Views\Shared\Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\class_descriptions.xml" />
+    <Content Include="App_Data\portals\class_descriptions.xml" />
     <Content Include="App_Data\editor\.Net %28C# MVC%29 Example.zip" />
     <Content Include="App_Data\editor\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\editor\Java Example.zip" />
@@ -641,9 +641,9 @@
     <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
     <Content Include="App_Data\docbuilder\Node.js Example.zip" />
     <Content Include="App_Data\docbuilder\Ruby Example.zip" />
-    <Content Include="App_Data\Templates\docx.docbuilder" />
-    <Content Include="App_Data\Templates\pdf.docbuilder" />
-    <Content Include="App_Data\Templates\xlsx.docbuilder" />
+    <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
+    <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
+    <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
     <Content Include="App_Data\docbuilder\PHP Example.zip" />
     <Content Include="App_Data\docbuilder\references\cell\Api.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiChart.json" />

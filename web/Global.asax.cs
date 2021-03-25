@@ -123,7 +123,7 @@ namespace ASC.Api.Web.Help
                 AreaRegistration.RegisterAllAreas();
                 RegisterRoutes(RouteTable.Routes);
                 RegisterBundles(BundleTable.Bundles);
-                ClassNamePluralizer.LoadAndWatch(HttpContext.Current.Server.MapPath("~/App_Data/class_descriptions.xml"));
+                ClassNamePluralizer.LoadAndWatch(HttpContext.Current.Server.MapPath("~/App_Data/portals/class_descriptions.xml"));
 
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             }
