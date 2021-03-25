@@ -366,7 +366,7 @@
     <Content Include="Content\img\plugins\check.png" />
     <Content Include="Content\img\plugins\combobox.png" />
     <Content Include="Content\img\plugins\loader.png" />
-    <Content Include="Content\img\plugins\macro-window.png" />
+    <Content Include="Content\img\plugins\macro_window.png" />
     <Content Include="Content\img\plugins\plugin-settings.png" />
     <Content Include="Content\img\plugins\adding-plugins.png" />
     <Content Include="Content\img\plugins\plugins-tab.png" />
