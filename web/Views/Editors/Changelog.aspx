@@ -28,7 +28,7 @@
         <li>Added the <a href="<%= Url.Action("config/document/info") %>#favorite">document.info.favorite</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">document.permissions.reviewGroups</a> field.</li>
         <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">epub, fb2, html</a> formats.</li>
-        <li>Added conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">xml</a> format.</li>
+        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">xml</a> format.</li>
     </ul>
 
     <h2 id="62" class="copy-link">Version 6.2</h2>
@@ -43,7 +43,7 @@
     <ul>
         <li>The <em>text</em>, <em>spreadsheet</em> and <em>presentation</em> values for <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter is deprecated, please use <em>word</em>, <em>cell</em> and <em>slide</em> values instead.</li>
         <li>Added the <em>group</em> field to the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a>.</li>
-        <li>Added conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">fb2</a> format.</li>
+        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">fb2</a> format.</li>
     </ul>
 
     <h2 id="60" class="copy-link">Version 6.0</h2>
