@@ -26,7 +26,7 @@
     <p>
         All the available controls are displayed within the <b>Controls example</b> plugin:
     </p>
-    <img alt="Controls example" src="<%= Url.Content("~/content/img/plugins/controls-example.png") %>" />
+    <img alt="Controls example" src="<%= Url.Content("~/content/img/plugins/controls.png") %>" />
 
     <br />
     <p><b>Buttons</b></p>

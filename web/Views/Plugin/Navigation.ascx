@@ -6,10 +6,10 @@
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("basic") %>">Overview</a>
-    </li><!--
+    </li>
     <li>
         <a href="<%= Url.Action("gettingstarted") %>">Getting started with plugins</a>
-    </li>-->
+    </li>
     <li>
         <a href="<%= Url.Action("types") %>">Plugin types</a>
     </li>
