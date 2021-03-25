@@ -50,7 +50,7 @@
     cursor: pointer;
 }
 </pre>
-        <img alt="Button 1" src="<%= Url.Content("~/content/img/plugins/button1.png") %>" />
+        <img alt="Button 1" src="<%= Url.Content("~/content/img/plugins/button-1.png") %>" />
         </li>
         <li>
             <p>Use the <em>btn-text-default.submit.primary</em> class to add <b>Button 2</b> to your plugin:</p>
@@ -64,7 +64,7 @@
     background-color: #7d858c;
 }
 </pre>
-        <img alt="Button 2" src="<%= Url.Content("~/content/img/plugins/button2.png") %>" />
+        <img alt="Button 2" src="<%= Url.Content("~/content/img/plugins/button-2.png") %>" />
         </li>
         <li>
             <p>Use the <em>btn-text-default.submit</em> class to add <b>Button 3</b> to your plugin:</p>
@@ -79,14 +79,14 @@
     border: 1px solid transparent;
 }               
 </pre>
-        <img alt="Button 3" src="<%= Url.Content("~/content/img/plugins/button3.png") %>" />
+        <img alt="Button 3" src="<%= Url.Content("~/content/img/plugins/button-3.png") %>" />
 
         <note>The button color is chosen by the developer. The darker the button, the more important it is. 
             As a rule, the button of the <em>btn-text-default.submit.primary</em> class is used to confirm the action and send the result (for example, the <b>Ok</b> button).</note>
         
         </li>
         <li>
-            <p>Use the <em>btn-edit</em> class to add <img alt="Edit button" src="<%= Url.Content("~/content/img/plugins/editbutton.png") %>" /> <b>Edit button</b> to your plugin:</p>
+            <p>Use the <em>btn-edit</em> class to add <img alt="Edit button" src="<%= Url.Content("~/content/img/plugins/edit_button.png") %>" /> <b>Edit button</b> to your plugin:</p>
             <pre>
 &lt;label class="for-combo"&gt;Edit button&lt;/label&gt;&lt;div class="btn-edit" style="display: inline-block; margin-left: 10px;"&gt;&lt;/div&gt;
 </pre>
@@ -118,7 +118,7 @@ textarea.form-control {
     resize: none;
 }               
 </pre>
-        <img alt="Textarea" src="<%= Url.Content("~/content/img/plugins/textarea.png") %>" />
+        <img alt="Textarea" src="<%= Url.Content("~/content/img/plugins/text_area.png") %>" />
         </li>
         <li>
             <p>Use the <em>input </em> form element with the <em>text</em> type to add a <b>text field</b> to your plugin:</p>
@@ -143,10 +143,10 @@ textarea.form-control {
     user-select: text;
 }        
 </pre>           
-            <img alt="Text field" src="<%= Url.Content("~/content/img/plugins/text-field.png") %>" />
+            <img alt="Text field" src="<%= Url.Content("~/content/img/plugins/text_field.png") %>" />
         </li>
         <li>
-            <p>Use the <em>input </em> form element with the <em>checkbox</em> type to add a <img alt="Checkbox" src="<%= Url.Content("~/content/img/plugins/check.png") %>" /> <b>checkbox</b> to your plugin:</p>
+            <p>Use the <em>input </em> form element with the <em>checkbox</em> type to add a <img alt="Checkbox" src="<%= Url.Content("~/content/img/plugins/checkbox_example.png") %>" /> <b>checkbox</b> to your plugin:</p>
             <pre>
 &lt;input type="checkbox" class="form-control" style="vertical-align: middle;"&gt;&lt;label style="margin-left: 5px;vertical-align: middle;"&gt;Checkbox&lt;/label&gt;
 </pre>
@@ -211,7 +211,7 @@ $('#select_example').select2({
     width : '120px'
 });
 </pre>
-    <img alt="Combobox" src="<%= Url.Content("~/content/img/plugins/combobox.png") %>" />
+    <img alt="Combobox" src="<%= Url.Content("~/content/img/plugins/combobox_example.png") %>" />
 
 
     <p></p>
@@ -228,7 +228,7 @@ $('#select_example').select2({
     position: relative;
 }        
 </pre>
-    <img alt="Loader" src="<%= Url.Content("~/content/img/plugins/loader.png") %>" />
+    <img alt="Loader" src="<%= Url.Content("~/content/img/plugins/loader_example.png") %>" />
  
     
     <p></p>
@@ -236,7 +236,7 @@ $('#select_example').select2({
     <h1>Example</h1>
 
     <p>Let&#8217;s have a look at how to add interface elements in the ONLYOFFICE style to the YouTube plugin.</p>
-    <img alt="YouTube plugin" src="<%= Url.Content("~/content/img/plugins/youtube-interface.png") %>" />
+    <img alt="YouTube plugin" src="<%= Url.Content("~/content/img/plugins/youtube_interface.png") %>" />
 
     <ol>
         <li>
