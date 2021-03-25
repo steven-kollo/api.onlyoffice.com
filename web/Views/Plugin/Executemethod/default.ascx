@@ -111,7 +111,7 @@
     </tbody>
 </table>
 
-<div class="note">NB: For the plugin to work correctly, it is necessary to wait until the current method is executed before executing the next method.</div>
+<div class="note">For the plugin to work correctly, it is necessary to wait until the current method is executed before executing the next method.</div>
 
 <%--<div class="header-gray">Example</div>
 
