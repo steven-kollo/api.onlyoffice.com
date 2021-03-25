@@ -25,6 +25,7 @@
 
 
 using System;
+using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
@@ -124,8 +125,7 @@ namespace ASC.Api.Web.Help
                 RegisterBundles(BundleTable.Bundles);
                 ClassNamePluralizer.LoadAndWatch(HttpContext.Current.Server.MapPath("~/App_Data/class_descriptions.xml"));
 
-                ServicePointManager.SecurityProtocol =
-                         SecurityProtocolType.Tls12;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             }
             catch (Exception error)
             {
@@ -143,11 +143,13 @@ namespace ASC.Api.Web.Help
                     {
                         initialized = true;
 
-                        try
+                        //Register cache
+                        CacheManifest.AddServerFolder(new HttpContextWrapper(HttpContext.Current), "~/content/img", "*.*");
+                        CacheManifest.AddCached(new Uri("/", UriKind.Relative));
+
+                        var enabledProducts = Products.EnabledProducts().Select(product => product.Id).ToList();
+                        if (enabledProducts.Contains("portals", StringComparer.InvariantCultureIgnoreCase))
                         {
-                            //Register cache
-                            CacheManifest.AddServerFolder(new HttpContextWrapper(HttpContext.Current), "~/content/img", "*.*");
-                            CacheManifest.AddCached(new Uri("/", UriKind.Relative));
                             CacheManifest.AddCached(new Uri("/portals/basic", UriKind.Relative));
                             CacheManifest.AddCached(new Uri("/portals/auth", UriKind.Relative));
                             CacheManifest.AddCached(new Uri("/portals/faq", UriKind.Relative));
@@ -155,28 +157,27 @@ namespace ASC.Api.Web.Help
                             CacheManifest.AddCached(new Uri("/portals/batch", UriKind.Relative));
                             CacheManifest.AddOnline(new Uri("/portals/search", UriKind.Relative));
                             CacheManifest.AddFallback(new Uri("/portals/search", UriKind.Relative), new Uri("/portals/notfound", UriKind.Relative));
-                        }
-                        catch (Exception error)
-                        {
-                            LogManager.GetLogger("ASC.Api").Error(error);
+
+                            try
+                            {
+                                Documentation.Load();
+                            }
+                            catch (Exception error)
+                            {
+                                LogManager.GetLogger("ASC.Api").Error(error);
+                            }
                         }
 
-                        try
+                        if (enabledProducts.Contains("docbuilder", StringComparer.InvariantCultureIgnoreCase))
                         {
-                            Documentation.Load();
-                        }
-                        catch (Exception error)
-                        {
-                            LogManager.GetLogger("ASC.Api").Error(error);
-                        }
-
-                        try
-                        {
-                            DocBuilderDocumentation.Load();
-                        }
-                        catch (Exception error)
-                        {
-                            LogManager.GetLogger("ASC.DocumentBuilder").Error(error);
+                            try
+                            {
+                                DocBuilderDocumentation.Load();
+                            }
+                            catch (Exception error)
+                            {
+                                LogManager.GetLogger("ASC.DocumentBuilder").Error(error);
+                            }
                         }
                     }
                 }
