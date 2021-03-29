@@ -23,7 +23,7 @@
         <li>easy to use,</li>
         <li>security, as macros do not have any access to the system. They are just JS code that runs in the same window with the editors.</li>
     </ul>
-    <p>You can find ready-to-use macros <a href="<%= Url.Action("macrosamples") %>">here</a> or create your own ones.</p>
+    <p>You can find ready-to-use macros <a href="<%= Url.Action("macrosamples/") %>">here</a> or create your own ones.</p>
 
     <p>How to start writing your macro</p>
     <ol>

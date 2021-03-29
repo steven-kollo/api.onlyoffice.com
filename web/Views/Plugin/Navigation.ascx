@@ -192,7 +192,7 @@
         <a href="<%= Url.Action("convertingvbamacros") %>">Converting macros</a>
     </li>
     <li>
-        <a href="<%= Url.Action("macrosamples") %>">Macro samples</a>
+        <a href="<%= Url.Action("macrosamples/") %>">Macro samples</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("macrosamples/writedatatoworksheetcell") %>">Write data to worksheet cell</a>
