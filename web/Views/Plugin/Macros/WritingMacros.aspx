@@ -19,7 +19,7 @@
         The table contains 200 rows and columns from <b>A</b> to <b>S</b>. It would take a lot of time to do that manually. So, using macros will be the best solution for this problem.</p>
 
     <ol>
-        <li>Open <b>ONLYOFFICE Desktop Editors</b> and create a new spreadsheet.</li>
+        <li>Open <a href="<%= Url.Action("basic", "desktop") %>">ONLYOFFICE Desktop Editors</a> and create a new spreadsheet.</li>
         <li>Now open the <b>Plugins</b> tab and select <b>Macros</b>. The macros window will pop up.</li>
         <li>Click <b>New</b>. You will be presented with the basic function wrapper which will allow you to enter the necessary code:
 

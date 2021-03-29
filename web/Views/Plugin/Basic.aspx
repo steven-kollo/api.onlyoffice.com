@@ -15,7 +15,7 @@
     </h1>
 
     <p>
-        ONLYOFFICE Docs and Desktop Editors offer support for plugins allowing developers to add specific features to the editors that are not directly related to the OOXML format.
+        ONLYOFFICE <a href="https://www.onlyoffice.com/office-suite.aspx" target="_blank">Docs</a> and <a href="https://www.onlyoffice.com/desktop.aspx" target="_blank">Desktop Editors</a> offer support for plugins allowing developers to add specific features to the editors that are not directly related to the OOXML format.
     </p>
     <p>
         This documentation describes:
