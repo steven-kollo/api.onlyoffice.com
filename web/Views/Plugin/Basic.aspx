@@ -36,7 +36,7 @@
         <li>connect third-party services, like Telegram, YouTube, Thesaurus, Translator, Zotero, OCR, etc.;</li>
         <li>add custom components & controls in the UI, like Trackchanges, Trackchanges_off;</li>
         <li>enhance the existing user experience and the editors&#8217; functionality: Autocomplete, Search & Replace, Move cursor, Extended comments;</li>
-        <li>automate tasks in documents with Macros.</li>
+        <li>automate tasks in documents with <a href="<%= Url.Action("macros") %>">Macros</a>.</li>
     </ul>
     <p>Code samples are available at <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>.</p>
     <p>If you are looking for ready-to-use plugins, please visit <a href="https://www.onlyoffice.com/en/app-directory" target="_blank">ONLYOFFICE App Directory</a>.</p>

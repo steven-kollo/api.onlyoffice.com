@@ -181,10 +181,10 @@
     </li>
 </ul>
 <div class="treeheader">Macros</div>
-<ul class="side-nav root"><!--
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("macros") %>">Getting started with macros</a>
-    </li>-->
+    </li>
     <li>
         <a href="<%= Url.Action("writingmacros") %>">Writing macros</a>
     </li>
@@ -192,8 +192,43 @@
         <a href="<%= Url.Action("convertingvbamacros") %>">Converting macros</a>
     </li>
     <li>
-        <a href="<%= Url.Action("macrosamples") %>">Macro samples</a>
-    </li>
+        <a href="<%= Url.Action("macrosamples/") %>">Macro samples</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("macrosamples/writedatatoworksheetcell") %>">Write data to worksheet cell</a>
+            </li> 
+            <li>
+                <a href="<%= Url.Action("macrosamples/changecellbackgroundcolor") %>">Change cell background color</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/changecellfontcolor") %>">Change cell font color</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/makecellfontbold") %>">Make cell font bold</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/mergecellrange") %>">Merge cell range</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/unmergecellrange") %>">Unmerge cell range</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/setcolumnwidth") %>">Set column width</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/formatrangeasatable") %>">Format range as a table</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/addchart") %>">Add chart</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/highlightduplicates") %>">Highlight duplicates</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/nextblankrow") %>">Next blank row</a>
+            </li>  
+        </ul>
+    <li>
 </ul>
 <div class="treeheader">More information</div>
 <ul class="side-nav root">
