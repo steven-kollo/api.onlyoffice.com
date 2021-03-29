@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: getting started page for macros
 - added Desktop Editors section
 - editors: added chamilo plugin
 - changed highlighting style
