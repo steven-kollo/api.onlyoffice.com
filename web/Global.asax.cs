@@ -107,6 +107,10 @@ namespace ASC.Api.Web.Help
                             .Include(
                                 "~/scripts/faq.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/main-page")
+                            .Include(
+                                "~/scripts/main-page.js"));
+
             bundles.Add(new Bundle("~/content/styles", new CssMinify())
                             .Include(
                                 "~/content/styles.css",

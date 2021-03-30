@@ -1730,30 +1730,25 @@ article {
 
 
 .body-block {
-    display: table;
+    display: flex;
     margin: auto;
     max-width: 1120px;
     width: 100%;
     margin-top: 65px;
+    margin-left: -15px;
+    margin-right: -15px;
+    align-items: flex-start;
 }
 
 .ip_main_part {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: grid;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 14px;
+    display: block;
+    width: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .ip_main_part .docs_block {
-    display: inline-block;
+    display: block;
     width: auto;
     position: relative;
     margin-bottom: 18px;

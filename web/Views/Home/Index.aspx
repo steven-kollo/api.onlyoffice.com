@@ -4,7 +4,8 @@
 <%@ Import Namespace="ASC.Api.Web.Help.Models" %>
 
 <asp:Content ID="IndexHead" ContentPlaceHolderID="HeadContent" runat="server">
-    <%= Scripts.Render("~/bundles/faq") %>
+    <%= Scripts.Render("~/bundles/faq")%>
+    <%= Scripts.Render("~/bundles/main-page") %>
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
@@ -32,13 +33,16 @@
             <% } %>
         </div>
 
-        <div class="body-block">
-            <div class="ip_main_part">
-                <% foreach (var product in products)
-                   {
-                %>
-                    <% Html.RenderPartial("ProductBlock", product); %>
-                <% } %>
+        <% foreach (var product in products)
+            {
+        %>
+            <% Html.RenderPartial("ProductBlock", product); %>
+        <% } %>
+
+        <div id="body-block" class="body-block">
+            <div class="ip_main_part col_1">
+            </div>
+            <div class="ip_main_part col_2">
             </div>
         </div>
     </div>

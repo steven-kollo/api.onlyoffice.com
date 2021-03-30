@@ -394,6 +394,7 @@
     <Content Include="Content\img\main-page\hosted_solution.svg" />
     <Content Include="Content\img\main-page\plugins_and_macros.svg" />
     <Content Include="Content\pushy.css" />
+    <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\faq.js" />
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="version.txt" />
