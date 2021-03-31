@@ -82,10 +82,6 @@
         left: 0;
     }
 
-    .pushy .pushy-right {
-        right: 0;
-    }
-
     .pushy-left {
         -webkit-transform: translate3d(-300px, 0, 0);
         -ms-transform: translate3d(-300px, 0, 0);
@@ -123,30 +119,6 @@
         z-index: 999;
     }
 
-    .pushy-right {
-        -ms-transform: translate3d(0px, 0, 0);
-        -webkit-transform: translate3d(0px, 0, 0);
-        transform: translate3d(0px, 0, 0);
-    }
-
-    .pushy-open-right #container {
-        -ms-transform: translate3d(-300px, 0, 0);
-        -webkit-transform: translate3d(-300px, 0, 0);
-        transform: translate3d(-300px, 0, 0);
-    }
-
-    .pushy-open-right .push {
-        -ms-transform: translate3d(-300px, 0, 0);
-        -webkit-transform: translate3d(-300px, 0, 0);
-        transform: translate3d(-300px, 0, 0);
-    }
-
-    .pushy-open-right .pushy {
-        -ms-transform: translate3d(0, 0, 0);
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-
     #container {
         transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
     }
@@ -167,21 +139,6 @@
         position: relative;
     }
 
-    .pushy-submenu a &::after {
-        -ms-transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        content: '';
-        display: block;
-        height: 11px;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: transform 0.2s;
-        width: 8px;
-    }
-
-
     .pushy-submenu-closed ul {
         max-height: 0;
         overflow: hidden;
@@ -190,7 +147,6 @@
     .pushy-submenu-closed .pushy-link {
         opacity: 0;
     }
-
 
     .pushy-submenu-open ul {
         display: block;
@@ -214,15 +170,6 @@
     .site-overlay.hidden {
         display: none;
     }
-    /*.pushy-submenu-open a {
-                -ms-transform: translateY(-50%) rotate(90deg);
-                -webkit-transform: translateY(-50%) rotate(90deg);
-                transform: translateY(-50%) rotate(90deg);
-    }
-    .pushy-submenu-open a::after {
-                -ms-transform: translateY(-50%) rotate(90deg);
-                -webkit-transform: translateY(-50%) rotate(90deg);
-                transform: translateY(-50%) rotate(90deg); */
 
     .pushy-submenu-closed ul {
         display: none;
