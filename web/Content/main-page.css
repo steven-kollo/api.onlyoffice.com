@@ -1,4 +1,11 @@
-﻿.icon-program-block {
+﻿/*
+    Copyright (c) Ascensio System SIA 2019. All rights reserved.
+    https://www.onlyoffice.com
+*/
+
+/* HEAD */
+
+.icon-program-block {
     margin: 70px auto 110px auto;
     justify-content: space-between;
     display: grid;
@@ -27,24 +34,7 @@
     text-decoration: underline;
 }
 
-.pp_info_block_more a {
-    color: #FF6F3D;
-}
-
-.title-block {
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-    margin: 24px 0 0 0;
-}
-
-.title-main {
-    font-size: 32px;
-    font-weight: 700;
-    color: #333;
-    text-align: center;
-    letter-spacing: -0.02em;
-}
+/* IMG */
 
 .img-title-editors {
     background-image: url(img/main-page/document_server.svg);
@@ -104,10 +94,7 @@
     width: 115px;
 }
 
-.product-link-column {
-    display: table-cell;
-    box-sizing: border-box;
-}
+/* BLOCK */
 
 .body-block {
     display: flex;
@@ -156,6 +143,30 @@
     text-align: left;
     color: #333333;
     border-bottom: 1px solid #CCCCCC;
+}
+
+.pp_info_block_more a {
+    color: #FF6F3D;
+}
+
+.title-block {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 24px 0 0 0;
+}
+
+.title-main {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+
+.product-link-column {
+    display: table-cell;
+    box-sizing: border-box;
 }
 
 .api_title {
