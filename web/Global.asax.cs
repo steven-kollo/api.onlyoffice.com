@@ -116,8 +116,8 @@ namespace ASC.Api.Web.Help
                                 "~/content/styles.css",
                                 "~/content/pushy.css",
                                 "~/content/jquery.treeview.css",
-                                "~/content/highlight.css",
-                                "~/content/main-page.css"));
+                                "~/content/main-page.css",
+                                "~/content/highlight.css"));
         }
 
         protected void Application_Start()
