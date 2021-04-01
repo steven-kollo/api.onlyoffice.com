@@ -42,46 +42,59 @@
         <%= method.Description %>
     </span>
 
-    <% if (method.Params != null && method.Params.Any()) { %>
-    <% var hasOptional = method.Params.Any(m => m.Optional); %>
     <h2>Parameters:</h2>
-    <table class="table">
-        <thead>
-            <tr class="tablerow">
-                <td>Name</td>
-                <td>Type</td>
-                <% if (hasOptional) { %>
-                    <td>Default</td>
-                <% } %>
-                <td>Description</td>
-            </tr>
-        </thead>
-        <tbody>
-            <% foreach(var p in method.Params) { %>
+    <% if (method.Params != null && method.Params.Any()) { %>
+    <div id="methodParams">
+    <% var hasOptional = method.Params.Any(m => m.Optional); %>
+        <table class="table">
+            <thead>
                 <tr class="tablerow">
-                    <td><em><%= p.Name %></em></td>
-                    <td>
-                        <em><%= DocBuilderDocumentation.ParamTypeToHtml(p) %></em>
-                    </td>
+                    <td>Name</td>
+                    <td>Type</td>
                     <% if (hasOptional) { %>
-                        <td><%= p.DefaultValue == null ? (p.Optional ? "null" : "") : p.DefaultValue %></td>
+                        <td>Default</td>
                     <% } %>
-                    <td><%= p.Description %></td>
+                    <td>Description</td>
                 </tr>
-            <% } %>
-        </tbody>
-    </table>
-    <% } %>
+            </thead>
+            <tbody>
+                <% foreach(var p in method.Params) { %>
+                    <tr class="tablerow">
+                        <td><em><%= p.Name %></em></td>
+                        <td>
+                            <em><%= DocBuilderDocumentation.ParamTypeToHtml(p) %></em>
+                        </td>
+                        <% if (hasOptional) { %>
+                            <td><%= p.DefaultValue == null ? (p.Optional ? "null" : "") : p.DefaultValue %></td>
+                        <% } %>
+                        <td><%= p.Description %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+    <% } else { %>
+    <div id="methodParams">
+        <p>This method doesn't have any parameters.</p>
+    </div>
+    <%} %>
 
-    <% if (method.Returns != null && method.Returns.Any()) { %>
+
     <h2>Returns:</h2>
+    <% if (method.Returns != null && method.Returns.Any()) { %>
     <dl class="param-type">
         <dt>Type</dt>
         <dd>
             <%= DocBuilderDocumentation.ReturnTypeToHtml(method) %>
         </dd>
     </dl>
-    <% } %>
+    <% } else { %>
+    <dl class="param-type">
+        <dd>
+            This method doesn't return any data.
+        </dd>
+    </dl>
+    <%} %>
 
     <% if (method.Example != null) { %>
         <% if (!string.IsNullOrEmpty(method.Example.Script)) { %>
