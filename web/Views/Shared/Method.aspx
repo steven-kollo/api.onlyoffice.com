@@ -83,7 +83,7 @@
     </div>
     <% } else { %>
     <div id="methodParams">
-        <p>This method doesn't have any parameters</p>
+        <p>This method doesn't have any parameters.</p>
     </div>
     <%} %>
 
@@ -108,9 +108,16 @@
     </div>
 
     <div class="header-gray">Returns</div>
+    <%if (!string.IsNullOrEmpty(method.Returns))
+          { %>
     <div id="methodReturns">
         <p><%= method.Returns %></p>
     </div>
+    <% } else { %>
+    <div id="methodReturns">
+        <p>This method doesn't return any data.</p>
+    </div>
+    <%} %>
 
     <div id="methodResponse">
     <% if (method.Response.Any())
