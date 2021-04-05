@@ -32,10 +32,10 @@ $(document).ready(function () {
         var $secondCol = $("#body-block .ip_main_part.col_2");
 
         if ($firstCol.height() <= $secondCol.height()) {
-            $(block).appendTo($firstCol)
+            $(block).appendTo($firstCol);
         } else {
-            $(block).appendTo($secondCol)
+            $(block).appendTo($secondCol);
         }
-    })
+    });
 
 });

@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage" ContentType="text/html" %>
 
 <%@ Import Namespace="System.Web.Optimization" %>
-<%@ Import Namespace="ASC.Api.Web.Help.Models" %>
 
 <asp:Content ID="IndexHead" ContentPlaceHolderID="HeadContent" runat="server">
-    <%= Scripts.Render("~/bundles/faq")%>
     <%= Scripts.Render("~/bundles/main-page") %>
 </asp:Content>
 
@@ -34,7 +32,7 @@
         </div>
 
         <% foreach (var product in products)
-            {
+           {
         %>
             <% Html.RenderPartial("ProductBlock", product); %>
         <% } %>
