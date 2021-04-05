@@ -338,6 +338,12 @@
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\Editor\php-add.png" />
+    <Content Include="Content\img\macros\add-new-chart.svg" />
+    <Content Include="Content\img\macros\change-cell.svg" />
+    <Content Include="Content\img\macros\column-width.svg" />
+    <Content Include="Content\img\macros\format-range.svg" />
+    <Content Include="Content\img\macros\merge-and-unmerge.svg" />
+    <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
     <Content Include="Content\img\php\handlerclick.png" />
