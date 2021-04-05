@@ -33,10 +33,10 @@
 
     <p>Here are some examples of what you can do with ONLYOFFICE plugins:</p>
     <ul>
-        <li>connect third-party services, like Telegram, YouTube, Thesaurus, Translator, Zotero, OCR, etc.;</li>
-        <li>add custom components & controls in the UI, like Trackchanges, Trackchanges_off;</li>
-        <li>enhance the existing user experience and the editors&#8217; functionality: Autocomplete, Search & Replace, Move cursor, Extended comments;</li>
-        <li>automate tasks in documents with Macros.</li>
+        <li>connect third-party services, like <b>Telegram</b>, <b>YouTube</b>, <b>Thesaurus</b>, <b>Translator</b>, <b>Zotero</b>, <b>OCR</b>, etc.;</li>
+        <li>add custom components & controls in the UI, like <b>Trackchanges</b>, <b>Trackchanges_off</b>;</li>
+        <li>enhance the existing user experience and the editors&#8217; functionality: <b>Autocomplete</b>, <b>Search & Replace</b>, <b>Move cursor</b>, <b>Extended comments</b>;</li>
+        <li>automate tasks in documents with <a href="<%= Url.Action("macros") %>">Macros</a>.</li>
     </ul>
     <p>Code samples are available at <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>.</p>
     <p>If you are looking for ready-to-use plugins, please visit <a href="https://www.onlyoffice.com/en/app-directory" target="_blank">ONLYOFFICE App Directory</a>.</p>
@@ -46,7 +46,7 @@
 
     <p>To create your own plugin, you need to follow a few steps:</p>
     <ol>
-        <li>Learn the fundamental concepts for building plugins on the Getting started with plugins page 
+        <li>Learn the fundamental concepts for building plugins on the <a href="<%= Url.Action("gettingstarted") %>">Getting started with plugins</a> page 
             and write code that defines the plugin appearance and behavior.</li>
         <li>After building the plugin, test it thoroughly and make sure the plugin looks and works as you expected. 
             Try to anticipate the problems that might occur and suggest your solutions to them.</li>
@@ -56,7 +56,7 @@
 
     <h2>How to get help</h2>
 
-    <p>If you have any questions about plugins, try to find them in the FAQ section first.</p>
+    <p>If you have any questions about plugins, try to find them in the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
     <p>You can also request a feature or report a bug by posting an issue <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
 
 </asp:Content>
