@@ -349,7 +349,6 @@
     <Content Include="Content\img\php\php-version-2.jpg" />
     <Content Include="Content\img\plugin.png" />
     <Content Include="Content\img\plugins\macros.png" />
-    <Content Include="Content\img\plugins\youtube-interface.png" />
     <Content Include="Content\img\portals.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
