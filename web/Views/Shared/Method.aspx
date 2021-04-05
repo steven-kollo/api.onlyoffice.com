@@ -108,8 +108,8 @@
     </div>
 
     <div class="header-gray">Returns</div>
-    <%if (!string.IsNullOrEmpty(method.Returns))
-          { %>
+    <% if (!string.IsNullOrEmpty(method.Returns))
+       { %>
     <div id="methodReturns">
         <p><%= method.Returns %></p>
     </div>
@@ -117,7 +117,7 @@
     <div id="methodReturns">
         <p>This method doesn't return any data.</p>
     </div>
-    <%} %>
+    <% } %>
 
     <div id="methodResponse">
     <% if (method.Response.Any())

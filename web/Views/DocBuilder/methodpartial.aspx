@@ -77,7 +77,7 @@
     <div id="methodParams">
         <p>This method doesn't have any parameters.</p>
     </div>
-    <%} %>
+    <% } %>
 
 
     <h2>Returns:</h2>
@@ -94,7 +94,7 @@
             This method doesn't return any data.
         </dd>
     </dl>
-    <%} %>
+    <% } %>
 
     <% if (method.Example != null) { %>
         <% if (!string.IsNullOrEmpty(method.Example.Script)) { %>
