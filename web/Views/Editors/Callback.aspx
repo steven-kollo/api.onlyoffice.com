@@ -44,7 +44,7 @@
                     <ul>
                         <li><b>0</b> - the user disconnects from the document co-editing,</li>
                         <li><b>1</b> - the new user connects to the document co-editing,</li>
-                        <li><b>2</b> - the user clicks the <em>forcesave</em> button.</li>
+                        <li><b>2</b> - the user clicks the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave button</a>.</li>
                     </ul> 
                     The <em>userid</em> field value is the user identifier.
                 </td>
