@@ -14,7 +14,7 @@
         <span class="hdr">ONLYOFFICE Document Builder</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE DocumentBuilder</span><span class="pvl_version">v6.1</span>
+    <span class="pvl_product">ONLYOFFICE DocumentBuilder</span><span class="pvl_version">v6.2</span>
 
     <p class="dscr">
         <b>ONLYOFFICE Document Builder</b> allows you to build a document easily without the need to actually run a document processing editor.
