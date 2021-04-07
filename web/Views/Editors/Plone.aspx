@@ -55,7 +55,7 @@
 ...
 
 eggs =
-onlyoffice.connector
+    onlyoffice.connector
     </span>
 
     <p>and then running <em>bin/buildout</em></p>
@@ -101,12 +101,12 @@ git clone --branch deploy git@github.com:ONLYOFFICE/onlyoffice-plone.git
 cd onlyoffice-plone
     </span>
 
-    <p>Create a virtualenv in the package</p>
+    <p>Create a <em>virtualenv</em> in the package</p>
     <p>Install requirements with pip</p>
     <p>Run buildout</p>
 
     <span class="commandline">
-virtualenv --clear .
+virtualenv .
 ./bin/pip install -r requirements.txt
 ./bin/buildout
     </span>
@@ -117,6 +117,29 @@ virtualenv --clear .
 ./bin/instance fg
     </span>
 
+    <p>
+        If you have a working Plone instance, you can install plugin by adding the project files to the <em>scr</em> directory:
+    </p>
+    <ul>
+        <li>In the <em>scr</em> directory create the <em>onlyoffice.connector</em> directory</li>
+        <li>Put your project files received by git into the <em>onlyoffice.connector</em> directory</li>
+        <li>Edit the <em>buildout.cfg</em> file:</li>
+        <span class="commandline">
+[buildout]
+
+...
+
+eggs =
+    onlyoffice.connector
+develop = 
+    src/onlyoffice.connector
+        </span>
+        <li>You need to rerun buildout for the changes to take effect:</li>
+        <span class="commandline">
+.bin/buildout
+        </span>
+        <li>Then start or restart your Plone instance</li>
+    </ul>
     <p>
         Note that Plone is based on Zope server and will not run as <em>root</em> user.
         If you intend to run it as <em>root</em> user. You must supply <a target="_blank" href="https://zope.readthedocs.io/en/2.12/SETUID.html">effective-user directive</a>. In order to do so add <em>effective-user &lt;username&gt;</em> line to <em>./parts/instance/etc/zope.conf</em>.
