@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added new value for actions.type for callback
 - docbuilder: applying examples on page
 - plugins: added plugin types page
 - plugins: getting started page for macros
