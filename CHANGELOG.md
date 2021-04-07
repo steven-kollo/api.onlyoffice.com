@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: applying examples on page
 - thirdparty licenses
 - editors: opening fb2
 
