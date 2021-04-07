@@ -424,10 +424,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     }
                     else
                     {
-                        if (ex.DemoUrl == null)
-                        {
-                            _logger.InfoFormat("Missing demo for {0}", path);
-                        }
                         if (ex.Script == null)
                         {
                             _logger.InfoFormat("Missing example for {0}", path);
@@ -603,9 +599,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     {
         [JsonProperty("script")]
         public string Script { get; set; }
-
-        [JsonProperty("demo")]
-        public string DemoUrl { get; set; }
     }
 
     public class DBGlobal : DBEntity

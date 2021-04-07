@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: applying examples on page
 - plugins: added plugin types page
 - plugins: getting started page for macros
 - added Desktop Editors section
