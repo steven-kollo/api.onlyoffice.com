@@ -415,14 +415,14 @@ li b.copy-link[id]:hover:before {
 
 .top-nav a {
     color: #555;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 71px;
     outline: none;
     text-decoration: none;
     text-transform: uppercase;
     display: block;
-    padding: 0 10px;
+    padding: 0 7px;
 }
 
 .top-nav a:hover {
@@ -1188,12 +1188,6 @@ ul.buider_page_methods_list,
     top: -72px;
 }
 
-iframe.docbuilder_resulting_docs {
-    width: 100%;
-    height: 500px;
-    margin-top: 10px;
-}
-
 /********************************
     docbuilder action
 ********************************/
@@ -1465,4 +1459,24 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 }
 .inactive_param p:after, .notallowed p:after {
     background-color: #dedede;
+}
+
+/********************************
+    product versions
+********************************/
+.pvl_product {
+    display: inline-block;
+    color: #fff;
+    background-color: #444;
+    padding: 1px 5px 1px 10px;
+    margin: 0;
+    text-align: right;
+}
+.pvl_version {
+    display: inline-block;
+    color: #fff;
+    background-color: #ff642e;
+    padding: 1px 10px 1px 5px;
+    margin: 0;
+    text-align: left;
 }

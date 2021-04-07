@@ -14,7 +14,7 @@
         <span class="hdr">Plugin structure</span>
     </h1>
 
-    <p>Each plugin for the server version is a folder with files. To use the plugins with the desktop version you need to pack this folder into a single zip archive file (see the <a href="<%= Url.Action("installation") %>">Adding plugins</a> section for more information on how to add plugins to the editors).</p>
+    <p>Each plugin for the server version is a folder with files. To use the plugins with the <a href="<%= Url.Action("plugins", "desktop") %>">desktop version</a> you need to pack this folder into a single zip archive file (see the <a href="<%= Url.Action("installation") %>">Adding plugins</a> section for more information on how to add plugins to the editors).</p>
 
     <p>The folder must contain the following files:</p>
 
@@ -30,5 +30,6 @@
         </li>
     </ul>
 
-    <img alt="Structure" src="<%= Url.Content("~/content/img/plugins/plugins-structure-example.png") %>" />
+    </br >
+    <img alt="Structure" src="<%= Url.Content("~/content/img/plugins/plugins-structure.png") %>" />
 </asp:Content>
