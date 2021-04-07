@@ -1466,3 +1466,23 @@ table.parameters_permissions td p, table.parameters_permissions th p {
 .inactive_param p:after, .notallowed p:after {
     background-color: #dedede;
 }
+
+/********************************
+    product versions
+********************************/
+.pvl_product {
+    display: inline-block;
+    color: #fff;
+    background-color: #444;
+    padding: 1px 5px 1px 10px;
+    margin: 0;
+    text-align: right;
+}
+.pvl_version {
+    display: inline-block;
+    color: #fff;
+    background-color: #ff642e;
+    padding: 1px 10px 1px 5px;
+    margin: 0;
+    text-align: left;
+}

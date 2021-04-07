@@ -1,5 +1,6 @@
 # Change Log
 
+- specifying products version
 - added Desktop Editors section
 - editors: added chamilo plugin
 - changed highlighting style

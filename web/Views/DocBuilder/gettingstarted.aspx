@@ -13,25 +13,6 @@
     <h1>
         <span class="hdr">Getting started</span>
     </h1>
-    <style>
-        .pvl_product {
-            display: inline-block;
-            color: #fff;
-            background-color: #444;
-            padding: 1px 5px 1px 10px;
-            margin: 0;
-            text-align: right;
-        }
-        .pvl_version {
-            display: inline-block;
-            color: #fff;
-            background-color: #ff642e;
-            padding: 1px 10px 1px 5px;
-            margin: 0;
-            text-align: left;
-        }
-    </style>
-    <span class="pvl_product">ONLYOFFICE DocumentBuilder</span><span class="pvl_version">v.6.2</span>
 
     <h2>How it works?</h2>
     <p class="dscr">As any document is a composite object consisting of a tree of larger nodes (paragraphs and tables), where it is possible to insert smaller document elements (text runs, images, charts, shapes), <b>ONLYOFFICE Document Builder</b> allows to insert the content and format it to your liking quickly and easily.</p>
