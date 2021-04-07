@@ -14,6 +14,8 @@
         <span class="hdr">Overview</span>
     </h1>
 
+    <span class="pvl_product">ONLYOFFICE Desktop Editors</span><span class="pvl_version">v6.2</span>
+
     <p>
         <b>ONLYOFFICE Desktop Editors</b> is an open-source office suite for working with documents stored on your computer. 
         This application allows you to create, edit and view text documents, spreadsheets and presentations without constant connection to the Internet. 

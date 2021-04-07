@@ -40,8 +40,13 @@
             <tr class="tablerow">
                 <td id="actions" class="copy-link">actions</td>
                 <td>
-                    Defines the object received if the new user connected to the document co-editing or disconnected from it.
-                    In the first case the <em>type</em> field value is <b>1</b>, in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected to or disconnected from the document co-editing.
+                    Defines the object received when the user takes an action with the document. The <em>type</em> field value can have the following values:
+                    <ul>
+                        <li><b>0</b> - the user disconnects from the document co-editing,</li>
+                        <li><b>1</b> - the new user connects to the document co-editing,</li>
+                        <li><b>2</b> - the user clicks the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave button</a>.</li>
+                    </ul> 
+                    The <em>userid</em> field value is the user identifier.
                 </td>
                 <td>array of object</td>
                 <td>optional</td>

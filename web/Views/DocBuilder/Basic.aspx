@@ -14,6 +14,8 @@
         <span class="hdr">ONLYOFFICE Document Builder</span>
     </h1>
 
+    <span class="pvl_product">ONLYOFFICE DocumentBuilder</span><span class="pvl_version">v6.1</span>
+
     <p class="dscr">
         <b>ONLYOFFICE Document Builder</b> allows you to build a document easily without the need to actually run a document processing editor.
          It also allows the developers to automate document building using the templates you create or inserting the data from some database of yours into a document or a set of documents. It has all the features of a common document editor but is lightweight and can be easily integrated into your document management system, CRM system, etc. using its JavaScript API.

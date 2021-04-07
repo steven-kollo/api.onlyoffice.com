@@ -16,6 +16,6 @@
 
     <p>To run ONLYOFFICE Desktop Editors in debug mode, launch it with <em>--ascdesktop-support-debug-info</em> flag.</p>
     <p>Here is the result:</p>
-    <img alt="Debug" src="<%= Url.Content("~/content/img/desktop/debug.png") %>" />
+    <img alt="Debug" src="<%= Url.Content("~/content/img/desktop/debugging.png") %>" />
     
 </asp:Content>

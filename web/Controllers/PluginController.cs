@@ -98,7 +98,18 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/Macros",
                 "macros/Writing",
                 "macros/ConvertingVBA",
-                "macros/Samples",
+                "macros/macrosamples",
+                "macros/macrosamples/writedatatoworksheetcell",
+                "macros/macrosamples/changecellbackgroundcolor",
+                "macros/macrosamples/changecellfontcolor",
+                "macros/macrosamples/makecellfontbold",
+                "macros/macrosamples/mergecellrange",
+                "macros/macrosamples/unmergecellrange",
+                "macros/macrosamples/setcolumnwidth",
+                "macros/macrosamples/formatrangeasatable",
+                "macros/macrosamples/addchart",
+                "macros/macrosamples/highlightduplicates",
+                "macros/macrosamples/nextblankrow"
             };
 
         public ActionResult Index()
@@ -289,9 +300,13 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Macros/ConvertingVBAMacros");
         }
 
-        public ActionResult MacroSamples()
+        public ActionResult Macrosamples(string catchall)
         {
-            return View("Macros/MacroSamples");
+            if (!_actionMap.Contains("Macros/Macrosamples/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Macros/Macrosamples", (object)catchall);
         }
 
         public ActionResult WritingMacros()
