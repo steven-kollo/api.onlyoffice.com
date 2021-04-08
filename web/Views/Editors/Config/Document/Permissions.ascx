@@ -199,6 +199,7 @@
             <td>
                 Defines the list of <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose documents the user can review.
                 The <em>""</em> value means that the user can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
+                If the parameter value is [], the user cannot review changes made by any group.
             </td>
             <td>array of string</td>
             <td></td>
