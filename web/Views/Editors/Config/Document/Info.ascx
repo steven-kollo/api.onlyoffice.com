@@ -43,12 +43,17 @@
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="favorite" class="copy-link">favorite</td>
             <td>Defines the highlighting state of the <em>Favorite</em> icon.
             If the parameter is <em>undefined</em>, the <em>Favorite</em> icon is not displayed at the editor window header.</td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/favorite.png") %>" alt="" />
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="folder" class="copy-link">folder</td>
