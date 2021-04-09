@@ -1283,12 +1283,6 @@ ul.buider_page_methods_list,
         top: -72px;
     }
 
-iframe.docbuilder_resulting_docs {
-    width: 100%;
-    height: 500px;
-    margin-top: 10px;
-}
-
 /********************************
     docbuilder action
 ********************************/
@@ -1785,4 +1779,24 @@ article {
     .layout-table-footer {
         height: 100%;
     }
+}
+
+/********************************
+    product versions
+********************************/
+.pvl_product {
+    display: inline-block;
+    color: #fff;
+    background-color: #444;
+    padding: 1px 5px 1px 10px;
+    margin: 0;
+    text-align: right;
+}
+.pvl_version {
+    display: inline-block;
+    color: #fff;
+    background-color: #ff642e;
+    padding: 1px 10px 1px 5px;
+    margin: 0;
+    text-align: left;
 }

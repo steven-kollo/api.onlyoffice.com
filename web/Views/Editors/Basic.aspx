@@ -15,6 +15,8 @@
         <span class="hdr">Basic concepts</span>
     </h1>
 
+    <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v6.2</span>
+
     <p class="dscr">ONLYOFFICE Document Server API is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
 
     <p>The API JavaScript file can normally be found in the following editors folder:</p>

@@ -1,5 +1,9 @@
 # Change Log
 
+- editors: install and update plone instruction
+- specifying products version
+- editors: added new value for actions.type for callback
+- docbuilder: applying examples on page
 - plugins: added plugin types page
 - plugins: getting started page for macros
 - added Desktop Editors section

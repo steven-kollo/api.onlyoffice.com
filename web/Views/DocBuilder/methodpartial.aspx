@@ -101,11 +101,78 @@
                 <h2>Example</h2>
                 <div class="button copy-code">Copy code</div>
 <pre><%= method.Example.Script %></pre>
-        <% } %>
 
-        <% if (!string.IsNullOrEmpty(method.Example.DemoUrl)) { %>
-            <h2>Resulting document</h2>
-            <iframe class="docbuilder_resulting_docs" src="<%= method.Example.DemoUrl %>" frameborder="0" scrolling="no" allowtransparency></iframe>
+    <h2>Resulting document</h2>
+
+    <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+
+    <div id="editorSpace">
+        <div id="placeholder"></div>
+    </div>
+
+    <script type="text/javascript">
+        <%
+            var ext = "docx";
+            switch (method.Module)
+            {
+                case "cell":
+                    ext = "xlsx";
+                    break;
+                case "slide":
+                    ext = "pptx";
+                    break;
+            }
+        %>
+
+        var config = <%= Config.Serialize(
+            new Config
+                {
+                    Document = new Config.DocumentConfig
+                        {
+                            FileType = ext,
+                            Key = "apiwh" + Guid.NewGuid(),
+                            Title = "Example Title." + ext,
+                            Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext
+                        },
+                    DocumentType = method.Module,
+                    EditorConfig = new Config.EditorConfigConfiguration
+                        {
+                            CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                            Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                {
+                                    Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                                        {
+                                            Visible = true
+                                        },
+                                    HideRightMenu = true
+                                },
+                            Plugins = new Config.EditorConfigConfiguration.PluginsConfig()
+                                {
+                                    PluginsData = new List<string>
+                                        {
+                                            new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/externallistener/config.json"), Query = ""}.ToString()
+                                        }
+                                }
+                        },
+                    Height = "550px",
+                    Width = "100%"
+                }) %>;
+
+        window.addEventListener("message", function (message) {
+            if (message && message.data == "externallistenerReady") {
+                document.getElementsByName("frameEditor")[0].contentWindow.postMessage(JSON.stringify({
+                    guid : "asc.{A8705DEE-7544-4C33-B3D5-168406D92F72}",
+                    type : "onExternalPluginMessage",
+                    data : {
+                        type: "executeCommand",
+                        text: "<%= Regex.Replace(method.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", ""), "\\r*\\n", "") %>"
+                    }
+                }), "<%= ConfigurationManager.AppSettings["editor_url"] ?? "*" %>");
+            }
+        }, false);
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    </script>
         <% } %>
     <% } %>
 

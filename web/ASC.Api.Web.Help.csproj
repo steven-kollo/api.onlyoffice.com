@@ -397,6 +397,9 @@
     <Content Include="Content\img\plugins\write-data-to-cell.png" />
     <Content Include="Content\img\plugins\highlight-duplicates.png" />
     <Content Include="Content\img\plugins\plugins-structure.png" />
+    <Content Include="externallistener\config.json" />
+    <Content Include="externallistener\index.html" />
+    <Content Include="externallistener\scripts\code.js" />
     <Content Include="Content\img\main-page\community_server.svg" />
     <Content Include="Content\img\main-page\desktop.svg" />
     <Content Include="Content\img\main-page\document_builder.svg" />
