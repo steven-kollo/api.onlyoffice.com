@@ -42,7 +42,7 @@
                         <a href="<%= Url.Action("executecommand") %>">executeCommand</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("executemethod") %>">executeMethod</a>
+                        <a href="<%= Url.Action("executemethod/") %>">executeMethod</a>
                         <ul>
                             <li>
                                 <a href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
@@ -107,7 +107,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("info") %>">info object</a>
+                        <a href="<%= Url.Action("info/") %>">info object</a>
                         <ul>
                             <li>
                                 <a href="<%= Url.Action("info/data") %>">data</a>
@@ -158,7 +158,7 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("installation") %>">Adding plugins</a>
+        <a href="<%= Url.Action("installation/") %>">Adding plugins</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("installation/desktop") %>">ONLYOFFICE Desktop Editors</a>
