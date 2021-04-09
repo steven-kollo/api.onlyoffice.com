@@ -48,16 +48,16 @@
     <h2 id="install" class="copy-link">Installing Plone ONLYOFFICE integration plugin</h2>
 
     <ol>
-        <li>Install plugin by adding it to your <em>buildout.cfg</em>:</li>
-
-    <span class="commandline">
+        <li>Install plugin by adding it to your <em>buildout.cfg</em>:
+            <span class="commandline">
 [buildout]
 
 ...
 
 eggs =
     onlyoffice.connector
-    </span>
+            </span>
+        </li>
 
         <li>Run <em>bin/buildout</em>.</li>
 
@@ -81,28 +81,27 @@ docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.connector" plone
     <h2 id="developing" class="copy-link">Developing Plone ONLYOFFICE plugin</h2>
 
     <ol>
-        <li>Clone repository and change directory:</li>
+        <li>Clone repository and change directory:
 
-        <span class="commandline">
+            <span class="commandline">
 git clone --branch deploy git@github.com:ONLYOFFICE/onlyoffice-plone.git
 cd onlyoffice-plone
-        </span>
-
+            </span>
+        </li>
         <li>Create a <em>virtualenv</em> in the package.</li>
         <li>Install requirements with pip.</li>
-        <li>Run <em>buildout</em>:</li>
-
-        <span class="commandline">
+        <li>Run <em>buildout</em>:
+            <span class="commandline">
 virtualenv .
 ./bin/pip install -r requirements.txt
 ./bin/buildout
-        </span>
-
-        <li>Start Plone in foreground:</li>
-
-        <span class="commandline">
+            </span>
+        </li>
+        <li>Start Plone in foreground:
+            <span class="commandline">
 ./bin/instance fg
-        </span>
+            </span>
+        </li>
     </ol>
 
     <p>
@@ -111,8 +110,8 @@ virtualenv .
     <ol>
         <li>In the <em>scr</em> directory create the <em>onlyoffice.connector</em> directory.</li>
         <li>Put your project files received by git into the <em>onlyoffice.connector</em> directory.</li>
-        <li>Edit the <em>buildout.cfg</em> file:</li>
-        <span class="commandline">
+        <li>Edit the <em>buildout.cfg</em> file:
+            <span class="commandline">
 [buildout]
 
 ...
@@ -121,11 +120,13 @@ eggs =
     onlyoffice.connector
 develop = 
     src/onlyoffice.connector
-        </span>
-        <li>Rerun buildout for the changes to take effect:</li>
-        <span class="commandline">
+            </span>
+        </li>
+        <li>Rerun buildout for the changes to take effect:
+            <span class="commandline">
 .bin/buildout
-        </span>
+            </span>
+        </li>
         <li>Then start or restart your Plone instance.</li>
     </ol>
     <p>
@@ -133,27 +134,23 @@ develop =
         If you intend to run it as <em>root</em> user. You must supply <a target="_blank" href="https://zope.readthedocs.io/en/2.12/SETUID.html">effective-user directive</a>. In order to do so add <em>effective-user &lt;username&gt;</em> line to <em>./parts/instance/etc/zope.conf</em>.
     </p>
 
-    <h2 id="how-it-works" class="copy-link">Upgrade Plone ONLYOFFICE integration plugin</h2>
+    <h2 id="upgrade" class="copy-link">Upgrade Plone ONLYOFFICE integration plugin</h2>
 
     <ol>
-        <li>If you specified a concrete plugin version in your <em>buildout.cfg</em> file (so-called <em>pinning</em>, and a recommended practice), 
-            like onlyoffice.connector = 1.0.0, update this reference to point to the newer version. 
-            If the plugin version is not specified, then the latest version will be automatically loaded:</li>
-
-        <span class="commandline">
+        <li>If you specified a concrete plugin version in your <em>buildout.cfg</em> file (so-called <em>pinning</em>, and a recommended practice), like onlyoffice.connector = 1.0.0, update this reference to point to the newer version. 
+            If the plugin version is not specified, then the latest version will be automatically loaded:
+            <span class="commandline">
 [versions]
 
 ...
 
 onlyoffice.connector = 1.0.1
-        </span>
-
+            </span>
+        </li>
         <li>Run <em>bin/buildout</em>. Wait until the new version is downloaded and installed.</li>
         <li>Restart Plone - your site may look weird, or even be inaccessible until you have performed the next step.</li>
-        <li>Navigate to the <b>Add-on</b> screen (add <em>/prefs_install_products_form</em> to your site URL) and 
-            in the <b>Upgrades</b> list select <em>onlyoffice.connector</em> and click <b>Upgrade onlyoffice.connector</b>.</li>
+        <li>Navigate to the <b>Add-on</b> screen (add <em>/prefs_install_products_form</em> to your site URL) and in the <b>Upgrades</b> list select <em>onlyoffice.connector</em> and click <b>Upgrade onlyoffice.connector</b>.</li>
     </ol>
-
 
 
     <h2 id="how-it-works" class="copy-link">How it works</h2>
