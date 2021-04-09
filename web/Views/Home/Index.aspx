@@ -4,7 +4,7 @@
 
 <asp:Content ID="IndexHead" ContentPlaceHolderID="HeadContent" runat="server">
     <%= Scripts.Render("~/bundles/main-page") %>
-    <%= Styles.Render("~/content/styles/main-page") %>
+    <%= Styles.Render("~/content/main-page") %>
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">

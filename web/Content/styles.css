@@ -1447,7 +1447,7 @@ a.qa-question-link {
             content: '';
             width: 29px;
             height: 24px;
-            background-image: url(img/accordions_sprite.png);
+            background-image: url("img/accordions_sprite.png");
             background-repeat: no-repeat;
             background-position: 0 0;
             position: absolute;
@@ -1627,32 +1627,32 @@ article {
 }
 
 .worksheet {
-    background-image: url(img/macros/worksheet.svg);
+    background-image: url("img/macros/worksheet.svg");
     background-repeat: no-repeat;
 }
 
 .change-cell {
-    background-image: url(img/macros/change-cell.svg);
+    background-image: url("img/macros/change-cell.svg");
     background-repeat: no-repeat;
 }
 
 .merge-and-unmerge {
-    background-image: url(img/macros/merge-and-unmerge.svg);
+    background-image: url("img/macros/merge-and-unmerge.svg");
     background-repeat: no-repeat;
 }
 
 .column-width {
-    background-image: url(img/macros/column-width.svg);
+    background-image: url("img/macros/column-width.svg");
     background-repeat: no-repeat;
 }
 
 .format-range {
-    background-image: url(img/macros/format-range.svg);
+    background-image: url("img/macros/format-range.svg");
     background-repeat: no-repeat;
 }
 
 .add-new-chart {
-    background-image: url(img/macros/add-new-chart.svg);
+    background-image: url("img/macros/add-new-chart.svg");
     background-repeat: no-repeat;
 }
 

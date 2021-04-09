@@ -58,7 +58,7 @@
 /* IMG */
 
 .img-title-editors {
-    background-image: url(img/main-page/document_server.svg);
+    background-image: url("img/main-page/document_server.svg");
     background-repeat: no-repeat;
     width: 186px;
     height: 100px;
@@ -67,7 +67,7 @@
 }
 
 .img-title-docbuilder {
-    background-image: url(img/main-page/document_builder.svg);
+    background-image: url("img/main-page/document_builder.svg");
     background-repeat: no-repeat;
     width: 186px;
     height: 100px;
@@ -76,7 +76,7 @@
 }
 
 .img-title-apisystem {
-    background-image: url(img/main-page/hosted_solution.svg);
+    background-image: url("img/main-page/hosted_solution.svg");
     background-repeat: no-repeat;
     width: 186px;
     height: 100px;
@@ -85,7 +85,7 @@
 }
 
 .img-title-plugin {
-    background-image: url(img/main-page/plugins_and_macros.svg);
+    background-image: url("img/main-page/plugins_and_macros.svg");
     background-repeat: no-repeat;
     width: 186px;
     height: 100px;
@@ -94,7 +94,7 @@
 }
 
 .img-title-portals {
-    background-image: url(img/main-page/community_server.svg);
+    background-image: url("img/main-page/community_server.svg");
     background-repeat: no-repeat;
     width: 186px;
     height: 100px;
@@ -103,7 +103,7 @@
 }
 
 .img-title-desktop {
-    background-image: url(img/main-page/desktop.svg);
+    background-image: url("img/main-page/desktop.svg");
     background-repeat: no-repeat;
     width: 186px;
     height: 100px;

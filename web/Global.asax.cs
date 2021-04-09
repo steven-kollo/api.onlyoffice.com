@@ -118,7 +118,7 @@ namespace ASC.Api.Web.Help
                                 "~/content/jquery.treeview.css",
                                 "~/content/highlight.css"));
 
-            bundles.Add(new Bundle("~/content/styles/main-page", new CssMinify())
+            bundles.Add(new Bundle("~/content/main-page", new CssMinify())
                             .Include(
                                 "~/content/main-page.css"));
         }
