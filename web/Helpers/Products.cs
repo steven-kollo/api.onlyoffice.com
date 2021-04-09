@@ -27,6 +27,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization;
 using ASC.Common.Logging;
 using Newtonsoft.Json;
@@ -44,6 +45,9 @@ namespace ASC.Api.Web.Help.Helpers
 
         [DataMember(Name = "description")]
         public string Description;
+
+        [DataMember(Name = "version")]
+        public string Version;
 
         [DataMember(Name = "links")]
         public Dictionary<string, List<Tuple<string, string>>> Links;
@@ -77,6 +81,11 @@ namespace ASC.Api.Web.Help.Helpers
             }
 
             return _allProducts;
+        }
+
+        public static Product Get(string id)
+        {
+            return EnabledProducts().FirstOrDefault(product => product.Id == id);
         }
     }
 }
