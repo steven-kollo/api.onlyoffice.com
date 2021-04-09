@@ -39,7 +39,7 @@
             <td>true</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="anonymous" class="copy-link">anonymous</td>
             <td>
                 Adds a request for the anonymous name:
@@ -64,6 +64,11 @@
             </td>
             <td>object</td>
             <td></td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
+            </td>
         </tr>
         <tr>
             <td id="autosave" class="copy-link">autosave</td>
@@ -243,7 +248,7 @@
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.forcesave</em> parameter.</div>
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="goback" class="copy-link">goback</td>
             <td>
                 Defines settings for the <b>Open file location</b> menu button and upper right corner button.
@@ -284,6 +289,11 @@
             <td>boolean or object</td>
             <td>true</td>
         </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
+            </td>
+        </tr>
         <tr>
             <td id="help" class="copy-link">help</td>
             <td>
@@ -312,7 +322,7 @@
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.hideRightMenu</em> parameter.</div>
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="hideRulers" class="copy-link">hideRulers</td>
             <td>
                 Defines if the editor rulers are displayed (<b>true</b>) or hidden (<b>false</b>). 
@@ -320,6 +330,11 @@
             </td>
             <td>boolean</td>
             <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
+            </td>
         </tr>
         <% if (license)
            { %>
@@ -509,7 +524,7 @@
             <td>true</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
                 Defines if the <b>Submit form</b> button is displayed or hidden.
@@ -518,6 +533,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/submitForm.png") %>" alt="" />
+            </td>
         </tr>
         <% if (license)
             { %>
@@ -540,9 +560,10 @@
             <td>boolean</td>
             <td>false</td>
         </tr>
-        <tr class="tablerow">
+        <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
+                <img src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
             </td>
         </tr>
         <tr>

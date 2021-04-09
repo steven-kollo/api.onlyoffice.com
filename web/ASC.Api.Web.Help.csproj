@@ -331,6 +331,12 @@
     <Content Include="Content\img\Editor\recent.png" />
     <Content Include="Content\img\Editor\review.png" />
     <Content Include="Content\img\Editor\export.jpg" />
+    <Content Include="Content\img\Editor\anonymous.png" />
+    <Content Include="Content\img\Editor\toolbarHideFileName.png" />
+    <Content Include="Content\img\Editor\goback.png" />
+    <Content Include="Content\img\Editor\favorite.png" />
+    <Content Include="Content\img\Editor\submitForm.png" />
+    <Content Include="Content\img\Editor\hideRulers.png" />
     <Content Include="Content\img\java\author.jpg" />
     <Content Include="Content\img\java\make-var.png" />
     <Content Include="Content\img\java\manager-app.jpg" />
