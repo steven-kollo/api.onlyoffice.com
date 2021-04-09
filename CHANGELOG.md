@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: install and update plone instruction
 - specifying products version
 - editors: added new value for actions.type for callback
 - docbuilder: applying examples on page
