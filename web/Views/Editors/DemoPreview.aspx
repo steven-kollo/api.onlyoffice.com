@@ -116,6 +116,10 @@
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
                                             {
                                                 Visible = true

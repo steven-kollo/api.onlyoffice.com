@@ -199,6 +199,9 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "customization", Namespace = "")]
             public class CustomizationConfig
             {
+                [DataMember(Name = "anonymous", EmitDefaultValue = false)]
+                public AnonymousConfig Anonymous;
+
                 [DataMember(Name = "about", EmitDefaultValue = false)]
                 public bool? About;
 
@@ -237,6 +240,14 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "zoom", EmitDefaultValue = false)]
                 public int Zoom;
+
+
+                [DataContract(Name = "anonymous", Namespace = "")]
+                public class AnonymousConfig
+                {
+                    [DataMember(Name = "request")]
+                    public bool Request;
+                }
 
 
                 [DataContract(Name = "customer", Namespace = "")]
