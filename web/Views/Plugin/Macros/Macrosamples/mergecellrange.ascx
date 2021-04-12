@@ -28,4 +28,4 @@ End Sub</pre>
 
 <div class="header-gray">Result</div>
 </br >
-<img alt="Merge cells" src="<%= Url.Content("~/content/img/plugins/merge-cells.png") %>" />
+<img alt="Merge cells" src="<%= Url.Content("~/content/img/plugins/merge_cells.png") %>" />
