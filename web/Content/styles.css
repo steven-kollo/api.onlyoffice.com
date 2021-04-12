@@ -1480,3 +1480,10 @@ table.parameters_permissions td p, table.parameters_permissions th p {
     margin: 0;
     text-align: left;
 }
+
+/********************************
+    page navigation
+********************************/
+.columns-4 {
+    column-count: 4;
+}
