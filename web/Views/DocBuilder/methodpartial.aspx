@@ -144,11 +144,16 @@
                                         {
                                             Request = false
                                         },
+                                    CompactHeader = true,
+                                    CompactToolbar = true,
                                     Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
                                         {
                                             Visible = true
                                         },
-                                    HideRightMenu = true
+                                    HideRightMenu = true,
+                                    HideRulers = true,
+                                    ToolbarHideFileName = true,
+                                    ToolbarNoTabs = true
                                 },
                             Plugins = new Config.EditorConfigConfiguration.PluginsConfig()
                                 {
