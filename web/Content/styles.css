@@ -206,7 +206,6 @@ body {
 }
 
 .layout-side {
-    border-right: 1px solid #F5F5F5;
     height: 100%;
     overflow: hidden;
     padding: 0 24px 0 0;
@@ -217,6 +216,7 @@ body {
 .layout-table-content {
     margin: 0;
     padding: 8px 24px;
+    border-left: 1px solid #EFEFEF;
 }
 
 .layout-content {
@@ -543,15 +543,17 @@ li b.copy-link[id]:hover:before {
 }
 
 .search-input {
-    border: 1px solid #c2c2c2;
+    border: 1px solid #ccc;
     display: inline-block;
     padding: 2px 2px 2px 4px;
     float: left;
-    width: 186px;
-    height: 23px;
+    width: 232px;
+    height: 45px;
     line-height: 18px;
     position: relative;
-    border-radius: 4px;
+    border-radius: 21px;
+    margin-bottom: 30px;
+    background-color: #fff;
 }
 
 .search-box input,
@@ -562,14 +564,16 @@ li b.copy-link[id]:hover:before {
     color: #666;
     display: inline-block;
     font-size: 14px;
-    height: 23px;
+    height: 45px;
     line-height: 23px;
     margin: 0;
     outline: none;
     padding: 0;
     position: absolute;
     top: 2px;
-    width: 187px;
+    width: 188px;
+    border-radius: 21px;
+    left: 50px;
 }
 
 .search-clear {
@@ -580,6 +584,7 @@ li b.copy-link[id]:hover:before {
     position: absolute;
     right: 4px;
     display: none;
+    top: 12px;
 }
 
     .search-clear:hover {
@@ -590,7 +595,7 @@ li b.copy-link[id]:hover:before {
     background: url("img/sprite.png") no-repeat scroll 0 -59px transparent;
     border: 0 none;
     height: 23px;
-    margin: 2px 0 0 10px;
+    margin: 11px 0 0 10px;
     padding: 0;
     width: 23px;
     color: #333333;
@@ -598,6 +603,7 @@ li b.copy-link[id]:hover:before {
     display: inline-block;
     font-size: 13px;
     line-height: normal;
+    z-index: 2;
 }
 
 /*start page*/
@@ -1292,7 +1298,7 @@ ul.buider_page_methods_list,
 
 .builder-run {
     background: no-repeat center 0 transparent;
-    color: #5891d0;
+    color: #333;
     cursor: pointer;
     display: inline-block;
     float: right;
