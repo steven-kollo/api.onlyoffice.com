@@ -2153,6 +2153,9 @@
 		"ApiRange.getformula": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"B1\").SetValue(1);\noWorksheet.GetRange(\"C1\").SetValue(2);\noRange = oWorksheet.GetRange(\"A1\");\noRange.SetValue(\"=SUM(B1:C1)\");\noFormula = oRange.GetFormula();\noWorksheet.GetRange(\"A3\").SetValue(\"Formula of cell A1: \" + oFormula);\nbuilder.SaveFile(\"xlsx\", \"GetFormula.xlsx\");\nbuilder.CloseFile();",
 		},
+		"ApiRange.gethidden": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRows(\"1:3\");\noRange.SetHidden(true);\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"3\");\noHidden = oRange.GetHidden();\noWorksheet.GetRange(\"A4\").SetValue(\"The values from A1:C1 are hidden: \" + oHidden);\nbuilder.SaveFile(\"xlsx\", \"GetHidden.xlsx\");\nbuilder.CloseFile();"
+		},
 		"ApiRange.getrow": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A9\").GetRow();\noWorksheet.GetRange(\"A2\").SetValue(oRange.toString());\nbuilder.SaveFile(\"xlsx\", \"GetRow.xlsx\");\nbuilder.CloseFile();",
 		},
@@ -2210,11 +2213,17 @@
 		"ApiRange.setfontsize": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A2\").SetValue(\"2\");\nsRange = oWorksheet.GetRange(\"A1:D5\");\nsRange.SetFontSize(20);\nbuilder.SaveFile(\"xlsx\", \"SetFontSize.xlsx\");\nbuilder.CloseFile();",
 		},
+		"ApiRange.sethidden": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRows(\"1:3\");\noRange.SetHidden(true);\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"3\");\nbuilder.SaveFile(\"xlsx\", \"SetHidden.xlsx\");\nbuilder.CloseFile();"
+		},
 		"ApiRange.setitalic": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A2\").SetValue(\"Italicized text\");\noWorksheet.GetRange(\"A2\").SetItalic(true);\noWorksheet.GetRange(\"A3\").SetValue(\"Normal text\");\nbuilder.SaveFile(\"xlsx\", \"SetBold.xlsx\");\nbuilder.CloseFile();",
 		},
 		"ApiRange.setnumberformat": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetColumnWidth(0, 30);\noWorksheet.SetColumnWidth(1, 30);\noWorksheet.GetRange(\"A2\").SetValue(\"123456\");\noWorksheet.GetRange(\"B2\").SetValue(\"General\");\noWorksheet.GetRange(\"A2\").SetNumberFormat(\"General\");\noWorksheet.GetRange(\"A3\").SetValue(\"123456\");\noWorksheet.GetRange(\"B3\").SetValue(\"Number\");\noWorksheet.GetRange(\"A3\").SetNumberFormat(\"0.00\");\noWorksheet.GetRange(\"A4\").SetValue(\"123456\");\noWorksheet.GetRange(\"B4\").SetValue(\"Currency\");\noWorksheet.GetRange(\"A4\").SetNumberFormat(\"$#,##0.00\");\noWorksheet.GetRange(\"A5\").SetValue(\"123456\");\noWorksheet.GetRange(\"B5\").SetValue(\"Accounting\");\noWorksheet.GetRange(\"A5\").SetNumberFormat(\"_($* #,##0.00_)\");\noWorksheet.GetRange(\"A6\").SetValue(\"123456\");\noWorksheet.GetRange(\"B6\").SetValue(\"DateShort\");\noWorksheet.GetRange(\"A6\").SetNumberFormat(\"m/d/yyyy\");\noWorksheet.GetRange(\"A7\").SetValue(\"123456\");\noWorksheet.GetRange(\"B7\").SetValue(\"DateLong\");\noWorksheet.GetRange(\"A7\").SetNumberFormat(\"[$-F800]dddd, mmmm dd, yyyy\");\noWorksheet.GetRange(\"A8\").SetValue(\"123456\");\noWorksheet.GetRange(\"B8\").SetValue(\"Time\");\noWorksheet.GetRange(\"A8\").SetNumberFormat(\"[$-F400]h:mm:ss AM/PM\");\noWorksheet.GetRange(\"A9\").SetValue(\"123456\");\noWorksheet.GetRange(\"B9\").SetValue(\"Percentage\");\noWorksheet.GetRange(\"A9\").SetNumberFormat(\"0.00%\");\noWorksheet.GetRange(\"A10\").SetValue(\"123456\");\noWorksheet.GetRange(\"B10\").SetValue(\"Percent\");\noWorksheet.GetRange(\"A10\").SetNumberFormat(\"0%\");\noWorksheet.GetRange(\"A11\").SetValue(\"123456\");\noWorksheet.GetRange(\"B11\").SetValue(\"Fraction\");\noWorksheet.GetRange(\"A11\").SetNumberFormat(\"# ?/?\");\noWorksheet.GetRange(\"A12\").SetValue(\"123456\");\noWorksheet.GetRange(\"B12\").SetValue(\"Scientific\");\noWorksheet.GetRange(\"A12\").SetNumberFormat(\"0.00E+00\");\noWorksheet.GetRange(\"A13\").SetValue(\"123456\");\noWorksheet.GetRange(\"B13\").SetValue(\"Text\");\noWorksheet.GetRange(\"A13\").SetNumberFormat(\"@\");\nbuilder.SaveFile(\"xlsx\", \"SetNumberFormat.xlsx\");\nbuilder.CloseFile();",
+		},
+		"ApiRange.setoffset": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"B3\").SetValue(\"Old Range\");\noRange = oWorksheet.GetRange(\"B3\");\noRange.SetOffset(2, 2);\noRange.SetValue(\"New Range\");\nbuilder.SaveFile(\"xlsx\", \"SetOffset.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiRange.setrowheight": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetRowHeight(32);\nbuilder.SaveFile(\"xlsx\", \"SetRowHeight.xlsx\");\nbuilder.CloseFile();"
