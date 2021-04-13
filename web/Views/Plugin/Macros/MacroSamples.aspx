@@ -4,7 +4,6 @@
     MasterPageFile="~/Views/Shared/Site.Master"
     Inherits="System.Web.Mvc.ViewPage"
     ContentType="text/html" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Macro samples
 </asp:Content>

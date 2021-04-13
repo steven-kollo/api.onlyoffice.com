@@ -107,11 +107,20 @@
                             CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
                             Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                 {
+                                    Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                        {
+                                            Request = false
+                                        },
+                                    CompactHeader = true,
+                                    CompactToolbar = true,
                                     Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
                                         {
                                             Visible = true
                                         },
-                                    HideRightMenu = true
+                                    HideRightMenu = true,
+                                    HideRulers = true,
+                                    ToolbarHideFileName = true,
+                                    ToolbarNoTabs = true
                                 },
                             Plugins = new Config.EditorConfigConfiguration.PluginsConfig()
                                 {

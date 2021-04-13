@@ -14,7 +14,7 @@
         <span class="hdr">Basic concepts</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE Community Server</span><span class="pvl_version">v11.1</span>
+    <span class="pvl_product">ONLYOFFICE Community Server</span><span class="pvl_version">v<%= Products.Get("portals").Version %></span>
 
     <p>
         The ONLYOFFICE Community Server API is implemented as REST over HTTP using GET/POST/PUT/DELETE.

@@ -1,15 +1,5 @@
 # Change Log
 
-- specifying products version
-- editors: added new value for actions.type for callback
-- docbuilder: applying examples on page
-- plugins: added plugin types page
-- plugins: getting started page for macros
-- added Desktop Editors section
-- editors: added chamilo plugin
-- changed highlighting style
-- thirdparty licenses
-- editors: opening fb2
 - editors: added editorConfig.customization.hideRulers
 - editors: added document.permissions.reviewGroups
 - editors: added document.info.favorite
@@ -21,6 +11,19 @@
 - editors: added new forcesave type
 - editors: epub, fb2, html conversion
 - editors: converting xml
+- docbuilder: api v6.2.0
+- redesign
+- editors: install and update plone instruction
+- specifying products version
+- editors: added new value for actions.type for callback
+- docbuilder: applying examples on page
+- plugins: added plugin types page
+- plugins: getting started page for macros
+- added Desktop Editors section
+- editors: added chamilo plugin
+- changed highlighting style
+- thirdparty licenses
+- editors: opening fb2
 
 ## 1.1.0
 - editors: added editorConfig.customization.toolbarHideFileName

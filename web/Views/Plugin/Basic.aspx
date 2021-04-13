@@ -14,7 +14,7 @@
         <span class="hdr">Overview</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE Plugins and Macros</span><span class="pvl_version">v6.2</span>
+    <span class="pvl_product">ONLYOFFICE Plugins and Macros</span><span class="pvl_version">v<%= Products.Get("plugin").Version %></span>
 
     <p>
         ONLYOFFICE <a href="https://www.onlyoffice.com/office-suite.aspx" target="_blank">Docs</a> and <a href="https://www.onlyoffice.com/desktop.aspx" target="_blank">Desktop Editors</a> offer support for plugins allowing developers to add specific features to the editors that are not directly related to the OOXML format.
