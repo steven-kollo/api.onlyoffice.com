@@ -28,4 +28,4 @@ End Sub</pre>
 
 <div class="header-gray">Result</div>
 </br >
-<img alt="Write data" src="<%= Url.Content("~/content/img/plugins/write-data-to-cell.png") %>" />
+<img alt="Write data" src="<%= Url.Content("~/content/img/plugins/write_data_to_cell.png") %>" />
