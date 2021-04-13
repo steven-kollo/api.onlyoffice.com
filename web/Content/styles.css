@@ -548,7 +548,7 @@ li b.copy-link[id]:hover:before {
     padding: 2px 2px 2px 4px;
     float: left;
     width: 232px;
-    height: 45px;
+    height: 40px;
     line-height: 18px;
     position: relative;
     border-radius: 21px;
@@ -564,7 +564,7 @@ li b.copy-link[id]:hover:before {
     color: #666;
     display: inline-block;
     font-size: 14px;
-    height: 45px;
+    height: 40px;
     line-height: 23px;
     margin: 0;
     outline: none;
@@ -595,7 +595,7 @@ li b.copy-link[id]:hover:before {
     background: url("img/sprite.svg") no-repeat scroll 0 -59px transparent;
     border: 0 none;
     height: 23px;
-    margin: 11px 0 0 10px;
+    margin: 10px 0 0 10px;
     padding: 0;
     width: 23px;
     color: #333333;
