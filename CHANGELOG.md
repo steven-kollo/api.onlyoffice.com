@@ -1,6 +1,8 @@
 # Change Log
 
 - docbuilder: api v6.2.0
+- redesign
+- editors: install and update plone instruction
 - specifying products version
 - editors: added new value for actions.type for callback
 - docbuilder: applying examples on page

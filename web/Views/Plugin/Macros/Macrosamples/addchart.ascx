@@ -29,4 +29,4 @@ End Sub</pre>
 
 <div class="header-gray">Result</div>
 </br >
-<img alt="Chart" src="<%= Url.Content("~/content/img/plugins/chart.png") %>" />
+<img alt="Chart" src="<%= Url.Content("~/content/img/plugins/add_chart.png") %>" />

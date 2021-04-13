@@ -24,38 +24,68 @@
 */
 
 
+using System;
 using System.Collections.Generic;
-using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using ASC.Common.Logging;
+using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.Helpers
 {
+    [DataContract(Name = "product", Namespace = "")]
     public class Product
     {
+        [DataMember(Name = "id", IsRequired = true, EmitDefaultValue = false)]
         public string Id;
+
+        [DataMember(Name = "title", IsRequired = true, EmitDefaultValue = false)]
         public string Title;
+
+        [DataMember(Name = "description")]
+        public string Description;
+
+        [DataMember(Name = "version")]
+        public string Version;
+
+        [DataMember(Name = "links")]
+        public Dictionary<string, List<Tuple<string, string>>> Links;
     }
 
     public static class Products
     {
-        public static List<Product> AllProducts = new List<Product>
-            {
-                new Product {Id = "portals", Title = "Community Server"},
-                new Product {Id = "apisystem", Title = "Hosted Solution"},
-                new Product {Id = "editors", Title = "Document Server"},
-                new Product {Id = "plugin", Title = "Plugins and Macros"},
-                new Product {Id = "docbuilder", Title = "Document Builder"},
-                new Product {Id = "desktop", Title = "Desktop Editors"},
-            };
+        private static List<Product> _allProducts;
 
         public static List<Product> EnabledProducts()
         {
-            var products = (ConfigurationManager.AppSettings["enabled_products"] ?? "").Split('|');
+            if (_allProducts == null)
+            {
+                var productsFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "products.json");
 
-            var map = AllProducts.ToDictionary(p => p.Id);
+                if (!File.Exists(productsFile))
+                {
+                    throw new Exception("Products list is not found");
+                }
+                var productsJson = File.ReadAllText(productsFile);
 
-            var enabled = (from product in products where map.ContainsKey(product) select map[product]).ToList();
-            return enabled;
+                try
+                {
+                    _allProducts = JsonConvert.DeserializeObject<List<Product>>(productsJson);
+                }
+                catch (Exception error)
+                {
+                    LogManager.GetLogger("ASC.Api").Error(error);
+                    _allProducts = new List<Product>();
+                }
+            }
+
+            return _allProducts;
+        }
+
+        public static Product Get(string id)
+        {
+            return EnabledProducts().FirstOrDefault(product => product.Id == id);
         }
     }
 }
