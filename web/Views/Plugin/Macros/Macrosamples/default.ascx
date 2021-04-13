@@ -12,7 +12,7 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
     <li class="macro-example">
         <a href="<%= Url.Action("macrosamples/writedatatoworksheetcell") %>"><div class="example-img worksheet"></div></a>
         <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/writedatatoworksheetcell") %>">Write data to worksheet cell</a></h2>
-        <p>In this example we are writing the data (the "Hello world" phrase) to fourth column of the third row of the worksheet</p>
+        <p>In this example we are writing the data (the "Hello world" phrase) to fourth column of the third row of the worksheet.</p>
         <p class="pp_info_block_more"><a href="<%= Url.Action("macrosamples/writedatatoworksheetcell") %>">More</a></p>
     </li>
     <li class="macro-example">
@@ -48,13 +48,13 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
     <li class="macro-example">
         <a href="<%= Url.Action("macrosamples/setcolumnwidth") %>"><div class="example-img column-width"></div></a>
         <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/setcolumnwidth") %>">Set column width</a></h2>
-        <p>In this example we are setting the width for the second ("B") column</p>
+        <p>In this example we are setting the width for the second ("B") column.</p>
         <p class="pp_info_block_more"><a href="<%= Url.Action("macrosamples/setcolumnwidth") %>">More</a></p>
     </li>
     <li class="macro-example">
         <a href="<%= Url.Action("macrosamples/formatrangeasatable") %>"><div class="example-img format-range"></div></a>
         <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/formatrangeasatable") %>">Format range as table</a></h2>
-        <p>In this example we are formatting the range of cells as a table</p>
+        <p>In this example we are formatting the range of cells as a table.</p>
         <p class="pp_info_block_more"><a href="<%= Url.Action("macrosamples/formatrangeasatable") %>">More</a></p>
     </li>
     <li class="macro-example">
