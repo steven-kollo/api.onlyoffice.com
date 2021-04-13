@@ -2009,6 +2009,9 @@
 		"ApiName.getrefersto": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"=SUM(A1:B1)\");\nApi.AddDefName(\"summa\", \"Sheet1!$A$1:$B$1\");\noDefName = Api.GetDefName(\"summa\");\noDefName.SetRefersTo(\"=SUM(A1:B1)\");\noWorksheet.GetRange(\"A3\").SetValue(\"The name 'summa' refers to the formula from the cell C1.\");\noWorksheet.GetRange(\"A4\").SetValue(\"Formula: \" + oDefName.GetRefersTo());\nbuilder.SaveFile(\"xlsx\", \"GetRefersTo.xlsx\");\nbuilder.CloseFile();",
 		},
+		"ApiName.getreferstorange": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"numbers\", \"Sheet1!$A$1:$B$1\");\noDefName = Api.GetDefName(\"numbers\");\noRange = oDefName.GetRefersToRange();\noRange.SetBold(true);\nbuilder.SaveFile(\"xlsx\", \"GetRefersToRange.xlsx\");\nbuilder.CloseFile();"
+		},
 		"ApiName.setname": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\nApi.AddDefName(\"name\", \"Sheet1!$A$1:$B$1\");\noDefName = Api.GetDefName(\"name\");\noDefName.SetName(\"new_name\");\noNewDefName = Api.GetDefName(\"new_name\");\noWorksheet.GetRange(\"A3\").SetValue(\"The new name of the range: \" + oNewDefName.GetName());\nbuilder.SaveFile(\"xlsx\", \"SetName.xlsx\");\nbuilder.CloseFile();",
 		},
