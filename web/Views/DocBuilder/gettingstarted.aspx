@@ -13,6 +13,7 @@
     <h1>
         <span class="hdr">Getting started</span>
     </h1>
+
     <h2>How it works?</h2>
     <p class="dscr">As any document is a composite object consisting of a tree of larger nodes (paragraphs and tables), where it is possible to insert smaller document elements (text runs, images, charts, shapes), <b>ONLYOFFICE Document Builder</b> allows to insert the content and format it to your liking quickly and easily.</p>
     <p><b>ONLYOFFICE Document Builder</b> is a C++ library used to create and edit Office Open XML format files (documents, spreadsheets and presentations) and save them to DOCX, XSLX, PPTX and PDF formats.</p>
