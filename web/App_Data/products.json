@@ -1,0 +1,334 @@
+[
+   {
+      "id":"editors",
+      "title":"Document Server",
+      "description":"Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
+      "version":"6.2",
+      "links":{
+         "Get Started":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"basic"
+            },
+            {
+               "Item1":"Try now",
+               "Item2":"try"
+            },
+            {
+               "Item1":"Integration examples",
+               "Item2":"demopreview"
+            },
+            {
+               "Item1":"Integration connectors",
+               "Item2":"plugins"
+            },
+            {
+               "Item1":"How it works",
+               "Item2":"howitworks"
+            }
+         ],
+         "Documentation":[
+            {
+               "Item1":"Advanced parameters",
+               "Item2":"advanced"
+            },
+            {
+               "Item1":"Config",
+               "Item2":"config/"
+            },
+            {
+               "Item1":"Methods",
+               "Item2":"methods"
+            },
+            {
+               "Item1":"Callback handler",
+               "Item2":"callback"
+            },
+            {
+               "Item1":"Command service",
+               "Item2":"command"
+            },
+            {
+               "Item1":"Conversion API",
+               "Item2":"conversionapi"
+            },
+            {
+               "Item1":"Document Builder API",
+               "Item2":"documentbuilderapi"
+            },
+            {
+               "Item1":"Signature",
+               "Item2":"signature/"
+            }
+         ],
+         "More information":[
+            {
+               "Item1":"Changelog",
+               "Item2":"changelog"
+            },
+            {
+               "Item1":"FAQ",
+               "Item2":"faq"
+            },
+            {
+               "Item1":"Troubleshooting",
+               "Item2":"troubleshooting"
+            }
+         ]
+      }
+   },
+   {
+      "id":"plugin",
+      "title":"Plugins and Macros",
+      "description":"Extend the ONLYOFFICE Docs functionality. In this section you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
+      "version":"6.2",
+      "links":{
+         "Get started":[
+            {
+               "Item1":"Introduction",
+               "Item2":"basic"
+            }
+         ],
+         "Documentation":[
+            {
+               "Item1":"Plugin structure",
+               "Item2":"structure"
+            },
+            {
+               "Item1":"Plugin installation",
+               "Item2":"installation"
+            },
+            {
+               "Item1":"Plugin localization",
+               "Item2":"localization"
+            },
+            {
+               "Item1":"Plugin styles",
+               "Item2":"styles"
+            },
+            {
+               "Item1":"Plugin example",
+               "Item2":"example"
+            }
+         ],
+         "Macros":[
+            {
+               "Item1":"Writing macros",
+               "Item2":"writingmacros"
+            },
+            {
+               "Item1":"Converting macros",
+               "Item2":"convertingvbamacros"
+            },
+            {
+               "Item1":"Macro samples",
+               "Item2":"macrosamples"
+            }
+         ]
+      }
+   },
+   {
+      "id":"docbuilder",
+      "title":"Document Builder",
+      "description":"Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
+      "version": "6.1",
+      "links":{
+         "Get started":[
+            {
+               "Item1":"Introduction",
+               "Item2":"basic"
+            },
+            {
+               "Item1":"Getting started",
+               "Item2":"gettingstarted"
+            },
+            {
+               "Item1":"Integrating Builder",
+               "Item2":"integratingdocumentbuilder"
+            }
+         ],
+         "Documentation":[
+            {
+               "Item1":"Integration API",
+               "Item2":"integrationapi"
+            },
+            {
+               "Item1":"Text document API",
+               "Item2":"textdocumentapi"
+            },
+            {
+               "Item1":"Spreadsheet API",
+               "Item2":"spreadsheetapi"
+            },
+            {
+               "Item1":"Presentation API",
+               "Item2":"presentationapi"
+            },
+            {
+               "Item1":"Global",
+               "Item2":"global"
+            },
+            {
+               "Item1":"List of classes",
+               "Item2":"classlist"
+            }
+         ]
+      }
+   },
+   {
+      "id":"desktop",
+      "title":"Desktop Editors",
+      "description":"Extent the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.",
+      "version":"6.2",
+      "links":{
+         "Get Started":[
+            {
+               "Item1":"Overview",
+               "Item2":"basic"
+            }
+         ],
+         "Documentation":[
+            {
+               "Item1":"Debugging",
+               "Item2":"debugging"
+            },
+            {
+               "Item1":"Adding plugins",
+               "Item2":"plugins"
+            },
+            {
+               "Item1":"Adding a DMS provider",
+               "Item2":"addingdms/"
+            }
+         ],
+         "More information":[
+            {
+               "Item1":"Changelog",
+               "Item2":"changelog"
+            },
+            {
+               "Item1":"FAQ",
+               "Item2":"faq"
+            }
+         ]
+      }
+   },
+   {
+      "id":"portals",
+      "title":"Community Server",
+      "description":"Create your own productivity platform based on ONLYOFFICE Groups. In this section you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.",
+      "version":"11.1",
+      "links":{
+         "Get started":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"basic"
+            },
+            {
+               "Item1":"Passing authentication",
+               "Item2":"auth"
+            }
+         ],
+         "Documentation":[
+            {
+               "Item1":"authentication",
+               "Item2":"section/authentication"
+            },
+            {
+               "Item1":"calendar",
+               "Item2":"section/calendar"
+            },
+            {
+               "Item1":"capabilities",
+               "Item2":"section/capabilities"
+            },
+            {
+               "Item1":"community",
+               "Item2":"section/community"
+            },
+            {
+               "Item1":"crm",
+               "Item2":"section/crm"
+            },
+            {
+               "Item1":"feed",
+               "Item2":"section/feed"
+            },
+            {
+               "Item1":"files",
+               "Item2":"section/files"
+            },
+            {
+               "Item1":"group",
+               "Item2":"section/group"
+            },
+            {
+               "Item1":"mail",
+               "Item2":"section/mail"
+            },
+            {
+               "Item1":"mailserver",
+               "Item2":"section/mailserver"
+            },
+            {
+               "Item1":"people",
+               "Item2":"section/people"
+            },
+            {
+               "Item1":"portal",
+               "Item2":"section/portal"
+            },
+            {
+               "Item1":"project",
+               "Item2":"section/project"
+            },
+            {
+               "Item1":"settings",
+               "Item2":"section/settings"
+            }
+         ],
+         "Help":[
+            {
+               "Item1":"F.A.Q.",
+               "Item2":"faq"
+            },
+            {
+               "Item1":"Filtering",
+               "Item2":"filters"
+            },
+            {
+               "Item1":"Batching",
+               "Item2":"batch"
+            }
+         ]
+      }
+   },
+   {
+      "id":"apisystem",
+      "title":"Hosted Solution",
+      "description":"Host ONLYOFFICE Groups to make your collaboration platform online. In this section you will learn how to make GET and POST requests to manage portals, set tariff plans and pass authentication.",
+      "version":"11.1",
+      "links":{
+         "Get started":[
+            {
+               "Item1":"Basic concepts",
+               "Item2":"basic"
+            },
+            {
+               "Item1":"Authentication",
+               "Item2":"authentication"
+            }
+         ],
+         "Methods":[
+            {
+               "Item1":"Portals",
+               "Item2":"section/portal"
+            },
+            {
+               "Item1":"Billing",
+               "Item2":"section/tariff"
+            }
+         ]
+      }
+   }
+]

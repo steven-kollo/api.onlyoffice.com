@@ -74,7 +74,7 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Section(string section, string category)
         {
             if (string.IsNullOrEmpty(section))
-                return View("sectionnotfound");
+                return Redirect(Url.Action("section", new { section = "portal" }));
 
             SectionType sectionType;
             return Enum.TryParse(section, true, out sectionType) ? View("section", (object) section) : View("sectionnotfound");

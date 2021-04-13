@@ -14,7 +14,7 @@
         <span class="hdr">Overview</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE Desktop Editors</span><span class="pvl_version">v6.2</span>
+    <span class="pvl_product">ONLYOFFICE Desktop Editors</span><span class="pvl_version">v<%= Products.Get("desktop").Version %></span>
 
     <p>
         <b>ONLYOFFICE Desktop Editors</b> is an open-source office suite for working with documents stored on your computer. 

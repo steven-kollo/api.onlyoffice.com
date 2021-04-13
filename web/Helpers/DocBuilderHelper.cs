@@ -138,7 +138,7 @@ namespace ASC.Api.Web.Help.Helpers
                 throw new Exception("SaveFile without format");
             }
 
-            var templatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "Templates", string.Format("{0}.docbuilder", format));
+            var templatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "docbuilder", "Templates", string.Format("{0}.docbuilder", format));
 
             if (!File.Exists(templatePath))
             {

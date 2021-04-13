@@ -24,28 +24,18 @@
 */
 
 
-using System;
-using System.Linq;
-using System.Web.Mvc;
-using System.Web.Routing;
+$(document).ready(function () {
 
-namespace ASC.Api.Web.Help.Helpers
-{
-    public class RedirectAttribute : ActionFilterAttribute
-    {
-        public override void OnActionExecuting(ActionExecutingContext filterContext)
-        {
-            base.OnActionExecuting(filterContext);
+    var $docsBlocks = $(".docs_block");
+    $docsBlocks.each(function (i, block) {
+        var $firstCol = $("#body-block .ip_main_part.col_1");
+        var $secondCol = $("#body-block .ip_main_part.col_2");
 
-            var products = Products.EnabledProducts().Select(product => product.Id);
-            if (!products.Contains(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName, StringComparer.InvariantCultureIgnoreCase))
-            {
-                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
-                    {
-                        controller = "home",
-                        action = "index"
-                    }));
-            }
+        if ($firstCol.height() <= $secondCol.height()) {
+            $(block).appendTo($firstCol);
+        } else {
+            $(block).appendTo($secondCol);
         }
-    }
-}
+    });
+
+});

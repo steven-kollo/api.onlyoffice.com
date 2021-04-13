@@ -247,7 +247,7 @@
     <Content Include="500.aspx" />
     <Content Include="Content\highlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
-    <Content Include="Content\img\desktop.png" />
+    <Content Include="Content\img\arrow-gray.svg" />
     <Content Include="Content\img\desktop\adding_plugins.png" />
     <Content Include="Content\img\desktop\connection_list.png" />
     <Content Include="Content\img\desktop\debugging.png" />
@@ -257,7 +257,6 @@
     <Content Include="Content\img\desktop\plugins_tab.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
-    <Content Include="Content\img\docbuilder.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
     <Content Include="Content\img\docbuilder\csharp\net46.png" />
@@ -310,7 +309,6 @@
     <Content Include="Content\img\Editor\coedit.jpg" />
     <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\csharp\add.png" />
-    <Content Include="Content\img\editors.png" />
     <Content Include="Content\img\Editor\create.png" />
     <Content Include="Content\img\Editor\customization.png" />
     <Content Include="Content\img\Editor\e-coedit.png" />
@@ -339,22 +337,25 @@
     <Content Include="Content\img\java\upload-app.jpg" />
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\Editor\opening.jpg" />
-    <Content Include="Content\img\apisystem.png" />
     <Content Include="Content\img\Editor\php-add.png" />
+    <Content Include="Content\img\macros\add-new-chart.svg" />
+    <Content Include="Content\img\macros\change-cell.svg" />
+    <Content Include="Content\img\macros\column-width.svg" />
+    <Content Include="Content\img\macros\format-range.svg" />
+    <Content Include="Content\img\macros\merge-and-unmerge.svg" />
+    <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
     <Content Include="Content\img\php\handlerclick.png" />
     <Content Include="Content\img\php\manager.png" />
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
-    <Content Include="Content\img\plugin.png" />
     <Content Include="Content\img\plugins\macros.png" />
-    <Content Include="Content\img\portals.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\sitename.png" />
-    <Content Include="Content\img\sprite.png" />
+    <Content Include="Content\img\sprite.svg" />
     <Content Include="Content\img\Video\nextcloud_integration.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
@@ -399,7 +400,17 @@
     <Content Include="externallistener\config.json" />
     <Content Include="externallistener\index.html" />
     <Content Include="externallistener\scripts\code.js" />
+    <Content Include="Content\img\main-page\community_server.svg" />
+    <Content Include="Content\img\main-page\desktop.svg" />
+    <Content Include="Content\img\main-page\document_builder.svg" />
+    <Content Include="Content\img\main-page\document_server.svg" />
+    <Content Include="Content\img\main-page\hosted_solution.svg" />
+    <Content Include="Content\img\main-page\plugins_and_macros.svg" />
+    <Content Include="Content\main-page.css" />
+    <Content Include="Content\pushy.css" />
+    <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\faq.js" />
+    <Content Include="Scripts\navigation-menu.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />
     <Content Include="Content\styles.css" />
@@ -509,6 +520,7 @@
     <Content Include="Views\Editors\Signature\Browser.ascx" />
     <Content Include="Views\Editors\Signature\Default.ascx" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Home\ProductBlock.ascx" />
     <Content Include="Views\Plugin\Basic.aspx" />
     <Content Include="Views\Plugin\Config.aspx" />
     <Content Include="Views\Plugin\Code.aspx" />
@@ -645,7 +657,7 @@
     <Content Include="Views\Shared\Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\class_descriptions.xml" />
+    <Content Include="App_Data\portals\class_descriptions.xml" />
     <Content Include="App_Data\editor\.Net %28C# MVC%29 Example.zip" />
     <Content Include="App_Data\editor\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\editor\Java Example.zip" />
@@ -656,9 +668,9 @@
     <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
     <Content Include="App_Data\docbuilder\Node.js Example.zip" />
     <Content Include="App_Data\docbuilder\Ruby Example.zip" />
-    <Content Include="App_Data\Templates\docx.docbuilder" />
-    <Content Include="App_Data\Templates\pdf.docbuilder" />
-    <Content Include="App_Data\Templates\xlsx.docbuilder" />
+    <Content Include="App_Data\docbuilder\Templates\docx.docbuilder" />
+    <Content Include="App_Data\docbuilder\Templates\pdf.docbuilder" />
+    <Content Include="App_Data\docbuilder\Templates\xlsx.docbuilder" />
     <Content Include="App_Data\docbuilder\PHP Example.zip" />
     <Content Include="App_Data\docbuilder\references\cell\Api.json" />
     <Content Include="App_Data\docbuilder\references\cell\ApiChart.json" />
@@ -718,6 +730,7 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\editor\Python Example.zip" />
+    <Content Include="App_Data\products.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
