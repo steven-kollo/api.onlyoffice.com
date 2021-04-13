@@ -467,6 +467,23 @@
           "optional": false
         }
       ]
+    },
+    "Copy": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "Copy",
+      "description": "<p>Create a copy of the inline content control. Ingonore comments, footnote references, complex fields</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiInlineLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class represent a container for the elements of a paragraph\r\n\t * @constructor\r\n\t */",
