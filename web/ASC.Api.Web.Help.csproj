@@ -390,7 +390,7 @@
     <Content Include="Content\img\plugins\font_bold.png" />
     <Content Include="Content\img\plugins\font_color.png" />
     <Content Include="Content\img\plugins\merge_cells.png" />
-    <Content Include="Content\img\plugins\next_blank-row.png" />
+    <Content Include="Content\img\plugins\next_blank_row.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
     <Content Include="Content\img\plugins\unmerge_cells_after.png" />
     <Content Include="Content\img\plugins\unmerge_cells_before.png" />
