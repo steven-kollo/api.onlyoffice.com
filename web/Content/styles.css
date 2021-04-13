@@ -118,7 +118,7 @@ tr {
 
 /*logo*/
 .logo {
-    background: url("img/sprite.png") no-repeat 0 16px transparent;
+    background: url("img/sprite.svg") no-repeat 0 16px transparent;
     display: inline-block;
     float: left;
     height: 71px;
@@ -201,7 +201,7 @@ body {
 }
 
 .mainBody {
-    background: #fff;
+    background: #f5f5f5;
     width: 100%;
 }
 
@@ -373,7 +373,7 @@ h1 {
     }
 
         h1 .up:after {
-            background: url("img/sprite.png") no-repeat scroll 0 -150px transparent;
+            background: url("img/sprite.svg") no-repeat scroll 0 -150px transparent;
             content: "";
             display: block;
             height: 12px;
@@ -421,7 +421,7 @@ h5 {
 }
 
     .copy-link[id]:hover:before {
-        background: url("img/sprite.png") no-repeat scroll 0 -125px transparent;
+        background: url("img/sprite.svg") no-repeat scroll 0 -125px transparent;
         content: " ";
         display: inline-block;
         height: 16px;
@@ -578,7 +578,7 @@ li b.copy-link[id]:hover:before {
 
 .search-clear {
     display: inline-block;
-    background: url("img/sprite.png") no-repeat scroll 0 -168px transparent;
+    background: url("img/sprite.svg") no-repeat scroll 0 -168px transparent;
     width: 16px;
     height: 22px;
     position: absolute;
@@ -592,7 +592,7 @@ li b.copy-link[id]:hover:before {
     }
 
 .search-box .btn {
-    background: url("img/sprite.png") no-repeat scroll 0 -59px transparent;
+    background: url("img/sprite.svg") no-repeat scroll 0 -59px transparent;
     border: 0 none;
     height: 23px;
     margin: 11px 0 0 10px;
@@ -622,6 +622,7 @@ li b.copy-link[id]:hover:before {
     box-sizing: border-box;
     display: block;
     width: 100%;
+    border-left: none;
 }
 
 .products-info {
@@ -1662,7 +1663,6 @@ article {
     background-repeat: no-repeat;
 }
 
-
 .macro-example {
     background-color: #fff;
     border: 1px solid #EFEFEF;
@@ -1670,6 +1670,13 @@ article {
     box-shadow: 0px 7px 25px rgba(85, 85, 85, 0.15);
     border-radius: 3px;
     padding: 24px;
+    list-style-type: none;
+}
+
+.name-example-macros a {
+    color: #333;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 2250px) {
@@ -1678,7 +1685,7 @@ article {
     }
 
     .mainBody {
-        background: #fff;
+        background: #f5f5f5;
         width: 100%;
     }
 }
@@ -1689,7 +1696,7 @@ article {
     }
 
     .mainBody {
-        background: #fff;
+        background: #f5f5f5;
         width: 100%;
     }
 }
@@ -1700,7 +1707,7 @@ article {
     }
 
     .mainBody {
-        background: #fff;
+        background: #f5f5f5;
         width: 100%;
     }
 
@@ -1751,6 +1758,16 @@ article {
     .copyReserved {
         text-align: center;
         float: none;
+    }
+
+    .macro-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+    }
+
+    .example-img {
+        background-size: 168px;
     }
 
     .ham_menu {

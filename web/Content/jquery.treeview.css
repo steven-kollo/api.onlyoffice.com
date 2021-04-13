@@ -100,9 +100,9 @@ ul.side-nav,
 }
 
 .treeview .collapsable-hitarea {
-    background: url("img/sprite.png") no-repeat 0 -102px transparent;
+    background: url("img/sprite.svg") no-repeat 0 -102px transparent;
 }
 
 .treeview .expandable-hitarea {
-    background: url("img/sprite.png") no-repeat 0 -82px transparent;
+    background: url("img/sprite.svg") no-repeat 0 -82px transparent;
 }
