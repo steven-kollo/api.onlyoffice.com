@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="62" class="copy-link">Version 6.2</h2>
     <ul>
+        <li>Added a new <a href="<%= Url.Action("callback") %>#actions">actions.type</a> field value (<em>actions.type = 2</em>).</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#trackChanges">editorConfig.customization.trackChanges</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">editorConfig.customization.toolbarHideFileName</a> field.</li>
         <li>The <em>callbackUrl</em> for <em>status</em> <b>6</b> is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a>.</li>

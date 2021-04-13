@@ -33,7 +33,14 @@
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -55,7 +62,14 @@
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         DocumentType = "cell",
                         Height = "100%",
@@ -78,7 +92,14 @@
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         DocumentType = "slide",
                         Height = "100%",
@@ -102,7 +123,14 @@
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -125,7 +153,14 @@
                         DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -148,7 +183,14 @@
                         DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -171,7 +213,14 @@
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -194,7 +243,14 @@
                         DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -217,7 +273,14 @@
                         DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -240,7 +303,14 @@
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -263,7 +333,14 @@
                         DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -286,6 +363,13 @@
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -309,6 +393,13 @@
                         DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -332,6 +423,13 @@
                         DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -355,6 +453,13 @@
                         DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -379,6 +484,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -407,6 +519,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -435,6 +554,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -465,6 +591,10 @@
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Autosave = false
                                     },
                                 User = new Config.EditorConfigConfiguration.UserConfig
@@ -497,6 +627,10 @@
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Autosave = false
                                     },
                                 User = new Config.EditorConfigConfiguration.UserConfig
@@ -529,6 +663,10 @@
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Autosave = false
                                     },
                                 User = new Config.EditorConfigConfiguration.UserConfig
@@ -561,6 +699,10 @@
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
                                             {
                                                 Address = "My City, 123a-45",
@@ -601,6 +743,10 @@
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
                                             {
                                                 Address = "My City, 123a-45",
@@ -641,6 +787,10 @@
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
                                             {
                                                 Address = "My City, 123a-45",
@@ -684,11 +834,18 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
                         Width = "100%"
-                    }) %>
+                    })%>
             );
         <% break; %>
 
@@ -713,6 +870,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -742,6 +906,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -771,6 +942,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -800,6 +978,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -828,6 +1013,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -861,6 +1053,13 @@
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
