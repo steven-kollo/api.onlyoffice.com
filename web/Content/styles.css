@@ -1630,7 +1630,7 @@ article {
 
 .example-img {
     height: 80px;
-    background-size: 208px;
+    background-size: 100%;
 }
 
 .worksheet {
