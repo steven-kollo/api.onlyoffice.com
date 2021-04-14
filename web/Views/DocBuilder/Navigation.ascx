@@ -6,7 +6,7 @@
 <div class="treeheader">Get Started</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("basic") %>">Introduction</a>
+        <a href="<%= Url.Action("basic") %>">Overview</a>
     </li>
     <li>
         <a href="<%= Url.Action("gettingstarted") %>">Getting started</a>
@@ -30,7 +30,7 @@
     </li>
 </ul>
 
-<div class="treeheader">Documentation</div>
+<div class="treeheader">Usage API</div>
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("integrationapi") %>">Integration API</a>
