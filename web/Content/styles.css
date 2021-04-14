@@ -1638,13 +1638,28 @@ article {
     background-repeat: no-repeat;
 }
 
+.cell-background-color {
+    background-image: url("img/macros/cell-background-color.svg");
+    background-repeat: no-repeat;
+}
+
 .change-cell {
     background-image: url("img/macros/change-cell.svg");
     background-repeat: no-repeat;
 }
 
+.cell-font-bold {
+    background-image: url("img/macros/cell-font-bold.svg");
+    background-repeat: no-repeat;
+}
+
 .merge-and-unmerge {
     background-image: url("img/macros/merge-and-unmerge.svg");
+    background-repeat: no-repeat;
+}
+
+.unmerge-cell {
+    background-image: url("img/macros/unmerge-cell.svg");
     background-repeat: no-repeat;
 }
 
@@ -1660,6 +1675,16 @@ article {
 
 .add-new-chart {
     background-image: url("img/macros/add-new-chart.svg");
+    background-repeat: no-repeat;
+}
+
+.highlight-duplicates {
+    background-image: url("img/macros/highlight-duplicates.svg");
+    background-repeat: no-repeat;
+}
+
+.next-blank-row {
+    background-image: url("img/macros/next-blank-row.svg");
     background-repeat: no-repeat;
 }
 
@@ -1767,7 +1792,7 @@ article {
     }
 
     .example-img {
-        background-size: 168px;
+        background-size: 208px;
     }
 
     .ham_menu {
