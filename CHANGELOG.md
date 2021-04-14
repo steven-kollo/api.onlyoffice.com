@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: new icon parameters
 - editors: added editorConfig.customization.hideRulers
 - editors: added document.permissions.reviewGroups
 - editors: added document.info.favorite
