@@ -1841,16 +1841,20 @@ img {
     color: #fff;
     background-color: #444;
     padding: 1px 5px 1px 10px;
-    margin: 0;
+    margin: 0px 0 20px;
     text-align: right;
+    font-size: 12px;
+    border-radius: 3px 0px 0px 3px;
 }
 .pvl_version {
     display: inline-block;
     color: #fff;
     background-color: #ff642e;
     padding: 1px 10px 1px 5px;
-    margin: 0;
+    margin: 0px 0 20px;
     text-align: left;
+    font-size: 12px;
+    border-radius: 0px 3px 3px 0px;
 }
 
 /********************************
