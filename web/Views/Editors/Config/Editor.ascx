@@ -8,6 +8,21 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The editorConfig section allows to change the parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.).</p>
 
+<nav class="content">
+    <ul class="columns-4" style="list-style: none;">
+        <li><a href="#actionLink">actionLink</a></li>
+        <li><a href="#callbackUrl">callbackUrl</a></li>
+        <li><a href="#createUrl">createUrl</a></li>
+        <li><a href="#lang">lang</a></li>
+        <li><a href="#location">location</a></li>
+        <li><a href="#mode">mode</a></li>
+        <li><a href="#recent">recent</a></li>
+        <li><a href="#region">region</a></li>
+        <li><a href="#templates">templates</a></li>
+        <li><a href="#user">user</a></li>
+    </ul>
+</nav>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -62,7 +77,7 @@
             <td>string</td>
             <td>"en"</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="location" class="copy-link">location</td>
             <td>
                 Defines the default measurement units.

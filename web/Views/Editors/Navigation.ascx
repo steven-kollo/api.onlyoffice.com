@@ -108,7 +108,7 @@
     </li>
 </ul>
 
-<div class="treeheader">Documentation</div>
+<div class="treeheader">Usage API</div>
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("advanced") %>">Advanced parameters</a>

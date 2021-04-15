@@ -28,4 +28,4 @@ End Sub</pre>
 
 <div class="header-gray">Result</div>
 </br >
-<img alt="Font bold" src="<%= Url.Content("~/content/img/plugins/font-bold.png") %>" />
+<img alt="Font bold" src="<%= Url.Content("~/content/img/plugins/font_bold.png") %>" />

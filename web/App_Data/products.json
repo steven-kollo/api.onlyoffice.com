@@ -27,7 +27,7 @@
                "Item2":"howitworks"
             }
          ],
-         "Documentation":[
+         "Usage API":[
             {
                "Item1":"Advanced parameters",
                "Item2":"advanced"
@@ -85,17 +85,25 @@
       "links":{
          "Get started":[
             {
-               "Item1":"Introduction",
+               "Item1":"Overview",
                "Item2":"basic"
+            },
+            {
+               "Item1":"Getting started",
+               "Item2":"gettingstarted"
+            },
+            {
+               "Item1":"Plugin types",
+               "Item2":"types"
             }
          ],
-         "Documentation":[
+         "Plugins":[
             {
                "Item1":"Plugin structure",
                "Item2":"structure"
             },
             {
-               "Item1":"Plugin installation",
+               "Item1":"Adding plugins",
                "Item2":"installation"
             },
             {
@@ -112,6 +120,10 @@
             }
          ],
          "Macros":[
+            {
+               "Item1":"Getting started",
+               "Item2":"macros"
+            },
             {
                "Item1":"Writing macros",
                "Item2":"writingmacros"
@@ -131,11 +143,11 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "6.1",
+      "version": "6.2",
       "links":{
          "Get started":[
             {
-               "Item1":"Introduction",
+               "Item1":"Overview",
                "Item2":"basic"
             },
             {
@@ -147,7 +159,7 @@
                "Item2":"integratingdocumentbuilder"
             }
          ],
-         "Documentation":[
+         "Usage API":[
             {
                "Item1":"Integration API",
                "Item2":"integrationapi"
@@ -178,7 +190,7 @@
    {
       "id":"desktop",
       "title":"Desktop Editors",
-      "description":"Extent the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.",
+      "description":"Extend the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.",
       "version":"6.2",
       "links":{
          "Get Started":[
@@ -187,7 +199,7 @@
                "Item2":"basic"
             }
          ],
-         "Documentation":[
+         "Usage API":[
             {
                "Item1":"Debugging",
                "Item2":"debugging"
@@ -229,7 +241,7 @@
                "Item2":"auth"
             }
          ],
-         "Documentation":[
+         "Usage API":[
             {
                "Item1":"authentication",
                "Item2":"section/authentication"
@@ -287,7 +299,7 @@
                "Item2":"section/settings"
             }
          ],
-         "Help":[
+         "More information":[
             {
                "Item1":"F.A.Q.",
                "Item2":"faq"
@@ -319,7 +331,7 @@
                "Item2":"authentication"
             }
          ],
-         "Methods":[
+         "Usage API":[
             {
                "Item1":"Portals",
                "Item2":"section/portal"

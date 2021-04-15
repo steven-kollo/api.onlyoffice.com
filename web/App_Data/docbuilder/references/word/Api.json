@@ -452,6 +452,7 @@
       "tags": {
         "typeofeditors": [
           "CDE",
+          "CSE",
           "CPE"
         ]
       },
@@ -778,7 +779,7 @@
     "GetMailMergeReceptionsCount": {
       "memberof": "Api",
       "name": "GetMailMergeReceptionsCount",
-      "description": "<p>Gets the mail merge template doc.</p>",
+      "description": "<p>Gets the mail merge receptions count.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

@@ -77,6 +77,10 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
     </li>
 </ul>
 
+<h2>Support</h2>
+<p>If you want to request a feature or report a bug regarding macros, use the issues section <a href="https://github.com/ONLYOFFICE/plugin-macros/issues" target="_blank">on GitHub.</a></p>
+<p>You can also request a macro sample by contacting us at <a href="mailto:marketing@onlyoffice.com" target="_blank">marketing@onlyoffice.com</a>.</p>
+
 
 
 <%--<ul>

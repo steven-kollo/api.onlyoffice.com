@@ -1852,3 +1852,10 @@ img {
     margin: 0;
     text-align: left;
 }
+
+/********************************
+    page navigation
+********************************/
+.columns-4 {
+    column-count: 4;
+}

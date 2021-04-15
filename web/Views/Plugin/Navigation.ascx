@@ -15,7 +15,7 @@
     </li>
 </ul>
 
-<div class="treeheader">Documentation</div>
+<div class="treeheader">Plugins</div>
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("structure") %>">Plugin structure</a>
