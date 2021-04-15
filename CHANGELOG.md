@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: update test examples
 - docbuilder: api v6.2.0
 - redesign
 - editors: install and update plone instruction
