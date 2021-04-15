@@ -60,9 +60,10 @@
             </tr>
             <tr class="tablerow">
                 <td id="token" class="copy-link">token</td>
-                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#builder">token</a>.</td>
+                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#builder">token</a>.
+                    <div class="note">required by configuration</div>
+                </td>
                 <td>string</td>
-                <td>required by configuration</td>
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
