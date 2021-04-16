@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -98,7 +98,18 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/Macros",
                 "macros/Writing",
                 "macros/ConvertingVBA",
-                "macros/Samples",
+                "macros/macrosamples",
+                "macros/macrosamples/writedatatoworksheetcell",
+                "macros/macrosamples/changecellbackgroundcolor",
+                "macros/macrosamples/changecellfontcolor",
+                "macros/macrosamples/makecellfontbold",
+                "macros/macrosamples/mergecellrange",
+                "macros/macrosamples/unmergecellrange",
+                "macros/macrosamples/setcolumnwidth",
+                "macros/macrosamples/formatrangeasatable",
+                "macros/macrosamples/addchart",
+                "macros/macrosamples/highlightduplicates",
+                "macros/macrosamples/nextblankrow"
             };
 
         public ActionResult Index()
@@ -289,9 +300,13 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Macros/ConvertingVBAMacros");
         }
 
-        public ActionResult MacroSamples()
+        public ActionResult Macrosamples(string catchall)
         {
-            return View("Macros/MacroSamples");
+            if (!_actionMap.Contains("Macros/Macrosamples/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Macros/Macrosamples", (object)catchall);
         }
 
         public ActionResult WritingMacros()

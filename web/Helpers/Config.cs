@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -199,6 +199,9 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "customization", Namespace = "")]
             public class CustomizationConfig
             {
+                [DataMember(Name = "anonymous", EmitDefaultValue = false)]
+                public AnonymousConfig Anonymous;
+
                 [DataMember(Name = "about", EmitDefaultValue = false)]
                 public bool? About;
 
@@ -210,6 +213,9 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "commentAuthorOnly", EmitDefaultValue = false)]
                 public bool? CommentAuthorOnly;
+
+                [DataMember(Name = "compactHeader", EmitDefaultValue = false)]
+                public bool? CompactHeader;
 
                 [DataMember(Name = "compactToolbar", EmitDefaultValue = false)]
                 public bool? CompactToolbar;
@@ -229,14 +235,31 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "hideRightMenu", EmitDefaultValue = false)]
                 public bool? HideRightMenu;
 
+                [DataMember(Name = "hideRulers", EmitDefaultValue = false)]
+                public bool? HideRulers;
+
                 [DataMember(Name = "logo", EmitDefaultValue = false)]
                 public LogoConfig Logo;
 
                 [DataMember(Name = "showReviewChanges", EmitDefaultValue = false)]
                 public bool? ShowReviewChanges;
 
+                [DataMember(Name = "toolbarHideFileName", EmitDefaultValue = false)]
+                public bool? ToolbarHideFileName;
+
+                [DataMember(Name = "toolbarNoTabs", EmitDefaultValue = false)]
+                public bool? ToolbarNoTabs;
+
                 [DataMember(Name = "zoom", EmitDefaultValue = false)]
                 public int Zoom;
+
+
+                [DataContract(Name = "anonymous", Namespace = "")]
+                public class AnonymousConfig
+                {
+                    [DataMember(Name = "request")]
+                    public bool Request;
+                }
 
 
                 [DataContract(Name = "customer", Namespace = "")]

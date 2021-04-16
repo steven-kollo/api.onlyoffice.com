@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -90,7 +90,13 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Section(string section, string category)
         {
             if (string.IsNullOrEmpty(section))
-                return View("sectionnotfound");
+            {
+                var firstPoint = Documentation.GetAll().OrderBy(x => x.Name).ToList().FirstOrDefault();
+
+                if (firstPoint == null) return View("sectionnotfound");
+
+                return Redirect(Url.Action("section", new { section = firstPoint.Name }));
+            }
 
             var docsSection = Documentation.GetDocs(section);
             if (docsSection == null || !docsSection.Methods.Any())

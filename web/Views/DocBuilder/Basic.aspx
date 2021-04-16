@@ -6,13 +6,15 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ONLYOFFICE Document Builder
+    Overview
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">ONLYOFFICE Document Builder</span>
+        <span class="hdr">Overview</span>
     </h1>
+
+    <span class="pvl_product">ONLYOFFICE DocumentBuilder</span><span class="pvl_version">v<%= Products.Get("docbuilder").Version %></span>
 
     <p class="dscr">
         <b>ONLYOFFICE Document Builder</b> allows you to build a document easily without the need to actually run a document processing editor.

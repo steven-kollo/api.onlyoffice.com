@@ -14,11 +14,13 @@
         <span class="hdr">Writing your own macros</span>
     </h1>
 
-    <p class="dscr">Now that you know how macros work, let us try and write your own macro. Say, we have a table and need to color the alternate table rows (odd will be colored green, even will become red). The table contains 200 rows (would take quite some time to do that manually) and columns from <b>A</b> to <b>S</b>.</p>
+    <p class="dscr">Now that you know how macros work, try to write your own macro. 
+        We have a table and need to color the alternate table rows (odd will be colored green, even will become red). 
+        The table contains 200 rows and columns from <b>A</b> to <b>S</b>. It would take a lot of time to do that manually. So, using macros will be the best solution for this problem.</p>
 
     <ol>
-        <li>Open <b>ONLYOFFICE Desktop Editors</b> and create a new spreadsheet.</li>
-        <li>Now open the plugins and select <b>Macros</b>. The macros window will popup.</li>
+        <li>Open <a href="<%= Url.Action("basic", "desktop") %>">ONLYOFFICE Desktop Editors</a> and create a new spreadsheet.</li>
+        <li>Now open the <b>Plugins</b> tab and select <b>Macros</b>. The macros window will pop up.</li>
         <li>Click <b>New</b>. You will be presented with the basic function wrapper which will allow you to enter the necessary code:
 
             <pre>(function()
@@ -35,10 +37,10 @@
                     <pre>for (var i = 1; i < 200; i += 2) {
 }</pre>
                 </li>
-                <li>Now set two variables: one for odd rows, the second for even rows:
+                <li>Set two variables: one for odd rows, the second for even rows:
                     <pre>var rowOdd = i, rowEven = i + 1;</pre>
                 </li>
-                <li>Now that we can access both odd and even rows, let's color them in proper colors. Set the desired colors using the <a href="<%= Url.Action("spreadsheetapi/api/createcolorfromrgb", "docbuilder") %>">CreateColorFromRGB</a> method. Get the cell range within the row using the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrange", "docbuilder") %>">GetRange</a> method and set the color for the odd rows:
+                <li>Now that we can access both the odd and even rows, let's color them in proper colors. Set the desired colors using the <a href="<%= Url.Action("spreadsheetapi/api/createcolorfromrgb", "docbuilder") %>">CreateColorFromRGB</a> method. Get the cell range within the row using the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getrange", "docbuilder") %>">GetRange</a> method and set the color for the odd rows:
                     <pre>oWorksheet.GetRange("A" + rowOdd + ":S" + rowOdd).SetFillColor(Api.CreateColorFromRGB(118, 190, 39));</pre>
                     The same is for the even rows, but with a different color:
                     <pre>oWorksheet.GetRange("A" + rowEven + ":S" + rowEven).SetFillColor(Api.CreateColorFromRGB(186, 56, 46));</pre>
@@ -60,5 +62,6 @@
 })();</pre>
 
     <p>Paste the code above to the macros window and click <b>Run</b>. The table rows from 1 to 200 will be colored alternately in less than a second.</p>
+    <img alt="Alternate raws" src="<%= Url.Content("~/content/img/plugins/alternate-raws.png") %>" />
 
 </asp:Content>

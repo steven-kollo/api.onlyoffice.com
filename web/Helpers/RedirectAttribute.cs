@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -25,7 +25,6 @@
 
 
 using System;
-using System.Configuration;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -38,14 +37,14 @@ namespace ASC.Api.Web.Help.Helpers
         {
             base.OnActionExecuting(filterContext);
 
-            var products = (ConfigurationManager.AppSettings["enabled_products"] ?? "").Split('|');
-            if (!products.Contains(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName, StringComparer.OrdinalIgnoreCase))
+            var products = Products.EnabledProducts().Select(product => product.Id);
+            if (!products.Contains(filterContext.ActionDescriptor.ControllerDescriptor.ControllerName, StringComparer.InvariantCultureIgnoreCase))
             {
                 filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
-                {
-                    controller = "home",
-                    action = "index"
-                }));
+                    {
+                        controller = "home",
+                        action = "index"
+                    }));
             }
         }
     }

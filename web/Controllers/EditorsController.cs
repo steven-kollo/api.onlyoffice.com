@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -46,6 +46,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Alfresco",
                 "Basic",
                 "Callback",
+                "Chamilo",
                 "Changelog",
                 "Coedit",
                 "Command",
@@ -195,6 +196,11 @@ namespace ASC.Api.Web.Help.Controllers
         public JsonResult Callback(string data)
         {
             return Json(new { error = 0 });
+        }
+
+        public ActionResult Chamilo()
+        {
+            return View();
         }
 
         public ActionResult Changelog()

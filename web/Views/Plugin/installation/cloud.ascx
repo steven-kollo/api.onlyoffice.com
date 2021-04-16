@@ -57,13 +57,13 @@
     <li>
         <p>Launch your Chrome browser and go to <em>chrome://extensions/</em>. Turn on the <b>Developer mode</b>, 
         click the <b>Load unpacked</b> button and select the created main extension folder:</p>
-        <img alt="Extension folder" src="<%= Url.Content("~/content/img/plugins/extension-folder.png") %>" />
+        <img alt="Extension folder" src="<%= Url.Content("~/content/img/plugins/extension_folder.png") %>" />
         <p>The new extension is now available in your browser:</p>
-        <img alt="Extension" src="<%= Url.Content("~/content/img/plugins/extension.png") %>" />
+        <img alt="Extension" src="<%= Url.Content("~/content/img/plugins/extension_example.png") %>" />
     </li>
     <li>
         <p>Launch ONLYOFFICE Cloud and open any document to check if the new plugin is available in the editors:</p>
-        <img alt="Hello world extension" src="<%= Url.Content("~/content/img/plugins/helloworld.png") %>" />
+        <img alt="Hello world extension" src="<%= Url.Content("~/content/img/plugins/helloworld_icon.png") %>" />
 </ol>
 
 
@@ -71,5 +71,5 @@
 <h2>Removing plugins from ONLYOFFICE Cloud</h2>
 
 <p>Click the <b>Remove</b> button on the extension tab and in the opened window confirm your action:</p>
-<img alt="Remove extension" src="<%= Url.Content("~/content/img/plugins/remove_extension.png") %>" />
+<img alt="Remove extension" src="<%= Url.Content("~/content/img/plugins/remove-extension.png") %>" />
 <p>The plugin will be removed from ONLYOFFICE Cloud after its start.</p>

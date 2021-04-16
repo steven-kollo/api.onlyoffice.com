@@ -63,6 +63,9 @@
             <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("chamilo") %>">Chamilo integration</a>
+            </li>
         </ul>
     </li>
     <li>
@@ -105,7 +108,7 @@
     </li>
 </ul>
 
-<div class="treeheader">Documentation</div>
+<div class="treeheader">Usage API</div>
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("advanced") %>">Advanced parameters</a>

@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -138,7 +138,7 @@ namespace ASC.Api.Web.Help.Helpers
                 throw new Exception("SaveFile without format");
             }
 
-            var templatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "Templates", string.Format("{0}.docbuilder", format));
+            var templatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "docbuilder", "Templates", string.Format("{0}.docbuilder", format));
 
             if (!File.Exists(templatePath))
             {
