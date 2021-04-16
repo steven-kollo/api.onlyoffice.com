@@ -158,7 +158,7 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.isModal</td>
-                <td>Specifies if the opened plugin window is modal, i.e. a separate modal window must be opened, or not (used for visual plugins only). The following rule must be observed at all times: <em>isModal != isInsideMode</em>.</td>
+                <td>Specifies if the opened plugin window is modal (used for visual plugins only, and if <em>isInsideMode</em> is not true).</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>

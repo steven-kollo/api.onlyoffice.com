@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: changed variations.isModal parameter
 - plugins: new icon parameters
 - editors: added editorConfig.customization.hideRulers
 - editors: added document.permissions.reviewGroups
