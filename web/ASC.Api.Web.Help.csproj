@@ -736,6 +736,10 @@
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\products.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiHyperlink.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiRange.json" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiName.json" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiComment.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
