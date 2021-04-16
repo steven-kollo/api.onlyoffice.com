@@ -190,8 +190,8 @@ body {
 .layout-table-side {
     height: 100%;
     margin: 0;
-    padding: 28px 0 40% 10px;
-    width: 261px;
+    padding: 28px 0 40% 0px;
+    width: 256px;
     background-color: #F5F5F5;
 }
 
@@ -208,9 +208,9 @@ body {
 .layout-side {
     height: 100%;
     overflow: hidden;
-    padding: 0 24px 0 0;
+    padding: 0 22px 0 0;
     text-overflow: ellipsis;
-    width: 236px;
+    width: 233px;
 }
 
 .layout-table-content {
@@ -221,7 +221,7 @@ body {
 
 .layout-content {
     margin-top: 20px;
-    max-width: 832px;
+    max-width: 880px;
     width: 100%;
 }
 
@@ -1622,10 +1622,22 @@ article {
     margin-top: 150px;
 }
 
+.block_more {
+    margin: 9px 0 0;
+    position: absolute;
+    bottom: 12px;
+    padding-bottom: 6px;
+}
+
+.macro-info{
+    padding-bottom:8px;
+}
+
 .macro-block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
+    margin: 0;
 }
 
 .example-img {
@@ -1696,12 +1708,19 @@ article {
     border-radius: 3px;
     padding: 24px;
     list-style-type: none;
+    position: relative;
+    max-width: 256px;
+}
+
+.name-example-macros {
+    margin: 32px 0 12px 0;
 }
 
 .name-example-macros a {
     color: #333;
     font-weight: 700;
     text-decoration: none;
+    font-size: 18px;
 }
 
 img {
