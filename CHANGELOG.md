@@ -1,5 +1,6 @@
 # Change Log
 
+## 2.0.0
 - redesign
 - specifying products version
 - changed highlighting style
