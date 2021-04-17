@@ -431,7 +431,7 @@ h5 {
     }
 
 h2.copy-link[id]:hover:before {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 li b.copy-link[id]:hover:before {
@@ -1638,13 +1638,28 @@ article {
     background-repeat: no-repeat;
 }
 
+.cell-background-color {
+    background-image: url("img/macros/cell-background-color.svg");
+    background-repeat: no-repeat;
+}
+
 .change-cell {
     background-image: url("img/macros/change-cell.svg");
     background-repeat: no-repeat;
 }
 
+.cell-font-bold {
+    background-image: url("img/macros/cell-font-bold.svg");
+    background-repeat: no-repeat;
+}
+
 .merge-and-unmerge {
     background-image: url("img/macros/merge-and-unmerge.svg");
+    background-repeat: no-repeat;
+}
+
+.unmerge-cell {
+    background-image: url("img/macros/unmerge-cell.svg");
     background-repeat: no-repeat;
 }
 
@@ -1663,6 +1678,16 @@ article {
     background-repeat: no-repeat;
 }
 
+.highlight-duplicates {
+    background-image: url("img/macros/highlight-duplicates.svg");
+    background-repeat: no-repeat;
+}
+
+.next-blank-row {
+    background-image: url("img/macros/next-blank-row.svg");
+    background-repeat: no-repeat;
+}
+
 .macro-example {
     background-color: #fff;
     border: 1px solid #EFEFEF;
@@ -1677,6 +1702,10 @@ article {
     color: #333;
     font-weight: 700;
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 @media screen and (min-width: 2250px) {
@@ -1767,7 +1796,7 @@ article {
     }
 
     .example-img {
-        background-size: 168px;
+        background-size: 208px;
     }
 
     .ham_menu {
@@ -1812,16 +1841,20 @@ article {
     color: #fff;
     background-color: #444;
     padding: 1px 5px 1px 10px;
-    margin: 0;
+    margin: 0px 0 20px;
     text-align: right;
+    font-size: 12px;
+    border-radius: 3px 0px 0px 3px;
 }
 .pvl_version {
     display: inline-block;
     color: #fff;
     background-color: #ff642e;
     padding: 1px 10px 1px 5px;
-    margin: 0;
+    margin: 0px 0 20px;
     text-align: left;
+    font-size: 12px;
+    border-radius: 0px 3px 3px 0px;
 }
 
 /********************************

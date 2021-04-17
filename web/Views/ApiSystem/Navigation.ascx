@@ -12,7 +12,7 @@
     </li>
 </ul>
 
-<div class="treeheader">Methods</div>
+<div class="treeheader">Usage API</div>
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("section", new {section = "portal"}) %>">Portals</a>

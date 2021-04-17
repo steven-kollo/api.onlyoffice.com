@@ -1,18 +1,20 @@
 # Change Log
 
-- docbuilder: api v6.2.0
+## 2.0.0
 - redesign
-- editors: install and update plone instruction
 - specifying products version
-- editors: added new value for actions.type for callback
-- docbuilder: applying examples on page
-- plugins: added plugin types page
-- plugins: getting started page for macros
-- added Desktop Editors section
-- editors: added chamilo plugin
 - changed highlighting style
 - thirdparty licenses
+- editors: update test examples
+- editors: install and update plone instruction
+- editors: added new value for actions.type for callback
+- editors: added chamilo plugin
 - editors: opening fb2
+- plugins: added plugin types page
+- plugins: getting started page for macros
+- docbuilder: api v6.2.0
+- docbuilder: applying examples on page
+- added Desktop Editors section
 
 ## 1.1.0
 - editors: added editorConfig.customization.toolbarHideFileName
