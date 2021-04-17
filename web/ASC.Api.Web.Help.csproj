@@ -345,10 +345,15 @@
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\Editor\php-add.png" />
     <Content Include="Content\img\macros\add-new-chart.svg" />
+    <Content Include="Content\img\macros\cell-background-color.svg" />
+    <Content Include="Content\img\macros\cell-font-bold.svg" />
     <Content Include="Content\img\macros\change-cell.svg" />
     <Content Include="Content\img\macros\column-width.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
+    <Content Include="Content\img\macros\highlight-duplicates.svg" />
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
+    <Content Include="Content\img\macros\next-blank-row.svg" />
+    <Content Include="Content\img\macros\unmerge-cell.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
@@ -396,7 +401,7 @@
     <Content Include="Content\img\plugins\font_bold.png" />
     <Content Include="Content\img\plugins\font_color.png" />
     <Content Include="Content\img\plugins\merge_cells.png" />
-    <Content Include="Content\img\plugins\next_blank-row.png" />
+    <Content Include="Content\img\plugins\next_blank_row.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
     <Content Include="Content\img\plugins\unmerge_cells_after.png" />
     <Content Include="Content\img\plugins\unmerge_cells_before.png" />
@@ -737,6 +742,10 @@
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\products.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiHyperlink.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiRange.json" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiName.json" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiComment.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
