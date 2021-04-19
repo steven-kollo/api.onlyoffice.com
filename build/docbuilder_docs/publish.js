@@ -38,6 +38,10 @@ function create_class_if_not_exist(doclet, main_data) {
         type.params = get_params(doclet.params);
     }
 
+    if (doclet.properties) {
+        type.properties = get_props(doclet.properties);
+    }
+
     if (!(main_data[name])) {
         main_data[name] = type;
     }
@@ -73,14 +77,24 @@ function add_typedef(doclet, main_data) {
     };
 }
 
+function get_props(data) {
+    let props = [];
+    data.forEach(x => {
+        props.push({
+            "type": parse_types(x.type),
+            "name": x.name,
+            "description": x.description,
+        });
+    })
+    return props;
+}
+
 function get_params(data) {
     let params = [];
-    var type = '';
     data.forEach(x => {
-        if (x.type) { type = x.type.names.join(" | ") }
         if (x.type) {
             params.push({
-                "type": type,
+                "type": parse_types(x.type),
                 "name": x.name,
                 "description": x.description,
                 "optional": !!x.optional,
@@ -89,6 +103,11 @@ function get_params(data) {
         }
     });
     return params;
+}
+
+function parse_types(type) {
+    if (type) return type.names.join(" | ");
+    return "";
 }
 
 function json_generate(data) {
@@ -118,9 +137,9 @@ function get_returns(data) {
     let returns = [];
     if (data) {
 
-    data.forEach(return_data => {
-        returns.push(return_data.type.names);
-    });
+        data.forEach(return_data => {
+            returns.push(return_data.type.names);
+        });
     }
     return returns;
 }
