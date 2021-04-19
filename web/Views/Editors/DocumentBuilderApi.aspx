@@ -32,6 +32,7 @@
                 <td>Parameter</td>
                 <td>Description</td>
                 <td>Type</td>
+                <td>Presence</td>
             </tr>
         </thead>
         <tbody>
@@ -48,6 +49,7 @@
                     The default value is <b>false</b>.
                 </td>
                 <td>boolean</td>
+                <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td id="key" class="copy-link">key</td>
@@ -57,18 +59,19 @@
                     When the synchronous request is used (the <em>async</em> parameter is set to <b>false</b>), this parameter is not required.
                 </td>
                 <td>string</td>
+                <td>required</td>
             </tr>
             <tr class="tablerow">
                 <td id="token" class="copy-link">token</td>
-                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#builder">token</a>.
-                    <div class="note">required by configuration</div>
-                </td>
+                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#builder">token</a>.</td>
                 <td>string</td>
+                <td>required by configuration</td>
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
                 <td>Defines the absolute URL to the .docbuilder file.</td>
                 <td>string</td>
+                <td>required</td>
             </tr>
         </tbody>
     </table>

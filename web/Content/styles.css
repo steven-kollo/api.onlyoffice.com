@@ -431,7 +431,7 @@ h5 {
     }
 
 h2.copy-link[id]:hover:before {
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 li b.copy-link[id]:hover:before {
