@@ -343,6 +343,18 @@
             <param name="uid">Event uid</param>
             <param name="responsibles">Task responsibles</param>
         </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.GetUtcOffsets(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
+            <summary>
+            Returns the offset or difference between the time in specified time zone and Coordinated Universal Time (UTC) for a particular dates
+            </summary>
+            <short>
+            Returns the UTC offset for a particular dates
+            </short>
+            <param name="timeZone">Time zone id</param>
+            <param name="startDate">Start date to determine the offset</param>
+            <param name="endDate">End date to determine the offset</param>
+            <returns>UTC offset in minutes</returns>
+        </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.UpdateCaldavEvent(System.String,System.String,System.Int32,System.Collections.Generic.List{System.String})">
             <summary>
             Create/update the existing caldav event in the selected calendar
@@ -576,6 +588,34 @@
             
             </summary>
         </member>
+        <member name="T:ASC.Api.Calendar.Notification.CalendarPatterns">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Calendar.Notification.CalendarPatterns.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Calendar.Notification.CalendarPatterns.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Calendar.Notification.CalendarPatterns.calendar_patterns">
+             <summary>
+               Looks up a localized string similar to &lt;patterns&gt;
+              &lt;formatter type=&quot;ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common&quot; /&gt;
+            
+              &lt;pattern id=&quot;CalendarSharingPattern&quot; sender=&quot;email.sender&quot;&gt;
+                &lt;subject resource=&quot;|CalendarSharingSubject|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar&quot; /&gt;
+                &lt;body styler=&quot;ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile&quot; resource=&quot;|CalendarSharingEmailPattern|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar&quot; /&gt;
+              &lt;/pattern&gt;
+              &lt;pattern id=&quot;CalendarSharing [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
         <member name="T:ASC.Api.Calendar.Notification.CalendarPatternResource">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -599,15 +639,11 @@
              
              
             &quot;$UserName&quot;:&quot;$UserLink&quot; has granted you the access to the calendar: $CalendarName 
-            
+             
+            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the notifications about the calendars shared with you, please manage your &quot;subscription settings&quot;:&quot;$RecipientSubscriptionConfigURL&quot;.^
             #end
             #if($SharingType == &quot;event&quot;)
-            h1.Access Granted to Event: $EventName
-             
-             
-            &quot;$UserName&quot;:&quot;$UserLink&quot; has granted you the access to the event: $EventName
-            
-            #end.
+            h1.Access Granted to Event: $ [rest of string was truncated]&quot;;.
              </summary>
         </member>
         <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.CalendarSharingJabberPattern">
@@ -641,7 +677,10 @@
              Event Description:
              
             $EventDescription
-            #end.
+            #end
+             
+             
+            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the event reminders, please manage your &quot;subscription settings&quot;:&quot;$RecipientSubscriptionConfigURL&quot;.^.
              </summary>
         </member>
         <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAlertJabberPattern">
@@ -659,34 +698,6 @@
             <summary>
               Looks up a localized string similar to Calendar. Reminder about the event: $EventName.
             </summary>
-        </member>
-        <member name="T:ASC.Api.Calendar.Notification.CalendarPatterns">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Calendar.Notification.CalendarPatterns.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Calendar.Notification.CalendarPatterns.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Calendar.Notification.CalendarPatterns.calendar_patterns">
-             <summary>
-               Looks up a localized string similar to &lt;patterns&gt;
-              &lt;formatter type=&quot;ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common&quot; /&gt;
-            
-              &lt;pattern id=&quot;CalendarSharingPattern&quot; sender=&quot;email.sender&quot;&gt;
-                &lt;subject resource=&quot;|CalendarSharingSubject|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar&quot; /&gt;
-                &lt;body styler=&quot;ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile&quot; resource=&quot;|CalendarSharingEmailPattern|ASC.Api.Calendar.Notification.CalendarPatternResource,ASC.Api.Calendar&quot; /&gt;
-              &lt;/pattern&gt;
-              &lt;pattern id=&quot;CalendarSharing [rest of string was truncated]&quot;;.
-             </summary>
         </member>
         <member name="T:ASC.Api.Calendar.Resources.CalendarApiResource">
             <summary>
@@ -732,11 +743,6 @@
         <member name="P:ASC.Api.Calendar.Resources.CalendarApiResource.ErrorEmptyName">
             <summary>
               Looks up a localized string similar to Name can&apos;t be empty.
-            </summary>
-        </member>
-        <member name="P:ASC.Api.Calendar.Resources.CalendarApiResource.ErrorIncorrectDateFormat">
-            <summary>
-              Looks up a localized string similar to Date format is incorrect.
             </summary>
         </member>
         <member name="P:ASC.Api.Calendar.Resources.CalendarApiResource.ErrorItemNotFound">
