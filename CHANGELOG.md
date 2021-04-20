@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: updated config parameters
 - portals: api v11.5
 
 ## 2.0.0
