@@ -97,9 +97,9 @@
                             <b>example</b>: false;
                         </li>
                         <li>
-                            <b>textLocale</b> - translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language,
+                            <b>textLocale</b> - translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language,
                             <br />
-                            <b>type</b>: object,
+                            <b>type</b>: object
                         </li>
                     </ul>
                 </td>
@@ -114,13 +114,13 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.descriptionLocale</td>
-                <td>Translations for the description field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.</td>
+                <td>Translations for the description field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin description translation for each language.</td>
                 <td>object</td>
                 <td></td>
             </tr>
             <tr class="tablerow">
                 <td>variations.EditorsSupport</td>
-                <td>The editors which the plugin is available for (<em>word</em> - text document editor, <em>cell</em> - spreadsheet editor, <em>slide</em> - presentation editor).</td>
+                <td>The editors which the plugin is available for (<b>word</b> - text document editor, <b>cell</b> - spreadsheet editor, <b>slide</b> - presentation editor).</td>
                 <td>array of string</td>
                 <td></td>
             </tr>
@@ -148,7 +148,7 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.initDataType</td>
-                <td>The data type selected in the editor and sent to the plugin: <em>text</em> - the text data, <em>html</em> - HTML formatted code, <em>ole</em> - OLE object data, <em>none</em> - no data will be send to the plugin from the editor.</td>
+                <td>The data type selected in the editor and sent to the plugin: <b>text</b> - the text data, <b>html</b> - HTML formatted code, <b>ole</b> - OLE object data, <b>none</b> - no data will be send to the plugin from the editor.</td>
                 <td>string</td>
                 <td>"ole"</td>
             </tr>

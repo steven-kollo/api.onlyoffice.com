@@ -11,7 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Writing the plugin code</span>
+        <span class="hdr">Plugin code</span>
     </h1>
 
     <p class="dscr">The main plugin code is placed to a <em>.js</em> file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the <a href="<%= Url.Action("config") %>">config.json</a> and <a href="<%= Url.Action("indexhtml") %>">index.html</a> files.</p>
@@ -46,8 +46,6 @@
     <div class="note">Please note, that all <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> features are already included into all the versions (including the open source one) of ONLYOFFICE document editors, this is how the plugins interact with the editors. The standalone <b>ONLYOFFICE Document Builder</b> version is required, however, in case you want to create documents without any document editors.</div>
 
     <p>The only <b>OK</b> button (<em>window.Asc.plugin.button = function (id) {...}</em>) is used to create the text and finish the work with the plugin.</p>
-
-    <p>This way any other plugin can be created. Currently the plugins support not only sending text or formatted text to the editors, but also OLE objects embedding (such examples are available here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/examples/chess" target="_blank">chess</a> - the chess game plugin, and <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/youtube" target="_blank">youtube</a> - embedding the YouTube video into an editor page).</p>
 
     <p>More existing open source plugin examples can be found here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>.</p>
 
