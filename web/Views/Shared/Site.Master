@@ -22,7 +22,7 @@
        {
            canonicalHref = canonicalHref.Replace(canonicalUrl.Query, "");
        } %>
-    <link rel="canonical" href="<%= canonicalHref %>" />
+    <link rel="canonical" href="<%= HttpUtility.HtmlEncode(canonicalHref) %>" />
 
     <%= Styles.Render("~/content/styles") %>
 
