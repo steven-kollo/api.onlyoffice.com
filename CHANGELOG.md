@@ -1,5 +1,6 @@
 # Change Log
 
+- fix xss
 - portals: api v11.5
 
 ## 2.0.0
