@@ -41,10 +41,10 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Basic",
-                "Button",
                 "Code",
                 "Config",
                 "callCommand",
+                "events",
                 "ExecuteCommand",
                 "executemethod",
                 "executemethod/insertandreplacecontentcontrols",
@@ -82,14 +82,11 @@ namespace ASC.Api.Web.Help.Controllers
                 "Info/recalculate",
                 "Info/resize",
                 "Info/width",
-                "Init",
                 "installation",
                 "installation/desktop",
                 "installation/onpremises",
                 "installation/cloud",
                 "Localization",
-                "OnExternalMouseUp",
-                "onmethodreturn",
                 "Plugin",
                 "scope",
                 "Structure",
@@ -173,11 +170,6 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Button()
-        {
-            return View();
-        }
-
         public ActionResult Code()
         {
             return View();
@@ -189,6 +181,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult callCommand()
+        {
+            return View();
+        }
+
+        public ActionResult Events()
         {
             return View();
         }
@@ -236,11 +233,6 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Info", (object)catchall);
         }
 
-        public ActionResult Init()
-        {
-            return View();
-        }
-
         public ActionResult Installation(string catchall)
         {
             if (!_actionMap.Contains("installation/" + catchall, StringComparer.OrdinalIgnoreCase))
@@ -251,16 +243,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Localization()
-        {
-            return View();
-        }
-
-        public ActionResult OnExternalMouseUp()
-        {
-            return View();
-        }
-
-        public ActionResult Onmethodreturn()
         {
             return View();
         }

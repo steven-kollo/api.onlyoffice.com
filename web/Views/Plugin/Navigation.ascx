@@ -30,11 +30,11 @@
                 <a href="<%= Url.Action("code") %>">Plugin code</a>
             </li>
             <li>
+                <a href="<%= Url.Action("events") %>">Events</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("plugin") %>">window.Asc.plugin object</a>
                 <ul>
-                    <li>
-                        <a href="<%= Url.Action("button") %>">button</a>
-                    </li>
                     <li>
                         <a href="<%= Url.Action("callcommand") %>">callCommand</a>
                     </li>
@@ -140,15 +140,6 @@
                                 <a href="<%= Url.Action("info/width") %>">width</a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("init") %>">init</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("onExternalMouseUp") %>">onExternalMouseUp</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("onmethodreturn") %>">onMethodReturn</a>
                     </li>
                 </ul>
             </li>

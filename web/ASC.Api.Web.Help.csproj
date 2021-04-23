@@ -529,7 +529,7 @@
     <Content Include="Views\Plugin\Basic.aspx" />
     <Content Include="Views\Plugin\Config.aspx" />
     <Content Include="Views\Plugin\Code.aspx" />
-    <Content Include="Views\Plugin\Button.aspx" />
+    <Content Include="Views\Plugin\Events.aspx" />
     <Content Include="Views\Plugin\example.aspx" />
     <Content Include="Views\Plugin\Executemethod.aspx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
@@ -567,12 +567,9 @@
     <Content Include="Views\Plugin\Localization.aspx" />
     <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Macros\Macros.aspx" />
-    <Content Include="Views\Plugin\OnExternalMouseUp.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
-    <Content Include="Views\Plugin\Init.aspx" />
     <Content Include="Views\Plugin\callCommand.aspx" />
     <Content Include="Views\Plugin\ExecuteCommand.aspx" />
-    <Content Include="Views\Plugin\onmethodreturn.aspx" />
     <Content Include="Views\Plugin\Plugin.aspx" />
     <Content Include="Views\Plugin\scope.aspx" />
     <Content Include="Views\Plugin\IndexHtml.aspx" />
