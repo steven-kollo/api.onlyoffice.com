@@ -1,5 +1,9 @@
 # Change Log
 
+## 2.1.0
+- fix xss
+- portals: api v11.5
+
 ## 2.0.0
 - redesign
 - specifying products version
