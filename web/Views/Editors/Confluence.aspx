@@ -59,6 +59,9 @@
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
         <li>Atlassian Plugin SDK (<a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" target="_blank">official instructions</a>),</li>
+        <li>Get a submodule:
+            <span class="commandline">git submodule update --init --recursive</span>
+        </li>
         <li>Compile package:
             <span class="commandline">atlas-package</span>
         </li>

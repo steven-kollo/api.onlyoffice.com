@@ -92,7 +92,20 @@
 
     <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 
-    <% var ext = Request["type"] == "spreadsheet" ? "xlsx" : Request["type"] == "presentation" ? "pptx" : "docx"; %>
+    <%
+        var documentType = "word";
+        var ext = "docx";
+        if (Request["type"] == "spreadsheet")
+        {
+            documentType = "spreadsheet";
+            ext = "xlsx";
+        }
+        else if (Request["type"] == "presentation")
+        {
+            documentType = "presentation";
+            ext = "pptx";
+        }
+    %>
     <script type="text/javascript">
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             <%= Config.Serialize(
@@ -110,7 +123,7 @@
                                         Print = false
                                     }
                             },
-                        DocumentType = Request["type"] ?? "word",
+                        DocumentType = documentType,
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
