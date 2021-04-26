@@ -569,6 +569,11 @@
     <Content Include="Views\Plugin\Macros\Macros.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
     <Content Include="Views\Plugin\callCommand.aspx" />
+    <Content Include="Views\Plugin\callModule.aspx" />
+    <Content Include="Views\Plugin\loadModule.aspx" />
+    <Content Include="Views\Plugin\createInputHelper.aspx" />
+    <Content Include="Views\Plugin\getInputHelper.aspx" />
+    <Content Include="Views\Plugin\resizeWindow.aspx" />
     <Content Include="Views\Plugin\ExecuteCommand.aspx" />
     <Content Include="Views\Plugin\Plugin.aspx" />
     <Content Include="Views\Plugin\scope.aspx" />

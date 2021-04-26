@@ -2,18 +2,54 @@
 
 <h1>
         <a class="up" href="<%= Url.Action("plugin") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod(Name, [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod (name, [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the <em>window.Asc.plugin</em> object method that allows executing certain methods of the editor using the plugin. <em>Name</em> is the name of the specific method that must be executed, <em>[args]</em> are the arguments that the method in use has (if it has any), and <em>callback</em> is the result that the method returns. The latter is an optional parameter. In case it is missing, the <a href="<%= Url.Action("onmethodreturn") %>">window.Asc.plugin.onMethodReturn</a> method will be used to return the result of the method execution.</p>
+<p class="dscr">Defines the method used to execute certain methods of the editor using the plugin.</p>
+
+<p>The <em>callback</em> is the result that the method returns. It is an optional parameter. In case it is missing, the 
+    <a href="<%= Url.Action("events") %>#onMethodReturn">window.Asc.plugin.onMethodReturn</a> function will be used to return the result of the method execution.</p>
+
+<div class="header-gray">Parameters</div>
+
+    <table class="table">
+        <colgroup>
+            <col style="width: 100px;" />
+            <col />
+            <col style="width: 100px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td>name</td>
+                <td>The name of the specific method that must be executed</td>
+                <td>string</td>
+            </tr>
+            <tr class="tablerow">
+                <td>args</td>
+                <td>The arguments that the method in use has (if it has any).</td>
+                <td>array</td>
+            </tr>
+            <tr class="tablerow">
+                <td>callback</td>
+                <td>The result that the method returns.</td>
+                <td>function</td>
+            </tr>
+        </tbody>
+    </table>
+
 
 <p>See the available <em>window.Asc.plugin.executeMethod</em> methods below to find more about them.</p>
 
 <div class="header-gray">Methods and properties</div>
-
-<p>Currently, the following six methods are available that can be executed in this way:</p>
 
 <table class="table">
     <colgroup>

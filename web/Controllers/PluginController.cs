@@ -44,6 +44,8 @@ namespace ASC.Api.Web.Help.Controllers
                 "Code",
                 "Config",
                 "callCommand",
+                "callModule",
+                "createInputHelper",
                 "events",
                 "ExecuteCommand",
                 "executemethod",
@@ -67,6 +69,9 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/setproperties",
                 "executemethod/showinputhelper",
                 "executemethod/unshowinputhelper",
+                "getInputHelper",
+                "loadModule",
+                "resizeWindow",
                 "Example",
                 "FAQ",
                 "GettingStarted",
@@ -185,6 +190,16 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult callModule()
+        {
+            return View();
+        }
+
+        public ActionResult createInputHelper()
+        {
+            return View();
+        }
+
         public ActionResult Events()
         {
             return View();
@@ -202,6 +217,21 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Executemethod", (object)catchall);
+        }
+
+        public ActionResult getInputHelper()
+        {
+            return View();
+        }
+
+        public ActionResult loadModule()
+        {
+            return View();
+        }
+
+        public ActionResult resizeWindow()
+        {
+            return View();
         }
 
         public ActionResult Example()
