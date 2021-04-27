@@ -56,6 +56,26 @@ function getInputHelperSize () {
         </li>
 
         <li>
+            <p><b id="getScrollSizes" class="copy-link">getScrollSizes</b> - the function called to get the sizes of the input helper scrolled window. 
+                Returns an object with width and height parameters.</p>
+            <div class="header-gray">Example</div>
+            <pre>
+function getInputHelperSize () {
+    var _size = window.Asc.plugin.getInputHelper().getScrollSizes();
+    var _width = 200;
+    var _height = _size.h;
+    var _heightMin = window.Asc.plugin.getInputHelper().getItemsHeight(Math.min(5, window.Asc.plugin.getInputHelper().getItems().length));
+    if (_width > 400)
+        _width = 400;
+    if (_height > _heightMin)
+        _height = _heightMin;
+        _width += 30;
+        return { w: _width, h : _height };
+}                                         
+</pre>
+        </li>
+
+        <li>
             <p><b id="setItems" class="copy-link">setItems</b> - the function called to set the items to the input helper.</p>
             <div class="header-gray">Parameters</div>
             <table class="table">
@@ -197,26 +217,6 @@ window.Asc.plugin.executeMethod ("SelectContentControl", [window.Asc.plugin.curr
     window.Asc.plugin.executeMethod("InputText", [item.text]);
     window.Asc.plugin.getInputHelper().unShow(); 
 });                             
-</pre>
-        </li>
-
-        <li>
-            <p><b id="getScrollSizes" class="copy-link">getScrollSizes</b> - the function called to get the sizes of the input helper scrolled window. 
-                Returns an object with width and height parameters.</p>
-            <div class="header-gray">Example</div>
-            <pre>
-function getInputHelperSize () {
-    var _size = window.Asc.plugin.getInputHelper().getScrollSizes();
-    var _width = 200;
-    var _height = _size.h;
-    var _heightMin = window.Asc.plugin.getInputHelper().getItemsHeight(Math.min(5, window.Asc.plugin.getInputHelper().getItems().length));
-    if (_width > 400)
-        _width = 400;
-    if (_height > _heightMin)
-        _height = _heightMin;
-        _width += 30;
-        return { w: _width, h : _height };
-}                                         
 </pre>
         </li>
 
