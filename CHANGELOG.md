@@ -1,5 +1,8 @@
 # Change Log
 
+- docbuilder: api v6.3.0
+- docbuilder: display class properties
+
 ## 2.1.0
 - fix xss
 - portals: api v11.5

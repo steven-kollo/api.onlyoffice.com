@@ -6,7 +6,7 @@
       "description": "<p>Get the type of this class.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CSE"
         ]
       },
       "returns": [
@@ -854,8 +854,145 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a range.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\r\n\t * Class representing a range.\r\n\t * @constructor\r\n\t * @property {number} Row - Returns the row number for the selected cell.\r\n\t * @property {number} Col - Returns the column number for the selected cell.\r\n\t * @property {ApiRange} Rows - Returns the ApiRange object that represents the rows of the specified range.\r\n\t * @property {number} Count - Returns the rows or columns count.\r\n\t * @property {string} Value - Returns the value from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Formula - Returns the formula from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Value2 - Returns the value2 (value without format) from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Text - Returns the text from the first cell of the specified range or sets it to this cell.\r\n\t * @property {ApiColor} FontColor - Sets the text color to the current cell range with the previously created color object.\r\n\t * @property {bool} Hidden - Returns or sets the value hiding property.\r\n\t * @property {number} ColumnWidth - Returns or sets the width of all the columns in the specified range measured in points.\r\n\t * @property {number} Width - Returns a value that represents the range width measured in points.\r\n\t * @property {number} RowHeight - Returns or sets the height of the first row in the specified range measured in points.\r\n\t * @property {number} Height - Returns a value that represents the range height measured in points.\r\n\t * @property {number} FontSize - Sets the font size to the characters of the current cell range.\r\n\t * @property {string} FontName - Sets the specified font family as the font name for the current cell range.\r\n\t * @property {'center' | 'bottom' | 'top' | 'distributed' | 'justify'} AlignVertical - Sets the text vertical alignment to the current cell range.\r\n\t * @property {'left' | 'right' | 'center' | 'justify'} AlignHorizontal - Sets the text horizontal alignment to the current cell range.\r\n\t * @property {bool} Bold - Sets the bold property to the text characters from the current cell or cell range.\r\n\t * @property {'none' | 'single' | 'singleAccounting' | 'double' | 'doubleAccounting'} Underline - Sets the type of underline applied to the font.\r\n\t * @property {bool} Strikeout - Sets a value that indicates whether the contents of the current cell or cell range are displayed struck through.\r\n\t * @property {ApiColor|'No Fill'} FillColor - Returns or sets the background color of the current cell range.\r\n\t * @property {string} NumberFormat - Sets a value that represents the format code for the object.\r\n\t * @property {ApiRange} MergeArea - Returns the cell or cell range from the merge area.\r\n\t * @property {ApiWorksheet} Worksheet - Returns the ApiWorksheet object that represents the worksheet containing the specified range.\r\n\t * @property {ApiName} DefName - Returns the ApiName object.\r\n\t * @property {ApiComment | null} Comments - Returns the ApiComment collection that represents all the comments from the specified worksheet.\r\n\t */",
   "description": "<p>Class representing a range.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "number",
+      "name": "Row",
+      "description": "<p>Returns the row number for the selected cell.</p>"
+    },
+    {
+      "type": "number",
+      "name": "Col",
+      "description": "<p>Returns the column number for the selected cell.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Rows",
+      "description": "<p>Returns the ApiRange object that represents the rows of the specified range.</p>"
+    },
+    {
+      "type": "number",
+      "name": "Count",
+      "description": "<p>Returns the rows or columns count.</p>"
+    },
+    {
+      "type": "string",
+      "name": "Value",
+      "description": "<p>Returns the value from the first cell of the specified range or sets it to this cell.</p>"
+    },
+    {
+      "type": "string",
+      "name": "Formula",
+      "description": "<p>Returns the formula from the first cell of the specified range or sets it to this cell.</p>"
+    },
+    {
+      "type": "string",
+      "name": "Value2",
+      "description": "<p>Returns the value2 (value without format) from the first cell of the specified range or sets it to this cell.</p>"
+    },
+    {
+      "type": "string",
+      "name": "Text",
+      "description": "<p>Returns the text from the first cell of the specified range or sets it to this cell.</p>"
+    },
+    {
+      "type": "ApiColor",
+      "name": "FontColor",
+      "description": "<p>Sets the text color to the current cell range with the previously created color object.</p>"
+    },
+    {
+      "type": "bool",
+      "name": "Hidden",
+      "description": "<p>Returns or sets the value hiding property.</p>"
+    },
+    {
+      "type": "number",
+      "name": "ColumnWidth",
+      "description": "<p>Returns or sets the width of all the columns in the specified range measured in points.</p>"
+    },
+    {
+      "type": "number",
+      "name": "Width",
+      "description": "<p>Returns a value that represents the range width measured in points.</p>"
+    },
+    {
+      "type": "number",
+      "name": "RowHeight",
+      "description": "<p>Returns or sets the height of the first row in the specified range measured in points.</p>"
+    },
+    {
+      "type": "number",
+      "name": "Height",
+      "description": "<p>Returns a value that represents the range height measured in points.</p>"
+    },
+    {
+      "type": "number",
+      "name": "FontSize",
+      "description": "<p>Sets the font size to the characters of the current cell range.</p>"
+    },
+    {
+      "type": "string",
+      "name": "FontName",
+      "description": "<p>Sets the specified font family as the font name for the current cell range.</p>"
+    },
+    {
+      "type": "'center' | 'bottom' | 'top' | 'distributed' | 'justify'",
+      "name": "AlignVertical",
+      "description": "<p>Sets the text vertical alignment to the current cell range.</p>"
+    },
+    {
+      "type": "'left' | 'right' | 'center' | 'justify'",
+      "name": "AlignHorizontal",
+      "description": "<p>Sets the text horizontal alignment to the current cell range.</p>"
+    },
+    {
+      "type": "bool",
+      "name": "Bold",
+      "description": "<p>Sets the bold property to the text characters from the current cell or cell range.</p>"
+    },
+    {
+      "type": "'none' | 'single' | 'singleAccounting' | 'double' | 'doubleAccounting'",
+      "name": "Underline",
+      "description": "<p>Sets the type of underline applied to the font.</p>"
+    },
+    {
+      "type": "bool",
+      "name": "Strikeout",
+      "description": "<p>Sets a value that indicates whether the contents of the current cell or cell range are displayed struck through.</p>"
+    },
+    {
+      "type": "ApiColor | 'No Fill'",
+      "name": "FillColor",
+      "description": "<p>Returns or sets the background color of the current cell range.</p>"
+    },
+    {
+      "type": "string",
+      "name": "NumberFormat",
+      "description": "<p>Sets a value that represents the format code for the object.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "MergeArea",
+      "description": "<p>Returns the cell or cell range from the merge area.</p>"
+    },
+    {
+      "type": "ApiWorksheet",
+      "name": "Worksheet",
+      "description": "<p>Returns the ApiWorksheet object that represents the worksheet containing the specified range.</p>"
+    },
+    {
+      "type": "ApiName",
+      "name": "DefName",
+      "description": "<p>Returns the ApiName object.</p>"
+    },
+    {
+      "type": "ApiComment | null",
+      "name": "Comments",
+      "description": "<p>Returns the ApiComment collection that represents all the comments from the specified worksheet.</p>"
+    }
+  ]
 }

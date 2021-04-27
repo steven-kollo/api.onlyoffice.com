@@ -408,6 +408,24 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",
-  "scope": "global"
+  "comment": "/**\r\n\t * Base class.\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\r\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\r\n\t * @property {ApiRange} Selection - Returns an object that represents the selection range.\r\n\t */",
+  "description": "<p>Base class.</p>",
+  "scope": "global",
+  "properties": [
+    {
+      "type": "Array",
+      "name": "Sheets",
+      "description": "<p>Returns the Sheets collection that represents all the sheets in the active workbook.</p>"
+    },
+    {
+      "type": "ApiWorksheet",
+      "name": "ActiveSheet",
+      "description": "<p>Returns an object that represents the active sheet.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Selection",
+      "description": "<p>Returns an object that represents the selection range.</p>"
+    }
+  ]
 }

@@ -1048,8 +1048,105 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a sheet.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\r\n\t * Class representing a sheet.\r\n\t * @constructor\r\n\t * @property {bool} Visible - Returns or sets the state of sheet visibility.\r\n\t * @property {number} Active - Makes the current sheet the active sheet.\r\n\t * @property {ApiRange} ActiveCell - Returns an object that represents the active cell.\r\n\t * @property {ApiRange} Selection - Returns an object that represents the selection range.\r\n\t * @property {ApiRange} Cells - Returns ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use).\r\n\t * @property {ApiRange} Rows - Returns ApiRange that represents all the cells of the rows range.\r\n\t * @property {ApiRange} Cols - Returns ApiRange that represents all the cells of the columns range.\r\n\t * @property {ApiRange} UsedRange - Returns ApiRange that represents the used range on the specified worksheet.\r\n\t * @property {string} Name - Returns or sets a name of the active sheet.\r\n\t * @property {number} Index - Returns a sheet index.\r\n\t * @property {number} LeftMargin - Returns or sets the size of the sheet left margin measured in points.\r\n\t * @property {number} RightMargin - Returns or sets the size of the sheet right margin measured in points.\r\n\t * @property {number} TopMargin - Returns or sets the size of the sheet top margin measured in points.\r\n\t * @property {number} BottomMargin - Returns or sets the size of the sheet bottom margin measured in points.\r\n\t * @property {PageOrientation} PageOrientation - Returns or sets the page orientation.\r\n\t * @property {bool} PrintHeadings - Returns or sets the page PrintHeadings property.\r\n\t * @property {bool} PrintGridlines - Returns or sets the page PrintGridlines property.\r\n\t * @property {Array} Defnames - Returns an array of the ApiName objects.\r\n\t * @property {Array} Comments - Returns an array of the ApiComment objects.\r\n\t */",
   "description": "<p>Class representing a sheet.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "bool",
+      "name": "Visible",
+      "description": "<p>Returns or sets the state of sheet visibility.</p>"
+    },
+    {
+      "type": "number",
+      "name": "Active",
+      "description": "<p>Makes the current sheet the active sheet.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "ActiveCell",
+      "description": "<p>Returns an object that represents the active cell.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Selection",
+      "description": "<p>Returns an object that represents the selection range.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Cells",
+      "description": "<p>Returns ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use).</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Rows",
+      "description": "<p>Returns ApiRange that represents all the cells of the rows range.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Cols",
+      "description": "<p>Returns ApiRange that represents all the cells of the columns range.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "UsedRange",
+      "description": "<p>Returns ApiRange that represents the used range on the specified worksheet.</p>"
+    },
+    {
+      "type": "string",
+      "name": "Name",
+      "description": "<p>Returns or sets a name of the active sheet.</p>"
+    },
+    {
+      "type": "number",
+      "name": "Index",
+      "description": "<p>Returns a sheet index.</p>"
+    },
+    {
+      "type": "number",
+      "name": "LeftMargin",
+      "description": "<p>Returns or sets the size of the sheet left margin measured in points.</p>"
+    },
+    {
+      "type": "number",
+      "name": "RightMargin",
+      "description": "<p>Returns or sets the size of the sheet right margin measured in points.</p>"
+    },
+    {
+      "type": "number",
+      "name": "TopMargin",
+      "description": "<p>Returns or sets the size of the sheet top margin measured in points.</p>"
+    },
+    {
+      "type": "number",
+      "name": "BottomMargin",
+      "description": "<p>Returns or sets the size of the sheet bottom margin measured in points.</p>"
+    },
+    {
+      "type": "PageOrientation",
+      "name": "PageOrientation",
+      "description": "<p>Returns or sets the page orientation.</p>"
+    },
+    {
+      "type": "bool",
+      "name": "PrintHeadings",
+      "description": "<p>Returns or sets the page PrintHeadings property.</p>"
+    },
+    {
+      "type": "bool",
+      "name": "PrintGridlines",
+      "description": "<p>Returns or sets the page PrintGridlines property.</p>"
+    },
+    {
+      "type": "Array",
+      "name": "Defnames",
+      "description": "<p>Returns an array of the ApiName objects.</p>"
+    },
+    {
+      "type": "Array",
+      "name": "Comments",
+      "description": "<p>Returns an array of the ApiComment objects.</p>"
+    }
+  ]
 }
