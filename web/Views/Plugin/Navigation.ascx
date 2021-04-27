@@ -127,42 +127,13 @@
                         <a href="<%= Url.Action("objects") %>">Auxiliary objects</a>
                         <ul>
                             <li>
-                                <a href="<%= Url.Action("info/") %>">info object</a>
-                                <ul>
-                                    <li>
-                                        <a href="<%= Url.Action("info/data") %>">data</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/editorType") %>">editorType</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/guid") %>">guid</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/height") %>">height</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/imgsrc") %>">imgSrc</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/mmtopx") %>">mmToPx</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/objectId") %>">objectId</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/recalculate") %>">recalculate</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/resize") %>">resize</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("info/width") %>">width</a>
-                                    </li>
-                                </ul>
+                                <a href="<%= Url.Action("info") %>">info object</a>
                             </li>
                             <li>
                                 <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("inputhelper") %>">InputHelper object</a>
                             </li>
                         </ul>
                     </li>

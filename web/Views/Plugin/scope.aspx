@@ -11,6 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
+        <a class="up" href="<%= Url.Action("objects") %>"></a>
         <span class="hdr">Asc.scope object</span>
     </h1>
 

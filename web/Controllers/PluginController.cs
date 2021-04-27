@@ -77,21 +77,13 @@ namespace ASC.Api.Web.Help.Controllers
                 "GettingStarted",
                 "IndexHtml",
                 "Info",
-                "Info/data",
-                "Info/editorType",
-                "Info/guid",
-                "Info/height",
-                "Info/imgSrc",
-                "Info/mmToPx",
-                "Info/objectId",
-                "Info/recalculate",
-                "Info/resize",
-                "Info/width",
+                "inputHelper",
                 "installation",
                 "installation/desktop",
                 "installation/onpremises",
                 "installation/cloud",
                 "Localization",
+                "Objects",
                 "Plugin",
                 "scope",
                 "Structure",
@@ -254,13 +246,14 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Info(string catchall)
+        public ActionResult Info()
         {
-            if (!_actionMap.Contains("info/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("Info", (object)catchall);
+            return View();
+        }
+
+        public ActionResult inputHelper()
+        {
+            return View();
         }
 
         public ActionResult Installation(string catchall)
@@ -273,6 +266,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Localization()
+        {
+            return View();
+        }
+
+        public ActionResult Objects()
         {
             return View();
         }
