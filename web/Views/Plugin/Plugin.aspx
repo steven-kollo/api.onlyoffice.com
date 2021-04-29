@@ -16,7 +16,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Defines the object created when the plugin is launched. It has several methods some of which are optional and must be used only if and when needed.</p>
+    <p class="dscr"><em>window.Asc.plugin</em> defines the object created when the plugin is launched. It has several methods some of which are optional and must be used only if and when needed.</p>
 
     <div class="header-gray">Methods and properties</div>
 
@@ -37,7 +37,7 @@
         <tbody>
             <tr class="tablerow">
                 <td><a href="<%= Url.Action("callcommand") %>">callCommand</a></td>
-                <td>Defines the method used to send the data back to the editor. It replaces the <a href="<%= Url.Action("executeCommand") %>">executeCommand</a> method 
+                <td>Defines the method used to send the data back to the editor. It replaces the <em>executeCommand</em> method 
                     when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors.</td>
                 <td>function</td>
                 <td>required</td>
