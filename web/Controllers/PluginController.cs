@@ -41,10 +41,12 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Basic",
-                "Button",
                 "Code",
                 "Config",
                 "callCommand",
+                "callModule",
+                "createInputHelper",
+                "events",
                 "ExecuteCommand",
                 "executemethod",
                 "executemethod/insertandreplacecontentcontrols",
@@ -67,29 +69,37 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/setproperties",
                 "executemethod/showinputhelper",
                 "executemethod/unshowinputhelper",
+                "executemethod/addcomment",
+                "executemethod/changecomment",
+                "executemethod/getallcomments",
+                "executemethod/getcurrentcontentcontrolpr",
+                "executemethod/getfields",
+                "executemethod/getfilehtml",
+                "executemethod/getselectedtext",
+                "executemethod/movecursortocontentcontrol",
+                "executemethod/movecursortoend",
+                "executemethod/movecursortostart",
+                "executemethod/movetocomment",
+                "executemethod/openfile",
+                "executemethod/removecomments",
+                "executemethod/removeselectedcontent",
+                "executemethod/searchandreplace",
+                "executemethod/selectcontentcontrol",
+                "getInputHelper",
+                "loadModule",
+                "resizeWindow",
                 "Example",
                 "FAQ",
                 "GettingStarted",
                 "IndexHtml",
                 "Info",
-                "Info/data",
-                "Info/editorType",
-                "Info/guid",
-                "Info/height",
-                "Info/imgSrc",
-                "Info/mmToPx",
-                "Info/objectId",
-                "Info/recalculate",
-                "Info/resize",
-                "Info/width",
-                "Init",
+                "inputHelper",
                 "installation",
                 "installation/desktop",
                 "installation/onpremises",
                 "installation/cloud",
                 "Localization",
-                "OnExternalMouseUp",
-                "onmethodreturn",
+                "Objects",
                 "Plugin",
                 "scope",
                 "Structure",
@@ -173,11 +183,6 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Button()
-        {
-            return View();
-        }
-
         public ActionResult Code()
         {
             return View();
@@ -189,6 +194,21 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult callCommand()
+        {
+            return View();
+        }
+
+        public ActionResult callModule()
+        {
+            return View();
+        }
+
+        public ActionResult createInputHelper()
+        {
+            return View();
+        }
+
+        public ActionResult Events()
         {
             return View();
         }
@@ -205,6 +225,21 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Executemethod", (object)catchall);
+        }
+
+        public ActionResult getInputHelper()
+        {
+            return View();
+        }
+
+        public ActionResult loadModule()
+        {
+            return View();
+        }
+
+        public ActionResult resizeWindow()
+        {
+            return View();
         }
 
         public ActionResult Example()
@@ -227,16 +262,12 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Info(string catchall)
+        public ActionResult Info()
         {
-            if (!_actionMap.Contains("info/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("Info", (object)catchall);
+            return View();
         }
 
-        public ActionResult Init()
+        public ActionResult inputHelper()
         {
             return View();
         }
@@ -255,12 +286,7 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult OnExternalMouseUp()
-        {
-            return View();
-        }
-
-        public ActionResult Onmethodreturn()
+        public ActionResult Objects()
         {
             return View();
         }

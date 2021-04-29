@@ -2,17 +2,17 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("StartAction", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("MoveCursorToEnd", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows specifying the start action for long operations.</p>
+<p class="dscr">Defines the method that allows moving the cursor to the end position.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("StartAction", [type, description]);
+window.Asc.plugin.executeMethod ("MoveCursorToEnd", [isMoveToMainContent]);
 </pre>
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -32,16 +32,10 @@ window.Asc.plugin.executeMethod ("StartAction", [type, description]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>type</td>
-            <td>A value which defines an action type which can take 0 if this is an <em>Information</em> action or 1 if this is a <em>BlockInteraction</em> action.</td>
-            <td>number</td>
-            <td>1</td>
-        </tr>
-        <tr class="tablerow">
-            <td>description</td>
-            <td>A string value that specifies the description text for the start action of the operation.</td>
-            <td>string</td>
-            <td>"Save to localstorage..."</td>
+            <td>isMoveToMainContent</td>
+            <td>Defines if the cursor moves to the document end (<b>true</b>) or to the current element end (<b>false</b>).</td>
+            <td>boolean</td>
+            <td>true</td>
         </tr>
     </tbody>
 </table>
@@ -53,5 +47,5 @@ window.Asc.plugin.executeMethod ("StartAction", [type, description]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("StartAction", [1, "Save to localstorage..."]);
+window.Asc.plugin.executeMethod ("MoveCursorToEnd", [true]);
 </pre>

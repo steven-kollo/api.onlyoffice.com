@@ -1,6 +1,11 @@
 # Change Log
 
+
 ## 2.1.0
+- plugins: added the InputHelper object and its methods
+- plugins: added new methods
+- plugins: added events
+- plugins: updated config parameters
 - fix xss
 - portals: api v11.5
 

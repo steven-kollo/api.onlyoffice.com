@@ -1,4 +1,4 @@
-﻿<%@ Page
+<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,18 +6,18 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    init
+    loadModule
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
         <a class="up" href="<%= Url.Action("plugin") %>"></a>
-        <span class="hdr">window.Asc.plugin.init(data)</span>
+        <span class="hdr">window.Asc.plugin.loadModule (url, callback)</span>
     </h1>
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Defines the data sent to the plugin describing what actions are to be performed and how they must be performed. This method is called when the plugin is launched.</p>
+    <p class="dscr">Defines the method used to load a remotely located text resource.</p>
 
     <div class="header-gray">Parameters</div>
 
@@ -36,9 +36,14 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td>data</td>
-                <td>Defines the data parameter that depends on the <em>initDataType</em> setting specified in the plugin configuration <a href="<%= Url.Action("config") %>">config.json</a> file. The type of the data is as follows: <em>none</em> - an empty string, <em>text</em> - the text of the selected document, <em>html</em> - a fragment of the selected document, <em>ole</em> - the data of the OLE object.</td>
+                <td>url</td>
+                <td>The resource code url.</td>
                 <td>string</td>
+            </tr>
+            <tr class="tablerow">
+                <td>callback</td>
+                <td>The result that the method returns.</td>
+                <td>function</td>
             </tr>
         </tbody>
     </table>
@@ -46,13 +51,14 @@
     <div class="header-gray">Example</div>
 
     <pre>
-window.Asc.plugin.init = function () {
-    this.callCommand(function() {
-        var oDocument = Api.GetDocument();
-        var oParagraph = Api.CreateParagraph();
-        oParagraph.AddText("Hello world!");
-        oDocument.InsertContent([oParagraph]);
-    }, true);
-};
+window.Asc.plugin.loadModule("./vendor/highlight/styles/" + e.params.data.id , function(content) {
+    style_value = content;
+    if (isDE || isFF) {
+        $("#jq_color").spectrum("set", (hexc($(container).css('backgroundColor'))));
+    } else {
+        background_color.value = hexc($(container).css('backgroundColor'));
+    }
+});        
 </pre>
+
 </asp:Content>

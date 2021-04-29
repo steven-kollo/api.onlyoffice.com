@@ -2,17 +2,17 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("SetMacros", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("ChangeComment", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows setting macros to the document.</p>
+<p class="dscr">Defines the method that allows changing the specified comment.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("SetMacros", [data]);
+window.Asc.plugin.executeMethod ("ChangeComment", [sId, oCommentData]);
 </pre>
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -32,21 +32,30 @@ window.Asc.plugin.executeMethod ("SetMacros", [data]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>data</td>
+            <td>sId</td>
+            <td>The comment id.</td>
+            <td>string</td>
+            <td>"id"</td>
+        </tr>
+        <tr class="tablerow">
+            <td>oCommentData</td>
             <td>
-                The <em>Macros</em> object containing the data about all the macros from the document in the following form (JSON):
+                An object which contains the comment data:
                 <ul>
                     <li>
-                        <b>macrosArray</b> - an array of macros codes (<em>[{"name": "Macros1", "value": "{macrosCode}"}]</em>),
+                        <b>comment</b> - the comment text,
                         <br />
-                        <b>type</b>: array of objects;
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "comment";
+                        <br />
                     </li>
                     <li>
-                        <b>current</b> - a current macros index,
+                        <b>author</b> - the comment author,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: 1.
+                        <b>example</b>: "John Smith".
                         <br />
                     </li>
                 </ul>
@@ -64,5 +73,5 @@ window.Asc.plugin.executeMethod ("SetMacros", [data]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("SetMacros", [{"macrosArray": [{"name": "Macros 1","value": "(function()\n{oDocument = Api.GetDocument();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a new paragraph\");\noDocument.Push(oParagraph);\n})();"},{"name": "Macros 2","value": "(function()\n{oDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetBold(true);\n})();"}],"current": 1}]);
+window.Asc.plugin.executeMethod ("ChangeComment", ["id", {"comment": "comment", "author": "John Smith"}]);
 </pre>
