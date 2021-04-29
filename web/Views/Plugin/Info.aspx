@@ -51,7 +51,7 @@
                 <td id="data" class="copy-link">data</td>
                 <td>The OLE object data which need to be sent to the <em>window.Asc.plugin.info</em> object and used by the plugin.</td>
                 <td>string</td>
-                <td>JSON.stringify ({"width": 70, "height": 70})</td>
+                <td>"{data}"</td>
             </tr>
             <tr class="tablerow">
                 <td id="editorType" class="copy-link">editorType</td>
@@ -63,7 +63,7 @@
                 <td id="guid" class="copy-link">guid</td>
                 <td>The OLE object GUID in the current document.</td>
                 <td>string</td>
-                <td>"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"</td>
+                <td>"asc.{UUID}"</td>
             </tr>
             <tr class="tablerow">
                 <td id="height" class="copy-link">height</td>

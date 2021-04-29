@@ -2,19 +2,43 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod("PasteHtml", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("PasteHtml", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows pasting text in <em>html</em> format into the document.</p>
+<p class="dscr">Defines the method that allows pasting text in the <em>html</em> format into the document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod("PasteHtml", [htmlText]);
+window.Asc.plugin.executeMethod ("PasteHtml", [htmlText]);
 </pre>
-<p>Where <em>htmlText</em> is a string value that specifies the text in <em>html</em> format to be pasted into the document.</p>
+<div class="header-gray">Parameters</div>
+<table class="table">
+    <colgroup>
+        <col style="width: 100px;" />
+        <col />
+        <col style="width: 100px;" />
+        <col style="width: 150px;" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>htmlText</td>
+            <td>A string value that specifies the text in the <em>html</em> format to be pasted into the document.</td>
+            <td>string</td>
+            <td>"html text"</td>
+        </tr>
+    </tbody>
+</table>
 
 <div class="header-gray">Returns</div>
 

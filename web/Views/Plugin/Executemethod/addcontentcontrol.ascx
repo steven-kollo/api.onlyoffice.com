@@ -2,37 +2,79 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod("AddContentControl", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("AddContentControl", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows adding an empty content control to 
-the document.</p>
+<p class="dscr">Defines the method that allows adding an empty content control to the document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod("AddContentControl", [wrap, obj]);
+window.Asc.plugin.executeMethod ("AddContentControl", [wrap, obj]);
 </pre>
-<p>Where:</p>
-<ul>
-    <li><em>wrap</em> is a numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block) or <b>2</b> (inline),</li>
-    <li><em>obj</em> is a JSON object of the following form:</li>
-</ul>
-<pre>
-{
-    "Id" : 0,
-    "Lock" : 0,
-    "Tag" : "{tag}"
-}
-</pre>
-<p>The <em>obj</em> object can have the following values:</p>
-<ul>
-    <li>"Id" (e.g. <em>{"Id": 2}</em> ) is a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.</li>
-    <li>"Tag" ( e.g. <em>{"Tag": "String"}</em> ) is a tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.</li>
-    <li>"Lock" (e.g. <em>{"Lock": 0}</em> ) is a value that defines if it is possible to delete and/or edit the content control or not. The values can be the following:</li>
-</ul>
+<div class="header-gray">Parameters</div>
+<table class="table">
+    <colgroup>
+        <col style="width: 100px;" />
+        <col />
+        <col style="width: 100px;" />
+        <col style="width: 150px;" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>wrap</td>
+            <td>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block) or <b>2</b> (inline).</td>
+            <td>number</td>
+            <td>2</td>
+        </tr>
+        <tr class="tablerow">
+            <td>obj</td>
+            <td>
+                A JSON object which can have the following values:
+                <ul>
+                    <li>
+                        <b>Id</b> - a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code,
+                        <br />
+                        <b>type</b>: number,
+                        <br />
+                        <b>example</b>: 0;
+                        <br />
+                    </li>
+                    <li>
+                        <b>Tag</b> - a tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "{tag}";
+                        <br />
+                    </li>
+                    <li>
+                        <b>Lock</b> - a value that defines if it is possible to delete and/or edit the content control or not,
+                        <br />
+                        <b>type</b>: number,
+                        <br />
+                        <b>example</b>: 0.
+                        <br />
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<p>The <em>Lock</em> parameter can have the following values:</p>
 <table class="table">
        <thead>
             <tr class="tablerow">
@@ -67,7 +109,7 @@ window.Asc.plugin.executeMethod("AddContentControl", [wrap, obj]);
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns a JSON object containing the data about the created content control in the following form (JSON):</p>
+<p>The method returns a JSON object containing the data about the created content control in the following form:</p>
 <pre>
 {
     "Tag": "{tag}",
@@ -77,19 +119,8 @@ window.Asc.plugin.executeMethod("AddContentControl", [wrap, obj]);
 }
 </pre>
 
-<%--<div class="header-gray">Example</div>
+<div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.button = function (id) {
-    var _info = window.Asc.plugin.info;
-    var _method = (_info.objectId === undefined) ? "asc_addOleObject" : "asc_editOleObject";
-    _info.width = _info.width ? _info.width : 70;
-    _info.height = _info.height ? _info.height : 70;
-    _info.widthPix = (_info.mmToPx * _info.width) >> 0;
-    _info.heightPix = (_info.mmToPx * _info.height) >> 0;
-    _info.imgSrc = window.g_board.getResult(_info.widthPix, _info.heightPix).image;
-    _info.data = window.g_board.getData();
-    var _code = "Api." + _method + "(" + JSON.stringify(_info) + ");";
-    this.executeCommand("close", _code);
-};
-</pre>--%>
+window.Asc.plugin.executeMethod("AddContentControl", [1, {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
+</pre>
