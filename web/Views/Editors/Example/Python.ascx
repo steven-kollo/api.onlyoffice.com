@@ -35,9 +35,10 @@
         <div class="commandline">cd Python\ Example</div>
     </li>
     <li>Install the dependencies:
-        <div class="commandline">pip install Django==3.1.3</div>
-        <div class="commandline">pip install requests==2.25.0</div>
-        <div class="commandline">pip install pyjwt==1.7.1</div>
+        <div class="commandline">pip install Django==3.1.3
+pip install requests==2.25.0
+pip install pyjwt==1.7.1
+pip install python-magic</div>
     </li>
     <li>Edit the <em>config.py</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
