@@ -27,9 +27,7 @@
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java example</a> from our site.</p>
 <p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
 
-<pre>files.docservice.url.converter=https://documentserver/ConvertService.ashx
-files.docservice.url.api=https://documentserver/web-apps/apps/api/documents/api.js
-files.docservice.url.preloader=https://documentserver/web-apps/apps/api/documents/cache-scripts.html</pre>
+<pre>files.docservice.url.site=https://documentserver/</pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\src\main\webapp\editor.jsp</em> file.</p>

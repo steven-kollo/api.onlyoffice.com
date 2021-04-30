@@ -42,11 +42,7 @@
         <div class="commandline">nano config/application.rb</div>
         <p>Edit the following lines:</p>
 
-        <pre>
-Rails.configuration.urlConverter="https://documentserver/ConvertService.ashx"
-Rails.configuration.urlApi="https://documentserver/web-apps/apps/api/documents/api.js"
-Rails.configuration.urlPreloader="https://documentserver/web-apps/apps/api/documents/cache-scripts.html"
-</pre>
+        <pre>Rails.configuration.urlSite="https://documentserver/"</pre>
 
         <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
     </li>

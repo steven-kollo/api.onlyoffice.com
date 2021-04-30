@@ -47,9 +47,7 @@ pip install python-magic</div>
         <p>Edit the following lines:</p>
 
         <pre>
-DOC_SERV_CONVERTER_URL = 'https://documentserver/ConvertService.ashx'
-DOC_SERV_API_URL = 'https://documentserver/web-apps/apps/api/documents/api.js'
-DOC_SERV_PRELOADER_URL = 'https://documentserver/web-apps/apps/api/documents/cache-scripts.html'
+DOC_SERV_SITE_URL = 'https://documentserver/'
 
 EXAMPLE_DOMAIN = 'https://exampleserver/'
 </pre>
