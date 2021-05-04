@@ -119,7 +119,8 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/formatrangeasatable",
                 "macros/macrosamples/addchart",
                 "macros/macrosamples/highlightduplicates",
-                "macros/macrosamples/nextblankrow"
+                "macros/macrosamples/nextblankrow",
+                "macros/macrosamples/inserttext"
             };
 
         public ActionResult Index()
