@@ -20,7 +20,7 @@
 <h2 id="Windows" class="copy-link">Running the example on Windows OS</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/server/developer-edition/windows/index.aspx?from=api_php_example">install Document Server for Windows</a>.</p>
+<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example">install Document Server for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP example</a> from our site.</p>
@@ -33,8 +33,8 @@
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>
     You can use any web server capable of runnig PHP code to run the sample.
-    We will demonstrate how to run the PHP sample using <b>Internet Information Services (IIS)</b> web server.
-    To set up and configure PHP on IIS <b>PHP Manager for IIS</b> will be used.
+    We will demonstrate how to run the PHP sample using the <b>Internet Information Services (IIS)</b> web server.
+    To set up and configure PHP on IIS, <b>PHP Manager for IIS</b> will be used.
 </p>
 
 <ul>
@@ -46,8 +46,8 @@
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>IIS configuration</h2>
 <ol>
     <li>
-        <p><b>PHP Manager for IIS</b> configuration:</p>
-        <p>After <b>PHP Manager for IIS</b> installation is complete launch the <b>IIS Manager:</b></p>
+        <p><b>PHP Manager for IIS</b> configuration.</p>
+        <p>After <b>PHP Manager for IIS</b> installation is complete, launch the <b>IIS Manager:</b></p>
         <p>Start -> ControlPanel -> System and Security -> Administrative Tools -> Internet Information Services (IIS) Manager </p>
         <p>and find the <b>PHP Manager</b> feature in the <b>Features View</b> in <b>IIS</b>.</p>
         <img src="<%= Url.Content("~/content/img/php/manager.png") %>" alt="">
@@ -60,12 +60,12 @@
         </p>
         <img src="<%= Url.Content("~/content/img/php/php-version-1.jpg") %>" width="700" alt="" />
 
-        <p>After clicking <b>OK</b> the new <b>PHP version</b> will be registered with IIS and will become active.</p>
+        <p>After clicking <b>OK</b>, the new <b>PHP version</b> will be registered with IIS and will become active.</p>
         <img src="<%= Url.Content("~/content/img/php/php-version-2.jpg") %>" width="650" alt="" />
     </li>
     <li>
-        <p>Configure IIS to handle PHP requests:</p>
-        <p>For IIS to host PHP applications, you must add handler mapping that tells IIS to pass all PHP-specific requests to the PHP application framework by using the FastCGI protocol.</p>
+        <p>Configure IIS to handle PHP requests.</p>
+        <p>For IIS to host PHP applications, you must add handler mapping that tells IIS to pass all the PHP-specific requests to the PHP application framework by using the FastCGI protocol.</p>
         <p>Double-click the <b>Handler Mappings</b> feature:</p>
         <img src="<%= Url.Content("~/content/img/php/handlerclick.png") %>" alt="" />
 
@@ -77,15 +77,13 @@
             <li>Request path: <b>*.php</b>,</li>
             <li>Module: <b>FastCgiModule</b>,</li>
             <li>Executable: <b>"C:\[Path to your PHP installation]\php-cgi.exe"</b>,</li>
-            <li>
-                <p>Name: <b>PHP via FastCGI</b>,</p>
-                <p>click <b>OK</b>.</p>
-            </li>
+            <li>Name: <b>PHP via FastCGI</b>.</li>  
         </ul>
+        <p>Click <b>OK</b>.</p>
         <img src="<%= Url.Content("~/content/img/php/handler-add.png") %>" alt="" />
     </li>
 </ol>
-<p>After IIS manager configuration is complete everything is ready for running the <b>PHP</b> example.</p>
+<p>After IIS manager configuration is complete, everything is ready for running the <b>PHP</b> example.</p>
 
 <h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Running your web site with the editors</h2>
 <ol>
@@ -95,7 +93,7 @@
         <img alt="" src="<%= Url.Content("~/content/img/csharp/add.png") %>" />
     </li>
     <li>
-        <p>In the <b>Add Website</b> dialog box specify the name of the folder with the PHP project in the <b>Site name</b> box.</p>
+        <p>In the <b>Add Website</b> dialog box, specify the name of the folder with the PHP project in the <b>Site name</b> box.</p>
         <p>Specify the path to the folder with your project in the <b>Physical Path</b> box.</p>
         <p>Specify the unique value used only for this website in the <b>Port</b> box.</p>
         <img alt="" src="<%= Url.Content("~/content/img/editor/php-add.png") %>" />
@@ -117,7 +115,7 @@
 <h2 id="Linux" class="copy-link">Running the example on Linux OS</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/server/developer-edition/linux/index.aspx?from=api_php_example">install Document Server for Linux</a>.</p>
+<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example">install Document Server for Linux</a>.</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
