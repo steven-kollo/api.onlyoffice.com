@@ -71,7 +71,7 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 </note>
 
 
-<h2>Removing plugins from ONLYOFFICE Docs on-premises</h2>
+<h2 id="remove" class="copy-link">Removing plugins from ONLYOFFICE Docs on-premises</h2>
 
 <p>You can uninstall plugins in two ways:</p>
 <p><b>Option 1.</b> Go to the <em>sdkjs-plugins</em> folder and remove the corresponding plugin folder from this directory.</p>
