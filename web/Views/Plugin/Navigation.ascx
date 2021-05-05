@@ -257,7 +257,10 @@
             </li>
             <li>
                 <a href="<%= Url.Action("macrosamples/nextblankrow") %>">Next blank row</a>
-            </li>  
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/inserttext") %>">Insert text</a>
+            </li>
         </ul>
     <li>
 </ul>

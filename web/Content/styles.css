@@ -1688,6 +1688,11 @@ article {
     background-repeat: no-repeat;
 }
 
+.insert-text {
+    background-image: url("img/macros/insert-text.svg");
+    background-repeat: no-repeat;
+}
+
 .macro-example {
     background-color: #fff;
     border: 1px solid #EFEFEF;
