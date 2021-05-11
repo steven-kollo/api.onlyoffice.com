@@ -40,6 +40,9 @@
                 <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("chamilo") %>">Chamilo integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
             </li>
             <li>
@@ -63,9 +66,6 @@
             <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
             </li>
-            <li>
-                <a href="<%= Url.Action("chamilo") %>">Chamilo integration</a>
-            </li>
         </ul>
     </li>
     <li>
@@ -82,6 +82,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("history") %>">Document history</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("anonymoususers") %>">Anonymous users</a>
             </li>
             <li>
                 <a href="<%= Url.Action("actionlink") %>">Action link</a>
