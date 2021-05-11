@@ -37,7 +37,7 @@
 
 <ul>
     <li>Java (download from  <a href="https://www.java.com/en/download/manual.jsp">the Oracle official web site</a>);</li>
-    <li>Apache Tomcat (download from <a href="http://tomcat.apache.org/">the official website</a>).</li>
+    <li>Apache Tomcat: version 9.0.x (download from <a href="https://tomcat.apache.org/download-90.cgi">the official website</a>).</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Running Apache Tomcat</h2>
