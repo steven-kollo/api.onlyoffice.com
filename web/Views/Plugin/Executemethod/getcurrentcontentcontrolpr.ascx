@@ -24,7 +24,7 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr");
     "Tag" : string,
     "Lock" : number,
     "Alias" : string,
-    "Appearance" : string,
+    "Appearance" : number,
     "Color" : {
         "R": number,
         "G": number,
@@ -75,9 +75,9 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr");
         </tr>
         <tr class="tablerow">
             <td>Appearance</td>
-            <td>Defines if the content control is shown as the bounding box or not.</td>
-            <td>"string"</td>
-            <td>"Bounding box"</td>
+            <td>Defines if the content control is shown as the bounding box (<b>1</b>) or not (<b>2</b>).</td>
+            <td>number</td>
+            <td>1</td>
         </tr>
         <tr class="tablerow">
             <td>Color</td>
