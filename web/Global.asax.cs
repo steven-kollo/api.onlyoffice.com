@@ -103,6 +103,10 @@ namespace ASC.Api.Web.Help
                                 "~/scripts/navigation-menu.js",
                                 "~/scripts/scripts.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/plugin-example")
+                            .Include(
+                                "~/scripts/filter-plugin.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/faq")
                             .Include(
                                 "~/scripts/faq.js"));
@@ -121,6 +125,10 @@ namespace ASC.Api.Web.Help
             bundles.Add(new Bundle("~/content/main-page", new CssMinify())
                             .Include(
                                 "~/content/main-page.css"));
+
+            bundles.Add(new Bundle("~/content/plugins-and-macros", new CssMinify())
+                .Include(
+                    "~/content/plugins-macros.css"));
         }
 
         protected void Application_Start()

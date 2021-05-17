@@ -402,6 +402,7 @@
     <Content Include="Content\img\plugins\write_data_to_cell.png" />
     <Content Include="Content\img\plugins\highlight_duplicates.png" />
     <Content Include="Content\img\plugins\plugins-structure.png" />
+    <Content Include="Content\plugins-macros.css" />
     <Content Include="externallistener\config.json" />
     <Content Include="externallistener\index.html" />
     <Content Include="externallistener\scripts\code.js" />
@@ -415,6 +416,7 @@
     <Content Include="Content\pushy.css" />
     <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\faq.js" />
+    <Content Include="Scripts\filter-plugin.js" />
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />
@@ -530,6 +532,9 @@
     <Content Include="Views\Plugin\Config.aspx" />
     <Content Include="Views\Plugin\Code.aspx" />
     <Content Include="Views\Plugin\Button.aspx" />
+    <Content Include="Views\Plugin\Example\plugin-example.ascx" />
+    <Content Include="Views\Plugin\Example\autocomplete.ascx" />
+    <Content Include="Views\Plugin\plugin-example.ascx" />
     <Content Include="Views\Plugin\example.aspx" />
     <Content Include="Views\Plugin\Executemethod.aspx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
