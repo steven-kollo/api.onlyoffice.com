@@ -1706,16 +1706,6 @@ article {
         float: none;
     }
 
-    .macro-block, .plugin-block {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 16px;
-    }
-
-    .example-img {
-        background-size: 208px;
-    }
-
     .ham_menu {
         cursor: pointer;
         display: block;
