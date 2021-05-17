@@ -11,41 +11,13 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Creating plugin configuration file: config.json</span>
+        <span class="hdr">config.json</span>
     </h1>
 
+    <div class="header-gray">Description</div>
     <p class="dscr">The <em>config.json</em> file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.</p>
-
-    <p>Below is an example code for the <em>config.json</em> file (this one is used for the <b>Chess</b> plugin, but any other <em>config.json</em> file can be created the same way):</p>
-
-    <pre>{
-    "baseUrl": "",
-    "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-    "help": "",
-    "name": "chess(fen)",
-    "variations": [
-        {
-            "buttons": [
-                { "text": "OK", "primary": true  },
-                { "text": "Cancel", "primary": false }
-            ],
-            "description": "chess",
-            "EditorsSupport": ["word", "cell", "slide"],
-            "icons": ["chess/icon.png", "chess/icon@2x.png", "chess/icon2.png", "chess/icon2@2x.png"],
-            "initData": "",
-            "initDataType": "ole",
-            "initOnSelectionChanged": true,
-            "isDisplayedInViewer": true,
-            "isInsideMode": false,
-            "isModal": true,
-            "isSystem": false,
-            "isUpdateOleOnResize": true,
-            "isViewer": true,
-            "isVisual": true,
-            "url": "chess/index.html"
-        }
-    ]
-};</pre>
+    
+    <div class="header-gray">Parameters</div>
     <table class="table">
         <colgroup>
             <col style="width: 220px;" />
@@ -57,7 +29,7 @@
                 <td>Name</td>
                 <td>Description</td>
                 <td>Type</td>
-                <td>Default</td>
+                <td>Example</td>
             </tr>
         </thead>
         <tbody>
@@ -71,7 +43,7 @@
                 <td>guid</td>
                 <td>Plugin identifier. It <b>must</b> be of the <em>asc.{UUID}</em> type.</td>
                 <td>string</td>
-                <td>""</td>
+                <td>"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"</td>
             </tr>
             <tr id="help" class="tablerow">
                 <td>help</td>
@@ -83,31 +55,74 @@
                 <td>name</td>
                 <td>Plugin name which will be visible at the plugin toolbar.</td>
                 <td>string</td>
-                <td>""</td>
+                <td>"plugin name"</td>
+            </tr>
+            <tr class="tablerow">
+                <td>nameLocale</td>
+                <td>Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.</td>
+                <td>object</td>
+                <td></td>
             </tr>
             <tr class="tablerow">
                 <td>variations</td>
-                <td>Plugin variations or "subplugins" - see the <a href="#pluginVariations">Plugin variations</a> section below.</td>
-                <td>array</td>
-                <td>[]</td>
+                <td>Plugin variations or <em>subplugins</em> - see the <a href="#pluginVariations">Plugin variations</a> section below.</td>
+                <td>array of object</td>
+                <td></td>
             </tr>
             <tr class="tablerow">
                 <td>variations.buttons</td>
-                <td>The list of skinnable plugin buttons used in the plugin interface (used for visual plugins with their own window only, i.e. <em>isVisual == true &amp;&amp; isInsideMode == false</em>). The buttons can be primary or not, the primary flag affecting the button skin only.</td>
-                <td>array</td>
-                <td>[]</td>
+                <td>
+                    The list of skinnable plugin buttons used in the plugin interface (used for visual plugins with their own window only, i.e. <em>isVisual == true &amp;&amp; isInsideMode == false</em>). 
+                    The button object can have the folowing parameters:
+                    <ul>
+                        <li>
+                            <b>text</b> - the label which is displayed on the button,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "Cancel";
+                        </li>
+                        <li>
+                            <b>primary</b> - defines if the button is primary or not. The primary flag affects the button skin only,
+                            <br />
+                            <b>type</b>: boolean,
+                            <br />
+                            <b>example</b>: true;
+                        </li>
+                        <li>
+                            <b>isViewer</b> - defines if the button is shown in the viewer mode only or not,
+                            <br />
+                            <b>type</b>: boolean,
+                            <br />
+                            <b>example</b>: false;
+                        </li>
+                        <li>
+                            <b>textLocale</b> - translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language,
+                            <br />
+                            <b>type</b>: object
+                        </li>
+                    </ul>
+                </td>
+                <td>array of object</td>
+                <td></td>
             </tr>
             <tr class="tablerow">
                 <td>variations.description</td>
                 <td>The description, i.e. what describes your plugin the best way.</td>
                 <td>string</td>
-                <td>""</td>
+                <td>"plugin description"</td>
+            </tr>
+            <tr class="tablerow">
+                <td>variations.descriptionLocale</td>
+                <td>Translations for the description field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin description translation for each language.</td>
+                <td>object</td>
+                <td></td>
             </tr>
             <tr class="tablerow">
                 <td>variations.EditorsSupport</td>
-                <td>The editors which the plugin is available for (<em>"word"</em> - text document editor, <em>"cell"</em> - spreadsheet editor, <em>"slide"</em> - presentation editor).</td>
-                <td>array</td>
-                <td>[]</td>
+                <td>The editors which the plugin is available for (<b>word</b> - text document editor, <b>cell</b> - spreadsheet editor, <b>slide</b> - presentation editor).</td>
+                <td>array of string</td>
+                <td></td>
             </tr>
             <tr class="tablerow">
                 <td>variations.icons</td>
@@ -122,8 +137,8 @@
                         <li><b>icon2@2x.png</b> - 52x52.</li>
                     </ul>
                 </td>
-                <td>array</td>
-                <td>[]</td>
+                <td>array of string</td>
+                <td></td>
             </tr>
             <tr class="tablerow">
                 <td>variations.initData</td>
@@ -133,9 +148,9 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.initDataType</td>
-                <td>The data type selected in the editor and sent to the plugin: <em>"text"</em> - the text data, <em>"html"</em> - HTML formatted code, <em>"ole"</em> - OLE object data, <em>"none"</em> - no data will be send to the plugin from the editor.</td>
+                <td>The data type selected in the editor and sent to the plugin: <b>text</b> - the text data, <b>html</b> - HTML formatted code, <b>ole</b> - OLE object data, <b>none</b> - no data will be send to the plugin from the editor.</td>
                 <td>string</td>
-                <td>""</td>
+                <td>"ole"</td>
             </tr>
             <tr class="tablerow">
                 <td>variations.initOnSelectionChanged</td>
@@ -145,7 +160,7 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.isDisplayedInViewer</td>
-                <td>Specifies if the plugin will be displayed in viewer mode as well as in editor mode (<em>isDisplayedInViewer == true</em>) or in the editor mode only (<em>isDisplayedInViewer == false</em>).</td>
+                <td>Specifies if the plugin will be displayed in the viewer mode as well as in the editor mode (<em>isDisplayedInViewer == true</em>) or in the editor mode only (<em>isDisplayedInViewer == false</em>).</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -163,21 +178,21 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.isSystem</td>
-                <td>Specifies if the plugin is not displayed in the editor interface and is started in background with the server (or desktop editors start) not interfering with the other plugins, so that they can work simultaneously.</td>
+                <td>Specifies if the plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with the other plugins, so that they can work simultaneously.</td>
                 <td>boolean</td>
                 <td>false</td>
             </tr>
             <tr class="tablerow">
                 <td>variations.isUpdateOleOnResize</td>
-                <td>Specifies if the OLE object must be redrawn when resized in the editor using the vector object draw type or not (used for OLE objects only, i.e. <em>initDataType == "ole"</em>).</td>
+                <td>Specifies if an OLE object must be redrawn when resized in the editor using the vector object draw type or not (used for OLE objects only, i.e. <em>initDataType == "ole"</em>).</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
             <tr class="tablerow">
                 <td>variations.isViewer</td>
-                <td>Specifies if the plugin is available when the document is available in viewer mode only or not.</td>
+                <td>Specifies if the plugin is available when the document is opened in the viewer mode only or not. The default value is <b>false</b>.</td>
                 <td>boolean</td>
-                <td>true</td>
+                <td>false</td>
             </tr>
             <tr class="tablerow">
                 <td>variations.isVisual</td>
@@ -188,14 +203,77 @@
             <tr class="tablerow">
                 <td>variations.url</td>
                 <td>
-                    Plugin entry point, i.e. HTML file which connects the <em>plugin.js</em> (the base file needed for work with plugins) file and launches the plugin code.
+                    Plugin entry point, i.e. an HTML file which connects the <em>plugin.js</em> file (the base file needed for work with plugins) and launches the plugin code.
                     See the <a href="<%= Url.Action("indexhtml") %>">index.html</a> section for the detailed information.
                 </td>
                 <td>string</td>
-                <td>""</td>
+                <td>"index.html"</td>
+            </tr>
+            <tr class="tablerow">
+                <td>variations.size</td>
+                <td>
+                    Plugin window size.
+                </td>
+                <td>array of integer</td>
+                <td></td>
+            </tr>
+            <tr class="tablerow">
+                <td>variations.events</td>
+                <td>
+                    Plugin events.
+                </td>
+                <td>array of string</td>
+                <td></td>
             </tr>
         </tbody>
     </table>
+
+    <div class="header-gray">Example</div>
+    <pre>{
+        "baseUrl": "",
+        "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+        "help": "",
+        "name": "plugin name",
+        "nameLocale": {
+            "fr": "french plugin name",
+            "es": "spanish plugin name"
+        },
+        "variations": [
+            {
+                "buttons": [
+                    { 
+                        "text": "Cancel",
+                        "primary": false,
+                        "isviewer": false,
+                        "textLocale": {
+                            "fr": "Annuler",
+                            "es": "Cancelar"
+                        }
+                    }
+                ],
+                "description": "plugin description",
+                "descriptionLocale": {
+                    "fr": "french plugin description",
+                    "es": "spanish plugin description"
+                },
+                "EditorsSupport": ["word", "cell", "slide"],
+                "icons": ["icon.png", "icon@2x.png", "icon2.png", "icon2@2x.png"],
+                "initData": "",
+                "initDataType": "ole",
+                "initOnSelectionChanged": true,
+                "isDisplayedInViewer": true,
+                "isInsideMode": false,
+                "isModal": true,
+                "isSystem": false,
+                "isUpdateOleOnResize": true,
+                "isViewer": true,
+                "isVisual": false,
+                "url": "index.html",
+                "size": [600, 700],
+                "events": ["onClick"]
+            }
+        ]
+    };</pre>
 
     <h2 id="pluginVariations" class="copy-link">Plugin variations</h2>
 

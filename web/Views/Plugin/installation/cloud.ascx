@@ -68,7 +68,7 @@
 
 
 
-<h2>Removing plugins from ONLYOFFICE Cloud</h2>
+<h2 id="remove" class="copy-link">Removing plugins from ONLYOFFICE Cloud</h2>
 
 <p>Click the <b>Remove</b> button on the extension tab and in the opened window confirm your action:</p>
 <img alt="Remove extension" src="<%= Url.Content("~/content/img/plugins/remove-extension.png") %>" />

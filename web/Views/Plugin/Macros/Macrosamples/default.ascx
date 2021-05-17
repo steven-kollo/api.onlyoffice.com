@@ -75,6 +75,12 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
         <p>In this example we are finding the next available blank row in a worksheet.</p></div>
         <p class="block_more"><a href="<%= Url.Action("macrosamples/nextblankrow") %>">More</a></p>
     </li>
+    <li class="macro-example">
+        <a href="<%= Url.Action("macrosamples/inserttext") %>"><div class="example-img insert-text"></div></a>
+        <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/inserttext") %>">Insert text</a></h2>
+        <p>In this example we are inserting text into the document at the current cursor position.</p>
+        <p class="pp_info_block_more"><a href="<%= Url.Action("macrosamples/inserttext") %>">More</a></p>
+    </li>
 </ul>
 
 <h2>Support</h2>

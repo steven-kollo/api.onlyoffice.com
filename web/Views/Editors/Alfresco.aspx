@@ -69,6 +69,9 @@ sudo update-alternatives --config javaws</span>
             <span class="commandline">cd ..
 git clone https://github.com/ONLYOFFICE/onlyoffice-alfresco.git</span>
         </li>
+        <li>Get a submodule:
+            <span class="commandline">git submodule update --init --recursive</span>
+        </li>
         <li>Compile packages in the <em>repo</em> and <em>share</em> directories:
             <span class="commandline">cd onlyoffice-alfresco/
 mvn clean install</span>

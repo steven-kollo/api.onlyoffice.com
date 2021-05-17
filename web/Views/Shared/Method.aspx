@@ -63,6 +63,8 @@
                     </td>
                     <td>
                         <%= param.Description %>
+                        <% if (!string.IsNullOrEmpty(param.Remarks)) { %>
+                        <div class="infotext"><%= param.Remarks %></div><% } %>
                         <% if (ClassNamePluralizer.IsOptional(param.Type) || param.IsOptional) { %>
                         <div class="infotext">optional</div><% } %>
                     </td>

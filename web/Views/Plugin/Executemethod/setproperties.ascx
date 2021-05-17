@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod("SetProperties", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("SetProperties", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
@@ -12,22 +12,61 @@
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod("SetProperties", [obj]);
+window.Asc.plugin.executeMethod ("SetProperties", [obj]);
 </pre>
-<p>Where <em>obj</em> is a JSON object of the following form (JSON):</p>
-<pre>
-{
-    "copyoutenabled" : boolean,
-    "hideContentControlTrack " : boolean,
-    "watermark_on_draw" : "string"
-}
-</pre>
-<p>The <em>obj</em> object can have the following values:</p>
-<ul>
-    <li>"copyoutenabled" (e.g. <em>{"copyoutenabled": true}</em>) disables copying from the editor if it is set to <b>true</b>;</li>
-    <li>"hideContentControlTrack" (e.g. <em>{"hideContentControlTrack": true}</em>) disables tracking the content control if it is set to <b>true</b>;</li>
-    <li>"watermark_on_draw" (e.g. <em>{"watermark_on_draw": "{watermark}"</em>) is a string value for watermark in json format.</li>
-</ul>
+<div class="header-gray">Parameters</div>
+<table class="table">
+    <colgroup>
+        <col style="width: 100px;" />
+        <col />
+        <col style="width: 100px;" />
+        <col style="width: 150px;" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>obj</td>
+            <td>
+                A JSON object of the following form:
+                <ul>
+                    <li>
+                        <b>copyoutenabled</b> disables copying from the editor if it is set to <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                        <br />
+                    </li>
+                    <li>
+                        <b>hideContentControlTrack</b> disables tracking the content control if it is set to <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                        <br />
+                    </li>
+                    <li>
+                        <b>watermark_on_draw</b> - a string value for watermark in json format,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "{watermark}".
+                        <br />
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 <div class="header-gray">Returns</div>
 

@@ -70,8 +70,11 @@ config = {
         See the <a href="<%= Url.Action("advanced") %>">Advanced parameters</a> section to find out what these parameters are and how you can change them.
     </p>
 
-    <h2>Support</h2>
+    <h2>Get help</h2>
+
+    <p>If you have any questions or feature requests about ONLYOFFICE Document Server, please visit <a href="https://github.com/ONLYOFFICE/DocumentServer/issues" target="_blank">GitHub</a>.</p>
+
     <p>
-        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
+        You can also ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
     </p>
 </asp:Content>

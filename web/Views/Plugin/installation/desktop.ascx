@@ -47,7 +47,7 @@
     <img alt="Extended comments" src="<%= Url.Content("~/content/img/plugins/extended_comments.png") %>" />
 
 
-    <h2>Removing plugins from ONLYOFFICE Desktop Editors</h2>
+    <h2 id="remove" class="copy-link">Removing plugins from ONLYOFFICE Desktop Editors</h2>
 
     <p>To uninstall the newly added plugins, proceed in the following way:</p>
     <ol>
