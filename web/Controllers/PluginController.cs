@@ -105,7 +105,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Structure",
                 "Styles",
                 "Types",
-                "example/autocomplete",
                 "macros/Macros",
                 "macros/Writing",
                 "macros/ConvertingVBA",
@@ -244,7 +243,8 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Example()        {
+        public ActionResult Example(string catchall)        
+        {
             if (!_actionMap.Contains("example/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
