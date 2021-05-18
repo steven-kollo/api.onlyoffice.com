@@ -14,7 +14,7 @@
         <span class="hdr">Anonymous users</span>
     </h1>
     <p class="dscr">The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Document Server.</p>
-    <img alt="Anonymous" src="<%= Url.Content("~/content/img/editor/anonymous.jpg") %>" />
+    <img alt="Anonymous" src="<%= Url.Content("~/content/img/editor/anonymous-user.png") %>" />
     <ol>
         <li>The anonymous user uses the <b>document manager</b> to open a document for viewing or editing.</li>
         <li>The <b>document storage service</b> sends the initialization config to the <b>document editor</b> using the <a href="<%= Url.Action("basic") %>">JavaScript API</a> but the user name is not specified there.</li>
@@ -30,12 +30,12 @@
         <li>
             <p>If the user name is not specified, it will be requested. The request can be turned off with 
             the <em>"request"=false</em> value of the <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> parameter.</p>
-            <img alt="Name request" src="<%= Url.Content("~/content/img/editor/name-request.jpg") %>" />
+            <img alt="Name request" src="<%= Url.Content("~/content/img/editor/name-request.png") %>" />
         </li>
         <li>
             <p>After the anonymous user&#8217;s name is set, the postfix is added to it via the <em>label</em> field of 
                 the <em>editorConfig.customization.anonymous</em> parameter to distinguish guests during the coediting session. By default this postfix is <em>"Guest"</em>.</p>
-            <img alt="Label" src="<%= Url.Content("~/content/img/editor/label.jpg") %>" />
+            <img alt="Label" src="<%= Url.Content("~/content/img/editor/label.png") %>" />
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {

@@ -84,9 +84,6 @@
                 <a href="<%= Url.Action("history") %>">Document history</a>
             </li>
             <li>
-                <a href="<%= Url.Action("anonymoususers") %>">Anonymous users</a>
-            </li>
-            <li>
                 <a href="<%= Url.Action("actionlink") %>">Action link</a>
             </li>
             <li>
@@ -106,6 +103,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("security") %>">Security</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("anonymoususers") %>">Anonymous users</a>
             </li>
         </ul>
     </li>
