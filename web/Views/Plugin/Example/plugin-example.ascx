@@ -6,7 +6,6 @@
 </h1>
 
 <div id="filter-button">
-    <div id="back-drop"></div>
      <div id="filter-plugin">
         <div class="img-plugin"></div> 
         <p class="text-plugin">Filter</p>

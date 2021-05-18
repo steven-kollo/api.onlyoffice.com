@@ -32,6 +32,7 @@
 </head>
 <body class="<%= Html.IfController("Home") ? "main-body" : string.Empty %>">
     <div class="site-overlay hidden"></div>
+    <div id="back-drop"></div>
     <div class="layout-table-header main-page">
         <% Html.RenderPartial("TopNavigation");%>
     </div>
