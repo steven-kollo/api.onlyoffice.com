@@ -362,6 +362,7 @@
     <Content Include="Content\img\csharp\sitename.png" />
     <Content Include="Content\img\sprite.svg" />
     <Content Include="Content\img\Video\install-plugins.png" />
+    <Content Include="Content\img\Video\install-plugins-desktop.png" />
     <Content Include="Content\img\Video\nextcloud_integration.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />

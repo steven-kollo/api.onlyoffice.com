@@ -4,6 +4,20 @@
     <a class="up" href="<%= Url.Action("installation/") %>"></a>
     <span class="hdr">Adding plugins to ONLYOFFICE Desktop Editors</span>
 </h1>
+
+<div class="video-link" title="Show video">
+    <img src="<%= Url.Content("~/content/img/video/install-plugins-desktop.png") %>" alt="Show video" />
+
+    <div class="popap-dialog">
+        <div class="popap-container">
+            <div class="popap-header">Install plugins in ONLYOFFICE Desktop Editors</div>
+            <iframe src="https://www.youtube.com/embed/bHTia-F0K3w?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
+            <a class="button-close button">Close</a>
+        </div>
+        <div class="button-close popap-close" title="Close">&times;</div>
+    </div>
+</div>
+
 <p>There are two ways to add plugins: through the plugin manager and through the plugin folder.</p>
 
     <h2>Adding plugins through the plugin manager</h2>
