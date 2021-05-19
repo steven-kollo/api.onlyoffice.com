@@ -555,7 +555,7 @@
             <td>true</td>
         </tr>
         <% } %>
-        <tr>
+        <%--<tr>
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
                 Defines if the <b>Submit form</b> button is displayed or hidden.
@@ -569,7 +569,7 @@
             <td colspan="4">
                 <img src="<%= Url.Content("~/content/img/editor/submitForm.png") %>" alt="" />
             </td>
-        </tr>
+        </tr>--%>
         <% if (license)
             { %>
         <tr class="tablerow">
@@ -727,7 +727,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "spellcheck": true,
             <% if (license)
                { %>"statusBar": true,
-            <% } %>"submitForm": true,
+            <% } %><%--"submitForm": true,--%>
             <% if (license)
                 { %>"toolbar": true,
             <% } %>"toolbarHideFileName": false,
