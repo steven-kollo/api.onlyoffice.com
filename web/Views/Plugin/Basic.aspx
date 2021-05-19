@@ -35,9 +35,13 @@
 
     <p>Here are some examples of what you can do with ONLYOFFICE plugins:</p>
     <ul>
-        <li>connect third-party services, like <b>Telegram</b>, <b>YouTube</b>, <b>Thesaurus</b>, <b>Translator</b>, <b>Zotero</b>, <b>OCR</b>, etc.;</li>
+        <li>connect third-party services, like <a href="<%= Url.Action("example/telegram") %>">Telegram</a>, <a href="<%= Url.Action("example/youtube") %>">YouTube</a>, 
+            <a href="<%= Url.Action("example/thesaurus") %>">Thesaurus</a>, <a href="<%= Url.Action("example/translator") %>">Translator</a>, <a href="<%= Url.Action("example/zotero") %>">Zotero</a>, 
+            <a href="<%= Url.Action("example/ocr") %>">OCR</a>, etc.;</li>
         <li>add custom components & controls in the UI, like <b>Trackchanges</b>, <b>Trackchanges_off</b>;</li>
-        <li>enhance the existing user experience and the editors&#8217; functionality: <b>Autocomplete</b>, <b>Search & Replace</b>, <b>Move cursor</b>, <b>Extended comments</b>;</li>
+        <li>enhance the existing user experience and the editors&#8217; functionality: <a href="<%= Url.Action("example/autocomplete") %>">Autocomplete</a>, 
+            <a href="<%= Url.Action("example/searchandreplace") %>">Search & Replace</a>, <a href="<%= Url.Action("example/movecursor") %>">Move cursor</a>, 
+            <a href="<%= Url.Action("example/extendedcomments") %>">Extended comments</a>;</li>
         <li>automate tasks in documents with <a href="<%= Url.Action("macros") %>">Macros</a>.</li>
     </ul>
     <p>Code samples are available at <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>.</p>

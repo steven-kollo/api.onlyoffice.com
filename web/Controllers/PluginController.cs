@@ -101,6 +101,43 @@ namespace ASC.Api.Web.Help.Controllers
                 "Localization",
                 "Objects",
                 "Plugin",
+                "example",
+                "example/addcommentincell",
+                "example/addcustomfields",
+                "example/autocomplete",
+                "example/cbr",
+                "example/chess",
+                "example/clippy",
+                "example/countwordsandcharacters",
+                "example/default",
+                "example/extendedcomments",
+                "example/getandpastehtml",
+                "example/helloworld",
+                "example/highlightcode",
+                "example/invoices",
+                "example/languagetool",
+                "example/loadcustomfields",
+                "example/customfields",
+                "example/movecursor",
+                "example/num2word",
+                "example/ocr",
+                "example/photoeditor",
+                "example/searchandchangetextbackgroundcolor",
+                "example/searchandreplace",
+                "example/searchandreplaceonstart",
+                "example/settings",
+                "example/speech",
+                "example/symboltable",
+                "example/telegram",
+                "example/templates",
+                "example/thesaurus",
+                "example/translator",
+                "example/typograf",
+                "example/workwithcontentcontrolscontent",
+                "example/workwithcontentcontrolsnavigation",
+                "example/workwithcontentcontrolstags",
+                "example/youtube",
+                "example/zotero",
                 "scope",
                 "Structure",
                 "Styles",
@@ -214,6 +251,15 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult example(string catchall)
+        {
+            if (!_actionMap.Contains("example/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("example", (object)catchall);
+        }
+
         public ActionResult ExecuteCommand()
         {
             return View();
@@ -241,15 +287,6 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult resizeWindow()
         {
             return View();
-        }
-
-        public ActionResult Example(string catchall)        
-        {
-            if (!_actionMap.Contains("example/" + catchall, StringComparer.OrdinalIgnoreCase))
-            {
-                catchall = null;
-            }
-            return View("example", (object)catchall);
         }
 
         public ActionResult GettingStarted()

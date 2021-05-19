@@ -1770,3 +1770,6 @@ article {
 .columns-4 {
     column-count: 4;
 }
+.columns-2 {
+    column-count: 2;
+}

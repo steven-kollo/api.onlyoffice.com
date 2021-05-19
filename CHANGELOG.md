@@ -1,5 +1,8 @@
 # Change Log
 
+- plugins: examples
+- plugins: methods
+- portals: api v11.5.1
 
 ## 2.1.0
 - plugins: added the InputHelper object and its methods

@@ -25,5 +25,5 @@
 </p>
 
 <div class="header-gray">Result</div>
-</br >
+<br/>
 <img alt="Chart" src="<%= Url.Content("~/content/img/plugins/insert-text.png") %>" />

@@ -13,9 +13,9 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Plugin example
+    Plugin examples
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <%= Html.Partial("example/"+ (Model ?? "plugin-example")) %>
+    <%= Html.Partial("example/"+ (Model ?? "default")) %>
 </asp:Content>
