@@ -608,7 +608,6 @@
     <Content Include="Views\Plugin\Events.aspx" />
     <Content Include="Views\Plugin\Example\default.ascx" />
     <Content Include="Views\Plugin\Example\autocomplete.ascx" />
-    <Content Include="Views\Plugin\plugin-example.ascx" />
     <Content Include="Views\Plugin\example.aspx" />
     <Content Include="Views\Plugin\Executemethod.aspx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
