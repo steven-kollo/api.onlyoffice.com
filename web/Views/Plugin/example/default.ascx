@@ -14,7 +14,7 @@
 
     <div class="filter-selector">
         <ul>
-            <li>Editor types</li>
+            <li class="filter-title">Editor types</li>
             <li>
                 <ul>
                     <li class="filter-item title" id="text-editor">Text editor</li>
@@ -22,7 +22,7 @@
                     <li class="filter-item title" id="presentation">Presentation editor</li>
                 </ul>
             </li>
-            <li>Visual & non-visual</li>
+            <li class="filter-title">Visual & non-visual</li>
             <li>
                 <ul>
                     <li class="filter-item title" id="visual">Visual</li>
@@ -30,15 +30,15 @@
                     <li class="filter-item title" id="input-helper">Input helper</li>
                 </ul>
             </li>
-            <li>System & non-system</li>
+            <li class="filter-title">System & non-system</li>
             <li>
                 <ul>
                     <li class="filter-item title" id="non-system">Non-system</li>
                     <li class="filter-item title" id="system">System</li>
                 </ul>
             </li>
-            <li class="filter-item" id="ole-object">OLE-objects</li>
-            <li class="filter-item" id="other">Others</li>
+            <li class="filter-item filter-title" id="ole-object">OLE-objects</li>
+            <li class="filter-item filter-title" id="other">Others</li>
         </ul>
     </div>
 </div>

@@ -367,7 +367,6 @@ img {
 .filter-selector li {
      list-style-type: none;
      margin: 0;
-     padding: 7px 16px;
 }
 
 .filter-selector li.selected {
@@ -386,6 +385,10 @@ img {
 
 .filter-item.title {
     padding: 7px 32px;
+}
+
+.filter-title {
+    padding: 7px 16px;
 }
 
 #back-drop {
