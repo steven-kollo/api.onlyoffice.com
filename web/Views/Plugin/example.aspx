@@ -5,6 +5,13 @@
     Inherits="System.Web.Mvc.ViewPage"
     ContentType="text/html" %>
 
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<asp:Content ID="IndexHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <%= Scripts.Render("~/bundles/plugin-example") %>
+    <%= Styles.Render("~/content/plugins-and-macros") %>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
     Plugin examples
 </asp:Content>
