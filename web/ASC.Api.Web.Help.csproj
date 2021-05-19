@@ -569,7 +569,7 @@
     <Content Include="Views\Plugin\Config.aspx" />
     <Content Include="Views\Plugin\Code.aspx" />
     <Content Include="Views\Plugin\Events.aspx" />
-    <Content Include="Views\Plugin\Example\plugin-example.ascx" />
+    <Content Include="Views\Plugin\Example\default.ascx" />
     <Content Include="Views\Plugin\Example\autocomplete.ascx" />
     <Content Include="Views\Plugin\plugin-example.ascx" />
     <Content Include="Views\Plugin\example.aspx" />
@@ -697,7 +697,6 @@
     <Content Include="Views\Plugin\example\chess.ascx" />
     <Content Include="Views\Plugin\example\clippy.ascx" />
     <Content Include="Views\Plugin\example\countwordsandcharacters.ascx" />
-    <Content Include="Views\Plugin\example\default.ascx" />
     <Content Include="Views\Plugin\example\extendedcomments.ascx" />
     <Content Include="Views\Plugin\example\getandpastehtml.ascx" />
     <Content Include="Views\Plugin\example\helloworld.ascx" />
