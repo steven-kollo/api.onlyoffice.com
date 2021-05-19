@@ -15,22 +15,28 @@
     <div class="filter-selector">
         <ul>
             <li>Editor types</li>
-            <ul>
-                <li class="filter-item title" id="text-editor">Text editor</li>
-                <li class="filter-item title" id="spreadsheet">Spreadsheet editor</li>
-                <li class="filter-item title" id="presentation">Presentation editor</li>
-            </ul>
+            <li>
+                <ul>
+                    <li class="filter-item title" id="text-editor">Text editor</li>
+                    <li class="filter-item title" id="spreadsheet">Spreadsheet editor</li>
+                    <li class="filter-item title" id="presentation">Presentation editor</li>
+                </ul>
+            </li>
             <li>Visual & non-visual</li>
-            <ul>
-                <li class="filter-item title" id="visual">Visual</li>
-                <li class="filter-item title" id="non-visual">Non-visual</li>
-                <li class="filter-item title" id="input-helper">Input helper</li>
-            </ul>
+            <li>
+                <ul>
+                    <li class="filter-item title" id="visual">Visual</li>
+                    <li class="filter-item title" id="non-visual">Non-visual</li>
+                    <li class="filter-item title" id="input-helper">Input helper</li>
+                </ul>
+            </li>
             <li>System & non-system</li>
-            <ul>
-                <li class="filter-item title" id="non-system">Non-system</li>
-                <li class="filter-item title" id="system">System</li>
-            </ul>
+            <li>
+                <ul>
+                    <li class="filter-item title" id="non-system">Non-system</li>
+                    <li class="filter-item title" id="system">System</li>
+                </ul>
+            </li>
             <li class="filter-item" id="ole-object">OLE-objects</li>
             <li class="filter-item" id="other">Others</li>
         </ul>
@@ -329,32 +335,3 @@
         <p class="block_more plug_more"><a href="<%= Url.Action("example/zotero") %>">More</a></p>
     </li>
 </ul>
-
-   <%--<p class="dscr">To understand how the plugins work and how they can be written and added to document editors, please see the example of the <em>helloworld.js</em> plugin below:</p>
-
-    <pre>
-(function(window, undefined){
-    var text = "Hello world!";
-    window.Asc.plugin.init = function() {
-        Asc.scope.text = text; // export variable to plugin scope
-        this.callCommand(function() {
-            var oDocument = Api.GetDocument();
-            var oParagraph = Api.CreateParagraph();
-            oParagraph.AddText(Asc.scope.text); // or oParagraph.AddText(scope.text);
-            oDocument.InsertContent([oParagraph]);
-        }, true);
-    };
-    window.Asc.plugin.button = function(id)
-    {
-    };
-})(window, undefined);
-</pre>
-
-    <p>It is the easiest plugin that will insert the 'Hello world!' phrase into your document whenever you press the plugin button.</p>
-
-    <p>This plugin and all the other currently existing open source plugin examples are available here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>. Feel free to fork them, use them with your editors and create your own plugins.</p>
-
-    <h2>Support</h2>
-    <p>
-        If you have any questions, you can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
-    </p>--%>

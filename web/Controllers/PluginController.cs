@@ -307,7 +307,7 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Info()
         {
             return View();
-            }
+        }
 
         public ActionResult inputHelper()
         {
