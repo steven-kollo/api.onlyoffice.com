@@ -5,41 +5,17 @@
     Inherits="System.Web.Mvc.ViewPage"
     ContentType="text/html" %>
 
+<%@ Import Namespace="System.Web.Optimization" %>
+
+<asp:Content ID="IndexHead" ContentPlaceHolderID="HeadContent" runat="server">
+    <%= Scripts.Render("~/bundles/plugin-example") %>
+    <%= Styles.Render("~/content/plugins-and-macros") %>
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Plugin example
+    Plugin examples
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>
-        <span class="hdr">Plugin example</span>
-    </h1>
-
-    <p class="dscr">To understand how the plugins work and how they can be written and added to document editors, please see the example of the <em>helloworld.js</em> plugin below:</p>
-
-    <pre>
-(function(window, undefined){
-    var text = "Hello world!";
-    window.Asc.plugin.init = function() {
-        Asc.scope.text = text; // export variable to plugin scope
-        this.callCommand(function() {
-            var oDocument = Api.GetDocument();
-            var oParagraph = Api.CreateParagraph();
-            oParagraph.AddText(Asc.scope.text); // or oParagraph.AddText(scope.text);
-            oDocument.InsertContent([oParagraph]);
-        }, true);
-    };
-    window.Asc.plugin.button = function(id)
-    {
-    };
-})(window, undefined);
-</pre>
-
-    <p>It is the easiest plugin that will insert the 'Hello world!' phrase into your document whenever you press the plugin button.</p>
-
-    <p>This plugin and all the other currently existing open source plugin examples are available here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>. Feel free to fork them, use them with your editors and create your own plugins.</p>
-
-    <h2>Support</h2>
-    <p>
-        If you have any questions, you can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
-    </p>
+    <%= Html.Partial("example/"+ (Model ?? "default")) %>
 </asp:Content>

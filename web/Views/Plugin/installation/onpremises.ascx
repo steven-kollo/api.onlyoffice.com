@@ -4,6 +4,20 @@
     <a class="up" href="<%= Url.Action("installation/") %>"></a>
     <span class="hdr">Adding plugins to ONLYOFFICE Docs on-premises</span>
 </h1>
+
+<div class="video-link" title="Show video">
+    <img src="<%= Url.Content("~/content/img/video/install-plugins.png") %>" alt="Show video" />
+
+    <div class="popap-dialog">
+        <div class="popap-container">
+            <div class="popap-header">Install plugins in self-hosted ONLYOFFICE Docs</div>
+            <iframe src="https://www.youtube.com/embed/R7gvhLvGL44?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
+            <a class="button-close button">Close</a>
+        </div>
+        <div class="button-close popap-close" title="Close">&times;</div>
+    </div>
+</div>
+
 <p>There are two ways to add plugins: through the <em>sdkjs-plugins</em> folder and through the <em>config.json</em> file.</p>
 
 <h2>Adding plugins through the sdkjs-plugins folder</h2>
@@ -71,7 +85,7 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 </note>
 
 
-<h2>Removing plugins from ONLYOFFICE Docs on-premises</h2>
+<h2 id="remove" class="copy-link">Removing plugins from ONLYOFFICE Docs on-premises</h2>
 
 <p>You can uninstall plugins in two ways:</p>
 <p><b>Option 1.</b> Go to the <em>sdkjs-plugins</em> folder and remove the corresponding plugin folder from this directory.</p>

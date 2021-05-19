@@ -59,7 +59,7 @@
             <td id="copy" class="copy-link">copy</td>
             <td>
                 Defines if the content can be copied to the clipboard or not.
-                In case the parameter is set to <b>true</b>, pasting the content will be available within the current document editor only.
+                In case the parameter is set to <b>false</b>, pasting the content will be available within the current document editor only.
                 The default value is <b>true</b>.
             </td>
             <td>boolean</td>

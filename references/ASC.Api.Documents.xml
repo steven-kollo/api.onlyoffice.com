@@ -19,12 +19,35 @@
             <param name="context"></param>
             <param name="fileStorageService"></param>
         </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetRootFolders(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean,System.Boolean)">
+             <summary>
+            
+             </summary>
+             <short>List of Sections</short>
+             <param name="userIdOrGroupId" optional="true">User or group ID</param>
+             <param name="filterType" optional="true">Filter type</param>
+             <param name="withsubfolders"></param>
+             <param name="withoutTrash"></param>
+             <param name="withoutAdditionalFolder"></param>
+             <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+             <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+             <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+             <param name="count" optional="true">Number of the elements returned.</param>
+             <param name="filterValue">Filter value.</param>
+             <category>Folders</category>
+             <returns></returns>
+        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetMyFolder(System.Guid,ASC.Files.Core.FilterType)">
             <summary>
             Returns the detailed list of files and folders located in the current user My section
             </summary>
             <short>Section My</short>
             <category>Folders</category>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>My folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetProjectsFolder(System.Guid,ASC.Files.Core.FilterType)">
@@ -33,6 +56,11 @@
             </summary>
             <short>Section Projects</short>
             <category>Folders</category>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>Projects folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetCommonFolder(System.Guid,ASC.Files.Core.FilterType)">
@@ -41,6 +69,11 @@
             </summary>
             <short>Section Common</short>
             <category>Folders</category>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>Common folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetShareFolder(System.Guid,ASC.Files.Core.FilterType)">
@@ -49,6 +82,11 @@
             </summary>
             <short>Section Shared</short>
             <category>Folders</category>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>Shared folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetRecentFolder(System.Guid,ASC.Files.Core.FilterType)">
@@ -57,6 +95,13 @@
             </summary>
             <short>Section Recent</short>
             <category>Folders</category>
+            <param name="userIdOrGroupId" optional="true">User or group ID</param>
+            <param name="filterType" optional="true">Filter type</param>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>Recent contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetFavoritesFolder(System.Guid,ASC.Files.Core.FilterType)">
@@ -65,6 +110,13 @@
             </summary>
             <short>Section Favorite</short>
             <category>Folders</category>
+            <param name="userIdOrGroupId" optional="true">User or group ID</param>
+            <param name="filterType" optional="true">Filter type</param>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>Favorites contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetTemplatesFolder(System.Guid,ASC.Files.Core.FilterType)">
@@ -73,6 +125,13 @@
             </summary>
             <short>Section Template</short>
             <category>Folders</category>
+            <param name="userIdOrGroupId" optional="true">User or group ID</param>
+            <param name="filterType" optional="true">Filter type</param>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>Templates contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetTrashFolder(System.Guid,ASC.Files.Core.FilterType)">
@@ -81,6 +140,11 @@
             </summary>
             <short>Section Trash</short>
             <category>Folders</category>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>Trash folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetFolder(System.String,System.Guid,ASC.Files.Core.FilterType)">
@@ -93,7 +157,12 @@
             <category>Folders</category>
             <param name="folderId">Folder ID</param>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
-            <param name="filterType" optional="true" remark="Allowed values: None (0), FilesOnly (1), FoldersOnly (2), DocumentsOnly (3), PresentationsOnly (4), SpreadsheetsOnly (5) or ImagesOnly (7)">Filter type</param>
+            <param name="filterType" optional="true">Filter type</param>
+            <param name="sortBy" optional="true" remark="Allowed values: DateAndTime, AZ, Size, Author, Type, New, DateAndTimeCreation">Sort by field name.</param>
+            <param name="sortOrder" optional="true" remark="Allowed values: descending or ascending">Sorting direction</param>
+            <param name="startIndex" optional="true">The number of elements to be skipped in the beginning. Used for response data pagination.</param>
+            <param name="count" optional="true">Number of the elements returned.</param>
+            <param name="filterValue">Filter value.</param>
             <returns>Folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UploadFileToMy(System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">

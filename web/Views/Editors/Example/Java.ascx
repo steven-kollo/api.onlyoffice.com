@@ -21,15 +21,13 @@
 <h2 id="Windows" class="copy-link">Running the example on Windows OS</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/server/developer-edition/windows/index.aspx?from=api_java_example">for Windows</a>.</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example">for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java example</a> from our site.</p>
-<p>You need to connnect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
+<p>You need to connect the editors to your web site. For that specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
 
-<pre>files.docservice.url.converter=https://documentserver/ConvertService.ashx
-files.docservice.url.api=https://documentserver/web-apps/apps/api/documents/api.js
-files.docservice.url.preloader=https://documentserver/web-apps/apps/api/documents/cache-scripts.html</pre>
+<pre>files.docservice.url.site=https://documentserver/</pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>\src\main\webapp\editor.jsp</em> file.</p>
@@ -39,7 +37,7 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
 
 <ul>
     <li>Java (download from  <a href="https://www.java.com/en/download/manual.jsp">the Oracle official web site</a>);</li>
-    <li>Apache Tomcat (download from <a href="http://tomcat.apache.org/">the official website</a>).</li>
+    <li>Apache Tomcat: version 9.0.x (download from <a href="https://tomcat.apache.org/download-90.cgi">the official website</a>).</li>
 </ul>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Running Apache Tomcat</h2>
@@ -56,8 +54,7 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
         <p>In <b>Windows 8</b> go to <b>Control Panel</b> -> <b>System</b> -> <b>Advanced System Settings</b>.</p>
         <p>Click the <b>Environment Variables</b> button.</p>
         <p>Under <b>System Variables</b>, click <b>New</b>.</p>
-        <p>In the <b>Variable Name</b> field, enter:</p>
-        <p><b>JAVA_HOME</b> if you installed the <b>JDK</b> (Java Development Kit) or <b>JRE_HOME</b> if you installed the <b>JRE</b> (Java Runtime Environment).</p>
+        <p>In the <b>Variable Name</b> field, enter <b>JAVA_HOME</b> if you installed the <b>JDK</b> (Java Development Kit) or <b>JRE_HOME</b> if you installed the <b>JRE</b> (Java Runtime Environment).</p>
         <p>In the <b>Variable Value</b> field, enter your <b>JDK</b> or <b>JRE</b> installation path, for example C:\Program Files\Java\jdk1.8.0_65.</p>
 
         <img src="<%= Url.Content("~/content/img/java/make-var.png") %>" alt="" />
@@ -75,7 +72,7 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
     <li>
         <p>Use the bin <em>startup.bat</em> script to start Apache Tomcat:</p>
         <pre>startup.bat</pre>
-        <p>You will see the new <b>Tomcat</b> console window displayed that provides the information and mesages about Tomcat startup:</p>
+        <p>You will see the new <b>Tomcat</b> console window displayed that provides the information and messages about Tomcat startup:</p>
         <img src="<%= Url.Content("~/content/img/java/tomcat-cmd.jpg") %>" width="800" alt="" />
 
         <p>Test your Tomcat installation using the address in a web browser:</p>
@@ -133,7 +130,7 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
 <h2 id="Linux" class="copy-link">Running the example on Linux OS</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/server/developer-edition/linux/index.aspx?from=api_java_example">install Document Server for Linux</a>.</p>
+<p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example">install Document Server for Linux</a>.</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
@@ -155,9 +152,7 @@ sudo apt-get install oracle-java8-installer</span>
         <p>Edit the following lines:</p>
 
         <pre>
-files.docservice.url.converter=https://documentserver/ConvertService.ashx
-files.docservice.url.api=https://documentserver/web-apps/apps/api/documents/api.js
-files.docservice.url.preloader=https://documentserver/web-apps/apps/api/documents/cache-scripts.html
+files.docservice.url.site=https://documentserver/
 </pre>
 
         <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
@@ -177,7 +172,7 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
         <pre>&lt;role rolename="manager-gui"/&gt;
 &lt;user username="USERNAME" password="PASSWORD" roles="manager-gui"/&gt;</pre>
         <p>Where the <b>USERNAME</b> and <b>PASSWORD</b> are your own credentials data.</p>
-        Restart timcat:
+        Restart tomcat:
         <div class="commandline">systemctl restart tomcat8</div>
     </li>
     <li>Open the tomcat administration page in browser with the admin user credentions:
@@ -196,3 +191,24 @@ files.docservice.url.preloader=https://documentserver/web-apps/apps/api/document
 </p>
 
 <p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
+
+
+<h2 id="Docker" class="copy-link">Build from Docker</h2>
+
+
+<ol>
+    <li>Edit the <em>settings.properties</em> configuration file.
+        Specify the name of your local server with the ONLYOFFICE Document Server installed.
+        <div class="commandline">nano src/main/resources/settings.properties</div>
+        <p>Edit the following lines:</p>
+
+        <pre>
+files.docservice.url.site=https://documentserver/
+</pre>
+
+        <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+    </li>
+    <li>Run the next command in the java example directory:
+        <div class="commandline">docker-compose up</div>
+    </li>
+    <li>After it, all the <em>bin</em> files will be passed to the <em>./target</em> folder.</li>

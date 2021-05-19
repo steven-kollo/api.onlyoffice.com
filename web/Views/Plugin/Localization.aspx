@@ -30,7 +30,7 @@
     "ru": "Подсветка кода"
 }</pre>
 
-    <p>The complete translations in the <a href="<%= Url.Action("config") %>">config.json</a> for the <a target="_blank" href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/code">code highlighting plugin</a> will look the following way:</p>
+    <p>The complete translations in the <a href="<%= Url.Action("config") %>">config.json</a> for the <a target="_blank" href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/scripts/code.js">highlighting plugin code</a> will look the following way:</p>
 
     <pre>{
     "name": "Highlight code",

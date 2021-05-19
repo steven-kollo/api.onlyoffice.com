@@ -4,11 +4,25 @@
     <a class="up" href="<%= Url.Action("installation/") %>"></a>
     <span class="hdr">Adding plugins to ONLYOFFICE Desktop Editors</span>
 </h1>
+
+<div class="video-link" title="Show video">
+    <img src="<%= Url.Content("~/content/img/video/install-plugins-desktop.png") %>" alt="Show video" />
+
+    <div class="popap-dialog">
+        <div class="popap-container">
+            <div class="popap-header">Install plugins in ONLYOFFICE Desktop Editors</div>
+            <iframe src="https://www.youtube.com/embed/bHTia-F0K3w?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
+            <a class="button-close button">Close</a>
+        </div>
+        <div class="button-close popap-close" title="Close">&times;</div>
+    </div>
+</div>
+
 <p>There are two ways to add plugins: through the plugin manager and through the plugin folder.</p>
 
     <h2>Adding plugins through the plugin manager</h2>
 
-    <p><b>Step 1.</b> Archive all the <a href="<%= Url.Action("structure") %>">plugin files</a> and change the archive extension to <em>.plugin</em>.</p>
+    <p><b>Step 1.</b> Pack all the <a href="<%= Url.Action("structure") %>">plugin files</a> into a <b>zip</b> archive and change its extension to <em>.plugin</em>.</p>
     <note>If you download a plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">GitHub</a>, 
         unpack the plugin folder first and then archive its elements only.</note>
 
@@ -47,7 +61,7 @@
     <img alt="Extended comments" src="<%= Url.Content("~/content/img/plugins/extended_comments.png") %>" />
 
 
-    <h2>Removing plugins from ONLYOFFICE Desktop Editors</h2>
+    <h2 id="remove" class="copy-link">Removing plugins from ONLYOFFICE Desktop Editors</h2>
 
     <p>To uninstall the newly added plugins, proceed in the following way:</p>
     <ol>
