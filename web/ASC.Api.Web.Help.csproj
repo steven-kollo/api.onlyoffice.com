@@ -330,6 +330,9 @@
     <Content Include="Content\img\Editor\review.png" />
     <Content Include="Content\img\Editor\export.jpg" />
     <Content Include="Content\img\Editor\anonymous.png" />
+    <Content Include="Content\img\Editor\anonymous-user.png" />
+    <Content Include="Content\img\Editor\name-request.png" />
+    <Content Include="Content\img\Editor\label.png" />
     <Content Include="Content\img\Editor\toolbarHideFileName.png" />
     <Content Include="Content\img\Editor\goback.png" />
     <Content Include="Content\img\Editor\favorite.png" />
@@ -599,6 +602,7 @@
     <Content Include="Views\Editors\ConversionApi.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
+    <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Confluence.aspx" />
     <Content Include="Views\Editors\Command.aspx" />
     <Content Include="Views\Editors\Coedit.aspx" />

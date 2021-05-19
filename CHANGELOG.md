@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Anonymous users page
 - plugins: changed variations.isModal parameter
 - plugins: new icon parameters
 - editors: added editorConfig.customization.hideRulers
