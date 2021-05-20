@@ -47,9 +47,9 @@
             </tr>
             <tr class="tablerow">
                 <td>isClose</td>
-                <td>Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action. 
+                <td>Defines whether the plugin window must be closed after the code is executed or left open waiting for another action. 
                     The <em>true</em> value is used to close the plugin window after executing a remotely located script. 
-                    The <em>false</em> value is used to execute the code and leave the window open waiting for the next code.</td>
+                    The <em>false</em> value is used to execute the code and leave the window open waiting for the next action.</td>
                 <td>boolean</td>
             </tr>
         </tbody>

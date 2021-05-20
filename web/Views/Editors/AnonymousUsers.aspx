@@ -52,9 +52,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         </li>
-        <li>As soon as you set the name for the first time, it will be stored in the browser local storage. You can set it by clicking the <b>F5</b> button.</li>
+        <li>As soon as you set the name for the first time, it will be stored in the browser local storage. To use it next time, just press the <b>F5</b> button.</li>
         <li>To change this name, click it on the top toolbar and enter a new one in the opened window.</li>
-        <li>All the users in the co-editing mode will see the new name.</li>
+        <li>All the co-authors will see the new name.</li>
     </ol>
 
 </asp:Content>

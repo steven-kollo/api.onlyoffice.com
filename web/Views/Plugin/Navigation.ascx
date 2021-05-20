@@ -175,10 +175,10 @@
                         <a href="<%= Url.Action("objects") %>">Auxiliary objects</a>
                         <ul>
                             <li>
-                                <a href="<%= Url.Action("info") %>">info object</a>
+                                <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
                             </li>
                             <li>
-                                <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
+                                <a href="<%= Url.Action("info") %>">info object</a>
                             </li>
                             <li>
                                 <a href="<%= Url.Action("inputhelper") %>">InputHelper object</a>
