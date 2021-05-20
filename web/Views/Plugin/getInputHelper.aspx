@@ -17,7 +17,7 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Defines the method used to get the InputHelper object.</p>
+    <p class="dscr">Defines the method used to get the <a href="<%= Url.Action("inputhelper") %>">InputHelper object</a>.</p>
 
     <div class="header-gray">Example</div>
 
