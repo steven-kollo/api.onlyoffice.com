@@ -12,6 +12,7 @@
 
 <nav class="content">
     <ul class="columns-4" style="list-style: none;">
+        <li><a href="#anonymous">anonymous</a></li>
         <li><a href="#autosave">autosave</a></li>
         <li><a href="#chat">chat</a></li>
         <li><a href="#commentAuthorOnly">commentAuthorOnly</a></li>
@@ -25,6 +26,7 @@
         <li><a href="#goback">goback</a></li>
         <li><a href="#help">help</a></li>
         <li><a href="#hideRightMenu">hideRightMenu</a></li>
+        <li><a href="#hideRulers">hideRulers</a></li>
         <li><a href="#logo">logo</a></li>
         <li><a href="#macros">macros</a></li>
         <li><a href="#macrosMode">macrosMode</a></li>
