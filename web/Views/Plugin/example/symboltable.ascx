@@ -5,21 +5,22 @@
     <span class="hdr">Symbol Table</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in all the editors and allows the user to insert special symbols into the document.
+<div class="header-gray">Description</div>
+<p class="dscr">Inserts special symbols into the document.
 </p>
 <p><b>Plugin type:</b> visual, non-system.</p>
-<p><b>Supported editors:</b> document, spreadsheet, presentation.</p>
+<p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 
 <img alt="SymbolTable" src="<%= Url.Content("~/content/img/plugins/gifs/symbol-table.gif") %>" />
 
 
-<h2>Installation</h2>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable" target="_blank">GitHub</a> and install it using the
-<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>
+<div class="header-gray">Installation</div>
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable" target="_blank">GitHub</a> and install it following the
+<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Find the plugin on the <b>Plugins</b> tab.</li>
@@ -29,12 +30,12 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/symboltable</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
     <li>The <em>translations</em> folder contains translations into Russian, German, Spanish and French.</li>
     <li><em>character.js</em> contains all the characters that the plugin supports.</li>
     <li>Third-party services:
@@ -46,7 +47,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name": "Symbol Table",
@@ -112,14 +113,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works on the left-side panel of the editor</li>
-    <li>The plugin name and description are translated into Russian, French, Spanish and German with the <em>nameLocale</em> and <em>descriptionLocale</em> parameters.</li>
-    <li>This plugin has two buttons - <em>Insert</em> and <em>Cancel</em>. They are specified with the buttons parameter and translated into Russian, French, Spanish and German languages with the <em>textLocale</em> parameter.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/symboltable/symboltable.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
@@ -135,6 +130,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>

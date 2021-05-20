@@ -5,20 +5,21 @@
     <span class="hdr">Work with content controls tags</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in the document editor and allows the user to get the list of content controls tags.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Gets the list of content controls tags.</p>
 <p><b>Plugin type:</b> visual, non-system.</p>
-<p><b>Supported editors:</b> document.</p>
+<p><b>Supported editors:</b> documents.</p>
 
 <img alt="WorkWithContentControlsTags" src="<%= Url.Content("~/content/img/plugins/gifs/work-with-content-controls-tags.gif") %>" />
 
 
-<h2>Installation</h2>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_work_with_content_controls_tags" target="_blank">GitHub</a> and install it using the
-<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>
+<div class="header-gray">Installation</div>
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_work_with_content_controls_tags" target="_blank">GitHub</a> and install it following the
+<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Add some content controls into the document. Set any tags for them</li>
@@ -28,12 +29,12 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_work_with_content_controls_tags" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_work_with_content_controls_tags</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
     <li>Third-party service:
         <ul>
             <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_work_with_content_controls_tags/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
@@ -42,7 +43,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name" : "Example work with content controls tags",
@@ -74,12 +75,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works on the left-side panel of the editor.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_work_with_content_controls_tags/scripts/code.js" target="_blank">here</a>.</p>
 <ul>
@@ -93,6 +90,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>

@@ -5,20 +5,21 @@
     <span class="hdr">Highlight code</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in all the editors and allows the user to connect the <a href="https://highlightjs.org/" target="_blank">highlight.js library</a> for highlighting code syntax with the necessary language, style, and background color.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Connects the <a href="https://highlightjs.org/" target="_blank">highlight.js library</a> for highlighting code syntax with the necessary language, style, and background color.</p>
 <p><b>Plugin type:</b> visual, non-system.</p>
-<p><b>Supported editors:</b> document, spreadsheet, presentation.</p>
+<p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 
 <img alt="HighlightCode" src="<%= Url.Content("~/content/img/plugins/gifs/highlight-code.gif") %>" />
 
 
-<h2>Installation</h2>
+<div class="header-gray">Installation</div>
 <p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors</p>
-<p>You can remove it using the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a> or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
+<p>You can remove it following the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a>, or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
 <p>The plugin guid: {BE5CBF95-C0AD-4842-B157-AC40FEDD9841}.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Find the plugin in the <b>Plugins</b> tab.</li>
@@ -28,12 +29,12 @@
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/plugin-highlightcode" target="_blank">https://github.com/ONLYOFFICE/plugin-highlightcode</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
     <li>The <em>translations</em> folder contains translations into Russian, German, Spanish and French.</li>
     <li>The <em>styles</em> folder contains all the code styles that the plugin supports.</li>
     <li><em>plugin_style.css</em> and <em>scrollable_div.js</em> are used to adjust the plugin style.</li>
@@ -47,7 +48,7 @@
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name": "Highlight code",
@@ -106,14 +107,8 @@
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works in its own frame.</li>
-    <li>This plugin has two buttons - <em>Ok</em> and <em>Cancel</em>. They are specified with the <em>buttons</em> parameter. The <em>Cancel</em> button is translated into Russian, French, Spanish and German languages with the <em>textLocale</em> parameter.</li>
-    <li>The plugin name and description are translated into Russian, French, Spanish and German with the <em>nameLocale</em> and <em>descriptionLocale</em> parameters.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/scripts/code.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
@@ -127,6 +122,6 @@
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/issues" target="_blank">GitHub</a>.</p>
