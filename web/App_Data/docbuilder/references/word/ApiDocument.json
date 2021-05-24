@@ -46,7 +46,7 @@
         {
           "type": "string",
           "name": "sStyleName",
-          "description": "<p>The name using which it is possible to address the style.</p>",
+          "description": "<p>The style name.</p>",
           "optional": false
         }
       ]
@@ -145,7 +145,7 @@
     "GetFinalSection": {
       "memberof": "ApiDocument",
       "name": "GetFinalSection",
-      "description": "<p>Get the document final section</p>",
+      "description": "<p>Get the document final section.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -234,7 +234,7 @@
     "InsertContent": {
       "memberof": "ApiDocument",
       "name": "InsertContent",
-      "description": "<p>Insert an array of elements in the current position of the document.</p>",
+      "description": "<p>Insert an array of elements into the current position of the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -257,13 +257,14 @@
         {
           "type": "boolean",
           "name": "isInline",
-          "description": "<p>Inline insert or not (works only for the last and the first element and only if it's a paragraph)</p>",
+          "description": "<p>Inline insert or not (works only for the last and the first element and only if it's a paragraph).</p>",
           "optional": true,
           "defaultValue": false
         },
         {
           "type": "object",
           "name": "oPr",
+          "description": "<p>Specifies that text and paragraph document properties are preserved for the inserted elements.\nThe object should look like this: {&quot;KeepTextOnly&quot;: true}.</p>",
           "optional": true
         }
       ]
@@ -336,6 +337,7 @@
         {
           "type": "string",
           "name": "oProperties.matchCase",
+          "description": "<p>Case sensitive or not.</p>",
           "optional": true,
           "defaultValue": true
         }
@@ -344,7 +346,7 @@
     "GetAllContentControls": {
       "memberof": "ApiDocument",
       "name": "GetAllContentControls",
-      "description": "<p>Get the list of all content controls in the document</p>",
+      "description": "<p>Get the list of all the content controls in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -362,7 +364,7 @@
     "SetTrackRevisions": {
       "memberof": "ApiDocument",
       "name": "SetTrackRevisions",
-      "description": "<p>Set to track changes or not</p>",
+      "description": "<p>Set change tracking mode.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -375,6 +377,7 @@
         {
           "type": "boolean",
           "name": "isTrack",
+          "description": "<p>Specifies if the change tracking mode is set or not.</p>",
           "optional": false
         }
       ]
@@ -382,7 +385,7 @@
     "IsTrackRevisions": {
       "memberof": "ApiDocument",
       "name": "IsTrackRevisions",
-      "description": "<p>Is change tracking enabled</p>",
+      "description": "<p>Check if change tracking mode is enabled or not.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -399,7 +402,7 @@
     "GetRange": {
       "memberof": "ApiDocument",
       "name": "GetRange",
-      "description": "<p>Returns a Range object that represents the part of the document contained in the specified document.</p>",
+      "description": "<p>Return a Range object that represents the part of the document contained in the specified document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -416,13 +419,13 @@
         {
           "type": "Number",
           "name": "Start",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>Start character in the current element.</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "End",
-          "description": "<p>end character in current element</p>",
+          "description": "<p>End character in the current element.</p>",
           "optional": false
         }
       ]
@@ -430,7 +433,7 @@
     "GetRangeBySelect": {
       "memberof": "ApiDocument",
       "name": "GetRangeBySelect",
-      "description": "<p>Gets a range object by the current selection.</p>",
+      "description": "<p>Get a range object by the current selection.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -448,12 +451,10 @@
     "Last": {
       "memberof": "ApiDocument",
       "name": "Last",
-      "description": "<p>Get the last element of document.</p>",
+      "description": "<p>Get the last document element.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [
@@ -467,7 +468,7 @@
     "DeleteBookmark": {
       "memberof": "ApiDocument",
       "name": "DeleteBookmark",
-      "description": "<p>Removes a bookmark from the document, if one exists.</p>",
+      "description": "<p>Remove a bookmark from the document, if one exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -484,7 +485,7 @@
         {
           "type": "string",
           "name": "sName",
-          "description": "<p>bookmark name</p>",
+          "description": "<p>The bookmark name.</p>",
           "optional": false
         }
       ]
@@ -492,7 +493,7 @@
     "AddComment": {
       "memberof": "ApiDocument",
       "name": "AddComment",
-      "description": "<p>Adds a comment to the document.</p>",
+      "description": "<p>Add a comment to the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -509,13 +510,13 @@
         {
           "type": "string",
           "name": "Comment",
-          "description": "<p>comment</p>",
+          "description": "<p>The comment text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "Autor",
-          "description": "<p>autor's name (not obligatory)</p>",
+          "description": "<p>The author's name (not obligatory).</p>",
           "optional": false
         }
       ]
@@ -523,7 +524,7 @@
     "GetBookmarkRange": {
       "memberof": "ApiDocument",
       "name": "GetBookmarkRange",
-      "description": "<p>Gets a bookmark's range.</p>",
+      "description": "<p>Get a bookmark's range.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -541,7 +542,7 @@
         {
           "type": "string",
           "name": "sName",
-          "description": "<p>bookmark name</p>",
+          "description": "<p>The bookmark name.</p>",
           "optional": false
         }
       ]
@@ -549,7 +550,7 @@
     "GetSections": {
       "memberof": "ApiDocument",
       "name": "GetSections",
-      "description": "<p>Gets the collection of section objects in the document.</p>",
+      "description": "<p>Get the collection of section objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -566,7 +567,7 @@
     "GetAllTablesOnPage": {
       "memberof": "ApiDocument",
       "name": "GetAllTablesOnPage",
-      "description": "<p>Get the collection of tables on a given absolute page\n<note>This method can be a little bit slow, because it runs the document calculation\nprocess to arrange tables on the specified page</note></p>",
+      "description": "<p>Get the collection of tables on a given absolute page.\n<note>This method can be a little bit slow, because it runs the document calculation\nprocess to arrange tables on the specified page.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -584,7 +585,7 @@
     "RemoveSelection": {
       "memberof": "ApiDocument",
       "name": "RemoveSelection",
-      "description": "<p>Remove current selection</p>",
+      "description": "<p>Remove current selection.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -597,7 +598,7 @@
     "GetAllDrawingObjects": {
       "memberof": "ApiDocument",
       "name": "GetAllDrawingObjects",
-      "description": "<p>Gets the collection of drawing objects in the document.</p>",
+      "description": "<p>Get the collection of drawing objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -614,7 +615,7 @@
     "GetAllShapes": {
       "memberof": "ApiDocument",
       "name": "GetAllShapes",
-      "description": "<p>Gets the collection of shapes objects in the document.</p>",
+      "description": "<p>Get the collection of shape objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -631,7 +632,7 @@
     "GetAllImages": {
       "memberof": "ApiDocument",
       "name": "GetAllImages",
-      "description": "<p>Gets the collection of image objects in the document.</p>",
+      "description": "<p>Get the collection of image objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -648,7 +649,7 @@
     "GetAllCharts": {
       "memberof": "ApiDocument",
       "name": "GetAllCharts",
-      "description": "<p>Gets the collection of chart objects in the document.</p>",
+      "description": "<p>Get the collection of chart objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -665,7 +666,7 @@
     "Search": {
       "memberof": "ApiDocument",
       "name": "Search",
-      "description": "<p>Searches for the scope of a document object. The search results are a collection of ApiRange objects.</p>",
+      "description": "<p>Search for the scope of a document object. The search results are a collection of ApiRange objects.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -682,12 +683,13 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>Search string.</p>",
           "optional": false
         },
         {
           "type": "bool",
           "name": "isMatchCase",
-          "description": "<p>is case sensitive.</p>",
+          "description": "<p>Case sensitive or not.</p>",
           "optional": false
         }
       ]
@@ -695,7 +697,7 @@
     "InsertWatermark": {
       "memberof": "ApiDocument",
       "name": "InsertWatermark",
-      "description": "<p>Insert watermark on each page of document</p>",
+      "description": "<p>Insert a watermark on each document page.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -708,12 +710,14 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>Watermark text.</p>",
           "optional": true,
           "defaultValue": "\"WATERMARK\""
         },
         {
           "type": "boolean",
           "name": "bIsDiagonal",
+          "description": "<p>Specifies if the watermark is placed diagonally (true) or horizontally (false).</p>",
           "optional": true,
           "defaultValue": true
         }
@@ -755,7 +759,15 @@
         ]
       ],
       "see": null,
-      "inherits": "Inherited From: {@link ApiDocumentContent#GetElement}"
+      "inherits": "Inherited From: {@link ApiDocumentContent#GetElement}",
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>The element position that will be taken from the document.</p>",
+          "optional": false
+        }
+      ]
     },
     "AddElement": {
       "memberof": "ApiDocument",
@@ -797,14 +809,18 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": "Inherited From: {@link ApiDocumentContent#Push}",
       "params": [
         {
           "type": "DocumentElement",
           "name": "oElement",
-          "description": "<p>The type of the element which will be pushed to the document.</p>",
+          "description": "<p>The element type which will be pushed to the document.</p>",
           "optional": false
         }
       ]
@@ -812,7 +828,7 @@
     "RemoveAllElements": {
       "memberof": "ApiDocument",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
+      "description": "<p>Remove all the elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",

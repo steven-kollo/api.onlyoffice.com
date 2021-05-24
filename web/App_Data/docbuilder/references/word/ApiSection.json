@@ -33,7 +33,7 @@
         {
           "type": "\"nextPage\" | \"oddPage\" | \"evenPage\" | \"continuous\" | \"nextColumn\"",
           "name": "sType",
-          "description": "<p>Type of the section break</p>",
+          "description": "<p>The section break type.</p>",
           "optional": false
         }
       ]
@@ -41,7 +41,7 @@
     "SetEqualColumns": {
       "memberof": "ApiSection",
       "name": "SetEqualColumns",
-      "description": "<p>Specify that all text columns in the current section are of equal width.</p>",
+      "description": "<p>Specify that all the text columns in the current section are of equal width.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -68,7 +68,7 @@
     "SetNotEqualColumns": {
       "memberof": "ApiSection",
       "name": "SetNotEqualColumns",
-      "description": "<p>Specify that all columns in the current section are of a different width. Number of columns is equal\nto the length of the aWidth array. The length of the aSpaces array MUST BE equal to (aWidth.length - 1).</p>",
+      "description": "<p>Specify that all the columns in the current section are of a different width. Number of columns is equal\nto the length of the aWidth array. The length of the aSpaces array MUST BE equal to (aWidth.length - 1).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -87,7 +87,7 @@
         {
           "type": "Array.<twips>",
           "name": "aSpaces",
-          "description": "<p>An array of distances values between the columns measured in twentieths of a point (1/1440 of an inch).</p>",
+          "description": "<p>An array of distance values between the columns measured in twentieths of a point (1/1440 of an inch).</p>",
           "optional": false
         }
       ]
@@ -95,7 +95,7 @@
     "SetPageSize": {
       "memberof": "ApiSection",
       "name": "SetPageSize",
-      "description": "<p>Specify the properties (size and orientation) for all pages in the current section.</p>",
+      "description": "<p>Specify the properties (size and orientation) for all the pages in the current section.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -120,7 +120,7 @@
         {
           "type": "boolean",
           "name": "isPortrait",
-          "description": "<p>Specifies the orientation of all pages in this section (if set to true then the portrait orientation is chosen).</p>",
+          "description": "<p>Specifies the orientation of all the pages in this section (if set to true, then the portrait orientation is chosen).</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -129,7 +129,7 @@
     "SetPageMargins": {
       "memberof": "ApiSection",
       "name": "SetPageMargins",
-      "description": "<p>Specify the page margins for all pages in this section.</p>",
+      "description": "<p>Specify the page margins for all the pages in this section.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -227,13 +227,13 @@
         {
           "type": "HdrFtrType",
           "name": "sType",
-          "description": "<p>Type of header to get the content from.</p>",
+          "description": "<p>Header type to get the content from.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isCreate",
-          "description": "<p>Whether to create a new header or not with the specified header type in case\nno header with such a type could be found in the current section.</p>",
+          "description": "<p>Specifies whether to create a new header or not with the specified header type in case\nno header with such a type could be found in the current section.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -255,7 +255,7 @@
         {
           "type": "HdrFtrType",
           "name": "sType",
-          "description": "<p>Type of header to be removed.</p>",
+          "description": "<p>Header type to be removed.</p>",
           "optional": false
         }
       ]
@@ -280,13 +280,13 @@
         {
           "type": "HdrFtrType",
           "name": "sType",
-          "description": "<p>Type of footer to get the content from.</p>",
+          "description": "<p>Footer type to get the content from.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isCreate",
-          "description": "<p>Whether to create a new footer or not with the specified footer type in case\nno footer with such a type could be found in the current section.</p>",
+          "description": "<p>Specifies whether to create a new footer or not with the specified footer type in case\nno footer with such a type could be found in the current section.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -337,7 +337,7 @@
     "GetNext": {
       "memberof": "ApiSection",
       "name": "GetNext",
-      "description": "<p>Gets next sections if exists.</p>",
+      "description": "<p>Get the next section if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -355,7 +355,7 @@
     "GetPrevious": {
       "memberof": "ApiSection",
       "name": "GetPrevious",
-      "description": "<p>Gets preious sections if exists.</p>",
+      "description": "<p>Get the preious section if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

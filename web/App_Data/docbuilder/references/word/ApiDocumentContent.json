@@ -55,7 +55,15 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>The element position that will be taken from the document.</p>",
+          "optional": false
+        }
+      ]
     },
     "AddElement": {
       "memberof": "ApiDocumentContent",
@@ -97,14 +105,18 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "DocumentElement",
           "name": "oElement",
-          "description": "<p>The type of the element which will be pushed to the document.</p>",
+          "description": "<p>The element type which will be pushed to the document.</p>",
           "optional": false
         }
       ]
@@ -112,7 +124,7 @@
     "RemoveAllElements": {
       "memberof": "ApiDocumentContent",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
+      "description": "<p>Remove all the elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -150,7 +162,7 @@
     "GetRange": {
       "memberof": "ApiDocumentContent",
       "name": "GetRange",
-      "description": "<p>Returns a Range object that represents the part of the document contained in the document content.</p>",
+      "description": "<p>Return a Range object that represents the part of the document contained in the document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -167,13 +179,13 @@
         {
           "type": "Number",
           "name": "Start",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>Start character in the current element.</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "End",
-          "description": "<p>end character in current element</p>",
+          "description": "<p>End character in the current element.</p>",
           "optional": false
         }
       ]

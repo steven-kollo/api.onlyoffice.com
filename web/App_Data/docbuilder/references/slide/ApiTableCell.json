@@ -16,7 +16,7 @@
     "GetContent": {
       "memberof": "ApiTableCell",
       "name": "GetContent",
-      "description": "<p>Returns cell content</p>",
+      "description": "<p>Returns cell content.</p>",
       "tags": {},
       "returns": [
         [
@@ -68,7 +68,7 @@
     "SetCellMarginBottom": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginBottom",
-      "description": "<p>Specifies the amount of space which shall be left between the bottom extent of the cell contents and the border\nof a specific table cell within a table.</p>",
+      "description": "<p>Specify the amount of space which shall be left between the bottom extent of the cell contents and the border\nof a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -85,7 +85,7 @@
     "SetCellMarginLeft": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginLeft",
-      "description": "<p>Specifies the amount of space which shall be left between the left extent of the current cell contents and the\nleft edge border of a specific individual table cell within a table.</p>",
+      "description": "<p>Specify the amount of space which shall be left between the left extent of the current cell contents and the\nleft edge border of a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -151,6 +151,7 @@
         {
           "type": "ApiFill",
           "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the current border.</p>",
           "optional": false
         }
       ]
@@ -173,6 +174,7 @@
         {
           "type": "ApiFill",
           "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the current border.</p>",
           "optional": false
         }
       ]
@@ -195,6 +197,7 @@
         {
           "type": "ApiFill",
           "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the current border.</p>",
           "optional": false
         }
       ]
@@ -217,6 +220,7 @@
         {
           "type": "ApiFill",
           "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the current border.</p>",
           "optional": false
         }
       ]
@@ -233,6 +237,7 @@
         {
           "type": "\"top\" | \"center\" | \"bottom\"",
           "name": "sType",
+          "description": "<p>The type of the vertical alignment.</p>",
           "optional": false
         }
       ]
@@ -249,13 +254,14 @@
         {
           "type": "\"lrtb\" | \"tbrl\" | \"btlr\"",
           "name": "sType",
+          "description": "<p>The type of the text flow direction.</p>",
           "optional": false
         }
       ]
     }
   },
-  "comment": "/**\r\n     * Represents table cell\r\n     * @param oCell\r\n     * @constructor\r\n     */",
-  "description": "<p>Represents table cell</p>",
+  "comment": "/**\r\n     * Class representing a table cell.\r\n     * @param oCell\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a table cell.</p>",
   "scope": "global",
   "params": []
 }
