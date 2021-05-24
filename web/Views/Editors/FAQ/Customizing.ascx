@@ -93,26 +93,6 @@
     ...
 });</pre>
         <p>This will disable both the <b>Chat</b> and <b>Comments</b> buttons and their functionality.</p>
-        <p>If you only want to restrict commenting to allow the authors edit their only comments, you will need to change the <em>editorConfig.customization.commentAuthorOnly</em> parameter:</p>
-        <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "document": {
-        "permissions": {
-            "comment": true,
-            ...
-        },
-        ...
-    },
-    "editorConfig": {
-        "mode": "edit",
-        "customization": {
-            "commentAuthorOnly": true,
-            ...
-        },
-        ...
-    },
-    ...
-});</pre>
-        <div class="note">Do not forget to set the <em>editorConfig.mode</em> to <b>edit</b>, otherwise any commenting functionality will be disabled.</div>
         <p>Further information about the customization can be found <a href="<%= Url.Action("config/editor/customization") %>">at this page</a>.</p>
     </dd>
 </dl>

@@ -47,6 +47,6 @@
 
     <p>The only <b>OK</b> button (<em>window.Asc.plugin.button = function (id) {...}</em>) is used to create the text and finish the work with the plugin.</p>
 
-    <p>More existing open source plugin examples can be found here: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins</a>.</p>
+    <p>More existing open source plugin examples can be found <a href="<%= Url.Action("example") %>">here</a>.</p>
 
 </asp:Content>

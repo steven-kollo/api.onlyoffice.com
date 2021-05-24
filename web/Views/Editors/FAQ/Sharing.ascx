@@ -397,3 +397,22 @@
         <p>Further information about the information for the document can be found <a href="<%= Url.Action("config/document/info") %>">at this page</a>.</p>
     </dd>
 </dl>
+<dl class="faq_block" id="sharing_10">
+    <dt>How to restrict commenting?</dt>
+    <dd>
+        <p>The comments are enabled by default. If you want to restrict commenting and allow the authors to edit and/or delete only their comments, 
+        you will need to change the <em>document.permissions.editCommentsAuthorOnly</em> and/or <em>document.permissions.deleteCommentsAuthorOnly</em> parameters:</p>
+        <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "document": {
+        "permissions": {
+            "comment": true,
+            "editCommentsAuthorOnly": true,
+            "deleteCommentsAuthorOnly": true,
+        },
+        ...
+    },
+    ...
+});</pre>
+    <div class="note">Do not forget to set the <em>editorConfig.mode</em> to <b>edit</b>, otherwise any commenting functionality will be disabled.</div>
+    </dd>
+</dl>

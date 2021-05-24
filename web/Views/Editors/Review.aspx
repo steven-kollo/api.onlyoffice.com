@@ -46,7 +46,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 </pre>
     <div class="note">Please note that the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.</div>
 
-    <!--<h2 id="group-rights" class="copy-link">Differentiation of reviewing rights by groups</h2>
+    <h2 id="group-rights" class="copy-link">Differentiation of reviewing rights by groups</h2>
     <ol>
         <li>
             <p>
@@ -78,20 +78,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                Specify the group access rights using the <a href="<%= Url.Action("config/editor/customization") %>#reviewPermissions">reviewPermissions</a> parameter in the customization section of the editor initialization.
+                Specify the access rights using the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a> parameter in the permissions section of the editor initialization.
             </p>
             <div class="note">
-                If the <b>reviewPermissions</b> parameter is specified in the editor config, the access rights to reviewing all changes are disabled.
+                If the <b>reviewGroups</b> parameter is specified in the editor config, the access rights to reviewing all changes are disabled.
                 Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
             </div>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "customization": {
-            "reviewPermissions": {
-                "Group1": ["Group2"],
-                "Group2": ["Group1", "Group2", ""],
-            },
+    "document": {
+        "permissions": {
+            "reviewGroups": ["Group1", "Group2"],
             ...
         }
         ...
@@ -100,22 +97,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                <em>"Group1": ["Group2"]</em> means that users from <em>Group1</em> can review changes made by users from <em>Group2</em>.
+                <em>["Group1", "Group2"]</em> means that user can review changes made by users from <em>Group1</em> and <em>Group2</em>.
             </p>
             <p>
-                <em>"Group2": ["Group1", "Group2"]</em> means that users from <em>Group2</em> can review changes made by users from <em>Group1</em> and <em>Group2</em>.
-            </p>
-            <p>
-                The <a href="<%= Url.Action("config/editor/customization") %>#reviewPermissions">reviewPermissions</a> parameter can take the value of an empty group.
-                This means that the group of users can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
+                The <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a> parameter can take the value of an empty group.
+                This means that the user can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
             </p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
-    "editorConfig": {
-        "customization": {
-            "reviewPermissions": {
-                "Group1": ["Group2", ""],
-            },
+    "document": {
+        "permissions": {
+            "reviewGroups": ["Group2", ""],
             ...
         }
         ...
@@ -124,8 +116,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                <em>"Group1": ["Group2", ""]</em> means that users from <em>Group1</em> can review changes made by users from <em>Group2</em> and users who do not belong to any of the groups.
+                <em>["Group2", ""]</em> means that user can review changes made by users from <em>Group2</em> and users who do not belong to any of the groups.
             </p>
         </li>
-    </ol>-->
+    </ol>
 </asp:Content>

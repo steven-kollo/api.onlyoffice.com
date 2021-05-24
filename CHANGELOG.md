@@ -1,5 +1,17 @@
 # Change Log
 
+- editors: added the Anonymous users page
+- plugins: changed variations.isModal parameter
+- plugins: new icon parameters
+- editors: added editorConfig.customization.hideRulers
+- editors: added document.permissions.reviewGroups
+- editors: added document.info.favorite
+- editors: added setFavorite method
+- editors: added events.onMetaChange
+- editors: added document.permissions.editCommentAuthorOnly and document.permissions.deleteCommentAuthorOnly
+- editors: added editorConfig.customization.anonymous
+- editors: epub, fb2, html conversion
+- editors: converting xml
 - plugins: examples
 - plugins: methods
 - portals: api v11.5.1

@@ -127,15 +127,7 @@
             <tr class="tablerow">
                 <td>variations.icons</td>
                 <td>
-                    Plugin icon image files used in the editors: for common screens and with doubled resolution for retina screens.
-                    Icons with the lowest ID value are placed first to specify the application icons.
-                    Icons must be of the following sizes:
-                    <ul>
-                        <li><b>icon.png</b> - 40x40;</li>
-                        <li><b>icon@2x.png</b> - 80x80;</li>
-                        <li><b>icon2.png</b> - 26x26;</li>
-                        <li><b>icon2@2x.png</b> - 52x52.</li>
-                    </ul>
+                    Plugin icon image files used in the editors. See the <a href="#pluginIcons">Plugin icons</a> section below for more information.
                 </td>
                 <td>array of string</td>
                 <td></td>
@@ -172,7 +164,7 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.isModal</td>
-                <td>Specifies if the opened plugin window is modal, i.e. a separate modal window must be opened, or not (used for visual plugins only). The following rule must be observed at all times: <em>isModal != isInsideMode</em>.</td>
+                <td>Specifies if the opened plugin window is modal (used for visual plugins only, and if <em>isInsideMode</em> is not true).</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -257,7 +249,16 @@
                     "es": "spanish plugin description"
                 },
                 "EditorsSupport": ["word", "cell", "slide"],
-                "icons": ["icon.png", "icon@2x.png", "icon2.png", "icon2@2x.png"],
+                "icons": [
+                    {
+                        "100%": { "normal": "icon.png" },
+                        "150%": { "normal": "icon@1.5x.png" },
+                        "200%": { "normal": "icon@2x.png" }
+                    },
+                    {
+                        "style" : "dark"
+                    }
+                ],
                 "initData": "",
                 "initDataType": "ole",
                 "initOnSelectionChanged": true,
@@ -280,5 +281,62 @@
     <p>Why would one plugin might need some variations? The answer is simple enough: the plugin can not only perform some actions but also contain some settings, or an <b>About</b> window, or something like that. For example, translation plugin: the plugin itself does not need a visual window for translation as it can be done just pressing a single button, but its settings (the translation direction) and an <b>About</b> window must be visual. So we will need to have at least two plugin variations (translation itself and settings), or three, in case we want to add an <b>About</b> window with the information about the plugin and its authors or the software used for the plugin creation.</p>
 
     <div class="note">The <em>.html</em> files for <b>all</b> variations must be placed to the plugin root folder together with the <em>config.json</em> configuration file for the plugin to work correctly.</div>
+
+    <h2 id="pluginIcons" class="copy-link">Plugin icons</h2>
+
+    <ul>
+        <li><b>Scaling.</b> There are three scaling types of plugin icons: 100%, 150% and 200%. For each type the icon has its <em>normal</em> state:</li>
+
+    <pre>
+"icons": [
+    {
+        "100%": { "normal": "icon.png" },
+        "150%": { "normal": "icon@1.5x.png" },
+        "200%": { "normal": "icon@2x.png" }
+    }
+]
+</pre>
+
+    <p>The document editor chooses the necessary icons in the following way:</p>
+    <ol>
+        <li>get the information about the current scaling and find an icon for it;</li>
+        <li>if there is no such an icon in the <em>config</em>, take the one which is the closest to the required size and round it up (150% instead of 140%).</li>
+    </ol>
+
+        <li><b>Style.</b> The <em>style</em> parameter is also used to specify the icon appearance:</li>
+    </ul>
+
+    <table class="table">
+        <colgroup>
+            <col style="width: 220px;" />
+            <col />
+            <col style="width: 100px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Type</td>
+                <td>Default</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="style" class="tablerow">
+                <td>style</td>
+                <td>The theme type of the plugin icons. It can have the <em>light</em> or <em>dark</em> values.</td>
+                <td>string</td>
+                <td>"dark"</td>
+            </tr>
+        </tbody>
+    </table>
+    <pre>
+"icons": [
+    {
+        "style" : "dark"
+    }
+]
+</pre>
+
+    <div class="note">This parameter is only used when the icons are different in light and dark themes.</div>
 
 </asp:Content>

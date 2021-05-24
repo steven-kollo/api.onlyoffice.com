@@ -12,6 +12,7 @@
 
 <nav class="content">
     <ul class="columns-4" style="list-style: none;">
+        <li><a href="#anonymous">anonymous</a></li>
         <li><a href="#autosave">autosave</a></li>
         <li><a href="#chat">chat</a></li>
         <li><a href="#commentAuthorOnly">commentAuthorOnly</a></li>
@@ -25,6 +26,7 @@
         <li><a href="#goback">goback</a></li>
         <li><a href="#help">help</a></li>
         <li><a href="#hideRightMenu">hideRightMenu</a></li>
+        <li><a href="#hideRulers">hideRulers</a></li>
         <li><a href="#logo">logo</a></li>
         <li><a href="#macros">macros</a></li>
         <li><a href="#macrosMode">macrosMode</a></li>
@@ -71,6 +73,37 @@
         </tr>
         <% } %>
         <tr>
+            <td id="anonymous" class="copy-link">anonymous</td>
+            <td>
+                Adds a request for the anonymous name:
+                <ul>
+                    <li>
+                        <b>request</b> - defines if the request is sent or not.
+                        The default value is <em>true</em>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>label</b> - a postfix added to the user name.
+                        The default value is <em>Guest</em>,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Guest";
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
             <td id="autosave" class="copy-link">autosave</td>
             <td>
                 Defines if the <b>Autosave</b> menu option is enabled or disabled.
@@ -100,6 +133,7 @@
             <td>
                 Defines if the user can edit and delete only his comments.
                 The default value is <b>false</b>.
+                Deprecated since version 6.3, please use the <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">document.permissions.editCommentAuthorOnly</a> and <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">document.permissions.deleteCommentAuthorOnly</a> fields instead. 
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -247,7 +281,7 @@
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.forcesave</em> parameter.</div>
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="goback" class="copy-link">goback</td>
             <td>
                 Defines settings for the <b>Open file location</b> menu button and upper right corner button.
@@ -288,6 +322,11 @@
             <td>boolean or object</td>
             <td>true</td>
         </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
+            </td>
+        </tr>
         <tr>
             <td id="help" class="copy-link">help</td>
             <td>
@@ -314,6 +353,20 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.hideRightMenu</em> parameter.</div>
+            </td>
+        </tr>
+        <tr>
+            <td id="hideRulers" class="copy-link">hideRulers</td>
+            <td>
+                Defines if the editor rulers are displayed (<b>true</b>) or hidden (<b>false</b>). 
+                This parameter is available for the document and presentation editors. The default value is <b>false</b> for the document editor and <b>true</b> for presentations.
+            </td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
             </td>
         </tr>
         <% if (license)
@@ -456,33 +509,6 @@
                 <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
-        <!--<tr class="tablerow">
-            <td id="reviewPermissions" class="copy-link">reviewPermissions</td>
-            <td>
-                Defines the group access rights to review documents of users from the specific groups.
-                If the current user does not belong to any of the groups, he can review documents of all groups.
-                The <em>""</em> value of an empty group means that the group of users can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
-                The <em>reviewPermissions</em> object has the following structure <em>group: accessRights</em> where:
-                <ul>
-                    <li>
-                        <b>group</b> - the group the user belongs to.
-                        <br />
-                        <b>type</b>: string,
-                        <br />
-                        <b>example</b>: "Group1";
-                    </li>
-                    <li>
-                        <b>accessRights</b> - the list of groups whose documents the <em>group</em> can review.
-                        <br />
-                        <b>type</b>: array of string,
-                        <br />
-                        <b>example</b>: ["Group1", "Group2", ""].
-                    </li>
-                </ul>
-            </td>
-            <td>object</td>
-            <td></td>
-        </tr>-->
         <% if (license)
            { %>
         <tr class="tablerow">
@@ -530,6 +556,24 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
+        <% } %>
+        <%--<tr>
+            <td id="submitForm" class="copy-link">submitForm</td>
+            <td>
+                Defines if the <b>Submit form</b> button is displayed or hidden.
+                Button will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b> and at least one of the <a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>, <a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a> or <a href="<%= Url.Action("config/document/permissions") %>#review">review</a> permissions is set to <b>true</b>.
+                The default value is <b>false</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/submitForm.png") %>" alt="" />
+            </td>
+        </tr>--%>
+        <% if (license)
+            { %>
         <tr class="tablerow">
             <td id="toolbar" class="copy-link">toolbar<span class="required">**</span></td>
             <td>
@@ -549,9 +593,10 @@
             <td>boolean</td>
             <td>false</td>
         </tr>
-        <tr class="tablerow">
+        <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
+                <img src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -571,8 +616,8 @@
         <tr class="tablerow">
             <td id="trackChanges" class="copy-link">trackChanges</td>
             <td>
-                Defines if the review editing mode is automatically switched on (<b>true</b>) or off (<b>false</b>) when the editor is loaded. 
-                If the parameter is <em>undefined</em>, then the current opening mode is used (it is stored in the browser local storage).
+                Defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
+                If the parameter is <em>undefined</em>, the <em>document.permissions.review</em> value is used (for all the document users).
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -631,10 +676,13 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {
+            "anonymous": {
+                "request": true,
+                "label": "Guest"
+            },
             <% if (license)
                { %>"about": true,
             <% } %>"chat": true,
-            "commentAuthorOnly": false,
             "comments": true,
             "compactHeader": false,
             "compactToolbar": false,
@@ -664,6 +712,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "loaderLogo": "https://example.com/loader-logo.png",
             "loaderName": "The document is loading, please wait...",
             <% } %>"hideRightMenu": false,
+            "hideRulers": false,
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
@@ -673,18 +722,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "macrosMode": "warn",
             "mentionShare": true,
             "plugins": true,
-            "reviewDisplay": "original",<!--
-            "reviewPermissions": {
-                "Group1": ["Group2"],
-                "Group2": ["Group1", "Group2", ""]
-            },-->
+            "reviewDisplay": "original",
             <% if (license)
                { %>"rightMenu": true,
             <% } %>"showReviewChanges": false,
             "spellcheck": true,
             <% if (license)
                { %>"statusBar": true,
-            "toolbar": true,
+            <% } %><%--"submitForm": true,--%>
+            <% if (license)
+                { %>"toolbar": true,
             <% } %>"toolbarHideFileName": false,
             "toolbarNoTabs": false,
             "trackChanges": false,

@@ -17,7 +17,8 @@
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Defines the method used to create an input helper.</p>
+    <p class="dscr">Defines the method used to create an <a href="<%= Url.Action("inputhelper") %>">input helper</a> - a window that appears and disappears when you type text. 
+        Its location is tied to the cursor.</p>
 
     <div class="header-gray">Example</div>
 
