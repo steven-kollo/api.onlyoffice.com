@@ -45,6 +45,28 @@
     </table>
     <% } %>
 
+    <% if (section.Properties != null && section.Properties.Any()) { %>
+    <h2>Properties</h2>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Name</td>
+                <td>Type</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% foreach(var p in section.Properties) { %>
+                <tr class="tablerow">
+                    <td><em><%= p.Name %></em></td>
+                    <td><%= p.Type %></td>
+                    <td><%= p.Description %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <% } %>
+
     <h2>Methods</h2>
     <table class="table table-classlist">
         <thead>

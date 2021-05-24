@@ -566,7 +566,7 @@
     "GetAllTablesOnPage": {
       "memberof": "ApiDocument",
       "name": "GetAllTablesOnPage",
-      "description": "<p>Get the collection of tables on a given absolute page</p>",
+      "description": "<p>Get the collection of tables on a given absolute page\n<note>This method can be a little bit slow, because it runs the document calculation\nprocess to arrange tables on the specified page</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"

@@ -520,6 +520,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [JsonProperty("methods")]
         public SortedDictionary<string, DBMethod> Methods { get; set; }
 
+        [JsonProperty("properties")]
+        public List<DBProperty> Properties { get; set; }
+
         [JsonProperty("comment")]
         public string Comment { get; set; }
 
@@ -563,6 +566,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [JsonIgnore]
         public DBExample Example { get; set; }
+    }
+
+    public class DBProperty : DBEntity
+    {
+        [JsonProperty("type")]
+        public string Type { get; set; }
     }
 
     public class DBTags

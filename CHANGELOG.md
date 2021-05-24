@@ -1,5 +1,8 @@
 # Change Log
 
+- docbuilder: api v6.3.0
+- docbuilder: display class properties
+
 - editors: added the Anonymous users page
 - plugins: changed variations.isModal parameter
 - plugins: new icon parameters
