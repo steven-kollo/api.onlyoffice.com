@@ -5,21 +5,22 @@
     <span class="hdr">Language tool</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in all the editors and allows the user to connect the <a href="https://languagetool.org/" target="_blank">LanguageTool</a> assistant to check the text for grammar, style and spell errors.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Connects the <a href="https://languagetool.org/" target="_blank">LanguageTool</a> assistant to check the text for grammar, style and spell errors.</p>
 <p><b>Plugin type:</b> visual, non-system.</p>
-<p><b>Supported editors:</b> document, spreadsheet, presentation.</p>
+<p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 <p><b>Analogue:</b> <a href="https://github.com/ONLYOFFICE/plugin-glavred" target="_blank">Glavred</a>.</p>
 
 <img alt="LanguageTool" src="<%= Url.Content("~/content/img/plugins/gifs/language-tool.gif") %>" />
 
 
-<h2>Installation</h2>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/plugin-languagetool/tree/master" target="_blank">GitHub</a> and install it using the
-<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>
+<div class="header-gray">Installation</div>
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/plugin-languagetool/tree/master" target="_blank">GitHub</a> and install it following the
+<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Open the <b>Plugins</b> tab and press <b>Languagetool</b>.</li>
@@ -30,13 +31,13 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/plugin-languagetool/tree/master" target="_blank">https://github.com/ONLYOFFICE/plugin-languagetool/tree/master</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
-    <li><em>index_about.html</em> for the plugin <b>About</b> window.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
+    <li><em>index_about.html</em> for the plugin <b>About</b> window</li>
     <li>The <em>translations</em> folder contains translations into Russian, German, Spanish and French.</li>
     <li><em>plugin_style.css</em> is used to adjust the plugin style.</li>
     <li>Third-party services:
@@ -49,7 +50,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name": "LanguageTool",
@@ -114,13 +115,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works on the left-side panel of the editor.</li>
-    <li>This plugin has two variations - for the plugin itself and for the <b>About</b> window.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-languagetool/blob/develop/scripts/langTool.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
@@ -136,6 +132,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>

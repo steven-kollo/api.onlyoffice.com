@@ -5,20 +5,21 @@
     <span class="hdr">Chess</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in all the editors and allows the user to insert a Chess Board object into the document editor. The object makes it possible to edit and save the chess position in the <em>FEN</em> format.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Inserts a Chess Board object into the document editor. The object makes it possible to edit and save the chess position in the <em>FEN</em> format.</p>
 <p><b>Plugin type:</b> visual, OLE-object, non-system.</p>
-<p><b>Supported editors:</b> document, spreadsheet, presentation.</p>
+<p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 
 <img alt="Chess" src="<%= Url.Content("~/content/img/plugins/gifs/chess.gif") %>" />
 
 
-<h2>Installation</h2>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess" target="_blank">GitHub</a> and install it using the
-<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>
+<div class="header-gray">Installation</div>
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess" target="_blank">GitHub</a> and install it following the
+<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Open the <b>Plugins</b> tab and press <b>Chess</b>.</li>
@@ -27,17 +28,17 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
-    <li><em>index_about.html</em> for the plugin <b>About</b> window.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
+    <li><em>index_about.html</em> for the plugin <b>About</b> window</li>
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name" : "chess(fen)",
@@ -89,15 +90,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works in its own frame.</li>
-    <li>This plugin has two variations - for the plugin itself and for the <b>About</b> window.</li>
-    <li>This plugin is an OLE-object (<em>"initDataType": "ole"</em>) that allows a third-party developer to save information from external resources to the resulting file.</li>
-    <li>This plugin has two buttons - <em>Ok</em> and <em>Cancel</em>. They are specified with the buttons parameter</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/chess/chess.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
@@ -118,6 +112,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>

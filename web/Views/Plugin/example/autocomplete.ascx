@@ -5,22 +5,23 @@
     <span class="hdr">Autocomplete</span>
 </h1>
 
-<p class="dscr">An input helper, system plugin that is available in all the editors and helps the user to input text quickly.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Helps the user to input text quickly.</p>
 
 <p><b>Plugin type:</b> input helper, system.</p>
-<p><b>Supported editors:</b> document, spreadsheet, presentation.</p>
+<p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 
 <img alt="Autocomplete" src="<%= Url.Content("~/content/img/plugins/gifs/autocomplete.gif") %>" />
 
 
-<h2>Installation</h2>
+<div class="header-gray">Installation</div>
 
-<p>Download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/autocomplete" target="_blank">ONLYOFFICE App Directory</a> and install it using the 
-<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a> 
+<p>Download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/autocomplete" target="_blank">ONLYOFFICE App Directory</a> and install it following the 
+<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>, 
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Start typing a word. If the plugin finds some words in the dictionary, an input helper window with the found words will appear.</li>
@@ -28,16 +29,16 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/plugin-autocomplete" target="_blank">https://github.com/ONLYOFFICE/plugin-autocomplete</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
     <li>The <em>dictionary.js</em> file contains words for autocompletion.</li>
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name" : "example_autocomplete",
@@ -73,15 +74,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 }
 </pre>
 
-<ul>
-    <li>The input helper type of this plugin is specified with the <em>onInputHelperClear</em> and <em>onInputHelperInput</em> events. 
-    So, the plugin has its own window that appears and disappears when the user types text. Its location is tied to the text-input cursor.</li>
-    <li>Please note that this is a system plugin (<em>"isSystem" : true</em>), so it is not displayed on the <b>Plugins</b> tab.</li>
-    <li>The <em>"isVisual": false</em> parameter means that this plugin does not have its own frame or panel.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-autocomplete/blob/master/scripts/code.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
@@ -102,6 +96,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/plugin-autocomplete/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/plugin-autocomplete/issues" target="_blank">GitHub</a>.</p>

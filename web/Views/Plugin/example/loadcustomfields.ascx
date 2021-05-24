@@ -5,23 +5,24 @@
     <span class="hdr">Load custom fields</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in the document editor and allows the user to load custom fields from the document.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Loads custom fields from the document.</p>
 <p class="note">
 The fields should be already added to the document with the <a href="<%= Url.Action("example/addcustomfields") %>">Example add custom fields</a> plugin.
 </p>
 <p><b>Plugin type:</b> visual, non-system.</p>
-<p><b>Supported editors:</b> document.</p>
+<p><b>Supported editors:</b> documents.</p>
 
 <img alt="LoadCustomFields" src="<%= Url.Content("~/content/img/plugins/gifs/load-custom-fields.gif") %>" />
 
 
-<h2>Installation</h2>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load" target="_blank">GitHub</a> and install it using the
-<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>
+<div class="header-gray">Installation</div>
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load" target="_blank">GitHub</a> and install it following the
+<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Open the <b>Plugins</b> tab and press <b>Example load custom fields</b>.</li>
@@ -33,16 +34,16 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_customfields_load</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name" : "Example loading custom fields",
@@ -72,12 +73,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works in its own frame.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_customfields_load/code.js" target="_blank">here</a>.</p>
 <ul>
@@ -90,6 +87,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>

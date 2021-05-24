@@ -5,20 +5,21 @@
     <span class="hdr">Get and paste html</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in all the editors and allows the user to get the document content as HTML code, modify it, and paste back to the document.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Gets the document content as HTML code, modifies it, and pastes back to the document.</p>
 <p><b>Plugin type:</b> visual, non-system.</p>
-<p><b>Supported editors:</b> document, spreadsheet, presentation.</p>
+<p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 
 <img alt="GetAndPasteHTML" src="<%= Url.Content("~/content/img/plugins/gifs/get-and-paste-html.gif") %>" />
 
 
-<h2>Installation</h2>
+<div class="header-gray">Installation</div>
 <p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Document Server + Community Server). </p>
-<p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/html" target="_blank">ONLYOFFICE App Directory</a> and install it using the
+<p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/html" target="_blank">ONLYOFFICE App Directory</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a> or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Select the necessary content.</li>
@@ -28,12 +29,12 @@
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/plugin-html" target="_blank">https://github.com/ONLYOFFICE/plugin-html</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
     <li>The <em>translations</em> folder which contains translations into Russian, German, Spanish, Czech and French.</li>
     <li>Third-party service:
         <ul>
@@ -43,9 +44,8 @@
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
-Config
 {
     "name": "Get and past html",
     "guid": "asc.{E581C417-3C80-4BC2-B42D-502850FDC1E7}",
@@ -76,12 +76,8 @@ Config
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works on the left-side panel of the editor.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-html/blob/master/scripts/code.js" target="_blank">here</a>.</p>
 <ul>
@@ -93,6 +89,6 @@ Config
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/plugin-html/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/plugin-html/issues" target="_blank">GitHub</a>.</p>

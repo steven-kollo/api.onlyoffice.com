@@ -381,7 +381,6 @@
     <Content Include="Content\img\plugin\controls-navigation.svg" />
     <Content Include="Content\img\plugin\controls-tags.svg" />
     <Content Include="Content\img\plugin\counter.svg" />
-    <Content Include="Content\img\plugin\example.svg" />
     <Content Include="Content\img\plugin\extended.svg" />
     <Content Include="Content\img\plugin\google-translate.svg" />
     <Content Include="Content\img\plugin\hello-world.svg" />
@@ -390,7 +389,6 @@
     <Content Include="Content\img\plugin\invoices.svg" />
     <Content Include="Content\img\plugin\language-tool.svg" />
     <Content Include="Content\img\plugin\load-custom.svg" />
-    <Content Include="Content\img\plugin\mendeley.svg" />
     <Content Include="Content\img\plugin\move-cursor.svg" />
     <Content Include="Content\img\plugin\num2word.svg" />
     <Content Include="Content\img\plugin\ocr.svg" />
