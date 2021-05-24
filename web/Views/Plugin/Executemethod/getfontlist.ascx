@@ -2,7 +2,7 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod("GetFontList", callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("GetFontList", callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
@@ -12,12 +12,12 @@
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod("GetFontList");
+window.Asc.plugin.executeMethod ("GetFontList");
 </pre>
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns an array of <em>FontInfo</em> objects containing the data about the used fonts in the following form (JSON):</p>
+<p>The method returns an array of the <em>FontInfo</em> objects containing the data about the used fonts in the following form (JSON):</p>
 <pre>
 {
     "m_wsFontName" : "string",

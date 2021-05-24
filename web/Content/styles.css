@@ -123,10 +123,8 @@ tr {
     float: left;
     height: 71px;
     outline: none;
-    width: 174px;
-    background-position-x: 50%;
-    margin-right: 81px;
-    padding-left: 15px;
+    width: 255px;
+    margin-left: 18px;
 }
 
 /*layout*/
@@ -157,8 +155,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    max-width: 1120px;
+    max-width: 1170px;
     margin: auto;
+    padding: 0 40px;
 }
 
 .header-navigation {
@@ -179,7 +178,7 @@ body {
 }
 
 .main-page .layout-header {
-    max-width: 1120px;
+    max-width: 1170px;
     margin: auto;
 }
 
@@ -190,8 +189,8 @@ body {
 .layout-table-side {
     height: 100%;
     margin: 0;
-    padding: 28px 0 40% 10px;
-    width: 261px;
+    padding: 28px 0px 40% 18px;
+    width: 256px;
     background-color: #F5F5F5;
 }
 
@@ -208,14 +207,14 @@ body {
 .layout-side {
     height: 100%;
     overflow: hidden;
-    padding: 0 24px 0 0;
+    padding: 0 22px 0 0;
     text-overflow: ellipsis;
-    width: 236px;
+    width: 233px;
 }
 
 .layout-table-content {
     margin: 0;
-    padding: 8px 24px;
+    padding: 8px 32px 8px 32px;
     border-left: 1px solid #EFEFEF;
 }
 
@@ -264,7 +263,7 @@ body {
     }
 
     .table-conversion-matrix-text td {
-        width: 9%;
+        width: 7%;
     }
 
     .table-conversion-matrix-spreadsheet td {
@@ -457,6 +456,7 @@ li b.copy-link[id]:hover:before {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     text-align: center;
+    padding: 0;
 }
 
     .top-nav li {
@@ -584,7 +584,7 @@ li b.copy-link[id]:hover:before {
     position: absolute;
     right: 4px;
     display: none;
-    top: 12px;
+    top: 11px;
 }
 
     .search-clear:hover {
@@ -1622,91 +1622,7 @@ article {
     margin-top: 150px;
 }
 
-.macro-block {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 16px;
-}
 
-.example-img {
-    height: 80px;
-    background-size: 100%;
-}
-
-.worksheet {
-    background-image: url("img/macros/worksheet.svg");
-    background-repeat: no-repeat;
-}
-
-.cell-background-color {
-    background-image: url("img/macros/cell-background-color.svg");
-    background-repeat: no-repeat;
-}
-
-.change-cell {
-    background-image: url("img/macros/change-cell.svg");
-    background-repeat: no-repeat;
-}
-
-.cell-font-bold {
-    background-image: url("img/macros/cell-font-bold.svg");
-    background-repeat: no-repeat;
-}
-
-.merge-and-unmerge {
-    background-image: url("img/macros/merge-and-unmerge.svg");
-    background-repeat: no-repeat;
-}
-
-.unmerge-cell {
-    background-image: url("img/macros/unmerge-cell.svg");
-    background-repeat: no-repeat;
-}
-
-.column-width {
-    background-image: url("img/macros/column-width.svg");
-    background-repeat: no-repeat;
-}
-
-.format-range {
-    background-image: url("img/macros/format-range.svg");
-    background-repeat: no-repeat;
-}
-
-.add-new-chart {
-    background-image: url("img/macros/add-new-chart.svg");
-    background-repeat: no-repeat;
-}
-
-.highlight-duplicates {
-    background-image: url("img/macros/highlight-duplicates.svg");
-    background-repeat: no-repeat;
-}
-
-.next-blank-row {
-    background-image: url("img/macros/next-blank-row.svg");
-    background-repeat: no-repeat;
-}
-
-.macro-example {
-    background-color: #fff;
-    border: 1px solid #EFEFEF;
-    box-sizing: border-box;
-    box-shadow: 0px 7px 25px rgba(85, 85, 85, 0.15);
-    border-radius: 3px;
-    padding: 24px;
-    list-style-type: none;
-}
-
-.name-example-macros a {
-    color: #333;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-}
 
 @media screen and (min-width: 2250px) {
     .background-body {
@@ -1730,7 +1646,7 @@ img {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1265px) {
     .background-body {
         background: linear-gradient( 90deg, #f5f5f5 10%, #fff 0%);
     }
@@ -1767,6 +1683,7 @@ img {
     .logo {
         width: 100%;
         padding-left: 0px;
+        background-position-x: 50%;
     }
 
     .top-nav a:hover {
@@ -1789,16 +1706,6 @@ img {
         float: none;
     }
 
-    .macro-block {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 16px;
-    }
-
-    .example-img {
-        background-size: 208px;
-    }
-
     .ham_menu {
         cursor: pointer;
         display: block;
@@ -1810,13 +1717,13 @@ img {
         position: absolute;
     }
 
-        .ham_menu span {
-            background-color: #F5F5F5;
-            display: block;
-            height: 2px;
-            margin: 0 0 4px;
-            width: 20px;
-        }
+    .ham_menu span {
+        background-color: #F5F5F5;
+        display: block;
+        height: 2px;
+        margin: 0 0 4px;
+        width: 20px;
+    }
 }
 
 @media screen and (max-width: 769px) {
@@ -1862,4 +1769,7 @@ img {
 ********************************/
 .columns-4 {
     column-count: 4;
+}
+.columns-2 {
+    column-count: 2;
 }

@@ -16,6 +16,21 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="63" class="copy-link">Version 6.3</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRulers">editorConfig.customization.hideRulers</a> field.</li>
+        <%--<li>Added the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">editorConfig.customization.submitForm</a> field.</li>--%>
+        <%--<li>Added a new <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a> (<em>forcesavetype = 3</em>).</li>--%>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> field.</li>
+        <li>The <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> field is deprecated, please use the <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">document.permissions.editCommentAuthorOnly</a> and <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">document.permissions.deleteCommentAuthorOnly</a> fields.</li>
+        <li>Added the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method.</li>
+        <li>Added the <em>data.favorite</em> parameter to the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/info") %>#favorite">document.info.favorite</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">document.permissions.reviewGroups</a> field.</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">epub, fb2, html</a> formats.</li>
+        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">xml</a> format.</li>
+    </ul>
+
     <h2 id="62" class="copy-link">Version 6.2</h2>
     <ul>
         <li>Added a new <a href="<%= Url.Action("callback") %>#actions">actions.type</a> field value (<em>actions.type = 2</em>).</li>
@@ -28,9 +43,8 @@
     <h2 id="61" class="copy-link">Version 6.1</h2>
     <ul>
         <li>The <em>text</em>, <em>spreadsheet</em> and <em>presentation</em> values for <a href="<%= Url.Action("config/") %>#documentType">documentType</a> parameter is deprecated, please use <em>word</em>, <em>cell</em> and <em>slide</em> values instead.</li>
-        <!--<li>Added the <em>group</em> field to the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a>.</li>
-        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#reviewPermissions">editorConfig.customization.reviewPermissions</a> field.</li>-->
-        <li>Added conversion <a href="<%= Url.Action("conversionapi") %>#text-matrix">fb2</a> format.</li>
+        <li>Added the <em>group</em> field to the <a href="<%= Url.Action("config/editor") %>#user">editorConfig.user</a>.</li>
+        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">fb2</a> format.</li>
     </ul>
 
     <h2 id="60" class="copy-link">Version 6.0</h2>
@@ -128,7 +142,7 @@
     <h2 id="44" class="copy-link">Version 4.4</h2>
     <ul>
         <li>Changed the <a href="<%= Url.Action("methods") %>#showMessage">showMessage</a> method.</li>
-        <li>Added conversion presentation to <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">odp</a> format.</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#presentation-matrix">odp</a> format.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#comment">document.permissions.comment</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> event.</li>

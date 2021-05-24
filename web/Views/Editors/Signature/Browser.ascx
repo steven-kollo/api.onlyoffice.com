@@ -33,8 +33,8 @@
         "callbackUrl": "https://example.com/url-to-callback.ashx",
         "mode": "edit",
         "user": {
-            <!--"group": "Group1",
-            -->"id": "78e1e841",
+            "group": "Group1",
+            "id": "78e1e841",
             "name": "Smith"
         }
     }

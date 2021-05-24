@@ -16,19 +16,15 @@
 
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/server/developer-edition/windows/index.aspx?from=api_csharp_example">for Windows</a>, <a href="https://helpcenter.onlyoffice.com/server/developer-edition/linux/index.aspx?from=api_csharp_example">for Linux</a>, or <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_csharp_example">for Docker</a>.</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example">for Windows</a>, <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example">for Linux</a>, or <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_csharp_example">for Docker</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) example</a> from our site.</p>
 <p>
-    You need to connnect the editors to your web site.
+    You need to connect the editors to your web site.
     For that specify the path to the editors installation in the <em>settings.config</em> file:
 </p>
-<pre>
-&lt;add key="files.docservice.url.converter" value="https://documentserver/ConvertService.ashx" /&gt;
-&lt;add key="files.docservice.url.api" value="https://documentserver/web-apps/apps/api/documents/api.js" /&gt;
-&lt;add key="files.docservice.url.preloader" value="https://documentserver/web-apps/apps/api/documents/cache-scripts.html"/&gt;
-</pre>
+<pre>&lt;add key="files.docservice.url.site" value="https://documentserver/" /&gt;</pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> it the <em>DocEditor.aspx</em> file.</p>

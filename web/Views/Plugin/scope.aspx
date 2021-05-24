@@ -11,6 +11,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
+        <a class="up" href="<%= Url.Action("objects") %>"></a>
         <span class="hdr">Asc.scope object</span>
     </h1>
 
@@ -18,7 +19,7 @@
 
     <p class="dscr">The object is used to pass any additional data (objects, parameters, variables, etc.) to the <a href="<%= Url.Action("callCommand") %>">window.Asc.plugin.callCommand</a> method, which is executed in its own isolated context.</p>
     
-    <div class="note">The functions cannot be passed to the <a href="<%= Url.Action("callCommand") %>">window.Asc.plugin.callCommand</a> method using the <em>Asc.scope</em> object.</div>
+    <div class="note">The functions cannot be passed to the <em>callCommand</em> method using the <em>Asc.scope</em> object.</div>
 
     <div class="header-gray">Example</div>
 

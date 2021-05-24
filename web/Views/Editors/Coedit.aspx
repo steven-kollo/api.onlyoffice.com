@@ -6,12 +6,12 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Coediting
+    Co-editing
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Coediting</span>
+        <span class="hdr">Co-editing</span>
     </h1>
     <p class="dscr">The reference figure and the steps below explain the process of co-editing a document in ONLYOFFICE Document Server.</p>
     <img alt="Co-editing" src="<%= Url.Content("~/content/img/editor/coedit.jpg") %>" />

@@ -77,7 +77,9 @@
                 <li>Download the latest signed version from the official store for <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>.</li>
                 <li>Or you can download the latest signed version from the application <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases">release page</a> on GitHub.</li>
                 <li>Or you can clone the application source code and compile it yourself:
-                    <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice</span>
+                    <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice
+cd onlyoffice
+git submodule update --init --recursive</span>
                 </li>
             </ol>
             <div class="note">ownCloud does not work with unsigned applications giving an alert, so you will need to use either option <b>a</b> or <b>b</b> to get the application.</div>

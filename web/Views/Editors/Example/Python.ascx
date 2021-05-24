@@ -19,7 +19,7 @@
 
 <h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Download and Install Document Server</h2>
 <p>First, download <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
-<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/server/developer-edition/windows/index.aspx?from=api_python_example">for Windows</a>, <a href="https://helpcenter.onlyoffice.com/server/developer-edition/linux/index.aspx?from=api_python_example">for Linux</a>, or <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_python_example">for Docker</a>.</p>
+<p>See the detailed guide to learn how to install Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_python_example">for Windows</a>, <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_python_example">for Linux</a>, or <a href="https://helpcenter.onlyoffice.com/server/developer-edition/docker/docker-installation.aspx?from=api_python_example">for Docker</a>.</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the web site with the editors</h2>
 <ol>
@@ -47,9 +47,7 @@ pip install python-magic</div>
         <p>Edit the following lines:</p>
 
         <pre>
-DOC_SERV_CONVERTER_URL = 'https://documentserver/ConvertService.ashx'
-DOC_SERV_API_URL = 'https://documentserver/web-apps/apps/api/documents/api.js'
-DOC_SERV_PRELOADER_URL = 'https://documentserver/web-apps/apps/api/documents/cache-scripts.html'
+DOC_SERV_SITE_URL = 'https://documentserver/'
 
 EXAMPLE_DOMAIN = 'https://exampleserver/'
 </pre>
