@@ -1,11 +1,9 @@
 # Change Log
 
+## 2.2.0
 - docbuilder: api v6.3.0
 - docbuilder: display class properties
-
 - editors: added the Anonymous users page
-- plugins: changed variations.isModal parameter
-- plugins: new icon parameters
 - editors: added editorConfig.customization.hideRulers
 - editors: added document.permissions.reviewGroups
 - editors: added document.info.favorite
@@ -15,6 +13,8 @@
 - editors: added editorConfig.customization.anonymous
 - editors: epub, fb2, html conversion
 - editors: converting xml
+- plugins: changed variations.isModal parameter
+- plugins: new icon parameters
 - plugins: examples
 - plugins: methods
 - portals: api v11.5.1
