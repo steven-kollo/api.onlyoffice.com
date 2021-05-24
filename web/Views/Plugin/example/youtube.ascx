@@ -5,20 +5,21 @@
     <span class="hdr">YouTube</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in all the editors and allows the user to connect <a href="https://developers.google.com/youtube/iframe_api_reference">youtube iframe_api</a> for embedding YouTube videos into  documents as OLE-objects and managing them by adjusting their size, rotating and changing position.</p>
-<p><b>Plugin type:</b> visual, OLE-object non-system.</p>
-<p><b>Supported editors:</b> document, spreadsheet, presentation.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Connects <a href="https://developers.google.com/youtube/iframe_api_reference">youtube iframe_api</a> for embedding YouTube videos into documents as OLE-objects and managing them by adjusting their size, rotating and changing position.</p>
+<p><b>Plugin type:</b> visual, OLE-object, non-system.</p>
+<p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 
 <img alt="Youtube" src="<%= Url.Content("~/content/img/plugins/gifs/youtube.gif") %>" />
 
 
 <h2>Installation</h2>
 <p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.</p>
-<p>You can remove it using the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a> or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
+<p>You can remove it following the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a>, or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
 <p>The plugin guid: {38E022EA-AD92-45FC-B22B-49DF39746DB4}.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Find the plugin on the <b>Plugins</b> tab.</li>
@@ -27,12 +28,12 @@
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/plugin-youtube" target="_blank">https://github.com/ONLYOFFICE/plugin-youtube</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
     <li>The <em>translations</em> folder contains translations into Russian, German, Spanish and French.</li>
     <li>Third-party service:
         <ul>
@@ -42,7 +43,7 @@
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name": "YouTube",
@@ -91,14 +92,8 @@
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works on the left-side panel of the editor.</li>
-    <li>This plugin is an OLE-object (<em>"initDataType": "ole"</em>) which allows a third-party developer to save information from external resources to the resulting file.</li>
-    <li>This plugin has two buttons - <em>Ok</em> and <em>Cancel</em>. They are specified with the <em>buttons</em> parameter. The <em>Cancel</em> button is translated into Russian, French, Spanish and German.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-youtube/blob/master/scripts/youtube.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
@@ -120,6 +115,6 @@
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Supports</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/plugin-youtube/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/plugin-youtube/issues" target="_blank">GitHub</a>.</p>

@@ -5,20 +5,21 @@
     <span class="hdr">CBR</span>
 </h1>
 
-<p class="dscr">A non-visual, non-system plugin that is available in the spreadsheet editor and allows the user to connect <a href="https://fixer.io/" target="_blank">Fixer API</a> for inserting the current and historical foreign exchange (forex) rates into the document.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Connects <a href="https://fixer.io/" target="_blank">Fixer API</a> for inserting the current and historical foreign exchange (forex) rates into the document.</p>
 <p><b>Plugin type:</b> non-visual, non-system.</p>
-<p><b>Supported editors:</b> spreadsheet.</p>
+<p><b>Supported editors:</b> spreadsheets.</p>
 
 <img alt="CBR" src="<%= Url.Content("~/content/img/plugins/gifs/cbr.gif") %>" />
 
 
-<h2>Installation</h2>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/cbr" target="_blank">GitHub</a> and install it using the
-<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>
+<div class="header-gray">Installation</div>
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/cbr" target="_blank">GitHub</a> and install it following the
+<a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Select the cell.</li>
@@ -27,12 +28,12 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/cbr" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/cbr</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
     <li>Third-party services:
         <ul>
             <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/cbr/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
@@ -43,7 +44,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name" : "cbr",
@@ -74,12 +75,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 }
 </pre>
 
-<ul>
-    <li>The (<em>"isVisual": false</em>) parameter means that this plugin does not have its own frame or tab.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/cbr.js" target="_blank">here</a>.</p>
 <ul>
@@ -90,6 +87,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>

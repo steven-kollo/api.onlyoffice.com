@@ -5,20 +5,21 @@
     <span class="hdr">Zotero</span>
 </h1>
 
-<p class="dscr">A visual, non-system plugin that is available in the document editor and allows the user to connect a Zotero account for adding references to the document in full accordance with the chosen style guides.</p>
+<div class="header-gray">Description</div>
+<p class="dscr">Connects a Zotero account for adding references to the document in full accordance with the chosen style guides.</p>
 <p><b>Plugin type:</b> visual, non-system.</p>
-<p><b>Supported editors:</b> document.</p>
+<p><b>Supported editors:</b> documents.</p>
 <p><b>Analogues:</b> <a href="https://github.com/ONLYOFFICE/plugin-mendeley" target="_blank">Mendeley</a>, <a href="https://github.com/ONLYOFFICE/plugin-easybib" target="_blank">EasyBib</a>.</p>
 
 <img alt="Zotero" src="<%= Url.Content("~/content/img/plugins/gifs/zotero.gif") %>" />
 
 
-<h2>Installation</h2>
+<div class="header-gray">Installation</div>
 <p>Available by default in ONLYOFFICE Enterprise Edition, Community Edition (Document Server + Community Server), and ONLYOFFICE cloud.</p>
-<p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/zotero" target="_blank">ONLYOFFICE App Directory</a> and install it using the
+<p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/zotero" target="_blank">ONLYOFFICE App Directory</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a> installation instruction.</p>
 
-<h2>Connect ONLYOFFICE to Zotero account</h2>
+<div class="header-gray">Connect ONLYOFFICE to Zotero account</div>
 <ol>
     <li>Find the plugin on the <b>Plugins</b> tab.</li>
     <li>Click the <b>Zotero API settings</b> link.</li>
@@ -27,7 +28,7 @@
 </ol>
 
 
-<h2>Usage</h2>
+<div class="header-gray">Usage</div>
 
 <ol>
     <li>Find the plugin on the <b>Plugins</b> tab.</li>
@@ -37,7 +38,7 @@
     <li>Click the <b>Insert Bibliography</b> button. The bibliography list will be inserted at the cursor position.</li>
 </ol>
 
-<h2>Known issues</h2>
+<div class="header-gray">Known issues</div>
 
 <p>For CentOS users with SELinx enabled, after copying the src folder to sdkjs-plugins, plugins may not work due to the variable file security context. To restore the rights, use the following command:</p>
 <pre>
@@ -49,12 +50,12 @@ sudo supervisorctl restart ds:docservice
 </pre>
 
 
-<h2>Plugin structure</h2>
+<div class="header-gray">Plugin structure</div>
 
 <p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/plugin-zotero" target="_blank">https://github.com/ONLYOFFICE/plugin-zotero</a>.</p>
 <ol>
-    <li>The obligatory components of the <a href="<%= Url.Action("structure") %>">plugin structure</a> (<em>config.json</em>, <em>index.html</em> and <em>code.js</em>).</li>
-    <li>Icons.</li>
+    <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
+    <li>Icons</li>
     <li><em>plugin_style.css</em> are used to adjust the plugin style.</li>
     <li>The <em>translations</em> folder contains translations into Russian, German, Spanish, Czech, Italian, Japanese, Dutch, Portuguese, Chinese and French.</li>
     <li><em>zotero.js</em> allows the user to get access to their Zotero account.</li>
@@ -68,7 +69,7 @@ sudo supervisorctl restart ds:docservice
 </ol>
 
 
-<h2>Config</h2>
+<div class="header-gray">Config</div>
 <pre>
 {
     "name" : "Zotero",
@@ -141,13 +142,8 @@ sudo supervisorctl restart ds:docservice
 }
 </pre>
 
-<ul>
-    <li>The plugin is visual (<em>"isVisual": true</em>), so it works on the left-side panel of the editor.</li>
-    <li>This plugin has four buttons - <em>Link</em>, <em>Bibliography</em>, <em>Clear local storage</em> and <em>Cancel</em>. They are specified with the buttons parameter and translated into Russian, French, Spanish and German languages with the <em>textLocale</em> parameter.</li>
-</ul>
 
-
-<h2>Methods and events</h2>
+<div class="header-gray">Methods and events</div>
 
 <p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-zotero/blob/master/src/code.js" target="_blank">here</a>.</p>
 <ul>
@@ -159,6 +155,6 @@ sudo supervisorctl restart ds:docservice
 </ul>
 
 
-<h2>Support</h2>
+<div class="header-gray">Support</div>
 
-<p>If you want to request a feature or report a bug regarding this plugin, use the issues section <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">on GitHub</a>.</p>
+<p>If you want to request a feature or report a bug regarding this plugin, use the issues section on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>
