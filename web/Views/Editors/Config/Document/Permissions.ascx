@@ -197,7 +197,7 @@
         <tr class="tablerow">
             <td id="reviewGroups" class="copy-link">reviewGroups</td>
             <td>
-                Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose documents the user can review.
+                Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose changes the user can accept/reject.
                 The <em>""</em> value means that the user can review changes made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
                 If the value is [], the user cannot review changes made by any group.
             </td>
