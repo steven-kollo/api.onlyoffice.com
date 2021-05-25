@@ -56,7 +56,11 @@
         </tr>
         <tr class="tablerow">
             <td id="url" class="copy-link">url<span class="required">*</span></td>
-            <td>Defines the absolute URL where the source viewed or edited document is stored.</td>
+            <td>
+                Defines the absolute URL where the source viewed or edited document is stored.
+                Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                Otherwise, an error will occur.
+            </td>
             <td>string</td>
             <td>"https://example.com/url-to-example-document.docx"</td>
         </tr>
