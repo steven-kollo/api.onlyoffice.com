@@ -70,6 +70,8 @@ config = {
         See the <a href="<%= Url.Action("advanced") %>">Advanced parameters</a> section to find out what these parameters are and how you can change them.
     </p>
 
+    <p>To prevent the substitution of important parameters, add an encrypted signature to the requests in the form of <a href="<%= Url.Action("signature/") %>">token</a>.</p>
+
     <h2>Get help</h2>
 
     <p>If you have any questions or feature requests about ONLYOFFICE Document Server, please visit <a href="https://github.com/ONLYOFFICE/DocumentServer/issues" target="_blank">GitHub</a>.</p>

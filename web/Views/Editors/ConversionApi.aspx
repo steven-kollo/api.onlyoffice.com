@@ -325,7 +325,11 @@
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
-                <td>Defines the absolute URL to the document to be converted.</td>
+                <td>
+                    Defines the absolute URL to the document to be converted.
+                    Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                    Otherwise, an error will occur.
+                </td>
                 <td>string</td>
                 <td>required</td>
             </tr>
