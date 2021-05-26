@@ -179,7 +179,7 @@ git submodule update --init --recursive</span>
             But if the encryption with the <em>per-user encryption keys</em> (used by default in ownCloud <b>Default encryption module</b> app) is enabled, ONLYOFFICE Document Server cannot open the encrypted files for editing and save them after the editing.
             The ONLYOFFICE section of the administrative settings page will display a notification about it.
             However if you set the encryption with the <em>master key</em>, ONLYOFFICE application will work as intended.
-            The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/admin_manual/configuration/files/encryption_configuration.html#enabling-encryption-from-the-command-line" target="_blank">ownCloud</a> websites.
+            The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line" target="_blank">ownCloud</a> websites.
             <div class="note note-important">
                 <div class="note-important-label">Please note</div>
                 ownCloud recommends using <em>master encryption key</em> only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of per-user encryption keys <b>might be lost forever</b> after you enable <em>master key</em> based encryption on them.
