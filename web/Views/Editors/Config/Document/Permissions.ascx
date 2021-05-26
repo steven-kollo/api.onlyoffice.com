@@ -66,6 +66,15 @@
             <td>true</td>
         </tr>
         <tr class="tablerow">
+            <td id="deleteCommentAuthorOnly" class="copy-link">deleteCommentAuthorOnly</td>
+            <td>
+                Defines if the user can delete only his/her comments.
+                The default value is <b>false</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
             <td id="download" class="copy-link">download</td>
             <td>
                 Defines if the document can be downloaded or only viewed or edited online.
@@ -81,6 +90,15 @@
                 Defines if the document can be edited or only viewed.
                 In case the editing permission is set to <b>"true"</b> the <b>File</b> menu will contain the <b>Edit Document</b> menu option; please note that if the editing permission is set to <b>"false"</b> the document will be opened in viewer and you will <b>not</b> be able to switch it to the editor even if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.
                 The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="editCommentAuthorOnly" class="copy-link">editCommentAuthorOnly</td>
+            <td>
+                Defines if the user can edit only his/her comments.
+                The default value is <b>false</b>.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -176,6 +194,16 @@
                 <img src="<%= Url.Content("~/content/img/editor/review.png") %>" alt="" />
             </td>
         </tr>
+        <tr class="tablerow">
+            <td id="reviewGroups" class="copy-link">reviewGroups</td>
+            <td>
+                Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose changes the user can accept/reject.
+                The <em>""</em> value means that the user can review changes made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
+                If the value is [], the user cannot review changes made by any group.
+            </td>
+            <td>array of string</td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
@@ -186,13 +214,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "permissions": {
             "comment": true,
             "copy": true,
+            "deleteCommentAuthorOnly": false,
             "download": true,
             "edit": true,
+            "editCommentAuthorOnly": false,
             "fillForms": true,
             "modifyContentControl": true,
             "modifyFilter": true,
             "print": true,
-            "review": true
+            "review": true,
+            "reviewGroups": ["Group1", "Group2", ""]
         },
         ...
     },

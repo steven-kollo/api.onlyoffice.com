@@ -112,8 +112,25 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a names\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a names</p>",
+  "comment": "/**\r\n\t * Class representing a name.\r\n\t * @constructor\r\n\t * @property {string} Name - Sets a name to the active sheet.\r\n\t * @property {string} RefersTo - Returns or sets the formula that the name is defined to refer to.\r\n\t * @property {apiRange} RefersToRange - Returns the ApiRange object by reference.\r\n\t */",
+  "description": "<p>Class representing a name.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "string",
+      "name": "Name",
+      "description": "<p>Sets a name to the active sheet.</p>"
+    },
+    {
+      "type": "string",
+      "name": "RefersTo",
+      "description": "<p>Returns or sets the formula that the name is defined to refer to.</p>"
+    },
+    {
+      "type": "apiRange",
+      "name": "RefersToRange",
+      "description": "<p>Returns the ApiRange object by reference.</p>"
+    }
+  ]
 }

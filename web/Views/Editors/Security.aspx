@@ -34,4 +34,17 @@
         If the <b>token</b> is invalid, the command is not executed.<p>
 
     <p>See the <a href="<%= Url.Action("signature/") %>">Signature</a> configuration section to find more.</p>
+
+    <note>
+        <p>
+            Please note that using the <b>local links</b> by the integrator requires the <em>JWT</em> in the config.
+            Otherwise, an error will occur.
+        </p>
+        <p>
+            Be sure to add a token when using local links in the following methods: <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a>, 
+            <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a>, <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a>, 
+            <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a>. Moreover, it is necessary when defining the local url for 
+            <a href="<%= Url.Action("config/document") %>#url">opening</a> or <a href="<%= Url.Action("conversionapi") %>#url">conversion</a>.
+        </p>
+    </note>
 </asp:Content>

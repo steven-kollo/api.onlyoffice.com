@@ -194,16 +194,21 @@
                         <br />
                         <b>example</b>: "John";
                     </li>
-                    <!--<li>
+                    <li>
                         <b>group</b> - the group the user belongs to,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "Group1";
-                    </li>-->
+                    </li>
                     <li>
                         <b>id</b> - the identification of the user.
-                        The length is limited to 128 symbols,
+                        The length is limited to 128 symbols.
+                        <br />
+                        This information is stored and used to distinguish co-authors, indicate the <a href="<%= Url.Action("callback") %>#users">author</a> of the last changes when saving and highlighting history (in the list of <a href="<%= Url.Action("callback") %>#changeshistory">changes</a>), and count users with access for a license based on the number of users.
+                        <br />
+                        We recommend using some unique anonymized hash.
+                        Do not use sensitive data, like name or email for this field.
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -273,8 +278,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             ...
         ],
         "user": {
-            <!--"group": "Group1",
-            -->"id": "78e1e841",
+            "group": "Group1",
+            "id": "78e1e841",
             "name": "John Smith"
         }
     },

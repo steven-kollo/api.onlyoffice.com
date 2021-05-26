@@ -40,6 +40,23 @@
         }
       ]
     },
+    "GetStyle": {
+      "memberof": "ApiParaPr",
+      "name": "GetStyle",
+      "description": "<p>Gets the paragraph style method.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiStyle"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetContextualSpacing": {
       "memberof": "ApiParaPr",
       "name": "SetContextualSpacing",
@@ -84,6 +101,26 @@
         }
       ]
     },
+    "GetIndLeft": {
+      "memberof": "ApiParaPr",
+      "name": "GetIndLeft",
+      "description": "<p>Gets the paragraph left side indentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetIndRight": {
       "memberof": "ApiParaPr",
       "name": "SetIndRight",
@@ -106,6 +143,26 @@
           "optional": false
         }
       ]
+    },
+    "GetIndRight": {
+      "memberof": "ApiParaPr",
+      "name": "GetIndRight",
+      "description": "<p>Gets the paragraph right side indentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "SetIndFirstLine": {
       "memberof": "ApiParaPr",
@@ -130,6 +187,26 @@
         }
       ]
     },
+    "GetIndFirstLine": {
+      "memberof": "ApiParaPr",
+      "name": "GetIndFirstLine",
+      "description": "<p>Gets the paragraph first line indentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetJc": {
       "memberof": "ApiParaPr",
       "name": "SetJc",
@@ -152,6 +229,29 @@
           "optional": false
         }
       ]
+    },
+    "GetJc": {
+      "memberof": "ApiParaPr",
+      "name": "GetJc",
+      "description": "<p>Gets paragraph contents justification.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"left\"",
+          "\"right\"",
+          "\"both\"",
+          "\"center\"",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "SetKeepLines": {
       "memberof": "ApiParaPr",
@@ -245,6 +345,49 @@
         }
       ]
     },
+    "GetSpacingLineValue": {
+      "memberof": "ApiParaPr",
+      "name": "GetSpacingLineValue",
+      "description": "<p>Get the paragraph line spacing value.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips",
+          "line240",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetSpacingLineRule": {
+      "memberof": "ApiParaPr",
+      "name": "GetSpacingLineRule",
+      "description": "<p>Get the paragraph line spacing rule.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"auto\"",
+          "\"atLeast\"",
+          "\"exact\"",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetSpacingBefore": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingBefore",
@@ -275,6 +418,25 @@
         }
       ]
     },
+    "GetSpacingBefore": {
+      "memberof": "ApiParaPr",
+      "name": "GetSpacingBefore",
+      "description": "<p>Get the spacing before value of the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetSpacingAfter": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingAfter",
@@ -304,6 +466,25 @@
           "defaultValue": false
         }
       ]
+    },
+    "GetSpacingAfter": {
+      "memberof": "ApiParaPr",
+      "name": "GetSpacingAfter",
+      "description": "<p>Get the spacing after value of the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "SetShd": {
       "memberof": "ApiParaPr",
@@ -350,6 +531,23 @@
           "defaultValue": false
         }
       ]
+    },
+    "GetShd": {
+      "memberof": "ApiParaPr",
+      "name": "GetShd",
+      "description": "<p>Gets the shading applied to the contents of the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRGBColor"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "SetBottomBorder": {
       "memberof": "ApiParaPr",

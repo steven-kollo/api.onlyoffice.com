@@ -6,17 +6,17 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    window.Asc.plugin object
+    Methods
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">window.Asc.plugin object</span>
+        <span class="hdr">Methods</span>
     </h1>
 
     <div class="header-gray">Description</div>
 
-    <p class="dscr">Defines the object created when the plugin is launched. It has several methods some of which are optional and must be used only if and when needed.</p>
+    <p class="dscr"><em>window.Asc.plugin</em> defines the object created when the plugin is launched. It has several methods some of which are optional and must be used only if and when needed.</p>
 
     <div class="header-gray">Methods and properties</div>
 
@@ -36,45 +36,52 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td><a href="<%= Url.Action("button") %>">button</a></td>
-                <td>Defines the buttons used with the plugin and the plugin behavior when they are clicked. This method is called when any of the plugin buttons is clicked.</td>
+                <td><a href="<%= Url.Action("callcommand") %>">callCommand</a></td>
+                <td>Defines the method used to send the data back to the editor. It replaces the <em>executeCommand</em> method 
+                    when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors.</td>
                 <td>function</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td><a href="<%= Url.Action("callcommand") %>">callCommand</a>/<a href="<%= Url.Action("executecommand") %>">executeCommand</a></td>
-                <td>Defines the <em>window.Asc.plugin.callCommand</em> method that is used to send the data back to the editor. It replaces the <em>window.Asc.plugin.executeCommand</em> method when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors. The <em>window.Asc.plugin.executeCommand</em> method is now primarily used to work with OLE objects.
-                </td>
+                <td><a href="<%= Url.Action("callmodule") %>">callModule</a></td>
+                <td>Defines the method used to execute a remotely located script following a link.</td>
+                <td>function</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("createInputHelper") %>">createInputHelper</a></td>
+                <td>Defines the method used to create an input helper.</td>
+                <td>function</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("executeCommand") %>">executeCommand</a></td>
+                <td>Defines the method used to send the data back to the editor. 
+                    Now this method is mainly used to work with the OLE objects and is retained for using with text so that the previous versions of the plugin remain compatible.</td>
                 <td>function</td>
                 <td>required</td>
             </tr>
             <tr class="tablerow">
                 <td><a href="<%= Url.Action("executemethod") %>">executeMethod</a></td>
-                <td>Used to execute certain editor methods with the help of the plugin.</td>
+                <td>Defines the method used to execute certain editor methods with the help of the plugin.</td>
                 <td>function</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td><a href="<%= Url.Action("info") %>">info</a></td>
-                <td>Stores all the information about the editor that uses the plugin.</td>
-                <td>object</td>
-                <td>optional</td>
-            </tr>
-            <tr class="tablerow">
-                <td><a href="<%= Url.Action("init") %>">init</a></td>
-                <td>The data sent to the plugin and what is to be done with it and how. This method is called when the plugin is started.</td>
-                <td>function</td>
-                <td>required</td>
-            </tr>
-            <tr class="tablerow">
-                <td><a href="<%= Url.Action("onexternalmouseup") %>">onExternalMouseUp</a></td>
-                <td>Specify the action that is to be performed when the mouse button is released outside the plugin iframe.</td>
+                <td><a href="<%= Url.Action("getInputHelper") %>">getInputHelper</a></td>
+                <td>Defines the method used to get the InputHelper object.</td>
                 <td>function</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
-                <td><a href="<%= Url.Action("onmethodreturn") %>">onMethodReturn</a></td>
-                <td>-</td>
+                <td><a href="<%= Url.Action("loadModule") %>">loadModule</a></td>
+                <td>Defines the method used to load a remotely located text resource.</td>
+                <td>function</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td><a href="<%= Url.Action("resizeWindow") %>">resizeWindow</a></td>
+                <td>Defines the method used to change the window size updating the minimum/maximum sizes.</td>
                 <td>function</td>
                 <td>optional</td>
             </tr>

@@ -62,7 +62,6 @@
         {
           "type": "string",
           "name": "sDisplay",
-          "description": "<p>start character in current element</p>",
           "optional": false
         }
       ]

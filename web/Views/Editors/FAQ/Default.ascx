@@ -31,6 +31,7 @@
     <li><a href="<%= Url.Action("faq/sharing") %>#sharing_7">How to disable/enable the possibility to download the file?</a></li>
     <li><a href="<%= Url.Action("faq/sharing") %>#sharing_8">How to prevent a document from being printed?</a></li>
     <li><a href="<%= Url.Action("faq/sharing") %>#sharing_9">How to view and change sharing settings for a certain document?</a></li>
+    <li><a href="<%= Url.Action("faq/sharing") %>#sharing_10">How to restrict commenting?</a></li>
 </ul>
 
 <h5><a class="link_in_heading" href="<%= Url.Action("faq/embedding") %>">Embedding questions</a></h5>

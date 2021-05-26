@@ -79,7 +79,9 @@
                 <li>Download the latest signed version from the official store for <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</li>
                 <li>Or you can download the latest signed version from the application <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-nextcloud/releases">release page</a> on GitHub.</li>
                 <li>Or you can clone the application source code and compile it yourself:
-                    <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-nextcloud.git onlyoffice</span>
+                    <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-nextcloud.git onlyoffice
+cd onlyoffice
+git submodule update --init --recursive</span>
                 </li>
             </ol>
         </li>

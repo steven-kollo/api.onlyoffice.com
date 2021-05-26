@@ -936,6 +936,29 @@
           "optional": false
         }
       ]
+    },
+    "ReplaceTextSmart": {
+      "memberof": "Api",
+      "name": "ReplaceTextSmart",
+      "description": "<p>Replaces each paragraph(or text in cell) in the select with the corresponding text from an array of strings.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array",
+          "name": "arrString",
+          "description": "<p>represents an array of strings.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\r\n\t * Base class\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",

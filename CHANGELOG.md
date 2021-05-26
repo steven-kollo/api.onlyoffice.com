@@ -1,6 +1,29 @@
 # Change Log
 
+## 2.2.0
+- docbuilder: api v6.3.0
+- docbuilder: display class properties
+- editors: added the Anonymous users page
+- editors: added editorConfig.customization.hideRulers
+- editors: added document.permissions.reviewGroups
+- editors: added document.info.favorite
+- editors: added setFavorite method
+- editors: added events.onMetaChange
+- editors: added document.permissions.editCommentAuthorOnly and document.permissions.deleteCommentAuthorOnly
+- editors: added editorConfig.customization.anonymous
+- editors: epub, fb2, html conversion
+- editors: converting xml
+- plugins: changed variations.isModal parameter
+- plugins: new icon parameters
+- plugins: examples
+- plugins: methods
+- portals: api v11.5.1
+
 ## 2.1.0
+- plugins: added the InputHelper object and its methods
+- plugins: added new methods
+- plugins: added events
+- plugins: updated config parameters
 - fix xss
 - portals: api v11.5
 

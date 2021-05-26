@@ -22,19 +22,19 @@
             <ul>
                 <li>
                     <p><em>Visual plugins</em> (<em>"isVisual": true</em>) open a window or a panel for some action, like 
-                        <a href="https://github.com/ONLYOFFICE/plugin-highlightcode" target="_blank">Highlight code</a>, 
-                        <a href="https://github.com/ONLYOFFICE/plugin-photoeditor" target="_blank">Photo editor</a>, 
-                        <a href="https://github.com/ONLYOFFICE/plugin-ocr" target="_blank">OCR</a>.</p>
+                        <a href="<%= Url.Action("example/highlightcode") %>">Highlight code</a>, 
+                        <a href="<%= Url.Action("example/photoeditor") %>">Photo editor</a>, 
+                        <a href="<%= Url.Action("example/ocr") %>">OCR</a>.</p>
                 </li>
                 <li>
                     <p><em>Non-visual plugins</em> (<em>"isVisual": false</em>) provide a button (or buttons) to apply some transformations or manipulations to the document, 
-                        like <a href="https://github.com/ONLYOFFICE/plugin-speech" target="_blank">Speech</a>, 
-                        <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/helloworld" target="_blank">Hello world</a>, 
-                        <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/num2word" target="_blank">Num2Word</a>.</p>
+                        like <a href="<%= Url.Action("example/speech") %>">Speech</a>, 
+                        <a href="<%= Url.Action("example/helloworld") %>">Hello world</a>, 
+                        <a href="<%= Url.Action("example/num2word") %>">Num2Word</a>.</p>
                 </li>
                 <li>
                     <p><em>An input helper</em> (<em>"events": ["onInputHelperClear", "onInputHelperInput"]</em>) plugin is a combo of both visual and non-visual plugins, 
-                        like <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_autocomplete" target="_blank">Autocomplete</a>. 
+                        like <a href="<%= Url.Action("example/autocomplete") %>">Autocomplete</a>. 
                         It has its own window that appears and disappears when you type text. Its location is tied to the cursor.</p>
                 </li>
             </ul>
@@ -45,14 +45,14 @@
             <ul>
                 <li>
                     <p><em>Non-system plugins</em> (not marked in the <em>config.json</em>) start upon clicking the corresponding button, 
-                        like <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/clippy" target="_blank">Clippy</a>, 
-                        <a href="https://github.com/ONLYOFFICE/plugin-thesaurus" target="_blank">Thesaurus</a>, 
-                        <a href="https://github.com/ONLYOFFICE/plugin-translator" target="_blank">Translator</a>.</p>
+                        like <a href="<%= Url.Action("example/clippy") %>">Clippy</a>, 
+                        <a href="<%= Url.Action("example/thesaurus") %>">Thesaurus</a>, 
+                        <a href="<%= Url.Action("example/translator") %>">Translator</a>.</p>
                 </li>
                 <li>
                     <p><em>System plugins</em> (<em>"isSystem": true</em>) plugins work in the background as long as the editors are launched, 
-                        like <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/settings" target="_blank">Settings</a>, 
-                        <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/searchAndReplaceOnStart" target="_blank">Search and replace on start</a>. 
+                        like <a href="<%= Url.Action("example/settings") %>">Settings</a>, 
+                        <a href="<%= Url.Action("example/searchandreplaceonstart") %>">Search and replace on start</a>. 
                         You don&#8217;t need to start them.</p>
                 </li>
             </ul>
@@ -62,9 +62,9 @@
             <ul>
                 <li>
                     <p><em>Editor enhancement plugins</em> extend the editor functionality and enhance the existing user experience, 
-                        like <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_replace" target="_blank">Search and replace</a>, 
-                        <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_add_comment_in_cell" target="_blank">Add comment in cell</a>, 
-                        <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_move_cursor" target="_blank">Move cursor</a>.</p>
+                        like <a href="<%= Url.Action("example/searchandreplace") %>">Search and replace</a>, 
+                        <a href="<%= Url.Action("example/addcommentincell") %>">Add comment in cell</a>, 
+                        <a href="<%= Url.Action("example/movecursor") %>">Move cursor</a>.</p>
                 </li>
                 <li>
                     <p><em>UI enhancement plugins</em> add custom components and controls to the UI, 
@@ -73,9 +73,9 @@
                 </li>
                 <li>
                     <p><em>Third-party service plugins</em> connect third-party services to the editors, 
-                        like <a href="https://github.com/ONLYOFFICE/plugin-typograf" target="_blank">Typograf</a>, 
-                        <a href="https://github.com/ONLYOFFICE/plugin-zotero" target="_blank">Zotero</a>, 
-                        <a href="https://github.com/ONLYOFFICE/plugin-telegram" target="_blank">Telegram</a>.</p>
+                        like <a href="<%= Url.Action("example/typograf") %>">Typograf</a>, 
+                        <a href="<%= Url.Action("example/zotero") %>">Zotero</a>, 
+                        <a href="<%= Url.Action("example/telegram") %>">Telegram</a>.</p>
                 </li>
             </ul>
         </li>
@@ -86,8 +86,8 @@
                 <li>
                     <p>In addition to simple document manipulation or editing, the plugin can embed an <em>OLE object</em> which allows a third-party developer to access the document format, 
                         i.e. save information from external resources to the resulting file.</p>
-                    <p>For example, the <a href="https://github.com/ONLYOFFICE/plugin-youtube" target="_blank">YouTube</a> plugin embeds YouTube videos into your document 
-                        and the <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/chess" target="_blank">Chess</a> plugin embeds a chess board.</p>
+                    <p>For example, the <a href="<%= Url.Action("example/youtube") %>">YouTube</a> plugin embeds YouTube videos into your document 
+                        and the <a href="<%= Url.Action("example/chess") %>">Chess</a> plugin embeds a chess board.</p>
                 </li>
             </ul>
         </li>   

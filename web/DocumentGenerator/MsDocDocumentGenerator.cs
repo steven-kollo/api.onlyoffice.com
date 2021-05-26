@@ -329,36 +329,41 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             if (desc.JsonParam != null) return desc.JsonParam;
 
-            object obj;
-            if (param.Type.StartsWith("System.Collections.Generic.IEnumerable`1[")
+            object obj = null;
+            if (param.Type != null && param.PureType != null)
+            {
+                if (param.Type.StartsWith("System.Collections.Generic.IEnumerable`1[")
                 || param.Type.StartsWith("System.Collections.Generic.List`1")
                 || param.Type.EndsWith("[]") && (param.PureType.IsGenericType || param.PureType.IsArray))
-            {
-                var elementType = param.PureType.IsArray ? param.PureType.GetElementType() : param.PureType.GenericTypeArguments[0];
-
-                Type listType = typeof(List<>).MakeGenericType(new [] { elementType });
-                var list = (System.Collections.IList)Activator.CreateInstance(listType);
-
-                var el = ClassNamePluralizer.ToHumanName(elementType.ToString(), elementType);
-
-                if (el != null && el.JsonParam != null && el.JsonParam.GetType() == elementType)
                 {
-                    list.Add(el.JsonParam);
+                    var elementType = param.PureType.IsArray ? param.PureType.GetElementType() : param.PureType.GenericTypeArguments[0];
+
+                    Type listType = typeof(List<>).MakeGenericType(new[] { elementType });
+                    var list = (System.Collections.IList)Activator.CreateInstance(listType);
+
+                    var el = ClassNamePluralizer.ToHumanName(elementType.ToString(), elementType);
+
+                    if (el != null && el.JsonParam != null && el.JsonParam.GetType() == elementType)
+                    {
+                        list.Add(el.JsonParam);
+                    }
+                    else if (!elementType.IsAbstract)
+                    {
+                        list.Add(Activator.CreateInstance(elementType));
+                    }
+
+                    obj = list;
                 }
-                else if (!elementType.IsAbstract)
+                else
                 {
-                    list.Add(Activator.CreateInstance(elementType));
+                    obj = Activator.CreateInstance(param.PureType);
                 }
 
-                obj = list;
-            } else {
-                obj = Activator.CreateInstance(param.PureType);
-            }
-
-            if (obj is Enum)
-            {
-                var names = param.PureType.GetEnumNames();
-                obj = names.Length > 0 ? names[0].ToLower() : obj.ToString();
+                if (obj is Enum)
+                {
+                    var names = param.PureType.GetEnumNames();
+                    obj = names.Length > 0 ? names[0].ToLower() : obj.ToString();
+                }
             }
 
             if (asString)
