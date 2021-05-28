@@ -25,11 +25,17 @@
 
 
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Web.Configuration;
 using System.Web.Mvc;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
 using ASC.Api.Web.Help.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -83,8 +89,7 @@ namespace ASC.Api.Web.Help.Controllers
         [ValidateInput(false)]
         public ActionResult Search(string query)
         {
-            ViewData["query"] = query ?? string.Empty;
-            return View(Documentation.Search(query ?? string.Empty));
+            return View(GCustomSearch.Search(ViewData, query, "portals"));
         }
 
         public ActionResult Section(string section, string category)

@@ -24,6 +24,7 @@
 */
 
 
+using ASC.Api.Web.Help.Helpers;
 using System.Web.Mvc;
 
 namespace ASC.Api.Web.Help.Controllers
@@ -33,6 +34,12 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        [ValidateInput(false)]
+        public ActionResult Search(string query)
+        {
+            return View(GCustomSearch.Search(ViewData, query));
         }
     }
 }
