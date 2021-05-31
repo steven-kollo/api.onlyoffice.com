@@ -1,11 +1,14 @@
-﻿using ASC.Api.Web.Help.DocumentGenerator;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
+using ASC.Api.Web.Help.DocumentGenerator;
+using log4net;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ASC.Api.Web.Help.Helpers
 {
@@ -16,49 +19,57 @@ namespace ASC.Api.Web.Help.Helpers
             var result = new List<SearchResult>();
 
             var searchUrl = string.Format("{0}?key={1}&cx={2}&q={3}",
-                                                          WebConfigurationManager.AppSettings["google.search.url"],
-                                                          WebConfigurationManager.AppSettings["google.search.key"],
-                                                          WebConfigurationManager.AppSettings["google.search.cx"],
-                                                          query);
+                                          WebConfigurationManager.AppSettings["google.search.url"],
+                                          WebConfigurationManager.AppSettings["google.search.key"],
+                                          WebConfigurationManager.AppSettings["google.search.cx"],
+                                          HttpUtility.UrlEncode(query));
 
             if (!string.IsNullOrWhiteSpace(subPath))
             {
-                searchUrl += " site:*/" + subPath;
+                searchUrl += " site:*/" + HttpUtility.UrlEncode(subPath);
             }
 
-            var request = WebRequest.Create(searchUrl);
-
-            var responce = (HttpWebResponse)request.GetResponse();
-            var responseString = string.Empty;
-
-            using (var dataStream = responce.GetResponseStream())
+            try
             {
-                if (dataStream != null)
+                var request = WebRequest.Create(searchUrl);
+
+                var responce = (HttpWebResponse)request.GetResponse();
+                var responseString = string.Empty;
+
+                using (var dataStream = responce.GetResponseStream())
                 {
-                    using (var reader = new StreamReader(dataStream))
+                    if (dataStream != null)
                     {
-                        responseString = reader.ReadToEnd();
+                        using (var reader = new StreamReader(dataStream))
+                        {
+                            responseString = reader.ReadToEnd();
+                        }
                     }
                 }
-            }
 
-            JObject jsonData = JsonConvert.DeserializeObject<JObject>(responseString);
+                var jsonData = JsonConvert.DeserializeObject<JObject>(responseString);
 
-            if (jsonData.ContainsKey("items"))
-            {
-                foreach (var item in jsonData["items"])
+                if (jsonData.ContainsKey("items"))
                 {
-                    result.Add(new SearchResult
+                    foreach (var item in jsonData["items"])
                     {
-                        Name = item["title"].ToString(),
-                        Url = item["link"].ToString(),
-                        Description = item["snippet"].ToString()
-                    });
+                        result.Add(new SearchResult
+                            {
+                                Name = item["title"].ToString(),
+                                Url = item["link"].ToString(),
+                                Description = item["snippet"].ToString()
+                            });
+                    }
                 }
+
+                viewData["query"] = query ?? string.Empty;
+                viewData["result"] = result;
+            }
+            catch (Exception error)
+            {
+                LogManager.GetLogger("ASC.Api").Error(error);
             }
 
-            viewData["query"] = query ?? string.Empty;
-            viewData["result"] = result;
             return new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>();
         }
     }
