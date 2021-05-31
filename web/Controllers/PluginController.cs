@@ -25,13 +25,9 @@
 
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
-using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
 {

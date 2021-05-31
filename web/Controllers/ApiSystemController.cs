@@ -25,12 +25,8 @@
 
 
 using System;
-using System.Collections.Generic;
 using System.Web.Mvc;
-using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
-using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -41,19 +37,6 @@ namespace ASC.Api.Web.Help.Controllers
         {
             Portal,
             Tariff,
-        }
-
-        private enum ActionType
-        {
-            Authentication,
-            Basic,
-            PortalGet,
-            PortalRegister,
-            PortalRemove,
-            PortalStatus,
-            TariffGet,
-            TariffSet,
-            ValidatePortalName,
         }
 
         public ActionResult Index()
@@ -74,7 +57,7 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Section(string section, string category)
         {
             if (string.IsNullOrEmpty(section))
-                return Redirect(Url.Action("section", new { section = "portal" }));
+                return Redirect(Url.Action("section", new { section = "apisystem" }));
 
             SectionType sectionType;
             return Enum.TryParse(section, true, out sectionType) ? View("section", (object) section) : View("sectionnotfound");
