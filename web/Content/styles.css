@@ -556,8 +556,8 @@ li b.copy-link[id]:hover:before {
     background-color: #fff;
 }
 
-.search-box input,
-.search-box input:focus {
+.search-box .search-input input,
+.search-box .search-input input:focus {
     border: medium none;
     border-radius: 0;
     box-shadow: none;
@@ -574,6 +574,52 @@ li b.copy-link[id]:hover:before {
     width: 188px;
     border-radius: 21px;
     left: 50px;
+}
+
+.search-big {
+    border: 1px solid #ccc;
+    width: 736px;
+    height: 50px;
+    position: relative;
+    border-radius: 32px;
+    background-color: #fff;
+}
+
+.search-box .search-big input,
+.search-box .search-big input:focus {
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #666;
+    display: inline-block;
+    font-size: 14px;
+    height: 40px;
+    line-height: 23px;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    width: 685px;
+    border-radius: 21px;
+    left: 50px;
+}
+
+.search-box-main,
+.search-box-result {
+    width: 100%;
+    max-width: 736px;
+    padding: 0 15px;
+    margin: 15px auto;
+    text-align: left;
+}
+
+.search-box-result ul {
+    list-style: none;
+}
+
+.search-box-result li {
+    margin-bottom: 30px;
 }
 
 .search-clear {
@@ -604,6 +650,9 @@ li b.copy-link[id]:hover:before {
     font-size: 13px;
     line-height: normal;
     z-index: 2;
+}
+.search-box .search-big .btn {
+    margin-top: 14px;
 }
 
 /*start page*/

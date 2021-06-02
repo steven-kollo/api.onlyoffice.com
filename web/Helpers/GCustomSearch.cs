@@ -4,8 +4,6 @@ using System.IO;
 using System.Net;
 using System.Web;
 using System.Web.Configuration;
-using System.Web.Mvc;
-using ASC.Api.Web.Help.DocumentGenerator;
 using log4net;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -14,7 +12,7 @@ namespace ASC.Api.Web.Help.Helpers
 {
     public class GCustomSearch
     {
-        public static Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>> Search(ViewDataDictionary viewData, string query, string subPath = null)
+        public static List<SearchResult> Search(string query, string subPath = null)
         {
             var result = new List<SearchResult>();
 
@@ -61,16 +59,13 @@ namespace ASC.Api.Web.Help.Helpers
                             });
                     }
                 }
-
-                viewData["query"] = query ?? string.Empty;
-                viewData["result"] = result;
             }
             catch (Exception error)
             {
                 LogManager.GetLogger("ASC.Api").Error(error);
             }
 
-            return new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>();
+            return result;
         }
     }
 }

@@ -82,7 +82,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Search(string query)
         {
-            return View(GCustomSearch.Search(ViewData, query, "docbuilder"));
+            return View(GCustomSearch.Search(query, "docbuilder"));
         }
 
         public ActionResult Basic()

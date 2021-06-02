@@ -66,7 +66,7 @@ namespace ASC.Api.Web.Help.Controllers
         [ValidateInput(false)]
         public ActionResult Search(string query)
         {
-            return View(GCustomSearch.Search(ViewData, query, "apisystem"));
+            return View(GCustomSearch.Search(query, "apisystem"));
         }
 
         public ActionResult Authentication()
