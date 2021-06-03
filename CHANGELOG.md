@@ -1,6 +1,6 @@
 # Change Log
 
-
+- global search
 - search via google
 
 ## 2.2.0
