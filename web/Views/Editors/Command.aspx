@@ -47,6 +47,7 @@
                         <li><b>drop</b> - disconnect the users with the identifiers present in the <em>users</em> parameter from the <b>document editing service</b> (these users will be able to view the document, but will not be allowed to make changes to it);</li>
                         <li><b>forcesave</b> - force saving the document being edited without closing it (the document editing might be continued after this command, so this will not be the final saved document version);</li>
                         <li><b>info</b> - receive a document status and the list of the identifiers of the users who opened the document for editing;</li>
+                        <li><b>license</b> - request the license from Document Server with information about the server and user quota;</li>
                         <li><b>meta</b> - update the meta information of the document for all collaborative editors;</li>
                         <li><b>version</b> - receive the current version number of Document Server.</li>
                     </ul>
@@ -143,6 +144,49 @@
 {
     "error": 0,
     "key": "Khirz6zTPdfd7"
+}
+</pre>
+
+    <div id="license" class="header-gray copy-link">Sample of JSON object sent to <b>document command service</b> used to request the license from Document Server</div>
+    <pre>
+{
+    "c": "license"
+}
+</pre>
+
+    <p>The request result is returned in JSON form.</p>
+    <div class="header-gray">Sample of the response</div>
+    <pre>
+{
+    "error": 0,
+    "license": {
+        "end_date": "2021-07-07T23:59:59.000Z",
+        "trial": false,
+        "customization": false,
+        "connections": 0,
+        "users_count": 10,
+        "users_expire": 30
+    },
+    "server": {
+        "resultType": 3,
+        "packageType": 1,
+        "buildDate": "2021-05-21T00:00:00.000Z",
+        "buildVersion": "6.3.0",
+        "buildNumber": 111
+    },
+    "quota": {
+        "users": [
+            {
+                "userid": "uid-0",
+                "expire": "2021-07-07T23:59:59.000Z"
+            },
+            {
+                "userid": "uid-1",
+                "expire": "2021-07-09T23:59:59.000Z"
+            },
+            ...
+        ]
+    }
 }
 </pre>
 

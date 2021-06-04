@@ -1,6 +1,7 @@
 # Change Log
 
 - editors: try reviewGroups
+- editors: added the license command
 - global search
 - search via google
 
