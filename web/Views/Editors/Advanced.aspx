@@ -76,6 +76,11 @@
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#commentGroups">commentGroups</a>": [
+                "view": "",
+                "edit": ["Group2", ""],
+                "remove": [""]
+            ],
             "<a href="<%= Url.Action("config/document/permissions") %>#copy">copy</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">deleteCommentAuthorOnly</a>": false,
             "<a href="<%= Url.Action("config/document/permissions") %>#download">download</a>": true,

@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added document.permissions.commentGroups
 - plugins: added the onPluginsReady event
 - editors: added the requestClose method
 - editors: added editorConfig.coEditing
