@@ -95,6 +95,10 @@
     "<a href="<%= Url.Action("config/editor") %>">editorConfig</a>": {
         "<a href="<%= Url.Action("config/editor") %>#actionLink">actionLink</a>": ACTION_DATA,
         "<a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a>": "https://example.com/url-to-callback.ashx",
+        "<a href="<%= Url.Action("config/editor") %>#coEditing">coEditing</a>": {
+            "mode": "fast",
+            "change": true
+        },
         "<a href="<%= Url.Action("config/editor") %>#createUrl">createUrl</a>": "https://example.com/url-to-create-document/",
         "<a href="<%= Url.Action("config/editor/customization") %>">customization</a>": {
             "<a href="<%= Url.Action("config/editor/customization") %>#anonymous">anonymous</a>": {
