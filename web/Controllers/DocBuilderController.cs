@@ -45,6 +45,7 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Basic",
                 "gettingstarted",
+                "changelog",
                 "csharpexample",
                 "nodejsexample",
                 "phpexample",
@@ -130,6 +131,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Basic()
+        {
+            return View();
+        }
+
+        public ActionResult Changelog()
         {
             return View();
         }

@@ -1,5 +1,7 @@
 # Change Log
 
+- docbuilder: changelog
+
 ## 2.2.0
 - docbuilder: api v6.3.0
 - docbuilder: display class properties

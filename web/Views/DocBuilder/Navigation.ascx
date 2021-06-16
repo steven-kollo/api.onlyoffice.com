@@ -147,3 +147,10 @@
         <a href="<%= Url.Action("classlist") %>">List of classes</a>
     </li>
 </ul>
+
+<div class="treeheader">More information</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("changelog") %>">Changelog</a>
+    </li>
+</ul>
