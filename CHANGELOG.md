@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: v6.4
 - docbuilder: changelog
 - editors: try reviewGroups
 - editors: added the license command
