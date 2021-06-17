@@ -1,6 +1,10 @@
 # Change Log
 
 - docbuilder: changelog
+- editors: try reviewGroups
+- editors: added the license command
+- global search
+- search via google
 
 ## 2.2.0
 - docbuilder: api v6.3.0

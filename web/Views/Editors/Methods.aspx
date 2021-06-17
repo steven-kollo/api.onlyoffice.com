@@ -154,7 +154,11 @@ docEditor.insertImage({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source image is stored.</td>
+                        <td>
+                            Defines the absolute URL where the source image is stored.
+                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                            Otherwise, an error will occur.
+                        </td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -491,8 +495,10 @@ docEditor.setHistoryData({
                     <tr class="tablerow">
                         <td>url</td>
                         <td>
-                            Defines the url address of the current version of the document.
-                            Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document.
+                            Defines the url address of the current document version.
+                            Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document. 
+                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
+                            Otherwise, an error will occur.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -555,7 +561,8 @@ docEditor.setMailMergeRecipients({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source data is stored.</td>
+                        <td>Defines the absolute URL where the source data is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
+                            Otherwise, an error will occur.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -609,7 +616,8 @@ docEditor.setRevisedFile({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source document is stored.</td>
+                        <td>Defines the absolute URL where the source document is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
+                            Otherwise, an error will occur.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>

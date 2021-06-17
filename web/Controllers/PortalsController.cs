@@ -83,8 +83,7 @@ namespace ASC.Api.Web.Help.Controllers
         [ValidateInput(false)]
         public ActionResult Search(string query)
         {
-            ViewData["query"] = query ?? string.Empty;
-            return View(Documentation.Search(query ?? string.Empty));
+            return View(GCustomSearch.Search(query, "portals"));
         }
 
         public ActionResult Section(string section, string category)

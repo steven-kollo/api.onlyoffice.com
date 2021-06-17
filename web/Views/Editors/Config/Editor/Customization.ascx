@@ -707,13 +707,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "https://example.com"
             },
             "help": true,
+            "hideRightMenu": false,
+            "hideRulers": false,
             <% if (license)
                { %>"leftMenu": true,
             "loaderLogo": "https://example.com/loader-logo.png",
             "loaderName": "The document is loading, please wait...",
-            <% } %>"hideRightMenu": false,
-            "hideRulers": false,
-            "logo": {
+            <% } %>"logo": {
                 "image": "https://example.com/logo.png",
                 "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"

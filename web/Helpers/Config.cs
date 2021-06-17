@@ -150,6 +150,9 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "review", EmitDefaultValue = false)]
                 public bool? Review;
+
+                [DataMember(Name = "reviewGroups", EmitDefaultValue = false)]
+                public string[] ReviewGroups;
             }
         }
 

@@ -18,6 +18,9 @@
                 <span class="hdr title-main">Welcome to ONLYOFFICE API</span>
             </h1>
         </div>
+        <div class="search-box-main">
+            <% Html.RenderPartial("SearchForm"); %>
+        </div>
 
         <div class="product-list clearfix">
         </div>

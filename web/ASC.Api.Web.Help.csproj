@@ -231,6 +231,7 @@
     <Compile Include="Helpers\ClassNamePluralizer.cs" />
     <Compile Include="Helpers\Config.cs" />
     <Compile Include="Helpers\DocBuilderHelper.cs" />
+    <Compile Include="Helpers\GCustomSearch.cs" />
     <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
     <Compile Include="Helpers\Html.cs" />
