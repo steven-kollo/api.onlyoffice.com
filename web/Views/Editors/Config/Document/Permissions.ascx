@@ -235,6 +235,7 @@
                 Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose changes the user can accept/reject.
                 The <em>[""]</em> value means that the user can review changes made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
                 If the value is <em>[]</em>, the user cannot review changes made by any group.
+                If the value is <em>""</em> or not specified, then the user can review changes made by any user.
             </td>
             <td>array of string</td>
             <td></td>
