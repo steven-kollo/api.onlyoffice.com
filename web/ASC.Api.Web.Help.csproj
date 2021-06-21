@@ -355,6 +355,7 @@
     <Content Include="Content\img\macros\column-width.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
+    <Content Include="Content\img\macros\insert-text.svg" />
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
