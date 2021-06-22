@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: api v6.3.1
 - editors: try reviewGroups
 - editors: added the license command
 - global search
