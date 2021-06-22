@@ -131,7 +131,7 @@ docEditor.insertImage({
                         <td>c</td>
                         <td>
                             Defines the type of image insertion from event.
-                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermak</em>, <em>slide</em>.
+                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermark</em>, <em>slide</em>.
                             The default value is "<em>add</em>".
                         </td>
                         <td>string</td>
