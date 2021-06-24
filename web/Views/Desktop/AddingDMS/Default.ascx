@@ -115,6 +115,7 @@
                         <p><b>example</b>: "./assets/buttonlogo.svg".</p>
                     </li>
                 </ul>
+                <p>You can add icons for each UI theme type (light and dark) by specifying the <em>themeLight</em> and <em>themeDark</em> objects with the corresponding icons.</p>
             </td>
             <td>object</td>
             <td></td>
@@ -136,8 +137,14 @@
     "editorPage" : "/apps/onlyoffice/",
     "startPage" : "/",
     "icons" : {
-        "connectionsList" :  "./assets/listicon.svg",
-        "buttonLogo" : "./assets/buttonlogo.svg"
+        "themeLight": {
+            "connectionsList": "./assets/listicon.svg",
+            "buttonLogo": "./assets/buttonlogo.svg"
+        },
+        "themeDark": {
+            "connectionsList": "./assets/listicon_dark.svg",
+            "buttonLogo": "./assets/buttonlogo_dark.svg"
+        }
     }
 }
 </pre>
@@ -158,6 +165,7 @@
 </ol>
 <p>Supported image formats are <em>.png</em>, <em>.jpeg</em>, <em>.svg</em>. 
     We recommend using a <em>.svg</em> file for correct display on HiDPI monitors with a 200% scale in the system.</p>
+<p>You can also add icons for each UI theme type (light and dark). In this case, create four icons (two for each theme) and add all of the to the <em>config.json</em> file.</p>
 
 
 <h2>Step 4</h2>

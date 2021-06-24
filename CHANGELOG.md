@@ -1,5 +1,6 @@
 # Change Log
 
+- desktop: added icons for the dark and light UI themes
 - editors: try reviewGroups
 - editors: added the license command
 - global search
