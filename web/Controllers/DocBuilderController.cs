@@ -66,6 +66,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "integrationapi/cdocbuilder/settmpfolder",
                 "integrationapi/globalvariable",
                 "integrationapi/arguments",
+                "integrationapi/comparedocuments",
                 "textdocumentapi",
                 "spreadsheetapi",
                 "presentationapi",

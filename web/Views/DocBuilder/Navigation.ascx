@@ -88,6 +88,9 @@
             <li>
                 <a href="<%= Url.Action("integrationapi/arguments") %>">Using command line arguments</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("integrationapi/comparedocuments") %>">Comparing documents</a>
+            </li>
         </ul>
     </li>
     <li>
