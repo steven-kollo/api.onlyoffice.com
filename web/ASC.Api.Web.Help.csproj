@@ -302,6 +302,7 @@
     <Content Include="Content\img\Editor\sharing_settings.png" />
     <Content Include="Content\img\Editor\alfresco.png" />
     <Content Include="Content\img\Editor\comment.png" />
+    <Content Include="Content\img\Editor\commenting.png" />
     <Content Include="Content\img\Editor\e-token.png" />
     <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\history.png" />
@@ -582,6 +583,7 @@
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Chamilo.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
+    <Content Include="Views\Editors\Commenting.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
     <Content Include="Views\Editors\FAQ.aspx" />
     <Content Include="Views\Editors\FAQ\Default.ascx" />

@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Commenting page
 - editors: added document.permissions.commentGroups
 - editors: added the onPluginsReady event
 - editors: added the requestClose method
