@@ -1,6 +1,7 @@
 # Change Log
 
 - docbuilder: added the Comparing documents page
+- editors: added the Comparing documents page
 - editors: try reviewGroups
 - editors: added the license command
 - global search
