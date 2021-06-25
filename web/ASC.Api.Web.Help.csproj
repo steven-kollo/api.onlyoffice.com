@@ -258,6 +258,7 @@
     <Content Include="Content\img\desktop\plugins_tab.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
+    <Content Include="Content\img\docbuilder\compare-documents.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
     <Content Include="Content\img\docbuilder\csharp\net46.png" />
@@ -564,6 +565,7 @@
     <Content Include="Views\DocBuilder\Integrationapi\default.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\globalvariable.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
+    <Content Include="Views\DocBuilder\Integrationapi\comparedocuments.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\arguments.ascx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
     <Content Include="Views\DocBuilder\presentationapi.aspx" />
