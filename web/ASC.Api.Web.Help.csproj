@@ -258,6 +258,7 @@
     <Content Include="Content\img\desktop\plugins_tab.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
+    <Content Include="Content\img\docbuilder\compare-documents.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
     <Content Include="Content\img\docbuilder\csharp\net46.png" />
@@ -309,6 +310,9 @@
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
     <Content Include="Content\img\Editor\coedit.jpg" />
+    <Content Include="Content\img\Editor\compare.png" />
+    <Content Include="Content\img\Editor\compare-documents.png" />
+    <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\csharp\add.png" />
     <Content Include="Content\img\Editor\create.png" />
@@ -356,6 +360,7 @@
     <Content Include="Content\img\macros\column-width.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
+    <Content Include="Content\img\macros\insert-text.svg" />
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
@@ -564,6 +569,7 @@
     <Content Include="Views\DocBuilder\Integrationapi\default.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\globalvariable.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
+    <Content Include="Views\DocBuilder\Integrationapi\comparedocuments.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\arguments.ascx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
     <Content Include="Views\DocBuilder\presentationapi.aspx" />
@@ -584,6 +590,7 @@
     <Content Include="Views\Editors\Chamilo.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\Commenting.aspx" />
+    <Content Include="Views\Editors\Comparing.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
     <Content Include="Views\Editors\FAQ.aspx" />
     <Content Include="Views\Editors\FAQ\Default.ascx" />

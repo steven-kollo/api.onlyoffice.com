@@ -8,6 +8,8 @@
 - editors: added the possibility to view the document history for the presentation files
 - editors: added editorConfig.customization.hideNotes
 - editors: added editorConfig.customization.uiTheme
+- docbuilder: added the Comparing documents page
+- editors: added the Comparing documents page
 - editors: try reviewGroups
 - editors: added the license command
 - global search

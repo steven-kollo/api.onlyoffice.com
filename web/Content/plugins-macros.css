@@ -87,6 +87,11 @@
     background-repeat: no-repeat;
 }
 
+.insert-text {
+    background-image: url("img/macros/insert-text.svg");
+    background-repeat: no-repeat;
+}
+
 .example-plug-img {
     height: 120px;
     margin: auto;

@@ -48,6 +48,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Coedit",
                 "Command",
                 "Commenting",
+                "Comparing",
                 "Config",
                 "Config/Document",
                 "Config/Document/Info",
@@ -182,6 +183,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Commenting()
+        {
+            return View();
+        }
+
+        public ActionResult Comparing()
         {
             return View();
         }
