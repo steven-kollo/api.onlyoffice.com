@@ -64,9 +64,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "integrationapi/cdocbuilder/setproperty",
                 "integrationapi/cdocbuilder/setpropertyw",
                 "integrationapi/cdocbuilder/settmpfolder",
-                "integrationapi/globalvariable",
                 "integrationapi/arguments",
-                "integrationapi/comparedocuments",
+                "howitworks",
+                "howitworks/globalvariable",
+                "howitworks/comparedocuments",
                 "textdocumentapi",
                 "spreadsheetapi",
                 "presentationapi",
@@ -132,6 +133,15 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Integrationapi", (object)catchall);
+        }
+
+        public ActionResult Howitworks(string catchall)
+        {
+            if (!_actionMap.Contains("howitworks/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Howitworks", (object)catchall);
         }
 
         public ActionResult Textdocumentapi(string catchall)

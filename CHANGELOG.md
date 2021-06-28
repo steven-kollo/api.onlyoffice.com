@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: added the How it works section
 - docbuilder: added the Comparing documents page
 - editors: added the Comparing documents page
 - editors: try reviewGroups
