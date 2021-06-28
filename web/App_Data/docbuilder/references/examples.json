@@ -163,7 +163,7 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph;\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a new paragraph\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetDocument.docx\");\nbuilder.CloseFile();",
 		},
 		"Api.replacetextsmart": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph1 = oDocument.GetElement(0);\noParagraph1.AddText(\"This is the first paragraph.\");\noParagraph2 = Api.CreateParagraph();\noParagraph2.AddText(\"This is the second paragraph.\");\noDocument.Push(oParagraph2);\noParagraph2.Select();\nApi.ReplaceTextSmart([\"The second paragraph was replaced with the ReplaceTextSmart method.\"]);\nbuilder.SaveFile(\"docx\", \"ReplaceTextSmart.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noFParagraph = oDocument.GetElement(0);\noFParagraph.AddText(\"First paragraph\");\noSParagraph = Api.CreateParagraph();\noSParagraph.AddText(\"Second Paragraph\");\noDocument.Push(oSParagraph);\noRange1 = oFParagraph.GetRange();\noRange2 = oSParagraph.GetRange();\noRange3 = oRange1.ExpandTo(oRange2);\noRange3.Select();\narr = [\"test_1\", \"test_2\"];\nApi.ReplaceTextSmart(arr);\nbuilder.SaveFile(\"docx\", \"ReplaceTextSmart.docx\");\nbuilder.CloseFile();"
 		},
 		"Api.save": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This sample text is saved to the document.\");\nApi.Save();\nbuilder.SaveFile(\"docx\", \"Save.docx\");\nbuilder.CloseFile();",
