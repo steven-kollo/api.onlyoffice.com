@@ -700,6 +700,13 @@
     <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Confluence.aspx" />
     <Content Include="Views\Editors\Command.aspx" />
+    <Content Include="Views\Editors\Command\default.ascx" />
+    <Content Include="Views\Editors\Command\drop.ascx" />
+    <Content Include="Views\Editors\Command\forcesave.ascx" />
+    <Content Include="Views\Editors\Command\info.ascx" />
+    <Content Include="Views\Editors\Command\license.ascx" />
+    <Content Include="Views\Editors\Command\meta.ascx" />
+    <Content Include="Views\Editors\Command\version.ascx" />
     <Content Include="Views\Editors\Coedit.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
     <Content Include="Views\Editors\Try.aspx" />

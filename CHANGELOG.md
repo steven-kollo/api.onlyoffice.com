@@ -1,6 +1,7 @@
 # Change Log
 
 - editors: how it works navigation
+- editors: restructured the Command service page
 - docbuilder: added the How it works section
 - docbuilder: added the Comparing documents page
 - editors: added the Comparing documents page
