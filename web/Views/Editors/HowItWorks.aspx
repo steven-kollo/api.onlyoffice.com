@@ -16,8 +16,27 @@
     </h1>
 
     <p class="dscr">
-        The work with document files in ONLYOFFICE Document Server is quite a simple process but it requires some understanding of what is going on when you click your document link to <a href="<%= Url.Action("open") %>">open</a> it in the browser, or <a href="<%= Url.Action("save") %>">save</a> the document or <a href="<%= Url.Action("conversion") %>">upload</a> it from your computer to the document server.
+        The work with document files in ONLYOFFICE Document Server is quite a simple process but it requires some understanding of what is going on when you click your document link to open it in the browser, save the document or upload it from your computer to the document server.
     </p>
+    <p>In this section you will learn how to:</p>
+    <ul class="columns-2">
+        <li><a href="<%= Url.Action("open") %>">Open a file</a></li>
+        <li><a href="<%= Url.Action("save") %>">Save a file</a></li>
+        <li><a href="<%= Url.Action("coedit") %>">Co-edit a file</a></li>
+        <li><a href="<%= Url.Action("history") %>">View the document history</a></li>
+        <li><a href="<%= Url.Action("actionlink") %>">Work with action links</a></li>
+        <li><a href="<%= Url.Action("mentions") %>">Mention users</a></li>
+        <li><a href="<%= Url.Action("rename") %>">Rename a file</a></li>
+        <li><a href="<%= Url.Action("review") %>">Review a file</a></li>
+        <li><a href="<%= Url.Action("inlineeditors") %>">Work with inline editors</a></li>
+        <li><a href="<%= Url.Action("conversion") %>">Convert and download a file</a></li>
+        <li><a href="<%= Url.Action("security") %>">Protect a document</a></li>
+        <li><a href="<%= Url.Action("anonymoususers") %>">Set a name to an anonymous user</a></li>
+        <li><a href="<%= Url.Action("comparing") %>">Compare documents</a></li>
+    </ul>
+    
+    <br />
+    <h2>User-document interaction</h2>
     <p>The user-document interaction is done both at the client side and at the server side.</p>
     <p>Below the main notions used throughout the current documentation are explained.</p>
     <p class="list-header">The client side includes:</p>
