@@ -47,6 +47,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "Changelog",
                 "Coedit",
                 "Command",
+                "Command/drop",
+                "Command/forcesave",
+                "Command/info",
+                "Command/license",
+                "Command/meta",
+                "Command/version",
                 "Comparing",
                 "Config",
                 "Config/Document",
@@ -176,9 +182,13 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Command()
+        public ActionResult Command(string catchall)
         {
-            return View();
+            if (!_actionMap.Contains("command/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Command", (object)catchall);
         }
 
         public ActionResult Comparing()
