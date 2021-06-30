@@ -51,7 +51,7 @@
         </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>c</td>
+            <td>Command</td>
             <td>Description</td>
         </tr>
     </thead>

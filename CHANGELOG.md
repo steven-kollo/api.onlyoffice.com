@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: restructured the Command service page
 - docbuilder: added the Comparing documents page
 - editors: added the Comparing documents page
 - editors: try reviewGroups
