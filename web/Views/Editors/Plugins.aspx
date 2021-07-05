@@ -23,6 +23,7 @@
     <p>Currently the following plugins are available:</p>
     <ul>
         <li><a href="<%= Url.Action("alfresco") %>">ONLYOFFICE Alfresco module package</a></li>
+        <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("confluence") %>">ONLYOFFICE Connector for Confluence</a></li>
         <li><a href="<%= Url.Action("HumHub") %>">ONLYOFFICE Connector for HumHub</a></li>
         <li><a href="<%= Url.Action("liferay") %>">ONLYOFFICE Connector for Liferay</a></li>
