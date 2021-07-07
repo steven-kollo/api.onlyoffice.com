@@ -8,6 +8,9 @@
 - editors: added the possibility to view the document history for the presentation files
 - editors: added editorConfig.customization.hideNotes
 - editors: added editorConfig.customization.uiTheme
+- editors: how it works navigation
+- editors: restructured the Command service page
+- docbuilder: added the How it works section
 - docbuilder: added the Comparing documents page
 - editors: added the Comparing documents page
 - editors: try reviewGroups

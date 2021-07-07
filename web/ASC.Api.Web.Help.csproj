@@ -550,6 +550,10 @@
     <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
     <Content Include="Views\DocBuilder\gettingstarted.aspx" />
     <Content Include="Views\DocBuilder\global.aspx" />
+    <Content Include="Views\DocBuilder\howitworks.aspx" />
+    <Content Include="Views\DocBuilder\Howitworks\comparedocuments.ascx" />
+    <Content Include="Views\DocBuilder\Howitworks\default.ascx" />
+    <Content Include="Views\DocBuilder\Howitworks\globalvariable.ascx" />
     <Content Include="Views\DocBuilder\integratingdocumentbuilder.aspx" />
     <Content Include="Views\DocBuilder\integrationapi.aspx" />
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder.ascx" />
@@ -567,9 +571,7 @@
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\setpropertyw.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\settmpfolder.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\default.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\globalvariable.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\comparedocuments.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\arguments.ascx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
     <Content Include="Views\DocBuilder\presentationapi.aspx" />
@@ -700,6 +702,13 @@
     <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Confluence.aspx" />
     <Content Include="Views\Editors\Command.aspx" />
+    <Content Include="Views\Editors\Command\default.ascx" />
+    <Content Include="Views\Editors\Command\drop.ascx" />
+    <Content Include="Views\Editors\Command\forcesave.ascx" />
+    <Content Include="Views\Editors\Command\info.ascx" />
+    <Content Include="Views\Editors\Command\license.ascx" />
+    <Content Include="Views\Editors\Command\meta.ascx" />
+    <Content Include="Views\Editors\Command\version.ascx" />
     <Content Include="Views\Editors\Coedit.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
