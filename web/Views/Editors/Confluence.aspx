@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ONLYOFFICE Connector for Confluence
+    Confluence ONLYOFFICE integration app
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">ONLYOFFICE Connector for Confluence</span>
+        <span class="hdr">Confluence ONLYOFFICE integration app</span>
     </h1>
 
     <p class="dscr">
@@ -34,7 +34,7 @@
     </p>
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
-    <h2 id="get-connector" class="copy-link">Getting ONLYOFFICE Connector for Confluence from Atlassian Marketplace</h2>
+    <h2 id="get-connector" class="copy-link">Getting Confluence ONLYOFFICE integration app from Atlassian Marketplace</h2>
     <p>
         You can download the latest connector version from the <a href="https://marketplace.atlassian.com/1218214" target="_blank">official Atlassian Marketplace</a>.
         This is done the following way:
@@ -47,15 +47,15 @@
         </li>
         <li>Click <b>Find new add-ons</b> from the left-hand side of the page.</li>
         <li>
-            Locate <b>ONLYOFFICE Connector for Confluence</b> via search.
+            Locate <b>Confluence ONLYOFFICE integration app</b> via search.
             Results will include the add-on versions compatible with your Confluence instance.
         </li>
         <li>Click <b>Install</b> to download and install your add-on.</li>
         <li>Now you can click <b>Close</b> in the <b>Installed and ready to go</b> dialog.</li>
     </ul>
 
-    <h2 id="compile" class="copy-link">Compiling and installing ONLYOFFICE Connector for Confluence</h2>
-    <p>If for some reason you want to compile ONLYOFFICE Connector for Confluence, then to start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
+    <h2 id="compile" class="copy-link">Compiling and installing Confluence ONLYOFFICE integration app</h2>
+    <p>If for some reason you want to compile Confluence ONLYOFFICE integration app, then to start using ONLYOFFICE Document Server with Confluence, the following steps must be performed:</p>
     <ul>
         <li>1.8.X of the Oracle Java SE Development Kit 8,</li>
         <li>Atlassian Plugin SDK (<a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" target="_blank">official instructions</a>),</li>
@@ -70,8 +70,8 @@
     <p>The latest compiled package files are available <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-confluence/releases">here</a>.</p>
 
 
-    <h2 id="configure" class="copy-link">Configuring ONLYOFFICE Connector for Confluence</h2>
-    <p>Find the uploaded <b>ONLYOFFICE Connector for Confluence</b> on the <em>Manage add-ons</em> page.
+    <h2 id="configure" class="copy-link">Configuring Confluence ONLYOFFICE integration app</h2>
+    <p>Find the uploaded <b>Confluence ONLYOFFICE integration app</b> on the <em>Manage add-ons</em> page.
         Click <em>Configure</em> and enter the name of the server with the ONLYOFFICE Document Server installed:</p>
     <span class="commandline">https://documentserver/</span>
 
@@ -95,6 +95,6 @@
     <p>Confluence downloads the new version of the document, replacing the old one.</p>
 
     <br />
-    <p>Download the ONLYOFFICE Connector for Confluence <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
+    <p>Download the Confluence ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
 
 </asp:Content>
