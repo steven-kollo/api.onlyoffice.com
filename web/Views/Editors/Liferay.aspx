@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ONLYOFFICE Connector for Liferay
+    Liferay ONLYOFFICE connector
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">ONLYOFFICE Connector for Liferay</span>
+        <span class="hdr">Liferay ONLYOFFICE connector</span>
     </h1>
 
     <p>This plugin enables users to edit office documents from <a href="https://www.liferay.com/" target="_blank">Liferay</a> using ONLYOFFICE Document Server.</p>
@@ -36,7 +36,7 @@
     <p>The easiest way to start an instance of ONLYOFFICE Document Server is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
 
 
-    <h2 id="compiling" class="copy-link">Compiling ONLYOFFICE Connector for Liferay</h2>
+    <h2 id="compiling" class="copy-link">Compiling Liferay ONLYOFFICE connector</h2>
 
     <p>
         Simply run <i>gradle build</i>.
@@ -44,7 +44,7 @@
     </p>
 
 
-    <h2 id="installing-plugin" class="copy-link">Installing ONLYOFFICE Connector for Liferay</h2>
+    <h2 id="installing-plugin" class="copy-link">Installing Liferay ONLYOFFICE connector</h2>
 
     <p>
         Either install it from <a href="https://web.liferay.com/marketplace/-/mp/application/171169174">Liferay Marketplace</a> or if you're building the plugin by yourself simply put compiled .jar file from <i>build/libs</i> folder to <i>/opt/liferay/deploy</i>.
@@ -83,6 +83,6 @@
 
 
     <br />
-    <p>Download the ONLYOFFICE Connector for Liferay <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">here</a>.</p>
+    <p>Download the Liferay ONLYOFFICE connector <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">here</a>.</p>
 
 </asp:Content>
