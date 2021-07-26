@@ -49,6 +49,9 @@
                 <a href="<%= Url.Action("humhub") %>">HumHub integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("jira") %>">Jira integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("liferay") %>">Liferay integration</a>
             </li>
             <li>
