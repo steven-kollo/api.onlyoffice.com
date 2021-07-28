@@ -504,6 +504,7 @@
     <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\faq.js" />
     <Content Include="Scripts\filter-plugin.js" />
+    <Content Include="Scripts\menuselector.js" />
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />

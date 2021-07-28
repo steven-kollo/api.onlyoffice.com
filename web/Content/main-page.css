@@ -282,3 +282,13 @@
         padding: 0;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .icon-program-block {
+        max-width: 400px;
+    }
+
+    .body-block {
+        display: block;
+    }
+}
