@@ -1981,6 +1981,16 @@ article {
         width: 235px;
     }
 
+    .search-box-main,
+    .search-box-result {
+        max-width: 400px;
+        width: 70%;
+    }
+
+    .home .layout-table-content {
+        padding: 0;
+    }
+
     b {
         word-break: break-all;
     }

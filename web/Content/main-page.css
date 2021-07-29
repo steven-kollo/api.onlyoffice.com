@@ -285,10 +285,24 @@
 
 @media screen and (max-width: 500px) {
     .icon-program-block {
-        max-width: 400px;
+        max-width: 100%;
     }
 
     .body-block {
         display: block;
+    }
+
+    body.main-body {
+        min-width: 100px !important;
+    }
+
+    .ip_main_part {
+        width: 90%
+    }
+
+    .products-info {
+        max-width: 288px;
+        margin: auto;
+        padding: 40px 0;
     }
 }
