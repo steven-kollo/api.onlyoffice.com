@@ -39,7 +39,7 @@
     <li><em>plugin style.css</em> is used to bring the plugin to the specific style.
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-thesaurus/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-thesaurus/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
             <li><b>Big Huge Thesaurus</b> - the developer-friendly <a href="https://words.bighugelabs.com/" target="_blank">API</a> for getting synonyms and antonyms for your apps and websites. License: <a href="https://github.com/ONLYOFFICE/plugin-thesaurus/blob/master/LICENSE" target="_blank">Apache 2.0 License</a>.</li>
         </ul>
     </li>

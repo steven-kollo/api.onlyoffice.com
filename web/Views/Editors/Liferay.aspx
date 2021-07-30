@@ -29,7 +29,7 @@
 
     <p>
         You will need an instance of ONLYOFFICE Document Server that is resolvable and connectable both from Liferay and any end clients.
-        If that is not the case, use the official ONLYOFFICE Document Server documetnation page: <a href="http://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
+        If that is not the case, use the official ONLYOFFICE Document Server documetnation page: <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">Document Server for Linux</a>.
         ONLYOFFICE Document Server must also be able to POST to Liferay directly.
     </p>
 

@@ -40,7 +40,7 @@
     <li><em>index_about.html</em> for the plugin <b>About</b> window</li>
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/clippy/licenses/jQuery.license" target="_blank">MIT License/</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/clippy/licenses/jQuery.license" target="_blank">MIT License/</a>.</li>
             <li><b>TesseractJS-Core</b> is a pure Javascript port of the popularTesseract OCR engine. This library supportsmore than 100 languages, automatic textorientation and script detection, a simple interface for reading paragraph, word, and characterbounding boxes (<a href="https://tesseract.projectnaptha.com/" target="_blank">https://tesseract.projectnaptha.com/</a>). License: <a href="https://github.com/naptha/tesseract.js-core/blob/master/LICENSE" target="_blank">Apache License.</a></li>
         </ul>
     </li>

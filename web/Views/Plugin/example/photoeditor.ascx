@@ -39,7 +39,7 @@
     <li><em>index_about.html</em> for the plugin <b>About</b> window</li>
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-photoeditor/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-photoeditor/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
             <li><b>Toast UI Image Editor</b> is a full featured image editor that uses HTML5 Canvas. It's easy to use and provides powerful filters (<a href="https://ui.toast.com/tui-image-editor" target="_blank">https://ui.toast.com/tui-image-editor</a>).  License: <a href="https://github.com/ONLYOFFICE/plugin-photoeditor/blob/master/licenses/Tui.license" target="_blank">MIT License</a>.</li>
         </ul>
     </li>
