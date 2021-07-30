@@ -41,7 +41,7 @@
 
     <p>
         Either install it from HumHub Marketplace or simply clone the repository inside one of the folder specified by <em>moduleAutoloadPaths</em> parameter.
-        Please see <a href="https://docs.humhub.org/dev-environment.html#external-modules-directory" target="_blank">HumHub Documentation</a> for more information.
+        Please see <a href="https://docs.humhub.org/docs/develop/environment#module-loader-path" target="_blank">HumHub Documentation</a> for more information.
     </p>
 
 
