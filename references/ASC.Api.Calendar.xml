@@ -413,7 +413,7 @@
             <param name="responsibles">Task responsibles</param>
             <category>Events</category>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.AddEvent(System.Int32,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String)">
+        <member name="M:ASC.Api.Calendar.CalendarApi.AddEvent(System.Int32,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String,System.Uri)">
             <summary>
             Creates a new iCal event in the selected calendar with the parameters specified in the request.
             </summary>
@@ -425,6 +425,7 @@
             <param name="alertType">Event notification type</param>
             <param name="sharingOptions">Event sharing access parameters</param>
             <param name="eventUid">Event UID</param>
+            <param name="uri" visible="false">Current URI</param>
             <category>Events</category>
             <returns>Event</returns>
         </member>

@@ -1,5 +1,7 @@
 # Change Log
 
+- portals: api v12.0
+
 - portals: api v11.6
 - docbuilder: try now page
 - editors: added the ability to use custom path for file storage in the test examples
