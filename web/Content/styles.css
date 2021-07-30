@@ -214,8 +214,10 @@ body {
 
 .layout-table-content {
     margin: 0;
-    padding: 8px 32px 8px 32px;
+    padding: 8px 32px;
+    padding-right: 15px;
     border-left: 1px solid #EFEFEF;
+    box-sizing: border-box;
 }
 
 .layout-content {
@@ -539,7 +541,7 @@ li b.copy-link[id]:hover:before {
     height: 24px;
     margin-bottom: 18px;
     white-space: nowrap;
-    width: 236px;
+    width: 100%;
 }
 
 .search-input {
@@ -672,6 +674,7 @@ li b.copy-link[id]:hover:before {
     display: block;
     width: 100%;
     border-left: none;
+    padding: 45px 0px;
 }
 
 .products-info {
@@ -1713,6 +1716,7 @@ article {
 }
 
 @media screen and (max-width: 1024px) {
+
     .layout-content {
         max-width: 700px;
         min-width: 0px;
@@ -1743,6 +1747,7 @@ article {
         width: 100%;
         padding-left: 0px;
         background-position-x: 50%;
+        margin: auto;
     }
 
     .top-nav a:hover {
@@ -1974,17 +1979,20 @@ article {
     }
 
     .search-big {
-        width: 288px;
+        width: 100%;
+        margin: 0;
     }
 
     .search-box .search-big input, .search-box .search-big input:focus {
-        width: 235px;
+        width: calc(100% - 67px);
+        font-size: 16px;
     }
 
     .search-box-main,
     .search-box-result {
-        max-width: 400px;
-        width: 70%;
+        max-width: 300px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .home .layout-table-content {
