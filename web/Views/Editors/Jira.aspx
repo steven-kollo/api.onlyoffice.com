@@ -92,7 +92,7 @@
         <li>The client browser makes a request for the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the <em>docEditor</em> configuration with the above properties.</li>
         <li>Then ONLYOFFICE Docs downloads the document from document storage and the user begins editing.</li>
         <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After 10 seconds of inactivity, ONLYOFFICE Docs sends a POST to the callback URL letting Jira know that the clients have finished editing the document and closed it.</li>
+        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the callback URL letting Jira know that the clients have finished editing the document and closed it.</li>
         <li>Jira downloads the new version of the document, replacing the old one.</li>
     </ul>
 

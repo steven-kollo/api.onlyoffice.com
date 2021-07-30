@@ -172,7 +172,7 @@ onlyoffice.connector = 1.0.1
         <li>Then ONLYOFFICE Document Server downloads the document from Plone and the user begins editing.</li>
         <li>ONLYOFFICE Document Server sends a POST request to the <em>callback</em> URL to inform Plone that a user is editing the document.</li>
         <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After 10 seconds of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Plone know that the clients have finished editing the document and closed it.</li>
+        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <em>callback</em> URL letting Plone know that the clients have finished editing the document and closed it.</li>
         <li>Plone downloads the new version of the document, replacing the old one.</li>
     </ul>
 

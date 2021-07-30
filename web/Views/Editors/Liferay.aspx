@@ -78,7 +78,7 @@
     <p>ONLYOFFICE Document Server sends a POST request to the <i>callback</i> URL to inform Liferay that a user is editing the document.</p>
     <p>Liferay locks the document, but still allows other users with write access the ability to collaborate in real time with ONLYOFFICE Document Server by leaving the Action present.</p>
     <p>When all users and client browsers are done with editing, they close the editing window.</p>
-    <p>After 10 seconds of inactivity, ONLYOFFICE Document Server sends a POST to the <i>callback</i> URL letting Liferay know that the clients have finished editing the document and closed it.</p>
+    <p>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Document Server sends a POST to the <i>callback</i> URL letting Liferay know that the clients have finished editing the document and closed it.</p>
     <p>Liferay downloads the new version of the document, replacing the old one.</p>
 
 
