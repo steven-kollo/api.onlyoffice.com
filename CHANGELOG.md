@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: commentGroups on try page
 - editors: added the Commenting page
 - editors: added document.permissions.commentGroups
 - editors: added the onPluginsReady event
