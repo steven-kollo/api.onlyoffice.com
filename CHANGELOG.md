@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Jira integration app
 - editors: how it works navigation
 - editors: restructured the Command service page
 - docbuilder: added the How it works section
