@@ -91,8 +91,37 @@ docEditor.destroyEditor();
                 <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.
             </p>
             <pre>
-docEditor.downloadAs();
+docEditor.downloadAs(format);
 </pre>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>format</td>
+                        <td>
+                            Defines the format in which a file will be downloaded.
+                            All the possible formats you can find in the <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion tables</a> 
+                            (<em>gif</em>, <em>jpg</em>, <em>png</em> are not available for download). 
+                            If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type.
+                        </td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                </tbody>
+            </table>
         </li>
 
         <li>
