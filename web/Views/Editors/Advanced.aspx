@@ -77,9 +77,9 @@
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#commentGroups">commentGroups</a>": [
-                "view": "",
                 "edit": ["Group2", ""],
-                "remove": [""]
+                "remove": [""],
+                "view": ""
             ],
             "<a href="<%= Url.Action("config/document/permissions") %>#copy">copy</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">deleteCommentAuthorOnly</a>": false,

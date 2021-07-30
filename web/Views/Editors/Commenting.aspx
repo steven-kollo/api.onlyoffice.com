@@ -125,16 +125,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             </p>
             <div class="note">
                 If the <b>commentGroups</b> parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled.
-                Otherwise, if the current user does not belong to any of the groups, he or she can view, edit and/or remove comments of all groups.
+                Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
             </div>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
             "commentGroups": {
-                "view": "",
                 "edit": ["Group2", ""],
-                "remove": [""]
+                "remove": [""],
+                "view": ""
             },
             ...
         }
@@ -144,9 +144,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <ul>
-                <li><em>"view": ""</em> means that the user can view comments made by any user.</li>
                 <li><em>"edit": ["Group2", ""]</em> means that the user can edit comments made by users from <em>Group2</em> and users who do not belong to any of the groups (for example, the document that is commented in third-party editors).</li>
                 <li><em>"remove": [""]</em> means that the user can remove comments made by someone who belongs to none of these groups (for example, the document that is commented in third-party editors).</li>
+                <li><em>"view": ""</em> means that the user can view comments made by any user.</li>
             </ul>
             
 </asp:Content>

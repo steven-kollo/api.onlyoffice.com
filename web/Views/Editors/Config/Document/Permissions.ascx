@@ -58,16 +58,9 @@
         <tr class="tablerow">
             <td id="commentGroups" class="copy-link">commentGroups</td>
             <td>
-                Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose comments the user can view, edit and/or remove.
+                Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose comments the user can edit, remove and/or view.
                 The object has the following parameters:
                 <ul>
-                    <li>
-                        <b>view</b> - the user can view comments made by other users,
-                        <br />
-                        <b>type</b>: list,
-                        <br />
-                        <b>example</b>: "";
-                    </li>
                     <li>
                         <b>edit</b> - the user can edit comments made by other users,
                         <br />
@@ -80,12 +73,19 @@
                         <br />
                         <b>type</b>: list,
                         <br />
-                        <b>example</b>: [].
+                        <b>example</b>: [];
+                    </li>
+                    <li>
+                        <b>view</b> - the user can view comments made by other users,
+                        <br />
+                        <b>type</b>: list,
+                        <br />
+                        <b>example</b>: "".
                     </li>
                 </ul>
-                The <em>[""]</em> value means that the user can view/edit/remove comments made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
-                If the value is <em>[]</em>, the user cannot view/edit/remove comments made by any group.
-                If the <em>view</em>, <em>edit</em> and <em>remove</em> parameters are <em>""</em> or not specified, then the user can view/edit/remove comments made by any user.
+                The <em>[""]</em> value means that the user can edit/remove/view comments made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
+                If the value is <em>[]</em>, the user cannot edit/remove/view comments made by any group.
+                If the <em>edit</em>, <em>remove</em> and <em>view</em> parameters are <em>""</em> or not specified, then the user can view/edit/remove comments made by any user.
             </td>
             <td>object</td>
             <td></td>
@@ -250,9 +250,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         "permissions": {
             "comment": true,
             "commentGroups": {
-                "view": "",
                 "edit": ["Group2", ""],
-                "remove": [""]
+                "remove": [""],
+                "view": ""
             },
             "copy": true,
             "deleteCommentAuthorOnly": false,
