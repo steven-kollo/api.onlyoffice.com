@@ -280,5 +280,6 @@
 @media screen and (max-width: 380px) {
     .api_block_links .api_users_block {
         grid-template-columns: 1fr;
+        grid-gap: 0px;
     }
 }

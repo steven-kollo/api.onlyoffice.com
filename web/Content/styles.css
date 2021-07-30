@@ -1839,6 +1839,15 @@ article {
         width: 100%;
     }
 
+    .bottommenu {
+        padding: 16px 0px 0 16px;
+        text-align: left;
+    }
+
+    .bottommenu ul li {
+        margin: 12px 40px 0 0;
+    }
+
     .arrow-header {
         background: url(img/sprite.svg) no-repeat 0 -102px transparent;
         fill: #fff;
