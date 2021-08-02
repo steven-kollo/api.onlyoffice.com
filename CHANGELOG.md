@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the format parameter to the downloadAs method
+- editors: conversion to OOXML and ODF templates
 - portals: api v11.5.3
 - editors: how it works navigation
 - editors: restructured the Command service page

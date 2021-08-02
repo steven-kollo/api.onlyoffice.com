@@ -265,15 +265,15 @@ body {
     }
 
     .table-conversion-matrix-text td {
-        width: 7%;
+        width: 5%;
     }
 
     .table-conversion-matrix-spreadsheet td {
-        width: 10%;
+        width: 8%;
     }
 
     .table-conversion-matrix-presentation td {
-        width: 11%;
+        width: 9%;
     }
 
     .table-conversion-matrix-text th,
