@@ -113,8 +113,8 @@ docEditor.downloadAs(format);
                         <td>format</td>
                         <td>
                             Defines the format in which a file will be downloaded.
-                            All the possible formats you can find in the <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion tables</a>. 
-                            But you cannot download a file in the image formats such as <em>gif</em>, <em>jpg</em>, <em>png</em>. 
+                            All the possible formats you can find in the <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion tables</a>.
+                            But you cannot download a file in the image formats such as <em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>.
                             If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type.
                         </td>
                         <td>string</td>
@@ -122,7 +122,10 @@ docEditor.downloadAs(format);
                     </tr>
                 </tbody>
             </table>
-            <note>Please note that conversion from the <em>djvu</em>, <em>pdf</em>, <em>xps</em> formats are not available. The original format will be downloaded.</note>
+            <note>
+                Please note that conversion from the <em>djvu</em>, <em>pdf</em>, <em>xps</em> formats are not available.
+                The original format will be downloaded.
+            </note>
         </li>
 
         <li>
