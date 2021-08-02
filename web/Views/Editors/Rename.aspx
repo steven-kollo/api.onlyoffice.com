@@ -50,7 +50,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In order to update the name of the document for all collaborative editors, send the request to the <a href="<%= Url.Action("command") %>">document command service</a>, using the <a href="<%= Url.Action("command") %>#meta">meta</a> value for the <em>c</em> parameter:
+                In order to update the name of the document for all collaborative editors, send the request to the <a href="<%= Url.Action("command") %>">document command service</a>, using the <a href="<%= Url.Action("command/meta") %>">meta</a> value for the <em>c</em> parameter:
             </p>
             <pre>
 {
@@ -64,7 +64,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                When the name of the document is changed via the <a href="<%= Url.Action("command") %>#meta">meta</a> command, the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event must be called in the document editor of each user.
+                When the name of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command, the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event must be called in the document editor of each user.
                 This event sends the name of the document in the <em>data.title</em> parameter.
             </p>
             <pre>

@@ -281,7 +281,7 @@
             <short>
             Get a user photo
             </short>
-            <category>Photoes</category>
+            <category>Photos</category>
             <param name="userid">User ID</param>
             <returns>User photo</returns>
         </member>
@@ -292,7 +292,7 @@
             <short>
             Update a user photo
             </short>
-            <category>Photoes</category>
+            <category>Photos</category>
             <param name="userid">User ID</param>
             <param name="files">New avatar photo URL</param>
             <returns>Updated user photo</returns>
@@ -304,7 +304,7 @@
             <short>
             Delete a user photo
             </short>
-            <category>Photoes</category>
+            <category>Photos</category>
             <param name="userid">User ID</param>
             <returns>Deleted user photo</returns>
         </member>
@@ -315,7 +315,7 @@
             <short>
             Create a photo thumbnail
             </short>
-            <category>Photoes</category>
+            <category>Photos</category>
             <param name="userid">User ID</param>
             <param name="tmpFile">Path to the temporary file</param>
             <param name="x">Horizontal coordinate</param>

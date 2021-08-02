@@ -12,7 +12,7 @@
         <p>Normally the final document version is compiled once all the users editing it close the document and the delay time (about 10 seconds) passes. But this behavior can be overriden. To do that the <b>forcesave</b> option is available.</p>
         <p>There are several ways to initiate forced saving:</p>
         <ul>
-            <li>Sending the request to the <a href="<%= Url.Action("command") %>">document command service</a>, using the <b>forcesave</b> value for the <em>c</em> parameter:
+            <li>Sending the request to the <a href="<%= Url.Action("command") %>">document command service</a>, using the <a href="<%= Url.Action("command/forcesave") %>">forcesave</a> value for the <em>c</em> parameter:
                 <pre>{
     "c": "forcesave",
     "key": "Khirz6zTPdfd7",
