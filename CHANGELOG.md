@@ -9,6 +9,8 @@
 - editors: added the possibility to view the document history for the presentation files
 - editors: added editorConfig.customization.hideNotes
 - editors: added editorConfig.customization.uiTheme
+- editors: conversion to OOXML and ODF templates
+- portals: api v11.5.3
 - editors: how it works navigation
 - editors: restructured the Command service page
 - docbuilder: added the How it works section

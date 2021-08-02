@@ -15,7 +15,7 @@
 
 <div class="header-gray">Installation</div>
 <p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors</p>
-<p>You can remove it following the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a>, or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
+<p>You can remove it following the <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>" target="_blank">on-premises</a>, or <a href="<%= Url.Action("installation/cloud") %>" target="_blank">cloud</a> installation instructions.
 <p>The plugin guid: {BE5CBF95-C0AD-4842-B157-AC40FEDD9841}.</p>
 
 
@@ -42,7 +42,7 @@
     <ul>
         <li><b>Highlight.js library</b> - a syntax highlighter written in JavaScript (<a href="https://highlightjs.org/" target="_blank">https://highlightjs.org/</a>). License: <a href="https://github.com/highlightjs/highlight.js/blob/master/LICENSE" target="_blank">BSD License</a>.</li>
         <li><b>Spectrum</b> - a JavaScriptcolorpickerplugin that uses the jQuery framework. License: <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/licenses/spectrum.license" target="_blank">MIT License</a>.</li>
-        <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+        <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
         <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License:  <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/licenses/Select2.license" target="_blank">MIT</a>.</li>
     </ul>
 </ol>

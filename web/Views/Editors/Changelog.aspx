@@ -29,7 +29,7 @@
 
     <h2 id="63" class="copy-link">Version 6.3</h2>
     <ul>
-        <li>Added the <a href="<%= Url.Action("command") %>#c">license</a> command.</li>
+        <li>Added the <a href="<%= Url.Action("command/license") %>">license</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRulers">editorConfig.customization.hideRulers</a> field.</li>
         <%--<li>Added the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">editorConfig.customization.submitForm</a> field.</li>--%>
         <%--<li>Added a new <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a> (<em>forcesavetype = 3</em>).</li>--%>
@@ -111,6 +111,7 @@
 
     <h2 id="53" class="copy-link">Version 5.3</h2>
     <ul>
+        <li>Added <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion</a> to the OOXML (dotx, xltx, potx) and ODF (ott, ots, otp) templates.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a> field.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#commentAuthorOnly">editorConfig.customization.commentAuthorOnly</a> field is now used to restrict comment deletion as well.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">editorConfig.customization.compactHeader</a> field.</li>
@@ -160,7 +161,7 @@
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRestore">events.onRequestRestore</a> event.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestRename">events.onRequestRename</a> event.</li>
-        <li>Added the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
+        <li>Added the <a href="<%= Url.Action("command/meta") %>">meta</a> command.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMetaChange">events.onMetaChange</a> event.</li>
         <li>Changed the use of <em>callbackUrl</em> from the <a href="<%= Url.Action("callback") %>#used-callbackUrl">last user</a> who joined the co-editing.</li>
         <li>Added the <a href="<%= Url.Action("config/editor") %>#location">editorConfig.location</a> field.</li>
@@ -188,7 +189,7 @@
         <li>Changed the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.</li>
         <li>Added the possibility to convert files to <a href="<%= Url.Action("conversionapi") %>#sample-thumbnail">thumbnail</a> in the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</li>
         <li>The POST requests are now used for the interaction with the <a href="<%= Url.Action("command") %>">document command service</a> and the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</li>
-        <li>Added the <a href="<%= Url.Action("command") %>#version">version</a> command.</li>
+        <li>Added the <a href="<%= Url.Action("command/version") %>">version</a> command.</li>
         <li>Added the <a href="<%= Url.Action("signature/") %>">signature</a> for the editor opening and for the incoming and outgoing requests.</li>
     </ul>
 

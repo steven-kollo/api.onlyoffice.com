@@ -15,7 +15,7 @@
 
 <div class="header-gray">Installation</div>
 <p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.</p>
-<p>You can remove it following the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a>, or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
+<p>You can remove it following the <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>" target="_blank">on-premises</a>, or <a href="<%= Url.Action("installation/cloud") %>" target="_blank">cloud</a> installation instructions.
 <p>The plugin guid: {BE5CBF95-C0AD-4842-B157-AC40FEDD9840}.</p>
 
 
@@ -39,7 +39,7 @@
     <li><em>plugin style.css</em> is used to bring the plugin to the specific style.
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-thesaurus/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-thesaurus/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
             <li><b>Big Huge Thesaurus</b> - the developer-friendly <a href="https://words.bighugelabs.com/" target="_blank">API</a> for getting synonyms and antonyms for your apps and websites. License: <a href="https://github.com/ONLYOFFICE/plugin-thesaurus/blob/master/LICENSE" target="_blank">Apache 2.0 License</a>.</li>
         </ul>
     </li>

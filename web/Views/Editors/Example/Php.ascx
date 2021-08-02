@@ -39,7 +39,7 @@
 
 <ul>
     <li><b>IIS: version 7</b> or later (refer to <a href="https://www.iis.net/learn/application-frameworks/scenario-build-a-php-website-on-iis/configuring-step-1-install-iis-and-php">Microsoft official website</a> to learn how to install <b>IIS</b>);</li>
-    <li><b>PHP</b> (download it from the <a href="https://php.net/downloads.php">http://php.net</a> site);</li>
+    <li><b>PHP</b> (download it from the <a href="https://php.net/downloads.php">https://php.net</a> site);</li>
     <li><b>PHP Manager for IIS</b> (download it from the <a href="https://phpmanager.codeplex.com/releases/view/69115">Microsoft open source site</a>).</li>
 </ul>
 
