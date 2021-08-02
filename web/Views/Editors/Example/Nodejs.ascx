@@ -100,7 +100,7 @@
         <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
     </li>
     <li>Run the project with Node.js:
-        <div class="commandline">nodejs bin/www</div>
+        <div class="commandline">node bin/www</div>
     </li>
     <li>See the result in your browser using the address:
         <div class="commandline">http://localhost:3000</div>
