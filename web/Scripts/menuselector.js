@@ -34,6 +34,8 @@ $(function () {
     $("#menu-button").on("click", function () {
         if ($(".layout-side").hasClass("open-menu")) {
             $(".layout-side").removeClass("open-menu");
+            $(".site-overlay").addClass('hidden');
+            $("body").removeClass("hidden-body");
         }
         else {
             $(".layout-side").addClass("open-menu");
@@ -41,29 +43,18 @@ $(function () {
             $(".pushy-left")
                 .addClass('pushy-submenu-closed')
                 .removeClass('pushy-submenu-open');
+            $("body").addClass("hidden-body");
         }
     })
 });
 
 $(function () {
-
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-    if ($("div.menu-button").length) {
-        $("#menu-button").on("click", function () {
-
-            if ($(".layout-table-side").hasClass("close-menu")) {
-                $(".layout-table-side")
-                    .removeClass('close-menu')
-                    .addClass('open-menu');
-                $(".site-overlay").removeClass('hidden');
-            } else {
-                $(".layout-table-side")
-                    .addClass('close-menu')
-                    .removeClass('open-menu');
-                $(".site-overlay").addClass('hidden');
-            }
-        });
-    }
+    $(".site-overlay").on("click", function () {
+        if ($(".site-overlay").hasClass("hidden")) {
+        $("body").removeClass("hidden-body");
+        }
+        else {
+         $("body").addClass("hidden-body");
+        }
+    })
 });

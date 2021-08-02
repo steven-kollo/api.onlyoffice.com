@@ -1839,6 +1839,14 @@ article {
         width: 100%;
     }
 
+    .hidden-body {
+        overflow-y: hidden;
+    }
+
+    .table td {
+        min-width: 0px;
+    }
+
     .bottommenu {
         padding: 16px 0px 0 16px;
         text-align: left;
@@ -1858,6 +1866,7 @@ article {
         padding: 0 10px 4px;
         position: absolute;
         margin: -27px 0px 0 18px;
+        filter: brightness(200%);
     }
 
     .logo {
@@ -1974,10 +1983,12 @@ article {
     .open-menu {
         display: block;
         background-color: #F5F5F5;
-        padding: 28px 0px 100% 18px;
+        padding: 28px 0px 10px 18px;
         width: 256px;
         position: absolute;
         z-index: 101;
+        overflow-y: scroll;
+        height: calc(100vh - 48px);
     }
 
     .layout-table-content {
