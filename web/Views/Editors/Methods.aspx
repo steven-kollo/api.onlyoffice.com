@@ -32,7 +32,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
             <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
             <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
-            <li><a href="#setSharingSettings">setSharingSettings</a> - update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.</li>
+            <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
             <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
             <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
         </ul>
