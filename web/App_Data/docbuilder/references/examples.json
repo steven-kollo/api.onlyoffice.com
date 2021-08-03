@@ -1299,6 +1299,9 @@
 		"ApiTable.clear": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noTable.GetCell(0, 0).GetContent().GetElement(0).AddText(\"This is just a sample text.\");\noDocument.Push(oTable);\noTable.Clear();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The content of the table was cleared.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"Clear.docx\");\nbuilder.CloseFile();",
 		},
+		"ApiTable.copy": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(2, 2);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noCopyTable = oTable.Copy();\noDocument.Push(oCopyTable);\nbuilder.SaveFile(\"docx\", \"Copy.docx\");\nbuilder.CloseFile();"
+		},
 		"ApiTable.getcell": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noCell = oTable.GetCell(0, 0);\noCell.GetContent().GetElement(0).AddText(\"Cell #1\");\nbuilder.SaveFile(\"docx\", \"GetCell.docx\");\nbuilder.CloseFile();",
 		},
@@ -1415,6 +1418,9 @@
 		},
 		"ApiTable.setwrappingstyle": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text.\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable1 = Api.CreateTable(3, 3);\noTable1.SetWidth(\"percent\", 100);\noTable1.SetStyle(oTableStyle);\noDocument.Push(oTable1);\noTable1.GetCell(0, 0).GetContent().GetElement(0).AddText(\"Table 1\");\noTable2 = Api.CreateTable(3, 3);\noTable2.SetWidth(\"percent\", 100);\noTable2.SetStyle(oTableStyle);\noDocument.Push(oTable2);\noTable2.GetCell(0, 0).GetContent().GetElement(0).AddText(\"Table 2\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"The tables were added to the paragraph. Table 1 is inline and Table 2 is not.\");\noTable1.SetWrappingStyle(true);\noTable2.SetWrappingStyle(false);\nbuilder.SaveFile(\"docx\", \"SetWrappingStyle.docx\");\nbuilder.CloseFile();",
+		},
+		"ApiTable.split": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noCell = oTable.GetCell(0, 0);\noTable.Split(oCell, 2, 2);\nbuilder.SaveFile(\"docx\", \"Split.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiTableCell.addcolumns": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noTable.GetCell(0, 0).GetContent().GetElement(0).AddText(\"Two new columns were added after this cell.\");\noTable.GetCell(0, 0).AddColumns(2, false);\nbuilder.SaveFile(\"docx\", \"AddColumns.docx\");\nbuilder.CloseFile();",
