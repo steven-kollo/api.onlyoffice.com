@@ -1985,6 +1985,12 @@
 		"ApiColor.getclasstype": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noColor = Api.CreateColorFromRGB(49, 133, 154);\noWorksheet.GetRange(\"A2\").SetValue(\"Text with color\");\noWorksheet.GetRange(\"A2\").SetFontColor(oColor);\noColorClassType = oColor.GetClassType();\noWorksheet.GetRange(\"A4\").SetValue(\"Class type = \" + oColorClassType);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
 		},
+		"ApiComment.delete": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noRange = oWorksheet.GetRange(\"A1\");\noRange.AddComment(\"This is just a number.\");\noComment = oRange.GetComment();\noComment.Delete();\noWorksheet.GetRange(\"A3\").SetValue(\"The comment was just deleted from A1.\");\nbuilder.SaveFile(\"xlsx\", \"Delete.xlsx\");\nbuilder.CloseFile();"
+		},
+		"ApiComment.getclasstype": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noRange = oWorksheet.GetRange(\"A1\");\noRange.AddComment(\"This is just a number.\");\noComment = oRange.GetComment();\nsType = oComment.GetClassType();\noWorksheet.GetRange(\"A3\").SetValue(\"Type: \" + sType + \" (number of comment data type)\");\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();"
+		},
 		"ApiComment.gettext": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noRange = oWorksheet.GetRange(\"A1\");\noRange.AddComment(\"This is just a number.\");\noWorksheet.GetRange(\"A3\").SetValue(\"Comment: \");\noWorksheet.GetRange(\"B3\").SetValue(oRange.GetComment().GetText());\nbuilder.SaveFile(\"xlsx\", \"GetText.xlsx\");\nbuilder.CloseFile();",
 		},
