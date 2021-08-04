@@ -10,7 +10,7 @@
         <span></span>
         <span></span>
         <span></span>
-        <div class="mobile_table_contents"><span id="variable-heading"></span></div>
+        <div class="mobile_table_contents"><span id="variable-heading"></span><div class="menu-header <%= Html.IfController("Home") ? "heading-menu" : string.Empty %>"></div></div>
         <div class="arrow-header"></div>
     </div>
     <nav class="pushy pushy-left pushy-submenu-closed">

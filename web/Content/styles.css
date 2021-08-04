@@ -2019,6 +2019,23 @@ article {
         padding: 0;
     }
 
+    .menu-header {
+        display: none;
+    }
+
+    .heading-menu {
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        text-transform: uppercase;
+    }
+
+    .heading-menu::before {
+        content: "Menu";
+    }
+
     b {
         word-break: break-all;
     }
