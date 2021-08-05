@@ -4,10 +4,9 @@
     <span class="hdr">How to integrate online editors into your own website on PHP</span>
 </h1>
 
-<h2>Introduction</h2>
+<h2>Overview</h2>
 <p class="dscr">
-    To integrate <b>ONLYOFFICE online editors</b> into your own website on <b>PHP</b> you need to download and install ONLYOFFICE editors on your local server and use the <a href="<%= Url.Action("demopreview") %>">PHP example</a> for their integration.
-    We will show you how to run the PHP example on <a href="#Windows">Windows OS</a> and <a href="#Linux">Linux OS</a>.
+    This example will help you integrate ONLYOFFICE Docs into your web application written in PHP.
 </p>
 
 <div class="note">
@@ -15,16 +14,14 @@
     <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
 </div>
 
-<p>This guide will show you the sequence of actions to integrate the editors successfully.</p>
-
-<h2 id="Windows" class="copy-link">Running the example on Windows OS</h2>
-<h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Download and install Document Server</h2>
-<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
+<h2 id="Windows" class="copy-link">For Windows</h2>
+<h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
+<p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
 <p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_php_example">install Document Server for Windows</a>.</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP example</a> from our site.</p>
-<p>You need to connect the editors to your website. For that specify the path to the editors installation in the <em>config.php</em> file:</p>
+<p>You need to connect the editors to your website. Specify the path to the editors installation in the <em>config.php</em> file:</p>
 <pre>$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
@@ -33,7 +30,7 @@
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
 <p>
     You can use any web server capable of running PHP code to run the sample.
-    We will demonstrate how to run the PHP sample using the <b>Internet Information Services (IIS)</b> web server.
+    We will demonstrate how to run the PHP example using the <b>Internet Information Services (IIS)</b> web server.
     To set up and configure PHP on IIS, <b>PHP Manager for IIS</b> will be used.
 </p>
 
@@ -85,7 +82,7 @@
 </ol>
 <p>After IIS manager configuration is complete, everything is ready for running the PHP example.</p>
 
-<h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Running your website with the editors</h2>
+<h2 id="win-5" class="copy-link"><span class="style_step">Step 5. </span>Run your website with the editors</h2>
 <ol>
     <li>
         <p>Add your website in the IIS Manager.</p>
@@ -105,18 +102,18 @@
     </li>
 </ol>
 
-<h2 id="win-6" class="copy-link"><span class="style_step">Step 6. </span>Checking accessibility</h2>
+<h2 id="win-6" class="copy-link"><span class="style_step">Step 6. </span>Check accessibility</h2>
 <p>
     In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
-    And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+    Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
 </p>
 
 <p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
 
 
-<h2 id="Linux" class="copy-link">Running the example on Linux OS</h2>
-<h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Download and install Document Server</h2>
-<p>First, download the <a href="<%= Url.Action("demopreview") %>"><b>ONLYOFFICE Editors</b></a> (the ONLYOFFICE Document Server).</p>
+<h2 id="Linux" class="copy-link">For Linux</h2>
+<h2 id="linux-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
+<p>Download and install <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> (packaged as Document Server).</p>
 <p>See the detailed guide to learn how to <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_php_example">install Document Server for Linux</a>.</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
@@ -153,10 +150,10 @@ $$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";
     </li>
 </ol>
 
-<h2 id="linux-3" class="copy-link"><span class="style_step">Step 3. </span>Checking accessibility</h2>
+<h2 id="linux-3" class="copy-link"><span class="style_step">Step 3. </span>Check accessibility</h2>
 <p>
     In case the example and Document Server are installed on different computers, make sure that your server with the example installed has access to the Document Server with the address which you specify instead of <b>documentserver</b> in the configuration files.
-    And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
+    Make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
 </p>
 
 <p>If you integrated the editors successfully the result should look like the <a href="<%= Url.Action("demopreview") %>#DemoPreview">demo preview</a> on our site.</p>
