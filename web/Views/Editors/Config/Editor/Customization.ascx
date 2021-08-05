@@ -189,7 +189,7 @@
         <tr class="tablerow">
             <td id="customer" class="copy-link">customer<span class="required">*</span></td>
             <td>
-                Contains the information which will be displayed int the editor <b>About</b> section and visible to all the editor users.
+                Contains the information which will be displayed in the editor <b>About</b> section and visible to all the editor users.
                 The object has the following parameters:
                 <ul>
                     <li>
