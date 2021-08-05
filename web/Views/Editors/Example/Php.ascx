@@ -134,7 +134,7 @@
         <p>Edit the following line:</p>
 
         <pre>
-$$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";
+$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";
 </pre>
 
         <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
