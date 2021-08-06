@@ -2517,7 +2517,7 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRightMargin = oWorksheet.GetRightMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Right margin: \" + oRightMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"GetRightMargin.xlsx\");\nbuilder.CloseFile();",
 		},
 		"ApiWorksheet.getrows": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:A3\");\noRows = oRange.GetRows(1, 2);\noRows.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRows(\"1:4\").SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiWorksheet.getselection": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetSelection().SetValue(\"selected\");\nbuilder.SaveFile(\"xlsx\", \"GetSelection.xlsx\");\nbuilder.CloseFile();",
