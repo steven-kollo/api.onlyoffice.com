@@ -2235,7 +2235,7 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noHeight = oWorksheet.GetRange(\"A1\").GetRowHeight();\noWorksheet.GetRange(\"A1\").SetValue(\"Height: \");\noWorksheet.GetRange(\"B1\").SetValue(oHeight);\nbuilder.SaveFile(\"xlsx\", \"GetRowHeight.xlsx\");\nbuilder.CloseFile();",
 		},
 		"ApiRange.getrows": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:A3\");\noRows = oRange.GetRows(2);\noRows.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:C3\");\nfor (let i=1; i <= 3; i++) {\n    oRows = oRange.GetRows(i);    \n    oRows.SetValue(i);\n}\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiRange.gettext": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"text1\");\noWorksheet.GetRange(\"B1\").SetValue(\"text2\");\noWorksheet.GetRange(\"C1\").SetValue(\"text3\");\noRange = oWorksheet.GetRange(\"A1:C1\");\noText = oRange.GetText();\noWorksheet.GetRange(\"A3\").SetValue(\"Text from the cell A1: \" + oText);\nbuilder.SaveFile(\"xlsx\", \"GetText.xlsx\");\nbuilder.CloseFile();",
