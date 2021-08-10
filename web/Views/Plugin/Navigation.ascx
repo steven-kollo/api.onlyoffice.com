@@ -93,6 +93,9 @@
                                         <a href="<%= Url.Action("executemethod/getselectedtext") %>">GetSelectedText</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/getselectiontype") %>">GetSelectionType</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a>
                                     </li>
                                     <li>

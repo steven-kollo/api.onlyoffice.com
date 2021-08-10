@@ -655,6 +655,7 @@
     <Content Include="Views\Plugin\Executemethod\getfields.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfilehtml.ascx" />
     <Content Include="Views\Plugin\Executemethod\getselectedtext.ascx" />
+    <Content Include="Views\Plugin\Executemethod\getselectiontype.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortocontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortoend.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortostart.ascx" />
