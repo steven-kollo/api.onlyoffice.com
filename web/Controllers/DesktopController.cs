@@ -37,15 +37,20 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "addingdms",
-                "basic",
-                "changelog",
-                "debugging",
-                "faq",
                 "addingdms/configuring",
                 "addingdms/loginlogout",
                 "addingdms/notifications",
                 "addingdms/opening",
                 "addingdms/encryption",
+                "addingdms/encryption/keygeneration",
+                "addingdms/encryption/operations",
+                "basic",
+                "changelog",
+                "debugging",
+                "faq",
+                "howitworks",
+                "howitworks/encryptinglocaldocuments",
+                "howitworks/encryptingclouddocuments",
                 "plugins"
             };
 
@@ -64,7 +69,15 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View(GCustomSearch.Search(query, "desktop"));
         }
-
+        
+        public ActionResult Addingdms(string catchall)
+        {
+            if (!_actionMap.Contains("addingdms/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Addingdms", (object) catchall);
+        }
 
         public ActionResult Basic()
         {
@@ -81,38 +94,18 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Encryption()
-        {
-            return View();
-        }
-
         public ActionResult Faq()
         {
             return View();
         }
 
-        public ActionResult Addingdms(string catchall)
+        public ActionResult Howitworks(string catchall)
         {
-            if (!_actionMap.Contains("addingdms/" + catchall, StringComparer.OrdinalIgnoreCase))
+            if (!_actionMap.Contains("howitworks/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
             }
-            return View("Addingdms", (object) catchall);
-        }
-
-        public ActionResult Loginlogout()
-        {
-            return View();
-        }
-
-        public ActionResult Notifications()
-        {
-            return View();
-        }
-
-        public ActionResult Opening()
-        {
-            return View();
+            return View("Howitworks", (object) catchall);
         }
 
         public ActionResult Plugins()
