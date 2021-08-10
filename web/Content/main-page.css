@@ -192,7 +192,7 @@
 .api_users_block a {
     color: #333;
     text-decoration: none;
-}
+} 
 
 .programs-list-title {
     font-weight: 700;
@@ -230,6 +230,21 @@
     padding: 0 32px 0 32px;
 }
 
+.api_col_wrapper {
+    display: flex;
+    max-width: 1120px;
+    width: 100%;
+    align-items: flex-start;
+    margin: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+.api_col_wrapper.showing{
+    display:none;
+}
+
 @media screen and (max-width: 1024px) {
     .icon-program-block {
         max-width: 580px;
@@ -241,6 +256,7 @@
     .body-block {
         max-width: 928px;
     }
+}
 
 @media screen and (max-width: 769px) {
     body.main-body {
@@ -253,12 +269,39 @@
 }
 
 @media screen and (max-width: 500px) {
+    .ip_main_part {
+        margin: 0;
+    }
+
+    .api_block_links .api_users_block {
+        display: none;
+    }
+
+    .product-link-column{
+        display:block;
+    }
+
+    .api_products.col_1 {
+        margin-right: 16px;
+        width: 50%;
+    }
+
+    .api_col_wrapper.showing {
+        display: flex;
+    }
+
+    .api_products a {
+        color: #333;
+        text-decoration: none;
+    }
+
     .icon-program-block {
         max-width: 100%;
     }
 
     .body-block {
         display: block;
+        max-width: 300px;
     }
 
     body.main-body {
@@ -267,7 +310,7 @@
     }
 
     .ip_main_part {
-        width: 90%
+        width: 100%
     }
 
     .products-info {
@@ -275,11 +318,43 @@
         margin: auto;
         padding: 40px 0;
     }
+
+    .pp_info_block {
+        padding: 32px 16px 0 16px;
+    }
+
+    .long {
+        padding-left: 16px;
+    }
+
+    .api_block_links .api_users_block {
+        padding: 0 16px;
+    }
 }
 
 @media screen and (max-width: 380px) {
-    .api_block_links .api_users_block {
-        grid-template-columns: 1fr;
+
+    /*.api_block_links .api_users_block {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-between;
+        width: 100%;
         grid-gap: 0px;
+        height: 100%;
     }
+
+    .product-link-column {
+        width: 50%;
+    }
+
+    .product-link-column:nth-child(2n+1) {
+        order: 2;
+    }
+
+    .product-link-column:nth-child(2n) {
+        order: 1;
+        position: absolute;
+        right: 0;
+        margin-bottom: 10px;
+    }*/
 }
