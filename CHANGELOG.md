@@ -1,5 +1,7 @@
 # Change Log
 
+- plugins: restructured the config.json page and added navigation to it
+- plugins: updated config parameters
 - plugins: added the GetSelectionType method
 - editors: conversion from djvu to the image formats
 - editors: added the format parameter to the downloadAs method

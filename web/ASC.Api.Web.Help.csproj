@@ -670,6 +670,7 @@
     <Content Include="Views\Plugin\Localization.aspx" />
     <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Macros\Macros.aspx" />
+    <Content Include="Views\Plugin\Icons.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
     <Content Include="Views\Plugin\callCommand.aspx" />
     <Content Include="Views\Plugin\callModule.aspx" />
@@ -692,6 +693,7 @@
     <Content Include="Views\Plugin\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
     <Content Include="Views\Plugin\Types.aspx" />
+    <Content Include="Views\Plugin\Variations.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />
     <Content Include="Views\Editors\Config\Default.ascx" />
     <Content Include="Views\Editors\Conversion.aspx" />
