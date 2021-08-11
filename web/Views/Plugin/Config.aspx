@@ -21,6 +21,7 @@
         <ul class="columns-4" style="list-style: none;">
             <li><a href="#baseUrl">baseUrl</a></li>
             <li><a href="#guid">guid</a></li>
+            <li><a href="#minVersion">minVersion</a></li>
             <li><a href="#help">help</a></li>
             <li><a href="#name">name</a></li>
             <li><a href="#nameLocale">nameLocale</a></li>
@@ -77,6 +78,12 @@
                 <td>Plugin identifier. It <b>must</b> be of the <em>asc.{UUID}</em> type.</td>
                 <td>string</td>
                 <td>"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="minVersion" class="copy-link">minVersion</td>
+                <td>The minimum supported editors version.</td>
+                <td>string</td>
+                <td>"6.3.0"</td>
             </tr>
             <tr class="tablerow">
                 <td id="help" class="copy-link">help</td>
@@ -287,6 +294,7 @@
     <pre>{
         "baseUrl": "",
         "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+        "minVersion": "6.3.0",
         "help": "",
         "name": "plugin name",
         "nameLocale": {
