@@ -664,6 +664,7 @@
     <Content Include="Views\Plugin\Executemethod\removeselectedcontent.ascx" />
     <Content Include="Views\Plugin\Executemethod\searchandreplace.ascx" />
     <Content Include="Views\Plugin\Executemethod\selectcontentcontrol.ascx" />
+    <Content Include="Views\Plugin\Executemethod\setdisplaymodeinreview.ascx" />
     <Content Include="Views\Plugin\Objects.aspx" />
     <Content Include="Views\Plugin\inputHelper.aspx" />
     <Content Include="Views\Plugin\Localization.aspx" />

@@ -189,6 +189,10 @@
             <td>This method allows to select the specified content control.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a></td>
+            <td>This method allows to set the display mode for track changes.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a></td>
             <td>This method allows to set macros to the document.</td>
         </tr>

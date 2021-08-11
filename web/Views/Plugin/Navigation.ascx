@@ -141,6 +141,9 @@
                                         <a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">SelectContentControl</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a>
                                     </li>
                                     <li>

@@ -81,6 +81,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/removeselectedcontent",
                 "executemethod/searchandreplace",
                 "executemethod/selectcontentcontrol",
+                "executemethod/setdisplaymodeinreview",
                 "getInputHelper",
                 "loadModule",
                 "resizeWindow",
