@@ -134,13 +134,13 @@
             </tr>
             <tr class="tablerow">
                 <td>variations.initData</td>
-                <td>Is always equal to <em>""</em> - this is the data which is sent from the editor to the plugin at the plugin start (e.g. if <em>initDataType == "text"</em>, the plugin will receive the selected text when run).</td>
+                <td>Is usually equal to <em>""</em> - this is the data which is sent from the editor to the plugin at the plugin start (e.g. if <em>initDataType == "text"</em>, the plugin will receive the selected text when run). It may also be equal to <em>encryption</em> in the encryption plugins.</td>
                 <td>string</td>
                 <td>""</td>
             </tr>
             <tr class="tablerow">
                 <td>variations.initDataType</td>
-                <td>The data type selected in the editor and sent to the plugin: <b>text</b> - the text data, <b>html</b> - HTML formatted code, <b>ole</b> - OLE object data, <b>none</b> - no data will be send to the plugin from the editor.</td>
+                <td>The data type selected in the editor and sent to the plugin: <b>text</b> - the text data, <b>html</b> - HTML formatted code, <b>ole</b> - OLE object data, <b>desktop</b> - the desktop editor data, <b>destop-external</b> - the main page data of the desktop app (system messages), <b>none</b> - no data will be send to the plugin from the editor.</td>
                 <td>string</td>
                 <td>"ole"</td>
             </tr>
@@ -149,6 +149,12 @@
                 <td>Specifies if the plugin watches the text selection events in the editor window.</td>
                 <td>boolean</td>
                 <td>true</td>
+            </tr>
+            <tr class="tablerow">
+                <td>variations.cryptoMode</td>
+                <td>The encryption plugin ID as there are several encryption plugins.</td>
+                <td>string</td>
+                <td>"1"</td>
             </tr>
             <tr class="tablerow">
                 <td>variations.isDisplayedInViewer</td>
@@ -217,6 +223,30 @@
                 <td>array of string</td>
                 <td></td>
             </tr>
+            <tr class="tablerow">
+                <td>variations.cryptoDisabledForInternalCloud</td>
+                <td>
+                    Specifies if the encryption for the ONLYOFFICE clouds is disabled or not.
+                </td>
+                <td>string</td>
+                <td>"true"</td>
+            </tr>
+            <tr class="tablerow">
+                <td>variations.cryptoDisabledForExternalCloud</td>
+                <td>
+                    Specifies if the encryption for the third-party clouds is disabled or not.
+                </td>
+                <td>string</td>
+                <td>"true"</td>
+            </tr>
+            <tr class="tablerow">
+                <td>variations.cryptoDisabledOnStart</td>
+                <td>
+                    Specifies if the mode is reset on restart or not.
+                </td>
+                <td>string</td>
+                <td>"true"</td>
+            </tr>
         </tbody>
     </table>
 
@@ -262,6 +292,7 @@
                 "initData": "",
                 "initDataType": "ole",
                 "initOnSelectionChanged": true,
+                "cryptoMode": "1",
                 "isDisplayedInViewer": true,
                 "isInsideMode": false,
                 "isModal": true,
@@ -271,7 +302,10 @@
                 "isVisual": false,
                 "url": "index.html",
                 "size": [600, 700],
-                "events": ["onClick"]
+                "events": ["onClick"],
+                "cryptoDisabledForInternalCloud": "true",
+                "cryptoDisabledForExternalCloud": "true",
+                "cryptoDisabledOnStart": "true"
             }
         ]
     };</pre>
