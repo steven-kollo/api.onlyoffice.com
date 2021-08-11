@@ -18,8 +18,8 @@
         on the <b>Plugins</b> tab or in the plugin <b>Settings</b> window. Here you can find all the available plugin icon parameters.</p>
 
 
-    <h2 id="scaling" class="copy-link">Scaling</h2> 
-    
+    <h2 id="scaling" class="copy-link">Scaling</h2>
+
     <p>There are three scaling types of plugin icons: 100%, 150% and 200%. For each type the icon has its <em>normal</em> state:</p>
 
     <pre>
@@ -39,8 +39,8 @@
     </ol>
 
 
-    <h2 id="style" class="copy-link">Style</h2> 
-    
+    <h2 id="style" class="copy-link">Style</h2>
+
     <p>The <em>style</em> parameter is also used to specify the icon appearance:</p>
 
     <table class="table">
