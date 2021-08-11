@@ -73,6 +73,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/getfilehtml",
                 "executemethod/getselectedtext",
                 "executemethod/getselectiontype",
+                "executemethod/getversion",
                 "executemethod/movecursortocontentcontrol",
                 "executemethod/movecursortoend",
                 "executemethod/movecursortostart",

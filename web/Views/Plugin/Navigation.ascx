@@ -104,6 +104,9 @@
                                         <a href="<%= Url.Action("executemethod/getselectiontype") %>">GetSelectionType</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/getversion") %>">GetVersion</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a>
                                     </li>
                                     <li>
