@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: added the SetDisplayModeInReview and CoAuthoringChatSendMessage methods
 - editors: conversion from djvu to the image formats
 - editors: added the format parameter to the downloadAs method
 - editors: conversion to OOXML and ODF templates

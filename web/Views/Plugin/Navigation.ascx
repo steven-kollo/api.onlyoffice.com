@@ -60,6 +60,9 @@
                                         <a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
                                     </li>
                                     <li>

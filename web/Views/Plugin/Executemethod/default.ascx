@@ -81,8 +81,12 @@
             <td>This method allows to change the specified comment.</td>
         </tr>
         <tr class="tablerow">
-            <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
-            <td>This method allows to edit an OLE object in the document.</td>
+            <td><a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a></td>
+            <td>This method allows to change the specified comment.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a></td>
+            <td>This method allows to send a message to the co-authoring chat.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/endaction") %>">EndAction</a></td>
