@@ -1856,6 +1856,10 @@ article {
         margin: 12px 40px 0 0;
     }
 
+    .treeview ul {
+        padding: 0;
+    }
+
     .arrow-header {
         background: url(img/sprite.svg) no-repeat 0 -102px transparent;
         fill: #fff;
@@ -1991,10 +1995,22 @@ article {
         height: calc(100vh - 48px);
     }
 
+    .hidden-body .close-menu {
+        background-image: url("img/close.svg");
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        z-index: 101;
+        position: absolute;
+        display: block;
+        right: 10px;
+        top: 57px;
+    }
+
     .layout-table-content {
         border: 0 none;
         margin: 0;
-        padding: 0 16px 0;
+        padding: 0 16px 16px;
         width: auto;
     }
 
@@ -2036,12 +2052,80 @@ article {
         content: "Menu";
     }
 
-    b {
-        word-break: break-all;
+    b, i, em {
+        word-break: break-word;
+    }
+
+    .video-link {
+        float: none;
+    }
+
+    #generateButton {
+        margin: 10px 0px;
+    }
+
+    .document_structure {
+        padding: 10px 5px 20px;
+    }
+
+    .document_structure.image_node, .document_structure.chart_node, .document_structure.shape_node, 
+    .document_structure.tablecell_node, .document_structure.tablecell_node .document_structure.chart_node, 
+    .document_structure.tablecell_node .document_structure.image_node, .document_structure.tablecell_node .document_structure.shape_node {
+    width: 80%;
+    }
+
+    .builder-run {
+        float: none;
+    }
+
+    .own-data {
+        float: none;
+        width: 100%;
+    }
+
+    .builder-code {
+        width: 100%;
     }
 
     img {
         width: auto;
-        height: 100%
+        height: auto;
+    }
+
+    .copyReserved {
+        padding: 25px 0;
+        margin: 0;
+    }
+
+    h2 + .copy-code,
+    h2 + .copy-code:active {
+        padding: 10px;
+    }
+
+    a, a:hover, a:visited {
+        word-break: break-word;
+    }
+
+    .demo-tab-panel a {
+        height: 65px;
+    }
+
+    ol {
+        padding: 8px 0 8px 24px;
+        margin: 0;
+    }
+
+    ul {
+        padding: 8px 0 8px 24px;
+        margin: 0;
+    }
+
+    .list-buttons {
+        padding: 0;
+        margin: 0;
+    }
+
+    .note, note {
+        padding: 10px 0px 10px 20px;
     }
 }
