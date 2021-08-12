@@ -16,6 +16,10 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+    <h1>
+        <span class="hdr">Frequently asked questions: Plugins and macros</span>
+    </h1>
+
     <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="plugins_1">
     <dt>How to install plugins to the ONLYOFFICE editors?</dt>
