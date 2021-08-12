@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: information about threaded comments
 - editors: commentGroups on try page
 - editors: added the Commenting page
 - editors: added document.permissions.commentGroups
