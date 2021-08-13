@@ -71,6 +71,14 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="filetype" class="copy-link">filetype</td>
+                <td>
+                    Defines an extension of the document that is downloaded from the link specified with the <a href="#url">url</a> parameter.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="forcesavetype" class="copy-link">forcesavetype</td>
                 <td>
                     Defines the type of initiator when the <a href="<%= Url.Action("save") %>#forcesave">force saving</a> request is performed.

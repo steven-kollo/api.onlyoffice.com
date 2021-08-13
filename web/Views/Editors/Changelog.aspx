@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="65" class="copy-link">Version 6.5</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("callback") %>#filetype">filetype</a> parameter to the <em>Callback handler</em>.</li>
         <li>Added the <em>FileType</em> field to the <a href="<%= Url.Action("conversionapi") %>#response">conversion response</a>.</li>
         <li>Added <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion</a> to OOXML with macros (docm, xlsm, pptm).</li>
     </ul>
