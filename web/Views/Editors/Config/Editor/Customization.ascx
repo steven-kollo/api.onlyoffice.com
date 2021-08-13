@@ -33,6 +33,7 @@
         <li><a href="#macrosMode">macrosMode</a></li>
         <li><a href="#mentionShare">mentionShare</a></li>
         <li><a href="#plugins">plugins</a></li>
+        <li><a href="#review">review</a></li>
         <li><a href="#reviewDisplay">reviewDisplay</a></li>
         <li><a href="#showReviewChanges">showReviewChanges</a></li>
         <li><a href="#spellcheck">spellcheck</a></li>
@@ -503,6 +504,60 @@
             <td>true</td>
         </tr>
         <tr>
+            <td id="review" class="copy-link">review</td>
+            <td>
+                Contains the information about the review mode. 
+                The object has the following parameters:
+                <ul>
+                    <li>
+                        <b>hideReviewDisplay</b> - defines if the <b>Display mode</b> button is displayed or hidden on the <b>Collaboration</b> tab. The default value is <b>false</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false;
+                    </li>
+                    <li>
+                        <b>showReviewChanges</b> - defines if the review changes panel is automatically displayed or hidden when the editor is loaded. The default value is <b>false</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false;
+                    </li>
+                    <li>
+                        <b>reviewDisplay</b> - defines the review editing mode which will be used when the document is opened for viewing. 
+                        It will only be available for the document editor if <a href="<%= Url.Action("config/editor") %>#mode">mode</a> is set to <b>view</b>. 
+                        Can take the following values:
+                        <br />–	<b>final</b> - the document is displayed with all the proposed changes applied;
+                        <br />–	<b>markup</b> - the document is displayed with proposed changes highlighted;
+                        <br />–	<b>original</b> - the original document is displayed without the proposed changes.
+                        <br />The default value is <b>original</b>,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "original";
+                    </li>
+                    <li>
+                        <b>trackChanges</b> - defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless 
+                        of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter 
+                        (the review mode is changed only for the current user). If the parameter is <em>undefined</em>, the <em>document.permissions.review</em> value is used 
+                        (for all the document users),
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true.
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">The <a href="#showReviewChanges">showReviewChanges</a>, <a href="#reviewDisplay">reviewDisplay</a>, <a href="#trackChanges">trackChanges</a> parameters are deprecated since version 6.5. 
+                Please use the <em>review</em> parameter instead.</div>
+            </td>
+        </tr>
+        <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
                 Defines the review editing mode which will be used when the document is opened for viewing.
@@ -520,8 +575,9 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
+                <div class="note">Deprecated since version 6.5. Please use the <a href="#review">review</a> parameter instead.</div>
                 <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
             </td>
         </tr>
         <% if (license)
@@ -536,7 +592,7 @@
             <td>true</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="showReviewChanges" class="copy-link">showReviewChanges</td>
             <td>
                 Defines if the review changes panel is automatically displayed or hidden when the editor is loaded.
@@ -544,6 +600,11 @@
             </td>
             <td>boolean</td>
             <td>false</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 6.5. Please use the <a href="#review">review</a> parameter instead.</div>
+            </td>
         </tr>
         <tr>
             <td id="spellcheck" class="copy-link">spellcheck</td>
@@ -628,7 +689,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="trackChanges" class="copy-link">trackChanges</td>
             <td>
                 Defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
@@ -636,6 +697,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 6.5. Please use the <a href="#review">review</a> parameter instead.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="uiTheme" class="copy-link">uiTheme</td>
@@ -755,11 +821,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "macrosMode": "warn",
             "mentionShare": true,
             "plugins": true,
-            "reviewDisplay": "original",
+            "review": {
+                "hideReviewDisplay": false,
+                "showReviewChanges": false,
+                "reviewDisplay": "original",
+                "trackChanges": true
+            },
             <% if (license)
                { %>"rightMenu": true,
-            <% } %>"showReviewChanges": false,
-            "spellcheck": true,
+            <% } %>"spellcheck": true,
             <% if (license)
                { %>"statusBar": true,
             <% } %><%--"submitForm": true,--%>
@@ -767,7 +837,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 { %>"toolbar": true,
             <% } %>"toolbarHideFileName": false,
             "toolbarNoTabs": false,
-            "trackChanges": false,
             "uiTheme": "theme-dark",
             "unit": "cm",
             "zoom": 100

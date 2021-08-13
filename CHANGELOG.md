@@ -1,5 +1,8 @@
 # Change Log
 
+- editors: added editorConfig.customization.review
+
+## 2.3.0
 - editors: commentGroups on try page
 - editors: added the Commenting page
 - editors: added document.permissions.commentGroups
