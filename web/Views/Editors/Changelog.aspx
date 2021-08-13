@@ -16,6 +16,10 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="65" class="copy-link">Version 6.5</h2>
+    <ul>
+    </ul>
+
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
         <li>Added the <em>simple</em> value to the <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a> parameter.</li>
