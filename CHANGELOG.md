@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the FileType field to the conversion response
 - editors: conversion to OOXML with macros
 
 ## 2.3.0

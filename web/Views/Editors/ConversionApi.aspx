@@ -1185,6 +1185,7 @@
     &lt;EndConvert&gt;True&lt;/EndConvert&gt;
     &lt;FileUrl&gt;https://documentserver/url-to-converted-document.pdf&lt;/FileUrl&gt;
     &lt;Percent&gt;100&lt;/Percent&gt;
+    &lt;FileType&gt;docm&lt;/FileType&gt;
 &lt;/FileResult&gt;
 </pre>
     <div class="header-gray">Sample of the response in JSON format</div>
@@ -1193,7 +1194,8 @@
 {
     "endConvert": true,
     "fileUrl": "https://documentserver/url-to-converted-document.pdf",
-    "percent": 100
+    "percent": 100,
+    "FileType": "docm"
 }
 </pre>
 
