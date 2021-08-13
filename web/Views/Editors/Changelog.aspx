@@ -16,6 +16,11 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="65" class="copy-link">Version 6.5</h2>
+    <ul>
+        <li>Added <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion</a> to OOXML with macros (docm, xlsm, pptm).</li>
+    </ul>
+
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a> field.</li>
