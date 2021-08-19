@@ -1847,6 +1847,10 @@ article {
         min-width: 0px;
     }
 
+    .columns-4 {
+        column-count: 2;
+    }
+
     .bottommenu {
         padding: 16px 0px 0 16px;
         text-align: left;
@@ -1928,7 +1932,7 @@ article {
         padding: 0 20px;
     }
 
-    .mobile_table_contents span {
+     .mobile_table_contents span {
         display: inline-block;
         margin-top: 0px;
         padding: 6px 30px 6px 20px;
@@ -1941,7 +1945,7 @@ article {
         text-transform: uppercase;
         background-color: transparent;
         height: 100%;
-    }
+     }
 
     .background-body {
         background: #fff;
@@ -2068,10 +2072,10 @@ article {
         padding: 10px 5px 20px;
     }
 
-    .document_structure.image_node, .document_structure.chart_node, .document_structure.shape_node, 
-    .document_structure.tablecell_node, .document_structure.tablecell_node .document_structure.chart_node, 
+    .document_structure.image_node, .document_structure.chart_node, .document_structure.shape_node,
+    .document_structure.tablecell_node, .document_structure.tablecell_node .document_structure.chart_node,
     .document_structure.tablecell_node .document_structure.image_node, .document_structure.tablecell_node .document_structure.shape_node {
-    width: 80%;
+        width: 80%;
     }
 
     .builder-run {
@@ -2126,6 +2130,58 @@ article {
     }
 
     .note, note {
-        padding: 10px 0px 10px 20px;
+        padding: 10px 0px 10px 12px;
+    }
+
+    .table-conversion-matrix-text, .table-conversion-matrix-spreadsheet, .table-conversion-matrix-presentation {
+        display: block;
+        width: 100vw;
+        overflow-x: scroll;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .try-now-table thead {
+        display: none;
+    }
+
+    .try-now-table {
+        display: block;
+    }
+
+    .try-now-table td {
+        display: inline-table;
+        margin: 10px;
+        min-width: 83px;
+    }
+
+    .try-now-table .button {
+        width: 48px;
+    }
+
+    table tr {
+        display: block;
+    }
+
+    table td {
+        display: flex;
+        font-size: 14px;
+    }
+
+    thead th:not(:first-child) {
+        display: none;
+    }
+
+    td, th {
+        display: block;
+    }
+
+    td[data-th]:before {
+         content: attr(data-th);
+    }
+
+    table td::before {
+     content: attr(data-label);
+     font-weight: bold;
     }
 }
