@@ -25,7 +25,7 @@
         <li><a href="<%= Url.Action("alfresco") %>">ONLYOFFICE Alfresco module package</a></li>
         <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE integration app</a></li>
-        <li><a href="<%= Url.Action("HumHub") %>">ONLYOFFICE Connector for HumHub</a></li>
+        <li><a href="<%= Url.Action("HumHub") %>">HumHub ONLYOFFICE connector</a></li>
         <li><a href="<%= Url.Action("liferay") %>">Liferay ONLYOFFICE connector</a></li>
         <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo ONLYOFFICE integration plugin</a></li>
