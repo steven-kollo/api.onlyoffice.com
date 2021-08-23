@@ -8,7 +8,7 @@
 <p>To protect your local documents, spreadsheets and presentations, encrypt them with a simple symmetric encryption plugin. The steps below explain how to do it.</p>
 
 
-<h2>Step 1. Creating Encryption plugin for the editor</h2>
+<h2>Step 1. Creating the Encryption plugin for the editor</h2>
 
 <p>To build the <b>Encryption</b> plugin, you need to create three files:</p>
 <ul>
@@ -17,7 +17,7 @@
     <li>JSON file with config.</li>
 </ul>
 
-<p>More information about the plugin structure you can find <a href="<%= Url.Action("structure", "plugin") %>">here</a>.</p>
+<p>More information about the plugin structure can be found <a href="<%= Url.Action("structure", "plugin") %>">here</a>.</p>
 <p>Let&#8217;s have a look at the config:</p>
 <pre>
 {
@@ -95,18 +95,18 @@
 
 <p>As we can see from the code above, all files will be encrypted with one password - <em>{my-super-long-password}</em>. 
 The <a href="<%= Url.Action("executemethod/onencryption", "plugin") %>">OnEncryption</a>, <a href="<%= Url.Action("executemethod/startaction", "plugin") %>">StartAction</a>, 
-<a href="<%= Url.Action("executemethod/endaction", "plugin") %>">EndAction</a> methods you can find in the <b>Plugins and macros API documentation</b>.</p>
+<a href="<%= Url.Action("executemethod/endaction", "plugin") %>">EndAction</a> methods can be found in the <b>Plugins and macros API documentation</b>.</p>
 
 <note>Please note that the <em>encryptData</em> and <em>decryptData</em> types of the <em>OnEncryption</em> method are not relevant for local files.</note>
 
 
-<h2>Step 2. Creating UI plugin for the app</h2>
+<h2>Step 2. Creating the UI plugin for the app</h2>
 
-<p>The <b>Encryption</b> plugin has no interface and does not start by default. It works only with a document where it is being run (in one tab in the app). 
-To work with all the documents opened or created in different tabs on the ONLYOFFICE desktop, the <b>UI</b> plugin for the app should be created. 
+<p>The <b>Encryption</b> plugin has no interface and can&#8217;t run by default. It works only within a document where it is opened (in one tab of the app). 
+To work with all the documents opened or created in different tabs of the ONLYOFFICE desktop, the <b>UI</b> plugin for the app should be created. 
 It helps to use the <b>Encryption</b> plugin when necessary for the whole app.</p>
 
-<p>This plugin cannot access editing functions but has almost the same config:</p>
+<p>This plugin can&#8217;t access the editing features but has almost the same config:</p>
 <pre>
 {
     "name" : "Encryption",
@@ -132,7 +132,7 @@ It helps to use the <b>Encryption</b> plugin when necessary for the whole app.</
 }
 </pre>
 
-<p>The <em>index.html</em> file will look the following way:</p>
+<p>The <em>index.html</em> file will look as follows:</p>
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -151,7 +151,7 @@ It helps to use the <b>Encryption</b> plugin when necessary for the whole app.</
 <p>With it, we will get a new tab called <b>Encryption</b> on the main app page:</p>
 <img alt="Encryption exabled" width="834px" src="<%= Url.Content("~/content/img/desktop/encryption-enabled.png") %>" />
 
-<p>Enable encryption on ticking the checkbox:</p>
+<p>Enable encryption by ticking the checkbox:</p>
 <pre>
 window.onload = function() {
   const ASC_DESKTOP_EDITOR_DEFAULT_MODE = 0;
@@ -179,19 +179,19 @@ window.onload = function() {
 
 <h2>Step 3. Adding plugins to the desktop app</h2>
 
-<p>Copy folders with plugins to the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
+<p>Copy the folders with plugins to the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
 <ul style="list-style: none;">
         <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
         <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\</em></li>
 </ul>
 <p>It is important that you use plugins GUID as a folder name.</p>
-<p>Detailed instructions you can find <a href="<%= Url.Action("installation/desktop", "plugin") %>">here</a>.</p>
+<p>Detailed instructions can be found <a href="<%= Url.Action("installation/desktop", "plugin") %>">here</a>.</p>
 
 
 <h2>Step 4. Working with encryption plugins</h2>
 
-<p>After adding both plugins to the app, a new tab <b>Encryption</b> will be displayed. If you tick the checkbox there, all files you create and edit will be encrypted with the password:</p>
+<p>After adding both plugins to the app, a new <b>Encryption</b> tab will be displayed. If you tick the checkbox there, all files you create and edit will be encrypted with the password:</p>
 <ul>
-    <li>If the encryption stays enabled, a password on opening the protected files will not be required (<em>getPasswordByFile</em> will be called).</li>
+    <li>If the encryption remains enabled, a password will not be required while opening the protected files (<em>getPasswordByFile</em> will be called).</li>
     <li>If the encryption is disabled or files are opened in another app, a password will be asked.</li>
 </ul>
