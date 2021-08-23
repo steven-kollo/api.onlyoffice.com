@@ -31,7 +31,7 @@
         <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("owncloud") %>">ownCloud ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("plone") %>">Plone ONLYOFFICE integration plugin</a></li>
-        <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE integration plugin</a></li>
+        <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE integration solution</a></li>
     </ul>
 
     <br />
