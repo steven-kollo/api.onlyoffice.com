@@ -347,13 +347,19 @@
             <td id="hideNotes" class="copy-link">hideNotes</td>
             <td>
                 Defines if the note panel is displayed or hidden on first loading.
-                The default value is <b>false</b>.
+                The default value is <b>false</b>. This parameter is available for the presentation editor only.
             </td>
             <td>boolean</td>
             <td>false</td>
-        </tr><tr class="tablerow tablerow-note">
+        </tr>
+        <tr class="tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.hideNotes</em> parameter.</div>
+            </td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
             </td>
         </tr>
         <tr>
