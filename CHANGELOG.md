@@ -1,5 +1,6 @@
 # Change Log
 
+- macros: assigning macros to the graphic objects
 - plugins: added the SetDisplayModeInReview and CoAuthoringChatSendMessage methods
 - editors: conversion from djvu to the image formats
 - editors: added the format parameter to the downloadAs method

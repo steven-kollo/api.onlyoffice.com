@@ -370,6 +370,7 @@
     <Content Include="Content\img\php\manager.png" />
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
+    <Content Include="Content\img\plugins\assign-macro.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
