@@ -527,8 +527,9 @@
                         <b>reviewDisplay</b> - defines the review editing mode which will be used when the document is opened for viewing. 
                         It will only be available for the document editor if <a href="<%= Url.Action("config/editor") %>#mode">mode</a> is set to <b>view</b>. 
                         Can take the following values:
-                        <br />–	<b>final</b> - the document is displayed with all the proposed changes applied;
                         <br />–	<b>markup</b> - the document is displayed with proposed changes highlighted;
+                        <br />–	<b>simple</b> - the document is displayed with proposed changes highlighted, but the balloons are turned off;
+                        <br />–	<b>final</b> - the document is displayed with all the proposed changes applied;
                         <br />–	<b>original</b> - the original document is displayed without the proposed changes.
                         <br />The default value is <b>original</b>,
                         <br />
@@ -544,7 +545,15 @@
                         <br />
                         <b>type</b>: boolean,
                         <br />
-                        <b>example</b>: true.
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>hoverMode</b> - defines the review display mode: show changes by hover in tooltips (<b>true</b>) or by click in balloons (<b>false</b>). 
+                        The default value is <b>false</b>.
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false.
                     </li>
                 </ul>
             </td>
@@ -825,7 +834,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "hideReviewDisplay": false,
                 "showReviewChanges": false,
                 "reviewDisplay": "original",
-                "trackChanges": true
+                "trackChanges": true,
+                "hoverMode": false
             },
             <% if (license)
                { %>"rightMenu": true,
