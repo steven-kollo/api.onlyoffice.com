@@ -21,6 +21,17 @@
                 <p class="programs-list-title"><%: linkGroup.Key %></p>
                 <% foreach (var link in linkGroup.Value)
                    { %>
+                <% if (link.Item1 == "group") 
+                    { %>
+                <p class="programs-list spoiler_heading"><%: "more" %></p>
+                <div class="spoiler_code">
+                    <% for (int i=7; i<14; i++)
+                    { %>
+                        <p class="programs-list"><a href="<%= Url.Action(linkGroup.Value[i].Item2, product.Id) %>"><%: linkGroup.Value[i].Item1 %></a></p>
+                    <% } %>
+                </div>
+                <% break; %>
+                <% } %>
                 <p class="programs-list"><a href="<%= Url.Action(link.Item2, product.Id) %>"><%: link.Item1 %></a></p>
                 <% } %>
             </div>
