@@ -1,6 +1,7 @@
 # Change Log
 
 - editors: added the simple value to the editorConfig.customization.reviewDisplay
+- editors: information about threaded comments
 - editors: commentGroups on try page
 - editors: added the Commenting page
 - editors: added document.permissions.commentGroups

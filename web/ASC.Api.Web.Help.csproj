@@ -310,6 +310,8 @@
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
     <Content Include="Content\img\Editor\coedit.jpg" />
+    <Content Include="Content\img\Editor\coediting-mode.png" />
+    <Content Include="Content\img\Editor\comments-threaded.png" />
     <Content Include="Content\img\Editor\compare.png" />
     <Content Include="Content\img\Editor\compare-documents.png" />
     <Content Include="Content\img\Editor\conversion.jpg" />
@@ -322,6 +324,7 @@
     <Content Include="Content\img\Editor\e-error0.png" />
     <Content Include="Content\img\Editor\e-key.png" />
     <Content Include="Content\img\Editor\embedded.png" />
+    <Content Include="Content\img\Editor\hideNotes.png" />
     <Content Include="Content\img\Editor\history_open.png" />
     <Content Include="Content\img\Editor\info.png" />
     <Content Include="Content\img\Editor\nextcloud-local.jpg" />
