@@ -8,6 +8,9 @@
         <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
     <li>
+        <a href="<%= Url.Action("getdocs") %>">Get ONLYOFFICE Docs</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("try") %>">Try now</a>
     </li>
     <li>

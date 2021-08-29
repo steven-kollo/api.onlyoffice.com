@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Get ONLYOFFICE Docs page
 - plugins: restructured the config.json page and added navigation to it
 - plugins: updated config parameters
 - plugins: added the GetSelectionType and GetVersion methods

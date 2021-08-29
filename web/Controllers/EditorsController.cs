@@ -86,6 +86,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
+                "GetDocs",
                 "History",
                 "HowItWorks",
                 "HumHub",
@@ -236,6 +237,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("FAQ", (object)catchall);
+        }
+
+        public ActionResult GetDocs()
+        {
+            return View();
         }
 
         public ActionResult DemoPreview()
