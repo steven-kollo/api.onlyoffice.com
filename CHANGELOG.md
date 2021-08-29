@@ -3,6 +3,7 @@
 - plugins: restructured the config.json page and added navigation to it
 - plugins: updated config parameters
 - plugins: added the GetSelectionType and GetVersion methods
+- mobile view
 - editors: conversion from djvu to the image formats
 - editors: added the format parameter to the downloadAs method
 - editors: conversion to OOXML and ODF templates

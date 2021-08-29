@@ -26,6 +26,10 @@
             </div>
             <% } %>
         </div>
+        <div class="api_col_wrapper">
+            <div class="api_products col_1"></div>
+            <div class="api_products col_2"></div>
+        </div>
     </div>
     <% } %>
 </div>

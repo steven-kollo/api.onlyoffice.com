@@ -249,6 +249,7 @@
     <Content Include="Content\highlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\arrow-gray.svg" />
+    <Content Include="Content\img\close.svg" />
     <Content Include="Content\img\desktop\adding_plugins.png" />
     <Content Include="Content\img\desktop\connection_list.png" />
     <Content Include="Content\img\desktop\debugging.png" />
@@ -504,6 +505,7 @@
     <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\faq.js" />
     <Content Include="Scripts\filter-plugin.js" />
+    <Content Include="Scripts\menuselector.js" />
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />
