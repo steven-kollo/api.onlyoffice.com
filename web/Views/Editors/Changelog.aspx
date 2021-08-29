@@ -137,6 +137,7 @@
 
     <h2 id="51" class="copy-link">Version 5.1</h2>
     <ul>
+        <li>Added the <em>format</em> parameter to the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">document.permissions.modifyContentControl</a> field.</li>
         <li>Added conversion for <a href="<%= Url.Action("conversionapi") %>#text-matrix">OpenDocument Template</a> formats.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestClose">events.onRequestClose</a> event.</li>

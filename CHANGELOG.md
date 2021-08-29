@@ -11,6 +11,12 @@
 - editors: added the possibility to view the document history for the presentation files
 - editors: added editorConfig.customization.hideNotes
 - editors: added editorConfig.customization.uiTheme
+- plugins: restructured the config.json page and added navigation to it
+- plugins: updated config parameters
+- plugins: added the GetSelectionType and GetVersion methods
+- mobile view
+- editors: conversion from djvu to the image formats
+- editors: added the format parameter to the downloadAs method
 - editors: conversion to OOXML and ODF templates
 - portals: api v11.5.3
 - editors: how it works navigation
