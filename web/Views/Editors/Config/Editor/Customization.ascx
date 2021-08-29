@@ -511,12 +511,12 @@
         <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
-                Defines the review editing mode which will be used when the document is opened for viewing.
-                It will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>view</b>.
-                Can take the following values:
+                Defines the review editing mode in the document editor. 
+                This parameter can take the following values:
                 <ul>
-                    <li><b>final</b> - the document is displayed with all the proposed changes applied;</li>
                     <li><b>markup</b> - the document is displayed with proposed changes highlighted;</li>
+                    <li><b>simple</b> - the document is displayed with proposed changes highlighted, but the balloons are turned off;</li>
+                    <li><b>final</b> - the document is displayed with all the proposed changes applied;</li>
                     <li><b>original</b> - the original document is displayed without the proposed changes.</li>
                 </ul>
                 The default value is <b>original</b>.
@@ -527,7 +527,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
-                <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+                <img width="834px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
         <% if (license)
