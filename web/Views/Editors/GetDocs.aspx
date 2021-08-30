@@ -29,8 +29,7 @@
     <p>Before working with ONLYOFFICE Docs API documentation, it is recommended to make the following settings if necessary:</p>
     <ul>
         <li>switch ONLYOFFICE Docs to the HTTPS protocol for secure connection using <a href="https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx" target="_blank">SSL Certificates</a>;</li>
-        <li>add additional <a href="https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx" target="_blank">fonts</a> to ONLYOFFICE Docs to enhance the work with the editors;</li>
-        <li>download external themes for the application interface.</li>
+        <li>add additional <a href="https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx" target="_blank">fonts</a> to ONLYOFFICE Docs to enhance the work with the editors.</li>
     </ul>
 
 </asp:Content>
