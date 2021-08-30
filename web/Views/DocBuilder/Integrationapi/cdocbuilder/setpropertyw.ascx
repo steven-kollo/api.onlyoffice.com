@@ -12,6 +12,7 @@
                     <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilder.SetPropertyW</em> method is not used explicitly, the argument itself is used instead as an additional property for the executive, see the example below.</div>
                 
             <h2>Parameters:</h2>
+            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">

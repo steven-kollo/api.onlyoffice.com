@@ -30,7 +30,7 @@
     <p>See the available <em>window.Asc.plugin.info</em> object parameters below to find out more about them.</p>
     
     <div class="header-gray">Parameters</div>
-
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 150px;" />

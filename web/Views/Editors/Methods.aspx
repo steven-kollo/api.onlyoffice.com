@@ -48,6 +48,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <pre>
 docEditor.denyEditingRights(message);
 </pre>
+            <div id="mobile-content"></div>
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />

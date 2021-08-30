@@ -9,6 +9,7 @@
                     <p class="dscr">Open the document file which will be edited and saved afterwards.</p>
                 
             <h2>Parameters:</h2>
+            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">

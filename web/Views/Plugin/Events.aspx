@@ -42,6 +42,7 @@
         <p><b id="button" class="copy-link">button</b> - the function called when any of the plugin buttons is clicked. 
             It defines the buttons used with the plugin and the plugin behavior when they are clicked.</p>
         <div class="header-gray">Parameters</div>
+        <div id="mobile-content"></div>
         <table class="table">
             <colgroup>
                 <col style="width: 100px;" />

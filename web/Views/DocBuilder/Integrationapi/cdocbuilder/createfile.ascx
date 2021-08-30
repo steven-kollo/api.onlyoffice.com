@@ -9,7 +9,7 @@
             <p class="dscr">Create a new file. The type of the file which will be created needs to be set.</p>
              
             <h2>Parameters:</h2>
-
+            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">

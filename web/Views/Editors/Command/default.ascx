@@ -13,7 +13,7 @@
 <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
 <div class="header-gray">Parameters</div>
-
+<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />

@@ -37,6 +37,7 @@
     <% if (method.Params.Any(x => x.Visible))
        { %>
     <div id="methodParams">
+        <div id="mobile-content"></div>
         <table class="table">
             <colgroup>
                 <col style="width: 20%"/>

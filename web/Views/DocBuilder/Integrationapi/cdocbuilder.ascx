@@ -10,6 +10,7 @@
                   
 
             <h2>Methods</h2>
+            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">

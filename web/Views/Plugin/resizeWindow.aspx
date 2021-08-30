@@ -22,7 +22,7 @@
     <div class="note">This method is used for visual modal plugins only.</div>
 
     <div class="header-gray">Parameters</div>
-
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />

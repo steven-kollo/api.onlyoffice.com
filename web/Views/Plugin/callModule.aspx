@@ -20,7 +20,7 @@
     <p class="dscr">Defines the method used to execute a remotely located script following a link.</p>
 
     <div class="header-gray">Parameters</div>
-
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />

@@ -17,6 +17,7 @@
     <h1>
         <span class="hdr">Portals</span>
     </h1>
+    <div id="mobile-content"></div>
     <table class="table hover">
         <colgroup>
             <col style="width: 25%" />

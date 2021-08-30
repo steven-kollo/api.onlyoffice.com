@@ -15,7 +15,7 @@
         I.e. the request <a href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "portals") %>">api/2.0/people</a> can be appended with several parameters, 
         for example <a href="<%= Url.DocUrl("people", null, "get", "api/2.0/people", "portals") %>">api/2.0/people?startIndex=10&amp;count=25</a>
     </p>
-
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 25%"/>

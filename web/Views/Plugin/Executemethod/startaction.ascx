@@ -15,6 +15,7 @@
 window.Asc.plugin.executeMethod ("StartAction", [type, description]);
 </pre>
 <div class="header-gray">Parameters</div>
+<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />

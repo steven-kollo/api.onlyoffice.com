@@ -54,6 +54,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <pre>
 docEditor.setActionLink(link);
 </pre>
+            <div id="mobile-content"></div>
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />

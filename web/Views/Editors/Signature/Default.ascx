@@ -24,7 +24,7 @@ supervisorctl restart all
 </pre>
 
 <div class="header-gray">Parameters</div>
-
+<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 300px;" />

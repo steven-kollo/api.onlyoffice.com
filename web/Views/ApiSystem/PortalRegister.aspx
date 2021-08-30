@@ -19,6 +19,7 @@
     <p class="dscr">New portal registration.</p>
 
     <div class="header-gray">Parameters</div>
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 20%" />

@@ -9,6 +9,7 @@
                     <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilder.RunTextW</em> method is not used.</div>
                 
             <h2>Parameters:</h2>
+            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">

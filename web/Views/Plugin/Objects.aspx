@@ -21,7 +21,7 @@
     <p>See the available objects below to find more about them.</p>
 
 <div class="header-gray">Objects</div>
-
+<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
             <col style="width: 100px;" />

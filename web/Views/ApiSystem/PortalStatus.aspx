@@ -20,6 +20,7 @@
     <p class="dscr">Portal activation status change.</p>
 
     <div class="header-gray">Parameters</div>
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 20%" />

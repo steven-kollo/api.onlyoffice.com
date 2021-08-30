@@ -21,6 +21,7 @@
     </p>
 
     <h2>Parameters and their description:</h2>
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />

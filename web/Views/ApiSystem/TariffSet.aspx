@@ -20,6 +20,7 @@
     <p class="dscr">Portal pricing plan change.</p>
 
     <div class="header-gray">Parameters</div>
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 20%" />

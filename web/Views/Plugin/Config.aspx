@@ -18,6 +18,7 @@
     <p class="dscr">The <em>config.json</em> file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.</p>
     
     <div class="header-gray">Parameters</div>
+    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 220px;" />

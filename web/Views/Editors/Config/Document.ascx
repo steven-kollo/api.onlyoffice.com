@@ -9,6 +9,7 @@
 <p class="dscr">The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).</p>
 
 <div class="header-gray">Parameters</div>
+<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col class="table-name" />

@@ -10,6 +10,7 @@
                     <p class="dscr">The path to the folder where the program will temporarily save files needed for the program correct work. After the successful document file creation all the files will be deleted from the folder. If no temporary folder is set, the system one will be used.</p>
                 
             <h2>Parameters:</h2>
+            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">

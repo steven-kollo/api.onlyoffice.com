@@ -8,6 +8,7 @@
                 <p class="dscr">Save the file after all the changes are made. The type of the file which will be saved needs to be set.</p>
                 
             <h2>Parameters:</h2>
+            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">

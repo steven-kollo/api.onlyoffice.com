@@ -8,6 +8,7 @@
 <p class="dscr">The config base section allows to change the platform type used, document display size (width and height) and type of the document opened.</p>
 
 <div class="header-gray">Parameters</div>
+<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col class="table-name" />

@@ -13,7 +13,7 @@
     <a href="<%= Url.Action("events") %>#onMethodReturn">window.Asc.plugin.onMethodReturn</a> function will be used to return the result of the method execution.</p>
 
 <div class="header-gray">Parameters</div>
-
+<div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
