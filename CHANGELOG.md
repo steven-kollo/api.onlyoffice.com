@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the possibility to view the document history in spreadsheets
+
 - editors: added the simple value to the editorConfig.customization.reviewDisplay
 - editors: information about threaded comments
 - editors: commentGroups on try page
