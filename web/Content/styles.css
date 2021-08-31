@@ -657,6 +657,12 @@ li b.copy-link[id]:hover:before {
     margin-top: 14px;
 }
 
+.not-found {
+    margin-bottom: 140px;
+    margin-top: 32px;
+    text-align: center;
+}
+
 /*start page*/
 
 .home .layout-content {

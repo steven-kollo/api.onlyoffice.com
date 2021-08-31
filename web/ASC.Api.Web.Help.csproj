@@ -250,6 +250,7 @@
     <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\arrow-gray.svg" />
     <Content Include="Content\img\close.svg" />
+    <Content Include="Content\img\not-found.svg" />
     <Content Include="Content\img\desktop\adding_plugins.png" />
     <Content Include="Content\img\desktop\connection_list.png" />
     <Content Include="Content\img\desktop\debugging.png" />
