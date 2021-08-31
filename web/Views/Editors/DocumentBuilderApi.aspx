@@ -172,7 +172,7 @@
 </pre>
 
     <div class="header-gray">Possible error codes and their description</div>
-    <table class="table">
+    <table class="error-table">
         <colgroup>
             <col style="width: 105px;" />
             <col />

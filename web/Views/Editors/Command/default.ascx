@@ -92,7 +92,6 @@
 </pre>
 
 <div class="header-gray">Parameters</div>
-
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -121,7 +120,7 @@
 <p>The <b>document editing service</b> informs the <b>document storage service</b> about the result caused by command using the <a href="<%= Url.Action("callback") %>">callback handler</a>.</p>
 
 <div class="header-gray">Possible error codes and their description</div>
-<table class="table">
+<table class="error-table">
     <colgroup>
         <col style="width: 105px;" />
         <col />

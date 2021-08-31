@@ -2187,6 +2187,14 @@ article {
         padding: 10px 0px 10px 12px;
     }
 
+    .required-descr {
+        padding-top: 16px;
+    }
+
+    .header-gray {
+        margin-top: 16px;
+    }
+
     .table-conversion-matrix-text, .table-conversion-matrix-spreadsheet, .table-conversion-matrix-presentation {
         display: block;
         width: 90vw;
@@ -2216,7 +2224,6 @@ article {
         display: flex;
         font-size: 14px;
     }
-
 
     .try-now-table .button {
         width: 48px;
