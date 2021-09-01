@@ -348,13 +348,19 @@
             <td id="hideNotes" class="copy-link">hideNotes</td>
             <td>
                 Defines if the note panel is displayed or hidden on first loading.
-                The default value is <b>false</b>.
+                The default value is <b>false</b>. This parameter is available for the presentation editor only.
             </td>
             <td>boolean</td>
             <td>false</td>
-        </tr><tr class="tablerow tablerow-note">
+        </tr>
+        <tr class="tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.hideNotes</em> parameter.</div>
+            </td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -569,11 +575,11 @@
         <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
-                Defines the review editing mode which will be used when the document is opened for viewing.
-                It will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>view</b>.
-                Can take the following values:
+                Defines the review editing mode in the document editor. 
+                This parameter can take the following values:
                 <ul>
                     <li><b>markup</b> - the document is displayed with proposed changes highlighted;</li>
+                    <li><b>simple</b> - the document is displayed with proposed changes highlighted, but the balloons are turned off;</li>
                     <li><b>final</b> - the document is displayed with all the proposed changes applied;</li>
                     <li><b>original</b> - the original document is displayed without the proposed changes.</li>
                 </ul>
@@ -585,7 +591,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Deprecated since version 6.5. Please use the <a href="#review">review.reviewDisplay</a> parameter instead.</div>
-                <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+                <img width="834px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
             </td>
         </tr>

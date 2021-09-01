@@ -21,10 +21,13 @@
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a>, <a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">editorConfig.customization.showReviewChanges</a>, <a href="<%= Url.Action("config/editor/customization") %>#trackChanges">editorConfig.customization.trackChanges</a> parameters are deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review</a> parameter instead.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hideReviewDisplay</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hoverMode</a> field.</li>
+        <li>Added the possibility to view the <a href="<%= Url.Action("history") %>">document history</a> for the spreadsheet files.</li>
     </ul>
 
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
+        <li>Added the <em>simple</em> value to the <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a> parameter.</li>
+        <li>Added the <a href="<%= Url.Action("commenting") %>#threaded-comments">threaded comments</a> saving in the spreadsheet files.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a> field.</li>
         <li>Added the possibility to view the <a href="<%= Url.Action("history") %>">document history</a> for the presentation files.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideNotes">editorConfig.customization.hideNotes</a> field.</li>
@@ -142,6 +145,7 @@
 
     <h2 id="51" class="copy-link">Version 5.1</h2>
     <ul>
+        <li>Added the <em>format</em> parameter to the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">document.permissions.modifyContentControl</a> field.</li>
         <li>Added conversion for <a href="<%= Url.Action("conversionapi") %>#text-matrix">OpenDocument Template</a> formats.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onRequestClose">events.onRequestClose</a> event.</li>
