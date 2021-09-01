@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
 
 - editors: added the simple value to the editorConfig.customization.reviewDisplay
