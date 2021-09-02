@@ -41,7 +41,10 @@
             <span class="search-box-result">No results matching your query could be found</span>
         </h1>
         <img alt="Not found" src="<%= Url.Content("~/content/img/not-found.svg") %>" />
+        <% if (Html.IfController("Home"))
+           { %>
         <p><a href="<%= Url.Action("index", "home") %>">Go to main page</a></p>
+        <% } %>
     </div>
     <% } %>
 </asp:Content>
