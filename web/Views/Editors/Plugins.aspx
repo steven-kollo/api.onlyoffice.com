@@ -6,21 +6,21 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Integration Connectors
+    Creating connectors
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Integration connectors</span>
+        <span class="hdr">Creating connectors</span>
     </h1>
 
     <p class="dscr">
-        ONLYOFFICE Document Editors can be integrated into some of the existing document management systems using plugins.
-        These plugins will add the document editing functions into the document management system you use quickly and easily without the need of writing the code by yourselves.
+        ONLYOFFICE Docs can be integrated into some of the existing document management systems using plugins.
+        These plugins will add the document editing features into the document management system you use quickly and easily without having to write your own code.
     </p>
 
-    <p>Currently the following plugins are available:</p>
+    <p>Currently, the following plugins are available:</p>
     <ul>
         <li><a href="<%= Url.Action("alfresco") %>">ONLYOFFICE Alfresco module package</a></li>
         <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE integration plugin</a></li>
