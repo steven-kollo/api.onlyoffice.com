@@ -194,6 +194,7 @@
         "changes": changes,
         "serverVersion": serverVersion
     },
+    "filetype": "docx",
     "key": "Khirz6zTPdfd7",
     "status": 2,
     "url": "https://documentserver/url-to-edited-document.docx",
@@ -218,6 +219,7 @@
         "changes": changes,
         "serverVersion": serverVersion
     },
+    "filetype": "docx",
     "key": "Khirz6zTPdfd7",
     "status": 6,
     "url": "https://documentserver/url-to-edited-document.docx",
