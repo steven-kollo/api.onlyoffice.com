@@ -1,5 +1,7 @@
 # Change Log
 
+- macros: assigning macros to the graphic objects
+- plugins: added the SetDisplayModeInReview and CoAuthoringChatSendMessage methods
 - editors: added the simple value to the editorConfig.customization.reviewDisplay
 - editors: information about threaded comments
 - editors: commentGroups on try page

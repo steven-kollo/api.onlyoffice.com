@@ -68,6 +68,9 @@
                                         <a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
                                     </li>
                                     <li>
@@ -153,6 +156,9 @@
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">SelectContentControl</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a>

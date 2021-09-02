@@ -376,6 +376,7 @@
     <Content Include="Content\img\php\manager.png" />
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
+    <Content Include="Content\img\plugins\assign-macro.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
@@ -658,6 +659,7 @@
     <Content Include="Views\Plugin\Executemethod\onencryption.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\changecomment.ascx" />
+    <Content Include="Views\Plugin\Executemethod\coauthoringchatsendmessage.ascx" />
     <Content Include="Views\Plugin\Executemethod\getallcomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrolpr.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfields.ascx" />
@@ -674,6 +676,7 @@
     <Content Include="Views\Plugin\Executemethod\removeselectedcontent.ascx" />
     <Content Include="Views\Plugin\Executemethod\searchandreplace.ascx" />
     <Content Include="Views\Plugin\Executemethod\selectcontentcontrol.ascx" />
+    <Content Include="Views\Plugin\Executemethod\setdisplaymodeinreview.ascx" />
     <Content Include="Views\Plugin\Objects.aspx" />
     <Content Include="Views\Plugin\inputHelper.aspx" />
     <Content Include="Views\Plugin\Localization.aspx" />
