@@ -20,7 +20,7 @@
     <ul>
         <li>Added the <a href="<%= Url.Action("callback") %>#filetype">filetype</a> parameter to the <em>Callback handler</em>.</li>
         <li>Added the <em>FileType</em> field to the <a href="<%= Url.Action("conversionapi") %>#response">conversion response</a>.</li>
-        <li>Added <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion</a> to OOXML with macros (docm, xlsm, pptm).</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">docm, xlsm, pptm</a> formats.</li>
     </ul>
 
     <h2 id="64" class="copy-link">Version 6.4</h2>

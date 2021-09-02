@@ -1183,9 +1183,9 @@
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;EndConvert&gt;True&lt;/EndConvert&gt;
+    &lt;FileType&gt;docm&lt;/FileType&gt;
     &lt;FileUrl&gt;https://documentserver/url-to-converted-document.pdf&lt;/FileUrl&gt;
     &lt;Percent&gt;100&lt;/Percent&gt;
-    &lt;FileType&gt;docm&lt;/FileType&gt;
 &lt;/FileResult&gt;
 </pre>
     <div class="header-gray">Sample of the response in JSON format</div>
@@ -1193,9 +1193,9 @@
     <pre>
 {
     "endConvert": true,
+    "fileType": "docm"
     "fileUrl": "https://documentserver/url-to-converted-document.pdf",
     "percent": 100,
-    "FileType": "docm"
 }
 </pre>
 
@@ -1204,6 +1204,7 @@
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;EndConvert&gt;False&lt;/EndConvert&gt;
+    &lt;FileType&gt;&lt;/FileType&gt;
     &lt;FileUrl&gt;&lt;/FileUrl&gt;
     &lt;Percent&gt;95&lt;/Percent&gt;
 &lt;/FileResult&gt;

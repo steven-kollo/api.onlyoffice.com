@@ -2,7 +2,7 @@
 
 - editors: added the filetype parameter to the Callback handler
 - editors: added the FileType field to the conversion response
-- editors: conversion to OOXML with macros
+- editors: conversion to docm, xlsm, pptm
 
 ## 2.3.0
 - editors: commentGroups on try page
