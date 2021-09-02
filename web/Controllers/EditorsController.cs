@@ -53,6 +53,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Command/license",
                 "Command/meta",
                 "Command/version",
+                "Commenting",
                 "Comparing",
                 "Config",
                 "Config/Document",
@@ -189,6 +190,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Command", (object)catchall);
+        }
+
+        public ActionResult Commenting()
+        {
+            return View();
         }
 
         public ActionResult Comparing()
