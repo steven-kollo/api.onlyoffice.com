@@ -41,7 +41,7 @@
     "ClearContent": {
       "memberof": "ApiRun",
       "name": "ClearContent",
-      "description": "<p>Remove all content from the current run.</p>",
+      "description": "<p>Clear content from the current run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -56,7 +56,7 @@
     "RemoveAllElements": {
       "memberof": "ApiRun",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all content from the current run.</p>",
+      "description": "<p>Remove all the elements from the current run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -165,7 +165,7 @@
     "AddDrawing": {
       "memberof": "ApiRun",
       "name": "AddDrawing",
-      "description": "<p>Add an object (image, shape or chart) to the current text run.</p>",
+      "description": "<p>Add a drawing object (image, shape or chart) to the current text run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -225,13 +225,13 @@
         {
           "type": "string",
           "name": "sLink",
-          "description": "<p>link to be add.</p>",
+          "description": "<p>The link address.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sScreenTipText",
-          "description": "<p>ScreenTip text</p>",
+          "description": "<p>The screen tip text.</p>",
           "optional": false
         }
       ]
@@ -258,7 +258,7 @@
     "GetRange": {
       "memberof": "ApiRun",
       "name": "GetRange",
-      "description": "<p>Returns a Range object that represents the part of the document contained in the specified run.</p>",
+      "description": "<p>Return a Range object that represents the part of the document contained in the specified run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -275,13 +275,13 @@
         {
           "type": "Number",
           "name": "Start",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>Start character in the current element.</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "End",
-          "description": "<p>end character in current element</p>",
+          "description": "<p>End character in the current element.</p>",
           "optional": false
         }
       ]
@@ -289,7 +289,7 @@
     "GetParentContentControl": {
       "memberof": "ApiRun",
       "name": "GetParentContentControl",
-      "description": "<p>Gets the content control that contains the run.</p>",
+      "description": "<p>Get the content control that contains the run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -308,7 +308,7 @@
     "GetParentTable": {
       "memberof": "ApiRun",
       "name": "GetParentTable",
-      "description": "<p>Gets the table that contains the run.</p>",
+      "description": "<p>Get the table that contains the run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -326,7 +326,7 @@
     "GetParentTableCell": {
       "memberof": "ApiRun",
       "name": "GetParentTableCell",
-      "description": "<p>Gets the table cell that contains the run.</p>",
+      "description": "<p>Get the table cell that contains the run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -344,7 +344,7 @@
     "SetTextPr": {
       "memberof": "ApiRun",
       "name": "SetTextPr",
-      "description": "<p>Sets text properties of the paragraph.</p>",
+      "description": "<p>Set the text properties for the current run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -363,6 +363,7 @@
         {
           "type": "ApiTextPr",
           "name": "oTextPr",
+          "description": "<p>The text properties that will be set to the run specified.</p>",
           "optional": false
         }
       ]
@@ -470,7 +471,7 @@
     "SetDoubleStrikeout": {
       "memberof": "ApiRun",
       "name": "SetDoubleStrikeout",
-      "description": "<p>Specify that the contents of this run is displayed with two horizontal lines through each character displayed on the line.</p>",
+      "description": "<p>Specify that the contents of this run are displayed with two horizontal lines through each character displayed on the line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -749,7 +750,7 @@
     "SetSmallCaps": {
       "memberof": "ApiRun",
       "name": "SetSmallCaps",
-      "description": "<p>Specify that all small letter characters in this text run are formatted for display only as their capital\nletter character equivalents in a font size two points smaller than the actual font size specified for this text.</p>",
+      "description": "<p>Specify that all the small letter characters in this text run are formatted for display only as their capital\nletter character equivalents which are two points smaller than the actual font size specified for this text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -768,7 +769,7 @@
         {
           "type": "boolean",
           "name": "isSmallCaps",
-          "description": "<p>Specifies that the contents of the current run are displayed capitalized two points smaller.</p>",
+          "description": "<p>Specifies if the contents of the current run are displayed capitalized two points smaller or not.</p>",
           "optional": false
         }
       ]
@@ -922,8 +923,8 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a small text block calling 'run'.\r\n\t * @constructor\r\n\t * @extends {ApiTextPr}\r\n\t */",
-  "description": "<p>Class representing a small text block calling 'run'.</p>",
+  "comment": "/**\r\n\t * Class representing a small text block called 'run'.\r\n\t * @constructor\r\n\t * @extends {ApiTextPr}\r\n\t */",
+  "description": "<p>Class representing a small text block called 'run'.</p>",
   "scope": "global",
   "params": []
 }

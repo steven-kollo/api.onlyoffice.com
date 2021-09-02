@@ -54,7 +54,7 @@
     "GetRowIndex": {
       "memberof": "ApiTableCell",
       "name": "GetRowIndex",
-      "description": "<p>Gets the index of the parent row.</p>",
+      "description": "<p>Get the index of the parent row.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -71,7 +71,7 @@
     "GetParentRow": {
       "memberof": "ApiTableCell",
       "name": "GetParentRow",
-      "description": "<p>Gets the parent row of the cell.</p>",
+      "description": "<p>Get the parent row of the cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -89,7 +89,7 @@
     "GetParentTable": {
       "memberof": "ApiTableCell",
       "name": "GetParentTable",
-      "description": "<p>Gets the parent table of the cell.</p>",
+      "description": "<p>Get the parent table of the cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -107,7 +107,7 @@
     "AddRows": {
       "memberof": "ApiTableCell",
       "name": "AddRows",
-      "description": "<p>Add a new rows to the current table.</p>",
+      "description": "<p>Add the new rows to the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -125,13 +125,13 @@
         {
           "type": "Number",
           "name": "nCount",
-          "description": "<p>count of rows to be added.</p>",
+          "description": "<p>Count of rows to be added.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new rows before or after the cell.</p>",
+          "description": "<p>Specifies if the new rows will be added before or after the cell.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -140,7 +140,7 @@
     "AddColumns": {
       "memberof": "ApiTableCell",
       "name": "AddColumns",
-      "description": "<p>Add a new columns to the current table.</p>",
+      "description": "<p>Add the new columns to the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -158,13 +158,13 @@
         {
           "type": "Number",
           "name": "nCount",
-          "description": "<p>count of columns to be added</p>",
+          "description": "<p>Count of columns to be added.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new columns before or after the cell.</p>",
+          "description": "<p>Specifies if the new columns will be added before or after the cell.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -173,7 +173,7 @@
     "RemoveColumn": {
       "memberof": "ApiTableCell",
       "name": "RemoveColumn",
-      "description": "<p>Remove the column containing the cell.</p>",
+      "description": "<p>Remove a column containing a cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -191,7 +191,7 @@
     "RemoveRow": {
       "memberof": "ApiTableCell",
       "name": "RemoveRow",
-      "description": "<p>Remove the row containing the cell.</p>",
+      "description": "<p>Remove a row containing a cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -209,7 +209,7 @@
     "Search": {
       "memberof": "ApiTableCell",
       "name": "Search",
-      "description": "<p>Searches for the scope of a cell object. The search results are a collection of ApiRange objects.</p>",
+      "description": "<p>Search for the scope of a cell object. The search results are a collection of ApiRange objects.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -226,12 +226,13 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>Search string.</p>",
           "optional": false
         },
         {
           "type": "bool",
           "name": "isMatchCase",
-          "description": "<p>is case sensitive.</p>",
+          "description": "<p>Case sensitive or not.</p>",
           "optional": false
         }
       ]
@@ -293,14 +294,14 @@
         {
           "type": "Number",
           "name": "nRow",
-          "description": "<p>count of rows which the cell will be split.</p>",
+          "description": "<p>Count of rows which the cell will be split.</p>",
           "optional": true,
           "defaultValue": 1
         },
         {
           "type": "Number",
           "name": "nCol",
-          "description": "<p>count of columns which the cell will be split.</p>",
+          "description": "<p>Count of columns which the cell will be split.</p>",
           "optional": true,
           "defaultValue": 1
         }
@@ -309,7 +310,7 @@
     "SetCellPr": {
       "memberof": "ApiTableCell",
       "name": "SetCellPr",
-      "description": "<p>Sets properties of the cell.</p>",
+      "description": "<p>Set the cell properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -326,6 +327,7 @@
         {
           "type": "ApiTableCellPr",
           "name": "oApiTableCellPr",
+          "description": "<p>The properties that will be set to the table cell.</p>",
           "optional": false
         }
       ]
@@ -333,7 +335,7 @@
     "SetTextPr": {
       "memberof": "ApiTableCell",
       "name": "SetTextPr",
-      "description": "<p>Applies text settings to the entire contents of the cell.</p>",
+      "description": "<p>Apply text settings to the entire contents of the cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -350,6 +352,7 @@
         {
           "type": "ApiTextPr",
           "name": "oTextPr",
+          "description": "<p>The properties that will be set to the table cell text.</p>",
           "optional": false
         }
       ]
@@ -357,7 +360,7 @@
     "Clear": {
       "memberof": "ApiTableCell",
       "name": "Clear",
-      "description": "<p>Clears the content of the cell.</p>",
+      "description": "<p>Clear the content from the cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

@@ -20,8 +20,8 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing RGB color\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing RGB color</p>",
+  "comment": "/**\r\n\t * Class representing RGB Color.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing RGB Color.</p>",
   "scope": "global",
   "params": []
 }

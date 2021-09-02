@@ -6,6 +6,10 @@
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
 
+- docbuilder: v6.4
+- docbuilder: added changelog page
+- macros: assigning macros to the graphic objects
+- plugins: added the SetDisplayModeInReview and CoAuthoringChatSendMessage methods
 - editors: added the simple value to the editorConfig.customization.reviewDisplay
 - editors: information about threaded comments
 - editors: commentGroups on try page

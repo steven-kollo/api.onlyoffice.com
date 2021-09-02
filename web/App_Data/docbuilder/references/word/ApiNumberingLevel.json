@@ -101,7 +101,7 @@
         {
           "type": "\"none\" | \"bullet\" | \"1)\" | \"1.\" | \"I.\" | \"A.\" | \"a)\" | \"a.\" | \"i.\"",
           "name": "sType",
-          "description": "<p>Set one of the existing predefined numbering templates.</p>",
+          "description": "<p>The predefined numbering template.</p>",
           "optional": false
         },
         {
