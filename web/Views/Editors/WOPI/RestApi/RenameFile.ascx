@@ -19,6 +19,52 @@
         that describes why the file name was invalid.</li>
     </ol>
 
+    <div class="header-gray">Parameters</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+            <col class="table-type" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>file_id</td>
+                <td>The file ID that must be URL safe.</td>
+                <td>string</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="header-gray">Query parameters</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+            <col class="table-type" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>access_token</td>
+                <td>An access token that the host will use to determine whether the request is authorized.</td>
+                <td>string</td>
+            </tr>
+        </tbody>
+    </table>
+
     <div class="header-gray">Request headers</div>
     <table class="table">
         <colgroup>

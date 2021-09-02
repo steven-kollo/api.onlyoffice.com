@@ -10,60 +10,13 @@
     </p>
     <p>ONLYOFFICE Docs uses the following WOPI operations:</p>
     <ul>
-        <li><a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a></li>
-        <li><a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a></li>
-        <li><a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a></li>
-        <li><a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a></li>
-        <li><a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a></li>
-        <li><a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a></li>
+        <li><a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a> - returns information about the file properties, access rights and editor settings.</li>
+        <li><a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a> - requests a message to retrieve a file for the <em>HTTP://server/&lt;...&gt;/wopi*/files/&lt;id&gt;/contents</em> operation.</li>
+        <li><a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a> - locks file editing by an online office that requested the lock.</li>
+        <li><a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a> - allows for file editing.</li>
+        <li><a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> - requests a message to update a file for the <em>HTTP://server/&lt;...&gt;/wopi*/files/&lt;id&gt;/contents</em> operation.</li>
+        <li><a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a> - renames a file.</li>
     </ul>
-
-
-    <div class="header-gray">Parameters</div>
-    <table class="table">
-        <colgroup>
-            <col class="table-name" />
-            <col />
-            <col class="table-type" />
-        </colgroup>
-        <thead>
-            <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>file_id</td>
-                <td>The file ID that must be URL safe.</td>
-                <td>string</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="header-gray">Query parameters</div>
-    <table class="table">
-        <colgroup>
-            <col class="table-name" />
-            <col />
-            <col class="table-type" />
-        </colgroup>
-        <thead>
-            <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>access_token</td>
-                <td>An access token that the host will use to determine whether the request is authorized.</td>
-                <td>string</td>
-            </tr>
-        </tbody>
-    </table>
 
     <div class="header-gray">Possible error codes and their description</div>
     <table class="table">
