@@ -117,7 +117,13 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/Discovery",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
-                "WOPI/RestApi"
+                "WOPI/RestApi",
+                "WOPI/RestApi/CheckFileInfo",
+                "WOPI/RestApi/Lock",
+                "WOPI/RestApi/RenameFile",
+                "WOPI/RestApi/Unlock",
+                "WOPI/RestApi/GetFile",
+                "WOPI/RestApi/PutFile"
             };
 
         [ValidateInput(false)]

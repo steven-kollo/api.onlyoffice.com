@@ -85,6 +85,26 @@
                     </li>
                     <li>
                         <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a>
+                        <ul>
+                            <li>
+                                <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a>
+                            </li>
+                            <li>
+                                <a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a>
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
