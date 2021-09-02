@@ -43,7 +43,7 @@ otherWindow.postMessage (msg, targetOrigin)
                         <li>
                             <b>SendTime</b> - the time the message was sent, expressed as milliseconds since midnight 1 January 1970 UTC,
                             <br />
-                            <b>type</b>: long,
+                            <b>type</b>: integer,
                             <br />
                             <b>example</b>: 1329014075000;
                         </li>
