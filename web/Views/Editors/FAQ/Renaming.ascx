@@ -15,7 +15,7 @@
 <dl class="faq_block" id="renaming_2">
     <dt>How to update the name of the document for all collaborative editors?</dt>
     <dd>
-        <p>To do that the <a href="<%= Url.Action("command") %>#meta">meta</a> option is available. The request must be sent to the <a href="<%= Url.Action("command") %>">document command service</a>, using the <em>meta</em> value for the <em>c</em> parameter:</p>
+        <p>To do that the <a href="<%= Url.Action("command/meta") %>">meta</a> option is available. The request must be sent to the <a href="<%= Url.Action("command") %>">document command service</a>, using the <em>meta</em> value for the <em>c</em> parameter:</p>
         <pre>
 {
     "c": "meta",

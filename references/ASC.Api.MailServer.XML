@@ -11,255 +11,256 @@
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.CreateMailbox(System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean)">
             <summary>
-               Create mailbox
+            Creates a mailbox with the parameters specified in the request.
             </summary>
-            <param name="name"></param>
-            <param name="local_part"></param>
-            <param name="domain_id"></param>
-            <param name="user_id"></param>
-            <param name="notifyCurrent">Send message to creating mailbox's address</param>
-            <param name="notifyProfile">Send message to email from user profile</param>
-            <returns>MailboxData associated with tenant</returns>
-            <short>Create mailbox</short> 
+            <param name="name">Mailbox name</param>
+            <param name="local_part">Mailbox local part</param>
+            <param name="domain_id">Mailbox domain ID</param>
+            <param name="user_id">User ID</param>
+            <param name="notifyCurrent">Specifies if the notifications will be sent to the email address from which this mailbox was created or not</param>
+            <param name="notifyProfile">Specifies if the notifications will be sent to the email address from the current user's profile or not</param>
+            <returns>Mailbox data associated with the tenant</returns>
+            <short>Create a mailbox</short> 
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.CreateMyMailbox(System.String)">
             <summary>
-               Create my mailbox
+            Create my common domain mailbox with the name specified in the request.
             </summary>
-            <param name="name"></param>
-            <returns>MailboxData associated with tenant</returns>
-            <short>Create mailbox</short> 
+            <param name="name">Sender name</param>
+            <returns>Mailbox data associated with the tenant</returns>
+            <short>Create my mailbox</short> 
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetMailboxes">
             <summary>
-               Returns list of the mailboxes associated with tenant
+            Returns a list of all the mailboxes associated with the tenant.
             </summary>
-            <returns>List of MailboxData for current tenant</returns>
-            <short>Get mailboxes list</short> 
+            <returns>List of mailbox data for the current tenant</returns>
+            <short>Get mailboxes</short> 
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.RemoveMailbox(System.Int32)">
             <summary>
-               Deletes the selected mailbox
+            Deletes a mailbox with the ID specified in the request.
             </summary>
-            <param name="id">id of mailbox</param>
-            <returns>MailOperationResult object</returns>
+            <param name="id">Mailbox ID</param>
+            <returns>Operation status</returns>
             <exception cref="T:System.ArgumentException">Exception happens when some parameters are invalid. Text description contains parameter name and text description.</exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException">Exception happens when mailbox wasn't found.</exception>
-            <short>Remove mailbox from mail server</short> 
+            <short>Remove a mailbox from the mail server</short> 
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.UpdateMailbox(System.Int32,System.String)">
             <summary>
-               Update mailbox
+            Updates a mailbox with the ID specified in the request.
             </summary>
-            <param name="mailbox_id">id of mailbox</param>
-            <param name="name">sender name</param>
-            <returns>Updated MailboxData</returns>
-            <short>Update mailbox</short>
+            <param name="mailbox_id">Mailbox ID</param>
+            <param name="name">New sender name</param>
+            <returns>Updated mailbox data</returns>
+            <short>Update a mailbox</short>
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.AddMailboxAlias(System.Int32,System.String)">
             <summary>
-               Add alias to mailbox
+            Adds an alias to the mailbox with the ID specified in the request.
             </summary>
-            <param name="mailbox_id">id of mailbox</param>
-            <param name="alias_name">name of alias</param>
-            <returns>MailboxData associated with tenant</returns>
-            <short>Add mailbox's aliases</short>
-            <category>AddressData</category>
+            <param name="mailbox_id">Mailbox ID</param>
+            <param name="alias_name">Mailbox alias</param>
+            <returns>Mailbox data associated with the tenant</returns>
+            <short>Add a mailbox alias</short>
+            <category>Address data</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.RemoveMailboxAlias(System.Int32,System.Int32)">
             <summary>
-               Remove alias from mailbox
+            Removes an alias from the mailbox with the ID specified in the request.
             </summary>
-            <param name="mailbox_id">id of mailbox</param>
-            <param name="address_id"></param>
-            <returns>id of mailbox</returns>
-            <short>Remove mailbox's aliases</short>
+            <param name="mailbox_id">Mailbox ID</param>
+            <param name="address_id">Mailbox address ID</param>
+            <returns>Mailbox ID</returns>
+            <short>Remove a mailbox alias</short>
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.ChangeMailboxPassword(System.Int32,System.String)">
             <summary>
-               Change mailbox password
+            Changes a password of the mailbox with the ID specified in the request.
             </summary>
-            <param name="mailbox_id"></param>
-            <param name="password"></param>
-            <short>Change mailbox password</short> 
+            <param name="mailbox_id">Mailbox ID</param>
+            <param name="password">New password</param>
+            <short>Change a mailbox password</short> 
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.IsAddressAlreadyRegistered(System.String,System.Int32)">
             <summary>
-               Check existence of mailbox address
+            Checks if the mailbox address is already registered or not.
             </summary>
-            <param name="local_part"></param>
-            <param name="domain_id"></param>
-            <short>Is server mailbox address exists</short>
-            <returns>True - address exists, False - not exists</returns>
+            <param name="local_part">Mailbox local part</param>
+            <param name="domain_id">Mailbox domain ID</param>
+            <short>Check the mailbox address existence</short>
+            <returns>Boolean value: True - address exists, False - address does not exist</returns>
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.IsAddressValid(System.String,System.Int32)">
             <summary>
-               Validate mailbox address
+            Checks if the mailbox address is valid or not.
             </summary>
-            <param name="local_part"></param>
-            <param name="domain_id"></param>
-            <short>Is server mailbox address valid</short>
-            <returns>True - address valid, False - not valid</returns>
+            <param name="local_part">Mailbox local part</param>
+            <param name="domain_id">Mailbox domain ID</param>
+            <short>Validate the mailbox address</short>
+            <returns>Boolean value: True - address is valid, False - address is not valid</returns>
             <category>Mailboxes</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.CreateMailGroup(System.String,System.Int32,System.Collections.Generic.List{System.Int32})">
             <summary>
-               Create group address
+            Creates a mail group with the parameters specified in the request.
             </summary>
-            <param name="name"></param>
-            <param name="domain_id"></param>
-            <param name="address_ids"></param>
-            <returns>MailGroupData associated with tenant</returns>
-            <short>Create mail group address</short>
-            <category>MailGroup</category>
+            <param name="name">Sender name</param>
+            <param name="domain_id">Domain ID</param>
+            <param name="address_ids">List of address IDs</param>
+            <returns>Mail group data associated with the tenant</returns>
+            <short>Create a mail group</short>
+            <category>Mail groups</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.AddMailGroupAddress(System.Int32,System.Int32)">
             <summary>
-               Add addresses to group
+            Adds an address with the ID specified in the request to the mail group.
             </summary>
-            <param name="mailgroup_id">id of group address</param>
-            <param name="address_id"></param>
-            <returns>MailGroupData associated with tenant</returns>
-            <short>Add group's addresses</short> 
-            <category>MailGroup</category>
+            <param name="mailgroup_id">Mail group ID</param>
+            <param name="address_id">Address ID</param>
+            <returns>Mail group data associated with the tenant</returns>
+            <short>Add an address to the mail group</short> 
+            <category>Mail groups</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.RemoveMailGroupAddress(System.Int32,System.Int32)">
             <summary>
-               Remove address from group
+            Remove an address with the ID specified in the request from the mail group.
             </summary>
-            <param name="mailgroup_id">id of group address</param>
-            <param name="address_id"></param>
-            <returns>id of group address</returns>
-            <short>Remove group's address</short>
-            <category>MailGroup</category>
+            <param name="mailgroup_id">Mail group ID</param>
+            <param name="address_id">Address ID</param>
+            <returns>Mail group ID</returns>
+            <short>Remove an address from the mail group</short>
+            <category>Mail groups</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetMailGroups">
             <summary>
-               Returns list of group addresses associated with tenant
+            Returns a list of mail groups associated with the tenant.
             </summary>
-            <returns>List of MailGroupData for current tenant</returns>
-            <short>Get mail group list</short>
-            <category>MailGroup</category>
+            <returns>List of mail group data for the current tenant</returns>
+            <short>Get mail groups</short>
+            <category>Mail groups</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.RemoveMailGroup(System.Int32)">
             <summary>
-               Deletes the selected group address
+            Deletes a mail group with the ID specified in the request.
             </summary>
-            <param name="id">id of group address</param>
-            <returns>id of group address</returns>
-            <short>Remove group address from mail server</short> 
-            <category>MailGroup</category>
+            <param name="id">Mail group ID</param>
+            <returns>Mail group ID</returns>
+            <short>Remove a mail group</short> 
+            <category>Mail groups</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.CreateNotificationAddress(System.String,System.String,System.Int32)">
             <summary>
-               Create address for tenant notifications
+            Creates an address for the tenant notifications with the parameters specified in the request.
             </summary>
-            <param name="name"></param>
-            <param name="password"></param>
-            <param name="domain_id"></param>
-            <returns>NotificationAddressData associated with tenant</returns>
-            <short>Create notification address</short> 
+            <param name="name">Address name</param>
+            <param name="password">Address password</param>
+            <param name="domain_id">Domain ID</param>
+            <returns>Notification address data associated with the tenant</returns>
+            <short>Create the notification address</short> 
             <category>Notifications</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.RemoveNotificationAddress(System.String)">
             <summary>
-               Deletes address for notification 
+            Deletes an address for the tenant notification specified in the request. 
             </summary>
-            <short>Remove mailbox from mail server</short> 
+            <param name="address">Address name</param>
+            <short>Remove the notification address</short> 
             <category>Notifications</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetMailServer">
             <summary>
-               Returns ServerData for mail server associated with tenant
+            Returns the mail server associated with the current tenant.
             </summary>
-            <returns>ServerData for current tenant.</returns>
-            <short>Get mail server</short> 
+            <returns>Mail server data for the current tenant</returns>
+            <short>Get the mail server</short> 
             <category>Servers</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetMailServerFullInfo">
             <summary>
-               Returns ServerData for mail server associated with tenant
+            Returns full information on the mail server associated with the current tenant.
             </summary>
-            <returns>ServerData for current tenant.</returns>
-            <short>Get mail server</short> 
+            <returns>Full mail server information for the current tenant</returns>
+            <short>Get the mail server information</short> 
             <category>Servers</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetUnusedDnsRecords">
             <summary>
-               Get or generate free to any domain DNS records
+            Returns or generates free DNS records.
             </summary>
-            <returns>DNS records for current tenant and user.</returns>
-            <short>Get free DNS records</short>
-            <category>DnsRecords</category>
+            <returns>DNS records for the current tenant and user</returns>
+            <short>Get or create free DNS records</short>
+            <category>DNS records</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetDomains">
             <summary>
-               Returns list of the web domains associated with tenant
+            Returns a list of all the web domains associated with the current tenant.
             </summary>
-            <returns>List of WebDomainData for current tenant</returns>
-            <short>Get tenant web domain list</short> 
+            <returns>List of web domains for the current tenant</returns>
+            <short>Get web domains</short> 
             <category>Domains</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetCommonDomain">
             <summary>
-               Returns the common web domain
+            Returns the common web domain.
             </summary>
-            <returns>WebDomainData for common web domain</returns>
+            <returns>Common web domain</returns>
             <short>Get common web domain</short> 
             <category>Domains</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.AddDomain(System.String,System.Int32)">
             <summary>
-               Associate a web domain with tenant
+            Adds a web domain to the current tenant.
             </summary>
-            <param name="name">web domain name</param>
-            <param name="id_dns"></param>
-            <returns>WebDomainData associated with tenant</returns>
-            <short>Add domain to mail server</short> 
+            <param name="name">Web domain name</param>
+            <param name="id_dns">DNS ID</param>
+            <returns>Web domain data associated with the tenant</returns>
+            <short>Add a domain to the mail server</short> 
             <category>Domains</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.RemoveDomain(System.Int32)">
             <summary>
-               Deletes the selected web domain
+            Deletes a web domain with the ID specified in the request from the mail server.
             </summary>
-            <param name="id">id of web domain</param>
-            <returns>MailOperationResult object</returns>
-            <short>Remove domain from mail server</short> 
+            <param name="id">Web domain ID</param>
+            <returns>Operation status</returns>
+            <short>Remove a domain from the mail server</short> 
             <category>Domains</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetDnsRecords(System.Int32)">
             <summary>
-               Returns dns records associated with domain
+            Returns DNS records related to the domain with the ID specified in the request.
             </summary>
-            <param name="id">id of domain</param>
-            <returns>Dns records associated with domain</returns>
-            <short>Returns dns records</short>
-            <category>DnsRecords</category>
+            <param name="id">Domain ID</param>
+            <returns>DNS records associated with the domain</returns>
+            <short>Get DNS records by domain ID</short>
+            <category>DNS records</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.IsDomainExists(System.String)">
             <summary>
-               Check web domain name existance
+            Checks if the web domain name specified in the request already exists or not.
             </summary>
-            <param name="name">web domain name</param>
-            <returns>True if domain name already exists.</returns>
-            <short>Is domain name exists.</short> 
+            <param name="name">Web domain name</param>
+            <returns>Boolean value: True - domain name exists, False - domain name does not exist</returns>
+            <short>Check the domain name existence</short> 
             <category>Domains</category>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.CheckDomainOwnership(System.String)">
             <summary>
-               Check web domain name ownership over txt record in dns
+            Checks if the web domain specified in the request belongs to the current user or not.
             </summary>
-            <param name="name">web domain name</param>
-            <returns>True if user is owner of this domain.</returns>
-            <short>Check domain ownership.</short> 
+            <param name="name">Web domain name</param>
+            <returns>Boolean value: True - current user is the domain owner, False - current user is not the domain owner</returns>
+            <short>Check the domain ownership</short> 
             <category>Domains</category>
         </member>
     </members>

@@ -87,6 +87,11 @@
     background-repeat: no-repeat;
 }
 
+.insert-text {
+    background-image: url("img/macros/insert-text.svg");
+    background-repeat: no-repeat;
+}
+
 .example-plug-img {
     height: 120px;
     margin: auto;
@@ -409,6 +414,21 @@ img {
 
     .example-img {
         background-size: 208px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .macro-block, .plugin-block {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .macro-example, .plugin-example {
+        max-width: 100%;
+    }
+
+    .filter-selector ul {
+        padding: 0;
     }
 }
 

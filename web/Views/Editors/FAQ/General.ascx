@@ -19,7 +19,7 @@
     <dt>How to find out the current version number of Document Server?</dt>
     <dd>
         <p>The current Document Server version number can be found at the <b>About</b> page of the Document, Presentation or Spreadsheet Editor, right below the logo and the editor name.</p>
-        <p>You can use the API to send a POST request to the <b><b>document command service</b></b>. Use the <em>c</em> parameter for that with the <b>version</b> value, which is sent as a JSON object in the request body:</p>
+        <p>You can use the API to send a POST request to the <b><b>document command service</b></b>. Use the <em>c</em> parameter for that with the <a href="<%= Url.Action("command/version") %>">version</a> value, which is sent as a JSON object in the request body:</p>
         <pre>{
     "c": "version"
 }

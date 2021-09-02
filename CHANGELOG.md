@@ -1,7 +1,33 @@
 # Change Log
 
 - docbuilder: v6.4
-- docbuilder: changelog
+- docbuilder: added changelog page
+- macros: assigning macros to the graphic objects
+- plugins: added the SetDisplayModeInReview and CoAuthoringChatSendMessage methods
+- editors: added the simple value to the editorConfig.customization.reviewDisplay
+- editors: information about threaded comments
+- editors: commentGroups on try page
+- editors: added the Commenting page
+- editors: added document.permissions.commentGroups
+- editors: added the onPluginsReady event
+- editors: added the requestClose method
+- editors: added editorConfig.coEditing
+- editors: added the possibility to view the document history for the presentation files
+- editors: added editorConfig.customization.hideNotes
+- editors: added editorConfig.customization.uiTheme
+- plugins: restructured the config.json page and added navigation to it
+- plugins: updated config parameters
+- plugins: added the GetSelectionType and GetVersion methods
+- mobile view
+- editors: conversion from djvu to the image formats
+- editors: added the format parameter to the downloadAs method
+- editors: conversion to OOXML and ODF templates
+- portals: api v11.5.3
+- editors: how it works navigation
+- editors: restructured the Command service page
+- docbuilder: added the How it works section
+- docbuilder: added the Comparing documents page
+- editors: added the Comparing documents page
 - editors: try reviewGroups
 - editors: added the license command
 - global search

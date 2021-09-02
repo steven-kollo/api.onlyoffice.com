@@ -249,6 +249,8 @@
     <Content Include="Content\highlight.css" />
     <Content Include="Content\img\accordions_sprite.png" />
     <Content Include="Content\img\arrow-gray.svg" />
+    <Content Include="Content\img\close.svg" />
+    <Content Include="Content\img\not-found.svg" />
     <Content Include="Content\img\desktop\adding_plugins.png" />
     <Content Include="Content\img\desktop\connection_list.png" />
     <Content Include="Content\img\desktop\debugging.png" />
@@ -258,6 +260,7 @@
     <Content Include="Content\img\desktop\plugins_tab.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
+    <Content Include="Content\img\docbuilder\compare-documents.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
     <Content Include="Content\img\docbuilder\csharp\net46.png" />
@@ -302,12 +305,18 @@
     <Content Include="Content\img\Editor\sharing_settings.png" />
     <Content Include="Content\img\Editor\alfresco.png" />
     <Content Include="Content\img\Editor\comment.png" />
+    <Content Include="Content\img\Editor\commenting.png" />
     <Content Include="Content\img\Editor\e-token.png" />
     <Content Include="Content\img\Editor\fill-forms.png" />
     <Content Include="Content\img\Editor\history.png" />
     <Content Include="Content\img\Editor\changesurl.png" />
     <Content Include="Content\img\Editor\coedit-view.png" />
     <Content Include="Content\img\Editor\coedit.jpg" />
+    <Content Include="Content\img\Editor\coediting-mode.png" />
+    <Content Include="Content\img\Editor\comments-threaded.png" />
+    <Content Include="Content\img\Editor\compare.png" />
+    <Content Include="Content\img\Editor\compare-documents.png" />
+    <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\Editor\conversion.jpg" />
     <Content Include="Content\img\csharp\add.png" />
     <Content Include="Content\img\Editor\create.png" />
@@ -317,6 +326,7 @@
     <Content Include="Content\img\Editor\e-error0.png" />
     <Content Include="Content\img\Editor\e-key.png" />
     <Content Include="Content\img\Editor\embedded.png" />
+    <Content Include="Content\img\Editor\hideNotes.png" />
     <Content Include="Content\img\Editor\history_open.png" />
     <Content Include="Content\img\Editor\info.png" />
     <Content Include="Content\img\Editor\nextcloud-local.jpg" />
@@ -355,6 +365,7 @@
     <Content Include="Content\img\macros\column-width.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
+    <Content Include="Content\img\macros\insert-text.svg" />
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
@@ -365,6 +376,7 @@
     <Content Include="Content\img\php\manager.png" />
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
+    <Content Include="Content\img\plugins\assign-macro.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
@@ -499,6 +511,7 @@
     <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\faq.js" />
     <Content Include="Scripts\filter-plugin.js" />
+    <Content Include="Scripts\menuselector.js" />
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="version.txt" />
     <Content Include="Global.asax" />
@@ -545,6 +558,10 @@
     <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
     <Content Include="Views\DocBuilder\gettingstarted.aspx" />
     <Content Include="Views\DocBuilder\global.aspx" />
+    <Content Include="Views\DocBuilder\howitworks.aspx" />
+    <Content Include="Views\DocBuilder\Howitworks\comparedocuments.ascx" />
+    <Content Include="Views\DocBuilder\Howitworks\default.ascx" />
+    <Content Include="Views\DocBuilder\Howitworks\globalvariable.ascx" />
     <Content Include="Views\DocBuilder\integratingdocumentbuilder.aspx" />
     <Content Include="Views\DocBuilder\integrationapi.aspx" />
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder.ascx" />
@@ -562,7 +579,6 @@
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\setpropertyw.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\settmpfolder.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\default.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\globalvariable.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\arguments.ascx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
@@ -583,6 +599,8 @@
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Chamilo.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
+    <Content Include="Views\Editors\Commenting.aspx" />
+    <Content Include="Views\Editors\Comparing.aspx" />
     <Content Include="Views\Editors\DocumentBuilderApi.aspx" />
     <Content Include="Views\Editors\FAQ.aspx" />
     <Content Include="Views\Editors\FAQ\Default.ascx" />
@@ -642,11 +660,14 @@
     <Content Include="Views\Plugin\Executemethod\onencryption.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\changecomment.ascx" />
+    <Content Include="Views\Plugin\Executemethod\coauthoringchatsendmessage.ascx" />
     <Content Include="Views\Plugin\Executemethod\getallcomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrolpr.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfields.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfilehtml.ascx" />
     <Content Include="Views\Plugin\Executemethod\getselectedtext.ascx" />
+    <Content Include="Views\Plugin\Executemethod\getselectiontype.ascx" />
+    <Content Include="Views\Plugin\Executemethod\getversion.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortocontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortoend.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortostart.ascx" />
@@ -656,11 +677,13 @@
     <Content Include="Views\Plugin\Executemethod\removeselectedcontent.ascx" />
     <Content Include="Views\Plugin\Executemethod\searchandreplace.ascx" />
     <Content Include="Views\Plugin\Executemethod\selectcontentcontrol.ascx" />
+    <Content Include="Views\Plugin\Executemethod\setdisplaymodeinreview.ascx" />
     <Content Include="Views\Plugin\Objects.aspx" />
     <Content Include="Views\Plugin\inputHelper.aspx" />
     <Content Include="Views\Plugin\Localization.aspx" />
     <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Macros\Macros.aspx" />
+    <Content Include="Views\Plugin\Icons.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
     <Content Include="Views\Plugin\callCommand.aspx" />
     <Content Include="Views\Plugin\callModule.aspx" />
@@ -683,6 +706,7 @@
     <Content Include="Views\Plugin\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
     <Content Include="Views\Plugin\Types.aspx" />
+    <Content Include="Views\Plugin\Variations.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />
     <Content Include="Views\Editors\Config\Default.ascx" />
     <Content Include="Views\Editors\Conversion.aspx" />
@@ -692,6 +716,13 @@
     <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Confluence.aspx" />
     <Content Include="Views\Editors\Command.aspx" />
+    <Content Include="Views\Editors\Command\default.ascx" />
+    <Content Include="Views\Editors\Command\drop.ascx" />
+    <Content Include="Views\Editors\Command\forcesave.ascx" />
+    <Content Include="Views\Editors\Command\info.ascx" />
+    <Content Include="Views\Editors\Command\license.ascx" />
+    <Content Include="Views\Editors\Command\meta.ascx" />
+    <Content Include="Views\Editors\Command\version.ascx" />
     <Content Include="Views\Editors\Coedit.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
     <Content Include="Views\Editors\Try.aspx" />

@@ -17,7 +17,7 @@
 <dl class="faq_block" id="coediting_2">
     <dt>How to find the information about users who are currently editing the document?</dt>
     <dd>
-        <p>You can use the API to send a POST request to the <b>document command service</b>. Use the <em>c</em> parameter for that with the <b>info</b> value and the <em>key</em> parameter identifying the document you want to find the information about. The parameters are sent as a part of the JSON object in the request body:</p>
+        <p>You can use the API to send a POST request to the <b>document command service</b>. Use the <em>c</em> parameter for that with the <a href="<%= Url.Action("command/info") %>">info</a> value and the <em>key</em> parameter identifying the document you want to find the information about. The parameters are sent as a part of the JSON object in the request body:</p>
         <pre>{
     "c": "info",
     "key": "Khirz6zTPdfd7"
@@ -39,7 +39,7 @@
 <dl class="faq_block" id="coediting_3">
     <dt>How to disconnect users who are currently editing the document before saving the document?</dt>
     <dd>
-        <p>To force disconnecting the users from the document before it can be saved, use the API to send a POST request to the <b>document command service</b>. Use the <em>c</em> parameter for that with the <b>drop</b> value and the <em>key</em> parameter identifying the document and the array of the IDs of the users you want to disconnect. The parameters are sent as a part of the JSON object in the request body:</p>
+        <p>To force disconnecting the users from the document before it can be saved, use the API to send a POST request to the <b>document command service</b>. Use the <em>c</em> parameter for that with the <a href="<%= Url.Action("command/drop") %>">drop</a> value and the <em>key</em> parameter identifying the document and the array of the IDs of the users you want to disconnect. The parameters are sent as a part of the JSON object in the request body:</p>
         <pre>{
     "c": "drop",
     "key": "Khirz6zTPdfd7",

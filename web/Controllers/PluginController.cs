@@ -67,11 +67,14 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/unshowinputhelper",
                 "executemethod/addcomment",
                 "executemethod/changecomment",
+                "executemethod/coauthoringchatsendmessage",
                 "executemethod/getallcomments",
                 "executemethod/getcurrentcontentcontrolpr",
                 "executemethod/getfields",
                 "executemethod/getfilehtml",
                 "executemethod/getselectedtext",
+                "executemethod/getselectiontype",
+                "executemethod/getversion",
                 "executemethod/movecursortocontentcontrol",
                 "executemethod/movecursortoend",
                 "executemethod/movecursortostart",
@@ -81,12 +84,14 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/removeselectedcontent",
                 "executemethod/searchandreplace",
                 "executemethod/selectcontentcontrol",
+                "executemethod/setdisplaymodeinreview",
                 "getInputHelper",
                 "loadModule",
                 "resizeWindow",
                 "Example",
                 "FAQ",
                 "GettingStarted",
+                "Icons",
                 "IndexHtml",
                 "Info",
                 "inputHelper",
@@ -138,6 +143,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Structure",
                 "Styles",
                 "Types",
+                "Variations",
                 "macros/Macros",
                 "macros/Writing",
                 "macros/ConvertingVBA",
@@ -255,6 +261,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Icons()
+        {
+            return View();
+        }
+
         public ActionResult IndexHtml()
         {
             return View();
@@ -310,6 +321,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Types()
+        {
+            return View();
+        }
+
+        public ActionResult Variations()
         {
             return View();
         }

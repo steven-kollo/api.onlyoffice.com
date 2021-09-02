@@ -28,6 +28,17 @@
             </li>
         </ul>
     </li>
+    <li>
+        <a href="<%= Url.Action("howitworks") %>">How it works</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("howitworks/globalvariable") %>">Exchanging data among files</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("howitworks/comparedocuments") %>">Comparing documents</a>
+            </li>
+        </ul>
+    </li>
 </ul>
 
 <div class="treeheader">Usage API</div>
@@ -81,9 +92,6 @@
                         <a href="<%= Url.Action("integrationapi/cdocbuilder/settmpfolder") %>">SetTmpFolder</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <a href="<%= Url.Action("integrationapi/globalvariable") %>">Exchanging data among files</a>
             </li>
             <li>
                 <a href="<%= Url.Action("integrationapi/arguments") %>">Using command line arguments</a>
