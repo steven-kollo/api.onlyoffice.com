@@ -3,7 +3,7 @@
       "id":"editors",
       "title":"Document Server",
       "description":"Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
-      "version":"6.4",
+      "version":"6.5",
       "links":{
          "Get Started":[
             {
@@ -115,7 +115,7 @@
                "Item2":"styles"
             },
             {
-               "Item1":"Plugin example",
+               "Item1":"Plugin examples",
                "Item2":"example"
             }
          ],
@@ -157,6 +157,10 @@
             {
                "Item1":"Integrating Builder",
                "Item2":"integratingdocumentbuilder"
+            },
+            {
+               "Item1":"How it works",
+               "Item2":"howitworks"
             }
          ],
          "Usage API":[
@@ -301,7 +305,7 @@
          ],
          "More information":[
             {
-               "Item1":"F.A.Q.",
+               "Item1":"FAQ",
                "Item2":"faq"
             },
             {
