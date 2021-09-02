@@ -10,7 +10,7 @@
 
     <p>The host page must contain the following elements:</p>
     <ul>
-        <li>A <em>form</em> element via which the host must <em>POST</em> the <em>access_token</em> and <em>access_token_ttl</em> parameters to the online office iframe for security purposes.</li>
+        <li>A <em>form</em> element via which the host must <em>POST</em> the <a href="#access_token">access_token</a> and <a href="#access_token_ttl">access_token_ttl</a> parameters to the online office iframe for security purposes.</li>
         <li>JavaScript code for interacting with the online office iframe using <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>.</li>
         <li>Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon 
         for the page using the favicon URL provided in <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>.</li>
@@ -83,4 +83,31 @@
 </pre>
 
     <note>Please note that the <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;&lt;%= params %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em> strings will be rendered with the appropriate parameters.</note>
+    <div class="header-gray">Parameters</div>
+        <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+            <col class="table-type" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="access_token" class="copy-link">access_token</td>
+                <td>An access token that the host will use to determine the identity and permissions of the issuer of a WOPI request.</td>
+                <td>string</td>
+            </tr>
+            <tr>
+                <td id="access_token_ttl" class="copy-link">access_token_ttl</td>
+                <td>The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.</td>
+                <td>integer</td>
+            </tr>
+        </tbody>
+    </table>
     <p>Further information about building a host page can be found <a href="https://wopi.readthedocs.io/en/latest/hostpage.html" target="_blank">here</a>.</p>
