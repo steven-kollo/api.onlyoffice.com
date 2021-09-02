@@ -17,6 +17,10 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Desktop Editors API.</p>
 
+    <h2 id="63" class="copy-link">Version 6.3</h2>
+    <ul>
+    </ul>
+
     <h2 id="62" class="copy-link">Version 6.2</h2>
     <ul>
         <li>Added <a href="<%= Url.Action("addingdms/") %>">config</a> with DMS integration parameters.</li>
