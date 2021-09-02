@@ -105,13 +105,13 @@
         {
           "type": "number",
           "name": "row",
-          "description": "<p>The number of the row or the number of cell (if only row defined)</p>",
+          "description": "<p>The row number or the cell number (if only row is defined)</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "col",
-          "description": "<p>The number of col</p>",
+          "description": "<p>The column number</p>",
           "optional": false
         }
       ]

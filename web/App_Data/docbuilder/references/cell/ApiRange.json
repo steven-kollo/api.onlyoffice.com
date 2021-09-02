@@ -67,7 +67,7 @@
     "GetRows": {
       "memberof": "ApiRange",
       "name": "GetRows",
-      "description": "<p>Return a Range object that represents the rows in the specified range.</p>",
+      "description": "<p>Return a Range object that represents the rows in the specified range. If the specified row is outside the Range object, a new Range will be returned that represents the cells between the columns of the original range in the specified row.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -84,7 +84,7 @@
         {
           "type": "number",
           "name": "nRow",
-          "description": "<p>The row number.</p>",
+          "description": "<p>The row number (starts counting from 1, the 0 value returns an error).</p>",
           "optional": false
         }
       ]
@@ -92,7 +92,7 @@
     "GetCols": {
       "memberof": "ApiRange",
       "name": "GetCols",
-      "description": "<p>Returns a Range object that represents all the cells in the specified range or specified cell.</p>",
+      "description": "<p>Returns a Range object that represents all the cells on the columns range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -109,7 +109,7 @@
         {
           "type": "number",
           "name": "nCol",
-          "description": "<p>The number of the col. *</p>",
+          "description": "<p>The column number. *</p>",
           "optional": false
         }
       ]
@@ -132,7 +132,7 @@
       "inherits": null,
       "params": [
         {
-          "type": "string",
+          "type": "Direction",
           "name": "direction",
           "description": "<p>The direction of end in the specified range. *</p>",
           "optional": false
@@ -142,7 +142,7 @@
     "GetCells": {
       "memberof": "ApiRange",
       "name": "GetCells",
-      "description": "<p>Returns a Range object that represents the cols in the specified range.</p>",
+      "description": "<p>Returns a Range object that represents all the cells in the specified range or a specified cell.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -159,13 +159,13 @@
         {
           "type": "number",
           "name": "row",
-          "description": "<p>The number of the row or the number of cell (if only row defined)</p>",
+          "description": "<p>The row number or the cell number (if only row is defined)</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "col",
-          "description": "<p>The number of col</p>",
+          "description": "<p>The column number</p>",
           "optional": false
         }
       ]
@@ -947,11 +947,15 @@
     "GetOrientation": {
       "memberof": "ApiRange",
       "name": "GetOrientation",
-      "description": "<p>returns getAngle</p>",
-      "tags": {},
+      "description": "<p>Returns the range angle.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
-          "getAngle"
+          "Angle"
         ]
       ],
       "see": null,
@@ -960,21 +964,26 @@
     "SetOrientation": {
       "memberof": "ApiRange",
       "name": "SetOrientation",
-      "description": "<p>Sets the angle for the range</p>",
-      "tags": {},
+      "description": "<p>Sets an angle to the current cell range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "angle",
+          "type": "Angle",
           "name": "angle",
+          "description": "<p>Specifies the range angle.</p>",
           "optional": false
         }
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a range.\r\n\t * @constructor\r\n\t * @property {number} Row - Returns the row number for the selected cell.\r\n\t * @property {number} Col - Returns the column number for the selected cell.\r\n\t * @property {ApiRange} Rows - Returns the ApiRange object that represents the rows of the specified range.\r\n\t * @property {number} Count - Returns the rows or columns count.\r\n\t * @property {string} Value - Returns the value from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Formula - Returns the formula from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Value2 - Returns the value2 (value without format) from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Text - Returns the text from the first cell of the specified range or sets it to this cell.\r\n\t * @property {ApiColor} FontColor - Sets the text color to the current cell range with the previously created color object.\r\n\t * @property {bool} Hidden - Returns or sets the value hiding property.\r\n\t * @property {number} ColumnWidth - Returns or sets the width of all the columns in the specified range measured in points.\r\n\t * @property {number} Width - Returns a value that represents the range width measured in points.\r\n\t * @property {number} RowHeight - Returns or sets the height of the first row in the specified range measured in points.\r\n\t * @property {number} Height - Returns a value that represents the range height measured in points.\r\n\t * @property {number} FontSize - Sets the font size to the characters of the current cell range.\r\n\t * @property {string} FontName - Sets the specified font family as the font name for the current cell range.\r\n\t * @property {'center' | 'bottom' | 'top' | 'distributed' | 'justify'} AlignVertical - Sets the text vertical alignment to the current cell range.\r\n\t * @property {'left' | 'right' | 'center' | 'justify'} AlignHorizontal - Sets the text horizontal alignment to the current cell range.\r\n\t * @property {bool} Bold - Sets the bold property to the text characters from the current cell or cell range.\r\n\t * @property {'none' | 'single' | 'singleAccounting' | 'double' | 'doubleAccounting'} Underline - Sets the type of underline applied to the font.\r\n\t * @property {bool} Strikeout - Sets a value that indicates whether the contents of the current cell or cell range are displayed struck through.\r\n\t * @property {ApiColor|'No Fill'} FillColor - Returns or sets the background color of the current cell range.\r\n\t * @property {string} NumberFormat - Sets a value that represents the format code for the object.\r\n\t * @property {ApiRange} MergeArea - Returns the cell or cell range from the merge area.\r\n\t * @property {ApiWorksheet} Worksheet - Returns the ApiWorksheet object that represents the worksheet containing the specified range.\r\n\t * @property {ApiName} DefName - Returns the ApiName object.\r\n\t * @property {ApiComment | null} Comments - Returns the ApiComment collection that represents all the comments from the specified worksheet.\r\n\t */",
+  "comment": "/**\r\n\t * Class representing a range.\r\n\t * @constructor\r\n\t * @property {number} Row - Returns the row number for the selected cell.\r\n\t * @property {number} Col - Returns the column number for the selected cell.\r\n\t * @property {ApiRange} Rows - Returns the ApiRange object that represents the rows of the specified range.\r\n\t * @property {ApiRange} Cols - Returns the ApiRange object that represents the columns of the specified range.\r\n\t * @property {number} Count - Returns the rows or columns count.\r\n\t * @property {string} Value - Returns the value from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Formula - Returns the formula from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Value2 - Returns the value2 (value without format) from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Text - Returns the text from the first cell of the specified range or sets it to this cell.\r\n\t * @property {ApiColor} FontColor - Sets the text color to the current cell range with the previously created color object.\r\n\t * @property {bool} Hidden - Returns or sets the value hiding property.\r\n\t * @property {number} ColumnWidth - Returns or sets the width of all the columns in the specified range measured in points.\r\n\t * @property {number} Width - Returns a value that represents the range width measured in points.\r\n\t * @property {number} RowHeight - Returns or sets the height of the first row in the specified range measured in points.\r\n\t * @property {number} Height - Returns a value that represents the range height measured in points.\r\n\t * @property {number} FontSize - Sets the font size to the characters of the current cell range.\r\n\t * @property {string} FontName - Sets the specified font family as the font name for the current cell range.\r\n\t * @property {'center' | 'bottom' | 'top' | 'distributed' | 'justify'} AlignVertical - Sets the text vertical alignment to the current cell range.\r\n\t * @property {'left' | 'right' | 'center' | 'justify'} AlignHorizontal - Sets the text horizontal alignment to the current cell range.\r\n\t * @property {bool} Bold - Sets the bold property to the text characters from the current cell or cell range.\r\n\t * @property {'none' | 'single' | 'singleAccounting' | 'double' | 'doubleAccounting'} Underline - Sets the type of underline applied to the font.\r\n\t * @property {bool} Strikeout - Sets a value that indicates whether the contents of the current cell or cell range are displayed struck through.\r\n\t * @property {ApiColor|'No Fill'} FillColor - Returns or sets the background color of the current cell range.\r\n\t * @property {string} NumberFormat - Sets a value that represents the format code for the object.\r\n\t * @property {ApiRange} MergeArea - Returns the cell or cell range from the merge area.\r\n\t * @property {ApiWorksheet} Worksheet - Returns the ApiWorksheet object that represents the worksheet containing the specified range.\r\n\t * @property {ApiName} DefName - Returns the ApiName object.\r\n\t * @property {ApiComment | null} Comments - Returns the ApiComment collection that represents all the comments from the specified worksheet.\r\n\t * @property {'xlDownward' | 'xlHorizontal' | 'xlUpward' | 'xlVertical'} Orientation - Sets an angle to the current cell range.\r\n\t */",
   "description": "<p>Class representing a range.</p>",
   "scope": "global",
   "params": [],
@@ -993,6 +1002,11 @@
       "type": "ApiRange",
       "name": "Rows",
       "description": "<p>Returns the ApiRange object that represents the rows of the specified range.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Cols",
+      "description": "<p>Returns the ApiRange object that represents the columns of the specified range.</p>"
     },
     {
       "type": "number",
@@ -1113,6 +1127,11 @@
       "type": "ApiComment | null",
       "name": "Comments",
       "description": "<p>Returns the ApiComment collection that represents all the comments from the specified worksheet.</p>"
+    },
+    {
+      "type": "'xlDownward' | 'xlHorizontal' | 'xlUpward' | 'xlVertical'",
+      "name": "Orientation",
+      "description": "<p>Sets an angle to the current cell range.</p>"
     }
   ]
 }

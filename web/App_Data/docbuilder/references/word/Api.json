@@ -856,7 +856,7 @@
     "AddComment": {
       "memberof": "Api",
       "name": "AddComment",
-      "description": "<p>Add a comment to the desired element or array of elements.</p>",
+      "description": "<p>Add a comment to the desired element or array of Runs.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -871,7 +871,7 @@
       "inherits": null,
       "params": [
         {
-          "type": "Array | ApiParagraph | ApiDocument",
+          "type": "Array.<ApiRun> | ApiParagraph | ApiDocument",
           "name": "oElement",
           "description": "<p>May be Document, Paragraph or Run[].</p>",
           "optional": false
