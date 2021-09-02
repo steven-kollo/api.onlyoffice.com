@@ -16,6 +16,19 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="64" class="copy-link">Version 6.4</h2>
+    <ul>
+        <li>Added the <em>simple</em> value to the <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a> parameter.</li>
+        <li>Added the <a href="<%= Url.Action("commenting") %>#threaded-comments">threaded comments</a> saving in the spreadsheet files.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a> field.</li>
+        <li>Added the possibility to view the <a href="<%= Url.Action("history") %>">document history</a> for the presentation files.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideNotes">editorConfig.customization.hideNotes</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor") %>#coEditing">editorConfig.coEditing</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("methods") %>#requestClose">requestClose</a> method.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#commentGroups">document.permissions.commentGroups</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/events") %>#onPluginsReady">events.onPluginsReady</a> event.</li>
+    </ul>
+
     <h2 id="63" class="copy-link">Version 6.3</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("command/license") %>">license</a> command.</li>

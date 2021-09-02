@@ -1,5 +1,16 @@
 # Change Log
 
+- editors: added the simple value to the editorConfig.customization.reviewDisplay
+- editors: information about threaded comments
+- editors: commentGroups on try page
+- editors: added the Commenting page
+- editors: added document.permissions.commentGroups
+- editors: added the onPluginsReady event
+- editors: added the requestClose method
+- editors: added editorConfig.coEditing
+- editors: added the possibility to view the document history for the presentation files
+- editors: added editorConfig.customization.hideNotes
+- editors: added editorConfig.customization.uiTheme
 - plugins: restructured the config.json page and added navigation to it
 - plugins: updated config parameters
 - plugins: added the GetSelectionType and GetVersion methods
