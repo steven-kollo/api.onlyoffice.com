@@ -20,7 +20,7 @@
     "GetDocContent": {
       "memberof": "ApiShape",
       "name": "GetDocContent",
-      "description": "<p>Deprecated in 6.2\nGet the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "description": "<p>Deprecated in 6.2.\nGet the shape inner contents where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"

@@ -1,5 +1,7 @@
 # Change Log
 
+- docbuilder: v6.4
+- docbuilder: added changelog page
 - macros: assigning macros to the graphic objects
 - plugins: added the SetDisplayModeInReview and CoAuthoringChatSendMessage methods
 - editors: added the simple value to the editorConfig.customization.reviewDisplay

@@ -99,6 +99,9 @@
 		"apiunicolor": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noPresetColor = Api.CreatePresetColor(\"lightYellow\");\noGs1 = Api.CreateGradientStop(oPresetColor, 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noClassType = oPresetColor.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 		},
+		"Api.addcomment": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\nApi.AddComment(oParagraph, \"ONLYOFFICE for developers\", \"Jane\");\nbuilder.SaveFile(\"docx\", \"AddComment.docx\");\nbuilder.CloseFile();"
+		},
 		"Api.createblipfill": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateBlipFill(\"https://api.onlyoffice.com/content/img/docbuilder/examples/icon_DocumentEditors.png\", \"tile\");\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"star10\", 5930900, 595605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateBlipFill.docx\");\nbuilder.CloseFile();",
 		},
@@ -490,10 +493,10 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.InsertParagraph(\"This is inserted paragraph.\", \"before\", true);\nbuilder.SaveFile(\"docx\", \"InsertParagraph.docx\");\nbuilder.CloseFile();",
 		},
 		"ApiDrawing.scaleheight": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor ( i = 3; i > 0; i-- ){\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.ScaleHeight( i );} \nbuilder.SaveFile(\"docx\", \"ScaleHeight.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor ( i = 3; i > 0; i-- ){\n    oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\n    oStroke = Api.CreateStroke(0, Api.CreateNoFill());\n    oDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\n    oParagraph.AddDrawing(oDrawing);\n    oDrawing.ScaleHeight( i );\n} \nbuilder.SaveFile(\"docx\", \"ScaleHeight.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiDrawing.scalewidth": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\n    for (i = 1; i < 4; i++ ){\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 963295, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.ScaleWidth( i );}\nbuilder.SaveFile(\"docx\", \"ScaleWidth.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\nfor (i = 1; i < 4; i++ ){\n    oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\n    oStroke = Api.CreateStroke(0, Api.CreateNoFill());\n    oDrawing = Api.CreateShape(\"cube\", 963295, 963295, oFill, oStroke);\n    oParagraph.AddDrawing(oDrawing);\n    oDrawing.ScaleWidth( i );\n}\nbuilder.SaveFile(\"docx\", \"ScaleWidth.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiDrawing.select": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noDrawing.InsertParagraph(\"The Select property is applied to the drawing object\", \"before\", false);\noDrawing.Select();\nbuilder.SaveFile(\"docx\", \"Select.docx\");\nbuilder.CloseFile();",
@@ -915,6 +918,9 @@
 		"ApiParagraph.setwidowcontrol": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"The single line of the last paragraph on this page will be prevented from being displayed on a separate page. \");\nfor (x = 0; x < 5; ++x) {\n  oParagraph = Api.CreateParagraph();\n  for (i = 0; i < 10; ++i) {\n    oParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\n  }\n  oDocument.Push(oParagraph);\n}\noParagraph = Api.CreateParagraph();\nfor (i = 0; i < 4; ++i) {\n  oParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\n}\noParagraph.SetWidowControl(true);\noParagraph.AddText(\"This last line is displayed on the next page, because we used the set widow control method set to \"true\".\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetWidowControl.docx\");\nbuilder.CloseFile();",
 		},
+		"ApiParagraph.wrapinmailmergefield": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Paragraph wrapped in 'Mail Merge Field'\");\noParagraph.WrapInMailMergeField();\nbuilder.SaveFile(\"docx\", \"WrapInMailMergeField.docx\");\nbuilder.CloseFile();"
+		},
 		"ApiParaPr.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noMyStyle = oDocument.CreateStyle(\"My document style\");\noParaPr = oMyStyle.GetParaPr();\noParaPr.SetLeftBorder(\"single\", 24, 0, 0, 255, 0);\noParagraph = oDocument.GetElement(0);\noParagraph.SetStyle(oMyStyle);\noParagraph.AddText(\"This is the first paragraph. \");\noParagraph.AddText(\"The paragraph properties styled above set a border at its left side.\");\noClassType = oParaPr.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 		},
@@ -958,7 +964,7 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noMyStyle = oDocument.CreateStyle(\"My document style\");\noParaPr = oMyStyle.GetParaPr();\noParaPr.SetRightBorder(\"single\", 24, 0, 0, 255, 0);\noParagraph = oDocument.GetElement(0);\noParagraph.SetStyle(oMyStyle);\noParagraph.AddText(\"This is the first paragraph. \");\noParagraph.AddText(\"The paragraph properties styled above set a border at its right side.\");\nbuilder.SaveFile(\"docx\", \"SetRightBorder.docx\");\nbuilder.CloseFile();",
 		},
 		"ApiParaPr.setshd": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noMyStyle = oDocument.CreateStyle(\"My document style\");\noParaPr = oMyStyle.GetParaPr();\noParaPr.SetShd(\"clear\", 0, 255, 0, false);\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is an example of setting a shading to a paragraph. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.SetStyle(oMyStyle);\nbuilder.SaveFile(\"docx\", \"SetShd.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noMyStyle = oDocument.CreateStyle(\"My document style\");\noParaPr = oMyStyle.GetParaPr();\noParaPr.SetShd(\"clear\", 0, 255, 0, false);\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is an example of setting a shading to a paragraph.\");\noParagraph.SetStyle(oMyStyle);\nbuilder.SaveFile(\"docx\", \"SetShd.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiParaPr.setspacingafter": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noMyStyle = oDocument.CreateStyle(\"My document style\");\noParaPr = oMyStyle.GetParaPr();\noParaPr.SetSpacingAfter(1440);\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is an example of setting a space after a paragraph. \");\noParagraph.AddText(\"The second paragraph will have an offset of one inch from the top. \");\noParagraph.AddText(\"This is due to the fact that the first paragraph has this offset enabled.\");\noParagraph.SetStyle(oMyStyle);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is the second paragraph and it is one inch away from the first paragraph.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetSpacingAfter.docx\");\nbuilder.CloseFile();",
@@ -1182,6 +1188,9 @@
 		"ApiRun.setvertalign": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"subscript\");\noRun.AddText(\"This is a text run with the text aligned below the baseline vertically. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"baseline\");\noRun.AddText(\"This is a text run with the text aligned by the baseline vertically. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetVertAlign(\"superscript\");\noRun.AddText(\"This is a text run with the text aligned above the baseline vertically.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetVertAlign.docx\");\nbuilder.CloseFile();",
 		},
+		"ApiRun.wrapinmailmergefield": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"Name\");\noParagraph.AddElement(oRun);\noRun.WrapInMailMergeField();\noParagraph.AddLineBreak();\noRun = Api.CreateRun();\noRun.AddText(\"Surname\");\noParagraph.AddElement(oRun);\noRun.WrapInMailMergeField();\nbuilder.SaveFile(\"docx\", \"WrapInMailMergeField.docx\");\nbuilder.CloseFile();"
+		},
 		"ApiSchemeColor.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noSchemeColor = Api.CreateSchemeColor(\"accent6\");\noFill = Api.CreateSolidFill(oSchemeColor);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"curvedUpArrow\", 5930900, 595605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noClassType = oSchemeColor.GetClassType();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Class Type = \" + oClassType);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
 		},
@@ -1193,6 +1202,12 @@
 		},
 		"ApiSection.getheader": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a page with a header. \");\noParagraph.AddText(\"See it above.\");\noSection = oDocument.GetFinalSection();\noHeader = oSection.GetHeader(\"default\", true);\noParagraph = oHeader.GetElement(0);\noParagraph.AddText(\"This is a page header\");\nbuilder.SaveFile(\"docx\", \"GetHeader.docx\");\nbuilder.CloseFile();",
+		},
+		"ApiSection.getnext": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a new paragraph.\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"Scroll down to see the new section.\");\noSection1 = oDocument.CreateSection(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph in the first section\");\noDocument.Push(oParagraph);\noSection2 = oDocument.CreateSection(oParagraph);\noNextSection = oSection1.GetNext();\noNextSection.SetPageMargins(7200, 2880, 1440, 5760);\nbuilder.SaveFile(\"docx\", \"GetNext.docx\");\nbuilder.CloseFile();"
+		},
+		"ApiSection.getprevious": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a new paragraph.\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"Scroll down to see the new section.\");\noSection1 = oDocument.CreateSection(oParagraph);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph in the first section\");\noDocument.Push(oParagraph);\noSection2 = oDocument.CreateSection(oParagraph);\noPreviousSection = oSection2.GetPrevious();\noPreviousSection.SetPageMargins(7200, 2880, 1440, 5760);\nbuilder.SaveFile(\"docx\", \"GetPrevious.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiSection.removefooter": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This page first was with a footer. \");\noParagraph.AddText(\"Scroll down the page to see if it was removed.\");\noSection = oDocument.CreateSection(oParagraph);\noFooter = oSection.GetFooter(\"default\", true);\noParagraph = oFooter.GetElement(0);\noParagraph.AddText(\"This is page footer #1. \");\noParagraph.AddText(\"You will not see it, as it will be removed.\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a page with a footer. \");\noParagraph.AddText(\"Scroll down the page to see it.\");\noDocument.Push(oParagraph);\noSection1 = oDocument.GetFinalSection();\noFooter = oSection1.GetFooter(\"default\", true);\noParagraph = oFooter.GetElement(0);\noParagraph.AddText(\"This is page footer #2. \");\noParagraph.AddText(\"Only this footer can be seen, as the first one has been removed.\");\noSection.RemoveFooter(\"default\");\nbuilder.SaveFile(\"docx\", \"RemoveFooter.docx\");\nbuilder.CloseFile();",
@@ -1298,6 +1313,9 @@
 		},
 		"ApiTable.clear": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noTable.GetCell(0, 0).GetContent().GetElement(0).AddText(\"This is just a sample text.\");\noDocument.Push(oTable);\noTable.Clear();\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The content of the table was cleared.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"Clear.docx\");\nbuilder.CloseFile();",
+		},
+		"ApiTable.copy": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(2, 2);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noCopyTable = oTable.Copy();\noDocument.Push(oCopyTable);\nbuilder.SaveFile(\"docx\", \"Copy.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiTable.getcell": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noCell = oTable.GetCell(0, 0);\noCell.GetContent().GetElement(0).AddText(\"Cell #1\");\nbuilder.SaveFile(\"docx\", \"GetCell.docx\");\nbuilder.CloseFile();",
@@ -1416,6 +1434,9 @@
 		"ApiTable.setwrappingstyle": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample text.\");\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable1 = Api.CreateTable(3, 3);\noTable1.SetWidth(\"percent\", 100);\noTable1.SetStyle(oTableStyle);\noDocument.Push(oTable1);\noTable1.GetCell(0, 0).GetContent().GetElement(0).AddText(\"Table 1\");\noTable2 = Api.CreateTable(3, 3);\noTable2.SetWidth(\"percent\", 100);\noTable2.SetStyle(oTableStyle);\noDocument.Push(oTable2);\noTable2.GetCell(0, 0).GetContent().GetElement(0).AddText(\"Table 2\");\noParagraph.AddLineBreak();\noParagraph.AddText(\"The tables were added to the paragraph. Table 1 is inline and Table 2 is not.\");\noTable1.SetWrappingStyle(true);\noTable2.SetWrappingStyle(false);\nbuilder.SaveFile(\"docx\", \"SetWrappingStyle.docx\");\nbuilder.CloseFile();",
 		},
+		"ApiTable.split": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noCell = oTable.GetCell(0, 0);\noTable.Split(oCell, 2, 2);\nbuilder.SaveFile(\"docx\", \"Split.docx\");\nbuilder.CloseFile();"
+		},
 		"ApiTableCell.addcolumns": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noTable.GetCell(0, 0).GetContent().GetElement(0).AddText(\"Two new columns were added after this cell.\");\noTable.GetCell(0, 0).AddColumns(2, false);\nbuilder.SaveFile(\"docx\", \"AddColumns.docx\");\nbuilder.CloseFile();",
 		},
@@ -1505,6 +1526,9 @@
 		},
 		"ApiTableCell.setwidth": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noCell = oTable.GetRow(0).GetCell(0);\noCell.SetWidth(\"twips\", 2880);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"2 inches\");\noCell = oTable.GetRow(0).GetCell(1);\noCell.SetWidth(\"twips\", 1440);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"1 inch\");\noCell = oTable.GetRow(0).GetCell(2);\noCell.SetWidth(\"twips\", 4320);\noParagraph = oCell.GetContent().GetElement(0);\noParagraph.AddText(\"3 inches\");\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nbuilder.SaveFile(\"docx\", \"SetWidth.docx\");\nbuilder.CloseFile();",
+		},
+		"ApiTableCell.split": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTable1.SetStyle(oTableStyle);\noDocument.Push(oTable);\noCell = oTable.GetCell(0, 0);\noCell.Split(2, 2);\nbuilder.SaveFile(\"docx\", \"Split.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiTableCellPr.getclasstype": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\noTable = Api.CreateTable(3, 3);\noTable.SetWidth(\"percent\", 100);\noTableCellPr = oTableStyle.GetTableCellPr();\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\noClassType = oTableCellPr.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class Type = \" + oClassType);\nbuilder.SaveFile(\"docx\", \"GetClassType.docx\");\nbuilder.CloseFile();",
@@ -1985,6 +2009,12 @@
 		"ApiColor.getclasstype": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noColor = Api.CreateColorFromRGB(49, 133, 154);\noWorksheet.GetRange(\"A2\").SetValue(\"Text with color\");\noWorksheet.GetRange(\"A2\").SetFontColor(oColor);\noColorClassType = oColor.GetClassType();\noWorksheet.GetRange(\"A4\").SetValue(\"Class type = \" + oColorClassType);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
 		},
+		"ApiComment.delete": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noRange = oWorksheet.GetRange(\"A1\");\noRange.AddComment(\"This is just a number.\");\noComment = oRange.GetComment();\noComment.Delete();\noWorksheet.GetRange(\"A3\").SetValue(\"The comment was just deleted from A1.\");\nbuilder.SaveFile(\"xlsx\", \"Delete.xlsx\");\nbuilder.CloseFile();"
+		},
+		"ApiComment.getclasstype": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noRange = oWorksheet.GetRange(\"A1\");\noRange.AddComment(\"This is just a number.\");\noComment = oRange.GetComment();\nsType = oComment.GetClassType();\noWorksheet.GetRange(\"A3\").SetValue(\"Type: \" + sType + \" (number of comment data type)\");\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();"
+		},
 		"ApiComment.gettext": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noRange = oWorksheet.GetRange(\"A1\");\noRange.AddComment(\"This is just a number.\");\noWorksheet.GetRange(\"A3\").SetValue(\"Comment: \");\noWorksheet.GetRange(\"B3\").SetValue(oRange.GetComment().GetText());\nbuilder.SaveFile(\"xlsx\", \"GetText.xlsx\");\nbuilder.CloseFile();",
 		},
@@ -2153,17 +2183,26 @@
 		"ApiRange.clear": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:B1\");\noRange.SetValue(\"1\");\noRange.Clear();\noWorksheet.GetRange(\"A2\").SetValue(\"The range A1:B1 was just cleared.\");\nbuilder.SaveFile(\"xlsx\", \"Clear.xlsx\");\nbuilder.CloseFile();",
 		},
+		"ApiRange.end": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"C4:D5\");\noRange.End(\"xlToLeft\").SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"End.xlsx\");\nbuilder.CloseFile();"
+		},
 		"ApiRange.foreach": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"3\");\noRange = oWorksheet.GetRange(\"A1:C1\");\noRange.ForEach(function (range) {\n    sValue = range.GetValue();\n    if (sValue != \"1\") {\n        range.SetBold(true);\n    }\n});\nbuilder.SaveFile(\"xlsx\", \"ForEach.xlsx\");\nbuilder.CloseFile();",
 		},
 		"ApiRange.getaddress": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noAddress = oWorksheet.GetRange(\"A1\").GetAddress(true, true, \"xlA1\", false);\noWorksheet.GetRange(\"A3\").SetValue(\"Address: \");\noWorksheet.GetRange(\"B3\").SetValue(oAddress);\nbuilder.SaveFile(\"xlsx\", \"GetAddress.xlsx\");\nbuilder.CloseFile();",
 		},
+		"ApiRange.getcells": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:C3\");\noRange.GetCells(2, 1).SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetCells.xlsx\");\nbuilder.CloseFile();"
+		},
 		"ApiRange.getclasstype": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1\");\noRange.SetValue(\"This is just a sample text in the cell A1.\");\noClassType = oRange.GetClassType();\noWorksheet.GetRange('A3').SetValue(\"Class type: \" + oClassType);\nbuilder.SaveFile(\"xlsx\", \"GetClassType.xlsx\");\nbuilder.CloseFile();",
 		},
 		"ApiRange.getcol": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"D9\").GetCol();\noWorksheet.GetRange(\"A2\").SetValue(oRange.toString());\nbuilder.SaveFile(\"xlsx\", \"GetCol.xlsx\");\nbuilder.CloseFile();",
+		},
+		"ApiRange.getcols": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:C3\");\noRange.GetCols(2).SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetCols.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiRange.getcolumnwidth": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWidth = oWorksheet.GetRange(\"A1\").GetColumnWidth();\noWorksheet.GetRange(\"A1\").SetValue(\"Width: \");\noWorksheet.GetRange(\"B1\").SetValue(oWidth);\nbuilder.SaveFile(\"xlsx\", \"GetColumnWidth.xlsx\");\nbuilder.CloseFile();",
@@ -2186,6 +2225,9 @@
 		"ApiRange.gethidden": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRows(\"1:3\");\noRange.SetHidden(true);\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noWorksheet.GetRange(\"C1\").SetValue(\"3\");\noHidden = oRange.GetHidden();\noWorksheet.GetRange(\"A4\").SetValue(\"The values from A1:C1 are hidden: \" + oHidden);\nbuilder.SaveFile(\"xlsx\", \"GetHidden.xlsx\");\nbuilder.CloseFile();"
 		},
+		"ApiRange.getorientation": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noRange = oWorksheet.GetRange(\"A1:B1\");\noRange.SetOrientation(\"xlUpward\");\nsOrientation = oRange.GetOrientation();\noWorksheet.GetRange(\"A3\").SetValue(\"Orientation: \" + sOrientation);\nbuilder.SaveFile(\"xlsx\", \"GetOrientation.xlsx\");\nbuilder.CloseFile();"
+		},
 		"ApiRange.getrow": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A9\").GetRow();\noWorksheet.GetRange(\"A2\").SetValue(oRange.toString());\nbuilder.SaveFile(\"xlsx\", \"GetRow.xlsx\");\nbuilder.CloseFile();",
 		},
@@ -2193,7 +2235,7 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noHeight = oWorksheet.GetRange(\"A1\").GetRowHeight();\noWorksheet.GetRange(\"A1\").SetValue(\"Height: \");\noWorksheet.GetRange(\"B1\").SetValue(oHeight);\nbuilder.SaveFile(\"xlsx\", \"GetRowHeight.xlsx\");\nbuilder.CloseFile();",
 		},
 		"ApiRange.getrows": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:A3\");\noRows = oRange.GetRows(1, 2);\noRows.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:C3\");\nfor (let i=1; i <= 3; i++) {\n    oRows = oRange.GetRows(i);    \n    oRows.SetValue(i);\n}\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiRange.gettext": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"text1\");\noWorksheet.GetRange(\"B1\").SetValue(\"text2\");\noWorksheet.GetRange(\"C1\").SetValue(\"text3\");\noRange = oWorksheet.GetRange(\"A1:C1\");\noText = oRange.GetText();\noWorksheet.GetRange(\"A3\").SetValue(\"Text from the cell A1: \" + oText);\nbuilder.SaveFile(\"xlsx\", \"GetText.xlsx\");\nbuilder.CloseFile();",
@@ -2254,6 +2296,9 @@
 		},
 		"ApiRange.setoffset": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"B3\").SetValue(\"Old Range\");\noRange = oWorksheet.GetRange(\"B3\");\noRange.SetOffset(2, 2);\noRange.SetValue(\"New Range\");\nbuilder.SaveFile(\"xlsx\", \"SetOffset.xlsx\");\nbuilder.CloseFile();"
+		},
+		"ApiRange.setorientation": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"B1\").SetValue(\"2\");\noRange = oWorksheet.GetRange(\"A1:B1\");\noRange.SetOrientation(\"xlUpward\");\nbuilder.SaveFile(\"xlsx\", \"SetOrientation.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiRange.setrowheight": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetRowHeight(32);\nbuilder.SaveFile(\"xlsx\", \"SetRowHeight.xlsx\");\nbuilder.CloseFile();"
@@ -2472,7 +2517,7 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRightMargin = oWorksheet.GetRightMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Right margin: \" + oRightMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"GetRightMargin.xlsx\");\nbuilder.CloseFile();",
 		},
 		"ApiWorksheet.getrows": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange = oWorksheet.GetRange(\"A1:A3\");\noRows = oRange.GetRows(1, 2);\noRows.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRows(\"1:4\").SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"GetRows.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiWorksheet.getselection": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetSelection().SetValue(\"selected\");\nbuilder.SaveFile(\"xlsx\", \"GetSelection.xlsx\");\nbuilder.CloseFile();",

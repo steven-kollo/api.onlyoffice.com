@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiTable",
       "name": "GetClassType",
-      "description": "<p>Returns type of object</p>",
+      "description": "<p>Return type of object.</p>",
       "tags": {},
       "returns": [
         [
@@ -16,7 +16,7 @@
     "GetRow": {
       "memberof": "ApiTable",
       "name": "GetRow",
-      "description": "<p>Returns row by index</p>",
+      "description": "<p>Return row by index.</p>",
       "tags": {},
       "returns": [
         [
@@ -29,6 +29,7 @@
         {
           "type": "number",
           "name": "nIndex",
+          "description": "<p>The row number (position) in the table.</p>",
           "optional": false
         }
       ]
@@ -36,7 +37,7 @@
     "MergeCells": {
       "memberof": "ApiTable",
       "name": "MergeCells",
-      "description": "<p>Merge array of cells. If merge was done successfully it will return merged cell, otherwise &quot;null&quot;.\n<b>Warning</b>: The number of cells in any row and the numbers of rows in the current table may be changed.</p>",
+      "description": "<p>Merge array of cells. If merge was done successfully, it will return merged cell, otherwise &quot;null&quot;.\n<b>Warning</b>: The number of cells in any row and the number of rows in the current table may be changed.</p>",
       "tags": {},
       "returns": [
         [
@@ -49,6 +50,7 @@
         {
           "type": "Array.<ApiTableCell>",
           "name": "aCells",
+          "description": "<p>The array of cells.</p>",
           "optional": false
         }
       ]
@@ -56,7 +58,7 @@
     "SetTableLook": {
       "memberof": "ApiTable",
       "name": "SetTableLook",
-      "description": "<p>Specify the components of the conditional formatting of the referenced table style (if one exists)\nwhich shall be applied to the set of table rows with the current table-level property exceptions. A table style\ncan specify up to six different optional conditional formats [Example: Different formatting for first column.\nend example], which then can be applied or omitted from individual table rows in the parent table.</p>\n<p>The default setting is to apply the row and column banding formatting, but not the first row, last row, first\ncolumn, or last column formatting.</p>",
+      "description": "<p>Specify the components of the conditional formatting of the referenced table style (if one exists)\nwhich shall be applied to the set of table rows with the current table-level property exceptions. A table style\ncan specify up to six different optional conditional formats [Example: Different formatting for first column],\nwhich then can be applied or omitted from individual table rows in the parent table.</p>\n<p>The default setting is to apply the row and column banding formatting, but not the first row, last row, first\ncolumn, or last column formatting.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -122,7 +124,7 @@
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new row before or after the specified cell. If no cell is specified\nthen this parameter will be ignored.</p>",
+          "description": "<p>Add a new row before or after the specified cell. If no cell is specified,\nthen this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -146,7 +148,7 @@
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new column before or after the specified cell. If no cell is specified\nthen this parameter will be ignored.</p>",
+          "description": "<p>Add a new column before or after the specified cell. If no cell is specified,\nthen this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -168,6 +170,7 @@
         {
           "type": "ApiTableCell",
           "name": "oCell",
+          "description": "<p>The table cell specified.</p>",
           "optional": false
         }
       ]
@@ -188,6 +191,7 @@
         {
           "type": "ApiTableCell",
           "name": "oCell",
+          "description": "<p>The table cell specified.</p>",
           "optional": false
         }
       ]
@@ -232,8 +236,8 @@
       ]
     }
   },
-  "comment": "/**\r\n     * Represents table in presentation\r\n     * @param oGraphicFrame\r\n     * @constructor\r\n     * */",
-  "description": "<p>Represents table in presentation</p>",
+  "comment": "/**\r\n     * Class representing a table.\r\n     * @param oGraphicFrame\r\n     * @constructor\r\n     * */",
+  "description": "<p>Class representing a table.</p>",
   "scope": "global",
   "params": []
 }

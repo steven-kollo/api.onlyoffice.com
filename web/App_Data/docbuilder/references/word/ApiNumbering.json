@@ -43,8 +43,8 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a numbering properties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a numbering properties.</p>",
+  "comment": "/**\r\n\t * Class representing the numbering properties.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing the numbering properties.</p>",
   "scope": "global",
   "params": []
 }

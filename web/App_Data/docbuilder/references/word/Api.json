@@ -3,7 +3,7 @@
     "GetDocument": {
       "memberof": "Api",
       "name": "GetDocument",
-      "description": "<p>Get the main document</p>",
+      "description": "<p>Get the main document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -38,7 +38,7 @@
     "CreateRange": {
       "memberof": "Api",
       "name": "CreateRange",
-      "description": "<p>Create a new paragraph.</p>",
+      "description": "<p>Create an element range.\nIf you do not specify the start and end positions, the range will be taken from the entire element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -46,11 +46,13 @@
       },
       "returns": [
         [
-          "ApiParagraph"
+          "ApiRange",
+          "null"
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     },
     "CreateTable": {
       "memberof": "Api",
@@ -122,19 +124,19 @@
         {
           "type": "string",
           "name": "sLink",
-          "description": "<p>link to</p>",
+          "description": "<p>The hyperlink address.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sDisplay",
-          "description": "<p>display text</p>",
+          "description": "<p>The text to display the hyperlink.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sScreenTipText",
-          "description": "<p>ScreenTip text</p>",
+          "description": "<p>The screen tip text.</p>",
           "optional": false
         }
       ]
@@ -388,7 +390,7 @@
     "CreateSolidFill": {
       "memberof": "Api",
       "name": "CreateSolidFill",
-      "description": "<p>Create a solid fill which allows to fill the object using a selected solid color as the object background.</p>",
+      "description": "<p>Create a solid fill to apply to the object using a selected solid color as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -415,7 +417,7 @@
     "CreateLinearGradientFill": {
       "memberof": "Api",
       "name": "CreateLinearGradientFill",
-      "description": "<p>Create a linear gradient fill which allows to fill the object using a selected linear gradient as the object background.</p>",
+      "description": "<p>Create a linear gradient fill to apply to the object using a selected linear gradient as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -448,7 +450,7 @@
     "CreateRadialGradientFill": {
       "memberof": "Api",
       "name": "CreateRadialGradientFill",
-      "description": "<p>Create a radial gradient fill which allows to fill the object using a selected radial gradient as the object background.</p>",
+      "description": "<p>Create a radial gradient fill to apply to the object using a selected radial gradient as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -475,7 +477,7 @@
     "CreatePatternFill": {
       "memberof": "Api",
       "name": "CreatePatternFill",
-      "description": "<p>Create a pattern fill which allows to fill the object using a selected pattern as the object background.</p>",
+      "description": "<p>Create a pattern fill to apply to fill the object using a selected pattern as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -514,7 +516,7 @@
     "CreateBlipFill": {
       "memberof": "Api",
       "name": "CreateBlipFill",
-      "description": "<p>Create a blip fill which allows to fill the object using a selected image as the object background.</p>",
+      "description": "<p>Create a blip fill to apply to the object using a selected image as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -690,7 +692,7 @@
     "CreateInlineLvlSdt": {
       "memberof": "Api",
       "name": "CreateInlineLvlSdt",
-      "description": "<p>Create a new inline container</p>",
+      "description": "<p>Create a new inline container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -707,7 +709,7 @@
     "CreateBlockLvlSdt": {
       "memberof": "Api",
       "name": "CreateBlockLvlSdt",
-      "description": "<p>Create a new block level container</p>",
+      "description": "<p>Create a new block level container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -724,7 +726,7 @@
     "Save": {
       "memberof": "Api",
       "name": "Save",
-      "description": "<p>Saves changes to the specified document.</p>",
+      "description": "<p>Save changes to the specified document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -737,7 +739,7 @@
     "LoadMailMergeData": {
       "memberof": "Api",
       "name": "LoadMailMergeData",
-      "description": "<p>Loads data for the mail merge.</p>",
+      "description": "<p>Load data for the mail merge.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -754,7 +756,7 @@
         {
           "type": "Array.<Array.<String>>",
           "name": "aList",
-          "description": "<p>mail merge data. The first element of the array is the array with names of the merge fields.\nThe rest of the array elements are arrays with values for the merge fields.</p>",
+          "description": "<p>Mail merge data. The first element of the array is the array with names of the merge fields.\nThe rest of the array elements are arrays with values for the merge fields.</p>",
           "optional": false
         }
       ]
@@ -762,7 +764,7 @@
     "GetMailMergeTemplateDocContent": {
       "memberof": "Api",
       "name": "GetMailMergeTemplateDocContent",
-      "description": "<p>Gets the mail merge template doc.</p>",
+      "description": "<p>Get the mail merge template document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -779,7 +781,7 @@
     "GetMailMergeReceptionsCount": {
       "memberof": "Api",
       "name": "GetMailMergeReceptionsCount",
-      "description": "<p>Gets the mail merge receptions count.</p>",
+      "description": "<p>Get the mail merge receptions count.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -796,7 +798,7 @@
     "ReplaceDocumentContent": {
       "memberof": "Api",
       "name": "ReplaceDocumentContent",
-      "description": "<p>Replaces the content of the main document with the another document content.</p>",
+      "description": "<p>Replace the main document content with another document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -809,6 +811,7 @@
         {
           "type": "ApiDocumentContent",
           "name": "oApiDocumentContent",
+          "description": "<p>The document content which the main document content will be replaced with.</p>",
           "optional": false
         }
       ]
@@ -816,7 +819,7 @@
     "MailMerge": {
       "memberof": "Api",
       "name": "MailMerge",
-      "description": "<p>Starts the mail merge process</p>",
+      "description": "<p>Start the mail merge process.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -833,11 +836,13 @@
         {
           "type": "number",
           "name": "nStartIndex",
+          "description": "<p>The start index of the document for mail merge process.</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "nEndIndex",
+          "description": "<p>The end index of the document for mail merge process.</p>",
           "optional": false
         },
         {
@@ -851,7 +856,7 @@
     "AddComment": {
       "memberof": "Api",
       "name": "AddComment",
-      "description": "<p>Adds a comment to the desired element or array of elements.</p>",
+      "description": "<p>Add a comment to the desired element or array of Runs.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -866,73 +871,21 @@
       "inherits": null,
       "params": [
         {
-          "type": "Array | ApiParagraph | ApiDocument",
+          "type": "Array.<ApiRun> | ApiParagraph | ApiDocument",
           "name": "oElement",
-          "description": "<p>may be Document, Paragraph or Run[]</p>",
+          "description": "<p>May be Document, Paragraph or Run[].</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "Comment",
-          "description": "<p>comment</p>",
+          "description": "<p>The comment text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "Autor",
-          "description": "<p>autor's name (not obligatory)</p>",
-          "optional": false
-        }
-      ]
-    },
-    "GetFirstRunInArray": {
-      "memberof": "Api",
-      "name": "GetFirstRunInArray",
-      "description": "<p>Get the Run that is first in position</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "ApiRun",
-          "null"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "Array",
-          "name": "Runs",
-          "description": "<p>Array of Runs</p>",
-          "optional": false
-        }
-      ]
-    },
-    "GetLastRunInArray": {
-      "memberof": "Api",
-      "name": "GetLastRunInArray",
-      "description": "<p>Get the Run that is last in position</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "ApiRun",
-          "null"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "Array",
-          "name": "Runs",
-          "description": "<p>Array of Runs</p>",
+          "description": "<p>The author's name (not obligatory).</p>",
           "optional": false
         }
       ]

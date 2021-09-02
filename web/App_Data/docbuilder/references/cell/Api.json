@@ -3,7 +3,7 @@
     "Format": {
       "memberof": "Api",
       "name": "Format",
-      "description": "<p>Returns a class formatted according to instructions contained in a format expression</p>",
+      "description": "<p>Return a class formatted according to the instructions contained in a format expression.</p>",
       "tags": {},
       "returns": [
         [
@@ -30,7 +30,7 @@
     "AddSheet": {
       "memberof": "Api",
       "name": "AddSheet",
-      "description": "<p>Creates a new worksheet. The new worksheet becomes the active sheet.</p>",
+      "description": "<p>Create a new worksheet. The new worksheet becomes the active sheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -43,6 +43,7 @@
         {
           "type": "string",
           "name": "sName",
+          "description": "<p>The name of a new worksheet.</p>",
           "optional": false
         }
       ]
@@ -50,7 +51,7 @@
     "GetSheets": {
       "memberof": "Api",
       "name": "GetSheets",
-      "description": "<p>Returns a Sheets collection that represents all the sheets in the active workbook.</p>",
+      "description": "<p>Returns a sheet collection that represents all the sheets in the active workbook.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -67,7 +68,7 @@
     "SetLocale": {
       "memberof": "Api",
       "name": "SetLocale",
-      "description": "<p>Set locale for document.</p>",
+      "description": "<p>Set locale for the document.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -80,6 +81,7 @@
         {
           "type": "number",
           "name": "LCID",
+          "description": "<p>The locale specified.</p>",
           "optional": false
         }
       ]
@@ -87,7 +89,7 @@
     "GetLocale": {
       "memberof": "Api",
       "name": "GetLocale",
-      "description": "<p>Returns current locale id.</p>",
+      "description": "<p>Return current locale id.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -121,7 +123,7 @@
     "GetSheet": {
       "memberof": "Api",
       "name": "GetSheet",
-      "description": "<p>Returns an object that represents the sheet</p>",
+      "description": "<p>Return an object that represents the sheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -139,7 +141,7 @@
         {
           "type": "string | number",
           "name": "nameOrIndex",
-          "description": "<p>Sheet name or Sheet index</p>",
+          "description": "<p>Sheet name or sheet index.</p>",
           "optional": false
         }
       ]
@@ -147,7 +149,7 @@
     "GetThemesColors": {
       "memberof": "Api",
       "name": "GetThemesColors",
-      "description": "<p>Get the list of all available theme colors for the spreadsheet.</p>",
+      "description": "<p>Get the list of all the available theme colors for the spreadsheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -181,7 +183,7 @@
         {
           "type": "string",
           "name": "sTheme",
-          "description": "<p>The list of theme colors that will be used to select the color scheme to be set to the current spreadsheet.</p>",
+          "description": "<p>The color scheme that will be set to the current spreadsheet.</p>",
           "optional": false
         }
       ]
@@ -251,7 +253,7 @@
     "Intersect": {
       "memberof": "Api",
       "name": "Intersect",
-      "description": "<p>Returns a ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.</p>",
+      "description": "<p>Return an ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -283,7 +285,7 @@
     "GetSelection": {
       "memberof": "Api",
       "name": "GetSelection",
-      "description": "<p>Returns an object that represents the selection range</p>",
+      "description": "<p>Return an object that represents the selection range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -300,7 +302,7 @@
     "AddDefName": {
       "memberof": "Api",
       "name": "AddDefName",
-      "description": "<p>Defines a new name for a range of cells.</p>",
+      "description": "<p>Define a new name for a range of cells.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -318,17 +320,19 @@
         {
           "type": "string",
           "name": "sName",
+          "description": "<p>The range name.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sRef",
-          "description": "<p>Must contain the sheet name, followed sign ! , followed by a range of cells.\nExample: &quot;Sheet1!$A$1:$B$2&quot;.</p>",
+          "description": "<p>Must contain the sheet name, followed by sign ! and  a range of cells.\nExample: &quot;Sheet1!$A$1:$B$2&quot;.</p>",
           "optional": false
         },
         {
           "type": "bool",
           "name": "isHidden",
+          "description": "<p>Defines if the range name is hidden or not.</p>",
           "optional": false
         }
       ]
@@ -336,7 +340,7 @@
     "GetDefName": {
       "memberof": "Api",
       "name": "GetDefName",
-      "description": "<p>Returns a ApiName.</p>",
+      "description": "<p>Return an ApiName.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -353,6 +357,7 @@
         {
           "type": "string",
           "name": "defName",
+          "description": "<p>The range name.</p>",
           "optional": false
         }
       ]
@@ -360,7 +365,7 @@
     "Save": {
       "memberof": "Api",
       "name": "Save",
-      "description": "<p>Saves changes to the specified document.</p>",
+      "description": "<p>Save changes to the specified document.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -373,15 +378,27 @@
     "GetRange": {
       "memberof": "Api",
       "name": "GetRange",
-      "description": "<p>Returns an ApiRange</p>",
-      "tags": {},
+      "description": "<p>Return an ApiRange.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
           "ApiRange"
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sRange",
+          "description": "<p>The range of cells from the current sheet.</p>",
+          "optional": false
+        }
+      ]
     },
     "GetMailMergeData": {
       "memberof": "Api",
@@ -403,6 +420,7 @@
         {
           "type": "number",
           "name": "nSheet",
+          "description": "<p>The sheet index.</p>",
           "optional": false
         }
       ]

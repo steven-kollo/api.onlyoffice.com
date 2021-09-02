@@ -93,21 +93,25 @@
         {
           "type": "EMU",
           "name": "nLeft",
+          "description": "<p>Left padding.</p>",
           "optional": false
         },
         {
           "type": "EMU",
           "name": "nTop",
+          "description": "<p>Top padding.</p>",
           "optional": false
         },
         {
           "type": "EMU",
           "name": "nRight",
+          "description": "<p>Right padding.</p>",
           "optional": false
         },
         {
           "type": "EMU",
           "name": "nBottom",
+          "description": "<p>Bottom padding.</p>",
           "optional": false
         }
       ]
@@ -115,7 +119,7 @@
     "GetNextShape": {
       "memberof": "ApiShape",
       "name": "GetNextShape",
-      "description": "<p>Gets the next inline shape.</p>",
+      "description": "<p>Get the next inline shape.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -133,7 +137,7 @@
     "GetPrevShape": {
       "memberof": "ApiShape",
       "name": "GetPrevShape",
-      "description": "<p>Gets the previous inline shape.</p>",
+      "description": "<p>Get the previous inline shape.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

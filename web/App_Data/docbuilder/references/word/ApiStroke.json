@@ -20,8 +20,8 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class represent a stroke class\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class represent a stroke class</p>",
+  "comment": "/**\r\n\t * Class representing a stroke.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a stroke.</p>",
   "scope": "global",
   "params": []
 }
