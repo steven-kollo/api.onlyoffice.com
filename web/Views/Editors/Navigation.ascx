@@ -40,7 +40,7 @@
         <a href="<%= Url.Action("integrating") %>">Integrating ONLYOFFICE Docs</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("plugins") %>">Creating connectors</a>
+                <a href="<%= Url.Action("plugins") %>">ONLYOFFICE API connectors</a>
                 <ul>
                     <li>
                         <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
