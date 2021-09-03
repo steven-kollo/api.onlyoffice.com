@@ -1,5 +1,6 @@
 # Change Log
 
+- desktop: added the updateEncryptionKeys command type to cloudCryptoCommand
 - editors: added the simple value to the editorConfig.customization.reviewDisplay
 - editors: information about threaded comments
 - editors: commentGroups on try page
