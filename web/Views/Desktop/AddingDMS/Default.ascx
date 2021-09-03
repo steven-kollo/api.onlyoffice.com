@@ -95,6 +95,12 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="entryPage" class="copy-link">entryPage</td>
+            <td>Defines the URL to connect the provider. It is used instead of the provider address and allows the desktop app not to send the <a href="#check">check</a> request.</td>
+            <td>string</td>
+            <td>"https://url-to-connect-provider.com"</td>
+        </tr>
+        <tr class="tablerow">
             <td id="startPage" class="copy-link">startPage</td>
             <td>Defines the relative URL added to the entered IP or domain when creating a new connection.</td>
             <td>string</td>
@@ -135,6 +141,7 @@
         }
     },
     "editorPage" : "/apps/onlyoffice/",
+    "entryPage" : "https://url-to-connect-provider.com",
     "startPage" : "/",
     "icons" : {
         "connectionsList" :  "./assets/listicon.svg",
