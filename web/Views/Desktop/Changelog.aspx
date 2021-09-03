@@ -19,6 +19,7 @@
 
     <h2 id="63" class="copy-link">Version 6.3</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("addingdms/") %>#entryPage">entryPage</a> parameter to the config with DMS integration parameters.</li>
     </ul>
 
     <h2 id="62" class="copy-link">Version 6.2</h2>
