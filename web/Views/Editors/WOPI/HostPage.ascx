@@ -56,7 +56,7 @@
 &lt;body&gt;
 
     &lt;form id="office_form" name="office_form" target="office_frame" action="&lt;%= actionUrl %&gt;" method="post"&gt;
-        &lt;input name="access_token" value="&lt;%= token %&gt;&lt;%= params %&gt;" type="hidden" /&gt;
+        &lt;input name="access_token" value="&lt;%= token %&gt;" type="hidden" /&gt;
         &lt;input name="access_token_ttl" value="&lt;%= tokenTtl %&gt;" type="hidden" /&gt;
     &lt;/form&gt;
 
@@ -82,7 +82,7 @@
 &lt;/html&gt;
 </pre>
 
-    <note>Please note that the <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;&lt;%= params %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em> strings will be rendered with the appropriate parameters.</note>
+    <note>Please note that the <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em> strings will be rendered with the appropriate parameters.</note>
     <div class="header-gray">Parameters</div>
         <table class="table">
         <colgroup>
@@ -105,7 +105,8 @@
             </tr>
             <tr>
                 <td id="access_token_ttl" class="copy-link">access_token_ttl</td>
-                <td>The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.</td>
+                <td>The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.
+                It is recommended to set this parameter to 10 hours.</td>
                 <td>integer</td>
             </tr>
         </tbody>
