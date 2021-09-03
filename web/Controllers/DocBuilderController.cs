@@ -43,6 +43,7 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Basic",
                 "gettingstarted",
+                "changelog",
                 "csharpexample",
                 "nodejsexample",
                 "phpexample",
@@ -64,8 +65,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "integrationapi/cdocbuilder/setproperty",
                 "integrationapi/cdocbuilder/setpropertyw",
                 "integrationapi/cdocbuilder/settmpfolder",
-                "integrationapi/globalvariable",
                 "integrationapi/arguments",
+                "howitworks",
+                "howitworks/globalvariable",
+                "howitworks/comparedocuments",
                 "textdocumentapi",
                 "spreadsheetapi",
                 "presentationapi",
@@ -86,6 +89,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Basic()
+        {
+            return View();
+        }
+
+        public ActionResult Changelog()
         {
             return View();
         }
@@ -131,6 +139,15 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Integrationapi", (object)catchall);
+        }
+
+        public ActionResult Howitworks(string catchall)
+        {
+            if (!_actionMap.Contains("howitworks/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Howitworks", (object)catchall);
         }
 
         public ActionResult Textdocumentapi(string catchall)

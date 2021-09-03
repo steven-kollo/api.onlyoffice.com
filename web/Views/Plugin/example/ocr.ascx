@@ -15,7 +15,7 @@
 
 <div class="header-gray">Installation</div>
 <p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.</p>
-<p>You can remove it following the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a>, or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
+<p>You can remove it following the <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>" target="_blank">on-premises</a>, or <a href="<%= Url.Action("installation/cloud") %>" target="_blank">cloud</a> installation instructions.
 <p>The plugin guid: {440EBF13-9B19-4BD8-8621-05200E58140B}.</p>
 
 
@@ -40,7 +40,7 @@
     <li><em>index_about.html</em> for the plugin <b>About</b> window</li>
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/clippy/licenses/jQuery.license" target="_blank">MIT License/</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/clippy/licenses/jQuery.license" target="_blank">MIT License/</a>.</li>
             <li><b>TesseractJS-Core</b> is a pure Javascript port of the popularTesseract OCR engine. This library supportsmore than 100 languages, automatic textorientation and script detection, a simple interface for reading paragraph, word, and characterbounding boxes (<a href="https://tesseract.projectnaptha.com/" target="_blank">https://tesseract.projectnaptha.com/</a>). License: <a href="https://github.com/naptha/tesseract.js-core/blob/master/LICENSE" target="_blank">Apache License.</a></li>
         </ul>
     </li>

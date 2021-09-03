@@ -21,9 +21,9 @@
     <ol>
         <li><p>Integrate this library into your own application. Use the buttons below to download these libraries:</p>
             <ul class="list-buttons">
-                <li><a class="button" href="http://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.tar.gz">Linux x64</a></li>
-                <li><a class="button" href="http://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.zip">Windows x64</a></li>
-                <li><a class="button" href="http://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x86.zip">Windows x86</a></li>
+                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.tar.gz">Linux x64</a></li>
+                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.zip">Windows x64</a></li>
+                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x86.zip">Windows x86</a></li>
             </ul>
             <p>After you download and unpack the files, the library is ready for <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">integration</a>.</p>
         </li>

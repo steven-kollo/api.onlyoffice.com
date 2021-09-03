@@ -442,8 +442,8 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a table cell proprties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a table cell proprties.</p>",
+  "comment": "/**\r\n\t * Class representing the table cell properties.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing the table cell properties.</p>",
   "scope": "global",
   "params": []
 }

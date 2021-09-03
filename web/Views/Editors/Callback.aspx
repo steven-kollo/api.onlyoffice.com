@@ -76,7 +76,7 @@
                     Defines the type of initiator when the <a href="<%= Url.Action("save") %>#forcesave">force saving</a> request is performed.
                     Can have the following values:
                     <ul>
-                        <li><b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>,</li>
+                        <li><b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command/forcesave") %>">command service</a>,</li>
                         <li><b>1</b> - the force saving request is performed each time the saving is done (e.g. the <b>Save</b> button is clicked), which is only available when the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> option is set to <em>true</em>.</li>
                         <li><b>2</b> - the force saving request is performed by timer with the settings from the server config.</li>
                         <%--<li><b>3</b> - the force saving request is performed each time the form is submitted (e.g. the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">Submit form</a> button is clicked).</li>--%>
@@ -129,7 +129,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="userdata" class="copy-link">userdata</td>
-                <td>Defines the custom information sent to the <a href="<%= Url.Action("command") %>#userdata">command service</a> in case it was present in the request.</td>
+                <td>Defines the custom information sent to the <a href="<%= Url.Action("command/forcesave") %>">command service</a> in case it was present in the request.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
@@ -201,7 +201,7 @@
 }
 </pre>
 
-    <div id="status-6" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command") %>">forcesave</a> command had been received</div>
+    <div id="status-6" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command/forcesave") %>">forcesave</a> command had been received</div>
     <pre>
 {
     "changesurl": "https://documentserver/url-to-changes.zip",

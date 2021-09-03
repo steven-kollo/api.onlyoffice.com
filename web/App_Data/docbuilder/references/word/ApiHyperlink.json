@@ -20,7 +20,7 @@
     "SetLink": {
       "memberof": "ApiHyperlink",
       "name": "SetLink",
-      "description": "<p>Sets the hyperlink address.</p>",
+      "description": "<p>Set the hyperlink address.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -37,7 +37,7 @@
         {
           "type": "string",
           "name": "sLink",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>The hyperlink address.</p>",
           "optional": false
         }
       ]
@@ -45,7 +45,7 @@
     "SetDisplayedText": {
       "memberof": "ApiHyperlink",
       "name": "SetDisplayedText",
-      "description": "<p>Sets the display text of the hyperlink.</p>",
+      "description": "<p>Set the hyperlink display text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -62,6 +62,7 @@
         {
           "type": "string",
           "name": "sDisplay",
+          "description": "<p>The text to display the hyperlink.</p>",
           "optional": false
         }
       ]
@@ -69,7 +70,7 @@
     "SetScreenTipText": {
       "memberof": "ApiHyperlink",
       "name": "SetScreenTipText",
-      "description": "<p>Sets the screen tip text of the hyperlink.</p>",
+      "description": "<p>Set the screen tip text of the hyperlink.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -86,7 +87,7 @@
         {
           "type": "string",
           "name": "sScreenTipText",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>The screen tip text of the hyperlink.</p>",
           "optional": false
         }
       ]
@@ -94,7 +95,7 @@
     "GetLinkedText": {
       "memberof": "ApiHyperlink",
       "name": "GetLinkedText",
-      "description": "<p>Gets the link text of the hyperlink.</p>",
+      "description": "<p>Get the hyperlink address.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -111,7 +112,7 @@
     "GetDisplayedText": {
       "memberof": "ApiHyperlink",
       "name": "GetDisplayedText",
-      "description": "<p>Gets the displayed text of the hyperlink.</p>",
+      "description": "<p>Get the hyperlink display text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -128,7 +129,7 @@
     "GetScreenTipText": {
       "memberof": "ApiHyperlink",
       "name": "GetScreenTipText",
-      "description": "<p>Gets the ScreenTip text of the hyperlink.</p>",
+      "description": "<p>Get the screen tip text of the hyperlink.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -145,7 +146,7 @@
     "GetElement": {
       "memberof": "ApiHyperlink",
       "name": "GetElement",
-      "description": "<p>Get the element of the hyperlink using the position specified.</p>",
+      "description": "<p>Get the hyperlink element using the position specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -191,7 +192,7 @@
     "SetDefaultStyle": {
       "memberof": "ApiHyperlink",
       "name": "SetDefaultStyle",
-      "description": "<p>Sets default hyperlink style.</p>",
+      "description": "<p>Set default hyperlink style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -208,7 +209,7 @@
     "GetRange": {
       "memberof": "ApiHyperlink",
       "name": "GetRange",
-      "description": "<p>Returns a Range object that represents the part of the document contained in the specified hyperlink.</p>",
+      "description": "<p>Return a Range object that represents the document part contained in the specified hyperlink.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -225,20 +226,20 @@
         {
           "type": "Number",
           "name": "Start",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>Start character index in the current element.</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "End",
-          "description": "<p>end character in current element</p>",
+          "description": "<p>End character index in the current element.</p>",
           "optional": false
         }
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a hyperlink of Paragraph\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a hyperlink of Paragraph</p>",
+  "comment": "/**\r\n\t * Class representing a Paragraph hyperlink.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a Paragraph hyperlink.</p>",
   "scope": "global",
   "params": []
 }

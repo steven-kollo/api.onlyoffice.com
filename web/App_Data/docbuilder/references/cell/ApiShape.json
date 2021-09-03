@@ -71,7 +71,7 @@
         {
           "type": "\"top\" | \"center\" | \"bottom\"",
           "name": "sVerticalAlign",
-          "description": "<p>The type of the vertical alignment for the shape inner contents.</p>",
+          "description": "<p>The vertical alignment type for the shape inner contents.</p>",
           "optional": false
         }
       ]

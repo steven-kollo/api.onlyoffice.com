@@ -254,5 +254,25 @@
       "\"Medium\"",
       "\"Thick\""
     ]
+  },
+  "Angle": {
+    "name": "Angle",
+    "description": "<p>Specifies the range angle.</p>",
+    "type": [
+      "\"xlDownward\"",
+      "\"xlHorizontal\"",
+      "\"xlUpward\"",
+      "\"xlVertical\""
+    ]
+  },
+  "Direction": {
+    "name": "Direction",
+    "description": "<p>Specifies the direction of end in the specified range.</p>",
+    "type": [
+      "\"xlUp\"",
+      "\"xlDown\"",
+      "\"xlToRight\"",
+      "\"xlToLeft\""
+    ]
   }
 }

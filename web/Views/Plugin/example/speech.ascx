@@ -6,7 +6,7 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">Connects the  <a href="http://richtr.github.io/guessLanguage.js/" target="_blank">guessLanguage.js</a> library and the  <a href="https://responsivevoice.org/" target="_blank">ResponsiveVoice</a> service for reading text documents out loud by converting the selected text into speech.</p>
+<p class="dscr">Connects the  <a href="https://richtr.github.io/guessLanguage.js/" target="_blank">guessLanguage.js</a> library and the  <a href="https://responsivevoice.org/" target="_blank">ResponsiveVoice</a> service for reading text documents out loud by converting the selected text into speech.</p>
 <p><b>Plugin type:</b> visual, non-system.</p>
 <p><b>Supported editors:</b> documents.</p>
 
@@ -37,7 +37,7 @@
     <li><em>index_about.html</em> for the plugin <b>About</b> window</li>
     <li>Third-party services:
         <ul>
-            <li><b>guessLanguage.js</b> is a natural language detection library based on trigram statistical analysis. This library is written in JavaScript and works equally well when run in either browser or node.js (<a href="http://richtr.github.io/guessLanguage.js/" target="_blank">http://richtr.github.io/guessLanguage.js/</a>). License: <a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank">GNU LGPL</a>.</li>
+            <li><b>guessLanguage.js</b> is a natural language detection library based on trigram statistical analysis. This library is written in JavaScript and works equally well when run in either browser or node.js (<a href="https://richtr.github.io/guessLanguage.js/" target="_blank">https://richtr.github.io/guessLanguage.js/</a>). License: <a href="https://www.gnu.org/licenses/lgpl-3.0.html" target="_blank">GNU LGPL</a>.</li>
             <li><b>ResponsiveVoice</b> is a  service for converting text into speech using HTML5 (<a href="https://responsivevoice.org/" target="_blank">https://responsivevoice.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-speech/blob/master/licenses/ResponsiveVoice.license" target="_blank">CC-BY</a>.</li>
         </ul>
     </li>

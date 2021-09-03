@@ -198,12 +198,20 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array",
+          "name": "aDrawings",
+          "description": "<p>The array of drawings.</p>",
+          "optional": false
+        }
+      ]
     },
     "CreateTable": {
       "memberof": "Api",
       "name": "CreateTable",
-      "description": "<p>Create table</p>",
+      "description": "<p>Create a table.</p>",
       "tags": {},
       "returns": [
         [
@@ -234,7 +242,7 @@
     "Save": {
       "memberof": "Api",
       "name": "Save",
-      "description": "<p>Saves changes to the specified document.</p>",
+      "description": "<p>Save changes to the specified document.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"

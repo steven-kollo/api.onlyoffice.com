@@ -8,6 +8,9 @@
         <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
     <li>
+        <a href="<%= Url.Action("getdocs") %>">Get ONLYOFFICE Docs</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("try") %>">Try now</a>
     </li>
     <li>
@@ -107,6 +110,12 @@
             <li>
                 <a href="<%= Url.Action("anonymoususers") %>">Anonymous users</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("commenting") %>">Commenting</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("comparing") %>">Comparing documents</a>
+            </li>
         </ul>
     </li>
 </ul>
@@ -156,7 +165,27 @@
         <a href="<%= Url.Action("callback") %>">Callback handler</a>
     </li>
     <li>
-        <a href="<%= Url.Action("command") %>">Command service</a>
+        <a href="<%= Url.Action("command/") %>">Command service</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("command/drop") %>">drop</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/forcesave") %>">forcesave</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/info") %>">info</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/license") %>">license</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/meta") %>">meta</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/version") %>">version</a>
+            </li>
+        </ul>
     </li>
     <li>
         <a href="<%= Url.Action("conversionapi") %>">Conversion API</a>

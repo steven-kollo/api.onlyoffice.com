@@ -47,6 +47,14 @@ namespace ASC.Api.Web.Help.Controllers
                 "Changelog",
                 "Coedit",
                 "Command",
+                "Command/drop",
+                "Command/forcesave",
+                "Command/info",
+                "Command/license",
+                "Command/meta",
+                "Command/version",
+                "Commenting",
+                "Comparing",
                 "Config",
                 "Config/Document",
                 "Config/Document/Info",
@@ -79,6 +87,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
+                "GetDocs",
                 "History",
                 "HowItWorks",
                 "HumHub",
@@ -175,7 +184,21 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Command()
+        public ActionResult Command(string catchall)
+        {
+            if (!_actionMap.Contains("command/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Command", (object)catchall);
+        }
+
+        public ActionResult Commenting()
+        {
+            return View();
+        }
+
+        public ActionResult Comparing()
         {
             return View();
         }
@@ -220,6 +243,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("FAQ", (object)catchall);
+        }
+
+        public ActionResult GetDocs()
+        {
+            return View();
         }
 
         public ActionResult DemoPreview()
