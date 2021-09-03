@@ -6,7 +6,7 @@
     </h1>
 
     <p class="dscr">
-        PostMessage is the  <a href="https://html.spec.whatwg.org/multipage/" target="_blank">HTML5 Web Messaging</a> protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. 
+        <a href="https://wopi.readthedocs.io/en/latest/scenarios/postmessage.html?highlight=postmessage" target="_blank">PostMessage</a> is the  <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web Messaging</a> protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. 
         It allows the online office frame to communicate with its parent host page.
     </p>
 
@@ -60,7 +60,7 @@ otherWindow.postMessage (msg, targetOrigin)
                 <td id="targetOrigin" class="copy-link">targetOrigin</td>
                 <td>
                     The <em>otherWindow</em> origin that must be for the event to be dispatched. 
-                    It will be set to the <a href="<%= Url.Action("wopi/restapi") %>#PostMessageOrigin">PostMessageOrigin</a> property provided in <a href="<%= Url.Action("wopi/restapi") %>#CheckFileInfo">CheckFileInfo</a>.
+                    It will be set to the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#PostMessageOrigin">PostMessageOrigin</a> property provided in <em>CheckFileInfo</em>.
                     <br />
                     *<em>otherWindow</em> is a reference to another window that <em>msg</em> will be posted to.
                 </td>
@@ -69,6 +69,7 @@ otherWindow.postMessage (msg, targetOrigin)
         </tbody>
     </table>
 
+    <p>Here you can find the messages that are available for ONLYOFFICE Docs to send to the host page. The process of receiving messages by the online office will be available later.</p>
     <div class="header-gray">Available messages</div>
     <table class="table">
         <colgroup>
@@ -98,21 +99,31 @@ otherWindow.postMessage (msg, targetOrigin)
             </tr>
             <tr>
                 <td id="UI_Close" class="copy-link">UI_Close</td>
-                <td>This message is posted when the online office application is closing, either due to an error or a user action. 
-                    Typically, the URL specified in the <a href="<%= Url.Action("wopi/restapi") %>#CloseURL">CloseURL</a> property in the <a href="<%= Url.Action("wopi/restapi") %>#CheckFileInfo">CheckFileInfo</a> response is displayed. 
-                    However, hosts can intercept this message instead and navigate in an appropriate way.</td>
+                <td>This message is posted when the online office application is closing, either due to an error or a user action.
+                    To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#ClosePostMessage">ClosePostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
+                    Otherwise, the online office will not send this message.</td>
             </tr>
             <tr>
                 <td id="UI_Edit" class="copy-link">UI_Edit</td>
-                <td>This message is posted when the user activates the <em>Edit</em> UI in the online office. This UI is only visible when using the view action.</td>
+                <td>This message is posted when the user activates the <em>Edit</em> UI in the online office. This UI is only visible when using the view action.
+                To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#EditModePostMessage">EditModePostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
+                Otherwise, the online office will not send this message and will redirect the inner iframe to the edit action URL instead.</td>
             </tr>
             <tr>
                 <td id="UI_FileVersions" class="copy-link">UI_FileVersions</td>
-                <td>This message is posted when the user activates the <em>Previous Versions</em> UI in the online office. The host should use this message to trigger any custom file version history UI.</td>
+                <td>This message is posted when the user activates the <em>Previous Versions</em> UI in the online office. The host should use this message to trigger any custom file version history UI.
+                To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileVersionPostMessage">FileVersionPostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
+                Otherwise, the online office will not send this message.</td>
             </tr>
             <tr>
                 <td id="UI_Sharing" class="copy-link">UI_Sharing</td>
-                <td>This message is posted when the user activates the <em>Share</em> UI in the online office. The host should use this message to trigger any custom sharing UI.</td>
+                <td>This message is posted when the user activates the <em>Share</em> UI in the online office. The host should use this message to trigger any custom sharing UI.
+                To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingPostMessage">FileSharingPostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
+                Otherwise, the online office will not send this message.</td>
             </tr>
         </tbody>
     </table>
+
+    <note>Please note that the PostMessage messages have the higher priority than the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#CloseUrl">CloseUrl</a>,
+    <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#HostEditUrl">HostEditUrl</a>, <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingUrl">FileSharingUrl</a>,
+    <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileVersionUrl">FileVersionUrl</a> properties provided in <em>CheckFileInfo</em>.</note>

@@ -216,7 +216,7 @@
             </tr>
             <tr>
                 <td id="PostMessageOrigin" class="copy-link">PostMessageOrigin</td>
-                <td>A domain that the WOPI client must use as the <a href="<%= Url.Action("wopi/postmessage") %>#targetOrigin">targetOrigin</a> parameter when sending messages as described in <a href="https://html.spec.whatwg.org/multipage/" target="_blank">[W3C-HTML5WEBMSG]</a>.</td>
+                <td>A domain that the WOPI client must use as the <a href="<%= Url.Action("wopi/postmessage") %>#targetOrigin">targetOrigin</a> parameter when sending messages as described in <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">[W3C-HTML5WEBMSG]</a>.</td>
                 <td>string</td>
                 <td>"https://exampledomain.com"</td>
             </tr>
@@ -241,7 +241,7 @@
         </thead>
         <tbody>
             <tr>
-                <td id="CloseURL" class="copy-link">CloseURL</td>
+                <td id="CloseUrl" class="copy-link">CloseUrl</td>
                 <td>URL to a web page that the implementer deems useful to the user in case the user closes the rendering or editing client currently using this file.</td>
                 <td>string</td>
                 <td>"https://example.com/url-to-close-page.com"</td>
