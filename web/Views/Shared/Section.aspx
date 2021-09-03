@@ -34,7 +34,6 @@
         <span class="hdr"><%= model.Category %></span>
     </h1>
     <% } %>
-    <div id="mobile-content"></div>
     <table class="table hover">
         <colgroup>
             <col style="width: 25%"/>
@@ -64,4 +63,5 @@
             <% } %>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 </asp:Content>

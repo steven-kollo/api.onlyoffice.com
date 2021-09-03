@@ -19,7 +19,6 @@
     <p class="dscr">Checks if the name is available to create a portal.</p>
 
     <div class="header-gray">Parameters</div>
-    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 20%" />
@@ -46,6 +45,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
     <div class="header-gray">Returns</div>
@@ -96,6 +96,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <div class="header-gray">Example successful response</div>
     <pre>
 {

@@ -20,7 +20,6 @@
 }
 </pre>
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -61,6 +60,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Response example</div>
 
@@ -96,3 +96,4 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>

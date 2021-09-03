@@ -19,7 +19,6 @@
     <p class="dscr"><em>window.Asc.plugin</em> defines the object created when the plugin is launched. It has several methods some of which are optional and must be used only if and when needed.</p>
 
     <div class="header-gray">Methods and properties</div>
-    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 150px;" />
@@ -87,6 +86,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Example</div>
 

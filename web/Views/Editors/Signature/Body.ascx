@@ -21,7 +21,6 @@
 </div>
 
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 300px;" />
@@ -52,6 +51,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 
 <div class="header-gray">Sample local.json configuration</div>

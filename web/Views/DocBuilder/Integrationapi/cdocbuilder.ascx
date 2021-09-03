@@ -10,7 +10,6 @@
                   
 
             <h2>Methods</h2>
-            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">
@@ -76,6 +75,7 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 
             <h2>Example</h2>
             <h4 class="header-gray" >C++</h4>

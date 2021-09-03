@@ -9,7 +9,6 @@
 <p class="dscr">The document info section allows to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).</p>
 
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -120,6 +119,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>

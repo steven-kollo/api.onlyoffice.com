@@ -44,7 +44,6 @@
 </nav>
 
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -666,6 +665,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
 <% if (license)
    { %>

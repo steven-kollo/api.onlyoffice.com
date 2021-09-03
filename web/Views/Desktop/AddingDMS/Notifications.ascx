@@ -14,7 +14,6 @@ window.onSystemMessage = function (e)
 </pre>
 
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -58,6 +57,7 @@ window.onSystemMessage = function (e)
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>

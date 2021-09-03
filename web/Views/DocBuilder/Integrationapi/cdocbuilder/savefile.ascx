@@ -8,7 +8,6 @@
                 <p class="dscr">Save the file after all the changes are made. The type of the file which will be saved needs to be set.</p>
                 
             <h2>Parameters:</h2>
-            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">
@@ -47,6 +46,7 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 <h2>Example</h2>
 <h4 class="header-gray">C++</h4>
 <pre>

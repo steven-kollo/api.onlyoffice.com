@@ -1724,7 +1724,7 @@ article {
     display: none;
 }
 
-#mobile-content {
+.mobile-content {
     display: none;
 }
 
@@ -1875,7 +1875,8 @@ article {
     page navigation
 ********************************/
 .columns-4 {
-    column-count: 4;
+    column-count: 2;
+    padding: 8px 0;
 }
 .columns-2 {
     column-count: 2;
@@ -1889,6 +1890,10 @@ article {
         width: 100%;
     }
 
+    h2 {
+        margin: 1em 0;
+    }
+
     .hidden-body {
         overflow-y: hidden;
     }
@@ -1899,6 +1904,7 @@ article {
 
     .columns-4 {
         column-count: 2;
+        padding: 8px 0;
     }
 
     .bottommenu {
@@ -2252,7 +2258,7 @@ article {
         display: none;
     }
 
-    #mobile-content {
+    .mobile-content {
         display: block;
     }
 
@@ -2276,5 +2282,13 @@ article {
         border-radius: 50%;
         border-color: transparent;
         margin-top: 100px;
+    }
+
+    .scroll-arrow .hidden {
+        display: none;
+    }
+
+    .value {
+        word-break: break-word;
     }
 }

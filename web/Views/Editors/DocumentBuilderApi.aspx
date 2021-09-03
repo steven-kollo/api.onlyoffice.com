@@ -21,7 +21,6 @@
     </p>
 
     <h2>Parameters and their description:</h2>
-    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -76,6 +75,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <p>
         The <em>.docbuilder</em> file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name.

@@ -15,7 +15,6 @@
                     <div class="note">Please note, that for the <em>.docbuilder</em> file the <em>CDocBuilder.ExecuteCommand</em> method is not used explicitly, the command itself is used instead, see the example below.</div>
                 
             <h2>Parameters:</h2>
-            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">
@@ -33,6 +32,7 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 
             <h2>Example</h2>
 <h4 class="header-gray" >C++</h4>

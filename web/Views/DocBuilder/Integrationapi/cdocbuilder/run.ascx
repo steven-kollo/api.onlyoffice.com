@@ -9,7 +9,6 @@
                <p class="dscr">Run <b>ONLYOFFICE Document Builder</b> executable. If you do not want to write a C++ application, you can simply use the <b>docbuilder.exe</b> executable file and run it with the <b>.docbuilder</b> file as an argument, where all the code for the document file creation will be written. For C++ the path to the executable file from the <em>sPath</em> parameter must be used, the <em>CDocBuilder</em> object created and the <em>Run</em> method is called.</p>
                 
             <h2>Parameters:</h2>
-            <div id="mobile-content"></div>
             <table class="table">
                 <thead>
                     <tr class="tablerow">
@@ -27,6 +26,7 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 
             <h2>Example</h2>
 <h4 class="header-gray" >C++</h4>

@@ -17,7 +17,6 @@
     <h1>
         <span class="hdr">Portals</span>
     </h1>
-    <div id="mobile-content"></div>
     <table class="table hover">
         <colgroup>
             <col style="width: 25%" />
@@ -59,13 +58,13 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% }
        else if (string.IsNullOrEmpty(section) || string.Equals(section, "tariff"))
        { %>
     <h1>
         <span class="hdr">Billing</span>
     </h1>
-    <div id="mobile-content"></div>
     <table class="table hover">
         <colgroup>
             <col style="width: 25%" />
@@ -92,5 +91,6 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 </asp:Content>

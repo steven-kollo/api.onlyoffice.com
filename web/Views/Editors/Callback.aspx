@@ -21,7 +21,6 @@
     </p>
 
     <h2>Parameters and their description:</h2>
-    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -142,6 +141,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     
     <p id="used-callbackUrl" class="copy-link">
         Since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected depending on the <em>status</em> of the request.

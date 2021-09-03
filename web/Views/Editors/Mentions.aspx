@@ -69,7 +69,6 @@ docEditor.setUsers({
                 Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
                 See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
             </p>
-            <div id="mobile-content"></div>
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -106,6 +105,7 @@ docEditor.setUsers({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
     </ol>
 
@@ -203,6 +203,7 @@ docEditor.setSharingSettings({
                     </tr>
                 </tbody>
             </table>
+    <div class="mobile-content"></div>
     <p>
         In the case when the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event does not provide access to the file, the <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a> parameter in the customization section of the editor configuration must be set to <b>false</b>.
     </p>

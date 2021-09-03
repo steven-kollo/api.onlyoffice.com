@@ -15,7 +15,6 @@
 window.Asc.plugin.executeMethod ("AddContentControl", [wrap, obj]);
 </pre>
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -74,6 +73,7 @@ window.Asc.plugin.executeMethod ("AddContentControl", [wrap, obj]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <p>The <em>Lock</em> parameter can have the following values:</p>
 <table class="table">
@@ -107,6 +107,7 @@ window.Asc.plugin.executeMethod ("AddContentControl", [wrap, obj]);
             </tr>
         </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

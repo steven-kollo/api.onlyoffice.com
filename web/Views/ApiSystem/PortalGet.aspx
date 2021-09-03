@@ -20,7 +20,6 @@
     <p class="dscr">Get the list of all the portals registered to the user with the email address specified in the request.</p>
 
     <div class="header-gray">Parameters</div>
-    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 20%" />
@@ -47,6 +46,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Returns</div>
     <p>Returns the list of all the portals registered to the user with the email address specified in the request.</p>

@@ -43,7 +43,6 @@
     </span>
 
     <h2>Parameters:</h2>
-    <div id="mobile-content"></div>
     <% if (method.Params != null && method.Params.Any()) { %>
     <div id="methodParams">
     <% var hasOptional = method.Params.Any(m => m.Optional); %>
@@ -73,6 +72,7 @@
                 <% } %>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
     </div>
     <% } else { %>
     <div id="methodParams">

@@ -15,7 +15,6 @@
 window.Asc.plugin.executeMethod ("PasteHtml", [htmlText]);
 </pre>
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -40,6 +39,7 @@ window.Asc.plugin.executeMethod ("PasteHtml", [htmlText]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

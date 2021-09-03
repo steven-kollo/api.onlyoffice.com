@@ -78,7 +78,6 @@ function getInputHelperSize () {
         <li>
             <p><b id="setItems" class="copy-link">setItems</b> - the function called to set the items to the input helper.</p>
             <div class="header-gray">Parameters</div>
-            <div id="mobile-content"></div>
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -120,6 +119,7 @@ function getInputHelperSize () {
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
             <div class="header-gray">Example</div>
             <pre>
 {

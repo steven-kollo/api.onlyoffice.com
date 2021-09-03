@@ -20,7 +20,6 @@
     <p class="dscr">Get the portal pricing plan.</p>
 
     <div class="header-gray">Parameters</div>
-    <div id="mobile-content"></div>
     <table class="table">
         <colgroup>
             <col style="width: 20%" />
@@ -47,6 +46,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
     <div class="header-gray">Returns</div>

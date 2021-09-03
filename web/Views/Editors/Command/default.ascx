@@ -13,7 +13,6 @@
 <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -38,6 +37,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <p>See the available command types below to find more about them.</p>
 
@@ -82,6 +82,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <p>The JSON Web Token should be sent in the JSON object format to <b>document command service</b>. It is used to receive the status of the document with the key specified.</p>
 
@@ -116,6 +117,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <p>The <b>document editing service</b> informs the <b>document storage service</b> about the result caused by command using the <a href="<%= Url.Action("callback") %>">callback handler</a>.</p>
 

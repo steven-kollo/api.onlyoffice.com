@@ -207,6 +207,8 @@ $(function() {
     });
 });
 
+var valueOfRenderedBlocks = 0;
+
 function getHeadParams(thead) {
     var paramsList = thead.find("td");
     if (!paramsList || !paramsList.length) return false
@@ -220,38 +222,43 @@ function getHeadParams(thead) {
     return params
 }
 
-function createContentItem(content, headParams, index) {
-
-    $("#mobile-content").append(`<div class="${"contentItem index" + index}"></div>`)
+function createContentItem(content, headParams, index, mobileBlock) {
+    $(mobileBlock).append(`<div class="${" contentItem index" + valueOfRenderedBlocks + "-" + index}" ></div >`)
 
     for (var i = 0; i < content.length; i++) {
         if (!content[i].innerHTML) continue;
-        $(`.contentItem.index${index}`).append(`
+        $(`.contentItem.index${valueOfRenderedBlocks}-${index}`).append(`
         <div class="itemRow">
             <span class="param">${headParams[i]}: </span>
             <span class="value">${content[i].innerHTML}</span>
         </div>`)
     }
+
+    valueOfRenderedBlocks++
 }
 
-function createMobileContent(tbody, headParams) {
+function createMobileContent(tbody, headParams, mobileBlock) {
     var contentList = tbody.children("tr");
 
     if (!contentList || !contentList.length) return false
 
     contentList.map((i) => {
-        createContentItem($(contentList[i]).children("td"), headParams, i);
+        createContentItem($(contentList[i]).children("td"), headParams, i, mobileBlock);
     })
 }
 
-function renderMobileContent() {
-    var $table = $(".table");
-    if (!$table.length) return
+function renderMobileContent(tables) {
+    if (!tables.length) return
 
-    var headParams = getHeadParams($table.children("thead"))
-    if (!headParams) return;
+    for (var table of tables) {
+        var mobileBlock = $(table).next(".mobile-content")
+        if (!mobileBlock.length) return
 
-    createMobileContent($table.children("tbody"), headParams)
+        var headParams = getHeadParams($(table).children("thead"))
+        if (!headParams) return;
+
+        createMobileContent($(table).children("tbody"), headParams, mobileBlock)
+    }
 }
 
 $(document).ready(function () {
@@ -259,8 +266,15 @@ $(document).ready(function () {
         $(this).next(".spoiler_code").slideToggle("fast");
     });
 
-    var $mobileContent = $("#mobile-content");
-    if ($mobileContent.length) renderMobileContent();
+    var $tables = $(".table");
+    if ($tables.length) renderMobileContent($tables);
 });
 
-
+$(window).scroll(function () {
+    if ($(window).scrollLeft() > 100) {
+        $('.scroll-arrow').addClass('hidden');
+    }
+    else {
+        $('.scroll-arrow').removeClass('hidden');
+    }
+});

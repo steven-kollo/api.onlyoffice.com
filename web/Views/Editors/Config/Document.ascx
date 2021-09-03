@@ -9,7 +9,6 @@
 <p class="dscr">The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).</p>
 
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -67,6 +66,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 

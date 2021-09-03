@@ -9,7 +9,6 @@
 <p class="dscr">The document permission section allows to change the permission for the document to be edited and downloaded or not.</p>
 
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -208,6 +207,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>
