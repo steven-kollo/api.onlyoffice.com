@@ -48,7 +48,7 @@
         {
           "type": "EMU",
           "name": "nPosX",
-          "description": "<p>The distance from the left side of the slide to left side of the drawing measured in English measure units.</p>",
+          "description": "<p>The distance from the left side of the slide to the left side of the drawing measured in English measure units.</p>",
           "optional": false
         },
         {

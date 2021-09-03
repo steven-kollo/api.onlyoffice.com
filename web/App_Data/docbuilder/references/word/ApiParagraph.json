@@ -230,7 +230,7 @@
     "GetElement": {
       "memberof": "ApiParagraph",
       "name": "GetElement",
-      "description": "<p>Get the element of the paragraph using the position specified.</p>",
+      "description": "<p>Get the paragraph element using the position specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -257,7 +257,7 @@
     "RemoveElement": {
       "memberof": "ApiParagraph",
       "name": "RemoveElement",
-      "description": "<p>Remove the element using the position specified.\n<note>If the element you remove is the last paragraph element (i.e. all elements are removed from the paragraph),\na new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
+      "description": "<p>Remove the element using the position specified.\n<note>If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph),\na new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -272,7 +272,7 @@
         {
           "type": "number",
           "name": "nPos",
-          "description": "<p>The position of the element which we want to remove in the paragraph.</p>",
+          "description": "<p>The element position which we want to remove from the paragraph.</p>",
           "optional": false
         }
       ]
@@ -280,7 +280,7 @@
     "RemoveAllElements": {
       "memberof": "ApiParagraph",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current paragraph.\n<note>When all elements are removed from the paragraph, a new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
+      "description": "<p>Remove all the elements from the current paragraph.\n<note>When all the elements are removed from the paragraph, a new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -295,7 +295,7 @@
     "Delete": {
       "memberof": "ApiParagraph",
       "name": "Delete",
-      "description": "<p>Deletes current paragraph.</p>",
+      "description": "<p>Delete current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -314,7 +314,7 @@
     "GetNext": {
       "memberof": "ApiParagraph",
       "name": "GetNext",
-      "description": "<p>Gets the next paragraph.</p>",
+      "description": "<p>Get the next paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -334,7 +334,7 @@
     "GetPrevious": {
       "memberof": "ApiParagraph",
       "name": "GetPrevious",
-      "description": "<p>Gets the Previous paragraph.</p>",
+      "description": "<p>Get the previous paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -353,7 +353,7 @@
     "Copy": {
       "memberof": "ApiParagraph",
       "name": "Copy",
-      "description": "<p>Create a copy of the paragraph. Ingonore comments, footnote references, complex fields</p>",
+      "description": "<p>Create a paragraph copy. Ingnore comments, footnote references, complex fields.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -397,7 +397,7 @@
         {
           "type": "number",
           "name": "nPos",
-          "description": "<p>The number of the paragraph where the current element will be added. If this value is not\nspecified then the element will be added at the end of the current paragraph.</p>",
+          "description": "<p>The position where the current element will be added. If this value is not\nspecified then the element will be added at the end of the current paragraph.</p>",
           "optional": true
         }
       ]
@@ -424,7 +424,7 @@
     "AddDrawing": {
       "memberof": "ApiParagraph",
       "name": "AddDrawing",
-      "description": "<p>Add an object (image, shape or chart) to the current paragraph.</p>",
+      "description": "<p>Add a drawing object (image, shape or chart) to the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -449,7 +449,7 @@
     "AddInlineLvlSdt": {
       "memberof": "ApiParagraph",
       "name": "AddInlineLvlSdt",
-      "description": "<p>Add a inline container</p>",
+      "description": "<p>Add an inline container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -466,7 +466,7 @@
         {
           "type": "ApiInlineLvlSdt",
           "name": "oSdt",
-          "description": "<p>if undefined or null, then new class ApiInlineLvlSdt will be created and added to paragraph.</p>",
+          "description": "<p>An inline container. If undefined or null, then new class ApiInlineLvlSdt will be created and added to paragraph.</p>",
           "optional": false
         }
       ]
@@ -474,7 +474,7 @@
     "AddComment": {
       "memberof": "ApiParagraph",
       "name": "AddComment",
-      "description": "<p>Adds a comment to the paragraph.</p>",
+      "description": "<p>Add a comment to the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -491,13 +491,13 @@
         {
           "type": "string",
           "name": "Comment",
-          "description": "<p>comment</p>",
+          "description": "<p>The comment text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "Autor",
-          "description": "<p>autor's name (not obligatory)</p>",
+          "description": "<p>The author's name (not obligatory).</p>",
           "optional": false
         }
       ]
@@ -523,13 +523,13 @@
         {
           "type": "string",
           "name": "sLink",
-          "description": "<p>link to be add.</p>",
+          "description": "<p>The link address.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sScreenTipText",
-          "description": "<p>ScreenTip text</p>",
+          "description": "<p>The screen tip text.</p>",
           "optional": false
         }
       ]
@@ -537,7 +537,7 @@
     "GetRange": {
       "memberof": "ApiParagraph",
       "name": "GetRange",
-      "description": "<p>Returns a Range object that represents the part of the document contained in the specified paragraph.</p>",
+      "description": "<p>Return a Range object that represents the part of the document contained in the specified paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -554,13 +554,13 @@
         {
           "type": "Number",
           "name": "Start",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>Start character in the current element.</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "End",
-          "description": "<p>end character in current element</p>",
+          "description": "<p>End character in the current element.</p>",
           "optional": false
         }
       ]
@@ -593,7 +593,7 @@
     "GetLastRunWithText": {
       "memberof": "ApiParagraph",
       "name": "GetLastRunWithText",
-      "description": "<p>Get last Run with text in the current paragraph</p>",
+      "description": "<p>Get the last Run with text in the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -704,7 +704,7 @@
     "SetDoubleStrikeout": {
       "memberof": "ApiParagraph",
       "name": "SetDoubleStrikeout",
-      "description": "<p>Specify that the contents of this paragraph is displayed with two horizontal lines through each character displayed on the line.</p>",
+      "description": "<p>Specify that the contents of this paragraph are displayed with two horizontal lines through each character displayed on the line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -917,7 +917,7 @@
     "SetSmallCaps": {
       "memberof": "ApiParagraph",
       "name": "SetSmallCaps",
-      "description": "<p>Specify that all small letter characters in this paragraph are formatted for display only as their capital\nletter character equivalents in a font size two points smaller than the actual font size specified for this text.</p>",
+      "description": "<p>Specify that all the small letter characters in this paragraph are formatted for display only as their capital\nletter character equivalents which are two points smaller than the actual font size specified for this text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -934,7 +934,7 @@
         {
           "type": "boolean",
           "name": "isSmallCaps",
-          "description": "<p>Specifies that the contents of the current paragraph are displayed capitalized two points smaller.</p>",
+          "description": "<p>Specifies if the contents of the current paragraph are displayed capitalized two points smaller or not.</p>",
           "optional": false
         }
       ]
@@ -1060,7 +1060,7 @@
     "GetAllContentControls": {
       "memberof": "ApiParagraph",
       "name": "GetAllContentControls",
-      "description": "<p>Gets the collection of content control objects in the Paragraph.</p>",
+      "description": "<p>Get the collection of content control objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1077,7 +1077,7 @@
     "GetAllDrawingObjects": {
       "memberof": "ApiParagraph",
       "name": "GetAllDrawingObjects",
-      "description": "<p>Gets the collection of drawing objects in the paragraph.</p>",
+      "description": "<p>Get the collection of drawing objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1094,7 +1094,7 @@
     "GetAllShapes": {
       "memberof": "ApiParagraph",
       "name": "GetAllShapes",
-      "description": "<p>Gets the collection of shapes objects in the Paragraph.</p>",
+      "description": "<p>Get the collection of shape objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1111,7 +1111,7 @@
     "GetAllImages": {
       "memberof": "ApiParagraph",
       "name": "GetAllImages",
-      "description": "<p>Gets the collection of image objects in the Paragraph.</p>",
+      "description": "<p>Get the collection of image objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1128,7 +1128,7 @@
     "GetAllCharts": {
       "memberof": "ApiParagraph",
       "name": "GetAllCharts",
-      "description": "<p>Gets the collection of chart objects in the Paragraph.</p>",
+      "description": "<p>Get the collection of chart objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1145,7 +1145,7 @@
     "GetParentContentControl": {
       "memberof": "ApiParagraph",
       "name": "GetParentContentControl",
-      "description": "<p>Gets the content control that contains the paragraph.</p>",
+      "description": "<p>Get the content control that contains the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1163,7 +1163,7 @@
     "GetParentTable": {
       "memberof": "ApiParagraph",
       "name": "GetParentTable",
-      "description": "<p>Gets the table that contains the paragraph.</p>",
+      "description": "<p>Get the table that contains the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1181,7 +1181,7 @@
     "GetParentTableCell": {
       "memberof": "ApiParagraph",
       "name": "GetParentTableCell",
-      "description": "<p>Gets the table cell that contains the paragraph.</p>",
+      "description": "<p>Get the table cell that contains the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1199,7 +1199,7 @@
     "GetText": {
       "memberof": "ApiParagraph",
       "name": "GetText",
-      "description": "<p>Gets text of the paragraph.</p>",
+      "description": "<p>Get paragraph text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1216,7 +1216,7 @@
     "GetTextPr": {
       "memberof": "ApiParagraph",
       "name": "GetTextPr",
-      "description": "<p>Gets text properties of the paragraph.</p>",
+      "description": "<p>Get paragraph text properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1233,7 +1233,7 @@
     "SetTextPr": {
       "memberof": "ApiParagraph",
       "name": "SetTextPr",
-      "description": "<p>Sets text properties of the paragraph.</p>",
+      "description": "<p>Set paragraph text properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1257,7 +1257,7 @@
     "InsertInContentControl": {
       "memberof": "ApiParagraph",
       "name": "InsertInContentControl",
-      "description": "<p>Wraps the paragraph object with a rich text content control.</p>",
+      "description": "<p>Wrap the paragraph object with a rich text content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1275,7 +1275,7 @@
         {
           "type": "number",
           "name": "nType",
-          "description": "<p>if nType === 1 -&gt; returns ApiBlockLvlSdt</p>",
+          "description": "<p>If nType === 1 -&gt; returns ApiBlockLvlSdt, otherwise returns ApiParagraph.</p>",
           "optional": false
         }
       ]
@@ -1283,7 +1283,7 @@
     "InsertParagraph": {
       "memberof": "ApiParagraph",
       "name": "InsertParagraph",
-      "description": "<p>Inserts a paragraph at the specified position.</p>",
+      "description": "<p>Insert a paragraph at the specified position.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1301,19 +1301,19 @@
         {
           "type": "string | ApiParagraph",
           "name": "paragraph",
-          "description": "<p>text or paragraph</p>",
+          "description": "<p>Text or paragraph.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sPosition",
-          "description": "<p>can be &quot;after&quot; or &quot;before&quot;</p>",
+          "description": "<p>The position where the text or paragraph will be inserted (&quot;before&quot; or &quot;after&quot; the paragraph specified).</p>",
           "optional": false
         },
         {
           "type": "bool",
           "name": "beRNewPara",
-          "description": "<p>if &quot;true&quot; - returns new paragraph, else returns this paragraph.</p>",
+          "description": "<p>If &quot;true&quot; -&gt; returns new paragraph, else returns this paragraph.</p>",
           "optional": false
         }
       ]
@@ -1338,7 +1338,7 @@
     "Search": {
       "memberof": "ApiParagraph",
       "name": "Search",
-      "description": "<p>Searches for the scope of a paragraph object. The search results are a collection of ApiRange objects.</p>",
+      "description": "<p>Search for the scope of a paragraph object. The search results are a collection of ApiRange objects.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1355,12 +1355,13 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>Search string.</p>",
           "optional": false
         },
         {
           "type": "bool",
           "name": "isMatchCase",
-          "description": "<p>is case sensitive.</p>",
+          "description": "<p>Case sensitive or not.</p>",
           "optional": false
         }
       ]
@@ -1402,7 +1403,7 @@
     "GetStyle": {
       "memberof": "ApiParagraph",
       "name": "GetStyle",
-      "description": "<p>Gets the paragraph style method.</p>",
+      "description": "<p>Get the paragraph style method.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1463,7 +1464,7 @@
     "GetIndLeft": {
       "memberof": "ApiParagraph",
       "name": "GetIndLeft",
-      "description": "<p>Gets the paragraph left side indentation.</p>",
+      "description": "<p>Get the paragraph left side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1506,7 +1507,7 @@
     "GetIndRight": {
       "memberof": "ApiParagraph",
       "name": "GetIndRight",
-      "description": "<p>Gets the paragraph right side indentation.</p>",
+      "description": "<p>Get the paragraph right side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1549,7 +1550,7 @@
     "GetIndFirstLine": {
       "memberof": "ApiParagraph",
       "name": "GetIndFirstLine",
-      "description": "<p>Gets the paragraph first line indentation.</p>",
+      "description": "<p>Get the paragraph first line indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1584,7 +1585,7 @@
         {
           "type": "\"left\" | \"right\" | \"both\" | \"center\"",
           "name": "sJc",
-          "description": "<p>The parameters will define the justification type that\nwill be applied to the paragraph contents.</p>",
+          "description": "<p>The justification type that\nwill be applied to the paragraph contents.</p>",
           "optional": false
         }
       ]
@@ -1592,7 +1593,7 @@
     "GetJc": {
       "memberof": "ApiParagraph",
       "name": "GetJc",
-      "description": "<p>Gets paragraph contents justification.</p>",
+      "description": "<p>Get paragraph contents justification.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1670,7 +1671,7 @@
         {
           "type": "boolean",
           "name": "isPageBreakBefore",
-          "description": "<p>The true value will enable the option to render the contents of the paragraph\nat the beginning of the a new page in the document.</p>",
+          "description": "<p>The true value will enable the option to render the contents of the paragraph\nat the beginning of a new page in the document.</p>",
           "optional": false
         }
       ]
@@ -1848,7 +1849,7 @@
     "GetShd": {
       "memberof": "ApiParagraph",
       "name": "GetShd",
-      "description": "<p>Gets the shading applied to the contents of the paragraph.</p>",
+      "description": "<p>Get the shading applied to the contents of the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

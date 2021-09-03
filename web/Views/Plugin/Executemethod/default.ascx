@@ -81,6 +81,10 @@
             <td>This method allows to change the specified comment.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a></td>
+            <td>This method allows to send a message to the co-authoring chat.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
             <td>This method allows to edit an OLE object in the document.</td>
         </tr>
@@ -195,6 +199,10 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">SelectContentControl</a></td>
             <td>This method allows to select the specified content control.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a></td>
+            <td>This method allows to set the display mode for track changes.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a></td>

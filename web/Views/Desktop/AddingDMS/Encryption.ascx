@@ -198,7 +198,7 @@ info.PrivateKeyEnc = NSFile::CUtf8Converter::GetUnicodeFromCharPtr(privateEnc);
     <li>
         <p>Send the generated keys to the cloud through the <em>cloudCryptoCommand</em> method with the <em>encryptionKeys</em> type:</p>
         <pre>
-window.AscDesktopEditor.cloudCryptoCommand(
+window.cloudCryptoCommand(
     "encryptionKeys",
     {
         "cryptoEngineId": "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",

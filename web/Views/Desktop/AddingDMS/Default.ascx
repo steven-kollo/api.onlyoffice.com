@@ -63,7 +63,7 @@
         <tr class="tablerow">
             <td id="check" class="copy-link">check</td>
             <td>
-                <p>Defines parameters for checking portal availability. A <em>GET</em> request is sent, after which the <em>HTTP_STATUS_CODE = 200</em> response is expected:</p>
+                <p>Defines parameters for checking portal availability:</p>
                 <ul>
                     <li>
                         <p><b>url</b> - the URL used in the request,</p>
@@ -76,6 +76,7 @@
                         <p><b>example</b>: {"OCS-APIREQUEST": true}.</p>
                     </li>
                 </ul>
+                <p>A <em>GET</em> request is sent, after which <em>HTTP_STATUS_CODE = 200</em> is expected. The response must be returned in the JSON format.</p>
             </td>
             <td>object</td>
             <td></td>
