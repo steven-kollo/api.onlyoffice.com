@@ -269,12 +269,3 @@ $(document).ready(function () {
     var $tables = $(".table");
     if ($tables.length) renderMobileContent($tables);
 });
-
-$(window).scroll(function () {
-    if ($(window).scrollLeft() > 100) {
-        $('.scroll-arrow').addClass('hidden');
-    }
-    else {
-        $('.scroll-arrow').removeClass('hidden');
-    }
-});
