@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the description of conversion response parameters
 - editors: added the Get ONLYOFFICE Docs page
 - docbuilder: v6.4
 - docbuilder: added changelog page
