@@ -91,7 +91,7 @@
             </tr>
             <tr>
                 <th>Restricted review</th>
-                <td><a title="Open DOCX file for review" href="<%= Url.Action("editor") %>?method=docxReviewGroup" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewGroupCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for restricted review" href="<%= Url.Action("editor") %>?method=docxReviewGroups" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewGroupsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
@@ -118,6 +118,13 @@
                 </td>
                 <td><a title="Open PPTX file for commenting" href="<%= Url.Action("editor") %>?method=pptxComment" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxCommentCode">&lt;/&gt;</a>
                 </td>
+            </tr>
+            <tr>
+                <th>Restricted comment</th>
+                <td><a title="Open DOCX file for restricted commenting" href="<%= Url.Action("editor") %>?method=docxCommentGroups" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentGroupsCode">&lt;/&gt;</a>
+                </td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
                 <th>View</th>
@@ -1350,7 +1357,7 @@
 </pre>
             </div>
 
-            <div id="docxReviewGroupCode">
+            <div id="docxReviewGroupsCode">
                 <div class="popap-header">Open docx for restricted review</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
@@ -1374,7 +1381,7 @@
                     "permissions": {
                         "edit": true,
                         "review": true,
-                        "reviewGroups": [ "group-3", "" ]
+                        "reviewGroups": [ "Group2", "" ]
                     }
                 },
                 "documentType": "word",
@@ -1434,7 +1441,7 @@
             </div>
 
             <div id="docxCommentCode">
-                <div class="popap-header">Open docx for comment</div>
+                <div class="popap-header">Open docx for commenting</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1475,7 +1482,7 @@
             </div>
 
             <div id="xlsxCommentCode">
-                <div class="popap-header">Open xlsx for comment</div>
+                <div class="popap-header">Open xlsx for commenting</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1516,7 +1523,7 @@
             </div>
 
             <div id="pptxCommentCode">
-                <div class="popap-header">Open pptx for comment</div>
+                <div class="popap-header">Open pptx for commenting</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1542,6 +1549,52 @@
                     }
                 },
                 "documentType": "slide",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
+                    "mode": "edit"
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxCommentGroupsCode">
+                <div class="popap-header">Open docx for restricted commenting</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "5C5D4CCA7674",
+                    "title": "Example Document Title.docx",
+                    "url": "https://example.com/url-to-example-document.docx",
+                    "permissions": {
+                        "comment": true,
+                        "commentGroups": [
+                            "edit": ["Group2", ""],
+                            "remove": ["Group2"],
+                            "view": ""
+                        ],
+                        "edit": false
+                    }
+                },
+                "documentType": "word",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
                     "mode": "edit"

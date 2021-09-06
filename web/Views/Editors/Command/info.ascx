@@ -34,6 +34,12 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td>c</td>
+            <td>Defines the command type.</td>
+            <td>string</td>
+            <td>required</td>
+        </tr>
+        <tr class="tablerow">
             <td>key</td>
             <td>Defines the document identifier used to unambiguously identify the document file.</td>
             <td>string</td>
@@ -73,6 +79,12 @@
             <td>error</td>
             <td>Defines an error code.</td>
             <td>integer</td>
+            <td>required</td>
+        </tr>
+        <tr class="tablerow">
+            <td>key</td>
+            <td>Defines the document identifier used to unambiguously identify the document file.</td>
+            <td>string</td>
             <td>required</td>
         </tr>
     </tbody>

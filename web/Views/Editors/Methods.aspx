@@ -27,6 +27,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
             <li><a href="#insertImage">insertImage</a> - insert an image into the file.</li>
             <li><a href="#refreshHistory">refreshHistory</a> - show the document version history.</li>
+            <li><a href="#requestClose">requestClose</a> - request to close the editor.</li>
             <li><a href="#setActionLink">setActionLink</a> - set the link to the document which contains a bookmark.</li>
             <li><a href="#setFavorite">setFavorite</a> - change the <em>Favorite</em> icon state.</li>
             <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
@@ -115,8 +116,8 @@ docEditor.downloadAs(format);
                         <td>format</td>
                         <td>
                             Defines the format in which a file will be downloaded.
-                            All the possible formats you can find in the <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion tables</a>. 
-                            But you cannot download a file in the image formats such as <em>gif</em>, <em>jpg</em>, <em>png</em>. 
+                            All the possible formats you can find in the <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion tables</a>.
+                            But you cannot download a file in the image formats such as <em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>.
                             If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type.
                         </td>
                         <td>string</td>
@@ -125,7 +126,10 @@ docEditor.downloadAs(format);
                 </tbody>
             </table>
             <div class="mobile-content"></div>
-            <note>Please note that conversion from the <em>djvu</em>, <em>pdf</em>, <em>xps</em> formats are not available. The original format will be downloaded.</note>
+            <note>
+                Please note that conversion from the <em>djvu</em>, <em>pdf</em>, <em>xps</em> formats are not available.
+                The original format will be downloaded.
+            </note>
         </li>
 
         <li>
@@ -351,6 +355,18 @@ docEditor.refreshHistory({
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+        </li>
+
+        <li>
+            <p>
+                <b id="requestClose" class="copy-link">requestClose</b> - request to close the editor.
+                It is recommended to call this method before the <a href="#destroyEditor">destroyEditor</a> method to check if there is some unsaved data in the editor or not. 
+                If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. 
+                If the <em>Close</em> option will be chosen, then the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event will be called.
+            </p>
+            <pre>
+docEditor.requestClose();
+</pre>
         </li>
 
         <li>

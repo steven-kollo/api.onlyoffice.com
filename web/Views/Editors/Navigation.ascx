@@ -8,6 +8,9 @@
         <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
     <li>
+        <a href="<%= Url.Action("getdocs") %>">Get ONLYOFFICE Docs</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("try") %>">Try now</a>
     </li>
     <li>
@@ -106,6 +109,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("anonymoususers") %>">Anonymous users</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("commenting") %>">Commenting</a>
             </li>
             <li>
                 <a href="<%= Url.Action("comparing") %>">Comparing documents</a>

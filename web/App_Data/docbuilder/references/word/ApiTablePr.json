@@ -607,8 +607,8 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a table properties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a table properties.</p>",
+  "comment": "/**\r\n\t * Class representing the table properties.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing the table properties.</p>",
   "scope": "global",
   "params": []
 }

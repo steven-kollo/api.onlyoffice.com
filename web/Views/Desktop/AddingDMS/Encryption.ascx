@@ -200,7 +200,7 @@ info.PrivateKeyEnc = NSFile::CUtf8Converter::GetUnicodeFromCharPtr(privateEnc);
     <li>
         <p>Send the generated keys to the cloud through the <em>cloudCryptoCommand</em> method with the <em>encryptionKeys</em> type:</p>
         <pre>
-window.AscDesktopEditor.cloudCryptoCommand(
+window.cloudCryptoCommand(
     "encryptionKeys",
     {
         "cryptoEngineId": "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
@@ -241,6 +241,7 @@ window.cloudCryptoCommand = function (type, params, callback)
                 <p>Defines the command type:</p>
                 <ul>
                     <li><em>encryptionKeys</em> - to save private and public keys to the params,</li>
+                    <li><em>updateEncryptionKeys</em> - to save private and public keys to the params forcely updating the existing keys with them,</li>
                     <li><em>relogin</em> - to re-enter the portal after unsuccessful keys decryption,</li>
                     <li><em>getsharingkeys</em> - to request for the public keys of all the users who have access to the file. The keys will be transferred via callback:</li>
                     <p>callback({"keys":[{"userId":"78e1e841","publicKey":"yyy"}, ...]})</p>

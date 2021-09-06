@@ -56,6 +56,41 @@
             </td>
         </tr>
         <tr class="tablerow">
+            <td id="commentGroups" class="copy-link">commentGroups</td>
+            <td>
+                Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose comments the user can edit, remove and/or view.
+                The object has the following parameters:
+                <ul>
+                    <li>
+                        <b>edit</b> - the user can edit comments made by other users,
+                        <br />
+                        <b>type</b>: list,
+                        <br />
+                        <b>example</b>: ["Group2", ""];
+                    </li>
+                    <li>
+                        <b>remove</b> - the user can remove comments made by other users,
+                        <br />
+                        <b>type</b>: list,
+                        <br />
+                        <b>example</b>: [];
+                    </li>
+                    <li>
+                        <b>view</b> - the user can view comments made by other users,
+                        <br />
+                        <b>type</b>: list,
+                        <br />
+                        <b>example</b>: "".
+                    </li>
+                </ul>
+                The <em>[""]</em> value means that the user can edit/remove/view comments made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
+                If the value is <em>[]</em>, the user cannot edit/remove/view comments made by any group.
+                If the <em>edit</em>, <em>remove</em> and <em>view</em> parameters are <em>""</em> or not specified, then the user can view/edit/remove comments made by any user.
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow">
             <td id="copy" class="copy-link">copy</td>
             <td>
                 Defines if the content can be copied to the clipboard or not.
@@ -198,8 +233,8 @@
             <td id="reviewGroups" class="copy-link">reviewGroups</td>
             <td>
                 Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose changes the user can accept/reject.
-                The <em>""</em> value means that the user can review changes made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
-                If the value is [], the user cannot review changes made by any group.
+                The <em>[""]</em> value means that the user can review changes made by someone who belongs to none of these groups (for example, if the document is reviewed in third-party editors).
+                If the value is <em>[]</em>, the user cannot review changes made by any group.
                 If the value is <em>""</em> or not specified, then the user can review changes made by any user.
             </td>
             <td>array of string</td>
@@ -215,6 +250,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
             "comment": true,
+            "commentGroups": {
+                "edit": ["Group2", ""],
+                "remove": [""],
+                "view": ""
+            },
             "copy": true,
             "deleteCommentAuthorOnly": false,
             "download": true,

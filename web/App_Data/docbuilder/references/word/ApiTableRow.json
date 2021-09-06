@@ -133,7 +133,7 @@
     "AddRows": {
       "memberof": "ApiTableRow",
       "name": "AddRows",
-      "description": "<p>Add a new rows to the current table.</p>",
+      "description": "<p>Add the new rows to the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -151,13 +151,13 @@
         {
           "type": "Number",
           "name": "nCount",
-          "description": "<p>count of rows to be added.</p>",
+          "description": "<p>Count of rows to be added.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new rows before or after the row.</p>",
+          "description": "<p>Specifies if the rows will be added before or after the current row.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -184,7 +184,7 @@
     "Clear": {
       "memberof": "ApiTableRow",
       "name": "Clear",
-      "description": "<p>Clears the content of row.</p>",
+      "description": "<p>Clear the content from row.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -201,7 +201,7 @@
     "Remove": {
       "memberof": "ApiTableRow",
       "name": "Remove",
-      "description": "<p>Remove the table row.</p>",
+      "description": "<p>Remove a table row.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -218,7 +218,7 @@
     "SetTextPr": {
       "memberof": "ApiTableRow",
       "name": "SetTextPr",
-      "description": "<p>Sets text properties for the row.</p>",
+      "description": "<p>Set text properties for the row.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -235,6 +235,7 @@
         {
           "type": "ApiTextPr",
           "name": "oTextPr",
+          "description": "<p>The text properties that will be set to the table specified.</p>",
           "optional": false
         }
       ]
@@ -242,7 +243,7 @@
     "Search": {
       "memberof": "ApiTableRow",
       "name": "Search",
-      "description": "<p>Searches for the scope of a table row object. The search results are a collection of ApiRange objects.</p>",
+      "description": "<p>Search for the scope of a table row object. The search results are a collection of ApiRange objects.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -259,12 +260,13 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>Search string.</p>",
           "optional": false
         },
         {
           "type": "bool",
           "name": "isMatchCase",
-          "description": "<p>is case sensitive.</p>",
+          "description": "<p>Case sensitive or not.</p>",
           "optional": false
         }
       ]

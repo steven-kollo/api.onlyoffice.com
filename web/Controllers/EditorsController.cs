@@ -53,6 +53,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Command/license",
                 "Command/meta",
                 "Command/version",
+                "Commenting",
                 "Comparing",
                 "Config",
                 "Config/Document",
@@ -86,6 +87,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
+                "GetDocs",
                 "History",
                 "HowItWorks",
                 "HumHub",
@@ -191,6 +193,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Command", (object)catchall);
         }
 
+        public ActionResult Commenting()
+        {
+            return View();
+        }
+
         public ActionResult Comparing()
         {
             return View();
@@ -236,6 +243,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("FAQ", (object)catchall);
+        }
+
+        public ActionResult GetDocs()
+        {
+            return View();
         }
 
         public ActionResult DemoPreview()
