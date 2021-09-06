@@ -93,6 +93,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "HumHub",
                 "InlineEditors",
                 "Liferay",
+                "Mattermost",
                 "Mentions",
                 "Methods",
                 "Nextcloud",
@@ -290,6 +291,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
         
         public ActionResult Liferay()
+        {
+            return View();
+        }
+
+        public ActionResult Mattermost()
         {
             return View();
         }
