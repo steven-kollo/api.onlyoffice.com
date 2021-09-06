@@ -22,7 +22,7 @@
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
-    <h2>Parameters and their description:</h2>
+    <h2 id="request" class="copy-link">Request parameters and their description</h2>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -1190,11 +1190,55 @@
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
-    <p id="response" class="copy-link">
+    <h2 id="response" class="copy-link">Response parameters and their description</h2>
+    <p>
         The request result is returned in XML format.
-        To receive a response in JSON format you need to specify in the HTTP request Header <em>accept</em> with the value <b>application/json</b> (available from version 4.3).
+        To receive a response in JSON format you need to specify the <em>Accept</em> header with the <b>application/json</b> value in the HTTP request (available from version 4.3).
         When forming the link to the resulting file, the same server name is used which was made the conversion request to.
     </p>
+    <table class="table">
+        <colgroup>
+            <col style="width: 100px;" />
+            <col />
+            <col style="width: 100px;" />
+            <col style="width: 150px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Parameter</td>
+                <td>Description</td>
+                <td>Type</td>
+                <td>Example</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td id="endConvert" class="copy-link">endConvert</td>
+                <td>Defines if the conversion is completed or not.</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="error" class="copy-link">error</td>
+                <td>Defines an error occurred during the conversion. Possible error codes can be found <a href="#error-codes">here</a>.</td>
+                <td>integer</td>
+                <td>-3</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="fileUrl" class="copy-link">fileUrl</td>
+                <td>Defines the link to the converted document. This parameter will be received only when the <em>endConvert</em> parameter is set to <b>true</b>.</td>
+                <td>string</td>
+                <td>"https://documentserver/url-to-converted-document.pdf"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="percent" class="copy-link">percent</td>
+                <td>Defines the percentage of the file conversion. If the <em>endConvert</em> parameter is set to <b>true</b>, the <em>percent</em> is equal to <b>100</b>.</td>
+                <td>integer</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+
     <div class="header-gray">Sample of the response in XML format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
     <pre>
@@ -1249,7 +1293,7 @@
 }
 </pre>
 
-    <div id="error" class="copy-link header-gray">Possible error codes and their description</div>
+    <div id="error-codes" class="copy-link header-gray">Possible error codes and their description</div>
     <table class="table">
         <colgroup>
             <col style="width: 105px;" />

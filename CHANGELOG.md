@@ -6,6 +6,11 @@
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
 
+- editors: added the description of conversion response parameters
+- desktop: v6.3
+- desktop: added the entryPage parameter to config
+- desktop: added the updateEncryptionKeys command type to cloudCryptoCommand
+- editors: added the Get ONLYOFFICE Docs page
 - docbuilder: v6.4
 - docbuilder: added changelog page
 - macros: assigning macros to the graphic objects
