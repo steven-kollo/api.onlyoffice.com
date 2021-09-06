@@ -105,6 +105,7 @@ docEditor.setUsers({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
     </ol>
 
@@ -202,6 +203,7 @@ docEditor.setSharingSettings({
                     </tr>
                 </tbody>
             </table>
+    <div class="mobile-content"></div>
     <p>
         In the case when the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event does not provide access to the file, the <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a> parameter in the customization section of the editor configuration must be set to <b>false</b>.
     </p>

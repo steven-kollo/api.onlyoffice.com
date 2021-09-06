@@ -66,6 +66,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Response example</div>
 
@@ -107,3 +108,4 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>

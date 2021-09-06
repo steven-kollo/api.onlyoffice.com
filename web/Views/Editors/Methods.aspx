@@ -49,6 +49,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <pre>
 docEditor.denyEditingRights(message);
 </pre>
+            
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -73,6 +74,7 @@ docEditor.denyEditingRights(message);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
         <li>
             <p>
@@ -123,6 +125,7 @@ docEditor.downloadAs(format);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
             <note>
                 Please note that conversion from the <em>djvu</em>, <em>pdf</em>, <em>xps</em> formats are not available.
                 The original format will be downloaded.
@@ -198,6 +201,7 @@ docEditor.insertImage({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -350,6 +354,7 @@ docEditor.refreshHistory({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -398,6 +403,7 @@ docEditor.setActionLink(link);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -432,6 +438,7 @@ docEditor.setFavorite(favorite);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -557,6 +564,7 @@ docEditor.setHistoryData({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -614,6 +622,7 @@ docEditor.setMailMergeRecipients({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -669,6 +678,7 @@ docEditor.setRevisedFile({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -727,6 +737,7 @@ docEditor.setSharingSettings({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -789,6 +800,7 @@ docEditor.setUsers({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -823,6 +835,7 @@ docEditor.showMessage(message);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
     </ul>
 

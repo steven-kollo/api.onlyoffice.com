@@ -22,7 +22,6 @@
     <div class="note">This method is used for visual modal plugins only.</div>
 
     <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -69,6 +68,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Example</div>
 

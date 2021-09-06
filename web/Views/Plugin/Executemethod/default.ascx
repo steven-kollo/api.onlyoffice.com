@@ -13,7 +13,6 @@
     <a href="<%= Url.Action("events") %>#onMethodReturn">window.Asc.plugin.onMethodReturn</a> function will be used to return the result of the method execution.</p>
 
 <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -45,6 +44,7 @@
             </tr>
         </tbody>
     </table>
+<div class="mobile-content"></div>
 
 
 <p>See the available <em>window.Asc.plugin.executeMethod</em> methods below to find more about them.</p>
@@ -226,5 +226,6 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="note">For the plugin to work correctly, it is necessary to wait until the current method is executed before executing the next method.</div>

@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
+        <li>Added support for <a href="<%= Url.Action("wopi/") %>">WOPI protocol</a>.</li>
         <li>Added the <em>simple</em> value to the <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a> parameter.</li>
         <li>Added the <a href="<%= Url.Action("commenting") %>#threaded-comments">threaded comments</a> saving in the spreadsheet files.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a> field.</li>
@@ -86,7 +87,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#unit">editorConfig.customization.unit</a> field.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#region">region</a> field.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#spreadsheetLayout">spreadsheetLayout</a> field.</li>
-        <li>Added <a href="<%= Url.Action("conversionapi") %>#error">input error</a> for conversion.</li>
+        <li>Added <a href="<%= Url.Action("conversionapi") %>#error-codes">input error</a> for conversion.</li>
         <li>The <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">events.onRequestSendNotify</a> event and the <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> event can be set independently.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">editorConfig.customization.mentionShare</a> field.</li>
         <li>The <em>callbackUrl</em> is selected based on <a href="<%= Url.Action("callback") %>#used-callbackUrl">status</a>.</li>
@@ -119,7 +120,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">editorConfig.customization.compactHeader</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">editorConfig.customization.hideRightMenu</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">editorConfig.customization.toolbarNoTabs</a> field.</li>
-        <li>Added <a href="<%= Url.Action("conversionapi") %>#error">conversion error</a> for password protected documents.</li>
+        <li>Added <a href="<%= Url.Action("conversionapi") %>#error-codes">conversion error</a> for password protected documents.</li>
         <li>Added the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> field.</li>
         <li>Added the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.</li>
         <li>Added the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">events.onMakeActionLink</a> event.</li>

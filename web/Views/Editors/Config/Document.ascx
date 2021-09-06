@@ -66,6 +66,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 

@@ -28,7 +28,6 @@
     <div class="note"><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</div>
 
     <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -65,6 +64,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <p>This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope") %>">Asc.scope</a> object.</p>
 

@@ -83,7 +83,6 @@ new DocsAPI.DocEditor("placeholder", {
     </div>
 
     <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
             <col style="width: 300px;" />
@@ -108,6 +107,7 @@ new DocsAPI.DocEditor("placeholder", {
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Sample local.json configuration</div>
     <pre>
@@ -175,6 +175,7 @@ new DocsAPI.DocEditor("placeholder", {
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 
             <div class="header-gray">Sample local.json configuration</div>
             <pre>

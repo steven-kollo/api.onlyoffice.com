@@ -30,7 +30,6 @@
     <p>See the available <em>window.Asc.plugin.info</em> object parameters below to find out more about them.</p>
     
     <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
             <col style="width: 150px;" />
@@ -109,6 +108,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Example for the <em>data</em>, <em>height</em>, <em>imgSrc</em>, <em>mmToPx</em>, <em>objectId</em> and <em>width</em> parameters</div>
 

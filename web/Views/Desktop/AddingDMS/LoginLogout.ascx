@@ -42,6 +42,7 @@ AscDesktopEditor.execCommand (command, parameters)
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <ol>
     <li id="login" class="copy-link">
@@ -118,6 +119,7 @@ AscDesktopEditor.execCommand (command, parameters)
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
     
         <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
@@ -170,6 +172,7 @@ AscDesktopEditor.execCommand ("portal:login", JSON.stringify(params))
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
 
         <div class="header-gray">Example</div>
         <pre>

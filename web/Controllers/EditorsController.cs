@@ -92,6 +92,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "Integrating",
                 "Liferay",
                 "Mattermost",
                 "Mentions",
@@ -113,6 +114,17 @@ namespace ASC.Api.Web.Help.Controllers
                 "Signature/Request",
                 "Troubleshooting",
                 "Try",
+                "WOPI",
+                "WOPI/Discovery",
+                "WOPI/HostPage",
+                "WOPI/PostMessage",
+                "WOPI/RestApi",
+                "WOPI/RestApi/CheckFileInfo",
+                "WOPI/RestApi/Lock",
+                "WOPI/RestApi/RenameFile",
+                "WOPI/RestApi/Unlock",
+                "WOPI/RestApi/GetFile",
+                "WOPI/RestApi/PutFile"
             };
 
         [ValidateInput(false)]
@@ -289,6 +301,11 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View();
         }
+
+        public ActionResult Integrating()
+        {
+            return View();
+        }
         
         public ActionResult Liferay()
         {
@@ -382,6 +399,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Try()
         {
             return View();
+        }
+
+        public ActionResult WOPI(string catchall)
+        {
+            if (!_actionMap.Contains("wopi/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("WOPI", (object)catchall);
         }
     }
 }
