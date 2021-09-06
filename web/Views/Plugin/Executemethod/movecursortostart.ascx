@@ -39,6 +39,7 @@ window.Asc.plugin.executeMethod ("MoveCursorToStart", [isMoveToMainContent]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

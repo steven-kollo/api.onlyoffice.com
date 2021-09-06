@@ -124,6 +124,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <h2>Support</h2>
     <p>

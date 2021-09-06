@@ -41,6 +41,7 @@ window.Asc.plugin.executeMethod ("RemoveContentControls", [arrDocuments]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

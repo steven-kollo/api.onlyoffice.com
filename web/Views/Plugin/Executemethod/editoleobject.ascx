@@ -99,6 +99,7 @@ window.Asc.plugin.executeMethod ("EditOleObject", [data]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

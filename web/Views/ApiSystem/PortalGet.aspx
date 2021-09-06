@@ -46,6 +46,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Returns</div>
     <p>Returns the list of all the portals registered to the user with the email address specified in the request.</p>

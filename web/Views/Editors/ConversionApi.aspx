@@ -335,11 +335,13 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
 
     <h2 id="text-matrix" class="copy-link">Text document file formats</h2>
     <table class="table-conversion-matrix-text">
         <tbody>
+            <tr class="scroll-arrow" style="margin-top:247px;"></tr>
             <tr>
                 <th rowspan="2">Input format</th>
                 <th colspan="15">Output format</th>
@@ -709,6 +711,7 @@
     <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
     <table class="table-conversion-matrix-spreadsheet">
         <tbody>
+            <tr class="scroll-arrow" style="margin-top:150px;"></tr>
             <tr>
                 <th rowspan="2">Input format</th>
                 <th colspan="11">Output format</th>
@@ -871,6 +874,7 @@
 
     <h2 id="presentation-matrix" class="copy-link">Presentation file formats</h2>
     <table class="table-conversion-matrix-presentation">
+        <tr class="scroll-arrow" style="margin-top:183px;"></tr>
         <tbody>
             <tr>
                 <th rowspan="2">Input format</th>
@@ -1248,7 +1252,7 @@
 </pre>
 
     <div id="error-codes" class="copy-link header-gray">Possible error codes and their description</div>
-    <table class="table">
+    <table class="error-table">
         <colgroup>
             <col style="width: 105px;" />
             <col />

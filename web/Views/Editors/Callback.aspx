@@ -141,6 +141,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     
     <p id="used-callbackUrl" class="copy-link">
         Since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected depending on the <em>status</em> of the request.

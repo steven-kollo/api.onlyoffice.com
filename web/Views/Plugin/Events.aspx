@@ -65,6 +65,7 @@
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.button = function (id) {
@@ -100,6 +101,7 @@ window.Asc.plugin.button = function (id) {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.init = function () {
@@ -157,6 +159,7 @@ window.Asc.plugin.init = function () {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.inputHelper_onSelectItem = function(item) {
@@ -195,6 +198,7 @@ window.Asc.plugin.inputHelper_onSelectItem = function(item) {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.event_onClick = function(isSelectionUse) {
@@ -265,6 +269,7 @@ window.Asc.plugin.event_onDocumentContentReady = function() {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.onEnableMouseEvent = function(isEnabled) {
@@ -332,6 +337,7 @@ window.Asc.plugin.onExternalMouseUp = function () {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.onExternalPluginMessage = function(data) {
@@ -410,6 +416,7 @@ window.Asc.plugin.event_onInputHelperClear = function() {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.event_onInputHelperInput = function(data) {
@@ -449,6 +456,7 @@ window.Asc.plugin.event_onInputHelperInput = function(data) {
                     </tr>
                 </tbody>
             </table>
+        <div class="mobile-content"></div>
             <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [_obj]);

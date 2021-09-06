@@ -24,7 +24,6 @@ supervisorctl restart all
 </pre>
 
 <div class="header-gray">Parameters</div>
-
 <table class="table">
     <colgroup>
         <col style="width: 300px;" />
@@ -73,6 +72,7 @@ supervisorctl restart all
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 
 <div class="header-gray">Sample local.json configuration</div>

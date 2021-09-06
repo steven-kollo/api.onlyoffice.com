@@ -370,6 +370,7 @@
     <Content Include="Content\img\macros\next-blank-row.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
+    <Content Include="Content\img\orange-arrow.svg" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
     <Content Include="Content\img\php\handlerclick.png" />
