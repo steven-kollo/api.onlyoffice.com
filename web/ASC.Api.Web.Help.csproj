@@ -597,6 +597,7 @@
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\Example\Python.ascx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
+    <Content Include="Views\Editors\Integrating.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Chamilo.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
@@ -728,6 +729,18 @@
     <Content Include="Views\Editors\Coedit.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
+    <Content Include="Views\Editors\Wopi.aspx" />
+    <Content Include="Views\Editors\WOPI\Default.ascx" />
+    <Content Include="Views\Editors\WOPI\Discovery.ascx" />
+    <Content Include="Views\Editors\WOPI\PostMessage.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\CheckFileInfo.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\Lock.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\RenameFile.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\Unlock.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\GetFile.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\PutFile.ascx" />
+    <Content Include="Views\Editors\WOPI\HostPage.ascx" />
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\History.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />

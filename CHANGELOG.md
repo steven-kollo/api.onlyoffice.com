@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added support for WOPI protocol
 - editors: added the description of conversion response parameters
 - desktop: v6.3
 - desktop: added the entryPage parameter to config
