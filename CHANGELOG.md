@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the description of conversion response parameters
 - desktop: v6.3
 - desktop: added the entryPage parameter to config
 - desktop: added the updateEncryptionKeys command type to cloudCryptoCommand
