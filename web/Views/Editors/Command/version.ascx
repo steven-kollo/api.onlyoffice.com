@@ -16,6 +16,32 @@
 }
 </pre>
 
+<div class="header-gray">Parameters</div>
+<table class="table">
+    <colgroup>
+        <col style="width: 100px;" />
+        <col />
+        <col style="width: 150px;" />
+        <col style="width: 100px;" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Name</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Presence</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>c</td>
+            <td>Defines the command type.</td>
+            <td>string</td>
+            <td>required</td>
+        </tr>
+    </tbody>
+</table>
+
 <div class="header-gray">Response example</div>
 
 <pre>
@@ -56,3 +82,4 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>

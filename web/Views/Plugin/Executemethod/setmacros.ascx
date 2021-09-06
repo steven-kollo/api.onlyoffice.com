@@ -56,6 +56,7 @@ window.Asc.plugin.executeMethod ("SetMacros", [data]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

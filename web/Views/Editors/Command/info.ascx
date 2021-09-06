@@ -34,6 +34,12 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td>c</td>
+            <td>Defines the command type.</td>
+            <td>string</td>
+            <td>required</td>
+        </tr>
+        <tr class="tablerow">
             <td>key</td>
             <td>Defines the document identifier used to unambiguously identify the document file.</td>
             <td>string</td>
@@ -41,6 +47,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Response example</div>
 
@@ -74,5 +81,12 @@
             <td>integer</td>
             <td>required</td>
         </tr>
+        <tr class="tablerow">
+            <td>key</td>
+            <td>Defines the document identifier used to unambiguously identify the document file.</td>
+            <td>string</td>
+            <td>required</td>
+        </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>

@@ -46,6 +46,7 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 <h2>Example</h2>
 <h4 class="header-gray">C++</h4>
 <pre>

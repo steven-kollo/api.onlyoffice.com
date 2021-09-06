@@ -45,6 +45,7 @@ window.Asc.plugin.executeMethod ("StartAction", [type, description]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

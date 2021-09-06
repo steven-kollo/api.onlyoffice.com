@@ -1,6 +1,10 @@
 # Change Log
 
 - editors: added support for WOPI protocol
+- editors: added the description of conversion response parameters
+- desktop: v6.3
+- desktop: added the entryPage parameter to config
+- desktop: added the updateEncryptionKeys command type to cloudCryptoCommand
 - editors: added the Get ONLYOFFICE Docs page
 - docbuilder: v6.4
 - docbuilder: added changelog page

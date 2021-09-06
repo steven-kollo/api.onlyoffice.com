@@ -58,6 +58,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% }
        else if (string.IsNullOrEmpty(section) || string.Equals(section, "tariff"))
        { %>
@@ -90,5 +91,6 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <% } %>
 </asp:Content>

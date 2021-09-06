@@ -65,6 +65,7 @@ window.Asc.plugin.executeMethod ("ChangeComment", [sId, oCommentData]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

@@ -12,33 +12,6 @@
 
 <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
-<div class="header-gray">Parameters</div>
-
-<table class="table">
-    <colgroup>
-        <col style="width: 100px;" />
-        <col />
-        <col style="width: 150px;" />
-        <col style="width: 100px;" />
-    </colgroup>
-    <thead>
-        <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Presence</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td>c</td>
-            <td>Defines the command type.</td>
-            <td>string</td>
-            <td>required</td>
-        </tr>
-    </tbody>
-</table>
-
 <p>See the available command types below to find more about them.</p>
 
 <div class="header-gray">Command types</div>
@@ -82,6 +55,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <p>The JSON Web Token should be sent in the JSON object format to <b>document command service</b>. It is used to receive the status of the document with the key specified.</p>
 
@@ -92,7 +66,6 @@
 </pre>
 
 <div class="header-gray">Parameters</div>
-
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -117,11 +90,12 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <p>The <b>document editing service</b> informs the <b>document storage service</b> about the result caused by command using the <a href="<%= Url.Action("callback") %>">callback handler</a>.</p>
 
 <div class="header-gray">Possible error codes and their description</div>
-<table class="table">
+<table class="error-table">
     <colgroup>
         <col style="width: 105px;" />
         <col />

@@ -703,6 +703,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
 <% if (license)
    { %>
