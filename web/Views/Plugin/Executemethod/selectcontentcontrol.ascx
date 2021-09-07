@@ -39,6 +39,7 @@ window.Asc.plugin.executeMethod ("SelectContentControl", [InternalId]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

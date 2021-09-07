@@ -115,6 +115,7 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr");
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 <p>The <em>Lock</em> parameter can have the following values:</p>
 <table class="table">
        <thead>
@@ -147,6 +148,7 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr");
             </tr>
         </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 

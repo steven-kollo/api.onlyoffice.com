@@ -45,8 +45,11 @@
         </tr>
         <tr>
             <td id="favorite" class="copy-link">favorite</td>
-            <td>Defines the highlighting state of the <em>Favorite</em> icon.
-            If the parameter is <em>undefined</em>, the <em>Favorite</em> icon is not displayed at the editor window header.</td>
+            <td>
+                Defines the highlighting state of the <em>Favorite</em> icon.
+                When the user clicks the icon, the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event is called.
+                If the parameter is <em>undefined</em>, the <em>Favorite</em> icon is not displayed at the editor window header.
+            </td>
             <td>boolean</td>
             <td>true</td>
         </tr>
@@ -72,24 +75,24 @@
             <td>Displays the information about the settings which allow to share the document with other users:
                 <ul>
                     <li>
-                        <b>isLink</b> - changes the user icon to the link icon.
+                        <b>isLink</b> - changes the user icon to the link icon,
                         <br />
-                        <b>type</b>: boolean
+                        <b>type</b>: boolean,
                         <br />
-                        <b>example</b>: false
+                        <b>example</b>: false;
                     </li>
                     <li>
                         <b>permissions</b> - the access rights for the user with the name above.
-                        Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>
+                        Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
-                        <b>example</b>: "Full Access"
+                        <b>example</b>: "Full Access";
                     </li>
                     <li>
-                        <b>user</b> - the name of the user the document will be shared with.
+                        <b>user</b> - the name of the user the document will be shared with,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
                         <br />
                         <b>example</b>: "John Smith".
                     </li>
@@ -116,6 +119,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>

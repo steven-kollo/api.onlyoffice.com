@@ -220,7 +220,7 @@
     "GetParentParagraph": {
       "memberof": "ApiDrawing",
       "name": "GetParentParagraph",
-      "description": "<p>Gets the parent paragraph that contains the graphic object.</p>",
+      "description": "<p>Get the parent paragraph that contains the graphic object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -238,7 +238,7 @@
     "GetParentContentControl": {
       "memberof": "ApiDrawing",
       "name": "GetParentContentControl",
-      "description": "<p>Gets the parent content control that contains the graphic object.</p>",
+      "description": "<p>Get the parent content control that contains the graphic object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -256,7 +256,7 @@
     "GetParentTable": {
       "memberof": "ApiDrawing",
       "name": "GetParentTable",
-      "description": "<p>Gets the parent table that contains the graphic object.</p>",
+      "description": "<p>Get the parent table that contains the graphic object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -274,7 +274,7 @@
     "GetParentTableCell": {
       "memberof": "ApiDrawing",
       "name": "GetParentTableCell",
-      "description": "<p>Gets the parent table cell that contains the graphic object.</p>",
+      "description": "<p>Get the parent table cell that contains the graphic object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -292,7 +292,7 @@
     "Delete": {
       "memberof": "ApiDrawing",
       "name": "Delete",
-      "description": "<p>Deletes the graphic object.</p>",
+      "description": "<p>Delete the graphic object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -326,7 +326,7 @@
     "InsertInContentControl": {
       "memberof": "ApiDrawing",
       "name": "InsertInContentControl",
-      "description": "<p>Wraps the graphic object with a rich text content control.</p>",
+      "description": "<p>Wrap the graphic object with a rich text content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -344,7 +344,7 @@
         {
           "type": "number",
           "name": "nType",
-          "description": "<p>if nType === 1 -&gt; returns ApiBlockLvlSdt, else -&gt; return ApiDrawing</p>",
+          "description": "<p>If nType === 1 -&gt; returns ApiBlockLvlSdt, else -&gt; return ApiDrawing.</p>",
           "optional": false
         }
       ]
@@ -352,7 +352,7 @@
     "InsertParagraph": {
       "memberof": "ApiDrawing",
       "name": "InsertParagraph",
-      "description": "<p>Inserts a paragraph at the specified position.</p>",
+      "description": "<p>Insert a paragraph at the specified position.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -370,19 +370,19 @@
         {
           "type": "string | ApiParagraph",
           "name": "paragraph",
-          "description": "<p>text or paragraph</p>",
+          "description": "<p>Text or paragraph.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sPosition",
-          "description": "<p>can be &quot;after&quot; or &quot;before&quot;</p>",
+          "description": "<p>The position where the text or paragraph will be inserted (&quot;before&quot; or &quot;after&quot; the drawing specified).</p>",
           "optional": false
         },
         {
           "type": "bool",
           "name": "beRNewPara",
-          "description": "<p>if &quot;true&quot; - returns new paragraph, else returns this ApiDrawing.</p>",
+          "description": "<p>If &quot;true&quot; -&gt; returns new paragraph, else -&gt; returns this ApiDrawing.</p>",
           "optional": false
         }
       ]
@@ -390,7 +390,7 @@
     "Select": {
       "memberof": "ApiDrawing",
       "name": "Select",
-      "description": "<p>Selects the graphic object.</p>",
+      "description": "<p>Select the graphic object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -403,7 +403,7 @@
     "AddBreak": {
       "memberof": "ApiDrawing",
       "name": "AddBreak",
-      "description": "<p>Inserts a break at the specified location in the main document.</p>",
+      "description": "<p>Insert a break at the specified location in the main document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -420,13 +420,13 @@
         {
           "type": "number",
           "name": "breakType",
-          "description": "<p>0 -&gt; page break, 1 -&gt; line break.</p>",
+          "description": "<p>If 0 -&gt; page break, 1 -&gt; line break.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "position",
-          "description": "<p>can bet &quot;after&quot; or &quot;before&quot;</p>",
+          "description": "<p>The position where the page or line break will be inserted (&quot;before&quot; or &quot;after&quot; the drawing specified).</p>",
           "optional": false
         }
       ]
@@ -434,7 +434,7 @@
     "SetHorFlip": {
       "memberof": "ApiDrawing",
       "name": "SetHorFlip",
-      "description": "<p>Horizontal Reflection.</p>",
+      "description": "<p>Horizontal reflection.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -447,6 +447,7 @@
         {
           "type": "bool",
           "name": "bFlip",
+          "description": "<p>Specifies if the figure will be flipped or not.</p>",
           "optional": false
         }
       ]
@@ -471,6 +472,7 @@
         {
           "type": "bool",
           "name": "bFlip",
+          "description": "<p>Specifies if the figure will be flipped or not.</p>",
           "optional": false
         }
       ]
@@ -478,7 +480,7 @@
     "ScaleHeight": {
       "memberof": "ApiDrawing",
       "name": "ScaleHeight",
-      "description": "<p>Scales the height of the figure using the specified coefficient.</p>",
+      "description": "<p>Scale the height of the figure using the specified coefficient.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -495,6 +497,7 @@
         {
           "type": "number",
           "name": "coefficient",
+          "description": "<p>The coefficient by which the figure height will be scaled.</p>",
           "optional": false
         }
       ]
@@ -502,7 +505,7 @@
     "ScaleWidth": {
       "memberof": "ApiDrawing",
       "name": "ScaleWidth",
-      "description": "<p>Scales the width of the graphic object using the specified ratio.</p>",
+      "description": "<p>Scale the width of the graphic object using the specified coefficient.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -519,6 +522,7 @@
         {
           "type": "number",
           "name": "coefficient",
+          "description": "<p>The coefficient by which the figure height will be scaled.</p>",
           "optional": false
         }
       ]
@@ -526,7 +530,7 @@
     "Fill": {
       "memberof": "ApiDrawing",
       "name": "Fill",
-      "description": "<p>Sets the fill formatting properties for the specified graphic object.</p>",
+      "description": "<p>Set the fill formatting properties for the specified graphic object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -543,6 +547,7 @@
         {
           "type": "ApiFill",
           "name": "oFill",
+          "description": "<p>The fill type used to fill the graphic object.</p>",
           "optional": false
         }
       ]
@@ -550,7 +555,7 @@
     "SetOutLine": {
       "memberof": "ApiDrawing",
       "name": "SetOutLine",
-      "description": "<p>Sets the outline properties for the specified graphic object.</p>",
+      "description": "<p>Set the outline properties for the specified graphic object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -567,6 +572,7 @@
         {
           "type": "ApiStroke",
           "name": "oStroke",
+          "description": "<p>The stroke used to create the graphic object outline.</p>",
           "optional": false
         }
       ]
@@ -574,7 +580,7 @@
     "GetNextDrawing": {
       "memberof": "ApiDrawing",
       "name": "GetNextDrawing",
-      "description": "<p>Gets the next inline drawing object.</p>",
+      "description": "<p>Get the next inline drawing object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -592,7 +598,7 @@
     "GetPrevDrawing": {
       "memberof": "ApiDrawing",
       "name": "GetPrevDrawing",
-      "description": "<p>Gets the previous inline drawing object.</p>",
+      "description": "<p>Get the previous inline drawing object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

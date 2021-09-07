@@ -849,6 +849,43 @@
             );
         <% break; %>
 
+        <% case "docxReviewGroups": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "review.docx",
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Edit = true,
+                                        Review = true,
+                                        ReviewGroups = new[] { "group-3", "" }
+                                    }
+                            },
+                        DocumentType = "word",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
+                                Mode = "edit"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    })%>
+            );
+        <% break; %>
+
         <% case "fillForms": %>
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             <%= Config.Serialize(
@@ -990,6 +1027,47 @@
                         Height = "100%",
                         Width = "100%"
                     }) %>
+            );
+        <% break; %>
+
+        <% case "docxCommentGroups": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                {
+                    Document = new Config.DocumentConfig
+                    {
+                        FileType = "docx",
+                        Key = "apiwh" + Guid.NewGuid(),
+                        Title = "Example Document Title.docx",
+                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "comment.docx",
+                        Permissions = new Config.DocumentConfig.PermissionsConfig
+                        {
+                            Comment = true,
+                            CommentGroups = new Config.DocumentConfig.PermissionsConfig.CommentGroupsConfig
+                            {
+                                Edit = new[] { "group-2", "" },
+                                Remove = new [] { "group-2"}
+                            },
+                            Edit = false
+                        }
+                    },
+                    DocumentType = "word",
+                    EditorConfig = new Config.EditorConfigConfiguration
+                    {
+                        CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                        Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                        {
+                            Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            }
+                        },
+                        Mode = "edit"
+                    },
+                    Height = "100%",
+                    Width = "100%"
+                }) %>
             );
         <% break; %>
 

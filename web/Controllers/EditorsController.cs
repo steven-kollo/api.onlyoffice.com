@@ -25,14 +25,10 @@
 
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
-using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
-using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -51,6 +47,14 @@ namespace ASC.Api.Web.Help.Controllers
                 "Changelog",
                 "Coedit",
                 "Command",
+                "Command/drop",
+                "Command/forcesave",
+                "Command/info",
+                "Command/license",
+                "Command/meta",
+                "Command/version",
+                "Commenting",
+                "Comparing",
                 "Config",
                 "Config/Document",
                 "Config/Document/Info",
@@ -83,10 +87,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
+                "GetDocs",
                 "History",
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "Integrating",
                 "Liferay",
                 "Mentions",
                 "Methods",
@@ -107,52 +113,23 @@ namespace ASC.Api.Web.Help.Controllers
                 "Signature/Request",
                 "Troubleshooting",
                 "Try",
+                "WOPI",
+                "WOPI/Discovery",
+                "WOPI/HostPage",
+                "WOPI/PostMessage",
+                "WOPI/RestApi",
+                "WOPI/RestApi/CheckFileInfo",
+                "WOPI/RestApi/Lock",
+                "WOPI/RestApi/RenameFile",
+                "WOPI/RestApi/Unlock",
+                "WOPI/RestApi/GetFile",
+                "WOPI/RestApi/PutFile"
             };
 
         [ValidateInput(false)]
         public ActionResult Search(string query)
         {
-            var result = new List<SearchResult>();
-
-            foreach (var action in _actionMap)
-            {
-                var actionString = action.ToLower();
-                var doc = new HtmlDocument();
-                try
-                {
-                    var html = this.RenderView(actionString, new ViewDataDictionary());
-                    doc.LoadHtml(html);
-                }
-                catch (Exception e)
-                {
-                    LogManager.GetLogger("ASC.Api").Error(e);
-                }
-                var content = doc.DocumentNode;
-                if (content.SelectSingleNode("html") != null)
-                {
-                    content = content.SelectSingleNode("//div[contains(@class, 'layout-content')]");
-                }
-
-                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
-                {
-                    var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
-                    var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
-                    var header = headerNode != null ? headerNode.InnerText : string.Empty;
-                    var descr = descrNode != null ? descrNode.InnerText : string.Empty;
-                    result.Add(new SearchResult
-                        {
-                            Module = "editors",
-                            Name = actionString,
-                            Resource = Highliter.HighliteString(header, query).ToHtmlString(),
-                            Description = Highliter.HighliteString(descr, query).ToHtmlString(),
-                            Url = Url.Action(actionString, "editors")
-                        });
-                }
-            }
-
-            ViewData["query"] = query ?? string.Empty;
-            ViewData["result"] = result;
-            return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
+            return View(GCustomSearch.Search(query, "editors"));
         }
 
 
@@ -219,7 +196,21 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Command()
+        public ActionResult Command(string catchall)
+        {
+            if (!_actionMap.Contains("command/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Command", (object)catchall);
+        }
+
+        public ActionResult Commenting()
+        {
+            return View();
+        }
+
+        public ActionResult Comparing()
         {
             return View();
         }
@@ -266,6 +257,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("FAQ", (object)catchall);
         }
 
+        public ActionResult GetDocs()
+        {
+            return View();
+        }
+
         public ActionResult DemoPreview()
         {
             var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/editor"));
@@ -301,6 +297,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult InlineEditors()
+        {
+            return View();
+        }
+
+        public ActionResult Integrating()
         {
             return View();
         }
@@ -392,6 +393,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Try()
         {
             return View();
+        }
+
+        public ActionResult WOPI(string catchall)
+        {
+            if (!_actionMap.Contains("wopi/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("WOPI", (object)catchall);
         }
     }
 }

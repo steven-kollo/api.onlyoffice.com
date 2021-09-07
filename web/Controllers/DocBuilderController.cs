@@ -25,13 +25,11 @@
 
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
 using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
@@ -45,6 +43,7 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "Basic",
                 "gettingstarted",
+                "changelog",
                 "csharpexample",
                 "nodejsexample",
                 "phpexample",
@@ -66,8 +65,10 @@ namespace ASC.Api.Web.Help.Controllers
                 "integrationapi/cdocbuilder/setproperty",
                 "integrationapi/cdocbuilder/setpropertyw",
                 "integrationapi/cdocbuilder/settmpfolder",
-                "integrationapi/globalvariable",
                 "integrationapi/arguments",
+                "howitworks",
+                "howitworks/globalvariable",
+                "howitworks/comparedocuments",
                 "textdocumentapi",
                 "spreadsheetapi",
                 "presentationapi",
@@ -84,52 +85,15 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Search(string query)
         {
-            var result = new List<SearchResult>();
-
-            foreach (var action in _actionMap)
-            {
-                var actionString = action.ToLower();
-                var doc = new HtmlDocument();
-                try
-                {
-                    var html = this.RenderView(actionString, new ViewDataDictionary());
-                    doc.LoadHtml(html);
-                }
-                catch (Exception e)
-                {
-                    LogManager.GetLogger("ASC.Api").Error(e);
-                }
-                var content = doc.DocumentNode;
-                if (content.SelectSingleNode("html") != null)
-                {
-                    content = content.SelectSingleNode("//div[contains(@class, 'layout-content')]");
-                }
-
-                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
-                {
-                    var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
-                    var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
-                    var header = headerNode != null ? headerNode.InnerText : string.Empty;
-                    var descr = descrNode != null ? descrNode.InnerText : string.Empty;
-                    result.Add(new SearchResult
-                        {
-                            Module = "docbuilder",
-                            Name = actionString,
-                            Resource = Highliter.HighliteString(header, query).ToHtmlString(),
-                            Description = Highliter.HighliteString(descr, query).ToHtmlString(),
-                            Url = Url.Action(actionString, "docbuilder")
-                        });
-                }
-            }
-
-            result.AddRange(DocBuilderDocumentation.Search(query, Url));
-
-            ViewData["query"] = query ?? string.Empty;
-            ViewData["result"] = result;
-            return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
+            return View(GCustomSearch.Search(query, "docbuilder"));
         }
 
         public ActionResult Basic()
+        {
+            return View();
+        }
+
+        public ActionResult Changelog()
         {
             return View();
         }
@@ -175,6 +139,15 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Integrationapi", (object)catchall);
+        }
+
+        public ActionResult Howitworks(string catchall)
+        {
+            if (!_actionMap.Contains("howitworks/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Howitworks", (object)catchall);
         }
 
         public ActionResult Textdocumentapi(string catchall)

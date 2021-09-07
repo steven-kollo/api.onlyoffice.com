@@ -27,12 +27,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
             <li><a href="#insertImage">insertImage</a> - insert an image into the file.</li>
             <li><a href="#refreshHistory">refreshHistory</a> - show the document version history.</li>
+            <li><a href="#requestClose">requestClose</a> - request to close the editor.</li>
             <li><a href="#setActionLink">setActionLink</a> - set the link to the document which contains a bookmark.</li>
             <li><a href="#setFavorite">setFavorite</a> - change the <em>Favorite</em> icon state.</li>
             <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
             <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
             <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
-            <li><a href="#setSharingSettings">setSharingSettings</a> - update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.</li>
+            <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
             <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
             <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
         </ul>
@@ -48,6 +49,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <pre>
 docEditor.denyEditingRights(message);
 </pre>
+            
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -72,6 +74,7 @@ docEditor.denyEditingRights(message);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
         <li>
             <p>
@@ -91,8 +94,42 @@ docEditor.destroyEditor();
                 <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.
             </p>
             <pre>
-docEditor.downloadAs();
+docEditor.downloadAs(format);
 </pre>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>format</td>
+                        <td>
+                            Defines the format in which a file will be downloaded.
+                            All the possible formats you can find in the <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion tables</a>.
+                            But you cannot download a file in the image formats such as <em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>.
+                            If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type.
+                        </td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+            <note>
+                Please note that conversion from the <em>djvu</em>, <em>pdf</em>, <em>xps</em> formats are not available.
+                The original format will be downloaded.
+            </note>
         </li>
 
         <li>
@@ -131,7 +168,7 @@ docEditor.insertImage({
                         <td>c</td>
                         <td>
                             Defines the type of image insertion from event.
-                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermak</em>, <em>slide</em>.
+                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermark</em>, <em>slide</em>.
                             The default value is "<em>add</em>".
                         </td>
                         <td>string</td>
@@ -164,6 +201,7 @@ docEditor.insertImage({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -316,6 +354,19 @@ docEditor.refreshHistory({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
+        </li>
+
+        <li>
+            <p>
+                <b id="requestClose" class="copy-link">requestClose</b> - request to close the editor.
+                It is recommended to call this method before the <a href="#destroyEditor">destroyEditor</a> method to check if there is some unsaved data in the editor or not. 
+                If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. 
+                If the <em>Close</em> option will be chosen, then the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event will be called.
+            </p>
+            <pre>
+docEditor.requestClose();
+</pre>
         </li>
 
         <li>
@@ -352,6 +403,7 @@ docEditor.setActionLink(link);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -386,6 +438,7 @@ docEditor.setFavorite(favorite);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -511,6 +564,7 @@ docEditor.setHistoryData({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -568,6 +622,7 @@ docEditor.setMailMergeRecipients({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -623,6 +678,7 @@ docEditor.setRevisedFile({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -681,6 +737,7 @@ docEditor.setSharingSettings({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -743,6 +800,7 @@ docEditor.setUsers({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -777,6 +835,7 @@ docEditor.showMessage(message);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
     </ul>
 

@@ -58,7 +58,7 @@
         {
           "type": "boolean",
           "name": "isBold",
-          "description": "<p>Specifies that the contents of this run are displayed bold.</p>",
+          "description": "<p>Specifies that the contents of the run are displayed bold.</p>",
           "optional": false
         }
       ]
@@ -89,7 +89,7 @@
     "SetStrikeout": {
       "memberof": "ApiTextPr",
       "name": "SetStrikeout",
-      "description": "<p>Specify that the contents of this run are displayed with a single horizontal line through the center of the line.</p>",
+      "description": "<p>Specify that the contents of the run are displayed with a single horizontal line through the center of the line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -112,7 +112,7 @@
     "SetUnderline": {
       "memberof": "ApiTextPr",
       "name": "SetUnderline",
-      "description": "<p>Specify that the contents of this run are displayed along with a line appearing directly below the character\n(less than all the spacing above and below the characters on the line).</p>",
+      "description": "<p>Specify that the contents of the run are displayed along with a line appearing directly below the character\n(less than all the spacing above and below the characters on the line).</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -307,7 +307,7 @@
     "SetDoubleStrikeout": {
       "memberof": "ApiTextPr",
       "name": "SetDoubleStrikeout",
-      "description": "<p>Specify that the contents of this run is displayed with two horizontal lines through each character displayed on the line.</p>",
+      "description": "<p>Specify that the contents of this run are displayed with two horizontal lines through each character displayed on the line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -353,7 +353,7 @@
     "SetSmallCaps": {
       "memberof": "ApiTextPr",
       "name": "SetSmallCaps",
-      "description": "<p>Specify that all small letter characters in this text run are formatted for display only as their capital\nletter character equivalents in a font size two points smaller than the actual font size specified for this text.</p>",
+      "description": "<p>Specify that all the small letter characters in the text run are formatted for display only as their capital\nletter character equivalents which are two points smaller than the actual font size specified for this text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -368,7 +368,7 @@
         {
           "type": "boolean",
           "name": "isSmallCaps",
-          "description": "<p>Specifies that the contents of the current run are displayed capitalized two points smaller.</p>",
+          "description": "<p>Specifies if the contents of the current run are displayed capitalized two points smaller or not.</p>",
           "optional": false
         }
       ]
@@ -477,8 +477,8 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a text properties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a text properties.</p>",
+  "comment": "/**\r\n\t * Class representing the text properties.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing the text properties.</p>",
   "scope": "global",
   "params": []
 }
