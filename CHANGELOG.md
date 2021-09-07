@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the RefreshLock operation for WOPI protocol
 - editors: added support for WOPI protocol
 - editors: added the description of conversion response parameters
 - desktop: v6.3

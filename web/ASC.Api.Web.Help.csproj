@@ -736,6 +736,7 @@
     <Content Include="Views\Editors\WOPI\RestApi.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\CheckFileInfo.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\Lock.ascx" />
+    <Content Include="Views\Editors\WOPI\RestApi\RefreshLock.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\RenameFile.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\Unlock.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\GetFile.ascx" />

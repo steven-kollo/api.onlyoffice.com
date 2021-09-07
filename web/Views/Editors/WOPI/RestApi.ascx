@@ -13,6 +13,7 @@
         <li><a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a> - returns information about the file properties, access rights and editor settings.</li>
         <li><a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a> - requests a message to retrieve a file for the <em>HTTP://server/&lt;...&gt;/wopi*/files/&lt;id&gt;/contents</em> operation.</li>
         <li><a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a> - locks file editing by an online office that requested the lock.</li>
+        <li><a href="<%= Url.Action("wopi/restapi/refreshlock") %>">RefreshLock</a> - refreshes the lock on a file by resetting its automatic expiration timer to 30 minutes.</li>
         <li><a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a> - allows for file editing.</li>
         <li><a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a> - requests a message to update a file for the <em>HTTP://server/&lt;...&gt;/wopi*/files/&lt;id&gt;/contents</em> operation.</li>
         <li><a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a> - renames a file.</li>
