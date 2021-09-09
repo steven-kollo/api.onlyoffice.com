@@ -92,7 +92,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
-                "Integrating",
                 "Liferay",
                 "Mentions",
                 "Methods",
@@ -297,11 +296,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult InlineEditors()
-        {
-            return View();
-        }
-
-        public ActionResult Integrating()
         {
             return View();
         }

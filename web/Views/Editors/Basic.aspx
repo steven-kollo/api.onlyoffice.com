@@ -17,7 +17,18 @@
 
     <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
 
-    <p class="dscr">ONLYOFFICE Document Server API is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
+    <p class="dscr">
+        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> is an open-source office suite that includes editors for text documents, spreadsheets and presentations. 
+        It provides the following features:
+    </p>
+    <ul>
+        <li>creating, editing and viewing text documents, spreadsheets and presentations;</li>
+        <li>collaborating on files with other teammates in real time.</li>
+    </ul>
+    <p>ONLYOFFICE Docs also supports the <b>WOPI protocol</b> that is used to integrate your application with an online office. 
+    Further information about WOPI can be found <a href="<%= Url.Action("wopi") %>">here</a>.</li>
+
+    <p><b>ONLYOFFICE Docs API</b> is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
 
     <p>The API JavaScript file can normally be found in the following editors folder:</p>
     <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>
