@@ -385,6 +385,9 @@
             <li>
                 <a href="<%= Url.Action("macrosamples/inserttext") %>">Insert text</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">Currency exchange rates</a>
+            </li>
         </ul>
     <li>
 </ul>

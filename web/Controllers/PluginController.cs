@@ -159,7 +159,8 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/addchart",
                 "macros/macrosamples/highlightduplicates",
                 "macros/macrosamples/nextblankrow",
-                "macros/macrosamples/inserttext"
+                "macros/macrosamples/inserttext",
+                "macros/macrosamples/currencyexchangerates"
             };
 
         public ActionResult Index()
