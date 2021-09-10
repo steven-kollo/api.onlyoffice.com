@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ONLYOFFICE API connectors
+    Ready-to-use connectors
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">ONLYOFFICE API connectors</span>
+        <span class="hdr">Ready-to-use connectors</span>
     </h1>
 
     <p class="dscr">
