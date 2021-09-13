@@ -17,7 +17,18 @@
 
     <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
 
-    <p class="dscr">ONLYOFFICE Document Server API is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
+    <p class="dscr">
+        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> is an open-source office suite that includes editors for text documents, spreadsheets and presentations. 
+        It provides the following features:
+    </p>
+    <ul>
+        <li>creating, editing and viewing text documents, spreadsheets and presentations;</li>
+        <li>collaborating on files with other teammates in real time.</li>
+    </ul>
+    <p>ONLYOFFICE Docs also supports the <b>WOPI protocol</b> that is used to integrate your application with an online office. 
+    Further information about WOPI can be found <a href="<%= Url.Action("wopi") %>">here</a>.</li>
+
+    <p><b>ONLYOFFICE Docs API</b> is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
 
     <p>The API JavaScript file can normally be found in the following editors folder:</p>
     <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>
@@ -74,9 +85,7 @@ config = {
 
     <h2>Get help</h2>
 
-    <p>If you have any questions or feature requests about ONLYOFFICE Document Server, please visit <a href="https://github.com/ONLYOFFICE/DocumentServer/issues" target="_blank">GitHub</a>.</p>
-
-    <p>
-        You can also ask our developers at <a href="https://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
-    </p>
+    <p>If you have any questions about ONLYOFFICE Docs, try to find them in the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
+    <p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/DocumentServer/issues" target="_blank">GitHub</a>.</p>
+    <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 </asp:Content>

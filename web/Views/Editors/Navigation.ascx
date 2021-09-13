@@ -14,7 +14,7 @@
         <a href="<%= Url.Action("try") %>">Try now</a>
     </li>
     <li>
-        <a href="<%= Url.Action("demopreview") %>">Integration examples</a>
+        <a href="<%= Url.Action("demopreview") %>">Language-specific examples</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("example/csharp") %>">.Net (C#) example</a>
@@ -37,82 +37,37 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("integrating") %>">Integrating ONLYOFFICE Docs</a>
+        <a href="<%= Url.Action("plugins") %>">Ready-to-use connectors</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("plugins") %>">ONLYOFFICE API connectors</a>
-                <ul>
-                    <li>
-                        <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("chamilo") %>">Chamilo integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("humhub") %>">HumHub integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("liferay") %>">Liferay integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("mattermost") %>">Mattermost integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("nuxeo") %>">Nuxeo integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("owncloud") %>">ownCloud integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("plone") %>">Plone integration</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
-                    </li>
-                </ul>
+                <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
             </li>
             <li>
-                <a href="<%= Url.Action("wopi/") %>">Using WOPI</a>
-                <ul>
-                    <li>
-                        <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("wopi/hostpage") %>">Host page</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a>
-                        <ul>
-                            <li>
-                                <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
-                    </li>
-                </ul>
+                <a href="<%= Url.Action("chamilo") %>">Chamilo integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("humhub") %>">HumHub integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("liferay") %>">Liferay integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("nuxeo") %>">Nuxeo integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("owncloud") %>">ownCloud integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("plone") %>">Plone integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
             </li>
         </ul>
     </li>
@@ -209,6 +164,49 @@
     <li>
         <a href="<%= Url.Action("callback") %>">Callback handler</a>
     </li>
+</ul>
+
+<div class="treeheader">Using WOPI</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("wopi/") %>">Overview</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/hostpage") %>">Host page</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
+    </li>
+</ul>
+
+<div class="treeheader">Additional API</div>
+<ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("command/") %>">Command service</a>
         <ul>
@@ -258,6 +256,7 @@
         </ul>
     </li>
 </ul>
+
 <div class="treeheader">More information</div>
 <ul class="side-nav root">
     <li>
