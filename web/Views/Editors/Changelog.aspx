@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="65" class="copy-link">Version 6.5</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#protect">document.permissions.protect</a> field.</li>
         <li>Added the <em>fileType</em> parameter to the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a>, <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> and <a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a> events.</li>
         <li>Added the possibility to insert several images via the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.</li>
         <li>The <a href="<%= Url.Action("save") %>#assemblyFormatAsOrigin">assemblyFormatAsOrigin</a> server setting is enabled by default.</li>
