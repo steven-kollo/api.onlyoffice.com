@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2.3.0
+- editors: added opening for oxps format
 - mobile view
 - global search
 - search via google
