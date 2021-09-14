@@ -56,3 +56,48 @@
     }
 }
 </pre>
+
+    <h2 id="ip-filter" class="copy-link">IP filter</h2>
+    <p>ONLYOFFICE Docs can accept WOPI requests only from the trusted integrator. 
+        The IP address of such an integrator must be included in the <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list" target="_blank">WOPI domain allow list</a>. 
+        At the same time, access for all the other integrators must be denied.</p>
+    <note>By default, all the IP addresses are considered trusted.</note>
+    <p>Follow the steps below to configure the Document Server IP filter:</p>
+    <ol>
+        <li>
+            <p>Open the <em>/etc/onlyoffice/documentserver/default.json</em> file using any available text editor:</p>
+            <pre>
+"ipfilter": {
+    "rules": [
+    {
+        "address": "ip_address",
+        "allowed": true
+    },
+    {
+        "address": "*",
+        "allowed": false
+    }
+    ],
+    "useforrequest": true,
+    "errorcode": 403
+}
+</pre>
+        </li>
+        <li>
+            <p>Change the following default settings. Enter your <em>"ip_address"</em> that can contain:</p>
+            <ul>
+                <li>IP in the X.X.X.X format for ipv4,</li>
+                <li>IP in the xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx.xxxx format for ipv6,</li>
+                <li>dns-name,</li>
+                <li>* wildcard to replace any symbol/symbols.</li>
+            </ul>
+            </ul>
+        </li>
+        <li>Change the <em>"allowed"</em> rule that can be <b>true</b> or <b>false</b>.</li>
+        <li>
+            <p>Restart the services for the config changes to take effect:</p>
+            <pre>
+supervisorctl restart all
+</pre>
+        </li>
+    </ol>
