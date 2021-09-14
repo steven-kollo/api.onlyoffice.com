@@ -18,3 +18,41 @@
     </ul>
 
     <p>For further information on the WOPI protocol, please read the <a href="https://wopi.readthedocs.io/en/latest/" target="_blank">WOPI documentation</a>.</p>
+
+    <h2 id="enable" class="copy-link">Enabling WOPI</h2>
+    <p>To enable WOPI, set the <em>wopi.enable</em> parameter in the Document Server config to <b>true</b>.</p>
+
+    <div class="header-gray">Parameters</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+            <col class="table-type" />
+            <col class="table-example" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+                <td>Type</td>
+                <td>Example</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>wopi.enable</td>
+                <td>Defines if WOPI is enabled or not. The default value is <b>false</b>.</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="header-gray">Example</div>
+    <pre>
+{
+    "wopi": {
+        "enable": true
+    }
+}
+</pre>

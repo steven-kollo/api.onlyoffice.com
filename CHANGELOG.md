@@ -1,6 +1,7 @@
 # Change Log
 
 ## 2.3.0
+- editors: added the wopi.enable parameter
 - editors: added the Proof keys page
 - mobile view
 - global search
