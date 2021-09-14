@@ -732,6 +732,7 @@
     <Content Include="Views\Editors\WOPI\Default.ascx" />
     <Content Include="Views\Editors\WOPI\Discovery.ascx" />
     <Content Include="Views\Editors\WOPI\PostMessage.ascx" />
+    <Content Include="Views\Editors\WOPI\ProofKeys.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\CheckFileInfo.ascx" />
     <Content Include="Views\Editors\WOPI\RestApi\Lock.ascx" />

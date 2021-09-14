@@ -12,6 +12,7 @@
     <ul>
         <li>file properties that can be specified via <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>;</li>
         <li>a <a href="<%= Url.Action("wopi/hostpage") %>">host page</a> that must be built to create an iframe element within the online office;</li>
+        <li><a href="<%= Url.Action("wopi/proofkeys") %>">proof keys</a> which are used to check that the request is received from the online office;</li>
         <li>supported <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a> functions;</li>
         <li>available messages that can be posted via <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>.</li>
     </ul>
