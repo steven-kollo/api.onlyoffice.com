@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Desktop Editors API.</p>
 
+    <h2 id="70" class="copy-link">Version 7.0</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("addingdms/") %>#extraLogout">extraLogout</a> parameter to the config with DMS integration parameters.</li>
+    </ul>
+
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
         <li>Added the possibility to use icons for each UI theme type in the <a href="<%= Url.Action("addingdms/") %>">config</a> with integration parameters.</li>
