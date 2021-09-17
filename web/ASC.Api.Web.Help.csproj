@@ -818,6 +818,7 @@
     <Content Include="Views\Portals\Basic.aspx" />
     <Content Include="Views\Portals\Batch.aspx" />
     <Content Include="Views\Portals\Faq.aspx" />
+    <Content Include="Views\Portals\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Portals\Filters.aspx" />
     <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\TopNavigation.ascx" />
