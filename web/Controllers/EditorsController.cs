@@ -116,6 +116,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/Discovery",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
+                "WOPI/ProofKeys",
                 "WOPI/RestApi",
                 "WOPI/RestApi/CheckFileInfo",
                 "WOPI/RestApi/Lock",

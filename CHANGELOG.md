@@ -1,5 +1,8 @@
 # Change Log
 
+- editors: added the ip filter information
+- editors: added the wopi.enable parameter
+- editors: added the Proof keys page
 - macros: added the Currency exchange rates macro sample
 
 ## 2.3.0

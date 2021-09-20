@@ -178,6 +178,9 @@
         <a href="<%= Url.Action("wopi/hostpage") %>">Host page</a>
     </li>
     <li>
+        <a href="<%= Url.Action("wopi/proofkeys") %>">Proof keys</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a>
         <ul>
             <li>
