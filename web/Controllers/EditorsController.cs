@@ -92,7 +92,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
-                "Integrating",
                 "Liferay",
                 "Mentions",
                 "Methods",
@@ -117,6 +116,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/Discovery",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
+                "WOPI/ProofKeys",
                 "WOPI/RestApi",
                 "WOPI/RestApi/CheckFileInfo",
                 "WOPI/RestApi/Lock",
@@ -298,11 +298,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult InlineEditors()
-        {
-            return View();
-        }
-
-        public ActionResult Integrating()
         {
             return View();
         }

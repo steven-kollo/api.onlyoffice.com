@@ -1,7 +1,6 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
     <h1>
-        <a class="up" href="<%= Url.Action("wopi/") %>"></a>
         <span class="hdr">WOPI REST API</span>
     </h1>
 

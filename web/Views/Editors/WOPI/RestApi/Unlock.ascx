@@ -89,7 +89,7 @@
                 <td>X-WOPI-Lock</td>
                 <td>The lock ID that the host must use to identify the lock on the file.</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>required</td>
             </tr>
         </tbody>
     </table>

@@ -63,6 +63,7 @@
     <h2>How to get help</h2>
 
     <p>If you have any questions about plugins, try to find them in the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
-    <p>You can also request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>
+    <p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/issues" target="_blank">GitHub</a>.</p>
+    <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/plugins/38" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 
 </asp:Content>

@@ -67,9 +67,7 @@
     </p>
     <h2>Get help</h2>
 
-    <p>If you have any questions or feature requests about ONLYOFFICE Community Server, please visit <a href="https://github.com/ONLYOFFICE/CommunityServer/issues" target="_blank">GitHub</a>.</p>
-    
-    <p>
-        You can ask our developers at <a href="https://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
-    </p>
+    <p>If you have any questions about ONLYOFFICE Community Server, try to find them in the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
+    <p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/CommunityServer/issues" target="_blank">GitHub</a>.</p>
+    <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/workspace/33" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 </asp:Content>
