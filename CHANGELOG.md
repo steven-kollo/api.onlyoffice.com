@@ -1,5 +1,7 @@
 # Change Log
 
+- macros: added the Currency exchange rates macro sample
+
 ## 2.3.0
 - mobile view
 - global search
