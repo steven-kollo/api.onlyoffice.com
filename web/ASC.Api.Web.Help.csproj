@@ -363,6 +363,7 @@
     <Content Include="Content\img\macros\cell-font-bold.svg" />
     <Content Include="Content\img\macros\change-cell.svg" />
     <Content Include="Content\img\macros\column-width.svg" />
+    <Content Include="Content\img\macros\currency-exchange-rates.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
     <Content Include="Content\img\macros\insert-text.svg" />
@@ -380,6 +381,7 @@
     <Content Include="Content\img\plugins\assign-macro.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\macros.png" />
+    <Content Include="Content\img\plugins\currencies-usd-eur.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
     <Content Include="Content\img\csharp\platform.png" />
@@ -781,6 +783,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\inserttext.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\currencyexchangerates.ascx" />
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
     <Content Include="Views\Plugin\example\addcommentincell.ascx" />
     <Content Include="Views\Plugin\example\addcustomfields.ascx" />
@@ -819,6 +822,7 @@
     <Content Include="Views\Portals\Basic.aspx" />
     <Content Include="Views\Portals\Batch.aspx" />
     <Content Include="Views\Portals\Faq.aspx" />
+    <Content Include="Views\Portals\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Portals\Filters.aspx" />
     <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\TopNavigation.ascx" />
