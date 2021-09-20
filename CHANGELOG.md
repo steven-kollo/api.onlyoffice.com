@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added opening for oxps format
 - editors: added the RefreshLock operation for WOPI protocol
 - editors: added the ip filter information
 - editors: added the wopi.enable parameter
