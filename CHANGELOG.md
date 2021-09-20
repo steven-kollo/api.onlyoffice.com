@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the RefreshLock operation for WOPI protocol
 - editors: added the ip filter information
 - editors: added the wopi.enable parameter
 - editors: added the Proof keys page

@@ -120,6 +120,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/RestApi",
                 "WOPI/RestApi/CheckFileInfo",
                 "WOPI/RestApi/Lock",
+                "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
                 "WOPI/RestApi/GetFile",

@@ -193,6 +193,9 @@
                 <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>
             </li>
             <li>
+                <a href="<%= Url.Action("wopi/restapi/refreshlock") %>">RefreshLock</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>
             </li>
             <li>
