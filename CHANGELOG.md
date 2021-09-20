@@ -1,7 +1,13 @@
 # Change Log
 
-## 2.3.0
 - editors: added opening for oxps format
+- editors: added the RefreshLock operation for WOPI protocol
+- editors: added the ip filter information
+- editors: added the wopi.enable parameter
+- editors: added the Proof keys page
+- macros: added the Currency exchange rates macro sample
+
+## 2.3.0
 - mobile view
 - global search
 - search via google
