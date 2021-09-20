@@ -68,7 +68,7 @@
                                         <a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a>
                                     </li>
                                     <li>
-                                        <a href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
+                                        <a title="CoAuthoringChatSendMessage" href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
@@ -86,7 +86,7 @@
                                         <a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a>
                                     </li>
                                     <li>
-                                        <a href="<%= Url.Action("executemethod/getcurrentcontentcontrolpr") %>">GetCurrentContentControlPr</a>
+                                        <a title="GetCurrentContentControlPr" href="<%= Url.Action("executemethod/getcurrentcontentcontrolpr") %>">GetCurrentContentControlPr</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/getfields") %>">GetFields</a>
@@ -113,10 +113,10 @@
                                         <a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a>
                                     </li>
                                     <li>
-                                        <a href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
+                                        <a title="InsertAndReplaceContentControls" href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
                                     </li>
                                     <li>
-                                        <a href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a>
+                                        <a title="MoveCursorToContentControl" href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/movecursortoend") %>">MoveCursorToEnd</a>
