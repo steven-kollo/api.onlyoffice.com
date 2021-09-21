@@ -40,7 +40,7 @@
 
 
     <h2 id="install" class="copy-link">Installing Mattermost ONLYOFFICE integration plugin</h2>
-    <p>To start using ONLYOFFICE Docs with Mattermost, follwo these steps:</p>
+    <p>To start using ONLYOFFICE Docs with Mattermost, follow these steps:</p>
     <ol>
         <li>Clone the <a href="https://github.com/ONLYOFFICE/onlyoffice-mattermost" target="_blank">master branch</a>.</li>
         <li>Go to the project root.</li>
@@ -54,16 +54,44 @@
 
 
     <h2 id="configuration" class="copy-link">Configuring Mattermost ONLYOFFICE integration plugin</h2>
-    <p>To connect ONLYOFFICE Docs, enter the following address:</p>
-    <span class="commandline">https://&lt;documentserver&gt;/</span>
-    <p>
-        where <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.
-        The address must be accessible from the user browser and from the Mattermost server.
-        The Mattermost server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
-    </p>
-    <p>To protect your documents from unauthorized access, enable JWT by specifying the secret key. If JWT protection is enabled, it is necessary to specify a custom header name 
-        since the Mattermost security policy blocks external <b>Authorization</b> headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. 
-        To specify the ONLYOFFICE Docs prefix, use a JWT prefix. Further information about signature can be found <a href="<%= Url.Action("signature/") %>">here</a>.</p>
+    <img alt="Mattermost settings" width="832px" src="<%= Url.Content("~/content/img/editor/mattermost-settings.png") %>"/>
+    <ul>
+        <li><b>Enable Plugin</b>. Enable the Mattermost ONLYOFFICE integration plugin by setting this parameter to <b>true</b>.</li>
+        <li>
+            <p><b>Document Editing Service address</b>. To connect ONLYOFFICE Docs, enter the following address:</p>
+            <span class="commandline">https://&lt;documentserver&gt;:&lt;port&gt;/</span>
+            <p>
+                where <b>documentserver</b> is the name of the server and <b>port</b> is the port number with <b>ONLYOFFICE Docs</b> installed.
+                The address must be accessible from the user browser and from the Mattermost server.
+                The Mattermost server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
+            </p>
+        </li>
+        <li><b>Secret key</b>. To protect your documents from unauthorized access, enable JWT.</li>
+        <li><b>JWT Header</b>. If JWT protection is enabled, it is necessary to specify a custom header name 
+            since the Mattermost security policy blocks external <b>Authorization</b> headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. 
+            Further information about signature can be found <a href="<%= Url.Action("signature/") %>">here</a>.</li>
+        <li><b>JWT Prefix</b>. Specify the ONLYOFFICE Docs prefix.</li>
+    </ul>
+
+
+    <h2 id="usage" class="copy-link">Using Mattermost ONLYOFFICE integration plugin</h2>
+    <p>Users are able to open files sent in personal and group Mattermost chats for viewing and co-editing.</p>
+    <p>When files are sent in the chat message, the following actions are available in the file context menu by clicking the &#8942; symbol:</p>
+    <ul>
+        <li><b>Open file in ONLYOFFICE</b> and <b>Change access rights</b> - for the author of the message.</li>
+        <li><b>Open file in ONLYOFFICE</b> - for the recipient of the message.</li>
+    </ul>
+    <img alt="Mattermost actions" src="<%= Url.Content("~/content/img/editor/mattermost-actions.png") %>"/>
+
+    <p>When clicking on the <b>Open file in ONLYOFFICE</b> button, the corresponding ONLYOFFICE editor opens in the same window.</p>
+    <img alt="Mattermost editor" width="832px" src="<%= Url.Content("~/content/img/editor/mattermost-editor.png") %>"/>
+
+    <p>The author of the message with attached documents is able to change access rights to the file via the context menu using the <b>Change access rights</b> option. 
+        This action is available both in personal and group chats.</p>
+    <img alt="Mattermost share" src="<%= Url.Content("~/content/img/editor/mattermost-share.png") %>"/>
+
+    <p>ONLYOFFICE bot sends notifications about changes in the document specifying the name of the user who made those changes.</p>
+    <img alt="Mattermost bot" src="<%= Url.Content("~/content/img/editor/mattermost-bot.png") %>"/>
 
 
     <h2 id="howitworks" class="copy-link">How it works</h2>

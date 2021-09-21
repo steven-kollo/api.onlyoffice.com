@@ -55,6 +55,9 @@
                 <a href="<%= Url.Action("liferay") %>">Liferay integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("mattermost") %>">Mattermost integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
             </li>
             <li>
