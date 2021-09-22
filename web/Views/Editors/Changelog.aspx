@@ -19,7 +19,7 @@
     <h2 id="65" class="copy-link">Version 6.5</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("callback") %>#filetype">filetype</a> parameter to the <em>Callback handler</em>.</li>
-        <li>Added the <em>FileType</em> field to the <a href="<%= Url.Action("conversionapi") %>#response">conversion response</a>.</li>
+        <li>Added the <a href="<%= Url.Action("conversionapi") %>#fileType">fileType</a> field to the conversion response.</li>
         <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">docm, xlsm, pptm</a> formats.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a>, <a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">editorConfig.customization.showReviewChanges</a>, <a href="<%= Url.Action("config/editor/customization") %>#trackChanges">editorConfig.customization.trackChanges</a> parameters are deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review</a> parameter instead.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hideReviewDisplay</a> field.</li>

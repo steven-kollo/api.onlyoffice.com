@@ -1247,6 +1247,12 @@
                 <td>-3</td>
             </tr>
             <tr class="tablerow">
+                <td id="fileType" class="copy-link">fileType</td>
+                <td>Defines an extension of the converted file.</td>
+                <td>string</td>
+                <td>"docm"</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="fileUrl" class="copy-link">fileUrl</td>
                 <td>Defines the link to the converted document. This parameter will be received only when the <em>endConvert</em> parameter is set to <b>true</b>.</td>
                 <td>string</td>
@@ -1277,9 +1283,9 @@
     <pre>
 {
     "endConvert": true,
-    "fileType": "docm"
+    "fileType": "docm",
     "fileUrl": "https://documentserver/url-to-converted-document.pdf",
-    "percent": 100,
+    "percent": 100
 }
 </pre>
 

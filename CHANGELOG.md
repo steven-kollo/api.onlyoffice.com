@@ -1,7 +1,7 @@
 # Change Log
 
 - editors: added the filetype parameter to the Callback handler
-- editors: added the FileType field to the conversion response
+- editors: added the fileType field to the conversion response
 - editors: conversion to docm, xlsm, pptm
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
