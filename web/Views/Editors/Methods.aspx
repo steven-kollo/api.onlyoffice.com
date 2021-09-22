@@ -448,6 +448,7 @@ docEditor.setFavorite(favorite);
             </p>
             <pre>
 docEditor.setHistoryData({
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
@@ -464,8 +465,10 @@ docEditor.setHistoryData({
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "https://example.com/url-to-changes.zip",
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "previous": {
+        "fileType": "docx",
         "key": "af86C7e71Ca8",
         "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
@@ -516,6 +519,12 @@ docEditor.setHistoryData({
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
                         <td>key</td>
                         <td>Defines the document identifier used to unambiguously identify the document file.</td>
                         <td>string</td>
@@ -525,6 +534,12 @@ docEditor.setHistoryData({
                         <td>previous</td>
                         <td>Defines the object of the previous version of the document if <em>changesUrl</em> address was returned after saving the document.</td>
                         <td>object</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>previous.fileType</td>
+                        <td>Defines an extension of the document specified with the <em>previous.url</em> parameter.</td>
+                        <td>string</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">

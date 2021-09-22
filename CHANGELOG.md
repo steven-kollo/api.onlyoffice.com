@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the fileType and previous.fileType parameters to the setHistoryData method
 - editors: added the filetype parameter to the Callback handler
 - editors: added the fileType field to the conversion response
 - editors: conversion to docm, xlsm, pptm
