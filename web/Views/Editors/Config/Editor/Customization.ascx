@@ -643,7 +643,7 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="uiTheme" class="copy-link">uiTheme</td>
             <td>
                 Defines the editor theme settings.
@@ -659,6 +659,11 @@
             </td>
             <td>string</td>
             <td>theme-dark</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.uiTheme</em> parameter.</div>
+            </td>
         </tr>
         <tr>
             <td id="unit" class="copy-link">unit</td>
