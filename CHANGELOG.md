@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the ooxml and odf values to the outputtype parameter of the conversion request
 - editors: added the fileType and previous.fileType parameters to the setHistoryData method
 - editors: added the filetype parameter to the Callback handler
 - editors: added the fileType field to the conversion response

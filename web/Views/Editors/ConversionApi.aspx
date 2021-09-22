@@ -103,7 +103,22 @@
             </tr>
             <tr class="tablerow">
                 <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
-                <td>Defines the resulting converted document type.</td>
+                <td>
+                    Defines the resulting converted document type.
+                    Starting from version 6.5, file formats can be specified instead of extensions.
+                    They are used when we do not know in advance what extension is required:
+                    <ul>
+                        <li>
+                            <b>ooxml</b> - defines that the file will be coverted into <em>docx</em>, <em>docm</em>, <em>xlsx</em>, <em>xlsm</em>, <em>pptx</em> or <em>pptm</em>.
+                            For example, when the <em>doc</em> file is converted into the OOXML format, the resulting file can be <em>docx</em> or <em>docm</em> if this file contains macros (the same for <em>xls</em> and <em>ppt</em>).
+                            It is also applied when converting XML files into OOXML formats (<em>docx</em>, <em>xlsx</em> or <em>pptx</em> depending on the content);
+                        </li>
+                        <li>
+                            <b>odf</b> - defines that the file will be coverted into <em>odt</em>, <em>ods</em> or <em>odp</em>.
+                            For example, it is used when converting XML files into ODF formats (<em>odt</em>, <em>ods</em> or <em>odp</em> depending on the content).
+                        </li>
+                    </ul>
+                </td>
                 <td>string</td>
                 <td>required</td>
             </tr>
