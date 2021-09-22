@@ -74,6 +74,7 @@
                 <td id="filetype" class="copy-link">filetype</td>
                 <td>
                     Defines an extension of the document that is downloaded from the link specified with the <a href="#url">url</a> parameter.
+                    The file type is OOXML by default but if the <a href="<%= Url.Action("save") %>#assemblyFormatAsOrigin">assemblyFormatAsOrigin</a> server setting is enabled, the file will be saved in its original format.
                 </td>
                 <td>string</td>
                 <td>optional</td>
