@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="65" class="copy-link">Version 6.5</h2>
     <ul>
+        <li>Added the possibility to insert several images via the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.</li>
         <li>The <a href="<%= Url.Action("save") %>#assemblyFormatAsOrigin">assemblyFormatAsOrigin</a> server setting is enabled by default.</li>
         <li>Added the <em>ooxml</em> and <em>odf</em> values to the <a href="<%= Url.Action("conversionapi") %>#outputtype">outputtype</a> parameter of the conversion request.</li>
         <li>Added the <em>fileType</em> and <em>previous.fileType</em> parameters to the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.</li>
