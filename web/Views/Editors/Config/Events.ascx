@@ -124,11 +124,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called.
-            The absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
+            The absolute URL to the document to be downloaded and its type are sent in the <em>data</em> parameter.
         </p>
         <div class="header-gray">Example</div>
         <pre>
 var onDownloadAs = function (event) {
+    var fileType = event.data.fileType;
+    var url = event.data.url;
     console.log("ONLYOFFICE Document Editor create file: " + event.data);
 };
 
@@ -514,7 +516,7 @@ var onRequestInsertImage = function (event) {
         "c": event.data.c,
         "images": [
             {
-                "fileType": "png",
+        "fileType": "png",
                 "url": "https://example.com/url-to-example-image1.png"
             },
             {
@@ -595,6 +597,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again.
             The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
             Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">history object</a>.
+            The type of the document which is specified with this link is sent in the <em>data.fileType</em> parameter.
             If the method is not declared the <em>Restore</em> button will not be displayed.
         </p>
         <div class="note">
@@ -605,6 +608,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <div class="header-gray">Example</div>
         <pre>
 var onRequestRestore = function (event) {
+    var fileType = event.data.fileType;
     var url = event.data.url;
     var version = event.data.version;
     ...
@@ -612,10 +616,10 @@ var onRequestRestore = function (event) {
         "currentVersion": 2,
         "history": [
             {
-                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "changes": changes,
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
-                "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "serverVersion": serverVersion,
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage"
@@ -656,13 +660,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save Copy as...</em> button.
-            The title of the document and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
+            The title of the document, its type and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
             If the method is not declared the <em>Save Copy as...</em> button will not be displayed.
         </p>
         <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
 var onRequestSaveAs = function (event) {
+    var fileType = event.data.fileType;
     var title = event.data.title;
     var url = event.data.url;
     ...

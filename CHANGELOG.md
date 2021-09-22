@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the fileType parameter to the onDownloadAs, onRequestRestore and onRequestSaveAs events
 - editors: added the possibility to insert several images via the insertImage method
 - editors: the assemblyFormatAsOrigin server setting is enabled by default
 - editors: added the ooxml and odf values to the outputtype parameter of the conversion request
