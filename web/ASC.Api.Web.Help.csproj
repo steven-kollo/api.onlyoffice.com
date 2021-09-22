@@ -282,6 +282,11 @@
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
     <Content Include="Content\img\Editor\inlineEditors.png" />
+    <Content Include="Content\img\Editor\mattermost-actions.png" />
+    <Content Include="Content\img\Editor\mattermost-bot.png" />
+    <Content Include="Content\img\Editor\mattermost-editor.png" />
+    <Content Include="Content\img\Editor\mattermost-settings.png" />
+    <Content Include="Content\img\Editor\mattermost-share.png" />
     <Content Include="Content\img\Editor\mentions-create.png" />
     <Content Include="Content\img\Editor\mentionShare.png" />
     <Content Include="Content\img\Editor\onMakeActionLink.png" />
@@ -600,6 +605,7 @@
     <Content Include="Views\Editors\Example\Python.ascx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
+    <Content Include="Views\Editors\Mattermost.aspx" />
     <Content Include="Views\Editors\Chamilo.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\Commenting.aspx" />
