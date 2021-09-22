@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: v7.0
 - editors: added the signature to the request for file changes
 - editors: added the document.permissions.protect field
 - editors: added the fileType parameter to the onDownloadAs, onRequestRestore and onRequestSaveAs events
