@@ -82,6 +82,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         
         <div class="header-gray">Example</div>
         <pre>
@@ -146,6 +147,7 @@ window.AscDesktopEditor.execCommand("portal:checkpwd", JSON.stringify({
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
 
         <div class="header-gray">Example</div>
         <pre>
@@ -263,6 +265,7 @@ window.cloudCryptoCommand = function (type, params, callback)
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 
 <h2>Operations with encrypted files</h2>
@@ -317,6 +320,7 @@ window.cloudCryptoCommand = function (type, params, callback)
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>
@@ -383,6 +387,7 @@ callback({
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>

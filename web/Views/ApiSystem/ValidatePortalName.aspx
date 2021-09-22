@@ -45,6 +45,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
     <div class="header-gray">Returns</div>
@@ -95,6 +96,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <div class="header-gray">Example successful response</div>
     <pre>
 {

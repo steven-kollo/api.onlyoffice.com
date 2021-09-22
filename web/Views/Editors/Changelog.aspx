@@ -29,6 +29,8 @@
 
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
+        <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">oxps</a> format.</li>
+        <li>Added support for <a href="<%= Url.Action("wopi/") %>">WOPI protocol</a>.</li>
         <li>Added the <em>simple</em> value to the <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a> parameter.</li>
         <li>Added the <a href="<%= Url.Action("commenting") %>#threaded-comments">threaded comments</a> saving in the spreadsheet files.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a> field.</li>

@@ -9,6 +9,7 @@
 <p class="dscr">The plugins section allows to connect the special add-ons to your Document Server installation which will help you add additional features to document editors.</p>
 
 <div class="header-gray">Parameters</div>
+<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col class="table-name" />

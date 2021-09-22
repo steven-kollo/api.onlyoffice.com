@@ -21,6 +21,7 @@
 <ul style="list-style: none;">
     <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/providers/</em></li>
     <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\providers\</em></li>
+    <li>For Mac OS - <em>/Applications/ONLYOFFICE.app/Contents/Resources/providers/</em></li>
 </ul>
 
 <h2>Step 2</h2>
@@ -128,6 +129,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>

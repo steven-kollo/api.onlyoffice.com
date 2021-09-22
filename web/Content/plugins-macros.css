@@ -92,6 +92,11 @@
     background-repeat: no-repeat;
 }
 
+.currency-exchange-rates {
+    background-image: url("img/macros/currency-exchange-rates.svg");
+    background-repeat: no-repeat;
+}
+
 .example-plug-img {
     height: 120px;
     margin: auto;

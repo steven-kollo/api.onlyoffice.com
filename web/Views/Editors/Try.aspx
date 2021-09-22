@@ -33,90 +33,90 @@
         <tbody>
             <tr>
                 <th>Edit</th>
-                <td><a title="Open DOCX file for editing" href="<%= Url.Action("editor") %>?method=docxEditor" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for editing" href="<%= Url.Action("editor") %>?method=docxEditor" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open DOC file for editing" href="<%= Url.Action("editor") %>?method=docEditor" class="button button-upper" target="blank">DOC</a><a title="View source code" class="button-popap-try" data-code="docEditorCode">&lt;/&gt;</a>
+                    <a title="Open DOC file for editing" href="<%= Url.Action("editor") %>?method=docEditor" class="button button-upper doc" target="blank">DOC</a><a title="View source code" class="button-popap-try" data-code="docEditorCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open ODT file for editing" href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper" target="blank">ODT</a><a title="View source code" class="button-popap-try" data-code="odtEditorCode">&lt;/&gt;</a>
+                    <a title="Open ODT file for editing" href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper doc" target="blank">ODT</a><a title="View source code" class="button-popap-try" data-code="odtEditorCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open TXT file for editing" href="<%= Url.Action("editor") %>?method=txtEditor" class="button button-upper" target="blank">TXT</a><a title="View source code" class="button-popap-try" data-code="txtEditorCode">&lt;/&gt;</a>
+                    <a title="Open TXT file for editing" href="<%= Url.Action("editor") %>?method=txtEditor" class="button button-upper doc" target="blank">TXT</a><a title="View source code" class="button-popap-try" data-code="txtEditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open XLSX file for editing" href="<%= Url.Action("editor") %>?method=xlsxEditor" class="button button-upper" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxEditorCode">&lt;/&gt;</a>
+                <td><a title="Open XLSX file for editing" href="<%= Url.Action("editor") %>?method=xlsxEditor" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxEditorCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open XLS file for editing" href="<%= Url.Action("editor") %>?method=xlsEditor" class="button button-upper" target="blank">XLS</a><a title="View source code" class="button-popap-try" data-code="xlsEditorCode">&lt;/&gt;</a>
+                    <a title="Open XLS file for editing" href="<%= Url.Action("editor") %>?method=xlsEditor" class="button button-upper spread" target="blank">XLS</a><a title="View source code" class="button-popap-try" data-code="xlsEditorCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open ODS file for editing" href="<%= Url.Action("editor") %>?method=odsEditor" class="button button-upper" target="blank">ODS</a><a title="View source code" class="button-popap-try" data-code="odsEditorCode">&lt;/&gt;</a>
+                    <a title="Open ODS file for editing" href="<%= Url.Action("editor") %>?method=odsEditor" class="button button-upper spread" target="blank">ODS</a><a title="View source code" class="button-popap-try" data-code="odsEditorCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open CSV file for editing" href="<%= Url.Action("editor") %>?method=csvEditor" class="button button-upper" target="blank">CSV</a><a title="View source code" class="button-popap-try" data-code="csvEditorCode">&lt;/&gt;</a>
+                    <a title="Open CSV file for editing" href="<%= Url.Action("editor") %>?method=csvEditor" class="button button-upper spread" target="blank">CSV</a><a title="View source code" class="button-popap-try" data-code="csvEditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open PPTX file for editing" href="<%= Url.Action("editor") %>?method=pptxEditor" class="button button-upper" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxEditorCode">&lt;/&gt;</a>
+                <td><a title="Open PPTX file for editing" href="<%= Url.Action("editor") %>?method=pptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxEditorCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open PPT file for editing" href="<%= Url.Action("editor") %>?method=pptEditor" class="button button-upper" target="blank">PPT</a><a title="View source code" class="button-popap-try" data-code="pptEditorCode">&lt;/&gt;</a>
+                    <a title="Open PPT file for editing" href="<%= Url.Action("editor") %>?method=pptEditor" class="button button-upper present" target="blank">PPT</a><a title="View source code" class="button-popap-try" data-code="pptEditorCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open ODP file for editing" href="<%= Url.Action("editor") %>?method=odpEditor" class="button button-upper" target="blank">ODP</a><a title="View source code" class="button-popap-try" data-code="odpEditorCode">&lt;/&gt;</a>
+                    <a title="Open ODP file for editing" href="<%= Url.Action("editor") %>?method=odpEditor" class="button button-upper present" target="blank">ODP</a><a title="View source code" class="button-popap-try" data-code="odpEditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
             <tr>
                 <th>Co-Edit</th>
-                <td><a title="Open DOCX file for co-editing" class="button button-upper button-coediting" data-type="docxCoediting">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for co-editing" class="button button-upper button-coediting doc" data-type="docxCoediting">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCoeditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open XLSX file for co-editing" class="button button-upper button-coediting" data-type="xlsxCoediting">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open XLSX file for co-editing" class="button button-upper button-coediting spread" data-type="xlsxCoediting">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxCoeditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open PPTX file for co-editing" class="button button-upper button-coediting" data-type="pptxCoediting">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open PPTX file for co-editing" class="button button-upper button-coediting present" data-type="pptxCoediting">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxCoeditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
             <tr>
                 <th>Strict Co-Edit</th>
-                <td><a title="Open DOCX file for co-editing" class="button button-upper button-coediting" data-type="docxStrictCoediting">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxStrictCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for co-editing" class="button button-upper button-coediting doc" data-type="docxStrictCoediting">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxStrictCoeditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open XLSX file for co-editing" class="button button-upper button-coediting" data-type="xlsxStrictCoediting">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxStrictCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open XLSX file for co-editing" class="button button-upper button-coediting spread" data-type="xlsxStrictCoediting">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxStrictCoeditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open PPTX file for co-editing" class="button button-upper button-coediting" data-type="pptxStrictCoediting">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxStrictCoeditorCode">&lt;/&gt;</a>
+                <td><a title="Open PPTX file for co-editing" class="button button-upper button-coediting present" data-type="pptxStrictCoediting">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxStrictCoeditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
             <tr>
                 <th>Local filter</th>
                 <td></td>
                 <td>
-                    <a title="Open XLSX file without access to change the filter" class="button button-upper button-coediting" data-type="modifyFilter">XLSX</a><a title="View source code" class="button-popap-try" data-code="modifyFilterCode">&lt;/&gt;</a>
+                    <a title="Open XLSX file without access to change the filter" class="button button-upper button-coediting spread" data-type="modifyFilter">XLSX</a><a title="View source code" class="button-popap-try" data-code="modifyFilterCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
             </tr>
             <tr>
                 <th>Review</th>
-                <td><a title="Open DOCX file for review" href="<%= Url.Action("editor") %>?method=docxReview" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for review" href="<%= Url.Action("editor") %>?method=docxReview" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>Restricted review</th>
-                <td><a title="Open DOCX file for restricted review" href="<%= Url.Action("editor") %>?method=docxReviewGroups" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewGroupsCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for restricted review" href="<%= Url.Action("editor") %>?method=docxReviewGroups" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxReviewGroupsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>Filling in forms</th>
-                <td><a title="Open DOCX file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>Content control<br /> settings restricted</th>
-                <td><a title="Open DOCX file without access to the settings of the content control" href="<%= Url.Action("editor") %>?method=modifyContentControl" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="modifyContentControl">&lt;/&gt;</a>
+                <td><a title="Open DOCX file without access to the settings of the content control" href="<%= Url.Action("editor") %>?method=modifyContentControl" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="modifyContentControl">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <th>Comment</th>
-                <td><a title="Open DOCX file for commenting" href="<%= Url.Action("editor") %>?method=docxComment" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for commenting" href="<%= Url.Action("editor") %>?method=docxComment" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open XLSX file for commenting" href="<%= Url.Action("editor") %>?method=xlsxComment" class="button button-upper" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxCommentCode">&lt;/&gt;</a>
+                <td><a title="Open XLSX file for commenting" href="<%= Url.Action("editor") %>?method=xlsxComment" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxCommentCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open PPTX file for commenting" href="<%= Url.Action("editor") %>?method=pptxComment" class="button button-upper" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxCommentCode">&lt;/&gt;</a>
+                <td><a title="Open PPTX file for commenting" href="<%= Url.Action("editor") %>?method=pptxComment" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxCommentCode">&lt;/&gt;</a>
                 </td>
             </tr>
             <tr>
@@ -128,22 +128,22 @@
             </tr>
             <tr>
                 <th>View</th>
-                <td><a title="Open DOCX file for viewing" href="<%= Url.Action("editor") %>?method=docxViewer" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxViewerCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for viewing" href="<%= Url.Action("editor") %>?method=docxViewer" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxViewerCode">&lt;/&gt;</a>
                     <br />
-                    <a title="Open PDF file for viewing" href="<%= Url.Action("editor") %>?method=pdfViewer" class="button button-upper" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfViewerCode">&lt;/&gt;</a>
+                    <a title="Open PDF file for viewing" href="<%= Url.Action("editor") %>?method=pdfViewer" class="button button-upper doc" target="blank">PDF</a><a title="View source code" class="button-popap-try" data-code="pdfViewerCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open XLSX file for viewing" href="<%= Url.Action("editor") %>?method=xlsxViewer" class="button button-upper" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxViewerCode">&lt;/&gt;</a>
+                <td><a title="Open XLSX file for viewing" href="<%= Url.Action("editor") %>?method=xlsxViewer" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxViewerCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open PPTX file for viewing" href="<%= Url.Action("editor") %>?method=pptxViewer" class="button button-upper" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxViewerCode">&lt;/&gt;</a>
+                <td><a title="Open PPTX file for viewing" href="<%= Url.Action("editor") %>?method=pptxViewer" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxViewerCode">&lt;/&gt;</a>
                 </td>
             </tr>
             <tr>
                 <th>Rebranding</th>
-                <td><a title="Open DOCX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingDocxEditor" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="rebrandingDocxEditorCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingDocxEditor" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="rebrandingDocxEditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open XLSX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingXlsxEditor" class="button button-upper" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="rebrandingXlsxEditorCode">&lt;/&gt;</a>
+                <td><a title="Open XLSX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingXlsxEditor" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="rebrandingXlsxEditorCode">&lt;/&gt;</a>
                 </td>
-                <td><a title="Open PPTX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="rebrandingPptxEditorCode">&lt;/&gt;</a>
+                <td><a title="Open PPTX file with rebranding" href="<%= Url.Action("editor") %>?method=rebrandingPptxEditor" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="rebrandingPptxEditorCode">&lt;/&gt;</a>
                 </td>
             </tr>
         </tbody>

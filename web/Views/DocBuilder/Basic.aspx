@@ -31,5 +31,6 @@
     <h2>Get help</h2>
 
     <p>If you have any questions or feature requests about ONLYOFFICE Document Builder, please visit <a href="https://github.com/ONLYOFFICE/DocumentBuilder/issues" target="_blank">GitHub</a>.</p>
+    <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/document-builder/37" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 
 </asp:Content>

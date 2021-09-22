@@ -103,7 +103,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -161,7 +161,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="834px" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -176,7 +176,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.compactToolbar</em> parameter.</div>
-                <img src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -327,7 +327,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -360,7 +360,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -388,7 +388,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
             </td>
         </tr>
         <% if (license)
@@ -573,7 +573,7 @@
                     Please use the <em>review</em> parameter instead.
                 </div>
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.review.hoverMode</em> and the <em>editorConfig.customization.review.reviewDisplay</em> parameters.</div>
-                <img width="834px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -690,7 +690,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
-                <img src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -704,7 +704,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img width="834px" src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -781,6 +781,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
 <% if (license)
    { %>
