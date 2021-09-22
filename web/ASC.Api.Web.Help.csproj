@@ -255,11 +255,14 @@
     <Content Include="Content\img\desktop\connection_list.png" />
     <Content Include="Content\img\desktop\debugging.png" />
     <Content Include="Content\img\desktop\extended_comments.png" />
+    <Content Include="Content\img\desktop\macos-terminal.png" />
     <Content Include="Content\img\desktop\plugin_settings.png" />
     <Content Include="Content\img\desktop\plugins_folder.png" />
     <Content Include="Content\img\desktop\plugins_tab.png" />
     <Content Include="Content\img\desktop\provider_button.png" />
     <Content Include="Content\img\desktop\remove-plugin-button.png" />
+    <Content Include="Content\img\desktop\windows-shortcut.png" />
+    <Content Include="Content\img\desktop\windows-terminal.png" />
     <Content Include="Content\img\docbuilder\compare-documents.png" />
     <Content Include="Content\img\docbuilder\csharp\add.png" />
     <Content Include="Content\img\docbuilder\csharp\browse.png" />
