@@ -46,7 +46,7 @@
         <p><b id="onAppReady" class="copy-link">onAppReady</b> - the function called when the application is loaded into the browser.</p>
         <div class="header-gray">Example</div>
         <pre>
-var onAppReady = function() {
+var onAppReady = function () {
     console.log("ONLYOFFICE Document Editor is ready");
 };
 
@@ -82,7 +82,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p><b id="onDocumentReady" class="copy-link">onDocumentReady</b> - the function called when the document is loaded into the document editor.</p>
         <div class="header-gray">Example</div>
         <pre>
-var onDocumentReady = function() {
+var onDocumentReady = function () {
     console.log("Document is loaded");
 };
 
@@ -318,7 +318,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestCompareFile = function() {
+var onRequestCompareFile = function () {
     docEditor.setRevisedFile({
         "fileType": "docx",
         "url": "https://example.com/url-to-example-document.docx"
@@ -345,7 +345,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </p>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestCreateNew = function() {
+var onRequestCreateNew = function () {
     ...
 };
 
@@ -395,7 +395,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestHistory = function() {
+var onRequestHistory = function () {
     docEditor.refreshHistory({
         "currentVersion": 2,
         "history": [
@@ -446,7 +446,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestHistoryClose = function() {
+var onRequestHistoryClose = function () {
     document.location.reload();
 };
 
@@ -470,7 +470,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestHistoryData = function(event) {
+var onRequestHistoryData = function (event) {
     var version = event.data;
     docEditor.setHistoryData({
         "changesUrl": "https://example.com/url-to-changes.zip",
@@ -509,11 +509,20 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestInsertImage = function(event) {
+var onRequestInsertImage = function (event) {
     docEditor.insertImage({
         "c": event.data.c,
-        "fileType": "png",
-        "url": "https://example.com/url-to-example-image.png"
+        "images": [
+            {
+                "fileType": "png",
+                "url": "https://example.com/url-to-example-image1.png"
+            },
+            {
+                "fileType": "png",
+                "url": "https://example.com/url-to-example-image2.png"
+            },
+            ...
+        ]
     });
 };
 
@@ -538,7 +547,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestMailMergeRecipients = function() {
+var onRequestMailMergeRecipients = function () {
     docEditor.setMailMergeRecipients({
         "fileType": "xlsx",
         "url": "https://example.com/url-to-example-recipients.xlsx"
@@ -565,7 +574,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestRename = function(event) {
+var onRequestRename = function (event) {
     var title = event.data;
     ...
 };
@@ -595,7 +604,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestRestore = function(event) {
+var onRequestRestore = function (event) {
     var url = event.data.url;
     var version = event.data.version;
     ...
@@ -653,7 +662,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestSaveAs = function(event) {
+var onRequestSaveAs = function (event) {
     var title = event.data.title;
     var url = event.data.url;
     ...
@@ -682,7 +691,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </div>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestSendNotify = function(event) {
+var onRequestSendNotify = function (event) {
     var ACTION_DATA = event.data.actionLink;
     var comment = event.data.message;
     var emails = event.data.emails;
@@ -708,7 +717,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestSharingSettings = function() {
+var onRequestSharingSettings = function () {
     docEditor.setSharingSettings({
         "sharingSettings": [
             {
@@ -743,7 +752,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestUsers = function() {
+var onRequestUsers = function () {
     docEditor.setUsers({
         "users": [
             {

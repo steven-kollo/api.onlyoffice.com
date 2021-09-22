@@ -135,13 +135,24 @@ docEditor.downloadAs(format);
         <li>
             <p>
                 <b id="insertImage" class="copy-link">insertImage</b> - insert an image into the file.
+                Starting from version 6.5, this method allows a user to insert several images.
+                The <em>images</em> array is used to do it.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> events.
             </p>
             <pre>
 docEditor.insertImage({
     "c": "add",
-    "fileType": "png",
-    "url": "https://example.com/url-to-example-image.png"
+    "images": [
+        {
+            "fileType": "png",
+            "url": "https://example.com/url-to-example-image1.png"
+        },
+        {
+            "fileType": "png",
+            "url": "https://example.com/url-to-example-image2.png"
+        },
+        ...
+    ]
 });
 </pre>
             <p>
@@ -167,7 +178,7 @@ docEditor.insertImage({
                     <tr class="tablerow">
                         <td>c</td>
                         <td>
-                            Defines the type of image insertion from event.
+                            Defines a type of image insertion from the event.
                             Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermark</em>, <em>slide</em>.
                             The default value is "<em>add</em>".
                         </td>
@@ -177,8 +188,35 @@ docEditor.insertImage({
                     <tr class="tablerow">
                         <td>fileType</td>
                         <td>
-                            Defines the type of image for insert into the file.
+                            Defines a type of the image to be inserted into the file.
                             Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                            Deprecated since version 6.5, please use the <em>images.fileType</em> parameter instead.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images</td>
+                        <td>
+                            Defines an array of images to be inserted.
+                        </td>
+                        <td>array of objects</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images.fileType</td>
+                        <td>
+                            Defines a type of the image to be inserted into the file.
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images.url</td>
+                        <td>
+                            Defines an absolute URL where the source image is stored.
+                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -192,9 +230,10 @@ docEditor.insertImage({
                     <tr class="tablerow">
                         <td>url</td>
                         <td>
-                            Defines the absolute URL where the source image is stored.
+                            Defines an absolute URL where the source image is stored.
                             Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
                             Otherwise, an error will occur.
+                            Deprecated since version 6.5, please use the <em>images.url</em> parameter instead.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -202,6 +241,20 @@ docEditor.insertImage({
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <note>
+                <p>Prior to version 6.5, this method allowed to insert only one image and had the following parameters:</p>
+                <pre>
+docEditor.insertImage({
+    "c": "add",
+    "fileType": "png",
+    "url": "https://example.com/url-to-example-image.png"
+});
+</pre>
+                <p>
+                    Please note that this structure is deprecated and will not be supported by the next editors versions.
+                    Please use a new one.
+                </p>
+            </note>
         </li>
 
         <li>
