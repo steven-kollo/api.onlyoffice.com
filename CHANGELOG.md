@@ -1,5 +1,6 @@
 # Change Log
 
+- desktop: updated the debugging page
 - editors: added the Mattermost plugin
 - editors: added opening for oxps format
 - editors: added the RefreshLock operation for WOPI protocol
