@@ -519,7 +519,7 @@
                     <li><b>final</b> - the document is displayed with all the proposed changes applied;</li>
                     <li><b>original</b> - the original document is displayed without the proposed changes.</li>
                 </ul>
-                The default value is <b>original</b>.
+                The default value is <b>original</b> for viewer and <b>markup</b> for editor.
             </td>
             <td>string</td>
             <td>original</td>
