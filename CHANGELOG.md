@@ -9,7 +9,7 @@
 - editors: added the fileType and previous.fileType parameters to the setHistoryData method
 - editors: added the filetype parameter to the Callback handler
 - editors: added the fileType field to the conversion response
-- editors: conversion to docm, xlsm, pptm
+- editors: conversion to docm, dotm, xlsm, xltm, pptm, potm
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
 

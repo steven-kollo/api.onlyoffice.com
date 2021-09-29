@@ -27,7 +27,7 @@
         <li>Added the <em>fileType</em> and <em>previous.fileType</em> parameters to the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.</li>
         <li>Added the <a href="<%= Url.Action("callback") %>#filetype">filetype</a> parameter to the <em>Callback handler</em>.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#fileType">fileType</a> field to the conversion response.</li>
-        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">docm, xlsm, pptm</a> formats.</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">docm, dotm, xlsm, xltm, pptm, potm</a> formats.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a>, <a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">editorConfig.customization.showReviewChanges</a>, <a href="<%= Url.Action("config/editor/customization") %>#trackChanges">editorConfig.customization.trackChanges</a> parameters are deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review</a> parameter instead.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hideReviewDisplay</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hoverMode</a> field.</li>
