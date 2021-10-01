@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Java Spring integration example
 - desktop: updated the debugging page
 - editors: added the Mattermost plugin
 - editors: added opening for oxps format

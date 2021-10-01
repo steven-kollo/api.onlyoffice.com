@@ -758,6 +758,7 @@
     <Content Include="Views\Editors\Plugins.aspx" />
     <Content Include="Views\Editors\Example.aspx" />
     <Content Include="Views\Editors\Example\Java.ascx" />
+    <Content Include="Views\Editors\Example\JavaSpring.ascx" />
     <Content Include="Views\Editors\Example\Nodejs.ascx" />
     <Content Include="Views\Editors\Example\Php.ascx" />
     <Content Include="Views\Editors\Example\Ruby.ascx" />
