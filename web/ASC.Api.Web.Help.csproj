@@ -756,6 +756,7 @@
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\History.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Example.aspx" />
     <Content Include="Views\Editors\Example\Java.ascx" />
     <Content Include="Views\Editors\Example\Nodejs.ascx" />

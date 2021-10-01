@@ -102,6 +102,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "Redmine",
                 "Rename",
                 "Review",
                 "Save",
@@ -349,6 +350,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult Redmine()
         {
             return View();
         }

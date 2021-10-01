@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Redmine plugin
 - desktop: v6.4
 - desktop: added icons for the dark and light UI themes
 - desktop: updated the debugging page
