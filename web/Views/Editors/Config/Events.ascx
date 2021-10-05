@@ -131,7 +131,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 var onDownloadAs = function (event) {
     var fileType = event.data.fileType;
     var url = event.data.url;
-    console.log("ONLYOFFICE Document Editor create file: " + event.data);
+    console.log("ONLYOFFICE Document Editor create file: " + url);
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
