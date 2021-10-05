@@ -20,7 +20,7 @@
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
         <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX.</li>
-        <li>The following formats are available for viewing only: DOC, DOCX, DOCM, DOC, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSX, XLSM, XLTZ , XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP.</li>
+        <li>The following formats are available for viewing: DOC, DOCM, DOC, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, PDF, DJVU, FB2, EPUB, XPS, XLS, XLSM, XLTZ , XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTM, POT, POTX, POTM, ODP, FODP, OTP.</li>
         <li>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents. 
             This allows multiple users to collaborate in real time and to save back those changes to Jira.</li>
     </ul>
@@ -41,10 +41,10 @@
     <p>Upload the compiled <em>target/onlyoffice-jira-app.jar</em> to Jira on the <b>Manage apps</b> page.</p>
     <p>The latest compiled package files are available <a href="https://github.com/ONLYOFFICE/onlyoffice-jira/releases" target="_blank">here</a> 
         and on <a href="https://marketplace.atlassian.com/???" target="_blank">Atlassian Marketplace</a>.</p>
-    <p>You can also install the app from Jira administration panel:</p>
+    <p>You can also install the app from the Jira administration panel:</p>
     <ol>
         <li>Navigate to the <b>Manage apps</b> page.</li>
-        <li>Click <b>Find new apps</b> on the left panel.</li>
+        <li>Click <b>Find new apps</b> on the left-side panel.</li>
         <li>Locate <b>ONLYOFFICE Connector for Jira</b> using search.</li>
         <li>Click <b>Install</b> to download and install the app.</li>
     </ol>
@@ -59,6 +59,10 @@
         The address must be accessible for the user browser and from the Jira server.
         The Jira server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
     </p>
+    <p>Enter the <b>Secret key</b> to enable JWT protection of your documents from unauthorized access (further information can be found <a href="<%= Url.Action("signature/") %>">here</a>).</p>
+    <p>Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Document Server using the public addresses. 
+        The <b>Advanced server settings</b> section allows you to set the ONLYOFFICE Document Server address for internal requests from Jira 
+        and the returning Jira address for internal requests from ONLYOFFICE Document Server.</p>
 
 
     <h2 id="compiling" class="copy-link">Compiling Jira ONLYOFFICE integration app</h2>
@@ -80,12 +84,20 @@ sudo apt-get install openjdk-8-jdk</span>
     </ol>
 
 
+    <h2 id="using" class="copy-link">Using Jira ONLYOFFICE integration app</h2>
+
+    <p>With the ONLYOFFICE integration app, you can view, edit and co-author office files attached to tasks right within your Jira dashboard.</p>
+    <p>To edit documents, click the ONLYOFFICE Docs icon next to the name of an attachment - the corresponding online editor will be opened in a new tab.</p>
+    <p>After the editing session, a document with all the changes will be saved as a new attachment. You will recognize it by the name with a postfix.</p>
+    <p>If you are editing an attachment collaboratively, the changes are saved in the same file version after the last user quits the editor.</p>
+
+
     <h2 id="how-it-works" class="copy-link">How it works</h2>
 
     <ol>
         <li>User navigates to the Jira attachments and selects the <b>Edit in ONLYOFFICE</b> action.</li>
         <li>Jira makes a request to <b>OnlyOfficeEditorServlet</b> (URL of the form: <em>/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id</em>).</li>
-        <li>Jira sends a document to ONLYOFFICE Document storage service and receive a temporary link.</li>
+        <li>Jira sends the document to ONLYOFFICE Document storage service and receives a temporary link.</li>
         <li>
             <p>Jira prepares a JSON object with the following properties:</p>
             <ul>
