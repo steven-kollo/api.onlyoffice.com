@@ -26,6 +26,7 @@
         <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("HumHub") %>">HumHub ONLYOFFICE connector</a></li>
+        <li><a href="<%= Url.Action("jira") %>">Jira ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("liferay") %>">Liferay ONLYOFFICE connector</a></li>
         <li><a href="<%= Url.Action("mattermost") %>">Mattermost ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE integration app</a></li>
