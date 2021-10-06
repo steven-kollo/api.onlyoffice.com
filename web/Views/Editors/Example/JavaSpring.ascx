@@ -20,7 +20,7 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java-Spring example</a> from our site.</p>
-<p>To connect the editors to your website, specify the path to the editors installation, server address and port in the <em>\src\main\resources\settings.properties</em> file:</p>
+<p>To connect the editors to your website, specify the path to the editors installation, server address and port in the <em>\src\main\resources\application.properties</em> file:</p>
 
 <pre>
 server.address=address
@@ -153,9 +153,9 @@ sudo apt-get install oracle-java11-installer</span>
             </li>
         </ul>
     </li>
-    <li>Edit the <em>settings.properties</em> configuration file.
+    <li>Edit the <em>application.properties</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Docs installed.
-        <div class="commandline">nano src/main/resources/settings.properties</div>
+        <div class="commandline">nano src/main/resources/application.properties</div>
         <p>Edit the following lines:</p>
 
         <pre>
@@ -195,9 +195,9 @@ files.docservice.url.site=https://documentserver/
 <h2 id="Docker" class="copy-link">For Docker</h2>
 
 <ol>
-    <li>Edit the <em>settings.properties</em> configuration file.
+    <li>Edit the <em>application.properties</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Docs <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx">installed</a>.
-        <div class="commandline">nano src/main/resources/settings.properties</div>
+        <div class="commandline">nano src/main/resources/application.properties</div>
         <p>Edit the following lines:</p>
 
         <pre>
