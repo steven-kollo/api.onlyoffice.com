@@ -23,6 +23,9 @@
                 <a href="<%= Url.Action("example/java") %>">Java example</a>
             </li>
             <li>
+                <a href="<%= Url.Action("example/javaspring") %>">Java Spring example</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("example/nodejs") %>">Node.js example</a>
             </li>
             <li>

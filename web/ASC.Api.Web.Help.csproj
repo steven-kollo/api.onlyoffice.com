@@ -758,6 +758,7 @@
     <Content Include="Views\Editors\Plugins.aspx" />
     <Content Include="Views\Editors\Example.aspx" />
     <Content Include="Views\Editors\Example\Java.ascx" />
+    <Content Include="Views\Editors\Example\JavaSpring.ascx" />
     <Content Include="Views\Editors\Example\Nodejs.ascx" />
     <Content Include="Views\Editors\Example\Php.ascx" />
     <Content Include="Views\Editors\Example\Ruby.ascx" />
@@ -858,8 +859,10 @@
     <Content Include="App_Data\editor\.Net %28C# MVC%29 Example.zip" />
     <Content Include="App_Data\editor\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\editor\Java Example.zip" />
+    <Content Include="App_Data\editor\Java Spring Example.zip" />
     <Content Include="App_Data\editor\Node.js Example.zip" />
     <Content Include="App_Data\editor\PHP Example.zip" />
+    <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
@@ -926,7 +929,6 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUniColor.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
-    <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\products.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiHyperlink.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiRange.json" />
