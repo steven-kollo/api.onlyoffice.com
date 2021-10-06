@@ -856,8 +856,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\portals\class_descriptions.xml" />
-    <Content Include="App_Data\editor\.Net %28C# MVC%29 Example.zip" />
-    <Content Include="App_Data\editor\.Net %28C#%29 Example.zip" />
+    <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
+    <Content Include="App_Data\editor\DotNet %28Csharp%29 Example.zip" />
     <Content Include="App_Data\editor\Java Example.zip" />
     <Content Include="App_Data\editor\Java Spring Example.zip" />
     <Content Include="App_Data\editor\Node.js Example.zip" />
