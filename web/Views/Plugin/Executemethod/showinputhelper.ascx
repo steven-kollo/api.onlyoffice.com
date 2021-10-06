@@ -57,6 +57,7 @@ window.Asc.plugin.executeMethod ("ShowInputHelper", [guid, w, h, isKeyboardTake]
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

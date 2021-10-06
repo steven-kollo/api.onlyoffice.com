@@ -43,7 +43,7 @@
     "GetStyle": {
       "memberof": "ApiParaPr",
       "name": "GetStyle",
-      "description": "<p>Gets the paragraph style method.</p>",
+      "description": "<p>Get the paragraph style method.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -104,7 +104,7 @@
     "GetIndLeft": {
       "memberof": "ApiParaPr",
       "name": "GetIndLeft",
-      "description": "<p>Gets the paragraph left side indentation.</p>",
+      "description": "<p>Get the paragraph left side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -147,7 +147,7 @@
     "GetIndRight": {
       "memberof": "ApiParaPr",
       "name": "GetIndRight",
-      "description": "<p>Gets the paragraph right side indentation.</p>",
+      "description": "<p>Get the paragraph right side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -190,7 +190,7 @@
     "GetIndFirstLine": {
       "memberof": "ApiParaPr",
       "name": "GetIndFirstLine",
-      "description": "<p>Gets the paragraph first line indentation.</p>",
+      "description": "<p>Get the paragraph first line indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -225,7 +225,7 @@
         {
           "type": "\"left\" | \"right\" | \"both\" | \"center\"",
           "name": "sJc",
-          "description": "<p>The parameters will define the justification type that\nwill be applied to the paragraph contents.</p>",
+          "description": "<p>The justification type that\nwill be applied to the paragraph contents.</p>",
           "optional": false
         }
       ]
@@ -233,7 +233,7 @@
     "GetJc": {
       "memberof": "ApiParaPr",
       "name": "GetJc",
-      "description": "<p>Gets paragraph contents justification.</p>",
+      "description": "<p>Get paragraph contents justification.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -311,7 +311,7 @@
         {
           "type": "boolean",
           "name": "isPageBreakBefore",
-          "description": "<p>The true value will enable the option to render the contents of the paragraph\nat the beginning of the a new page in the document.</p>",
+          "description": "<p>The true value will enable the option to render the contents of the paragraph\nat the beginning of a new page in the document.</p>",
           "optional": false
         }
       ]
@@ -535,7 +535,7 @@
     "GetShd": {
       "memberof": "ApiParaPr",
       "name": "GetShd",
-      "description": "<p>Gets the shading applied to the contents of the paragraph.</p>",
+      "description": "<p>Get the shading applied to the contents of the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -905,8 +905,8 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a paragraph properties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a paragraph properties.</p>",
+  "comment": "/**\r\n\t * Class representing the paragraph properties.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing the paragraph properties.</p>",
   "scope": "global",
   "params": []
 }

@@ -64,6 +64,7 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [arrDocuments
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <p>The <em>Props</em> object can have the following values:</p>
 <ul>
@@ -103,6 +104,7 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [arrDocuments
             </tr>
         </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

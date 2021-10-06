@@ -160,10 +160,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 <td>Zotero</td>
                 <td>{BFC5D5C6-89DE-4168-9565-ABD8D1E48711}</td>
             </tr>
-            <tr>
-                <td>Send</td>
-                <td>{B509123E-6335-40BD-B965-91EB799346E3}</td>
-            </tr>
         </tbody>
     </table>
     <note>Please note that after app updating the default plugins will appear again and you will need to uninstall them.</note>

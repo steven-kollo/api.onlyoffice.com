@@ -75,6 +75,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <p>
         The <em>.docbuilder</em> file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name.
@@ -171,7 +172,7 @@
 </pre>
 
     <div class="header-gray">Possible error codes and their description</div>
-    <table class="table">
+    <table class="error-table">
         <colgroup>
             <col style="width: 105px;" />
             <col />

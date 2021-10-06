@@ -20,8 +20,8 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a Scheme Color\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a Scheme Color</p>",
+  "comment": "/**\r\n\t * Class representing a Scheme Color.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a Scheme Color.</p>",
   "scope": "global",
   "params": []
 }

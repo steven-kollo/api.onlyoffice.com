@@ -37,7 +37,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li>Icons</li>
     <li>Third-party service:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_work_with_content_controls_tags/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_work_with_content_controls_tags/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
         </ul>
     </li>
 </ol>

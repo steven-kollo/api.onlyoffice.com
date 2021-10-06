@@ -25,6 +25,7 @@
         <li><a href="#forcesave">forcesave</a></li>
         <li><a href="#goback">goback</a></li>
         <li><a href="#help">help</a></li>
+        <li><a href="#hideNotes">hideNotes</a></li>
         <li><a href="#hideRightMenu">hideRightMenu</a></li>
         <li><a href="#hideRulers">hideRulers</a></li>
         <li><a href="#logo">logo</a></li>
@@ -38,6 +39,7 @@
         <li><a href="#toolbarHideFileName">toolbarHideFileName</a></li>
         <li><a href="#toolbarNoTabs">toolbarNoTabs</a></li>
         <li><a href="#trackChanges">trackChanges</a></li>
+        <li><a href="#uiTheme">uiTheme</a></li>
         <li><a href="#unit">unit</a></li>
         <li><a href="#zoom">zoom</a></li>
     </ul>
@@ -100,7 +102,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/anonymous.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -158,7 +160,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/compactHeader.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -173,7 +175,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.compactToolbar</em> parameter.</div>
-                <img src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/compactToolbar.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -189,7 +191,7 @@
         <tr class="tablerow">
             <td id="customer" class="copy-link">customer<span class="required">*</span></td>
             <td>
-                Contains the information which will be displayed int the editor <b>About</b> section and visible to all the editor users.
+                Contains the information which will be displayed in the editor <b>About</b> section and visible to all the editor users.
                 The object has the following parameters:
                 <ul>
                     <li>
@@ -324,7 +326,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/goback.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -339,6 +341,25 @@
         <tr class="tablerow">
             <td colspan="4">
                 <img src="<%= Url.Content("~/content/img/editor/help.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
+            <td id="hideNotes" class="copy-link">hideNotes</td>
+            <td>
+                Defines if the note panel is displayed or hidden on first loading.
+                The default value is <b>false</b>. This parameter is available for the presentation editor only.
+            </td>
+            <td>boolean</td>
+            <td>false</td>
+        </tr>
+        <tr class="tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.hideNotes</em> parameter.</div>
+            </td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/hideNotes.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -358,7 +379,7 @@
         <tr>
             <td id="hideRulers" class="copy-link">hideRulers</td>
             <td>
-                Defines if the editor rulers are displayed (<b>true</b>) or hidden (<b>false</b>). 
+                Defines if the editor rulers are displayed or hidden. 
                 This parameter is available for the document and presentation editors. The default value is <b>false</b> for the document editor and <b>true</b> for presentations.
             </td>
             <td>boolean</td>
@@ -366,7 +387,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
             </td>
         </tr>
         <% if (license)
@@ -490,15 +511,15 @@
         <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
-                Defines the review editing mode which will be used when the document is opened for viewing.
-                It will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>view</b>.
-                Can take the following values:
+                Defines the review editing mode in the document editor. 
+                This parameter can take the following values:
                 <ul>
-                    <li><b>final</b> - the document is displayed with all the proposed changes applied;</li>
                     <li><b>markup</b> - the document is displayed with proposed changes highlighted;</li>
+                    <li><b>simple</b> - the document is displayed with proposed changes highlighted, but the balloons are turned off;</li>
+                    <li><b>final</b> - the document is displayed with all the proposed changes applied;</li>
                     <li><b>original</b> - the original document is displayed without the proposed changes.</li>
                 </ul>
-                The default value is <b>original</b>.
+                The default value is <b>original</b> for viewer and <b>markup</b> for editor.
             </td>
             <td>string</td>
             <td>original</td>
@@ -506,7 +527,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
-                <img src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
         <% if (license)
@@ -596,7 +617,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">Please note that this setting is used when the <a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a> and <a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a> parameters are set to <b>true</b>.</div>
-                <img src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarHideFileName.png") %>" alt="" />
             </td>
         </tr>
         <tr>
@@ -610,7 +631,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">
@@ -621,6 +642,28 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr>
+            <td id="uiTheme" class="copy-link">uiTheme</td>
+            <td>
+                Defines the editor theme settings.
+                It can be set in two ways:
+                <ul>
+                    <li><b>theme id</b> - the user sets the theme parameter by its id (<em>theme-light</em>, <em>theme-classic-light</em>, <em>theme-dark</em>),</li>
+                    <li>
+                        <b>default theme</b> - the default dark or light theme value will be set (<em>default-dark</em>, <em>default-light</em>).
+                        The default light theme is <em>theme-classic-light</em>.
+                    </li>
+                </ul>
+                The first option has higher priority.
+            </td>
+            <td>string</td>
+            <td>theme-dark</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.uiTheme</em> parameter.</div>
+            </td>
         </tr>
         <tr>
             <td id="unit" class="copy-link">unit</td>
@@ -665,6 +708,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
 <% if (license)
    { %>
@@ -707,6 +751,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "https://example.com"
             },
             "help": true,
+            "hideNotes": false,
             "hideRightMenu": false,
             "hideRulers": false,
             <% if (license)
@@ -735,6 +780,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% } %>"toolbarHideFileName": false,
             "toolbarNoTabs": false,
             "trackChanges": false,
+            "uiTheme": "theme-dark",
             "unit": "cm",
             "zoom": 100
         },

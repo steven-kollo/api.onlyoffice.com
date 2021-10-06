@@ -130,6 +130,9 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "comment", EmitDefaultValue = false)]
                 public bool? Comment;
 
+                [DataMember(Name = "commentGroups", EmitDefaultValue = false)]
+                public CommentGroupsConfig CommentGroups;
+
                 [DataMember(Name = "download", EmitDefaultValue = false)]
                 public bool? Download;
 
@@ -153,6 +156,19 @@ namespace ASC.Api.Web.Help.Helpers
 
                 [DataMember(Name = "reviewGroups", EmitDefaultValue = false)]
                 public string[] ReviewGroups;
+
+                [DataContract(Name = "customization", Namespace = "")]
+                public class CommentGroupsConfig
+                {
+                    [DataMember(Name = "edit", EmitDefaultValue = false)]
+                    public string[] Edit;
+
+                    [DataMember(Name = "remove", EmitDefaultValue = false)]
+                    public string[] Remove;
+
+                    [DataMember(Name = "view", EmitDefaultValue = false)]
+                    public string[] View;
+                }
             }
         }
 

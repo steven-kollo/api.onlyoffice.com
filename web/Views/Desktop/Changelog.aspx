@@ -15,7 +15,18 @@
         <span class="hdr">Changelog</span>
     </h1>
 
-    <p class="dscr">The list of changes of ONLYOFFICE Desktop Editors API.</p>
+    <p class="dscr">The list of changes for ONLYOFFICE Desktop Editors API.</p>
+
+    <h2 id="64" class="copy-link">Version 6.4</h2>
+    <ul>
+        <li>Added the possibility to use icons for each UI theme type in the <a href="<%= Url.Action("addingdms/") %>">config</a> with integration parameters.</li>
+    </ul>
+
+    <h2 id="63" class="copy-link">Version 6.3</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("addingdms/") %>#entryPage">entryPage</a> parameter to the config with DMS integration parameters.</li>
+        <li>Added the <em>updateEncryptionKeys</em> <a href="<%= Url.Action("addingdms/encryption") %>#type">command type</a> to the <em>cloudCryptoCommand</em> function.</li>
+    </ul>
 
     <h2 id="62" class="copy-link">Version 6.2</h2>
     <ul>
