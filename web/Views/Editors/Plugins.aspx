@@ -6,13 +6,13 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ONLYOFFICE API connectors
+    Ready-to-use connectors
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">ONLYOFFICE API connectors</span>
+        <span class="hdr">Ready-to-use connectors</span>
     </h1>
 
     <p class="dscr">
@@ -26,7 +26,9 @@
         <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("HumHub") %>">HumHub ONLYOFFICE connector</a></li>
+        <li><a href="<%= Url.Action("jira") %>">Jira ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("liferay") %>">Liferay ONLYOFFICE connector</a></li>
+        <li><a href="<%= Url.Action("mattermost") %>">Mattermost ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("owncloud") %>">ownCloud ONLYOFFICE integration app</a></li>

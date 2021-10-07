@@ -20,9 +20,9 @@
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">Step 2. </span>Install the prerequisites and run the website with the editors</h2>
 <ol>
-    <li>Install <b>Ruby Version Manager (RVM)</b> and the latest stable <b>Ruby</b> version:
+    <li>Install <b>Ruby Version Manager (RVM)</b> and the stable 2.7 <b>Ruby</b> version:
         <div class="commandline">gpg --keyserver "hkp://keys.gnupg.net" --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3</div>
-        <div class="commandline">\curl -sSL https://get.rvm.io | bash -s stable --ruby</div>
+        <div class="commandline">\curl -sSL https://get.rvm.io | bash -s stable --ruby=2.7.0</div>
     </li>
     <li>Download the archive with the Ruby example and unpack the archive:
         <div class="commandline">wget "https://api.onlyoffice.com/app_data/editor/Ruby%20Example.zip"</div>

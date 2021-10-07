@@ -13,6 +13,7 @@
         <ul class="columns-2">
             <li><a href="<%= Url.Action("example/csharp") %>">.Net (C#)</a></li>
             <li><a href="<%= Url.Action("example/java") %>">Java</a></li>
+            <li><a href="<%= Url.Action("example/javaspring") %>">Java Spring</a></li>
             <li><a href="<%= Url.Action("example/nodejs") %>">Node.js</a></li>
             <li><a href="<%= Url.Action("example/php") %>">PHP</a></li>
             <li><a href="<%= Url.Action("example/python") %>">Python</a></li>
@@ -26,6 +27,7 @@
             <li><a href="<%= Url.Action("confluence") %>">Confluence</a></li>
             <li><a href="<%= Url.Action("humhub") %>">HumHub</a></li>
             <li><a href="<%= Url.Action("liferay") %>">Liferay</a></li>
+            <li><a href="<%= Url.Action("mattermost") %>">Mattermost</a></li>
             <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud</a></li>
             <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo</a></li>
             <li><a href="<%= Url.Action("owncloud") %>">ownCloud</a></li>

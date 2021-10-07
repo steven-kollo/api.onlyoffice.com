@@ -70,6 +70,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "DemoPreview",
                 "DocumentBuilderApi",
                 "Example/Java",
+                "Example/JavaSpring",
                 "Example/Nodejs",
                 "Example/Php",
                 "Example/Ruby",
@@ -92,8 +93,9 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
-                "Integrating",
+                "Jira",
                 "Liferay",
+                "Mattermost",
                 "Mentions",
                 "Methods",
                 "Nextcloud",
@@ -117,9 +119,11 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/Discovery",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
+                "WOPI/ProofKeys",
                 "WOPI/RestApi",
                 "WOPI/RestApi/CheckFileInfo",
                 "WOPI/RestApi/Lock",
+                "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
                 "WOPI/RestApi/GetFile",
@@ -301,12 +305,17 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Integrating()
+        public ActionResult Jira()
         {
             return View();
         }
         
         public ActionResult Liferay()
+        {
+            return View();
+        }
+
+        public ActionResult Mattermost()
         {
             return View();
         }

@@ -1,13 +1,13 @@
 <%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
     <h1>
-        <a class="up" href="<%= Url.Action("wopi/") %>"></a>
         <span class="hdr">WOPI discovery</span>
     </h1>
 
     <p class="dscr">
         <a href="https://wopi.readthedocs.io/en/latest/discovery.html" target="_blank">WOPI discovery</a> is a process which helps the WOPI server discover a WOPI client by requesting the discovery XML from an online office. 
-        WOPI hosts use the discovery XML to specify how to interact with the online office.
+        WOPI hosts use the discovery XML to specify how to interact with the online office. 
+        The requests are sent to the <span class="fakelink">https://documentserver/hosting/discovery</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
     </p>
 
 

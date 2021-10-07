@@ -107,7 +107,7 @@
                     <ul>
                         <% foreach (var method in entry.Value.Methods) { %>
                             <li>
-                                <a href="<%= Url.Action(string.Format("textdocumentapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
+                                <a title=<%= method.Key %> href="<%= Url.Action(string.Format("textdocumentapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
                             </li>
                         <% } %>
                     </ul>
@@ -123,7 +123,7 @@
                     <ul>
                         <% foreach (var method in entry.Value.Methods) { %>
                             <li>
-                                <a href="<%= Url.Action(string.Format("spreadsheetapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
+                                <a title=<%= method.Key %> href="<%= Url.Action(string.Format("spreadsheetapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
                             </li>
                         <% } %>
                     </ul>
@@ -140,7 +140,7 @@
                     <ul>
                         <% foreach (var method in entry.Value.Methods) { %>
                             <li>
-                                <a href="<%= Url.Action(string.Format("presentationapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
+                                <a title=<%= method.Key %> href="<%= Url.Action(string.Format("presentationapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
                             </li>
                         <% } %>
                     </ul>

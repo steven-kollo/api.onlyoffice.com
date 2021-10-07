@@ -1,5 +1,19 @@
 # Change Log
 
+## 2.4.0
+- editors: added the Jira integration app
+- editors: added the Java Spring integration example
+- editors: added the Mattermost plugin
+- editors: added opening for oxps format
+- editors: added the RefreshLock operation for WOPI protocol
+- editors: added the ip filter information
+- editors: added the wopi.enable parameter
+- editors: added the Proof keys page
+- macros: added the Currency exchange rates macro sample
+- desktop: v6.4
+- desktop: added icons for the dark and light UI themes
+- desktop: updated the debugging page
+
 ## 2.3.0
 - mobile view
 - global search
