@@ -70,6 +70,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "DemoPreview",
                 "DocumentBuilderApi",
                 "Example/Java",
+                "Example/JavaSpring",
                 "Example/Nodejs",
                 "Example/Php",
                 "Example/Ruby",
@@ -92,6 +93,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "Jira",
                 "Liferay",
                 "Mattermost",
                 "Mentions",
@@ -299,6 +301,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult InlineEditors()
+        {
+            return View();
+        }
+
+        public ActionResult Jira()
         {
             return View();
         }
