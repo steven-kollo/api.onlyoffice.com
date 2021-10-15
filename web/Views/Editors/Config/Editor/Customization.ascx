@@ -569,7 +569,7 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">
-                    The <a href="#showReviewChanges">showReviewChanges</a>, <a href="#reviewDisplay">reviewDisplay</a>, <a href="#trackChanges">trackChanges</a> parameters are deprecated since version 6.5.
+                    The <a href="#showReviewChanges">showReviewChanges</a>, <a href="#reviewDisplay">reviewDisplay</a>, <a href="#trackChanges">trackChanges</a> parameters are deprecated since version 7.0.
                     Please use the <em>review</em> parameter instead.
                 </div>
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.review.hoverMode</em> and the <em>editorConfig.customization.review.reviewDisplay</em> parameters.</div>
@@ -594,7 +594,7 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Deprecated since version 6.5. Please use the <a href="#review">review.reviewDisplay</a> parameter instead.</div>
+                <div class="note">Deprecated since version 7.0. Please use the <a href="#review">review.reviewDisplay</a> parameter instead.</div>
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
             </td>
         </tr>
@@ -621,7 +621,7 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Deprecated since version 6.5. Please use the <a href="#review">review.showReviewChanges</a> parameter instead.</div>
+                <div class="note">Deprecated since version 7.0. Please use the <a href="#review">review.showReviewChanges</a> parameter instead.</div>
             </td>
         </tr>
         <tr>
@@ -718,7 +718,7 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Deprecated since version 6.5. Please use the <a href="#review">review.trackChanges</a> parameter instead.</div>
+                <div class="note">Deprecated since version 7.0. Please use the <a href="#review">review.trackChanges</a> parameter instead.</div>
             </td>
         </tr>
         <tr>

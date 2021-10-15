@@ -105,7 +105,7 @@
                 <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
                 <td>
                     Defines the resulting converted document type.
-                    Starting from version 6.5, file formats can be specified instead of extensions.
+                    Starting from version 7.0, file formats can be specified instead of extensions.
                     They are used when we do not know in advance what extension is required:
                     <ul>
                         <li>

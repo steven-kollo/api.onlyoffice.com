@@ -16,7 +16,7 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
-    <h2 id="65" class="copy-link">Version 6.5</h2>
+    <h2 id="70" class="copy-link">Version 7.0</h2>
     <ul>
         <li>Added a signature to the request for file changes specified with the <em>changesUrl</em> parameter of the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method</a>.
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#protect">document.permissions.protect</a> field.</li>

@@ -135,7 +135,7 @@ docEditor.downloadAs(format);
         <li>
             <p>
                 <b id="insertImage" class="copy-link">insertImage</b> - insert an image into the file.
-                Starting from version 6.5, this method allows a user to insert several images.
+                Starting from version 7.0, this method allows a user to insert several images.
                 The <em>images</em> array is used to do it.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> events.
             </p>
@@ -190,7 +190,7 @@ docEditor.insertImage({
                         <td>
                             Defines a type of the image to be inserted into the file.
                             Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
-                            Deprecated since version 6.5, please use the <em>images.fileType</em> parameter instead.
+                            Deprecated since version 7.0, please use the <em>images.fileType</em> parameter instead.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -233,7 +233,7 @@ docEditor.insertImage({
                             Defines an absolute URL where the source image is stored.
                             Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
                             Otherwise, an error will occur.
-                            Deprecated since version 6.5, please use the <em>images.url</em> parameter instead.
+                            Deprecated since version 7.0, please use the <em>images.url</em> parameter instead.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -242,7 +242,7 @@ docEditor.insertImage({
             </table>
             <div class="mobile-content"></div>
             <note>
-                <p>Prior to version 6.5, this method allowed to insert only one image and had the following parameters:</p>
+                <p>Prior to version 7.0, this method allowed to insert only one image and had the following parameters:</p>
                 <pre>
 docEditor.insertImage({
     "c": "add",

@@ -197,7 +197,7 @@ new DocsAPI.DocEditor("placeholder", {
     <h2 id="assemblyFormatAsOrigin" class="copy-link">Saving in original format</h2>
 
     <p>
-        Starting from version 6.5, the <em>assemblyFormatAsOrigin</em> server setting is enabled by default to save the assembled file in its original format.
+        Starting from version 7.0, the <em>assemblyFormatAsOrigin</em> server setting is enabled by default to save the assembled file in its original format.
         It is used to change the file format from OOXML to ODF or to save files with macros.
     </p>
 
