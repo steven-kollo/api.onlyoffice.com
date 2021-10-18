@@ -426,7 +426,7 @@
                 The object has the following parameters:
                 <ul>
                     <li>
-                        <b>image</b> - path to the image file used to show in common work mode (i.e. in view and edit modes for all editors).
+                        <b>image</b> - path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type).
                         The image must have the following size: 172x40,
                         <br />
                         <b>type</b>: string,
@@ -435,7 +435,8 @@
                     </li>
                     <li>
                         <b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type).
-                        The image must have the following size: 248x40,
+                        The image must have the following size: 248x40.
+                        Deprecated since version 7.0, please use the <em>image</em> field instead,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -838,7 +839,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "loaderName": "The document is loading, please wait...",
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
-                "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://www.onlyoffice.com"
             },
             "macros": true,
