@@ -47,7 +47,6 @@ $(document).ready(function () {
             $(".fq_collapse").hide();
             $(".fq_expand").show();
         }
-        window.location = "#" + $(this).parents("dl").attr("id");
     });
 
     var current = window.location.href.split("#")[1];
