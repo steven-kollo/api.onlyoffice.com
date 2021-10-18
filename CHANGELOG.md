@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the logoDark field to the editorConfig.customization.customer parameter
+- editors: added the imageDark field to the editorConfig.customization.logo parameter
 - editors: added the signature to the request for file changes
 - editors: added the document.permissions.protect field
 - editors: added the fileType parameter to the onDownloadAs, onRequestRestore and onRequestSaveAs events
