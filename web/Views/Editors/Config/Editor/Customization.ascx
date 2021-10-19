@@ -210,12 +210,20 @@
                         <b>example</b>: "Some additional information";
                     </li>
                     <li>
-                        <b>logo</b> - the path to the image logo (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
+                        <b>logo</b> - the path to the image logo (there are no special recommendations for this file, but it would be better if it was in <em>.png</em> format with transparent background).
                         The image must have the following size: 432x70,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "https://example.com/logo-big.png".
+                    </li>
+                    <li>
+                        <b>logoDark</b> - the path to the image logo for the dark theme (there are no special recommendations for this file, but it would be better if it was in <em>.png</em> format with transparent background).
+                        The image must have the following size: 432x70,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "https://example.com/dark-logo-big.png".
                     </li>
                     <li>
                         <b>mail</b> - email address of the company or person who gives access to the editors or the editor authors,
@@ -432,6 +440,14 @@
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "https://example.com/logo.png";
+                    </li>
+                    <li>
+                        <b>imageDark</b> - path to the image file used for the dark theme.
+                        The image must have the following size: 172x40,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "https://example.com/dark-logo.png";
                     </li>
                     <li>
                         <b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type).
@@ -814,6 +830,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
                 "logo": "https://example.com/logo-big.png",
+                "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
@@ -839,6 +856,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "loaderName": "The document is loading, please wait...",
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
+                "imageDark": "https://example.com/dark-logo.png",
                 "url": "https://www.onlyoffice.com"
             },
             "macros": true,

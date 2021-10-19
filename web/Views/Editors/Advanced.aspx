@@ -121,6 +121,7 @@
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
                 "logo": "https://example.com/logo-big.png",
+                "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
@@ -142,6 +143,7 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#hideRulers">hideRulers</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {
                 "image": "https://example.com/logo.png",
+                "imageDark": "https://example.com/dark-logo.png",
                 "url": "https://example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#macros">macros</a>": true,

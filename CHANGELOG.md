@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the logoDark field to the editorConfig.customization.customer parameter
+- editors: added the imageDark field to the editorConfig.customization.logo parameter
 - editors: the imageEmbedded field of the editorConfig.customization.logo parameter is removed
 - editors: added the signature to the request for file changes
 - editors: added the document.permissions.protect field
