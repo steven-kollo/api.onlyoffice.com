@@ -185,7 +185,7 @@
         </tr>
         <tr>
             <td id="templates" class="copy-link">templates</td>
-            <td>Defines the presence or absence of the templates in the <b>From Template</b> section for the <b>Create New...</b> menu option where the following document parameters can be set:
+            <td>Defines the presence or absence of the templates in the <b>Create New...</b> menu option where the following document parameters can be set:
                 <ul>
                     <li>
                         <b>image</b> - the absolute URL to the image for template,
@@ -195,7 +195,7 @@
                         <b>example</b>: "https://example.com/exampletemplate1.png";
                     </li>
                     <li>
-                        <b>title</b> - the template title that will be displayed in the <b>From Template</b> section for the <b>Create New...</b> menu option,
+                        <b>title</b> - the template title that will be displayed in the <b>Create New...</b> menu option,
                         <br />
                         <b>type</b>: string,
                         <br />
