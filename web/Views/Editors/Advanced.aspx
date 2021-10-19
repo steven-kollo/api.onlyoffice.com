@@ -144,7 +144,6 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "imageEmbedded": "https://example.com/logo_em.png",
                 "url": "https://example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#macros">macros</a>": true,

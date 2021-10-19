@@ -20,6 +20,7 @@
     <ul>
         <li>Added the <em>logoDark</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#customer">editorConfig.customization.customer</a> parameter.</li>
         <li>Added the <em>imageDark</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter.</li>
+        <li>The <em>imageEmbedded</em> field of the <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter is deprecated, please use the <em>image</em> field instead.</li>
         <li>Added a signature to the request for file changes specified with the <em>changesUrl</em> parameter of the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method</a>.
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#protect">document.permissions.protect</a> field.</li>
         <li>Added the <em>fileType</em> parameter to the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a>, <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> and <a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a> events.</li>
