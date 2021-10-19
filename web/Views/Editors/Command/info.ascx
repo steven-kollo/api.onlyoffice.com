@@ -7,7 +7,8 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Requests a document status and the list of the identifiers of the users who opened the document for editing.</p>
+<p class="dscr">Requests a document status and the list of the identifiers of the users who opened the document for editing. 
+The response will be sent to the <a href="<%= Url.Action("callback") %>">callback handler</a>.</p>
 
 <div class="header-gray">Request example</div>
 <pre>
