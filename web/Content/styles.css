@@ -1164,6 +1164,108 @@ pre,
 /********
     docbuilder
 **************/
+#startButton {
+    background: #FF6F3D;
+    border: 1px solid #FF6F3D;
+    color: #FFFFFF;
+}
+    #startButton:hover {
+        background: #ff7a4b;
+    }
+
+#doc-builder-file-types {
+    display: block;
+    text-align: left;
+    height: 35px;
+    margin-bottom: 25px;
+    border: none;
+    box-shadow: inset #bfbfbf 0 -1px 0 0;
+}
+    #doc-builder-file-types a {
+        color: rgb(121, 121, 121);
+        margin: 0 28px 0 0;
+        min-width: 100px;
+        font-size: 13px;
+        line-height: 35px;
+        padding: 0;
+    }
+    #doc-builder-file-types li.active a, #doc-builder-file-types a:hover  {
+        color: #f94a0c;
+    }
+
+.doc-builder-list-buttons {
+    margin: 16px -8px;
+}
+
+#doc-builder-search-box div {
+    margin-bottom: 25px;
+    background: rgb(249, 249, 249);
+    display: flex;
+    border-radius: 3px;
+    width: 99%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    padding-right: 4px;
+}
+
+#doc-builder-search-box input {
+    font: inherit;
+    color: rgb(51, 51, 51);
+    background: rgb(249, 249, 249);
+    margin: 0 0 0 15px;
+    position: static;
+    width: 100%;
+    border-radius: 0;
+}
+
+.builder-search-results {
+    padding: 0 !important;
+    max-height: 235px;
+    overflow-y: auto;
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    margin: 0;
+    top: -20px;
+    border-radius: 3px;
+    border: 1px solid #bfbfbf;
+    background: rgb(249, 249, 249);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    position: relative;
+}
+    .builder-search-results li {
+        display: inline-flex;
+        margin: 0;
+        padding: 5px 5px 5px 50px;
+        cursor: pointer;
+        list-style-type: none;
+    }
+    .builder-search-results li:hover {
+        background: rgb(239, 239, 239);
+    }
+    .builder-search-results li p {
+        padding: 0 1px 0 1px;
+        max-width: 30vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+
+#builderScript {
+    outline: none;
+    background: rgb(249, 249, 249);
+    border-radius: 3px;
+    padding: 15px 24px;
+    width: 95%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+}
+
 .details {
     border-left: 2px solid #ddd;
     font-size: 14px;
@@ -2298,5 +2400,15 @@ article {
 
     .value {
         word-break: break-word;
+    }
+
+    #doc-builder-file-types {
+        box-shadow: none;
+    }
+    #builderScript {
+        width: 90%;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        width: fill-available;
     }
 }

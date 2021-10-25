@@ -50,6 +50,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "nodejsexample",
                 "howitworks",
                 "howitworks/comparedocuments",
+                "howitworks/docbuilder",
                 "howitworks/globalvariable",
                 "integratingdocumentbuilder",
                 "integrationapi",
@@ -148,6 +149,12 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Howitworks", (object)catchall);
+        }
+
+        [HttpPost]
+        public string Howitworks(string module, string section, string method)
+        {
+            return DocBuilderDocumentation.GetMethod(module, section, method).Example.Script;
         }
 
         public ActionResult Textdocumentapi(string catchall)
