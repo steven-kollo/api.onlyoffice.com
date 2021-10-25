@@ -37,7 +37,8 @@
     <h2 id="install" class="copy-link">Installing Redmine ONLYOFFICE integration plugin</h2>
     <p>To start using ONLYOFFICE Docs with Redmine, the following steps must be performed:</p>
     <ol>
-        <li>If you're new to Redmine, install it following <a href="https://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank">these instructions</a>.</li>
+        <li>If you're new to Redmine, install it following <a href="https://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank">these instructions</a>.
+            Minimum version of Redmine for ONLYOFFICE integration plugin is 4.0.0.</li>
         <li>
             <p>Download Redmine ONLYOFFICE integration plugin. You can either clone the master branch or download the latest zipped version. 
             Before installing, make sure that the Redmine instance is stopped.</p>
