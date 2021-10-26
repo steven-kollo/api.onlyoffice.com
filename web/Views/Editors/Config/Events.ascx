@@ -660,7 +660,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save Copy as...</em> button.
-            The title of the document, its type and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
+            The title of the document, its type and the absolute URL to the document to be downloaded are sent in the <em>data</em> parameter.
             If the method is not declared the <em>Save Copy as...</em> button will not be displayed.
         </p>
         <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>

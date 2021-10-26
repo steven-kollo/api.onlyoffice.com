@@ -541,7 +541,8 @@
                         <b>example</b>: false;
                     </li>
                     <li>
-                        <b>hoverMode</b> - defines the review display mode: show changes by hover in tooltips (<b>true</b>) or by click in balloons (<b>false</b>).
+                        <b>hoverMode</b> - defines the review display mode: show reviews in tooltips by hovering the changes (<b>true</b>) 
+                        or in balloons by clicking the changes (<b>false</b>).
                         The default value is <b>false</b>.
                         <br />
                         <b>type</b>: boolean,
