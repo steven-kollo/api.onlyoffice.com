@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: added the ConvertDocument method
 - editors: added the logoDark field to the editorConfig.customization.customer parameter
 - editors: added the imageDark field to the editorConfig.customization.logo parameter
 - editors: the imageEmbedded field of the editorConfig.customization.logo parameter is removed

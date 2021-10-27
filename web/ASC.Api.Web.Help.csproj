@@ -675,6 +675,7 @@
     <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\changecomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\coauthoringchatsendmessage.ascx" />
+    <Content Include="Views\Plugin\Executemethod\convertdocument.ascx" />
     <Content Include="Views\Plugin\Executemethod\getallcomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrolpr.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfields.ascx" />

@@ -68,6 +68,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/addcomment",
                 "executemethod/changecomment",
                 "executemethod/coauthoringchatsendmessage",
+                "executemethod/convertdocument",
                 "executemethod/getallcomments",
                 "executemethod/getcurrentcontentcontrolpr",
                 "executemethod/getfields",
