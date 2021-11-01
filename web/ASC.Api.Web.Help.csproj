@@ -610,6 +610,7 @@
     <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />
+    <Content Include="Views\Editors\Moodle.aspx" />
     <Content Include="Views\Editors\Chamilo.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\Commenting.aspx" />

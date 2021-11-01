@@ -64,6 +64,9 @@
                 <a href="<%= Url.Action("mattermost") %>">Mattermost integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("moodle") %>">Moodle integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
             </li>
             <li>

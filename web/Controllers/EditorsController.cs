@@ -98,6 +98,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Mattermost",
                 "Mentions",
                 "Methods",
+                "Moodle",
                 "Nextcloud",
                 "Nuxeo",
                 "Open",
@@ -326,6 +327,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Methods()
+        {
+            return View();
+        }
+
+        public ActionResult Moodle()
         {
             return View();
         }
