@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: changed get docs page
 - editors: added the Moodle plugin
 
 ## 2.4.0

@@ -357,6 +357,9 @@
     <Content Include="Content\img\Editor\favorite.png" />
     <Content Include="Content\img\Editor\submitForm.png" />
     <Content Include="Content\img\Editor\hideRulers.png" />
+    <Content Include="Content\img\get-docs\docker.png" />
+    <Content Include="Content\img\get-docs\linux.svg" />
+    <Content Include="Content\img\get-docs\windows.svg" />
     <Content Include="Content\img\java\author.jpg" />
     <Content Include="Content\img\java\make-var.png" />
     <Content Include="Content\img\java\manager-app.jpg" />
@@ -508,6 +511,7 @@
     <Content Include="Content\img\plugins\gifs\youtube.gif" />
     <Content Include="Content\img\plugins\gifs\zotero.gif" />
     <Content Include="Content\plugins-macros.css" />
+    <Content Include="Content\get-docs.css" />
     <Content Include="externallistener\config.json" />
     <Content Include="externallistener\index.html" />
     <Content Include="externallistener\scripts\code.js" />
