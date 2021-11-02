@@ -192,7 +192,7 @@
                 <td id="status6" class="copy-link"><em>Status</em> <b>6</b> (<b>7</b>)</td>
                 <td>
                     <p>It is received when the force saving request is performed.</p>
-                    <p>Since version version 6.2, the <em>callbackUrl</em> depends on <em>forcesavetype</em> parameter:</p>
+                    <p>The <em>callbackUrl</em> depends on <em>forcesavetype</em> parameter:</p>
                     <ul>
                         <li>If <em>forcesavetype</em> parameter is set to <b>1</b>, the <em>callbackUrl</em> from the user who clicked the <b>Save</b> button is used.</li>
                         <li>If <em>forcesavetype</em> parameter is set to <b>0</b> or <b>2</b>, the <em>callbackUrl</em> from the user who made the last changes to the file is used.</li>
