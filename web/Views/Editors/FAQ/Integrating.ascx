@@ -28,6 +28,7 @@
             <li><a href="<%= Url.Action("humhub") %>">HumHub</a></li>
             <li><a href="<%= Url.Action("liferay") %>">Liferay</a></li>
             <li><a href="<%= Url.Action("mattermost") %>">Mattermost</a></li>
+            <li><a href="<%= Url.Action("moodle") %>">Moodle</a></li>
             <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud</a></li>
             <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo</a></li>
             <li><a href="<%= Url.Action("owncloud") %>">ownCloud</a></li>

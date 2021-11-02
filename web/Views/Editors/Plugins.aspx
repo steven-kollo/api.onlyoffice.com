@@ -29,6 +29,7 @@
         <li><a href="<%= Url.Action("jira") %>">Jira ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("liferay") %>">Liferay ONLYOFFICE connector</a></li>
         <li><a href="<%= Url.Action("mattermost") %>">Mattermost ONLYOFFICE integration plugin</a></li>
+        <li><a href="<%= Url.Action("moodle") %>">Moodle ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("owncloud") %>">ownCloud ONLYOFFICE integration app</a></li>
