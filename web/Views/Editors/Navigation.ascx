@@ -79,6 +79,9 @@
                 <a href="<%= Url.Action("plone") %>">Plone integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("redmine") %>">Redmine integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
             </li>
         </ul>

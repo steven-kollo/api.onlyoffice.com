@@ -33,6 +33,7 @@
             <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo</a></li>
             <li><a href="<%= Url.Action("owncloud") %>">ownCloud</a></li>
             <li><a href="<%= Url.Action("plone") %>">Plone</a></li>
+            <li><a href="<%= Url.Action("redmine") %>">Redmine</a></li>
             <li><a href="<%= Url.Action("sharepoint") %>">SharePoint</a></li>
         </ul>
         <p>Most of the connectors are available from the corresponding service application store and are easy to install. Just follow the step-by-step instructions at the <a href="<%= Url.Action("plugins") %>">connector page</a> and connect Document Server to your service.</p>

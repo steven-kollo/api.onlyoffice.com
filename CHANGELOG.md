@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Redmine plugin
 - editors: changed get docs page
 - editors: added the Moodle plugin
 
