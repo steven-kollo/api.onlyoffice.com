@@ -17,6 +17,8 @@
 
     <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-redmine" target="_blank">plugin</a> enables users to edit office documents within <a href="https://www.redmine.org/" target="_blank">Redmine</a> using ONLYOFFICE Docs.</p>
 
+    <p>The plugin is available in the official <a href="https://www.redmine.org/plugins/onlyoffice_redmine" target="_blank">Redmine Plugins Directory</a>.</p>
+
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
         <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX.</li>
