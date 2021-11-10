@@ -357,6 +357,9 @@
     <Content Include="Content\img\Editor\favorite.png" />
     <Content Include="Content\img\Editor\submitForm.png" />
     <Content Include="Content\img\Editor\hideRulers.png" />
+    <Content Include="Content\img\get-docs\docker.png" />
+    <Content Include="Content\img\get-docs\linux.svg" />
+    <Content Include="Content\img\get-docs\windows.svg" />
     <Content Include="Content\img\java\author.jpg" />
     <Content Include="Content\img\java\make-var.png" />
     <Content Include="Content\img\java\manager-app.jpg" />
@@ -508,6 +511,7 @@
     <Content Include="Content\img\plugins\gifs\youtube.gif" />
     <Content Include="Content\img\plugins\gifs\zotero.gif" />
     <Content Include="Content\plugins-macros.css" />
+    <Content Include="Content\get-docs.css" />
     <Content Include="externallistener\config.json" />
     <Content Include="externallistener\index.html" />
     <Content Include="externallistener\scripts\code.js" />
@@ -607,8 +611,10 @@
     <Content Include="Views\Editors\HumHub.aspx" />
     <Content Include="Views\Editors\Example\Python.ascx" />
     <Content Include="Views\Editors\InlineEditors.aspx" />
+    <Content Include="Views\Editors\Jira.aspx" />
     <Content Include="Views\Editors\Liferay.aspx" />
     <Content Include="Views\Editors\Mattermost.aspx" />
+    <Content Include="Views\Editors\Moodle.aspx" />
     <Content Include="Views\Editors\Chamilo.aspx" />
     <Content Include="Views\Editors\Changelog.aspx" />
     <Content Include="Views\Editors\Commenting.aspx" />
@@ -759,6 +765,7 @@
     <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Example.aspx" />
     <Content Include="Views\Editors\Example\Java.ascx" />
+    <Content Include="Views\Editors\Example\JavaSpring.ascx" />
     <Content Include="Views\Editors\Example\Nodejs.ascx" />
     <Content Include="Views\Editors\Example\Php.ascx" />
     <Content Include="Views\Editors\Example\Ruby.ascx" />
@@ -856,11 +863,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\portals\class_descriptions.xml" />
-    <Content Include="App_Data\editor\.Net %28C# MVC%29 Example.zip" />
-    <Content Include="App_Data\editor\.Net %28C#%29 Example.zip" />
+    <Content Include="App_Data\editor\DotNet %28Csharp MVC%29 Example.zip" />
+    <Content Include="App_Data\editor\DotNet %28Csharp%29 Example.zip" />
     <Content Include="App_Data\editor\Java Example.zip" />
+    <Content Include="App_Data\editor\Java Spring Example.zip" />
     <Content Include="App_Data\editor\Node.js Example.zip" />
     <Content Include="App_Data\editor\PHP Example.zip" />
+    <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
@@ -927,7 +936,6 @@
     <Content Include="App_Data\docbuilder\references\word\ApiUniColor.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiUnsupported.json" />
     <Content Include="App_Data\docbuilder\references\word\Globals.json" />
-    <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\products.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiHyperlink.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiRange.json" />

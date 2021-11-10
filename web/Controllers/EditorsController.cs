@@ -70,6 +70,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "DemoPreview",
                 "DocumentBuilderApi",
                 "Example/Java",
+                "Example/JavaSpring",
                 "Example/Nodejs",
                 "Example/Php",
                 "Example/Ruby",
@@ -92,10 +93,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "Jira",
                 "Liferay",
                 "Mattermost",
                 "Mentions",
                 "Methods",
+                "Moodle",
                 "Nextcloud",
                 "Nuxeo",
                 "Open",
@@ -303,6 +306,11 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View();
         }
+
+        public ActionResult Jira()
+        {
+            return View();
+        }
         
         public ActionResult Liferay()
         {
@@ -320,6 +328,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Methods()
+        {
+            return View();
+        }
+
+        public ActionResult Moodle()
         {
             return View();
         }
