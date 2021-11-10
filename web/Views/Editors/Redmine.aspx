@@ -44,7 +44,6 @@
             Before installing, make sure that the Redmine instance is stopped.</p>
             <pre>
 git clone https://github.com/ONLYOFFICE/onlyoffice-redmine
-wget https://github.com/ONLYOFFICE/onlyoffice-redmine
 </pre>
         </li>
         <li>Put <b>onlyoffice_redmine</b> plugin directory into plugins. The plugins sub-directory must be named as <b>onlyoffice_redmine</b>. 
