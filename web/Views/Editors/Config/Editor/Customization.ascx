@@ -81,7 +81,7 @@
                 <ul>
                     <li>
                         <b>request</b> - defines if the request is sent or not.
-                        The default value is <em>true</em>,
+                        The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -89,7 +89,7 @@
                     </li>
                     <li>
                         <b>label</b> - a postfix added to the user name.
-                        The default value is <em>Guest</em>,
+                        The default value is <b>Guest</b>,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -109,8 +109,7 @@
             <td id="autosave" class="copy-link">autosave</td>
             <td>
                 Defines if the <b>Autosave</b> menu option is enabled or disabled.
-                If set to <b>false</b>, only <em>Strict</em> co-editing mode can be selected, as <em>Fast</em> does not work without autosave.
-                Please note that in case you change this option in menu it will be saved to your browser localStorage.
+                If set to <b>false</b>, only <b>Strict</b> co-editing mode can be selected, as <b>Fast</b> does not work without autosave.
                 The default value is <b>true</b>.
             </td>
             <td>boolean</td>
@@ -124,7 +123,8 @@
         <tr class="tablerow">
             <td id="chat" class="copy-link">chat</td>
             <td>
-                Defines if the <b>Chat</b> menu button is displayed or hidden; please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled.
+                Defines if the <b>Chat</b> menu button is displayed or hidden.
+                Please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled.
                 The default value is <b>true</b>.
             </td>
             <td>boolean</td>
@@ -143,7 +143,8 @@
         <tr class="tablerow">
             <td id="comments" class="copy-link">comments</td>
             <td>
-                Defines if the <b>Comments</b> menu button is displayed or hidden; please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable.
+                Defines if the <b>Comments</b> menu button is displayed or hidden.
+                Please note that in case you hide the <b>Comments</b> button, the corresponding commenting functionality will be available for viewing only, adding and editing comments will be unavailable.
                 The default value is <b>true</b>.
             </td>
             <td>boolean</td>
@@ -166,7 +167,7 @@
         <tr>
             <td id="compactToolbar" class="copy-link">compactToolbar</td>
             <td>
-                Defines if the top toolbar type displayed is full (<b>false</b>) or compact <b>true</b>.
+                Defines if the top toolbar type displayed is full (<b>false</b>) or compact (<b>true</b>).
                 The default value is <b>false</b>.
             </td>
             <td>boolean</td>
@@ -209,7 +210,7 @@
                         <b>example</b>: "Some additional information";
                     </li>
                     <li>
-                        <b>logo</b> - the path to the image logo (there are no special recommendations for this file, but it would be better if it were in .png format with transparent background).
+                        <b>logo</b> - the path to the image logo (there are no special recommendations for this file, but it would be better if it was in the <em>.png</em> format with transparent background).
                         The image must have the following size: 432x70,
                         <br />
                         <b>type</b>: string,
@@ -257,7 +258,7 @@
                         <b>example</b>: "https://example.com";
                     </li>
                     <li>
-                        <b>visible</b> - show or hide the <b>Feedback &amp; Support</b> menu button,
+                        <b>visible</b> - shows or hides the <b>Feedback &amp; Support</b> menu button,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -272,7 +273,7 @@
         <tr>
             <td id="forcesave" class="copy-link">forcesave</td>
             <td>
-                Adds the request for the forced file saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.).
+                Adds the request for the file force saving to the <a href="<%= Url.Action("callback") %>#forcesavetype">callback handler</a> when saving the document within the <b>document editing service</b> (e.g. clicking the <b>Save</b> button, etc.).
                 The default value is <b>false</b>.
             </td>
             <td>boolean</td>
@@ -290,7 +291,7 @@
                 The object has the following parameters:
                 <ul>
                     <li>
-                        <b>blank</b> - open the website in the new browser tab/window (if the value is set to <em>true</em>) or the current tab (if the value is set to <em>false</em>) when the <b>Open file location</b> button is clicked.
+                        <b>blank</b> - opens the website in the new browser tab/window (if the value is set to <b>true</b>) or the current tab (if the value is set to <b>false</b>) when the <b>Open file location</b> button is clicked.
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
@@ -420,7 +421,7 @@
         <tr class="tablerow">
             <td id="logo" class="copy-link">logo<span class="required">*</span></td>
             <td>
-                Changes the image file at the top left corner of the Editor header.
+                Changes the image file at the top left corner of the editor header.
                 The recommended image height is 20 pixels.
                 The object has the following parameters:
                 <ul>
@@ -456,7 +457,7 @@
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
             <td>
-                Defines if document macros will be run and available macros settings.
+                Defines if document macros will be run.
                 The default value is <b>true</b>.
             </td>
             <td>boolean</td>
@@ -465,14 +466,14 @@
         <tr>
             <td id="macrosMode" class="copy-link">macrosMode</td>
             <td>
-                Defines if document macros will be run.
+                Defines the macro run mode.
                 Can take the following values:
                 <ul>
                     <li><b>disable</b> - don't run at all;</li>
                     <li><b>enable</b> - run all macros automatically;</li>
                     <li><b>warn</b> - warn about macros and ask permission to run.</li>
                 </ul>
-                The default value is <b>original</b>.
+                The default value is <b>warn</b>.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -608,7 +609,7 @@
         <tr>
             <td id="toolbarHideFileName" class="copy-link">toolbarHideFileName</td>
             <td>
-                Defines if the document title is visible on the top toolbar (when set to <b>false</b>) or hidden (when set to <b>true</b>).
+                Defines if the document title is visible on the top toolbar (<b>false</b>) or hidden (<b>true</b>).
                 The default value is <b>false</b>.
             </td>
             <td>boolean</td>
@@ -623,7 +624,7 @@
         <tr>
             <td id="toolbarNoTabs" class="copy-link">toolbarNoTabs</td>
             <td>
-                Defines if the top toolbar tabs are distinctly displayed (when set to <b>false</b>) or only highlighted to see which one is selected (when set to <b>true</b>).
+                Defines if the top toolbar tabs are distinctly displayed (<b>false</b>) or only highlighted to see which one is selected (<b>true</b>).
                 The default value is <b>false</b>.
             </td>
             <td>boolean</td>
@@ -649,10 +650,10 @@
                 Defines the editor theme settings.
                 It can be set in two ways:
                 <ul>
-                    <li><b>theme id</b> - the user sets the theme parameter by its id (<em>theme-light</em>, <em>theme-classic-light</em>, <em>theme-dark</em>),</li>
+                    <li><b>theme id</b> - the user sets the theme parameter by its id (<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>),</li>
                     <li>
-                        <b>default theme</b> - the default dark or light theme value will be set (<em>default-dark</em>, <em>default-light</em>).
-                        The default light theme is <em>theme-classic-light</em>.
+                        <b>default theme</b> - the default dark or light theme value will be set (<b>default-dark</b>, <b>default-light</b>).
+                        The default light theme is <b>theme-classic-light</b>.
                     </li>
                 </ul>
                 The first option has higher priority.
@@ -675,7 +676,7 @@
                     <li><b>pt</b> - points,</li>
                     <li><b>inch</b> - inches.</li>
                 </ul>
-                The default value is centimeters (cm).
+                The default value is centimeters (<b>cm</b>).
             </td>
             <td>string</td>
             <td>cm</td>
