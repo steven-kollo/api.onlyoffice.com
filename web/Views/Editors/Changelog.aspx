@@ -35,6 +35,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hideReviewDisplay</a> field.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hoverMode</a> field.</li>
         <li>Added the possibility to view the <a href="<%= Url.Action("history") %>">document history</a> of the spreadsheet files.</li>
+        <li>Added the <a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">UI_InsertGraphic</a> message for the PostMessage WOPI protocol.</li>
     </ul>
 
     <h2 id="64" class="copy-link">Version 6.4</h2>
