@@ -16,6 +16,11 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="71" class="copy-link">Version 7.1</h2>
+    <ul>
+        <li></li>
+    </ul>
+
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
         <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">oxps</a> format.</li>
