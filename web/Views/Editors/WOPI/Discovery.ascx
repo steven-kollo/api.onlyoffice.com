@@ -103,7 +103,7 @@ ui=en-us&thm=1&"/&gt;
     They open the editor via the MIME-type which is included in the <em>app</em> element of the following structure:</p>
     <pre>
 &lt;app name="application/msword"&gt;
-&lt;action default="true" ext="" name="edit" urlsrc="http://159.89.20.129:9980/loleaflet/ba528af/loleaflet.html?"/&gt;
+    &lt;action default="true" ext="" name="edit" urlsrc="http://159.89.20.129:9980/loleaflet/ba528af/loleaflet.html?"/&gt;
 &lt;/app&gt;
 </pre>
     <p>The <em>app</em> element like this:</p>
