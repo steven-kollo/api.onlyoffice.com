@@ -325,6 +325,13 @@ body {
     border-bottom: 1px solid #d7d8dc;
 }
 
+.table .tablerow .borders {
+    border-bottom: 1px solid #d7d8dc;
+    border-top: 1px solid #d7d8dc;
+    border-left: 1px solid #d7d8dc;
+    border-right: 1px solid #d7d8dc;
+}
+
 .error-table .tablerow {
     border-bottom: 1px solid #d7d8dc;
 }
@@ -439,6 +446,10 @@ h5 {
     font-weight: 300;
     margin: 25px 0 5px;
     text-transform: none;
+}
+
+.table-header-gray {
+    background-color: #ebebeb;
 }
 
 .header-gray {
