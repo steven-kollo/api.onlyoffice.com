@@ -18,6 +18,10 @@
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
 
+- editors: added the Redmine plugin
+- editors: changed get docs page
+- editors: added the Moodle plugin
+
 ## 2.4.0
 - editors: added the Jira integration app
 - editors: added the Java Spring integration example

@@ -1783,7 +1783,7 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 255));\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFill(oFill);\noParagraph.AddText(\"This is a text run with the font color set to blue.\");\noParagraph.SetTextPr(oTextPr);\nbuilder.SaveFile(\"docx\", \"SetFill.docx\");\nbuilder.CloseFile();",
 		},
 		"ApiTextPr.setfontfamily": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontFamily(\"Comic Sans MS\");\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"A sample text with the font family set to \"Comic Sans MS\" using the text properties.\");\nbuilder.SaveFile(\"docx\", \"SetFontFamily.docx\");\nbuilder.CloseFile();",
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontFamily(\"Comic Sans MS\");\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"A sample text with the font family set to 'Comic Sans MS' using the text properties.\");\nbuilder.SaveFile(\"docx\", \"SetFontFamily.docx\");\nbuilder.CloseFile();",
 		},
 		"ApiTextPr.setfontsize": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontSize(30);\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"A sample text with the font size set to 15 points using the text properties.\");\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();",

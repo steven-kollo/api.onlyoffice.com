@@ -17,6 +17,8 @@
 
     <p>This <a href="https://github.com/ONLYOFFICE/onlyoffice-jira" target="_blank">app</a> enables users to edit office documents from <a href="https://www.atlassian.com/software/jira" target="_blank">Jira Software</a> using ONLYOFFICE Docs.</p>
 
+    <p>The connector is available in the official <a href="https://marketplace.atlassian.com/apps/1226616/onlyoffice-connector-for-jira" target="_blank">Atlassian Marketplace</a>.</p>
+
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
         <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX.</li>

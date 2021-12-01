@@ -69,14 +69,14 @@
             <pre>
 "ipfilter": {
     "rules": [
-    {
-        "address": "ip_address",
-        "allowed": true
-    },
-    {
-        "address": "*",
-        "allowed": false
-    }
+        {
+            "address": "ip_address",
+            "allowed": true
+        },
+        {
+            "address": "*",
+            "allowed": false
+        }
     ],
     "useforrequest": true,
     "errorcode": 403

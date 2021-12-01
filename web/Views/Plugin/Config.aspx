@@ -38,6 +38,7 @@
             <li><a href="#isDisplayedInViewer">isDisplayedInViewer</a></li>
             <li><a href="#isInsideMode">isInsideMode</a></li>
             <li><a href="#isModal">isModal</a></li>
+            <li><a href="#isCustomWindow">isCustomWindow</a></li>
             <li><a href="#isSystem">isSystem</a></li>
             <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
             <li><a href="#isViewer">isViewer</a></li>
@@ -215,6 +216,12 @@
                 <td>true</td>
             </tr>
             <tr class="tablerow">
+                <td id="isCustomWindow" class="copy-link">variations.isCustomWindow</td>
+                <td>Specifies if the plugin uses a custom window, without standard borders and buttons (used for modal plugins only).</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="isSystem" class="copy-link">variations.isSystem</td>
                 <td>Specifies if the plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with the other plugins, so that they can work simultaneously.</td>
                 <td>boolean</td>
@@ -338,6 +345,7 @@
                 "isDisplayedInViewer": true,
                 "isInsideMode": false,
                 "isModal": true,
+                "isCustomWindow": true,
                 "isSystem": false,
                 "isUpdateOleOnResize": true,
                 "isViewer": true,

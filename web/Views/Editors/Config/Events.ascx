@@ -543,8 +543,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
-            To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
-            If the method is not declared the <em>Mail merge</em> button will not be displayed.
+            To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
+            If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.
         </p>
         <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
         <div class="header-gray">Example</div>

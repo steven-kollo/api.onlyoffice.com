@@ -53,7 +53,7 @@ DOC_SERV_SITE_URL = 'https://documentserver/'
         <div class="commandline">python manage.py runserver 0.0.0.0:8000</div>
     </li>
     <li>See the result in your browser using the address:
-        <div class="commandline">http://localhost</div>
+        <div class="commandline">http://localhost:8000</div>
     </li>
 </ol>
 

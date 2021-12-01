@@ -98,12 +98,14 @@ namespace ASC.Api.Web.Help.Controllers
                 "Mattermost",
                 "Mentions",
                 "Methods",
+                "Moodle",
                 "Nextcloud",
                 "Nuxeo",
                 "Open",
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "Redmine",
                 "Rename",
                 "Review",
                 "Save",
@@ -330,6 +332,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Moodle()
+        {
+            return View();
+        }
+
         public ActionResult Nextcloud()
         {
             return View();
@@ -356,6 +363,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult Redmine()
         {
             return View();
         }

@@ -157,8 +157,8 @@
                 "trackChanges": true,
                 "hoverMode": false
             },
-            "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,
-            <%--"<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
+            "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,<%--
+            "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#uiTheme">uiTheme</a>": "theme-dark",
