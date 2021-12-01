@@ -9,7 +9,7 @@
 <dl class="faq_block" id="editing_1">
     <dt>What is the 'Callback handler' and why do I need it?</dt>
     <dd>
-        <p>The <b>document editing service</b> informs the <b>document storage service</b> about the status of the document editing using the <em>callbackUrl</em>, which is specified in the configuration file like this:</p>
+        <p>The <b>document editing service</b> informs the <b>document storage service</b> about the status of the document editing and sends the response with all the necessary data via the <em>callbackUrl</em>, which is specified in the configuration file like this:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "callbackUrl": "https://example.com/url-to-callback.ashx"
