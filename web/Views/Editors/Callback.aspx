@@ -148,7 +148,7 @@
         Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
         Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.
     </p>
-    <div id="error-codes" class="copy-link header-gray">Possible document statuses and their description</div>
+    <div id="status-descr" class="copy-link header-gray">Possible document statuses and their description</div>
     <table class="error-table">
         <colgroup>
             <col style="width: 105px;" />
