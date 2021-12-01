@@ -161,7 +161,7 @@
         Since version 7.0, <em>callbackUrl</em> is used from the last tab of the same user. Prior to version 7.0, <em>callbackUrl</em> from the first user tab was used.
     </p>
 
-    <div id="error-codes" class="copy-link header-gray">Possible document statuses and their description</div>
+    <div id="status-descr" class="copy-link header-gray">Possible document statuses and their description</div>
 
     <table class="error-table">
         <colgroup>
