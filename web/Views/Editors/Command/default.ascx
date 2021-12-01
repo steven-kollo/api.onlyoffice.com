@@ -92,7 +92,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<p>The <b>document editing service</b> informs the <b>document storage service</b> about the result caused by command using the <a href="<%= Url.Action("callback") %>">callback handler</a>.</p>
+<p>The <b>document editing service</b> informs the <b>document storage service</b> about the result caused by command and sends the response with all the necessary data via the <a href="<%= Url.Action("callback") %>">callback handler</a>.</p>
 
 <div class="header-gray">Possible error codes and their description</div>
 <table class="error-table">
