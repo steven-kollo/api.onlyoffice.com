@@ -158,6 +158,9 @@
         Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.
     </p>
     <p>
+        Since version 7.0, <em>callbackUrl</em> is used from the last tab of the same user. Prior to version 7.0, <em>callbackUrl</em> from the first user tab was used.
+    </p>
+    <p>
         <em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.
         His <em>callbackUrl</em> is used.
     </p>
