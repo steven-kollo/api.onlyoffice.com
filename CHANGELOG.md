@@ -1,5 +1,23 @@
 # Change Log
 
+- editors: the callbackUrl is used from the last tab of the same user
+- editors: added the UI_InsertGraphic message for the PostMessage WOPI protocol
+- editors: added the logoDark field to the editorConfig.customization.customer parameter
+- editors: added the imageDark field to the editorConfig.customization.logo parameter
+- editors: the imageEmbedded field of the editorConfig.customization.logo parameter is removed
+- editors: added the signature to the request for file changes
+- editors: added the document.permissions.protect field
+- editors: added the fileType parameter to the onDownloadAs, onRequestRestore and onRequestSaveAs events
+- editors: added the possibility to insert several images via the insertImage method
+- editors: the assemblyFormatAsOrigin server setting is enabled by default
+- editors: added the ooxml and odf values to the outputtype parameter of the conversion request
+- editors: added the fileType and previous.fileType parameters to the setHistoryData method
+- editors: added the filetype parameter to the Callback handler
+- editors: added the fileType field to the conversion response
+- editors: conversion to docm, dotm, xlsm, xltm, pptm, potm
+- editors: added editorConfig.customization.review
+- editors: added the possibility to view the document history in spreadsheets
+
 - editors: added the Redmine plugin
 - editors: changed get docs page
 - editors: added the Moodle plugin

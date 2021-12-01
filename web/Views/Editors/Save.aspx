@@ -193,4 +193,58 @@ new DocsAPI.DocEditor("placeholder", {
         The <em>forcesavetype</em> parameter will have the <b>2</b> value when sending the request to the <b>callback handler</b>.</li>
     </ul>
 
+
+    <h2 id="assemblyFormatAsOrigin" class="copy-link">Saving in original format</h2>
+
+    <p>
+        Starting from version 7.0, the <em>assemblyFormatAsOrigin</em> server setting is enabled by default to save the assembled file in its original format.
+        It is used to change the file format from OOXML to ODF or to save files with macros.
+    </p>
+
+    <div class="header-gray">Parameters</div>
+    <table class="table">
+        <colgroup>
+            <col style="width: 300px;" />
+            <col />
+            <col style="width: 100px;" />
+            <col style="width: 100px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Parameter</td>
+                <td>Description</td>
+                <td>Type</td>
+                <td>Example</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td>services.CoAuthoring.server.assemblyFormatAsOrigin</td>
+                <td>
+                    Specifies if the assembled file is saved in its original format or not.
+                    The default value is <b>true</b>.
+                </td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="header-gray">Sample local.json configuration</div>
+    <pre>
+{
+    "services": {
+        "CoAuthoring": {
+            "server": {
+                "assemblyFormatAsOrigin": true
+            }
+        }
+    }
+}
+</pre>
+    <note>
+        Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the <em>.doc</em> format which is unavailable for saving in ONLYOFFICE Docs).
+        Disable this setting if necessary.
+    </note>
+
 </asp:Content>
