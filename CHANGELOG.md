@@ -1,5 +1,8 @@
 # Change Log
 
+- editors: added the editorConfig.customization.features parameter section
+
+## 2.5.0
 - editors: the callbackUrl is used from the last tab of the same user
 - editors: added the UI_InsertGraphic message for the PostMessage WOPI protocol
 - editors: added the logoDark field to the editorConfig.customization.customer parameter
@@ -17,7 +20,6 @@
 - editors: conversion to docm, dotm, xlsm, xltm, pptm, potm
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
-
 - editors: added the Redmine plugin
 - editors: changed get docs page
 - editors: added the Moodle plugin

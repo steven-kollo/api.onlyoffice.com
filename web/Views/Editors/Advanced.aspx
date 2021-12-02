@@ -126,6 +126,12 @@
                 "name": "John Smith and Co.",
                 "www": "example.com"
             },
+            "<a href="<%= Url.Action("config/editor/customization") %>#features">features</a>": {
+                "spellcheck": {
+                    "mode": true,
+                    "change": true
+                }
+            },
             "<a href="<%= Url.Action("config/editor/customization") %>#feedback">feedback</a>": {
                 "url": "https://example.com",
                 "visible": true
@@ -156,8 +162,7 @@
                 "reviewDisplay": "original",
                 "trackChanges": true,
                 "hoverMode": false
-            },
-            "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,<%--
+            },<%--
             "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
