@@ -22,7 +22,7 @@
         </thead>
         <tbody>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>General info</h2></td>
+                <td id="general-info" class="table-header-gray borders copy-link table-style"><h2>General info</h2></td>
                 <td class="borders">
                     <p>Application Programming Interface: describes the main methods that allow you to interact with different ONLYOFFICE components, 
                         including editors, thus giving you programmatic access to it.</p>
@@ -35,7 +35,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Integration with sync&share and DMS solutions</h2></td>
+                <td id="integration" class="table-header-gray borders copy-link table-style"><h2>Integration with sync&share and DMS solutions</h2></td>
                 <td class="borders">
                     <p>Integration via ready-to-use connectors developed by ONLYOFFICE or its partners.</p>
                     <p><a href="https://www.onlyoffice.com/all-connectors.aspx" target="_blank">Check all integrations</a></p>
@@ -45,7 +45,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Collaboration (modes)</h2></td>
+                <td id="collaboration" class="table-header-gray borders copy-link table-style"><h2>Collaboration (modes)</h2></td>
                 <td class="borders">
                     <p>Switching between real-time and paragraph-locking co-editing modes.</p>
                 </td>
@@ -54,7 +54,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Customization</h2></td>
+                <td id="customization" class="table-header-gray borders copy-link table-style"><h2>Customization</h2></td>
                 <td class="borders">
                     <ul>
                         <li>Specifying the editor interface <a href="<%= Url.Action("config/editor") %>#lang">language</a></li>
@@ -78,7 +78,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Denying requests for resources</h2></td>
+                <td id="denying-requests" class="table-header-gray borders copy-link table-style"><h2>Denying requests for resources</h2></td>
                 <td class="borders">
                     <p>Configuring IPs of <a href="<%= Url.Action("wopi/") %>#ip-filter">trusted integrators</a> (white list) which requests ONLYOFFICE Docs can accept.</p>
                 </td>
@@ -87,7 +87,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Restricting access to the use of ONLYOFFICE server</h2></td>
+                <td id="access-to-server" class="table-header-gray borders copy-link table-style"><h2>Restricting access to the use of ONLYOFFICE server</h2></td>
                 <td class="borders">
                     <p>Editing access control is based on JWT signature. The secret key is required to generate a <a href="<%= Url.Action("signature/browser") %>">file open request</a>.</p>
                 </td>
@@ -96,7 +96,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Restricting access to data</h2></td>
+                <td id="access-to-data" class="table-header-gray borders copy-link table-style"><h2>Restricting access to data</h2></td>
                 <td class="borders">
                     <p>Verification of request from the ONLYOFFICE server is based on the JWT signature. 
                     The request is <a href="<%= Url.Action("signature/request") %>#callbackUrl">signed</a> with a secret key, 
@@ -109,7 +109,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Basic actions</h2></td>
+                <td id="basic-actions" class="table-header-gray borders copy-link table-style"><h2>Basic actions</h2></td>
                 <td class="borders">
                     <p>The basic actions of viewing, editing, co-editing, mobile viewing and editing, embedded documents viewing are supported.</p>
                 </td>
@@ -118,7 +118,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Additional actions through method calls</h2></td>
+                <td id="methods" class="table-header-gray borders copy-link table-style"><h2>Additional actions through method calls</h2></td>
                 <td class="borders">
                     <ul>
                         <li><a href="<%= Url.Action("methods") %>#downloadAs">Download</a> request in a different format</li>
@@ -131,7 +131,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Additional actions through event handling</h2></td>
+                <td id="events" class="table-header-gray borders copy-link table-style"><h2>Additional actions through event handling</h2></td>
                 <td class="borders">
                     <ul>
                         <li><a href="<%= Url.Action("config/events") %>#onRequestClose">Closing</a> the editor</li>
@@ -162,7 +162,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>File lock</h2></td>
+                <td id="file-lock" class="table-header-gray borders copy-link table-style"><h2>File lock</h2></td>
                 <td class="borders">
                     <p>Getting a message with the <a href="<%= Url.Action("callback") %>#status">document status</a> informing about opening a file for editing, 
                     closing a file with no changes or closing a file which is ready for saving after editing.</p>
@@ -176,7 +176,7 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>File access rights</h2></td>
+                <td id="file-access-rights" class="table-header-gray borders copy-link table-style"><h2>File access rights</h2></td>
                 <td class="borders">
                     <ul>
                         <li>Viewing</li>
