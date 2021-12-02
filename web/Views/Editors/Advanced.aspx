@@ -124,6 +124,12 @@
                 "name": "John Smith and Co.",
                 "www": "example.com"
             },
+            "<a href="<%= Url.Action("config/editor/customization") %>#features">features</a>": {
+                "spellcheck": {
+                    "mode": true,
+                    "change": true
+                }
+            },
             "<a href="<%= Url.Action("config/editor/customization") %>#feedback">feedback</a>": {
                 "url": "https://example.com",
                 "visible": true
@@ -149,8 +155,7 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#plugins">plugins</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",
-            "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,
-            "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,<%--
+            "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,<%--
             "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,

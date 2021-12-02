@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the editorConfig.customization.features parameter section
 - editors: added the Redmine plugin
 - editors: changed get docs page
 - editors: added the Moodle plugin

@@ -18,7 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <ul>
-        <li></li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features</a> parameter section.</li>
     </ul>
 
     <h2 id="64" class="copy-link">Version 6.4</h2>
