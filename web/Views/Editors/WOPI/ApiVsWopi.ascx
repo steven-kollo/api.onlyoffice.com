@@ -54,15 +54,6 @@
                 </td>
             </tr>
             <tr class="tablerow">
-                <td class="table-header-gray borders"><h2>Supported formats</h2></td>
-                <td class="borders">
-                    <p>DOCX, XLSX, PPTX, PDF, DJVU, PPSX, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS, etc.</p>
-                </td>
-                <td class="borders">
-                    <p>DOCX, XLSX, PPTX, PDF, DJVU, PPSX, TXT, CSV, ODT, ODS, ODP, DOC, XLS, PPT, PPS, EPUB, RTF, HTML, HTM, MHT, XPS, etc.</p>
-                </td>
-            </tr>
-            <tr class="tablerow">
                 <td class="table-header-gray borders"><h2>Customization</h2></td>
                 <td class="borders">
                     <ul>
