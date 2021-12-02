@@ -837,7 +837,7 @@ docEditor.showMessage(message);
             </table>
             <div class="mobile-content"></div>
             <note>
-                Please note that displaying a tooltip with a message is not supported in the embedded mode.
+                Please note that displaying a tooltip with a message is not supported in the embedded platform <a href="<%= Url.Action("config") %>#type">type</a>.
             </note>
         </li>
     </ul>
