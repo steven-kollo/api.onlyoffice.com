@@ -805,7 +805,7 @@ docEditor.setUsers({
 
         <li>
             <p>
-                <b id="showMessage" class="copy-link">showMessage</b> - display tooltip with the message.
+                <b id="showMessage" class="copy-link">showMessage</b> - display a tooltip with a message.
                 This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
             </p>
             <pre>
@@ -836,6 +836,9 @@ docEditor.showMessage(message);
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <note>
+                Please note that displaying a tooltip with a message is not supported in the embedded platform <a href="<%= Url.Action("config") %>#type">type</a>.
+            </note>
         </li>
     </ul>
 
