@@ -141,6 +141,40 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#hideNotes">hideNotes</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">hideRightMenu</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#hideRulers">hideRulers</a>": false,
+            "<a href="<%= Url.Action("config/editor/customization") %>#layout">layout</a>": {
+                "toolbar": {
+                    "file": {
+                        "close": true,
+                        "settings": true,
+                        "info": true,
+                        "save": true
+                    },
+                    "home": {
+                        "mailmerge": true
+                    },
+                    "layout": true,
+                    "references": true,
+                    "collaboration": true,
+                    "protect": true,
+                    "plugins": true,
+                    "save": true,
+                },
+                "header": {
+                    "users": true,
+                    "save": true
+                },
+                "leftMenu": {
+                    "navigation": true,
+                    "spellcheck": true
+                },
+                "rightMenu": {
+                    "statusBar": {
+                        "textLang": true,
+                        "docLang": true,
+                        "actionStatus": true
+                    }
+                }
+            },
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",

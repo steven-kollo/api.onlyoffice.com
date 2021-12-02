@@ -1,5 +1,8 @@
 # Change Log
 
+- editors: added the editorConfig.customization.layout parameter section
+
+## 2.5.0
 - editors: the callbackUrl is used from the last tab of the same user
 - editors: added the UI_InsertGraphic message for the PostMessage WOPI protocol
 - editors: added the logoDark field to the editorConfig.customization.customer parameter
