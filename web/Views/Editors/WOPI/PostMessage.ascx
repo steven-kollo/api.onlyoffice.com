@@ -123,6 +123,27 @@ otherWindow.postMessage (msg, targetOrigin)
         </tbody>
     </table>
 
+    <div class="header-gray">Collabora specific</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>MessageId</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="UI_InsertGraphic" class="copy-link">UI_InsertGraphic</td>
+                <td>This message is posted to present a user interface element (like a dialog) allowing the user to pick an image from the integration.
+                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back via the <a href="https://sdk.collaboraonline.com/docs/postmessage_api.html#id1" target="_blank">Action_InsertGraphic</a> message with values set to the temporary URL.</td>
+            </tr>
+        </tbody>
+    </table>
+
     <note>Please note that the PostMessage messages have the higher priority than the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#CloseUrl">CloseUrl</a>,
     <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#HostEditUrl">HostEditUrl</a>, <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingUrl">FileSharingUrl</a>,
     <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileVersionUrl">FileVersionUrl</a> properties provided in <em>CheckFileInfo</em>.</note>

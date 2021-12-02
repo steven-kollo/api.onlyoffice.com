@@ -103,7 +103,22 @@
             </tr>
             <tr class="tablerow">
                 <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
-                <td>Defines the resulting converted document type.</td>
+                <td>
+                    Defines the resulting converted document type.
+                    Starting from version 7.0, file formats can be specified instead of extensions.
+                    They are used when we do not know in advance what extension is required:
+                    <ul>
+                        <li>
+                            <b>ooxml</b> - defines that the file will be coverted into <em>docx</em>, <em>docm</em>, <em>xlsx</em>, <em>xlsm</em>, <em>pptx</em> or <em>pptm</em>.
+                            For example, when the <em>doc</em> file is converted into the OOXML format, the resulting file can be <em>docx</em> or <em>docm</em> if this file contains macros (the same for <em>xls</em> and <em>ppt</em>).
+                            It is also applied when converting XML files into OOXML formats (<em>docx</em>, <em>xlsx</em> or <em>pptx</em> depending on the content);
+                        </li>
+                        <li>
+                            <b>odf</b> - defines that the file will be coverted into <em>odt</em>, <em>ods</em> or <em>odp</em>.
+                            For example, it is used when converting XML files into ODF formats (<em>odt</em>, <em>ods</em> or <em>odp</em> depending on the content).
+                        </li>
+                    </ul>
+                </td>
                 <td>string</td>
                 <td>required</td>
             </tr>
@@ -344,11 +359,13 @@
             <tr class="scroll-arrow" style="margin-top:247px;"></tr>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="15">Output format</th>
+                <th colspan="17">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
+                <td>docm</td>
                 <td>docx</td>
+                <td>dotm</td>
                 <td>dotx</td>
                 <td>epub</td>
                 <td>fb2</td>
@@ -366,6 +383,8 @@
             <tr>
                 <td>djvu</td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
@@ -398,9 +417,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>docm</td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -420,7 +443,9 @@
             <tr>
                 <td>docx</td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -452,11 +477,15 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>dotm</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -473,6 +502,8 @@
             </tr>
             <tr>
                 <td>dotx</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
@@ -494,6 +525,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -509,6 +542,8 @@
             </tr>
             <tr>
                 <td>fb2</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -542,9 +577,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>html</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -569,6 +608,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -581,6 +622,8 @@
             </tr>
             <tr>
                 <td>odt</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -608,6 +651,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -618,6 +663,8 @@
             <tr>
                 <td>oxps</td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
@@ -640,6 +687,8 @@
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
@@ -653,6 +702,8 @@
             </tr>
             <tr>
                 <td>rtf</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -685,11 +736,15 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
             </tr>
             <tr>
                 <td>xps</td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
@@ -722,6 +777,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
         </tbody>
     </table>
@@ -732,7 +789,7 @@
             <tr class="scroll-arrow" style="margin-top:150px;"></tr>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="11">Output format</th>
+                <th colspan="13">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -744,13 +801,17 @@
                 <td>pdf</td>
                 <td>pdfa</td>
                 <td>png</td>
+                <td>xlsm</td>
                 <td>xlsx</td>
+                <td>xltm</td>
                 <td>xltx</td>
             </tr>
             <tr>
                 <td>csv</td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -774,6 +835,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ods</td>
@@ -782,6 +845,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -802,9 +867,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xls</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -828,6 +897,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
             </tr>
@@ -842,11 +913,15 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xlt</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -872,9 +947,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xltx</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -896,7 +975,7 @@
         <tbody>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="10">Output format</th>
+                <th colspan="12">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -907,7 +986,9 @@
                 <td>pdf</td>
                 <td>pdfa</td>
                 <td>png</td>
+                <td>potm</td>
                 <td>potx</td>
+                <td>pptm</td>
                 <td>pptx</td>
             </tr>
             <tr>
@@ -922,6 +1003,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>odp</td>
@@ -929,6 +1012,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -948,9 +1033,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pot</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -972,6 +1061,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
             </tr>
@@ -985,11 +1076,15 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pps</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1013,9 +1108,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ppsx</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1039,6 +1138,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptm</td>
@@ -1052,9 +1153,13 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptx</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -1204,6 +1309,12 @@
                 <td>-3</td>
             </tr>
             <tr class="tablerow">
+                <td id="fileType" class="copy-link">fileType</td>
+                <td>Defines an extension of the converted file.</td>
+                <td>string</td>
+                <td>"docm"</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="fileUrl" class="copy-link">fileUrl</td>
                 <td>Defines the link to the converted document. This parameter will be received only when the <em>endConvert</em> parameter is set to <b>true</b>.</td>
                 <td>string</td>
@@ -1224,6 +1335,7 @@
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;EndConvert&gt;True&lt;/EndConvert&gt;
+    &lt;FileType&gt;docm&lt;/FileType&gt;
     &lt;FileUrl&gt;https://documentserver/url-to-converted-document.pdf&lt;/FileUrl&gt;
     &lt;Percent&gt;100&lt;/Percent&gt;
 &lt;/FileResult&gt;
@@ -1233,6 +1345,7 @@
     <pre>
 {
     "endConvert": true,
+    "fileType": "docm",
     "fileUrl": "https://documentserver/url-to-converted-document.pdf",
     "percent": 100
 }
@@ -1243,6 +1356,7 @@
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;EndConvert&gt;False&lt;/EndConvert&gt;
+    &lt;FileType&gt;&lt;/FileType&gt;
     &lt;FileUrl&gt;&lt;/FileUrl&gt;
     &lt;Percent&gt;95&lt;/Percent&gt;
 &lt;/FileResult&gt;

@@ -71,6 +71,15 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="filetype" class="copy-link">filetype</td>
+                <td>
+                    Defines an extension of the document that is downloaded from the link specified with the <a href="#url">url</a> parameter.
+                    The file type is OOXML by default but if the <a href="<%= Url.Action("save") %>#assemblyFormatAsOrigin">assemblyFormatAsOrigin</a> server setting is enabled, the file will be saved in its original format.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="forcesavetype" class="copy-link">forcesavetype</td>
                 <td>
                     Defines the type of initiator when the <a href="<%= Url.Action("save") %>#forcesave">force saving</a> request is performed.
@@ -142,13 +151,18 @@
         </tbody>
     </table>
     <div class="mobile-content"></div>
-    
+
     <p id="used-callbackUrl" class="copy-link">
         Since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected depending on the <em>status</em> of the request.
         Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
         Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.
     </p>
-    <div id="error-codes" class="copy-link header-gray">Possible document statuses and their description</div>
+    <p>
+        Since version 7.0, <em>callbackUrl</em> is used from the last tab of the same user. Prior to version 7.0, <em>callbackUrl</em> from the first user tab was used.
+    </p>
+
+    <div id="status-descr" class="copy-link header-gray">Possible document statuses and their description</div>
+
     <table class="error-table">
         <colgroup>
             <col style="width: 105px;" />
@@ -222,6 +236,7 @@
         "changes": changes,
         "serverVersion": serverVersion
     },
+    "filetype": "docx",
     "key": "Khirz6zTPdfd7",
     "status": 2,
     "url": "https://documentserver/url-to-edited-document.docx",
@@ -246,6 +261,7 @@
         "changes": changes,
         "serverVersion": serverVersion
     },
+    "filetype": "docx",
     "key": "Khirz6zTPdfd7",
     "status": 6,
     "url": "https://documentserver/url-to-edited-document.docx",

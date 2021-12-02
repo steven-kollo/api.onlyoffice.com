@@ -138,21 +138,6 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
-        <tr class="tablerow">
-            <td id="print" class="copy-link">print</td>
-            <td>
-                Defines if the document can be printed or not.
-                In case the printing permission is set to <b>"false"</b> the <b>Print</b> menu option will be absent from the <b>File</b> menu.
-                The default value is <b>true</b>.
-            </td>
-            <td>boolean</td>
-            <td>true</td>
-        </tr>
-        <tr class="tablerow">
-            <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/permissions.png") %>" alt="" />
-            </td>
-        </tr>
         <tr>
             <td id="fillForms" class="copy-link">fillForms</td>
             <td>
@@ -198,6 +183,30 @@
             <td colspan="4">
                 <div class="note">In case the document is edited by a user with the full access rights, the filters applied by such a user will be visible to all other users despite their local settings.</div>
             </td>
+        </tr>
+        <tr>
+            <td id="print" class="copy-link">print</td>
+            <td>
+                Defines if the document can be printed or not.
+                In case the printing permission is set to <b>"false"</b> the <b>Print</b> menu option will be absent from the <b>File</b> menu.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img src="<%= Url.Content("~/content/img/editor/permissions.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr class="tablerow">
+            <td id="protect" class="copy-link">protect</td>
+            <td>
+                Defines if the <b>Protect</b> tab on the toolbar and the <b>Protect</b> button in the left menu are displayed (<b>true</b>) or hidden (<b>false</b>).
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
         </tr>
         <tr class="tablerow">
             <td id="rename" class="copy-link">rename</td>
@@ -264,6 +273,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "modifyContentControl": true,
             "modifyFilter": true,
             "print": true,
+            "protect": true,
             "review": true,
             "reviewGroups": ["Group1", "Group2", ""]
         },

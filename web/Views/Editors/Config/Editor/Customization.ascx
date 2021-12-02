@@ -34,6 +34,7 @@
         <li><a href="#macrosMode">macrosMode</a></li>
         <li><a href="#mentionShare">mentionShare</a></li>
         <li><a href="#plugins">plugins</a></li>
+        <li><a href="#review">review</a></li>
         <li><a href="#reviewDisplay">reviewDisplay</a></li>
         <li><a href="#showReviewChanges">showReviewChanges</a></li>
         <li><a href="#spellcheck">spellcheck</a></li>
@@ -217,6 +218,14 @@
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "https://example.com/logo-big.png".
+                    </li>
+                    <li>
+                        <b>logoDark</b> - the path to the image logo for the dark theme (there are no special recommendations for this file, but it would be better if it was in <em>.png</em> format with transparent background).
+                        The image must have the following size: 432x70,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "https://example.com/dark-logo-big.png".
                     </li>
                     <li>
                         <b>mail</b> - email address of the company or person who gives access to the editors or the editor authors,
@@ -461,7 +470,7 @@
                 The object has the following parameters:
                 <ul>
                     <li>
-                        <b>image</b> - path to the image file used to show in common work mode (i.e. in view and edit modes for all editors).
+                        <b>image</b> - path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type).
                         The image must have the following size: 172x40,
                         <br />
                         <b>type</b>: string,
@@ -469,8 +478,17 @@
                         <b>example</b>: "https://example.com/logo.png";
                     </li>
                     <li>
+                        <b>imageDark</b> - path to the image file used for the dark theme.
+                        The image must have the following size: 172x40,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "https://example.com/dark-logo.png";
+                    </li>
+                    <li>
                         <b>imageEmbedded</b> - path to the image file used to show in the embedded mode (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type).
-                        The image must have the following size: 248x40,
+                        The image must have the following size: 248x40.
+                        Deprecated since version 7.0, please use the <em>image</em> field instead,
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -545,6 +563,74 @@
             <td>true</td>
         </tr>
         <tr>
+            <td id="review" class="copy-link">review</td>
+            <td>
+                Contains the information about the review mode.
+                The object has the following parameters:
+                <ul>
+                    <li>
+                        <b>hideReviewDisplay</b> - defines if the <b>Display mode</b> button is displayed or hidden on the <b>Collaboration</b> tab.
+                        The default value is <b>false</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false;
+                    </li>
+                    <li>
+                        <b>hoverMode</b> - defines the review display mode: show reviews in tooltips by hovering the changes (<b>true</b>) 
+                        or in balloons by clicking the changes (<b>false</b>).
+                        The default value is <b>false</b>.
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false;
+                    </li>
+                    <li>
+                        <b>reviewDisplay</b> - defines the review editing mode which will be used when the document is opened for viewing.
+                        It will only be available for the document editor if <a href="<%= Url.Action("config/editor") %>#mode">mode</a> is set to <b>view</b>.
+                        Can take the following values:
+                        <br />– <b>markup</b> - the document is displayed with proposed changes highlighted;
+                        <br />– <b>simple</b> - the document is displayed with proposed changes highlighted, but the balloons are turned off;
+                        <br />– <b>final</b> - the document is displayed with all the proposed changes applied;
+                        <br />– <b>original</b> - the original document is displayed without the proposed changes.
+                        <br />The default value is <b>original</b>,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "original";
+                    </li>
+                    <li>
+                        <b>showReviewChanges</b> - defines if the review changes panel is automatically displayed or hidden when the editor is loaded.
+                        The default value is <b>false</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false;
+                    </li>
+                    <li>
+                        <b>trackChanges</b> - defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
+                        If the parameter is <em>undefined</em>, the <em>document.permissions.review</em> value is used (for all the document users),
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true.
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">
+                    The <a href="#showReviewChanges">showReviewChanges</a>, <a href="#reviewDisplay">reviewDisplay</a>, <a href="#trackChanges">trackChanges</a> parameters are deprecated since version 7.0.
+                    Please use the <em>review</em> parameter instead.
+                </div>
+                <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.review.hoverMode</em> and the <em>editorConfig.customization.review.reviewDisplay</em> parameters.</div>
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
+            </td>
+        </tr>
+        <tr>
             <td id="reviewDisplay" class="copy-link">reviewDisplay</td>
             <td>
                 Defines the review editing mode in the document editor. 
@@ -562,8 +648,8 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
+                <div class="note">Deprecated since version 7.0. Please use the <a href="#review">review.reviewDisplay</a> parameter instead.</div>
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.reviewDisplay</em> parameter.</div>
-                <img width="832px" src="<%= Url.Content("~/content/img/editor/reviewDisplay.png") %>" alt="" />
             </td>
         </tr>
         <% if (license)
@@ -578,7 +664,7 @@
             <td>true</td>
         </tr>
         <% } %>
-        <tr class="tablerow">
+        <tr>
             <td id="showReviewChanges" class="copy-link">showReviewChanges</td>
             <td>
                 Defines if the review changes panel is automatically displayed or hidden when the editor is loaded.
@@ -586,6 +672,11 @@
             </td>
             <td>boolean</td>
             <td>false</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.0. Please use the <a href="#review">review.showReviewChanges</a> parameter instead.</div>
+            </td>
         </tr>
         <tr>
             <td id="spellcheck" class="copy-link">spellcheck</td>
@@ -618,7 +709,7 @@
         <%--<tr>
             <td id="submitForm" class="copy-link">submitForm</td>
             <td>
-                Defines if the <b>Submit form</b> button is displayed or hidden.
+                Defines if the <b>Submit form</b> button is displayed or hidden.
                 Button will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b> and at least one of the <a href="<%= Url.Action("config/document/permissions") %>#edit">edit</a>, <a href="<%= Url.Action("config/document/permissions") %>#fillForms">fillForms</a> or <a href="<%= Url.Action("config/document/permissions") %>#review">review</a> permissions is set to <b>true</b>.
                 The default value is <b>false</b>.
             </td>
@@ -671,7 +762,7 @@
                 <img width="832px" src="<%= Url.Content("~/content/img/editor/toolbarNoTabs.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="trackChanges" class="copy-link">trackChanges</td>
             <td>
                 Defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
@@ -679,6 +770,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.0. Please use the <a href="#review">review.trackChanges</a> parameter instead.</div>
+            </td>
         </tr>
         <tr>
             <td id="uiTheme" class="copy-link">uiTheme</td>
@@ -712,7 +808,7 @@
                     <li><b>pt</b> - points,</li>
                     <li><b>inch</b> - inches.</li>
                 </ul>
-                The default value is centimeters (<b>cm</b>).
+                The default value is centimeters (<b>cm</b>).
             </td>
             <td>string</td>
             <td>cm</td>
@@ -772,6 +868,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
                 "logo": "https://example.com/logo-big.png",
+                "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
@@ -803,17 +900,23 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "loaderName": "The document is loading, please wait...",
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
-                "imageEmbedded": "https://example.com/logo_em.png",
+                "imageDark": "https://example.com/dark-logo.png",
                 "url": "https://www.onlyoffice.com"
             },
             "macros": true,
             "macrosMode": "warn",
             "mentionShare": true,
             "plugins": true,
-            "reviewDisplay": "original",
+            "review": {
+                "hideReviewDisplay": false,
+                "showReviewChanges": false,
+                "reviewDisplay": "original",
+                "trackChanges": true,
+                "hoverMode": false
+            },
             <% if (license)
                { %>"rightMenu": true,
-            <% } %>"showReviewChanges": false,
+            <% } %>
             <% if (license)
                { %>"statusBar": true,
             <% } %><%--"submitForm": true,--%>
@@ -821,7 +924,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 { %>"toolbar": true,
             <% } %>"toolbarHideFileName": false,
             "toolbarNoTabs": false,
-            "trackChanges": false,
             "uiTheme": "theme-dark",
             "unit": "cm",
             "zoom": 100
