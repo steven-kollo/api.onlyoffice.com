@@ -21,6 +21,7 @@
         <li><a href="#compactToolbar">compactToolbar</a></li>
         <li><a href="#compatibleFeatures">compatibleFeatures</a></li>
         <li><a href="#customer">customer</a></li>
+        <li><a href="#features">features</a></li>
         <li><a href="#feedback">feedback</a></li>
         <li><a href="#forcesave">forcesave</a></li>
         <li><a href="#goback">goback</a></li>
@@ -247,6 +248,40 @@
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "example.com".
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow">
+            <td id="features" class="copy-link">features</td>
+            <td>
+                Defines the parameters that the user can disable or customize if possible:
+                <ul>
+                    <li>
+                        <b>spellcheck </b> - defines if the spell checker is automatically switched on or off when the editor is loaded.
+                        If this parameter is a boolean value, then it is set as the initial spell checker value and the spell checker setting will not be hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>spellcheck.mode</b> - defines if the spell checker is automatically switched on or off on the first editor loading.
+                        This parameter will only be available for the document editor and the presentation editor,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>spellcheck.change</b> - defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true.
                     </li>
                 </ul>
             </td>
@@ -848,6 +883,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#features">features.spellcheck</a> parameter instead.</div>
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.spellcheck</em> parameter.</div>
             </td>
         </tr>
@@ -1030,6 +1066,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "name": "John Smith and Co.",
                 "www": "example.com"
             },
+            "features": {
+                "spellcheck": {
+                    "mode": true,
+                    "change": true
+                }
+            },
             "feedback": {
                 "url": "https://example.com",
                 "visible": true
@@ -1098,7 +1140,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "trackChanges": true,
                 "hoverMode": false
             },
-            "spellcheck": true,
             <% if (license)
                { %>"statusBar": true,
             <% } %><%--"submitForm": true,--%>
