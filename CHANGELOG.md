@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added conversion to and from docxf format
 - editors: added the .docxf and .oform document formats
 - editors: a table of differences between ONLYOFFICE Docs API and WOPI
 - editors: the callbackUrl is used from the last tab of the same user
