@@ -175,7 +175,7 @@ docEditor.setHistoryData({
                 For its correct work the cross-origin HTTP requests must be allowed (CORS).
                 This can be achieved using the <em>Access-Control-Allow-Origin</em> header.
             </div>
-            <img alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
+            <img width="832px" alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
         </li>
     </ul>
 </asp:Content>
