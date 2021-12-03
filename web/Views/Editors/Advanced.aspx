@@ -163,7 +163,7 @@
                     "collaboration": true,
                     "protect": true,
                     "plugins": true,
-                    "save": true,
+                    "save": true
                 },
                 "header": {
                     "users": true,
@@ -173,12 +173,11 @@
                     "navigation": true,
                     "spellcheck": true
                 },
-                "rightMenu": {
-                    "statusBar": {
-                        "textLang": true,
-                        "docLang": true,
-                        "actionStatus": true
-                    }
+                "rightMenu": true,
+                "statusBar": {
+                    "textLang": true,
+                    "docLang": true,
+                    "actionStatus": true
                 }
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {
