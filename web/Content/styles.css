@@ -325,6 +325,13 @@ body {
     border-bottom: 1px solid #d7d8dc;
 }
 
+.table .tablerow .borders {
+    border-bottom: 1px solid #d7d8dc;
+    border-top: 1px solid #d7d8dc;
+    border-left: 1px solid #d7d8dc;
+    border-right: 1px solid #d7d8dc;
+}
+
 .error-table .tablerow {
     border-bottom: 1px solid #d7d8dc;
 }
@@ -441,6 +448,10 @@ h5 {
     text-transform: none;
 }
 
+.table-header-gray {
+    background-color: #ebebeb;
+}
+
 .header-gray {
     background-color: #ebebeb;
     font-size: 14px;
@@ -464,6 +475,11 @@ h5 {
 
 h2.copy-link[id]:hover:before {
     margin-top: 5px;
+}
+
+td.table-style.copy-link[id]:hover:before {
+    margin-left: -32px;
+    margin-top: 30px;
 }
 
 li b.copy-link[id]:hover:before {

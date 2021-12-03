@@ -118,6 +118,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Troubleshooting",
                 "Try",
                 "WOPI",
+                "WOPI/ApiVsWopi",
                 "WOPI/Discovery",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
