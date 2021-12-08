@@ -28,7 +28,7 @@
     <p>
         In case the <em>edit</em> parameter is set to <b>true</b> and the <em>comment</em> parameter is also set to <b>true</b>, the user will be able to edit the document and comment.
     </p>
-    <img alt="Commenting" width="834px" src="<%= Url.Content("~/content/img/editor/commenting.png") %>" />
+    <img alt="Commenting" width="832px" src="<%= Url.Content("~/content/img/editor/commenting.png") %>" />
     <p>
         In case the <em>edit</em> parameter is set to <b>false</b> and the <em>comment</em> parameter is set to <b>true</b>, the document will be available for commenting only.
     </p>
@@ -167,7 +167,7 @@ reply1
 ${author2}:
 reply2
 </pre>
-            <img width="834px" src="<%= Url.Content("~/content/img/editor/comments-threaded.png") %>" alt="" />
+            <img width="832px" src="<%= Url.Content("~/content/img/editor/comments-threaded.png") %>" alt="" />
         </li>
         <li>
             To convert the original comments format into the <b>threaded comments</b>, the <em>"${author}:\n"</em> string is deleted if the comment starts with it.
