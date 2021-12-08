@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the .docxf and .oform document formats
 - editors: a table of differences between ONLYOFFICE Docs API and WOPI
 - editors: the callbackUrl is used from the last tab of the same user
 - editors: added the UI_InsertGraphic message for the PostMessage WOPI protocol
