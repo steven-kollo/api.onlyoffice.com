@@ -202,7 +202,7 @@
         <tr class="tablerow">
             <td id="protect" class="copy-link">protect</td>
             <td>
-                Defines if the <b>Protect</b> tab on the toolbar and the <b>Protect</b> button in the left menu are displayed (<b>true</b>) or hidden (<b>false</b>).
+                Defines if the <b>Protection</b> tab on the toolbar and the <b>Protect</b> button in the left menu are displayed (<b>true</b>) or hidden (<b>false</b>).
                 The default value is <b>true</b>.
             </td>
             <td>boolean</td>
