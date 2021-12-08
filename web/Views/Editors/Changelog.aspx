@@ -19,6 +19,7 @@
     <h2 id="70" class="copy-link">Version 7.0</h2>
     <ul>
         <li>Added the <em>.docxf</em> and <em>.oform</em> <a href="<%= Url.Action("config/") %>#documentType">document formats</a>.</li>
+        <li>Added conversion to and from <a href="<%= Url.Action("conversionapi") %>#text-matrix">docxf</a> format.</li>
         <li>The <a href="<%= Url.Action("callback") %>#used-callbackUrl">callbackUrl</a> is used from the last tab of the same user.</li>
         <li>Added the <em>logoDark</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#customer">editorConfig.customization.customer</a> parameter.</li>
         <li>Added the <em>imageDark</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter.</li>
