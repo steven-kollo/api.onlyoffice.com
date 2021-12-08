@@ -85,7 +85,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/coediting-mode.png") %>" width="834px" alt="" />
+                <img src="<%= Url.Content("~/content/img/editor/coediting-mode.png") %>" width="832px" alt="" />
             </td>
         </tr>
         <tr>
