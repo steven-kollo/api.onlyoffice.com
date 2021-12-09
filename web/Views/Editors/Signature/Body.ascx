@@ -199,31 +199,6 @@ Content-Type: application/json
             See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
         </p>
 
-
         <p>When performing the GET requests from ONLYOFFICE Document Server an <a href="<%= Url.Action("signature/request") %>">authorization header</a> with the token is added.</p>
-    </li>
-    <li>
-        <p><b id="download" class="copy-link">Request to document storage service for file download</b></p>
-        <p>
-            Validation is performed for outgoing requests to <b>document storage service</b> for file download.
-        </p>
-
-        <div class="header-gray">Sample payload of request to document storage service for file download</div>
-        <pre>
-{
-    "url: "http://example.com/url-to-example-document.docx"
-}
-</pre>
-        <div class="header-gray">Sample of request to document storage service for file download</div>
-        <pre>
-GET url-to-example-document.docx HTTP/1.1
-Host: example.com
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9.-DBTpvYH2srNUc3Xy2N4QozEXO6VF1XS89K7Li0JM68
-</pre>
-        <p>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-        </p>
-        <p>The token includes the payload (the full URL to the document, in the example above it is <em>{"url: "http://example.com/url-to-example-document.docx"}</em>), which is also duplicated in the header as the <b>Host</b> (<em>example.com</em>) and the document address the GET request is sent to (<em>url-to-example-document.docx</em>).</p>
     </li>
 </ul>

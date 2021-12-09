@@ -160,17 +160,47 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Imtle
 
         <div class="header-gray">Sample payload of request to document storage service for file download</div>
         <pre>
-{}
+{
+    "payload": {
+        "url": "https://example.com/url-to-example-document.docx"
+    }
+}
 </pre>
         <div class="header-gray">Sample of request to document storage service for file download</div>
         <pre>
 GET url-to-example-document.docx HTTP/1.1
 Host: example.com
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWV4YW1wbGUtZG9jdW1lbnQuZG9jeCJ9fQ.DnhdBVtn8sFo9Adfl6GuT_v53NVV5cQ0Vi9c8xRzrjs
 </pre>
         <p>
             Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
             See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
         </p>
+        <p>The token includes the payload (the full URL to the document, in the example above it is <em>{"url: "http://example.com/url-to-example-document.docx"}</em>), which is also duplicated in the header as the <b>Host</b> (<em>example.com</em>) and the document address the GET request is sent to (<em>url-to-example-document.docx</em>).</p>
+    </li>
+    <li>
+        <p><b id="file-changes" class="copy-link">Request to document storage service for document changes data download</b></p>
+        <p>Validation is performed for outgoing requests to <b>document storage service</b> for document changes data download.</p>
+
+        <div class="header-gray">Sample payload of request to document storage service for document changes data download</div>
+        <pre>
+{
+    "payload": {
+        "url": "https://example.com/url-to-document-changes.zip"
+    }
+}
+</pre>
+        <div class="header-gray">Sample of request to document storage service for document changes data download</div>
+        <pre>
+GET url-to-changes.zip HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7InVybCI6Imh0dHBzOi8vZXhhbXBsZS5jb20vdXJsLXRvLWRvY3VtZW50LWNoYW5nZXMuemlwIn19.4CJ4F8x7VDMW72ss9VnIYGIwjRpBMYBBRXZ5aX2r2Y4
+</pre>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+        <p>The token includes the payload (the full URL to the document, in the example above it is <em>{"url: "http://example.com/url-to-document-changes.zip"}</em>), which is also duplicated in the header as the <b>Host</b> (<em>example.com</em>) and the document address the GET request is sent to (<em>url-to-document-changes.zip</em>).</p>
     </li>
 </ul>
