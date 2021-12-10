@@ -652,6 +652,10 @@
     <Content Include="Views\Plugin\example.aspx" />
     <Content Include="Views\Plugin\Executemethod.aspx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontrolcheckbox.ascx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontroldatepicker.ascx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontrollist.ascx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontrolpicture.ascx" />
     <Content Include="Views\Plugin\Executemethod\default.ascx" />
     <Content Include="Views\Plugin\Executemethod\getallcontentcontrols.ascx" />
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrol.ascx" />

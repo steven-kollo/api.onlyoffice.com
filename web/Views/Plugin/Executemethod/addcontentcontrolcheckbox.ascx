@@ -1,18 +1,18 @@
-﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("AddContentControl", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("AddContentControlCheckBox", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows adding an empty content control to the document.</p>
+<p class="dscr">Defines the method that allows adding an empty content control checkbox to the document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("AddContentControl", [type, commonPr]);
+window.Asc.plugin.executeMethod ("AddContentControlCheckBox", [checkBoxPr, commonPr]);
 </pre>
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -32,10 +32,38 @@ window.Asc.plugin.executeMethod ("AddContentControl", [type, commonPr]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>type</td>
-            <td>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block) or <b>2</b> (inline).</td>
-            <td>number</td>
-            <td>2</td>
+            <td>checkBoxPr</td>
+            <td>
+                Defines the content control checkbox properties:
+                <ul>
+                    <li>
+                        <b>Checked</b> - defines if the content control checkbox is checked or not,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: false;
+                        <br />
+                    </li>
+                    <li>
+                        <b>CheckedSymbol</b> - a symbol in the HTML code format that is used when the checkbox is checked,
+                        <br />
+                        <b>type</b>: number,
+                        <br />
+                        <b>example</b>: 9746;
+                        <br />
+                    </li>
+                    <li>
+                        <b>UncheckedSymbol</b> - a symbol in the HTML code format that is used when the checkbox is not checked,
+                        <br />
+                        <b>type</b>: number,
+                        <br />
+                        <b>example</b>: 9744.
+                        <br />
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
         </tr>
         <tr class="tablerow">
             <td>commonPr</td>
@@ -111,18 +139,10 @@ window.Asc.plugin.executeMethod ("AddContentControl", [type, commonPr]);
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns a JSON object containing the data about the created content control in the following form:</p>
-<pre>
-{
-    "Tag": "{tag}",
-    "Id": 0,
-    "Lock": 0,
-    "InternalId": "1_713"
-}
-</pre>
+<p>The method returns the <em>undefined</em> value.</p>
 
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod ("AddContentControl", [1, {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
+window.Asc.plugin.executeMethod ("AddContentControlCheckBox", [{"Checked" : false, "CheckedSymbol" : 9756, "UncheckedSymbol" : 9744}, {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
 </pre>

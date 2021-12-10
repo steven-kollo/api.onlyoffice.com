@@ -1,6 +1,7 @@
 # Change Log
 
-- plugins: added the ConvertDocument method
+- plugins: added parameters to the GetSelectedText method
+- plugins: added the ConvertDocument, AddContentControlCheckBox, AddContentControlDatePicker, AddContentControlList and AddContentControlPicture methods
 - editors: added the logoDark field to the editorConfig.customization.customer parameter
 - editors: added the imageDark field to the editorConfig.customization.logo parameter
 - editors: the imageEmbedded field of the editorConfig.customization.logo parameter is removed

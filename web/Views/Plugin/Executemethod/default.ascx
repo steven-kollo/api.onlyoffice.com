@@ -53,10 +53,9 @@
 
 <table class="table">
     <colgroup>
-            <col style="width: 200px;" />
-            <col />
-            <col style="width: 200px;" />
-        </colgroup>
+        <col style="width: 250px;" />
+        <col style="width: 500px;" />
+    </colgroup>
     <thead>
         <tr class="tablerow">
             <td>Name</td>
@@ -71,6 +70,22 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/addcontentcontrol") %>">AddContentControl</a></td>
             <td>This method allows to add an empty content control to the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/addcontentcontrolcheckbox") %>">AddContentControlCheckBox</a></td>
+            <td>This method allows to add an empty content control checkbox to the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/addcontentcontroldatepicker") %>">AddContentControlDatePicker</a></td>
+            <td>This method allows to add an empty content control datepicker to the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/addcontentcontrollist") %>">AddContentControlList</a></td>
+            <td>This method allows to add an empty content control list to the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/addcontentcontrolpicture") %>">AddContentControlPicture</a></td>
+            <td>This method allows to add an empty content control picture to the document.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a></td>
