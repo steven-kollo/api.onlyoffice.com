@@ -32,12 +32,23 @@
     <li><b>Microsoft .NET Framework</b>: version 4.5 (download it from the <a href="https://www.microsoft.com/en-US/download/details.aspx?id=30653">official Microsoft website</a>);</li>
     <li><b>Internet Information Services</b>: version 7 or later.</li>
 </ul>
+<p>Configure the IIS components for the server to work correctly:</p>
+<ol>
+    <li>
+        <p>Open Windows features:</p>
+        <p><b>Start</b> -> <b>Control Panel</b> -> <b>Programs</b> -> <b>Programs and Features</b> -> <b>Turn Windows features on or off</b></p>
+    </li>
+    <li>
+        <p>In the opened window, find <b>Internet Information Services</b> and check all the features that are chosen in the following image:</p>
+        <img alt="" src="<%= Url.Content("~/content/img/csharp/server-components.png") %>" />
+    </li>
+</ol>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Run your website with the editors</h2>
 <ol>
     <li>
         <p>Run the Internet Information Service (IIS) Manager:</p>
-        <p><b>Start</b> -> <b>ControlPanel</b> -> <b>System and Security</b> -> <b>Administrative Tools</b> -> <b>Internet Information Services (IIS) Manager</b></p>
+        <p><b>Start</b> -> <b>Control Panel</b> -> <b>System and Security</b> -> <b>Administrative Tools</b> -> <b>Internet Information Services (IIS) Manager</b></p>
     </li>
     <li>
         <p>Add your website in the IIS Manager.</p>
