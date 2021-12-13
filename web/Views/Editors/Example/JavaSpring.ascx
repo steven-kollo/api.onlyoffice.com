@@ -23,12 +23,11 @@
 <p>To connect the editors to your website, specify the path to the editors installation, server address and port in the <em>\src\main\resources\application.properties</em> file:</p>
 
 <pre>
-server.address=address
 server.port=port
 files.docservice.url.site=https://documentserver/
 </pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed, <b>address</b> is the server address, <b>port</b> is any available port. 
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed, <b>port</b> is any available port.
     Comment the address line if you want to use localhost.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>\src\main\webapp\editor.jsp</em> file.</p>
 
@@ -159,12 +158,11 @@ sudo apt-get install oracle-java11-installer</span>
         <p>Edit the following lines:</p>
 
         <pre>
-server.address=address
 server.port=port
 files.docservice.url.site=https://documentserver/
 </pre>
 
-        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed, <b>address</b> is the server address, <b>port</b> is any available port. 
+        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed, <b>port</b> is any available port. 
     Comment the address line if you want to use localhost.</p>
     </li>
     <li>Install <b>Maven</b>:
