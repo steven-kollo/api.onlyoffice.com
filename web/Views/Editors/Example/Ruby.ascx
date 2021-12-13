@@ -57,6 +57,7 @@ Rails.configuration.urlSite="https://documentserver/"</pre>
         You can set an absolute path. For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
     </li>
     <li>Run the <b>Rails</b> application:
+        <div class="commandline">rails server -u webrick</div>
         <div class="commandline">rails s -b 0.0.0.0 -p 80</div>
     </li>
     <li>See the result in your browser using the address:
