@@ -1,12 +1,62 @@
 # Change Log
 
-- docbuilder: added the How it works section
-- docbuilder: added the Comparing documents page
+- editors: added the Redmine plugin
+- editors: changed get docs page
+- editors: added the Moodle plugin
+
+## 2.4.0
+- editors: added the Jira integration app
+- editors: added the Java Spring integration example
+- editors: added the Mattermost plugin
+- editors: added opening for oxps format
+- editors: added the RefreshLock operation for WOPI protocol
+- editors: added the ip filter information
+- editors: added the wopi.enable parameter
+- editors: added the Proof keys page
+- macros: added the Currency exchange rates macro sample
+- desktop: v6.4
+- desktop: added icons for the dark and light UI themes
+- desktop: updated the debugging page
+
+## 2.3.0
+- mobile view
+- global search
+- search via google
+- editors: added support for WOPI protocol
+- editors: added the description of conversion response parameters
+- editors: added the Get ONLYOFFICE Docs page
+- editors: added the simple value to the editorConfig.customization.reviewDisplay
+- editors: information about threaded comments
+- editors: commentGroups on try page
+- editors: added the Commenting page
+- editors: added document.permissions.commentGroups
+- editors: added the onPluginsReady event
+- editors: added the requestClose method
+- editors: added editorConfig.coEditing
+- editors: added the possibility to view the document history for the presentation files
+- editors: added editorConfig.customization.hideNotes
+- editors: added editorConfig.customization.uiTheme
+- editors: conversion from djvu to the image formats
+- editors: added the format parameter to the downloadAs method
+- editors: conversion to OOXML and ODF templates
+- editors: how it works navigation
+- editors: restructured the Command service page
 - editors: added the Comparing documents page
 - editors: try reviewGroups
 - editors: added the license command
-- global search
-- search via google
+- macros: assigning macros to the graphic objects
+- plugins: added the SetDisplayModeInReview and CoAuthoringChatSendMessage methods
+- plugins: restructured the config.json page and added navigation to it
+- plugins: updated config parameters
+- plugins: added the GetSelectionType and GetVersion methods
+- desktop: v6.3
+- desktop: added the entryPage parameter to config
+- desktop: added the updateEncryptionKeys command type to cloudCryptoCommand
+- docbuilder: v6.4
+- docbuilder: added changelog page
+- docbuilder: added the How it works section
+- docbuilder: added the Comparing documents page
+- portals: api v11.5.3
 
 ## 2.2.0
 - docbuilder: api v6.3.0

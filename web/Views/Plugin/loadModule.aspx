@@ -20,7 +20,6 @@
     <p class="dscr">Defines the method used to load a remotely located text resource.</p>
 
     <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -47,6 +46,7 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Example</div>
 

@@ -47,6 +47,13 @@ namespace ASC.Api.Web.Help.Controllers
                 "Changelog",
                 "Coedit",
                 "Command",
+                "Command/drop",
+                "Command/forcesave",
+                "Command/info",
+                "Command/license",
+                "Command/meta",
+                "Command/version",
+                "Commenting",
                 "Comparing",
                 "Config",
                 "Config/Document",
@@ -63,6 +70,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "DemoPreview",
                 "DocumentBuilderApi",
                 "Example/Java",
+                "Example/JavaSpring",
                 "Example/Nodejs",
                 "Example/Php",
                 "Example/Ruby",
@@ -80,19 +88,24 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
+                "GetDocs",
                 "History",
                 "HowItWorks",
                 "HumHub",
                 "InlineEditors",
+                "Jira",
                 "Liferay",
+                "Mattermost",
                 "Mentions",
                 "Methods",
+                "Moodle",
                 "Nextcloud",
                 "Nuxeo",
                 "Open",
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "Redmine",
                 "Rename",
                 "Review",
                 "Save",
@@ -104,6 +117,19 @@ namespace ASC.Api.Web.Help.Controllers
                 "Signature/Request",
                 "Troubleshooting",
                 "Try",
+                "WOPI",
+                "WOPI/Discovery",
+                "WOPI/HostPage",
+                "WOPI/PostMessage",
+                "WOPI/ProofKeys",
+                "WOPI/RestApi",
+                "WOPI/RestApi/CheckFileInfo",
+                "WOPI/RestApi/Lock",
+                "WOPI/RestApi/RefreshLock",
+                "WOPI/RestApi/RenameFile",
+                "WOPI/RestApi/Unlock",
+                "WOPI/RestApi/GetFile",
+                "WOPI/RestApi/PutFile"
             };
 
         [ValidateInput(false)]
@@ -176,7 +202,16 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Command()
+        public ActionResult Command(string catchall)
+        {
+            if (!_actionMap.Contains("command/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Command", (object)catchall);
+        }
+
+        public ActionResult Commenting()
         {
             return View();
         }
@@ -228,6 +263,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("FAQ", (object)catchall);
         }
 
+        public ActionResult GetDocs()
+        {
+            return View();
+        }
+
         public ActionResult DemoPreview()
         {
             var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/editor"));
@@ -266,8 +306,18 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View();
         }
+
+        public ActionResult Jira()
+        {
+            return View();
+        }
         
         public ActionResult Liferay()
+        {
+            return View();
+        }
+
+        public ActionResult Mattermost()
         {
             return View();
         }
@@ -278,6 +328,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Methods()
+        {
+            return View();
+        }
+
+        public ActionResult Moodle()
         {
             return View();
         }
@@ -308,6 +363,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult Redmine()
         {
             return View();
         }
@@ -354,6 +414,15 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Try()
         {
             return View();
+        }
+
+        public ActionResult WOPI(string catchall)
+        {
+            if (!_actionMap.Contains("wopi/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("WOPI", (object)catchall);
         }
     }
 }

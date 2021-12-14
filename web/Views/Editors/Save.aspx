@@ -83,7 +83,6 @@ new DocsAPI.DocEditor("placeholder", {
     </div>
 
     <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
             <col style="width: 300px;" />
@@ -108,6 +107,7 @@ new DocsAPI.DocEditor("placeholder", {
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Sample local.json configuration</div>
     <pre>
@@ -132,7 +132,7 @@ new DocsAPI.DocEditor("placeholder", {
         The forcesave process can be initiated the following ways:
     </p>
     <ul>
-        <li>By the request to the <a href="<%= Url.Action("command") %>">document command service</a> with the <b>forcesave</b> value in the <em>c</em> parameter.
+        <li>By the request to the <a href="<%= Url.Action("command") %>">document command service</a> with the <a href="<%= Url.Action("command/forcesave") %>">forcesave</a> value in the <em>c</em> parameter.
             The <em>forcesavetype</em> parameter will have the <b>0</b> value when sending the request to the <b>callback handler</b>.</li>
         <li>Enable the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> mode setting it to <b>true</b> in the editor initialization configuration.
             In this case each time the user clicks the <b>Save</b> button, the forcesave will be done, and the <em>forcesavetype</em> parameter will have the <b>1</b> value when sending the request to the <b>callback handler</b>.</li>
@@ -175,6 +175,7 @@ new DocsAPI.DocEditor("placeholder", {
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 
             <div class="header-gray">Sample local.json configuration</div>
             <pre>

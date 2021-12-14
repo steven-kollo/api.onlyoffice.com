@@ -56,7 +56,7 @@
     <li>Icons</li>
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-typograf/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-typograf/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
             <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-typograf/blob/master/licenses/Select2.license" target="_blank">MIT</a>.</li>
             <li><b>Typograf</b> - screen typography for typesetting text (<a href="https://github.com/typograf/typograf" target="_blank">https://github.com/typograf/typograf</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-typograf/blob/master/licenses/Typograf.license" target="_blank">MIT License</a>.</li>
         </ul>
@@ -111,7 +111,6 @@
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-typograf/blob/master/scripts/typograf.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

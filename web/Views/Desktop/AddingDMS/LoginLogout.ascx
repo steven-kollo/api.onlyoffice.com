@@ -42,9 +42,10 @@ AscDesktopEditor.execCommand (command, parameters)
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <ol>
-    <li>
+    <li id="login" class="copy-link">
         <p><b>portal:login</b></p>
         <p>When the <em>portal:login</em> command is sent, the cloud is registered and listed on the <b>Connected clouds</b> page. 
             Call the command on all the pages you can access after logging in to your cloud. 
@@ -118,6 +119,7 @@ AscDesktopEditor.execCommand (command, parameters)
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
     
         <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
@@ -133,7 +135,7 @@ const params = {
 AscDesktopEditor.execCommand ("portal:login", JSON.stringify(params))           
 </pre>
     </li>
-    <li>
+    <li id="logout" class="copy-link">
         <p><b>portal:logout</b></p>
         <p>When the <em>portal:logout</em> command is sent, the cloud will be removed from the list on the <b>Connected clouds</b> page. 
             Cookies for this domain will be cleared. Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
@@ -170,6 +172,7 @@ AscDesktopEditor.execCommand ("portal:login", JSON.stringify(params))
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
 
         <div class="header-gray">Example</div>
         <pre>

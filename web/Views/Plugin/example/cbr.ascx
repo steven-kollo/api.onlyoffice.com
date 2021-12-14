@@ -36,9 +36,9 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li>Icons</li>
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="http://jquery.com/" target="_blank">http://jquery.com/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/cbr/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
-            <li><b>jQuery UI</b> - a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice (<a href="http://jqueryui.com/" target="_blank">http://jqueryui.com/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/cbr/licenses/jQuery.license" target="_blank">MIT</a>.</li>
-            <li><b>Fixer</b> is a free API for current and historical foreign exchange rates published by the European Central Bank (<a href="https://fixer.io/" target="_blank">https://fixer.io/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/cbr/licenses/Fixer.license" target="_blank">MIT License</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>jQuery UI</b> - a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice (<a href="https://jqueryui.com" target="_blank">https://jqueryui.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/jQuery.license" target="_blank">MIT</a>.</li>
+            <li><b>Fixer</b> is a free API for current and historical foreign exchange rates published by the European Central Bank (<a href="https://fixer.io/" target="_blank">https://fixer.io/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/licenses/Fixer.license" target="_blank">MIT License</a>.</li>
         </ul>
     </li>
 </ol>
@@ -67,9 +67,9 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "initDataType"    : "none",
             "initData"        : "",
 
-    "isUpdateOleOnResize" : false,
+            "isUpdateOleOnResize" : false,
 
-    "buttons" : []
+            "buttons" : []
         }
     ]
 }
@@ -78,7 +78,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/cbr/cbr.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

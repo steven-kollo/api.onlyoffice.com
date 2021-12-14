@@ -11,7 +11,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <a class="up" href="<%= Url.Action("plugin") %>"></a>
         <span class="hdr">Events</span>
     </h1>
 
@@ -32,7 +31,7 @@
         <li><a href="#onInputHelperInput">onInputHelperInput</a></li>
         <li><a href="#onMethodReturn">onMethodReturn</a></li>
         <li><a href="#onTargetPositionChanged">onTargetPositionChanged</a></li>
-        <li><a href="#onTranslate">onTranslate</a></li>       
+        <li><a href="#onTranslate">onTranslate</a></li>
     </ul>
 </nav>
 
@@ -59,13 +58,14 @@
                 <tr class="tablerow">
                     <td>id</td>
                     <td>
-                        Defines the button index in the <em>buttons</em> array of the <a href="<%= Url.Action("config") %>">config.json</a> file. 
+                        Defines the button index in the <a href="<%= Url.Action("config") %>#buttons">buttons</a> array of the <em>config.json</em> file. 
                         If <em>id == -1</em>, then the plugin considers that the <b>Close window</b> cross button has been clicked or its operation has been somehow interrupted.
                     </td>
                     <td>number</td>
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.button = function (id) {
@@ -95,14 +95,13 @@ window.Asc.plugin.button = function (id) {
                 <tr class="tablerow">
                     <td>data</td>
                     <td>
-                        Defines the data parameter that depends on the <em>initDataType</em> setting specified in the <a href="<%= Url.Action("config") %>">config.json</a> file. 
-                        The type of the data is as follows: <em>none</em> - an empty string, <em>text</em> - the text of the selected document, 
-                        <em>html</em> - a fragment of the selected document, <em>ole</em> - the data of the OLE object.
+                        Defines the data parameter that depends on the <a href="<%= Url.Action("config") %>#initDataType">initDataType</a> setting specified in the <em>config.json</em> file.
                     </td>
                     <td>string</td>
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.init = function () {
@@ -160,6 +159,7 @@ window.Asc.plugin.init = function () {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.inputHelper_onSelectItem = function(item) {
@@ -168,7 +168,7 @@ window.Asc.plugin.inputHelper_onSelectItem = function(item) {
 
     window.Asc.plugin.executeMethod("InputText", [item.text, window.Asc.plugin.currentText]);
     window.Asc.plugin.getInputHelper().unShow();
-};       
+};
 </pre>
     </li>
 
@@ -198,6 +198,7 @@ window.Asc.plugin.inputHelper_onSelectItem = function(item) {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.event_onClick = function(isSelectionUse) {
@@ -208,7 +209,7 @@ window.Asc.plugin.event_onClick = function(isSelectionUse) {
             controlTag = "";
         ... 
     }); 
-};                                                   
+};
 </pre>
     </li>
 
@@ -220,7 +221,7 @@ window.Asc.plugin.event_onClick = function(isSelectionUse) {
 window.Asc.plugin.onCommandCallback = function() {
     var plugin = window.Asc.plugin;
     plugin.executeCommand("close", "");
-};                              
+};
 </pre>
     </li>
 
@@ -238,7 +239,7 @@ window.Asc.plugin.event_onDocumentContentReady = function() {
     window.Asc.plugin.executeMethod("SearchAndReplace", [oProperties], function() {
             window.Asc.plugin.executeCommand("close", "");
     });
-};                                            
+};
 </pre>
     </li>
 
@@ -268,6 +269,7 @@ window.Asc.plugin.event_onDocumentContentReady = function() {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.onEnableMouseEvent = function(isEnabled) {
@@ -275,7 +277,7 @@ window.Asc.plugin.onEnableMouseEvent = function(isEnabled) {
     if (_frames && _frames[0]) {
         _frames[0].style.pointerEvents = isEnabled ? "none" : "";
     }
-};                      
+};
 </pre>
     </li>
 
@@ -287,7 +289,7 @@ window.Asc.plugin.onExternalMouseUp = function () {
     var evt = document.createEvent("MouseEvents");
     evt.initMouseEvent("mouseup", true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
     document.dispatchEvent(evt);
-};                                                
+};
 </pre>
     </li>
 
@@ -335,6 +337,7 @@ window.Asc.plugin.onExternalMouseUp = function () {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.onExternalPluginMessage = function(data) {
@@ -354,7 +357,7 @@ window.Asc.plugin.onExternalPluginMessage = function(data) {
             break;
         }
     }
-};                             
+};
 </pre>
     </li>
 
@@ -413,6 +416,7 @@ window.Asc.plugin.event_onInputHelperClear = function() {
                 </tr>
             </tbody>
         </table>
+        <div class="mobile-content"></div>
         <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.event_onInputHelperInput = function(data) {
@@ -421,7 +425,7 @@ window.Asc.plugin.event_onInputHelperInput = function(data) {
     else
         window.Asc.plugin.currentText = data.text;
         ...
-}                 
+}
 </pre>
     </li>
 
@@ -452,6 +456,7 @@ window.Asc.plugin.event_onInputHelperInput = function(data) {
                     </tr>
                 </tbody>
             </table>
+        <div class="mobile-content"></div>
             <div class="header-gray">Example</div>
         <pre>
 window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [_obj]);
@@ -461,7 +466,7 @@ window.Asc.plugin.onMethodReturn = function(returnValue) {
     } else if ("GetAllContentControls") {
         window.Asc.plugin.executeCommand("close", console.log(JSON.stringify(returnValue)));
     } 
-};                                                 
+};
 </pre>
     </li>
 
@@ -474,7 +479,7 @@ window.Asc.plugin.event_onTargetPositionChanged = function() {
         window.Asc.plugin.executeMethod("GetCurrentContentControl");
     }
     fClickLabel = false;
-};                                   
+};
 </pre>
     </li>
 
@@ -486,7 +491,7 @@ window.Asc.plugin.onTranslate = function() {
     var label = document.getElementById("button_new");
     if (label)
         label.innerHTML = window.Asc.plugin.tr("New");
-}                       
+}
 </pre>
     </li>
 

@@ -101,6 +101,7 @@ namespace ASC.Api.Web.Help
                                 "~/scripts/highlight.pack.js",
                                 "~/scripts/clipboard.js",
                                 "~/scripts/navigation-menu.js",
+                                "~/scripts/menuselector.js",
                                 "~/scripts/scripts.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/plugin-example")
@@ -129,6 +130,10 @@ namespace ASC.Api.Web.Help
             bundles.Add(new Bundle("~/content/plugins-and-macros", new CssMinify())
                 .Include(
                     "~/content/plugins-macros.css"));
+
+            bundles.Add(new Bundle("~/content/get-docs", new CssMinify())
+                .Include(
+                    "~/content/get-docs.css"));
         }
 
         protected void Application_Start()

@@ -15,7 +15,7 @@
 
 <h2>Installation</h2>
 <p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.</p>
-<p>You can remove it following the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a>, or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
+<p>You can remove it following the <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>" target="_blank">on-premises</a>, or <a href="<%= Url.Action("installation/cloud") %>" target="_blank">cloud</a> installation instructions.
 <p>The plugin guid: {38E022EA-AD92-45FC-B22B-49DF39746DB4}.</p>
 
 
@@ -95,7 +95,6 @@
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-youtube/blob/master/scripts/youtube.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

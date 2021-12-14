@@ -22,6 +22,14 @@
         <ul>
             <li>
                 <a href="<%= Url.Action("config") %>">config.json</a>
+                <ul>
+                    <li>
+                        <a href="<%= Url.Action("variations") %>">Plugin variations</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("icons") %>">Plugin icons</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="<%= Url.Action("indexhtml") %>">index.html</a>
@@ -60,6 +68,9 @@
                                         <a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a>
                                     </li>
                                     <li>
+                                        <a title="CoAuthoringChatSendMessage" href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
                                     </li>
                                     <li>
@@ -75,7 +86,7 @@
                                         <a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a>
                                     </li>
                                     <li>
-                                        <a href="<%= Url.Action("executemethod/getcurrentcontentcontrolpr") %>">GetCurrentContentControlPr</a>
+                                        <a title="GetCurrentContentControlPr" href="<%= Url.Action("executemethod/getcurrentcontentcontrolpr") %>">GetCurrentContentControlPr</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/getfields") %>">GetFields</a>
@@ -93,13 +104,19 @@
                                         <a href="<%= Url.Action("executemethod/getselectedtext") %>">GetSelectedText</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/getselectiontype") %>">GetSelectionType</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/getversion") %>">GetVersion</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a>
                                     </li>
                                     <li>
-                                        <a href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
+                                        <a title="InsertAndReplaceContentControls" href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
                                     </li>
                                     <li>
-                                        <a href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a>
+                                        <a title="MoveCursorToContentControl" href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/movecursortoend") %>">MoveCursorToEnd</a>
@@ -139,6 +156,9 @@
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">SelectContentControl</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a>
@@ -364,6 +384,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("macrosamples/inserttext") %>">Insert text</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">Currency exchange rates</a>
             </li>
         </ul>
     <li>

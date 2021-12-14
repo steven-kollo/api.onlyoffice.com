@@ -47,29 +47,39 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
         {
             "description"         : "hello world",
             "url"                 : "index.html",
+
             "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
             "isViewer"            : false,
             "EditorsSupport"      : ["word"],
+
             "isVisual"            : false,
             "isModal"             : true,
             "isInsideMode"        : false,
+
             "initDataType"        : "none",
             "initData"            : "",
+
             "isUpdateOleOnResize" : true,
+
             "buttons"             : []
         },
         {
             "description"         : "About",
             "url"                 : "index_about.html",
+
             "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
             "isViewer"            : false,
             "EditorsSupport"      : ["word"],
+
             "isVisual"            : true,
             "isModal"             : true,
             "isInsideMode"        : false,
+
             "initDataType"        : "none",
             "initData"            : "",
+
             "isUpdateOleOnResize" : true,
+
             "buttons"         : [
                 {
                     "text": "Ok",
@@ -86,7 +96,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/helloworld/helloworld.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

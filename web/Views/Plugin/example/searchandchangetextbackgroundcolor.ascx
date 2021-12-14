@@ -14,7 +14,7 @@
 
 
 <div class="header-gray">Installation</div>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_search_and_change_text_background_color" target="_blank">GitHub</a> and install it following the
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color" target="_blank">GitHub</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
@@ -33,7 +33,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Plugin structure</div>
 
-<p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_search_and_change_text_background_color" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_search_and_change_text_background_color</a>.</p>
+<p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color</a>.</p>
 <ol>
     <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
     <li>Icons</li>
@@ -65,7 +65,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "isUpdateOleOnResize" : false,
 
             "buttons"         : []
-
         }
     ]
 }
@@ -74,7 +73,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_search_and_change_text_background_color/scripts/code.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

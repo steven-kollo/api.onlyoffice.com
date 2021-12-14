@@ -13,7 +13,6 @@
     <a href="<%= Url.Action("events") %>#onMethodReturn">window.Asc.plugin.onMethodReturn</a> function will be used to return the result of the method execution.</p>
 
 <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -45,6 +44,7 @@
             </tr>
         </tbody>
     </table>
+<div class="mobile-content"></div>
 
 
 <p>See the available <em>window.Asc.plugin.executeMethod</em> methods below to find more about them.</p>
@@ -79,6 +79,10 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a></td>
             <td>This method allows to change the specified comment.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a></td>
+            <td>This method allows to send a message to the co-authoring chat.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
@@ -123,6 +127,14 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getselectedtext") %>">GetSelectedText</a></td>
             <td>This method allows to get the selected text from the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getselectiontype") %>">GetSelectionType</a></td>
+            <td>This method allows to get the type of the current selection.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getversion") %>">GetVersion</a></td>
+            <td>This method allows to get the editor version.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a></td>
@@ -189,6 +201,10 @@
             <td>This method allows to select the specified content control.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a></td>
+            <td>This method allows to set the display mode for track changes.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a></td>
             <td>This method allows to set macros to the document.</td>
         </tr>
@@ -210,5 +226,6 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="note">For the plugin to work correctly, it is necessary to wait until the current method is executed before executing the next method.</div>

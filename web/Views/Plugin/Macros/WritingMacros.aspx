@@ -64,4 +64,15 @@
     <p>Paste the code above to the macros window and click <b>Run</b>. The table rows from 1 to 200 will be colored alternately in less than a second.</p>
     <img alt="Alternate raws" src="<%= Url.Content("~/content/img/plugins/alternate-raws.png") %>" />
 
+    <h2 id="assign-macro" class="copy-link">Assigning macros</h2>
+    <p>In the spreadsheet editor, you can assign a macro to the graphic object:</p>
+    <ol>
+        <li>Right-click the graphic object.</li>
+        <li>Click <b>Assign Macro</b>.</li>
+        <li>Choose a macro in the appeared window. You can type the macro name in the corresponding field.</li>
+        <li>Click the <b>OK</b> button.</li>
+    </ol>
+    <img alt="Assign macro" src="<%= Url.Content("~/content/img/plugins/assign-macro.png") %>" />
+    <p>To run the macro, just click the graphic object and the script will be executed.</p>
+
 </asp:Content>

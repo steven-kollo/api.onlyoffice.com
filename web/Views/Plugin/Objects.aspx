@@ -21,7 +21,6 @@
     <p>See the available objects below to find more about them.</p>
 
 <div class="header-gray">Objects</div>
-
 <table class="table">
     <colgroup>
             <col style="width: 100px;" />
@@ -50,6 +49,7 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
     <div class="header-gray">Example</div>
 

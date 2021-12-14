@@ -12,13 +12,14 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 </p>
 <p><b>Plugin type:</b> visual, non-system.</p>
 <p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
+<p><b>Analogues:</b> <a href="https://github.com/ONLYOFFICE/plugin-rainbow" target="_blank">Rainbow</a>.</p>
 
 <img alt="Telegram" src="<%= Url.Content("~/content/img/plugins/gifs/telegram.gif") %>" />
 
 
 <div class="header-gray">Installation</div>
 <p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Document Server + Community Server).</p>
-<p>You can also download this plugin from <a href="https://www.onlyoffice.com/en/app-directory/telegram" target="_blank">the ONLYOFFICE App Directory</a> and install it following the
+<p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/telegram" target="_blank">ONLYOFFICE App Directory</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a> or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
 
@@ -77,7 +78,6 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-telegram/blob/master/scripts/code.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

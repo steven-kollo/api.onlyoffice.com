@@ -21,6 +21,7 @@
 <ul style="list-style: none;">
     <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/providers/</em></li>
     <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\providers\</em></li>
+    <li>For Mac OS - <em>/Applications/ONLYOFFICE.app/Contents/Resources/providers/</em></li>
 </ul>
 
 <h2>Step 2</h2>
@@ -63,7 +64,7 @@
         <tr class="tablerow">
             <td id="check" class="copy-link">check</td>
             <td>
-                <p>Defines parameters for checking portal availability. A <em>GET</em> request is sent, after which the <em>HTTP_STATUS_CODE = 200</em> response is expected:</p>
+                <p>Defines parameters for checking portal availability:</p>
                 <ul>
                     <li>
                         <p><b>url</b> - the URL used in the request,</p>
@@ -76,6 +77,7 @@
                         <p><b>example</b>: {"OCS-APIREQUEST": true}.</p>
                     </li>
                 </ul>
+                <p>A <em>GET</em> request is sent, after which <em>HTTP_STATUS_CODE = 200</em> is expected. The response must be returned in the JSON format.</p>
             </td>
             <td>object</td>
             <td></td>
@@ -92,6 +94,12 @@
             <td colspan="4">
                 <div class="note">You can use regular expressions for this parameter. For example, <em>"regex:\/lib\/(?:[\w-]{32,})\/file\/"</em>.</div>
             </td>
+        </tr>
+        <tr class="tablerow">
+            <td id="entryPage" class="copy-link">entryPage</td>
+            <td>Defines the URL to connect the provider. It is used instead of the provider address and allows the desktop app not to send the <a href="#check">check</a> request.</td>
+            <td>string</td>
+            <td>"https://url-to-connect-provider.com"</td>
         </tr>
         <tr class="tablerow">
             <td id="startPage" class="copy-link">startPage</td>
@@ -115,12 +123,14 @@
                         <p><b>example</b>: "./assets/buttonlogo.svg".</p>
                     </li>
                 </ul>
+                <p>You can add icons for each UI theme type (light and dark) by specifying the <em>themeLight</em> and <em>themeDark</em> objects with the corresponding icons.</p>
             </td>
             <td>object</td>
             <td></td>
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>
@@ -134,10 +144,17 @@
         }
     },
     "editorPage" : "/apps/onlyoffice/",
+    "entryPage" : "https://url-to-connect-provider.com",
     "startPage" : "/",
     "icons" : {
-        "connectionsList" :  "./assets/listicon.svg",
-        "buttonLogo" : "./assets/buttonlogo.svg"
+        "themeLight": {
+            "connectionsList": "./assets/listicon.svg",
+            "buttonLogo": "./assets/buttonlogo.svg"
+        },
+        "themeDark": {
+            "connectionsList": "./assets/listicon_dark.svg",
+            "buttonLogo": "./assets/buttonlogo_dark.svg"
+        }
     }
 }
 </pre>
@@ -158,6 +175,7 @@
 </ol>
 <p>Supported image formats are <em>.png</em>, <em>.jpeg</em>, <em>.svg</em>. 
     We recommend using a <em>.svg</em> file for correct display on HiDPI monitors with a 200% scale in the system.</p>
+<p>You can also add icons for each UI theme type (light and dark). In this case, create four icons (two for each theme) and add all of the to the <em>config.json</em> file.</p>
 
 
 <h2>Step 4</h2>

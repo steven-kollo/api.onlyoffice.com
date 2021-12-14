@@ -45,6 +45,7 @@ window.Asc.plugin.executeMethod ("OpenFile", [binaryFile, fields]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 

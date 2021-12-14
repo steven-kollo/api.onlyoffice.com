@@ -14,7 +14,7 @@
         <span class="hdr">Document history</span>
     </h1>
     <p class="dscr">You can view the document history using the <b>document editor</b>.</p>
-    <div class="note">The history is currently available for text document files only.</div>
+    <div class="note">The history is currently available for text document and presentation files.</div>
 
     <p>
         The document history is stored with the document storage service.
@@ -175,7 +175,7 @@ docEditor.setHistoryData({
                 For its correct work the cross-origin HTTP requests must be allowed (CORS).
                 This can be achieved using the <em>Access-Control-Allow-Origin</em> header.
             </div>
-            <img alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
+            <img width="832px" alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
         </li>
     </ul>
 </asp:Content>

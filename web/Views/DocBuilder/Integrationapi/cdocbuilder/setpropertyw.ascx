@@ -33,6 +33,7 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 <p>Once added, the argument will be available as <b>Argument</b> variable with its parameter values set:</p>
 <pre>
 Argument.name === "ONLYOFFICE" // true

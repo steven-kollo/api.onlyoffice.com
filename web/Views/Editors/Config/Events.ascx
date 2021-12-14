@@ -13,12 +13,13 @@
         <li><a href="#onCollaborativeChanges">onCollaborativeChanges</a> - the document is co-edited by the other user in the <em>strict</em> co-editing mode.</li>
         <li><a href="#onDocumentReady">onDocumentReady</a> - the document is loaded into the document editor.</li>
         <li><a href="#onDocumentStateChange">onDocumentStateChange</a> - the document is modified.</li>
-        <li><a href="#onDownloadAs">onDownloadAs</a> - the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called.</li>
+        <li><a href="#onDownloadAs">onDownloadAs</a> - the absolute URL to the edited file when the <em>downloadAs</em> method is being called.</li>
         <li><a href="#onError">onError</a> - an error or some other specific event occurs.</li>
         <li><a href="#onInfo">onInfo</a> - the application opened the file.</li>
-        <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <a href="<%= Url.Action("command") %>#meta">meta</a> command.</li>
+        <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <em>meta</em> command.</li>
         <li><a href="#onMakeActionLink">onMakeActionLink</a> - the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</li>
-        <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved.</li>
+        <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - the document is opened for editing with the old <em>document.key</em> value, which was used to edit the previous document version and was successfully saved.</li>
+        <li><a href="#onPluginsReady">onPluginsReady</a> - all plugins are loaded and can be used.</li>
         <li><a href="#onReady">onReady</a> - the application is loaded into the browser.</li>
         <li><a href="#onRequestClose">onRequestClose</a> - the work with the editor must be ended and the editor must be closed.</li>
         <li><a href="#onRequestCompareFile">onRequestCompareFile</a> - the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.</li>
@@ -186,7 +187,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command") %>#meta">meta</a> command.
+            <b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command.
             The name of the document is sent in the <em>data.title</em> parameter.
             The <em>Favorite</em> icon highlighting state is sent in the <em>data.favorite</em> parameter.
             When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
@@ -251,6 +252,26 @@ var onOutdatedVersion = function () {
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
         "onOutdatedVersion": onOutdatedVersion,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
+            <b id="onPluginsReady" class="copy-link">onPluginsReady</b> - the function called when all plugins are loaded and can be used.
+        </p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onPluginsReady = function () {
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onPluginsReady": onPluginsReady,
         ...
     },
     ...
@@ -511,8 +532,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
-            To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
-            If the method is not declared the <em>Mail merge</em> button will not be displayed.
+            To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
+            If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.
         </p>
         <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
         <div class="header-gray">Example</div>

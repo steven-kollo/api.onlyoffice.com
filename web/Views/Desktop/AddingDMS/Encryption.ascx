@@ -61,6 +61,7 @@ window.cloudCryptoCommand = function (type, params, callback)
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <p>Explore the following pages to find out which commands need to be used for:</p>
 <ul>

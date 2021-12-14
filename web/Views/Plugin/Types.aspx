@@ -68,8 +68,8 @@
                 </li>
                 <li>
                     <p><em>UI enhancement plugins</em> add custom components and controls to the UI, 
-                        like <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/trackchanges" target="_blank">Trackchanges</a>, 
-                        <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/trackchanges_off" target="_blank">Trackchanges off</a>.</p>
+                        like <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/trackchanges" target="_blank">Trackchanges</a>, 
+                        <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/trackchanges_off" target="_blank">Trackchanges off</a>.</p>
                 </li>
                 <li>
                     <p><em>Third-party service plugins</em> connect third-party services to the editors, 

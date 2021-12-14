@@ -47,18 +47,22 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
         {
             "description"         : "searchAndReplaceOnStart",
             "url"                 : "index.html",
+
             "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
             "isViewer"            : true,
-            "EditorsSupport"   : [ "word" ],
-            "isSystem"     : true,
+            "EditorsSupport"      : [ "word" ],
+
+            "isSystem"            : true,
             "isVisual"            : false,
             "isModal"             : false,
             "isInsideMode"        : false,
+
             "initDataType"        : "none",
             "initData"            : "",
+
             "buttons"             : [],
 
-            "events" : ["onDocumentContentReady"]
+            "events"              : ["onDocumentContentReady"]
         }
     ]
 }
@@ -67,7 +71,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/searchAndReplaceOnStart/code.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

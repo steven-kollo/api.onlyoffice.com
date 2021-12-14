@@ -16,7 +16,7 @@
 
 <div class="header-gray">Installation</div>
 <p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.</p>
-<p>You can remove it following the <a href="https://api.teamlab.info/plugin/installation/desktop">desktop</a>, <a href="https://api.teamlab.info/plugin/installation/onpremises" target="_blank">on-premises</a>, or <a href="https://api.teamlab.info/plugin/installation/cloud" target="_blank">cloud</a> installation instructions.
+<p>You can remove it following the <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>" target="_blank">on-premises</a>, or <a href="<%= Url.Action("installation/cloud") %>" target="_blank">cloud</a> installation instructions.
 <p>The plugin guid: {7327FC95-16DA-41D9-9AF2-0E7F449F6800}.</p>
 
 
@@ -36,8 +36,10 @@
     <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
     <li>Icons</li>
     <li>The <em>translations</em> folder contains translations into Russian, German, Spanish and French.</li>
-    <li>Third-party service:
+    <li>Third-party services:
         <ul>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-translator/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-translator/blob/master/licenses/Select2.license" target="_blank">MIT</a>.</li>
             <li><a href="https://cloud.google.com/translate?hl=ru" target="_blank">Google Translate API</a> enables translation between languages. License: <a href="https://github.com/matheuss/google-translate-api/blob/master/LICENSE" target="_blank">MIT License</a>.</li>
         </ul>
     </li>
@@ -91,7 +93,6 @@
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-translator/blob/master/scripts/translate.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>
