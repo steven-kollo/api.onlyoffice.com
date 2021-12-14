@@ -60,7 +60,7 @@ window.AscDesktopEditor.cloudCryptoCommand("upload", {
     "cryptoEngineId": "{FFF0E1EB-13DB-4678-B67D-FF0A41DBBCEF}",
     "filter": "*.docx *.xlsx *.pptx"
 },
-callback)                                    
+callback)
 </pre>
 
 <p>After the user chooses the files, they will be encrypted in a loop and transferred to <em>callback</em>:</p>
@@ -128,7 +128,7 @@ window.AscDesktopEditor.cloudCryptoCommand("share",
     "file": ["https://example.com/url-to-example-document.docx" ],
     "keys":[{"userId":"78e1e841","publicKey":"yyy"}, ...]
 }, 
-callback)                                        
+callback)
 </pre>
 
 <p>The file is uploaded by the desktop app and encrypted. The access rights to the file are transferred to it with keys. After that, it is transmitted to <em>callback</em>:</p>

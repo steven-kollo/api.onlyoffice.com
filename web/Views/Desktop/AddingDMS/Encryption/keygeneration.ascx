@@ -9,7 +9,7 @@
 <pre>
 typeof window.AscDesktopEditor.cloudCryptoCommand === "function"
 </pre>
-<p>The steps below explain the process of document encryption in ONLYOFFICE.</p>   
+<p>The steps below explain the process of document encryption in ONLYOFFICE.</p>
 
 <ol>
     <li>
@@ -83,7 +83,7 @@ window.AscDesktopEditor.execCommand("portal:checkpwd", JSON.stringify({
     "domain": "https://exampledomain.com",
     "emailInput": "john@example.com",
     "pwdInput": "123456"
-}));                   
+}));
 </pre>
         <p>When the command is sent, the DMS provider transfers the information about the password from the login page to the desktop app. 
             ONLYOFFICE Desktop Editors remembers the password and uses it for the key encryption and decryption.</p>
@@ -150,7 +150,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
         "publicKey": "yyy"
     },
     ...
-}));                              
+}));
 </pre>
 
         <p>You can also do it in the editor initialization config:</p>

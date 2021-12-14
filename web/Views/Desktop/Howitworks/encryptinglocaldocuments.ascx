@@ -115,7 +115,7 @@ It helps to use the <b>Encryption</b> plugin when necessary for the whole app.</
         "it" : "Crittografia",
         "fr" : "Chiffrement",
         "es" : "Encriptacio&#769;n",
-        "de" : "Verschl&#252;sselung"                
+        "de" : "Verschl&#252;sselung"
     },
     "guid" : "asc.{11111111-1111-1111-1111-111111111111}",
 
@@ -126,7 +126,7 @@ It helps to use the <b>Encryption</b> plugin when necessary for the whole app.</
             "initDataType"  : "desktop-external",
             "initData"      : "encryption",
 
-            "cryptoDisabledOnStart" : "true"         
+            "cryptoDisabledOnStart" : "true"
         }
     ]
 }
@@ -149,7 +149,7 @@ It helps to use the <b>Encryption</b> plugin when necessary for the whole app.</
 </pre>
 
 <p>With it, we will get a new tab called <b>Encryption</b> on the main app page:</p>
-<img alt="Encryption exabled" width="834px" src="<%= Url.Content("~/content/img/desktop/encryption-enabled.png") %>" />
+<img alt="Encryption exabled" width="832px" src="<%= Url.Content("~/content/img/desktop/encryption-enabled.png") %>" />
 
 <p>Enable encryption by ticking the checkbox:</p>
 <pre>
@@ -160,14 +160,14 @@ window.onload = function() {
   document.getElementById ("check").onchange = function() {
 
     let mode = this.checked ? ASC_DESKTOP_EDITOR_CRYPTO_MODE : ASC_DESKTOP_EDITOR_DEFAULT_MODE;
-    AscDesktopEditor.SetCryptoMode("", mode, function(retCode) {        
-      switch (retCode) {         
+    AscDesktopEditor.SetCryptoMode("", mode, function(retCode) {
+      switch (retCode) {
         case 0:
           console.log("OK");
           break;
         case 1:
           console.log("Please, close all open files!");
-          break;           
+          break;
         default:
           break;
       }
