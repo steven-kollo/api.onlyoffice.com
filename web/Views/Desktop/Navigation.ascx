@@ -7,6 +7,17 @@
     <li>
         <a href="<%= Url.Action("basic") %>">Overview</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("howitworks/") %>">How it works</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("howitworks/encryptinglocaldocuments") %>">Encrypting local documents</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("howitworks/encryptingclouddocuments") %>">Encrypting cloud documents</a>
+            </li>
+        </ul>
+    </li>
 </ul>
 
 <div class="treeheader">Usage API</div>
@@ -34,6 +45,14 @@
             </li>
             <li>
                 <a href="<%= Url.Action("addingdms/encryption") %>">Encryption</a>
+                <ul>
+                    <li>
+                        <a href="<%= Url.Action("addingdms/encryption/keygeneration") %>">Key generation</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("addingdms/encryption/operations") %>">Operations with encrypted files</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </li>
