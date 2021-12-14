@@ -69,7 +69,7 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View(GCustomSearch.Search(query, "desktop"));
         }
-        
+
         public ActionResult Addingdms(string catchall)
         {
             if (!_actionMap.Contains("addingdms/" + catchall, StringComparer.OrdinalIgnoreCase))

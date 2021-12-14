@@ -1,5 +1,6 @@
 # Change Log
 
+- desktop: restructured the Encryption page
 - desktop: added the How it workds section
 - editors: added the Redmine plugin
 - editors: changed get docs page

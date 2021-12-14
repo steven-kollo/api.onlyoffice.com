@@ -6,8 +6,10 @@
 </h1>
 
 
-<p>Starting from version 5.6, ONLYOFFICE Desktop Editors offers support for Private Rooms, secure workspace where every symbol you type is encrypted end-to-end even 
-    if you co-edit documents in real time. Using ONLYOFFICE Desktop Editors makes it possible to encrypt and decrypt the data on the client, ensuring endpoint security.</p>
+<p>
+    Starting from version 5.6, ONLYOFFICE Desktop Editors offers support for Private Rooms, secure workspace where every symbol you type is encrypted end-to-end even if you co-edit documents in real time.
+    Using ONLYOFFICE Desktop Editors makes it possible to encrypt and decrypt the data on the client, ensuring endpoint security.
+</p>
 
 
 <h2 id="commands" class="copy-link">Processing desktop editors commands</h2>

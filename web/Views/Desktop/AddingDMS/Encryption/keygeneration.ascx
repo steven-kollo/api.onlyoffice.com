@@ -24,7 +24,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
 </pre>
     </li>
     <li>
-        <p>To monitor the password from the login page, send the desktop editors the <em>portal:checkpwd</em> command through the <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method. 
+        <p>To monitor the password from the login page, send the desktop editors the <em>portal:checkpwd</em> command through the <a href="<%= Url.Action("addingdms/loginlogout") %>">execCommand</a> method.
             Parameters are specified in the format of a string with the serialized <em>json</em> as follows:</p>
         <pre>
 {
@@ -76,7 +76,7 @@ window.AscDesktopEditor.execCommand("portal:login", JSON.stringify({
                 </tr>
             </tbody>
         </table>
-        
+
         <div class="header-gray">Example</div>
         <pre>
 window.AscDesktopEditor.execCommand("portal:checkpwd", JSON.stringify({
@@ -85,7 +85,7 @@ window.AscDesktopEditor.execCommand("portal:checkpwd", JSON.stringify({
     "pwdInput": "123456"
 }));
 </pre>
-        <p>When the command is sent, the DMS provider transfers the information about the password from the login page to the desktop app. 
+        <p>When the command is sent, the DMS provider transfers the information about the password from the login page to the desktop app.
             ONLYOFFICE Desktop Editors remembers the password and uses it for the key encryption and decryption.</p>
     </li>
     <li>

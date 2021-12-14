@@ -5,12 +5,14 @@
    <span class="hdr">Operations with encrypted files</span>
 </h1>
 
-<p>To perform operations with encrypted files, including file encryption, decryption, creation, editing and sharing, ONLYOFFICE uses the individual credentials of users 
-    (RSA key pair) and a document password (document encryption key). The processes of uploading and sharing encrypted files are described here.</p>
+<p>
+    To perform operations with encrypted files, including file encryption, decryption, creation, editing and sharing, ONLYOFFICE uses the individual credentials of users (RSA key pair) and a document password (document encryption key).
+    The processes of uploading and sharing encrypted files are described here.
+</p>
 
 
 <p id="uploading" class="copy-link"><b>Uploading encrypted documents</b></p>
-<p>To upload encrypted files in the desktop app, replace the standard <em>input type = file</em> call with the <em>cloudCryptoCommand</em> function with the <em>upload</em> type. 
+<p>To upload encrypted files in the desktop app, replace the standard <em>input type = file</em> call with the <em>cloudCryptoCommand</em> function with the <em>upload</em> type.
     The <em>params</em> object has the following values:</p>
 
 <div class="header-gray">Parameters</div>
