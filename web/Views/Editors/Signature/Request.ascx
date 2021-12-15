@@ -18,10 +18,13 @@
 
 <h2>Incoming request</h2>
 
-<p id="command" class="copy-link">Validation is performed for incoming requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("command") %>">document command service</a>.</p>
+<ul>
+    <li>
+        <p><b id="command" class="copy-link">Request to receive the status of the edited document</b></p>
+        <p>Validation is performed for incoming requests with the commands from the <b>document storage service</b> to the <a href="<%= Url.Action("command") %>">document command service</a>.</p>
 
-<div class="header-gray">Sample payload of request to receive the status of the edited document</div>
-<pre>
+        <div class="header-gray">Sample payload of request to receive the status of the edited document</div>
+        <pre>
 {
     "payload": {
         "c": "info",
@@ -29,8 +32,8 @@
     }
 }
 </pre>
-<div class="header-gray">Sample of request to receive the status of the edited document</div>
-<pre>
+        <div class="header-gray">Sample of request to receive the status of the edited document</div>
+        <pre>
 POST coauthoring/CommandService.ashx HTTP/1.1
 Host: documentserver
 Content-Type: application/json
@@ -41,12 +44,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImMiO
     "key": "Khirz6zTPdfd7"
 }
 </pre>
+    </li>
+    <li>
+        <p><b id="conversion" class="copy-link">Request to convert the document</b></p>
+        <p>Validation is performed for incoming requests from the <b>document storage service</b> to the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</p>
 
-
-<p id="conversion" class="copy-link">Validation is performed for incoming requests from the <b>document storage service</b> to the <a href="<%= Url.Action("conversionapi") %>">document conversion service</a>.</p>
-
-<div class="header-gray">Sample payload of request to convert the document</div>
-<pre>
+        <div class="header-gray">Sample payload of request to convert the document</div>
+        <pre>
 {
     "payload": {
         "filetype": "docx",
@@ -57,12 +61,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImMiO
     }
 }
 </pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
-<div class="header-gray">Sample of request to convert the document</div>
-<pre>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+        <div class="header-gray">Sample of request to convert the document</div>
+        <pre>
 POST ConvertService.ashx HTTP/1.1
 Host: documentserver
 Content-Type: application/json
@@ -76,16 +80,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpb
     "url": "https://example.com/url-to-example-document.docx"
 }
 </pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+    </li>
+    <li>
+        <p><b id="builder" class="copy-link">Request to document builder service</b></p>
+        <p>Validation is performed for incoming requests from the <b>document storage service</b> to the <a href="<%= Url.Action("documentbuilderapi") %>">document builder service</a>.</p>
 
-
-<p id="builder" class="copy-link">Validation is performed for incoming requests from the <b>document storage service</b> to the <a href="<%= Url.Action("documentbuilderapi") %>">document builder service</a>.</p>
-
-<div class="header-gray">Sample payload of request to document builder service</div>
-<pre>
+        <div class="header-gray">Sample payload of request to document builder service</div>
+        <pre>
 {
     "payload": {
         "async": true,
@@ -93,12 +98,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImZpb
     }
 }
 </pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
-<div class="header-gray">Sample of request to document builder service</div>
-<pre>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+        <div class="header-gray">Sample of request to document builder service</div>
+        <pre>
 POST docbuilder HTTP/1.1
 Host: documentserver
 Content-Type: application/json
@@ -109,18 +114,22 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFze
     "url": "https://example.com/url-to-example-script.docbuilder"
 }
 </pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
-
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+    </li>
+</ul>
 
 <h2>Outgoing requests</h2>
 
-<p id="callbackUrl" class="copy-link">Validation is performed for outgoing requests to "<a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a>" address by <b>document editing service</b>.</p>
+<ul>
+    <li>
+        <p><b id="callbackUrl" class="copy-link">Request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes</b></p>
+        <p>Validation is performed for outgoing requests to "<a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a>" address by <b>document editing service</b>.</p>
 
-<div class="header-gray">Sample payload of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes</div>
-<pre>
+        <div class="header-gray">Sample payload of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes</div>
+        <pre>
 {
     "payload": {
         "key": "Khirz6zTPdfd7",
@@ -128,8 +137,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFze
     }
 }
 </pre>
-<div class="header-gray">Sample of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes</div>
-<pre>
+        <div class="header-gray">Sample of request to "callbackUrl" address by document editing service when the last user closed the document for editing without changes</div>
+        <pre>
 POST url-to-callback.ashx HTTP/1.1
 Host: example.com
 Content-Type: application/json
@@ -140,25 +149,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7Imtle
     "status": 4
 }
 </pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+    </li>
+    <li>
+        <p><b id="download" class="copy-link">Request to document storage service for file download</b></p>
+        <p>Validation is performed for outgoing requests to <b>document storage service</b> for file download.</p>
 
-
-<p id="download" class="copy-link">Validation is performed for outgoing requests to <b>document storage service</b> for file download.</p>
-
-<div class="header-gray">Sample payload of request to document storage service for file download</div>
-<pre>
+        <div class="header-gray">Sample payload of request to document storage service for file download</div>
+        <pre>
 {}
 </pre>
-<div class="header-gray">Sample of request to document storage service for file download</div>
-<pre>
+        <div class="header-gray">Sample of request to document storage service for file download</div>
+        <pre>
 GET url-to-example-document.docx HTTP/1.1
 Host: example.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.LwimMJA3puF3ioGeS-tfczR3370GXBZMIL-bdpu4hOU
 </pre>
-<p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
-</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
+    </li>
+</ul>
