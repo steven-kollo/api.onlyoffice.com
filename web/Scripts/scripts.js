@@ -131,44 +131,45 @@ $(function() {
     });
 
     $("#doc-builder-search-box input").bind("change paste keyup", function () {
-        let valExs = !!$(this).val(); 
-        if (valExs) {
+        var searchBox = this;
+        if (!!$(searchBox).val()) {
             $(".builder-search-results").empty();
-            for (let method of methodNames) {
-                if (method.toLowerCase().includes($(this).val().toLowerCase())) {
-                    let elem = document.createElement("li");
+            methodNames.forEach(function (method) {
+                if (method.toLowerCase().includes($(searchBox).val().toLowerCase())) {
+                    var elem = document.createElement("li");
                     elem.innerHTML = method;
-                    $(".builder-search-results").append(elem)
+                    $(".builder-search-results").append(elem);
                 }
-            }
+            });
         }
-        $(".builder-search-results")[0].innerHTML != "" ? $(".builder-search-results").show() : $(".builder-search-results").hide();
-    })
+        $(".builder-search-results").toggle($(".builder-search-results")[0].innerHTML != "");
+    });
 
     $(document).bind("mouseup", function(e) {
-        if (!$(e.target).closest(".builder-search-results").length) {
+        var builderSearch = $(e.target).closest(".builder-search-results");
+        if (!builderSearch.length) {
             $(".builder-search-results").hide();
-        } else if ($(e.target).closest(".builder-search-results")) {
-            let liText = e.target.closest("li").innerText;
+        } else if (builderSearch) {
+            var liText = e.target.closest("li").innerText;
 
             $(".builder-search-results").hide();
-            $("#doc-builder-search-box input").val(liText);
+            $("#doc-builder-search-box input").val("");
             liText = liText.substring(liText.indexOf("— ") + 2);
-            let postParams = liText.split(".");
+            var postParams = liText.split(".");
 
-            let xhr = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
             xhr.open("POST", "");
-            xhr.setRequestHeader( 'Content-Type', 'application/json');
-            xhr.send(JSON.stringify( {module: editorType, section: postParams[0].toLowerCase(), method: postParams[1].toLowerCase()}));
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify( {module: documentType, section: postParams[0].toLowerCase(), method: postParams[1].toLowerCase()}));
 
             xhr.onload = function () {
-                let script = xhr.responseText;
-                script = "\n\n" + script.substring(script.indexOf(";") + 2, script.length)
+                var script = xhr.responseText;
+                script = "\n\n" + script.substring(script.indexOf(";") + 2, script.length);
 
                 $("#builderScript").val(function () {
                     return this.value.substring(0, this.value.indexOf("builder.SaveFile") - 1) + script;
                 });
-            }
+            };
         }
     });
 

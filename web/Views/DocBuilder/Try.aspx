@@ -20,15 +20,15 @@
     <p>You can use the search for the desired method to use its script in the text area below. Or, in case you have a script of your own, use the button under the textarea to upload it. You can select the necessary editor.</p>
 
     <div>
-        <ul id="doc-builder-file-types" class="top-nav">
-            <li>
-                <a href="?type=word">Document Editor</a>
+        <ul class="doc-builder-file-types top-nav">
+            <li class="<%= Request["type"] != "cell" && Request["type"] != "slide" ? "active" : "" %>">
+                <a href="<%= Url.Action("try") %>">Document Editor</a>
             </li>
-            <li>
-                <a href="?type=cell">Spreadsheet Editor</a>
+            <li class="<%= Request["type"] == "cell" ? "active" : "" %>">
+                <a href="<%= Url.Action("try") %>?type=cell">Spreadsheet Editor</a>
             </li>
-            <li>
-                <a href="?type=slide">Presentation Editor</a>
+            <li class="<%= Request["type"] == "slide" ? "active" : "" %>">
+                <a href="<%= Url.Action("try") %>?type=slide">Presentation Editor</a>
             </li>
         </ul>
     </div>
@@ -75,26 +75,28 @@
 
         $(".builder-search-results").hide();
 
-        <% var editorType = HttpUtility.ParseQueryString(new Uri(Request.Url.ToString()).Query).Get("type");
-            var docFormat = "docx";
-            if (editorType == null)
+        <%
+            var documentType = "word";
+            var ext = "docx";
+            if (Request["type"] == "cell")
             {
-                editorType = "word";
+                documentType = "cell";
+                ext = "xlsx";
             }
-            else if (editorType.Equals("cell"))
+            else if (Request["type"] == "slide")
             {
-                docFormat = "xlsx";
+                documentType = "slide";
+                ext = "pptx";
             }
-            else if (editorType.Equals("slide")) docFormat = "pptx";
         %>
 
         var methodNames = [];
-        var editorType = "<%= editorType %>";
-        var sections = <%= Newtonsoft.Json.JsonConvert.SerializeObject(DocBuilderDocumentation.GetModule(editorType)) %>;
+        var sections = <%= Newtonsoft.Json.JsonConvert.SerializeObject(DocBuilderDocumentation.GetModule(documentType)) %>;
 
         for (var section in sections) {
             for (var md in sections[section].methods) {
                 var method = sections[section].methods[md];
+                //todo:
                 var desc = method.description;
                 if (desc.includes("<note>")) {
                     desc = desc.substring(0, desc.indexOf("<note>") - 1) + "</p>";
@@ -102,35 +104,53 @@
                 if (desc.includes("<ul>")) {
                     desc = desc.substring(0, desc.indexOf("<ul>") - 1) + "</p>";
                 }
-                desc = desc.replace(".", "") + "<p> — " + method.memberof + "." + method.name + "</p>";
+                desc ="<p>" + method.memberof + "." + method.name + " — </p>" + desc.replace(".", "");
                 methodNames.push(desc);
             }
         }
 
-        var editorTypesList = document.getElementById("doc-builder-file-types"); 
-        var builderTextArea = document.getElementById("builderScript");
+        <% var defaultMethod = DocBuilderDocumentation.GetMethod(documentType, "api", "save"); %>
+        $("#builderScript").val("<%= Regex.Replace(defaultMethod.Example.Script.Replace("\"", "\\\""), "\\n", "") %>".replaceAll(";", ";\n"));
 
-        <% var defaultMethod = DocBuilderDocumentation.GetMethod(editorType, "api", "save"); %>
-        builderTextArea.value = "<%= Regex.Replace(defaultMethod.Example.Script.Replace("\"", "\\\""), "\\n", "") %>".replaceAll(";", ";\n");
+        var postScript = function () {
+            var removeMethod = {
+                docx: "Api.GetDocument().RemoveAllElements();",
+                xlsx: "Api.AddSheet(\"Sheet 1\");sheets = Api.GetSheets(); for (shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
+                pptx: "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());"
+            };
+            var script = removeMethod["<%= ext %>"] + $("#builderScript").val().replaceAll("\\", "").replaceAll("builder.CreateFile", "").replaceAll("\n", "");
 
-        if ("<%= editorType %>" == "word") {
-            editorTypesList.children[0].className = "active";
-        } else if ("<%= editorType %>" == "cell") {
-            editorTypesList.children[1].className = "active";     
-        } else {
-            editorTypesList.children[2].className = "active";
-        }
+            document.getElementsByName("frameEditor")[0].contentWindow.postMessage(JSON.stringify({
+                guid : "asc.{A8705DEE-7544-4C33-B3D5-168406D92F72}",
+                type : "onExternalPluginMessage",
+                data : {
+                    type: "executeCommand",
+                    text: script
+                }
+            }), "<%= ConfigurationManager.AppSettings["editor_url"] ?? "*" %>");
+        };
+
+        window.addEventListener("message", function (message) {
+            if (message && message.data == "externallistenerReady") {
+                postScript();
+                $("#startButton").click(postScript);
+            }
+        }, false);
+
+        $("#clearButton").click(function () {
+            $("#builderScript").val("");
+        });
 
         var config = <%= Config.Serialize(
             new Config {
                 Document = new Config.DocumentConfig
                     {
-                        FileType = docFormat,
+                        FileType = ext,
                         Key = "apiwh" + Guid.NewGuid(),
-                        Title = "Example Title." + docFormat,
-                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + docFormat 
+                        Title = "Example Title." + ext,
+                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext 
                     },
-                DocumentType = editorType,
+                DocumentType = documentType,
                 EditorConfig = new Config.EditorConfigConfiguration
                     {
                         CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
@@ -162,38 +182,6 @@
                 Height = "550px",
                 Width = "100%"
             }) %>;
-
-        var postScript = function (newDoc) {
-            var removeMethod = {
-                docx: "Api.GetDocument().RemoveAllElements();",
-                xlsx: "Api.AddSheet(\"Sheet 1\");sheets = Api.GetSheets(); for (shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
-                pptx: "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());"
-            };
-            var script = (newDoc ? "" : removeMethod["<%= docFormat %>"]) + builderTextArea.value.replaceAll("\\", "").replaceAll("builder.CreateFile", "").replaceAll("\n", "");
-
-            document.getElementsByName("frameEditor")[0].contentWindow.postMessage(JSON.stringify({
-                guid : "asc.{A8705DEE-7544-4C33-B3D5-168406D92F72}",
-                type : "onExternalPluginMessage",
-                data : {
-                    type: "executeCommand",
-                    text: script
-                }
-            }), "<%= ConfigurationManager.AppSettings["editor_url"] ?? "*" %>");
-        };
-
-        var cleanUpScriptArea = function () {
-            document.getElementById("builderScript").value = "";
-        };
-
-        window.addEventListener("message", function (message) {
-            if (message && message.data == "externallistenerReady") {
-                postScript(true);
-                document.getElementById("startButton").addEventListener("click", function () {
-                    postScript(false);
-                }, false);
-                document.getElementById("clearButton").addEventListener("click", cleanUpScriptArea, false);
-            }
-        }, false);
 
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
     </script>
