@@ -105,12 +105,12 @@
         var ext = "docx";
         if (Request["type"] == "spreadsheet")
         {
-            documentType = "spreadsheet";
+            documentType = "cell";
             ext = "xlsx";
         }
         else if (Request["type"] == "presentation")
         {
-            documentType = "presentation";
+            documentType = "slide";
             ext = "pptx";
         }
     %>
