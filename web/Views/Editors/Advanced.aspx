@@ -182,7 +182,10 @@
                     "plugins": true,
                     "protect": true,
                     "references": true,
-                    "save": true
+                    "save": true,
+                    "view": {
+                        "navigation": true
+                    },
                 }
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {

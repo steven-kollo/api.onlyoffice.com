@@ -213,6 +213,22 @@
                         <br />
                         <b>type</b>: boolean,
                         <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>view</b> - defines the <b>View</b> tab settings. If this parameter is a boolean value, then it specifies
+                        whether the <b>View</b> tab will be displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>view.navigation</b> - defines if the <b>Navigation</b> button is displayed or hidden. The default value is <b>true</b>.
+                        This parameter will only be available for the document editor,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
                         <b>example</b>: true.
                     </li>
                 </ul>
@@ -259,7 +275,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                     "plugins": true,
                     "protect": true,
                     "references": true,
-                    "save": true
+                    "save": true,
+                    "view": {
+                        "navigation": true
+                    },
                 }
             },
             ...
