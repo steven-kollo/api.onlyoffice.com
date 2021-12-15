@@ -11,5 +11,4 @@ Follow the steps and tips described in this section to easily generate documents
 <ul>
     <li><a href="<%= Url.Action("howitworks/globalvariable") %>">Exchange data among files</a></li>
     <li><a href="<%= Url.Action("howitworks/comparedocuments") %>">Compare documents</a></li>
-    <li><a href="<%= Url.Action("howitworks/docbuilder") %>">Document builder</a></li>
 </ul>

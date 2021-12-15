@@ -1,6 +1,6 @@
 # Change Log
 
-- docbuilder: try online in how it works section
+- docbuilder: try now page
 - desktop: restructured the Encryption page
 - desktop: added the How it workds section
 - editors: added the Redmine plugin

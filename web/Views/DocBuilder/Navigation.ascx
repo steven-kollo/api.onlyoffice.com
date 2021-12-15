@@ -12,6 +12,9 @@
         <a href="<%= Url.Action("gettingstarted") %>">Getting started</a>
     </li>
     <li>
+        <a href="<%= Url.Action("try") %>">Try now</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("integratingdocumentbuilder") %>">Integrating Document Builder</a>
         <ul>
             <li>
@@ -36,9 +39,6 @@
             </li>
             <li>
                 <a href="<%= Url.Action("howitworks/comparedocuments") %>">Comparing documents</a>
-            </li>
-            <li>
-                <a href="<%= Url.Action("howitworks/docbuilder") %>">Document builder</a>
             </li>
         </ul>
     </li>

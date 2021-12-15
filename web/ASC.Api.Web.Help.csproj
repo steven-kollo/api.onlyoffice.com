@@ -572,7 +572,7 @@
     <Content Include="Views\DocBuilder\Basic.aspx" />
     <Content Include="Views\DocBuilder\Changelog.aspx" />
     <Content Include="Views\DocBuilder\classlist.aspx" />
-    <Content Include="Views\DocBuilder\Howitworks\docbuilder.ascx" />
+    <Content Include="Views\DocBuilder\Try.aspx" />
     <Content Include="Views\DocBuilder\phpexample.aspx" />
     <Content Include="Views\DocBuilder\nodejsexample.aspx" />
     <Content Include="Views\DocBuilder\methodpartial.aspx" />

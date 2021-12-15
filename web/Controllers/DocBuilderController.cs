@@ -50,7 +50,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "nodejsexample",
                 "howitworks",
                 "howitworks/comparedocuments",
-                "howitworks/docbuilder",
                 "howitworks/globalvariable",
                 "integratingdocumentbuilder",
                 "integrationapi",
@@ -75,6 +74,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "rubyexample",
                 "spreadsheetapi",
                 "textdocumentapi",
+                "try",
             };
 
         #endregion
@@ -151,10 +151,18 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Howitworks", (object)catchall);
         }
 
-        [HttpPost]
-        public string Howitworks(string module, string section, string method)
+        public ActionResult Try()
         {
-            return DocBuilderDocumentation.GetMethod(module, section, method).Example.Script;
+            return View();
+        }
+
+        [HttpPost]
+        public string Try(string module, string section, string method)
+        {
+            var dbMethod = DocBuilderDocumentation.GetMethod(module, section, method);
+            if (dbMethod != null && dbMethod.Example != null)
+                return dbMethod.Example.Script;
+            return "";
         }
 
         public ActionResult Textdocumentapi(string catchall)
