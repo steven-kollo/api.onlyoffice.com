@@ -38,19 +38,19 @@ namespace ASC.Api.Web.Help.Controllers
             {
                 "addingdms",
                 "addingdms/configuring",
-                "addingdms/loginlogout",
-                "addingdms/notifications",
-                "addingdms/opening",
                 "addingdms/encryption",
                 "addingdms/encryption/keygeneration",
                 "addingdms/encryption/operations",
+                "addingdms/loginlogout",
+                "addingdms/notifications",
+                "addingdms/opening",
                 "basic",
                 "changelog",
                 "debugging",
                 "faq",
                 "howitworks",
-                "howitworks/encryptinglocaldocuments",
                 "howitworks/encryptingclouddocuments",
+                "howitworks/encryptinglocaldocuments",
                 "plugins"
             };
 
