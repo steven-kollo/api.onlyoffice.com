@@ -19,11 +19,14 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Java code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Java example</a> from our site.</p>
-<p>To connect the editors to your website, specify the path to the editors installation in the <em>\src\main\resources\settings.properties</em> file:</p>
+<p>To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>\src\main\resources\settings.properties</em> file:</p>
 
-<pre>files.docservice.url.site=https://documentserver/</pre>
+<pre>
+storage-folder = app_data
+files.docservice.url.site=https://documentserver/</pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storage-folder</b> is the path where files will be created and stored. You can set an absolute path.
+For example, <em>D:\\\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>\src\main\webapp\editor.jsp</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
@@ -143,13 +146,18 @@ sudo apt-get install oracle-java8-installer</span>
     <li>Edit the <em>settings.properties</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano src/main/resources/settings.properties</div>
-        <p>Edit the following line:</p>
+        <p>Edit the following lines:</p>
 
         <pre>
+storage-folder = app_data
 files.docservice.url.site=https://documentserver/
 </pre>
 
-        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storage-folder</b> is the path where files will be created and stored.
+        Please note that you must have read and write permissions to the folder. If you do not have them, please use the next command:</p>
+        <pre>
+sudo chmod -R ugo+rw /{path}
+</pre>
     </li>
     <li>Install <b>Maven</b>:
         <div class="commandline">sudo apt-get install maven</div>
@@ -194,13 +202,14 @@ files.docservice.url.site=https://documentserver/
     <li>Edit the <em>settings.properties</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-docker.aspx">installed</a>.
         <div class="commandline">nano src/main/resources/settings.properties</div>
-        <p>Edit the following line:</p>
+        <p>Edit the following lines:</p>
 
         <pre>
+storage-folder = app_data
 files.docservice.url.site=https://documentserver/
 </pre>
 
-        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storage-folder</b> is the path where files will be created and stored.</p>
     </li>
     <li>Run the next command in the Java example directory:
         <div class="commandline">docker-compose up</div>

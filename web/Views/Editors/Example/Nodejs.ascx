@@ -22,14 +22,16 @@
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the Node.js code for the editors integration<span class="copy-link" title="Click to get link"></span></h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">Node.js example</a> from our site.</p>
 <p>
-    You need to connect the editors to your website.
-    Specify the path to the editors installation in the <em>config/default.json</em> file:
+    To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>config/default.json</em> file:
 </p>
 <pre class="commandline">
+"storageFolder": "./files"
+"storagePath": "/files"
 "siteUrl": "https://documentserver/"
 </pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed, the <b>storageFolder</b> and <b>storagePath</b> are the paths where files will be created and stored.
+You can set an absolute path. For example, <em>D:\\\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>\views\editor.ejs</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install Node.js environment</h2>
@@ -90,13 +92,19 @@
     <li>Edit the <em>default.json</em> configuration file.
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config/default.json</div>
-        <p>Edit the following line:</p>
+        <p>Edit the following lines:</p>
 
         <pre>
+"storageFolder": "./files"
+"storagePath": "/files"
 "siteUrl": "https://documentserver/"
 </pre>
 
-        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed, the <b>storageFolder</b> and <b>storagePath</b> are the paths where files will be created and stored.
+        Please note that you must have read and write permissions to the folder. If you do not have them, please use the next command:</p>
+        <pre>
+sudo chmod -R ugo+rw /{path}
+</pre>
     </li>
     <li>Run the project with Node.js:
         <div class="commandline">node bin/www</div>
