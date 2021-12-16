@@ -49,7 +49,7 @@ DOC_SERV_SITE_URL = 'https://documentserver/'
 </pre>
 
         <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>STORAGE_PATH</b> is the path where files will be created and stored.
-        You can set an absolute path. For example, <em>D:\\\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
+        You can set an absolute path. For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
     </li>
     <li>Run the <b>Python</b> server:
         <div class="commandline">python manage.py runserver 0.0.0.0:8000</div>

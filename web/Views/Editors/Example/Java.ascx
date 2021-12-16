@@ -26,7 +26,7 @@ storage-folder = app_data
 files.docservice.url.site=https://documentserver/</pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storage-folder</b> is the path where files will be created and stored. You can set an absolute path.
-For example, <em>D:\\\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
+For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>\src\main\webapp\editor.jsp</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>

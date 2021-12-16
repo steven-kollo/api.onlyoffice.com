@@ -31,7 +31,7 @@
 </pre>
 
 <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed, the <b>storageFolder</b> and <b>storagePath</b> are the paths where files will be created and stored.
-You can set an absolute path. For example, <em>D:\\\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
+You can set an absolute path. For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>\views\editor.ejs</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install Node.js environment</h2>
