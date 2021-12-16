@@ -74,6 +74,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "rubyexample",
                 "spreadsheetapi",
                 "textdocumentapi",
+                "try",
             };
 
         #endregion
@@ -148,6 +149,20 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Howitworks", (object)catchall);
+        }
+
+        public ActionResult Try()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public string Try(string module, string section, string method)
+        {
+            var dbMethod = DocBuilderDocumentation.GetMethod(module, section, method);
+            if (dbMethod != null && dbMethod.Example != null)
+                return dbMethod.Example.Script;
+            return "";
         }
 
         public ActionResult Textdocumentapi(string catchall)
