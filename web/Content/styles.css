@@ -1256,7 +1256,7 @@ pre,
     margin: 0;
 }
 
-#builderScript {
+.docbuilder-script {
     outline: none;
     background: rgb(249, 249, 249);
     border-radius: 3px;
@@ -2406,7 +2406,7 @@ article {
     .doc-builder-file-types {
         box-shadow: none;
     }
-    #builderScript {
+    .docbuilder-script {
         width: 90%;
         width: -moz-available;
         width: -webkit-fill-available;

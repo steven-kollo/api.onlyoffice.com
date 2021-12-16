@@ -41,7 +41,7 @@
         <ul class="builder-search-results"></ul>
     </div>
 
-    <textarea id="builderScript" name="builderScript" data-easy="true" class="builder-code" spellcheck="false"></textarea>
+    <textarea id="builderScript" name="builderScript" data-easy="true" class="docbuilder-script" spellcheck="false"></textarea>
 
     <ul class="list-buttons doc-builder-list-buttons">
         <li>
