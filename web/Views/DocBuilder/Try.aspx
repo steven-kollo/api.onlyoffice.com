@@ -41,7 +41,7 @@
         <ul class="builder-search-results"></ul>
     </div>
 
-    <textarea id="builderScript" name="builderScript" class="builder-code" spellcheck="false"></textarea>
+    <textarea id="builderScript" name="builderScript" data-easy="true" class="builder-code" spellcheck="false"></textarea>
 
     <ul class="list-buttons doc-builder-list-buttons">
         <li>
@@ -90,6 +90,7 @@
             }
         %>
 
+        var documentType = "<%= documentType %>";
         var methodNames = [];
         var sections = <%= Newtonsoft.Json.JsonConvert.SerializeObject(DocBuilderDocumentation.GetModule(documentType)) %>;
 
@@ -104,8 +105,11 @@
                 if (desc.includes("<ul>")) {
                     desc = desc.substring(0, desc.indexOf("<ul>") - 1) + "</p>";
                 }
-                desc ="<p>" + method.memberof + "." + method.name + " — </p>" + desc.replace(".", "");
-                methodNames.push(desc);
+                methodNames.push({
+                    memberof: method.memberof,
+                    name: method.name,
+                    desc: desc.replace(".", "")
+                });
             }
         }
 

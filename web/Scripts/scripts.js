@@ -134,10 +134,13 @@ $(function() {
         var searchBox = this;
         if (!!$(searchBox).val()) {
             $(".builder-search-results").empty();
-            methodNames.forEach(function (method) {
-                if (method.toLowerCase().includes($(searchBox).val().toLowerCase())) {
+            methodNames.forEach(function (methodItem) {
+                var searchItem = methodItem.memberof + " " + methodItem.name + " " + methodItem.desc;
+                if (searchItem.toLowerCase().includes($(searchBox).val().toLowerCase())) {
                     var elem = document.createElement("li");
-                    elem.innerHTML = method;
+                    elem.innerHTML = "<p>" + methodItem.memberof + "." + methodItem.name + " — </p>" + desc.replace(".", "");
+                    elem.setAttribute("data-section", methodItem.memberof);
+                    elem.setAttribute("data-method", methodItem.name);
                     $(".builder-search-results").append(elem);
                 }
             });
@@ -150,17 +153,15 @@ $(function() {
         if (!builderSearch.length) {
             $(".builder-search-results").hide();
         } else if (builderSearch) {
-            var liText = e.target.closest("li").innerText;
+            var methodItem = $(e.target.closest("li"));
 
             $(".builder-search-results").hide();
             $("#doc-builder-search-box input").val("");
-            liText = liText.substring(liText.indexOf("— ") + 2);
-            var postParams = liText.split(".");
 
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "");
             xhr.setRequestHeader('Content-Type', 'application/json');
-            xhr.send(JSON.stringify( {module: documentType, section: postParams[0].toLowerCase(), method: postParams[1].toLowerCase()}));
+            xhr.send(JSON.stringify( {module: documentType, section: methodItem.data("section").toLowerCase(), method: methodItem.data("method").toLowerCase()}));
 
             xhr.onload = function () {
                 var script = xhr.responseText;
@@ -200,11 +201,12 @@ $(function() {
             var scriptMaxLength = 10000;
             var createFunction = "builder.CreateFile";
             var saveFunction = "builder.SaveFile";
+            var easy = $("#builderScript").data("easy");
 
             if (text.length == 0
                 || text.length >= scriptMaxLength
-                || text.indexOf(createFunction) == -1
-                || text.indexOf(saveFunction) == -1) {
+                || text.indexOf(createFunction) == -1 && !easy
+                || text.indexOf(saveFunction) == -1 && !easy) {
                 $("#builderScript").val("Invalid script");
                 return;
             }
