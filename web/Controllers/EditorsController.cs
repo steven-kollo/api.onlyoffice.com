@@ -112,8 +112,8 @@ namespace ASC.Api.Web.Help.Controllers
                 "Security",
                 "SharePoint",
                 "Signature",
-                "Signature/Browser",
                 "Signature/Body",
+                "Signature/Browser",
                 "Signature/Request",
                 "Troubleshooting",
                 "Try",
@@ -125,12 +125,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/ProofKeys",
                 "WOPI/RestApi",
                 "WOPI/RestApi/CheckFileInfo",
+                "WOPI/RestApi/GetFile",
                 "WOPI/RestApi/Lock",
+                "WOPI/RestApi/PutFile",
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
-                "WOPI/RestApi/GetFile",
-                "WOPI/RestApi/PutFile"
             };
 
         [ValidateInput(false)]

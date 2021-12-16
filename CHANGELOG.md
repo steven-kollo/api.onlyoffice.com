@@ -22,6 +22,10 @@
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
 
+- docbuilder: try now page
+- editors: added the ability to use custom path for file storage in the test examples
+- desktop: restructured the Encryption page
+- desktop: added the How it workds section
 - editors: added the Redmine plugin
 - editors: changed get docs page
 - editors: added the Moodle plugin

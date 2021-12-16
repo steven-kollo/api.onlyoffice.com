@@ -42,9 +42,9 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li><em>plugin_style.css</em> is used to adjust the plugin style.</li>
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-languagetool/blob/develop/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
-            <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-languagetool/blob/develop/licenses/Select2.license" target="_blank">MIT</a>.</li>
-            <li><b>Languagetool</b> is a multilingual grammar and style checker (<a href="https://languagetool.org/" target="_blank">https://languagetool.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-languagetool/blob/develop/licenses/Languagetool's.license" target="_blank">GNU LESSER GENERAL PUBLIC LICENSE</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-languagetool/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-languagetool/blob/master/licenses/Select2.license" target="_blank">MIT</a>.</li>
+            <li><b>Languagetool</b> is a multilingual grammar and style checker (<a href="https://languagetool.org/" target="_blank">https://languagetool.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-languagetool/blob/master/licenses/Languagetool's.license" target="_blank">GNU LESSER GENERAL PUBLIC LICENSE</a>.</li>
         </ul>
     </li>
 </ol>
@@ -118,7 +118,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-languagetool/blob/develop/scripts/langTool.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

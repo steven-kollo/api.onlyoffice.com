@@ -36,8 +36,10 @@
     <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
     <li>Icons</li>
     <li>The <em>translations</em> folder contains translations into Russian, German, Spanish and French.</li>
-    <li>Third-party service:
+    <li>Third-party services:
         <ul>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-translator/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-translator/blob/master/licenses/Select2.license" target="_blank">MIT</a>.</li>
             <li><a href="https://cloud.google.com/translate?hl=ru" target="_blank">Google Translate API</a> enables translation between languages. License: <a href="https://github.com/matheuss/google-translate-api/blob/master/LICENSE" target="_blank">MIT License</a>.</li>
         </ul>
     </li>
@@ -91,7 +93,6 @@
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-translator/blob/master/scripts/translate.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

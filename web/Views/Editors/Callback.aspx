@@ -131,7 +131,7 @@
                 <td id="url" class="copy-link">url</td>
                 <td>
                     Defines the link to the edited document to be saved with the document storage service.
-                    The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only.
+                    The link is present when the <em>status</em> value is equal to <b>2</b>, <b>3</b>, <b>6</b> or <b>7</b> only.
                 </td>
                 <td>string</td>
                 <td>optional</td>
