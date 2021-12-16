@@ -44,7 +44,7 @@ Rails.configuration.storagePath="app_data"
 Rails.configuration.urlSite="https://documentserver/"</pre>
 
         <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storagePath</b> is the path where files will be created and stored.
-        You can set an absolute path. For example, <em>D:\\\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
+        You can set an absolute path. For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
     </li>
     <li>Run the <b>Rails</b> application:
         <div class="commandline">rails s -b 0.0.0.0 -p 80</div>
