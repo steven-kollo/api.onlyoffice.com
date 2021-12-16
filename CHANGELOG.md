@@ -1,6 +1,7 @@
 # Change Log
 
 - docbuilder: try now page
+- editors: added the ability to use custom path for file storage in the test examples
 - desktop: restructured the Encryption page
 - desktop: added the How it workds section
 - editors: added the Redmine plugin

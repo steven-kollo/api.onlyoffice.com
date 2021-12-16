@@ -41,13 +41,15 @@ pip install python-magic</div>
         Specify the name of your local server with the ONLYOFFICE Document Server installed.
         And specify the name of the server on which example is installed.
         <div class="commandline">nano config.py</div>
-        <p>Edit the following line:</p>
+        <p>Edit the following lines:</p>
 
         <pre>
+STORAGE_PATH = 'app_data'
 DOC_SERV_SITE_URL = 'https://documentserver/'
 </pre>
 
-        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>STORAGE_PATH</b> is the path where files will be created and stored.
+        You can set an absolute path. For example, <em>D:\\\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
     </li>
     <li>Run the <b>Python</b> server:
         <div class="commandline">python manage.py runserver 0.0.0.0:8000</div>

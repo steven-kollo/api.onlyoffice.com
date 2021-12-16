@@ -19,11 +19,13 @@
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) example</a> from our site.</p>
 <p>
-    Connect the editors to your website by specifying the path to the editors installation in the <em>settings.config</em> file:
+    To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>settings.config</em> file:
 </p>
-<pre>&lt;add key="files.docservice.url.site" value="https://documentserver/" /&gt;</pre>
+<pre>
+&lt;add key="storage-path" value=""/&gt;
+&lt;add key="files.docservice.url.site" value="https://documentserver/" /&gt;</pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storage-path</b> is the path where files will be created and stored. You can set an absolute path.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>DocEditor.aspx</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
