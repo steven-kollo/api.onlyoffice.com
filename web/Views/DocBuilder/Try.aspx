@@ -17,7 +17,7 @@
     </h1>
 
     <h2>Search for methods and create a document</h2>
-    <p>You can use the search for the desired method to use its script in the text area below. Or, in case you have a script of your own, use the button under the textarea to upload it. You can select the necessary editor.</p>
+    <p>You can search for the desired method to use its script in the text area below. Or, in case you have a script of your own, use the button under the text area to upload it. You can select the necessary editor.</p>
 
     <div>
         <ul class="doc-builder-file-types top-nav">
@@ -61,14 +61,6 @@
     <div id="editorSpace">
         <div id="placeholder"></div>
     </div>
-
-    <h2>Want to learn how it works?</h2>
-    <p><a href="<%= Url.Action("gettingstarted") %>">Get started here</a> and find out the main principles of <b>ONLYOFFICE Document Builder</b> work, or read the <a href="<%= Url.Action("integrationapi") %>">Integration API</a>, <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>, <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a> or <a href="<%= Url.Action("presentationapi") %>">Presentation API</a> articles to find out how to automate your document creation using <b>ONLYOFFICE Document Builder</b>.</p>
-
-    <h2>Get help</h2>
-
-    <p>If you have any questions or feature requests about ONLYOFFICE Document Builder, please visit <a href="https://github.com/ONLYOFFICE/DocumentBuilder/issues" target="_blank">GitHub</a>.</p>
-    <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/document-builder/37" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 
     <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
     <script type="text/javascript">
