@@ -138,7 +138,7 @@ $(function() {
                 var searchItem = methodItem.memberof + " " + methodItem.name + " " + methodItem.desc;
                 if (searchItem.toLowerCase().includes($(searchBox).val().toLowerCase())) {
                     var elem = document.createElement("li");
-                    elem.innerHTML = "<p>" + methodItem.memberof + "." + methodItem.name + " — </p>" + desc.replace(".", "");
+                    elem.innerHTML = "<p>" + methodItem.memberof + "." + methodItem.name + " — </p>" + methodItem.desc.replace(".", "");
                     elem.setAttribute("data-section", methodItem.memberof);
                     elem.setAttribute("data-method", methodItem.name);
                     $(".builder-search-results").append(elem);
