@@ -19,6 +19,16 @@
 
     <p>For further information on the WOPI protocol, please read the <a href="https://wopi.readthedocs.io/en/latest/" target="_blank">WOPI documentation</a>.</p>
 
+    <p>All the necessary WOPI settings you can find and change in the configuration file which can be found (or created) at the following path:</p>
+    <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
+    <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
+
+    <div class="note">
+        The default values are available in the <em>default.json</em> configuration file, which is available in the folders above (for Linux and Windows).
+        Please do not edit the contents of the <em>default.json</em> file directly.
+        The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+    </div>
+
     <h2 id="enable" class="copy-link">Enabling WOPI</h2>
     <p>To enable WOPI, set the <em>wopi.enable</em> parameter in the Document Server config to <b>true</b>.</p>
 
@@ -65,7 +75,7 @@
     <p>Follow the steps below to configure the Document Server IP filter:</p>
     <ol>
         <li>
-            <p>Open the <em>/etc/onlyoffice/documentserver/default.json</em> file using any available text editor:</p>
+            <p>Open the <em>/etc/onlyoffice/documentserver/local.json</em> file using any available text editor:</p>
             <pre>
 "ipfilter": {
     "rules": [
