@@ -61,7 +61,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config/Document/Permissions",
                 "Config/Editor",
                 "Config/Editor/Customization",
-                "Config/Editor/Customization/Layout",
                 "Config/Editor/Embedded",
                 "Config/Editor/Plugins",
                 "Config/Events",

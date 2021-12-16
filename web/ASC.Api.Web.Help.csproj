@@ -772,7 +772,6 @@
     <Content Include="Views\Editors\Example\Csharp.ascx" />
     <Content Include="Views\Editors\Methods.aspx" />
     <Content Include="Views\Editors\Config\Editor\Customization.ascx" />
-    <Content Include="Views\Editors\Config\Editor\Customization\Layout.ascx" />
     <Content Include="Views\Editors\Config\Editor\Embedded.ascx" />
     <Content Include="Views\Editors\Config\Editor\Plugins.ascx" />
     <Content Include="Views\Editors\DemoPreview.aspx" />

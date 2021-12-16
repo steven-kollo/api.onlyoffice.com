@@ -35,11 +35,6 @@
             <ul>
                 <li>
                     <a href="<%= Url.Action("config/editor/customization") %>"><b>customization</b></a> - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
-                    <ul>
-                        <li>
-                            <a href="<%= Url.Action("config/editor/customization/layout") %>"><b>layout</b></a> - allows to hide the interface elements but not to disable features completely;
-                        </li>
-                    </ul>
                 </li>
                 <li>
                     <a href="<%= Url.Action("config/editor/embedded") %>"><b>embedded</b></a> - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
@@ -152,42 +147,6 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#hideNotes">hideNotes</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#hideRightMenu">hideRightMenu</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#hideRulers">hideRulers</a>": false,
-            "<a href="<%= Url.Action("config/editor/customization/layout") %>">layout</a>": {
-                "<a href="<%= Url.Action("config/editor/customization/layout") %>#header">header</a>": {
-                    "save": true,
-                    "users": true
-                },
-                "<a href="<%= Url.Action("config/editor/customization/layout") %>#leftMenu">leftMenu</a>": {
-                    "navigation": true,
-                    "spellcheck": true
-                },
-                "<a href="<%= Url.Action("config/editor/customization/layout") %>#rightMenu">rightMenu</a>": true,
-                "<a href="<%= Url.Action("config/editor/customization/layout") %>#statusBar">statusBar</a>": {
-                    "actionStatus": true,
-                    "docLang": true,
-                    "textLang": true
-                },
-                "<a href="<%= Url.Action("config/editor/customization/layout") %>#toolbar">toolbar</a>": {
-                    "collaboration": true,
-                    "file": {
-                        "close": true,
-                        "info": true,
-                        "save": true,
-                        "settings": true
-                    },
-                    "home": {
-                        "mailmerge": true
-                    },
-                    "layout": true,
-                    "plugins": true,
-                    "protect": true,
-                    "references": true,
-                    "save": true,
-                    "view": {
-                        "navigation": true
-                    },
-                }
-            },
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",

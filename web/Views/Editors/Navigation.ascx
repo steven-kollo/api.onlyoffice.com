@@ -159,11 +159,6 @@
                 <ul>
                     <li>
                         <a href="<%= Url.Action("config/editor/customization") %>">Customization</a>
-                        <ul>
-                            <li>
-                                <a href="<%= Url.Action("config/editor/customization/layout") %>">Layout</a>
-                            </li>
-                        </ul>
                     </li>
                     <li>
                         <a href="<%= Url.Action("config/editor/embedded") %>">Embedded</a>

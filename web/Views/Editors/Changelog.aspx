@@ -19,12 +19,6 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <ul>
-        <% if (license)
-            { %>
-        <li>The <a href="<%= Url.Action("config/editor/customization") %>#leftMenu">editorConfig.customization.leftMenu</a> field is deprecated, please use the <a href="<%= Url.Action("config/editor/customization/layout") %>#leftMenu">editorConfig.customization.layout.leftMenu</a> field instead.</li>
-        <li>The <a href="<%= Url.Action("config/editor/customization") %>#rightMenu">editorConfig.customization.rightMenu</a> field is deprecated, please use the <a href="<%= Url.Action("config/editor/customization/layout") %>#rightMenu">editorConfig.customization.layout.rightMenu</a> field instead.</li>
-        <% } %>
-        <li>Added the <a href="<%= Url.Action("config/editor/customization/layout") %>">editorConfig.customization.layout</a> parameter section.</li>
         <li>The <a href="<%= Url.Action("config/editor/customization") %>#spellcheck">editorConfig.customization.spellcheck</a> field is deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features.spellcheck</a> field instead.</li>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features</a> parameter section.</li>
     </ul>
