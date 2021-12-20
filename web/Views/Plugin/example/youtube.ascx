@@ -48,13 +48,23 @@
 {
     "name": "YouTube",
     "guid": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}",
+    "version": "1.0",
 
     "variations": [
         {
             "description": "YouTube",
             "url": "index.html",
 
-            "icons": [ "icon.png", "icon@2x.png", "icon2.png", "icon2@2x.png" ],
+            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png" ],
+            "icons2": [
+                {
+                    "100%": { "normal": "resources/img/icon.png" },
+                    "125%": { "normal": "resources/img/icon@1.25x.png" },
+                    "150%": { "normal": "resources/img/icon@1.5x.png" },
+                    "175%": { "normal": "resources/img/icon@1.75x.png" },
+                    "200%": { "normal": "resources/img/icon@2x.png" }
+                }
+            ],
             "isViewer": true,
             "isDisplayedInViewer": false,
             "EditorsSupport": [ "word", "cell", "slide" ],
