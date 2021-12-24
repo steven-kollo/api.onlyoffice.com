@@ -111,4 +111,4 @@
             </tr>
         </tbody>
     </table>
-    <p>Further information about building a host page can be found <a href="https://wopi.readthedocs.io/en/latest/hostpage.html" target="_blank">here</a>.</p>
+    <p>Further information about building a host page can be found <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage" target="_blank">here</a>.</p>

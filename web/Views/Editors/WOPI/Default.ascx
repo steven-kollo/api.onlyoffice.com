@@ -17,7 +17,7 @@
         <li>available messages that can be posted via <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>.</li>
     </ul>
 
-    <p>For further information on the WOPI protocol, please read the <a href="https://wopi.readthedocs.io/en/latest/" target="_blank">WOPI documentation</a>.</p>
+    <p>For further information on the WOPI protocol, please read the <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/" target="_blank">WOPI documentation</a>.</p>
 
     <p>All the necessary WOPI settings you can find and change in the configuration file which can be found (or created) at the following path:</p>
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
