@@ -88,6 +88,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
+                "FAQ/UsingWOPI",
                 "GetDocs",
                 "History",
                 "HowItWorks",
