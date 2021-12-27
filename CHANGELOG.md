@@ -1,5 +1,8 @@
 # Change Log
 
+## 2.4.1
+- editors: fix macrosMode default
+
 ## 2.4.0
 - editors: added the Jira integration app
 - editors: added the Java Spring integration example

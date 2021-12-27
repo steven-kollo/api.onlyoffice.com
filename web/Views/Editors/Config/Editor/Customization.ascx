@@ -472,7 +472,7 @@
                     <li><b>enable</b> - run all macros automatically;</li>
                     <li><b>warn</b> - warn about macros and ask permission to run.</li>
                 </ul>
-                The default value is <b>original</b>.
+                The default value is <b>warn</b>.
             </td>
             <td>boolean</td>
             <td>true</td>
