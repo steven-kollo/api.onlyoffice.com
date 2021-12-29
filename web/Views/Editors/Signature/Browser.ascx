@@ -18,15 +18,26 @@
 <pre>
 {
     "document": {
-        "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "permissions": {
+            "comment": true,
+            "commentGroups": {
+                "edit": ["Group2", ""],
+                "remove": [""],
+                "view": ""
+            },
+            "copy": true,
+            "deleteCommentAuthorOnly": false,
             "download": true,
             "edit": true,
+            "editCommentAuthorOnly": false,
+            "fillForms": true,
+            "modifyContentControl": true,
+            "modifyFilter": true,
             "print": true,
-            "review": true
+            "review": true,
+            "reviewGroups": ["Group1", "Group2", ""]
         },
-        "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
     "editorConfig": {

@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: changed the recommended list of parameters to be signed when performing the client-side browser requests to ONLYOFFICE Document Server
 - docbuilder: try now page
 - editors: added the ability to use custom path for file storage in the test examples
 - desktop: restructured the Encryption page
