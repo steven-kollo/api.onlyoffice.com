@@ -12,7 +12,7 @@
 
 <p>
     The <em>payload</em> for the JWT token in the JSON format must have the same structure as the <a href="<%= Url.Action("advanced") %>">config</a>.
-    The parameter list to be signed is not strictly regulated, but we recommend that you specify the following parameters:
+    The parameter list to be signed is strictly regulated. You have to specify the following parameters:
 </p>
 
 <pre>
