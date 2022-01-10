@@ -29,7 +29,10 @@
         <li><a href="#hideNotes">hideNotes</a></li>
         <li><a href="#hideRightMenu">hideRightMenu</a></li>
         <li><a href="#hideRulers">hideRulers</a></li>
+        <% if (license)
+           { %>
         <li><a href="#layout">layout</a></li>
+        <% } %>
         <li><a href="#logo">logo</a></li>
         <li><a href="#macros">macros</a></li>
         <li><a href="#macrosMode">macrosMode</a></li>
@@ -441,8 +444,10 @@
                 <img width="832px" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
             </td>
         </tr>
+        <% if (license)
+           { %>
         <tr class="tablerow">
-            <td id="layout" class="copy-link">layout</td>
+            <td id="layout" class="copy-link">layout<span class="required">**</span></td>
             <td>
                 Defines the parameters that the user can use to hide the interface elements but not to disable features completely
                 (for example, if this functionality is available from other elements such as context menu, or via hotkeys):
@@ -643,8 +648,6 @@
             </td>
             <td>object</td>
         </tr>
-        <% if (license)
-           { %>
         <tr>
             <td id="leftMenu" class="copy-link">leftMenu<span class="required">**</span></td>
             <td>
@@ -1112,7 +1115,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "hideNotes": false,
             "hideRightMenu": false,
             "hideRulers": false,
-            "layout": {
+            <% if (license)
+               { %>"layout": {
                 "header": {
                     "save": true,
                     "users": true
@@ -1145,11 +1149,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                     "save": true,
                     "view": {
                         "navigation": true
-                    },
+                    }
                 }
             },
-            <% if (license)
-               { %>"loaderLogo": "https://example.com/loader-logo.png",
+            "loaderLogo": "https://example.com/loader-logo.png",
             "loaderName": "The document is loading, please wait...",
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
