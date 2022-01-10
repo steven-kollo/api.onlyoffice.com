@@ -11,7 +11,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <% var license = !string.IsNullOrEmpty(Page.Request["license"]); %>
     <h1>
         <span class="hdr">Changelog</span>
     </h1>
