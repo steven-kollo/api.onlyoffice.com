@@ -921,9 +921,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"rightMenu": true,
-            <% } %>
-            <% if (license)
-               { %>"statusBar": true,
+            "statusBar": true,
             <% } %><%--"submitForm": true,--%>
             <% if (license)
                 { %>"toolbar": true,
