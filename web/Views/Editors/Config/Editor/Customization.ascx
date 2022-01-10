@@ -816,8 +816,8 @@
                         <b>example</b>: false;
                     </li>
                     <li>
-                        <b>trackChanges</b> - defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
-                        If the parameter is <em>undefined</em>, the <em>document.permissions.review</em> value is used (for all the document users),
+                        <b>trackChanges</b> - defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
+                        If the parameter is <em>undefined</em>, the <em>document.permissions.review</em> value is used (for all the document users),
                         <br />
                         <b>type</b>: boolean,
                         <br />
