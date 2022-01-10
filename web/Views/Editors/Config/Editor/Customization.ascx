@@ -253,7 +253,7 @@
             <td>object</td>
             <td></td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="features" class="copy-link">features</td>
             <td>
                 Defines the parameters that the user can disable or customize if possible:
@@ -286,6 +286,11 @@
             </td>
             <td>object</td>
             <td></td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <div class="note">Please note that in case <em>spellcheck</em> setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.features.spellcheck</em> parameter.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="feedback" class="copy-link">feedback</td>
@@ -916,9 +921,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"rightMenu": true,
-            <% } %>
-            <% if (license)
-               { %>"statusBar": true,
+            "statusBar": true,
             <% } %><%--"submitForm": true,--%>
             <% if (license)
                 { %>"toolbar": true,
