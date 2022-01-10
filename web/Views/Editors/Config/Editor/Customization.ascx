@@ -12,6 +12,10 @@
 
 <nav class="content">
     <ul class="columns-4" style="list-style: none;">
+        <% if (license)
+           { %>
+        <li><a href="#about">about</a></li>
+        <% } %>
         <li><a href="#anonymous">anonymous</a></li>
         <li><a href="#autosave">autosave</a></li>
         <li><a href="#chat">chat</a></li>
@@ -32,6 +36,9 @@
         <% if (license)
            { %>
         <li><a href="#layout">layout</a></li>
+        <li><a href="#leftMenu">leftMenu</a></li>
+        <li><a href="#loaderLogo">loaderLogo</a></li>
+        <li><a href="#loaderName">loaderName</a></li>
         <% } %>
         <li><a href="#logo">logo</a></li>
         <li><a href="#macros">macros</a></li>
@@ -40,8 +47,17 @@
         <li><a href="#plugins">plugins</a></li>
         <li><a href="#review">review</a></li>
         <li><a href="#reviewDisplay">reviewDisplay</a></li>
+        <% if (license)
+           { %>
+        <li><a href="#rightMenu">rightMenu</a></li>
+        <% } %>
         <li><a href="#showReviewChanges">showReviewChanges</a></li>
         <li><a href="#spellcheck">spellcheck</a></li>
+        <% if (license)
+           { %>
+        <li><a href="#statusBar">statusBar</a></li>
+        <li><a href="#toolbar">toolbar</a></li>
+        <% } %>
         <li><a href="#toolbarHideFileName">toolbarHideFileName</a></li>
         <li><a href="#toolbarNoTabs">toolbarNoTabs</a></li>
         <li><a href="#trackChanges">trackChanges</a></li>
