@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiPresetColor",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiPresetColor class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",

@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiTable",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiTable class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "GetRowsCount": {
       "memberof": "ApiTable",
       "name": "GetRowsCount",
-      "description": "<p>Get the number of rows in the current table.</p>",
+      "description": "<p>Returns a number of rows in the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -37,7 +37,7 @@
     "GetRow": {
       "memberof": "ApiTable",
       "name": "GetRow",
-      "description": "<p>Get the table row by its position in the table.</p>",
+      "description": "<p>Returns a table row by its position in the table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -63,7 +63,7 @@
     "GetCell": {
       "memberof": "ApiTable",
       "name": "GetCell",
-      "description": "<p>Get the cell by its position.</p>",
+      "description": "<p>Returns a cell by its position.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -81,7 +81,7 @@
         {
           "type": "number",
           "name": "nRow",
-          "description": "<p>The row position in the current table.</p>",
+          "description": "<p>The row position in the current table where the specified cell is placed.</p>",
           "optional": false
         },
         {
@@ -95,7 +95,7 @@
     "MergeCells": {
       "memberof": "ApiTable",
       "name": "MergeCells",
-      "description": "<p>Merge an array of cells. If the merge is done successfully, it will return the resulting merged cell, otherwise the result will be &quot;null&quot;.\n<note>The number of cells in any row and the number of rows in the current table may be changed.</note></p>",
+      "description": "<p>Merges an array of cells. If the merge is done successfully, it will return the resulting merged cell, otherwise the result will be &quot;null&quot;.\n<note>The number of cells in any row and the number of rows in the current table may be changed.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -120,7 +120,7 @@
     "SetStyle": {
       "memberof": "ApiTable",
       "name": "SetStyle",
-      "description": "<p>Set the style for the current table.</p>",
+      "description": "<p>Sets a style to the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -145,7 +145,7 @@
     "SetTableLook": {
       "memberof": "ApiTable",
       "name": "SetTableLook",
-      "description": "<p>Specify the conditional formatting components of the referenced table style (if one exists)\nwhich will be applied to the set of table rows with the current table-level property exceptions. A table style\ncan specify up to six different optional conditional formats, for example, different formatting for first column,\nwhich then can be applied or omitted from individual table rows in the parent table.</p>\n<p>The default setting is to apply the row and column band formatting, but not the first row, last row, first\ncolumn, or last column formatting.</p>",
+      "description": "<p>Specifies the conditional formatting components of the referenced table style (if one exists)\nwhich will be applied to the set of table rows with the current table-level property exceptions. A table style\ncan specify up to six different optional conditional formats, for example, different formatting for the first column,\nwhich then can be applied or omitted from individual table rows in the parent table.</p>\n<p>The default setting is to apply the row and column band formatting, but not the first row, last row, first\ncolumn, or last column formatting.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -196,7 +196,7 @@
     "Split": {
       "memberof": "ApiTable",
       "name": "Split",
-      "description": "<p>Split the cell into a given number of rows and columns.</p>",
+      "description": "<p>Splits the cell into a given number of rows and columns.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -220,14 +220,14 @@
         {
           "type": "Number",
           "name": "nRow",
-          "description": "<p>Count of rows which the cell will be split.</p>",
+          "description": "<p>Count of rows into which the cell will be split.</p>",
           "optional": true,
           "defaultValue": 1
         },
         {
           "type": "Number",
           "name": "nCol",
-          "description": "<p>Count of columns which the cell will be split.</p>",
+          "description": "<p>Count of columns into which the cell will be split.</p>",
           "optional": true,
           "defaultValue": 1
         }
@@ -236,7 +236,7 @@
     "AddRow": {
       "memberof": "ApiTable",
       "name": "AddRow",
-      "description": "<p>Add a new row to the current table.</p>",
+      "description": "<p>Adds a new row to the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -259,7 +259,7 @@
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new row before or after the specified cell. If no cell is specified, then\nthis parameter will be ignored.</p>",
+          "description": "<p>Adds a new row before (false) or after (true) the specified cell. If no cell is specified, then\nthis parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -268,7 +268,7 @@
     "AddRows": {
       "memberof": "ApiTable",
       "name": "AddRows",
-      "description": "<p>Add the new rows to the current table.</p>",
+      "description": "<p>Adds the new rows to the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -297,7 +297,7 @@
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new rows before or after the specified cell. If no cell is specified then\nthis parameter will be ignored.</p>",
+          "description": "<p>Adds the new rows before (false) or after (true) the specified cell. If no cell is specified, then\nthis parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -306,7 +306,7 @@
     "AddColumn": {
       "memberof": "ApiTable",
       "name": "AddColumn",
-      "description": "<p>Add a new column to the current table.</p>",
+      "description": "<p>Adds a new column to the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -325,7 +325,7 @@
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add a new column before or after the specified cell. If no cell is specified,\nthen this parameter will be ignored.</p>",
+          "description": "<p>Adds a new column before (false) or after (true) the specified cell. If no cell is specified,\nthen this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -334,7 +334,7 @@
     "AddColumns": {
       "memberof": "ApiTable",
       "name": "AddColumns",
-      "description": "<p>Add the new columns to the current table.</p>",
+      "description": "<p>Adds the new columns to the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -359,7 +359,7 @@
         {
           "type": "boolean",
           "name": "isBefore",
-          "description": "<p>Add the new columns before or after the specified cell. If no cell is specified,\nthen this parameter will be ignored.</p>",
+          "description": "<p>Adds the new columns before (false) or after (true) the specified cell. If no cell is specified,\nthen this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -368,7 +368,7 @@
     "AddElement": {
       "memberof": "ApiTable",
       "name": "AddElement",
-      "description": "<p>Add a paragraph or a table or a blockLvl content control using its position in the cell.</p>",
+      "description": "<p>Adds a paragraph or a table or a blockLvl content control using its position in the cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -383,13 +383,13 @@
         {
           "type": "ApiTableCell",
           "name": "oCell",
-          "description": "<p>The cell where the current element will be added.</p>",
+          "description": "<p>The cell where the specified element will be added.</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "nPos",
-          "description": "<p>The position in the cell where the current element will be added.</p>",
+          "description": "<p>The position in the cell where the specified element will be added.</p>",
           "optional": false
         },
         {
@@ -403,7 +403,7 @@
     "RemoveRow": {
       "memberof": "ApiTable",
       "name": "RemoveRow",
-      "description": "<p>Remove a table row with a specified cell.</p>",
+      "description": "<p>Removes a table row with a specified cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -420,7 +420,7 @@
         {
           "type": "ApiTableCell",
           "name": "oCell",
-          "description": "<p>The cell which is present in the row that will be removed.</p>",
+          "description": "<p>The cell which is placed in the row that will be removed.</p>",
           "optional": false
         }
       ]
@@ -428,7 +428,7 @@
     "RemoveColumn": {
       "memberof": "ApiTable",
       "name": "RemoveColumn",
-      "description": "<p>Remove a table column with a specified cell.</p>",
+      "description": "<p>Removes a table column with a specified cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -445,7 +445,7 @@
         {
           "type": "ApiTableCell",
           "name": "oCell",
-          "description": "<p>The cell which is present in the column that will be removed.</p>",
+          "description": "<p>The cell which is placed in the column that will be removed.</p>",
           "optional": false
         }
       ]
@@ -453,7 +453,7 @@
     "Copy": {
       "memberof": "ApiTable",
       "name": "Copy",
-      "description": "<p>Create a copy of a table.</p>",
+      "description": "<p>Creates a copy of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -472,7 +472,7 @@
     "Select": {
       "memberof": "ApiTable",
       "name": "Select",
-      "description": "<p>Select a table.</p>",
+      "description": "<p>Selects the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -490,7 +490,7 @@
     "GetRange": {
       "memberof": "ApiTable",
       "name": "GetRange",
-      "description": "<p>Return a Range object that represents the part of the document contained in the specified table.</p>",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the specified table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -521,7 +521,7 @@
     "SetHAlign": {
       "memberof": "ApiTable",
       "name": "SetHAlign",
-      "description": "<p>Set horizontal alignment for a table.</p>",
+      "description": "<p>Sets the horizontal alignment to the table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -546,7 +546,7 @@
     "SetVAlign": {
       "memberof": "ApiTable",
       "name": "SetVAlign",
-      "description": "<p>Set vertical alignment for a table.</p>",
+      "description": "<p>Sets the vertical alignment to the table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -571,7 +571,7 @@
     "SetPaddings": {
       "memberof": "ApiTable",
       "name": "SetPaddings",
-      "description": "<p>Set table paddings.\nIf table is inline -&gt; only left padding applies.</p>",
+      "description": "<p>Sets the table paddings.\nIf table is inline, then only left padding is applied.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -614,7 +614,7 @@
     "SetWrappingStyle": {
       "memberof": "ApiTable",
       "name": "SetWrappingStyle",
-      "description": "<p>Set table wrapping style.</p>",
+      "description": "<p>Sets the table wrapping style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -639,7 +639,7 @@
     "GetParentContentControl": {
       "memberof": "ApiTable",
       "name": "GetParentContentControl",
-      "description": "<p>Get a content control that contains the table.</p>",
+      "description": "<p>Returns a content control that contains the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -657,7 +657,7 @@
     "InsertInContentControl": {
       "memberof": "ApiTable",
       "name": "InsertInContentControl",
-      "description": "<p>Wrap the table object with a content control.</p>",
+      "description": "<p>Wraps the current table object with a content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -675,7 +675,7 @@
         {
           "type": "number",
           "name": "nType",
-          "description": "<p>if nType === 1 -&gt; returns ApiBlockLvlSdt, else return ApiTable.</p>",
+          "description": "<p>Defines if this method returns the ApiBlockLvlSdt (nType === 1) or ApiTable (any value except 1) object.</p>",
           "optional": false
         }
       ]
@@ -683,7 +683,7 @@
     "GetParentTable": {
       "memberof": "ApiTable",
       "name": "GetParentTable",
-      "description": "<p>Get the table that contains this table.</p>",
+      "description": "<p>Returns a table that contains the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -701,7 +701,7 @@
     "GetTables": {
       "memberof": "ApiTable",
       "name": "GetTables",
-      "description": "<p>Get the tables that contain this table.</p>",
+      "description": "<p>Returns the tables that contain the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -718,7 +718,7 @@
     "GetNext": {
       "memberof": "ApiTable",
       "name": "GetNext",
-      "description": "<p>Get the next table.</p>",
+      "description": "<p>Returns the next table if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -736,7 +736,7 @@
     "GetPrevious": {
       "memberof": "ApiTable",
       "name": "GetPrevious",
-      "description": "<p>Get the previous table.</p>",
+      "description": "<p>Returns the previous table if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -754,7 +754,7 @@
     "GetParentTableCell": {
       "memberof": "ApiTable",
       "name": "GetParentTableCell",
-      "description": "<p>Get the table cell that contains the table.</p>",
+      "description": "<p>Returns a table cell that contains the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -772,7 +772,7 @@
     "Delete": {
       "memberof": "ApiTable",
       "name": "Delete",
-      "description": "<p>Delete the table.</p>",
+      "description": "<p>Deletes the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -789,7 +789,7 @@
     "Clear": {
       "memberof": "ApiTable",
       "name": "Clear",
-      "description": "<p>Clear the content from the table.</p>",
+      "description": "<p>Clears the content from the table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -806,7 +806,7 @@
     "Search": {
       "memberof": "ApiTable",
       "name": "Search",
-      "description": "<p>Search for the scope of a table object. The search results are a collection of ApiRange objects.</p>",
+      "description": "<p>Searches for a scope of a table object. The search results are a collection of ApiRange objects.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -837,7 +837,7 @@
     "SetTextPr": {
       "memberof": "ApiTable",
       "name": "SetTextPr",
-      "description": "<p>Apply text settings to the entire contents of the table.</p>",
+      "description": "<p>Applies the text settings to the entire contents of the table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -854,7 +854,7 @@
         {
           "type": "ApiTextPr",
           "name": "oTextPr",
-          "description": "<p>The text properties that will be set to the table specified.</p>",
+          "description": "<p>The text properties that will be set to the current table.</p>",
           "optional": false
         }
       ]
@@ -862,7 +862,7 @@
     "SetStyleColBandSize": {
       "memberof": "ApiTable",
       "name": "SetStyleColBandSize",
-      "description": "<p>Specify the number of columns which will comprise each table column band for this table style.</p>",
+      "description": "<p>Specifies a number of columns which will comprise each table column band for this table style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -883,7 +883,7 @@
     "SetStyleRowBandSize": {
       "memberof": "ApiTable",
       "name": "SetStyleRowBandSize",
-      "description": "<p>Specify the number of rows which will comprise each table row band for this table style.</p>",
+      "description": "<p>Specifies a number of rows which will comprise each table row band for this table style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -904,7 +904,7 @@
     "SetJc": {
       "memberof": "ApiTable",
       "name": "SetJc",
-      "description": "<p>Specify the alignment of the current table with respect to the text margins in the current section.</p>",
+      "description": "<p>Specifies the alignment of the current table with respect to the text margins in the current section.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -925,7 +925,7 @@
     "SetShd": {
       "memberof": "ApiTable",
       "name": "SetShd",
-      "description": "<p>Specify the shading which is applied to the extents of the current table.</p>",
+      "description": "<p>Specifies the shading which is applied to the extents of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -962,7 +962,7 @@
         {
           "type": "boolean",
           "name": "isAuto",
-          "description": "<p>The true value will disable the SetShd method use.</p>",
+          "description": "<p>The true value disables the SetShd method use.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -971,7 +971,7 @@
     "SetTableBorderTop": {
       "memberof": "ApiTable",
       "name": "SetTableBorderTop",
-      "description": "<p>Set the border which will be displayed at the top of the current table.</p>",
+      "description": "<p>Sets the border which will be displayed at the top of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1022,7 +1022,7 @@
     "SetTableBorderBottom": {
       "memberof": "ApiTable",
       "name": "SetTableBorderBottom",
-      "description": "<p>Set the border which will be displayed at the bottom of the current table.</p>",
+      "description": "<p>Sets the border which will be displayed at the bottom of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1073,7 +1073,7 @@
     "SetTableBorderLeft": {
       "memberof": "ApiTable",
       "name": "SetTableBorderLeft",
-      "description": "<p>Set the border which will be displayed on the left of the current table.</p>",
+      "description": "<p>Sets the border which will be displayed on the left of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1124,7 +1124,7 @@
     "SetTableBorderRight": {
       "memberof": "ApiTable",
       "name": "SetTableBorderRight",
-      "description": "<p>Set the border which will be displayed on the right of the current table.</p>",
+      "description": "<p>Sets the border which will be displayed on the right of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1175,7 +1175,7 @@
     "SetTableBorderInsideH": {
       "memberof": "ApiTable",
       "name": "SetTableBorderInsideH",
-      "description": "<p>Specify the border which will be displayed on all horizontal table cell borders which are not on an outmost edge\nof the parent table (all horizontal borders which are not the topmost or bottommost border).</p>",
+      "description": "<p>Specifies the border which will be displayed on all horizontal table cell borders which are not on the outmost edge\nof the parent table (all horizontal borders which are not the topmost or bottommost borders).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1226,7 +1226,7 @@
     "SetTableBorderInsideV": {
       "memberof": "ApiTable",
       "name": "SetTableBorderInsideV",
-      "description": "<p>Specify the border which will be displayed on all vertical table cell borders which are not on an outmost edge\nof the parent table (all vertical borders which are not the leftmost or rightmost border).</p>",
+      "description": "<p>Specifies the border which will be displayed on all vertical table cell borders which are not on the outmost edge\nof the parent table (all vertical borders which are not the leftmost or rightmost borders).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1277,7 +1277,7 @@
     "SetTableCellMarginBottom": {
       "memberof": "ApiTable",
       "name": "SetTableCellMarginBottom",
-      "description": "<p>Specify the amount of space which will be left between the bottom extent of the cell contents and the border\nof all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specifies an amount of space which will be left between the bottom extent of the cell contents and the border\nof all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1298,7 +1298,7 @@
     "SetTableCellMarginLeft": {
       "memberof": "ApiTable",
       "name": "SetTableCellMarginLeft",
-      "description": "<p>Specify the amount of space which will be present between the left extent of the cell contents and the left\nborder of all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specifies an amount of space which will be left between the left extent of the cell contents and the left\nborder of all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1319,7 +1319,7 @@
     "SetTableCellMarginRight": {
       "memberof": "ApiTable",
       "name": "SetTableCellMarginRight",
-      "description": "<p>Specify the amount of space which will be present between the right extent of the cell contents and the right\nborder of all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specifies an amount of space which will be left between the right extent of the cell contents and the right\nborder of all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1340,7 +1340,7 @@
     "SetTableCellMarginTop": {
       "memberof": "ApiTable",
       "name": "SetTableCellMarginTop",
-      "description": "<p>Specify the amount of space which will be present between the top extent of the cell contents and the top border\nof all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specifies an amount of space which will be left between the top extent of the cell contents and the top border\nof all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1361,7 +1361,7 @@
     "SetCellSpacing": {
       "memberof": "ApiTable",
       "name": "SetCellSpacing",
-      "description": "<p>Specify the default table cell spacing (the spacing between adjacent cells and the edges of the table).</p>",
+      "description": "<p>Specifies the default table cell spacing (the spacing between adjacent cells and the edges of the table).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1374,7 +1374,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>Spacing value measured in twentieths of a point (1/1440 of an inch). <code>&quot;Null&quot;</code> means no spacing will be applied.</p>",
+          "description": "<p>Spacing value measured in twentieths of a point (1/1440 of an inch). <code>&quot;Null&quot;</code> means that no spacing will be applied.</p>",
           "optional": false
         }
       ]
@@ -1382,7 +1382,7 @@
     "SetTableInd": {
       "memberof": "ApiTable",
       "name": "SetTableInd",
-      "description": "<p>Specify the indentation which will be added before the leading edge of the current table in the document\n(the left edge in a left-to-right table, and the right edge in a right-to-left table).</p>",
+      "description": "<p>Specifies the indentation which will be added before the leading edge of the current table in the document\n(the left edge in the left-to-right table, and the right edge in the right-to-left table).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1403,7 +1403,7 @@
     "SetWidth": {
       "memberof": "ApiTable",
       "name": "SetWidth",
-      "description": "<p>Set the preferred width for this table.\n<note>Tables are created with the {@link ApiTable#SetWidth} method properties set by default, which always override the {@link ApiTablePr#SetWidth} method properties. That is why there is no use to try and apply {@link ApiTablePr#SetWidth}, we recommend that you use the  {@link ApiTablePr#SetWidth}  method instead.</note></p>",
+      "description": "<p>Sets the preferred width to the current table.\n<note>Tables are created with the {@link ApiTable#SetWidth} method properties set by default, which always override the {@link ApiTablePr#SetWidth} method properties. That is why there is no use to try and apply {@link ApiTablePr#SetWidth}. We recommend you to use the  {@link ApiTablePr#SetWidth} method instead.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1430,7 +1430,7 @@
     "SetTableLayout": {
       "memberof": "ApiTable",
       "name": "SetTableLayout",
-      "description": "<p>Specify the algorithm which will be used to lay out the contents of this table within the document.</p>",
+      "description": "<p>Specifies the algorithm which will be used to lay out the contents of the current table within the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

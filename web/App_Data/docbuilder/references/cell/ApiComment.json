@@ -3,7 +3,7 @@
     "GetText": {
       "memberof": "ApiComment",
       "name": "GetText",
-      "description": "<p>Return the comment text.</p>",
+      "description": "<p>Returns the comment text.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -20,7 +20,7 @@
     "Delete": {
       "memberof": "ApiComment",
       "name": "Delete",
-      "description": "<p>Delete an ApiComment object.</p>",
+      "description": "<p>Deletes an ApiComment object.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -33,7 +33,7 @@
     "GetClassType": {
       "memberof": "ApiComment",
       "name": "GetClassType",
-      "description": "<p>Returns the type of comment class.</p>",
+      "description": "<p>Returns a type of the ApiComment class.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -48,8 +48,8 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing the comments.\r\n\t * @constructor\r\n\t * @property {string} Text - Returns the text from the first cell in range.\r\n\t */",
-  "description": "<p>Class representing the comments.</p>",
+  "comment": "/**\r\n\t * Class representing a comment.\r\n\t * @constructor\r\n\t * @property {string} Text - Returns the text from the first cell in range.\r\n\t */",
+  "description": "<p>Class representing a comment.</p>",
   "scope": "global",
   "params": [],
   "properties": [

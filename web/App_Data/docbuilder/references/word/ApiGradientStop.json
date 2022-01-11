@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiGradientStop",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiGradientStop class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",

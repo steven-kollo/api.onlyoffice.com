@@ -197,7 +197,7 @@
   },
   "TickLabelPosition": {
     "name": "TickLabelPosition",
-    "description": "<p>Possible values for the position of chart tick labels (either horizontal or vertical).</p>\n<ul>\n<li><strong>&quot;none&quot;</strong> - not display the selected tick labels.</li>\n<li><strong>&quot;nextTo&quot;</strong> - set the position of the selected tick labels next to the main label.</li>\n<li><strong>&quot;low&quot;</strong> - set the position of the selected tick labels in the part of the chart with lower values.</li>\n<li><strong>&quot;high&quot;</strong> - set the position of the selected tick labels in the part of the chart with higher values.</li>\n</ul>",
+    "description": "<p>Possible values for the position of chart tick labels (either horizontal or vertical).</p>\n<ul>\n<li><strong>&quot;none&quot;</strong> - does not display the selected tick labels.</li>\n<li><strong>&quot;nextTo&quot;</strong> - sets the position of the selected tick labels next to the main label.</li>\n<li><strong>&quot;low&quot;</strong> - sets the position of the selected tick labels in the part of the chart with lower values.</li>\n<li><strong>&quot;high&quot;</strong> - sets the position of the selected tick labels in the part of the chart with higher values.</li>\n</ul>",
     "type": [
       "\"none\"",
       "\"nextTo\"",
@@ -207,6 +207,7 @@
   },
   "PageOrientation": {
     "name": "PageOrientation",
+    "description": "<p>The page orientation type.</p>",
     "type": [
       "\"xlLandscape\"",
       "\"xlPortrait\""
@@ -214,6 +215,7 @@
   },
   "TickMark": {
     "name": "TickMark",
+    "description": "<p>The type of tick mark appearance.</p>",
     "type": [
       "\"cross\"",
       "\"in\"",
@@ -257,6 +259,7 @@
   },
   "SortOrder": {
     "name": "SortOrder",
+    "description": "<p>Specifies the sort order.</p>",
     "type": [
       "\"xlAscending\"",
       "\"xlDescending\""
@@ -264,6 +267,7 @@
   },
   "SortHeader": {
     "name": "SortHeader",
+    "description": "<p>Specifies whether the first row of the sort range contains the header information.</p>",
     "type": [
       "\"xlNo\"",
       "\"xlYes\""
@@ -271,6 +275,7 @@
   },
   "SortOrientation": {
     "name": "SortOrientation",
+    "description": "<p>Specifies if the sort should be by row or column.</p>",
     "type": [
       "\"xlSortColumns\"",
       "\"xlSortRows\""
