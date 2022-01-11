@@ -100,7 +100,7 @@
             </tr>
             <tr>
                 <th>Filling in forms</th>
-                <td><a title="Open DOCX file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
+                <td><a title="Open OFORM file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">OFORM</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
@@ -1438,7 +1438,7 @@
             </div>
 
             <div id="fillFormsCode">
-                <div class="popap-header">Open docx for filling in forms</div>
+                <div class="popap-header">Open oform for filling in forms</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1454,10 +1454,10 @@
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
                 "document": {
-                    "fileType": "docx",
+                    "fileType": "oform",
                     "key": "9B5D4A67A9A9",
-                    "title": "Example Document Title.docx",
-                    "url": "https://example.com/url-to-example-document.docx",
+                    "title": "Example Form Title.oform",
+                    "url": "https://example.com/url-to-example-document.oform",
                     "permissions": {
                         "edit": false,
                         "fillForms": true
