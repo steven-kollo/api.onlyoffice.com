@@ -16,6 +16,19 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <h2 id="70" class="copy-link">Version 7.0</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/getprevious") %>">ApiRun/GetPrevious</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/getnext") %>">ApiRun/GetNext</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/convertdocument") %>">Api/ConvertDocument</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/apidocument#tohtml") %>">Api/ApiDocument#ToHtml</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/apidocument#tomarkdown") %>">Api/ApiDocument#ToMarkdown</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortOrientation">SortOrientation</a> global type.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortHeader">SortHeader</a> global type.</li>
+        <li>Added the <a href="<%= Url.Action("global") %>#SortOrder">SortOrder</a> global type.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/setsort") %>">ApiRange/SetSort</a> method to Spreadsheet API.</li>
+    </ul>
+
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
         <li>Changed the return value of the <a href="<%= Url.Action("textdocumentapi/api/createrange") %>">Api/CreateRange</a> method of Text document API.</li>

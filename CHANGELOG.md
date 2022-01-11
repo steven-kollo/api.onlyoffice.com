@@ -10,6 +10,7 @@
 - editors: added the logoDark field to the editorConfig.customization.customer parameter
 - editors: added the imageDark field to the editorConfig.customization.logo parameter
 - editors: the imageEmbedded field of the editorConfig.customization.logo parameter is removed
+- docbuilder: v7.0
 - editors: added the signature to the request for file changes
 - editors: added the document.permissions.protect field
 - editors: added the fileType parameter to the onDownloadAs, onRequestRestore and onRequestSaveAs events
@@ -22,7 +23,6 @@
 - editors: conversion to docm, dotm, xlsm, xltm, pptm, potm
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
-
 - portals: api v11.6
 - docbuilder: try now page
 - editors: added the ability to use custom path for file storage in the test examples
