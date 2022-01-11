@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: test examples v1.1.0
 - editors: docxf and oform on try page
 - editors: changed the recommended list of parameters to be signed when performing the client-side browser requests to ONLYOFFICE Document Server
 - editors: the parameter list in the initialization config signature has become strictly regulated
