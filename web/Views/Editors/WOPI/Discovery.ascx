@@ -5,7 +5,7 @@
     </h1>
 
     <p class="dscr">
-        <a href="https://wopi.readthedocs.io/en/latest/discovery.html" target="_blank">WOPI discovery</a> is a process which helps the WOPI server discover a WOPI client by requesting the discovery XML from an online office. 
+        <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/discovery" target="_blank">WOPI discovery</a> is a process which helps the WOPI server discover a WOPI client by requesting the discovery XML from an online office. 
         WOPI hosts use the discovery XML to specify how to interact with the online office. 
         The requests are sent to the <span class="fakelink">https://documentserver/hosting/discovery</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
     </p>
@@ -54,7 +54,7 @@ ui=en-us&thm=1&"/&gt;
         For example, change a language, theme or chat.</p>
 
 
-    <h2 id="wopi-standart" class="copy-link">WOPI standart</h2>
+    <h2 id="wopi-standart" class="copy-link">WOPI standard</h2>
 
     <div class="header-gray">Parameters</div>
     <table class="table">
