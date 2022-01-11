@@ -890,6 +890,100 @@
         }
       ]
     },
+    "ApiDocument#ToMarkdown": {
+      "memberof": "Api",
+      "name": "ApiDocument#ToMarkdown",
+      "description": "<p>Convert document to markdown.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bHtmlHeadings",
+          "description": "<p>If you have used multiple Heading 1 headings in your Doc, set this param true to demote all heading levels to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bBase64img",
+          "description": "<p>set this param true if you want images to be created in base64 format.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bDemoteHeadings",
+          "description": "<p>Not all Markdown renderers handle Markdown-style IDs. If that is the case for your target platform, set this param true to generate HTML headings and IDs.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bRenderHTMLTags",
+          "description": "<p>By default, angle brackets (&lt;) will be replaced by the &lt; entity. If you really want to embed HTML tags in your Markdown, set this param true to preserve them.\nOr, if you just want to use an occasional HTML tag, you can escape the opening angle bracket like this: &lt;tag&gt;text&lt;/tag&gt;.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "ApiDocument#ToHtml": {
+      "memberof": "Api",
+      "name": "ApiDocument#ToHtml",
+      "description": "<p>Convert document to html.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bHtmlHeadings",
+          "description": "<p>If you have used multiple Heading 1 headings in your Doc, set this param true to demote all heading levels to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bBase64img",
+          "description": "<p>set this param true if you want images to be created in base64 format.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bDemoteHeadings",
+          "description": "<p>Not all Markdown renderers handle Markdown-style IDs. If that is the case for your target platform, set this param true to generate HTML headings and IDs.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bRenderHTMLTags",
+          "description": "<p>By default, angle brackets (&lt;) will be replaced by the &lt; entity. If you really want to embed HTML tags in your Markdown, set this param true to preserve them.\nOr, if you just want to use an occasional HTML tag, you can escape the opening angle bracket like this: &lt;tag&gt;text&lt;/tag&gt;.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
     "ReplaceTextSmart": {
       "memberof": "Api",
       "name": "ReplaceTextSmart",
@@ -910,6 +1004,60 @@
           "name": "arrString",
           "description": "<p>represents an array of strings.</p>",
           "optional": false
+        }
+      ]
+    },
+    "ConvertDocument": {
+      "memberof": "Api",
+      "name": "ConvertDocument",
+      "description": "<p>Convert document to markdown or html text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"markdown\" | \"html\"",
+          "name": "sConvertType",
+          "description": "<p>type of converting.</p>",
+          "optional": true,
+          "defaultValue": "\"markdown\""
+        },
+        {
+          "type": "bool",
+          "name": "bHtmlHeadings",
+          "description": "<p>If you have used multiple Heading 1 headings in your Doc, set this param true to demote all heading levels to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bBase64img",
+          "description": "<p>set this param true if you want images to be created in base64 format.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bDemoteHeadings",
+          "description": "<p>Not all Markdown renderers handle Markdown-style IDs. If that is the case for your target platform, set this param true to generate HTML headings and IDs.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bRenderHTMLTags",
+          "description": "<p>By default, angle brackets (&lt;) will be replaced by the &lt; entity. If you really want to embed HTML tags in your Markdown, set this param true to preserve them.\nOr, if you just want to use an occasional HTML tag, you can escape the opening angle bracket like this: &lt;tag&gt;text&lt;/tag&gt;.</p>",
+          "optional": true,
+          "defaultValue": false
         }
       ]
     }

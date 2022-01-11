@@ -19,7 +19,7 @@
     <% foreach(var type in globals) { %>
         <div class="global-type-definitions">
             <span class="anchor-position" id="<%= type.Key %>">&nbsp;</span>
-            <h4 class="header-gray"><%= type.Key %></h4>
+            <h4 class="header-gray copy-link" id="<%= type.Key %>"><%= type.Key %></h4>
             <p><%= type.Value.Description %></p>
 
             <div class="global-list">

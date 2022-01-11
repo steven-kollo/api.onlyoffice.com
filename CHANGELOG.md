@@ -1,6 +1,33 @@
 # Change Log
 
 - editors: changed the recommended list of parameters to be signed when performing the client-side browser requests to ONLYOFFICE Document Server
+- editors: the parameter list in the initialization config signature has become strictly regulated
+- plugins: added parameters to the GetSelectedText method
+- plugins: added the ConvertDocument, AddContentControlCheckBox, AddContentControlDatePicker, AddContentControlList and AddContentControlPicture methods
+- editors: added the FAQ page concerning using WOPI
+- editors: added an example for outgoing request for document changes data download
+- editors: added conversion to and from docxf format
+- editors: added the .docxf and .oform document formats
+- editors: a table of differences between ONLYOFFICE Docs API and WOPI
+- editors: the callbackUrl is used from the last tab of the same user
+- editors: added the UI_InsertGraphic message for the PostMessage WOPI protocol
+- editors: added the logoDark field to the editorConfig.customization.customer parameter
+- editors: added the imageDark field to the editorConfig.customization.logo parameter
+- editors: the imageEmbedded field of the editorConfig.customization.logo parameter is removed
+- docbuilder: v7.0
+- editors: added the signature to the request for file changes
+- editors: added the document.permissions.protect field
+- editors: added the fileType parameter to the onDownloadAs, onRequestRestore and onRequestSaveAs events
+- editors: added the possibility to insert several images via the insertImage method
+- editors: the assemblyFormatAsOrigin server setting is enabled by default
+- editors: added the ooxml and odf values to the outputtype parameter of the conversion request
+- editors: added the fileType and previous.fileType parameters to the setHistoryData method
+- editors: added the filetype parameter to the Callback handler
+- editors: added the fileType field to the conversion response
+- editors: conversion to docm, dotm, xlsm, xltm, pptm, potm
+- editors: added editorConfig.customization.review
+- editors: added the possibility to view the document history in spreadsheets
+- portals: api v11.6
 - docbuilder: try now page
 - editors: added the ability to use custom path for file storage in the test examples
 - desktop: restructured the Encryption page

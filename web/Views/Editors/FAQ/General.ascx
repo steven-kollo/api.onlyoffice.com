@@ -10,8 +10,8 @@
     <dt>I am new to Document Server API. Where should I start?</dt>
     <dd>
         <p>If you do not know where to start with Document Server API, we suggest that you first read the <a href="<%= Url.Action("basic") %>">Basic concepts</a> and <a href="<%= Url.Action("howitworks") %>">How it works</a> sections to have better understanding of how Document Server API is built. Once you are familiar with the main concepts, you can visit the <a href="<%= Url.Action("try") %>">Try now</a> section to see the live examples of the main Document Server features in action.</p>
-        <p>If you are interested in a specific programming language example, see the <a href="<%= Url.Action("demopreview") %>">Integration examples</a> which are available in several programming languages and explain how to install Document Server, where to get the example source files and how to install them and connect Document Server.</p>
-        <p>The users who use some document management systems (Nextcloud, ownCloud, SharePoint etc.) and simply want to know how to connect Document Server to these systems should visit the <a href="<%= Url.Action("plugins") %>">Integration connectors</a> section where all the main plugins working with Document Server are explained.</p>
+        <p>If you are interested in a specific programming language example, see the <a href="<%= Url.Action("demopreview") %>">Language-specific examples</a> which are available in several programming languages and explain how to install Document Server, where to get the example source files and how to install them and connect Document Server.</p>
+        <p>The users who use some document management systems (Nextcloud, ownCloud, SharePoint etc.) and simply want to know how to connect Document Server to these systems should visit the <a href="<%= Url.Action("plugins") %>">Ready-to-use connectors</a> section where all the main plugins working with Document Server are explained.</p>
         <p>The detailed description of every API method is available in the larger <b>Documentation</b> module. All the methods are described in the appropriate sections, the list of them is available in the <a href="<%= Url.Action("advanced") %>">Advanced parameters</a>.</p>
     </dd>
 </dl>
@@ -48,6 +48,8 @@ local.json</pre>
             <li><a href="<%= Url.Action("save") %>#savedelay">Save delay</a></li>
             <li><a href="<%= Url.Action("save") %>#forcesave">Force saving</a></li>
             <li><a href="<%= Url.Action("signature/body") %>">Request with token in body</a></li>
+            <li><a href="<%= Url.Action("wopi/") %>#enable">Enabling WOPI</a></li>
+            <li><a href="<%= Url.Action("wopi/") %>#ip-filter">IP filter</a></li>
         </ul>
     </dd>
 </dl>

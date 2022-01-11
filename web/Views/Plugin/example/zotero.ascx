@@ -73,71 +73,63 @@ sudo supervisorctl restart ds:docservice
 <pre>
 {
     "name" : "Zotero",
-    "guid" : "asc.{0788E794-718F-4697-BCEC-3E8A0F44570B}",
+    "guid" : "asc.{BFC5D5C6-89DE-4168-9565-ABD8D1E48711}",
 
     "variations" : [
-        {
-            "description" : "Zotero",
-            "url"         : "index.html",
-
-            "icons"           : ["icon.png", "icon@2x.png", "icon.png", "icon@2x.png"],
-            "isViewer"        : true,
-            "EditorsSupport"  : ["word"],
-
-            "isVisual"        : true,
-            "isModal"         : true,
-            "isInsideMode"    : false,
-
-            "initDataType"    : "text",
-            "initData"        : "",
-
-            "isUpdateOleOnResize" : false,
-
-            "buttons"        : [
-                {
-                    "text": "Link",
-                    "primary": true,
-                    "textLocale": {
-                        "ru": "&#1057;&#1089;&#1099;&#1083;&#1082;&#1072;",
-                        "fr": "Lien",
-                        "es": "Enlace",
-                        "de": "Referenz"
-                    }
+      {
+        "description": "Zotero",
+        "url": "index.html",
+        "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+        "icons2": [
+            {
+                "style" : "light",
+                
+                "100%": {
+                    "normal": "resources/light/icon.png"
                 },
-                {
-                    "text": "Bibliography",
-                    "primary": true,
-                    "textLocale": {
-                        "ru": "&#1041;&#1080;&#1073;&#1083;&#1080;&#1086;&#1075;&#1088;&#1072;&#1092;&#1080;&#1103;",
-                        "fr": "Bibliographie",
-                        "es": "Bibliografi&#769;a",
-                        "de": "Literaturverzeichnis"
-                    }
+                "125%": {
+                    "normal": "resources/light/icon@1.25x.png"
                 },
-                {
-                    "text": "Clear local storage",
-                    "primary": true,
-                    "textLocale": {
-                        "ru": "&#1054;&#1095;&#1080;&#1089;&#1090;&#1080;&#1090;&#x044C; &#1083;&#1086;&#1082;&#1072;&#1083;&#x044C;&#1085;&#1086;&#1077; &#1093;&#1088;&#1072;&#1085;&#1080;&#1083;&#1080;&#1097;&#1077;",
-                        "fr": "Effacer le stockage local",
-                        "es": "Borrar almacenamiento local",
-                        "de": "L&#246;schen Sie den lokalen Speicher"
-                    }
+                "150%": {
+                    "normal": "resources/light/icon@1.5x.png"
                 },
-                {
-                    "text": "Cancel",
-                    "primary": false,
-                    "textLocale": {
-                        "ru": "&#1054;&#1090;&#1084;&#1077;&#1085;&#1072;",
-                        "fr": "Annuler",
-                        "es": "Cancelar",
-                        "de": "Abbrechen"
-                    }
+                "175%": {
+                    "normal": "resources/light/icon@1.75x.png"
+                },
+                "200%": {
+                    "normal": "resources/light/icon@2x.png"
                 }
-            ],
-
-            "initOnSelectionChanged" : true
-        }
+            },
+            {
+                "style" : "dark",
+                
+                "100%": {
+                    "normal": "resources/dark/icon.png"
+                },
+                "125%": {
+                    "normal": "resources/dark/icon@1.25x.png"
+                },
+                "150%": {
+                    "normal": "resources/dark/icon@1.5x.png"
+                },
+                "175%": {
+                    "normal": "resources/dark/icon@1.75x.png"
+                },
+                "200%": {
+                    "normal": "resources/dark/icon@2x.png"
+                }
+            }
+        ],
+        "isViewer": false,
+        "EditorsSupport": [ "word" ],
+        "initDataType": "text",
+        "initData": "",
+        "isVisual": true,
+        "isModal": false,
+        "isInsideMode": true,
+        "isUpdateOleOnResize": false,
+        "initOnSelectionChanged": true
+      }
     ]
 }
 </pre>

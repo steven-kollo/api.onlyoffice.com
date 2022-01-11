@@ -62,7 +62,47 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description": "LanguageTool",
             "url": "index.html",
 
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon.png", "resources/img/icon@2x.png" ],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer": true,
             "EditorsSupport": [ "word", "cell", "slide" ],
 
@@ -125,6 +165,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li><a href="<%= Url.Action("events") %>#onTranslate">onTranslate</a></li>
     <li><a href="<%= Url.Action("callcommand") %>">callCommand</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
+    <li><a href="<%= Url.Action("executemethod/getselectiontype") %>">executeMethod ("GetSelectionType")</a></li>
+    <li><a href="<%= Url.Action("executemethod/getversion") %>">executeMethod ("GetVersion")</a></li>
     <li><a href="<%= Url.Action("executemethod/pastetext") %>">executeMethod ("PasteText")</a></li>
     <li><a href="<%= Url.Action("scope") %>">Asc.scope object</a></li>
     <li><a href="<%= Url.Action("info") %>#recalculate">info.recalculate</a></li>

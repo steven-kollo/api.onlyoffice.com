@@ -921,6 +921,42 @@
       "returns": [],
       "see": null,
       "inherits": null
+    },
+    "GetNext": {
+      "memberof": "ApiRun",
+      "name": "GetNext",
+      "description": "<p>Gets the next run if exist.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRun",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPrevious": {
+      "memberof": "ApiRun",
+      "name": "GetPrevious",
+      "description": "<p>Gets the previous run if exist.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRun",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\r\n\t * Class representing a small text block called 'run'.\r\n\t * @constructor\r\n\t * @extends {ApiTextPr}\r\n\t */",

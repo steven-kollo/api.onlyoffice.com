@@ -255,6 +255,27 @@
       "\"Thick\""
     ]
   },
+  "SortOrder": {
+    "name": "SortOrder",
+    "type": [
+      "\"xlAscending\"",
+      "\"xlDescending\""
+    ]
+  },
+  "SortHeader": {
+    "name": "SortHeader",
+    "type": [
+      "\"xlNo\"",
+      "\"xlYes\""
+    ]
+  },
+  "SortOrientation": {
+    "name": "SortOrientation",
+    "type": [
+      "\"xlSortColumns\"",
+      "\"xlSortRows\""
+    ]
+  },
   "Angle": {
     "name": "Angle",
     "description": "<p>Specifies the range angle.</p>",

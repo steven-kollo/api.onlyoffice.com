@@ -13,8 +13,7 @@
     <h1>
         <span class="hdr">Document history</span>
     </h1>
-    <p class="dscr">You can view the document history using the <b>document editor</b>.</p>
-    <div class="note">The history is currently available for text document and presentation files.</div>
+    <p class="dscr">You can view the history of text documents, spreadsheets or presentations using the <b>document editor</b>.</p>
 
     <p>
         The document history is stored with the document storage service.
