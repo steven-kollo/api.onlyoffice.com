@@ -2012,6 +2012,9 @@
 		"Api.intersect": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noRange1 = oWorksheet.GetRange(\"A1:C5\");\noRange2 = oWorksheet.GetRange(\"B2:B4\");\noRange = Api.Intersect(oRange1, oRange2);\noRange.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));\nbuilder.SaveFile(\"xlsx\", \"Intersect.xlsx\");\nbuilder.CloseFile();"
 		},
+		"Api.recalculateallformulas": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"B1\").SetValue(1);\noWorksheet.GetRange(\"C1\").SetValue(2);\noRange = oWorksheet.GetRange(\"A1\");\noRange.SetValue(\"=SUM(B1:C1)\");\noRange = oWorksheet.GetRange(\"E1\");\noRange.SetValue(\"=A1+1\");\noWorksheet.GetRange(\"B1\").SetValue(3);\nApi.RecalculateAllFormulas();\noWorksheet.GetRange(\"A3\").SetValue(\"Formulas from cells A1 and E1 were recalculated with a new value from cell C1.\");\nbuilder.SaveFile(\"xlsx\", \"RecalculateAllFormulas.xlsx\");\nbuilder.CloseFile();"
+		},
 		"Api.replacetextsmart": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"1\");\noWorksheet.GetRange(\"A2\").SetValue(\"2\");\noRange = oWorksheet.GetRange(\"A1:A2\");\noRange.Select();\nApi.ReplaceTextSmart([\"Cell 1\", \"Cell 2\"]);\nbuilder.SaveFile(\"xlsx\", \"ReplaceTextSmart.xlsx\");\nbuilder.CloseFile();"
 		},
@@ -2539,6 +2542,9 @@
 		},
 		"ApiShape.getcontent": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noContent = oShape.GetContent();\noContent.RemoveAllElements();\noParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it.\");\noContent.Push(oParagraph);\nbuilder.SaveFile(\"xlsx\", \"GetContent.xlsx\");\nbuilder.CloseFile();"
+		},
+		"ApiShape.getdoccontent": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetDocContent();\noDocContent.RemoveAllElements();\noParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it.\");\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"xlsx\", \"GetDocContent.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiShape.setverticaltextalign": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noShape = oWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 50 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);\noDocContent = oShape.GetContent();\noDocContent.RemoveAllElements();\noShape.SetVerticalTextAlign(\"bottom\");\noParagraph = Api.CreateParagraph();\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"We removed all elements from the shape and added a new paragraph inside it \");\noParagraph.AddText(\"aligning it vertically by the bottom.\");\noDocContent.Push(oParagraph);\nbuilder.SaveFile(\"xlsx\", \"SetVerticalTextAlign.xlsx\");\nbuilder.CloseFile();"
