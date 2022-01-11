@@ -43,6 +43,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 {
     "name" : "example_autocomplete",
     "guid" : "asc.{A103601F-FDA0-418A-BC37-A514031894C0}",
+    "version" : "1.0",
 
     "variations" : [
         {
@@ -64,7 +65,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "isUpdateOleOnResize" : false,
 
             "buttons"        : [ ],
-   
+
             "events" : [
                 "onInputHelperClear",
                 "onInputHelperInput"
