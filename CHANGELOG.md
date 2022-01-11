@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: the parameter list in the initialization config signature has become strictly regulated
 - editors: added the FAQ page concerning using WOPI
 - editors: added an example for outgoing request for document changes data download
 - editors: added conversion to and from docxf format
