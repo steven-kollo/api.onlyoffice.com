@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: the parameter list in the initialization config signature has become strictly regulated
 - plugins: added parameters to the GetSelectedText method
 - plugins: added the ConvertDocument, AddContentControlCheckBox, AddContentControlDatePicker, AddContentControlList and AddContentControlPicture methods
 - editors: added the FAQ page concerning using WOPI
