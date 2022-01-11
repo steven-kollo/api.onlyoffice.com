@@ -161,6 +161,31 @@
           "optional": false
         }
       ]
+    },
+    "SetLanguage": {
+      "memberof": "ApiPresentation",
+      "name": "SetLanguage",
+      "description": "<p>Specify the languages which will be used to check spelling and grammar (if requested).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sLangId",
+          "description": "<p>The possible value for this parameter is a language identifier as defined by\nRFC 4646/BCP 47. Example: &quot;en-CA&quot;.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\r\n     * Class representing a presentation.\r\n     * @constructor\r\n     */",
