@@ -641,6 +641,7 @@
     <Content Include="Views\Editors\FAQ\Customizing.ascx" />
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\General.ascx" />
+    <Content Include="Views\Editors\FAQ\UsingWOPI.ascx" />
     <Content Include="Views\Editors\GetDocs.aspx" />
     <Content Include="Views\Editors\Mentions.aspx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
@@ -754,6 +755,7 @@
     <Content Include="Views\Editors\Editor.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
+    <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
     <Content Include="Views\Editors\WOPI\Discovery.ascx" />
     <Content Include="Views\Editors\WOPI\PostMessage.ascx" />

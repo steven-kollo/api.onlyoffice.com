@@ -224,6 +224,9 @@
     <li>
         <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("wopi/apivswopi") %>">API vs WOPI</a>
+    </li>
 </ul>
 
 <div class="treeheader">Additional API</div>
@@ -318,6 +321,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("faq/renaming") %>">Renaming</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/usingwopi") %>">Using WOPI</a>
             </li>
         </ul>
     </li>
