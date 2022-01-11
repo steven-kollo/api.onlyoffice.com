@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the editorConfig.customization.layout parameter section
 - editors: added the editorConfig.customization.features parameter section
 
 ## 2.5.0
