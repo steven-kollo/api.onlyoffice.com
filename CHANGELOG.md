@@ -1,5 +1,7 @@
 # Change Log
 
+- plugins: added parameters to the GetSelectedText method
+- plugins: added the ConvertDocument, AddContentControlCheckBox, AddContentControlDatePicker, AddContentControlList and AddContentControlPicture methods
 - editors: added the FAQ page concerning using WOPI
 - editors: added an example for outgoing request for document changes data download
 - editors: added conversion to and from docxf format

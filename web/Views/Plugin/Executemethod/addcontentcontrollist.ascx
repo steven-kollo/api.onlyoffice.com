@@ -1,18 +1,18 @@
-﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("AddContentControl", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("AddContentControlList", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows adding an empty content control to the document.</p>
+<p class="dscr">Defines the method that allows adding an empty content control list to the document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("AddContentControl", [type, commonPr]);
+window.Asc.plugin.executeMethod ("AddContentControlList", [type, List, commonPr]);
 </pre>
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -33,9 +33,35 @@ window.Asc.plugin.executeMethod ("AddContentControl", [type, commonPr]);
     <tbody>
         <tr class="tablerow">
             <td>type</td>
-            <td>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block) or <b>2</b> (inline).</td>
+            <td>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (comboBox) or <b>0</b> (drop-down list).</td>
             <td>number</td>
-            <td>2</td>
+            <td>0</td>
+        </tr>
+        <tr class="tablerow">
+            <td>List</td>
+            <td>
+                A list of the content control elements that consist of two items:
+                <ul>
+                    <li>
+                        <b>Display</b> - an item that will be displayed to the user in the content control list,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Item1_D";
+                        <br />
+                    </li>
+                    <li>
+                        <b>Value</b> - a value of each item from the content control list,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Item1_V".
+                        <br />
+                    </li>
+                </ul>
+            </td>
+            <td>array of objects</td>
+            <td></td>
         </tr>
         <tr class="tablerow">
             <td>commonPr</td>
@@ -111,18 +137,10 @@ window.Asc.plugin.executeMethod ("AddContentControl", [type, commonPr]);
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns a JSON object containing the data about the created content control in the following form:</p>
-<pre>
-{
-    "Tag": "{tag}",
-    "Id": 0,
-    "Lock": 0,
-    "InternalId": "1_713"
-}
-</pre>
+<p>The method returns the <em>undefined</em> value.</p>
 
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod ("AddContentControl", [1, {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
+window.Asc.plugin.executeMethod ("AddContentControlList", [0, [{Display: "Item1_D", Value: "Item1_V"}, {Display: "Item2_D", Value: "Item2_V"}], {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
 </pre>
