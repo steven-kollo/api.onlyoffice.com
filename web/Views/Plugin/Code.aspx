@@ -18,9 +18,9 @@
 
     <h2>How it works</h2>
 
-    <p>Any plugin has <a href="<%= Url.Action("plugin") %>">window.Asc.plugin</a> object which in its turn has several methods for it to interact with ONLYOFFICE document, spreadsheet and presentation editors.</p>
+    <p>Any plugin has <em>window.Asc.plugin</em> object which in its turn has several <a href="<%= Url.Action("plugin") %>">methods</a> for it to interact with ONLYOFFICE document, spreadsheet and presentation editors.</p>
 
-    <p>For the plugin to work the developer must specify two obligatory methods for the <a href="<%= Url.Action("plugin") %>">window.Asc.plugin</a> object: <a href="<%= Url.Action("init") %>">window.Asc.plugin.init</a> and <a href="<%= Url.Action("button") %>">window.Asc.plugin.button</a>. After that the <a href="<%= Url.Action("callcommand") %>">window.Asc.plugin.callCommand</a> method is used to send the data to the editors using the in-built <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand", "docbuilder") %>">API</a> features.</p>
+    <p>For the plugin to work the developer must specify two obligatory events for the <em>window.Asc.plugin</em> object: <a href="<%= Url.Action("events") %>#init">window.Asc.plugin.init</a> and <a href="<%= Url.Action("events") %>#button">window.Asc.plugin.button</a>. After that the <a href="<%= Url.Action("callcommand") %>">window.Asc.plugin.callCommand</a> method is used to send the data to the editors using the in-built <b>ONLYOFFICE Document Builder</b> <a href="<%= Url.Action("integrationapi/cdocbuilder/executecommand", "docbuilder") %>">API</a> features.</p>
     
     <p>If the plugin operates with an OLE object, <a href="<%= Url.Action("executecommand") %>">window.Asc.plugin.executeCommand</a> method is used to manage it.</p>
 
