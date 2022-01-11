@@ -123,7 +123,7 @@
             </tr>
             <tr>
                 <th>Restricted comment</th>
-                <td><a title="Open DOCX file for restricted commenting" href="<%= Url.Action("editor") %>?method=docxCommentGroups" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentGroupsCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for restricted commenting" href="<%= Url.Action("editor") %>?method=docxCommentGroups" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentGroupsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
