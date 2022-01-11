@@ -322,6 +322,9 @@
             <li>
                 <a href="<%= Url.Action("faq/renaming") %>">Renaming</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("faq/usingwopi") %>">Using WOPI</a>
+            </li>
         </ul>
     </li>
     <li>
