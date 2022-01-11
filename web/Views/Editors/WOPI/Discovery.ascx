@@ -54,7 +54,7 @@ ui=en-us&thm=1&"/&gt;
         For example, change a language, theme or chat.</p>
 
 
-    <h2 id="wopi-standart" class="copy-link">WOPI standart</h2>
+    <h2 id="wopi-standart" class="copy-link">WOPI standard</h2>
 
     <div class="header-gray">Parameters</div>
     <table class="table">
