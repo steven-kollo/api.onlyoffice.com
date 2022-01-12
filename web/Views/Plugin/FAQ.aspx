@@ -26,7 +26,7 @@
     <dd>
         <p>
             Some plugins are installed by default. Switch to the <b>Plugins</b> tab to see the available ones. 
-            To install additional plugins, see the <a href="<%= Url.Action("installation/desktop") %>">desktop</a> or <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a> installation instructions.
+            To install additional plugins, see the <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a> or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.
         </p>
     </dd>
 </dl>

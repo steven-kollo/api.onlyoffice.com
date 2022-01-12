@@ -7,8 +7,8 @@
 <p>You can add a plugin to the <b>Cloud service</b> as a <b>Chrome extension</b>.</p>
 
 <ol>
-    <li>Create a main folder on your computer and put <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/chrome_extension_example/manifest.json" target="_blank">manifest.json</a> 
-    and <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/chrome_extension_example/main.js" target="_blank">main.js</a> extension files.</li>
+    <li>Create a main folder on your computer and put <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/chrome_extension_example/manifest.json" target="_blank">manifest.json</a> 
+    and <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/chrome_extension_example/main.js" target="_blank">main.js</a> extension files.</li>
     <li>Create a subfolder with the plugin files.</li>
     <li>
         <p>In the <em>main.js</em> file, change the directory to the necessary plugin:</p>
