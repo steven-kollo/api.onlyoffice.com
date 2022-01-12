@@ -1,11 +1,10 @@
 # Change Log
 
+## 2.5.0
 - editors: test examples v1.1.0
 - editors: docxf and oform on try page
 - editors: changed the recommended list of parameters to be signed when performing the client-side browser requests to ONLYOFFICE Document Server
 - editors: the parameter list in the initialization config signature has become strictly regulated
-- plugins: added parameters to the GetSelectedText method
-- plugins: added the ConvertDocument, AddContentControlCheckBox, AddContentControlDatePicker, AddContentControlList and AddContentControlPicture methods
 - editors: added the FAQ page concerning using WOPI
 - editors: added an example for outgoing request for document changes data download
 - editors: added conversion to and from docxf format
@@ -16,7 +15,6 @@
 - editors: added the logoDark field to the editorConfig.customization.customer parameter
 - editors: added the imageDark field to the editorConfig.customization.logo parameter
 - editors: the imageEmbedded field of the editorConfig.customization.logo parameter is removed
-- docbuilder: v7.0
 - editors: added the signature to the request for file changes
 - editors: added the document.permissions.protect field
 - editors: added the fileType parameter to the onDownloadAs, onRequestRestore and onRequestSaveAs events
@@ -29,14 +27,17 @@
 - editors: conversion to docm, dotm, xlsm, xltm, pptm, potm
 - editors: added editorConfig.customization.review
 - editors: added the possibility to view the document history in spreadsheets
-- portals: api v11.6
-- docbuilder: try now page
 - editors: added the ability to use custom path for file storage in the test examples
-- desktop: restructured the Encryption page
-- desktop: added the How it workds section
 - editors: added the Redmine plugin
 - editors: changed get docs page
 - editors: added the Moodle plugin
+- plugins: added parameters to the GetSelectedText method
+- plugins: added the ConvertDocument, AddContentControlCheckBox, AddContentControlDatePicker, AddContentControlList and AddContentControlPicture methods
+- docbuilder: v7.0
+- docbuilder: try now page
+- desktop: restructured the Encryption page
+- desktop: added the How it workds section
+- portals: api v11.6
 
 ## 2.4.1
 - editors: fix macrosMode default
