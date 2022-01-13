@@ -518,9 +518,10 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>statusBar</b> - defines the status bar settings;
+                        <b>statusBar</b> - defines the status bar settings. If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden.
+                        The default value is <b>true</b>,
                         <br />
-                        <b>type</b>: object,
+                        <b>type</b>: object or boolean,
                     </li>
                     <li>
                         <b>statusBar.actionStatus</b> - defines if an action status is displayed or hidden. The default value is <b>true</b>,
@@ -546,9 +547,10 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>toolbar </b> - defines the toolbar settings,
+                        <b>toolbar </b> - defines the toolbar settings. If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden.
+                        The default value is <b>true</b>,
                         <br />
-                        <b>type</b>: object;
+                        <b>type</b>: object or boolean;
                     </li>
                     <li>
                         <b>toolbar.collaboration</b> - defines if the <b>Collaboration</b> tab is displayed or hidden.
