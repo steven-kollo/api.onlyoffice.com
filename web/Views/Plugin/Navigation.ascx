@@ -71,6 +71,9 @@
                                         <a title="CoAuthoringChatSendMessage" href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/convertdocument") %>">ConvertDocument</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
                                     </li>
                                     <li>
@@ -150,6 +153,9 @@
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/removeselectedcontent") %>">RemoveSelectedContent</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/replacetextsmart") %>">ReplaceTextSmart</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/searchandreplace") %>">SearchAndReplace</a>

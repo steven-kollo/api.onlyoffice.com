@@ -680,6 +680,7 @@
     <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\changecomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\coauthoringchatsendmessage.ascx" />
+    <Content Include="Views\Plugin\Executemethod\convertdocument.ascx" />
     <Content Include="Views\Plugin\Executemethod\getallcomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrolpr.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfields.ascx" />
@@ -694,6 +695,7 @@
     <Content Include="Views\Plugin\Executemethod\openfile.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\removeselectedcontent.ascx" />
+    <Content Include="Views\Plugin\Executemethod\replacetextsmart.ascx" />
     <Content Include="Views\Plugin\Executemethod\searchandreplace.ascx" />
     <Content Include="Views\Plugin\Executemethod\selectcontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\setdisplaymodeinreview.ascx" />

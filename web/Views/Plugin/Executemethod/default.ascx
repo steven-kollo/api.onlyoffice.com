@@ -85,6 +85,10 @@
             <td>This method allows to send a message to the co-authoring chat.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/convertdocument") %>">ConvertDocument</a></td>
+            <td>This method allows to convert document content to Markdown or HTML.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
             <td>This method allows to edit an OLE object in the document.</td>
         </tr>
@@ -191,6 +195,10 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removeselectedcontent") %>">RemoveSelectedContent</a></td>
             <td>This method allows to remove the selected content from the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/replacetextsmart") %>">ReplaceTextSmart</a></td>
+            <td>This method allows to replace each paragraph (or text in cell) in the select with the corresponding text from an array of strings.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/searchandreplace") %>">SearchAndReplace</a></td>
