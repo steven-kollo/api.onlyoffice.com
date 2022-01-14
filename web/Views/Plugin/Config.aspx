@@ -331,7 +331,9 @@
                 "icons": [
                     {
                         "100%": { "normal": "icon.png" },
+                        "125%": { "normal": "icon@1.25.png" },
                         "150%": { "normal": "icon@1.5x.png" },
+                        "175%": { "normal": "icon@1.75.png" },
                         "200%": { "normal": "icon@2x.png" }
                     },
                     {
