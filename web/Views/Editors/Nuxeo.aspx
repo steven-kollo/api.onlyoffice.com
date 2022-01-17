@@ -20,7 +20,7 @@
     <h2 id="features" class="copy-link">Features</h2>
 
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX.</li>
+        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
         <li>The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT.</li>
         <li>The plugin allows multiple users to collaborate in real time and to save back those changes to Nuxeo.</li>
     </ul>

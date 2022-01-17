@@ -72,24 +72,24 @@ ui=en-us&thm=1&"/&gt;
         </thead>
         <tbody>
             <tr>
-                <td>ui</td>
+                <td id="ui" class="copy-link">ui</td>
                 <td>Indicates that the WOPI server includes the preferred UI language in the format described in <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a>.</td>
                 <td>en-us</td>
             </tr>
             <tr>
-                <td>rs</td>
+                <td id="rs" class="copy-link">rs</td>
                 <td>Indicates that the WOPI server includes preferred data language in the format described in <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a> for cases 
                     where the language can affect data calculation (in spreadsheet editor).</td>
                 <td>en-us</td>
             </tr>
             <tr>
-                <td>thm</td>
+                <td id="thm" class="copy-link">thm</td>
                 <td>Indicates that the WOPI server includes a value to designate the theme used. The current values are <em>"1"</em> to indicate a light-colored theme 
                     and <em>"2"</em> to indicate a dark-colored theme.</td>
                 <td>1</td>
             </tr>
             <tr>
-                <td>dchat</td>
+                <td id="dchat" class="copy-link">dchat</td>
                 <td>Indicates that the WOPI server includes the value <em>"1"</em> to load a view of the document that does not create or join a chat session.</td>
                 <td>1</td>
             </tr>

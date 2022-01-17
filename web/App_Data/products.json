@@ -3,7 +3,7 @@
       "id":"editors",
       "title":"Document Server",
       "description":"Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
-      "version":"6.4",
+      "version":"7.0",
       "links":{
          "Get Started":[
             {
@@ -113,7 +113,7 @@
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"Extend the ONLYOFFICE Docs functionality. In this section you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"6.4",
+      "version":"7.0",
       "links":{
          "Get started":[
             {
@@ -175,7 +175,7 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "6.4",
+      "version": "7.0",
       "links":{
          "Get started":[
             {
@@ -265,7 +265,7 @@
       "id":"portals",
       "title":"Community Server",
       "description":"Create your own productivity platform based on ONLYOFFICE Groups. In this section you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.",
-      "version":"11.5",
+      "version":"11.6",
       "links":{
          "Get started":[
             {
@@ -355,7 +355,7 @@
       "id":"apisystem",
       "title":"Hosted Solution",
       "description":"Host ONLYOFFICE Groups to make your collaboration platform online. In this section you will learn how to make GET and POST requests to manage portals, set tariff plans and pass authentication.",
-      "version":"11.5",
+      "version":"11.6",
       "links":{
          "Get started":[
             {

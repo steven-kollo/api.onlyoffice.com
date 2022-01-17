@@ -641,6 +641,7 @@
     <Content Include="Views\Editors\FAQ\Customizing.ascx" />
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\General.ascx" />
+    <Content Include="Views\Editors\FAQ\UsingWOPI.ascx" />
     <Content Include="Views\Editors\GetDocs.aspx" />
     <Content Include="Views\Editors\Mentions.aspx" />
     <Content Include="Views\Editors\Nextcloud.aspx" />
@@ -665,6 +666,10 @@
     <Content Include="Views\Plugin\example.aspx" />
     <Content Include="Views\Plugin\Executemethod.aspx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontrolcheckbox.ascx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontroldatepicker.ascx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontrollist.ascx" />
+    <Content Include="Views\Plugin\Executemethod\addcontentcontrolpicture.ascx" />
     <Content Include="Views\Plugin\Executemethod\default.ascx" />
     <Content Include="Views\Plugin\Executemethod\getallcontentcontrols.ascx" />
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrol.ascx" />
@@ -688,6 +693,7 @@
     <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\changecomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\coauthoringchatsendmessage.ascx" />
+    <Content Include="Views\Plugin\Executemethod\convertdocument.ascx" />
     <Content Include="Views\Plugin\Executemethod\getallcomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrolpr.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfields.ascx" />
@@ -754,6 +760,7 @@
     <Content Include="Views\Editors\Editor.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
+    <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
     <Content Include="Views\Editors\WOPI\Discovery.ascx" />
     <Content Include="Views\Editors\WOPI\PostMessage.ascx" />

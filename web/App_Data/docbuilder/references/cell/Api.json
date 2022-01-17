@@ -3,7 +3,7 @@
     "Format": {
       "memberof": "Api",
       "name": "Format",
-      "description": "<p>Return a class formatted according to the instructions contained in a format expression.</p>",
+      "description": "<p>Returns a class formatted according to the instructions contained in the format expression.</p>",
       "tags": {},
       "returns": [
         [
@@ -30,7 +30,7 @@
     "AddSheet": {
       "memberof": "Api",
       "name": "AddSheet",
-      "description": "<p>Create a new worksheet. The new worksheet becomes the active sheet.</p>",
+      "description": "<p>Creates a new worksheet. The new worksheet becomes the active sheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -68,7 +68,7 @@
     "SetLocale": {
       "memberof": "Api",
       "name": "SetLocale",
-      "description": "<p>Set locale for the document.</p>",
+      "description": "<p>Sets a locale to the document.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -89,7 +89,7 @@
     "GetLocale": {
       "memberof": "Api",
       "name": "GetLocale",
-      "description": "<p>Return current locale id.</p>",
+      "description": "<p>Returns the current locale ID.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -106,7 +106,7 @@
     "GetActiveSheet": {
       "memberof": "Api",
       "name": "GetActiveSheet",
-      "description": "<p>Get the object that represents the active sheet.</p>",
+      "description": "<p>Returns an object that represents the active sheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -123,7 +123,7 @@
     "GetSheet": {
       "memberof": "Api",
       "name": "GetSheet",
-      "description": "<p>Return an object that represents the sheet.</p>",
+      "description": "<p>Returns an object that represents a sheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -149,7 +149,7 @@
     "GetThemesColors": {
       "memberof": "Api",
       "name": "GetThemesColors",
-      "description": "<p>Get the list of all the available theme colors for the spreadsheet.</p>",
+      "description": "<p>Returns a list of all the available theme colors for the spreadsheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -166,7 +166,7 @@
     "SetThemeColors": {
       "memberof": "Api",
       "name": "SetThemeColors",
-      "description": "<p>Set the theme colors to the current spreadsheet.</p>",
+      "description": "<p>Sets the theme colors to the current spreadsheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -191,7 +191,7 @@
     "CreateColorFromRGB": {
       "memberof": "Api",
       "name": "CreateColorFromRGB",
-      "description": "<p>Create an RGB color setting the appropriate values for the red, green and blue color components.</p>",
+      "description": "<p>Creates an RGB color setting the appropriate values for the red, green and blue color components.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -228,7 +228,7 @@
     "CreateColorByName": {
       "memberof": "Api",
       "name": "CreateColorByName",
-      "description": "<p>Create a color selecting it from one of the available color presets.</p>",
+      "description": "<p>Creates a color selecting it from one of the available color presets.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -253,7 +253,7 @@
     "Intersect": {
       "memberof": "Api",
       "name": "Intersect",
-      "description": "<p>Return an ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.</p>",
+      "description": "<p>Returns an ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -271,13 +271,13 @@
         {
           "type": "ApiRange",
           "name": "Range1",
-          "description": "<p>The intersecting ranges. At least two Range objects must be specified.</p>",
+          "description": "<p>One of the intersecting ranges. At least two Range objects must be specified.</p>",
           "optional": false
         },
         {
           "type": "ApiRange",
           "name": "Range2",
-          "description": "<p>The intersecting ranges. At least two Range objects must be specified.</p>",
+          "description": "<p>One of the intersecting ranges. At least two Range objects must be specified.</p>",
           "optional": false
         }
       ]
@@ -285,7 +285,7 @@
     "GetSelection": {
       "memberof": "Api",
       "name": "GetSelection",
-      "description": "<p>Return an object that represents the selection range.</p>",
+      "description": "<p>Returns an object that represents the selected range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -302,7 +302,7 @@
     "AddDefName": {
       "memberof": "Api",
       "name": "AddDefName",
-      "description": "<p>Define a new name for a range of cells.</p>",
+      "description": "<p>Adds a new name to a range of cells.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -326,7 +326,7 @@
         {
           "type": "string",
           "name": "sRef",
-          "description": "<p>Must contain the sheet name, followed by sign ! and  a range of cells.\nExample: &quot;Sheet1!$A$1:$B$2&quot;.</p>",
+          "description": "<p>The reference to the specified range. It must contain the sheet name, followed by sign ! and a range of cells.\nExample: &quot;Sheet1!$A$1:$B$2&quot;.</p>",
           "optional": false
         },
         {
@@ -340,7 +340,7 @@
     "GetDefName": {
       "memberof": "Api",
       "name": "GetDefName",
-      "description": "<p>Return an ApiName.</p>",
+      "description": "<p>Returns an ApiName object by the range name.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -365,7 +365,7 @@
     "Save": {
       "memberof": "Api",
       "name": "Save",
-      "description": "<p>Save changes to the specified document.</p>",
+      "description": "<p>Saves changes to the specified document.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -378,7 +378,7 @@
     "GetRange": {
       "memberof": "Api",
       "name": "GetRange",
-      "description": "<p>Return an ApiRange.</p>",
+      "description": "<p>Returns an ApiRange object by the range reference.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -403,7 +403,7 @@
     "GetMailMergeData": {
       "memberof": "Api",
       "name": "GetMailMergeData",
-      "description": "<p>Get mail merge data.</p>",
+      "description": "<p>Returns the mail merge data.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -424,9 +424,34 @@
           "optional": false
         }
       ]
+    },
+    "RecalculateAllFormulas": {
+      "memberof": "Api",
+      "name": "RecalculateAllFormulas",
+      "description": "<p>Recalculates all formulas in the active workbook.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "function",
+          "name": "fLogger",
+          "description": "<p>A function which specifies the logger object for checking recalculation of formulas.</p>",
+          "optional": false
+        }
+      ]
     }
   },
-  "comment": "/**\r\n\t * Base class.\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\r\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\r\n\t * @property {ApiRange} Selection - Returns an object that represents the selection range.\r\n\t */",
+  "comment": "/**\r\n\t * Base class.\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\r\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\r\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\r\n\t */",
   "description": "<p>Base class.</p>",
   "scope": "global",
   "properties": [
@@ -443,7 +468,7 @@
     {
       "type": "ApiRange",
       "name": "Selection",
-      "description": "<p>Returns an object that represents the selection range.</p>"
+      "description": "<p>Returns an object that represents the selected range.</p>"
     }
   ]
 }
