@@ -4,7 +4,7 @@ REM variables
 set sdkjsPath=sdkjs
 set outPath=jsdoc
 set branch=master
-set cloneRepo=Y
+set cloneRepo=N
 set parseDocs=Y
 
 if %cloneRepo% NEQ Y goto skipClone

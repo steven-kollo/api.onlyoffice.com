@@ -21,10 +21,13 @@
 
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the PHP code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">PHP example</a> from our site.</p>
-<p>You need to connect the editors to your website. Specify the path to the editors installation in the <em>config.php</em> file:</p>
-<pre>$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
+<p>To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>config.php</em> file:</p>
+<pre>
+$GLOBALS['STORAGE_PATH'] = "";
+$GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";</pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>STORAGE_PATH</b> is the path where files will be created and stored.
+You can set an absolute path. For example, <em>D:\\folder</em>. Please note that on Windows OS the double backslash must be used as a separator.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>doceditor.php</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
@@ -131,13 +134,15 @@
     </li>
     <li>Edit the <em>config.php</em> configuration file. Specify the name of your local server with the ONLYOFFICE Document Server installed.
         <div class="commandline">nano config.php</div>
-        <p>Edit the following line:</p>
+        <p>Edit the following lines:</p>
 
         <pre>
+$GLOBALS['STORAGE_PATH'] = "";
 $GLOBALS['DOC_SERV_SITE_URL'] = "https://documentserver/";
 </pre>
 
-        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+        <p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>STORAGE_PATH</b> is the path where files will be created and stored.
+        You can set an absolute path.</p>
     </li>
     <li>Set permission for site:
         <div class="commandline">chown -R www-data:www-data /var/www/html</div>

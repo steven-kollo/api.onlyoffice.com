@@ -49,7 +49,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description" : "chess",
             "url"         : "index.html",
 
-            "icons"           : ["icon.png", "icon@2x.png"],
+            "icons"           : ["resources/icon.png", "resources/icon@2x.png"],
             "isViewer"        : true,
             "EditorsSupport"  : ["word", "cell", "slide"],
 
@@ -69,7 +69,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description" : "About",
             "url"         : "index_about.html",
 
-            "icons"           : ["icon.png", "icon@2x.png"],
+            "icons"           : ["resources/icon.png", "resources/icon@2x.png"],
             "isViewer"        : true,
             "EditorsSupport"  : ["word", "cell", "slide"],
 
@@ -93,7 +93,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/chess/chess.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

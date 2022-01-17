@@ -95,7 +95,7 @@
             "isModal": false,
             "isInsideMode": true,
 
-            "initDataType": "",
+            "initDataType": "none",
             "initData": "",
 
             "isUpdateOleOnResize": false,
@@ -111,8 +111,7 @@
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-typograf/blob/master/scripts/typograf.js" target="_blank">here</a>.</p>
-<ul>
+<ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>
     <li><a href="<%= Url.Action("events") %>#onExternalMouseUp">onExternalMouseUp</a></li>

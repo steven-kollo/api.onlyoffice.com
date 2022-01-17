@@ -5,7 +5,7 @@
     </h1>
 
     <p class="dscr">
-        <a href="https://wopi.readthedocs.io/en/latest/scenarios/postmessage.html?highlight=postmessage" target="_blank">PostMessage</a> is the  <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web Messaging</a> protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. 
+        <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage" target="_blank">PostMessage</a> is the  <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web Messaging</a> protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. 
         It allows the online office frame to communicate with its parent host page.
     </p>
 

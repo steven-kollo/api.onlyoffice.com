@@ -14,7 +14,7 @@
 
 
 <div class="header-gray">Installation</div>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_extended_comments" target="_blank">GitHub</a> and install it following the
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments" target="_blank">GitHub</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
@@ -33,14 +33,14 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Plugin structure</div>
 
-<p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_extended_comments" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_extended_comments</a>.</p>
+<p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_extended_comments</a>.</p>
 <ol>
     <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
     <li>Icons</li>
     <li>Third-party services:
         <ul>
-            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_extended_comments/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
-            <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_extended_comments/licenses/Select2.license" target="_blank">MIT</a>.</li>
+            <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_extended_comments/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
+            <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_extended_comments/licenses/Select2.license" target="_blank">MIT</a>.</li>
         </ul>
     </li>
 </ol>
@@ -57,7 +57,47 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description" : "Extended comments",
             "url"         : "index.html",
 
-            "icons"           : ["resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png"],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer"        : false,
             "EditorsSupport"  : ["word"],
 
@@ -65,7 +105,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "isModal"         : false,
             "isInsideMode"    : true,
 
-            "initDataType"    : "",
+            "initDataType"    : "none",
             "initData"        : "",
 
             "isUpdateOleOnResize" : false,
@@ -81,8 +121,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_extended_comments/scripts/code.js" target="_blank">here</a>.</p>
-<ul>
+<ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>

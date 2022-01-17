@@ -151,7 +151,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <p>
         In the case when the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">document.info.sharingSettings</a> field is used in the document initialization but the list of the users from the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is different, the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method must be called.
     </p>
-    <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/sharing_settings.png") %>" />
+    <img width="832px" alt="Mentions" src="<%= Url.Content("~/content/img/editor/sharing_settings.png") %>" />
     <pre>
 docEditor.setSharingSettings({
     "sharingSettings": [

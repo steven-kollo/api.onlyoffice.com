@@ -67,7 +67,7 @@ docEditor.setRevisedFile({
             <p>
                 After that the user can accept or reject the changes using the corresponding buttons on the top toolbar.
             </p>
-            <img alt="Accept changes" width="834px" src="<%= Url.Content("~/content/img/editor/compare-documents.png") %>" />
+            <img alt="Accept changes" width="832px" src="<%= Url.Content("~/content/img/editor/compare-documents.png") %>" />
         </li>
     </ol>
 </asp:Content>

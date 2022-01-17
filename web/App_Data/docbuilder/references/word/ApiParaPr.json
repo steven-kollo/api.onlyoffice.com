@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiParaPr",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiParaPr class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -43,7 +43,7 @@
     "GetStyle": {
       "memberof": "ApiParaPr",
       "name": "GetStyle",
-      "description": "<p>Get the paragraph style method.</p>",
+      "description": "<p>Returns the paragraph style method.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -60,7 +60,7 @@
     "SetContextualSpacing": {
       "memberof": "ApiParaPr",
       "name": "SetContextualSpacing",
-      "description": "<p>Specify that any space before or after this paragraph set using the\n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and\nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
+      "description": "<p>Specifies that any space before or after this paragraph set using the\n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and\nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -81,7 +81,7 @@
     "SetIndLeft": {
       "memberof": "ApiParaPr",
       "name": "SetIndLeft",
-      "description": "<p>Set the paragraph left side indentation.</p>",
+      "description": "<p>Sets the paragraph left side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -104,7 +104,7 @@
     "GetIndLeft": {
       "memberof": "ApiParaPr",
       "name": "GetIndLeft",
-      "description": "<p>Get the paragraph left side indentation.</p>",
+      "description": "<p>Returns the paragraph left side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -124,7 +124,7 @@
     "SetIndRight": {
       "memberof": "ApiParaPr",
       "name": "SetIndRight",
-      "description": "<p>Set the paragraph right side indentation.</p>",
+      "description": "<p>Sets the paragraph right side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -147,7 +147,7 @@
     "GetIndRight": {
       "memberof": "ApiParaPr",
       "name": "GetIndRight",
-      "description": "<p>Get the paragraph right side indentation.</p>",
+      "description": "<p>Returns the paragraph right side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -167,7 +167,7 @@
     "SetIndFirstLine": {
       "memberof": "ApiParaPr",
       "name": "SetIndFirstLine",
-      "description": "<p>Set the paragraph first line indentation.</p>",
+      "description": "<p>Sets the paragraph first line indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -190,7 +190,7 @@
     "GetIndFirstLine": {
       "memberof": "ApiParaPr",
       "name": "GetIndFirstLine",
-      "description": "<p>Get the paragraph first line indentation.</p>",
+      "description": "<p>Returns the paragraph first line indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -210,7 +210,7 @@
     "SetJc": {
       "memberof": "ApiParaPr",
       "name": "SetJc",
-      "description": "<p>Set paragraph contents justification.</p>",
+      "description": "<p>Sets the paragraph contents justification.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -233,7 +233,7 @@
     "GetJc": {
       "memberof": "ApiParaPr",
       "name": "GetJc",
-      "description": "<p>Get paragraph contents justification.</p>",
+      "description": "<p>Returns the paragraph contents justification.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -256,7 +256,7 @@
     "SetKeepLines": {
       "memberof": "ApiParaPr",
       "name": "SetKeepLines",
-      "description": "<p>Specify that when rendering this document using a page view, all lines of this paragraph are maintained on a single page whenever possible.</p>",
+      "description": "<p>Specifies that when rendering the document using a page view, all lines of the current paragraph are maintained on a single page whenever possible.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -269,7 +269,7 @@
         {
           "type": "boolean",
           "name": "isKeepLines",
-          "description": "<p>The true value will enable the option to keep lines of the paragraph on a single page.</p>",
+          "description": "<p>The true value enables the option to keep lines of the paragraph on a single page.</p>",
           "optional": false
         }
       ]
@@ -277,7 +277,7 @@
     "SetKeepNext": {
       "memberof": "ApiParaPr",
       "name": "SetKeepNext",
-      "description": "<p>Specify that when rendering this document using a paginated view, the contents of this paragraph are at least\npartly rendered on the same page as the following paragraph whenever possible.</p>",
+      "description": "<p>Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least\npartly rendered on the same page as the following paragraph whenever possible.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -290,7 +290,7 @@
         {
           "type": "boolean",
           "name": "isKeepNext",
-          "description": "<p>The true value will enable the option to keep lines of the paragraph on the same\npage as the following paragraph.</p>",
+          "description": "<p>The true value enables the option to keep lines of the paragraph on the same\npage as the following paragraph.</p>",
           "optional": false
         }
       ]
@@ -298,7 +298,7 @@
     "SetPageBreakBefore": {
       "memberof": "ApiParaPr",
       "name": "SetPageBreakBefore",
-      "description": "<p>Specify that when rendering this document using a paginated view, the contents of this paragraph are rendered at\nthe beginning of a new page in the document.</p>",
+      "description": "<p>Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at\nthe beginning of a new page in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -311,7 +311,7 @@
         {
           "type": "boolean",
           "name": "isPageBreakBefore",
-          "description": "<p>The true value will enable the option to render the contents of the paragraph\nat the beginning of a new page in the document.</p>",
+          "description": "<p>The true value enables the option to render the contents of the paragraph\nat the beginning of a new page in the document.</p>",
           "optional": false
         }
       ]
@@ -319,7 +319,7 @@
     "SetSpacingLine": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingLine",
-      "description": "<p>Set the paragraph line spacing. If the value of the sLineRule parameter is either\n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If\nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the\nnLine parameter will be interpreted as 240ths of a line.</p>",
+      "description": "<p>Sets the paragraph line spacing. If the value of the sLineRule parameter is either\n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If\nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the\nnLine parameter will be interpreted as 240ths of a line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -340,7 +340,7 @@
         {
           "type": "\"auto\" | \"atLeast\" | \"exact\"",
           "name": "sLineRule",
-          "description": "<p>The rule that determines the measuring units of the nLine parameter.</p>",
+          "description": "<p>The rule that determines the measuring units of the line spacing.</p>",
           "optional": false
         }
       ]
@@ -348,7 +348,7 @@
     "GetSpacingLineValue": {
       "memberof": "ApiParaPr",
       "name": "GetSpacingLineValue",
-      "description": "<p>Get the paragraph line spacing value.</p>",
+      "description": "<p>Returns the paragraph line spacing value.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -369,7 +369,7 @@
     "GetSpacingLineRule": {
       "memberof": "ApiParaPr",
       "name": "GetSpacingLineRule",
-      "description": "<p>Get the paragraph line spacing rule.</p>",
+      "description": "<p>Returns the paragraph line spacing rule.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -391,7 +391,7 @@
     "SetSpacingBefore": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingBefore",
-      "description": "<p>Set the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then\nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then\nit will be interpreted as false.</p>",
+      "description": "<p>Sets the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then\nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then\nit will be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -412,7 +412,7 @@
         {
           "type": "boolean",
           "name": "isBeforeAuto",
-          "description": "<p>The true value will disable the nBefore parameter.</p>",
+          "description": "<p>The true value disables the spacing before the current paragraph.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -421,7 +421,7 @@
     "GetSpacingBefore": {
       "memberof": "ApiParaPr",
       "name": "GetSpacingBefore",
-      "description": "<p>Get the spacing before value of the current paragraph.</p>",
+      "description": "<p>Returns the spacing before value of the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -440,7 +440,7 @@
     "SetSpacingAfter": {
       "memberof": "ApiParaPr",
       "name": "SetSpacingAfter",
-      "description": "<p>Set the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then\nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it\nwill be interpreted as false.</p>",
+      "description": "<p>Sets the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then\nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it\nwill be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -461,7 +461,7 @@
         {
           "type": "boolean",
           "name": "isAfterAuto",
-          "description": "<p>The true value will disable the nAfter parameter.</p>",
+          "description": "<p>The true value disables the spacing after the current paragraph.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -470,7 +470,7 @@
     "GetSpacingAfter": {
       "memberof": "ApiParaPr",
       "name": "GetSpacingAfter",
-      "description": "<p>Get the spacing after value of the current paragraph.</p>",
+      "description": "<p>Returns the spacing after value of the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -489,7 +489,7 @@
     "SetShd": {
       "memberof": "ApiParaPr",
       "name": "SetShd",
-      "description": "<p>Specify the shading applied to the contents of the paragraph.</p>",
+      "description": "<p>Specifies the shading applied to the contents of the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -526,7 +526,7 @@
         {
           "type": "boolean",
           "name": "isAuto",
-          "description": "<p>The true value will disable paragraph contents shading.</p>",
+          "description": "<p>The true value disables paragraph contents shading.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -535,7 +535,7 @@
     "GetShd": {
       "memberof": "ApiParaPr",
       "name": "GetShd",
-      "description": "<p>Get the shading applied to the contents of the paragraph.</p>",
+      "description": "<p>Returns the shading applied to the contents of the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -552,7 +552,7 @@
     "SetBottomBorder": {
       "memberof": "ApiParaPr",
       "name": "SetBottomBorder",
-      "description": "<p>Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note></p>",
+      "description": "<p>Specifies the border which will be displayed below a set of paragraphs which have the same paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -603,7 +603,7 @@
     "SetLeftBorder": {
       "memberof": "ApiParaPr",
       "name": "SetLeftBorder",
-      "description": "<p>Specify the border which will be displayed at the left side of the page around the specified paragraph.</p>",
+      "description": "<p>Specifies the border which will be displayed at the left side of the page around the specified paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -654,7 +654,7 @@
     "SetRightBorder": {
       "memberof": "ApiParaPr",
       "name": "SetRightBorder",
-      "description": "<p>Specify the border which will be displayed at the right side of the page around the specified paragraph.</p>",
+      "description": "<p>Specifies the border which will be displayed at the right side of the page around the specified paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -705,7 +705,7 @@
     "SetTopBorder": {
       "memberof": "ApiParaPr",
       "name": "SetTopBorder",
-      "description": "<p>Specify the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.</note></p>",
+      "description": "<p>Specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -756,7 +756,7 @@
     "SetBetweenBorder": {
       "memberof": "ApiParaPr",
       "name": "SetBetweenBorder",
-      "description": "<p>Specify the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings.</p>",
+      "description": "<p>Specifies the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -807,7 +807,7 @@
     "SetWidowControl": {
       "memberof": "ApiParaPr",
       "name": "SetWidowControl",
-      "description": "<p>Specify whether a single line of this paragraph will be prevented from being displayed on a separate page from the remaining content at display time by moving the line onto the following page.</p>",
+      "description": "<p>Specifies whether a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -820,7 +820,7 @@
         {
           "type": "boolean",
           "name": "isWidowControl",
-          "description": "<p>The true value will enable the SetWidowControl method use.</p>",
+          "description": "<p>The true value means that a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page.</p>",
           "optional": false
         }
       ]
@@ -828,7 +828,7 @@
     "SetTabs": {
       "memberof": "ApiParaPr",
       "name": "SetTabs",
-      "description": "<p>Specify a sequence of custom tab stops which will be used for any tab characters in the current paragraph.\n<b>Warning</b>: The lengths of aPos array and aVal array <b>MUST BE</b> equal to each other.</p>",
+      "description": "<p>Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.\n<b>Warning</b>: The lengths of aPos array and aVal array <b>MUST BE</b> equal to each other.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -857,7 +857,7 @@
     "SetNumPr": {
       "memberof": "ApiParaPr",
       "name": "SetNumPr",
-      "description": "<p>Specify that the current paragraph references a numbering definition instance in the current document.</p>",
+      "description": "<p>Specifies that the current paragraph references a numbering definition instance in the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -876,7 +876,7 @@
         {
           "type": "number",
           "name": "nLvl",
-          "description": "<p>Specifies a numbering level reference. If the current instance of the ApiParaPr class is direct\nformatting of a paragraph, then this parameter MUST BE specified. Otherwise if the current instance of the ApiParaPr class\nis the part of ApiStyle properties, this parameter will be ignored.</p>",
+          "description": "<p>Specifies a numbering level reference. If the current instance of the ApiParaPr class is direct\nformatting of a paragraph, then this parameter MUST BE specified. Otherwise, if the current instance of the ApiParaPr class\nis the part of ApiStyle properties, this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": 0
         }
@@ -885,7 +885,7 @@
     "SetBullet": {
       "memberof": "ApiParaPr",
       "name": "SetBullet",
-      "description": "<p>Set the bullet or numbering to the current paragraph.</p>",
+      "description": "<p>Sets the bullet or numbering to the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CSE",
@@ -899,7 +899,7 @@
         {
           "type": "ApiBullet",
           "name": "oBullet",
-          "description": "<p>The bullet object created using either the {@link Api#CreateBullet} or {@link Api#CreateNumbering} method.</p>",
+          "description": "<p>The bullet object created with the {@link Api#CreateBullet} or {@link Api#CreateNumbering} method.</p>",
           "optional": false
         }
       ]

@@ -3,7 +3,7 @@
     "GetDocument": {
       "memberof": "Api",
       "name": "GetDocument",
-      "description": "<p>Get the main document.</p>",
+      "description": "<p>Returns the main document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "CreateParagraph": {
       "memberof": "Api",
       "name": "CreateParagraph",
-      "description": "<p>Create a new paragraph.</p>",
+      "description": "<p>Creates a new paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -38,7 +38,7 @@
     "CreateRange": {
       "memberof": "Api",
       "name": "CreateRange",
-      "description": "<p>Create an element range.\nIf you do not specify the start and end positions, the range will be taken from the entire element.</p>",
+      "description": "<p>Creates an element range.\nIf you do not specify the start and end positions, the range will be taken from the entire element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -57,7 +57,7 @@
     "CreateTable": {
       "memberof": "Api",
       "name": "CreateTable",
-      "description": "<p>Create a new table with a specified number of rows and columns.</p>",
+      "description": "<p>Creates a new table with a specified number of rows and columns.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -88,7 +88,7 @@
     "CreateRun": {
       "memberof": "Api",
       "name": "CreateRun",
-      "description": "<p>Create a new smaller text block to be inserted to the current paragraph or table.</p>",
+      "description": "<p>Creates a new smaller text block to be inserted to the current paragraph or table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -107,7 +107,7 @@
     "CreateHyperlink": {
       "memberof": "Api",
       "name": "CreateHyperlink",
-      "description": "<p>Create a new hyperlink text block to be inserted to the current paragraph or table.</p>",
+      "description": "<p>Creates a new hyperlink text block to be inserted to the current paragraph or table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -144,7 +144,7 @@
     "CreateImage": {
       "memberof": "Api",
       "name": "CreateImage",
-      "description": "<p>Create an image with the parameters specified.</p>",
+      "description": "<p>Creates an image with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -181,7 +181,7 @@
     "CreateShape": {
       "memberof": "Api",
       "name": "CreateShape",
-      "description": "<p>Create a shape with the parameters specified.</p>",
+      "description": "<p>Creates a shape with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -235,7 +235,7 @@
     "CreateChart": {
       "memberof": "Api",
       "name": "CreateChart",
-      "description": "<p>Create a chart with the parameters specified.</p>",
+      "description": "<p>Creates a chart with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -297,7 +297,7 @@
     "CreateRGBColor": {
       "memberof": "Api",
       "name": "CreateRGBColor",
-      "description": "<p>Create an RGB color setting the appropriate values for the red, green and blue color components.</p>",
+      "description": "<p>Creates an RGB color setting the appropriate values for the red, green and blue color components.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -336,7 +336,7 @@
     "CreateSchemeColor": {
       "memberof": "Api",
       "name": "CreateSchemeColor",
-      "description": "<p>Create a complex color scheme selecting from one of the available schemes.</p>",
+      "description": "<p>Creates a complex color scheme selecting from one of the available schemes.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -363,7 +363,7 @@
     "CreatePresetColor": {
       "memberof": "Api",
       "name": "CreatePresetColor",
-      "description": "<p>Create a color selecting it from one of the available color presets.</p>",
+      "description": "<p>Creates a color selecting it from one of the available color presets.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -390,7 +390,7 @@
     "CreateSolidFill": {
       "memberof": "Api",
       "name": "CreateSolidFill",
-      "description": "<p>Create a solid fill to apply to the object using a selected solid color as the object background.</p>",
+      "description": "<p>Creates a solid fill to apply to the object using a selected solid color as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -417,7 +417,7 @@
     "CreateLinearGradientFill": {
       "memberof": "Api",
       "name": "CreateLinearGradientFill",
-      "description": "<p>Create a linear gradient fill to apply to the object using a selected linear gradient as the object background.</p>",
+      "description": "<p>Creates a linear gradient fill to apply to the object using the selected linear gradient as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -450,7 +450,7 @@
     "CreateRadialGradientFill": {
       "memberof": "Api",
       "name": "CreateRadialGradientFill",
-      "description": "<p>Create a radial gradient fill to apply to the object using a selected radial gradient as the object background.</p>",
+      "description": "<p>Creates a radial gradient fill to apply to the object using the selected radial gradient as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -477,7 +477,7 @@
     "CreatePatternFill": {
       "memberof": "Api",
       "name": "CreatePatternFill",
-      "description": "<p>Create a pattern fill to apply to fill the object using a selected pattern as the object background.</p>",
+      "description": "<p>Creates a pattern fill to apply to the object using the selected pattern as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -516,7 +516,7 @@
     "CreateBlipFill": {
       "memberof": "Api",
       "name": "CreateBlipFill",
-      "description": "<p>Create a blip fill to apply to the object using a selected image as the object background.</p>",
+      "description": "<p>Creates a blip fill to apply to the object using the selected image as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -549,7 +549,7 @@
     "CreateNoFill": {
       "memberof": "Api",
       "name": "CreateNoFill",
-      "description": "<p>Create no fill and remove the fill from the element.</p>",
+      "description": "<p>Creates no fill and removes the fill from the element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -568,7 +568,7 @@
     "CreateStroke": {
       "memberof": "Api",
       "name": "CreateStroke",
-      "description": "<p>Create a stroke adding shadows to the element.</p>",
+      "description": "<p>Creates a stroke adding shadows to the element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -601,7 +601,7 @@
     "CreateGradientStop": {
       "memberof": "Api",
       "name": "CreateGradientStop",
-      "description": "<p>Create a gradient stop used for different types of gradients.</p>",
+      "description": "<p>Creates a gradient stop used for different types of gradients.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -634,7 +634,7 @@
     "CreateBullet": {
       "memberof": "Api",
       "name": "CreateBullet",
-      "description": "<p>Create a bullet for a paragraph with the character or symbol specified with the sBullet parameter.</p>",
+      "description": "<p>Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter.</p>",
       "tags": {
         "typeofeditors": [
           "CSE",
@@ -660,7 +660,7 @@
     "CreateNumbering": {
       "memberof": "Api",
       "name": "CreateNumbering",
-      "description": "<p>Create a bullet for a paragraph with the character or symbol specified with the sType parameter.</p>",
+      "description": "<p>Creates a bullet for a paragraph with the numbering character or symbol specified with the sType parameter.</p>",
       "tags": {
         "typeofeditors": [
           "CSE",
@@ -692,7 +692,7 @@
     "CreateInlineLvlSdt": {
       "memberof": "Api",
       "name": "CreateInlineLvlSdt",
-      "description": "<p>Create a new inline container.</p>",
+      "description": "<p>Creates a new inline container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -709,7 +709,7 @@
     "CreateBlockLvlSdt": {
       "memberof": "Api",
       "name": "CreateBlockLvlSdt",
-      "description": "<p>Create a new block level container.</p>",
+      "description": "<p>Creates a new block level container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -726,7 +726,7 @@
     "Save": {
       "memberof": "Api",
       "name": "Save",
-      "description": "<p>Save changes to the specified document.</p>",
+      "description": "<p>Saves changes to the specified document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -739,7 +739,7 @@
     "LoadMailMergeData": {
       "memberof": "Api",
       "name": "LoadMailMergeData",
-      "description": "<p>Load data for the mail merge.</p>",
+      "description": "<p>Loads data for the mail merge.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -764,7 +764,7 @@
     "GetMailMergeTemplateDocContent": {
       "memberof": "Api",
       "name": "GetMailMergeTemplateDocContent",
-      "description": "<p>Get the mail merge template document.</p>",
+      "description": "<p>Returns the mail merge template document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -781,7 +781,7 @@
     "GetMailMergeReceptionsCount": {
       "memberof": "Api",
       "name": "GetMailMergeReceptionsCount",
-      "description": "<p>Get the mail merge receptions count.</p>",
+      "description": "<p>Returns the mail merge receptions count.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -798,7 +798,7 @@
     "ReplaceDocumentContent": {
       "memberof": "Api",
       "name": "ReplaceDocumentContent",
-      "description": "<p>Replace the main document content with another document content.</p>",
+      "description": "<p>Replaces the main document content with another document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -819,7 +819,7 @@
     "MailMerge": {
       "memberof": "Api",
       "name": "MailMerge",
-      "description": "<p>Start the mail merge process.</p>",
+      "description": "<p>Starts the mail merge process.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -856,7 +856,7 @@
     "AddComment": {
       "memberof": "Api",
       "name": "AddComment",
-      "description": "<p>Add a comment to the desired element or array of Runs.</p>",
+      "description": "<p>Adds a comment to the desired element or array of Runs.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -873,7 +873,7 @@
         {
           "type": "Array.<ApiRun> | ApiParagraph | ApiDocument",
           "name": "oElement",
-          "description": "<p>May be Document, Paragraph or Run[].</p>",
+          "description": "<p>The element where a comment will be added. It may be Document, Paragraph or Run[].</p>",
           "optional": false
         },
         {
@@ -893,7 +893,7 @@
     "ReplaceTextSmart": {
       "memberof": "Api",
       "name": "ReplaceTextSmart",
-      "description": "<p>Replaces each paragraph(or text in cell) in the select with the corresponding text from an array of strings.</p>",
+      "description": "<p>Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -908,8 +908,62 @@
         {
           "type": "Array",
           "name": "arrString",
-          "description": "<p>represents an array of strings.</p>",
+          "description": "<p>An array of replacement strings.</p>",
           "optional": false
+        }
+      ]
+    },
+    "ConvertDocument": {
+      "memberof": "Api",
+      "name": "ConvertDocument",
+      "description": "<p>Converts a document to Markdown or HTML text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"markdown\" | \"html\"",
+          "name": "sConvertType",
+          "description": "<p>Conversion type.</p>",
+          "optional": true,
+          "defaultValue": "\"markdown\""
+        },
+        {
+          "type": "bool",
+          "name": "bHtmlHeadings",
+          "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bBase64img",
+          "description": "<p>Defines if the images will be created in the base64 format.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bDemoteHeadings",
+          "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bRenderHTMLTags",
+          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &amp;lt;tag&gt;text&amp;lt;/tag&gt;. By default, angle brackets will be replaced with the special characters.</p>",
+          "optional": true,
+          "defaultValue": false
         }
       ]
     }

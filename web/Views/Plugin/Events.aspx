@@ -431,7 +431,7 @@ window.Asc.plugin.event_onInputHelperInput = function(data) {
 
     <li>
         <p><b id="onMethodReturn" class="copy-link">onMethodReturn</b> - the function called to return the result of the previously executed method. 
-            It can be used to return data after executing the <a href="<%= Url.Action("executemethod") %>">executeMethod</a> method.</p>
+            It can be used to return data after executing the <a href="<%= Url.Action("executemethod/") %>">executeMethod</a> method.</p>
             <div class="header-gray">Parameters</div>
             <table class="table">
                 <colgroup>

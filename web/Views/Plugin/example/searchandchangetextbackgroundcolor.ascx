@@ -14,7 +14,7 @@
 
 
 <div class="header-gray">Installation</div>
-<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_search_and_change_text_background_color" target="_blank">GitHub</a> and install it following the
+<p>Download this plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color" target="_blank">GitHub</a> and install it following the
 <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>">on-premises</a>,
 or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation instructions.</p>
 
@@ -33,7 +33,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Plugin structure</div>
 
-<p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_search_and_change_text_background_color" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/develop/example_search_and_change_text_background_color</a>.</p>
+<p>Repository on GitHub: <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color" target="_blank">https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/example_search_and_change_text_background_color</a>.</p>
 <ol>
     <li><em>config.json</em>, <em>index.html</em> and <em>code.js</em></li>
     <li>Icons</li>
@@ -51,7 +51,47 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description" : "Example search and change background text",
             "url"         : "index.html",
 
-            "icons"           : ["resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png"],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer"        : false,
             "EditorsSupport"  : ["word"],
 
@@ -59,7 +99,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "isModal"         : false,
             "isInsideMode"    : true,
 
-            "initDataType"    : "",
+            "initDataType"    : "none",
             "initData"        : "",
 
             "isUpdateOleOnResize" : false,
@@ -73,7 +113,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/develop/example_search_and_change_text_background_color/scripts/code.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

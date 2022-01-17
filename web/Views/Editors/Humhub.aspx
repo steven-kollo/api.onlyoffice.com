@@ -20,7 +20,7 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</li>
+        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
         <li>The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT, TXT, PDF.</li>
         <li>The plugin will create a new <b>Edit/View</b> menu option for Office documents. 
             This allows multiple users to collaborate in real time and to save back those changes to HumHub.</li>

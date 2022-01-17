@@ -57,6 +57,7 @@
         "de": "Thesaurus"
     },
     "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9840}",
+    "version": "1.0",
 
     "variations": [
         {
@@ -69,7 +70,47 @@
             },
             "url": "index.html",
 
-            "icons": [ "icon.png", "icon@2x.png", "icon.png", "icon@2x.png" ],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer": true,
             "EditorsSupport": [ "word", "cell", "slide" ],
 
@@ -93,7 +134,6 @@
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-thesaurus/blob/master/scripts/synonim.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

@@ -42,15 +42,18 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Basic",
-                "gettingstarted",
                 "changelog",
+                "classlist",
                 "csharpexample",
+                "gettingstarted",
+                "global",
                 "nodejsexample",
-                "phpexample",
-                "rubyexample",
+                "howitworks",
+                "howitworks/comparedocuments",
+                "howitworks/globalvariable",
                 "integratingdocumentbuilder",
                 "integrationapi",
-                "integrationapi/usingdocbuilderfile",
+                "integrationapi/arguments",
                 "integrationapi/cdocbuilder",
                 "integrationapi/cdocbuilder/closefile",
                 "integrationapi/cdocbuilder/createfile",
@@ -61,19 +64,17 @@ namespace ASC.Api.Web.Help.Controllers
                 "integrationapi/cdocbuilder/run",
                 "integrationapi/cdocbuilder/runtexta",
                 "integrationapi/cdocbuilder/runtextw",
-                "integrationapi/cdocbuilder/savefile",
                 "integrationapi/cdocbuilder/setproperty",
                 "integrationapi/cdocbuilder/setpropertyw",
                 "integrationapi/cdocbuilder/settmpfolder",
-                "integrationapi/arguments",
-                "howitworks",
-                "howitworks/globalvariable",
-                "howitworks/comparedocuments",
-                "textdocumentapi",
-                "spreadsheetapi",
+                "integrationapi/cdocbuilder/savefile",
+                "integrationapi/usingdocbuilderfile",
+                "phpexample",
                 "presentationapi",
-                "global",
-                "classlist",
+                "rubyexample",
+                "spreadsheetapi",
+                "textdocumentapi",
+                "try",
             };
 
         #endregion
@@ -148,6 +149,20 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Howitworks", (object)catchall);
+        }
+
+        public ActionResult Try()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public string Try(string module, string section, string method)
+        {
+            var dbMethod = DocBuilderDocumentation.GetMethod(module, section, method);
+            if (dbMethod != null && dbMethod.Example != null)
+                return dbMethod.Example.Script;
+            return "";
         }
 
         public ActionResult Textdocumentapi(string catchall)

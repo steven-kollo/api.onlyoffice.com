@@ -205,7 +205,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="isInsideMode" class="copy-link">variations.isInsideMode</td>
-                <td>Specifies if the plugin must be displayed inside the editor panel instead of its own window (used for visual non-modal plugins only). The following rule must be observed at all times: <em>isModal != isInsideMode</em>.</td>
+                <td>Specifies if the plugin must be displayed inside the editor panel instead of its own window.</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -331,7 +331,9 @@
                 "icons": [
                     {
                         "100%": { "normal": "icon.png" },
+                        "125%": { "normal": "icon@1.25.png" },
                         "150%": { "normal": "icon@1.5x.png" },
+                        "175%": { "normal": "icon@1.75.png" },
                         "200%": { "normal": "icon@2x.png" }
                     },
                     {
