@@ -17,9 +17,9 @@
       "see": null,
       "inherits": null
     },
-    "GetDocContent": {
+    "GetContent": {
       "memberof": "ApiShape",
-      "name": "GetDocContent",
+      "name": "GetContent",
       "description": "<p>Returns the shape inner contents where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
@@ -34,9 +34,9 @@
       "see": null,
       "inherits": null
     },
-    "GetContent": {
+    "GetDocContent": {
       "memberof": "ApiShape",
-      "name": "GetContent",
+      "name": "GetDocContent",
       "description": "<p>Returns the shape inner contents where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [

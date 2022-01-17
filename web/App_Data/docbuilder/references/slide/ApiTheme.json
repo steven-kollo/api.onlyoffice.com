@@ -1,0 +1,166 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiTheme",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"theme\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetMaster": {
+      "memberof": "ApiTheme",
+      "name": "GetMaster",
+      "description": "<p>Get the slide master of this theme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiMaster",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetColorScheme": {
+      "memberof": "ApiTheme",
+      "name": "SetColorScheme",
+      "description": "<p>Sets the presentation color scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiThemeColorScheme",
+          "name": "oApiColorScheme",
+          "optional": false
+        }
+      ]
+    },
+    "GetColorScheme": {
+      "memberof": "ApiTheme",
+      "name": "GetColorScheme",
+      "description": "<p>Gets the presentation color scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeColorScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFormatScheme": {
+      "memberof": "ApiTheme",
+      "name": "SetFormatScheme",
+      "description": "<p>Sets the presentation format scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiThemeFormatScheme",
+          "name": "oApiFormatScheme",
+          "optional": false
+        }
+      ]
+    },
+    "GetFormatScheme": {
+      "memberof": "ApiTheme",
+      "name": "GetFormatScheme",
+      "description": "<p>Gets the presentation format scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeFormatScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFontScheme": {
+      "memberof": "ApiTheme",
+      "name": "SetFontScheme",
+      "description": "<p>Sets the presentation font scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiThemeFontScheme",
+          "name": "oApiFontScheme",
+          "optional": false
+        }
+      ]
+    },
+    "GetFontScheme": {
+      "memberof": "ApiTheme",
+      "name": "GetFontScheme",
+      "description": "<p>Gets the presentation font scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeFontScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * Class representing a presentation theme.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a presentation theme.</p>",
+  "scope": "global",
+  "params": []
+}

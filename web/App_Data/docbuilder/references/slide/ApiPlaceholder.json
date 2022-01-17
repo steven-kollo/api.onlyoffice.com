@@ -1,0 +1,50 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiPlaceholder",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"placeholder\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetType": {
+      "memberof": "ApiPlaceholder",
+      "name": "SetType",
+      "description": "<p>Set the placeholder type.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sType",
+          "description": "<p>name of placeholder type.</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\r\n     * Class representing a placeholder.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a placeholder.</p>",
+  "scope": "global",
+  "params": []
+}

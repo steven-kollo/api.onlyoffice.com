@@ -1,5 +1,7 @@
 # Change Log
 
+- docbuilder: v7.1
+
 ## 2.5.0
 - editors: test examples v1.1.0
 - editors: docxf and oform on try page

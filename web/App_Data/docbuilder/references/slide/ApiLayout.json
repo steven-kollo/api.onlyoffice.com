@@ -1,0 +1,278 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiLayout",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"master\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetName": {
+      "memberof": "ApiLayout",
+      "name": "SetName",
+      "description": "<p>Sets the name of this layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "optional": false
+        }
+      ]
+    },
+    "RemoveObject": {
+      "memberof": "ApiLayout",
+      "name": "RemoveObject",
+      "description": "<p>Removes objects (image, shape or chart) from the current slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>position from which to delete</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nCount",
+          "description": "<p>count of elements for delete.</p>",
+          "optional": true,
+          "defaultValue": 1
+        }
+      ]
+    },
+    "ClearBackground": {
+      "memberof": "ApiLayout",
+      "name": "ClearBackground",
+      "description": "<p>Clears the slide layout background.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "FollowMasterBackground": {
+      "memberof": "ApiLayout",
+      "name": "FollowMasterBackground",
+      "description": "<p>Determines whether the slide follows the slide master background.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Copy": {
+      "memberof": "ApiLayout",
+      "name": "Copy",
+      "description": "<p>Creates a copy of the specified slide layout object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiLayout",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Delete": {
+      "memberof": "ApiLayout",
+      "name": "Delete",
+      "description": "<p>Deletes the specified object from parent slide master if it exist.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Duplicate": {
+      "memberof": "ApiLayout",
+      "name": "Duplicate",
+      "description": "<p>Creates a duplicate of the specified slide layout object, adds the new slide layout to the slide layout collection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiLayout",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "optional": true,
+          "defaultValue": "ApiMaster.GetLayoutsCount()"
+        }
+      ]
+    },
+    "MoveTo": {
+      "memberof": "ApiLayout",
+      "name": "MoveTo",
+      "description": "<p>Moves the specified object to a specific location within the same collection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllDrawings": {
+      "memberof": "ApiLayout",
+      "name": "GetAllDrawings",
+      "description": "<p>Gets the array with all drawing objects in slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllShapes": {
+      "memberof": "ApiLayout",
+      "name": "GetAllShapes",
+      "description": "<p>Gets the array with all shape objects in slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllImages": {
+      "memberof": "ApiLayout",
+      "name": "GetAllImages",
+      "description": "<p>Gets the array with all image objects in slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiImage>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllCharts": {
+      "memberof": "ApiLayout",
+      "name": "GetAllCharts",
+      "description": "<p>Gets the array with all chart objects in slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiChart>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetMaster": {
+      "memberof": "ApiLayout",
+      "name": "GetMaster",
+      "description": "<p>Gets parent slide master.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiMaster"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * Class representing a slide layout.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a slide layout.</p>",
+  "scope": "global",
+  "params": []
+}

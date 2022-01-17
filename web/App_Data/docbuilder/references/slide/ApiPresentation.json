@@ -186,6 +186,152 @@
           "optional": false
         }
       ]
+    },
+    "GetSlidesCount": {
+      "memberof": "ApiPresentation",
+      "name": "GetSlidesCount",
+      "description": "<p>Gets slides count.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetMastersCount": {
+      "memberof": "ApiPresentation",
+      "name": "GetMastersCount",
+      "description": "<p>Gets slide masters count.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetMaster": {
+      "memberof": "ApiPresentation",
+      "name": "GetMaster",
+      "description": "<p>Gets a slide master.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiMaster",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "optional": false
+        }
+      ]
+    },
+    "AddMaster": {
+      "memberof": "ApiPresentation",
+      "name": "AddMaster",
+      "description": "<p>Adds the slide master to presentation slide masters collection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "optional": true,
+          "defaultValue": "ApiPresentation.GetMastersCount()"
+        },
+        {
+          "type": "ApiMaster",
+          "name": "oApiMaster",
+          "optional": false
+        }
+      ]
+    },
+    "ApplyTheme": {
+      "memberof": "ApiPresentation",
+      "name": "ApplyTheme",
+      "description": "<p>Applies the theme to the all slides in presentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTheme",
+          "name": "oApiTheme",
+          "optional": false
+        }
+      ]
+    },
+    "RemoveSlides": {
+      "memberof": "ApiPresentation",
+      "name": "RemoveSlides",
+      "description": "<p>Remove a range of slides from presentation.\nDeletes all slides without parameters.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "nStart",
+          "description": "<p>beginning of the deletion range.</p>",
+          "optional": true,
+          "defaultValue": 0
+        },
+        {
+          "type": "Number",
+          "name": "nCount",
+          "description": "<p>count of slides for deletion.</p>",
+          "optional": true,
+          "defaultValue": "ApiPresentation.GetSlidesCount()"
+        }
+      ]
     }
   },
   "comment": "/**\r\n     * Class representing a presentation.\r\n     * @constructor\r\n     */",

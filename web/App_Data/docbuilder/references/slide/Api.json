@@ -17,6 +17,268 @@
       "see": null,
       "inherits": null
     },
+    "CreateMaster": {
+      "memberof": "Api",
+      "name": "CreateMaster",
+      "description": "<p>Create a new slide master.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiMaster",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTheme",
+          "name": "oTheme",
+          "description": "<p>ApiTheme object.</p>",
+          "optional": true,
+          "defaultValue": "ApiPresentation.GetMaster(0).GetTheme()"
+        }
+      ]
+    },
+    "CreateLayout": {
+      "memberof": "Api",
+      "name": "CreateLayout",
+      "description": "<p>Create a new slide layout and adds it to the slide master if it specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiLayout"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiMaster",
+          "name": "oMaster",
+          "description": "<p>parent slide master.</p>",
+          "optional": true,
+          "defaultValue": null
+        }
+      ]
+    },
+    "CreatePlaceholder": {
+      "memberof": "Api",
+      "name": "CreatePlaceholder",
+      "description": "<p>Create a new placeholder.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiPlaceholder"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sType",
+          "description": "<p>the placeholder type.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateTheme": {
+      "memberof": "Api",
+      "name": "CreateTheme",
+      "description": "<p>Create a new theme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTheme",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>specified theme's name.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiMaster",
+          "name": "oMaster",
+          "description": "<p>slide master. Required parameter.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiThemeColorScheme",
+          "name": "oClrScheme",
+          "description": "<p>color scheme. Required parameter.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiThemeFormatScheme",
+          "name": "oFormatScheme",
+          "description": "<p>format scheme. Required parameter.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiThemeFontScheme",
+          "name": "oFontScheme",
+          "description": "<p>font scheme. Required parameter.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateThemeColorScheme": {
+      "memberof": "Api",
+      "name": "CreateThemeColorScheme",
+      "description": "<p>Create a new theme color scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeColorScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>specified name of theme's color scheme.</p>",
+          "optional": false
+        },
+        {
+          "type": "Array.<ApiUniColor> | Array.<ApiRGBColor>",
+          "name": "arrColors",
+          "description": "<p>This array defines a set of colors which are referred to as a color scheme.\nThe color scheme is responsible for defining a list of twelve colors.\nThe array should contain a sequence of colors: 2 dark, 2 light,6 primary and a color for each of a hyperlink and followed hyperlink.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateThemeFormatScheme": {
+      "memberof": "Api",
+      "name": "CreateThemeFormatScheme",
+      "description": "<p>Create a new theme format scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeFormatScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ApiFill>",
+          "name": "arrFill",
+          "description": "<p>This array contains fill styles. Should be composed of subtle, moderate and intense fills.</p>",
+          "optional": false
+        },
+        {
+          "type": "Array.<ApiFill>",
+          "name": "arrBgFill",
+          "description": "<p>This array contains the background fill styles. Should be composed of subtle, moderate and intense fills.</p>",
+          "optional": false
+        },
+        {
+          "type": "Array.<ApiStroke>",
+          "name": "arrLine",
+          "description": "<p>This array contains line styles. Should be composed of subtle, moderate and intense lines.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sName",
+          "optional": false
+        }
+      ]
+    },
+    "CreateThemeFontScheme": {
+      "memberof": "Api",
+      "name": "CreateThemeFontScheme",
+      "description": "<p>Create a new theme font scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeFontScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "mjLatin",
+          "description": "<p>Font's name. Is used to determine the major theme font applied to latit text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mjEa",
+          "description": "<p>Font's name. Is used to determine the major theme font applied to east asian text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mjCs",
+          "description": "<p>Font's name. Is used to determine the major theme font applied to complex script text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mnLatin",
+          "description": "<p>Font's name. Is used to determine the minor theme font applied to latit text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mnEa",
+          "description": "<p>Font's name. Is used to determine the minor theme font applied to east asian text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mnCs",
+          "description": "<p>Font's name. Is used to determine the minor theme font applied to complex script text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>name of this font scheme.</p>",
+          "optional": false
+        }
+      ]
+    },
     "CreateSlide": {
       "memberof": "Api",
       "name": "CreateSlide",
@@ -251,6 +513,57 @@
       "returns": [],
       "see": null,
       "inherits": null
+    },
+    "ApiThemeFontScheme#SetFonts": {
+      "memberof": "Api",
+      "name": "ApiThemeFontScheme#SetFonts",
+      "description": "<p>Sets the fonts for font scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "mjLatin",
+          "description": "<p>Font's name. Is used to determine the major theme font applied to latit text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mjEa",
+          "description": "<p>Font's name. Is used to determine the major theme font applied to east asian text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mjCs",
+          "description": "<p>Font's name. Is used to determine the major theme font applied to complex script text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mnLatin",
+          "description": "<p>Font's name. Is used to determine the minor theme font applied to latit text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mnEa",
+          "description": "<p>Font's name. Is used to determine the minor theme font applied to east asian text.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "mnCs",
+          "description": "<p>Font's name. Is used to determine the minor theme font applied to complex script text.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\r\n     * @global\r\n     * @class\r\n     * @name Api\r\n     */",

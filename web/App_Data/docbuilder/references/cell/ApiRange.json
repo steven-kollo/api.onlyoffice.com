@@ -299,8 +299,8 @@
       "inherits": null,
       "params": [
         {
-          "type": "string",
-          "name": "sValue",
+          "type": "string | bool | number | Array.<Array> | Array.<Array.<Array>>",
+          "name": "data",
           "description": "<p>The general value for the cell or cell range in the string format.</p>",
           "optional": false
         }
@@ -1044,9 +1044,137 @@
           "optional": false
         }
       ]
+    },
+    "Delete": {
+      "memberof": "ApiRange",
+      "name": "Delete",
+      "description": "<p>Delete the object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "String",
+          "name": "shift",
+          "description": "<p>Specifies how to shift cells to replace deleted cells (&quot;up&quot;, &quot;left&quot;)</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Insert": {
+      "memberof": "ApiRange",
+      "name": "Insert",
+      "description": "<p>Inserts a cell or a range of cells into the worksheet or macro sheet and shifts other cells away to make space.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "String",
+          "name": "shift",
+          "description": "<p>Specifies which way to shift the cells (&quot;right&quot;, &quot;down&quot;)</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AutoFit": {
+      "memberof": "ApiRange",
+      "name": "AutoFit",
+      "description": "<p>Changes the width of the columns in the range or the height of the rows in the range to achieve the best fit.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bRows",
+          "description": "<p>Defines will we make autofit rows</p>",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "bCols",
+          "description": "<p>Defines will we make autofit cols</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetAreas": {
+      "memberof": "ApiRange",
+      "name": "GetAreas",
+      "description": "<p>Returns a collection of the ranges.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiAreas"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Copy": {
+      "memberof": "ApiRange",
+      "name": "Copy",
+      "description": "<p>Copies the range to the specified range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiRange",
+          "name": "destination",
+          "description": "<p>Specifies the new range to which the specified range will be copied</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Paste": {
+      "memberof": "ApiRange",
+      "name": "Paste",
+      "description": "<p>Pastes a Range object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiRange",
+          "name": "rangeFrom",
+          "description": "<p>Specifies the range to be pasted to the current range</p>",
+          "optional": false
+        }
+      ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a range.\r\n\t * @constructor\r\n\t * @property {number} Row - Returns the row number for the selected cell.\r\n\t * @property {number} Col - Returns the column number for the selected cell.\r\n\t * @property {ApiRange} Rows - Returns the ApiRange object that represents the rows of the specified range.\r\n\t * @property {ApiRange} Cols - Returns the ApiRange object that represents the columns of the specified range.\r\n\t * @property {number} Count - Returns the rows or columns count.\r\n\t * @property {string} Value - Returns a value from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Formula - Returns a formula from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Value2 - Returns the value2 (value without format) from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Text - Returns the text from the first cell of the specified range or sets it to this cell.\r\n\t * @property {ApiColor} FontColor - Sets the text color to the current cell range with the previously created color object.\r\n\t * @property {bool} Hidden - Returns or sets the value hiding property.\r\n\t * @property {number} ColumnWidth - Returns or sets the width of all the columns in the specified range measured in points.\r\n\t * @property {number} Width - Returns a value that represents the range width measured in points.\r\n\t * @property {number} RowHeight - Returns or sets the height of the first row in the specified range measured in points.\r\n\t * @property {number} Height - Returns a value that represents the range height measured in points.\r\n\t * @property {number} FontSize - Sets the font size to the characters of the current cell range.\r\n\t * @property {string} FontName - Sets the specified font family as the font name for the current cell range.\r\n\t * @property {'center' | 'bottom' | 'top' | 'distributed' | 'justify'} AlignVertical - Sets the text vertical alignment to the current cell range.\r\n\t * @property {'left' | 'right' | 'center' | 'justify'} AlignHorizontal - Sets the text horizontal alignment to the current cell range.\r\n\t * @property {bool} Bold - Sets the bold property to the text characters from the current cell or cell range.\r\n\t * @property {'none' | 'single' | 'singleAccounting' | 'double' | 'doubleAccounting'} Underline - Sets the type of underline applied to the font.\r\n\t * @property {bool} Strikeout - Sets a value that indicates whether the contents of the current cell or cell range are displayed struck through.\r\n\t * @property {ApiColor|'No Fill'} FillColor - Returns or sets the background color of the current cell range.\r\n\t * @property {string} NumberFormat - Sets a value that represents the format code for the object.\r\n\t * @property {ApiRange} MergeArea - Returns the cell or cell range from the merge area.\r\n\t * @property {ApiWorksheet} Worksheet - Returns the ApiWorksheet object that represents the worksheet containing the specified range.\r\n\t * @property {ApiName} DefName - Returns the ApiName object.\r\n\t * @property {ApiComment | null} Comments - Returns the ApiComment collection that represents all the comments from the specified worksheet.\r\n\t * @property {'xlDownward' | 'xlHorizontal' | 'xlUpward' | 'xlVertical'} Orientation - Sets an angle to the current cell range.\r\n\t */",
+  "comment": "/**\r\n\t * Class representing a range.\r\n\t * @constructor\r\n\t * @property {number} Row - Returns the row number for the selected cell.\r\n\t * @property {number} Col - Returns the column number for the selected cell.\r\n\t * @property {ApiRange} Rows - Returns the ApiRange object that represents the rows of the specified range.\r\n\t * @property {ApiRange} Cols - Returns the ApiRange object that represents the columns of the specified range.\r\n\t * @property {number} Count - Returns the rows or columns count.\r\n\t * @property {string} Value - Returns a value from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Formula - Returns a formula from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Value2 - Returns the value2 (value without format) from the first cell of the specified range or sets it to this cell.\r\n\t * @property {string} Text - Returns the text from the first cell of the specified range or sets it to this cell.\r\n\t * @property {ApiColor} FontColor - Sets the text color to the current cell range with the previously created color object.\r\n\t * @property {bool} Hidden - Returns or sets the value hiding property.\r\n\t * @property {number} ColumnWidth - Returns or sets the width of all the columns in the specified range measured in points.\r\n\t * @property {number} Width - Returns a value that represents the range width measured in points.\r\n\t * @property {number} RowHeight - Returns or sets the height of the first row in the specified range measured in points.\r\n\t * @property {number} Height - Returns a value that represents the range height measured in points.\r\n\t * @property {number} FontSize - Sets the font size to the characters of the current cell range.\r\n\t * @property {string} FontName - Sets the specified font family as the font name for the current cell range.\r\n\t * @property {'center' | 'bottom' | 'top' | 'distributed' | 'justify'} AlignVertical - Sets the text vertical alignment to the current cell range.\r\n\t * @property {'left' | 'right' | 'center' | 'justify'} AlignHorizontal - Sets the text horizontal alignment to the current cell range.\r\n\t * @property {bool} Bold - Sets the bold property to the text characters from the current cell or cell range.\r\n\t * @property {'none' | 'single' | 'singleAccounting' | 'double' | 'doubleAccounting'} Underline - Sets the type of underline applied to the font.\r\n\t * @property {bool} Strikeout - Sets a value that indicates whether the contents of the current cell or cell range are displayed struck through.\r\n\t * @property {ApiColor|'No Fill'} FillColor - Returns or sets the background color of the current cell range.\r\n\t * @property {string} NumberFormat - Sets a value that represents the format code for the object.\r\n\t * @property {ApiRange} MergeArea - Returns the cell or cell range from the merge area.\r\n\t * @property {ApiWorksheet} Worksheet - Returns the ApiWorksheet object that represents the worksheet containing the specified range.\r\n\t * @property {ApiName} DefName - Returns the ApiName object.\r\n\t * @property {ApiComment | null} Comments - Returns the ApiComment collection that represents all the comments from the specified worksheet.\r\n\t * @property {'xlDownward' | 'xlHorizontal' | 'xlUpward' | 'xlVertical'} Orientation - Sets an angle to the current cell range.\r\n\t * @property {ApiAreas} Areas - Returns a collection of the areas.\r\n\t */",
   "description": "<p>Class representing a range.</p>",
   "scope": "global",
   "params": [],
@@ -1195,6 +1323,11 @@
       "type": "'xlDownward' | 'xlHorizontal' | 'xlUpward' | 'xlVertical'",
       "name": "Orientation",
       "description": "<p>Sets an angle to the current cell range.</p>"
+    },
+    {
+      "type": "ApiAreas",
+      "name": "Areas",
+      "description": "<p>Returns a collection of the areas.</p>"
     }
   ]
 }

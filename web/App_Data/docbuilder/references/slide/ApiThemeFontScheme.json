@@ -1,0 +1,66 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiThemeFontScheme",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"fontScheme\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSchemeName": {
+      "memberof": "ApiThemeFontScheme",
+      "name": "SetSchemeName",
+      "description": "<p>Sets the scheme's name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "optional": false
+        }
+      ]
+    },
+    "Copy": {
+      "memberof": "ApiThemeFontScheme",
+      "name": "Copy",
+      "description": "<p>Creates a copy of the specified theme's font scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeFontScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * Class representing a theme's font scheme.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a theme's font scheme.</p>",
+  "scope": "global",
+  "params": []
+}

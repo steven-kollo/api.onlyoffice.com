@@ -910,6 +910,20 @@
           "name": "arrString",
           "description": "<p>An array of replacement strings.</p>",
           "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sParaTab",
+          "description": "<p>specifies which character to use to define the tab in the source text.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
+        },
+        {
+          "type": "string",
+          "name": "sParaNewLine",
+          "description": "<p>specifies which character to use to specify the line break character in the source text.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
         }
       ]
     },

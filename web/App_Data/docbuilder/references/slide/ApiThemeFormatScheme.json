@@ -1,0 +1,154 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiThemeFormatScheme",
+      "name": "GetClassType",
+      "description": "<p>Get the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"formatColorScheme\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSchemeName": {
+      "memberof": "ApiThemeFormatScheme",
+      "name": "SetSchemeName",
+      "description": "<p>Sets the format scheme name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "optional": false
+        }
+      ]
+    },
+    "ChangeFillStyles": {
+      "memberof": "ApiThemeFormatScheme",
+      "name": "ChangeFillStyles",
+      "description": "<p>Sets the fill styles.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ApiFill>",
+          "name": "arrFill",
+          "description": "<p>the array of styles must contains 3 elements and consist of subtle, moderate and intense fills.\nIf there are empty  or no ApiFill elements in the array, it will be filled by Api.CreateNoFill() element.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ChangeBgFillStyles": {
+      "memberof": "ApiThemeFormatScheme",
+      "name": "ChangeBgFillStyles",
+      "description": "<p>Sets the background fill styles.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ApiFill>",
+          "name": "arrBgFill",
+          "description": "<p>the array of background fill styles must contains 3 elements and consist of subtle, moderate and intense fills.\nIf there are empty or no ApiFill elements in the array, it will be filled by Api.CreateNoFill() element.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ChangeLineStyles": {
+      "memberof": "ApiThemeFormatScheme",
+      "name": "ChangeLineStyles",
+      "description": "<p>Sets the line styles.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ApiStroke>",
+          "name": "arrLine",
+          "description": "<p>the array of line styles must contains 3 elements and consist of subtle, moderate and intense fills.\nIf there are empty or no ApiStroke elements in the array, it will be filled by Api.CreateStroke(0, Api.CreateNoFill()) element.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ChangeEffectStyles": {
+      "memberof": "ApiThemeFormatScheme",
+      "name": "ChangeEffectStyles",
+      "description": "<p><strong>Need to do</strong>\nSets the effect styles.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array",
+          "name": "arrEffect",
+          "description": "<p>the array of line styles must contains 3 elements and consist of subtle, moderate and intense fills.\nIf there are empty or no ApiStroke elements in the array, it will be filled by Api.CreateStroke(0, Api.CreateNoFill()) element.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "Copy": {
+      "memberof": "ApiThemeFormatScheme",
+      "name": "Copy",
+      "description": "<p>Creates a copy of the specified theme's format scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeFormatScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * Class representing a theme's format scheme.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a theme's format scheme.</p>",
+  "scope": "global",
+  "params": []
+}

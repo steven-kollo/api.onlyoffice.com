@@ -1,0 +1,90 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiThemeColorScheme",
+      "name": "GetClassType",
+      "description": "<p>Gets the type of this class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"themeColorScheme\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetSchemeName": {
+      "memberof": "ApiThemeColorScheme",
+      "name": "SetSchemeName",
+      "description": "<p>Sets the color scheme name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "optional": false
+        }
+      ]
+    },
+    "ChangeColor": {
+      "memberof": "ApiThemeColorScheme",
+      "name": "ChangeColor",
+      "description": "<p>Change color in color scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiUniColor | ApiRGBColor",
+          "name": "oColor",
+          "optional": false
+        }
+      ]
+    },
+    "Copy": {
+      "memberof": "ApiThemeColorScheme",
+      "name": "Copy",
+      "description": "<p>Creates a copy of the specified theme's color scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeColorScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n     * Class representing a theme's color scheme.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a theme's color scheme.</p>",
+  "scope": "global",
+  "params": []
+}

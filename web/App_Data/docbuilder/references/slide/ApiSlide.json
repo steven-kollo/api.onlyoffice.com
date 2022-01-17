@@ -1,5 +1,97 @@
 {
   "methods": {
+    "ApiMaster#AddObject": {
+      "memberof": "ApiSlide",
+      "name": "ApiMaster#AddObject",
+      "description": "<p>Adds an object (image, shape or chart) to the current slide master.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiDrawing",
+          "name": "oDrawing",
+          "description": "<p>The object which will be added to the current slide master.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ApiMaster#SetBackground": {
+      "memberof": "ApiSlide",
+      "name": "ApiMaster#SetBackground",
+      "description": "<p>Sets the background to the current slide master.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the presentation slide master background.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ApiLayout#AddObject": {
+      "memberof": "ApiSlide",
+      "name": "ApiLayout#AddObject",
+      "description": "<p>Adds an object (image, shape or chart) to the current slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiDrawing",
+          "name": "oDrawing",
+          "description": "<p>The object which will be added to the current slide layout.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ApiLayout#SetBackground": {
+      "memberof": "ApiSlide",
+      "name": "ApiLayout#SetBackground",
+      "description": "<p>Sets the background to the current slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the presentation slide layout background.</p>",
+          "optional": false
+        }
+      ]
+    },
     "GetClassType": {
       "memberof": "ApiSlide",
       "name": "GetClassType",
@@ -39,7 +131,11 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -48,6 +144,38 @@
           "name": "oDrawing",
           "description": "<p>The object which will be added to the current presentation slide.</p>",
           "optional": false
+        }
+      ]
+    },
+    "RemoveObject": {
+      "memberof": "ApiSlide",
+      "name": "RemoveObject",
+      "description": "<p>Removes objects (image, shape or chart) from the current slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>position from which to delete</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nCount",
+          "description": "<p>count of elements for delete.</p>",
+          "optional": true,
+          "defaultValue": 1
         }
       ]
     },
@@ -101,6 +229,303 @@
       "returns": [
         [
           "EMU"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ApplyLayout": {
+      "memberof": "ApiSlide",
+      "name": "ApplyLayout",
+      "description": "<p>Applies specified layout to the slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiLayout",
+          "name": "oLayout",
+          "optional": false
+        }
+      ]
+    },
+    "Delete": {
+      "memberof": "ApiSlide",
+      "name": "Delete",
+      "description": "<p>Deletes the specified slide from presentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Copy": {
+      "memberof": "ApiSlide",
+      "name": "Copy",
+      "description": "<p>Creates a copy of the specified slide object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiSlide",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Duplicate": {
+      "memberof": "ApiSlide",
+      "name": "Duplicate",
+      "description": "<p>Creates a duplicate of the specified slide object, adds the new slide to the slides collection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiSlide",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "optional": true,
+          "defaultValue": "ApiPresentation.GetSlidesCount()"
+        }
+      ]
+    },
+    "MoveTo": {
+      "memberof": "ApiSlide",
+      "name": "MoveTo",
+      "description": "<p>Moves the specified slide to a specific location within the same collection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetSlideIndex": {
+      "memberof": "ApiSlide",
+      "name": "GetSlideIndex",
+      "description": "<p>Gets the positions of the spicified slide in a presentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ClearBackground": {
+      "memberof": "ApiSlide",
+      "name": "ClearBackground",
+      "description": "<p>Clears the slide background.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "FollowLayoutBackground": {
+      "memberof": "ApiSlide",
+      "name": "FollowLayoutBackground",
+      "description": "<p>Sets the slide background as the background of slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "FollowMasterBackground": {
+      "memberof": "ApiSlide",
+      "name": "FollowMasterBackground",
+      "description": "<p>Sets the slide background as the background of slide master.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ApplyTheme": {
+      "memberof": "ApiSlide",
+      "name": "ApplyTheme",
+      "description": "<p>Applies a specified theme to the slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTheme",
+          "name": "oApiTheme",
+          "optional": false
+        }
+      ]
+    },
+    "GetLayout": {
+      "memberof": "ApiSlide",
+      "name": "GetLayout",
+      "description": "<p>Gets layout of the slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiLayout",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetTheme": {
+      "memberof": "ApiSlide",
+      "name": "GetTheme",
+      "description": "<p>Gets the theme of slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllDrawings": {
+      "memberof": "ApiSlide",
+      "name": "GetAllDrawings",
+      "description": "<p>Gets the array with all drawing objects in slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllShapes": {
+      "memberof": "ApiSlide",
+      "name": "GetAllShapes",
+      "description": "<p>Gets the array with all shape objects in slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllImages": {
+      "memberof": "ApiSlide",
+      "name": "GetAllImages",
+      "description": "<p>Gets the array with all image objects in slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiImage>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllCharts": {
+      "memberof": "ApiSlide",
+      "name": "GetAllCharts",
+      "description": "<p>Gets the array with all chart objects in slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiChart>"
         ]
       ],
       "see": null,

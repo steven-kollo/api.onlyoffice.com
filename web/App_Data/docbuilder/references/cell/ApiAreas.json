@@ -1,0 +1,79 @@
+{
+  "methods": {
+    "GetCount": {
+      "memberof": "ApiAreas",
+      "name": "GetCount",
+      "description": "<p>Returns a value that represents the number of objects in the collection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetItem": {
+      "memberof": "ApiAreas",
+      "name": "GetItem",
+      "description": "<p>Returns a single object from a collection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "ind",
+          "description": "<p>The index number of the object.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetParent": {
+      "memberof": "ApiAreas",
+      "name": "GetParent",
+      "description": "<p>Returns a value that represents the number of objects in the collection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class representing the areas.\r\n\t * @constructor\r\n\t * @property {number} Count - Returns a value that represents the number of objects in the collection.\r\n\t * @property {ApiRange} Parent - Returns the parent object for the specified object.\r\n\t */",
+  "description": "<p>Class representing the areas.</p>",
+  "scope": "global",
+  "params": [],
+  "properties": [
+    {
+      "type": "number",
+      "name": "Count",
+      "description": "<p>Returns a value that represents the number of objects in the collection.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "Parent",
+      "description": "<p>Returns the parent object for the specified object.</p>"
+    }
+  ]
+}

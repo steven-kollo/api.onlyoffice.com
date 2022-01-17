@@ -380,6 +380,24 @@
         }
       ]
     },
+    "GetParentParagraph": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetParentParagraph",
+      "description": "<p>Gets the paragraph that contains the current content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiBlockLvlSdt",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetParentContentControl": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetParentContentControl",
