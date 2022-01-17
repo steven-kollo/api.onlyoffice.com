@@ -95,7 +95,7 @@
             "isModal": false,
             "isInsideMode": true,
 
-            "initDataType": "",
+            "initDataType": "none",
             "initData": "",
 
             "isUpdateOleOnResize": false,
