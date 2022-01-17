@@ -63,7 +63,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "isModal": false,
             "isInsideMode": true,
 
-            "initDataType": "text",
+            "initDataType": "none",
             "initData": "",
 
             "isUpdateOleOnResize": false,
