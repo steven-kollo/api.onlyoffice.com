@@ -518,7 +518,8 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>statusBar</b> - defines the status bar settings. If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden.
+                        <b>statusBar</b> - defines the status bar settings.
+                        If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden.
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: object or boolean,
@@ -547,7 +548,8 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>toolbar </b> - defines the toolbar settings. If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden.
+                        <b>toolbar </b> - defines the toolbar settings.
+                        If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden.
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: object or boolean;
@@ -677,7 +679,7 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Deprecated since version 7.1. Please use the <a href="<%= Url.Action("config/editor/customization/layout") %>#leftMenu">layout.leftMenu</a> parameter instead.</div>
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.leftMenu</a> parameter instead.</div>
             </td>
         </tr>
         <tr class="tablerow">
@@ -899,7 +901,7 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Deprecated since version 7.1. Please use the <a href="<%= Url.Action("config/editor/customization/layout") %>#rightMenu">layout.rightMenu</a> parameter instead.</div>
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.rightMenu</a> parameter instead.</div>
             </td>
         </tr>
         <% } %>
@@ -935,7 +937,7 @@
         </tr>
         <% if (license)
            { %>
-        <tr class="tablerow">
+        <tr>
             <td id="statusBar" class="copy-link">statusBar<span class="required">**</span></td>
             <td>
                 Defines if the status bar is displayed or hidden.
@@ -943,6 +945,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.statusBar</a> parameter instead.</div>
+            </td>
         </tr>
         <% } %>
         <%--<tr>
@@ -962,7 +969,7 @@
         </tr>--%>
         <% if (license)
             { %>
-        <tr class="tablerow">
+        <tr>
             <td id="toolbar" class="copy-link">toolbar<span class="required">**</span></td>
             <td>
                 Defines if the top toolbar is displayed or hidden.
@@ -970,6 +977,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.toolbar</a> parameter instead.</div>
+            </td>
         </tr>
         <% } %>
         <tr>
