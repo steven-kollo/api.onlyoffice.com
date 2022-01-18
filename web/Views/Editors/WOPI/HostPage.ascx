@@ -70,7 +70,8 @@
         office_frame.title = 'Office Frame';
         office_frame.setAttribute('allowfullscreen', 'true');
 
-        office_frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation allow-popups-to-escape-sandbox');
+        office_frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-top-navigation allow-popups-to-escape-sandbox allow-downloads allow-modals');
+        office_frame.setAttribute('allow', 'autoplay camera microphone display-capture');
         frameholder.appendChild(office_frame);
 
         document.getElementById('office_form').submit();
@@ -110,4 +111,4 @@
             </tr>
         </tbody>
     </table>
-    <p>Further information about building a host page can be found <a href="https://wopi.readthedocs.io/en/latest/hostpage.html" target="_blank">here</a>.</p>
+    <p>Further information about building a host page can be found <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage" target="_blank">here</a>.</p>

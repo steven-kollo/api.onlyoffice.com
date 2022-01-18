@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiChart",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiChart class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "SetTitle": {
       "memberof": "ApiChart",
       "name": "SetTitle",
-      "description": "<p>Specify the chart title.</p>",
+      "description": "<p>Specifies the chart title.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -53,7 +53,7 @@
     "SetHorAxisTitle": {
       "memberof": "ApiChart",
       "name": "SetHorAxisTitle",
-      "description": "<p>Specify the chart horizontal axis title.</p>",
+      "description": "<p>Specifies the chart horizontal axis title.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -86,7 +86,7 @@
     "SetVerAxisTitle": {
       "memberof": "ApiChart",
       "name": "SetVerAxisTitle",
-      "description": "<p>Specify the chart vertical axis title.</p>",
+      "description": "<p>Specifies the chart vertical axis title.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -119,7 +119,7 @@
     "SetVerAxisOrientation": {
       "memberof": "ApiChart",
       "name": "SetVerAxisOrientation",
-      "description": "<p>Specify a vertical axis orientation.</p>",
+      "description": "<p>Specifies the vertical axis orientation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -140,7 +140,7 @@
     "SetHorAxisOrientation": {
       "memberof": "ApiChart",
       "name": "SetHorAxisOrientation",
-      "description": "<p>Specify a horizontal axis orientation.</p>",
+      "description": "<p>Specifies the horizontal axis orientation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -161,7 +161,7 @@
     "SetLegendPos": {
       "memberof": "ApiChart",
       "name": "SetLegendPos",
-      "description": "<p>Specify the chart legend position.</p>",
+      "description": "<p>Specifies the chart legend position.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -182,7 +182,7 @@
     "SetLegendFontSize": {
       "memberof": "ApiChart",
       "name": "SetLegendFontSize",
-      "description": "<p>Specify a legend font size.</p>",
+      "description": "<p>Specifies the legend font size.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -203,7 +203,7 @@
     "SetShowDataLabels": {
       "memberof": "ApiChart",
       "name": "SetShowDataLabels",
-      "description": "<p>Specify which chart data labels are shown for the chart.</p>",
+      "description": "<p>Specifies which chart data labels are shown for the chart.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -242,7 +242,7 @@
     "SetShowPointDataLabel": {
       "memberof": "ApiChart",
       "name": "SetShowPointDataLabel",
-      "description": "<p>Spicify the show options for data labels</p>",
+      "description": "<p>Spicifies the show options for data labels.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -293,7 +293,7 @@
     "SetVertAxisTickLabelPosition": {
       "memberof": "ApiChart",
       "name": "SetVertAxisTickLabelPosition",
-      "description": "<p>Spicify tick labels position for vertical axis.</p>",
+      "description": "<p>Spicifies tick labels position for the vertical axis.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -314,7 +314,7 @@
     "SetHorAxisTickLabelPosition": {
       "memberof": "ApiChart",
       "name": "SetHorAxisTickLabelPosition",
-      "description": "<p>Spicify tick labels position for horizontal axis.</p>",
+      "description": "<p>Spicifies tick labels position for the horizontal axis.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -335,7 +335,7 @@
     "SetHorAxisMajorTickMark": {
       "memberof": "ApiChart",
       "name": "SetHorAxisMajorTickMark",
-      "description": "<p>Specify major tick mark for horizontal axis.</p>",
+      "description": "<p>Specifies major tick mark for the horizontal axis.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -356,7 +356,7 @@
     "SetHorAxisMinorTickMark": {
       "memberof": "ApiChart",
       "name": "SetHorAxisMinorTickMark",
-      "description": "<p>Specify minor tick mark for horizontal axis.</p>",
+      "description": "<p>Specifies minor tick mark for the horizontal axis.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -377,7 +377,7 @@
     "SetVertAxisMajorTickMark": {
       "memberof": "ApiChart",
       "name": "SetVertAxisMajorTickMark",
-      "description": "<p>Specify major tick mark for vertical axis.</p>",
+      "description": "<p>Specifies major tick mark for the vertical axis.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -398,7 +398,7 @@
     "SetVertAxisMinorTickMark": {
       "memberof": "ApiChart",
       "name": "SetVertAxisMinorTickMark",
-      "description": "<p>Specify minor tick mark for vertical axis.</p>",
+      "description": "<p>Specifies minor tick mark for the vertical axis.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -419,7 +419,7 @@
     "SetMajorVerticalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMajorVerticalGridlines",
-      "description": "<p>Specify major vertical gridline's visual properties.</p>",
+      "description": "<p>Specifies major vertical gridline visual properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -440,7 +440,7 @@
     "SetMinorVerticalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMinorVerticalGridlines",
-      "description": "<p>Specify minor vertical gridline's visual properties.</p>",
+      "description": "<p>Specifies minor vertical gridline visual properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -461,7 +461,7 @@
     "SetMajorHorizontalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMajorHorizontalGridlines",
-      "description": "<p>Specify major horizontal gridline's visual properties.</p>",
+      "description": "<p>Specifies major horizontal gridline visual properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -482,7 +482,7 @@
     "SetMinorHorizontalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMinorHorizontalGridlines",
-      "description": "<p>Specify minor vertical gridline's visual properties.</p>",
+      "description": "<p>Specifies minor horizontal gridline visual properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -503,7 +503,7 @@
     "SetHorAxisLablesFontSize": {
       "memberof": "ApiChart",
       "name": "SetHorAxisLablesFontSize",
-      "description": "<p>Specify font size for labels of horizontal axis.</p>",
+      "description": "<p>Specifies font size for labels of the horizontal axis.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -524,7 +524,7 @@
     "SetVertAxisLablesFontSize": {
       "memberof": "ApiChart",
       "name": "SetVertAxisLablesFontSize",
-      "description": "<p>Specify font size for labels of vertical axis.</p>",
+      "description": "<p>Specifies font size for labels of the vertical axis.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -545,7 +545,7 @@
     "GetNextChart": {
       "memberof": "ApiChart",
       "name": "GetNextChart",
-      "description": "<p>Get the next inline chart.</p>",
+      "description": "<p>Returns the next inline chart if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -563,7 +563,7 @@
     "GetPrevChart": {
       "memberof": "ApiChart",
       "name": "GetPrevChart",
-      "description": "<p>Get the previous inline chart.</p>",
+      "description": "<p>Returns the previous inline chart if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

@@ -88,6 +88,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
+                "FAQ/UsingWOPI",
                 "GetDocs",
                 "History",
                 "HowItWorks",
@@ -98,36 +99,39 @@ namespace ASC.Api.Web.Help.Controllers
                 "Mattermost",
                 "Mentions",
                 "Methods",
+                "Moodle",
                 "Nextcloud",
                 "Nuxeo",
                 "Open",
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "Redmine",
                 "Rename",
                 "Review",
                 "Save",
                 "Security",
                 "SharePoint",
                 "Signature",
-                "Signature/Browser",
                 "Signature/Body",
+                "Signature/Browser",
                 "Signature/Request",
                 "Troubleshooting",
                 "Try",
                 "WOPI",
+                "WOPI/ApiVsWopi",
                 "WOPI/Discovery",
                 "WOPI/HostPage",
                 "WOPI/PostMessage",
                 "WOPI/ProofKeys",
                 "WOPI/RestApi",
                 "WOPI/RestApi/CheckFileInfo",
+                "WOPI/RestApi/GetFile",
                 "WOPI/RestApi/Lock",
+                "WOPI/RestApi/PutFile",
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
-                "WOPI/RestApi/GetFile",
-                "WOPI/RestApi/PutFile"
             };
 
         [ValidateInput(false)]
@@ -330,6 +334,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Moodle()
+        {
+            return View();
+        }
+
         public ActionResult Nextcloud()
         {
             return View();
@@ -356,6 +365,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult Redmine()
         {
             return View();
         }

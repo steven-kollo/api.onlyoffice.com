@@ -38,6 +38,7 @@
             <li><a href="#isDisplayedInViewer">isDisplayedInViewer</a></li>
             <li><a href="#isInsideMode">isInsideMode</a></li>
             <li><a href="#isModal">isModal</a></li>
+            <li><a href="#isCustomWindow">isCustomWindow</a></li>
             <li><a href="#isSystem">isSystem</a></li>
             <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
             <li><a href="#isViewer">isViewer</a></li>
@@ -204,13 +205,19 @@
             </tr>
             <tr class="tablerow">
                 <td id="isInsideMode" class="copy-link">variations.isInsideMode</td>
-                <td>Specifies if the plugin must be displayed inside the editor panel instead of its own window (used for visual non-modal plugins only). The following rule must be observed at all times: <em>isModal != isInsideMode</em>.</td>
+                <td>Specifies if the plugin must be displayed inside the editor panel instead of its own window.</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
             <tr class="tablerow">
                 <td id="isModal" class="copy-link">variations.isModal</td>
                 <td>Specifies if the opened plugin window is modal (used for visual plugins only, and if <em>isInsideMode</em> is not true).</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="isCustomWindow" class="copy-link">variations.isCustomWindow</td>
+                <td>Specifies if the plugin uses a custom window, without standard borders and buttons (used for modal plugins only).</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
@@ -338,6 +345,7 @@
                 "isDisplayedInViewer": true,
                 "isInsideMode": false,
                 "isModal": true,
+                "isCustomWindow": true,
                 "isSystem": false,
                 "isUpdateOleOnResize": true,
                 "isViewer": true,

@@ -12,7 +12,7 @@
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("AddContentControl", [wrap, obj]);
+window.Asc.plugin.executeMethod ("AddContentControl", [type, commonPr]);
 </pre>
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -32,15 +32,15 @@ window.Asc.plugin.executeMethod ("AddContentControl", [wrap, obj]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>wrap</td>
+            <td>type</td>
             <td>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block) or <b>2</b> (inline).</td>
             <td>number</td>
             <td>2</td>
         </tr>
         <tr class="tablerow">
-            <td>obj</td>
+            <td>commonPr</td>
             <td>
-                A JSON object which can have the following values:
+                Defines the common content control properties:
                 <ul>
                     <li>
                         <b>Id</b> - a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code,
@@ -124,5 +124,5 @@ window.Asc.plugin.executeMethod ("AddContentControl", [wrap, obj]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("AddContentControl", [1, {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
+window.Asc.plugin.executeMethod ("AddContentControl", [1, {"Id" : 7, "Tag" : "{tag}", "Lock" : 0}]);
 </pre>

@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiShape",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiShape class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -21,7 +21,7 @@
     "GetDocContent": {
       "memberof": "ApiShape",
       "name": "GetDocContent",
-      "description": "<p>Get the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "description": "<p>Returns the shape inner contents where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -39,7 +39,7 @@
     "GetContent": {
       "memberof": "ApiShape",
       "name": "GetContent",
-      "description": "<p>Get the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "description": "<p>Returns the shape inner contents where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -57,7 +57,7 @@
     "SetVerticalTextAlign": {
       "memberof": "ApiShape",
       "name": "SetVerticalTextAlign",
-      "description": "<p>Set the vertical alignment for the shape content where a paragraph or text runs can be inserted.</p>",
+      "description": "<p>Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -79,7 +79,7 @@
     "SetPaddings": {
       "memberof": "ApiShape",
       "name": "SetPaddings",
-      "description": "<p>Set text paddings</p>",
+      "description": "<p>Sets the text paddings to the current shape.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -119,7 +119,7 @@
     "GetNextShape": {
       "memberof": "ApiShape",
       "name": "GetNextShape",
-      "description": "<p>Get the next inline shape.</p>",
+      "description": "<p>Returns the next inline shape if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -137,7 +137,7 @@
     "GetPrevShape": {
       "memberof": "ApiShape",
       "name": "GetPrevShape",
-      "description": "<p>Get the previous inline shape.</p>",
+      "description": "<p>Returns the previous inline shape if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

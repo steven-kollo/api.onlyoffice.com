@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiUniColor",
       "name": "GetClassType",
-      "description": "<p>Get the type of the class based on this base class.</p>",
+      "description": "<p>Returns a type of the ApiUniColor class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",

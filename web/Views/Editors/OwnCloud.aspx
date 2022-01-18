@@ -35,7 +35,7 @@
     
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT.</li>
+        <li>Currently the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.</li>
         <li>The following formats are available for viewing only: PDF, DJVU, XPS.</li>
         <li>
             The app will create an item in the <b>new (+)</b> menu to create <b>Document</b>, <b>Spreadsheet</b>, <b>Presentation</b>.

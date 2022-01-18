@@ -14,7 +14,7 @@
 
 
 <div class="header-gray">Installation</div>
-<p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors</p>
+<p>Available by default in the cloud, on-premises and desktop versions of ONLYOFFICE editors.</p>
 <p>You can remove it following the <a href="<%= Url.Action("installation/desktop") %>">desktop</a>, <a href="<%= Url.Action("installation/onpremises") %>" target="_blank">on-premises</a>, or <a href="<%= Url.Action("installation/cloud") %>" target="_blank">cloud</a> installation instructions.
 <p>The plugin guid: {BE5CBF95-C0AD-4842-B157-AC40FEDD9841}.</p>
 
@@ -40,7 +40,7 @@
     <li><em>plugin_style.css</em> and <em>scrollable_div.js</em> are used to adjust the plugin style.</li>
     <li>Third-party service:
     <ul>
-        <li><b>Highlight.js library</b> - a syntax highlighter written in JavaScript (<a href="https://highlightjs.org/" target="_blank">https://highlightjs.org/</a>). License: <a href="https://github.com/highlightjs/highlight.js/blob/master/LICENSE" target="_blank">BSD License</a>.</li>
+        <li><b>Highlight.js library</b> - a syntax highlighter written in JavaScript (<a href="https://highlightjs.org/" target="_blank">https://highlightjs.org/</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/licenses/Highlight.license" target="_blank">BSD License</a>.</li>
         <li><b>Spectrum</b> - a JavaScriptcolorpickerplugin that uses the jQuery framework. License: <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/licenses/spectrum.license" target="_blank">MIT License</a>.</li>
         <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
         <li><b>Select2</b> gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options (<a href="https://select2.org/" target="_blank">https://select2.org/</a>). License:  <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/licenses/Select2.license" target="_blank">MIT</a>.</li>
@@ -59,6 +59,7 @@
         "de": "Code hervorheben"
     },
     "guid": "asc.{BE5CBF95-C0AD-4842-B157-AC40FEDD9841}",
+    "version": "1.0",
 
     "variations": [
         {
@@ -71,7 +72,47 @@
             },
             "url": "index.html",
 
-            "icons": [ "icon.png", "icon@2x.png", "icon.png", "icon@2x.png" ],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer": false,
             "EditorsSupport": [ "word", "cell", "slide" ],
 
@@ -110,11 +151,11 @@
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/scripts/code.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>
     <li><a href="<%= Url.Action("events") %>#onExternalMouseUp">onExternalMouseUp</a></li>
+    <li><a href="<%= Url.Action("events") %>#onTranslate">onTranslate</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("executemethod/pastehtml") %>">executeMethod ("PasteHtml")</a></li>
     <li><a href="<%= Url.Action("loadmodule") %>">loadModule</a></li>

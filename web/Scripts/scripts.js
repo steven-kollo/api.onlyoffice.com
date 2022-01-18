@@ -122,12 +122,56 @@ $(function() {
     });
 
     $(".search-box input").bind("change paste keyup", function () {
-        $(this).val() ? $(".search-box .search-clear").show() : $(".search-box .search-clear").hide();
+        $(this).val() ? $(this).parent().children(".search-clear").show() : $(this).parent().children(".search-clear").hide();
     });
 
     $(".search-box .search-clear").click(function () {
-        $(".search-box input").val("");
+        $(this).parent().children("input").val("");
         $(this).hide();
+    });
+
+    $("#doc-builder-search-box input").bind("change paste keyup", function () {
+        var searchBox = this;
+        if (!!$(searchBox).val()) {
+            $(".builder-search-results").empty();
+            methodNames.forEach(function (methodItem) {
+                var searchItem = methodItem.memberof + " " + methodItem.name + " " + methodItem.desc;
+                if (searchItem.toLowerCase().includes($(searchBox).val().toLowerCase())) {
+                    var elem = document.createElement("li");
+                    elem.innerHTML = "<p>" + methodItem.memberof + "." + methodItem.name + " — </p>" + methodItem.desc.replace(".", "");
+                    elem.setAttribute("data-section", methodItem.memberof);
+                    elem.setAttribute("data-method", methodItem.name);
+                    $(".builder-search-results").append(elem);
+                }
+            });
+        }
+        $(".builder-search-results").toggle($(".builder-search-results")[0].innerHTML != "");
+    });
+
+    $(document).bind("mouseup", function(e) {
+        var builderSearch = $(e.target).closest(".builder-search-results");
+        if (!builderSearch.length) {
+            $(".builder-search-results").hide();
+        } else if (builderSearch) {
+            var methodItem = $(e.target.closest("li"));
+
+            $(".builder-search-results").hide();
+            $("#doc-builder-search-box input").val("");
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "");
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify( {module: documentType, section: methodItem.data("section").toLowerCase(), method: methodItem.data("method").toLowerCase()}));
+
+            xhr.onload = function () {
+                var script = xhr.responseText;
+                script = "\n\n" + script.substring(script.indexOf(";") + 2, script.length);
+
+                $("#builderScript").val(function () {
+                    return this.value.substring(0, this.value.indexOf("builder.SaveFile") - 1) + script;
+                });
+            };
+        }
     });
 
     $(".side-nav").treeview({
@@ -157,11 +201,12 @@ $(function() {
             var scriptMaxLength = 10000;
             var createFunction = "builder.CreateFile";
             var saveFunction = "builder.SaveFile";
+            var easy = $("#builderScript").data("easy");
 
             if (text.length == 0
                 || text.length >= scriptMaxLength
-                || text.indexOf(createFunction) == -1
-                || text.indexOf(saveFunction) == -1) {
+                || text.indexOf(createFunction) == -1 && !easy
+                || text.indexOf(saveFunction) == -1 && !easy) {
                 $("#builderScript").val("Invalid script");
                 return;
             }

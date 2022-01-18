@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiInlineLvlSdt class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "SetLock": {
       "memberof": "ApiInlineLvlSdt",
       "name": "SetLock",
-      "description": "<p>Set the lock to the current inline text content control.\n<b>&quot;contentLocked&quot;</b> - content cannot be edited.\n<b>&quot;sdtContentLocked&quot;</b> - content cannot be edited and BlockLvlSdt cannot be deleted.\n<b>&quot;sdtLocked&quot;</b> - BlockLvlSdt cannot be deleted.</p>",
+      "description": "<p>Sets the lock to the current inline text content control:\n<b>&quot;contentLocked&quot;</b> - content cannot be edited.\n<b>&quot;sdtContentLocked&quot;</b> - content cannot be edited and the container cannot be deleted.\n<b>&quot;sdtLocked&quot;</b> - the container cannot be deleted.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -41,7 +41,7 @@
     "GetLock": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetLock",
-      "description": "<p>Get the lock type of this container.</p>",
+      "description": "<p>Returns the lock type of the current container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -58,7 +58,7 @@
     "SetTag": {
       "memberof": "ApiInlineLvlSdt",
       "name": "SetTag",
-      "description": "<p>Add a string tag to the current inline text content control.</p>",
+      "description": "<p>Adds a string tag to the current inline text content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -79,7 +79,7 @@
     "GetTag": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetTag",
-      "description": "<p>Get the tag attribute for this container.</p>",
+      "description": "<p>Returns the tag attribute for the current container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -96,7 +96,7 @@
     "SetLabel": {
       "memberof": "ApiInlineLvlSdt",
       "name": "SetLabel",
-      "description": "<p>Add a string label to the current inline text content control.</p>",
+      "description": "<p>Adds a string label to the current inline text content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -117,7 +117,7 @@
     "GetLabel": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetLabel",
-      "description": "<p>Get the label attribute for this container.</p>",
+      "description": "<p>Returns the label attribute for the current container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -134,7 +134,7 @@
     "SetAlias": {
       "memberof": "ApiInlineLvlSdt",
       "name": "SetAlias",
-      "description": "<p>Set the alias attribute for this container.</p>",
+      "description": "<p>Sets the alias attribute to the current container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -155,7 +155,7 @@
     "GetAlias": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetAlias",
-      "description": "<p>Get the alias attribute for this container.</p>",
+      "description": "<p>Returns the alias attribute for the current container.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -172,7 +172,7 @@
     "GetElementsCount": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetElementsCount",
-      "description": "<p>Get the number of elements in the current inline text content control. The text content\ncontrol is created with one text run present in it by default, so even without any\nelement added this method will return the value of '1'.</p>",
+      "description": "<p>Returns a number of elements in the current inline text content control. The text content\ncontrol is created with one text run present in it by default, so even without any\nelement added this method will return the value of '1'.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -189,7 +189,7 @@
     "GetElement": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetElement",
-      "description": "<p>Get the element of the current inline text content control using the position specified.</p>",
+      "description": "<p>Returns an element of the current inline text content control using the position specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -214,7 +214,7 @@
     "RemoveElement": {
       "memberof": "ApiInlineLvlSdt",
       "name": "RemoveElement",
-      "description": "<p>Remove the element using the position specified from the current inline text content control.</p>",
+      "description": "<p>Removes an element using the position specified from the current inline text content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -235,7 +235,7 @@
     "RemoveAllElements": {
       "memberof": "ApiInlineLvlSdt",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all the elements from the current inline text content control.</p>",
+      "description": "<p>Removes all the elements from the current inline text content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -252,7 +252,7 @@
     "AddElement": {
       "memberof": "ApiInlineLvlSdt",
       "name": "AddElement",
-      "description": "<p>Add an element to the inline text content control.</p>",
+      "description": "<p>Adds an element to the inline text content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -283,7 +283,7 @@
     "Push": {
       "memberof": "ApiInlineLvlSdt",
       "name": "Push",
-      "description": "<p>Add an element to the end of inline text content control.</p>",
+      "description": "<p>Adds an element to the end of inline text content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -298,15 +298,9 @@
       "inherits": null,
       "params": [
         {
-          "type": "number",
-          "name": "nPos",
-          "description": "<p>The position where the current element will be added.</p>",
-          "optional": false
-        },
-        {
           "type": "DocumentElement",
           "name": "oElement",
-          "description": "<p>The document element which will be added at the current position.</p>",
+          "description": "<p>The document element which will be added to the end of the container.</p>",
           "optional": false
         }
       ]
@@ -314,7 +308,7 @@
     "AddText": {
       "memberof": "ApiInlineLvlSdt",
       "name": "AddText",
-      "description": "<p>Add text to the current content control.</p>",
+      "description": "<p>Adds text to the current content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -339,7 +333,7 @@
     "Delete": {
       "memberof": "ApiInlineLvlSdt",
       "name": "Delete",
-      "description": "<p>Remove content control and content. If keepContent is true, the content is not deleted.</p>",
+      "description": "<p>Removes a content control and its content. If keepContent is true, the content is not deleted.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -364,7 +358,7 @@
     "SetTextPr": {
       "memberof": "ApiInlineLvlSdt",
       "name": "SetTextPr",
-      "description": "<p>Apply text settings to content of content control.</p>",
+      "description": "<p>Applies text settings to the content of the content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -381,7 +375,7 @@
         {
           "type": "ApiTextPr",
           "name": "oTextPr",
-          "description": "<p>The properties that will be set to the content of content control.</p>",
+          "description": "<p>The properties that will be set to the content of the content control.</p>",
           "optional": false
         }
       ]
@@ -389,7 +383,7 @@
     "GetParentContentControl": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetParentContentControl",
-      "description": "<p>Get the content control that contains the current content control.</p>",
+      "description": "<p>Returns a content control that contains the current content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -407,7 +401,7 @@
     "GetParentTable": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetParentTable",
-      "description": "<p>Get the table that contains the content control.</p>",
+      "description": "<p>Returns a table that contains the current content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -425,7 +419,7 @@
     "GetParentTableCell": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetParentTableCell",
-      "description": "<p>Get the table cell that contains the content control.</p>",
+      "description": "<p>Returns a table cell that contains the current content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -443,7 +437,7 @@
     "GetRange": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetRange",
-      "description": "<p>Return a Range object that represents the part of the document contained in the specified content control.</p>",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the specified content control.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -474,7 +468,7 @@
     "Copy": {
       "memberof": "ApiInlineLvlSdt",
       "name": "Copy",
-      "description": "<p>Create a copy of an inline content control. Ingonore comments, footnote references, complex fields.</p>",
+      "description": "<p>Creates a copy of an inline content control. Ignores comments, footnote references, complex fields.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

@@ -55,7 +55,7 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
-                <img src="<%= Url.Content("~/content/img/editor/favorite.png") %>" alt="" />
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/favorite.png") %>" alt="" />
             </td>
         </tr>
         <tr class="tablerow">

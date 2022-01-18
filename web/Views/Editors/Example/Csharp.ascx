@@ -19,11 +19,13 @@
 <h2 id="win-2" class="copy-link"><span class="style_step">Step 2. </span>Download the .Net (C#) code for the editors integration</h2>
 <p>Download the <a href="<%= Url.Action("demopreview") %>">.Net (C#) example</a> from our site.</p>
 <p>
-    Connect the editors to your website by specifying the path to the editors installation in the <em>settings.config</em> file:
+    To connect the editors to your website, specify the path to the editors installation and the path to the storage folder in the <em>settings.config</em> file:
 </p>
-<pre>&lt;add key="files.docservice.url.site" value="https://documentserver/" /&gt;</pre>
+<pre>
+&lt;add key="storage-path" value=""/&gt;
+&lt;add key="files.docservice.url.site" value="https://documentserver/" /&gt;</pre>
 
-<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+<p>where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed and the <b>storage-path</b> is the path where files will be created and stored. You can set an absolute path.</p>
 <p>If you want to experiment with the editor configuration, modify the <a href="<%= Url.Action("advanced") %>">parameters</a> in the <em>DocEditor.aspx</em> file.</p>
 
 <h2 id="win-3" class="copy-link"><span class="style_step">Step 3. </span>Install the prerequisites</h2>
@@ -32,12 +34,23 @@
     <li><b>Microsoft .NET Framework</b>: version 4.5 (download it from the <a href="https://www.microsoft.com/en-US/download/details.aspx?id=30653">official Microsoft website</a>);</li>
     <li><b>Internet Information Services</b>: version 7 or later.</li>
 </ul>
+<p>Configure the IIS components for the server to work correctly:</p>
+<ol>
+    <li>
+        <p>Open Windows features:</p>
+        <p><b>Start</b> -> <b>Control Panel</b> -> <b>Programs</b> -> <b>Programs and Features</b> -> <b>Turn Windows features on or off</b></p>
+    </li>
+    <li>
+        <p>In the opened window, find <b>Internet Information Services</b> and check all the features that are chosen in the following image:</p>
+        <img alt="" src="<%= Url.Content("~/content/img/csharp/server-components.png") %>" />
+    </li>
+</ol>
 
 <h2 id="win-4" class="copy-link"><span class="style_step">Step 4. </span>Run your website with the editors</h2>
 <ol>
     <li>
         <p>Run the Internet Information Service (IIS) Manager:</p>
-        <p><b>Start</b> -> <b>ControlPanel</b> -> <b>System and Security</b> -> <b>Administrative Tools</b> -> <b>Internet Information Services (IIS) Manager</b></p>
+        <p><b>Start</b> -> <b>Control Panel</b> -> <b>System and Security</b> -> <b>Administrative Tools</b> -> <b>Internet Information Services (IIS) Manager</b></p>
     </li>
     <li>
         <p>Add your website in the IIS Manager.</p>

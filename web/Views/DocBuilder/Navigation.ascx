@@ -12,6 +12,9 @@
         <a href="<%= Url.Action("gettingstarted") %>">Getting started</a>
     </li>
     <li>
+        <a href="<%= Url.Action("try") %>">Try now</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("integratingdocumentbuilder") %>">Integrating Document Builder</a>
         <ul>
             <li>

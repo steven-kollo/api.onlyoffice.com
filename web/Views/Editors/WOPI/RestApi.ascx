@@ -5,7 +5,7 @@
     </h1>
 
     <p class="dscr">
-        <a href="https://wopi.readthedocs.io/projects/wopirest/en/latest/" target="_blank">WOPI REST API</a> specifies a set of operations that enables a client to access and change files stored on a server.
+        <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/rest/" target="_blank">WOPI REST API</a> specifies a set of operations that enables a client to access and change files stored on a server.
     </p>
     <p>ONLYOFFICE Docs uses the following WOPI operations:</p>
     <ul>

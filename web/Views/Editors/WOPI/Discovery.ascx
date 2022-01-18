@@ -5,7 +5,7 @@
     </h1>
 
     <p class="dscr">
-        <a href="https://wopi.readthedocs.io/en/latest/discovery.html" target="_blank">WOPI discovery</a> is a process which helps the WOPI server discover a WOPI client by requesting the discovery XML from an online office. 
+        <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/discovery" target="_blank">WOPI discovery</a> is a process which helps the WOPI server discover a WOPI client by requesting the discovery XML from an online office. 
         WOPI hosts use the discovery XML to specify how to interact with the online office. 
         The requests are sent to the <span class="fakelink">https://documentserver/hosting/discovery</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Docs installed.
     </p>
@@ -54,7 +54,7 @@ ui=en-us&thm=1&"/&gt;
         For example, change a language, theme or chat.</p>
 
 
-    <h2 id="wopi-standart" class="copy-link">WOPI standart</h2>
+    <h2 id="wopi-standart" class="copy-link">WOPI standard</h2>
 
     <div class="header-gray">Parameters</div>
     <table class="table">
@@ -72,24 +72,24 @@ ui=en-us&thm=1&"/&gt;
         </thead>
         <tbody>
             <tr>
-                <td>ui</td>
+                <td id="ui" class="copy-link">ui</td>
                 <td>Indicates that the WOPI server includes the preferred UI language in the format described in <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a>.</td>
                 <td>en-us</td>
             </tr>
             <tr>
-                <td>rs</td>
+                <td id="rs" class="copy-link">rs</td>
                 <td>Indicates that the WOPI server includes preferred data language in the format described in <a href="https://datatracker.ietf.org/doc/html/rfc1766.html" target="_blank">[RFC1766]</a> for cases 
                     where the language can affect data calculation (in spreadsheet editor).</td>
                 <td>en-us</td>
             </tr>
             <tr>
-                <td>thm</td>
+                <td id="thm" class="copy-link">thm</td>
                 <td>Indicates that the WOPI server includes a value to designate the theme used. The current values are <em>"1"</em> to indicate a light-colored theme 
                     and <em>"2"</em> to indicate a dark-colored theme.</td>
                 <td>1</td>
             </tr>
             <tr>
-                <td>dchat</td>
+                <td id="dchat" class="copy-link">dchat</td>
                 <td>Indicates that the WOPI server includes the value <em>"1"</em> to load a view of the document that does not create or join a chat session.</td>
                 <td>1</td>
             </tr>
@@ -103,7 +103,7 @@ ui=en-us&thm=1&"/&gt;
     They open the editor via the MIME-type which is included in the <em>app</em> element of the following structure:</p>
     <pre>
 &lt;app name="application/msword"&gt;
-&lt;action default="true" ext="" name="edit" urlsrc="http://159.89.20.129:9980/loleaflet/ba528af/loleaflet.html?"/&gt;
+    &lt;action default="true" ext="" name="edit" urlsrc="http://159.89.20.129:9980/loleaflet/ba528af/loleaflet.html?"/&gt;
 &lt;/app&gt;
 </pre>
     <p>The <em>app</em> element like this:</p>

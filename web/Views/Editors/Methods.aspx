@@ -135,13 +135,24 @@ docEditor.downloadAs(format);
         <li>
             <p>
                 <b id="insertImage" class="copy-link">insertImage</b> - insert an image into the file.
+                Starting from version 7.0, this method allows a user to insert several images.
+                The <em>images</em> array is used to do it.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> events.
             </p>
             <pre>
 docEditor.insertImage({
     "c": "add",
-    "fileType": "png",
-    "url": "https://example.com/url-to-example-image.png"
+    "images": [
+        {
+            "fileType": "png",
+            "url": "https://example.com/url-to-example-image1.png"
+        },
+        {
+            "fileType": "png",
+            "url": "https://example.com/url-to-example-image2.png"
+        },
+        ...
+    ]
 });
 </pre>
             <p>
@@ -167,7 +178,7 @@ docEditor.insertImage({
                     <tr class="tablerow">
                         <td>c</td>
                         <td>
-                            Defines the type of image insertion from event.
+                            Defines a type of image insertion from the event.
                             Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermark</em>, <em>slide</em>.
                             The default value is "<em>add</em>".
                         </td>
@@ -177,8 +188,35 @@ docEditor.insertImage({
                     <tr class="tablerow">
                         <td>fileType</td>
                         <td>
-                            Defines the type of image for insert into the file.
+                            Defines a type of the image to be inserted into the file.
                             Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                            Deprecated since version 7.0, please use the <em>images.fileType</em> parameter instead.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images</td>
+                        <td>
+                            Defines an array of images to be inserted.
+                        </td>
+                        <td>array of objects</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images.fileType</td>
+                        <td>
+                            Defines a type of the image to be inserted into the file.
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images.url</td>
+                        <td>
+                            Defines an absolute URL where the source image is stored.
+                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -192,9 +230,10 @@ docEditor.insertImage({
                     <tr class="tablerow">
                         <td>url</td>
                         <td>
-                            Defines the absolute URL where the source image is stored.
+                            Defines an absolute URL where the source image is stored.
                             Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
                             Otherwise, an error will occur.
+                            Deprecated since version 7.0, please use the <em>images.url</em> parameter instead.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -202,6 +241,20 @@ docEditor.insertImage({
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <note>
+                <p>Prior to version 7.0, this method allowed to insert only one image and had the following parameters:</p>
+                <pre>
+docEditor.insertImage({
+    "c": "add",
+    "fileType": "png",
+    "url": "https://example.com/url-to-example-image.png"
+});
+</pre>
+                <p>
+                    Please note that this structure is deprecated and will not be supported by the next editors versions.
+                    Please use a new one.
+                </p>
+            </note>
         </li>
 
         <li>
@@ -448,6 +501,7 @@ docEditor.setFavorite(favorite);
             </p>
             <pre>
 docEditor.setHistoryData({
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
@@ -464,8 +518,10 @@ docEditor.setHistoryData({
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "https://example.com/url-to-changes.zip",
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "previous": {
+        "fileType": "docx",
         "key": "af86C7e71Ca8",
         "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
@@ -504,7 +560,7 @@ docEditor.setHistoryData({
                         <td>changesUrl</td>
                         <td>
                             Defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.
-                            The request for file is sent out directly from the browser.
+                            The request for file is signed with a token which is checked by the Document Server.
                         </td>
                         <td>string</td>
                         <td>optional</td>
@@ -512,6 +568,12 @@ docEditor.setHistoryData({
                     <tr class="tablerow">
                         <td>error</td>
                         <td>Defines the error message text.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
@@ -525,6 +587,12 @@ docEditor.setHistoryData({
                         <td>previous</td>
                         <td>Defines the object of the previous version of the document if <em>changesUrl</em> address was returned after saving the document.</td>
                         <td>object</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>previous.fileType</td>
+                        <td>Defines an extension of the document specified with the <em>previous.url</em> parameter.</td>
+                        <td>string</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
@@ -805,7 +873,7 @@ docEditor.setUsers({
 
         <li>
             <p>
-                <b id="showMessage" class="copy-link">showMessage</b> - display tooltip with the message.
+                <b id="showMessage" class="copy-link">showMessage</b> - display a tooltip with a message.
                 This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
             </p>
             <pre>
@@ -836,6 +904,9 @@ docEditor.showMessage(message);
                 </tbody>
             </table>
             <div class="mobile-content"></div>
+            <note>
+                Please note that displaying a tooltip with a message is not supported in the embedded platform <a href="<%= Url.Action("config") %>#type">type</a>.
+            </note>
         </li>
     </ul>
 

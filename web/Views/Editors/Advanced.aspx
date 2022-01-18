@@ -90,6 +90,7 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#modifyContentControl">modifyContentControl</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#modifyFilter">modifyFilter</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#print">print</a>": true,
+            "<a href="<%= Url.Action("config/document/permissions") %>#protect">protect</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#review">review</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a>": ["Group1", "Group2", ""]
         },
@@ -120,6 +121,7 @@
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
                 "logo": "https://example.com/logo-big.png",
+                "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
@@ -141,20 +143,24 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#hideRulers">hideRulers</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#logo">logo</a>": {
                 "image": "https://example.com/logo.png",
-                "imageEmbedded": "https://example.com/logo_em.png",
+                "imageDark": "https://example.com/dark-logo.png",
                 "url": "https://example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#macros">macros</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#macrosMode">macrosMode</a>": "warn",
             "<a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#plugins">plugins</a>": true,
-            "<a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">reviewDisplay</a>": "original",
-            "<a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">showReviewChanges</a>": false,
-            "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,
-            <%--"<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
+            "<a href="<%= Url.Action("config/editor/customization") %>#review">review</a>": {
+                "hideReviewDisplay": false,
+                "showReviewChanges": false,
+                "reviewDisplay": "original",
+                "trackChanges": true,
+                "hoverMode": false
+            },
+            "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,<%--
+            "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
-            "<a href="<%= Url.Action("config/editor/customization") %>#trackChanges">trackChanges</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#uiTheme">uiTheme</a>": "theme-dark",
             "<a href="<%= Url.Action("config/editor/customization") %>#unit">unit</a>": "cm",
             "<a href="<%= Url.Action("config/editor/customization") %>#zoom">zoom</a>": 100

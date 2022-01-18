@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiStyle",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiStyle class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "GetName": {
       "memberof": "ApiStyle",
       "name": "GetName",
-      "description": "<p>Get the name of the current style.</p>",
+      "description": "<p>Returns a name of the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -37,7 +37,7 @@
     "SetName": {
       "memberof": "ApiStyle",
       "name": "SetName",
-      "description": "<p>Set the name of the current style.</p>",
+      "description": "<p>Sets a name of the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -58,7 +58,7 @@
     "GetType": {
       "memberof": "ApiStyle",
       "name": "GetType",
-      "description": "<p>Get the type of the current style.</p>",
+      "description": "<p>Returns a type of the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -75,7 +75,7 @@
     "GetTextPr": {
       "memberof": "ApiStyle",
       "name": "GetTextPr",
-      "description": "<p>Get the text properties of the current style.</p>",
+      "description": "<p>Returns the text properties of the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -92,7 +92,7 @@
     "GetParaPr": {
       "memberof": "ApiStyle",
       "name": "GetParaPr",
-      "description": "<p>Get the paragraph properties of the current style.</p>",
+      "description": "<p>Returns the paragraph properties of the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -109,7 +109,7 @@
     "GetTablePr": {
       "memberof": "ApiStyle",
       "name": "GetTablePr",
-      "description": "<p>Get the table properties of the current style.</p>",
+      "description": "<p>Returns the table properties of the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -126,7 +126,7 @@
     "GetTableRowPr": {
       "memberof": "ApiStyle",
       "name": "GetTableRowPr",
-      "description": "<p>Get the table row properties of the current style.</p>",
+      "description": "<p>Returns the table row properties of the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -143,7 +143,7 @@
     "GetTableCellPr": {
       "memberof": "ApiStyle",
       "name": "GetTableCellPr",
-      "description": "<p>Get the table cell properties of the current style.</p>",
+      "description": "<p>Returns the table cell properties of the current style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -160,7 +160,7 @@
     "SetBasedOn": {
       "memberof": "ApiStyle",
       "name": "SetBasedOn",
-      "description": "<p>Specify the reference to the parent style which this style inherits from in the style hierarchy.</p>",
+      "description": "<p>Specifies the reference to the parent style which this style inherits from in the style hierarchy.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -181,7 +181,7 @@
     "GetConditionalTableStyle": {
       "memberof": "ApiStyle",
       "name": "GetConditionalTableStyle",
-      "description": "<p>Get a set of formatting properties which will be conditionally applied to the parts of a table that match the\nrequirement specified in the sType parameter.</p>",
+      "description": "<p>Returns a set of formatting properties which will be conditionally applied to the parts of a table that match the\nrequirement specified in the sType parameter.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

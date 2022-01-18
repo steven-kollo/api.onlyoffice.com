@@ -64,6 +64,9 @@
                 <a href="<%= Url.Action("mattermost") %>">Mattermost integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("moodle") %>">Moodle integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
             </li>
             <li>
@@ -74,6 +77,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("plone") %>">Plone integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("redmine") %>">Redmine integration</a>
             </li>
             <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
@@ -218,6 +224,9 @@
     <li>
         <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("wopi/apivswopi") %>">API vs WOPI</a>
+    </li>
 </ul>
 
 <div class="treeheader">Additional API</div>
@@ -312,6 +321,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("faq/renaming") %>">Renaming</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/usingwopi") %>">Using WOPI</a>
             </li>
         </ul>
     </li>

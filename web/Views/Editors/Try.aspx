@@ -35,6 +35,8 @@
                 <th>Edit</th>
                 <td><a title="Open DOCX file for editing" href="<%= Url.Action("editor") %>?method=docxEditor" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEditorCode">&lt;/&gt;</a>
                     <br />
+                    <a title="Open DOCXF file for editing" href="<%= Url.Action("editor") %>?method=docxfEditor" class="button button-upper doc" target="blank">DOCXF</a><a title="View source code" class="button-popap-try" data-code="docxfEditorCode">&lt;/&gt;</a>
+                    <br />
                     <a title="Open DOC file for editing" href="<%= Url.Action("editor") %>?method=docEditor" class="button button-upper doc" target="blank">DOC</a><a title="View source code" class="button-popap-try" data-code="docEditorCode">&lt;/&gt;</a>
                     <br />
                     <a title="Open ODT file for editing" href="<%= Url.Action("editor") %>?method=odtEditor" class="button button-upper doc" target="blank">ODT</a><a title="View source code" class="button-popap-try" data-code="odtEditorCode">&lt;/&gt;</a>
@@ -98,7 +100,7 @@
             </tr>
             <tr>
                 <th>Filling in forms</th>
-                <td><a title="Open DOCX file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
+                <td><a title="Open OFORM file for filling in forms" href="<%= Url.Action("editor") %>?method=fillForms" class="button button-upper doc" target="blank">OFORM</a><a title="View source code" class="button-popap-try" data-code="fillFormsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
@@ -121,7 +123,7 @@
             </tr>
             <tr>
                 <th>Restricted comment</th>
-                <td><a title="Open DOCX file for restricted commenting" href="<%= Url.Action("editor") %>?method=docxCommentGroups" class="button button-upper" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentGroupsCode">&lt;/&gt;</a>
+                <td><a title="Open DOCX file for restricted commenting" href="<%= Url.Action("editor") %>?method=docxCommentGroups" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxCommentGroupsCode">&lt;/&gt;</a>
                 </td>
                 <td></td>
                 <td></td>
@@ -173,6 +175,42 @@
                     "key": "E7FAFC9C22A8",
                     "title": "Example Document Title.docx",
                     "url": "https://example.com/url-to-example-document.docx"
+                },
+                "documentType": "word",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
+                },
+                "height": "100%",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxfEditorCode">
+                <div class="popap-header">Open docxf for editing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docxf",
+                    "key": "E7FAFC9C22A8",
+                    "title": "Example Form Template Title.docxf",
+                    "url": "https://example.com/url-to-example-document.docxf"
                 },
                 "documentType": "word",
                 "editorConfig": {
@@ -1400,7 +1438,7 @@
             </div>
 
             <div id="fillFormsCode">
-                <div class="popap-header">Open docx for filling in forms</div>
+                <div class="popap-header">Open oform for filling in forms</div>
                 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html style="height: 100%;"&gt;
@@ -1416,10 +1454,10 @@
         window.docEditor = new DocsAPI.DocEditor("placeholder",
             {
                 "document": {
-                    "fileType": "docx",
+                    "fileType": "oform",
                     "key": "9B5D4A67A9A9",
-                    "title": "Example Document Title.docx",
-                    "url": "https://example.com/url-to-example-document.docx",
+                    "title": "Example Form Title.oform",
+                    "url": "https://example.com/url-to-example-document.oform",
                     "permissions": {
                         "edit": false,
                         "fillForms": true
