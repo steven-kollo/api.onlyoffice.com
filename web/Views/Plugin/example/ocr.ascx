@@ -124,8 +124,6 @@
             "initDataType": "none",
             "initData": "",
 
-            "isUpdateOleOnResize": false,
-
             "buttons": [
                 {
                     "text": "Insert Text",
@@ -171,8 +169,6 @@
 
             "initDataType": "none",
             "initData": "",
-
-            "isUpdateOleOnResize": false,
 
             "buttons": [
                 {

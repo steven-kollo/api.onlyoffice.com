@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 <p class="dscr">Inserts the content of one content control into another.</p>
-<p><b>Plugin type:</b> non-visual, system.</p>
+<p><b>Plugin type:</b> non-visual, non-system.</p>
 <p><b>Supported editors:</b> documents.</p>
 
 <img alt="WorkWithContentControlsContent" src="<%= Url.Content("~/content/img/plugins/gifs/work-with-content-controls-content.gif") %>" />
@@ -94,13 +94,9 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "EditorsSupport"  : ["word"],
 
             "isVisual"        : false,
-            "isModal"         : true,
-            "isInsideMode"    : false,
 
             "initDataType"    : "text",
             "initData"        : "",
-
-            "isUpdateOleOnResize" : false,
 
             "buttons"         : [],
 

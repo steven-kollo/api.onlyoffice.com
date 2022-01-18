@@ -55,14 +55,10 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "EditorsSupport"  : ["word", "slide", "cell"],
 
             "isVisual"        : false,
-            "isModal"         : false,
-            "isInsideMode"    : false,
             "isSystem"        : true,
 
             "initDataType"    : "none",
             "initData"        : "",
-
-            "isUpdateOleOnResize" : false,
 
             "buttons"        : [ ],
 
