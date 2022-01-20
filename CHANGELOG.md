@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: added the "version" parameter to config
 - desktop: v7.0
 - desktop: added the extraLogout parameter to config
 
