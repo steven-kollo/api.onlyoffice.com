@@ -73,6 +73,10 @@
             {
                "Item1":"PostMessage",
                "Item2":"wopi/postmessage"
+            },
+            {
+               "Item1":"API vs WOPI",
+               "Item2":"wopi/apivswopi"
             }
          ],
          "Additional API":[
@@ -220,6 +224,12 @@
                "Item1":"List of classes",
                "Item2":"classlist"
             }
+         ],
+         "More information":[
+            {
+               "Item1":"Changelog",
+               "Item2":"changelog"
+            }
          ]
       }
    },
@@ -233,6 +243,10 @@
             {
                "Item1":"Overview",
                "Item2":"basic"
+            },
+            {
+               "Item1":"How it works",
+               "Item2":"howitworks"
             }
          ],
          "Usage API":[
