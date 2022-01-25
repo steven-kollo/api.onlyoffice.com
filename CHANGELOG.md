@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: the information about the users whose comments/reviews cannot be viewed is hidden
 - editors: added the editorConfig.customization.layout parameter section
 - editors: added the editorConfig.customization.features parameter section
 
