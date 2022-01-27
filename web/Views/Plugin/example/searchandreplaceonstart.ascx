@@ -48,14 +48,11 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description"         : "searchAndReplaceOnStart",
             "url"                 : "index.html",
 
-            "icons"               : ["resources/img/icon.png", "resources/img/icon@2x.png"],
             "isViewer"            : true,
             "EditorsSupport"      : [ "word" ],
 
             "isSystem"            : true,
             "isVisual"            : false,
-            "isModal"             : false,
-            "isInsideMode"        : false,
 
             "initDataType"        : "none",
             "initData"            : "",

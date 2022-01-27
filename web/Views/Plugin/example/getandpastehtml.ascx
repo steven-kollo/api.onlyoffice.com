@@ -66,8 +66,6 @@
             "initDataType": "html",
             "initData": "",
 
-            "isUpdateOleOnResize": false,
-
             "buttons": [],
 
             "initOnSelectionChanged": true

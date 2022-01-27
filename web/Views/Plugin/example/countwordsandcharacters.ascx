@@ -68,8 +68,6 @@
             "initDataType"    : "text",
             "initData"        : "",
 
-            "isUpdateOleOnResize" : true,
-
             "buttons"         : [],
 
             "initOnSelectionChanged": true
