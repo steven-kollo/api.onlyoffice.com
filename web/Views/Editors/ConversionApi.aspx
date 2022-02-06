@@ -929,6 +929,22 @@
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
+                <td>xlsb</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
                 <td>xlsm</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>

@@ -29,7 +29,7 @@
             <td>Defines the document type to be opened:
                 <ul>
                     <li><b>word</b> - text document (<em>.doc, .docm, .docx, .docxf, .dot, .dotm, .dotx, .epub, .fodt, .fb2, .htm, .html, .mht, .odt, .oform, .ott, .oxps, .pdf, .rtf, .txt, .djvu, .xml, .xps</em>),</li>
-                    <li><b>cell</b> - spreadsheet (<em>.csv, .fods, .ods, .ots, .xls, .xlsm, .xlsx, .xlt, .xltm, .xltx</em>),</li>
+                    <li><b>cell</b> - spreadsheet (<em>.csv, .fods, .ods, .ots, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx</em>),</li>
                     <li><b>slide</b> - presentation (<em>.fodp, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx</em>).</li>
                 </ul>
             </td>

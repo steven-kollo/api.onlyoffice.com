@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added conversion from xlsb format
+- editors: added opening for xlsb format
 - editors: added the editorConfig.customization.layout parameter section
 - editors: added the editorConfig.customization.features parameter section
 
