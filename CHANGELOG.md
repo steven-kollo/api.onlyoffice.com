@@ -1,6 +1,8 @@
 # Change Log
 
 - editors: the information about the users whose comments/reviews cannot be viewed is hidden
+- editors: added conversion from xlsb format
+- editors: added opening for xlsb format
 - editors: added the editorConfig.customization.layout parameter section
 - editors: added the editorConfig.customization.features parameter section
 
