@@ -61,7 +61,7 @@
                 <td>required</td>
             </tr>
             <tr class="tablerow">
-                <td><a href="<%= Url.Action("executemethod") %>">executeMethod</a></td>
+                <td><a href="<%= Url.Action("executemethod/") %>">executeMethod</a></td>
                 <td>Defines the method used to execute certain editor methods with the help of the plugin.</td>
                 <td>function</td>
                 <td>optional</td>

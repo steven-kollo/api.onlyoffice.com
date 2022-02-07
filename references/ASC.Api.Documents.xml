@@ -226,7 +226,7 @@
             <category>Uploads</category>
             <returns>Inserted file</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.UpdateFileStream(System.IO.Stream,System.String,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.UpdateFileStream(System.IO.Stream,System.String,System.String,System.Boolean,System.Boolean)">
             <summary>
             Updates the content of a file with the ID specified in the request.
             </summary>
@@ -234,6 +234,7 @@
             <category>Files</category>
             <param name="file">File stream</param>
             <param name="fileId">File ID</param>
+            <param name="fileExtension">File extension</param>
             <param name="encrypted" visible="false">Encrypts a file or not</param>
             <param name="forcesave" visible="false">Forcibly saves a file or not</param>
             <returns>Updated file</returns>
@@ -462,6 +463,17 @@
             <param name="version">File version</param>
             <category>Files</category>
             <returns>File information</returns>
+        </member>
+        <member name="M:ASC.Api.Documents.DocumentsApi.CopyFileAs(System.String,System.String,System.String)">
+            <summary>
+              Copies (and converts, if possible) an existing file to a new file.
+            </summary>
+            <short>Copy file</short>
+            <category>Files</category>
+            <param name="fileId">File ID</param>
+            <param name="destFolderId">Destination folder ID</param>
+            <param name="destTitle">Destination file Title</param>
+            <returns></returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UpdateFile(System.String,System.String,System.Int32)">
             <summary>

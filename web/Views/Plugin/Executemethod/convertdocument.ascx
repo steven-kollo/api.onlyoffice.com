@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows converting document content to Markdown or HTML.</p>
+<p class="dscr">Defines the method that allows converting a document to Markdown or HTML text.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -33,7 +33,7 @@ window.Asc.plugin.executeMethod ("ConvertDocument", [sConvertType, bHtmlHeadings
     <tbody>
         <tr class="tablerow">
             <td>sConvertType</td>
-            <td>Conversion type.</td>
+            <td>Conversion type ("markdown" or "html").</td>
             <td>string</td>
             <td>"markdown"</td>
         </tr>
@@ -57,8 +57,8 @@ window.Asc.plugin.executeMethod ("ConvertDocument", [sConvertType, bHtmlHeadings
         </tr>
         <tr class="tablerow">
             <td>bRenderHTMLTags</td>
-            <td>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket in the following way:
-                \&lt;tag&gt;text\&lt;/tag&gt;. By default, angle brackets (&lt;) will be replaced with the special character.</td>
+            <td>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket 
+            in the following way: <em>\&lt;tag&gt;text\&lt;/tag&gt;</em>. By default, angle brackets will be replaced with the special characters.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -68,7 +68,7 @@ window.Asc.plugin.executeMethod ("ConvertDocument", [sConvertType, bHtmlHeadings
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns the Markdown or HTML file content in the <em>string</em> format.</p>
+<p>The method returns the Markdown/HTML text in the <em>string</em> format.</p>
 
 <div class="header-gray">Example</div>
 

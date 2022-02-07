@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 <p class="dscr">Searches for target text and replaces it with something else.</p>
-<p><b>Plugin type:</b> visual, non-system, OLE-object.</p>
+<p><b>Plugin type:</b> visual, non-system.</p>
 <p><b>Supported editors:</b> documents.</p>
 
 <img alt="SearchandReplace" src="<%= Url.Content("~/content/img/plugins/gifs/search-and-replace.gif") %>" />
@@ -48,7 +48,47 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description" : "Example of search and replace",
             "url"         : "index.html",
 
-            "icons"           : ["icon.png", "icon@2x.png"],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer"        : true,
             "EditorsSupport"  : ["word"],
 
@@ -56,10 +96,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "isModal"         : true,
             "isInsideMode"    : false,
 
-            "initDataType"    : "ole",
+            "initDataType"    : "none",
             "initData"        : "",
-
-            "isUpdateOleOnResize" : true,
 
             "buttons"         : []
         }
@@ -70,7 +108,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/sdkjs-plugins/blob/master/example_search_replace/code.js" target="_blank">here</a>.</p>
 <ul>
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

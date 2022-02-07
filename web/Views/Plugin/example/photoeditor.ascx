@@ -37,6 +37,7 @@
     <li>Icons</li>
     <li>The <em>translations</em> folder contains translations into Russian, German, Spanish, Czech and French.</li>
     <li><em>index_about.html</em> for the plugin <b>About</b> window</li>
+    <li><em>black-theme.css</em>, <em>black-theme.js</em>, <em>white-theme.css</em> and <em>white-theme.js</em> are used to adjust the dark or light plugin theme</li>
     <li>Third-party services:
         <ul>
             <li><b>jQuery</b> - a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development (<a href="https://jquery.com" target="_blank">https://jquery.com</a>). License: <a href="https://github.com/ONLYOFFICE/plugin-photoeditor/blob/master/licenses/jQuery.license" target="_blank">MIT License</a>.</li>
@@ -57,6 +58,7 @@
         "de": "Foto-Editor"
     },
     "guid": "asc.{07FD8DFA-DFE0-4089-AL24-0730933CC80A}",
+    "version": "1.0",
     "baseUrl": "",
 
     "variations": [
@@ -70,7 +72,47 @@
             },
             "url": "index.html",
 
-            "icons": [ "icon.png", "icon@2x.png", "icon2.png", "icon2@2x.png" ],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer": false,
             "EditorsSupport": [ "word", "cell", "slide" ],
 
@@ -80,8 +122,6 @@
 
             "initDataType": "html",
             "initData": "",
-
-            "isUpdateOleOnResize": false,
 
             "buttons": [
                 {
@@ -113,7 +153,7 @@
             },
             "url": "index_about.html",
 
-            "icons": [ "icon.png", "icon@2x.png", "icon2.png", "icon2@2x.png" ],
+            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png" ],
             "isViewer": false,
             "EditorsSupport": [ "word", "cell", "slide" ],
 
@@ -124,8 +164,6 @@
             "initDataType": "none",
             "initData": "",
 
-            "isUpdateOleOnResize": false,
-
             "size": [ 392, 147 ]
         }
     ]
@@ -135,7 +173,6 @@
 
 <div class="header-gray">Methods and events</div>
 
-<p>The main plugin code is located <a href="https://github.com/ONLYOFFICE/plugin-photoeditor/blob/master/scripts/photoeditor.js" target="_blank">here</a>.</p>
 <ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>

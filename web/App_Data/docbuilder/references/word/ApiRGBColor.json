@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiRGBColor",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiRGBColor class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -20,8 +20,8 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing RGB Color.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing RGB Color.</p>",
+  "comment": "/**\r\n\t * Class representing an RGB Color.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing an RGB Color.</p>",
   "scope": "global",
   "params": []
 }

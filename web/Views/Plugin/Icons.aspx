@@ -20,13 +20,15 @@
 
     <h2 id="scaling" class="copy-link">Scaling</h2>
 
-    <p>There are three scaling types of plugin icons: 100%, 150% and 200%. For each type the icon has its <em>normal</em> state:</p>
+    <p>There can be several scaling types for plugin icons: 100%, 125%, 150%, 175%, 200%, etc. For each type the icon has its <em>normal</em> state:</p>
 
     <pre>
 "icons": [
     {
         "100%": { "normal": "icon.png" },
+        "125%": { "normal": "icon@1.25.png" },
         "150%": { "normal": "icon@1.5x.png" },
+        "175%": { "normal": "icon@1.75.png" },
         "200%": { "normal": "icon@2x.png" }
     }
 ]

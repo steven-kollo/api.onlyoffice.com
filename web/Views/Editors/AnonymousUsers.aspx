@@ -30,7 +30,7 @@
         <li>
             <p>If the user name is not specified, it will be requested. The request can be turned off with 
             the <em>"request"=false</em> value of the <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> parameter.</p>
-            <img alt="Name request" src="<%= Url.Content("~/content/img/editor/name-request.png") %>" />
+            <img width="832px" alt="Name request" src="<%= Url.Content("~/content/img/editor/name-request.png") %>" />
         </li>
         <li>
             <p>After the anonymous user&#8217;s name is set, the postfix is added to it via the <em>label</em> field of 
