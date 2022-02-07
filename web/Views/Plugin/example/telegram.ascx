@@ -67,8 +67,6 @@ The plugin has no access to the camera and microphone, so you will be unable to 
             "initDataType"    : "none",
             "initData"        : "",
 
-            "isUpdateOleOnResize" : false,
-
             "buttons"         : [ ]
         }
     ]

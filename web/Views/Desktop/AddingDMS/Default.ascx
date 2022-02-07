@@ -82,6 +82,18 @@
             <td>object</td>
             <td></td>
         </tr>
+        <tr class="tablerow">
+            <td id="entryPage" class="copy-link">entryPage</td>
+            <td>Defines the URL to connect the provider. It is used instead of the provider address and allows the desktop app not to send the <a href="#check">check</a> request.</td>
+            <td>string</td>
+            <td>"https://url-to-connect-provider.com"</td>
+        </tr>
+        <tr class="tablerow">
+            <td id="extraLogout" class="copy-link">extraLogout</td>
+            <td>Defines the URL to log out from the cloud. It is used instead of the provider address.</td>
+            <td>string or array of strings</td>
+            <td>"https://url-for-logout.com"</td>
+        </tr>
         <tr>
             <td id="editorPage" class="copy-link">editorPage</td>
             <td>
@@ -94,12 +106,6 @@
             <td colspan="4">
                 <div class="note">You can use regular expressions for this parameter. For example, <em>"regex:\/lib\/(?:[\w-]{32,})\/file\/"</em>.</div>
             </td>
-        </tr>
-        <tr class="tablerow">
-            <td id="entryPage" class="copy-link">entryPage</td>
-            <td>Defines the URL to connect the provider. It is used instead of the provider address and allows the desktop app not to send the <a href="#check">check</a> request.</td>
-            <td>string</td>
-            <td>"https://url-to-connect-provider.com"</td>
         </tr>
         <tr class="tablerow">
             <td id="startPage" class="copy-link">startPage</td>
@@ -143,8 +149,9 @@
             "OCS-APIREQUEST": true
         }
     },
-    "editorPage" : "/apps/onlyoffice/",
     "entryPage" : "https://url-to-connect-provider.com",
+    "extraLogout" : "https://url-for-logout.com",
+    "editorPage" : "/apps/onlyoffice/",
     "startPage" : "/",
     "icons" : {
         "themeLight": {

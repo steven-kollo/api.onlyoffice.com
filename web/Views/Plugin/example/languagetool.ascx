@@ -113,8 +113,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "initDataType": "text",
             "initData": "",
 
-            "isUpdateOleOnResize": false,
-
             "buttons": [],
 
             "initOnSelectionChanged": true
@@ -139,8 +137,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
             "initDataType": "none",
             "initData": "",
-
-            "isUpdateOleOnResize": false,
 
             "buttons": [
                 {
