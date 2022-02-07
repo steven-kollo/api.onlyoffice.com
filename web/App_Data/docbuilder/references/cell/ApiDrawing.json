@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiDrawing",
       "name": "GetClassType",
-      "description": "<p>Get the type of the class based on this base class.</p>",
+      "description": "<p>Returns a type of the ApiDrawing class.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -20,7 +20,7 @@
     "SetSize": {
       "memberof": "ApiDrawing",
       "name": "SetSize",
-      "description": "<p>Set the size of the object (image, shape, chart) bounding box.</p>",
+      "description": "<p>Sets a size of the object (image, shape, chart) bounding box.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -47,7 +47,7 @@
     "SetPosition": {
       "memberof": "ApiDrawing",
       "name": "SetPosition",
-      "description": "<p>Change the position for the drawing object.\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of\nthe specified nFromCol column and nFromRow row cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note></p>",
+      "description": "<p>Changes the position for the drawing object.\n<note>Please note that the horizontal and vertical offsets are calculated within the limits of\nthe specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note></p>",
       "tags": {
         "typeofeditors": [
           "CSE"

@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiImage",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiImage class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -21,7 +21,7 @@
     "GetNextImage": {
       "memberof": "ApiImage",
       "name": "GetNextImage",
-      "description": "<p>Get the next inline image.</p>",
+      "description": "<p>Returns the next inline image if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -39,7 +39,7 @@
     "GetPrevImage": {
       "memberof": "ApiImage",
       "name": "GetPrevImage",
-      "description": "<p>Get the previous inline image.</p>",
+      "description": "<p>Returns the previous inline image if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

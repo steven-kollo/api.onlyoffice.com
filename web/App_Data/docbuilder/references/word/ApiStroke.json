@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiStroke",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiStroke class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",

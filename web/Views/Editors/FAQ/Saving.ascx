@@ -58,7 +58,7 @@
     <dd>
         <p>If the document of a format different from the OOXML (.txt or .ods) is opened, the OOXML format will be saved by default.</p>
         <p>To save the opened document to a format different from the default Office Open XML one, the POST request must be sent to the <b>document conversion service</b>.</p>
-        <p>The details of how the conversion works and why it is needed can be found in the <a href="<%= Url.Action("conversion") %>">this section</a>. The POST request parameters and available responses to it can be found <a href="<%= Url.Action("conversionapi") %>">here</a>.</p>
+        <p>The details of how the conversion works and why it is needed can be found in <a href="<%= Url.Action("conversion") %>">this section</a>. The POST request parameters and available responses to it can be found <a href="<%= Url.Action("conversionapi") %>">here</a>.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="saving_4">

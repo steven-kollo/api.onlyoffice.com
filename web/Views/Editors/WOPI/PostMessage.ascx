@@ -5,7 +5,7 @@
     </h1>
 
     <p class="dscr">
-        <a href="https://wopi.readthedocs.io/en/latest/scenarios/postmessage.html?highlight=postmessage" target="_blank">PostMessage</a> is the  <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web Messaging</a> protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. 
+        <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage" target="_blank">PostMessage</a> is the  <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web Messaging</a> protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. 
         It allows the online office frame to communicate with its parent host page.
     </p>
 
@@ -119,6 +119,27 @@ otherWindow.postMessage (msg, targetOrigin)
                 <td>This message is posted when the user activates the <em>Share</em> UI in the online office. The host should use this message to trigger any custom sharing UI.
                 To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingPostMessage">FileSharingPostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
                 Otherwise, the online office will not send this message.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="header-gray">Collabora specific</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>MessageId</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="UI_InsertGraphic" class="copy-link">UI_InsertGraphic</td>
+                <td>This message is posted to present a user interface element (like a dialog) allowing the user to pick an image from the integration.
+                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back via the <a href="https://sdk.collaboraonline.com/docs/postmessage_api.html#id1" target="_blank">Action_InsertGraphic</a> message with values set to the temporary URL.</td>
             </tr>
         </tbody>
     </table>

@@ -62,6 +62,18 @@
                                         <a href="<%= Url.Action("executemethod/addcontentcontrol") %>">AddContentControl</a>
                                     </li>
                                     <li>
+                                        <a title="AddContentControlCheckBox" href="<%= Url.Action("executemethod/addcontentcontrolcheckbox") %>">AddContentControlCheckBox</a>
+                                    </li>
+                                    <li>
+                                        <a title="AddContentControlDatePicker" href="<%= Url.Action("executemethod/addcontentcontroldatepicker") %>">AddContentControlDatePicker</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/addcontentcontrollist") %>">AddContentControlList</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/addcontentcontrolpicture") %>">AddContentControlPicture</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a>
                                     </li>
                                     <li>
@@ -69,6 +81,9 @@
                                     </li>
                                     <li>
                                         <a title="CoAuthoringChatSendMessage" href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/convertdocument") %>">ConvertDocument</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>

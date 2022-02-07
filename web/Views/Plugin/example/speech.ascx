@@ -55,6 +55,7 @@
         "de": "Rede"
     },
     "guid": "asc.{D71C2EF0-F15B-47C7-80E9-86D671F9C595}",
+    "version" : "1.0",
 
     "variations": [
         {
@@ -67,20 +68,86 @@
             },
             "url": "index.html",
 
-            "icons": [ "icon.png", "icon@2x.png", "icon2.png", "icon2@2x.png" ],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer": true,
             "EditorsSupport": [ "word" ],
 
             "isVisual": false,
-            "isModal": false,
-            "isInsideMode": false,
 
             "initDataType": "text",
             "initData": "",
 
-            "isUpdateOleOnResize": false,
-
             "buttons": []
+        }
+        {
+            "description": "About",
+            "descriptionLocale": {
+                "ru": "&#1057;&#1087;&#1088;&#1072;&#1074;&#1082;&#1072;",
+                "fr": "A&#768; propos",
+                "es": "Sobre programa",
+                "de": "&#220;ber"
+            },
+            "url": "index_about.html",
+
+            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png" ],
+            "isViewer": false,
+            "EditorsSupport": [ "word" ],
+
+            "isVisual": true,
+            "isModal": true,
+            "isInsideMode": false,
+
+            "initDataType": "none",
+            "initData": "",
+
+            "buttons": [
+                {
+                    "text": "Ok",
+                    "primary": true
+                }
+            ],
+
+            "size": [ 400, 50 ]
         }
     ]
 }

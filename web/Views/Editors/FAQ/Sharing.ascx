@@ -28,7 +28,7 @@
     ...
 });</pre>
             </li>
-            <li>Reviewing only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.review</em> is set to <b>true</b>, the user will be able to open the document in review mode only. Theconfiguration in this case will look like this:
+            <li>Reviewing only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.review</em> is set to <b>true</b>, the user will be able to open the document in review mode only. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -120,7 +120,7 @@
     ...
 });</pre>
             </li>
-            <li>Comments are available for viewing only: if the <em>document.permission.edit</em> parameter is set to <b>true</b> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The configuration in this case will look like this:
+            <li>Comments are available for viewing only: if the <em>document.permission.edit</em> parameter is set to <b>true</b> and <em>document.permission.comment</em> is set to <b>false</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -143,7 +143,7 @@
 <dl class="faq_block" id="sharing_3">
     <dt>How can the 'fillForms' parameter be used?</dt>
     <dd>
-        <p>Starting with version 5.2 Document Server provides functionality for filling special forms without the need to give editing permissions to the user. This can be used, for example, in case you have a document form of some kind and want to give the users the access to this form so that they could fill it, but could not edit other document fields (e.g. fill the names in a contract but not change the contract terms, or fill the variable fields in some other document but leave the other parts of the document intact).</p>
+        <p>Starting from version 5.2, Document Server provides functionality for filling special forms without the need to give editing permissions to the user. This can be used, for example, in case you have a document form of some kind and want to give the users the access to this form so that they could fill it, but could not edit other document fields (e.g. fill the names in a contract but not change the contract terms, or fill the variable fields in some other document but leave the other parts of the document intact).</p>
         <p>To enable this mode the <em>document.permissions.fillForms</em> parameter is used:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {

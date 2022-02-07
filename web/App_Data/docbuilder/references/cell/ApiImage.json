@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiImage",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiImage class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",

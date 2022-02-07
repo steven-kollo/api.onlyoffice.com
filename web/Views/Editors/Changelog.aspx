@@ -16,6 +16,31 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="70" class="copy-link">Version 7.0</h2>
+    <ul>
+        <li>Added the <em>.docxf</em> and <em>.oform</em> <a href="<%= Url.Action("config/") %>#documentType">document formats</a>.</li>
+        <li>Added conversion to and from <a href="<%= Url.Action("conversionapi") %>#text-matrix">docxf</a> format.</li>
+        <li>The <a href="<%= Url.Action("callback") %>#used-callbackUrl">callbackUrl</a> is used from the last tab of the same user.</li>
+        <li>Added the <em>logoDark</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#customer">editorConfig.customization.customer</a> parameter.</li>
+        <li>Added the <em>imageDark</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter.</li>
+        <li>The <em>imageEmbedded</em> field of the <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> parameter is deprecated, please use the <em>image</em> field instead.</li>
+        <li>Added a signature to the request for file changes specified with the <em>changesUrl</em> parameter of the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method</a>.
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#protect">document.permissions.protect</a> field.</li>
+        <li>Added the <em>fileType</em> parameter to the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a>, <a href="<%= Url.Action("config/events") %>#onRequestRestore">onRequestRestore</a> and <a href="<%= Url.Action("config/events") %>#onRequestSaveAs">onRequestSaveAs</a> events.</li>
+        <li>Added the possibility to insert several images via the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method.</li>
+        <li>The <a href="<%= Url.Action("save") %>#assemblyFormatAsOrigin">assemblyFormatAsOrigin</a> server setting is enabled by default.</li>
+        <li>Added the <em>ooxml</em> and <em>odf</em> values to the <a href="<%= Url.Action("conversionapi") %>#outputtype">outputtype</a> parameter of the conversion request.</li>
+        <li>Added the <em>fileType</em> and <em>previous.fileType</em> parameters to the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.</li>
+        <li>Added the <a href="<%= Url.Action("callback") %>#filetype">filetype</a> parameter to the <em>Callback handler</em>.</li>
+        <li>Added the <a href="<%= Url.Action("conversionapi") %>#fileType">fileType</a> field to the conversion response.</li>
+        <li>Added conversion to <a href="<%= Url.Action("conversionapi") %>#text-matrix">docm, dotm, xlsm, xltm, pptm, potm</a> formats.</li>
+        <li>The <a href="<%= Url.Action("config/editor/customization") %>#reviewDisplay">editorConfig.customization.reviewDisplay</a>, <a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">editorConfig.customization.showReviewChanges</a>, <a href="<%= Url.Action("config/editor/customization") %>#trackChanges">editorConfig.customization.trackChanges</a> parameters are deprecated, please use the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review</a> parameter instead.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hideReviewDisplay</a> field.</li>
+        <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#review">editorConfig.customization.review.hoverMode</a> field.</li>
+        <li>Added the possibility to view the <a href="<%= Url.Action("history") %>">document history</a> of the spreadsheet files.</li>
+        <li>Added the <a href="<%= Url.Action("wopi/postmessage") %>#UI_InsertGraphic">UI_InsertGraphic</a> message for the PostMessage WOPI protocol.</li>
+    </ul>
+
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
         <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">oxps</a> format.</li>

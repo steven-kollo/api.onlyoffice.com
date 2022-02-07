@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 <p class="dscr">Inserts the content of one content control into another.</p>
-<p><b>Plugin type:</b> non-visual, system.</p>
+<p><b>Plugin type:</b> non-visual, non-system.</p>
 <p><b>Supported editors:</b> documents.</p>
 
 <img alt="WorkWithContentControlsContent" src="<%= Url.Content("~/content/img/plugins/gifs/work-with-content-controls-content.gif") %>" />
@@ -41,33 +41,66 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <div class="header-gray">Config</div>
 <pre>
 {
-    "name" : "example_work_with_content_controls_combo",
-    "guid" : "asc.{639E69BC-58DE-4029-9B43-F0420F67E6F9}",
+    "name" : "Example work with content controls content",
+    "guid" : "asc.{C9945AC2-8275-4F9B-92E4-CA1104D7305B}",
 
     "variations" : [
         {
-            "description" : "example_work_with_content_controls_combo",
+            "description" : "Example work with content controls content",
             "url"         : "index.html",
 
-            "icons"           : ["resources/img/icon.png", "resources/img/icon@2x.png"],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer"        : false,
             "EditorsSupport"  : ["word"],
 
             "isVisual"        : false,
-            "isModal"         : false,
-            "isInsideMode"    : false,
-            "isSystem"        : true,
 
-            "initDataType"    : "none",
+            "initDataType"    : "text",
             "initData"        : "",
 
-            "isUpdateOleOnResize" : false,
+            "buttons"         : [],
 
-            "buttons"        : [ ],
-
-            "events" : [
-                "onClick"
-            ]
+            "initOnSelectionChanged" : true
         }
     ]
 }
@@ -76,7 +109,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
 <div class="header-gray">Methods and events</div>
 
-<ul>
+<ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>

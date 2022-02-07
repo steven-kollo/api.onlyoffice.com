@@ -49,7 +49,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description" : "chess",
             "url"         : "index.html",
 
-            "icons"           : ["icon.png", "icon@2x.png"],
+            "icons"           : ["resources/icon.png", "resources/icon@2x.png"],
             "isViewer"        : true,
             "EditorsSupport"  : ["word", "cell", "slide"],
 
@@ -69,7 +69,7 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description" : "About",
             "url"         : "index_about.html",
 
-            "icons"           : ["icon.png", "icon@2x.png"],
+            "icons"           : ["resources/icon.png", "resources/icon@2x.png"],
             "isViewer"        : true,
             "EditorsSupport"  : ["word", "cell", "slide"],
 
@@ -79,8 +79,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
             "initDataType"    : "none",
             "initData"        : "",
-
-            "isUpdateOleOnResize" : false,
 
             "buttons"         : [ { "text": "Ok", "primary": true } ],
 

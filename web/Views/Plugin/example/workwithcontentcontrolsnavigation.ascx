@@ -58,7 +58,47 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "description" : "Example work with content controls navigation",
             "url"         : "index.html",
 
-            "icons"           : ["resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png"],
+            "icons": [ "resources/light/icon.png", "resources/light/icon@2x.png" ],
+            "icons2": [
+                {
+                    "style" : "light",
+                    
+                    "100%": {
+                        "normal": "resources/light/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/light/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/light/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/light/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/light/icon@2x.png"
+                    }
+                },
+                {
+                    "style" : "dark",
+                    
+                    "100%": {
+                        "normal": "resources/dark/icon.png"
+                    },
+                    "125%": {
+                        "normal": "resources/dark/icon@1.25x.png"
+                    },
+                    "150%": {
+                        "normal": "resources/dark/icon@1.5x.png"
+                    },
+                    "175%": {
+                        "normal": "resources/dark/icon@1.75x.png"
+                    },
+                    "200%": {
+                        "normal": "resources/dark/icon@2x.png"
+                    }
+                }
+            ],
             "isViewer"        : false,
             "EditorsSupport"  : ["word"],
 
@@ -68,8 +108,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
             "initDataType"    : "text",
             "initData"        : "",
-
-            "isUpdateOleOnResize" : false,
 
             "buttons"         : [],
 
@@ -89,9 +127,11 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>
     <li><a href="<%= Url.Action("events") %>#onMethodReturn">onMethodReturn</a></li>
     <li><a href="<%= Url.Action("events") %>#onTargetPositionChanged">onTargetPositionChanged</a></li>
+    <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
     <li><a href="<%= Url.Action("executemethod/getallcontentcontrols") %>">executeMethod ("GetAllContentControls")</a></li>
     <li><a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">executeMethod ("GetCurrentContentControl")</a></li>
     <li><a href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">executeMethod ("MoveCursorToContentControl")</a></li>
+    <li><a href="<%= Url.Action("executemethod/pastetext") %>">executeMethod ("PasteText")</a></li>
     <li><a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">executeMethod ("SelectContentControl")</a></li>
 </ul>
 

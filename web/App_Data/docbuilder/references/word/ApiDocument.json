@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiDocument",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiDocument class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "CreateNewHistoryPoint": {
       "memberof": "ApiDocument",
       "name": "CreateNewHistoryPoint",
-      "description": "<p>Create new history point.</p>",
+      "description": "<p>Creates a new history point.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -29,7 +29,7 @@
     "GetStyle": {
       "memberof": "ApiDocument",
       "name": "GetStyle",
-      "description": "<p>Get a style by the style name.</p>",
+      "description": "<p>Returns a style by its name.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -54,7 +54,7 @@
     "CreateStyle": {
       "memberof": "ApiDocument",
       "name": "CreateStyle",
-      "description": "<p>Create a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one.</p>",
+      "description": "<p>Creates a new style with the specified type and name. If there is a style with the same name it will be replaced with a new one.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -86,7 +86,7 @@
     "GetDefaultStyle": {
       "memberof": "ApiDocument",
       "name": "GetDefaultStyle",
-      "description": "<p>Get the default style parameters for the specified document element.</p>",
+      "description": "<p>Returns the default style parameters for the specified document element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -111,7 +111,7 @@
     "GetDefaultTextPr": {
       "memberof": "ApiDocument",
       "name": "GetDefaultTextPr",
-      "description": "<p>Get a set of default properties for the text run in the current document.</p>",
+      "description": "<p>Returns a set of default properties for the text run in the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -128,7 +128,7 @@
     "GetDefaultParaPr": {
       "memberof": "ApiDocument",
       "name": "GetDefaultParaPr",
-      "description": "<p>Get a set of default paragraph properties in the current document.</p>",
+      "description": "<p>Returns a set of default paragraph properties in the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -145,7 +145,7 @@
     "GetFinalSection": {
       "memberof": "ApiDocument",
       "name": "GetFinalSection",
-      "description": "<p>Get the document final section.</p>",
+      "description": "<p>Returns the document final section.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -162,7 +162,7 @@
     "CreateSection": {
       "memberof": "ApiDocument",
       "name": "CreateSection",
-      "description": "<p>Create a new document section which ends at the specified paragraph. Allows to set local parameters for the current\nsection - page size, footer, header, columns, etc.</p>",
+      "description": "<p>Creates a new document section which ends at the specified paragraph. Allows to set local parameters to the current\nsection - page size, footer, header, columns, etc.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -179,7 +179,7 @@
         {
           "type": "ApiParagraph",
           "name": "oParagraph",
-          "description": "<p>The paragraph after which the new document section will be inserted.</p>",
+          "description": "<p>The paragraph after which a new document section will be inserted.</p>",
           "optional": false
         }
       ]
@@ -187,7 +187,7 @@
     "SetEvenAndOddHdrFtr": {
       "memberof": "ApiDocument",
       "name": "SetEvenAndOddHdrFtr",
-      "description": "<p>Specify whether sections in this document will have different headers and footers for even and\nodd pages (one header/footer for odd pages and another header/footer for even pages).</p>",
+      "description": "<p>Specifies whether sections in this document will have different headers and footers for even and\nodd pages (one header/footer for odd pages and another header/footer for even pages).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -208,7 +208,7 @@
     "CreateNumbering": {
       "memberof": "ApiDocument",
       "name": "CreateNumbering",
-      "description": "<p>Create an abstract multilevel numbering with a specified type.</p>",
+      "description": "<p>Creates an abstract multilevel numbering with a specified type.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -234,7 +234,7 @@
     "InsertContent": {
       "memberof": "ApiDocument",
       "name": "InsertContent",
-      "description": "<p>Insert an array of elements into the current position of the document.</p>",
+      "description": "<p>Inserts an array of elements into the current position of the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -272,7 +272,7 @@
     "GetCommentsReport": {
       "memberof": "ApiDocument",
       "name": "GetCommentsReport",
-      "description": "<p>Get a report about all the comments added to the document.</p>",
+      "description": "<p>Returns a report about all the comments added to the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -289,7 +289,7 @@
     "GetReviewReport": {
       "memberof": "ApiDocument",
       "name": "GetReviewReport",
-      "description": "<p>Get a report about every change which was made to the document in the review mode.</p>",
+      "description": "<p>Returns a report about every change which was made to the document in the review mode.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -306,7 +306,7 @@
     "SearchAndReplace": {
       "memberof": "ApiDocument",
       "name": "SearchAndReplace",
-      "description": "<p>Find and replace text.</p>",
+      "description": "<p>Finds and replaces the text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -319,7 +319,7 @@
         {
           "type": "Object",
           "name": "oProperties",
-          "description": "<p>The properties for find and replace.</p>",
+          "description": "<p>The properties to find and replace.</p>",
           "optional": false
         },
         {
@@ -346,7 +346,7 @@
     "GetAllContentControls": {
       "memberof": "ApiDocument",
       "name": "GetAllContentControls",
-      "description": "<p>Get the list of all the content controls in the document.</p>",
+      "description": "<p>Returns a list of all the content controls in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -364,7 +364,7 @@
     "SetTrackRevisions": {
       "memberof": "ApiDocument",
       "name": "SetTrackRevisions",
-      "description": "<p>Set change tracking mode.</p>",
+      "description": "<p>Sets the change tracking mode.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -385,7 +385,7 @@
     "IsTrackRevisions": {
       "memberof": "ApiDocument",
       "name": "IsTrackRevisions",
-      "description": "<p>Check if change tracking mode is enabled or not.</p>",
+      "description": "<p>Checks if change tracking mode is enabled or not.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -402,7 +402,7 @@
     "GetRange": {
       "memberof": "ApiDocument",
       "name": "GetRange",
-      "description": "<p>Return a Range object that represents the part of the document contained in the specified document.</p>",
+      "description": "<p>Returns a Range object that represents the part of the document contained in the specified document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -433,7 +433,7 @@
     "GetRangeBySelect": {
       "memberof": "ApiDocument",
       "name": "GetRangeBySelect",
-      "description": "<p>Get a range object by the current selection.</p>",
+      "description": "<p>Returns a range object by the current selection.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -451,7 +451,7 @@
     "Last": {
       "memberof": "ApiDocument",
       "name": "Last",
-      "description": "<p>Get the last document element.</p>",
+      "description": "<p>Returns the last document element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -468,7 +468,7 @@
     "DeleteBookmark": {
       "memberof": "ApiDocument",
       "name": "DeleteBookmark",
-      "description": "<p>Remove a bookmark from the document, if one exists.</p>",
+      "description": "<p>Removes a bookmark from the document, if one exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -493,7 +493,7 @@
     "AddComment": {
       "memberof": "ApiDocument",
       "name": "AddComment",
-      "description": "<p>Add a comment to the document.</p>",
+      "description": "<p>Adds a comment to the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -524,7 +524,7 @@
     "GetBookmarkRange": {
       "memberof": "ApiDocument",
       "name": "GetBookmarkRange",
-      "description": "<p>Get a bookmark's range.</p>",
+      "description": "<p>Returns a bookmark range.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -550,7 +550,7 @@
     "GetSections": {
       "memberof": "ApiDocument",
       "name": "GetSections",
-      "description": "<p>Get the collection of section objects in the document.</p>",
+      "description": "<p>Returns a collection of section objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -567,7 +567,7 @@
     "GetAllTablesOnPage": {
       "memberof": "ApiDocument",
       "name": "GetAllTablesOnPage",
-      "description": "<p>Get the collection of tables on a given absolute page.\n<note>This method can be a little bit slow, because it runs the document calculation\nprocess to arrange tables on the specified page.</note></p>",
+      "description": "<p>Returns a collection of tables on a given absolute page.\n<note>This method can be a little bit slow, because it runs the document calculation\nprocess to arrange tables on the specified page.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -585,7 +585,7 @@
     "RemoveSelection": {
       "memberof": "ApiDocument",
       "name": "RemoveSelection",
-      "description": "<p>Remove current selection.</p>",
+      "description": "<p>Removes the current selection.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -598,7 +598,7 @@
     "GetAllDrawingObjects": {
       "memberof": "ApiDocument",
       "name": "GetAllDrawingObjects",
-      "description": "<p>Get the collection of drawing objects in the document.</p>",
+      "description": "<p>Returns a collection of drawing objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -615,7 +615,7 @@
     "GetAllShapes": {
       "memberof": "ApiDocument",
       "name": "GetAllShapes",
-      "description": "<p>Get the collection of shape objects in the document.</p>",
+      "description": "<p>Returns a collection of shape objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -632,7 +632,7 @@
     "GetAllImages": {
       "memberof": "ApiDocument",
       "name": "GetAllImages",
-      "description": "<p>Get the collection of image objects in the document.</p>",
+      "description": "<p>Returns a collection of image objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -649,7 +649,7 @@
     "GetAllCharts": {
       "memberof": "ApiDocument",
       "name": "GetAllCharts",
-      "description": "<p>Get the collection of chart objects in the document.</p>",
+      "description": "<p>Returns a collection of chart objects in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -666,7 +666,7 @@
     "Search": {
       "memberof": "ApiDocument",
       "name": "Search",
-      "description": "<p>Search for the scope of a document object. The search results are a collection of ApiRange objects.</p>",
+      "description": "<p>Searches for a scope of a document object. The search results are a collection of ApiRange objects.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -694,10 +694,104 @@
         }
       ]
     },
+    "ToMarkdown": {
+      "memberof": "ApiDocument",
+      "name": "ToMarkdown",
+      "description": "<p>Converts a document to Markdown.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bHtmlHeadings",
+          "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bBase64img",
+          "description": "<p>Defines if the images will be created in the base64 format.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bDemoteHeadings",
+          "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bRenderHTMLTags",
+          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &amp;lt;tag&gt;text&amp;lt;/tag&gt;. By default, angle brackets will be replaced with the special characters.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "ToHtml": {
+      "memberof": "ApiDocument",
+      "name": "ToHtml",
+      "description": "<p>Converts a document to HTML.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bHtmlHeadings",
+          "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bBase64img",
+          "description": "<p>Defines if the images will be created in the base64 format.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bDemoteHeadings",
+          "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bRenderHTMLTags",
+          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &amp;lt;tag&gt;text&amp;lt;/tag&gt;. By default, angle brackets will be replaced with the special characters.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
     "InsertWatermark": {
       "memberof": "ApiDocument",
       "name": "InsertWatermark",
-      "description": "<p>Insert a watermark on each document page.</p>",
+      "description": "<p>Inserts a watermark on each document page.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -726,7 +820,7 @@
     "GetElementsCount": {
       "memberof": "ApiDocument",
       "name": "GetElementsCount",
-      "description": "<p>Get the number of elements in the current document.</p>",
+      "description": "<p>Returns a number of elements in the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -745,7 +839,7 @@
     "GetElement": {
       "memberof": "ApiDocument",
       "name": "GetElement",
-      "description": "<p>Get the element by its position in the document.</p>",
+      "description": "<p>Returns an element by its position in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -772,7 +866,7 @@
     "AddElement": {
       "memberof": "ApiDocument",
       "name": "AddElement",
-      "description": "<p>Add a paragraph or a table or a blockLvl content control using its position in the document content.</p>",
+      "description": "<p>Adds a paragraph or a table or a blockLvl content control using its position in the document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -801,7 +895,7 @@
     "Push": {
       "memberof": "ApiDocument",
       "name": "Push",
-      "description": "<p>Push a paragraph or a table to actually add it to the document.</p>",
+      "description": "<p>Pushes a paragraph or a table to actually add it to the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -828,7 +922,7 @@
     "RemoveAllElements": {
       "memberof": "ApiDocument",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all the elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
+      "description": "<p>Removes all the elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -843,7 +937,7 @@
     "RemoveElement": {
       "memberof": "ApiDocument",
       "name": "RemoveElement",
-      "description": "<p>Remove element using the position specified.</p>",
+      "description": "<p>Removes an element using the position specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",

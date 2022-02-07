@@ -56,7 +56,7 @@ The plugin has no access to the camera and microphone, so you will be unable to 
             "description" : "Telegram",
             "url"         : "index.html",
 
-            "icons"           : ["resources/img/icon.png", "resources/img/icon@2x.png"],
+            "icons"           : ["resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon2.png", "resources/img/icon2@2x.png"],
             "isViewer"        : true,
             "EditorsSupport"  : ["word", "cell", "slide"],
 
@@ -66,8 +66,6 @@ The plugin has no access to the camera and microphone, so you will be unable to 
 
             "initDataType"    : "none",
             "initData"        : "",
-
-            "isUpdateOleOnResize" : false,
 
             "buttons"         : [ ]
         }

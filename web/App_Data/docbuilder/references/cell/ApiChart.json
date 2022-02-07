@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiChart",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiChart class.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -20,7 +20,7 @@
     "SetTitle": {
       "memberof": "ApiChart",
       "name": "SetTitle",
-      "description": "<p>Specify the chart title.</p>",
+      "description": "<p>Specifies the chart title with the specified parameters.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -53,7 +53,7 @@
     "SetHorAxisTitle": {
       "memberof": "ApiChart",
       "name": "SetHorAxisTitle",
-      "description": "<p>Specify the chart horizontal axis title.</p>",
+      "description": "<p>Specifies the chart horizontal axis title.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -86,7 +86,7 @@
     "SetVerAxisTitle": {
       "memberof": "ApiChart",
       "name": "SetVerAxisTitle",
-      "description": "<p>Specify the chart vertical axis title.</p>",
+      "description": "<p>Specifies the chart vertical axis title.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -119,7 +119,7 @@
     "SetVerAxisOrientation": {
       "memberof": "ApiChart",
       "name": "SetVerAxisOrientation",
-      "description": "<p>Specify the direction of the data displayed on the vertical axis.</p>",
+      "description": "<p>Specifies the direction of the data displayed on the vertical axis.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -132,7 +132,7 @@
         {
           "type": "bool",
           "name": "bIsMinMax",
-          "description": "<p>The <code>true</code> value will set the normal data direction for the vertical axis (from minimum to maximum).\nThe <code>false</code> value will set the inverted data direction for the vertical axis (from maximum to minimum).</p>",
+          "description": "<p>The <code>true</code> value sets the normal data direction for the vertical axis (from minimum to maximum).\nThe <code>false</code> value sets the inverted data direction for the vertical axis (from maximum to minimum).</p>",
           "optional": false
         }
       ]
@@ -140,7 +140,7 @@
     "SetHorAxisMajorTickMark": {
       "memberof": "ApiChart",
       "name": "SetHorAxisMajorTickMark",
-      "description": "<p>Specify major tick mark for horizontal axis.</p>",
+      "description": "<p>Specifies the major tick mark for the horizontal axis.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -161,7 +161,7 @@
     "SetHorAxisMinorTickMark": {
       "memberof": "ApiChart",
       "name": "SetHorAxisMinorTickMark",
-      "description": "<p>Specify minor tick mark for horizontal axis.</p>",
+      "description": "<p>Specifies the minor tick mark for the horizontal axis.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -182,7 +182,7 @@
     "SetVertAxisMajorTickMark": {
       "memberof": "ApiChart",
       "name": "SetVertAxisMajorTickMark",
-      "description": "<p>Specify major tick mark for vertical axis.</p>",
+      "description": "<p>Specifies the major tick mark for the vertical axis.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -203,7 +203,7 @@
     "SetVertAxisMinorTickMark": {
       "memberof": "ApiChart",
       "name": "SetVertAxisMinorTickMark",
-      "description": "<p>Specify minor tick mark for vertical axis.</p>",
+      "description": "<p>Specifies the minor tick mark for the vertical axis.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -224,7 +224,7 @@
     "SetHorAxisOrientation": {
       "memberof": "ApiChart",
       "name": "SetHorAxisOrientation",
-      "description": "<p>Specify the direction of the data displayed on the horizontal axis.</p>",
+      "description": "<p>Specifies the direction of the data displayed on the horizontal axis.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -237,7 +237,7 @@
         {
           "type": "bool",
           "name": "bIsMinMax",
-          "description": "<p>The <code>true</code> value will set the normal data direction for the horizontal axis\n(from minimum to maximum). The <code>false</code> value will set the inverted data direction for the horizontal axis (from maximum to minimum).</p>",
+          "description": "<p>The <code>true</code> value sets the normal data direction for the horizontal axis\n(from minimum to maximum). The <code>false</code> value sets the inverted data direction for the horizontal axis (from maximum to minimum).</p>",
           "optional": false
         }
       ]
@@ -245,7 +245,7 @@
     "SetLegendPos": {
       "memberof": "ApiChart",
       "name": "SetLegendPos",
-      "description": "<p>Specify the chart legend position.</p>",
+      "description": "<p>Specifies the chart legend position.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -266,7 +266,7 @@
     "SetLegendFontSize": {
       "memberof": "ApiChart",
       "name": "SetLegendFontSize",
-      "description": "<p>Specify the legend font size.</p>",
+      "description": "<p>Specifies the legend font size.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -287,7 +287,7 @@
     "SetShowDataLabels": {
       "memberof": "ApiChart",
       "name": "SetShowDataLabels",
-      "description": "<p>Specify which chart data labels are shown for the chart.</p>",
+      "description": "<p>Specifies which chart data labels are shown for the chart.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -326,7 +326,7 @@
     "SetShowPointDataLabel": {
       "memberof": "ApiChart",
       "name": "SetShowPointDataLabel",
-      "description": "<p>Spicify the show options for data labels.</p>",
+      "description": "<p>Spicifies the show options for the data labels.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -377,7 +377,7 @@
     "SetVertAxisTickLabelPosition": {
       "memberof": "ApiChart",
       "name": "SetVertAxisTickLabelPosition",
-      "description": "<p>Set the possible values for the position of the chart tick labels in relation to the main vertical label or the chart data values.</p>",
+      "description": "<p>Sets the possible values for the position of the chart tick labels in relation to the main vertical label or the chart data values.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -398,7 +398,7 @@
     "SetHorAxisTickLabelPosition": {
       "memberof": "ApiChart",
       "name": "SetHorAxisTickLabelPosition",
-      "description": "<p>Set the possible values for the position of the chart tick labels in relation to the main horizontal label or the chart data values.</p>",
+      "description": "<p>Sets the possible values for the position of the chart tick labels in relation to the main horizontal label or the chart data values.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -419,7 +419,7 @@
     "SetMajorVerticalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMajorVerticalGridlines",
-      "description": "<p>Specify major vertical gridline's visual properties.</p>",
+      "description": "<p>Specifies the visual properties of the major vertical gridline.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -440,7 +440,7 @@
     "SetMinorVerticalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMinorVerticalGridlines",
-      "description": "<p>Specify minor vertical gridline's visual properties.</p>",
+      "description": "<p>Specifies the visual properties of the minor vertical gridline.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -461,7 +461,7 @@
     "SetMajorHorizontalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMajorHorizontalGridlines",
-      "description": "<p>Specify major horizontal gridline's visual properties.</p>",
+      "description": "<p>Specifies the visual properties of the major horizontal gridline.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -482,7 +482,7 @@
     "SetMinorHorizontalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMinorHorizontalGridlines",
-      "description": "<p>Specify minor vertical gridline's visual properties.</p>",
+      "description": "<p>Specifies the visual properties of the minor vertical gridline.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -503,7 +503,7 @@
     "SetHorAxisLablesFontSize": {
       "memberof": "ApiChart",
       "name": "SetHorAxisLablesFontSize",
-      "description": "<p>Specify font size for the horizontal axis labels.</p>",
+      "description": "<p>Specifies the font size to the horizontal axis labels.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -524,7 +524,7 @@
     "SetVertAxisLablesFontSize": {
       "memberof": "ApiChart",
       "name": "SetVertAxisLablesFontSize",
-      "description": "<p>Specify font size for the vertical axis labels.</p>",
+      "description": "<p>Specifies the font size to the vertical axis labels.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -545,7 +545,7 @@
     "ApplyChartStyle": {
       "memberof": "ApiChart",
       "name": "ApplyChartStyle",
-      "description": "<p>Apply set of visual settings to the chart.</p>",
+      "description": "<p>Applies a set of visual settings to the chart.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"

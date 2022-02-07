@@ -21,7 +21,7 @@
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX.</li>
+        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
         <li>
             <p>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents.</p>
             <img alt="Edit in OnlyOffice" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>

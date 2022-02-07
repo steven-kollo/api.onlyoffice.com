@@ -3,7 +3,7 @@
       "id":"editors",
       "title":"Document Server",
       "description":"Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
-      "version":"6.4",
+      "version":"7.0",
       "links":{
          "Get Started":[
             {
@@ -73,6 +73,10 @@
             {
                "Item1":"PostMessage",
                "Item2":"wopi/postmessage"
+            },
+            {
+               "Item1":"API vs WOPI",
+               "Item2":"wopi/apivswopi"
             }
          ],
          "Additional API":[
@@ -113,7 +117,7 @@
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"Extend the ONLYOFFICE Docs functionality. In this section you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"6.4",
+      "version":"7.0",
       "links":{
          "Get started":[
             {
@@ -175,7 +179,7 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "6.4",
+      "version": "7.0",
       "links":{
          "Get started":[
             {
@@ -220,6 +224,12 @@
                "Item1":"List of classes",
                "Item2":"classlist"
             }
+         ],
+         "More information":[
+            {
+               "Item1":"Changelog",
+               "Item2":"changelog"
+            }
          ]
       }
    },
@@ -227,12 +237,16 @@
       "id":"desktop",
       "title":"Desktop Editors",
       "description":"Extend the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.",
-      "version":"6.4",
+      "version":"7.0",
       "links":{
          "Get Started":[
             {
                "Item1":"Overview",
                "Item2":"basic"
+            },
+            {
+               "Item1":"How it works",
+               "Item2":"howitworks"
             }
          ],
          "Usage API":[

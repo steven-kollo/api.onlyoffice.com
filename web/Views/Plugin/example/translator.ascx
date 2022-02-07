@@ -57,6 +57,7 @@
         "de": "&#220;bersetzer"
     },
     "guid": "asc.{7327FC95-16DA-41D9-9AF2-0E7F449F6800}",
+    "version": "1.0",
 
     "variations": [
         {
@@ -69,7 +70,16 @@
             },
             "url": "index.html",
 
-            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png", "resources/img/icon.png", "resources/img/icon@2x.png" ],
+            "icons": [ "resources/img/icon.png", "resources/img/icon@2x.png" ],
+            "icons2": [
+                {
+                    "100%": { "normal": "resources/img/icon.png" },
+                    "125%": { "normal": "resources/img/icon@1.25x.png" },
+                    "150%": { "normal": "resources/img/icon@1.5x.png" },
+                    "175%": { "normal": "resources/img/icon@1.75x.png" },
+                    "200%": { "normal": "resources/img/icon@2x.png" }
+                }
+            ],
             "isViewer": true,
             "EditorsSupport": [ "word", "cell", "slide" ],
 
@@ -79,8 +89,6 @@
 
             "initDataType": "text",
             "initData": "",
-
-            "isUpdateOleOnResize": false,
 
             "buttons": [],
 
@@ -93,12 +101,17 @@
 
 <div class="header-gray">Methods and events</div>
 
-<ul>
+<ul class="columns-2">
     <li><a href="<%= Url.Action("events") %>#button">button</a></li>
     <li><a href="<%= Url.Action("events") %>#init">init</a></li>
     <li><a href="<%= Url.Action("events") %>#onExternalMouseUp">onExternalMouseUp</a></li>
     <li><a href="<%= Url.Action("events") %>#onTranslate">onTranslate</a></li>
+    <li><a href="<%= Url.Action("callcommand") %>">callCommand</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
+    <li><a href="<%= Url.Action("executemethod/getversion") %>">executeMethod ("GetVersion")</a></li>
+    <li><a href="<%= Url.Action("executemethod/getselectiontype") %>">executeMethod ("GetSelectionType")</a></li>
+    <li><a href="<%= Url.Action("executemethod/pastetext") %>">executeMethod ("PasteText")</a></li>
+    <li><a href="<%= Url.Action("scope") %>">Asc.scope object</a></li>
 </ul>
 
 

@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiUnsupported",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiUnsupported class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
