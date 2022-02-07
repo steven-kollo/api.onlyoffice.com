@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: updated the information about adding plugins to ONLYOFFICE Cloud
 - plugins: added the "version" parameter to config
 - desktop: v7.0
 - desktop: added the extraLogout parameter to config

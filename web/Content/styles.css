@@ -2429,3 +2429,48 @@ article {
         width: fill-available;
     }
 }
+
+/********************************
+    extensions
+********************************/
+
+.browser {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 0;
+}
+
+.browser .tab {
+    text-align: center;
+    float: left;
+    color: #CCC;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 50px;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 0 7px;
+}
+
+.browser .tab:hover {
+    color: #FF6F3D;
+    border-bottom: 1px solid #f94a0c;
+    cursor: pointer;
+}
+
+.browser .tab.active {
+    color: #f94a0c;
+    border-bottom: 1px solid #f94a0c;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: inline;
+}
+    
