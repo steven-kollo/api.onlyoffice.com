@@ -2,6 +2,11 @@
 
 - docbuilder: v7.1
 
+## 2.6.0
+- plugins: added the "version" parameter to config
+- desktop: v7.0
+- desktop: added the extraLogout parameter to config
+
 ## 2.5.0
 - editors: test examples v1.1.0
 - editors: docxf and oform on try page

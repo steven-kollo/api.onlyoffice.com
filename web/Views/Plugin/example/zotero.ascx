@@ -127,7 +127,6 @@ sudo supervisorctl restart ds:docservice
         "isVisual": true,
         "isModal": false,
         "isInsideMode": true,
-        "isUpdateOleOnResize": false,
         "initOnSelectionChanged": true
       }
     ]
