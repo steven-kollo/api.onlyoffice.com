@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 <p class="dscr">Searches for target text and replaces it with something else.</p>
-<p><b>Plugin type:</b> visual, non-system, OLE-object.</p>
+<p><b>Plugin type:</b> visual, non-system.</p>
 <p><b>Supported editors:</b> documents.</p>
 
 <img alt="SearchandReplace" src="<%= Url.Content("~/content/img/plugins/gifs/search-and-replace.gif") %>" />
@@ -96,10 +96,8 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "isModal"         : true,
             "isInsideMode"    : false,
 
-            "initDataType"    : "ole",
+            "initDataType"    : "none",
             "initData"        : "",
-
-            "isUpdateOleOnResize" : true,
 
             "buttons"         : []
         }

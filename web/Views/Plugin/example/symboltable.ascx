@@ -82,8 +82,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "initDataType": "html",
             "initData": "",
 
-            "isUpdateOleOnResize": false,
-
             "buttons": [
                 {
                     "text": "Insert",

@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 <p class="dscr">Inserts the <em>Hello world!</em> phrase when he/she presses the button.</p>
-<p><b>Plugin type:</b> non-visual, system.</p>
+<p><b>Plugin type:</b> non-visual, non-system.</p>
 <p><b>Supported editors:</b> documents.</p>
 
 <img alt="HelloWorld" src="<%= Url.Content("~/content/img/plugins/gifs/hello-world.gif") %>" />
@@ -53,13 +53,9 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
             "EditorsSupport"      : ["word"],
 
             "isVisual"            : false,
-            "isModal"             : true,
-            "isInsideMode"        : false,
 
             "initDataType"        : "none",
             "initData"            : "",
-
-            "isUpdateOleOnResize" : true,
 
             "buttons"             : []
         },
@@ -77,8 +73,6 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 
             "initDataType"        : "none",
             "initData"            : "",
-
-            "isUpdateOleOnResize" : true,
 
             "buttons"         : [
                 {
