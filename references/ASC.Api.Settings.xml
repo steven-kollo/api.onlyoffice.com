@@ -599,6 +599,13 @@
             <short>Close the welcome pop-up notification</short>
             <category>Common settings</category>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CloseAdminHelper">
+            <summary>
+             Close the admin helper notification.
+             </summary>
+             <short>Close the admin helper notification</short>
+             <category>Common settings</category>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveColorTheme(System.String)">
              <summary>
              Saves a portal color theme specified in the request.
