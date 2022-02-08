@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the documentRenderer parameter to the conversion request
+- editors: added conversion from pdf/xps formats to docx
 - editors: the information about the users whose comments/reviews cannot be viewed is hidden
 - editors: added conversion from xlsb format
 - editors: added opening for xlsb format
