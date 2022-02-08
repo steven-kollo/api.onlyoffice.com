@@ -24,9 +24,9 @@
         The test example included by default is written on Node.js. It is disabled by default. To enable it, follow the instructions on your start screen.</p>
 
     <div class="note">
-        The integration examples are used only to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
-        They are not protected against any vulnerabilities.
+        The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
         <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+        If you enabled any of the test examples, disable it before going for production.
     </div>
 
     <h2>To start integrating document editors into your own website you need to do the following:</h2>

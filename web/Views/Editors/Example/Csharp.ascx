@@ -8,9 +8,9 @@
 <p class="dscr">This example will help you integrate ONLYOFFICE Docs into your web application written in .Net (C#).</p>
 
 <div class="note">
-    The integration examples are used only to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
-    They are not protected against any vulnerabilities.
+    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
     <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+    If you enabled any of the test examples, disable it before going for production.
 </div>
 
 <h2 id="win-1" class="copy-link"><span class="style_step">Step 1. </span>Install ONLYOFFICE Docs</h2>
