@@ -9,7 +9,8 @@
 <p>Spring Boot has a lot of functionality, but its most significant features are: dependency management, auto-configuration, and built-in servlet containers.</p>
 
 <div class="note">
-    The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+    The integration examples are used only to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+    They are not protected against any vulnerabilities.
     <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
 </div>
 

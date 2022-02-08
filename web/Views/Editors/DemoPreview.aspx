@@ -23,6 +23,12 @@
     <p>Test example is simple document management system that can be built into your application for testing. 
         The test example included by default is written on Node.js. It is disabled by default. To enable it, follow the instructions on your start screen.</p>
 
+    <div class="note">
+        The integration examples are used only to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
+        They are not protected against any vulnerabilities.
+        <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+    </div>
+
     <h2>To start integrating document editors into your own website you need to do the following:</h2>
 
     <ol>
@@ -62,11 +68,6 @@
             And you must also make sure that the Document Server in its turn has access to the server with the example installed with the address which you specify instead of <b>example.com</b> in the configuration files.
         </li>
     </ol>
-
-    <div class="note">
-        The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
-        <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
-    </div>
 
     <p>The result should look like the demo preview below.</p>
 
