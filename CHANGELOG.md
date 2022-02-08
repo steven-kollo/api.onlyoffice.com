@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the documentLayout parameter to the conversion request
 - editors: the information about the users whose comments/reviews cannot be viewed is hidden
 - editors: added conversion from xlsb format
 - editors: added opening for xlsb format
