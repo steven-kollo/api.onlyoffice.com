@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: link to helpcenter about themes
+
 ## 2.6.0
 - plugins: added the "version" parameter to config
 - desktop: v7.0
