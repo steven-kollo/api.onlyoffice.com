@@ -11,6 +11,7 @@
 <div class="note">
     The integration examples are used to demonstrate document editors functions and the ways to connect <b>Document Server</b> to your own application.
     <b>DO NOT USE</b> these examples on your own server without <b>PROPER CODE MODIFICATIONS</b>!
+    If you enabled any of the test examples, disable it before going for production.
 </div>
 
 <h2 id="Windows" class="copy-link">For Windows</h2>
