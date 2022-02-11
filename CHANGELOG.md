@@ -1,6 +1,7 @@
 # Change Log
 
 - editors: link to helpcenter about themes
+- plugins: updated the information about adding plugins to ONLYOFFICE Cloud
 
 ## 2.6.0
 - plugins: added the "version" parameter to config
