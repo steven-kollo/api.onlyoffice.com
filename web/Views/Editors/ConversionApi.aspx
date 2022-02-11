@@ -127,10 +127,22 @@
                 <td>
                     Defines the rendering mode that can have the following values:
                     <ul>
-                        <li><b>blockChar</b> - all text is converted by single characters. Each character is in its own frame (like a textbox),</li>
-                        <li><b>blockLine</b> - all text is converted by separate lines. Each text line is in its own frame. Lines can be combined within the same block,</li>
-                        <li><b>plainLine</b> - all text is converted as a plain text. But each line is a separate paragraph,</li>
-                        <li><b>plainParagraph</b> - all text is converted as a plain text. Lines are combined into paragraphs.</li>
+                        <li>
+                            <b>blockChar</b> - all text is converted by single characters.
+                            Each character is in its own frame (like a textbox),
+                        </li>
+                        <li>
+                            <b>blockLine</b> - all text is converted by separate lines.
+                            Each text line is in its own frame. Lines can be combined within the same block,
+                        </li>
+                        <li>
+                            <b>plainLine</b> - all text is converted as a plain text.
+                            But each line is a separate paragraph,
+                        </li>
+                        <li>
+                            <b>plainParagraph</b> - all text is converted as a plain text.
+                            Lines are combined into paragraphs.
+                        </li>
                     </ul>
                 </td>
                 <td>string</td>
