@@ -118,7 +118,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="documentRenderer" class="copy-link">documentRenderer</td>
-                <td>Defines the document renderer.</td>
+                <td>Defines the document renderer when converting from <em>pdf</em>, <em>xps</em>, <em>oxps</em>.</td>
                 <td>object</td>
                 <td>optional</td>
             </tr>
@@ -758,23 +758,23 @@
             <tr>
                 <td>oxps</td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pdf</td>

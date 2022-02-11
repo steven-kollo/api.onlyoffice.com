@@ -7,7 +7,7 @@
 - editors: added the editorConfig.customization.features parameter section
 - editors: added the documentLayout parameter to the conversion request
 - editors: added the documentRenderer parameter to the conversion request
-- editors: added conversion from pdf/xps formats to docx
+- editors: added conversion from pdf/xps/oxps formats to docx
 
 ## 2.6.0
 - plugins: added the "version" parameter to config

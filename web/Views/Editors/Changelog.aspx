@@ -25,7 +25,7 @@
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#features">editorConfig.customization.features</a> parameter section.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#documentLayout">documentLayout</a> parameter to the conversion request.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#documentRenderer">documentRenderer</a> parameter to the conversion request.</li>
-        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdf/xps</a> formats to <em>docx</em>.</li>
+        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdf/xps/oxps</a> formats to <em>docx</em>.</li>
     </ul>
 
     <h2 id="70" class="copy-link">Version 7.0</h2>
