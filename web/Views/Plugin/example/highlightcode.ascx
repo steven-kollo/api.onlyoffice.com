@@ -123,8 +123,6 @@
             "initDataType": "html",
             "initData": "",
 
-            "isUpdateOleOnResize": false,
-
             "buttons": [
                 {
                     "text": "Ok",

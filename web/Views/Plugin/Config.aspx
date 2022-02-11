@@ -21,6 +21,7 @@
         <ul class="columns-4" style="list-style: none;">
             <li><a href="#baseUrl">baseUrl</a></li>
             <li><a href="#guid">guid</a></li>
+            <li><a href="#version">version</a></li>
             <li><a href="#minVersion">minVersion</a></li>
             <li><a href="#help">help</a></li>
             <li><a href="#name">name</a></li>
@@ -85,6 +86,12 @@
                 <td>The minimum supported editors version.</td>
                 <td>string</td>
                 <td>"6.3.0"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="version" class="copy-link">version</td>
+                <td>The plugin version.</td>
+                <td>string</td>
+                <td>"1.0"</td>
             </tr>
             <tr class="tablerow">
                 <td id="help" class="copy-link">help</td>
@@ -235,7 +242,7 @@
             </tr>
             <tr class="tablerow">
                 <td id="isViewer" class="copy-link">variations.isViewer</td>
-                <td>Specifies if the plugin is available when the document is opened in the viewer mode only or not. The default value is <b>false</b>.</td>
+                <td>Specifies if the plugin is working when the document is available in the viewer mode only or not. The default value is <b>false</b>.</td>
                 <td>boolean</td>
                 <td>false</td>
             </tr>
@@ -302,6 +309,7 @@
     <pre>{
         "baseUrl": "",
         "guid": "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
+        "version": "1.0",
         "minVersion": "6.3.0",
         "help": "",
         "name": "plugin name",

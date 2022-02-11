@@ -113,13 +113,9 @@
             "EditorsSupport": [ "word" ],
 
             "isVisual": false,
-            "isModal": false,
-            "isInsideMode": false,
 
             "initDataType": "text",
             "initData": "",
-
-            "isUpdateOleOnResize": false,
 
             "buttons": []
         }
@@ -143,8 +139,6 @@
 
             "initDataType": "none",
             "initData": "",
-
-            "isUpdateOleOnResize": false,
 
             "buttons": [
                 {
