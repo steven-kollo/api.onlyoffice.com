@@ -90,6 +90,33 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="documentLayout" class="copy-link">documentLayout</td>
+                <td>Defines the document layout which specifies parameters for printing forms as <em>pdf</em> documents or images.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="drawPlaceHolders" class="copy-link">documentLayout.drawPlaceHolders</td>
+                <td>Defines if placeholders will be drawn or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="drawFormHighlight" class="copy-link">documentLayout.drawFormHighlight</td>
+                <td>Defines if forms will be highlighted or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="isPrint" class="copy-link">documentLayout.isPrint</td>
+                <td>Defines if the print mode is turned on or off. This parameter is used only for converting <em>docx/docxf</em> into <em>pdf</em>.
+                    If this parameter is equal to <b>true</b>, the <em>drawPlaceHolders</em> and <em>drawFormHighlight</em> flags are used as described above.
+                    If this parameter is <b>false</b>, the <em>drawFormHighlight</em> flag does not work and the <em>drawPlaceHolders</em> parameter allows saving the forms in the <em>pdf</em> format.
+                    The default value is <b>false</b>.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="documentRenderer" class="copy-link">documentRenderer</td>
                 <td>Defines the document renderer.</td>
                 <td>object</td>
