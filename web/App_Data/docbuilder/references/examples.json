@@ -144,6 +144,9 @@
 		"Api.createradialgradientfill": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateRadialGradientFill.docx\");\nbuilder.CloseFile();"
 		},
+		"Api.createrange": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = Api.CreateRange(oParagraph, 0, 9);\noRange.SetBold(true);\nbuilder.SaveFile(\"docx\", \"CreateRange.docx\");\nbuilder.CloseFile();"
+		},
 		"Api.creatergbcolor": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateRGBColor.docx\");\nbuilder.CloseFile();"
 		},
