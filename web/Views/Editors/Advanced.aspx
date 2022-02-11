@@ -92,7 +92,8 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#print">print</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#protect">protect</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#review">review</a>": true,
-            "<a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a>": ["Group1", "Group2", ""]
+            "<a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a>": ["Group1", "Group2", ""],
+            "<a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">userInfoGroups</a>": ["Group1", ""]
         },
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
         "<a href="<%= Url.Action("config/document") %>#url">url</a>": "https://example.com/url-to-example-document.docx"
