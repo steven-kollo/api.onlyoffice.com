@@ -144,6 +144,7 @@
                             Lines are combined into paragraphs.
                         </li>
                     </ul>
+                    The default value is <b>plainLine</b>.
                 </td>
                 <td>string</td>
                 <td>optional</td>
