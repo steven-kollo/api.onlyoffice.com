@@ -55,7 +55,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
             </td>
         </tr>
-        <tr>
+        <tr class="tablerow">
             <td id="commentGroups" class="copy-link">commentGroups</td>
             <td>
                 Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose comments the user can edit, remove and/or view.
@@ -89,18 +89,6 @@
             </td>
             <td>object</td>
             <td></td>
-        </tr>
-        <tr class="tablerow tablerow-note">
-            <td colspan="4">
-                <div class="note">
-                    Please note that starting from version 7.1, the information about the users whose comments cannot be viewed is hidden:
-                    <ul>
-                        <li>the usernames are hidden in the list of the editing users,</li>
-                        <li>when typing text, the user cursors and tooltips with their names are not displayed,</li>
-                        <li>when locking objects in the strict co-editing mode, the usernames are hidden.</li>
-                    </ul>
-                </div>
-            </td>
         </tr>
         <tr class="tablerow">
             <td id="copy" class="copy-link">copy</td>
@@ -250,7 +238,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/review.png") %>" alt="" />
             </td>
         </tr>
-        <tr>
+        <tr class="tablerow">
             <td id="reviewGroups" class="copy-link">reviewGroups</td>
             <td>
                 Defines the <a href="<%= Url.Action("config/editor") %>#user">groups</a> whose changes the user can accept/reject.
@@ -261,17 +249,21 @@
             <td>array of string</td>
             <td></td>
         </tr>
-        <tr class="tablerow tablerow-note">
-            <td colspan="4">
-                <div class="note">
-                    Please note that starting from version 7.1, the information about the users whose reviews cannot be viewed is hidden:
-                    <ul>
-                        <li>the usernames are hidden in the list of the editing users,</li>
-                        <li>when typing text, the user cursors and tooltips with their names are not displayed,</li>
-                        <li>when locking objects in the strict co-editing mode, the usernames are hidden.</li>
-                    </ul>
-                </div>
+        <tr class="tablerow">
+            <td id="userInfoGroups" class="copy-link">userInfoGroups</td>
+            <td>
+                Defines the groups of users whose information is displayed in the editors:
+                <ul>
+                    <li>the usernames are displayed in the list of the editing users in the editor header,</li>
+                    <li>when typing text, the user cursors and tooltips with their names are displayed,</li>
+                    <li>when locking objects in the strict co-editing mode, the usernames are displayed.</li>
+                </ul>
+                The <em>["Group1", ""]</em> means that the information about users from Group1 and users who don't belong to any group is displayed.
+                The <em>[]</em> means that no user information is displayed at all.
+                The <em>undefined</em> or <em>""</em> values mean that the information about all users is displayed.
             </td>
+            <td>array of strings</td>
+            <td></td>
         </tr>
     </tbody>
 </table>
@@ -299,7 +291,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "print": true,
             "protect": true,
             "review": true,
-            "reviewGroups": ["Group1", "Group2", ""]
+            "reviewGroups": ["Group1", "Group2", ""],
+            "userInfoGroups": ["Group1", ""]
         },
         ...
     },
