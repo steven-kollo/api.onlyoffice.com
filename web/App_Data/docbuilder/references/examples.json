@@ -117,6 +117,9 @@
 		"Api.creategradientstop": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateGradientStop.docx\");\nbuilder.CloseFile();"
 		},
+		"Api.createhyperlink": {
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noHyperlink = Api.CreateHyperlink(\"https://api.onlyoffice.com/\", \"ONLYOFFICE Document Builder\", \"ONLYOFFICE for developers\");\nsType = oHyperlink.GetClassType();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"Class type of the created object: \" + sType);\nbuilder.SaveFile(\"docx\", \"CreateHyperlink.docx\");\nbuilder.CloseFile();"
+		},
 		"Api.createimage": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noDrawing = Api.CreateImage(\"https://api.onlyoffice.com/content/img/docbuilder/examples/coordinate_aspects.png\", 60 * 36000, 35 * 36000);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateImage.docx\");\nbuilder.CloseFile();"
 		},
@@ -505,7 +508,7 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"cube\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noCopyDrawing = oDrawing.Copy();\noParagraph.AddDrawing(oCopyDrawing);\noNextDrawing = oDrawing.GetNextDrawing();\noNextDrawing.SetHorFlip(true);\nbuilder.SaveFile(\"docx\", \"GetNextDrawing.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiDrawing.getparentcontentcontrol": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = Api.CreateParagraph();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 255));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noBlockLvlSdt.AddElement(oParagraph, 0);\noDocument.AddElement(0, oBlockLvlSdt);\noParentContentControl = oDrawing.GetParentContentControl();\noParentContentControl.AddText(\"This is a parent content control.\")\nbuilder.SaveFile(\"docx\", \"GetParentContentControl.docx\");\nbuilder.CloseFile();"
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = Api.CreateParagraph();\noBlockLvlSdt = Api.CreateBlockLvlSdt();\noFill = Api.CreateSolidFill(Api.CreateRGBColor(255, 0, 255));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noBlockLvlSdt.AddElement(oParagraph, 0);\noDocument.AddElement(0, oBlockLvlSdt);\noParentContentControl = oDrawing.GetParentContentControl();\noParentContentControl.AddText(\"This is a parent content control.\");\nbuilder.SaveFile(\"docx\", \"GetParentContentControl.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiDrawing.getparentparagraph": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noDrawing = Api.CreateShape(\"rect\", 3212465, 963295, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\noParentParagraph = oDrawing.GetParentParagraph();\noParentParagraph.AddLineBreak();\noParentParagraph.AddText(\"This is a parent paragraph\");\nbuilder.SaveFile(\"docx\", \"GetParentParagraph.docx\");\nbuilder.CloseFile();"
@@ -1955,6 +1958,9 @@
 		"Api.createlineargradientfill": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 1, 3 * 36000);\nbuilder.SaveFile(\"xlsx\", \"CreateLinearGradientFill.xlsx\");\nbuilder.CloseFile();"
 		},
+		"Api.createnewhistorypoint": {
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.GetRange(\"A1\").SetValue(\"This is just a sample text.\");\nApi.CreateNewHistoryPoint();\noWorksheet.GetRange(\"A3\").SetValue(\"New history point was just created.\");\nbuilder.SaveFile(\"xlsx\", \"CreateNewHistoryPoint.xlsx\");\nbuilder.CloseFile();"
+		},
 		"Api.createnofill": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\noGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\noFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\noStroke = Api.CreateStroke(0, Api.CreateNoFill());\noWorksheet.AddShape(\"flowChartOnlineStorage\", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 1, 3 * 36000);\nbuilder.SaveFile(\"xlsx\", \"CreateNoFill.xlsx\");\nbuilder.CloseFile();"
 		},
@@ -2724,7 +2730,7 @@
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetLeftMargin(20.8);\nnLeftMargin = oWorksheet.GetLeftMargin();\noWorksheet.GetRange(\"A1\").SetValue(\"Left margin: \" + nLeftMargin + \" mm\");\nbuilder.SaveFile(\"xlsx\", \"SetLeftMargin.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiWorksheet.setname": {
-			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetName(\"sheet 1\");\nbuilder.SaveFile(\"xlsx\", \"SetName.xlsx\");\nbuilder.CloseFile();"
+			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetName(\"sheet 1\");\nsName = oWorksheet.GetName();\noWorksheet.GetRange(\"A1\").SetValue(\"Worksheet name: \");\noWorksheet.GetRange(\"A1\").AutoFit(false, true);\noWorksheet.GetRange(\"B1\").SetValue(sName);\nbuilder.SaveFile(\"xlsx\", \"SetName.xlsx\");\nbuilder.CloseFile();"
 		},
 		"ApiWorksheet.setpageorientation": {
 			"script": "builder.CreateFile(\"xlsx\");\noWorksheet = Api.GetActiveSheet();\noWorksheet.SetPageOrientation(\"xlPortrait\");\nsPageOrientation = oWorksheet.GetPageOrientation();\noWorksheet.GetRange(\"A1\").SetValue(\"Page orientation: \");\noWorksheet.GetRange(\"C1\").SetValue(oPageOrientation);\nbuilder.SaveFile(\"xlsx\", \"SetPageOrientation.xlsx\");\nbuilder.CloseFile();"
