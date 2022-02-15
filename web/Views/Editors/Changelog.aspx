@@ -18,7 +18,6 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <ul>
-        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">document.permissions.userInfoGroups</a> parameter.</li>
         <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#spreadsheet-matrix">xlsb</a> format.</li>
         <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">xlsb</a> format.</li>
         <li>The parameter list in the initialization config <a href="<%= Url.Action("signature/browser") %>#open">signature</a> has become strictly regulated.</li>
@@ -27,6 +26,7 @@
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#documentLayout">documentLayout</a> parameter to the conversion request.</li>
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#documentRenderer">documentRenderer</a> parameter to the conversion request.</li>
         <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdf/xps/oxps</a> formats to <em>docx</em>.</li>
+        <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">document.permissions.userInfoGroups</a> parameter.</li>
     </ul>
 
     <h2 id="70" class="copy-link">Version 7.0</h2>

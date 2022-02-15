@@ -283,7 +283,8 @@
                     <li>when locking objects in the strict co-editing mode, the usernames are displayed.</li>
                 </ul>
                 The <em>["Group1", ""]</em> means that the information about users from Group1 and users who don't belong to any group is displayed.
-                The <em>[]</em> means that no user information is displayed at all. The <em>undefined</em> or <em>""</em> values mean that the information about all users is displayed.
+                The <em>[]</em> means that no user information is displayed at all.
+                The <em>undefined</em> or <em>""</em> values mean that the information about all users is displayed.
             </td>
             <td>array of strings</td>
             <td></td>
