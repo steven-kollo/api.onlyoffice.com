@@ -55,7 +55,7 @@ window.Asc.plugin.executeMethod ("ReplaceTextSmart", [arrString, sParaTab, sPara
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns the <em>undefined</em> value.</p>
+<p>The method always returns the <em>true</em> boolean value.</p>
 
 <div class="header-gray">Example</div>
 
