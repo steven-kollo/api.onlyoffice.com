@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: added the GetAllOleObjects, RemoveOleObject, RemoveOleObjects and SelectOleObject methods
 - plugins: added the ConvertDocument and ReplaceTextSmart methods
 - editors: added the editorConfig.customization.layout parameter section
 - editors: added the editorConfig.customization.features parameter section

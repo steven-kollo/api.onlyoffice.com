@@ -98,6 +98,9 @@
                                         <a href="<%= Url.Action("executemethod/getallcontentcontrols") %>">GetAllContentControls</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/getalloleobjects") %>">GetAllOleObjects</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a>
                                     </li>
                                     <li>
@@ -164,6 +167,12 @@
                                         <a href="<%= Url.Action("executemethod/removecontentcontrols") %>">RemoveContentControls</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/removeoleobject") %>">RemoveOleObject</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/removeoleobjects") %>">RemoveOleObjects</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/removeselectedcontent") %>">RemoveSelectedContent</a>
                                     </li>
                                     <li>
@@ -174,6 +183,9 @@
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">SelectContentControl</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/selectoleobject") %>">SelectOleObject</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a>
