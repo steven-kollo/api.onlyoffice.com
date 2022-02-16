@@ -288,20 +288,23 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>spellcheck.mode</b> - defines if the spell checker is automatically switched on or off on the first editor loading.
+                        <b>spellcheck.mode</b> - defines if the spell checker is automatically switched on or off when the editor is loaded.
                         This parameter will only be available for the document editor and the presentation editor,
                         <br />
                         <b>type</b>: boolean,
                         <br />
                         <b>example</b>: true;
                     </li>
+                    <% if (license)
+                       { %>
                     <li>
-                        <b>spellcheck.change</b> - defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types,
+                        <b>spellcheck.change<span class="required">**</span></b> - defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types,
                         <br />
                         <b>type</b>: boolean,
                         <br />
                         <b>example</b>: true.
                     </li>
+                    <% } %>
                 </ul>
             </td>
             <td>object</td>
@@ -1127,8 +1130,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "features": {
                 "spellcheck": {
                     "mode": true,
-                    "change": true
-                }
+                <% if (license)
+                    { %>    "change": true
+                <% } %>}
             },
             "feedback": {
                 "url": "https://example.com",
