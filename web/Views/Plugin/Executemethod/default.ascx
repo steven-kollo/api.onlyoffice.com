@@ -96,6 +96,10 @@
             <td>This method allows to change the specified comment.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/changeoleobjects") %>">ChangeOleObjects</a></td>
+            <td>This method allows to change multiple OLE objects with the <em>InternalIds</em> specified in OLE object data.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a></td>
             <td>This method allows to send a message to the co-authoring chat.</td>
         </tr>
@@ -105,7 +109,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
-            <td>This method allows to edit the OLE object in the current document position.</td>
+            <td>This method allows to change the OLE object with the <em>InternalId</em> specified in OLE object data.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/endaction") %>">EndAction</a></td>
@@ -133,7 +137,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getfields") %>">GetFields</a></td>
-            <td>This method allows to open file with fields.</td>
+            <td>This method allows to get all fields as a text.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getfilehtml") %>">GetFileHTML</a></td>
@@ -165,23 +169,27 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a></td>
-            <td>This method allows to insert a content control that contains data.</td>
+            <td>This method allows to insert the content control that contains data.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/insertoleobject") %>">InsertOleObject</a></td>
+            <td>This method allows to insert the OLE object at the current document position.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a></td>
-            <td>This method allows to move the cursor to the specified content control.</td>
+            <td>This method allows to move a cursor to the specified content control.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortoend") %>">MoveCursorToEnd</a></td>
-            <td>This method allows to move the cursor to the end position.</td>
+            <td>This method allows to move a cursor to the end position.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortostart") %>">MoveCursorToStart</a></td>
-            <td>This method allows to move the cursor to the start position.</td>
+            <td>This method allows to move a cursor to the start position.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movetocomment") %>">MoveToComment</a></td>
-            <td>This method allows to move the cursor to the specified comment.</td>
+            <td>This method allows to move a cursor to the specified comment.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a></td>
@@ -189,7 +197,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/openfile") %>">OpenFile</a></td>
-            <td>This method allows to open file with fields.</td>
+            <td>This method allows to open a file with fields.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/pastehtml") %>">PasteHtml</a></td>
@@ -205,7 +213,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removecontentcontrol") %>">RemoveContentControl</a></td>
-            <td>This method allows to remove a content control, but leave all its contents.</td>
+            <td>This method allows to remove the currently selected content control retaining all its contents.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removecontentcontrols") %>">RemoveContentControls</a></td>

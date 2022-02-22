@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows moving the cursor to the specified content control.</p>
+<p class="dscr">Defines the method that allows moving a cursor to the specified content control.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -39,7 +39,7 @@ window.Asc.plugin.executeMethod ("MoveCursorToContentControl", [InternalId, isBe
         </tr>
         <tr class="tablerow">
             <td>isBegin</td>
-            <td>Defines if the cursor position changes in the content control. By default, the cursor will be placed to the content control begin (<b>false</b>).</td>
+            <td>Defines if the cursor position changes in the content control. By default, a cursor will be placed to the content control begin (<b>false</b>).</td>
             <td>boolean</td>
             <td>false</td>
         </tr>

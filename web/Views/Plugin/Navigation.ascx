@@ -80,6 +80,9 @@
                                         <a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/changeoleobjects") %>">ChangeOleObjects</a>
+                                    </li>
+                                    <li>
                                         <a title="CoAuthoringChatSendMessage" href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
                                     </li>
                                     <li>
@@ -132,6 +135,9 @@
                                     </li>
                                     <li>
                                         <a title="InsertAndReplaceContentControls" href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/insertoleobject") %>">InsertOleObject</a>
                                     </li>
                                     <li>
                                         <a title="MoveCursorToContentControl" href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a>

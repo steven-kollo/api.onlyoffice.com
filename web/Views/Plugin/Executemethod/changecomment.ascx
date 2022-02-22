@@ -33,9 +33,9 @@ window.Asc.plugin.executeMethod ("ChangeComment", [sId, oCommentData]);
     <tbody>
         <tr class="tablerow">
             <td>sId</td>
-            <td>The comment id.</td>
+            <td>The comment ID.</td>
             <td>string</td>
-            <td>"id"</td>
+            <td>"ID"</td>
         </tr>
         <tr class="tablerow">
             <td>oCommentData</td>
@@ -74,5 +74,5 @@ window.Asc.plugin.executeMethod ("ChangeComment", [sId, oCommentData]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod ("ChangeComment", ["id", {"comment": "comment", "author": "John Smith"}]);
+window.Asc.plugin.executeMethod ("ChangeComment", ["ID", {"comment": "comment", "author": "John Smith"}]);
 </pre>

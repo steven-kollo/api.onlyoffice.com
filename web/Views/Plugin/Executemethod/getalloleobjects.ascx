@@ -52,6 +52,7 @@ window.Asc.plugin.executeMethod ("GetAllOleObjects", [sPluginId]);
     "ImageData" : string,
     "ApplicationId" : string,
     "InternalId" : string,
+    "ParaDrawingId" : string,
     "Width" : number,
     "Height" : number,
     "WidthPix" : number,
@@ -98,6 +99,12 @@ window.Asc.plugin.executeMethod ("GetAllOleObjects", [sPluginId]);
             <td>The OLE object identifier which is used to work with OLE object added to the document.</td>
             <td>string</td>
             <td>"5_556"</td>
+        </tr>
+        <tr class="tablerow">
+            <td>ParaDrawingId</td>
+            <td>An identifier of the drawing object containing the current OLE object.</td>
+            <td>string</td>
+            <td>"1_713"</td>
         </tr>
         <tr class="tablerow">
             <td>Width</td>
