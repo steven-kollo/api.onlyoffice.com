@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: the access to the window and document objects and the alert function is restricted from the plugin command code and macros
 - plugins: added the GetAllOleObjects, RemoveOleObject, RemoveOleObjects and SelectOleObject methods
 - plugins: added the ConvertDocument and ReplaceTextSmart methods
 - editors: added the editorConfig.customization.layout parameter section
