@@ -23,6 +23,9 @@
         <li>easy to use,</li>
         <li>security, as macros do not have any access to the system. They are just JS code that runs in the same window with the editors.</li>
     </ul>
+
+    <div class="note">Please note that starting from version 7.1, the access to the <em>window</em> and <em>document</em> objects and the <em>alert</em> function is restricted from the macros.</div>
+
     <p>You can find ready-to-use macros <a href="<%= Url.Action("macrosamples/") %>">here</a> or create your own ones.</p>
 
     <p>How to start writing your macro</p>
