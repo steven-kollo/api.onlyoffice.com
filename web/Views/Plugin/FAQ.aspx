@@ -76,7 +76,7 @@
     <dd>
         <p>Please make sure that your plugin archive <b>doesn&#8217;t</b> look the following way:</p>
         <img alt="Plugin archive" src="<%= Url.Content("~/content/img/plugins/plugin_archive.png") %>" />
-        <p>All the plugin files should be at the archive root, not in the subfolder. To do it, unpack the plugin folder first and then archive its elements only.</p>
+        <p>All the plugin files and subfolders must be at the archive root. To do it, unpack the plugin folder first and then archive its elements only.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="macros_1">
