@@ -148,6 +148,7 @@
                 Defines if the <b>Chat</b> menu button is displayed or hidden.
                 Please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled.
                 The default value is <b>true</b>.
+                Deprecated since version 7.1, please use the <a href="<%= Url.Action("config/document/permissions") %>#chat">document.permissions.chat</a> parameter instead.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -1113,8 +1114,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"about": true,
-            <% } %>"chat": true,
-            "comments": true,
+            <% } %>"comments": true,
             "compactHeader": false,
             "compactToolbar": false,
             "compatibleFeatures": false,
