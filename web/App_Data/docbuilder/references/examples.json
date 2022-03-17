@@ -1021,7 +1021,7 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is just a sample paragraph with the font size set to 24 points.\");\noParagraph.SetFontSize(48);\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiParagraph.sethighlight": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text highlighted with yellow color.\");\noParagraph.SetHighlight(255, 255, 0);\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();"
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the text highlighted with green color.\");\noParagraph.SetHighlight(\"green\");\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiParagraph.setindfirstline": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"This is a paragraph with the indent of 1 inch set to the first line. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noParagraph.SetIndFirstLine(1440);\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a paragraph without any indent set to the first line. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes. \");\noParagraph.AddText(\"These sentences are used to add lines for demonstrative purposes.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"SetIndFirstLine.docx\");\nbuilder.CloseFile();"
@@ -1270,7 +1270,7 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetFontSize(14);\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiRange.sethighlight": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 26);\noRange.SetHighlight(255, 164, 101);\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();"
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 26);\noRange.SetHighlight(\"green\");\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiRange.setitalic": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"ONLYOFFICE Document Builder\");\noRange = oDocument.GetRange(0, 24);\noRange.SetItalic(true);\nbuilder.SaveFile(\"docx\", \"SetItalic.docx\");\nbuilder.CloseFile();"
@@ -1381,7 +1381,7 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetFontSize(30);\noRun.AddText(\"This is a text run with the font size set to 15 points (30 half-points).\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiRun.sethighlight": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetHighlight(255, 255, 0);\noRun.AddText(\"This is a text run with the text highlighted with yellow color.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();"
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetHighlight(\"green\");\noRun.AddText(\"This is a text run with the text highlighted with green color.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiRun.setitalic": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noParagraph = oDocument.GetElement(0);\noRun = Api.CreateRun();\noRun.AddText(\"This is just a sample text. \");\noParagraph.AddElement(oRun);\noRun = Api.CreateRun();\noRun.SetItalic(true);\noRun.AddText(\"This is a text run with the font set to italicized letters.\");\noParagraph.AddElement(oRun);\nbuilder.SaveFile(\"docx\", \"SetItalic.docx\");\nbuilder.CloseFile();"
@@ -1972,7 +1972,7 @@
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetFontSize(30);\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"A sample text with the font size set to 15 points using the text properties.\");\nbuilder.SaveFile(\"docx\", \"SetFontSize.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiTextPr.sethighlight": {
-			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetHighlight(255, 255, 0, false);\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"A sample text highlighted with yellow color using the text properties.\");\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();"
+			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetHighlight(\"green\");\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"A sample text highlighted with green color using the text properties.\");\nbuilder.SaveFile(\"docx\", \"SetHighlight.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiTextPr.setitalic": {
 			"script": "builder.CreateFile(\"docx\");\noDocument = Api.GetDocument();\noTextPr = oDocument.GetDefaultTextPr();\noTextPr.SetItalic(true);\noParagraph = oDocument.GetElement(0);\noParagraph.AddText(\"A sample text with the font set to italicized letters using the text properties.\");\nbuilder.SaveFile(\"docx\", \"SetItalic.docx\");\nbuilder.CloseFile();"
