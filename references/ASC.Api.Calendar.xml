@@ -230,6 +230,18 @@
             <category>Events</category>
             <returns>The number of imported events</returns>
         </member>
+        <member name="M:ASC.Api.Calendar.CalendarApi.ImportEventsFromAggregator(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
+            <summary>
+            Imports the events from the iCal files and attachments specified in the request.
+            </summary>
+            <short>
+            Import events from the iCal files and attachments
+            </short>
+            <param name="files">iCal formatted files with the events and attachments</param>
+            <visible>false</visible> 
+            <category>Events</category>
+            <returns>The number of imported events</returns>
+        </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.ImportEvents(System.Int32,System.String)">
             <summary>
             Imports the events in the iCal format to the calendar with the ID specified in the request.
@@ -413,7 +425,7 @@
             <param name="responsibles">Task responsibles</param>
             <category>Events</category>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.AddEvent(System.Int32,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String,System.Uri)">
+        <member name="M:ASC.Api.Calendar.CalendarApi.AddEvent(System.Int32,System.String,ASC.Web.Core.Calendars.EventAlertType,System.Collections.Generic.List{ASC.Api.Calendar.CalendarApi.SharingParam},System.String)">
             <summary>
             Creates a new iCal event in the selected calendar with the parameters specified in the request.
             </summary>
@@ -425,7 +437,6 @@
             <param name="alertType">Event notification type</param>
             <param name="sharingOptions">Event sharing access parameters</param>
             <param name="eventUid">Event UID</param>
-            <param name="uri" visible="false">Current URI</param>
             <category>Events</category>
             <returns>Event</returns>
         </member>
@@ -722,7 +733,7 @@
             #end.
              </summary>
         </member>
-        <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAlertEmailPattern">
+        <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAlertEmailPatternWithAttachments">
              <summary>
                Looks up a localized string similar to h1.Reminder about the Event: $EventName
              
@@ -735,11 +746,15 @@
             $EventDescription
             #end
              
-             
-            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the event reminders, please manage your &quot;subscription settings&quot;:&quot;$RecipientSubscriptionConfigURL&quot;.^.
+            #if($EventAttachmentsBody!=&quot;&quot;)
+            $EventAttachmentsHeader
+            $EventAttachmentsBody
+            #end
+            
+            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the event reminders, please manage your &quot;subscr [rest of string was truncated]&quot;;.
              </summary>
         </member>
-        <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAlertJabberPattern">
+        <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAlertJabberPatternWithAttachments">
              <summary>
                Looks up a localized string similar to The $EventName event is appointed for $EventStartDate #if($EventEndDate!=&quot;&quot;)- $EventEndDate #end
             #if($EventDescription!=&quot;&quot;)
@@ -747,12 +762,22 @@
              Event Description:
              
             $EventDescription
+            #end
+            
+            #if($EventAttachmentsBody!=&quot;&quot;)
+            $EventAttachmentsHeader
+            $EventAttachmentsBody
             #end.
              </summary>
         </member>
         <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAlertSubject">
             <summary>
               Looks up a localized string similar to Calendar. Reminder about the event: $EventName.
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Calendar.Notification.CalendarPatternResource.EventAttachments">
+            <summary>
+              Looks up a localized string similar to Attachments:.
             </summary>
         </member>
         <member name="T:ASC.Api.Calendar.Resources.CalendarApiResource">
