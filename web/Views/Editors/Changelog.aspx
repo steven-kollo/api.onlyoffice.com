@@ -18,6 +18,7 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <ul>
+        <li>The <a href="<%= Url.Action("config/editor/customization") %>#chat">editorConfig.customization.chat</a> parameter is deprecated, please use the <a href="<%= Url.Action("config/document/permissions") %>#chat">document.permissions.chat</a> parameter instead.</li>
         <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#spreadsheet-matrix">xlsb</a> format.</li>
         <li>Added opening for <a href="<%= Url.Action("config/") %>#documentType">xlsb</a> format.</li>
         <li>The parameter list in the initialization config <a href="<%= Url.Action("signature/browser") %>#open">signature</a> has become strictly regulated.</li>

@@ -75,6 +75,7 @@
         },
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
+            "<a href="<%= Url.Action("config/document/permissions") %>#chat">chat</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#commentGroups">commentGroups</a>": [
                 "edit": ["Group2", ""],
@@ -113,7 +114,6 @@
                 "label": "Guest"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#autosave">autosave</a>": true,
-            "<a href="<%= Url.Action("config/editor/customization") %>#chat">chat</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactToolbar">compactToolbar</a>": false,

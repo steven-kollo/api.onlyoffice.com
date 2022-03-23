@@ -35,6 +35,16 @@
             <td>boolean</td>
             <td>true</td>
         </tr>
+        <tr class="tablerow">
+            <td id="chat" class="copy-link">chat</td>
+            <td>
+                Defines if the chat functionality is enabled in the document or not.
+                In case the chat permission is set to <b>true</b>, the <b>Chat</b> menu button will be displayed.
+                The default value is <b>true</b>.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
         <tr>
             <td id="comment" class="copy-link">comment</td>
             <td>
@@ -274,6 +284,7 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
+            "chat": true,
             "comment": true,
             "commentGroups": {
                 "edit": ["Group2", ""],
