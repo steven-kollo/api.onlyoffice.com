@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the X-LOOL-WOPI-IsModifiedByUser, X-LOOL-WOPI-IsAutosave and X-LOOL-WOPI-IsExitSave request headers to the PutFile WOPI operation
 - editors: added the document.permissions.chat parameter
 - editors: added conversion from xlsb format
 - editors: added opening for xlsb format
