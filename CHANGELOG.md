@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the information for Nextcloud and ownCloud about validating certificates
 - editors: added the important security information to the test examples
 - editors: link to helpcenter about themes
 - plugins: updated the information about adding plugins to ONLYOFFICE Cloud
