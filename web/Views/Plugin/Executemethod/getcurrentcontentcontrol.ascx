@@ -24,7 +24,7 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControl");
 
 <pre>
 document.getElementById("buttonIDChangeState").onclick = function () {
-    _Control = [];
+    var _Control = [];
     window.buttonIDChangeState_click = true;
     window.Asc.plugin.executeMethod("GetCurrentContentControl");
 };
