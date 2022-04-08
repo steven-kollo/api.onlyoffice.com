@@ -15,7 +15,9 @@
     To enable it set the <em>services.CoAuthoring.token.inbox.inBody</em> and <em>services.CoAuthoring.token.outbox.inBody</em> in configuration file to <b>true</b>.
 </p>
 <p>
-    Starting from version 7.1, these parameters are deprecated. Now the incoming requests use the token in body if it exists. Otherwise, the header token is taken.
+    Starting from version 7.1, these parameters are deprecated.
+    Now the incoming requests use the token in body if it exists.
+    Otherwise, the header token is taken.
     To specify what is used next to validate the data, <b>tokenRequiredParams</b> must be added to the <em>local.json</em> configuration file. If it is <b>true</b>, only the token data is used.
     Otherwise, the opened request part is merged with the token data.
 </p>
@@ -48,13 +50,19 @@
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.inbox.inBody</td>
-            <td>Specifies the enabling the token validation in the request body to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>. Deprecated since version 7.1.</td>
+            <td>
+                Specifies the enabling the token validation in the request body to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.
+                Deprecated since version 7.1.
+            </td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.outbox.inBody</td>
-            <td>Specifies the enabling the token generation for the request body by <b>document editing service</b> to <b>document storage service</b>. Deprecated since version 7.1.</td>
+            <td>
+                Specifies the enabling the token generation for the request body by <b>document editing service</b> to <b>document storage service</b>.
+                Deprecated since version 7.1.
+            </td>
             <td>boolean</td>
             <td>false</td>
         </tr>
