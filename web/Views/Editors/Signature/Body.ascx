@@ -18,7 +18,7 @@
     Starting from version 7.1, these parameters are deprecated.
     Now the incoming requests use the token in body if it exists.
     Otherwise, the header token is taken.
-    To specify what is used next to validate the data, <b>tokenRequiredParams</b> must be added to the <em>local.json</em> configuration file. If it is <b>true</b>, only the token data is used.
+    To specify what is used next to validate the data, <em>services.CoAuthoring.server.tokenRequiredParams</em> must be added to the <em>local.json</em> configuration file. If it is <b>true</b>, only the token data is used.
     Otherwise, the opened request part is merged with the token data.
 </p>
 <p>
