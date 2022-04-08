@@ -11,8 +11,8 @@
 
 <pre>(function()
 {
-    oDocument = Api.GetDocument();
-    oParagraph = Api.CreateParagraph();
+    var oDocument = Api.GetDocument();
+    var oParagraph = Api.CreateParagraph();
     oParagraph.AddText("Hello world!");
     oDocument.InsertContent([oParagraph]);
 })();</pre>

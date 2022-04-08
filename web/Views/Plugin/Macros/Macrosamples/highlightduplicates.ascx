@@ -12,17 +12,17 @@
 <pre>(function () 
 {
     // Background color of cells with non-repeating values
-    whiteFill = Api.CreateColorFromRGB(255, 255, 255);
+    var whiteFill = Api.CreateColorFromRGB(255, 255, 255);
     // The current index of the color range
-    uniqueColorIndex = 0;
+    var uniqueColorIndex = 0;
     // Color range to highlight duplicate values
-    uniqueColors = [Api.CreateColorFromRGB(255, 255, 0),
+    var uniqueColors = [Api.CreateColorFromRGB(255, 255, 0),
         Api.CreateColorFromRGB(204, 204, 255),
         Api.CreateColorFromRGB(0, 255, 0),
         Api.CreateColorFromRGB(0, 128, 128),
         Api.CreateColorFromRGB(192, 192, 192),
         Api.CreateColorFromRGB(255, 204, 0)];
- 
+
     // Function to get color for duplicates
     function getColor() {
         // If you have chosen all the unique colors, then let's go from the beginning
@@ -31,29 +31,29 @@
         }
         return uniqueColors[uniqueColorIndex++];
     }
- 
+
     // Getting an active sheet
-    activeSheet = Api.ActiveSheet;
+    var activeSheet = Api.ActiveSheet;
     // Getting selection on the active sheet
-    selection = activeSheet.Selection;
+    var selection = activeSheet.Selection;
     // Map of values in cells with the duplicates number
-    mapValues = {};
+    var mapValues = {};
     // All cells range
-    arrRanges = [];
+    var arrRanges = [];
     // Going through the selection
     selection.ForEach(function (range) {
         // Getting value from cell
-        value = range.GetValue();
+        var value = range.GetValue();
         if (!mapValues.hasOwnProperty(value)) {
             mapValues[value] = 0;
         }
         mapValues[value] += 1;
         arrRanges.push(range);
     });
-    value;
-    mapColors = {};
+    var value;
+    var mapColors = {};
     // We go through all the cells of the selection and setting the highlighting if this value is repeated more than 1 time
-    for (i = 0; i < arrRanges.length; ++i) {
+    for (var i = 0; i < arrRanges.length; ++i) {
         value = arrRanges[i].GetValue();
         if (mapValues[value] > 1) {
             if (!mapColors.hasOwnProperty(value)) {
