@@ -1578,6 +1578,9 @@ ul.buider_page_methods_list,
     background-position-x: 30px;
     padding-right: 10px;
 }
+    .spoiler_changelog {
+        background-position-x: 35px;
+    }
 
 span.yes, span.no {
     width: 10px;
