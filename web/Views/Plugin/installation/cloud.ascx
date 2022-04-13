@@ -67,6 +67,9 @@
     ...
 }
 </pre>
+        <note>Please note that when adding an extension to <a href="https://www.onlyoffice.com/en/app-directory" target="_blank">ONLYOFFICE App Directory</a>,
+        the <b>Title</b> and <b>Summary</b> are filled in automatically with the <b>name</b> and <b>description</b> parameters from the <em>manifest.json</em> file.
+        You cannot change them later in the store.</note>
     </li>
 </ol>
 
