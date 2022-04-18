@@ -476,8 +476,10 @@ var onRequestHistoryData = function (event) {
     var version = event.data;
     docEditor.setHistoryData({
         "changesUrl": "https://example.com/url-to-changes.zip",
+        "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "previous": {
+            "fileType": "docx",
             "key": "af86C7e71Ca8",
             "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
         },
