@@ -19,7 +19,7 @@
         In this section, you will learn how to integrate ONLYOFFICE Docs into your own website.</p>
 
 
-    <p>Each ONLYOFFICE Docs instance includes online editors for text documents, spreadsheets, and presentations, plus a test example.</p>
+    <p>Each ONLYOFFICE Docs instance includes online editors for text documents, spreadsheets, presentations, and fillable forms, plus a test example.</p>
     <p>Test example is simple document management system that can be built into your application for testing. 
         The test example included by default is written on Node.js. It is disabled by default. To enable it, follow the instructions on your start screen.</p>
 
