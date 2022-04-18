@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: test examples v1.2.0
 - editors: added the Strapi plugin
 - editors: added the information for Nextcloud and ownCloud about validating certificates
 - editors: added the important security information to the test examples
