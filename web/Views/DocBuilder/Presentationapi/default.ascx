@@ -86,7 +86,7 @@ builder.CloseFile();                             // close the presentation file 
     </div>
     <h2 id="OpenPresentation">Opening an existing presentation</h2>
     <p>If you want to edit an already existing presentation, you can open it using <b>ONLYOFFICE Document Builder</b>, get its elements and change them however you need. The only difference from a presentation editor in this case will be that you will not need this presentation editor. The presentation is opened the following way:</p>
-<pre>builder.OpenFile("mypresentation.pptx");         // open an existing 'mypresentation.pptx' presentation file with ONLYOFFICE Document Builder
+<pre>builder.OpenFile("https://example.com/mypresentation.pptx");         // use a path to an existing 'mypresentation.pptx' presentation file to open it with ONLYOFFICE Document Builder
 var oPresentation = Api.GetPresentation();       // create a new 'oPresentation' variable and get the created presentation contents
 var oSlide = oPresentation.GetSlideByIndex(0);   // get the first slide
 oSlide.RemoveAllObjects();                       // remove all objects from the first slide

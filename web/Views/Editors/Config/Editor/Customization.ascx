@@ -10,62 +10,60 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.</p>
 
-<nav class="content">
-    <ul class="columns-4" style="list-style: none;">
-        <% if (license)
-           { %>
-        <li><a href="#about">about</a></li>
-        <% } %>
-        <li><a href="#anonymous">anonymous</a></li>
-        <li><a href="#autosave">autosave</a></li>
-        <li><a href="#chat">chat</a></li>
-        <li><a href="#commentAuthorOnly">commentAuthorOnly</a></li>
-        <li><a href="#comments">comments</a></li>
-        <li><a href="#compactHeader">compactHeader</a></li>
-        <li><a href="#compactToolbar">compactToolbar</a></li>
-        <li><a href="#compatibleFeatures">compatibleFeatures</a></li>
-        <li><a href="#customer">customer</a></li>
-        <li><a href="#features">features</a></li>
-        <li><a href="#feedback">feedback</a></li>
-        <li><a href="#forcesave">forcesave</a></li>
-        <li><a href="#goback">goback</a></li>
-        <li><a href="#help">help</a></li>
-        <li><a href="#hideNotes">hideNotes</a></li>
-        <li><a href="#hideRightMenu">hideRightMenu</a></li>
-        <li><a href="#hideRulers">hideRulers</a></li>
-        <% if (license)
-           { %>
-        <li><a href="#layout">layout</a></li>
-        <li><a href="#leftMenu">leftMenu</a></li>
-        <li><a href="#loaderLogo">loaderLogo</a></li>
-        <li><a href="#loaderName">loaderName</a></li>
-        <% } %>
-        <li><a href="#logo">logo</a></li>
-        <li><a href="#macros">macros</a></li>
-        <li><a href="#macrosMode">macrosMode</a></li>
-        <li><a href="#mentionShare">mentionShare</a></li>
-        <li><a href="#plugins">plugins</a></li>
-        <li><a href="#review">review</a></li>
-        <li><a href="#reviewDisplay">reviewDisplay</a></li>
-        <% if (license)
-           { %>
-        <li><a href="#rightMenu">rightMenu</a></li>
-        <% } %>
-        <li><a href="#showReviewChanges">showReviewChanges</a></li>
-        <li><a href="#spellcheck">spellcheck</a></li>
-        <% if (license)
-           { %>
-        <li><a href="#statusBar">statusBar</a></li>
-        <li><a href="#toolbar">toolbar</a></li>
-        <% } %>
-        <li><a href="#toolbarHideFileName">toolbarHideFileName</a></li>
-        <li><a href="#toolbarNoTabs">toolbarNoTabs</a></li>
-        <li><a href="#trackChanges">trackChanges</a></li>
-        <li><a href="#uiTheme">uiTheme</a></li>
-        <li><a href="#unit">unit</a></li>
-        <li><a href="#zoom">zoom</a></li>
-    </ul>
-</nav>
+<ul class="columns-4" style="list-style: none;">
+    <% if (license)
+       { %>
+    <li><a href="#about">about</a></li>
+    <% } %>
+    <li><a href="#anonymous">anonymous</a></li>
+    <li><a href="#autosave">autosave</a></li>
+    <li><a href="#chat">chat</a></li>
+    <li><a href="#commentAuthorOnly">commentAuthorOnly</a></li>
+    <li><a href="#comments">comments</a></li>
+    <li><a href="#compactHeader">compactHeader</a></li>
+    <li><a href="#compactToolbar">compactToolbar</a></li>
+    <li><a href="#compatibleFeatures">compatibleFeatures</a></li>
+    <li><a href="#customer">customer</a></li>
+    <li><a href="#features">features</a></li>
+    <li><a href="#feedback">feedback</a></li>
+    <li><a href="#forcesave">forcesave</a></li>
+    <li><a href="#goback">goback</a></li>
+    <li><a href="#help">help</a></li>
+    <li><a href="#hideNotes">hideNotes</a></li>
+    <li><a href="#hideRightMenu">hideRightMenu</a></li>
+    <li><a href="#hideRulers">hideRulers</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#layout">layout</a></li>
+    <li><a href="#leftMenu">leftMenu</a></li>
+    <li><a href="#loaderLogo">loaderLogo</a></li>
+    <li><a href="#loaderName">loaderName</a></li>
+    <% } %>
+    <li><a href="#logo">logo</a></li>
+    <li><a href="#macros">macros</a></li>
+    <li><a href="#macrosMode">macrosMode</a></li>
+    <li><a href="#mentionShare">mentionShare</a></li>
+    <li><a href="#plugins">plugins</a></li>
+    <li><a href="#review">review</a></li>
+    <li><a href="#reviewDisplay">reviewDisplay</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#rightMenu">rightMenu</a></li>
+    <% } %>
+    <li><a href="#showReviewChanges">showReviewChanges</a></li>
+    <li><a href="#spellcheck">spellcheck</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#statusBar">statusBar</a></li>
+    <li><a href="#toolbar">toolbar</a></li>
+    <% } %>
+    <li><a href="#toolbarHideFileName">toolbarHideFileName</a></li>
+    <li><a href="#toolbarNoTabs">toolbarNoTabs</a></li>
+    <li><a href="#trackChanges">trackChanges</a></li>
+    <li><a href="#uiTheme">uiTheme</a></li>
+    <li><a href="#unit">unit</a></li>
+    <li><a href="#zoom">zoom</a></li>
+</ul>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -148,6 +146,7 @@
                 Defines if the <b>Chat</b> menu button is displayed or hidden.
                 Please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled.
                 The default value is <b>true</b>.
+                Deprecated since version 7.1, please use the <a href="<%= Url.Action("config/document/permissions") %>#chat">document.permissions.chat</a> parameter instead.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -288,20 +287,23 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>spellcheck.mode</b> - defines if the spell checker is automatically switched on or off on the first editor loading.
+                        <b>spellcheck.mode</b> - defines if the spell checker is automatically switched on or off when the editor is loaded.
                         This parameter will only be available for the document editor and the presentation editor,
                         <br />
                         <b>type</b>: boolean,
                         <br />
                         <b>example</b>: true;
                     </li>
+                    <% if (license)
+                       { %>
                     <li>
-                        <b>spellcheck.change</b> - defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types,
+                        <b>spellcheck.change<span class="required">**</span></b> - defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types,
                         <br />
                         <b>type</b>: boolean,
                         <br />
                         <b>example</b>: true.
                     </li>
+                    <% } %>
                 </ul>
             </td>
             <td>object</td>
@@ -518,9 +520,11 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>statusBar</b> - defines the status bar settings;
+                        <b>statusBar</b> - defines the status bar settings.
+                        If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden.
+                        The default value is <b>true</b>,
                         <br />
-                        <b>type</b>: object,
+                        <b>type</b>: object or boolean,
                     </li>
                     <li>
                         <b>statusBar.actionStatus</b> - defines if an action status is displayed or hidden. The default value is <b>true</b>,
@@ -546,9 +550,11 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>toolbar </b> - defines the toolbar settings,
+                        <b>toolbar </b> - defines the toolbar settings.
+                        If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden.
+                        The default value is <b>true</b>,
                         <br />
-                        <b>type</b>: object;
+                        <b>type</b>: object or boolean;
                     </li>
                     <li>
                         <b>toolbar.collaboration</b> - defines if the <b>Collaboration</b> tab is displayed or hidden.
@@ -675,7 +681,7 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Deprecated since version 7.1. Please use the <a href="<%= Url.Action("config/editor/customization/layout") %>#leftMenu">layout.leftMenu</a> parameter instead.</div>
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.leftMenu</a> parameter instead.</div>
             </td>
         </tr>
         <tr class="tablerow">
@@ -897,7 +903,7 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Deprecated since version 7.1. Please use the <a href="<%= Url.Action("config/editor/customization/layout") %>#rightMenu">layout.rightMenu</a> parameter instead.</div>
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.rightMenu</a> parameter instead.</div>
             </td>
         </tr>
         <% } %>
@@ -933,7 +939,7 @@
         </tr>
         <% if (license)
            { %>
-        <tr class="tablerow">
+        <tr>
             <td id="statusBar" class="copy-link">statusBar<span class="required">**</span></td>
             <td>
                 Defines if the status bar is displayed or hidden.
@@ -941,6 +947,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.statusBar</a> parameter instead.</div>
+            </td>
         </tr>
         <% } %>
         <%--<tr>
@@ -960,7 +971,7 @@
         </tr>--%>
         <% if (license)
             { %>
-        <tr class="tablerow">
+        <tr>
             <td id="toolbar" class="copy-link">toolbar<span class="required">**</span></td>
             <td>
                 Defines if the top toolbar is displayed or hidden.
@@ -968,6 +979,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.toolbar</a> parameter instead.</div>
+            </td>
         </tr>
         <% } %>
         <tr>
@@ -1096,8 +1112,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"about": true,
-            <% } %>"chat": true,
-            "comments": true,
+            <% } %>"comments": true,
             "compactHeader": false,
             "compactToolbar": false,
             "compatibleFeatures": false,
@@ -1113,8 +1128,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "features": {
                 "spellcheck": {
                     "mode": true,
-                    "change": true
-                }
+                <% if (license)
+                    { %>    "change": true
+                <% } %>}
             },
             "feedback": {
                 "url": "https://example.com",

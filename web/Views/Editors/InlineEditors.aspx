@@ -35,7 +35,7 @@
             <pre>
 &lt;div id="placeholder1"&gt;&lt;/div&gt;
 &lt;div id="placeholder2"&gt;&lt;/div&gt;
-&lt;div id="placeholder2"&gt;&lt;/div&gt;
+&lt;div id="placeholder3"&gt;&lt;/div&gt;
 ...
 </pre>
         </li>

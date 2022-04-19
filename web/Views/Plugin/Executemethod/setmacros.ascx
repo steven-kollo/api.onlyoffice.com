@@ -42,7 +42,7 @@ window.Asc.plugin.executeMethod ("SetMacros", [data]);
                         <b>type</b>: array of objects;
                     </li>
                     <li>
-                        <b>current</b> - a current macros index,
+                        <b>current</b> - a current macro index,
                         <br />
                         <b>type</b>: number,
                         <br />

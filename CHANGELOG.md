@@ -3,8 +3,25 @@
 - plugins: the access to the window and document objects and the alert function is restricted from the plugin command code and macros
 - plugins: added the GetAllOleObjects, RemoveOleObject, RemoveOleObjects and SelectOleObject methods
 - plugins: added the ConvertDocument and ReplaceTextSmart methods
+- editors: the services.CoAuthoring.token.inbox.inBody and services.CoAuthoring.token.outbox.inBody parameters for enabling token in body are deprecated
+- editors: added the X-LOOL-WOPI-IsModifiedByUser, X-LOOL-WOPI-IsAutosave and X-LOOL-WOPI-IsExitSave request headers to the PutFile WOPI operation
+- editors: added the document.permissions.chat parameter
+- editors: added conversion from xlsb format
+- editors: added opening for xlsb format
 - editors: added the editorConfig.customization.layout parameter section
 - editors: added the editorConfig.customization.features parameter section
+- editors: added the documentLayout parameter to the conversion request
+- editors: added the documentRenderer parameter to the conversion request
+- editors: added conversion from pdf/xps/oxps formats to docx
+- editors: added the document.permissions.userInfoGroups parameter
+
+## 2.7.0
+- editors: test examples v1.2.0
+- editors: added the Strapi plugin
+- editors: added the information for Nextcloud and ownCloud about validating certificates
+- editors: added the important security information to the test examples
+- editors: link to helpcenter about themes
+- plugins: updated the information about adding plugins to ONLYOFFICE Cloud
 
 ## 2.6.0
 - plugins: added the "version" parameter to config
