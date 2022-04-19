@@ -53,7 +53,7 @@ window.Asc.plugin.executeMethod ("SetProperties", [obj]);
                         <br />
                     </li>
                     <li>
-                        <b>watermark_on_draw</b> - a string value for watermark in json format,
+                        <b>watermark_on_draw</b> - a string value for watermark in JSON format,
                         <br />
                         <b>type</b>: string,
                         <br />
