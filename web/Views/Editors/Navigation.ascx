@@ -84,6 +84,9 @@
             <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("strapi") %>">Strapi integration</a>
+            </li>
         </ul>
     </li>
     <li>

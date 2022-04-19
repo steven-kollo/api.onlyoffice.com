@@ -15,8 +15,7 @@
 
 <div class="header-gray">Installation</div>
 <p>Available by default in ONLYOFFICE Enterprise Edition and Community Edition (Document Server + Community Server), and ONLYOFFICE cloud.</p>
-<p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/speech" target="_blank">ONLYOFFICE App Directory</a> and install it following the
-<a href="<%= Url.Action("installation/desktop") %>">desktop</a> installation instruction.</p>
+<p>You can also download this plugin from the <a href="https://www.onlyoffice.com/en/app-directory/speech" target="_blank">ONLYOFFICE App Directory</a>.</p>
 
 
 <div class="header-gray">Usage</div>

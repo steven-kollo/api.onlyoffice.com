@@ -199,16 +199,19 @@ git submodule update --init --recursive</span>
             </div>
         </li>
         <li>
-            <b>Validating certificate</b>. If you are using a self-signed certificate for your Document Server, ownCloud will not validate such a certificate and will not allow connection to/from Document Server.
-            This issue can be solved the following way: locate the ownCloud config file (<em>/owncloud/config/config.php</em>) and open it.
-            Insert the following section to it:
+            <p><b>Validating certificate</b>. If you are using a self-signed certificate for your Document Server, ownCloud will not validate such a certificate and will not allow connection to/from Document Server.
+            This issue can be solved in two ways:</p>
+            <ol>
+                <li>Check the <b>Disable certificate verification (insecure)</b> box on the ONLYOFFICE administration page, Server settings section, within your ownCloud.</li>
+                <li>Change the ownCloud config file manually. Locate the ownCloud config file (<em>/owncloud/config/config.php</em>) and open it. Insert the following section to it:</li>
+            </ol>
         <pre>
 'onlyoffice' => array (
     'verify_peer_off' => true
 )
 </pre>
-            This will disable the certificate verification and allow ownCloud to establish connection with Document Server, but you must remember that this is the temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA.
-            Once you do that, do not forget to remove the above section from ownCloud config file.
+            <p>This will disable the certificate verification and allow ownCloud to establish connection with Document Server.</p>
+            <note>Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the ownCloud config file.</note>
         </li>
         <li>
             <b>Federated Cloud Sharing</b>. If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing between the ownCloud instances connected to different ONLYOFFICE servers will not be available.

@@ -10,62 +10,60 @@
 <div class="header-gray">Description</div>
 <p class="dscr">The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.</p>
 
-<nav class="content">
-    <ul class="columns-4" style="list-style: none;">
-        <% if (license)
-           { %>
-        <li><a href="#about">about</a></li>
-        <% } %>
-        <li><a href="#anonymous">anonymous</a></li>
-        <li><a href="#autosave">autosave</a></li>
-        <li><a href="#chat">chat</a></li>
-        <li><a href="#commentAuthorOnly">commentAuthorOnly</a></li>
-        <li><a href="#comments">comments</a></li>
-        <li><a href="#compactHeader">compactHeader</a></li>
-        <li><a href="#compactToolbar">compactToolbar</a></li>
-        <li><a href="#compatibleFeatures">compatibleFeatures</a></li>
-        <li><a href="#customer">customer</a></li>
-        <li><a href="#features">features</a></li>
-        <li><a href="#feedback">feedback</a></li>
-        <li><a href="#forcesave">forcesave</a></li>
-        <li><a href="#goback">goback</a></li>
-        <li><a href="#help">help</a></li>
-        <li><a href="#hideNotes">hideNotes</a></li>
-        <li><a href="#hideRightMenu">hideRightMenu</a></li>
-        <li><a href="#hideRulers">hideRulers</a></li>
-        <% if (license)
-           { %>
-        <li><a href="#layout">layout</a></li>
-        <li><a href="#leftMenu">leftMenu</a></li>
-        <li><a href="#loaderLogo">loaderLogo</a></li>
-        <li><a href="#loaderName">loaderName</a></li>
-        <% } %>
-        <li><a href="#logo">logo</a></li>
-        <li><a href="#macros">macros</a></li>
-        <li><a href="#macrosMode">macrosMode</a></li>
-        <li><a href="#mentionShare">mentionShare</a></li>
-        <li><a href="#plugins">plugins</a></li>
-        <li><a href="#review">review</a></li>
-        <li><a href="#reviewDisplay">reviewDisplay</a></li>
-        <% if (license)
-           { %>
-        <li><a href="#rightMenu">rightMenu</a></li>
-        <% } %>
-        <li><a href="#showReviewChanges">showReviewChanges</a></li>
-        <li><a href="#spellcheck">spellcheck</a></li>
-        <% if (license)
-           { %>
-        <li><a href="#statusBar">statusBar</a></li>
-        <li><a href="#toolbar">toolbar</a></li>
-        <% } %>
-        <li><a href="#toolbarHideFileName">toolbarHideFileName</a></li>
-        <li><a href="#toolbarNoTabs">toolbarNoTabs</a></li>
-        <li><a href="#trackChanges">trackChanges</a></li>
-        <li><a href="#uiTheme">uiTheme</a></li>
-        <li><a href="#unit">unit</a></li>
-        <li><a href="#zoom">zoom</a></li>
-    </ul>
-</nav>
+<ul class="columns-4" style="list-style: none;">
+    <% if (license)
+       { %>
+    <li><a href="#about">about</a></li>
+    <% } %>
+    <li><a href="#anonymous">anonymous</a></li>
+    <li><a href="#autosave">autosave</a></li>
+    <li><a href="#chat">chat</a></li>
+    <li><a href="#commentAuthorOnly">commentAuthorOnly</a></li>
+    <li><a href="#comments">comments</a></li>
+    <li><a href="#compactHeader">compactHeader</a></li>
+    <li><a href="#compactToolbar">compactToolbar</a></li>
+    <li><a href="#compatibleFeatures">compatibleFeatures</a></li>
+    <li><a href="#customer">customer</a></li>
+    <li><a href="#features">features</a></li>
+    <li><a href="#feedback">feedback</a></li>
+    <li><a href="#forcesave">forcesave</a></li>
+    <li><a href="#goback">goback</a></li>
+    <li><a href="#help">help</a></li>
+    <li><a href="#hideNotes">hideNotes</a></li>
+    <li><a href="#hideRightMenu">hideRightMenu</a></li>
+    <li><a href="#hideRulers">hideRulers</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#layout">layout</a></li>
+    <li><a href="#leftMenu">leftMenu</a></li>
+    <li><a href="#loaderLogo">loaderLogo</a></li>
+    <li><a href="#loaderName">loaderName</a></li>
+    <% } %>
+    <li><a href="#logo">logo</a></li>
+    <li><a href="#macros">macros</a></li>
+    <li><a href="#macrosMode">macrosMode</a></li>
+    <li><a href="#mentionShare">mentionShare</a></li>
+    <li><a href="#plugins">plugins</a></li>
+    <li><a href="#review">review</a></li>
+    <li><a href="#reviewDisplay">reviewDisplay</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#rightMenu">rightMenu</a></li>
+    <% } %>
+    <li><a href="#showReviewChanges">showReviewChanges</a></li>
+    <li><a href="#spellcheck">spellcheck</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#statusBar">statusBar</a></li>
+    <li><a href="#toolbar">toolbar</a></li>
+    <% } %>
+    <li><a href="#toolbarHideFileName">toolbarHideFileName</a></li>
+    <li><a href="#toolbarNoTabs">toolbarNoTabs</a></li>
+    <li><a href="#trackChanges">trackChanges</a></li>
+    <li><a href="#uiTheme">uiTheme</a></li>
+    <li><a href="#unit">unit</a></li>
+    <li><a href="#zoom">zoom</a></li>
+</ul>
 
 <div class="header-gray">Parameters</div>
 <table class="table">
