@@ -20,24 +20,22 @@
 var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
-    <nav class="content">
-        <ul>
-            <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
-            <li><a href="#destroyEditor">destroyEditor</a> - destroy <em>docEditor</em> object.</li>
-            <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
-            <li><a href="#insertImage">insertImage</a> - insert an image into the file.</li>
-            <li><a href="#refreshHistory">refreshHistory</a> - show the document version history.</li>
-            <li><a href="#requestClose">requestClose</a> - request to close the editor.</li>
-            <li><a href="#setActionLink">setActionLink</a> - set the link to the document which contains a bookmark.</li>
-            <li><a href="#setFavorite">setFavorite</a> - change the <em>Favorite</em> icon state.</li>
-            <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
-            <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
-            <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
-            <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
-            <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
-            <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
+        <li><a href="#destroyEditor">destroyEditor</a> - destroy <em>docEditor</em> object.</li>
+        <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
+        <li><a href="#insertImage">insertImage</a> - insert an image into the file.</li>
+        <li><a href="#refreshHistory">refreshHistory</a> - show the document version history.</li>
+        <li><a href="#requestClose">requestClose</a> - request to close the editor.</li>
+        <li><a href="#setActionLink">setActionLink</a> - set the link to the document which contains a bookmark.</li>
+        <li><a href="#setFavorite">setFavorite</a> - change the <em>Favorite</em> icon state.</li>
+        <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
+        <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
+        <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
+        <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
+        <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
+    </ul>
 
     <h2>Methods and their description:</h2>
     <ul>

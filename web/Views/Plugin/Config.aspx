@@ -16,43 +16,41 @@
 
     <div class="header-gray">Description</div>
     <p class="dscr">The <em>config.json</em> file is plugin configuration file containing the information about the main plugin data needed to register the plugin in the editors.</p>
-    
-    <nav class="content">
-        <ul class="columns-4" style="list-style: none;">
-            <li><a href="#baseUrl">baseUrl</a></li>
-            <li><a href="#guid">guid</a></li>
-            <li><a href="#version">version</a></li>
-            <li><a href="#minVersion">minVersion</a></li>
-            <li><a href="#help">help</a></li>
-            <li><a href="#name">name</a></li>
-            <li><a href="#nameLocale">nameLocale</a></li>
-            <li><a href="#variations">variations</a></li>
-            <li><a href="#buttons">buttons</a></li>
-            <li><a href="#description">description</a></li>
-            <li><a href="#descriptionLocale">descriptionLocale</a></li>
-            <li><a href="#EditorsSupport">EditorsSupport</a></li>
-            <li><a href="#icons">icons</a></li>
-            <li><a href="#initData">initData</a></li>
-            <li><a href="#initDataType">initDataType</a></li>
-            <li><a href="#initOnSelectionChanged">initOnSelectionChanged</a></li>
-            <li><a href="#cryptoMode">cryptoMode</a></li>
-            <li><a href="#isDisplayedInViewer">isDisplayedInViewer</a></li>
-            <li><a href="#isInsideMode">isInsideMode</a></li>
-            <li><a href="#isModal">isModal</a></li>
-            <li><a href="#isCustomWindow">isCustomWindow</a></li>
-            <li><a href="#isSystem">isSystem</a></li>
-            <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
-            <li><a href="#isViewer">isViewer</a></li>
-            <li><a href="#isVisual">isVisual</a></li>
-            <li><a href="#url">url</a></li>
-            <li><a href="#size">size</a></li>
-            <li><a href="#events">events</a></li>
-            <li><a href="#cryptoDisabledForInternalCloud">cryptoDisabledForInternalCloud</a></li>
-            <li><a href="#cryptoDisabledForExternalCloud">cryptoDisabledForExternalCloud</a></li>
-            <li><a href="#cryptoDisabledOnStart">cryptoDisabledOnStart</a></li>
-        </ul>
-    </nav>
-    
+
+    <ul class="columns-4" style="list-style: none;">
+        <li><a href="#baseUrl">baseUrl</a></li>
+        <li><a href="#guid">guid</a></li>
+        <li><a href="#version">version</a></li>
+        <li><a href="#minVersion">minVersion</a></li>
+        <li><a href="#help">help</a></li>
+        <li><a href="#name">name</a></li>
+        <li><a href="#nameLocale">nameLocale</a></li>
+        <li><a href="#variations">variations</a></li>
+        <li><a href="#buttons">buttons</a></li>
+        <li><a href="#description">description</a></li>
+        <li><a href="#descriptionLocale">descriptionLocale</a></li>
+        <li><a href="#EditorsSupport">EditorsSupport</a></li>
+        <li><a href="#icons">icons</a></li>
+        <li><a href="#initData">initData</a></li>
+        <li><a href="#initDataType">initDataType</a></li>
+        <li><a href="#initOnSelectionChanged">initOnSelectionChanged</a></li>
+        <li><a href="#cryptoMode">cryptoMode</a></li>
+        <li><a href="#isDisplayedInViewer">isDisplayedInViewer</a></li>
+        <li><a href="#isInsideMode">isInsideMode</a></li>
+        <li><a href="#isModal">isModal</a></li>
+        <li><a href="#isCustomWindow">isCustomWindow</a></li>
+        <li><a href="#isSystem">isSystem</a></li>
+        <li><a href="#isUpdateOleOnResize">isUpdateOleOnResize</a></li>
+        <li><a href="#isViewer">isViewer</a></li>
+        <li><a href="#isVisual">isVisual</a></li>
+        <li><a href="#url">url</a></li>
+        <li><a href="#size">size</a></li>
+        <li><a href="#events">events</a></li>
+        <li><a href="#cryptoDisabledForInternalCloud">cryptoDisabledForInternalCloud</a></li>
+        <li><a href="#cryptoDisabledForExternalCloud">cryptoDisabledForExternalCloud</a></li>
+        <li><a href="#cryptoDisabledOnStart">cryptoDisabledOnStart</a></li>
+    </ul>
+
     <div class="header-gray">Parameters</div>
     <table class="table">
         <colgroup>
