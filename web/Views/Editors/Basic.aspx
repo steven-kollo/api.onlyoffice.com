@@ -18,11 +18,11 @@
     <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
 
     <p class="dscr">
-        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> is an open-source office suite that includes editors for text documents, spreadsheets and presentations. 
+        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> is an open-source office suite that includes editors for text documents, spreadsheets, presentations and fillable forms. 
         It provides the following features:
     </p>
     <ul>
-        <li>creating, editing and viewing text documents, spreadsheets and presentations;</li>
+        <li>creating, editing and viewing text documents, spreadsheets, presentations and fillable forms;</li>
         <li>collaborating on files with other teammates in real time.</li>
     </ul>
     <p>ONLYOFFICE Docs also supports the <b>WOPI protocol</b> that is used to integrate your application with an online office. 

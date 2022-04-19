@@ -54,7 +54,7 @@
         </li>
     </ol>
 
-    <h2 id="macos" class="copy-link">For MacOS</h2>
+    <h2 id="macos" class="copy-link">For Mac OS</h2>
     <p>Use the terminal to run ONLYOFFICE Desktop Editors in debug mode:</p>
     <ol>
         <li>Press <b>Command+Space</b>.</li>

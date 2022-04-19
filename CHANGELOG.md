@@ -1,5 +1,13 @@
 # Change Log
 
+## 2.7.0
+- editors: test examples v1.2.0
+- editors: added the Strapi plugin
+- editors: added the information for Nextcloud and ownCloud about validating certificates
+- editors: added the important security information to the test examples
+- editors: link to helpcenter about themes
+- plugins: updated the information about adding plugins to ONLYOFFICE Cloud
+
 ## 2.6.0
 - plugins: added the "version" parameter to config
 - desktop: v7.0
