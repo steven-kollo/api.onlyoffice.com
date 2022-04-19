@@ -87,7 +87,7 @@ window.Asc.plugin.executeMethod ("OnEncryption", [obj]);
                         <br />
                     </li>
                     <li>
-                        <b>error</b> - a string value specifying the error that occurs (the "" value means that the operation is successful),
+                        <b>error</b> - a string value specifying an error that occurs (the "" value means that the operation is successful),
                         <br />
                         <b>type</b>: string,
                         <br />

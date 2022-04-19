@@ -37,7 +37,7 @@ window.Asc.plugin.init = function(text) {
         </li>
 
         <li>
-            <p><b id="getItems" class="copy-link">getItems</b> - the function called to return the <em>InputHelperItem</em> object that contains all the items from the input helper.</p>
+            <p><b id="getItems" class="copy-link">getItems</b> - the function called to return an array of the <em>InputHelperItem</em> objects that contain all the items from the input helper.</p>
             <div class="header-gray">Example</div>
             <pre>
 function getInputHelperSize () {
@@ -95,7 +95,7 @@ function getInputHelperSize () {
                     <tr class="tablerow">
                         <td>InputHelperItem</td>
                         <td>
-                            Defines the object which contains all the items for the input helper. This object can have the following parameters:
+                            Defines an array of the <em>InputHelperItem</em> objects which contain all the items for the input helper. This object can have the following parameters:
                             <ul>
                                 <li>
                                     <b>id</b> - the item index,
