@@ -715,6 +715,7 @@
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrolpr.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfields.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfilehtml.ascx" />
+    <Content Include="Views\Plugin\Executemethod\getfiletodownload.ascx" />
     <Content Include="Views\Plugin\Executemethod\getselectedtext.ascx" />
     <Content Include="Views\Plugin\Executemethod\getselectiontype.ascx" />
     <Content Include="Views\Plugin\Executemethod\getversion.ascx" />

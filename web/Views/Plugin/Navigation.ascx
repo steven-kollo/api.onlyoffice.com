@@ -110,6 +110,9 @@
                                         <a href="<%= Url.Action("executemethod/getfilehtml") %>">GetFileHTML</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/getfiletodownload") %>">GetFileToDownload</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a>
                                     </li>
                                     <li>

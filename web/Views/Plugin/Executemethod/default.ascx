@@ -136,6 +136,10 @@
             <td>This method allows to get file content in the HTML format.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getfiletodownload") %>">GetFileToDownload</a></td>
+            <td>This method allows to get the current file to download in the specified format.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a></td>
             <td>This method allows to get the fonts list.</td>
         </tr>

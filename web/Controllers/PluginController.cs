@@ -100,6 +100,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/getcurrentcontentcontrol",
                 "executemethod/getfields",
                 "executemethod/getfilehtml",
+                "executemethod/getfiletodownload",
                 "executemethod/getfontlist",
                 "executemethod/getmacros",
                 "executemethod/getselectedtext",
