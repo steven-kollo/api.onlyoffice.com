@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: changed the plugin localization scheme
 - plugins: added the GetFileToDownload method
 
 ## 2.7.0
