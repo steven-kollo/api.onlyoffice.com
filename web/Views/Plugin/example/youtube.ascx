@@ -6,8 +6,8 @@
 </h1>
 
 <div class="header-gray">Description</div>
-<p class="dscr">Connects <a href="https://developers.google.com/youtube/iframe_api_reference">youtube iframe_api</a> for embedding YouTube videos into documents as OLE-objects and managing them by adjusting their size, rotating and changing position.</p>
-<p><b>Plugin type:</b> visual, OLE-object, non-system.</p>
+<p class="dscr">Connects <a href="https://developers.google.com/youtube/iframe_api_reference">youtube iframe_api</a> for embedding YouTube videos into documents as OLE objects and managing them by adjusting their size, rotating and changing position.</p>
+<p><b>Plugin type:</b> visual, OLE object, non-system.</p>
 <p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 
 <img alt="Youtube" src="<%= Url.Content("~/content/img/plugins/gifs/youtube.gif") %>" />

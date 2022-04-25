@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows inserting a content control containing data. The data is specified by the <em>js</em> code for <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder</a>, or by a link to the shared document.</p>
+<p class="dscr">Defines the method that allows inserting the content control containing data. The data is specified by the <em>js</em> code for <a href="<%= Url.Action("basic", "docbuilder") %>">Document Builder</a>, or by a link to the shared document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -34,7 +34,7 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [arrDocuments
         <tr class="tablerow">
             <td>arrDocuments</td>
             <td>
-                A JSON array of properties and contents for content controls. Each object from this array can have the following values:
+                An array of properties and contents of the content control. Each object from this array can have the following values:
                 <ul>
                     <li>
                         <b>Props</b> - the content control properties,
@@ -42,7 +42,7 @@ window.Asc.plugin.executeMethod("InsertAndReplaceContentControls", [arrDocuments
                         <b>type</b>: object;
                     </li>
                     <li>
-                        <b>Script</b> - a script that will be executed to generate data within the content control (can be replaced with the <em>Url</em> parameter),
+                        <b>Script</b> - a script that will be executed to generate the data within the content control (can be replaced with the <em>Url</em> parameter),
                         <br />
                         <b>type</b>: string,
                         <br />

@@ -75,6 +75,7 @@
         },
         "<a href="<%= Url.Action("config/document") %>#key">key</a>": "Khirz6zTPdfd7",
         "<a href="<%= Url.Action("config/document/permissions") %>">permissions</a>": {
+            "<a href="<%= Url.Action("config/document/permissions") %>#chat">chat</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#commentGroups">commentGroups</a>": [
                 "edit": ["Group2", ""],
@@ -92,7 +93,8 @@
             "<a href="<%= Url.Action("config/document/permissions") %>#print">print</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#protect">protect</a>": true,
             "<a href="<%= Url.Action("config/document/permissions") %>#review">review</a>": true,
-            "<a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a>": ["Group1", "Group2", ""]
+            "<a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a>": ["Group1", "Group2", ""],
+            "<a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">userInfoGroups</a>": ["Group1", ""]
         },
         "<a href="<%= Url.Action("config/document") %>#title">title</a>": "Example Document Title.docx",
         "<a href="<%= Url.Action("config/document") %>#url">url</a>": "https://example.com/url-to-example-document.docx"
@@ -112,7 +114,6 @@
                 "label": "Guest"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#autosave">autosave</a>": true,
-            "<a href="<%= Url.Action("config/editor/customization") %>#chat">chat</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#comments">comments</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactHeader">compactHeader</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#compactToolbar">compactToolbar</a>": false,
@@ -125,6 +126,12 @@
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
+            },
+            "<a href="<%= Url.Action("config/editor/customization") %>#features">features</a>": {
+                "spellcheck": {
+                    "mode": true,
+                    "change": true
+                }
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#feedback">feedback</a>": {
                 "url": "https://example.com",
@@ -156,8 +163,7 @@
                 "reviewDisplay": "original",
                 "trackChanges": true,
                 "hoverMode": false
-            },
-            "<a href="<%= Url.Action("config/editor/customization") %>#spellcheck">spellcheck</a>": true,<%--
+            },<%--
             "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
             "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,

@@ -2,20 +2,19 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("AddOleObject", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("ChangeOleObjects", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows adding the OLE object to the current document position.</p>
+<p class="dscr">Defines the method that allows changing multiple OLE objects with the <em>InternalIds</em> specified in OLE object data.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
+window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
 </pre>
 <div class="header-gray">Parameters</div>
-<div id="mobile-content"></div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -33,9 +32,9 @@ window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>NewObject</td>
+            <td>arrObjectData</td>
             <td>
-                The <b>OLEObjectData</b> object which contains the following parameters:
+                An array of OLE object data which contains the following parameters:
                 <ul>
                     <li>
                         <b>Data</b> - OLE object data (internal format),
@@ -59,6 +58,22 @@ window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
                         <b>type</b>: string,
                         <br />
                         <b>example</b>: "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}";
+                        <br />
+                    </li>
+                    <li>
+                        <b>InternalId</b> - the OLE object identifier which is used to work with OLE object added to the document,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "5_556";
+                        <br />
+                    </li>
+                    <li>
+                        <b>ParaDrawingId</b> - an identifier of the drawing object containing the current OLE object,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "1_713";
                         <br />
                     </li>
                     <li>
@@ -95,7 +110,7 @@ window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
                     </li>
                 </ul>
             </td>
-            <td>object</td>
+            <td>array of objects</td>
             <td></td>
         </tr>
     </tbody>
@@ -109,5 +124,5 @@ window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("AddOleObject", [{"Data": "{data}", "ImageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}]);
+window.Asc.plugin.executeMethod("ChangeOleObjects", [[{"Data": "{data}", "ImageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "InternalId": "5_556", "ParaDrawingId": "1_713", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}]]);
 </pre>

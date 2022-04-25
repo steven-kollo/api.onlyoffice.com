@@ -89,11 +89,15 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a></td>
-            <td>This method allows to add an OLE object to the document.</td>
+            <td>This method allows to add the OLE object to the current document position.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a></td>
             <td>This method allows to change the specified comment.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/changeoleobjects") %>">ChangeOleObjects</a></td>
+            <td>This method allows to change multiple OLE objects with the <em>InternalIds</em> specified in OLE object data.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a></td>
@@ -105,7 +109,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a></td>
-            <td>This method allows to edit an OLE object in the document.</td>
+            <td>This method allows to change the OLE object with the <em>InternalId</em> specified in OLE object data.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/endaction") %>">EndAction</a></td>
@@ -120,6 +124,10 @@
             <td>This method allows to get information about all the content controls that have been added to the page.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getalloleobjects") %>">GetAllOleObjects</a></td>
+            <td>This method allows to get all OLE object data for objects which can be opened by the specified plugin.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a></td>
             <td>This method allows to get the identifier of the selected content control.</td>
         </tr>
@@ -129,7 +137,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getfields") %>">GetFields</a></td>
-            <td>This method allows to open file with fields.</td>
+            <td>This method allows to get all fields as a text.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getfilehtml") %>">GetFileHTML</a></td>
@@ -165,23 +173,27 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a></td>
-            <td>This method allows to insert a content control that contains data.</td>
+            <td>This method allows to insert the content control that contains data.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/insertoleobject") %>">InsertOleObject</a></td>
+            <td>This method allows to insert the OLE object at the current document position.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a></td>
-            <td>This method allows to move the cursor to the specified content control.</td>
+            <td>This method allows to move a cursor to the specified content control.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortoend") %>">MoveCursorToEnd</a></td>
-            <td>This method allows to move the cursor to the end position.</td>
+            <td>This method allows to move a cursor to the end position.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortostart") %>">MoveCursorToStart</a></td>
-            <td>This method allows to move the cursor to the start position.</td>
+            <td>This method allows to move a cursor to the start position.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movetocomment") %>">MoveToComment</a></td>
-            <td>This method allows to move the cursor to the specified comment.</td>
+            <td>This method allows to move a cursor to the specified comment.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a></td>
@@ -189,7 +201,7 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/openfile") %>">OpenFile</a></td>
-            <td>This method allows to open file with fields.</td>
+            <td>This method allows to open a file with fields.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/pastehtml") %>">PasteHtml</a></td>
@@ -205,15 +217,27 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removecontentcontrol") %>">RemoveContentControl</a></td>
-            <td>This method allows to remove a content control, but leave all its contents.</td>
+            <td>This method allows to remove the currently selected content control retaining all its contents.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removecontentcontrols") %>">RemoveContentControls</a></td>
             <td>This method allows to remove several content controls.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/removeoleobject") %>">RemoveOleObject</a></td>
+            <td>This method allows to remove OLE object from the document by its internal ID.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/removeoleobjects") %>">RemoveOleObjects</a></td>
+            <td>This method allows to remove several OLE objects from the document by their internal IDs.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removeselectedcontent") %>">RemoveSelectedContent</a></td>
             <td>This method allows to remove the selected content from the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/replacetextsmart") %>">ReplaceTextSmart</a></td>
+            <td>This method allows to replace each paragraph (or text in cell) in the select with the corresponding text from an array of strings.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/searchandreplace") %>">SearchAndReplace</a></td>
@@ -222,6 +246,10 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">SelectContentControl</a></td>
             <td>This method allows to select the specified content control.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/selectoleobject") %>">SelectOleObject</a></td>
+            <td>This method allows to select the specified OLE object.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a></td>
