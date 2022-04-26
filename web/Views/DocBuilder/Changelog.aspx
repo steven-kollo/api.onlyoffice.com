@@ -37,24 +37,30 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomboboxform/setlistvalues") %>">ApiComboBoxForm/SetListValues</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomboboxform/settext") %>">ApiComboBoxForm/SetText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/clearallfields") %>">ApiDocument/ClearAllFields</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/clearallforms") %>">ApiDocument/ClearAllForms</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getallforms") %>">ApiDocument/GetAllForms</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/setformshighlight") %>">ApiDocument/SetFormsHighlight</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase") %>">ApiFormBase</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/clear") %>">ApiFormBase/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/copy") %>">ApiFormBase/Copy</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/getclasstype") %>">ApiFormBase/GetClassType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/getformkey") %>">ApiFormBase/GetFormKey</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/getformtype") %>">ApiFormBase/GetFormType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/gettext") %>">ApiFormBase/GetText</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/gettextpr") %>">ApiFormBase/GetTextPr</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/gettiptext") %>">ApiFormBase/GetTipText</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/isfixedform") %>">ApiFormBase/IsFixedForm</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/getwrappershape") %>">ApiFormBase/GetWrapperShape</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/isfixed") %>">ApiFormBase/IsFixed</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/isrequired") %>">ApiFormBase/IsRequired</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/setbackgroundcolor") %>">ApiFormBase/SetBackgroundColor</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/setbordercolor") %>">ApiFormBase/SetBorderColor</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/setfixedform") %>">ApiFormBase/SetFixedForm</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/setformkey") %>">ApiFormBase/SetFormKey</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/setplaceholdertext") %>">ApiFormBase/SetPlaceholderText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/setrequired") %>">ApiFormBase/SetRequired</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/settextpr") %>">ApiFormBase/SetTextPr</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/settiptext") %>">ApiFormBase/SetTipText</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/getform") %>">ApiInlineLvlSdt/GetForm</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/tofixed") %>">ApiFormBase/ToFixed</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/toinline") %>">ApiFormBase/ToInline</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/getplaceholdertext") %>">ApiInlineLvlSdt/GetPlaceholderText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/isform") %>">ApiInlineLvlSdt/IsForm</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/setplaceholdertext") %>">ApiInlineLvlSdt/SetPlaceholderText</a> method to Text document API.</li>
