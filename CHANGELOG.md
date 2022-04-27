@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the live viewer mode to the text document, spreadsheet and presentation editors
+
 ## 2.7.0
 - editors: test examples v1.2.0
 - editors: added the Strapi plugin

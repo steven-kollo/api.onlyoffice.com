@@ -72,6 +72,7 @@
                         <b>example</b>:  true.
                     </li>
                 </ul>
+                <p>This parameter is used to apply the <a href="<%= Url.Action("viewing") %>">viewing</a> modes.</p>
             </td>
             <td>object</td>
             <td></td>

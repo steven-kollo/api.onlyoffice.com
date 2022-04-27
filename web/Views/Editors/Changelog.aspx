@@ -17,7 +17,9 @@
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="72" class="copy-link">Version 7.2</h2>
-
+    <ul>
+        <li>Added the <a href="<%= Url.Action("viewing") %>">live viewer</a> mode to the text document, spreadsheet and presentation editors.</li>
+    </ul>
 
     <h2 id="70" class="copy-link">Version 7.0</h2>
     <ul>
