@@ -18,8 +18,8 @@
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#embedview">embedview</a> action to the WOPI discovery.</li>
     </ul>
-
 
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <ul>

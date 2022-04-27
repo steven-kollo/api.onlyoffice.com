@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the embedview action to the WOPI discovery
+
 - editors: the services.CoAuthoring.token.inbox.inBody and services.CoAuthoring.token.outbox.inBody parameters for enabling token in body are deprecated
 - editors: added the X-LOOL-WOPI-IsModifiedByUser, X-LOOL-WOPI-IsAutosave and X-LOOL-WOPI-IsExitSave request headers to the PutFile WOPI operation
 - editors: added the document.permissions.chat parameter
