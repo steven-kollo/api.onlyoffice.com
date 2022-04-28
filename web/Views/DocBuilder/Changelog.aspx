@@ -18,7 +18,7 @@
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <ul>
-        <li>Added the <a href="<%= Url.Action("formsapi") %>">Forms API</a>.</li>
+        <li>Added the <a href="<%= Url.Action("formapi") %>">Form API</a>.</li>
     </ul>
 
     <h2 id="70" class="copy-link">Version 7.0</h2>

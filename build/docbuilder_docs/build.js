@@ -16,7 +16,7 @@ const files = {
         "slide.js": "slide/apiBuilder.js"
     },
     "sdkjs-forms/master": {
-        "forms.js": "apiBuilder.js"
+        "form.js": "apiBuilder.js"
     }
 };
 

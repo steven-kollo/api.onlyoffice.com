@@ -45,7 +45,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 { "word", "textdocumentapi" },
                 { "cell", "spreadsheetapi" },
                 { "slide", "presentationapi" },
-                { "forms", "formsapi" }
+                { "form", "formapi" }
             };
 
         private static readonly Dictionary<string, string> EditorsTypeMapping = new Dictionary<string, string>

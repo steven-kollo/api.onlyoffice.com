@@ -157,9 +157,9 @@
         </table>
     <% } %>
 
-    <h2 id="FormsDocuments"><a href="<%= Url.Action("formsapi") %>">Forms API</a></h2>
-    <% var forms = DocBuilderDocumentation.GetModule("forms"); %>
-    <% foreach (var section in forms.Values) { %>
+    <h2 id="FormsDocuments"><a href="<%= Url.Action("formapi") %>">Form API</a></h2>
+    <% var form = DocBuilderDocumentation.GetModule("form"); %>
+    <% foreach (var section in form.Values) { %>
         <h5 class="builder_page_class">
             <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
         </h5>

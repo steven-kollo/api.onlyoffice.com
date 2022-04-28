@@ -152,15 +152,15 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("formsapi") %>">Forms API</a>
+        <a href="<%= Url.Action("formapi") %>">Form API</a>
         <ul>
-            <% foreach (var entry in DocBuilderDocumentation.GetModule("forms")) { %>
+            <% foreach (var entry in DocBuilderDocumentation.GetModule("form")) { %>
                 <li>
-                    <a href="<%= Url.Action(string.Format("formsapi/{0}", entry.Key.ToLower())) %>"> <%= entry.Key %></a>
+                    <a href="<%= Url.Action(string.Format("formapi/{0}", entry.Key.ToLower())) %>"> <%= entry.Key %></a>
                     <ul>
                         <% foreach (var method in entry.Value.Methods) { %>
                             <li>
-                                <a title=<%= method.Key %> href="<%= Url.Action(string.Format("formsapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
+                                <a title=<%= method.Key %> href="<%= Url.Action(string.Format("formapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
                             </li>
                         <% } %>
                     </ul>
