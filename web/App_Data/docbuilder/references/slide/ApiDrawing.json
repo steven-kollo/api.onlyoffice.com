@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiDrawing",
       "name": "GetClassType",
-      "description": "<p>Get the type of the class based on this base class.</p>",
+      "description": "<p>Returns the type of the ApiDrawing class.</p>",
       "tags": {},
       "returns": [
         [
@@ -16,7 +16,7 @@
     "SetSize": {
       "memberof": "ApiDrawing",
       "name": "SetSize",
-      "description": "<p>Set the size of the object (image, shape, chart) bounding box.</p>",
+      "description": "<p>Sets the size of the object (image, shape, chart) bounding box.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -39,7 +39,7 @@
     "SetPosition": {
       "memberof": "ApiDrawing",
       "name": "SetPosition",
-      "description": "<p>Set the position of the drawing on the slide.</p>",
+      "description": "<p>Sets the position of the drawing on the slide.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -62,7 +62,7 @@
     "GetParent": {
       "memberof": "ApiDrawing",
       "name": "GetParent",
-      "description": "<p>Gets the parent of drawing.</p>",
+      "description": "<p>Returns the drawing parent object.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -82,7 +82,7 @@
     "GetParentSlide": {
       "memberof": "ApiDrawing",
       "name": "GetParentSlide",
-      "description": "<p>Gets the parent slide.</p>",
+      "description": "<p>Returns the drawing parent slide.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -100,7 +100,7 @@
     "GetParentLayout": {
       "memberof": "ApiDrawing",
       "name": "GetParentLayout",
-      "description": "<p>Gets the parent slide layout.</p>",
+      "description": "<p>Returns the drawing parent slide layout.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -118,7 +118,7 @@
     "GetParentMaster": {
       "memberof": "ApiDrawing",
       "name": "GetParentMaster",
-      "description": "<p>Gets the parent slide master.</p>",
+      "description": "<p>Returns the drawing parent slide master.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -136,7 +136,7 @@
     "Copy": {
       "memberof": "ApiDrawing",
       "name": "Copy",
-      "description": "<p>Creates a copy of specified drawing object.</p>",
+      "description": "<p>Creates a copy of the specified drawing object.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -153,7 +153,7 @@
     "Delete": {
       "memberof": "ApiDrawing",
       "name": "Delete",
-      "description": "<p>Deletes the specified drawing object from parent.</p>",
+      "description": "<p>Deletes the specified drawing object from the parent.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -170,7 +170,7 @@
     "SetPlaceholder": {
       "memberof": "ApiDrawing",
       "name": "SetPlaceholder",
-      "description": "<p>Sets the specified placeholder to the shape.</p>",
+      "description": "<p>Sets the specified placeholder to the current drawing object.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -187,7 +187,7 @@
         {
           "type": "ApiPlaceholder",
           "name": "oPlaceholder",
-          "description": "<p>The type of the vertical alignment for the shape inner contents.</p>",
+          "description": "<p>Placeholder object.</p>",
           "optional": false
         }
       ]
@@ -195,7 +195,7 @@
     "GetPlaceholder": {
       "memberof": "ApiDrawing",
       "name": "GetPlaceholder",
-      "description": "<p>Gets the placeholder of the specified shape.</p>",
+      "description": "<p>Returns a placeholder from the current drawing object.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"

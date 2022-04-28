@@ -20,7 +20,7 @@
     "GetItem": {
       "memberof": "ApiAreas",
       "name": "GetItem",
-      "description": "<p>Returns a single object from a collection.</p>",
+      "description": "<p>Returns a single object from a collection by its ID.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -45,7 +45,7 @@
     "GetParent": {
       "memberof": "ApiAreas",
       "name": "GetParent",
-      "description": "<p>Returns a value that represents the number of objects in the collection.</p>",
+      "description": "<p>Returns the parent object for the specified collection.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -60,7 +60,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing the areas.\r\n\t * @constructor\r\n\t * @property {number} Count - Returns a value that represents the number of objects in the collection.\r\n\t * @property {ApiRange} Parent - Returns the parent object for the specified object.\r\n\t */",
+  "comment": "/**\r\n\t * Class representing the areas.\r\n\t * @constructor\r\n\t * @property {number} Count - Returns a value that represents the number of objects in the collection.\r\n\t * @property {ApiRange} Parent - Returns the parent object for the specified collection.\r\n\t */",
   "description": "<p>Class representing the areas.</p>",
   "scope": "global",
   "params": [],
@@ -73,7 +73,7 @@
     {
       "type": "ApiRange",
       "name": "Parent",
-      "description": "<p>Returns the parent object for the specified object.</p>"
+      "description": "<p>Returns the parent object for the specified collection.</p>"
     }
   ]
 }

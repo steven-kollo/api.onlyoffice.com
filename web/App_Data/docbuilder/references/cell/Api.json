@@ -188,6 +188,19 @@
         }
       ]
     },
+    "CreateNewHistoryPoint": {
+      "memberof": "Api",
+      "name": "CreateNewHistoryPoint",
+      "description": "<p>Creates a new history point.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
     "CreateColorFromRGB": {
       "memberof": "Api",
       "name": "CreateColorFromRGB",
@@ -253,7 +266,7 @@
     "Intersect": {
       "memberof": "Api",
       "name": "Intersect",
-      "description": "<p>Returns an ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.</p>",
+      "description": "<p>Returns the ApiRange object that represents the rectangular intersection of two or more ranges. If one or more ranges from a different worksheet are specified, an error will be returned.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -340,7 +353,7 @@
     "GetDefName": {
       "memberof": "Api",
       "name": "GetDefName",
-      "description": "<p>Returns an ApiName object by the range name.</p>",
+      "description": "<p>Returns the ApiName object by the range name.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -378,7 +391,7 @@
     "GetRange": {
       "memberof": "Api",
       "name": "GetRange",
-      "description": "<p>Returns an ApiRange object by the range reference.</p>",
+      "description": "<p>Returns the ApiRange object by the range reference.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -422,6 +435,13 @@
           "name": "nSheet",
           "description": "<p>The sheet index.</p>",
           "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bWithFormat",
+          "description": "<p>indicates that data will be received with the format.</p>",
+          "optional": true,
+          "defaultValue": false
         }
       ]
     },

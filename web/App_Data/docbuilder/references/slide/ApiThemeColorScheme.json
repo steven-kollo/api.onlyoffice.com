@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiThemeColorScheme",
       "name": "GetClassType",
-      "description": "<p>Gets the type of this class.</p>",
+      "description": "<p>Returns the type of the ApiThemeColorScheme class.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -20,7 +20,7 @@
     "SetSchemeName": {
       "memberof": "ApiThemeColorScheme",
       "name": "SetSchemeName",
-      "description": "<p>Sets the color scheme name.</p>",
+      "description": "<p>Sets a name to the current theme color scheme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -37,6 +37,7 @@
         {
           "type": "string",
           "name": "sName",
+          "description": "<p>Theme color scheme name.</p>",
           "optional": false
         }
       ]
@@ -44,7 +45,7 @@
     "ChangeColor": {
       "memberof": "ApiThemeColorScheme",
       "name": "ChangeColor",
-      "description": "<p>Change color in color scheme.</p>",
+      "description": "<p>Changes a color in the theme color scheme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -59,8 +60,15 @@
       "inherits": null,
       "params": [
         {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>Color position in the color scheme which will be changed.</p>",
+          "optional": false
+        },
+        {
           "type": "ApiUniColor | ApiRGBColor",
           "name": "oColor",
+          "description": "<p>New color of the theme color scheme.</p>",
           "optional": false
         }
       ]
@@ -68,7 +76,7 @@
     "Copy": {
       "memberof": "ApiThemeColorScheme",
       "name": "Copy",
-      "description": "<p>Creates a copy of the specified theme's color scheme.</p>",
+      "description": "<p>Creates a copy of the current theme color scheme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -83,8 +91,8 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n     * Class representing a theme's color scheme.\r\n     * @constructor\r\n     */",
-  "description": "<p>Class representing a theme's color scheme.</p>",
+  "comment": "/**\r\n     * Class representing a theme color scheme.\r\n     * @constructor\r\n     */",
+  "description": "<p>Class representing a theme color scheme.</p>",
   "scope": "global",
   "params": []
 }

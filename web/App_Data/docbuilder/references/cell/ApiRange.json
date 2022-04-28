@@ -301,7 +301,7 @@
         {
           "type": "string | bool | number | Array.<Array> | Array.<Array.<Array>>",
           "name": "data",
-          "description": "<p>The general value for the cell or cell range in the string format.</p>",
+          "description": "<p>The general value for the cell or cell range.</p>",
           "optional": false
         }
       ]
@@ -882,7 +882,7 @@
     "GetWorksheet": {
       "memberof": "ApiRange",
       "name": "GetWorksheet",
-      "description": "<p>Returns a Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode.</p>",
+      "description": "<p>Returns the Worksheet object that represents the worksheet containing the specified range. It will be available in the read-only mode.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -899,7 +899,7 @@
     "GetDefName": {
       "memberof": "ApiRange",
       "name": "GetDefName",
-      "description": "<p>Returns an ApiName object of the current range.</p>",
+      "description": "<p>Returns the ApiName object of the current range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -916,7 +916,7 @@
     "GetComment": {
       "memberof": "ApiRange",
       "name": "GetComment",
-      "description": "<p>Returns an ApiComment object of the current range.</p>",
+      "description": "<p>Returns the ApiComment object of the current range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -1048,7 +1048,7 @@
     "Delete": {
       "memberof": "ApiRange",
       "name": "Delete",
-      "description": "<p>Delete the object.</p>",
+      "description": "<p>Deletes the Range object.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -1061,7 +1061,7 @@
         {
           "type": "String",
           "name": "shift",
-          "description": "<p>Specifies how to shift cells to replace deleted cells (&quot;up&quot;, &quot;left&quot;)</p>",
+          "description": "<p>Specifies how to shift cells to replace the deleted cells (&quot;up&quot;, &quot;left&quot;).</p>",
           "optional": false
         }
       ]
@@ -1082,7 +1082,7 @@
         {
           "type": "String",
           "name": "shift",
-          "description": "<p>Specifies which way to shift the cells (&quot;right&quot;, &quot;down&quot;)</p>",
+          "description": "<p>Specifies which way to shift the cells (&quot;right&quot;, &quot;down&quot;).</p>",
           "optional": false
         }
       ]
@@ -1090,7 +1090,7 @@
     "AutoFit": {
       "memberof": "ApiRange",
       "name": "AutoFit",
-      "description": "<p>Changes the width of the columns in the range or the height of the rows in the range to achieve the best fit.</p>",
+      "description": "<p>Changes the width of the columns or the height of the rows in the range to achieve the best fit.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -1103,13 +1103,13 @@
         {
           "type": "bool",
           "name": "bRows",
-          "description": "<p>Defines will we make autofit rows</p>",
+          "description": "<p>Specifies if the width of the columns will be autofit.</p>",
           "optional": false
         },
         {
           "type": "bool",
           "name": "bCols",
-          "description": "<p>Defines will we make autofit cols</p>",
+          "description": "<p>Specifies if the height of the rows will be autofit.</p>",
           "optional": false
         }
       ]
@@ -1134,7 +1134,7 @@
     "Copy": {
       "memberof": "ApiRange",
       "name": "Copy",
-      "description": "<p>Copies the range to the specified range.</p>",
+      "description": "<p>Copies a range to the specified range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -1147,7 +1147,7 @@
         {
           "type": "ApiRange",
           "name": "destination",
-          "description": "<p>Specifies the new range to which the specified range will be copied</p>",
+          "description": "<p>Specifies a new range to which the specified range will be copied.</p>",
           "optional": false
         }
       ]
@@ -1155,7 +1155,7 @@
     "Paste": {
       "memberof": "ApiRange",
       "name": "Paste",
-      "description": "<p>Pastes a Range object.</p>",
+      "description": "<p>Pastes the Range object to the specified range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"

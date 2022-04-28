@@ -88,7 +88,7 @@
     "GetCells": {
       "memberof": "ApiWorksheet",
       "name": "GetCells",
-      "description": "<p>Returns an ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use).</p>",
+      "description": "<p>Returns the ApiRange that represents all the cells on the worksheet (not just the cells that are currently in use).</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -119,7 +119,7 @@
     "GetRows": {
       "memberof": "ApiWorksheet",
       "name": "GetRows",
-      "description": "<p>Returns an ApiRange object that represents all the cells on the rows range.</p>",
+      "description": "<p>Returns the ApiRange object that represents all the cells on the rows range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -144,7 +144,7 @@
     "GetCols": {
       "memberof": "ApiWorksheet",
       "name": "GetCols",
-      "description": "<p>Returns an ApiRange object that represents all the cells on the columns range.</p>",
+      "description": "<p>Returns the ApiRange object that represents all the cells on the columns range.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -169,7 +169,7 @@
     "GetUsedRange": {
       "memberof": "ApiWorksheet",
       "name": "GetUsedRange",
-      "description": "<p>Returns an ApiRange object that represents the used range on the specified worksheet.</p>",
+      "description": "<p>Returns the ApiRange object that represents the used range on the specified worksheet.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -698,7 +698,7 @@
     "GetDefName": {
       "memberof": "ApiWorksheet",
       "name": "GetDefName",
-      "description": "<p>Return an ApiName object by the range name.</p>",
+      "description": "<p>Returns the ApiName object by the worksheet name.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
