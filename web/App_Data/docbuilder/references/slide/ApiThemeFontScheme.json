@@ -111,7 +111,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n     * Class representing a theme font scheme.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a theme font scheme.\n     * @constructor\n     */",
   "description": "<p>Class representing a theme font scheme.</p>",
   "scope": "global",
   "params": []

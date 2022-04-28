@@ -148,7 +148,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n     * Class representing a theme format scheme.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a theme format scheme.\n     * @constructor\n     */",
   "description": "<p>Class representing a theme format scheme.</p>",
   "scope": "global",
   "params": []

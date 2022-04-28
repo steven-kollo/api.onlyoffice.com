@@ -327,7 +327,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n     * Class representing a slide layout.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a slide layout.\n     * @constructor\n     */",
   "description": "<p>Class representing a slide layout.</p>",
   "scope": "global",
   "params": []
