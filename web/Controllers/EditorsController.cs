@@ -116,6 +116,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Signature/Body",
                 "Signature/Browser",
                 "Signature/Request",
+                "Strapi",
                 "Troubleshooting",
                 "Try",
                 "WOPI",
@@ -406,6 +407,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("Signature", (object)catchall);
+        }
+
+        public ActionResult Strapi()
+        {
+            return View();
         }
 
         public ActionResult Troubleshooting()

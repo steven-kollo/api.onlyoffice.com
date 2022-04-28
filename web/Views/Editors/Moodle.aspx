@@ -15,7 +15,7 @@
         <span class="hdr">Moodle ONLYOFFICE integration plugin</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-moodle" target="_blank">plugin</a> enables users to edit office documents from <a href="https://moodle.org/" target="_blank">Moodle</a> using ONLYOFFICE Docs.</p>
+    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor" target="_blank">plugin</a> enables users to edit office documents from <a href="https://moodle.org/" target="_blank">Moodle</a> using ONLYOFFICE Docs.</p>
 
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
@@ -39,7 +39,7 @@
     <h2 id="install" class="copy-link">Installing Moodle ONLYOFFICE integration plugin</h2>
     <p>This plugin is an <b>activity module</b>.</p>
     <p>Follow the usual Moodle plugin installation steps to install this plugin into your <em>mod/onlyoffice</em> directory. Please see <a href="https://docs.moodle.org/311/en/Installing_plugins" target="_blank">Moodle Documentation</a> for more information.</p>
-    <p>The latest compiled package files are available <a href="https://github.com/ONLYOFFICE/onlyoffice-moodle/releases" target="_blank">here</a>.</p>
+    <p>The latest compiled package files are available <a href="https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor/releases" target="_blank">here</a>.</p>
 
 
     <h2 id="configuration" class="copy-link">Configuring Moodle ONLYOFFICE integration plugin</h2>
@@ -75,6 +75,6 @@
     <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
 
     <br />
-    <p>Download the Moodle ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-moodle" target="_blank">here</a>.</p>
+    <p>Download the Moodle ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/moodle-mod_onlyofficeeditor" target="_blank">here</a>.</p>
 
 </asp:Content>

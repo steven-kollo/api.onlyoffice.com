@@ -30,7 +30,7 @@
         <li>
             <p>
                 Specify the event handler for opening the <em>Rename...</em> menu in the configuration script for Document Editor initialization.
-                When the <a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a> event is called, the new name of the document is sent to the software integrators which rename the document in the document storage service.
+                When the <a href="<%= Url.Action("config/events") %>#onRequestRename">onRequestRename</a> event is called, the new name of the document without extension is sent to the software integrators which rename the document in the document storage service.
             </p>
             <img alt="Renaming File" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>" />
             <pre>
