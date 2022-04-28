@@ -477,7 +477,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing the text properties.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing the text properties.\n\t * @constructor\n\t */",
   "description": "<p>Class representing the text properties.</p>",
   "scope": "global",
   "params": []

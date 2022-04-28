@@ -65,7 +65,7 @@
       ]
     }
   },
-  "comment": "/**\r\n     * Class representing a table row.\r\n     * @param oTableRow\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a table row.\n     * @param oTableRow\n     * @constructor\n     */",
   "description": "<p>Class representing a table row.</p>",
   "scope": "global",
   "params": []

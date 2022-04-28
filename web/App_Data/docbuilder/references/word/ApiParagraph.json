@@ -2220,7 +2220,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a paragraph.\r\n\t * @constructor\r\n\t * @extends {ApiParaPr}\r\n\t */",
+  "comment": "/**\n\t * Class representing a paragraph.\n\t * @constructor\n\t * @extends {ApiParaPr}\n\t */",
   "description": "<p>Class representing a paragraph.</p>",
   "scope": "global",
   "params": []

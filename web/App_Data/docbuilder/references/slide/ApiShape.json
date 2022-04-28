@@ -73,7 +73,7 @@
       ]
     }
   },
-  "comment": "/**\r\n     * Class representing a shape.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a shape.\n     * @constructor\n     */",
   "description": "<p>Class representing a shape.</p>",
   "scope": "global",
   "params": []

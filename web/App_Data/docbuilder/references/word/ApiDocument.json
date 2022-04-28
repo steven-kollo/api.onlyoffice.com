@@ -958,7 +958,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a document.\r\n\t * @constructor\r\n\t * @extends {ApiDocumentContent}\r\n\t */",
+  "comment": "/**\n\t * Class representing a document.\n\t * @constructor\n\t * @extends {ApiDocumentContent}\n\t */",
   "description": "<p>Class representing a document.</p>",
   "scope": "global",
   "params": []

@@ -959,7 +959,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a small text block called 'run'.\r\n\t * @constructor\r\n\t * @extends {ApiTextPr}\r\n\t */",
+  "comment": "/**\n\t * Class representing a small text block called 'run'.\n\t * @constructor\n\t * @extends {ApiTextPr}\n\t */",
   "description": "<p>Class representing a small text block called 'run'.</p>",
   "scope": "global",
   "params": []

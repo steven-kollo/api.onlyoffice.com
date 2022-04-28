@@ -253,6 +253,6 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n     * @global\r\n     * @class\r\n     * @name Api\r\n     */",
+  "comment": "/**\n     * @global\n     * @class\n     * @name Api\n     */",
   "scope": "global"
 }
