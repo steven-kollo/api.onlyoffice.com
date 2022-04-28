@@ -16,6 +16,11 @@
     </h1>
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
+    <h2 id="71" class="copy-link">Version 7.1</h2>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("formsapi") %>">Forms API</a>.</li>
+    </ul>
+
     <h2 id="70" class="copy-link">Version 7.0</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/getprevious") %>">ApiRun/GetPrevious</a> method to Text document API.</li>

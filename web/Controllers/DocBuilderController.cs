@@ -45,6 +45,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "changelog",
                 "classlist",
                 "csharpexample",
+                "formsapi",
                 "gettingstarted",
                 "global",
                 "nodejsexample",
@@ -181,6 +182,12 @@ namespace ASC.Api.Web.Help.Controllers
         {
             if (string.IsNullOrEmpty(catchall)) return View("Presentationapi");
             return FindDoc("slide", catchall);
+        }
+
+        public ActionResult Formsapi(string catchall)
+        {
+            if (string.IsNullOrEmpty(catchall)) return View("Formsapi");
+            return FindDoc("forms", catchall);
         }
 
         public ActionResult Global()
