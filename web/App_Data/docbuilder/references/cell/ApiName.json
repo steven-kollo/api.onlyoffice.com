@@ -97,7 +97,7 @@
     "GetRefersToRange": {
       "memberof": "ApiName",
       "name": "GetRefersToRange",
-      "description": "<p>Returns an ApiRange object by its name.</p>",
+      "description": "<p>Returns the ApiRange object by its name.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"

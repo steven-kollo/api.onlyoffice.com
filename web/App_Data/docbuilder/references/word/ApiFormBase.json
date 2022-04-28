@@ -1,0 +1,433 @@
+{
+  "methods": {
+    "GetClassType": {
+      "memberof": "ApiFormBase",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiFormBase class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "\"form\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetFormType": {
+      "memberof": "ApiFormBase",
+      "name": "GetFormType",
+      "description": "<p>Returns a type of the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "FormType"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetFormKey": {
+      "memberof": "ApiFormBase",
+      "name": "GetFormKey",
+      "description": "<p>Returns the current form key.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetFormKey": {
+      "memberof": "ApiFormBase",
+      "name": "SetFormKey",
+      "description": "<p>Sets a key to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sKey",
+          "description": "<p>Form key.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTipText": {
+      "memberof": "ApiFormBase",
+      "name": "GetTipText",
+      "description": "<p>Returns the tip text of the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTipText": {
+      "memberof": "ApiFormBase",
+      "name": "SetTipText",
+      "description": "<p>Sets the tip text to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>Tip text.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "IsRequired": {
+      "memberof": "ApiFormBase",
+      "name": "IsRequired",
+      "description": "<p>Checks if the current form is required.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetRequired": {
+      "memberof": "ApiFormBase",
+      "name": "SetRequired",
+      "description": "<p>Specifies if the current form should be required.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bRequired",
+          "description": "<p>Defines if the current form is required (true) or not (false).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "IsFixed": {
+      "memberof": "ApiFormBase",
+      "name": "IsFixed",
+      "description": "<p>Checks if the current form is fixed-size</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ToFixed": {
+      "memberof": "ApiFormBase",
+      "name": "ToFixed",
+      "description": "<p>Convert form to a fixed-size mode</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "twips",
+          "name": "nWidth",
+          "description": "<p>The wrapper shape width measured in twentieths of a point (1/1440 of an inch).</p>",
+          "optional": false
+        },
+        {
+          "type": "twips",
+          "name": "nHeight",
+          "description": "<p>The wrapper shape height measured in twentieths of a point (1/1440 of an inch).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ToInline": {
+      "memberof": "ApiFormBase",
+      "name": "ToInline",
+      "description": "<p>Convert form to an inline mode\n<em>Picture form can't be converted to inline mode, it's always a fixed-size object</em></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetBorderColor": {
+      "memberof": "ApiFormBase",
+      "name": "SetBorderColor",
+      "description": "<p>Sets the border color to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that border color will not be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetBackgroundColor": {
+      "memberof": "ApiFormBase",
+      "name": "SetBackgroundColor",
+      "description": "<p>Sets the background color to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that background color will not be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetText": {
+      "memberof": "ApiFormBase",
+      "name": "GetText",
+      "description": "<p>Returns the text from the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Clear": {
+      "memberof": "ApiFormBase",
+      "name": "Clear",
+      "description": "<p>Clears the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetWrapperShape": {
+      "memberof": "ApiFormBase",
+      "name": "GetWrapperShape",
+      "description": "<p>Gets the shape in which the form placed.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiShape"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetPlaceholderText": {
+      "memberof": "ApiFormBase",
+      "name": "SetPlaceholderText",
+      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button</em></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The text that will be set to the current form.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetTextPr": {
+      "memberof": "ApiFormBase",
+      "name": "SetTextPr",
+      "description": "<p>Sets the text properties to the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "description": "<p>The text properties that will be set to the current form.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTextPr": {
+      "memberof": "ApiFormBase",
+      "name": "GetTextPr",
+      "description": "<p>Gets the text properties from the current form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\r\n\t * Class representing a document form base.\r\n\t * @constructor\r\n\t */",
+  "description": "<p>Class representing a document form base.</p>",
+  "scope": "global",
+  "params": []
+}

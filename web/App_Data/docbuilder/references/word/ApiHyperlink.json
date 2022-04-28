@@ -149,9 +149,7 @@
       "description": "<p>Returns the hyperlink element using the position specified.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [
@@ -176,9 +174,7 @@
       "description": "<p>Returns a number of elements in the current hyperlink.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [

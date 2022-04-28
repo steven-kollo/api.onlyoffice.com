@@ -20,7 +20,7 @@
     "Delete": {
       "memberof": "ApiComment",
       "name": "Delete",
-      "description": "<p>Deletes an ApiComment object.</p>",
+      "description": "<p>Deletes the ApiComment object.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"

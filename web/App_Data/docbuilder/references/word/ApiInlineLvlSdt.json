@@ -220,7 +220,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -380,6 +384,24 @@
         }
       ]
     },
+    "GetParentParagraph": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetParentParagraph",
+      "description": "<p>Returns a paragraph that contains the current content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiBlockLvlSdt",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetParentContentControl": {
       "memberof": "ApiInlineLvlSdt",
       "name": "GetParentContentControl",
@@ -477,6 +499,65 @@
       "returns": [
         [
           "ApiInlineLvlSdt"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetPlaceholderText": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "GetPlaceholderText",
+      "description": "<p>Returns the placeholder text from the current inline content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetPlaceholderText": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "SetPlaceholderText",
+      "description": "<p>Sets the placeholder text to the current inline content control.\n<em>Can't be set to checkbox or radio button</em></p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The text that will be set to the current inline content control.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "IsForm": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "IsForm",
+      "description": "<p>Checks if the content control is a form.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
         ]
       ],
       "see": null,

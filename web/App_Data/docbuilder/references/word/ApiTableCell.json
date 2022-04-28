@@ -405,6 +405,49 @@
         }
       ]
     },
+    "SetBackgroundColor": {
+      "memberof": "ApiTableCell",
+      "name": "SetBackgroundColor",
+      "description": "<p>Sets the background color to the current table cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that background color will not be set.</p>",
+          "optional": false
+        }
+      ]
+    },
     "SetShd": {
       "memberof": "ApiTableCell",
       "name": "SetShd",

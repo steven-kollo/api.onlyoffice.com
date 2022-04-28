@@ -372,7 +372,6 @@
       "tags": {
         "typeofeditors": [
           "CDE",
-          "CSE",
           "CPE"
         ]
       },
@@ -457,7 +456,6 @@
       "tags": {
         "typeofeditors": [
           "CDE",
-          "CSE",
           "CPE"
         ]
       },
@@ -855,6 +853,92 @@
           "type": "ApiTextPr",
           "name": "oTextPr",
           "description": "<p>The text properties that will be set to the current table.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetBackgroundColor": {
+      "memberof": "ApiTable",
+      "name": "SetBackgroundColor",
+      "description": "<p>Sets the background color to all cells in the current table.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that background color will not be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ApiTableCell#SetColumnBackgroundColor": {
+      "memberof": "ApiTable",
+      "name": "ApiTableCell#SetColumnBackgroundColor",
+      "description": "<p>Sets the background color to all cells in the column containing the current cell.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that background color will not be set.</p>",
           "optional": false
         }
       ]

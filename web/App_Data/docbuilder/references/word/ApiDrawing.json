@@ -89,7 +89,7 @@
         {
           "type": "\"left\" | \"right\" | \"center\"",
           "name": "sAlign",
-          "description": "<p>The alingment type which will be used for the object horizontal alignment.</p>",
+          "description": "<p>The alignment type which will be used for the object horizontal alignment.</p>",
           "optional": true,
           "defaultValue": "\"left\""
         }

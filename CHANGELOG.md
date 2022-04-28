@@ -1,5 +1,7 @@
 # Change Log
 
+- docbuilder: v7.1
+
 ## 2.7.0
 - editors: test examples v1.2.0
 - editors: added the Strapi plugin
