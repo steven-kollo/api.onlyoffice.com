@@ -17,6 +17,7 @@
                     <li><em>editorConfig.customization.customer.address</em> is used to specify the postal address of the company or person;</li>
                     <li><em>editorConfig.customization.customer.info</em> is used to give some additional information about the company or person;</li>
                     <li><em>editorConfig.customization.customer.logo</em> is used to specify the path to the image logo;</li>
+                    <li><em>editorConfig.customization.customer.logoDark</em> is used to specify the path to the image logo for the dark theme;</li>
                     <li><em>editorConfig.customization.customer.mail</em> is used to specify the email address of the company or person;</li>
                     <li><em>editorConfig.customization.customer.name</em> is used to specify the name of the company or person who gives access to the editors or the editor authors;</li>
                     <li><em>editorConfig.customization.customer.www</em> is used to specify the home website address of the company or person.</li>
@@ -24,8 +25,8 @@
             </li>
             <li><em>editorConfig.customization.logo</em> options:
                 <ul>
-                    <li><em>editorConfig.customization.logo.image</em> is used to specify the path to the image file used to show in common work mode (i.e. in view and edit modes for all editors);</li>
-                    <li><em>editorConfig.customization.logo.imageEmbedded</em> is used to specify the path to the image file used to show in the embedded mode;</li>
+                    <li><em>editorConfig.customization.logo.image</em> is used to specify the path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode;</li>
+                    <li><em>editorConfig.customization.logo.imageDark</em> is used to specify the path to the image file used for the dark theme;</li>
                     <li><em>editorConfig.customization.logo.url</em> is used to specify the absolute URL which will be used when someone clicks the logo image (you can leave as an empty string or null to make the logo not clickable).</li>
                 </ul>
             </li>
@@ -38,13 +39,14 @@
                 "address": "My City, 123a-45",
                 "info": "Some additional information",
                 "logo": "https://example.com/logo-big.png",
+                "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
             },
             "logo": {
                 "image": "https://example.com/logo.png",
-                "imageEmbedded": "https://example.com/logo_em.png",
+                "imageDark": "https://example.com/dark-logo.png",
                 "url": "https://www.onlyoffice.com"
             },
             ...
@@ -74,18 +76,12 @@
 <dl class="faq_block" id="customizing_3">
     <dt>How to enable or disable the chat and/or the comments panel in the editors?</dt>
     <dd>
-        <p>The chat and comments are enabled by default. To disable them use the <em>document.permissions.comment</em> and <em>editorConfig.customization.chat</em> parameters with the values set to <b>false</b> in the configuration file respectively:</p>
+        <p>The chat and comments are enabled by default. To disable them use the <em>document.permissions.comment</em> and <em>document.permissions.chat</em> parameters with the values set to <b>false</b> in the configuration file respectively:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
-            "comment": false,
-            ...
-        },
-        ...
-    },
-    "editorConfig": {
-        "customization": {
             "chat": false,
+            "comment": false,
             ...
         },
         ...
