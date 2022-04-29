@@ -24,6 +24,8 @@
 - editors: link to helpcenter about themes
 - plugins: updated the information about adding plugins to ONLYOFFICE Cloud
 
+- portals: api v12.0
+
 ## 2.6.0
 - plugins: added the "version" parameter to config
 - desktop: v7.0
