@@ -63,7 +63,7 @@ window.Asc.plugin.executeMethod ("AddComment", [oCommentData]);
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns the comment id in the <em>string</em> format or <em>null</em> if the comment cannot be added.</p>
+<p>The method returns the comment ID in the <em>string</em> format or <em>null</em> if the comment cannot be added.</p>
 
 <div class="header-gray">Example</div>
 

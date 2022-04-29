@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 <p class="dscr">Inserts a Chess Board object into the document editor. The object makes it possible to edit and save the chess position in the <em>FEN</em> format.</p>
-<p><b>Plugin type:</b> visual, OLE-object, non-system.</p>
+<p><b>Plugin type:</b> visual, OLE object, non-system.</p>
 <p><b>Supported editors:</b> documents, spreadsheets, presentations.</p>
 
 <img alt="Chess" src="<%= Url.Content("~/content/img/plugins/gifs/chess.gif") %>" />

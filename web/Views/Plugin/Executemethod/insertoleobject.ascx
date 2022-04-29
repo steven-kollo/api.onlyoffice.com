@@ -2,17 +2,17 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("AddOleObject", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("InsertOleObject", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows adding the OLE object to the current document position.</p>
+<p class="dscr">Defines the method that allows inserting the OLE object at the current document position.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
+window.Asc.plugin.executeMethod ("InsertOleObject", [NewObject, bSelect]);
 </pre>
 <div class="header-gray">Parameters</div>
 <div id="mobile-content"></div>
@@ -98,6 +98,12 @@ window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
             <td>object</td>
             <td></td>
         </tr>
+        <tr class="tablerow">
+            <td>bSelect</td>
+            <td>Defines if the OLE object will be selected after inserting into the document (<b>true</b>) or not (<b>false</b>).</td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
@@ -109,5 +115,5 @@ window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("AddOleObject", [{"Data": "{data}", "ImageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}]);
+window.Asc.plugin.executeMethod("InsertOleObject", [{"Data": "{data}", "ImageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}, true]);
 </pre>

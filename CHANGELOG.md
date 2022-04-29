@@ -1,5 +1,8 @@
 # Change Log
 
+- plugins: the access to the window and document objects and the alert function is restricted from the plugin command code and macros
+- plugins: added the GetAllOleObjects, RemoveOleObject, RemoveOleObjects and SelectOleObject methods
+- plugins: added the ConvertDocument and ReplaceTextSmart methods
 - editors: the services.CoAuthoring.token.inbox.inBody and services.CoAuthoring.token.outbox.inBody parameters for enabling token in body are deprecated
 - editors: added the X-LOOL-WOPI-IsModifiedByUser, X-LOOL-WOPI-IsAutosave and X-LOOL-WOPI-IsExitSave request headers to the PutFile WOPI operation
 - editors: added the document.permissions.chat parameter
