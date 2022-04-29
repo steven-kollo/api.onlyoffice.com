@@ -90,6 +90,66 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="documentLayout" class="copy-link">documentLayout</td>
+                <td>Defines the document layout which specifies parameters for printing forms as <em>pdf</em> documents or images.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="drawPlaceHolders" class="copy-link">documentLayout.drawPlaceHolders</td>
+                <td>Defines if placeholders will be drawn or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="drawFormHighlight" class="copy-link">documentLayout.drawFormHighlight</td>
+                <td>Defines if forms will be highlighted or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="isPrint" class="copy-link">documentLayout.isPrint</td>
+                <td>Defines if the print mode is turned on or off. This parameter is used only for converting <em>docx/docxf</em> into <em>pdf</em>.
+                    If this parameter is equal to <b>true</b>, the <em>drawPlaceHolders</em> and <em>drawFormHighlight</em> flags are used as described above.
+                    If this parameter is <b>false</b>, the <em>drawFormHighlight</em> flag does not work and the <em>drawPlaceHolders</em> parameter allows saving the forms in the <em>pdf</em> format.
+                    The default value is <b>false</b>.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="documentRenderer" class="copy-link">documentRenderer</td>
+                <td>Defines the document renderer when converting from <em>pdf</em>, <em>xps</em>, <em>oxps</em>.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="textAssociation" class="copy-link">documentRenderer.textAssociation</td>
+                <td>
+                    Defines the rendering mode that can have the following values:
+                    <ul>
+                        <li>
+                            <b>blockChar</b> - all text is converted by single characters.
+                            Each character is in its own frame (like a textbox),
+                        </li>
+                        <li>
+                            <b>blockLine</b> - all text is converted by separate lines.
+                            Each text line is in its own frame. Lines can be combined within the same block,
+                        </li>
+                        <li>
+                            <b>plainLine</b> - all text is converted as a plain text.
+                            But each line is a separate paragraph,
+                        </li>
+                        <li>
+                            <b>plainParagraph</b> - all text is converted as a plain text.
+                            Lines are combined into paragraphs.
+                        </li>
+                    </ul>
+                    The default value is <b>plainLine</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="filetype" class="copy-link">filetype<span class="required">*</span></td>
                 <td>Defines the type of the document file to be converted.</td>
                 <td>string</td>
@@ -699,44 +759,44 @@
             <tr>
                 <td>oxps</td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pdf</td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>rtf</td>
@@ -783,23 +843,23 @@
             <tr>
                 <td>xps</td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xml</td>
@@ -914,6 +974,22 @@
             </tr>
             <tr>
                 <td>xls</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>xlsb</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>

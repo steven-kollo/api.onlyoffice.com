@@ -100,6 +100,24 @@
                 <td>string</td>
                 <td>optional</td>
             </tr>
+            <tr>
+                <td>X-LOOL-WOPI-IsModifiedByUser</td>
+                <td>Indicates whether the user has modified the document before the save (<b>"true"</b>), or if they just pressed the <b>Save</b> button without any modification (<b>"false"</b>).</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr>
+                <td>X-LOOL-WOPI-IsAutosave</td>
+                <td>Indicates whether the <b>PutFile</b> is triggered by autosave (<b>"true"</b>) or by explicit user operation (<b>Save</b> button or menu entry) (<b>"false"</b>).</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr>
+                <td>X-LOOL-WOPI-IsExitSave</td>
+                <td>Indicates whether an automatic save will be triggered when the document gets cleaned up from memory (e.g. when all users disconnect) (<b>"true"</b>) or not (<b>"false"</b>).</td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
         </tbody>
     </table>
 

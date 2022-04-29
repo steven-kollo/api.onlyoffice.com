@@ -11,6 +11,10 @@
 <p class="dscr">The customization section allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details.</p>
 
 <ul class="columns-4" style="list-style: none;">
+    <% if (license)
+       { %>
+    <li><a href="#about">about</a></li>
+    <% } %>
     <li><a href="#anonymous">anonymous</a></li>
     <li><a href="#autosave">autosave</a></li>
     <li><a href="#chat">chat</a></li>
@@ -20,6 +24,7 @@
     <li><a href="#compactToolbar">compactToolbar</a></li>
     <li><a href="#compatibleFeatures">compatibleFeatures</a></li>
     <li><a href="#customer">customer</a></li>
+    <li><a href="#features">features</a></li>
     <li><a href="#feedback">feedback</a></li>
     <li><a href="#forcesave">forcesave</a></li>
     <li><a href="#goback">goback</a></li>
@@ -27,6 +32,13 @@
     <li><a href="#hideNotes">hideNotes</a></li>
     <li><a href="#hideRightMenu">hideRightMenu</a></li>
     <li><a href="#hideRulers">hideRulers</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#layout">layout</a></li>
+    <li><a href="#leftMenu">leftMenu</a></li>
+    <li><a href="#loaderLogo">loaderLogo</a></li>
+    <li><a href="#loaderName">loaderName</a></li>
+    <% } %>
     <li><a href="#logo">logo</a></li>
     <li><a href="#macros">macros</a></li>
     <li><a href="#macrosMode">macrosMode</a></li>
@@ -34,8 +46,17 @@
     <li><a href="#plugins">plugins</a></li>
     <li><a href="#review">review</a></li>
     <li><a href="#reviewDisplay">reviewDisplay</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#rightMenu">rightMenu</a></li>
+    <% } %>
     <li><a href="#showReviewChanges">showReviewChanges</a></li>
     <li><a href="#spellcheck">spellcheck</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#statusBar">statusBar</a></li>
+    <li><a href="#toolbar">toolbar</a></li>
+    <% } %>
     <li><a href="#toolbarHideFileName">toolbarHideFileName</a></li>
     <li><a href="#toolbarNoTabs">toolbarNoTabs</a></li>
     <li><a href="#trackChanges">trackChanges</a></li>
@@ -125,6 +146,7 @@
                 Defines if the <b>Chat</b> menu button is displayed or hidden.
                 Please note that in case you hide the <b>Chat</b> button, the corresponding chat functionality will also be disabled.
                 The default value is <b>true</b>.
+                Deprecated since version 7.1, please use the <a href="<%= Url.Action("config/document/permissions") %>#chat">document.permissions.chat</a> parameter instead.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -249,6 +271,48 @@
             </td>
             <td>object</td>
             <td></td>
+        </tr>
+        <tr>
+            <td id="features" class="copy-link">features</td>
+            <td>
+                Defines the parameters that the user can disable or customize if possible:
+                <ul>
+                    <li>
+                        <b>spellcheck </b> - defines if the spell checker is automatically switched on or off when the editor is loaded.
+                        If this parameter is a boolean value, then it is set as the initial spell checker value and the spell checker setting will not be hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>spellcheck.mode</b> - defines if the spell checker is automatically switched on or off when the editor is loaded.
+                        This parameter will only be available for the document editor and the presentation editor,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <% if (license)
+                       { %>
+                    <li>
+                        <b>spellcheck.change<span class="required">**</span></b> - defines if the spell checker setting will be displayed or not. Spell checker setting is available in all editor types,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true.
+                    </li>
+                    <% } %>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <div class="note">Please note that in case <em>spellcheck</em> setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.features.spellcheck</em> parameter.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="feedback" class="copy-link">feedback</td>
@@ -401,6 +465,212 @@
         <% if (license)
            { %>
         <tr class="tablerow">
+            <td id="layout" class="copy-link">layout<span class="required">**</span></td>
+            <td>
+                Defines the parameters that the user can use to hide the interface elements but not to disable features completely
+                (for example, if this functionality is available from other elements such as context menu, or via hotkeys):
+                <ul>
+                    <li>
+                        <b>header</b> - defines the editor header settings,
+                        <br />
+                        <b>type</b>: object,
+                    </li>
+                    <li>
+                        <b>header.save</b> - defines if the <b>Save</b> button in the editor header is displayed or hidden. The default value is <b>true</b>.
+                        Please note that this setting is used when the <a href="#compactHeader">compactHeader</a> parameter is set to <b>false</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>header.users</b> - defines if the button with the editing users is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>leftMenu</b> - defines the left menu settings. If this parameter is a boolean value, then it specifies whether the left menu will be displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                    </li>
+                    <li>
+                        <b>leftMenu.navigation</b> - defines if the <b>Navigation</b> button is displayed or hidden. The default value is <b>true</b>.
+                        This parameter will only be available for the document editor,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>leftMenu.spellcheck</b> - defines if the <b>Spellcheck</b> button is displayed or hidden. The default value is <b>true</b>.
+                        This parameter will only be available for the spreadsheet editor,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>rightMenu</b> - defines if the right menu is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>statusBar</b> - defines the status bar settings.
+                        If this parameter is a boolean value, then it specifies whether the status bar will be displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                    </li>
+                    <li>
+                        <b>statusBar.actionStatus</b> - defines if an action status is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>statusBar.docLang</b> - defines if a button for choosing the document language is displayed or hidden. The default value is <b>true</b>.
+                        This parameter will only be available for the document editor and the presentation editor,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>statusBar.textLang</b> - defines if a button for choosing the text language is displayed or hidden. The default value is <b>true</b>.
+                        This parameter will only be available for the document editor and the presentation editor,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar </b> - defines the toolbar settings.
+                        If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean;
+                    </li>
+                    <li>
+                        <b>toolbar.collaboration</b> - defines if the <b>Collaboration</b> tab is displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.file</b> - defines the <b>File</b> tab settings. If this parameter is a boolean value, then it specifies
+                        whether the <b>File</b> tab will be displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.file.close</b> - defines if the <b>Close menu</b> option is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.file.info</b> - defines if the <b>Document info</b> option is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.file.save</b> - defines if the <b>Save</b> option is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.file.settings</b> - defines if the <b>Advanced settings</b> option is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.home</b> - defines the <b>Home</b> tab settings. This tab cannot be hidden,
+                        <br />
+                        <b>type</b>: object,
+                    </li>
+                    <li>
+                        <b>toolbar.home.mailmerge</b> - defines if the button for choosing the mail merge base is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.layout</b> - defines if the <b>Layout</b> tab is displayed or hidden. This parameter will only be available for the document editor and the spreadsheet editor.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.plugins</b> - defines if the <b>Plugins</b> tab is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.protect</b> - defines if the <b>Protection</b> tab is displayed or hidden. The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.references</b> - defines if the <b>References</b> tab is displayed or hidden. This parameter will only be available for the document editor.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.save</b> - defines if the <b>Save</b> button on the toolbar is displayed or hidden. The default value is <b>true</b>.
+                        Please note that this setting is used when the <a href="#compactHeader">compactHeader</a> parameter is set to <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.view</b> - defines the <b>View</b> tab settings. If this parameter is a boolean value, then it specifies whether the <b>View</b> tab will be displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>toolbar.view.navigation</b> - defines if the <b>Navigation</b> button is displayed or hidden. 
+                        The default value is <b>true</b>. This parameter will only be available for the document editor,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true.
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+        </tr>
+        <tr>
             <td id="leftMenu" class="copy-link">leftMenu<span class="required">**</span></td>
             <td>
                 Defines if the left menu panel is displayed or hidden.
@@ -408,6 +678,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.leftMenu</a> parameter instead.</div>
+            </td>
         </tr>
         <tr class="tablerow">
             <td id="loaderLogo" class="copy-link">loaderLogo<span class="required">**</span></td>
@@ -571,8 +846,8 @@
                         <b>example</b>: false;
                     </li>
                     <li>
-                        <b>trackChanges</b> - defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
-                        If the parameter is <em>undefined</em>, the <em>document.permissions.review</em> value is used (for all the document users),
+                        <b>trackChanges</b> - defines if the document is opened in the review editing mode (<b>true</b>) or not (<b>false</b>) regardless of the <a href="<%= Url.Action("config/document/permissions") %>#review">document.permissions.review</a> parameter (the review mode is changed only for the current user).
+                        If the parameter is <em>undefined</em>, the <em>document.permissions.review</em> value is used (for all the document users),
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -617,7 +892,7 @@
         </tr>
         <% if (license)
            { %>
-        <tr class="tablerow">
+        <tr>
             <td id="rightMenu" class="copy-link">rightMenu<span class="required">**</span></td>
             <td>
                 Defines if the right menu panel is displayed or hidden.
@@ -625,6 +900,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.rightMenu</a> parameter instead.</div>
+            </td>
         </tr>
         <% } %>
         <tr>
@@ -653,12 +933,13 @@
         </tr>
         <tr class="tablerow">
             <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#features">features.spellcheck</a> parameter instead.</div>
                 <div class="note">Please note that in case this setting is changed in the editor interface, it will be stored in the browser local storage and will overwrite any values sent as the <em>editorConfig.customization.spellcheck</em> parameter.</div>
             </td>
         </tr>
         <% if (license)
            { %>
-        <tr class="tablerow">
+        <tr>
             <td id="statusBar" class="copy-link">statusBar<span class="required">**</span></td>
             <td>
                 Defines if the status bar is displayed or hidden.
@@ -666,6 +947,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.statusBar</a> parameter instead.</div>
+            </td>
         </tr>
         <% } %>
         <%--<tr>
@@ -685,7 +971,7 @@
         </tr>--%>
         <% if (license)
             { %>
-        <tr class="tablerow">
+        <tr>
             <td id="toolbar" class="copy-link">toolbar<span class="required">**</span></td>
             <td>
                 Defines if the top toolbar is displayed or hidden.
@@ -693,6 +979,11 @@
             </td>
             <td>boolean</td>
             <td>true</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Deprecated since version 7.1. Please use the <a href="#layout">layout.toolbar</a> parameter instead.</div>
+            </td>
         </tr>
         <% } %>
         <tr>
@@ -821,8 +1112,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             },
             <% if (license)
                { %>"about": true,
-            <% } %>"chat": true,
-            "comments": true,
+            <% } %>"comments": true,
             "compactHeader": false,
             "compactToolbar": false,
             "compatibleFeatures": false,
@@ -834,6 +1124,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
                 "www": "example.com"
+            },
+            "features": {
+                "spellcheck": {
+                    "mode": true,
+                <% if (license)
+                    { %>    "change": true
+                <% } %>}
             },
             "feedback": {
                 "url": "https://example.com",
@@ -851,7 +1148,42 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "hideRightMenu": false,
             "hideRulers": false,
             <% if (license)
-               { %>"leftMenu": true,
+               { %>"layout": {
+                "header": {
+                    "save": true,
+                    "users": true
+                },
+                "leftMenu": {
+                    "navigation": true,
+                    "spellcheck": true
+                },
+                "rightMenu": true,
+                "statusBar": {
+                    "actionStatus": true,
+                    "docLang": true,
+                    "textLang": true
+                },
+                "toolbar": {
+                    "collaboration": true,
+                    "file": {
+                        "close": true,
+                        "info": true,
+                        "save": true,
+                        "settings": true
+                    },
+                    "home": {
+                        "mailmerge": true
+                    },
+                    "layout": true,
+                    "plugins": true,
+                    "protect": true,
+                    "references": true,
+                    "save": true,
+                    "view": {
+                        "navigation": true
+                    }
+                }
+            },
             "loaderLogo": "https://example.com/loader-logo.png",
             "loaderName": "The document is loading, please wait...",
             <% } %>"logo": {
@@ -870,9 +1202,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "trackChanges": true,
                 "hoverMode": false
             },
-            <% if (license)
-               { %>"rightMenu": true,
-            <% } %>"spellcheck": true,
             <% if (license)
                { %>"statusBar": true,
             <% } %><%--"submitForm": true,--%>
