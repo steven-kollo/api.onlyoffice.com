@@ -19,6 +19,10 @@
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <p><b>Form methods</b></p>
     <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createcheckboxform") %>">Api/CreateCheckBoxForm</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createcomboboxform") %>">Api/CreateComboBoxForm</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createpictureform") %>">Api/CreatePictureForm</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createtextform") %>">Api/CreateTextForm</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/getplaceholdertext") %>">ApiBlockLvlSdt/GetPlaceholderText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/setplaceholdertext") %>">ApiBlockLvlSdt/SetPlaceholderText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicheckboxform") %>">ApiCheckBoxForm</a> class to Text document API.</li>
@@ -66,10 +70,15 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/setplaceholdertext") %>">ApiInlineLvlSdt/SetPlaceholderText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform") %>">ApiPictureForm</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/getimage") %>">ApiPictureForm/GetImage</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/getpicturescalecase") %>">ApiPictureForm/GetPictureScaleCase</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/getpictureposition") %>">ApiPictureForm/GetPicturePosition</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/getscaleflag") %>">ApiPictureForm/GetScaleFlag</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/islockaspectratio") %>">ApiPictureForm/IsLockAspectRatio</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/isrespectborders") %>">ApiPictureForm/IsRespectBorders</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/setimage") %>">ApiPictureForm/SetImage</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/setlockaspectratio") %>">ApiPictureForm/SetLockAspectRatio</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/setpicturescalecase") %>">ApiPictureForm/SetPictureScaleCase</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/setpictureposition") %>">ApiPictureForm/SetPicturePosition</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/setrespectborders") %>">ApiPictureForm/SetRespectBorders</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/setscaleflag") %>">ApiPictureForm/SetScaleFlag</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform") %>">ApiTextForm</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform/isautofit") %>">ApiTextForm/IsAutoFit</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform/iscomb") %>">ApiTextForm/IsComb</a> method to Text document API.</li>
