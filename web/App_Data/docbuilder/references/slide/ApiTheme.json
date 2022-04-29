@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiTheme",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns the type of the ApiTheme class.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -20,7 +20,7 @@
     "GetMaster": {
       "memberof": "ApiTheme",
       "name": "GetMaster",
-      "description": "<p>Get the slide master of this theme.</p>",
+      "description": "<p>Returns the slide master of the current theme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -38,7 +38,7 @@
     "SetColorScheme": {
       "memberof": "ApiTheme",
       "name": "SetColorScheme",
-      "description": "<p>Sets the presentation color scheme.</p>",
+      "description": "<p>Sets the color scheme to the current presentation theme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -55,6 +55,7 @@
         {
           "type": "ApiThemeColorScheme",
           "name": "oApiColorScheme",
+          "description": "<p>Theme color scheme.</p>",
           "optional": false
         }
       ]
@@ -62,7 +63,7 @@
     "GetColorScheme": {
       "memberof": "ApiTheme",
       "name": "GetColorScheme",
-      "description": "<p>Gets the presentation color scheme.</p>",
+      "description": "<p>Returns the color scheme of the current theme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -79,7 +80,7 @@
     "SetFormatScheme": {
       "memberof": "ApiTheme",
       "name": "SetFormatScheme",
-      "description": "<p>Sets the presentation format scheme.</p>",
+      "description": "<p>Sets the format scheme to the current presentation theme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -96,6 +97,7 @@
         {
           "type": "ApiThemeFormatScheme",
           "name": "oApiFormatScheme",
+          "description": "<p>Theme format scheme.</p>",
           "optional": false
         }
       ]
@@ -103,7 +105,7 @@
     "GetFormatScheme": {
       "memberof": "ApiTheme",
       "name": "GetFormatScheme",
-      "description": "<p>Gets the presentation format scheme.</p>",
+      "description": "<p>Returns the format scheme of the current theme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -120,7 +122,7 @@
     "SetFontScheme": {
       "memberof": "ApiTheme",
       "name": "SetFontScheme",
-      "description": "<p>Sets the presentation font scheme.</p>",
+      "description": "<p>Sets the font scheme to the current presentation theme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -137,6 +139,7 @@
         {
           "type": "ApiThemeFontScheme",
           "name": "oApiFontScheme",
+          "description": "<p>Theme font scheme.</p>",
           "optional": false
         }
       ]
@@ -144,7 +147,7 @@
     "GetFontScheme": {
       "memberof": "ApiTheme",
       "name": "GetFontScheme",
-      "description": "<p>Gets the presentation font scheme.</p>",
+      "description": "<p>Returns the font scheme of the current theme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"

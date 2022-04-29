@@ -58,7 +58,7 @@ window.Asc.plugin.executeMethod ("ConvertDocument", [sConvertType, bHtmlHeadings
         <tr class="tablerow">
             <td>bRenderHTMLTags</td>
             <td>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket 
-            in the following way: <em>\&lt;tag&gt;text\&lt;/tag&gt;</em>. By default, angle brackets will be replaced with the special characters.</td>
+            in the following way: <em>\&lt;tag&gt;text\&lt;/tag&gt;</em>. By default, the opening angle brackets will be replaced with the special characters.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>

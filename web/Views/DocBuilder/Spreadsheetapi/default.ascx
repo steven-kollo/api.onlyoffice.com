@@ -89,7 +89,7 @@ builder.CloseFile();                             // close the spreadsheet file a
     </div>
     <h2 id="OpenSheet">Opening an existing spreadsheet</h2>
     <p>If you want to edit an already existing spreadsheet, you can open it using <b>ONLYOFFICE Document Builder</b>, get its elements and change them however you need. The only difference from a spreadsheet editor in this case will be that you will not need this spreadsheet editor. The spreadsheet is opened the following way:</p>
-<pre>builder.OpenFile("myspreadsheet.xlsx");          // open an existing 'myspreadsheet.xlsx' spreadsheet file with ONLYOFFICE Document Builder
+<pre>builder.OpenFile("https://example.com/myspreadsheet.xlsx");          // use a path to an existing 'myspreadsheet.xlsx' spreadsheet file to open it with ONLYOFFICE Document Builder
 var oWorksheet = Api.GetActiveSheet();           // create a new 'oWorksheet' variable and get the created spreadsheet contents
 oWorksheet.SetName("sheet 1 renamed");           // set the 'sheet 1 renamed' name for the current active sheet
 oWorksheet.SetColumnWidth(0, 20);                // set the width of the first column to 140 pixels

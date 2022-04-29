@@ -3,7 +3,7 @@
     "GetPresentation": {
       "memberof": "Api",
       "name": "GetPresentation",
-      "description": "<p>Get the main presentation.</p>",
+      "description": "<p>Returns the main presentation.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -20,7 +20,7 @@
     "CreateMaster": {
       "memberof": "Api",
       "name": "CreateMaster",
-      "description": "<p>Create a new slide master.</p>",
+      "description": "<p>Creates a new slide master.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -38,7 +38,7 @@
         {
           "type": "ApiTheme",
           "name": "oTheme",
-          "description": "<p>ApiTheme object.</p>",
+          "description": "<p>The presentation theme object.</p>",
           "optional": true,
           "defaultValue": "ApiPresentation.GetMaster(0).GetTheme()"
         }
@@ -47,7 +47,7 @@
     "CreateLayout": {
       "memberof": "Api",
       "name": "CreateLayout",
-      "description": "<p>Create a new slide layout and adds it to the slide master if it specified.</p>",
+      "description": "<p>Creates a new slide layout and adds it to the slide master if it is specified.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -64,7 +64,7 @@
         {
           "type": "ApiMaster",
           "name": "oMaster",
-          "description": "<p>parent slide master.</p>",
+          "description": "<p>Parent slide master.</p>",
           "optional": true,
           "defaultValue": null
         }
@@ -73,7 +73,7 @@
     "CreatePlaceholder": {
       "memberof": "Api",
       "name": "CreatePlaceholder",
-      "description": "<p>Create a new placeholder.</p>",
+      "description": "<p>Creates a new placeholder.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -90,7 +90,7 @@
         {
           "type": "string",
           "name": "sType",
-          "description": "<p>the placeholder type.</p>",
+          "description": "<p>The placeholder type (&quot;body&quot;, &quot;chart&quot;, &quot;clipArt&quot;, &quot;ctrTitle&quot;, &quot;diagram&quot;, &quot;date&quot;, &quot;footer&quot;, &quot;header&quot;, &quot;media&quot;, &quot;object&quot;, &quot;picture&quot;, &quot;sldImage&quot;, &quot;sldNumber&quot;, &quot;subTitle&quot;, &quot;table&quot;, &quot;title&quot;).</p>",
           "optional": false
         }
       ]
@@ -98,7 +98,7 @@
     "CreateTheme": {
       "memberof": "Api",
       "name": "CreateTheme",
-      "description": "<p>Create a new theme.</p>",
+      "description": "<p>Creates a new presentation theme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -116,62 +116,31 @@
         {
           "type": "string",
           "name": "sName",
-          "description": "<p>specified theme's name.</p>",
+          "description": "<p>Theme name.</p>",
           "optional": false
         },
         {
           "type": "ApiMaster",
           "name": "oMaster",
-          "description": "<p>slide master. Required parameter.</p>",
+          "description": "<p>Slide master. Required parameter.</p>",
           "optional": false
         },
         {
           "type": "ApiThemeColorScheme",
           "name": "oClrScheme",
-          "description": "<p>color scheme. Required parameter.</p>",
+          "description": "<p>Theme color scheme. Required parameter.</p>",
           "optional": false
         },
         {
           "type": "ApiThemeFormatScheme",
           "name": "oFormatScheme",
-          "description": "<p>format scheme. Required parameter.</p>",
+          "description": "<p>Theme format scheme. Required parameter.</p>",
           "optional": false
         },
         {
           "type": "ApiThemeFontScheme",
           "name": "oFontScheme",
-          "description": "<p>font scheme. Required parameter.</p>",
-          "optional": false
-        }
-      ]
-    },
-    "CreateThemeColorScheme": {
-      "memberof": "Api",
-      "name": "CreateThemeColorScheme",
-      "description": "<p>Create a new theme color scheme.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CPE"
-        ]
-      },
-      "returns": [
-        [
-          "ApiThemeColorScheme"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "string",
-          "name": "sName",
-          "description": "<p>specified name of theme's color scheme.</p>",
-          "optional": false
-        },
-        {
-          "type": "Array.<ApiUniColor> | Array.<ApiRGBColor>",
-          "name": "arrColors",
-          "description": "<p>This array defines a set of colors which are referred to as a color scheme.\nThe color scheme is responsible for defining a list of twelve colors.\nThe array should contain a sequence of colors: 2 dark, 2 light,6 primary and a color for each of a hyperlink and followed hyperlink.</p>",
+          "description": "<p>Theme font scheme. Required parameter.</p>",
           "optional": false
         }
       ]
@@ -179,7 +148,7 @@
     "CreateThemeFormatScheme": {
       "memberof": "Api",
       "name": "CreateThemeFormatScheme",
-      "description": "<p>Create a new theme format scheme.</p>",
+      "description": "<p>Creates a new theme format scheme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -196,24 +165,25 @@
         {
           "type": "Array.<ApiFill>",
           "name": "arrFill",
-          "description": "<p>This array contains fill styles. Should be composed of subtle, moderate and intense fills.</p>",
+          "description": "<p>This array contains the fill styles. It should be consist of subtle, moderate and intense fills.</p>",
           "optional": false
         },
         {
           "type": "Array.<ApiFill>",
           "name": "arrBgFill",
-          "description": "<p>This array contains the background fill styles. Should be composed of subtle, moderate and intense fills.</p>",
+          "description": "<p>This array contains the background fill styles. It should be consist of subtle, moderate and intense fills.</p>",
           "optional": false
         },
         {
           "type": "Array.<ApiStroke>",
           "name": "arrLine",
-          "description": "<p>This array contains line styles. Should be composed of subtle, moderate and intense lines.</p>",
+          "description": "<p>This array contains the line styles. It should be consist of subtle, moderate and intense lines.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sName",
+          "description": "<p>Theme format scheme name.</p>",
           "optional": false
         }
       ]
@@ -221,7 +191,7 @@
     "CreateThemeFontScheme": {
       "memberof": "Api",
       "name": "CreateThemeFontScheme",
-      "description": "<p>Create a new theme font scheme.</p>",
+      "description": "<p>Creates a new theme font scheme.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -238,43 +208,43 @@
         {
           "type": "string",
           "name": "mjLatin",
-          "description": "<p>Font's name. Is used to determine the major theme font applied to latit text.</p>",
+          "description": "<p>The major theme font applied to the latin text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "mjEa",
-          "description": "<p>Font's name. Is used to determine the major theme font applied to east asian text.</p>",
+          "description": "<p>The major theme font applied to the east asian text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "mjCs",
-          "description": "<p>Font's name. Is used to determine the major theme font applied to complex script text.</p>",
+          "description": "<p>The major theme font applied to the complex script text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "mnLatin",
-          "description": "<p>Font's name. Is used to determine the minor theme font applied to latit text.</p>",
+          "description": "<p>The minor theme font applied to the latin text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "mnEa",
-          "description": "<p>Font's name. Is used to determine the minor theme font applied to east asian text.</p>",
+          "description": "<p>The minor theme font applied to the east asian text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "mnCs",
-          "description": "<p>Font's name. Is used to determine the minor theme font applied to complex script text.</p>",
+          "description": "<p>The minor theme font applied to the complex script text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sName",
-          "description": "<p>name of this font scheme.</p>",
+          "description": "<p>Theme font scheme name.</p>",
           "optional": false
         }
       ]
@@ -282,7 +252,7 @@
     "CreateSlide": {
       "memberof": "Api",
       "name": "CreateSlide",
-      "description": "<p>Create a new slide.</p>",
+      "description": "<p>Creates a new slide.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -299,7 +269,7 @@
     "CreateImage": {
       "memberof": "Api",
       "name": "CreateImage",
-      "description": "<p>Create an image with the parameters specified.</p>",
+      "description": "<p>Creates an image with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -316,7 +286,7 @@
         {
           "type": "string",
           "name": "sImageSrc",
-          "description": "<p>The image source where the image to be inserted should be taken from (currently\nonly internet URL or Base64 encoded images are supported).</p>",
+          "description": "<p>The image source where the image to be inserted should be taken from (currently,\nonly internet URL or Base64 encoded images are supported).</p>",
           "optional": false
         },
         {
@@ -336,7 +306,7 @@
     "CreateShape": {
       "memberof": "Api",
       "name": "CreateShape",
-      "description": "<p>Create a shape with the parameters specified.</p>",
+      "description": "<p>Creates a shape with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -390,7 +360,7 @@
     "CreateChart": {
       "memberof": "Api",
       "name": "CreateChart",
-      "description": "<p>Create a chart with the parameters specified.</p>",
+      "description": "<p>Creates a chart with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -452,7 +422,7 @@
     "CreateGroup": {
       "memberof": "Api",
       "name": "CreateGroup",
-      "description": "<p>Create a group of drawings.</p>",
+      "description": "<p>Creates a group of drawings.</p>",
       "tags": {},
       "returns": [
         [
@@ -473,7 +443,7 @@
     "CreateTable": {
       "memberof": "Api",
       "name": "CreateTable",
-      "description": "<p>Create a table.</p>",
+      "description": "<p>Creates a table.</p>",
       "tags": {},
       "returns": [
         [
@@ -487,7 +457,7 @@
     "CreateParagraph": {
       "memberof": "Api",
       "name": "CreateParagraph",
-      "description": "<p>Create a new paragraph.</p>",
+      "description": "<p>Creates a new paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -504,7 +474,7 @@
     "Save": {
       "memberof": "Api",
       "name": "Save",
-      "description": "<p>Save changes to the specified document.</p>",
+      "description": "<p>Saves changes to the specified document.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -513,57 +483,6 @@
       "returns": [],
       "see": null,
       "inherits": null
-    },
-    "ApiThemeFontScheme#SetFonts": {
-      "memberof": "Api",
-      "name": "ApiThemeFontScheme#SetFonts",
-      "description": "<p>Sets the fonts for font scheme.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CPE"
-        ]
-      },
-      "returns": [],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "string",
-          "name": "mjLatin",
-          "description": "<p>Font's name. Is used to determine the major theme font applied to latit text.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "mjEa",
-          "description": "<p>Font's name. Is used to determine the major theme font applied to east asian text.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "mjCs",
-          "description": "<p>Font's name. Is used to determine the major theme font applied to complex script text.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "mnLatin",
-          "description": "<p>Font's name. Is used to determine the minor theme font applied to latit text.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "mnEa",
-          "description": "<p>Font's name. Is used to determine the minor theme font applied to east asian text.</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "mnCs",
-          "description": "<p>Font's name. Is used to determine the minor theme font applied to complex script text.</p>",
-          "optional": false
-        }
-      ]
     }
   },
   "comment": "/**\r\n     * @global\r\n     * @class\r\n     * @name Api\r\n     */",

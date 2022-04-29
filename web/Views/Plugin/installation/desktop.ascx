@@ -22,7 +22,8 @@
 
     <h2>Adding plugins through the plugin manager</h2>
 
-    <p><b>Step 1.</b> Pack all the <a href="<%= Url.Action("structure") %>">plugin files</a> into a <b>zip</b> archive and change its extension to <em>.plugin</em>.</p>
+    <p><b>Step 1.</b> Pack all the <a href="<%= Url.Action("structure") %>">plugin files</a> within the plugin folder into a <b>zip</b> archive and change its extension to <em>.plugin</em>
+    (all the plugin files and subfolders must be at the archive root).</p>
     <note>If you download a plugin from <a href="https://github.com/ONLYOFFICE/sdkjs-plugins" target="_blank">GitHub</a>, 
         unpack the plugin folder first and then archive its elements only.</note>
 
@@ -41,6 +42,7 @@
     <ul style="list-style: none;">
         <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>
         <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\sdkjs-plugins\</em></li>
+        <li>For Mac OS - <em>/Applications/ONLYOFFICE.app/Contents/Resources/editors/sdkjs-plugins/</em></li>
     </ul>
 
     <p><b>Step 2.</b> Use a plugin <b>GUID</b> as the folder name. You can find the plugin GUID in the <em>config.json</em> file.</p>
@@ -72,6 +74,7 @@
     <note>This option is not available for the default plugins and the plugins added via the plugin folder.</note>
 
     <p>If you need to uninstall the default plugins, go to the <em>sdkjs-plugins</em> folder and remove the corresponding plugin folder from this directory.</p>
+    <note>Please note that removing the default plugins from ONLYOFFICE Desktop Editors on Mac OS breaks the package integrity and may cause the application crash. Be careful and don't do this unless absolutely necessary.</note>
     <p>The table below contains default plugins guids to make it easier for you to find them:</p>
             
     <h2>Default plugins guid&#8217;s</h2>

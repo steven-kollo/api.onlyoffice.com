@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiLayout",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns the type of the ApiLayout class.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -20,7 +20,7 @@
     "SetName": {
       "memberof": "ApiLayout",
       "name": "SetName",
-      "description": "<p>Sets the name of this layout.</p>",
+      "description": "<p>Sets a name to the current layout.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -37,6 +37,32 @@
         {
           "type": "string",
           "name": "sName",
+          "description": "<p>Layout name to be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AddObject": {
+      "memberof": "ApiLayout",
+      "name": "AddObject",
+      "description": "<p>Adds an object (image, shape or chart) to the current slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiDrawing",
+          "name": "oDrawing",
+          "description": "<p>The object which will be added to the current slide layout.</p>",
           "optional": false
         }
       ]
@@ -61,15 +87,36 @@
         {
           "type": "number",
           "name": "nPos",
-          "description": "<p>position from which to delete</p>",
+          "description": "<p>Position from which the object will be deleted.</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "nCount",
-          "description": "<p>count of elements for delete.</p>",
+          "description": "<p>The number of elements to delete.</p>",
           "optional": true,
           "defaultValue": 1
+        }
+      ]
+    },
+    "SetBackground": {
+      "memberof": "ApiLayout",
+      "name": "SetBackground",
+      "description": "<p>Sets the background to the current slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the presentation slide layout background.</p>",
+          "optional": false
         }
       ]
     },
@@ -93,7 +140,7 @@
     "FollowMasterBackground": {
       "memberof": "ApiLayout",
       "name": "FollowMasterBackground",
-      "description": "<p>Determines whether the slide follows the slide master background.</p>",
+      "description": "<p>Sets the master background as the background of the layout.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -128,7 +175,7 @@
     "Delete": {
       "memberof": "ApiLayout",
       "name": "Delete",
-      "description": "<p>Deletes the specified object from parent slide master if it exist.</p>",
+      "description": "<p>Deletes the specified object from the parent slide master if it exists.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -163,6 +210,7 @@
         {
           "type": "number",
           "name": "nPos",
+          "description": "<p>Position where the new slide layout will be added.</p>",
           "optional": true,
           "defaultValue": "ApiMaster.GetLayoutsCount()"
         }
@@ -171,7 +219,7 @@
     "MoveTo": {
       "memberof": "ApiLayout",
       "name": "MoveTo",
-      "description": "<p>Moves the specified object to a specific location within the same collection.</p>",
+      "description": "<p>Moves the specified layout to a specific location within the same collection.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -183,12 +231,20 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>Position where the specified slide layout will be moved to.</p>",
+          "optional": false
+        }
+      ]
     },
     "GetAllDrawings": {
       "memberof": "ApiLayout",
       "name": "GetAllDrawings",
-      "description": "<p>Gets the array with all drawing objects in slide layout.</p>",
+      "description": "<p>Returns an array with all the drawing objects from the slide layout.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -205,7 +261,7 @@
     "GetAllShapes": {
       "memberof": "ApiLayout",
       "name": "GetAllShapes",
-      "description": "<p>Gets the array with all shape objects in slide layout.</p>",
+      "description": "<p>Returns an array with all the shape objects from the slide layout.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -222,7 +278,7 @@
     "GetAllImages": {
       "memberof": "ApiLayout",
       "name": "GetAllImages",
-      "description": "<p>Gets the array with all image objects in slide layout.</p>",
+      "description": "<p>Returns an array with all the image objects from the slide layout.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -239,7 +295,7 @@
     "GetAllCharts": {
       "memberof": "ApiLayout",
       "name": "GetAllCharts",
-      "description": "<p>Gets the array with all chart objects in slide layout.</p>",
+      "description": "<p>Returns an array with all the chart objects from the slide layout.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -256,7 +312,7 @@
     "GetMaster": {
       "memberof": "ApiLayout",
       "name": "GetMaster",
-      "description": "<p>Gets parent slide master.</p>",
+      "description": "<p>Returns the parent slide master of the current layout.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"

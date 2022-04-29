@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiTableRow",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns the type of the ApiTableRow class.</p>",
       "tags": {},
       "returns": [
         [
@@ -16,7 +16,7 @@
     "GetCellsCount": {
       "memberof": "ApiTableRow",
       "name": "GetCellsCount",
-      "description": "<p>Get the number of cells in the current row.</p>",
+      "description": "<p>Returns a number of cells in the current row.</p>",
       "tags": {},
       "returns": [
         [
@@ -29,7 +29,7 @@
     "GetCell": {
       "memberof": "ApiTableRow",
       "name": "GetCell",
-      "description": "<p>Get the cell by its position.</p>",
+      "description": "<p>Returns a cell by its position in the current row.</p>",
       "tags": {},
       "returns": [
         [
@@ -50,7 +50,7 @@
     "SetHeight": {
       "memberof": "ApiTableRow",
       "name": "SetHeight",
-      "description": "<p>Set the height of the current table row within the current table.</p>",
+      "description": "<p>Sets the height to the current table row.</p>",
       "tags": {},
       "returns": [],
       "see": null,
