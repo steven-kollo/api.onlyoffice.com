@@ -934,7 +934,7 @@
             <category>Settings</category>
             <returns>The auto cleanup setting properties</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.ChangeDafaultAccessRights(ASC.Files.Core.Security.FileShare)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.ChangeDafaultAccessRights(System.Collections.Generic.List{ASC.Files.Core.Security.FileShare})">
             <summary>
             Changes the default access rights in sharing settings
             </summary>

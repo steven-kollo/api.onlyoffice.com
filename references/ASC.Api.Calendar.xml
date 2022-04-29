@@ -230,13 +230,14 @@
             <category>Events</category>
             <returns>The number of imported events</returns>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.ImportEventsFromAggregator(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
+        <member name="M:ASC.Api.Calendar.CalendarApi.ImportEventsFromAggregator(System.Int32,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
             <summary>
             Imports the events from the iCal files and attachments specified in the request.
             </summary>
             <short>
             Import events from the iCal files and attachments
             </short>
+            <param name="calendarId">Calendar ID</param>
             <param name="files">iCal formatted files with the events and attachments</param>
             <visible>false</visible> 
             <category>Events</category>
