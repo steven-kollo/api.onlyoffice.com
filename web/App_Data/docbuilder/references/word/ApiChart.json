@@ -579,7 +579,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a chart.\r\n\t * @constructor\r\n\t *\r\n\t */",
+  "comment": "/**\n\t * Class representing a chart.\n\t * @constructor\n\t *\n\t */",
   "description": "<p>Class representing a chart.</p>",
   "scope": "global",
   "params": []

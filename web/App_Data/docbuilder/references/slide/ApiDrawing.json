@@ -211,7 +211,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n     * Class representing a graphical object.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a graphical object.\n     * @constructor\n     */",
   "description": "<p>Class representing a graphical object.</p>",
   "scope": "global",
   "params": []

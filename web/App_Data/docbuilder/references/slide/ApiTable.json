@@ -236,7 +236,7 @@
       ]
     }
   },
-  "comment": "/**\r\n     * Class representing a table.\r\n     * @param oGraphicFrame\r\n     * @constructor\r\n     * */",
+  "comment": "/**\n     * Class representing a table.\n     * @param oGraphicFrame\n     * @constructor\n     * */",
   "description": "<p>Class representing a table.</p>",
   "scope": "global",
   "params": []

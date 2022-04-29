@@ -426,7 +426,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a document form base.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a document form base.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a document form base.</p>",
   "scope": "global",
   "params": []

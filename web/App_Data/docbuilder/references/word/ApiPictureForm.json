@@ -642,7 +642,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
     }
   },
-  "comment": "/**\r\n\t * Class representing a document picture form.\r\n\t * @constructor\r\n\t * @extends {ApiFormBase}\r\n\t */",
+  "comment": "/**\n\t * Class representing a document picture form.\n\t * @constructor\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document picture form.</p>",
   "scope": "global",
   "params": []

@@ -19,6 +19,7 @@
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <p><b>Form methods</b></p>
     <ul>
+        <li>Added the <a href="<%= Url.Action("formapi") %>">Form API</a>.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createcheckboxform") %>">Api/CreateCheckBoxForm</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createcomboboxform") %>">Api/CreateComboBoxForm</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createpictureform") %>">Api/CreatePictureForm</a> method to Text document API.</li>

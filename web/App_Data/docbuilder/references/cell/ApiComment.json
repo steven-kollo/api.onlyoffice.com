@@ -48,7 +48,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a comment.\r\n\t * @constructor\r\n\t * @property {string} Text - Returns the text from the first cell in range.\r\n\t */",
+  "comment": "/**\n\t * Class representing a comment.\n\t * @constructor\n\t * @property {string} Text - Returns the text from the first cell in range.\n\t */",
   "description": "<p>Class representing a comment.</p>",
   "scope": "global",
   "params": [],

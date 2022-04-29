@@ -234,7 +234,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a Paragraph hyperlink.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a Paragraph hyperlink.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a Paragraph hyperlink.</p>",
   "scope": "global",
   "params": []

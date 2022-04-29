@@ -523,7 +523,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
     }
   },
-  "comment": "/**\r\n\t * Class representing a document checkbox form.\r\n\t * @constructor\r\n\t * @extends {ApiFormBase}\r\n\t */",
+  "comment": "/**\n\t * Class representing a document checkbox form.\n\t * @constructor\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document checkbox form.</p>",
   "scope": "global",
   "params": []

@@ -978,7 +978,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Base class\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",
+  "comment": "/**\n\t * Base class\n\t * @global\n\t * @class\n\t * @name Api\n\t */",
   "description": "<p>Base class</p>",
   "scope": "global"
 }

@@ -341,7 +341,7 @@
       ]
     }
   },
-  "comment": "/**\r\n     * Class representing a presentation.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a presentation.\n     * @constructor\n     */",
   "description": "<p>Class representing a presentation.</p>",
   "scope": "global",
   "params": []
