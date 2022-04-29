@@ -581,7 +581,9 @@
       "description": "<p>Specifies a highlighting color which is applied as a background to the contents of the current run.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE, CPE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
       "returns": [
