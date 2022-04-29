@@ -1,6 +1,6 @@
 {
   "methods": {},
-  "comment": "/**\r\n     * Class representing a group of drawings.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a group of drawings.\n     * @constructor\n     */",
   "description": "<p>Class representing a group of drawings.</p>",
   "scope": "global",
   "params": []

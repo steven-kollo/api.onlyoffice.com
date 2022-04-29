@@ -149,9 +149,7 @@
       "description": "<p>Returns the hyperlink element using the position specified.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [
@@ -176,9 +174,7 @@
       "description": "<p>Returns a number of elements in the current hyperlink.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [
@@ -238,7 +234,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a Paragraph hyperlink.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a Paragraph hyperlink.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a Paragraph hyperlink.</p>",
   "scope": "global",
   "params": []

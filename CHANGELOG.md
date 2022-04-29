@@ -14,6 +14,7 @@
 - editors: added the documentRenderer parameter to the conversion request
 - editors: added conversion from pdf/xps/oxps formats to docx
 - editors: added the document.permissions.userInfoGroups parameter
+- docbuilder: v7.1
 
 ## 2.7.0
 - editors: test examples v1.2.0

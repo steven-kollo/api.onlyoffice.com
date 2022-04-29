@@ -179,7 +179,7 @@
         {
           "type": "ApiParagraph",
           "name": "oParagraph",
-          "description": "<p>The paragraph after which a new document section will be inserted.</p>",
+          "description": "<p>The paragraph after which a new document section will be inserted.\nParagraph must be in a document.</p>",
           "optional": false
         }
       ]
@@ -580,7 +580,14 @@
       ],
       "see": null,
       "inherits": null,
-      "params": []
+      "params": [
+        {
+          "type": "number",
+          "name": "nPage",
+          "description": "<p>The page number.</p>",
+          "optional": false
+        }
+      ]
     },
     "RemoveSelection": {
       "memberof": "ApiDocument",
@@ -735,7 +742,7 @@
         {
           "type": "bool",
           "name": "bRenderHTMLTags",
-          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &amp;lt;tag&gt;text&amp;lt;/tag&gt;. By default, angle brackets will be replaced with the special characters.</p>",
+          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -782,7 +789,7 @@
         {
           "type": "bool",
           "name": "bRenderHTMLTags",
-          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &amp;lt;tag&gt;text&amp;lt;/tag&gt;. By default, angle brackets will be replaced with the special characters.</p>",
+          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -816,6 +823,228 @@
           "defaultValue": true
         }
       ]
+    },
+    "ClearAllFields": {
+      "memberof": "ApiDocument",
+      "name": "ClearAllFields",
+      "description": "<p>Clears all fields in the document</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllForms": {
+      "memberof": "ApiDocument",
+      "name": "GetAllForms",
+      "description": "<p>Returns all existing forms in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiTextForm>",
+          "Array.<ApiPictureForm>",
+          "Array.<ApiComboBoxForm>",
+          "Array.<ApiCheckBoxForm>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ClearAllForms": {
+      "memberof": "ApiDocument",
+      "name": "ClearAllForms",
+      "description": "<p>Clears all forms in the document</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "SetFormsHighlight": {
+      "memberof": "ApiDocument",
+      "name": "SetFormsHighlight",
+      "description": "<p>Sets the highlight to the forms in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that highlight will not be set.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "GetAllNumberedParagraphs": {
+      "memberof": "ApiDocument",
+      "name": "GetAllNumberedParagraphs",
+      "description": "<p>Returns all numbered paragraphs from the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiParagraph>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllHeadingParagraphs": {
+      "memberof": "ApiDocument",
+      "name": "GetAllHeadingParagraphs",
+      "description": "<p>Returns all heading paragraphs from the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiParagraph>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetFootnotesFirstParagraphs": {
+      "memberof": "ApiDocument",
+      "name": "GetFootnotesFirstParagraphs",
+      "description": "<p>Returns the first paragraphs from all footnotes in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiParagraph>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetEndNotesFirstParagraphs": {
+      "memberof": "ApiDocument",
+      "name": "GetEndNotesFirstParagraphs",
+      "description": "<p>Returns the first paragraphs from all endnotes in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiParagraph>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllCaptionParagraphs": {
+      "memberof": "ApiDocument",
+      "name": "GetAllCaptionParagraphs",
+      "description": "<p>Returns all caption paragraphs of the specified type from the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiParagraph>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "captionType",
+          "name": "sCaption",
+          "description": "<p>Caption type (equation, figure or table).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "AcceptAllRevisionChanges": {
+      "memberof": "ApiDocument",
+      "name": "AcceptAllRevisionChanges",
+      "description": "<p>Accepts all changes made in review mode.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "RejectAllRevisionChanges": {
+      "memberof": "ApiDocument",
+      "name": "RejectAllRevisionChanges",
+      "description": "<p>Rejects all changes made in review mode.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllBookmarksNames": {
+      "memberof": "ApiDocument",
+      "name": "GetAllBookmarksNames",
+      "description": "<p>Returns an array with names of all bookmarks in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<string>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "GetElementsCount": {
       "memberof": "ApiDocument",
@@ -958,7 +1187,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a document.\r\n\t * @constructor\r\n\t * @extends {ApiDocumentContent}\r\n\t */",
+  "comment": "/**\n\t * Class representing a document.\n\t * @constructor\n\t * @extends {ApiDocumentContent}\n\t */",
   "description": "<p>Class representing a document.</p>",
   "scope": "global",
   "params": []

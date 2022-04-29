@@ -26,7 +26,7 @@
     %>
 
     <h2>Want to learn how it works?</h2>
-    <p><a href="<%= Url.Action("gettingstarted") %>">Get started here</a> and find out the main principles of <b>ONLYOFFICE Document Builder</b> work, or read the <a href="<%= Url.Action("integrationapi") %>">Integration API</a>, <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>, <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a> or <a href="<%= Url.Action("presentationapi") %>">Presentation API</a> articles to find out how to automate your document creation using <b>ONLYOFFICE Document Builder</b>.</p>
+    <p><a href="<%= Url.Action("gettingstarted") %>">Get started here</a> and find out the main principles of <b>ONLYOFFICE Document Builder</b> work, or read the <a href="<%= Url.Action("integrationapi") %>">Integration API</a>, <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>, <a href="<%= Url.Action("spreadsheetapi") %>">Spreadsheet API</a>, <a href="<%= Url.Action("presentationapi") %>">Presentation API</a> or <a href="<%= Url.Action("formapi") %>">Form API</a> articles to find out how to automate your document creation using <b>ONLYOFFICE Document Builder</b>.</p>
 
     <h2>Get help</h2>
 

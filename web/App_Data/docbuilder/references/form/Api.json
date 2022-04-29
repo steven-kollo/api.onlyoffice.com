@@ -1,0 +1,91 @@
+{
+  "methods": {
+    "CreateTextForm": {
+      "memberof": "Api",
+      "name": "CreateTextForm",
+      "description": "<p>Create a text form</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiTextForm"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TextFormPr",
+          "name": "oFormPr",
+          "description": "<p>text form properties</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateCheckBoxForm": {
+      "memberof": "Api",
+      "name": "CreateCheckBoxForm",
+      "description": "<p>Create the checkbox/radiobutton form</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiCheckBoxForm"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "CheckBoxFormPr",
+          "name": "oFormPr",
+          "description": "<p>checkbox(radiobutton) form properties</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateComboBoxForm": {
+      "memberof": "Api",
+      "name": "CreateComboBoxForm",
+      "description": "<p>Create a combobox/dropdown form</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiComboBoxForm"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ComboBoxFormPr",
+          "name": "oFormPr",
+          "description": "<p>combobox form properties</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreatePictureForm": {
+      "memberof": "Api",
+      "name": "CreatePictureForm",
+      "description": "<p>Create a picture form</p>",
+      "tags": {},
+      "returns": [
+        [
+          "ApiPictureForm"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "PictureFormPr",
+          "name": "oFormPr",
+          "description": "<p>picture form properties</p>",
+          "optional": false
+        }
+      ]
+    }
+  },
+  "comment": "/**\n\t * Base class\n\t * @global\n\t * @class\n\t * @name Api\n\t */",
+  "description": "<p>Base class</p>",
+  "scope": "global"
+}
