@@ -78,7 +78,7 @@
 <div class="global-type-definitions">
 <span class="anchor-position" id="CreateSheet">&nbsp;</span>
     <h2>Creating a new spreadsheet</h2>
-    <p>A simplest example spreadsheet with a sheet named 'sheet 1' and the first column 140 pixels wide and A1 cell set to 'New cell' value can be built with the help of <b>ONLYOFFICE Document Builder</b> using the following code:</p>
+    <p>The simplest example spreadsheet with a sheet named 'sheet 1' and the first column 140 pixels wide and A1 cell set to 'New cell' value can be built with the help of <b>ONLYOFFICE Document Builder</b> using the following code:</p>
 <pre>builder.CreateFile("xlsx");                      // create a spreadsheet file in the .xlsx format with ONLYOFFICE Document Builder
 var oWorksheet = Api.GetActiveSheet();           // create a new 'oWorksheet' variable and get the created spreadsheet contents
 oWorksheet.SetName("sheet 1");                   // set the 'sheet 1' name for the current active sheet
