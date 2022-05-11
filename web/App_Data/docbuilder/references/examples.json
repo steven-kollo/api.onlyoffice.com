@@ -129,12 +129,6 @@
 		"Api.createchart": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oDrawing = Api.CreateChart(\"bar3D\", [\n  [200, 240, 280],\n  [250, 260, 280]\n], [\"Projected Revenue\", \"Estimated Costs\"], [2014, 2015, 2016], 4051300, 2347595, 24);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateChart.docx\");\nbuilder.CloseFile();"
 		},
-		"Api.createcheckboxform": {
-		    "script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oCheckBoxForm = Api.CreateCheckBoxForm({\"key\": \"Marital status\", \"tip\": \"Specify your marital status\", \"required\": true, \"placeholder\": \"Marital status\", \"radio\": true});\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddElement(oCheckBoxForm);\noParagraph.AddText(\" Married\");\noParagraph.AddLineBreak();\noCheckBoxForm = Api.CreateCheckBoxForm({\"key\": \"Marital status\", \"tip\": \"Specify your marital status\", \"required\": true, \"placeholder\": \"Marital status\", \"radio\": true});\noParagraph.AddElement(oCheckBoxForm);\noParagraph.AddText(\" Single\");\nbuilder.SaveFile(\"docx\", \"CreateCheckBoxForm.docx\");\nbuilder.CloseFile();"
-		},
-		"Api.createcomboboxform": {
-			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oComboBoxForm = Api.CreateComboBoxForm({\"key\": \"Personal information\", \"tip\": \"Choose your country\", \"required\": true, \"placeholder\": \"Country\", \"editable\": false, \"autoFit\": false, \"items\": [\"Latvia\", \"USA\", \"UK\"]});\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddElement(oComboBoxForm);\nbuilder.SaveFile(\"docx\", \"CreateComboBoxForm.docx\");\nbuilder.CloseFile();"
-		},
 		"Api.creategradientstop": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);\nvar oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\nvar oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreateGradientStop.docx\");\nbuilder.CloseFile();"
 		},
@@ -161,9 +155,6 @@
 		},
 		"Api.createpatternfill": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oFill = Api.CreatePatternFill(\"dashDnDiag\", Api.CreateRGBColor(255, 224, 204), Api.CreateRGBColor(255, 164, 101));\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreatePatternFill.docx\");\nbuilder.CloseFile();"
-		},
-		"Api.createpictureform": {
-			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oPictureForm = Api.CreatePictureForm({\"key\": \"Personal information\", \"tip\": \"Upload your photo\", \"required\": true, \"placeholder\": \"Photo\", \"scaleFlag\": \"tooBig\", \"lockAspectRatio\": true, \"respectBorders\": false, \"shiftX\": 50, \"shiftY\": 50});\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddElement(oPictureForm);\nbuilder.SaveFile(\"docx\", \"CreatePictureForm.docx\");\nbuilder.CloseFile();"
 		},
 		"Api.createpresetcolor": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = oDocument.GetElement(0);\nvar oGs1 = Api.CreateGradientStop(Api.CreatePresetColor(\"lightYellow\"), 0);\nvar oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);\nvar oFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oDrawing = Api.CreateShape(\"rect\", 5930900, 395605, oFill, oStroke);\noParagraph.AddDrawing(oDrawing);\nbuilder.SaveFile(\"docx\", \"CreatePresetColor.docx\");\nbuilder.CloseFile();"
@@ -194,9 +185,6 @@
 		},
 		"Api.createtable": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oTable = Api.CreateTable(3, 3);\noDocument.Push(oTable);\noTable.SetTableBorderTop(\"single\", 32, 0, 0, 0, 255);\noTable.SetTableBorderBottom(\"single\", 32, 0, 0, 0, 255);\noTable.SetTableBorderLeft(\"single\", 32, 0, 0, 0, 255);\noTable.SetTableBorderRight(\"single\", 32, 0, 0, 0, 255);\noTable.SetTableBorderInsideV(\"single\", 32, 0, 255, 0, 0);\noTable.SetTableBorderInsideH(\"single\", 32, 0, 255, 0, 0);\noTable.SetWidth(\"percent\", 100);\nbuilder.SaveFile(\"docx\", \"CreateTable.docx\");\nbuilder.CloseFile();"
-		},
-		"Api.createtextform": {
-			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oTextForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddElement(oTextForm);\nbuilder.SaveFile(\"docx\", \"CreateTextForm.docx\");\nbuilder.CloseFile();"
 		},
 		"Api.getdocument": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"This is a new paragraph\");\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetDocument.docx\");\nbuilder.CloseFile();"
@@ -3909,6 +3897,20 @@
 		},
 		"ApiUniColor.getclasstype": {
 			"script": "builder.CreateFile(\"pptx\");\nvar oPresentation = Api.GetPresentation();\nvar oSlide = oPresentation.GetSlideByIndex(0);\noSlide.RemoveAllObjects();\nvar oPresetColor = Api.CreatePresetColor(\"lightYellow\");\nvar oGs1 = Api.CreateGradientStop(oPresetColor, 0);\nvar oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(61, 74, 107), 100000);\nvar oFill = Api.CreateRadialGradientFill([oGs1, oGs2]);\nvar oStroke = Api.CreateStroke(0, Api.CreateNoFill());\nvar oShape = Api.CreateShape(\"flowChartMagneticTape\", 300 * 36000, 130 * 36000, oFill, oStroke);\noShape.SetPosition(608400, 1267200);\noShape.SetSize(300 * 36000, 130 * 36000);\nvar oDocContent = oShape.GetDocContent();\nvar sClassType = oPresetColor.GetClassType();\nvar oParagraph = oDocContent.GetElement(0);\noParagraph.SetJc(\"left\");\noParagraph.AddText(\"Class Type = \" + sClassType);\noSlide.AddObject(oShape);\nbuilder.SaveFile(\"pptx\", \"GetClassType.pptx\");\nbuilder.CloseFile();"
+		}
+	},
+	"form": {
+		"Api.createcheckboxform": {
+		    "script": "builder.CreateFile(\"docxf\");\nvar oDocument = Api.GetDocument();\nvar oCheckBoxForm = Api.CreateCheckBoxForm({\"key\": \"Marital status\", \"tip\": \"Specify your marital status\", \"required\": true, \"placeholder\": \"Marital status\", \"radio\": true});\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddElement(oCheckBoxForm);\noParagraph.AddText(\" Married\");\noParagraph.AddLineBreak();\noCheckBoxForm = Api.CreateCheckBoxForm({\"key\": \"Marital status\", \"tip\": \"Specify your marital status\", \"required\": true, \"placeholder\": \"Marital status\", \"radio\": true});\noParagraph.AddElement(oCheckBoxForm);\noParagraph.AddText(\" Single\");\nbuilder.SaveFile(\"docxf\", \"CreateCheckBoxForm.docxf\");\nbuilder.CloseFile();"
+		},
+		"Api.createcomboboxform": {
+			"script": "builder.CreateFile(\"docxf\");\nvar oDocument = Api.GetDocument();\nvar oComboBoxForm = Api.CreateComboBoxForm({\"key\": \"Personal information\", \"tip\": \"Choose your country\", \"required\": true, \"placeholder\": \"Country\", \"editable\": false, \"autoFit\": false, \"items\": [\"Latvia\", \"USA\", \"UK\"]});\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddElement(oComboBoxForm);\nbuilder.SaveFile(\"docxf\", \"CreateComboBoxForm.docxf\");\nbuilder.CloseFile();"
+		},
+		"Api.createpictureform": {
+			"script": "builder.CreateFile(\"docxf\");\nvar oDocument = Api.GetDocument();\nvar oPictureForm = Api.CreatePictureForm({\"key\": \"Personal information\", \"tip\": \"Upload your photo\", \"required\": true, \"placeholder\": \"Photo\", \"scaleFlag\": \"tooBig\", \"lockAspectRatio\": true, \"respectBorders\": false, \"shiftX\": 50, \"shiftY\": 50});\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddElement(oPictureForm);\nbuilder.SaveFile(\"docxf\", \"CreatePictureForm.docxf\");\nbuilder.CloseFile();"
+		},
+		"Api.createtextform": {
+			"script": "builder.CreateFile(\"docxf\");\nvar oDocument = Api.GetDocument();\nvar oTextForm = Api.CreateTextForm({\"key\": \"Personal information\", \"tip\": \"Enter your first name\", \"required\": true, \"placeholder\": \"First name\", \"comb\": true, \"maxCharacters\": 10, \"cellWidth\": 3, \"multiLine\": false, \"autoFit\": false});\nvar oParagraph = oDocument.GetElement(0);\noParagraph.AddElement(oTextForm);\nbuilder.SaveFile(\"docxf\", \"CreateTextForm.docxf\");\nbuilder.CloseFile();"
 		}
 	}
 }
