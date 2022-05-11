@@ -938,7 +938,6 @@
     <Content Include="App_Data\docbuilder\references\form\Api.json" />
     <Content Include="App_Data\docbuilder\references\form\Globals.json" />
     <Content Include="App_Data\docbuilder\references\globalsExamples.json" />
-    <Content Include="App_Data\docbuilder\references\slide\Api.Api.json" />
     <Content Include="App_Data\docbuilder\references\slide\Api.json" />
     <Content Include="App_Data\docbuilder\references\slide\ApiChart.json" />
     <Content Include="App_Data\docbuilder\references\slide\ApiDrawing.json" />
