@@ -111,6 +111,9 @@
                     ext = "pptx";
                     break;
             }
+
+            var documentType = section.Module;
+            if (documentType == "form") documentType = "word";
         %>
 
         var config = <%= Config.Serialize(
@@ -123,7 +126,7 @@
                             Title = "Example Title." + ext,
                             Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext
                         },
-                    DocumentType = section.Module,
+                    DocumentType = documentType,
                     EditorConfig = new Config.EditorConfigConfiguration
                         {
                             CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
