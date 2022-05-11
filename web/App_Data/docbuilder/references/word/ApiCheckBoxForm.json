@@ -20,7 +20,7 @@
         {
           "type": "boolean",
           "name": "isChecked",
-          "description": "<p>Defines if the current checkbox is checked (true) or not (false).</p>",
+          "description": "<p>Specifies if the current checkbox will be checked (true) or not (false).</p>",
           "optional": false
         }
       ]
@@ -62,7 +62,7 @@
     "GetRadioGroup": {
       "memberof": "ApiCheckBoxForm",
       "name": "GetRadioGroup",
-      "description": "<p>Returns the radio group key, if the current checkbox is a radio button.</p>",
+      "description": "<p>Returns the radio group key if the current checkbox is a radio button.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -260,7 +260,7 @@
     "IsFixed": {
       "memberof": "ApiCheckBoxForm",
       "name": "IsFixed",
-      "description": "<p>Checks if the current form is fixed-size</p>",
+      "description": "<p>Checks if the current form is fixed size.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -277,7 +277,7 @@
     "ToFixed": {
       "memberof": "ApiCheckBoxForm",
       "name": "ToFixed",
-      "description": "<p>Convert form to a fixed-size mode</p>",
+      "description": "<p>Converts the current form to a fixed size form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -308,7 +308,7 @@
     "ToInline": {
       "memberof": "ApiCheckBoxForm",
       "name": "ToInline",
-      "description": "<p>Convert form to an inline mode\n<em>Picture form can't be converted to inline mode, it's always a fixed-size object</em></p>",
+      "description": "<p>Converts the current form to an inline form.\n<em>Picture form can't be converted to an inline form, it's always a fixed size object.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -441,7 +441,7 @@
     "GetWrapperShape": {
       "memberof": "ApiCheckBoxForm",
       "name": "GetWrapperShape",
-      "description": "<p>Gets the shape in which the form placed.</p>",
+      "description": "<p>Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -458,7 +458,7 @@
     "SetPlaceholderText": {
       "memberof": "ApiCheckBoxForm",
       "name": "SetPlaceholderText",
-      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button</em></p>",
+      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -508,7 +508,7 @@
     "GetTextPr": {
       "memberof": "ApiCheckBoxForm",
       "name": "GetTextPr",
-      "description": "<p>Gets the text properties from the current form.</p>",
+      "description": "<p>Returns the text properties from the current form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -523,8 +523,15 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
     }
   },
-  "comment": "/**\n\t * Class representing a document checkbox form.\n\t * @constructor\n\t * @extends {ApiFormBase}\n\t */",
+  "comment": "/**\n\t * Class representing a document checkbox form.\n\t * @constructor\n\t * @property {boolean} radio - Specifies if the current checkbox is a radio button. In this case, the key parameter is considered as an identifier for the group of radio buttons.\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document checkbox form.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "boolean",
+      "name": "radio",
+      "description": "<p>Specifies if the current checkbox is a radio button. In this case, the key parameter is considered as an identifier for the group of radio buttons.</p>"
+    }
+  ]
 }

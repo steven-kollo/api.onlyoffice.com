@@ -1346,27 +1346,109 @@ h2 + .copy-code:active {
     vertical-align: top;
 }
 
-    .document_structure.tablecell_node {
+    .document_structure.tablerow_node {
         display: inline-block;
-        width: 44%;
     }
 
-        .document_structure.tablecell_node .document_structure.image_node {
-            width: 23%;
+    .document_structure.tablecell_node {
+        display: inline-block;
+        width: 42%;
+    }
+
+    .document_structure.textrun_node {
+        display: inline-block;
+    }
+        .document_structure.textrun_node .document_structure.image_node {
+            width: 16%;
             padding-left: 10px;
             padding-right: 10px;
         }
 
-        .document_structure.tablecell_node .document_structure.shape_node {
-            width: 23%;
+        .document_structure.textrun_node .document_structure.shape_node {
+            width: 56%;
             padding-left: 10px;
             padding-right: 10px;
         }
 
-        .document_structure.tablecell_node .document_structure.chart_node {
-            width: 23%;
+        .document_structure.textrun_node .document_structure.chart_node {
+            width: 16%;
             padding-left: 10px;
             padding-right: 10px;
+        }
+
+    .document_structure.range_node {
+        display: inline-block;
+        width: 94%;
+    }
+        .document_structure.range_node .document_structure.paragraph_node {
+            width: 22%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+        .document_structure.range_node .document_structure.table_node {
+            width: 22%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+        .document_structure.range_node .document_structure.blockcontentcontrol_node {
+            width: 44%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+    .document_structure.blockcontentcontrol_node {
+        display: inline-block;
+        width: 94%;
+    }
+        .document_structure.blockcontentcontrol_node .document_structure.paragraph_node {
+            width: 22%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+        .document_structure.blockcontentcontrol_node .document_structure.table_node {
+            width: 22%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+        .document_structure.blockcontentcontrol_node .document_structure.blockcontentcontrol_node {
+            width: 44%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+    .document_structure.inlinecontentcontrol_node {
+        display: inline-block;
+        width: 94%;
+    }
+        .document_structure.inlinecontentcontrol_node .document_structure.textrun_node {
+            width: 22%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+        .document_structure.inlinecontentcontrol_node .document_structure.inlinecontentcontrol_node {
+            width: 44%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
+        }
+
+        .document_structure.inlinecontentcontrol_node .document_structure.hyperlink_node {
+            width: 22%;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: inline-block;
         }
 
     .document_structure.image_node {
