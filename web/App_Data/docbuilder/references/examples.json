@@ -264,7 +264,7 @@
 		"ApiBlockLvlSdt.getparenttablecell": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oTableStyle = oDocument.CreateStyle(\"CustomTableStyle\", \"table\");\noTableStyle.SetBasedOn(oDocument.GetStyle(\"Bordered - Accent 5\"));\nvar oTable = Api.CreateTable(3, 3);\noTable.SetStyle(oTableStyle);\noDocument.Push(oTable);\nvar oBlockLvlSdt = Api.CreateBlockLvlSdt();\noBlockLvlSdt.GetContent().GetElement(0).AddText(\"This is a block text content control.\");\nvar oCell = oTable.GetRow(0).GetCell(0);\noCell.AddElement(0, oBlockLvlSdt);\nvar oParentTableCell = oBlockLvlSdt.GetParentTableCell();\noParentTableCell.SetCellBorderTop(\"single\", 32, 0, 0, 0, 255);\nbuilder.SaveFile(\"docx\", \"GetParentTableCell.docx\");\nbuilder.CloseFile();"
 		},
-		"ApiBlockLvlSdt.getplaceholder": {
+		"ApiBlockLvlSdt.getplaceholdertext": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oBlockLvlSdt = Api.CreateBlockLvlSdt();\noDocument.AddElement(0, oBlockLvlSdt);\noBlockLvlSdt.SetPlaceholderText(\"Name\");\nvar sText = oBlockLvlSdt.GetPlaceholderText();\nvar oParagraph = Api.CreateParagraph();\noParagraph.AddText(\"Placeholder text: \" + sText);\noDocument.Push(oParagraph);\nbuilder.SaveFile(\"docx\", \"GetPlaceholderText.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiBlockLvlSdt.getrange": {
@@ -294,7 +294,7 @@
 		"ApiBlockLvlSdt.setlock": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oBlockLvlSdt = Api.CreateBlockLvlSdt();\noBlockLvlSdt.GetContent().GetElement(0).AddText(\"This is a block text content control with the content lock set to it.\");\noBlockLvlSdt.SetLock(\"sdtContentLocked\");\noDocument.AddElement(0, oBlockLvlSdt);\nvar oLock = oBlockLvlSdt.GetLock();\nvar oParagraph = oDocument.GetElement(1);\noParagraph.AddText(\"Lock type: \" + oLock);\nbuilder.SaveFile(\"docx\", \"SetLock.docx\");\nbuilder.CloseFile();"
 		},
-		"ApiBlockLvlSdt.setplaceholder": {
+		"ApiBlockLvlSdt.setplaceholdertext": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument();\nvar oBlockLvlSdt = Api.CreateBlockLvlSdt();\noDocument.AddElement(0, oBlockLvlSdt);\noBlockLvlSdt.SetPlaceholderText(\"Name\");\nbuilder.SaveFile(\"docx\", \"SetPlaceholderText.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiBlockLvlSdt.settag": {
@@ -435,7 +435,7 @@
 		"ApiDocument.deletebookmark": {
 			"script": "builder.CreateFile( \"docx \"); \nvar oDocument = Api.GetDocument(); \nvar oParagraph = oDocument.GetElement(0); \noParagraph.AddText( \"ONLYOFFICE Document Builder \"); \nvar oRange = oDocument.GetRange(0, 9); \noRange.AddBookmark( \"Bookmark\"); \noDocument.DeleteBookmark(\"Bookmark\");\noParagraph = Api.CreateParagraph();\noParagraph.AddText(\"The bookmark was removed from this document.\");\noDocument.Push(oParagraph);\nbuilder.SaveFile( \"docx \",  \"DeleteBookmark.docx \"); \nbuilder.CloseFile();"
 		},
-		"ApiParagraph.getallbookmarksnames": {
+		"ApiDocument.getallbookmarksnames": {
 			"script": "builder.CreateFile(\"docx\");\nvar oDocument = Api.GetDocument(); \nvar oParagraph = oDocument.GetElement(0); \noParagraph.AddText(\"ONLYOFFICE Document Builder\"); \nvar oRange1 = oDocument.GetRange(0, 9); \noRange1.AddBookmark(\"Bookmark 1\");\nvar oRange2 = oDocument.GetRange(11, 18); \noRange2.AddBookmark(\"Bookmark 2\");\nvar aBookmarks = oDocument.GetAllBookmarksNames();\noParagraph.AddLineBreak();\noParagraph.AddText(\"Bookmark names: \");\nfor (let i = 0; i < 2; i++ ){\n    oParagraph.AddText(aBookmarks[i] + \",\" + \" \");\n}\nbuilder.SaveFile(\"docx\", \"GetAllBookmarksNames.docx\");\nbuilder.CloseFile();"
 		},
 		"ApiDocument.getallcaptionparagraphs": {
