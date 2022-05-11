@@ -711,6 +711,7 @@
   },
   "FormType": {
     "name": "FormType",
+    "description": "<p>The available form types.</p>",
     "type": [
       "\"textForm\"",
       "\"comboBoxForm\"",
@@ -729,7 +730,7 @@
   },
   "ScaleFlag": {
     "name": "ScaleFlag",
-    "description": "<p>Condition when to scale image</p>",
+    "description": "<p>The condition to scale an image in the picture form.</p>",
     "type": [
       "\"always\"",
       "\"never\"",
@@ -739,7 +740,7 @@
   },
   "percentage": {
     "name": "percentage",
-    "description": "<p>Value from 0 to 100</p>",
+    "description": "<p>Value from 0 to 100.</p>",
     "type": [
       "number"
     ]
@@ -852,6 +853,7 @@
   },
   "TickMark": {
     "name": "TickMark",
+    "description": "<p>The type of tick mark appearance.</p>",
     "type": [
       "\"cross\"",
       "\"in\"",

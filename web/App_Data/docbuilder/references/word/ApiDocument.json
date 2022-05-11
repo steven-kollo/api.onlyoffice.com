@@ -827,7 +827,7 @@
     "ClearAllFields": {
       "memberof": "ApiDocument",
       "name": "ClearAllFields",
-      "description": "<p>Clears all fields in the document</p>",
+      "description": "<p>Clears all fields in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -860,7 +860,7 @@
     "ClearAllForms": {
       "memberof": "ApiDocument",
       "name": "ClearAllForms",
-      "description": "<p>Clears all forms in the document</p>",
+      "description": "<p>Clears all forms in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

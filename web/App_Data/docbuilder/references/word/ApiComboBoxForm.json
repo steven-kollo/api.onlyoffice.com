@@ -70,7 +70,7 @@
     "SetText": {
       "memberof": "ApiComboBoxForm",
       "name": "SetText",
-      "description": "<p>Sets the text to the current combo box.</p>",
+      "description": "<p>Sets the text to the current combo box.\n<em>Available only for editable combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -272,7 +272,7 @@
     "IsFixed": {
       "memberof": "ApiComboBoxForm",
       "name": "IsFixed",
-      "description": "<p>Checks if the current form is fixed-size</p>",
+      "description": "<p>Checks if the current form is fixed size.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -289,7 +289,7 @@
     "ToFixed": {
       "memberof": "ApiComboBoxForm",
       "name": "ToFixed",
-      "description": "<p>Convert form to a fixed-size mode</p>",
+      "description": "<p>Converts the current form to a fixed size form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -320,7 +320,7 @@
     "ToInline": {
       "memberof": "ApiComboBoxForm",
       "name": "ToInline",
-      "description": "<p>Convert form to an inline mode\n<em>Picture form can't be converted to inline mode, it's always a fixed-size object</em></p>",
+      "description": "<p>Converts the current form to an inline form.\n<em>Picture form can't be converted to an inline form, it's always a fixed size object.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -453,7 +453,7 @@
     "GetWrapperShape": {
       "memberof": "ApiComboBoxForm",
       "name": "GetWrapperShape",
-      "description": "<p>Gets the shape in which the form placed.</p>",
+      "description": "<p>Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -470,7 +470,7 @@
     "SetPlaceholderText": {
       "memberof": "ApiComboBoxForm",
       "name": "SetPlaceholderText",
-      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button</em></p>",
+      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -520,7 +520,7 @@
     "GetTextPr": {
       "memberof": "ApiComboBoxForm",
       "name": "GetTextPr",
-      "description": "<p>Gets the text properties from the current form.</p>",
+      "description": "<p>Returns the text properties from the current form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -535,8 +535,25 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
     }
   },
-  "comment": "/**\n\t * Class representing a document combo box form.\n\t * @constructor\n\t * @extends {ApiFormBase}\n\t */",
+  "comment": "/**\n\t * Class representing a document combo box form.\n\t * @constructor\n\t * @property {boolean} editable - Specifies if the combo box text can be edited.\n\t * @property {boolean} autoFit - Specifies if the combo box form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.\n\t * @property {Array.<string | Array.<string>>} items - The combo box items.\n     * This array consists of strings or arrays of two strings where the first string is the displayed value and the second one is its meaning.\n     * If the array consists of single strings, then the displayed value and its meaning are the same.\n     * Example: [\"First\", [\"Second\", \"2\"], [\"Third\", \"3\"], \"Fourth\"].\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document combo box form.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "boolean",
+      "name": "editable",
+      "description": "<p>Specifies if the combo box text can be edited.</p>"
+    },
+    {
+      "type": "boolean",
+      "name": "autoFit",
+      "description": "<p>Specifies if the combo box form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>"
+    },
+    {
+      "type": "Array.<(string|Array.<string>)>",
+      "name": "items",
+      "description": "<p>The combo box items.\nThis array consists of strings or arrays of two strings where the first string is the displayed value and the second one is its meaning.\nIf the array consists of single strings, then the displayed value and its meaning are the same.\nExample: [&quot;First&quot;, [&quot;Second&quot;, &quot;2&quot;], [&quot;Third&quot;, &quot;3&quot;], &quot;Fourth&quot;].</p>"
+    }
+  ]
 }

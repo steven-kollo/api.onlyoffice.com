@@ -163,7 +163,7 @@
     "IsFixed": {
       "memberof": "ApiFormBase",
       "name": "IsFixed",
-      "description": "<p>Checks if the current form is fixed-size</p>",
+      "description": "<p>Checks if the current form is fixed size.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -180,7 +180,7 @@
     "ToFixed": {
       "memberof": "ApiFormBase",
       "name": "ToFixed",
-      "description": "<p>Convert form to a fixed-size mode</p>",
+      "description": "<p>Converts the current form to a fixed size form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -211,7 +211,7 @@
     "ToInline": {
       "memberof": "ApiFormBase",
       "name": "ToInline",
-      "description": "<p>Convert form to an inline mode\n<em>Picture form can't be converted to inline mode, it's always a fixed-size object</em></p>",
+      "description": "<p>Converts the current form to an inline form.\n<em>Picture form can't be converted to an inline form, it's always a fixed size object.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -344,7 +344,7 @@
     "GetWrapperShape": {
       "memberof": "ApiFormBase",
       "name": "GetWrapperShape",
-      "description": "<p>Gets the shape in which the form placed.</p>",
+      "description": "<p>Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -361,7 +361,7 @@
     "SetPlaceholderText": {
       "memberof": "ApiFormBase",
       "name": "SetPlaceholderText",
-      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button</em></p>",
+      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -411,7 +411,7 @@
     "GetTextPr": {
       "memberof": "ApiFormBase",
       "name": "GetTextPr",
-      "description": "<p>Gets the text properties from the current form.</p>",
+      "description": "<p>Returns the text properties from the current form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -426,8 +426,30 @@
       "inherits": null
     }
   },
-  "comment": "/**\n\t * Class representing a document form base.\n\t * @constructor\n\t */",
+  "comment": "/**\n\t * Class representing a document form base.\n\t * @constructor\n\t * @property {string} key - Form key.\n\t * @property {string} tip - Form tip text.\n\t * @property {boolean} required - Specifies if the form is required or not.\n\t * @property {string} placeholder - Form placeholder text.\n\t */",
   "description": "<p>Class representing a document form base.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "string",
+      "name": "key",
+      "description": "<p>Form key.</p>"
+    },
+    {
+      "type": "string",
+      "name": "tip",
+      "description": "<p>Form tip text.</p>"
+    },
+    {
+      "type": "boolean",
+      "name": "required",
+      "description": "<p>Specifies if the form is required or not.</p>"
+    },
+    {
+      "type": "string",
+      "name": "placeholder",
+      "description": "<p>Form placeholder text.</p>"
+    }
+  ]
 }

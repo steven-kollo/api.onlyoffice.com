@@ -145,6 +145,37 @@
         }
       ]
     },
+    "CreateThemeColorScheme": {
+      "memberof": "Api",
+      "name": "CreateThemeColorScheme",
+      "description": "<p>Creates a new theme color scheme.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiThemeColorScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<ApiUniColor> | Array.<ApiRGBColor>",
+          "name": "arrColors",
+          "description": "<p>Set of colors which are referred to as a color scheme.\nThe color scheme is responsible for defining a list of twelve colors.\nThe array should contain a sequence of colors: 2 dark, 2 light, 6 primary, a color for a hyperlink and a color for the followed hyperlink.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>Theme color scheme name.</p>",
+          "optional": false
+        }
+      ]
+    },
     "CreateThemeFormatScheme": {
       "memberof": "Api",
       "name": "CreateThemeFormatScheme",

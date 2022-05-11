@@ -3,7 +3,7 @@
     "IsAutoFit": {
       "memberof": "ApiTextForm",
       "name": "IsAutoFit",
-      "description": "<p>Checks if the text form content is autofit.</p>",
+      "description": "<p>Checks if the text form content is autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "SetAutoFit": {
       "memberof": "ApiTextForm",
       "name": "SetAutoFit",
-      "description": "<p>Specifies if the text form content should be autofit.</p>",
+      "description": "<p>Specifies if the text form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -121,7 +121,7 @@
         {
           "type": "number",
           "name": "nChars",
-          "description": "<p>The maximum number of characters in the text form. If this parameter is equal to -1, no limit will be set.\nA limit is required to be set, if a comb of characters is applied.\nMaximum value for this parameter is 1000000.</p>",
+          "description": "<p>The maximum number of characters in the text form. If this parameter is equal to -1, no limit will be set.\nA limit is required to be set if a comb of characters is applied.\nMaximum value for this parameter is 1000000.</p>",
           "optional": false
         }
       ]
@@ -129,7 +129,7 @@
     "IsComb": {
       "memberof": "ApiTextForm",
       "name": "IsComb",
-      "description": "<p>Checks if the text form is a comb of characters.</p>",
+      "description": "<p>Checks if the text form is a comb of characters with the same cell width.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -146,7 +146,7 @@
     "SetComb": {
       "memberof": "ApiTextForm",
       "name": "SetComb",
-      "description": "<p>Specifies if the text form should be a comb of characters.</p>",
+      "description": "<p>Specifies if the text form should be a comb of characters with the same cell width.\nThe maximum number of characters must be set to a positive value.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -171,7 +171,7 @@
     "SetCellWidth": {
       "memberof": "ApiTextForm",
       "name": "SetCellWidth",
-      "description": "<p>Sets the width of a cell to the applied comb of characters.</p>",
+      "description": "<p>Sets the cell width to the applied comb of characters.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -188,7 +188,7 @@
         {
           "type": "mm",
           "name": "nCellWidth",
-          "description": "<p>The cell width measured in millimeters. If this parameter is equal to 0, then the width will be set automatically. Must be &gt;= 1 and &lt;= 558.8.</p>",
+          "description": "<p>The cell width measured in millimeters.\nIf this parameter is not specified or equal to 0 or less, then the width will be set automatically. Must be &gt;= 1 and &lt;= 558.8.</p>",
           "optional": true,
           "defaultValue": 0
         }
@@ -382,7 +382,7 @@
     "IsFixed": {
       "memberof": "ApiTextForm",
       "name": "IsFixed",
-      "description": "<p>Checks if the current form is fixed-size</p>",
+      "description": "<p>Checks if the current form is fixed size.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -399,7 +399,7 @@
     "ToFixed": {
       "memberof": "ApiTextForm",
       "name": "ToFixed",
-      "description": "<p>Convert form to a fixed-size mode</p>",
+      "description": "<p>Converts the current form to a fixed size form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -430,7 +430,7 @@
     "ToInline": {
       "memberof": "ApiTextForm",
       "name": "ToInline",
-      "description": "<p>Convert form to an inline mode\n<em>Picture form can't be converted to inline mode, it's always a fixed-size object</em></p>",
+      "description": "<p>Converts the current form to an inline form.\n<em>Picture form can't be converted to an inline form, it's always a fixed size object.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -563,7 +563,7 @@
     "GetWrapperShape": {
       "memberof": "ApiTextForm",
       "name": "GetWrapperShape",
-      "description": "<p>Gets the shape in which the form placed.</p>",
+      "description": "<p>Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -580,7 +580,7 @@
     "SetPlaceholderText": {
       "memberof": "ApiTextForm",
       "name": "SetPlaceholderText",
-      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button</em></p>",
+      "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -630,7 +630,7 @@
     "GetTextPr": {
       "memberof": "ApiTextForm",
       "name": "GetTextPr",
-      "description": "<p>Gets the text properties from the current form.</p>",
+      "description": "<p>Returns the text properties from the current form.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -645,8 +645,35 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
     }
   },
-  "comment": "/**\n\t * Class representing a document text form.\n\t * @constructor\n\t * @extends {ApiFormBase}\n\t */",
+  "comment": "/**\n\t * Class representing a document text form.\n\t * @constructor\n\t * @property {boolean} comb - Specifies if the text form should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.\n\t * @property {number} maxCharacters - The maximum number of characters in the text form.\n\t * @property {number} cellWidth - The cell width for each character measured in millimeters. If this parameter is not specified or equal to 0 or less, then the width will be set automatically.\n\t * @property {boolean} multiLine - Specifies if the current fixed size text form is multiline or not.\n\t * @property {boolean} autoFit - Specifies if the text form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document text form.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "boolean",
+      "name": "comb",
+      "description": "<p>Specifies if the text form should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.</p>"
+    },
+    {
+      "type": "number",
+      "name": "maxCharacters",
+      "description": "<p>The maximum number of characters in the text form.</p>"
+    },
+    {
+      "type": "number",
+      "name": "cellWidth",
+      "description": "<p>The cell width for each character measured in millimeters. If this parameter is not specified or equal to 0 or less, then the width will be set automatically.</p>"
+    },
+    {
+      "type": "boolean",
+      "name": "multiLine",
+      "description": "<p>Specifies if the current fixed size text form is multiline or not.</p>"
+    },
+    {
+      "type": "boolean",
+      "name": "autoFit",
+      "description": "<p>Specifies if the text form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>"
+    }
+  ]
 }
