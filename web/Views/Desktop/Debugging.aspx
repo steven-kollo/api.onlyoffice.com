@@ -75,4 +75,42 @@
     <p>Here is the result:</p>
     <p><img alt="Debug" src="<%= Url.Content("~/content/img/desktop/debugging.png") %>" /></p>
 
+    <h2 id="running" class="copy-link">Running the application</h2>
+    <p>Starting from version 7.1, you can run ONLYOFFICE Desktop Editors with the <em>--ascdesktop-support-debug-info-keep</em> flag. It can have the following values:</p>
+    <div class="header-gray">Parameters</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col style="width: 150px;" />
+            <col style="width: 200px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Value</td>
+                <td>Description</td>
+                <td>Usage</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td id="1" class="copy-link">1</td>
+                <td>Runs the application.</td>
+                <td>--ascdesktop-support-debug-info-keep=1</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="0" class="copy-link">0</td>
+                <td>Stops the application.</td>
+                <td>--ascdesktop-support-debug-info-keep=0</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="check" class="copy-link">default</td>
+                <td>The default application condition - the app is turned off.</td>
+                <td>--ascdesktop-support-debug-info-keep=default</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>To launch ONLYOFFICE Desktop Editors with this flag, use the same instructions as for the <em>--ascdesktop-support-debug-info</em> flag <a href="#windows">above</a>.
+        The only difference is that the <em>--ascdesktop-support-debug-info-keep</em> flag stores the value passed to it.
+        You will not need to specify it every time you run the application.</p>
+
 </asp:Content>
