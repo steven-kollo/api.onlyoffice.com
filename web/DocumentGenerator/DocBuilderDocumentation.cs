@@ -357,62 +357,58 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static void LoadExamples()
         {
-            var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references", "examples.json");
+            var examplesFolders = new List<string>{"cell", "slide", "word"};
+            var examplePath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references\examples");
             var globalsExamplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references", "globalsExamples.json");
-            if (!File.Exists(examplesPath))
+            foreach (var folder in examplesFolders)
             {
-                _logger.Info("Couldn't find any examples: " + examplesPath);
-            }
-            else
-            {
-                var examplesContent = File.ReadAllText(examplesPath);
-                try
+                var mod = GetModule(folder);
+                if (mod == null) continue;
+                
+                var path = Path.Combine(examplePath, folder);
+                if (!Directory.Exists(path))
                 {
-                    var examples = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, DBExample>>>(examplesContent);
-                    foreach (var module in examples)
+                    _logger.Info("Couldn't find example folder: " + path);
+                }
+                else
+                {
+                    foreach (var file in Directory.GetFiles(path))
                     {
-                        var mod = GetModule(module.Key);
-                        if (mod == null) continue;
-
-                        foreach (var ex in module.Value)
+                        var example = new DBExample();
+                        if (file.Contains("."))
                         {
-                            if (ex.Key.Contains("."))
+                            var split = file.Split('.');
+                            if (mod.ContainsKey(split[0]))
                             {
-                                var split = ex.Key.Split('.');
-                                if (mod.ContainsKey(split[0]))
+                                var section = mod[split[0]];
+                                if (section.Methods.ContainsKey(split[1]))
                                 {
-                                    var section = mod[split[0]];
-                                    if (section.Methods.ContainsKey(split[1]))
-                                    {
-                                        section.Methods[split[1]].Example = ex.Value;
-                                    }
-                                    else
-                                    {
-                                        _logger.InfoFormat("Found example for {0}.{1} but the method is missing", module.Key, ex.Key);
-                                    }
+                                    example.Script = File.ReadAllText(Path.Combine(path, file));
+                                    section.Methods[split[1]].Example = example;
                                 }
                                 else
                                 {
-                                    _logger.InfoFormat("Found example for {0}.{1} but the class is missing", module.Key, ex.Key);
+                                    _logger.InfoFormat("Found example for {0}.{1} but the method is missing", folder, file);
                                 }
                             }
                             else
                             {
-                                if (mod.ContainsKey(ex.Key))
-                                {
-                                    mod[ex.Key].Example = ex.Value;
-                                }
-                                else
-                                {
-                                    _logger.InfoFormat("Found example for {0}.{1} but the class is missing", module.Key, ex.Key);
-                                }
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", folder, file);
+                            }
+                        }
+                        else
+                        {
+                            if (mod.ContainsKey(file))
+                            {
+                                example.Script = File.ReadAllText(Path.Combine(path, file));
+                                mod[file].Example = example;
+                            }
+                            else
+                            {
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", folder, file);
                             }
                         }
                     }
-                }
-                catch (Exception e)
-                {
-                    _logger.WarnFormat("Couldn't parse examples.json. Got an error: {0}", e.Message);
                 }
             }
 
