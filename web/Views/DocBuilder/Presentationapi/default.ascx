@@ -5,14 +5,15 @@
 </h1>
 
 <p class="dscr">A presentation document has a more simple structure than that of a text document, most of the presentation elements are nested within the <em>slide</em> element with all the other elements placed on it. The single or multiple <em>slide</em> elements are a part of the <em>presentation</em> element.</p>
-<p>Some drawn objects - <em>images</em>, <em>shapes</em>, <em>charts</em> - can be placed directly to the <em>slide</em>.</p>
-<p>The text cannot be placed directly to the <em>slide</em>, it can be only grouped to <em>paragraphs</em> and added to the <em>shapes</em>. For the sake of convenience (as it is always easier to work with smaller blocks than with larger ones) the text is usually divided into small text portions called <em>runs</em>. Each paragraph can consist either of only one text run or have dozens of them inside, depending on the paragraph complexity.</p>
+<p>If you need all the slides to contain the same fonts and images, the <em>slide master</em> should be used. It consists of the same elements as the <em>slide</em>.</p>
+<p>The <em>layout</em> can be added to the <em>slide</em> to specify its structure. Also some drawn objects - <em>images</em>, <em>shapes</em>, <em>charts</em> - can be placed directly to the <em>slide</em> or slide <em>layout</em>. The <em>placeholder</em> element can be added to the <em>shape</em>.</p>
+<p>The text cannot be placed directly to the <em>slide</em>, it can be only grouped to <em>paragraphs</em> and added to the <em>shapes</em> or <em>tables</em>. For the sake of convenience (as it is always easier to work with smaller blocks than with larger ones) the text is usually divided into small text portions called <em>runs</em>. Each paragraph can consist either of only one text run or have dozens of them inside, depending on the paragraph complexity.</p>
 <p>Thus any presentation document structure with <b>ONLYOFFICE Document Builder</b> API used to create it can be outlined like this:</p>
 <div class="presentation_document">
 <div class="document_structure">
         <p class="node_label"><b>ONLYOFFICE Document Builder API</b></p>
-        <p class="node_description">Presentation creation, global color and fill/stroke settings:<br />
-            <a href="<%= Url.Action("presentationapi/api") %>">Api</a>, <a href="<%= Url.Action("presentationapi/apifill") %>">ApiFill</a>, <a href="<%= Url.Action("presentationapi/apibullet") %>">ApiBullet</a>, <a href="<%= Url.Action("presentationapi/apistroke") %>">ApiStroke</a>, <a href="<%= Url.Action("presentationapi/apigradientstop") %>">ApiGradientStop</a>, <a href="<%= Url.Action("presentationapi/apiunicolor") %>">ApiUniColor</a>, <a href="<%= Url.Action("presentationapi/apipresetcolor") %>">ApiPresetColor</a>, <a href="<%= Url.Action("presentationapi/apirgbcolor") %>">ApiRGBColor</a>, <a href="<%= Url.Action("presentationapi/apischemecolor") %>">ApiSchemeColor</a>
+        <p class="node_description">Presentation creation, global color, theme and fill/stroke settings:<br />
+            <a href="<%= Url.Action("presentationapi/api") %>">Api</a>, <a href="<%= Url.Action("presentationapi/apifill") %>">ApiFill</a>, <a href="<%= Url.Action("presentationapi/apibullet") %>">ApiBullet</a>, <a href="<%= Url.Action("presentationapi/apistroke") %>">ApiStroke</a>, <a href="<%= Url.Action("presentationapi/apigradientstop") %>">ApiGradientStop</a>, <a href="<%= Url.Action("presentationapi/apiunicolor") %>">ApiUniColor</a>, <a href="<%= Url.Action("presentationapi/apipresetcolor") %>">ApiPresetColor</a>, <a href="<%= Url.Action("presentationapi/apirgbcolor") %>">ApiRGBColor</a>, <a href="<%= Url.Action("presentationapi/apischemecolor") %>">ApiSchemeColor</a>, <a href="<%= Url.Action("presentationapi/apitheme") %>">ApiTheme</a>, <a href="<%= Url.Action("presentationapi/apithemecolorscheme") %>">ApiThemeColorScheme</a>, <a href="<%= Url.Action("presentationapi/apithemefontscheme") %>">ApiThemeFontScheme</a>, <a href="<%= Url.Action("presentationapi/apithemeformatscheme") %>">ApiThemeFormatScheme</a>
         </p>
         <div class="document_structure document_node">
             <p class="node_label">Presentation</p>
@@ -28,43 +29,251 @@
                     <br />
                     <a href="<%= Url.Action("presentationapi/apislide") %>">ApiSlide</a>
                 </p>
-                <div class="document_structure image_node">
-                    <p class="node_label">Image</p>
+                <div class="document_structure section_node">
+                    <p class="node_label">Layout</p>
                     <p class="node_description">
-                        Common object properties, current image properties:
-                                <br />
-                        <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apiimage") %>">ApiImage</a>
-                    </p>
-                </div>
-                <div class="document_structure chart_node">
-                    <p class="node_label">Chart</p>
-                    <p class="node_description">
-                        Common object properties, current chart properties:
-                                <br />
-                        <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apichart") %>">ApiChart</a>
-                    </p>
-                </div>
-                <div class="document_structure shape_node">
-                    <p class="node_label">Shape</p>
-                    <p class="node_description">
-                        Common object properties, current shape properties:
-                    <br />
-                        <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apishape") %>">ApiShape</a>.
-                    </p>
-                    <div class="document_structure paragraph_node">
-                        <p class="node_label">Paragraph</p>
-                        <p class="node_description">
-                            Common paragraph properties, current paragraph properties, paragraph numbering:
+                        Add objects to the layout, set background:
                         <br />
-                            <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>, <a href="<%= Url.Action("presentationapi/apiparagraph") %>">ApiParagraph</a>
+                        <a href="<%= Url.Action("presentationapi/apilayout") %>">ApiLayout</a>
+                    </p>
+                    <div class="document_structure image_node">
+                        <p class="node_label">Image</p>
+                        <p class="node_description">
+                            Common object properties, current image properties:
+                                    <br />
+                            <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apiimage") %>">ApiImage</a>
                         </p>
-                        <div class="document_structure textrun_node">
-                            <p class="node_label">Text run</p>
+                    </div>
+                    <div class="document_structure chart_node">
+                        <p class="node_label">Chart</p>
+                        <p class="node_description">
+                            Common object properties, current chart properties:
+                                    <br />
+                            <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apichart") %>">ApiChart</a>
+                        </p>
+                    </div>
+                    <div class="document_structure shape_node">
+                        <p class="node_label">Shape</p>
+                        <p class="node_description">
+                            Common object properties, current shape properties:
+                        <br />
+                            <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apishape") %>">ApiShape</a>.
+                        </p>
+                        <div class="document_structure paragraph_node">
+                            <p class="node_label">Paragraph</p>
                             <p class="node_description">
-                                Common text properties, current text run properties:
+                                Common paragraph properties, current paragraph properties:
                             <br />
-                                <a href="<%= Url.Action("presentationapi/apitextpr") %>">ApiTextPr</a>, <a href="<%= Url.Action("presentationapi/apirun") %>">ApiRun</a>
+                                <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>, <a href="<%= Url.Action("presentationapi/apiparagraph") %>">ApiParagraph</a>
                             </p>
+                            <div class="document_structure textrun_node">
+                                <p class="node_label">Text run</p>
+                                <p class="node_description">
+                                    Common text properties, current text run properties:
+                                <br />
+                                    <a href="<%= Url.Action("presentationapi/apitextpr") %>">ApiTextPr</a>, <a href="<%= Url.Action("presentationapi/apirun") %>">ApiRun</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="document_structure paragraph_node">
+                            <p class="node_label">Placeholder</p>
+                            <p class="node_description">
+                                Current placeholder properties:
+                            <br />
+                                <a href="<%= Url.Action("presentationapi/apiplaceholder") %>">ApiPlaceholder</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="document_structure table_node">
+                        <p class="node_label">Table</p>
+                        <p class="node_description">
+                            Common object properties, current table properties:
+                            <br />
+                            <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apitable") %>">ApiTable</a>.
+                        </p>
+                        <div class="document_structure tablerow_node">
+                            <p class="node_label">Table row</p>
+                            <p class="node_description">
+                                Current table row properties:
+                                <br />
+                                <a href="<%= Url.Action("textdocumentapi/apitablerow") %>">ApiTableRow</a>
+                            </p>
+                            <div class="document_structure tablecell_node">
+                                <p class="node_label">Table cell</p>
+                                <p class="node_description">
+                                    Current table cell properties:
+                                    <br />
+                                    <a href="<%= Url.Action("textdocumentapi/apitablecell") %>">ApiTableCell</a>
+                                </p>
+                                <div class="document_structure paragraph_node">
+                                    <p class="node_label">Paragraph</p>
+                                    <p class="node_description">
+                                        Common paragraph properties, current paragraph properties:
+                                    <br />
+                                        <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>, <a href="<%= Url.Action("presentationapi/apiparagraph") %>">ApiParagraph</a>
+                                    </p>
+                                    <div class="document_structure textrun_node">
+                                        <p class="node_label">Text run</p>
+                                        <p class="node_description">
+                                            Common text properties, current text run properties:
+                                        <br />
+                                            <a href="<%= Url.Action("presentationapi/apitextpr") %>">ApiTextPr</a>, <a href="<%= Url.Action("presentationapi/apirun") %>">ApiRun</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="document_structure tablecell_node">
+                                <p class="node_label">Table cell</p>
+                                <p class="node_description">
+                                    Current table cell properties:
+                                    <br />
+                                    <a href="<%= Url.Action("textdocumentapi/apitablecell") %>">ApiTableCell</a>
+                                </p>
+                                <div class="document_structure paragraph_node">
+                                    <p class="node_label">Paragraph</p>
+                                    <p class="node_description">
+                                        Common paragraph properties, current paragraph properties:
+                                    <br />
+                                        <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>, <a href="<%= Url.Action("presentationapi/apiparagraph") %>">ApiParagraph</a>
+                                    </p>
+                                    <div class="document_structure textrun_node">
+                                        <p class="node_label">Text run</p>
+                                        <p class="node_description">
+                                            Common text properties, current text run properties:
+                                        <br />
+                                            <a href="<%= Url.Action("presentationapi/apitextpr") %>">ApiTextPr</a>, <a href="<%= Url.Action("presentationapi/apirun") %>">ApiRun</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="document_structure section_node">
+                <p class="node_label">Slide master</p>
+                <p class="node_description">
+                    Add objects to the slide master, set background:
+                    <br />
+                    <a href="<%= Url.Action("presentationapi/apimaster") %>">ApiMaster</a>
+                </p>
+                <div class="document_structure section_node">
+                    <p class="node_label">Layout</p>
+                    <p class="node_description">
+                        Add objects to the layout, set background:
+                        <br />
+                        <a href="<%= Url.Action("presentationapi/apilayout") %>">ApiLayout</a>
+                    </p>
+                    <div class="document_structure image_node">
+                        <p class="node_label">Image</p>
+                        <p class="node_description">
+                            Common object properties, current image properties:
+                                    <br />
+                            <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apiimage") %>">ApiImage</a>
+                        </p>
+                    </div>
+                    <div class="document_structure chart_node">
+                        <p class="node_label">Chart</p>
+                        <p class="node_description">
+                            Common object properties, current chart properties:
+                                    <br />
+                            <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apichart") %>">ApiChart</a>
+                        </p>
+                    </div>
+                    <div class="document_structure shape_node">
+                        <p class="node_label">Shape</p>
+                        <p class="node_description">
+                            Common object properties, current shape properties:
+                        <br />
+                            <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apishape") %>">ApiShape</a>.
+                        </p>
+                        <div class="document_structure paragraph_node">
+                            <p class="node_label">Paragraph</p>
+                            <p class="node_description">
+                                Common paragraph properties, current paragraph properties:
+                            <br />
+                                <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>, <a href="<%= Url.Action("presentationapi/apiparagraph") %>">ApiParagraph</a>
+                            </p>
+                            <div class="document_structure textrun_node">
+                                <p class="node_label">Text run</p>
+                                <p class="node_description">
+                                    Common text properties, current text run properties:
+                                <br />
+                                    <a href="<%= Url.Action("presentationapi/apitextpr") %>">ApiTextPr</a>, <a href="<%= Url.Action("presentationapi/apirun") %>">ApiRun</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="document_structure paragraph_node">
+                            <p class="node_label">Placeholder</p>
+                            <p class="node_description">
+                                Current placeholder properties:
+                            <br />
+                                <a href="<%= Url.Action("presentationapi/apiplaceholder") %>">ApiPlaceholder</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="document_structure table_node">
+                        <p class="node_label">Table</p>
+                        <p class="node_description">
+                            Common object properties, current table properties:
+                            <br />
+                            <a href="<%= Url.Action("presentationapi/apidrawing") %>">ApiDrawing</a>, <a href="<%= Url.Action("presentationapi/apitable") %>">ApiTable</a>.
+                        </p>
+                        <div class="document_structure tablerow_node">
+                            <p class="node_label">Table row</p>
+                            <p class="node_description">
+                                Current table row properties:
+                                <br />
+                                <a href="<%= Url.Action("textdocumentapi/apitablerow") %>">ApiTableRow</a>
+                            </p>
+                            <div class="document_structure tablecell_node">
+                                <p class="node_label">Table cell</p>
+                                <p class="node_description">
+                                    Current table cell properties:
+                                    <br />
+                                    <a href="<%= Url.Action("textdocumentapi/apitablecell") %>">ApiTableCell</a>
+                                </p>
+                                <div class="document_structure paragraph_node">
+                                    <p class="node_label">Paragraph</p>
+                                    <p class="node_description">
+                                        Common paragraph properties, current paragraph properties:
+                                    <br />
+                                        <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>, <a href="<%= Url.Action("presentationapi/apiparagraph") %>">ApiParagraph</a>
+                                    </p>
+                                    <div class="document_structure textrun_node">
+                                        <p class="node_label">Text run</p>
+                                        <p class="node_description">
+                                            Common text properties, current text run properties:
+                                        <br />
+                                            <a href="<%= Url.Action("presentationapi/apitextpr") %>">ApiTextPr</a>, <a href="<%= Url.Action("presentationapi/apirun") %>">ApiRun</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="document_structure tablecell_node">
+                                <p class="node_label">Table cell</p>
+                                <p class="node_description">
+                                    Current table cell properties:
+                                    <br />
+                                    <a href="<%= Url.Action("textdocumentapi/apitablecell") %>">ApiTableCell</a>
+                                </p>
+                                <div class="document_structure paragraph_node">
+                                    <p class="node_label">Paragraph</p>
+                                    <p class="node_description">
+                                        Common paragraph properties, current paragraph properties:
+                                    <br />
+                                        <a href="<%= Url.Action("presentationapi/apiparapr") %>">ApiParaPr</a>, <a href="<%= Url.Action("presentationapi/apiparagraph") %>">ApiParagraph</a>
+                                    </p>
+                                    <div class="document_structure textrun_node">
+                                        <p class="node_label">Text run</p>
+                                        <p class="node_description">
+                                            Common text properties, current text run properties:
+                                        <br />
+                                            <a href="<%= Url.Action("presentationapi/apitextpr") %>">ApiTextPr</a>, <a href="<%= Url.Action("presentationapi/apirun") %>">ApiRun</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
