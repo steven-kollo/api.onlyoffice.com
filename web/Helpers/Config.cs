@@ -30,6 +30,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using ASC.Web.Core.Files;
 using JWT;
+using JWT.Algorithms;
 
 namespace ASC.Api.Web.Help.Helpers
 {
@@ -40,8 +41,12 @@ namespace ASC.Api.Web.Help.Helpers
         {
             if (!string.IsNullOrEmpty(FileUtility.SignatureSecret))
             {
-                JsonWebToken.JsonSerializer = new DocumentService.JwtSerializer();
-                config.Token = JsonWebToken.Encode(config, FileUtility.SignatureSecret, JwtHashAlgorithm.HS256);
+                var serializer = new DocumentService.JwtSerializer();
+                var urlEncoder = new JwtBase64UrlEncoder();
+                var algorithm = new HMACSHA256Algorithm();
+                var encoder = new JwtEncoder(algorithm, serializer, urlEncoder);
+
+                config.Token = encoder.Encode(config, FileUtility.SignatureSecret);
             }
 
             using (var ms = new MemoryStream())

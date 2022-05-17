@@ -780,10 +780,10 @@
     "SetHighlight": {
       "memberof": "ApiParagraph",
       "name": "SetHighlight",
-      "description": "<p>Specifies a highlighting color in the RGB format which is applied as a background to the contents of the current paragraph.</p>",
+      "description": "<p>Specifies a highlighting color which is applied as a background to the contents of the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE, CPE"
         ]
       },
       "returns": [
@@ -795,29 +795,10 @@
       "inherits": null,
       "params": [
         {
-          "type": "byte",
-          "name": "r",
-          "description": "<p>Red color component value.</p>",
+          "type": "highlightColor",
+          "name": "sColor",
+          "description": "<p>Available highlight color.</p>",
           "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "g",
-          "description": "<p>Green color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "b",
-          "description": "<p>Blue color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "boolean",
-          "name": "isNone",
-          "description": "<p>If this parameter is set to &quot;true&quot;, then r,g,b parameters will be ignored.</p>",
-          "optional": true,
-          "defaultValue": false
         }
       ]
     },
@@ -1379,6 +1360,296 @@
       "returns": [],
       "see": null,
       "inherits": null
+    },
+    "AddNumberedCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddNumberedCrossRef",
+      "description": "<p>Adds a numbered cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "numberedRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a numbered reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The numbered paragraph to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;text&quot; and &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "string",
+          "name": "sSepWith",
+          "description": "<p>A number separator (used only with the &quot;fullCtxParaNum&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": "\"\""
+        }
+      ]
+    },
+    "AddHeadingCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddHeadingCrossRef",
+      "description": "<p>Adds a heading cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "headingRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a heading reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The heading paragraph to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;text&quot; and &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddBookmarkCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddBookmarkCrossRef",
+      "description": "<p>Adds a bookmark cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bookmarkRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a bookmark reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sBookmarkName",
+          "description": "<p>The name of the bookmark to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;text&quot; and &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "string",
+          "name": "sSepWith",
+          "description": "<p>A number separator (used only with the &quot;fullCtxParaNum&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": "\"\""
+        }
+      ]
+    },
+    "AddFootnoteCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddFootnoteCrossRef",
+      "description": "<p>Adds a footnote cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "footnoteRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a footnote reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The first paragraph from a footnote to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddEndnoteCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddEndnoteCrossRef",
+      "description": "<p>Adds an endnote cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "endnoteRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of an endnote reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The first paragraph from an endnote to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddCaptionCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddCaptionCrossRef",
+      "description": "<p>Adds a caption cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "captionType",
+          "name": "sCaption",
+          "description": "<p>Caption type (equation, figure, table).</p>",
+          "optional": false
+        },
+        {
+          "type": "captionRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a caption reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The caption paragraph to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (used only with the &quot;pageNum&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
     },
     "SetStyle": {
       "memberof": "ApiParagraph",
@@ -2220,7 +2491,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a paragraph.\r\n\t * @constructor\r\n\t * @extends {ApiParaPr}\r\n\t */",
+  "comment": "/**\n\t * Class representing a paragraph.\n\t * @constructor\n\t * @extends {ApiParaPr}\n\t */",
   "description": "<p>Class representing a paragraph.</p>",
   "scope": "global",
   "params": []

@@ -52,7 +52,7 @@
 
     <pre>
 window.Asc.plugin.loadModule("./vendor/highlight/styles/" + e.params.data.id , function(content) {
-    style_value = content;
+    var style_value = content;
     if (isDE || isFF) {
         $("#jq_color").spectrum("set", (hexc($(container).css('backgroundColor'))));
     } else {

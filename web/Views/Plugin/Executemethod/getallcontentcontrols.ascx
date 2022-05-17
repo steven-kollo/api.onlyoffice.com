@@ -17,7 +17,7 @@ window.Asc.plugin.executeMethod ("GetAllContentControls");
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns the data in the following form (JSON):</p>
+<p>The method returns an array of content control objects:</p>
 <pre>
 [
     {

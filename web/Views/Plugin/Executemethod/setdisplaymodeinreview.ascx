@@ -33,7 +33,7 @@ window.Asc.plugin.executeMethod ("SetDisplayModeInReview", [sMode]);
     <tbody>
         <tr class="tablerow">
             <td>sMode</td>
-            <td>The display mode: <em>"edit"</em> - all changes are displayed, <em>"final"</em> - all accepted changes are displayed, <em>"original"</em> - all rejected changes are displayed.</td>
+            <td>The display mode: <em>"edit"</em> - all changes are displayed, <em>"simple"</em> - all changes are displayed but the balloons are turned off, <em>"final"</em> - all accepted changes are displayed, <em>"original"</em> - all rejected changes are displayed.</td>
             <td>string</td>
             <td>"edit"</td>
         </tr>

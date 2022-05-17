@@ -117,7 +117,7 @@
       "id":"plugin",
       "title":"Plugins and Macros",
       "description":"Extend the ONLYOFFICE Docs functionality. In this section you will learn how to create your own plugins/macros: its structure, development lifecycle, and examples.",
-      "version":"7.0",
+      "version":"7.1",
       "links":{
          "Get started":[
             {
@@ -179,7 +179,7 @@
       "id":"docbuilder",
       "title":"Document Builder",
       "description":"Generate documents easily without running a document editor. In this section you will learn how to build documents using JavaScript and integrate Document Builder into your DMS, CRM system, etc.",
-      "version": "7.0",
+      "version": "7.1",
       "links":{
          "Get started":[
             {
@@ -217,6 +217,10 @@
                "Item2":"presentationapi"
             },
             {
+               "Item1":"Form API",
+               "Item2":"formapi"
+            },
+            {
                "Item1":"Global",
                "Item2":"global"
             },
@@ -237,7 +241,7 @@
       "id":"desktop",
       "title":"Desktop Editors",
       "description":"Extend the ONLYOFFICE Desktop Editors functionality. In this section you will learn how to set up, customize and integrate them with the document management systems.",
-      "version":"7.0",
+      "version":"7.1",
       "links":{
          "Get Started":[
             {
@@ -279,7 +283,7 @@
       "id":"portals",
       "title":"Community Server",
       "description":"Create your own productivity platform based on ONLYOFFICE Groups. In this section you will learn how to make GET, POST, PUT and DELETE requests to work with platform modules and pass authentication.",
-      "version":"11.6",
+      "version":"12.0",
       "links":{
          "Get started":[
             {
@@ -369,7 +373,7 @@
       "id":"apisystem",
       "title":"Hosted Solution",
       "description":"Host ONLYOFFICE Groups to make your collaboration platform online. In this section you will learn how to make GET and POST requests to manage portals, set tariff plans and pass authentication.",
-      "version":"11.6",
+      "version":"12.0",
       "links":{
          "Get started":[
             {

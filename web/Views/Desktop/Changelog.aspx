@@ -17,6 +17,11 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Desktop Editors API.</p>
 
+    <h2 id="71" class="copy-link">Version 7.1</h2>
+    <ul>
+        <li>Added the <em>--ascdesktop-support-debug-info-keep</em> flag to <a href="<%= Url.Action("debugging") %>#running">run</a> the application.</li>
+    </ul>
+
     <h2 id="70" class="copy-link">Version 7.0</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("addingdms/") %>#extraLogout">extraLogout</a> parameter to the config with DMS integration parameters.</li>
