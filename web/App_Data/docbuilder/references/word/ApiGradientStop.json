@@ -20,7 +20,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing gradient stop.\r\n\t * @constructor\r\n\t * */",
+  "comment": "/**\n\t * Class representing gradient stop.\n\t * @constructor\n\t * */",
   "description": "<p>Class representing gradient stop.</p>",
   "scope": "global",
   "params": []

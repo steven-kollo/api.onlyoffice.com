@@ -33,7 +33,7 @@ window.Asc.plugin.executeMethod ("RemoveComments", [arrIds]);
     <tbody>
         <tr class="tablerow">
             <td>arrIds</td>
-            <td>An array which contains the ids of the specified comments.</td>
+            <td>An array which contains the IDs of the specified comments.</td>
             <td>array of strings</td>
             <td></td>
         </tr>
@@ -48,5 +48,5 @@ window.Asc.plugin.executeMethod ("RemoveComments", [arrIds]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod ("RemoveComments", [["id1", "id2"]]);
+window.Asc.plugin.executeMethod ("RemoveComments", [["ID1", "ID2"]]);
 </pre>

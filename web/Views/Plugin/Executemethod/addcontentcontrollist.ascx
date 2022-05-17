@@ -40,7 +40,7 @@ window.Asc.plugin.executeMethod ("AddContentControlList", [type, List, commonPr]
         <tr class="tablerow">
             <td>List</td>
             <td>
-                A list of the content control elements that consist of two items:
+                A list of the content control elements that consists of two items:
                 <ul>
                     <li>
                         <b>Display</b> - an item that will be displayed to the user in the content control list,

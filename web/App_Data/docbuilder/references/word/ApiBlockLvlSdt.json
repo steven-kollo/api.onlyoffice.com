@@ -528,9 +528,51 @@
       "returns": [],
       "see": null,
       "inherits": null
+    },
+    "GetPlaceholderText": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetPlaceholderText",
+      "description": "<p>Returns the placeholder text from the current content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetPlaceholderText": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "SetPlaceholderText",
+      "description": "<p>Sets the placeholder text to the current content control.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The text that will be set to the current content control.</p>",
+          "optional": false
+        }
+      ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a container for the document content.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a container for the document content.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a container for the document content.</p>",
   "scope": "global",
   "params": []

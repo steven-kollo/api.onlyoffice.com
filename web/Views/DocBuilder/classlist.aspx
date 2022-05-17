@@ -157,6 +157,30 @@
         </table>
     <% } %>
 
+    <h2 id="FormsDocuments"><a href="<%= Url.Action("formapi") %>">Form API</a></h2>
+    <% var form = DocBuilderDocumentation.GetModule("form"); %>
+    <% foreach (var section in form.Values) { %>
+        <h5 class="builder_page_class">
+            <a href="<%= Url.Action(string.Format("{0}/{1}", section.Path, section.Name)) %>"><%= section.Name %></a>
+        </h5>
+        <table class="table table-classlist">
+            <thead>
+                <tr class="tablerow">
+                    <td class="table-classlist-name">Name</td>
+                    <td>Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% foreach (var method in section.Methods.Values) { %>
+                    <tr class="tablerow">
+                        <td><a href="<%= Url.Action(string.Format("{0}/{1}/{2}", section.Path, section.Name, method.Name)) %>"><%= method.Name %></a></td>    
+                        <td><%= method.Description %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    <% } %>
+
     <h5 class="builder_page_class"><a href="<%= Url.Action("global") %>">Global</a></h5>
 
 </asp:Content>

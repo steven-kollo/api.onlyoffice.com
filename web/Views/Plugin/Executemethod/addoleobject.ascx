@@ -7,12 +7,12 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows adding an OLE object to the document.</p>
+<p class="dscr">Defines the method that allows adding the OLE object to the current document position.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("AddOleObject", [data]);
+window.Asc.plugin.executeMethod ("AddOleObject", [NewObject]);
 </pre>
 <div class="header-gray">Parameters</div>
 <div id="mobile-content"></div>
@@ -33,28 +33,12 @@ window.Asc.plugin.executeMethod ("AddOleObject", [data]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>data</td>
+            <td>NewObject</td>
             <td>
-                A JSON object which can have the following values:
+                The <b>OLEObjectData</b> object which contains the following parameters:
                 <ul>
                     <li>
-                        <b>width</b> - the object width measured in millimeters,
-                        <br />
-                        <b>type</b>: number,
-                        <br />
-                        <b>example</b>: 70;
-                        <br />
-                    </li>
-                    <li>
-                        <b>height</b> - the object height measured in millimeters,
-                        <br />
-                        <b>type</b>: number,
-                        <br />
-                        <b>example</b>: 70;
-                        <br />
-                    </li>
-                    <li>
-                        <b>data</b> - OLE object data (internal format),
+                        <b>Data</b> - OLE object data (internal format),
                         <br />
                         <b>type</b>: string,
                         <br />
@@ -62,23 +46,39 @@ window.Asc.plugin.executeMethod ("AddOleObject", [data]);
                         <br />
                     </li>
                     <li>
-                        <b>guid</b> - an OLE object program identifier which must be of the <em>asc.{UUID}</em> type,
+                        <b>ImageData</b> - an image in the base64 format stored in the OLE object and used by the plugin,
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "asc.{UUID}";
+                        <b>example</b>: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6";
                         <br />
                     </li>
                     <li>
-                        <b>imgSrc</b> - a link to the image (its visual representation) stored in the OLE object and used by the plugin,
+                        <b>ApplicationId</b> - an identifier of the plugin which can edit the current OLE object and must be of the <em>asc.{UUID}</em> type,
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "./resources/image.png";
+                        <b>example</b>: "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}";
                         <br />
                     </li>
                     <li>
-                        <b>widthPix</b> - the image width in pixels,
+                        <b>Width</b> - the OLE object width measured in millimeters,
+                        <br />
+                        <b>type</b>: number,
+                        <br />
+                        <b>example</b>: 70;
+                        <br />
+                    </li>
+                    <li>
+                        <b>Height</b> - the OLE object height measured in millimeters,
+                        <br />
+                        <b>type</b>: number,
+                        <br />
+                        <b>example</b>: 70;
+                        <br />
+                    </li>
+                    <li>
+                        <b>WidthPix</b> - the OLE object image width in pixels,
                         <br />
                         <b>type</b>: number,
                         <br />
@@ -86,7 +86,7 @@ window.Asc.plugin.executeMethod ("AddOleObject", [data]);
                         <br />
                     </li>
                     <li>
-                        <b>heightPix</b> - the image height in pixels,
+                        <b>HeightPix</b> - the OLE object image height in pixels,
                         <br />
                         <b>type</b>: number,
                         <br />
@@ -100,6 +100,7 @@ window.Asc.plugin.executeMethod ("AddOleObject", [data]);
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 
@@ -108,5 +109,5 @@ window.Asc.plugin.executeMethod ("AddOleObject", [data]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("AddOleObject", [{"width": 70, "height": 70, "data": "{data}", "guid": "asc.{UUID}", "imgSrc": "./resources/image.png", "widthPix": 60 * 36000, "heightPix": 60 * 36000}]);
+window.Asc.plugin.executeMethod("AddOleObject", [{"Data": "{data}", "ImageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}]);
 </pre>

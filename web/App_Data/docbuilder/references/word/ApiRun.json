@@ -578,7 +578,7 @@
     "SetHighlight": {
       "memberof": "ApiRun",
       "name": "SetHighlight",
-      "description": "<p>Specifies a highlighting color in the RGB format which is applied as a background for the contents of the current run.</p>",
+      "description": "<p>Specifies a highlighting color which is applied as a background to the contents of the current run.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -595,29 +595,10 @@
       "inherits": null,
       "params": [
         {
-          "type": "byte",
-          "name": "r",
-          "description": "<p>Red color component value.</p>",
+          "type": "highlightColor",
+          "name": "sColor",
+          "description": "<p>Available highlight color.</p>",
           "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "g",
-          "description": "<p>Green color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "b",
-          "description": "<p>Blue color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "boolean",
-          "name": "isNone",
-          "description": "<p>If this parameter is set to &quot;true&quot;, then r,g,b parameters will be ignored.</p>",
-          "optional": true,
-          "defaultValue": false
         }
       ]
     },
@@ -959,7 +940,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a small text block called 'run'.\r\n\t * @constructor\r\n\t * @extends {ApiTextPr}\r\n\t */",
+  "comment": "/**\n\t * Class representing a small text block called 'run'.\n\t * @constructor\n\t * @extends {ApiTextPr}\n\t */",
   "description": "<p>Class representing a small text block called 'run'.</p>",
   "scope": "global",
   "params": []

@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows opening file with fields.</p>
+<p class="dscr">Defines the method that allows opening a file with fields.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -33,13 +33,13 @@ window.Asc.plugin.executeMethod ("OpenFile", [binaryFile, fields]);
     <tbody>
         <tr class="tablerow">
             <td>binaryFile</td>
-            <td>A file in the format of a 8-bit unsigned integer array.</td>
+            <td>A file in the format of the 8-bit unsigned integer array.</td>
             <td>array</td>
             <td>[Uint8Array]</td>
         </tr>
         <tr class="tablerow">
             <td>fields</td>
-            <td>The list of field values.</td>
+            <td>A list of field values.</td>
             <td>list</td>
             <td>["id", "name"]</td>
         </tr>
