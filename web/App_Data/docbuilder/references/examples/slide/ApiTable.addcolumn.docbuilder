@@ -1,0 +1,17 @@
+builder.CreateFile("pptx");
+oPresentation = Api.GetPresentation();
+oPresentation.SetSizes(300 * 36000, 190 * 36000);
+oTable = Api.CreateTable(2, 4);
+oTable.SetPosition(0 * 36000, 60 * 36000);
+oTable.AddColumn(1, true);
+oRow = oTable.GetRow(0);
+oCell = oRow.GetCell(1);
+oContent = oCell.GetContent();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("New column was added here.");
+oContent.Push(oParagraph);
+oSlide = oPresentation.GetSlideByIndex(0);
+oSlide.RemoveAllObjects();
+oSlide.AddObject(oTable);
+builder.SaveFile("pptx", "AddColumn.pptx");
+builder.CloseFile();

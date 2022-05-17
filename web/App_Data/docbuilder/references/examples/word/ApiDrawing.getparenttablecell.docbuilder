@@ -1,0 +1,17 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = Api.CreateParagraph();
+oTable = Api.CreateTable(3, 3);
+oTable.SetWidth("percent", 100);
+oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
+oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+oDrawing = Api.CreateShape("rect", 3212465, 963295, oFill, oStroke);
+oCell = oTable.GetCell(1, 1);
+oCell.GetContent().GetElement(0).AddDrawing(oDrawing);
+oDocument.Push(oTable);
+oParentCell = oDrawing.GetParentTableCell();
+oCellContent = oParentCell.GetContent().GetElement(0);
+oCellContent.AddLineBreak();
+oCellContent.AddText("This is a parent cell");
+builder.SaveFile("docx", "GetParentTableCell.docx");
+builder.CloseFile();

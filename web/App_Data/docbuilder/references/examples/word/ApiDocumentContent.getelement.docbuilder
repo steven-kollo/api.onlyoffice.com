@@ -1,0 +1,8 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oSection = oDocument.GetFinalSection();
+oDocContent = oSection.GetHeader("default", true);
+oParagraph = oDocContent.GetElement(0);
+oParagraph.AddText("This is the text in the default header");
+builder.SaveFile("docx", "GetElement.docx");
+builder.CloseFile();

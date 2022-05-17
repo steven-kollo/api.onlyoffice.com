@@ -1,0 +1,11 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oTable = Api.CreateTable(3, 3);
+oRow = oTable.GetRow(0);
+oTextPr = oDocument.GetDefaultTextPr();
+oTextPr.SetBold(true);
+oRow.GetCell(0).GetContent().GetElement(0).AddText("First row");
+oRow.SetTextPr(oTextPr);
+oDocument.Push(oTable);
+builder.SaveFile("docx", "SetTextPr.docx");
+builder.CloseFile();

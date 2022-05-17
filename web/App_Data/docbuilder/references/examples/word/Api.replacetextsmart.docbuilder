@@ -1,0 +1,15 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oFParagraph = oDocument.GetElement(0);
+oFParagraph.AddText("First paragraph");
+oSParagraph = Api.CreateParagraph();
+oSParagraph.AddText("Second Paragraph");
+oDocument.Push(oSParagraph);
+oRange1 = oFParagraph.GetRange();
+oRange2 = oSParagraph.GetRange();
+oRange3 = oRange1.ExpandTo(oRange2);
+oRange3.Select();
+arr = ["test_1", "test_2"];
+Api.ReplaceTextSmart(arr);
+builder.SaveFile("docx", "ReplaceTextSmart.docx");
+builder.CloseFile();

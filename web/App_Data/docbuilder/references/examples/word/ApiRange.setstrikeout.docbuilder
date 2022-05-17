@@ -1,0 +1,8 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("ONLYOFFICE Document Server Builder");
+oRange = oDocument.GetRange(18, 23);
+oRange.SetStrikeout(true);
+builder.SaveFile("docx", "SetStrikeout.docx");
+builder.CloseFile();

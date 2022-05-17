@@ -1,0 +1,15 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("This is an example of setting a shade to a paragraph. ");
+oParagraph.SetShd("clear", 255, 0, 0, false);
+oShade = oParagraph.GetShd();
+oParagraph = Api.CreateParagraph();
+oFill = Api.CreateSolidFill(oShade);
+oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+oDrawing = Api.CreateShape("rect", 10 * 36000, 3 * 36000, oFill, oStroke);
+oParagraph.AddText("Shade: ");
+oParagraph.AddDrawing(oDrawing);
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "GetShd.docx");
+builder.CloseFile();

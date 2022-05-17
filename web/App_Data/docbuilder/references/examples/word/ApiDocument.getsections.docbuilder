@@ -1,0 +1,17 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("This is a new paragraph.");
+oParagraph.AddLineBreak();
+oParagraph.AddText("Scroll down to see the new section.");
+oSection1 = oDocument.CreateSection(oParagraph);
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("This is a paragraph in a new section");
+oDocument.Push(oParagraph);
+oSections = oDocument.GetSections();
+oParagraph = Api.CreateParagraph();
+sClassType = oSections[1].GetClassType();
+oParagraph.AddText("Class type: " + sClassType);
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "GetSections.docx");
+builder.CloseFile();

@@ -1,0 +1,15 @@
+builder.CreateFile("pptx");
+oPresentation = Api.GetPresentation();
+oTable = Api.CreateTable(2, 4);
+oRow = oTable.GetRow(0);
+oCellsCount = oRow.GetCellsCount();
+oCell = oRow.GetCell(0);
+oContent = oCell.GetContent();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("The number of cells in the row: " + oCellsCount);
+oContent.Push(oParagraph);
+oSlide = oPresentation.GetSlideByIndex(0);
+oSlide.RemoveAllObjects();
+oSlide.AddObject(oTable);
+builder.SaveFile("pptx", "GetCellsCount.pptx");
+builder.CloseFile();

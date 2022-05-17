@@ -1,0 +1,13 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
+oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+oDrawing = Api.CreateShape("cube", 3212465, 963295, oFill, oStroke);
+oParagraph.AddDrawing(oDrawing); 
+oCopyDrawing = oDrawing.Copy();
+oStroke = Api.CreateStroke(36000, Api.CreateSolidFill(Api.CreateRGBColor(0, 0, 0)));
+oCopyDrawing.SetOutLine(oStroke);
+oParagraph.AddDrawing(oCopyDrawing);
+builder.SaveFile("docx", "SetOutLine.docx");
+builder.CloseFile();

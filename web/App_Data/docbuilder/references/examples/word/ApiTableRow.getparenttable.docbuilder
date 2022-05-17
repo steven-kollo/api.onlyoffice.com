@@ -1,0 +1,10 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oTable = Api.CreateTable(3, 3);
+oTable.SetWidth("percent", 100);
+oRow = oTable.GetRow(0);
+oParentTable = oRow.GetParentTable();
+oParentTable.SetTableBorderBottom("single", 32, 0, 0, 0, 255);
+oDocument.Push(oParentTable);
+builder.SaveFile("docx", "GetParentTable.docx");
+builder.CloseFile();

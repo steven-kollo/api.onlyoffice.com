@@ -1,0 +1,16 @@
+builder.CreateFile("pptx");
+oPresentation = Api.GetPresentation();
+oTable = Api.CreateTable(2, 4);
+oRow = oTable.GetRow(0);
+oRow.SetHeight(30 * 36000);
+oCell = oRow.GetCell(0);
+oCell.SetTextDirection("tbrl");
+oContent = oCell.GetContent();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("This is just a sample text.");
+oContent.Push(oParagraph);
+oSlide = oPresentation.GetSlideByIndex(0);
+oSlide.RemoveAllObjects();
+oSlide.AddObject(oTable);
+builder.SaveFile("pptx", "SetTextDirection.pptx");
+builder.CloseFile();

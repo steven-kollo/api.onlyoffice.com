@@ -1,0 +1,7 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oDocument.SetTrackRevisions(true);
+oParagraph.AddText("Track revisions mode was set.");
+builder.SaveFile("docx", "SetTrackRevisions.docx");
+builder.CloseFile();

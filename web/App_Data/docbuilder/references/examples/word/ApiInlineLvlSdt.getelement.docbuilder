@@ -1,0 +1,18 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oInlineLvlSdt = Api.CreateInlineLvlSdt();
+oParagraph.AddInlineLvlSdt(oInlineLvlSdt);
+for (nPos = 0; nPos < 10; ++nPos) {
+    curRun = Api.CreateRun();
+    curRun.AddText("This is text run " + (nPos + 1) + ". ");
+    oInlineLvlSdt.AddElement(curRun);
+}
+changeRun = oInlineLvlSdt.GetElement(4);
+changeRun.SetBold(true);
+oParagraph.AddLineBreak();
+oParagraph.AddLineBreak();
+oParagraph.AddLineBreak();
+oParagraph.AddText("We added 10 text runs to the above inline text content control. Then we changed the fifth run, so it is different from the others.");
+builder.SaveFile("docx", "GetElement.docx");
+builder.CloseFile();

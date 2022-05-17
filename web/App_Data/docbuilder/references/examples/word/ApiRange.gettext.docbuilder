@@ -1,0 +1,10 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("ONLYOFFICE Document Builder");
+oRange = oDocument.GetRange(0, 24);
+oParagraph2 = Api.CreateParagraph();
+oParagraph2.AddText(oRange.GetText());
+oDocument.Push(oParagraph2);
+builder.SaveFile("docx", "GetText.docx");
+builder.CloseFile();

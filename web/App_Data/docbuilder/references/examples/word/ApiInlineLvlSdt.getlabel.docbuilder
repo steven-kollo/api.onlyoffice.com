@@ -1,0 +1,15 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oInlineLvlSdt = Api.CreateInlineLvlSdt();
+oRun = Api.CreateRun();
+oRun.AddText("This is an inline text content control with a label set to it.");
+oInlineLvlSdt.AddElement(oRun, 0);
+oInlineLvlSdt.SetLabel("2147483647");
+oParagraph.AddInlineLvlSdt(oInlineLvlSdt);
+oLabel = oInlineLvlSdt.GetLabel();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("Label: " + oLabel);
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "GetLabel.docx");
+builder.CloseFile();

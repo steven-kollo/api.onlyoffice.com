@@ -1,0 +1,11 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("This is a sample text №1.");
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("This is a sample text №2.");
+oDocument.Push(oParagraph);
+oElement = oDocument.Last();
+oElement.SetBold(true);
+builder.SaveFile("docx", "Last.docx");
+builder.CloseFile();

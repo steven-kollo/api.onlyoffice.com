@@ -1,0 +1,15 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oInlineLvlSdt = Api.CreateInlineLvlSdt();
+oParagraph.AddInlineLvlSdt(oInlineLvlSdt);
+oRun = Api.CreateRun();
+oRun.AddText("This is an inline text content control with a tag set to it.");
+oInlineLvlSdt.SetTag("This is a tag");
+oInlineLvlSdt.AddElement(oRun, 0);
+oTag = oInlineLvlSdt.GetTag();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("Tag: " + oTag);
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "SetTag.docx");
+builder.CloseFile();

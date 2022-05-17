@@ -1,0 +1,8 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("ONLYOFFICE Document Builder");
+oRange = oDocument.GetRange(0, 26);
+oRange.SetHighlight(255, 164, 101);
+builder.SaveFile("docx", "SetHighlight.docx");
+builder.CloseFile();

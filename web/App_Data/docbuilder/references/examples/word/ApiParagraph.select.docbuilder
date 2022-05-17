@@ -1,0 +1,10 @@
+builder.CreateFile("docx");
+oDocument = editor.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("ONLYOFFICE Document Builder");
+bResult = oParagraph.Select();
+if (bResult === true) {
+    oParagraph.SetItalic(true);
+}
+builder.SaveFile("docx", "Select.docx");
+builder.CloseFile();

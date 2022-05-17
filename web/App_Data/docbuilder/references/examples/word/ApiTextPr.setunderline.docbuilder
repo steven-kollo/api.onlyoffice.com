@@ -1,0 +1,8 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oTextPr = oDocument.GetDefaultTextPr();
+oTextPr.SetUnderline(true);
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("A sample text underlined with a single line.");
+builder.SaveFile("docx", "SetUnderline.docx");
+builder.CloseFile();

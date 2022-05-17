@@ -1,0 +1,11 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oTable = Api.CreateTable(3, 3);
+oRow = oTable.GetRow(0);
+oTableStyle = oDocument.GetStyle("Table Grid");
+oTable.SetStyle(oTableStyle);
+oTable.SetWidth("percent", 100);
+oRow.MergeCells();
+oDocument.Push(oTable);
+builder.SaveFile("docx", "MergeCells.docx");
+builder.CloseFile();

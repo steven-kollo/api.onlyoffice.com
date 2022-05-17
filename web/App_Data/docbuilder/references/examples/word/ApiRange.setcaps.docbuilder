@@ -1,0 +1,8 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("ONLYOFFICE Document Builder");
+oRange = oDocument.GetRange(10, 17);
+oRange.SetCaps(true);
+builder.SaveFile("docx", "SetCaps.docx");
+builder.CloseFile();

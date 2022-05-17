@@ -1,0 +1,78 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph1 = oDocument.GetElement(0);
+oDocument.SetTrackRevisions(true);
+oParagraph1.AddText("Reviewing documents");
+oParagraph1.SetJc("center");
+oParagraph1.SetFontSize(24);
+oParagraph1.SetBold(true);
+oParagraph2 = Api.CreateParagraph();
+oParagraph2.AddText("If you need to get review report, you can use Document Builder. The steps below will show how to do it.");
+oDocument.Push(oParagraph2);
+oReviewReport = oDocument.GetReviewReport();
+oParagraph = Api.CreateParagraph();
+oDocument.Push(oParagraph);
+oParagraph = Api.CreateParagraph();
+oDocument.Push(oParagraph);
+oParagraph.AddText("Review report");
+nRows = 1;
+for (var sUserName in oReviewReport) {
+  nRows += oReviewReport[sUserName].length;
+}
+nCols = 4;
+oTable = Api.CreateTable(nCols, nRows);
+oDocument.Push(oTable);
+
+function privateFillCell(nCurRow, nCurCol, sText) {
+  oRow = oTable.GetRow(nCurRow);
+  oCell = oRow.GetCell(nCurCol);
+  oCellContent = oCell.GetContent();
+  oRun = oCellContent.GetElement(0).AddText(sText);
+  return {
+    Cell: oCell,
+    Run: oRun
+  };
+}
+privateFillCell(0, 0, "Name");
+privateFillCell(0, 1, "Date");
+privateFillCell(0, 2, "Action");
+privateFillCell(0, 3, "Text");
+nCurRow = 1;
+for (sUserName in oReviewReport) {
+  arrUserChanges = oReviewReport[sUserName];
+  arrCells = [];
+  for (nIndex = 0, nCount = arrUserChanges.length; nIndex < nCount; ++nIndex, ++nCurRow) {
+    oChangeInfo = arrUserChanges[nIndex];
+    arrCells.push(privateFillCell(nCurRow, 0, "").Cell);
+    privateFillCell(nCurRow, 1, (new Date(oChangeInfo["Date"])).toString());
+    sType = oChangeInfo["Type"];
+    if ("TextAdd" === sType) {
+      privateFillCell(nCurRow, 2, "Added text");
+      privateFillCell(nCurRow, 3, oChangeInfo["Value"]);
+    } else if ("TextRem" === sType) {
+      privateFillCell(nCurRow, 2, "Removed text");
+      privateFillCell(nCurRow, 3, oChangeInfo["Value"]).Run.SetStrikeout(true);
+    } else if ("TextPr" === sType) {
+      privateFillCell(nCurRow, 2, "Formatted text");
+    } else if ("ParaAdd" === sType) {
+      privateFillCell(nCurRow, 2, "Added paragraph");
+    } else if ("ParaRem" === sType) {
+      privateFillCell(nCurRow, 2, "Removed paragraph");
+    } else if ("ParaPr" === sType) {
+      privateFillCell(nCurRow, 2, "Formatted paragraph");
+    } else {
+      privateFillCell(nCurRow, 2, "Unknown change");
+    }
+  }
+  oMergedCell = oTable.MergeCells(arrCells);
+  if (oMergedCell) {
+    oCellContent = oMergedCell.GetContent();
+    oCellContent.GetElement(0).AddText(sUserName);
+  } else if (arrCells.length > 0) {
+    oCellContent = arrCells[0].GetContent();
+    oCellContent.GetElement(0).AddText(sUserName);
+  }
+}
+oTable.SetStyle(oDocument.GetStyle("Bordered"));
+builder.SaveFile("docx", "GetReviewReport.docx");
+builder.CloseFile();

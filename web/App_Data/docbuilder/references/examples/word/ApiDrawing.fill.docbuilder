@@ -1,0 +1,15 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
+oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+oDrawing = Api.CreateShape("cube", 3212465, 963295, oFill, oStroke);
+oParagraph.AddDrawing(oDrawing);
+oCopyDrawing = oDrawing.Copy();
+oGs1 = Api.CreateGradientStop(Api.CreateRGBColor(255, 224, 204), 0);
+oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(155, 64, 1), 100000);
+oFill = Api.CreateRadialGradientFill([oGs1, oGs2]);
+oCopyDrawing.Fill(oFill);
+oParagraph.AddDrawing(oCopyDrawing);
+builder.SaveFile("docx", "Fill.docx");
+builder.CloseFile();

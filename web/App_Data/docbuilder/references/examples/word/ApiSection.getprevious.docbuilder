@@ -1,0 +1,15 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("This is a new paragraph.");
+oParagraph.AddLineBreak();
+oParagraph.AddText("Scroll down to see the new section.");
+oSection1 = oDocument.CreateSection(oParagraph);
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("This is a paragraph in the first section");
+oDocument.Push(oParagraph);
+oSection2 = oDocument.CreateSection(oParagraph);
+oPreviousSection = oSection2.GetPrevious();
+oPreviousSection.SetPageMargins(7200, 2880, 1440, 5760);
+builder.SaveFile("docx", "GetPrevious.docx");
+builder.CloseFile();

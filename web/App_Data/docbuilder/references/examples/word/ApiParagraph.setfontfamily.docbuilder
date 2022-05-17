@@ -1,0 +1,8 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("This is a paragraph with the font family set to 'Consolas'.");
+oParagraph.SetFontFamily("Consolas");
+oDocument.AddElement(0, oParagraph);
+builder.SaveFile("docx", "SetFontFamily.docx");
+builder.CloseFile();

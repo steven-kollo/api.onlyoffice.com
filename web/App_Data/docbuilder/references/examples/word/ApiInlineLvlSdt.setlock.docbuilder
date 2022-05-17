@@ -1,0 +1,15 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oInlineLvlSdt = Api.CreateInlineLvlSdt();
+oParagraph.AddInlineLvlSdt(oInlineLvlSdt);
+oRun = Api.CreateRun();
+oRun.AddText("This is an inline text content control with the content lock set to it.");
+oInlineLvlSdt.SetLock("sdtContentLocked");
+oInlineLvlSdt.AddElement(oRun, 0);
+oLock = oInlineLvlSdt.GetLock();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("Lock type: " + oLock);
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "SetLock.docx");
+builder.CloseFile();

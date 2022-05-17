@@ -1,0 +1,12 @@
+builder.CreateFile("pptx");
+oPresentation = Api.GetPresentation();
+oTable = Api.CreateTable(2, 4);
+oRow = oTable.GetRow(0);
+oCell = oRow.GetCell(0);
+oFill = Api.CreateSolidFill(Api.CreateRGBColor(520, 64, 1));
+oCell.SetCellBorderLeft(2, oFill);
+oSlide = oPresentation.GetSlideByIndex(0);
+oSlide.RemoveAllObjects();
+oSlide.AddObject(oTable);
+builder.SaveFile("pptx", "SetCellBorderLeft.pptx");
+builder.CloseFile();

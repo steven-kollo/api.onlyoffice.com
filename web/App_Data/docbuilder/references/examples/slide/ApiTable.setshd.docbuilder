@@ -1,0 +1,9 @@
+builder.CreateFile("pptx");
+oPresentation = Api.GetPresentation();
+oTable = Api.CreateTable(2, 4);
+oTable.SetShd("clear", 255, 0, 0);
+oSlide = oPresentation.GetSlideByIndex(0);
+oSlide.RemoveAllObjects();
+oSlide.AddObject(oTable);
+builder.SaveFile("pptx", "SetShd.pptx");
+builder.CloseFile();

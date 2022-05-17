@@ -1,0 +1,9 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oTable = Api.CreateTable(3, 3);
+oRow = oTable.GetRow(0);
+oRow.GetCell(0).GetContent().GetElement(0).AddText("First row");
+oRow.Remove();
+oDocument.Push(oTable);
+builder.SaveFile("docx", "Remove.docx");
+builder.CloseFile();

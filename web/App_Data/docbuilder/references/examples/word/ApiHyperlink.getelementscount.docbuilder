@@ -1,0 +1,18 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oRun1 = Api.CreateRun();
+oRun1.AddText("Api Document Builder.");
+oParagraph.AddElement(oRun1, 0);
+oRun2 = Api.CreateRun();
+oRun2.AddText(" ONLYOFFICE for developers");
+oParagraph.AddElement(oRun2, 1);
+oHyperlink = oParagraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
+oElementsCount = oHyperlink.GetElementsCount();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("Number of elements in hyperlink: " + oElementsCount);
+oParagraph.AddLineBreak();
+oParagraph.AddText("Elements: oParagraph, oRun1, oRun2, oHyperlink");
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "GetElementsCount.docx");
+builder.CloseFile();

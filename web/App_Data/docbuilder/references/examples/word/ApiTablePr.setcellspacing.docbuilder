@@ -1,0 +1,13 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("We create a 3x3 table and set the cell spacing to half an inch:");
+oTableStyle = oDocument.CreateStyle("CustomTableStyle", "table");
+oTableStyle.SetBasedOn(oDocument.GetStyle("Bordered - Accent 5"));
+oTablePr = oTableStyle.GetTablePr();
+oTable = Api.CreateTable(3, 3);
+oTable.SetStyle(oTableStyle);
+oTablePr.SetCellSpacing(720);
+oDocument.Push(oTable);
+builder.SaveFile("docx", "SetCellSpacing.docx");
+builder.CloseFile();

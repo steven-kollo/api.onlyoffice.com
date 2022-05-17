@@ -1,0 +1,11 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("ONLYOFFICE Document Builder");
+oHyperlink = oParagraph.AddHyperlink("https://api.onlyoffice.com/docbuilder/basic");
+oDisplayedText = oHyperlink.GetDisplayedText();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("Displayed text: " + oDisplayedText);
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "GetDisplayedText.docx");
+builder.CloseFile();

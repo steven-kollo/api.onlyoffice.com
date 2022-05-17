@@ -1,0 +1,15 @@
+builder.CreateFile("pptx");
+oPresentation = Api.GetPresentation();
+oTable = Api.CreateTable(2, 4);
+oTable.AddRow(1, true);
+oRow = oTable.GetRow(0);
+oCell = oRow.GetCell(0);
+oContent = oCell.GetContent();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("This is a sample text in the first row.");
+oContent.Push(oParagraph);
+oSlide = oPresentation.GetSlideByIndex(0);
+oSlide.RemoveAllObjects();
+oSlide.AddObject(oTable);
+builder.SaveFile("pptx", "GetRow.pptx");
+builder.CloseFile();

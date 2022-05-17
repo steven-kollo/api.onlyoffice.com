@@ -1,0 +1,16 @@
+builder.CreateFile("docx");
+oDocument = Api.GetDocument();
+oParagraph = oDocument.GetElement(0);
+oPresetColor = Api.CreatePresetColor("lightYellow");
+oGs1 = Api.CreateGradientStop(oPresetColor, 0);
+oGs2 = Api.CreateGradientStop(Api.CreateRGBColor(255, 164, 101), 100000);
+oFill = Api.CreateRadialGradientFill([oGs1, oGs2]);
+oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+oDrawing = Api.CreateShape("rect", 5930900, 395605, oFill, oStroke);
+oParagraph.AddDrawing(oDrawing);
+sClassType = oPresetColor.GetClassType();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("Class Type = " + sClassType);
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "ApiUniColor.docx");
+builder.CloseFile();

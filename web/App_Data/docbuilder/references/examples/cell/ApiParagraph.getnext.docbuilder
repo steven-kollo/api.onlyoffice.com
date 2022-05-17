@@ -1,0 +1,17 @@
+builder.CreateFile("xlsx");
+oWorksheet = Api.GetActiveSheet();
+oFill = Api.CreateSolidFill(Api.CreateRGBColor(104, 155, 104));
+oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+oShape = oWorksheet.AddShape("flowChartOnlineStorage", 60 * 36000, 35 * 36000, oFill, oStroke, 0, 2 * 36000, 0, 3 * 36000);
+oDocContent = oShape.GetContent();
+oDocContent.RemoveAllElements();
+oParagraph1 = Api.CreateParagraph();
+oParagraph1.AddText("This is the first paragraph.");
+oDocContent.Push(oParagraph1);
+oParagraph2 = Api.CreateParagraph();
+oParagraph2.AddText("This is the second paragraph.");
+oDocContent.Push(oParagraph2);
+oNextParagraph = oParagraph1.GetNext();
+oNextParagraph.SetBold(true);
+builder.SaveFile("xlsx", "GetNext.xlsx");
+builder.CloseFile();
