@@ -121,8 +121,8 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
     <div class="kb_index_page">
     <h5>Headers and footers</h5>
     <ul>
-        <li><a href="#" class="button-popap-open" data-body="body40">add and edit a page header</a></li>
-        <li><a href="#" class="button-popap-open" data-body="body41">add and edit a page footer</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body40">get and edit a page header</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body41">get and edit a page footer</a></li>
     </ul>
     </div>
     <div class="kb_index_page">
@@ -582,7 +582,7 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                 </div>
             </div> 
             <div id="body40" class="tags_content">
-                <h5>Learn how to <span class="tag_name">add and edit a page header</span></h5>
+                <h5>Learn how to <span class="tag_name">get and edit a page header</span></h5>
                 <div>
                    <ul>
                        <li>Get page header &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apisection/getheader") %>">ApiSection.GetHeader</a></li>
@@ -592,7 +592,7 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                 </div>
             </div>
             <div id="body41" class="tags_content">
-                <h5>Learn how to <span class="tag_name">add and edit a page footer</span></h5>
+                <h5>Learn how to <span class="tag_name">get and edit a page footer</span></h5>
                 <div>
                    <ul>
                        <li>Get page footer &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apisection/getfooter") %>">ApiSection.GetFooter</a></li>
