@@ -135,6 +135,7 @@
                         {
                             FileType = ext,
                             Key = "apiwh" + Guid.NewGuid(),
+                            Permissions = new Config.DocumentConfig.PermissionsConfig(),
                             Title = "Example Title." + ext,
                             Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext
                         },

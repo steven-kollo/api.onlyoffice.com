@@ -27,6 +27,7 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
@@ -57,6 +58,7 @@
                             {
                                 FileType = "docxf",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Form Template Title.docxf",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docxf"
                             },
@@ -87,6 +89,7 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
@@ -117,6 +120,7 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
@@ -147,6 +151,7 @@
                             {
                                 FileType = "doc",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.doc",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.doc"
                             },
@@ -177,6 +182,7 @@
                             {
                                 FileType = "xls",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xls",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xls"
                             },
@@ -207,6 +213,7 @@
                             {
                                 FileType = "ppt",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.ppt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ppt"
                             },
@@ -237,6 +244,7 @@
                             {
                                 FileType = "odt",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.odt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odt"
                             },
@@ -267,6 +275,7 @@
                             {
                                 FileType = "ods",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.ods",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ods"
                             },
@@ -297,6 +306,7 @@
                             {
                                 FileType = "odp",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.odp",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odp"
                             },
@@ -327,6 +337,7 @@
                             {
                                 FileType = "txt",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.txt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.txt"
                             },
@@ -357,6 +368,7 @@
                             {
                                 FileType = "csv",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.csv",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.csv"
                             },
@@ -387,6 +399,7 @@
                             {
                                 FileType = "pdf",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.pdf",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf"
                             },
@@ -417,6 +430,7 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
@@ -447,6 +461,7 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
@@ -477,6 +492,7 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
@@ -507,6 +523,7 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
@@ -542,6 +559,7 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
@@ -577,6 +595,7 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
@@ -612,6 +631,7 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
@@ -648,6 +668,7 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
@@ -684,6 +705,7 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
@@ -720,6 +742,7 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
@@ -764,6 +787,7 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
@@ -808,6 +832,7 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
