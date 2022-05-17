@@ -837,19 +837,15 @@
           "type": "number",
           "name": "nStartIndex",
           "description": "<p>The start index of the document for mail merge process.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 0
         },
         {
           "type": "number",
           "name": "nEndIndex",
           "description": "<p>The end index of the document for mail merge process.</p>",
-          "optional": false
-        },
-        {
-          "type": "bool",
-          "name": "bAll",
-          "description": "<p>if true -&gt; be mail merge all recipients</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.GetMailMergeReceptionsCount() - 1"
         }
       ]
     },
@@ -910,6 +906,20 @@
           "name": "arrString",
           "description": "<p>An array of replacement strings.</p>",
           "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sParaTab",
+          "description": "<p>specifies which character to use to define the tab in the source text.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
+        },
+        {
+          "type": "string",
+          "name": "sParaNewLine",
+          "description": "<p>specifies which character to use to specify the line break character in the source text.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
         }
       ]
     },
@@ -961,14 +971,14 @@
         {
           "type": "bool",
           "name": "bRenderHTMLTags",
-          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &amp;lt;tag&gt;text&amp;lt;/tag&gt;. By default, angle brackets will be replaced with the special characters.</p>",
+          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
           "optional": true,
           "defaultValue": false
         }
       ]
     }
   },
-  "comment": "/**\r\n\t * Base class\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",
+  "comment": "/**\n\t * Base class\n\t * @global\n\t * @class\n\t * @name Api\n\t */",
   "description": "<p>Base class</p>",
   "scope": "global"
 }

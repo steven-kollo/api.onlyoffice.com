@@ -18,7 +18,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a base class for color types.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a base class for color types.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a base class for color types.</p>",
   "scope": "global",
   "params": []

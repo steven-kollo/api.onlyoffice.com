@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiDrawing",
       "name": "GetClassType",
-      "description": "<p>Get the type of the class based on this base class.</p>",
+      "description": "<p>Returns the type of the ApiDrawing class.</p>",
       "tags": {},
       "returns": [
         [
@@ -16,7 +16,7 @@
     "SetSize": {
       "memberof": "ApiDrawing",
       "name": "SetSize",
-      "description": "<p>Set the size of the object (image, shape, chart) bounding box.</p>",
+      "description": "<p>Sets the size of the object (image, shape, chart) bounding box.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -39,7 +39,7 @@
     "SetPosition": {
       "memberof": "ApiDrawing",
       "name": "SetPosition",
-      "description": "<p>Set the position of the drawing on the slide.</p>",
+      "description": "<p>Sets the position of the drawing on the slide.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -58,9 +58,160 @@
           "optional": false
         }
       ]
+    },
+    "GetParent": {
+      "memberof": "ApiDrawing",
+      "name": "GetParent",
+      "description": "<p>Returns the drawing parent object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiSlide",
+          "ApiLayout",
+          "ApiMaster",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentSlide": {
+      "memberof": "ApiDrawing",
+      "name": "GetParentSlide",
+      "description": "<p>Returns the drawing parent slide.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiSlide",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentLayout": {
+      "memberof": "ApiDrawing",
+      "name": "GetParentLayout",
+      "description": "<p>Returns the drawing parent slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiLayout",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentMaster": {
+      "memberof": "ApiDrawing",
+      "name": "GetParentMaster",
+      "description": "<p>Returns the drawing parent slide master.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiMaster",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Copy": {
+      "memberof": "ApiDrawing",
+      "name": "Copy",
+      "description": "<p>Creates a copy of the specified drawing object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDrawing"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Delete": {
+      "memberof": "ApiDrawing",
+      "name": "Delete",
+      "description": "<p>Deletes the specified drawing object from the parent.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetPlaceholder": {
+      "memberof": "ApiDrawing",
+      "name": "SetPlaceholder",
+      "description": "<p>Sets the specified placeholder to the current drawing object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiPlaceholder",
+          "name": "oPlaceholder",
+          "description": "<p>Placeholder object.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetPlaceholder": {
+      "memberof": "ApiDrawing",
+      "name": "GetPlaceholder",
+      "description": "<p>Returns a placeholder from the current drawing object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiPlaceholder",
+          "null"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n     * Class representing a graphical object.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a graphical object.\n     * @constructor\n     */",
   "description": "<p>Class representing a graphical object.</p>",
   "scope": "global",
   "params": []

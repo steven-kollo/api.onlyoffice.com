@@ -14,7 +14,7 @@
             Entry point name.
             </summary>
         </member>
-        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Returns the authentication token for use in api authorization.
             </summary>
@@ -25,6 +25,7 @@
             <param name="password">Password</param>
             <param name="provider">Social media provider type</param>
             <param name="accessToken">Provider token</param>
+            <param name="codeOAuth">Code for take token</param>
             <returns>Authentication token to use in the 'Authorization' header when calling API methods</returns>
             <exception cref="T:System.Security.Authentication.AuthenticationException">Thrown when not authenticated.</exception>
         </member>
@@ -51,7 +52,7 @@
             <param name="accessToken">Provider token</param>
             <returns>Mobile phone</returns>
         </member>
-        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Returns the two-factor authentication token for use in api authorization.
             </summary>
@@ -63,6 +64,7 @@
             <param name="provider">Social media provider type</param>
             <param name="accessToken">Provider token</param>
             <param name="code">Two-factor authentication code</param>
+            <param name="codeOAuth">Code for take token</param>
             <returns>Two-factor authentication token to use in 'Authorization' header when calling API methods</returns>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean,System.String)">

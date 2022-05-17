@@ -120,7 +120,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a set of formatting properties which shall be conditionally applied to the parts of a table\r\n\t * which match the requirement specified on the <code>Type</code>.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a set of formatting properties which shall be conditionally applied to the parts of a table\n\t * which match the requirement specified on the <code>Type</code>.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a set of formatting properties which shall be conditionally applied to the parts of a table\nwhich match the requirement specified on the <code>Type</code>.</p>",
   "scope": "global",
   "params": []

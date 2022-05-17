@@ -858,16 +858,6 @@
             <category>Forums</category>
             <returns>Category</returns>
         </member>
-        <member name="M:ASC.Api.Community.CommunityApi.RemindAboutBirthday(System.Guid,System.Boolean)">
-            <summary>
-            Subscribes to or unsubscribes from the birthday of the user with the ID specified in the request.
-            </summary>
-            <short>Birthday subscription</short>
-            <param name="userid">User ID</param>
-            <param name="onRemind">Defines if the user will be notified about other user's birthday or not</param>
-            <returns>Bool value: true means that the user will get the notification</returns>
-            <category>Birthday</category>
-        </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetPreview(System.String,System.String)">
             <summary>
             Returns the preview information about the specified category from the community section.

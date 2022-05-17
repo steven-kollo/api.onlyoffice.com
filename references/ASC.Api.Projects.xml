@@ -371,7 +371,7 @@
             </short>
             <category>Report</category>
         </member>
-        <member name="M:ASC.Api.Projects.ProjectApi.SaveReportTemplate(System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean)">
+        <member name="M:ASC.Api.Projects.ProjectApi.SaveReportTemplate(System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean,System.Boolean,ASC.Projects.Core.Domain.AverageTime,System.Boolean)">
             <summary>
             Creates a project report template with the parameters specified in the request. Most of the parameters are optional and depend on the report type selected.
             </summary>
@@ -395,6 +395,9 @@
             <param name="toDate" optional="true">Report period end date</param>
             <param name="viewType" optional="true">Report view type: by group or by project</param>
             <param name="noResponsible" optional="true">Specifies if the tasks without responsibles will be shown or hidden</param>   
+            <param name="isShowAverageTime"  optional="true">Specifies if the average time will be shown or not</param>
+            <param name="typeOfShowAverageTime" optional="true">Average time type (All, ClosingProjects, CompletingTasks)</param>
+            <param name="projectAverageCompletingTasks" optional="true">Specifies if the average time of closing projects will be shown or not</param>
             <returns>Project report template</returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateReportTemplate(System.Int32,System.String,System.String,System.Int32,System.Int32,System.Boolean,ASC.Projects.Core.Domain.Reports.ReportType,System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Guid,System.Guid,ASC.Projects.Core.Domain.Reports.ReportTimeInterval,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32,System.Boolean)">
@@ -1563,6 +1566,19 @@
             <param name="taskid">Task ID</param>
             <param name="subtaskid">Subtask ID</param>
             <returns>New subtask</returns>
+            <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.MoveSubtask(System.Int32,System.Int32)">
+            <summary>
+            Moves a subtask with the ID specified in the request to another task.
+            </summary>
+            <short>
+            Move a subtask
+            </short>
+            <category>Tasks</category>
+            <param name="taskid">Task ID</param>
+            <param name="subtaskid">Subtask ID</param>
+            <returns>Updated subtask</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateSubtask(System.Int32,System.Int32,System.Guid,System.String)">
