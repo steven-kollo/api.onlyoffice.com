@@ -34,7 +34,7 @@ window.Asc.plugin.executeMethod ("RemoveContentControls", [arrDocuments]);
         <tr class="tablerow">
             <td>arrDocuments</td>
             <td>
-                A JSON array of content control internal ids (<em>[{"InternalId": "5_556"}]</em>).
+                An array of content control internal IDs (<em>[{"InternalId": "5_556"}]</em>).
             </td>
             <td>array of objects</td>
             <td></td>

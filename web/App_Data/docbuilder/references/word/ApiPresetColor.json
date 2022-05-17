@@ -20,7 +20,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a Preset Color.\r\n\t * @constructor\r\n\t * */",
+  "comment": "/**\n\t * Class representing a Preset Color.\n\t * @constructor\n\t * */",
   "description": "<p>Class representing a Preset Color.</p>",
   "scope": "global",
   "params": []

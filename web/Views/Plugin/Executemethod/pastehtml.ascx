@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows pasting text in the <em>html</em> format into the document.</p>
+<p class="dscr">Defines the method that allows pasting text in the <em>HTML</em> format into the document.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -33,7 +33,7 @@ window.Asc.plugin.executeMethod ("PasteHtml", [htmlText]);
     <tbody>
         <tr class="tablerow">
             <td>htmlText</td>
-            <td>A string value that specifies the text in the <em>html</em> format to be pasted into the document.</td>
+            <td>A string value that specifies the text in the <em>HTML</em> format to be pasted into the document.</td>
             <td>string</td>
             <td>"html text"</td>
         </tr>

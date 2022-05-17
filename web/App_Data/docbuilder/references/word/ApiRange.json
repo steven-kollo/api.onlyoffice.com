@@ -353,7 +353,7 @@
     "SetHighlight": {
       "memberof": "ApiRange",
       "name": "SetHighlight",
-      "description": "<p>Specifies a highlighting color in the RGB format which is applied as a background for the contents of the current Range.</p>",
+      "description": "<p>Specifies a highlighting color which is applied as a background to the contents of the current Range.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -369,29 +369,10 @@
       "inherits": null,
       "params": [
         {
-          "type": "byte",
-          "name": "r",
-          "description": "<p>Red color component value.</p>",
+          "type": "highlightColor",
+          "name": "sColor",
+          "description": "<p>Available highlight color.</p>",
           "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "g",
-          "description": "<p>Green color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "b",
-          "description": "<p>Blue color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "bool",
-          "name": "isNone",
-          "description": "<p>If this parameter is set to &quot;true&quot;, then r,g,b parameters will be ignored.</p>",
-          "optional": true,
-          "defaultValue": false
         }
       ]
     },
@@ -743,7 +724,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a continuous region in a document. \r\n\t * Each Range object is determined by the position of the start and end characters.\r\n\t * @param oElement - The document element that may be Document, Table, Paragraph, Run or Hyperlink.\r\n\t * @param {Number} Start - The start element of Range in the current Element.\r\n\t * @param {Number} End - The end element of Range in the current Element.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a continuous region in a document. \n\t * Each Range object is determined by the position of the start and end characters.\n\t * @param oElement - The document element that may be Document, Table, Paragraph, Run or Hyperlink.\n\t * @param {Number} Start - The start element of Range in the current Element.\n\t * @param {Number} End - The end element of Range in the current Element.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a continuous region in a document.\nEach Range object is determined by the position of the start and end characters.</p>",
   "scope": "global",
   "params": [

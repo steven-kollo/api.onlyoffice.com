@@ -307,22 +307,16 @@
     <dd>
         <p>To open the document with both the <em>viewing</em> mode enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
         <p>You will need to set the <em>document.permission.edit</em>, <em>document.permission.review</em> and <em>document.permission.fillForms</em> parameters to <b>false</b>, so that the user will not be able to either edit, or review the document, or change form fields in it. If you additionally want to disable the commenting functionality for the document, set the <em>comment</em> parameter also to <b>false</b> (the existing comments will be available for viewing though).</p>
-        <div class="note">In case you disable all the editing permissions, we suggest that you also set the <em>editorConfig.customization.chat</em> to <b>false</b>, so that the users with the access to the document could not spam to the document embedded chat.</div>
+        <div class="note">In case you disable all the editing permissions, we suggest that you also set the <em>document.permissions.chat</em> to <b>false</b>, so that the users with the access to the document could not spam to the document embedded chat.</div>
         <p>The configuration in this case will look like this:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
+            "chat": false,
             "edit": false,
             "review": false,
             "fillForms": false,
             "comment": false
-        },
-        ...
-    },
-    "editorConfig": {
-        "customization": {
-            "chat": false
-            ...
         },
         ...
     },

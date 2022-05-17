@@ -147,6 +147,24 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
         <li><a href="#" class="button-popap-open" data-body="body48">set the page margins</a></li>
     </ul>
     </div>
+    <div class="kb_index_page">
+        <h5>Creating and editing forms</h5>
+        <ul>
+            <li><a href="#" class="button-popap-open" data-body="body49">create a form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body50">set the border color to the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body51">set the placeholder text to the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body52">set the text properties to the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body53">clear the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body54">get the tip text from the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body55">get the text from the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body56">make a form fixed size</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body57">set the picture position inside the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body58">set the radio group key to the checkbox</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body59">set the list values to the combo box</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body60">select the specified value from the combo box list values</a></li>
+            
+        </ul>
+        </div>
     </div>
         
     <div id="containerDialog" class="popap-dialog">
@@ -651,6 +669,124 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                 <div>
                    <ul>
                        <li>Set page margins &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apisection/setpagemargins") %>">ApiSection.SetPageMargins</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body49" class="tags_content">
+                <h5>Learn how to <span class="tag_name">create a form</span></h5>
+                <div>
+                   <ul>
+                       <li>Create a text form &mdash; <a target="blank" href="<%= Url.Action("formapi/api/createtextform") %>">Api.CreateTextForm</a></li>
+                       <li>Create a combo box form &mdash; <a target="blank" href="<%= Url.Action("formapi/api/createcomboboxform") %>">Api.CreateComboBoxForm</a></li>
+                       <li>Create a checkbox form &mdash; <a target="blank" href="<%= Url.Action("formapi/api/createcheckboxform") %>">Api.CreateCheckBoxForm</a></li>
+                       <li>Create a picture form &mdash; <a target="blank" href="<%= Url.Action("formapi/api/createpictureform") %>">Api.CreatePictureForm</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body50" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the border color to the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the border color to the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/setbordercolor") %>">ApiTextForm.SetBorderColor</a></li>
+                       <li>Set the border color to the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/setbordercolor") %>">ApiComboBoxForm.SetBorderColor</a></li>
+                       <li>Set the border color to the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/setbordercolor") %>">ApiCheckBoxForm.SetBorderColor</a></li>
+                       <li>Set the border color to the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/setbordercolor") %>">ApiPictureForm.SetBorderColor</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body51" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the placeholder text to the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the placeholder text to the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/setplaceholdertext") %>">ApiTextForm.SetPlaceholderText</a></li>
+                       <li>Set the placeholder text to the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/setplaceholdertext") %>">ApiComboBoxForm.SetPlaceholderText</a></li>
+                       <li>Set the placeholder text to the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/setplaceholdertext") %>">ApiCheckBoxForm.SetPlaceholderText</a></li>
+                       <li>Set the placeholder text to the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/setplaceholdertext") %>">ApiPictureForm.SetPlaceholderText</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body52" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the text properties to the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the text properties to the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/settextpr") %>">ApiTextForm.SetTextPr</a></li>
+                       <li>Set the text properties to the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/settextpr") %>">ApiComboBoxForm.SetTextPr</a></li>
+                       <li>Set the text properties to the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/settextpr") %>">ApiCheckBoxForm.SetTextPr</a></li>
+                       <li>Set the text properties to the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/settextpr") %>">ApiPictureForm.SetTextPr</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body53" class="tags_content">
+                <h5>Learn how to <span class="tag_name">clear the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Clear the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/clear") %>">ApiTextForm.Clear</a></li>
+                       <li>Clear the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/clear") %>">ApiComboBoxForm.Clear</a></li>
+                       <li>Clear the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/clear") %>">ApiCheckBoxForm.Clear</a></li>
+                       <li>Clear the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/clear") %>">ApiPictureForm.Clear</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body54" class="tags_content">
+                <h5>Learn how to <span class="tag_name">get the tip text from the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Get the tip text from the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/gettiptext") %>">ApiTextForm.GetTipText</a></li>
+                       <li>Get the tip text from the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/gettiptext") %>">ApiComboBoxForm.GetTipText</a></li>
+                       <li>Get the tip text from the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/gettiptext") %>">ApiCheckBoxForm.GetTipText</a></li>
+                       <li>Get the tip text from the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/gettiptext") %>">ApiPictureForm.GetTipText</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body55" class="tags_content">
+                <h5>Learn how to <span class="tag_name">get the text from the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Get the text from the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/gettext") %>">ApiTextForm.GetText</a></li>
+                       <li>Get the text from the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/gettext") %>">ApiComboBoxForm.GetText</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body56" class="tags_content">
+                <h5>Learn how to <span class="tag_name">make a form fixed size</span></h5>
+                <div>
+                   <ul>
+                       <li>Make a text form fixed size &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/tofixed") %>">ApiTextForm.ToFixed</a></li>
+                       <li>Make a combo box form fixed size &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/tofixed") %>">ApiComboBoxForm.ToFixed</a></li>
+                       <li>Make a checkbox form fixed size &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/tofixed") %>">ApiCheckBoxForm.ToFixed</a></li>
+                       <li>Make a picture form fixed size &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/tofixed") %>">ApiPictureForm.ToFixed</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body57" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the picture position inside the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the picture position inside the form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/setpictureposition") %>">ApiPictureForm.SetPicturePosition</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body58" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the radio group key to the checkbox</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the radio group key to the checkbox &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/setradiogroup") %>">ApiCheckBoxForm.SetRadioGroup</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body59" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the list values to the combo box</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the list values to the combo box &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/setlistvalues") %>">ApiComboBoxForm.SetListValues</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body60" class="tags_content">
+                <h5>Learn how to <span class="tag_name">select the specified value from the combo box list values</span></h5>
+                <div>
+                   <ul>
+                       <li>Select the specified value from the combo box list values &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/selectlistvalue") %>">ApiComboBoxForm.SelectListValue</a></li>
                    </ul>
                 </div>
             </div>

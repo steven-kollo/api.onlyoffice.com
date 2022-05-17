@@ -66,7 +66,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing the table row properties.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing the table row properties.\n\t * @constructor\n\t */",
   "description": "<p>Class representing the table row properties.</p>",
   "scope": "global",
   "params": []

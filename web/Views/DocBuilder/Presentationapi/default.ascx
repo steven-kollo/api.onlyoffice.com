@@ -76,7 +76,7 @@
 <div class="global-type-definitions">
 <span class="anchor-position" id="CreatePresentation">&nbsp;</span>
     <h2>Creating a new presentation</h2>
-    <p>A simplest example presentation with a single slide without any objects can be built with the help of <b>ONLYOFFICE Document Builder</b> using the following code:</p>
+    <p>The simplest example presentation with a single slide without any objects can be built with the help of <b>ONLYOFFICE Document Builder</b> using the following code:</p>
 <pre>builder.CreateFile("pptx");                      // create a presentation file in the .pptx format with ONLYOFFICE Document Builder
 var oPresentation = Api.GetPresentation();       // create a new 'oPresentation' variable and get the created presentation contents
 var oSlide = oPresentation.GetSlideByIndex(0);   // get the first slide

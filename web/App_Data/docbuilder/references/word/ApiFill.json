@@ -20,7 +20,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a base class for fill.\r\n\t * @constructor\r\n\t * */",
+  "comment": "/**\n\t * Class representing a base class for fill.\n\t * @constructor\n\t * */",
   "description": "<p>Class representing a base class for fill.</p>",
   "scope": "global",
   "params": []

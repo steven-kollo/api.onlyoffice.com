@@ -417,15 +417,15 @@
             <category>Profiles</category>
             <returns>Information message</returns>
         </member>
-        <member name="M:ASC.Api.Employee.EmployeeApi.JoinToAffiliateProgram">
+        <member name="M:ASC.Api.Employee.EmployeeApi.RemindAboutBirthday(System.Guid,System.Boolean)">
             <summary>
-            Joins to the affiliate programm by the link.
+            Subscribes to or unsubscribes from the birthday of a user with the ID specified.
             </summary>
-            <short>
-            Join to the affiliate programm
-            </short>
-            <category>Affiliate programm</category>
-            <returns>Link to the affiliate programm</returns>
+            <short>Birthday subscription</short>
+            <param name="userid">User ID</param>
+            <param name="onRemind">Defines if the user will be notified about other user's birthday or not</param>
+            <returns>Bool value: true means that the user will get the notification</returns>
+            <category>Birthday</category>
         </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.LinkAccount(System.String)">
              <summary>
@@ -519,6 +519,16 @@
              <remarks>
              This method returns partial group information.
              </remarks>
+        </member>
+        <member name="M:ASC.Api.Employee.GroupsApi.GetTagsByName(System.String)">
+            <summary>
+            Returns a list of all the groups by the group name specified in the request.
+            </summary>
+            <short>
+            Get groups by a group name
+            </short>
+            <param name="groupName">Group name</param>
+            <returns>List of groups</returns>
         </member>
         <member name="M:ASC.Api.Employee.GroupsApi.GetById(System.Guid)">
             <summary>

@@ -19,7 +19,7 @@
 <p>Create a folder using the DMS provider as a name (e.g. <em>onlyoffice</em>) in the <em>providers</em> directory. 
     The path to the folder depends on the operating system you use:</p>
 <ul style="list-style: none;">
-    <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/providers/</em></li>
+    <li>For Linux - <em>/opt/onlyoffice/desktopeditors/providers/</em></li>
     <li>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DesktopEditors\providers\</em></li>
     <li>For Mac OS - <em>/Applications/ONLYOFFICE.app/Contents/Resources/providers/</em></li>
 </ul>
