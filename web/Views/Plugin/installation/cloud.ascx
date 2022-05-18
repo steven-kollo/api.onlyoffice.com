@@ -208,7 +208,6 @@
     </div>
 </div>
 
-<script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
 <script type="text/javascript">
     $('ul.browser').on('click', 'li:not(.browser tab active)', function() {
         $(this)
