@@ -167,7 +167,7 @@
                     type : "onExternalPluginMessage",
                     data : {
                         type: "executeCommand",
-                        text: "<%= Regex.Replace(section.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", ""), "\\r*\\n", "") %>"
+                        text: "<%= Regex.Replace(section.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>"
                     }
                 }), "<%= ConfigurationManager.AppSettings["editor_url"] ?? "*" %>");
             }
