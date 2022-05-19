@@ -20,7 +20,7 @@
 
     <p>For further information on the WOPI protocol, please read the <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/" target="_blank">WOPI documentation</a>.</p>
 
-    <p>All the necessary WOPI settings you can find and change in the configuration file which can be found (or created) at the following path:</p>
+    <p>All the necessary <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI" target="_blank">WOPI settings</a> you can find and change in the configuration file which can be found (or created) at the following path:</p>
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
     <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
 
@@ -31,7 +31,7 @@
     </div>
 
     <h2 id="enable" class="copy-link">Enabling WOPI</h2>
-    <p>To enable WOPI, set the <em>wopi.enable</em> parameter in the Document Server config to <b>true</b>.</p>
+    <p>To enable WOPI, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> parameter in the Document Server config to <b>true</b>:</p>
 
     <div class="header-gray">Parameters</div>
     <table class="table">
@@ -73,7 +73,7 @@
         The IP address of such an integrator must be included in the <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list" target="_blank">WOPI domain allow list</a>. 
         At the same time, access for all the other integrators must be denied.</p>
     <note>By default, all the IP addresses are considered trusted.</note>
-    <p>Follow the steps below to configure the Document Server IP filter:</p>
+    <p>Follow the steps below to configure the Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter" target="_blank">IP filter</a>:</p>
     <ol>
         <li>
             <p>Open the <em>/etc/onlyoffice/documentserver/local.json</em> file using any available text editor:</p>
