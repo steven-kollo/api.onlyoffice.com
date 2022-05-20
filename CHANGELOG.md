@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the information about co-editing modes
 - editors: added the live viewer mode to the text document, spreadsheet and presentation editors
 - editors: added the embedview action to the WOPI discovery
 

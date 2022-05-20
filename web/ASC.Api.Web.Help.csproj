@@ -288,6 +288,9 @@
     <Content Include="Content\img\Editor\editor.png" />
     <Content Include="Content\img\Editor\inlineEditors.png" />
     <Content Include="Content\img\Editor\live-viewer.png" />
+    <Content Include="Content\img\Editor\fast-mode.png" />
+    <Content Include="Content\img\Editor\strict-mode.png" />
+    <Content Include="Content\img\Editor\save-updates.png" />
     <Content Include="Content\img\Editor\viewer.png" />
     <Content Include="Content\img\Editor\show-changes-from-other-users.png" />
     <Content Include="Content\img\Editor\mattermost-actions.png" />
