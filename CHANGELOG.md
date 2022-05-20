@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the four letter language codes to the editorConfig.lang parameter
 - editors: added the embedview action to the WOPI discovery
 
 ## 2.8.0
