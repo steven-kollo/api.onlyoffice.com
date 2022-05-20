@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the connections_view and users_view parameters to the license response
 - editors: added the information about co-editing modes
 - editors: added the live viewer mode to the text document, spreadsheet and presentation editors
 - editors: added the embedview action to the WOPI discovery

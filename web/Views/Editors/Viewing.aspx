@@ -74,6 +74,6 @@
         <li>when opening the <em>pdf/djvu/xps</em> formats.</li>
     </ul>
     <note>Please note that the server connections for the live viewer are counted separately from the total number of simultaneous connections
-        and limited with the <em>connections_view</em> parameter in the license. For the open source version, this limit is 20. The live viewer is not available for the older licenses.</note>
+        and limited with the <a href="<%= Url.Action("command/license") %>#license">connections_view</a> parameter in the license. For the open source version, this limit is 20. The live viewer is not available for the older licenses.</note>
     <p>The concept for working with viewing modes in the mobile editors is the same as for the web version.</p>
 </asp:Content>
