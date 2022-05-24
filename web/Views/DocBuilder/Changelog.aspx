@@ -17,9 +17,182 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
     <h2 id="72" class="copy-link">Version 7.2</h2>
+    <p><b>Methods for converting to/from JSON</b></p>
     <ul>
-        <li></li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/fromjson") %>">Api/FromJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/tojson") %>">ApiBlockLvlSdt/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/tojson") %>">ApiDocument/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/tojson") %>">ApiDocumentContent/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/tojson") %>">ApiDrawing/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apifill/tojson") %>">ApiFill/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apigradientstop/tojson") %>">ApiGradientStop/ToJSON</a> method to Text document API.</li>
     </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apihyperlink/tojson") %>">ApiHyperlink/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/tojson") %>">ApiInlineLvlSdt/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apinumbering/tojson") %>">ApiNumbering/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/tojson") %>">ApiParagraph/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparapr/tojson") %>">ApiParaPr/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipresetcolor/tojson") %>">ApiPresetColor/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirange/tojson") %>">ApiRange/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirgbcolor/tojson") %>">ApiRGBColor/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/tojson") %>">ApiRun/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apischemecolor/tojson") %>">ApiSchemeColor/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apisection/tojson") %>">ApiSection/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apistroke/tojson") %>">ApiStroke/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apistyle/tojson") %>">ApiStyle/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/tojson") %>">ApiTable/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablecellpr/tojson") %>">ApiTableCellPr/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/tojson") %>">ApiTablePr/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablerowpr/tojson") %>">ApiTableRowPr/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablestylepr/tojson") %>">ApiTableStylePr/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/tojson") %>">ApiTextPr/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiunicolor/tojson") %>">ApiUniColor/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/api/fromjson") %>">Api/FromJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apidrawing/tojson") %>">ApiDrawing/ToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apilayout/tojson") %>">ApiLayout/ToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apimaster/tojson") %>">ApiMaster/ToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/slidestojson") %>">ApiPresentation/SlidesToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/tojson") %>">ApiPresentation/ToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apislide/tojson") %>">ApiSlide/ToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitable/tojson") %>">ApiTable/ToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apithemecolorscheme/tojson") %>">ApiThemeColorScheme/ToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apithemefontscheme/tojson") %>">ApiThemeFontScheme/ToJSON</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apithemeformatscheme/tojson") %>">ApiThemeFormatScheme/ToJSON</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>Word Art methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createwordart") %>">Api/CreateWordArt</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/addwordart") %>">ApiWorksheet/AddWordArt</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/api/createwordart") %>">Api/CreateWordArt</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>Table of contents/figures methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/updatealltoc") %>">ApiDocument/UpdateAllTOC</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/updatealltof") %>">ApiDocument/UpdateAllTOF</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Chart methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/applychartstyle") %>">ApiChart/ApplyChartStyle</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/removeseria") %>">ApiChart/RemoveSeria</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setaxienumformat") %>">ApiChart/SetAxieNumFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setcategoryname") %>">ApiChart/SetCategoryName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setdatapointfill") %>">ApiChart/SetDataPointFill</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setdatapointnumformat") %>">ApiChart/SetDataPointNumFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setdatapointoutline") %>">ApiChart/SetDataPointOutLine</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setlegendfill") %>">ApiChart/SetLegendFill</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setlegendoutline") %>">ApiChart/SetLegendOutLine</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setmarkerfill") %>">ApiChart/SetMarkerFill</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setmarkeroutline") %>">ApiChart/SetMarkerOutLine</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setplotareafill") %>">ApiChart/SetPlotAreaFill</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setplotareaoutline") %>">ApiChart/SetPlotAreaOutLine</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setserianame") %>">ApiChart/SetSeriaName</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setserianumformat") %>">ApiChart/SetSeriaNumFormat</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setseriavalues") %>">ApiChart/SetSeriaValues</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setseriesfill") %>">ApiChart/SetSeriesFill</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setseriesoutline") %>">ApiChart/SetSeriesOutLine</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/settitlefill") %>">ApiChart/SetTitleFill</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/settitleoutline") %>">ApiChart/SetTitleOutLine</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apichart/setxvalues") %>">ApiChart/SetXValues</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/addseria") %>">ApiChart/AddSeria</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/removeseria") %>">ApiChart/RemoveSeria</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setaxienumformat") %>">ApiChart/SetAxieNumFormat</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setcatformula") %>">ApiChart/SetCatFormula</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setdatapointfill") %>">ApiChart/SetDataPointFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setdatapointoutline") %>">ApiChart/SetDataPointOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setlegendfill") %>">ApiChart/SetLegendFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setlegendoutline") %>">ApiChart/SetLegendOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setmarkerfill") %>">ApiChart/SetMarkerFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setmarkeroutline") %>">ApiChart/SetMarkerOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setplotareafill") %>">ApiChart/SetPlotAreaFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setplotareaoutline") %>">ApiChart/SetPlotAreaOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setserianame") %>">ApiChart/SetSeriaName</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setseriavalues") %>">ApiChart/SetSeriaValues</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setseriaxvalues") %>">ApiChart/SetSeriaXValues</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setseriesfill") %>">ApiChart/SetSeriesFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/setseriesoutline") %>">ApiChart/SetSeriesOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/settitlefill") %>">ApiChart/SetTitleFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apichart/settitleoutline") %>">ApiChart/SetTitleOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/applychartstyle") %>">ApiChart/ApplyChartStyle</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/removeseria") %>">ApiChart/RemoveSeria</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setaxienumformat") %>">ApiChart/SetAxieNumFormat</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setcategoryname") %>">ApiChart/SetCategoryName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setdatapointfill") %>">ApiChart/SetDataPointFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setdatapointnumformat") %>">ApiChart/SetDataPointNumFormat</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setdatapointoutline") %>">ApiChart/SetDataPointOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setlegendfill") %>">ApiChart/SetLegendFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setlegendoutline") %>">ApiChart/SetLegendOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setmarkerfill") %>">ApiChart/SetMarkerFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setmarkeroutline") %>">ApiChart/SetMarkerOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setplotareafill") %>">ApiChart/SetPlotAreaFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setplotareaoutline") %>">ApiChart/SetPlotAreaOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setserianame") %>">ApiChart/SetSeriaName</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setserianumformat") %>">ApiChart/SetSeriaNumFormat</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setseriavalues") %>">ApiChart/SetSeriaValues</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setseriesfill") %>">ApiChart/SetSeriesFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setseriesoutline") %>">ApiChart/SetSeriesOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/settitlefill") %>">ApiChart/SetTitleFill</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/settitleoutline") %>">ApiChart/SetTitleOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apichart/setxvalues") %>">ApiChart/SetXValues</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>Drawing methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/fromjson") %>">ApiDocument/GetSelectedDrawings </a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/replacedrawing") %>">ApiDocument/ReplaceDrawing</a> method to Text document API.</li> 
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/getheight") %>">ApiDrawing/GetHeight</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/getlockvalue") %>">ApiDrawing/GetLockValue</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/getwidth") %>">ApiDrawing/GetWidth</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/setdrawingprfromdrawing") %>">ApiDrawing/SetDrawingPrFromDrawing</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/setlockvalue") %>">ApiDrawing/SetLockValue</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apidrawing/getheight") %>">ApiDrawing/GetHeight</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apidrawing/getlockvalue") %>">ApiDrawing/GetLockValue</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apidrawing/getwidth") %>">ApiDrawing/GetWidth</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apidrawing/setlockvalue") %>">ApiDrawing/SetLockValue</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apidrawing/getheight") %>">ApiDrawing/GetHeight</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apidrawing/getlockvalue") %>">ApiDrawing/GetLockValue</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apidrawing/getwidth") %>">ApiDrawing/GetWidth</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apidrawing/setlockvalue") %>">ApiDrawing/SetLockValue</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>Other methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createtextpr") %>">Api/CreateTextPr</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/getposinparent") %>">ApiBlockLvlSdt/GetPosInParent</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/replacebyelement") %>">ApiBlockLvlSdt/ReplaceByElement</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getfontnames") %>">ApiParagraph/GetFontNames</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getposinparent") %>">ApiParagraph/GetPosInParent</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/replacebyelement") %>">ApiParagraph/ReplaceByElement</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/getfontnames") %>">ApiRun/GetFontNames</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/getposintable") %>">ApiTable/GetPosInTable</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/replacebyelement") %>">ApiTable/ReplaceByElement</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallcharts") %>">ApiWorksheet/GetAllCharts</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getalldrawings") %>">ApiWorksheet/GetAllDrawings</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallimages") %>">ApiWorksheet/GetAllImages</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallshapes") %>">ApiWorksheet/GetAllShapes</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getheight") %>">ApiPresentation/GetHeight</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getinfoole") %>">ApiPresentation/GetInfoOle</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getwidth") %>">ApiPresentation/GetWidth</a> method to Presentation API.</li>
+    </ul>
+
 
     <h2 id="71" class="copy-link">Version 7.1</h2>
     <p><b>Form methods</b></p>
