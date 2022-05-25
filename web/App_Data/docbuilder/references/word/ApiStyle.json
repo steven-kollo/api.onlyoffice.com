@@ -205,7 +205,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a style.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a style.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a style.</p>",
   "scope": "global",
   "params": []

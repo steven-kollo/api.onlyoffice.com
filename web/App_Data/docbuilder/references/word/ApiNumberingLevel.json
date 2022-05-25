@@ -210,7 +210,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a reference to a specified level of the numbering.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a reference to a specified level of the numbering.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a reference to a specified level of the numbering.</p>",
   "scope": "global",
   "params": []

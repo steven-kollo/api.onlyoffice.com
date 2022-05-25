@@ -9,6 +9,26 @@
              Portal settings.
             </summary>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.GetCardDavUrl">
+            <summary>
+            Creates a CardDav address book for a user with all portal users and returns a link to this address book.
+            </summary>
+            <short>
+            Get a link to the CardDav address book
+            </short>
+            <category>CardDav address book</category>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.DeleteCardDavAddressBook">
+            <summary>
+            Deletes a CardDav address book with all portal users.
+            </summary>
+            <short>
+            Delete a CardDav address book
+            </short>
+            <category>CardDav address book</category>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSmtpSettings">
             <summary>
             Returns the current portal SMTP settings.
@@ -573,12 +593,18 @@
             <category>Telegram</category>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CloseWelcomePopup">
-             <summary>
-             Closes the welcome pop-up notification.
+            <summary>
+            Closes the welcome pop-up notification.
+            </summary>
+            <short>Close the welcome pop-up notification</short>
+            <category>Common settings</category>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.CloseAdminHelper">
+            <summary>
+             Close the admin helper notification.
              </summary>
-             <short>Close the welcome pop-up notification</short>
+             <short>Close the admin helper notification</short>
              <category>Common settings</category>
-            <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveColorTheme(System.String)">
              <summary>
