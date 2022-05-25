@@ -486,6 +486,10 @@ li b.copy-link[id]:hover:before {
     margin-left: -40px;
 }
 
+li.copy-link[id]:hover:before {
+    background: none;
+}
+
 .header-gray.copy-link[id]:hover:before {
     margin-left: -35px;
 }
