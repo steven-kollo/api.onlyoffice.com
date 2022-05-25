@@ -54,6 +54,7 @@
         "connections": 0,
         "connections_view": 0,
         "users_count": 10,
+        "users_view_count": 10,
         "users_expire": 30
     },
     "server": {
@@ -154,6 +155,13 @@
                     </li>
                     <li>
                         <b>users_count</b> - the number of users for the user license.
+                        <br />
+                        <b>type</b>: integer
+                        <br />
+                        <b>presence</b>: optional
+                    </li>
+                    <li>
+                        <b>users_view_count</b> - the number of users for the live viewer.
                         <br />
                         <b>type</b>: integer
                         <br />
