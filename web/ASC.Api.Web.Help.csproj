@@ -286,7 +286,14 @@
     <Content Include="Content\img\Editor\alfresco-create.png" />
     <Content Include="Content\img\Editor\compactToolbar.png" />
     <Content Include="Content\img\Editor\compactHeader.png" />
+    <Content Include="Content\img\Editor\editor.png" />
     <Content Include="Content\img\Editor\inlineEditors.png" />
+    <Content Include="Content\img\Editor\live-viewer.png" />
+    <Content Include="Content\img\Editor\fast-mode.png" />
+    <Content Include="Content\img\Editor\strict-mode.png" />
+    <Content Include="Content\img\Editor\save-updates.png" />
+    <Content Include="Content\img\Editor\viewer.png" />
+    <Content Include="Content\img\Editor\show-changes-from-other-users.png" />
     <Content Include="Content\img\Editor\mattermost-actions.png" />
     <Content Include="Content\img\Editor\mattermost-bot.png" />
     <Content Include="Content\img\Editor\mattermost-editor.png" />
@@ -784,6 +791,7 @@
     <Content Include="Views\Editors\Command\meta.ascx" />
     <Content Include="Views\Editors\Command\version.ascx" />
     <Content Include="Views\Editors\Coedit.aspx" />
+    <Content Include="Views\Editors\Viewing.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
