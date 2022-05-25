@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the four letter language codes to the editorConfig.lang parameter
 - editors: added the connections_view and users_view parameters to the license response
 - editors: added the information about co-editing modes
 - editors: added the live viewer mode to the text document, spreadsheet and presentation editors

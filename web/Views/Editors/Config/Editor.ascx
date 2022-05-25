@@ -102,7 +102,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/create.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="lang" class="copy-link">lang</td>
             <td>
                 Defines the editor interface language (if some other languages other than English are present).
@@ -111,6 +111,13 @@
             </td>
             <td>string</td>
             <td>"en"</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that to translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan)
+                (these languages were added in version 7.2), you need to use the four letter language codes - <b>pt-PT</b> or <b>zh-TW</b>, respectively.
+                The two letter <b>pt</b> language code sets Portuguese (Brazil) and the <b>zh</b> code specifies Chinese (People's Republic of China).</div>
+            </td>
         </tr>
         <tr>
             <td id="location" class="copy-link">location</td>
