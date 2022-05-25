@@ -58,20 +58,21 @@
                 The object has the following parameters:
                 <ul>
                     <li>
-                        <b>mode</b> - the co-editing mode (<em>fast</em> or <em>strict</em>),
+                        <b>mode</b> - the co-editing mode (<em>fast</em> or <em>strict</em>). The default value is <b>fast</b>,
                         <br />
                         <b>type</b>: string,
                         <br />
                         <b>example</b>:  "fast";
                     </li>
                     <li>
-                        <b>change</b> - defines if the co-editing mode can be changed in the editor interface or not,
+                        <b>change</b> - defines if the co-editing mode can be changed in the editor interface or not. The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
                         <br />
                         <b>example</b>:  true.
                     </li>
                 </ul>
+                <p>This parameter is used to apply the <a href="<%= Url.Action("coedit") %>#modes">co-editing</a> and <a href="<%= Url.Action("viewing") %>">viewing</a> modes.</p>
             </td>
             <td>object</td>
             <td></td>
