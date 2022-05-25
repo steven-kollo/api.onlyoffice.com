@@ -675,6 +675,7 @@
     <Content Include="Views\Editors\Signature\Browser.ascx" />
     <Content Include="Views\Editors\Signature\Default.ascx" />
     <Content Include="Views\Editors\Strapi.aspx" />
+    <Content Include="Views\Editors\Wordpress.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\ProductBlock.ascx" />
     <Content Include="Views\Plugin\Basic.aspx" />

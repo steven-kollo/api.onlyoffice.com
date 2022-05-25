@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the WordPress plugin
+
 ## 2.8.1
 - docbuilder: fix run examples
 
