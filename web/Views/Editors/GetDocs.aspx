@@ -43,6 +43,7 @@
 
     <p>Before working with ONLYOFFICE Docs API documentation, it is recommended to make the following settings if necessary:</p>
     <ul>
+        <li>configure <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx" target="_blank">ONLYOFFICE Docs server settings</a> in ONLYOFFICE Docs configuration file;</li>
         <li>switch ONLYOFFICE Docs to the HTTPS protocol for secure connection using <a href="https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx" target="_blank">SSL Certificates</a>;</li>
         <li>add additional <a href="https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx" target="_blank">fonts</a> to ONLYOFFICE Docs to enhance the work with the editors;</li>
         <li>download <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">external themes</a> for the application interface.</li>

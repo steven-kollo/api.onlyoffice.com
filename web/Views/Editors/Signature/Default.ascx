@@ -7,7 +7,7 @@
 
 <div class="note">This feature is used in <b>Document Server</b> starting with version 4.2</div>
 
-<p>For the validation setup it is necessary to edit the configuration file which can be found (or created) at the following path:</p>
+<p>For the validation setup it is necessary to edit the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey" target="_blank">secret key</a> and <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token" target="_blank">token</a> parameters in the configuration file which can be found (or created) at the following path:</p>
 <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
 <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
 
@@ -41,32 +41,38 @@ supervisorctl restart all
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td>services.CoAuthoring.secret.browser.string</td>
+            <td>Defines the <em>secret key</em> to generate a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> to ONLYOFFICE Docs.</td>
+            <td>string</td>
+            <td>secret</td>
+        </tr>
+        <tr class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
-            <td>Defines the <em>secret key</em> to generate the token in the <a href="<%= Url.Action("signature/browser") %>">browser</a> for the <b>document editor</b> opening and calling the methods and the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
+            <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> with the commands from the <b>document storage service</b> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
             <td>string</td>
             <td>secret</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.outbox.string</td>
-            <td>Defines the <em>secret key</em> to generate the token in the <a href="<%= Url.Action("signature/request") %>">requests</a> by <b>document editing service</b> to "callbackUrl" address.</td>
+            <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#outgoing">outgoing HTTP requests</a> to the <em>callbackUrl</em> address by <b>document editing service</b>.</td>
             <td>string</td>
             <td>secret</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.browser</td>
-            <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/browser") %>">config</a> for the <b>document editor</b> opening and calling the methods.</td>
+            <td>Defines if a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> is enabled or not.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.inbox</td>
-            <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
+            <td>Defines if a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> is enabled or not.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.outbox</td>
-            <td>Specifies the enabling the token generation for the <a href="<%= Url.Action("signature/request") %>">requests</a> by <b>document editing service</b> to <b>document storage service</b>.</td>
+            <td>Defines if a token in the <a href="<%= Url.Action("signature/request") %>#outgoing">outgoing HTTP requests</a> is enabled or not.</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -81,6 +87,9 @@ supervisorctl restart all
     "services": {
         "CoAuthoring": {
             "secret": {
+                "browser": {
+                    "string": "secret"
+                },
                 "inbox": {
                     "string": "secret"
                 },
