@@ -135,9 +135,9 @@ static JwtManager()
     Serializer = new JavaScriptSerializer();
 }
 
-public static string Encode(IDictionary<string, object> payload)
+public static string Encode(IDictionary&lt;string, object&gt; payload)
 {
-    var header = new Dictionary<string, object>
+    var header = new Dictionary&lt;string, object&gt;
         {
             { "alg", "HS256" },
             { "typ", "JWT" }
@@ -169,7 +169,6 @@ private static string Base64UrlEncode(byte[] bytes)
     return Convert.ToBase64String(bytes)
         .TrimEnd('=').Replace('+', '-').Replace('/', '_');
 }
-
 </pre>
     </div>
     <div id="csharp" class="content active">
@@ -181,9 +180,9 @@ static JwtManager()
     Serializer = new JavaScriptSerializer();
 }
 
-public static string Encode(IDictionary<string, object> payload)
+public static string Encode(IDictionary&lt;string, object&gt; payload)
 {
-    var header = new Dictionary<string, object>
+    var header = new Dictionary&lt;string, object&gt;
         {
             { "alg", "HS256" },
             { "typ", "JWT" }
