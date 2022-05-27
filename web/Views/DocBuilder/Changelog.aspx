@@ -189,7 +189,6 @@
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallimages") %>">ApiWorksheet/GetAllImages</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallshapes") %>">ApiWorksheet/GetAllShapes</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getheight") %>">ApiPresentation/GetHeight</a> method to Presentation API.</li>
-        <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getinfoole") %>">ApiPresentation/GetInfoOle</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getwidth") %>">ApiPresentation/GetWidth</a> method to Presentation API.</li>
     </ul>
 
@@ -209,6 +208,7 @@
     <p class="spoiler_heading spoiler_changelog">More</p>
     <ul class="spoiler_code">
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicheckboxform/clear") %>">ApiCheckBoxForm/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicheckboxform/copy") %>">ApiCheckBoxForm/Copy</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicheckboxform/getclasstype") %>">ApiCheckBoxForm/GetClassType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicheckboxform/getformkey") %>">ApiCheckBoxForm/GetFormKey</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicheckboxform/getformtype") %>">ApiCheckBoxForm/GetFormType</a> method to Text document API.</li>
@@ -234,6 +234,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicheckboxform/toinline") %>">ApiCheckBoxForm/ToInline</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomboboxform") %>">ApiComboBoxForm</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomboboxform/clear") %>">ApiComboBoxForm/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomboboxform/copy") %>">ApiComboBoxForm/Copy</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomboboxform/getclasstype") %>">ApiComboBoxForm/GetClassType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomboboxform/getformkey") %>">ApiComboBoxForm/GetFormKey</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomboboxform/getformtype") %>">ApiComboBoxForm/GetFormType</a> method to Text document API.</li>
@@ -263,6 +264,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/setformshighlight") %>">ApiDocument/SetFormsHighlight</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase") %>">ApiFormBase</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/clear") %>">ApiFormBase/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/copy") %>">ApiFormBase/Copy</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/getclasstype") %>">ApiFormBase/GetClassType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/getformkey") %>">ApiFormBase/GetFormKey</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiformbase/getformtype") %>">ApiFormBase/GetFormType</a> method to Text document API.</li>
@@ -286,6 +288,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/setplaceholdertext") %>">ApiInlineLvlSdt/SetPlaceholderText</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform") %>">ApiPictureForm</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/clear") %>">ApiPictureForm/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/copy") %>">ApiPictureForm/Copy</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/getclasstype") %>">ApiPictureForm/GetClassType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/getformkey") %>">ApiPictureForm/GetFormKey</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/getformtype") %>">ApiPictureForm/GetFormType</a> method to Text document API.</li>
@@ -316,6 +319,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apipictureform/toinline") %>">ApiPictureForm/ToInline</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform") %>">ApiTextForm</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform/clear") %>">ApiTextForm/Clear</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform/copy") %>">ApiTextForm/Copy</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform/getcharacterslimit") %>">ApiTextForm/GetCharactersLimit</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform/getclasstype") %>">ApiTextForm/GetClassType</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextform/getformkey") %>">ApiTextForm/GetFormKey</a> method to Text document API.</li>
