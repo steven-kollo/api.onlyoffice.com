@@ -29,8 +29,8 @@
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
     <p>
-        You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Moodle and any end clients (version 4.2.7 and later are supported for use with the plugin). 
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>. 
+        You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Moodle and any end clients.
+        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>.
         ONLYOFFICE Docs must also be able to POST to Moodle directly.
     </p>
     <p>The easiest way to install an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
