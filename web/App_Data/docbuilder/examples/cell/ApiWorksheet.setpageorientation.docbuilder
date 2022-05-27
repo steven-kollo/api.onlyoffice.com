@@ -1,8 +1,0 @@
-builder.CreateFile("xlsx");
-oWorksheet = Api.GetActiveSheet();
-oWorksheet.SetPageOrientation("xlPortrait");
-sPageOrientation = oWorksheet.GetPageOrientation();
-oWorksheet.GetRange("A1").SetValue("Page orientation: ");
-oWorksheet.GetRange("C1").SetValue(oPageOrientation);
-builder.SaveFile("xlsx", "SetPageOrientation.xlsx");
-builder.CloseFile();

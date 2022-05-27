@@ -1,6 +1,0 @@
-builder.CreateFile("xlsx");
-oWorksheet = Api.GetActiveSheet();
-oUsedRange = oWorksheet.GetUsedRange();
-oUsedRange.SetFillColor(Api.CreateColorFromRGB(255, 224, 204));
-builder.SaveFile("xlsx", "GetUsedRange.xlsx");
-builder.CloseFile();

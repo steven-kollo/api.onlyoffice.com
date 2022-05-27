@@ -1,7 +1,0 @@
-builder.CreateFile("docx");
-oDocument = Api.GetDocument();
-oParagraph = oDocument.GetElement(0);
-sClassType = oParagraph.GetClassType();
-oParagraph.AddText("Class Type = " + sClassType);
-builder.SaveFile("docx", "GetClassType.docx");
-builder.CloseFile();

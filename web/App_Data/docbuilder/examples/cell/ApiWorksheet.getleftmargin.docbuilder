@@ -1,6 +1,0 @@
-builder.CreateFile("xlsx");
-oWorksheet = Api.GetActiveSheet();
-nLeftMargin = oWorksheet.GetLeftMargin();
-oWorksheet.GetRange("A1").SetValue("Left margin: " + nLeftMargin + " mm");
-builder.SaveFile("xlsx", "GetLeftMargin.xlsx");
-builder.CloseFile();

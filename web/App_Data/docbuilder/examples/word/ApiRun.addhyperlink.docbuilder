@@ -1,9 +1,0 @@
-builder.CreateFile("docx");
-oDocument = Api.GetDocument();
-oParagraph = oDocument.GetElement(0);
-oRun = Api.CreateRun();
-oRun.AddText("ONLYOFFICE Document Builder");
-oParagraph.AddElement(oRun);
-oRun.AddHyperlink("https://www.onlyoffice.com", "main page");
-builder.SaveFile("docx", "AddHyperlink.docx");
-builder.CloseFile();

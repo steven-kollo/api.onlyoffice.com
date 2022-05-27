@@ -1,7 +1,0 @@
-builder.CreateFile("xlsx");
-oWorksheet = Api.GetActiveSheet();
-sRange = oWorksheet.GetRange("A1:D5");
-oWorksheet.GetRange("A2").SetValue("This is just a sample text distributed in the A2 cell.");
-sRange.SetAlignVertical("distributed");
-builder.SaveFile("xlsx", "SetAlignVertical.xlsx");
-builder.CloseFile();

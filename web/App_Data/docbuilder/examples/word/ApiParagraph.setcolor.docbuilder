@@ -1,7 +1,0 @@
-builder.CreateFile("docx");
-oDocument = Api.GetDocument();
-oParagraph = oDocument.GetElement(0);
-oParagraph.AddText("This is a paragraph with the font color set to blue.");
-oParagraph.SetColor(0, 0, 255);
-builder.SaveFile("docx", "SetColor.docx");
-builder.CloseFile();
