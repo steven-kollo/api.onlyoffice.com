@@ -171,7 +171,7 @@ private static string Base64UrlEncode(byte[] bytes)
 }
 </pre>
     </div>
-    <div id="csharp" class="content active">
+    <div id="csharp" class="content">
         <pre>
 static JwtManager()
 {
@@ -216,7 +216,7 @@ private static string Base64UrlEncode(byte[] bytes)
 }
 </pre>
     </div>
-    <div id="java" class="content active">
+    <div id="java" class="content">
         <pre>
 public static String CreateToken(Map<String, Object> payloadClaims)
 {
@@ -242,7 +242,7 @@ public static String GetTokenSecret()
 }
 </pre>
     </div>
-    <div id="java-spring" class="content active">
+    <div id="java-spring" class="content">
         <pre>
 @Value("${files.docservice.secret}")
 private String tokenSecret;
@@ -261,7 +261,7 @@ public String createToken(Map<String, Object> payloadClaims) {
 }
 </pre>
     </div>
-    <div id="nodejs" class="content active">
+    <div id="nodejs" class="content">
         <pre>
 var configServer = require('config').get('server');
 var cfgSignatureSecretExpiresIn = configServer.get('token.expiresIn');
@@ -274,7 +274,7 @@ documentService.getToken = function (data) {
 };
 </pre>
     </div>
-    <div id="php" class="content active">
+    <div id="php" class="content">
         <pre>
 function jwtEncode($payload) {
     $header = [
@@ -297,14 +297,14 @@ function base64UrlEncode($str) {
 }
 </pre>
     </div>
-    <div id="python" class="content active">
+    <div id="python" class="content">
         <pre>
 def encode(payload):
     return jwt.encode(payload, config.DOC_SERV_JWT_SECRET, algorithm='HS256')
 
 </pre>
     </div>
-    <div id="ruby" class="content active">
+    <div id="ruby" class="content">
         <pre>
 @jwt_secret = Rails.configuration.jwtSecret
 
