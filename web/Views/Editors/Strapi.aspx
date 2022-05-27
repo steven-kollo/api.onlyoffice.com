@@ -21,7 +21,7 @@
     <ul>
         <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX.</li>
         <li>The following formats are available for viewing: DOC, DOCX, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, OXPS, XLS, XLSX, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP.</li>
-        <li>The plugin will create a new <b>Open in ONLYOFFICE</b> / <b>Edit in ONLYOFFICE</b> menu option within the document library for office documents. 
+        <li>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for office documents. 
             This allows multiple users to collaborate in real time and save back those changes to Strapi.</li>
     </ul>
 
@@ -78,7 +78,7 @@ npm run develop
     <h2 id="configuration" class="copy-link">Configuring Strapi ONLYOFFICE integration plugin</h2>
     <p>You can configure ONLYOFFICE app via Strapi <b>Dashboard -> Settings -> Global settings -> ONLYOFFICE</b>. On the settings page, enter:</p>
     <ul>
-        <li><b>Document server address</b>. The URL of the installed ONLYOFFICE Document Server.</p></li>
+        <li><b>Document server address</b>. The URL of the installed ONLYOFFICE Document Server.</li>
         <li><b>Document server JWT secret key</b>. To protect your documents from unauthorized access, enable JWT (further information can be found <a href="<%= Url.Action("signature/") %>">here</a>).</li>
     </ul>
 

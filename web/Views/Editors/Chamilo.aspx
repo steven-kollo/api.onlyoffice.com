@@ -17,8 +17,6 @@
 
     <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-chamilo" target="_blank">plugin</a> enables users to edit office documents within <a href="https://chamilo.org/en/" target="_blank">Chamilo</a> using ONLYOFFICE Docs.</p>
 
-    <p>The app is compatible with Chamilo v1.11.14 or higher.</p>
-
     <h2 id="features" class="copy-link">Features</h2>
     <ul>
         <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, PPSX, DOCXF, OFORM.</li>
