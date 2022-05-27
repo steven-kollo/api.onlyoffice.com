@@ -359,7 +359,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             var docbuilderExt = ".docbuilder";
             var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\examples");
-            var globalsExamplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references", "globalsExamples.json");
+            var globalsExamplesPath = Path.Combine(examplesPath, "globalsExamples.json");
             foreach (var moduleName in _entries.Keys)
             {
                 var mod = GetModule(moduleName);
@@ -458,11 +458,15 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 try
                 {
                     var examples = JsonConvert.DeserializeObject<Dictionary<string, string>>(examplesContent);
-                    foreach (var global in _globals)
+                    foreach (var example in examples.Keys)
                     {
-                        if (examples.ContainsKey(global.Key.ToLowerInvariant()))
+                        if (_globals.ContainsKey(example))
                         {
-                            global.Value.Script = examples[global.Key.ToLowerInvariant()];
+                            _globals[example].Script = examples[example];
+                        }
+                        else
+                        {
+                            _logger.InfoFormat("Found global example for {0} but the method is missing", example);
                         }
                     }
                 }
