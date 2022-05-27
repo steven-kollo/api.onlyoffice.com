@@ -357,55 +357,63 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static void LoadExamples()
         {
-            var examplesFolders = new List<string>{"cell", "slide", "word"};
-            var examplePath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references\examples");
+            var docbuilderExt = ".docbuilder";
+            var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\examples");
             var globalsExamplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references", "globalsExamples.json");
-            foreach (var folder in examplesFolders)
+            foreach (var moduleName in _entries.Keys)
             {
-                var mod = GetModule(folder);
+                var mod = GetModule(moduleName);
                 if (mod == null) continue;
                 
-                var path = Path.Combine(examplePath, folder);
+                var path = Path.Combine(examplesPath, moduleName);
                 if (!Directory.Exists(path))
                 {
-                    _logger.Info("Couldn't find example folder: " + path);
+                    _logger.Info("Couldn't find any examples: " + path);
                 }
                 else
                 {
-                    foreach (var file in Directory.GetFiles(path))
+                    foreach (var examplePath in Directory.GetFiles(path))
                     {
-                        var example = new DBExample();
-                        if (file.Contains("."))
+                        if (Path.GetExtension(examplePath) != docbuilderExt) continue;
+
+                        var exampleName = Path.GetFileNameWithoutExtension(examplePath);
+                        if (exampleName.Contains("."))
                         {
-                            var split = file.Split('.');
+                            var split = exampleName.Split('.');
                             if (mod.ContainsKey(split[0]))
                             {
                                 var section = mod[split[0]];
                                 if (section.Methods.ContainsKey(split[1]))
                                 {
-                                    example.Script = File.ReadAllText(Path.Combine(path, file));
+                                    var example = new DBExample
+                                    {
+                                        Script = File.ReadAllText(examplePath)
+                                    };
                                     section.Methods[split[1]].Example = example;
                                 }
                                 else
                                 {
-                                    _logger.InfoFormat("Found example for {0}.{1} but the method is missing", folder, file);
+                                    _logger.InfoFormat("Found example for {0}.{1} but the method is missing", moduleName, exampleName);
                                 }
                             }
                             else
                             {
-                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", folder, file);
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", moduleName, exampleName);
                             }
                         }
                         else
                         {
-                            if (mod.ContainsKey(file))
+                            if (mod.ContainsKey(exampleName))
                             {
-                                example.Script = File.ReadAllText(Path.Combine(path, file));
-                                mod[file].Example = example;
+                                var example = new DBExample
+                                {
+                                    Script = File.ReadAllText(examplePath)
+                                };
+                                mod[exampleName].Example = example;
                             }
                             else
                             {
-                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", folder, file);
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", moduleName, exampleName);
                             }
                         }
                     }
