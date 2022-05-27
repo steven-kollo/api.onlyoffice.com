@@ -1,0 +1,2 @@
+// The created drawing will be centered vertically relative to the paragraph height:
+oDrawing.SetHorAlign("paragraph", "center");

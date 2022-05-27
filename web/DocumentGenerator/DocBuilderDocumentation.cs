@@ -359,7 +359,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         {
             var docbuilderExt = ".docbuilder";
             var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\examples");
-            var globalsExamplesPath = Path.Combine(examplesPath, "globalsExamples.json");
+
             foreach (var moduleName in _entries.Keys)
             {
                 var mod = GetModule(moduleName);
@@ -448,31 +448,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
             }
 
-            if (!File.Exists(globalsExamplesPath))
+            foreach (var globalsExamplePath in Directory.GetFiles(examplesPath))
             {
-                _logger.Info("Couldn't find any globalsExamples: " + globalsExamplesPath);
-            }
-            else
-            {
-                var examplesContent = File.ReadAllText(globalsExamplesPath);
-                try
+                if (Path.GetExtension(globalsExamplePath) != docbuilderExt) continue;
+
+                var globalExampleName = Path.GetFileNameWithoutExtension(globalsExamplePath);
+
+                if (_globals.ContainsKey(globalExampleName))
                 {
-                    var examples = JsonConvert.DeserializeObject<Dictionary<string, string>>(examplesContent);
-                    foreach (var example in examples.Keys)
-                    {
-                        if (_globals.ContainsKey(example))
-                        {
-                            _globals[example].Script = examples[example];
-                        }
-                        else
-                        {
-                            _logger.InfoFormat("Found global example for {0} but the method is missing", example);
-                        }
-                    }
+                    _globals[globalExampleName].Script = File.ReadAllText(globalsExamplePath);
                 }
-                catch (Exception e)
+                else
                 {
-                    _logger.WarnFormat("Couldn't parse globalsExamples.json. Got an error: {0}", e.Message);
+                    _logger.InfoFormat("Found global example for {0} but the method is missing", globalExampleName);
                 }
             }
         }
