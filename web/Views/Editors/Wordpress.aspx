@@ -35,7 +35,6 @@
 
 
     <h2 id="install" class="copy-link">Installing WordPress ONLYOFFICE integration plugin</h2>
-    <note>Please note that the minimum version of WordPress for ONLYOFFICE integration plugin is 5.9.0.</note>
     <p>To start using ONLYOFFICE Docs with WordPress, follow these steps:</p>
     <ol>
         <li>Download the zipped plugin.</li>
