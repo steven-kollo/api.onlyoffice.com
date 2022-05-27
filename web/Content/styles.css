@@ -2530,7 +2530,14 @@ article {
     padding: 0;
 }
 
-.browser .tab {
+.code {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    padding: 0;
+}
+
+.browser .tab, .code .tab {
     text-align: center;
     float: left;
     color: #CCC;
@@ -2544,13 +2551,13 @@ article {
     padding: 0 7px;
 }
 
-.browser .tab:hover {
+.browser .tab:hover, .code .tab:hover {
     color: #FF6F3D;
     border-bottom: 1px solid #f94a0c;
     cursor: pointer;
 }
 
-.browser .tab.active {
+.browser .tab.active, .code .tab.active {
     color: #f94a0c;
     border-bottom: 1px solid #f94a0c;
 }
