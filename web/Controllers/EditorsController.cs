@@ -133,6 +133,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
+                "Wordpress"
             };
 
         [ValidateInput(false)]
@@ -431,6 +432,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("WOPI", (object)catchall);
+        }
+
+        public ActionResult Wordpress()
+        {
+            return View();
         }
     }
 }
