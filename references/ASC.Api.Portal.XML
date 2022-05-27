@@ -382,6 +382,14 @@
              <returns>Backup temporary path</returns>
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Portal.PortalApi.DeletePortalImmediately">
+             <summary>
+             Deletes the current portal immediately
+             </summary>
+             <short>Delete the current portal</short>
+             <returns></returns>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Portal.PortalApi.UpdatePortalName(System.String)">
              <summary>
              Updates a portal name with a new one specified in the request.

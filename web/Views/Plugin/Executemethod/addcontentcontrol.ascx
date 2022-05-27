@@ -33,7 +33,7 @@ window.Asc.plugin.executeMethod ("AddContentControl", [type, commonPr]);
     <tbody>
         <tr class="tablerow">
             <td>type</td>
-            <td>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block) or <b>2</b> (inline).</td>
+            <td>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block), <b>2</b> (inline), <b>3</b> (row) or <b>4</b> (cell).</td>
             <td>number</td>
             <td>2</td>
         </tr>

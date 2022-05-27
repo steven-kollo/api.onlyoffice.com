@@ -19,7 +19,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing an image.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing an image.\n\t * @constructor\n\t */",
   "description": "<p>Class representing an image.</p>",
   "scope": "global",
   "params": []

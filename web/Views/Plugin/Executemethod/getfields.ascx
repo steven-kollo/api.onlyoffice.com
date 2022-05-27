@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows opening file with fields.</p>
+<p class="dscr">Defines the method that allows getting all fields as a text.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -17,4 +17,4 @@ window.Asc.plugin.executeMethod ("GetFields");
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns the <em>list</em> of field values.</p>
+<p>The method returns a <em>list</em> of field values.</p>

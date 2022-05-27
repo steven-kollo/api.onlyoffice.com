@@ -12,18 +12,18 @@
 <pre>(function () 
 {
     // Getting the active sheet
-    activeSheet = Api.ActiveSheet;
+    var activeSheet = Api.ActiveSheet;
     // Minimum row index
-    indexRowMin = 0;
+    var indexRowMin = 0;
     // Maximum row index
-    indexRowMax = 1048576;
+    var indexRowMax = 1048576;
     // Column 'A'
-    indexCol = 0;
+    var indexCol = 0;
     // Row index for empty cell search
-    indexRow = indexRowMax;
+    var indexRow = indexRowMax;
     for (; indexRow >= indexRowMin; --indexRow) {
         // Getting the cell
-        range = activeSheet.GetRangeByNumber(indexRow, indexCol);
+        var range = activeSheet.GetRangeByNumber(indexRow, indexCol);
         // Checking the value
         if (range.GetValue() && indexRow !== indexRowMax) {
             range = activeSheet.GetRangeByNumber(indexRow + 1, indexCol);

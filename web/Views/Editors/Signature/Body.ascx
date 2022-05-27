@@ -11,8 +11,19 @@
 </p>
 
 <p>
-    Starting with version 5.2 it is possible to use the token in body parameters with <b>Document Server</b>.
+    Starting from version 5.2, it is possible to use the token in body parameters with <b>Document Server</b>.
     To enable it set the <em>services.CoAuthoring.token.inbox.inBody</em> and <em>services.CoAuthoring.token.outbox.inBody</em> in configuration file to <b>true</b>.
+</p>
+<p>
+    Starting from version 7.1, these parameters are deprecated.
+    Now the incoming requests use the token in body if it exists.
+    Otherwise, the header token is taken.
+    To specify what is used next to validate the data, <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-tokenRequiredParams" target="_blank">services.CoAuthoring.server.tokenRequiredParams</a> must be added to the <em>local.json</em> configuration file. If it is <b>true</b>, only the token data is used.
+    Otherwise, the opened request part is merged with the token data.
+</p>
+<p>
+    The outgoing requests use both the token in body and token in header. They can be different.
+    For example, the information about version history can be removed from the header token because of the size limit of the token in header.
 </p>
 
 <div class="note">
@@ -39,39 +50,25 @@
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.inbox.inBody</td>
-            <td>Specifies the enabling the token validation in the request body to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
+            <td>
+                Specifies the enabling the token validation in the request body to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.
+                Deprecated since version 7.1.
+            </td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.outbox.inBody</td>
-            <td>Specifies the enabling the token generation for the request body by <b>document editing service</b> to <b>document storage service</b>.</td>
+            <td>
+                Specifies the enabling the token generation for the request body by <b>document editing service</b> to <b>document storage service</b>.
+                Deprecated since version 7.1.
+            </td>
             <td>boolean</td>
             <td>false</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
-
-
-<div class="header-gray">Sample local.json configuration</div>
-<pre>
-{
-    "services": {
-        "CoAuthoring": {
-            "token": {
-                "inbox": {
-                    "inBody": true,
-                },
-                "outbox": {
-                    "inBody": true
-                }
-            }
-        }
-    }
-}
-</pre>
-
 
 <p>The <em>payload</em> for the JSON Web Token contains the request body parameters.</p>
 

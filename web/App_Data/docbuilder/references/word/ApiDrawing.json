@@ -89,7 +89,7 @@
         {
           "type": "\"left\" | \"right\" | \"center\"",
           "name": "sAlign",
-          "description": "<p>The alingment type which will be used for the object horizontal alignment.</p>",
+          "description": "<p>The alignment type which will be used for the object horizontal alignment.</p>",
           "optional": true,
           "defaultValue": "\"left\""
         }
@@ -614,7 +614,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a graphical object.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a graphical object.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a graphical object.</p>",
   "scope": "global",
   "params": []

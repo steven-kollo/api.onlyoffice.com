@@ -19,7 +19,7 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a paragraph bullet.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a paragraph bullet.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a paragraph bullet.</p>",
   "scope": "global",
   "params": []

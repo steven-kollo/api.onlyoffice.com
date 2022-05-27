@@ -87,6 +87,9 @@
             <li>
                 <a href="<%= Url.Action("strapi") %>">Strapi integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("wordpress") %>">WordPress integration</a>
+            </li>
         </ul>
     </li>
     <li>
@@ -270,13 +273,13 @@
                 <a href="<%= Url.Action("signature/browser") %>">Browser</a>
             </li>
             <li>
-                <a href="<%= Url.Action("signature/request") %>">Request</a>
+                <a href="<%= Url.Action("signature/body") %>">Request</a>
                 <ul>
                     <li>
-                        <a href="<%= Url.Action("signature/request") %>">Token in header</a>
+                        <a href="<%= Url.Action("signature/body") %>">Token in body</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("signature/body") %>">Token in body</a>
+                        <a href="<%= Url.Action("signature/request") %>">Token in header</a>
                     </li>
                 </ul>
             </li>

@@ -111,6 +111,9 @@
                     ext = "pptx";
                     break;
             }
+
+            var documentType = section.Module;
+            if (documentType == "form") documentType = "word";
         %>
 
         var config = <%= Config.Serialize(
@@ -120,10 +123,11 @@
                         {
                             FileType = ext,
                             Key = "apiwh" + Guid.NewGuid(),
+                            Permissions = new Config.DocumentConfig.PermissionsConfig(),
                             Title = "Example Title." + ext,
                             Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext
                         },
-                    DocumentType = section.Module,
+                    DocumentType = documentType,
                     EditorConfig = new Config.EditorConfigConfiguration
                         {
                             CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
@@ -163,7 +167,7 @@
                     type : "onExternalPluginMessage",
                     data : {
                         type: "executeCommand",
-                        text: "<%= Regex.Replace(section.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", ""), "\\r*\\n", "") %>"
+                        text: "<%= Regex.Replace(section.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>"
                     }
                 }), "<%= ConfigurationManager.AppSettings["editor_url"] ?? "*" %>");
             }

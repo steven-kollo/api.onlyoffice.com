@@ -431,11 +431,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var samples = new List<MsDocFunctionResponse>();
             var returnType = apiMethod.MethodCall.ReturnType;
             var collection = false;
-            if (apiMethod.MethodCall.ReturnType.IsGenericType)
+            if (returnType.IsGenericType)
             {
-                //It's collection
-                returnType = apiMethod.MethodCall.ReturnType.GetGenericArguments().FirstOrDefault();
-                collection = true;
+                if (returnType.Namespace == "System.Threading.Tasks")
+                {
+                    //It's task
+                    returnType = returnType.GetGenericArguments().FirstOrDefault();
+                }
+                if (returnType.IsGenericType)
+                {
+                    //It's collection
+                    returnType = returnType.GetGenericArguments().FirstOrDefault();
+                    collection = true;
+                }
             }
             if (returnType != null)
             {

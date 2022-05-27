@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiTableCell",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns the type of the ApiTableCell class.</p>",
       "tags": {},
       "returns": [
         [
@@ -16,7 +16,7 @@
     "GetContent": {
       "memberof": "ApiTableCell",
       "name": "GetContent",
-      "description": "<p>Returns cell content.</p>",
+      "description": "<p>Returns the current cell content.</p>",
       "tags": {},
       "returns": [
         [
@@ -29,7 +29,7 @@
     "SetShd": {
       "memberof": "ApiTableCell",
       "name": "SetShd",
-      "description": "<p>Specify the shading which shall be applied to the extents of the current table cell.</p>",
+      "description": "<p>Specifies the shading which shall be applied to the extents of the current table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -68,7 +68,7 @@
     "SetCellMarginBottom": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginBottom",
-      "description": "<p>Specify the amount of space which shall be left between the bottom extent of the cell contents and the border\nof a specific individual table cell within a table.</p>",
+      "description": "<p>Specifies an amount of space which shall be left between the bottom extent of the cell contents and the border\nof a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -85,7 +85,7 @@
     "SetCellMarginLeft": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginLeft",
-      "description": "<p>Specify the amount of space which shall be left between the left extent of the current cell contents and the\nleft edge border of a specific individual table cell within a table.</p>",
+      "description": "<p>Specifies an amount of space which shall be left between the left extent of the current cell contents and the\nleft edge border of a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -94,7 +94,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,\notherwise override the table cell bottom margin with specified value for the current cell.</p>",
+          "description": "<p>If this value is <code>null</code>, then default table cell left margin shall be used,\notherwise override the table cell left margin with specified value for the current cell.</p>",
           "optional": false
         }
       ]
@@ -102,7 +102,7 @@
     "SetCellMarginRight": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginRight",
-      "description": "<p>Specifies the amount of space which shall be left between the right extent of the current cell contents and the\nright edge border of a specific individual table cell within a table.</p>",
+      "description": "<p>Specifies an amount of space which shall be left between the right extent of the current cell contents and the\nright edge border of a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -111,7 +111,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,\notherwise override the table cell bottom margin with specified value for the current cell.</p>",
+          "description": "<p>If this value is <code>null</code>, then default table cell right margin shall be used,\notherwise override the table cell right margin with specified value for the current cell.</p>",
           "optional": false
         }
       ]
@@ -119,7 +119,7 @@
     "SetCellMarginTop": {
       "memberof": "ApiTableCell",
       "name": "SetCellMarginTop",
-      "description": "<p>Specifies the amount of space which shall be left between the top extent of the current cell contents and the\ntop edge border of a specific individual table cell within a table.</p>",
+      "description": "<p>Specifies an amount of space which shall be left between the top extent of the current cell contents and the\ntop edge border of a specific individual table cell within a table.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -128,7 +128,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>If this value is <code>null</code>, then default table cell bottom margin shall be used,\notherwise override the table cell bottom margin with specified value for the current cell.</p>",
+          "description": "<p>If this value is <code>null</code>, then default table cell top margin shall be used,\notherwise override the table cell top margin with specified value for the current cell.</p>",
           "optional": false
         }
       ]
@@ -136,7 +136,7 @@
     "SetCellBorderBottom": {
       "memberof": "ApiTableCell",
       "name": "SetCellBorderBottom",
-      "description": "<p>Set the border which shall be displayed at the bottom of the current table cell.</p>",
+      "description": "<p>Sets the border which shall be displayed at the bottom of the current table cell.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -159,7 +159,7 @@
     "SetCellBorderLeft": {
       "memberof": "ApiTableCell",
       "name": "SetCellBorderLeft",
-      "description": "<p>Set the border which shall be displayed at the left of the current table cell.</p>",
+      "description": "<p>Sets the border which shall be displayed at the left of the current table cell.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -182,7 +182,7 @@
     "SetCellBorderRight": {
       "memberof": "ApiTableCell",
       "name": "SetCellBorderRight",
-      "description": "<p>Set the border which shall be displayed at the right of the current table cell.</p>",
+      "description": "<p>Sets the border which shall be displayed at the right of the current table cell.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -205,7 +205,7 @@
     "SetCellBorderTop": {
       "memberof": "ApiTableCell",
       "name": "SetCellBorderTop",
-      "description": "<p>Set the border which shall be displayed at the top of the current table cell.</p>",
+      "description": "<p>Sets the border which shall be displayed at the top of the current table cell.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -228,7 +228,7 @@
     "SetVerticalAlign": {
       "memberof": "ApiTableCell",
       "name": "SetVerticalAlign",
-      "description": "<p>Specify the vertical alignment for text within the current table cell.</p>",
+      "description": "<p>Specifies the vertical alignment for text within the current table cell.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -245,7 +245,7 @@
     "SetTextDirection": {
       "memberof": "ApiTableCell",
       "name": "SetTextDirection",
-      "description": "<p>Specify the direction of the text flow for this table cell.</p>",
+      "description": "<p>Specifies the direction of the text flow for the current table cell.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -260,7 +260,7 @@
       ]
     }
   },
-  "comment": "/**\r\n     * Class representing a table cell.\r\n     * @param oCell\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a table cell.\n     * @param oCell\n     * @constructor\n     */",
   "description": "<p>Class representing a table cell.</p>",
   "scope": "global",
   "params": []

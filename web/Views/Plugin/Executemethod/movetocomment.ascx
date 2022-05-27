@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows moving the cursor to the specified comment.</p>
+<p class="dscr">Defines the method that allows moving a cursor to the specified comment.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -33,9 +33,9 @@ window.Asc.plugin.executeMethod ("MoveToComment", [sId]);
     <tbody>
         <tr class="tablerow">
             <td>sId</td>
-            <td>The comment id.</td>
+            <td>The comment ID.</td>
             <td>string</td>
-            <td>"id"</td>
+            <td>"ID"</td>
         </tr>
     </tbody>
 </table>
@@ -48,5 +48,5 @@ window.Asc.plugin.executeMethod ("MoveToComment", [sId]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod ("MoveToComment", ["id"]);
+window.Asc.plugin.executeMethod ("MoveToComment", ["ID"]);
 </pre>

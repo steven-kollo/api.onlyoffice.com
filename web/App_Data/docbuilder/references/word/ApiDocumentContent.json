@@ -191,7 +191,7 @@
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a container for paragraphs and tables.\r\n\t * @param Document\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a container for paragraphs and tables.\n\t * @param Document\n\t * @constructor\n\t */",
   "description": "<p>Class representing a container for paragraphs and tables.</p>",
   "scope": "global",
   "params": []

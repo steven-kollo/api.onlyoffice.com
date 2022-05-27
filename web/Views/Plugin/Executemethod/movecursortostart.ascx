@@ -7,7 +7,7 @@
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows moving the cursor to the start position.</p>
+<p class="dscr">Defines the method that allows moving a cursor to the start position.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
@@ -33,7 +33,7 @@ window.Asc.plugin.executeMethod ("MoveCursorToStart", [isMoveToMainContent]);
     <tbody>
         <tr class="tablerow">
             <td>isMoveToMainContent</td>
-            <td>Defines if the cursor moves to the document start (<b>true</b>) or to the current element start (<b>false</b>).</td>
+            <td>Defines if a cursor moves to the document start (<b>true</b>) or to the current element start (<b>false</b>).</td>
             <td>boolean</td>
             <td>true</td>
         </tr>
