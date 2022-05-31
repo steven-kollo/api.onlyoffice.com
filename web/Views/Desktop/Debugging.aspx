@@ -18,11 +18,11 @@
 
     <div class="container">
         <ul class="browser">
-            <li class="browser tab active">Windows</li>
-            <li class="browser tab">Linux</li>
-            <li class="browser tab">Mac OS</li>
+            <li class="browser tab active copy-link" id="windows">Windows</li>
+            <li class="browser tab copy-link" id="linux">Linux</li>
+            <li class="browser tab copy-link" id="macos">Mac OS</li>
         </ul>
-        <div class="content active">
+        <div id="windows" class="content active">
             <h2>Running in debug mode on Windows</h2>
             <p>There are two ways to launch the application: through the shortcut or the terminal.</p>
 
@@ -51,7 +51,7 @@
                 </li>
             </ol>
         </div>
-        <div class="content">
+        <div id="linux" class="content">
             <h2>Running in debug mode on Linux</h2>
             <p>Use the terminal to run ONLYOFFICE Desktop Editors in debug mode:</p>
             <ol>
@@ -62,7 +62,7 @@
                 </li>
             </ol>
         </div>
-        <div class="content">
+        <div id="macos" class="content">
             <h2>Running in debug mode on Mac OS</h2>
             <p>Use the terminal to run ONLYOFFICE Desktop Editors in debug mode:</p>
             <ol>
@@ -130,6 +130,14 @@
             .addClass('active').siblings().removeClass('active')
             .closest('div.container').find('div.content').removeClass('active').eq($(this).index()).addClass('active');
         });
+        var loc = window.location.hash;
+        if (loc != "") {
+            var id = loc.substring(1);;
+            $('.browser .tab').removeClass('active');
+            $('.browser .tab[id="'+id  +'"]').addClass('active');
+            $('.content').removeClass('active');
+            $('.content[id="'+id  +'"]').addClass('active');
+        }
     </script>
 
 </asp:Content>
