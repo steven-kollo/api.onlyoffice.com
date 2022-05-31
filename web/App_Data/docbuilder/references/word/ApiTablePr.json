@@ -605,6 +605,23 @@
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiTablePr",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiTablePr object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\n\t * Class representing the table properties.\n\t * @constructor\n\t */",

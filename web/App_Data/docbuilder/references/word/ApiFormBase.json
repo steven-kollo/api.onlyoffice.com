@@ -314,7 +314,7 @@
     "GetText": {
       "memberof": "ApiFormBase",
       "name": "GetText",
-      "description": "<p>Returns the text from the current form.</p>",
+      "description": "<p>Returns the text from the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -386,7 +386,7 @@
     "SetTextPr": {
       "memberof": "ApiFormBase",
       "name": "SetTextPr",
-      "description": "<p>Sets the text properties to the current form.</p>",
+      "description": "<p>Sets the text properties to the current form.\n*This method is used only for text and combo box forms.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -411,7 +411,7 @@
     "GetTextPr": {
       "memberof": "ApiFormBase",
       "name": "GetTextPr",
-      "description": "<p>Returns the text properties from the current form.</p>",
+      "description": "<p>Returns the text properties from the current form.\n*This method is used only for text and combo box forms.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -420,6 +420,27 @@
       "returns": [
         [
           "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Copy": {
+      "memberof": "ApiFormBase",
+      "name": "Copy",
+      "description": "<p>Copies the current form (copies with the shape if it exists).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "null",
+          "ApiTextForm",
+          "ApiCheckBoxForm",
+          "ApiComboBoxForm",
+          "ApiPictureForm"
         ]
       ],
       "see": null,

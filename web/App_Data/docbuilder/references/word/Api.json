@@ -291,6 +291,12 @@
           "name": "nStyleIndex",
           "description": "<p>The chart color style index (can be 1 - 48, as described in OOXML specification).</p>",
           "optional": false
+        },
+        {
+          "type": "Array.<NumFormat> | Array.<String>",
+          "name": "aNumFormats",
+          "description": "<p>Numeric formats which will be applied to the series (can be custom formats).\nThe default numeric format is &quot;General&quot;.</p>",
+          "optional": false
         }
       ]
     },
@@ -747,7 +753,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -827,7 +833,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -849,6 +855,27 @@
         }
       ]
     },
+    "FromJSON": {
+      "memberof": "Api",
+      "name": "FromJSON",
+      "description": "<p>Converts the specified JSON object into the Document Builder object of the corresponding type.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "JSON",
+          "name": "sMessage",
+          "description": "<p>The JSON object to convert.</p>",
+          "optional": false
+        }
+      ]
+    },
     "AddComment": {
       "memberof": "Api",
       "name": "AddComment",
@@ -860,7 +887,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -886,10 +913,53 @@
         }
       ]
     },
+    "ApiDocument#UpdateAllTOC": {
+      "memberof": "Api",
+      "name": "ApiDocument#UpdateAllTOC",
+      "description": "<p>Updates all tables of contents in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bOnlyPageNumbers",
+          "description": "<p>Specifies that only page numbers will be updated.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "ApiDocument#UpdateAllTOF": {
+      "memberof": "Api",
+      "name": "ApiDocument#UpdateAllTOF",
+      "description": "<p>Updates all tables of figures in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bOnlyPageNumbers",
+          "description": "<p>Specifies that only page numbers will be updated.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
     "ReplaceTextSmart": {
       "memberof": "Api",
       "name": "ReplaceTextSmart",
-      "description": "<p>Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -948,32 +1018,124 @@
           "defaultValue": "\"markdown\""
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bHtmlHeadings",
           "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bBase64img",
           "description": "<p>Defines if the images will be created in the base64 format.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bDemoteHeadings",
           "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bRenderHTMLTags",
           "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
           "optional": true,
           "defaultValue": false
+        }
+      ]
+    },
+    "CreateTextPr": {
+      "memberof": "Api",
+      "name": "CreateTextPr",
+      "description": "<p>Creates the empty text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "CreateWordArt": {
+      "memberof": "Api",
+      "name": "CreateWordArt",
+      "description": "<p>Creates a Text Art object with the parameters specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDrawing"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "description": "<p>The text properties.</p>",
+          "optional": true,
+          "defaultValue": "Api.CreateTextPr()"
+        },
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The text for the Text Art object.</p>",
+          "optional": true,
+          "defaultValue": "\"Your text here\""
+        },
+        {
+          "type": "TextTransofrm",
+          "name": "sTransform",
+          "description": "<p>Text transform type.</p>",
+          "optional": true,
+          "defaultValue": "\"textNoShape\""
+        },
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The color or pattern used to fill the Text Art object.</p>",
+          "optional": true,
+          "defaultValue": "Api.CreateNoFill()"
+        },
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the Text Art object shadow.</p>",
+          "optional": true,
+          "defaultValue": "Api.CreateStroke(0, Api.CreateNoFill())"
+        },
+        {
+          "type": "number",
+          "name": "nRotAngle",
+          "description": "<p>Rotation angle.</p>",
+          "optional": true,
+          "defaultValue": 0
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>Text Art width measured in English measure units.</p>",
+          "optional": true,
+          "defaultValue": 1828800
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>Text Art heigth measured in English measure units.</p>",
+          "optional": true,
+          "defaultValue": 1828800
         }
       ]
     }

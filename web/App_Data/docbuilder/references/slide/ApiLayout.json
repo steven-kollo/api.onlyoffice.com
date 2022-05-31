@@ -11,7 +11,7 @@
       },
       "returns": [
         [
-          "\"master\""
+          "\"layout\""
         ]
       ],
       "see": null,
@@ -28,7 +28,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -53,7 +53,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -78,7 +78,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -108,14 +108,18 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "ApiFill",
           "name": "oApiFill",
-          "description": "<p>The color or pattern used to fill the presentation slide layout background.</p>",
+          "description": "<p>The color or pattern used to fill the presentation slide layout background.\\</p>",
           "optional": false
         }
       ]
@@ -131,7 +135,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -148,7 +152,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -157,7 +161,7 @@
     "Copy": {
       "memberof": "ApiLayout",
       "name": "Copy",
-      "description": "<p>Creates a copy of the specified slide layout object.</p>",
+      "description": "<p>Creates a copy of the specified slide layout object.\nCopies without master slide.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -183,7 +187,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -227,7 +231,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -325,6 +329,32 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiLayout",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiLayout object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bWriteMaster",
+          "description": "<p>Specifies if the slide master will be written to the JSON object or not.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
     }
   },
   "comment": "/**\n     * Class representing a slide layout.\n     * @constructor\n     */",

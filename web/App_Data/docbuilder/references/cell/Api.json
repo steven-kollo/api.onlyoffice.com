@@ -174,7 +174,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -343,7 +343,7 @@
           "optional": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "isHidden",
           "description": "<p>Defines if the range name is hidden or not.</p>",
           "optional": false
@@ -456,7 +456,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,

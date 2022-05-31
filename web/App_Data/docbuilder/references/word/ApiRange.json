@@ -50,7 +50,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -82,7 +82,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -246,7 +246,7 @@
       "inherits": null,
       "params": [
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "isBold",
           "description": "<p>Specifies if the Range contents are displayed bold or not.</p>",
           "optional": false
@@ -272,7 +272,7 @@
       "inherits": null,
       "params": [
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "isCaps",
           "description": "<p>Specifies if the Range contents are displayed capitalized or not.</p>",
           "optional": false
@@ -717,7 +717,24 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiRange",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiRange object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
         ]
       ],
       "see": null,

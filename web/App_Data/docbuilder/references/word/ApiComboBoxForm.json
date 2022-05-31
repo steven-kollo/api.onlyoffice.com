@@ -423,7 +423,7 @@
     "GetText": {
       "memberof": "ApiComboBoxForm",
       "name": "GetText",
-      "description": "<p>Returns the text from the current form.</p>",
+      "description": "<p>Returns the text from the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -495,7 +495,7 @@
     "SetTextPr": {
       "memberof": "ApiComboBoxForm",
       "name": "SetTextPr",
-      "description": "<p>Sets the text properties to the current form.</p>",
+      "description": "<p>Sets the text properties to the current form.\n*This method is used only for text and combo box forms.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -520,7 +520,7 @@
     "GetTextPr": {
       "memberof": "ApiComboBoxForm",
       "name": "GetTextPr",
-      "description": "<p>Returns the text properties from the current form.</p>",
+      "description": "<p>Returns the text properties from the current form.\n*This method is used only for text and combo box forms.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -533,6 +533,27 @@
       ],
       "see": null,
       "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
+    },
+    "Copy": {
+      "memberof": "ApiComboBoxForm",
+      "name": "Copy",
+      "description": "<p>Copies the current form (copies with the shape if it exists).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "null",
+          "ApiTextForm",
+          "ApiCheckBoxForm",
+          "ApiComboBoxForm",
+          "ApiPictureForm"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiFormBase#Copy}"
     }
   },
   "comment": "/**\n\t * Class representing a document combo box form.\n\t * @constructor\n\t * @property {boolean} editable - Specifies if the combo box text can be edited.\n\t * @property {boolean} autoFit - Specifies if the combo box form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.\n\t * @property {Array.<string | Array.<string>>} items - The combo box items.\n     * This array consists of strings or arrays of two strings where the first string is the displayed value and the second one is its meaning.\n     * If the array consists of single strings, then the displayed value and its meaning are the same.\n     * Example: [\"First\", [\"Second\", \"2\"], [\"Third\", \"3\"], \"Fourth\"].\n\t * @extends {ApiFormBase}\n\t */",

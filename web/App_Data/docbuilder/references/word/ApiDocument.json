@@ -476,7 +476,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -501,7 +501,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -694,7 +694,7 @@
           "optional": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "isMatchCase",
           "description": "<p>Case sensitive or not.</p>",
           "optional": false
@@ -719,28 +719,28 @@
       "inherits": null,
       "params": [
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bHtmlHeadings",
           "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bBase64img",
           "description": "<p>Defines if the images will be created in the base64 format.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bDemoteHeadings",
           "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bRenderHTMLTags",
           "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
           "optional": true,
@@ -766,28 +766,28 @@
       "inherits": null,
       "params": [
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bHtmlHeadings",
           "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bBase64img",
           "description": "<p>Defines if the images will be created in the base64 format.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bDemoteHeadings",
           "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bRenderHTMLTags",
           "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
           "optional": true,
@@ -827,7 +827,7 @@
     "ClearAllFields": {
       "memberof": "ApiDocument",
       "name": "ClearAllFields",
-      "description": "<p>Clears all fields in the document.</p>",
+      "description": "<p>Clears all forms in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -836,6 +836,24 @@
       "returns": [],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiDocument",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiDocument object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
     },
     "GetAllForms": {
       "memberof": "ApiDocument",
@@ -854,19 +872,6 @@
           "Array.<ApiCheckBoxForm>"
         ]
       ],
-      "see": null,
-      "inherits": null
-    },
-    "ClearAllForms": {
-      "memberof": "ApiDocument",
-      "name": "ClearAllForms",
-      "description": "<p>Clears all forms in the document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [],
       "see": null,
       "inherits": null
     },
@@ -1046,6 +1051,64 @@
       "see": null,
       "inherits": null
     },
+    "GetSelectedDrawings": {
+      "memberof": "ApiDocument",
+      "name": "GetSelectedDrawings",
+      "description": "<p>Returns the selected drawings.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>",
+          "Array.<ApiImage>",
+          "Array.<ApiChart>",
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ReplaceDrawing": {
+      "memberof": "ApiDocument",
+      "name": "ReplaceDrawing",
+      "description": "<p>Replaces a drawing with a new drawing.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiDrawing",
+          "name": "oOldDrawing",
+          "description": "<p>A drawing which will be replaced.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiDrawing",
+          "name": "oNewDrawing",
+          "description": "<p>A drawing to replace the old drawing.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bSaveOldDrawingPr",
+          "description": "<p>Specifies if the old drawing settings will be saved.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
     "GetElementsCount": {
       "memberof": "ApiDocument",
       "name": "GetElementsCount",
@@ -1134,7 +1197,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -1182,6 +1245,31 @@
           "type": "number",
           "name": "nPos",
           "description": "<p>The element number (position) in the document or inside other element.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetContent": {
+      "memberof": "ApiDocument",
+      "name": "GetContent",
+      "description": "<p>Returns an array of document elements from the current ApiDocumentContent object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiDocumentContent#GetContent}",
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bGetCopies",
+          "description": "<p>Specifies if the copies of the document elements will be returned or not.</p>",
           "optional": false
         }
       ]

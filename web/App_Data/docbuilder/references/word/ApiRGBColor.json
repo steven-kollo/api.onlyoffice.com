@@ -18,6 +18,19 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiRGBColor",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiRGBColor object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\n\t * Class representing an RGB Color.\n\t * @constructor\n\t */",

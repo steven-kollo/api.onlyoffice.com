@@ -107,7 +107,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -186,6 +186,44 @@
           "type": "Number",
           "name": "End",
           "description": "<p>End character in the current element.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ToJSON": {
+      "memberof": "ApiDocumentContent",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiDocumentContent object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "GetContent": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetContent",
+      "description": "<p>Returns an array of document elements from the current ApiDocumentContent object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bGetCopies",
+          "description": "<p>Specifies if the copies of the document elements will be returned or not.</p>",
           "optional": false
         }
       ]
