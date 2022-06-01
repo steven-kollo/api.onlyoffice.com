@@ -913,50 +913,6 @@
         }
       ]
     },
-    "ApiDocument#UpdateAllTOC": {
-      "memberof": "Api",
-      "name": "ApiDocument#UpdateAllTOC",
-      "description": "<p>Updates all tables of contents in the current document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "boolean",
-          "name": "bOnlyPageNumbers",
-          "description": "<p>Specifies that only page numbers will be updated.</p>",
-          "optional": true,
-          "defaultValue": false
-        }
-      ]
-    },
-    "ApiDocument#UpdateAllTOF": {
-      "memberof": "Api",
-      "name": "ApiDocument#UpdateAllTOF",
-      "description": "<p>Updates all tables of figures in the current document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "boolean",
-          "name": "bOnlyPageNumbers",
-          "description": "<p>Specifies that only page numbers will be updated.</p>",
-          "optional": true,
-          "defaultValue": false
-        }
-      ]
-    },
     "ReplaceTextSmart": {
       "memberof": "Api",
       "name": "ReplaceTextSmart",

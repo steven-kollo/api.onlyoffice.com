@@ -837,6 +837,50 @@
       "see": null,
       "inherits": null
     },
+    "UpdateAllTOC": {
+      "memberof": "ApiDocument",
+      "name": "UpdateAllTOC",
+      "description": "<p>Updates all tables of contents in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bOnlyPageNumbers",
+          "description": "<p>Specifies that only page numbers will be updated.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "UpdateAllTOF": {
+      "memberof": "ApiDocument",
+      "name": "UpdateAllTOF",
+      "description": "<p>Updates all tables of figures in the current document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bOnlyPageNumbers",
+          "description": "<p>Specifies that only page numbers will be updated.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
     "ToJSON": {
       "memberof": "ApiDocument",
       "name": "ToJSON",
