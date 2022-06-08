@@ -261,6 +261,13 @@
                         <b>example</b>: "John Smith and Co.";
                     </li>
                     <li>
+                        <b>phone</b> - the phone of the company or person who gives access to the editors or the editor authors,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "+18637774549";
+                    </li>
+                    <li>
                         <b>www</b> - home website address of the above company or person,
                         <br />
                         <b>type</b>: string,
@@ -1123,6 +1130,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
+                "phone": "+18637774549",
                 "www": "example.com"
             },
             "features": {
