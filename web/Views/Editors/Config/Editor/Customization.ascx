@@ -265,7 +265,7 @@
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "+18637774549";
+                        <b>example</b>: "123456789";
                     </li>
                     <li>
                         <b>www</b> - home website address of the above company or person,
@@ -1130,7 +1130,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
-                "phone": "+18637774549",
+                "phone": "123456789",
                 "www": "example.com"
             },
             "features": {
