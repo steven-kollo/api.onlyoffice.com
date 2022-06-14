@@ -1,5 +1,6 @@
 # Change Log
 
+- docbuilder: added global examples
 - editors: added the WordPress plugin
 
 ## 2.8.1
