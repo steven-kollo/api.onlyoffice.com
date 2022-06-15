@@ -361,6 +361,90 @@
       "see": null,
       "inherits": null
     },
+    "GetTagsOfAllContentControls": {
+      "memberof": "ApiDocument",
+      "name": "GetTagsOfAllContentControls",
+      "description": "<p>Returns a list of all tags that are used for all content controls in the document</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<String>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetTagsOfAllForms": {
+      "memberof": "ApiDocument",
+      "name": "GetTagsOfAllForms",
+      "description": "<p>Returns a list of all tags that are used for all special forms in the document</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<String>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetContentControlsByTag": {
+      "memberof": "ApiDocument",
+      "name": "GetContentControlsByTag",
+      "description": "<p>Returns a list of all the content controls in the document with specified tag name</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiBlockLvlSdt>",
+          "Array.<ApiInlineLvlSdt>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sTag",
+          "optional": false
+        }
+      ]
+    },
+    "GetFormsByTag": {
+      "memberof": "ApiDocument",
+      "name": "GetFormsByTag",
+      "description": "<p>Returns a list of all the special forms in the document with specified tag name</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiBlockLvlSdt>",
+          "Array.<ApiInlineLvlSdt>"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sTag",
+          "optional": false
+        }
+      ]
+    },
     "SetTrackRevisions": {
       "memberof": "ApiDocument",
       "name": "SetTrackRevisions",
@@ -824,19 +908,6 @@
         }
       ]
     },
-    "ClearAllFields": {
-      "memberof": "ApiDocument",
-      "name": "ClearAllFields",
-      "description": "<p>Clears all forms in the document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [],
-      "see": null,
-      "inherits": null
-    },
     "UpdateAllTOC": {
       "memberof": "ApiDocument",
       "name": "UpdateAllTOC",
@@ -916,6 +987,19 @@
           "Array.<ApiCheckBoxForm>"
         ]
       ],
+      "see": null,
+      "inherits": null
+    },
+    "ClearAllFields": {
+      "memberof": "ApiDocument",
+      "name": "ClearAllFields",
+      "description": "<p>Clears all forms in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
       "see": null,
       "inherits": null
     },
