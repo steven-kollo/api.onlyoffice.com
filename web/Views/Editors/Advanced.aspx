@@ -125,6 +125,7 @@
                 "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
+                "phone": "123456789",
                 "www": "example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#features">features</a>": {
