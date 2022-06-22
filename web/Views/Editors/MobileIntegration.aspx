@@ -72,7 +72,7 @@ private func load() {
                 </li>
                 <li>
                     <p>Use the <b>DocumentServerViewController</b> controller to open the editors correctly on iOS devices.
-                        In this controller, define a function to open a document via WebView component.
+                        In this controller, define a function to open a document via WKWebView component.
                         First, request an absolute URL and check if it contains the <em>"/editor?"</em> string.
                         If so, add an additional query parameter (the mobile platform type) to the link:</p>
                     <pre>
@@ -129,7 +129,7 @@ func webView(_ webView: WKWebView,
                 </li>
                 <li>
                     <p>To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component.
-                        To do this, set up WebView and layout in the <b>DocumentServerEditorViewController</b> controller as follows:</p>
+                        To do this, set up WKWebView and layout in the <b>DocumentServerEditorViewController</b> controller as follows:</p>
                     <pre>
 private func configureView() {
     let preferences = WKPreferences()
@@ -309,7 +309,7 @@ extension EditorEventsHandler: WKScriptMessageHandler {
                         Get the event parameters (file type and URL) and delegate the event handling to <b>EditorViewController</b>:</p>
                     <pre>
 func onDownloadAs(fileType: String, url: String) {
-    print("⚡️ ONLYOFFICE Document Editor create file: \(url)")
+    print("&#9889; ONLYOFFICE Document Editor create file: \(url)")
 }
 </pre>
                 </li>
@@ -417,7 +417,7 @@ private fun showDialog() {
                 </li>
                 <li>
                     <p>Use the <b>MainFragment.kt</b> controller to open the editors correctly on Android devices.
-                        In this controller, define a function to open a document via WebView component.
+                        In this controller, define a function to open a document via WKWebView component.
                         Request a URL and check if it contains the <em>"editor"</em> string which specifies that the document will be opened:</p>
                     <pre>
 private class MainWebViewClient(private val navController: NavController) : WebViewClient() {
@@ -443,7 +443,7 @@ private class MainWebViewClient(private val navController: NavController) : WebV
                 </li>
                 <li>
                     <p>To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component.
-                        To do this, set up WebView and layout in the <b>EditorFragment.kt</b> controller as follows:</p>
+                        To do this, set up WKWebView and layout in the <b>EditorFragment.kt</b> controller as follows:</p>
                     <pre>
 @SuppressLint("SetJavaScriptEnabled")
 private fun setSettings() {
