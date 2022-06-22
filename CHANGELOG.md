@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Mobile integration page
 - editors: added the WordPress plugin
 
 ## 2.8.1
