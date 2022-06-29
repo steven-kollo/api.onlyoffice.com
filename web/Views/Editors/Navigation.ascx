@@ -90,6 +90,9 @@
             <li>
                 <a href="<%= Url.Action("wordpress") %>">WordPress integration</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("drupal") %>">Drupal integration</a>
+            </li>
         </ul>
     </li>
     <li>

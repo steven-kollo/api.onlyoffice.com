@@ -38,6 +38,7 @@
         <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE integration solution</a></li>
         <li><a href="<%= Url.Action("strapi") %>">Strapi ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("wordpress") %>">WordPress ONLYOFFICE integration plugin</a></li>
+        <li><a href="<%= Url.Action("drupal") %>">Drupal ONLYOFFICE connector module</a></li>
     </ul>
 
     <br />
