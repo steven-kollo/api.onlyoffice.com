@@ -91,6 +91,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Security",
                 "FAQ/Sharing",
                 "FAQ/UsingWOPI",
+                "Frameworks",
                 "GetDocs",
                 "History",
                 "HowItWorks",
@@ -109,6 +110,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "React",
                 "Redmine",
                 "Rename",
                 "Review",
@@ -305,6 +307,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Frameworks()
+        {
+            return View();
+        }
+
         public ActionResult History()
         {
             return View();
@@ -386,6 +393,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Plugins()
+        {
+            return View();
+        }
+
+        public ActionResult React()
         {
             return View();
         }
