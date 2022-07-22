@@ -19,6 +19,7 @@
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <p><b>Form methods</b></p>
     <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apicomplexform") %>">ApiComplexForm</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/gettagsofallcontentcontrols") %>">ApiDocument/GetTagsOfAllContentControls</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/gettagsofallforms") %>">ApiDocument/GetTagsOfAllForms</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getcontentcontrolsbytag") %>">ApiDocument/GetContentControlsByTag</a> method to Text document API.</li>
@@ -84,6 +85,13 @@
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/updatealltoc") %>">ApiDocument/UpdateAllTOC</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/updatealltof") %>">ApiDocument/UpdateAllTOF</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Footnote/endnote methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/addendnote") %>">ApiDocument/AddEndnote</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/addfootnote") %>">ApiDocument/AddFootnote</a> method to Text document API.</li>
     </ul>
     <br />
 
@@ -158,16 +166,24 @@
 
     <p><b>Drawing methods</b></p>
     <ul>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/fromjson") %>">ApiDocument/GetSelectedDrawings </a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/replacedrawing") %>">ApiDocument/ReplaceDrawing</a> method to Text document API.</li> 
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getselecteddrawings") %>">ApiDocument/GetSelectedDrawings</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/replacedrawing") %>">ApiDocument/ReplaceDrawing</a> method to Text document API.</li>
+        <li>Removed the <em>ApiDocument/GetAllCharts</em> method from Text document API.</li>
+        <li>Removed the <em>ApiDocument/GetAllDrawingObjects</em> method from Text document API.</li>
+        <li>Removed the <em>ApiDocument/GetAllImages</em> method from Text document API.</li>
+        <li>Removed the <em>ApiDocument/GetAllShapes</em> method from Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getallcharts") %>">ApiDocumentContent/GetAllCharts</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getalldrawingobjects") %>">ApiDocumentContent/GetAllDrawingObjects</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getallimages") %>">ApiDocumentContent/GetAllImages</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getallshapes") %>">ApiDocumentContent/GetAllShapes</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/getheight") %>">ApiDrawing/GetHeight</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/getlockvalue") %>">ApiDrawing/GetLockValue</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/getwidth") %>">ApiDrawing/GetWidth</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/setdrawingprfromdrawing") %>">ApiDrawing/SetDrawingPrFromDrawing</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidrawing/setlockvalue") %>">ApiDrawing/SetLockValue</a> method to Text document API.</li>
-    </ul>
-    <p class="spoiler_heading spoiler_changelog">More</p>
-    <ul class="spoiler_code">
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apidrawing/getheight") %>">ApiDrawing/GetHeight</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apidrawing/getlockvalue") %>">ApiDrawing/GetLockValue</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apidrawing/getwidth") %>">ApiDrawing/GetWidth</a> method to Spreadsheet API.</li>
@@ -176,6 +192,50 @@
         <li>Added the <a href="<%= Url.Action("presentationapi/apidrawing/getlockvalue") %>">ApiDrawing/GetLockValue</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apidrawing/getwidth") %>">ApiDrawing/GetWidth</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apidrawing/setlockvalue") %>">ApiDrawing/SetLockValue</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>OLE object methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject") %>">ApiOleObject</a> class to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createoleobject") %>">Api/CreateOleObject</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getalloleobjects") %>">ApiDocumentContent/GetAllOleObjects</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject/getapplicationid") %>">ApiOleObject/GetApplicationId</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject/getclasstype") %>">ApiOleObject/GetClassType</a> method to Text document API.</li> 
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject/getdata") %>">ApiOleObject/GetData</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject/setapplicationid") %>">ApiOleObject/SetApplicationId</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject/setdata") %>">ApiOleObject/SetData</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getalloleobjects") %>">ApiParagraph/GetAllOleObjects</a> method to Text document API.</li>
+    </ul>
+    <p class="spoiler_heading spoiler_changelog">More</p>
+    <ul class="spoiler_code">
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apioleobject") %>">ApiOleObject</a> class to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/addoleobject") %>">ApiWorksheet/AddOleObject</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getalloleobjects") %>">ApiWorksheet/GetAllOleObjects</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apioleobject/getapplicationid") %>">ApiOleObject/GetApplicationId</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apioleobject/getclasstype") %>">ApiOleObject/GetClassType</a> method to Spreadsheet API.</li> 
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apioleobject/getdata") %>">ApiOleObject/GetData</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apioleobject/setapplicationid") %>">ApiOleObject/SetApplicationId</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apioleobject/setdata") %>">ApiOleObject/SetData</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apioleobject") %>">ApiOleObject</a> class to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/api/createoleobject") %>">Api/CreateOleObject</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apimaster/getalloleobjects") %>">ApiMaster/GetAllOleObjects</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apilayout/getalloleobjects") %>">ApiLayout/GetAllOleObjects</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apislide/getalloleobjects") %>">ApiSlide/GetAllOleObjects</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apioleobject/getapplicationid") %>">ApiOleObject/GetApplicationId</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apioleobject/getclasstype") %>">ApiOleObject/GetClassType</a> method to Presentation API.</li> 
+        <li>Added the <a href="<%= Url.Action("presentationapi/apioleobject/getdata") %>">ApiOleObject/GetData</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apioleobject/setapplicationid") %>">ApiOleObject/SetApplicationId</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apioleobject/setdata") %>">ApiOleObject/SetData</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>Table methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/gettabledescription") %>">ApiTablePr/GetTableDescription</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/gettabletitle") %>">ApiTablePr/GetTableTitle</a> method to Text document API.</li> 
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/settabledescription") %>">ApiTablePr/SetTableDescription</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/settabletitle") %>">ApiTablePr/SetTableTitle</a> method to Text document API.</li>
     </ul>
     <br />
 
@@ -191,7 +251,7 @@
     <p class="spoiler_heading spoiler_changelog">More</p>
     <ul class="spoiler_code">
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/getfontnames") %>">ApiRun/GetFontNames</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/getposintable") %>">ApiTable/GetPosInTable</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/getposinparent") %>">ApiTable/GetPosInParent</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/replacebyelement") %>">ApiTable/ReplaceByElement</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallcharts") %>">ApiWorksheet/GetAllCharts</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getalldrawings") %>">ApiWorksheet/GetAllDrawings</a> method to Spreadsheet API.</li>
@@ -571,7 +631,7 @@
     <ul>
         <li>Added the <em>sParaTab</em> and <em>sParaNewLine</em> parameters to the <a href="<%= Url.Action("textdocumentapi/api/replacetextsmart") %>">Api/ReplaceTextSmart</a> method of Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiinlinelvlsdt/getparentparagraph") %>">ApiInlineLvlSdt/GetParentParagraph</a> method to Text document API.</li>
-        <li>Deleted the <em>ApiShape/GetDocContent</em> method from Spreadsheet API.</li>
+        <li>Removed the <em>ApiShape/GetDocContent</em> method from Spreadsheet API.</li>
     </ul>
 
     <h2 id="70" class="copy-link">Version 7.0</h2>
@@ -593,18 +653,18 @@
     <h2 id="64" class="copy-link">Version 6.4</h2>
     <ul>
         <li>Changed the return value of the <a href="<%= Url.Action("textdocumentapi/api/createrange") %>">Api/CreateRange</a> method of Text document API.</li>
-        <li>Deleted the <em>Api/GetFirstRunInArray</em> method from Text document API.</li>
-        <li>Deleted the <em>Api/GetLastRunInArray</em> method from Text document API.</li>
+        <li>Removed the <em>Api/GetFirstRunInArray</em> method from Text document API.</li>
+        <li>Removed the <em>Api/GetLastRunInArray</em> method from Text document API.</li>
         <li>Added parameters to the <a href="<%= Url.Action("textdocumentapi/apichart/setlegendfontsize") %>">ApiChart/SetLegendFontSize</a> method of Text document API.</li>
         <li>Added parameters to the <a href="<%= Url.Action("textdocumentapi/apidocument/getelement") %>">ApiDocument/GetElement</a> method of Text document API.</li>
         <li>Added the return value to the <a href="<%= Url.Action("textdocumentapi/apidocument/push") %>">ApiDocument/Push</a> method of Text document API.</li>
         <li>Added parameters to the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getelement") %>">ApiDocumentContent/GetElement</a> method of Text document API.</li>
         <li>Added the return value to the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/push") %>">ApiDocumentContent/Push</a> method of Text document API.</li>
-        <li>Deleted parameters from the <a href="<%= Url.Action("textdocumentapi/apirange/select") %>">ApiRange/Select</a> method of Text document API.</li>
+        <li>Removed parameters from the <a href="<%= Url.Action("textdocumentapi/apirange/select") %>">ApiRange/Select</a> method of Text document API.</li>
         <li>Added the <em>oCell</em> parameter to the <a href="<%= Url.Action("textdocumentapi/apitable/addelement") %>">ApiTable/AddElement</a> method of Text document API.</li>
         <li>Added parameters to the <a href="<%= Url.Action("spreadsheetapi/api/getrange") %>">Api/GetRange</a> method of Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apicomment/getclasstype") %>">ApiComment/GetClassType</a> method to Spreadsheet API.</li>
-        <li>Deleted the <em>ApiDocument/Last</em> method from Spreadsheet and Presentation API.</li>
+        <li>Removed the <em>ApiDocument/Last</em> method from Spreadsheet and Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/getcols") %>">ApiRange/GetCols</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/end") %>">ApiRange/End</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirange/getcells") %>">ApiRange/GetCells</a> method to Spreadsheet API.</li>

@@ -1,0 +1,13 @@
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oParagraph = Api.CreateParagraph();
+oParagraph.AddText("This is a new paragraph");
+oDocument.Push(oParagraph);
+var sJSON = oParagraph.ToJSON();
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("The ApiParagraph object in the JSON format: ").SetBold(true);
+oParagraph.AddLineBreak();
+oParagraph.AddText(sJSON);
+oDocument.Push(oParagraph);
+builder.SaveFile("docx", "ToJSON.docx");
+builder.CloseFile();
