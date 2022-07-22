@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Integrating ONLYOFFICE mobile web editors</span>
     </h1>
-    <p>To access the editor features in your mobile application, integrate it with ONLYOFFICE editors via the <a href="https://developer.apple.com/documentation/webkit/wkwebview" target="_blank">WKWebView component</a> - a system component that is responsible for opening web pages within applications.
+    <p>To access the editor features in your mobile application, integrate it with ONLYOFFICE editors via the WebView component - a system component that is responsible for opening web pages within applications.
         After that, users will be able to view, create and edit text documents, spreadsheets, and presentations, fill out oforms, and read PDFs directly on their iOS or Android devices.</p>
     <note>Please note that ONLYOFFICE mobile web editors are available only for commercial builds of <a href="https://www.onlyoffice.com/docs-enterprise.aspx" target="_blank">Enterprise</a> and <a href="https://www.onlyoffice.com/developer-edition.aspx" target="_blank">Developer</a> editions.</note>
     <div class="container">
@@ -22,7 +22,7 @@
             <li class="browser tab copy-link" id="android">Android</li>
         </ul>
         <div id="ios" class="content active">
-            <p>In this section, we will look at the integration process using the mobile demo sample for iOS which is available on <a href="https://github.com/ONLYOFFICE/editors-webview-ios" target="_blank">GitHub</a>.</p>
+            <p>In this section, we will look at the integration process via <a href="https://developer.apple.com/documentation/webkit/wkwebview" target="_blank">WKWebView</a> using the mobile demo sample for iOS which is available on <a href="https://github.com/ONLYOFFICE/editors-webview-ios" target="_blank">GitHub</a>.</p>
 
             <h2>Integration based on the ONLYOFFICE test sample</h2>
             <p>This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE <a href="<%= Url.Action("demopreview") %>">test or DMS sample</a>.</p>
@@ -111,7 +111,7 @@ func webView(_ webView: WKWebView,
                     For example, in our test sample, they are specified with the interface elements such as the <b>Reload</b>, <b>Back</b>, and <b>Forward</b> buttons.</li>
                 <li>
                     <p>For easy interaction with the editor, define the <b>Activity Indicator</b> and <b>Progress View</b> UI components.</p>
-                    <p>The full code for <b>DocumentServerViewController</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift" target="_blank">here</a>.</p>
+                    <p>The full code for <b>DocumentServerViewController</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerDemo/DocumentServerViewController.swift" target="_blank">here</a>.</p>
                     <div class="img-block-3">
                         <div>
                             <img alt="Activity indicator" src="<%= Url.Content("~/content/img/editor/activity-indicator.png") %>" />
@@ -186,7 +186,7 @@ func webView(_ webView: WKWebView,
 </pre>
             <p><img alt="Go back" src="<%= Url.Content("~/content/img/editor/exit-button.png") %>" /></p>
             <p>Button to exit the editor</p>
-            <p>The full code for <b>DocumentServerEditorViewController</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerEditor/DocumentServerEditorViewController.swift" target="_blank">here</a>.</p>
+            <p>The full code for <b>DocumentServerEditorViewController</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/DocumentServerEditor/DocumentServerEditorViewController.swift" target="_blank">here</a>.</p>
 
             <h2>Integration based on the ONLYOFFICE Docs API</h2>
             <p>This example demonstrates how to open the ONLYOFFICE editors via WKWebView using the editor configuration described in the <a href="<%= Url.Action("basic") %>">API documentation</a> and the <a href="<%= Url.Action("try") %>">configuration examples</a>.</p>
@@ -198,7 +198,7 @@ func webView(_ webView: WKWebView,
                     <p>Download the mobile demo sample for iOS from <a href="https://github.com/ONLYOFFICE/editors-webview-ios" target="_blank">GitHub</a>.</p>
                     <p>Now you can modify code fragments of this example for your DMS to work correctly.</p>
                 </li>
-                <li>Create an empty <em>html</em> file. The demo project <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/Resources/editor.html" target="_blank">editor.html</a> resource is used as a template.</p></li>
+                <li>Create an empty <em>html</em> file. The demo project <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/Resources/editor.html" target="_blank">editor.html</a> resource is used as a template.</p></li>
                 <li>
                     <p>Add the <em>div</em> element as shown below:</p>
                     <pre>
@@ -258,7 +258,7 @@ private func load() {
 </pre>
                     <p><img alt="Editor samples" src="<%= Url.Content("~/content/img/editor/editor-samples.png") %>" /></p>
                     <p>ONLYOFFICE Editor Samples</p>
-                    <p>The full code for <b>EditorViewController</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorViewController.swift" target="_blank">here</a>.</p>
+                    <p>The full code for <b>EditorViewController</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorViewController.swift" target="_blank">here</a>.</p>
                 </li>
                 <li>Open the <em>EditorWebViewDemo.xcodeproj</em> project in Xcode. In the toolbar, select a build scheme and a device where the app will be run.
                     After that, choose <b>Product -> Run</b>, or click the <b>Run</b> button in the project toolbar to build and run your code.</li>
@@ -339,7 +339,7 @@ private func callMethod(function: String, arg: [String: Any]) {
     webView.evaluateJavaScript(javascript, completionHandler: nil)
 }
 </pre>
-                    <p>The full code for <b>EditorEventsHandler</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorEventsHandler.swift" target="_blank">here</a>.</p>
+                    <p>The full code for <b>EditorEventsHandler</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/Editor/EditorEventsHandler.swift" target="_blank">here</a>.</p>
                 </li>
                 <li>
                     <p>To display the result of downloading and printing a document, use the <b>PreviewController</b> controller. This controller is based on <b>QLPreviewController</b>.
@@ -368,12 +368,12 @@ func present(url: URL, in parent: UIViewController, complation: @escaping (() ->
     }
 }
 </pre>
-                    <p>The full code for <b>PreviewController</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/main/EditorWebViewDemo/PresentationLayer/UserStories/Editor/PreviewController.swift" target="_blank">here</a>.</p>
+                    <p>The full code for <b>PreviewController</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-ios/blob/ad146259742d0cecb7b10e67e19b4594730663e0/EditorWebViewDemo/PresentationLayer/UserStories/Editor/PreviewController.swift" target="_blank">here</a>.</p>
                 </li>
             </ol>
         </div>
         <div id="android" class="content">
-            <p>In this section, we will look at the integration process using the mobile demo sample for Android which is available on <a href="https://github.com/ONLYOFFICE/editors-webview-android" target="_blank">GitHub</a>.</p>
+            <p>In this section, we will look at the integration process via <a href="https://developer.android.com/reference/android/webkit/WebView" target="_blank">WebView</a> using the mobile demo sample for Android which is available on <a href="https://github.com/ONLYOFFICE/editors-webview-android" target="_blank">GitHub</a>.</p>
             <h2>Integration based on the ONLYOFFICE test sample</h2>
             <p>This example demonstrates how to integrate ONLYOFFICE mobile web editors with the ONLYOFFICE <a href="<%= Url.Action("demopreview") %>">test or DMS sample</a>.</p>
             
@@ -406,18 +406,18 @@ private fun showDialog() {
 </pre>
                     <div class="img-block-2">
                         <div>
-                            <img alt="iOS error" src="<%= Url.Content("~/content/img/editor/android-error.png") %>" />
+                            <img alt="Android error" src="<%= Url.Content("~/content/img/editor/android-error.png") %>" />
                             <p>DocumentServerURL is not specified</p>
                         </div>
                         <div>
-                            <img alt="iOS managing" src="<%= Url.Content("~/content/img/editor/android-managing.png") %>" />
+                            <img alt="Android managing" src="<%= Url.Content("~/content/img/editor/android-managing.png") %>" />
                             <p>DocumentServerURL is specified</p>
                         </div>
                     </div>
                 </li>
                 <li>
                     <p>Use the <b>MainFragment.kt</b> controller to open the editors correctly on Android devices.
-                        In this controller, define a function to open a document via WKWebView component.
+                        In this controller, define a function to open a document via WebView component.
                         Request a URL and check if it contains the <em>"editor"</em> string which specifies that the document will be opened:</p>
                     <pre>
 private class MainWebViewClient(private val navController: NavController) : WebViewClient() {
@@ -439,11 +439,11 @@ private class MainWebViewClient(private val navController: NavController) : WebV
 
 }
 </pre>
-                    <p>The full code for <b>MainFragment.kt</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-android/blob/main/app/src/main/java/ru/mike/florida/MainFragment.kt" target="_blank">here</a>.</p>
+                    <p>The full code for <b>MainFragment.kt</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-android/blob/fd8f9809441fab9653140cf2e51a1303e2edd774/app/src/main/java/ru/mike/florida/MainFragment.kt" target="_blank">here</a>.</p>
                 </li>
                 <li>
-                    <p>To start working with documents, display the ONLYOFFICE editor on your mobile device via the WKWebView component.
-                        To do this, set up WKWebView and layout in the <b>EditorFragment.kt</b> controller as follows:</p>
+                    <p>To start working with documents, display the ONLYOFFICE editor on your mobile device via the WebView component.
+                        To do this, set up WebView and layout in the <b>EditorFragment.kt</b> controller as follows:</p>
                     <pre>
 @SuppressLint("SetJavaScriptEnabled")
 private fun setSettings() {
@@ -481,7 +481,7 @@ private class EditorWebViewClient(private val navController: NavController) : We
 
 }
 </pre>
-            <p>The full code for <b>EditorFragment.kt</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-android/blob/main/app/src/main/java/ru/mike/florida/EditorFragment.kt" target="_blank">here</a>.</p>
+            <p>The full code for <b>EditorFragment.kt</b> can be found <a href="https://github.com/ONLYOFFICE/editors-webview-android/blob/fd8f9809441fab9653140cf2e51a1303e2edd774/app/src/main/java/ru/mike/florida/EditorFragment.kt" target="_blank">here</a>.</p>
         </div>
     </div>
 
