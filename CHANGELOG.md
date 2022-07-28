@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: added the plugin marketplace
 - plugins: changed the plugin localization scheme
 - plugins: added the GetFileToDownload method
 
