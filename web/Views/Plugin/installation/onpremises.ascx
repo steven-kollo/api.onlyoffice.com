@@ -90,7 +90,7 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 <p>Starting from version 7.2, you can download ready-to-use plugins from marketplace.</p>
 <note>The plugin marketplace is now available only for <b>ONLYOFFICE Docs on-premises</b> and local test examples.</note>
 
-<p>Follow the steps below to add the plugins to the editor using mkarketplace:</p>
+<p>Follow the steps below to add the plugins to the editor using marketplace:</p>
 <ol>
     <li>Open the <b>Plugins</b> tab.</li>
     <li>Click <b>Marketplace</b>.</li>
