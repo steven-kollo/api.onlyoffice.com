@@ -101,6 +101,9 @@
                                         <a href="<%= Url.Action("executemethod/getallcontentcontrols") %>">GetAllContentControls</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/getallforms") %>">GetAllForms</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/getalloleobjects") %>">GetAllOleObjects</a>
                                     </li>
                                     <li>
@@ -122,6 +125,15 @@
                                         <a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/getformsbytag") %>">GetFormsByTag</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/getformvalue") %>">GetFormValue</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/getinstalledplugins") %>">GetInstalledPlugins</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/getmacros") %>">GetMacros</a>
                                     </li>
                                     <li>
@@ -141,6 +153,9 @@
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/insertoleobject") %>">InsertOleObject</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/installplugin") %>">InstallPlugin</a>
                                     </li>
                                     <li>
                                         <a title="MoveCursorToContentControl" href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a>
@@ -182,6 +197,9 @@
                                         <a href="<%= Url.Action("executemethod/removeoleobjects") %>">RemoveOleObjects</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/removeplugin") %>">RemovePlugin</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/removeselectedcontent") %>">RemoveSelectedContent</a>
                                     </li>
                                     <li>
@@ -200,6 +218,9 @@
                                         <a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/setformvalue") %>">SetFormValue</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a>
                                     </li>
                                     <li>
@@ -213,6 +234,9 @@
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/unshowinputhelper") %>">UnShowInputHelper</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/updateplugin") %>">UpdatePlugin</a>
                                     </li>
                                 </ul>
                             </li>
