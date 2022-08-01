@@ -18,7 +18,7 @@
     </div>
 </div>
 
-<p>There are three ways to add plugins: through the <em>sdkjs-plugins</em> folder, through the <em>config.json</em> file or through the plugin marketplace.</p>
+<p>There are three ways to add plugins: through the <em>sdkjs-plugins</em> folder, through the <em>config.json</em> file or through the plugin manager.</p>
 
 <h2>Adding plugins through the sdkjs-plugins folder</h2>
 
@@ -85,23 +85,23 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 </note>
 
 
-<h2>Adding plugins through the plugin marketplace</h2>
+<h2>Adding plugins through the plugin manager</h2>
 
 <p>Starting from version 7.2, you can download ready-to-use plugins from marketplace.</p>
 <note>The plugin marketplace is now available only for <b>ONLYOFFICE Docs on-premises</b> and local test examples.</note>
 
-<p>Follow the steps below to add the plugins to the editor using marketplace:</p>
+<p>Follow the steps below to add the plugins to the editor using plugin manager:</p>
 <ol>
     <li>Open the <b>Plugins</b> tab.</li>
-    <li>Click <b>Marketplace</b>.</li>
+    <li>Click <b>Plugin Manager</b>.</li>
     <li>Find the plugin you need and click <b>Install</b>.</li>
 </ol>
-<img alt="Plugins marketplace" src="<%= Url.Content("~/content/img/plugins/marketplace.png") %>" />
+<img alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/plugin-manager.png") %>" />
 <p>The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the <b>Plugins</b> tab.</p>
 
 <p>You can submit your own plugin for publishing by following the instructions below:</p>
 <ol>
-    <li>Click the <b>Submit your own plugin</b> button in the upper right corner of the marketplace window.
+    <li>Click the <b>Submit your own plugin</b> button in the upper right corner of the plugin manager window.
     You will be redirected to the <b>Pull requests</b> section of the marketplace GitHub repository.</li>
     <li>Create a pull request with your plugin.</li>
     <li>The plugin will automatically appear in the marketplace when your pull request is accepted.</li>
@@ -191,6 +191,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 <p><b>Option 3.</b> To uninstall the newly added plugin, proceed in the following way:</p>
 <ol>
     <li>Open the <b>Plugins</b> tab.</li>
-    <li>Go to the <b>Marketplace</b>.</li>
+    <li>Go to the <b>Plugin Manager</b>.</li>
     <li>Click the <b>Remove</b> button near the corresponding plugin.</li>
 </ol>

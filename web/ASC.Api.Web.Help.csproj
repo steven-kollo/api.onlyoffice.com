@@ -394,7 +394,7 @@
     <Content Include="Content\img\plugins\assign-macro.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\macros.png" />
-    <Content Include="Content\img\plugins\marketplace.png" />
+    <Content Include="Content\img\plugins\plugin-manager.png" />
     <Content Include="Content\img\plugins\currencies-usd-eur.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
