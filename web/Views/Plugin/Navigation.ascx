@@ -227,6 +227,9 @@
                                         <a href="<%= Url.Action("executemethod/setproperties") %>">SetProperties</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/showbutton") %>">ShowButton</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/showinputhelper") %>">ShowInputHelper</a>
                                     </li>
                                     <li>

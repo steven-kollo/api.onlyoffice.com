@@ -139,6 +139,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/setformvalue",
                 "executemethod/setmacros",
                 "executemethod/setproperties",
+                "executemethod/showbutton",
                 "executemethod/showinputhelper",
                 "executemethod/startaction",
                 "executemethod/unshowinputhelper",

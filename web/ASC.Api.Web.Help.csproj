@@ -714,6 +714,7 @@
     <Content Include="Views\Plugin\Executemethod\startaction.ascx" />
     <Content Include="Views\Plugin\Executemethod\endaction.ascx" />
     <Content Include="Views\Plugin\Executemethod\setproperties.ascx" />
+    <Content Include="Views\Plugin\Executemethod\showbutton.ascx" />
     <Content Include="Views\Plugin\Executemethod\showinputhelper.ascx" />
     <Content Include="Views\Plugin\Executemethod\unshowinputhelper.ascx" />
     <Content Include="Views\Plugin\Executemethod\updateplugin.ascx" />
