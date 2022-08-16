@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the information about highlighting document changes in the forcefully saved document versions
 - editors: added the Mobile integration page
 - editors: added the WordPress plugin
 

@@ -192,6 +192,9 @@ new DocsAPI.DocEditor("placeholder", {
 </pre>
         The <em>forcesavetype</em> parameter will have the <b>2</b> value when sending the request to the <b>callback handler</b>.</li>
     </ul>
+    <note>Please note that you cannot see the document versions created with the force saving option in the document history.
+        The reason is that ONLYOFFICE Docs <a href="<%= Url.Action("history") %>#apply-changes">highlights the changes</a> made from the beginning of the current document session, not from the beginning of the document version.
+        And even if several document versions are created during one session, all changes from this session will be highlighted.</note>
 
 
     <h2 id="assemblyFormatAsOrigin" class="copy-link">Saving in original format</h2>
