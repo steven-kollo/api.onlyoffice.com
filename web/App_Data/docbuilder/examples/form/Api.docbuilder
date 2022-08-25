@@ -20,5 +20,5 @@ oParagraph.AddLineBreak();
 var oPictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "required": true, "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
 oParagraph = oDocument.GetElement(0);
 oParagraph.AddElement(oPictureForm);
-builder.SaveFile("docx", "Api.docx");
+builder.SaveFile("docxf", "Api.docxf");
 builder.CloseFile();
