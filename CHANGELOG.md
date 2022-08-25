@@ -1,5 +1,7 @@
 # Change Log
 
+- docbuilder: added the C++ and .Net wrappers
+- docbuilder: v7.2
 - editors: added the WordPress plugin
 
 ## 2.8.1
