@@ -164,6 +164,10 @@
             <td>This method allows to get a value of the specified form.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getimagedatafromselection") %>">GetImageDataFromSelection</a></td>
+            <td>This method allows to get the image data from the first of the selected drawings.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getinstalledplugins") %>">GetInstalledPlugins</a></td>
             <td>This method allows to get all the installed plugins.</td>
         </tr>
@@ -230,6 +234,10 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/pastetext") %>">PasteText</a></td>
             <td>This method allows to paste text into the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/putimagedatatoselection") %>">PutImageDataToSelection</a></td>
+            <td>This method allows to replace the first selected drawing with the image specified in the parameters.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removecomments") %>">RemoveComments</a></td>

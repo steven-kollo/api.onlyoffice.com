@@ -131,6 +131,9 @@
                                         <a href="<%= Url.Action("executemethod/getformvalue") %>">GetFormValue</a>
                                     </li>
                                     <li>
+                                        <a title="GetImageDataFromSelection" href="<%= Url.Action("executemethod/getimagedatafromselection") %>">GetImageDataFromSelection</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/getinstalledplugins") %>">GetInstalledPlugins</a>
                                     </li>
                                     <li>
@@ -180,6 +183,9 @@
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/pastetext") %>">PasteText</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/putimagedatatoselection") %>">PutImageDataToSelection</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/removecomments") %>">RemoveComments</a>

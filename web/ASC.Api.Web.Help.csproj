@@ -696,6 +696,7 @@
     <Content Include="Views\Plugin\Executemethod\getalloleobjects.ascx" />
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\insertandreplacecontentcontrols.ascx" />
+    <Content Include="Views\Plugin\Executemethod\putimagedatatoselection.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrols.ascx" />
     <Content Include="Views\Plugin\Executemethod\removeoleobject.ascx" />
@@ -706,6 +707,7 @@
     <Content Include="Views\Plugin\Executemethod\insertoleobject.ascx" />
     <Content Include="Views\Plugin\Executemethod\installplugin.ascx" />
     <Content Include="Views\Plugin\Executemethod\getfontlist.ascx" />
+    <Content Include="Views\Plugin\Executemethod\getimagedatafromselection.ascx" />
     <Content Include="Views\Plugin\Executemethod\inputtext.ascx" />
     <Content Include="Views\Plugin\Executemethod\pastehtml.ascx" />
     <Content Include="Views\Plugin\Executemethod\pastetext.ascx" />

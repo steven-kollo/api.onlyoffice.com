@@ -1,6 +1,6 @@
 # Change Log
 
-- plugins: added the GetAllForms, GetFileToDownload, GetFormsByTag, GetFormValue, GetInstalledPlugins, InstallPlugin, RemovePlugin, SetFormValue, ShowButton and UpdatePlugin methods
+- plugins: added the GetAllForms, GetFileToDownload, GetFormsByTag, GetFormValue, GetImageDataFromSelection, GetInstalledPlugins, InstallPlugin, PutImageDataToSelection, RemovePlugin, SetFormValue, ShowButton and UpdatePlugin methods
 - plugins: changed the plugin localization scheme
 
 ## 2.8.0
