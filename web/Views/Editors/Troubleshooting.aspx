@@ -53,7 +53,7 @@
     <h2 id="changesUrl" class="copy-link">The file version cannot be opened</h2>
     <img width="832px" alt="The file version cannot be opened" src="<%= Url.Content("~/content/img/editor/changes-url.png") %>" />
     <p>The <b>document editing service</b> cannot open the file version.</p>
-    <p>Check if the <em>changesUrl</em> link from the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method matches <em>previous.url</em> parameter.</p>
+    <p>Check if the <em>changesUrl</em> link from the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method corresponds to the <em>previous.url</em> parameter.</p>
 
     <h2 id="coedit" class="copy-link">No collaborative editing</h2>
     <img width="832px" alt="No collaborative editing" src="<%= Url.Content("~/content/img/editor/e-coedit.png") %>" />
