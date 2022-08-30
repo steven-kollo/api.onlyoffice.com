@@ -28,7 +28,7 @@ See the <a href="<%= Url.Action("textdocumentapi") %>">Text document API</a>, <a
         <tr class="tablerow">
             <td><em>p1-p6</em></td>
             <td>CDocBuilderValue</td>
-            <td>The parameters that the Document Builder method takes as argumens.</td>
+            <td>The parameters that the Document Builder method takes as arguments.</td>
         </tr>
     </tbody>
 </table>
