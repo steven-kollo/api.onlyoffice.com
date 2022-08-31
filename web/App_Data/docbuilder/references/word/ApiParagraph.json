@@ -1141,6 +1141,23 @@
       "see": null,
       "inherits": null
     },
+    "GetAllOleObjects": {
+      "memberof": "ApiParagraph",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns a collection of OLE objects in the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetParentContentControl": {
       "memberof": "ApiParagraph",
       "name": "GetParentContentControl",
@@ -1689,7 +1706,7 @@
     "GetPosInParent": {
       "memberof": "ApiParagraph",
       "name": "GetPosInParent",
-      "description": "<p>Returns the paragraph position in its parent element.</p>",
+      "description": "<p>Returns the paragraph position within its parent element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

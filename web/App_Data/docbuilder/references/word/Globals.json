@@ -710,8 +710,8 @@
       "\"sdtLocked\""
     ]
   },
-  "TextTransofrm": {
-    "name": "TextTransofrm",
+  "TextTransform": {
+    "name": "TextTransform",
     "description": "<p>Text transform type.</p>",
     "type": [
       "\"textArchDown\"",
@@ -934,6 +934,17 @@
       "\"mm:ss.0\"",
       "\"##0.0E+0\"",
       "\"@\""
+    ]
+  },
+  "ApiForm": {
+    "name": "ApiForm",
+    "description": "<p>Types of all supported forms.</p>",
+    "type": [
+      "ApiTextForm",
+      "ApiComboBoxForm",
+      "ApiCheckBoxForm",
+      "ApiPictureForm",
+      "ApiComplexForm"
     ]
   },
   "PositivePercentage": {

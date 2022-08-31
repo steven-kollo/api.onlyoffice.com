@@ -1075,7 +1075,7 @@
           "defaultValue": "\"Your text here\""
         },
         {
-          "type": "TextTransofrm",
+          "type": "TextTransform",
           "name": "sTransform",
           "description": "<p>Text transform type.</p>",
           "optional": true,
@@ -1105,14 +1105,14 @@
         {
           "type": "EMU",
           "name": "nWidth",
-          "description": "<p>Text Art width measured in English measure units.</p>",
+          "description": "<p>The Text Art width measured in English measure units.</p>",
           "optional": true,
           "defaultValue": 1828800
         },
         {
           "type": "EMU",
           "name": "nHeight",
-          "description": "<p>Text Art heigth measured in English measure units.</p>",
+          "description": "<p>The Text Art heigth measured in English measure units.</p>",
           "optional": true,
           "defaultValue": 1828800
         },
@@ -1143,6 +1143,79 @@
           "description": "<p>The offset from the nFromRow row to the upper part of the Text Art object measured in English measure units.</p>",
           "optional": true,
           "defaultValue": 0
+        }
+      ]
+    },
+    "AddOleObject": {
+      "memberof": "ApiWorksheet",
+      "name": "AddOleObject",
+      "description": "<p>Adds an OLE object to the current sheet with the parameters specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiOleObject"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sImageSrc",
+          "description": "<p>The image source where the image to be inserted should be taken from (currently, only internet URL or Base64 encoded images are supported).</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The OLE object width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The OLE object height in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sData",
+          "description": "<p>The OLE object string data.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sAppId",
+          "description": "<p>The application ID associated with the current OLE object.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nFromCol",
+          "description": "<p>The number of the column where the beginning of the OLE object will be placed.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nColOffset",
+          "description": "<p>The offset from the nFromCol column to the left part of the OLE object measured in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nFromRow",
+          "description": "<p>The number of the row where the beginning of the OLE object will be placed.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nRowOffset",
+          "description": "<p>The offset from the nFromRow row to the upper part of the OLE object measured in English measure units.</p>",
+          "optional": false
         }
       ]
     },
@@ -1242,6 +1315,23 @@
       "returns": [
         [
           "Array.<ApiChart>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllOleObjects": {
+      "memberof": "ApiWorksheet",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns all OLE objects from the current sheet.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
         ]
       ],
       "see": null,

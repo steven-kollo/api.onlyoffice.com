@@ -574,7 +574,7 @@
     "GetPosInParent": {
       "memberof": "ApiBlockLvlSdt",
       "name": "GetPosInParent",
-      "description": "<p>Returns the content control position in its parent element.</p>",
+      "description": "<p>Returns the content control position within its parent element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"

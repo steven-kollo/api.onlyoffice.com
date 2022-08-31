@@ -1,226 +1,7 @@
 {
   "methods": {
-    "IsAutoFit": {
-      "memberof": "ApiTextForm",
-      "name": "IsAutoFit",
-      "description": "<p>Checks if the text form content is autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null
-    },
-    "SetAutoFit": {
-      "memberof": "ApiTextForm",
-      "name": "SetAutoFit",
-      "description": "<p>Specifies if the text form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "boolean",
-          "name": "bAutoFit",
-          "description": "<p>Defines if the text form content is autofit (true) or not (false).</p>",
-          "optional": false
-        }
-      ]
-    },
-    "IsMultiline": {
-      "memberof": "ApiTextForm",
-      "name": "IsMultiline",
-      "description": "<p>Checks if the current text form is multiline.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null
-    },
-    "SetMultiline": {
-      "memberof": "ApiTextForm",
-      "name": "SetMultiline",
-      "description": "<p>Specifies if the current text form should be miltiline.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "boolean",
-          "name": "bMultiline",
-          "description": "<p>Defines if the current text form is multiline (true) or not (false).</p>",
-          "optional": false
-        }
-      ]
-    },
-    "GetCharactersLimit": {
-      "memberof": "ApiTextForm",
-      "name": "GetCharactersLimit",
-      "description": "<p>Returns a limit of the text form characters.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "number"
-        ]
-      ],
-      "see": null,
-      "inherits": null
-    },
-    "SetCharactersLimit": {
-      "memberof": "ApiTextForm",
-      "name": "SetCharactersLimit",
-      "description": "<p>Sets a limit to the text form characters.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "number",
-          "name": "nChars",
-          "description": "<p>The maximum number of characters in the text form. If this parameter is equal to -1, no limit will be set.\nA limit is required to be set if a comb of characters is applied.\nMaximum value for this parameter is 1000000.</p>",
-          "optional": false
-        }
-      ]
-    },
-    "IsComb": {
-      "memberof": "ApiTextForm",
-      "name": "IsComb",
-      "description": "<p>Checks if the text form is a comb of characters with the same cell width.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null
-    },
-    "SetComb": {
-      "memberof": "ApiTextForm",
-      "name": "SetComb",
-      "description": "<p>Specifies if the text form should be a comb of characters with the same cell width.\nThe maximum number of characters must be set to a positive value.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "boolean",
-          "name": "bComb",
-          "description": "<p>Defines if the text form is a comb of characters (true) or not (false).</p>",
-          "optional": false
-        }
-      ]
-    },
-    "SetCellWidth": {
-      "memberof": "ApiTextForm",
-      "name": "SetCellWidth",
-      "description": "<p>Sets the cell width to the applied comb of characters.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "mm",
-          "name": "nCellWidth",
-          "description": "<p>The cell width measured in millimeters.\nIf this parameter is not specified or equal to 0 or less, then the width will be set automatically. Must be &gt;= 1 and &lt;= 558.8.</p>",
-          "optional": true,
-          "defaultValue": 0
-        }
-      ]
-    },
-    "SetText": {
-      "memberof": "ApiTextForm",
-      "name": "SetText",
-      "description": "<p>Sets the text to the current text form.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "boolean"
-        ]
-      ],
-      "see": null,
-      "inherits": null,
-      "params": [
-        {
-          "type": "string",
-          "name": "sText",
-          "description": "<p>The text that will be set to the current text form.</p>",
-          "optional": false
-        }
-      ]
-    },
     "GetClassType": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "GetClassType",
       "description": "<p>Returns a type of the ApiFormBase class.</p>",
       "tags": {
@@ -237,7 +18,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetClassType}"
     },
     "GetFormType": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "GetFormType",
       "description": "<p>Returns a type of the current form.</p>",
       "tags": {
@@ -254,7 +35,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetFormType}"
     },
     "GetFormKey": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "GetFormKey",
       "description": "<p>Returns the current form key.</p>",
       "tags": {
@@ -271,7 +52,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetFormKey}"
     },
     "SetFormKey": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "SetFormKey",
       "description": "<p>Sets a key to the current form.</p>",
       "tags": {
@@ -296,7 +77,7 @@
       ]
     },
     "GetTipText": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "GetTipText",
       "description": "<p>Returns the tip text of the current form.</p>",
       "tags": {
@@ -313,7 +94,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetTipText}"
     },
     "SetTipText": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "SetTipText",
       "description": "<p>Sets the tip text to the current form.</p>",
       "tags": {
@@ -338,7 +119,7 @@
       ]
     },
     "IsRequired": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "IsRequired",
       "description": "<p>Checks if the current form is required.</p>",
       "tags": {
@@ -355,7 +136,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#IsRequired}"
     },
     "SetRequired": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "SetRequired",
       "description": "<p>Specifies if the current form should be required.</p>",
       "tags": {
@@ -380,7 +161,7 @@
       ]
     },
     "IsFixed": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "IsFixed",
       "description": "<p>Checks if the current form is fixed size.</p>",
       "tags": {
@@ -397,7 +178,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#IsFixed}"
     },
     "ToFixed": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "ToFixed",
       "description": "<p>Converts the current form to a fixed size form.</p>",
       "tags": {
@@ -428,7 +209,7 @@
       ]
     },
     "ToInline": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "ToInline",
       "description": "<p>Converts the current form to an inline form.\n<em>Picture form can't be converted to an inline form, it's always a fixed size object.</em></p>",
       "tags": {
@@ -445,7 +226,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#ToInline}"
     },
     "SetBorderColor": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "SetBorderColor",
       "description": "<p>Sets the border color to the current form.</p>",
       "tags": {
@@ -488,7 +269,7 @@
       ]
     },
     "SetBackgroundColor": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "SetBackgroundColor",
       "description": "<p>Sets the background color to the current form.</p>",
       "tags": {
@@ -531,7 +312,7 @@
       ]
     },
     "GetText": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "GetText",
       "description": "<p>Returns the text from the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
@@ -548,7 +329,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetText}"
     },
     "Clear": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "Clear",
       "description": "<p>Clears the current form.</p>",
       "tags": {
@@ -561,7 +342,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#Clear}"
     },
     "GetWrapperShape": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "GetWrapperShape",
       "description": "<p>Returns a shape in which the form is placed to control the position and size of the fixed size form frame.\nThe null value will be returned for the inline forms.</p>",
       "tags": {
@@ -578,7 +359,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetWrapperShape}"
     },
     "SetPlaceholderText": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "SetPlaceholderText",
       "description": "<p>Sets the placeholder text to the current form.\n<em>Can't be set to checkbox or radio button.</em></p>",
       "tags": {
@@ -603,7 +384,7 @@
       ]
     },
     "SetTextPr": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "SetTextPr",
       "description": "<p>Sets the text properties to the current form.\n*This method is used only for text and combo box forms.</p>",
       "tags": {
@@ -628,7 +409,7 @@
       ]
     },
     "GetTextPr": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "GetTextPr",
       "description": "<p>Returns the text properties from the current form.\n*This method is used only for text and combo box forms.</p>",
       "tags": {
@@ -645,7 +426,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#GetTextPr}"
     },
     "Copy": {
-      "memberof": "ApiTextForm",
+      "memberof": "ApiComplexForm",
       "name": "Copy",
       "description": "<p>Copies the current form (copies with the shape if it exists).</p>",
       "tags": {
@@ -662,35 +443,8 @@
       "inherits": "Inherited From: {@link ApiFormBase#Copy}"
     }
   },
-  "comment": "/**\n\t * Class representing a document text form.\n\t * @constructor\n\t * @property {boolean} comb - Specifies if the text form should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.\n\t * @property {number} maxCharacters - The maximum number of characters in the text form.\n\t * @property {number} cellWidth - The cell width for each character measured in millimeters. If this parameter is not specified or equal to 0 or less, then the width will be set automatically.\n\t * @property {boolean} multiLine - Specifies if the current fixed size text form is multiline or not.\n\t * @property {boolean} autoFit - Specifies if the text form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.\n\t * @extends {ApiFormBase}\n\t */",
-  "description": "<p>Class representing a document text form.</p>",
+  "comment": "/**\n\t * Class representing a complex form.\n\t * @param oSdt\n\t * @constructor\n\t * @extends {ApiFormBase}\n\t */",
+  "description": "<p>Class representing a complex form.</p>",
   "scope": "global",
-  "params": [],
-  "properties": [
-    {
-      "type": "boolean",
-      "name": "comb",
-      "description": "<p>Specifies if the text form should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.</p>"
-    },
-    {
-      "type": "number",
-      "name": "maxCharacters",
-      "description": "<p>The maximum number of characters in the text form.</p>"
-    },
-    {
-      "type": "number",
-      "name": "cellWidth",
-      "description": "<p>The cell width for each character measured in millimeters. If this parameter is not specified or equal to 0 or less, then the width will be set automatically.</p>"
-    },
-    {
-      "type": "boolean",
-      "name": "multiLine",
-      "description": "<p>Specifies if the current fixed size text form is multiline or not.</p>"
-    },
-    {
-      "type": "boolean",
-      "name": "autoFit",
-      "description": "<p>Specifies if the text form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.</p>"
-    }
-  ]
+  "params": []
 }

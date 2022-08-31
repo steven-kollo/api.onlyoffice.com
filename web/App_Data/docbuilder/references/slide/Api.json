@@ -333,6 +333,55 @@
         }
       ]
     },
+    "CreateOleObject": {
+      "memberof": "Api",
+      "name": "CreateOleObject",
+      "description": "<p>Creates an OLE object with the parameters specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiOleObject"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sImageSrc",
+          "description": "<p>The image source where the image to be inserted should be taken from (currently, only internet URL or Base64 encoded images are supported).</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The OLE object width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The OLE object height in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sData",
+          "description": "<p>The OLE object string data.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sAppId",
+          "description": "<p>The application ID associated with the current OLE object.</p>",
+          "optional": false
+        }
+      ]
+    },
     "CreateShape": {
       "memberof": "Api",
       "name": "CreateShape",
@@ -552,7 +601,7 @@
           "defaultValue": "\"Your text here\""
         },
         {
-          "type": "TextTransofrm",
+          "type": "TextTransform",
           "name": "sTransform",
           "description": "<p>Text transform type.</p>",
           "optional": true,
@@ -582,14 +631,14 @@
         {
           "type": "EMU",
           "name": "nWidth",
-          "description": "<p>Text Art width measured in English measure units.</p>",
+          "description": "<p>The Text Art width measured in English measure units.</p>",
           "optional": true,
           "defaultValue": 1828800
         },
         {
           "type": "EMU",
           "name": "nHeight",
-          "description": "<p>Text Art heigth measured in English measure units.</p>",
+          "description": "<p>The Text Art heigth measured in English measure units.</p>",
           "optional": true,
           "defaultValue": 1828800
         },

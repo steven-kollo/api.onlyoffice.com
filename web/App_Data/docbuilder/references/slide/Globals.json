@@ -625,9 +625,9 @@
       "\"out\""
     ]
   },
-  "TextTransofrm": {
-    "name": "TextTransofrm",
-    "description": "<p>Text transform preset</p>",
+  "TextTransform": {
+    "name": "TextTransform",
+    "description": "<p>Text transform type.</p>",
     "type": [
       "\"textArchDown\"",
       "\"textArchDownPour\"",
@@ -672,8 +672,8 @@
       "\"textNoShape\""
     ]
   },
-  "AxiePos": {
-    "name": "AxiePos",
+  "AxisPos": {
+    "name": "AxisPos",
     "description": "<p>Axis position in the chart.</p>",
     "type": [
       "\"top\"",

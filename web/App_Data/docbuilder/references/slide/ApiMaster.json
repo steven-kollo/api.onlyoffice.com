@@ -396,6 +396,23 @@
       "see": null,
       "inherits": null
     },
+    "GetAllOleObjects": {
+      "memberof": "ApiMaster",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns an array with all the OLE objects from the slide master.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "ToJSON": {
       "memberof": "ApiMaster",
       "name": "ToJSON",

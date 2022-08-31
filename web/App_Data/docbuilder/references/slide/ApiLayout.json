@@ -313,6 +313,23 @@
       "see": null,
       "inherits": null
     },
+    "GetAllOleObjects": {
+      "memberof": "ApiLayout",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns an array with all the OLE objects from the slide layout.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetMaster": {
       "memberof": "ApiLayout",
       "name": "GetMaster",
