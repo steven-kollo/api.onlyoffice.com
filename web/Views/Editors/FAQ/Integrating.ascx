@@ -25,6 +25,7 @@
             <li><a href="<%= Url.Action("alfresco") %>">Alfresco</a></li>
             <li><a href="<%= Url.Action("chamilo") %>">Chamilo</a></li>
             <li><a href="<%= Url.Action("confluence") %>">Confluence</a></li>
+            <li><a href="<%= Url.Action("drupal") %>">Drupal</a></li>
             <li><a href="<%= Url.Action("humhub") %>">HumHub</a></li>
             <li><a href="<%= Url.Action("liferay") %>">Liferay</a></li>
             <li><a href="<%= Url.Action("mattermost") %>">Mattermost</a></li>
@@ -37,7 +38,6 @@
             <li><a href="<%= Url.Action("sharepoint") %>">SharePoint</a></li>
             <li><a href="<%= Url.Action("strapi") %>">Strapi</a></li>
             <li><a href="<%= Url.Action("wordpress") %>">WordPress</a></li>
-            <li><a href="<%= Url.Action("drupal") %>">Drupal</a></li>
         </ul>
         <p>Most of the connectors are available from the corresponding service application store and are easy to install. Just follow the step-by-step instructions at the <a href="<%= Url.Action("plugins") %>">connector page</a> and connect Document Server to your service.</p>
     </dd>
