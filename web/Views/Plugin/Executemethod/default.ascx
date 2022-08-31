@@ -124,6 +124,10 @@
             <td>This method allows to get information about all the content controls that have been added to the page.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getallforms") %>">GetAllForms</a></td>
+            <td>This method allows to get information about all the forms that have been added to the document.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getalloleobjects") %>">GetAllOleObjects</a></td>
             <td>This method allows to get all OLE object data for objects which can be opened by the specified plugin.</td>
         </tr>
@@ -145,11 +149,27 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getfiletodownload") %>">GetFileToDownload</a></td>
-            <td>This method allows to get the current file to download in the specified format.</td>
+            <td>This method allows to get the current file to download it in the specified format.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a></td>
             <td>This method allows to get the fonts list.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getformsbytag") %>">GetFormsByTag</a></td>
+            <td>This method allows to get information about all the forms that have been added to the document with the specified tag.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getformvalue") %>">GetFormValue</a></td>
+            <td>This method allows to get a value of the specified form.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getimagedatafromselection") %>">GetImageDataFromSelection</a></td>
+            <td>This method allows to get the image data from the first of the selected drawings.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/getinstalledplugins") %>">GetInstalledPlugins</a></td>
+            <td>This method allows to get all the installed plugins.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/getmacros") %>">GetMacros</a></td>
@@ -178,6 +198,10 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/insertoleobject") %>">InsertOleObject</a></td>
             <td>This method allows to insert the OLE object at the current document position.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/installplugin") %>">InstallPlugin</a></td>
+            <td>This method allows to install a plugin by the URL to the plugin config.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a></td>
@@ -212,6 +236,10 @@
             <td>This method allows to paste text into the document.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/putimagedatatoselection") %>">PutImageDataToSelection</a></td>
+            <td>This method allows to replace the first selected drawing with the image specified in the parameters.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removecomments") %>">RemoveComments</a></td>
             <td>This method allows to remove the specified comments.</td>
         </tr>
@@ -230,6 +258,10 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removeoleobjects") %>">RemoveOleObjects</a></td>
             <td>This method allows to remove several OLE objects from the document by their internal IDs.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/removeplugin") %>">RemovePlugin</a></td>
+            <td>This method allows to remove a plugin with the specified GUID.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removeselectedcontent") %>">RemoveSelectedContent</a></td>
@@ -256,12 +288,20 @@
             <td>This method allows to set the display mode for track changes.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/setformvalue") %>">SetFormValue</a></td>
+            <td>This method allows to set a value to the specified form.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a></td>
             <td>This method allows to set macros to the document.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/setproperties") %>">SetProperties</a></td>
             <td>This method allows to set the properties to the document.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/showbutton") %>">ShowButton</a></td>
+            <td>This method allows to show or hide buttons in the header.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/showinputhelper") %>">ShowInputHelper</a></td>
@@ -275,8 +315,8 @@
             <td><a href="<%= Url.Action("executemethod/unshowinputhelper") %>">UnShowInputHelper</a></td>
             <td>This method allows to unshow the input helper.</td>
         </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/updateplugin") %>">UpdatePlugin</a></td>
+            <td>This method allows to update a plugin by the URL to the plugin config.</td>
+        </tr>
     </tbody>
-</table>
-<div class="mobile-content"></div>
-
-<div class="note">For the plugin to work correctly, it is necessary to wait until the current method is executed before executing the next method.</div>

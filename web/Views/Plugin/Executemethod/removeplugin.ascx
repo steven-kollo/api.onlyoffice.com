@@ -2,17 +2,17 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("GetFileToDownload", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("RemovePlugin", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows returning the current file to download it in the specified format.</p>
+<p class="dscr">Defines the method that allows removing a plugin with the specified GUID.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("GetFileToDownload", [format]);
+window.Asc.plugin.executeMethod ("RemovePlugin", [guid]);
 </pre>
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -32,10 +32,10 @@ window.Asc.plugin.executeMethod ("GetFileToDownload", [format]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>format</td>
-            <td>A format in which you need to download a file. The default value is <em>""</em>.</td>
+            <td>guid</td>
+            <td>The plugin identifier. It must be of the <em>asc.{UUID}</em> type.</td>
             <td>string</td>
-            <td>"pdf"</td>
+            <td>"asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"</td>
         </tr>
     </tbody>
 </table>
@@ -43,10 +43,10 @@ window.Asc.plugin.executeMethod ("GetFileToDownload", [format]);
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns the URL in the <em>string</em> format to download a file in the specified format or an error.</p>
+<p>The method returns an <em>object</em> with the result information.</p>
 
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod ("GetFileToDownload", ["pdf"]);
+window.Asc.plugin.executeMethod ("RemovePlugin", ["asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}"]);
 </pre>

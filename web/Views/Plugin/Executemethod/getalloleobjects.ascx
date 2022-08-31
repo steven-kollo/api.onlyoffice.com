@@ -86,7 +86,7 @@ window.Asc.plugin.executeMethod ("GetAllOleObjects", [sPluginId]);
             <td>ImageData</td>
             <td>An image in the base64 format stored in the OLE object and used by the plugin.</td>
             <td>string</td>
-            <td>"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6"</td>
+            <td>"data:image/png;base64,image-in-the-base64-format"</td>
         </tr>
         <tr class="tablerow">
             <td>ApplicationId</td>

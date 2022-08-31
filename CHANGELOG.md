@@ -1,7 +1,7 @@
 # Change Log
 
+- plugins: added the GetAllForms, GetFileToDownload, GetFormsByTag, GetFormValue, GetImageDataFromSelection, GetInstalledPlugins, InstallPlugin, PutImageDataToSelection, RemovePlugin, SetFormValue, ShowButton and UpdatePlugin methods
 - plugins: changed the plugin localization scheme
-- plugins: added the GetFileToDownload method
 
 ## 2.8.0
 - editors: the services.CoAuthoring.token.inbox.inBody and services.CoAuthoring.token.outbox.inBody parameters for enabling token in body are deprecated
