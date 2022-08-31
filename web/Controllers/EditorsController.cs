@@ -100,6 +100,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Mattermost",
                 "Mentions",
                 "Methods",
+                "MobileIntegration",
                 "Moodle",
                 "Nextcloud",
                 "Nuxeo",
@@ -338,6 +339,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Methods()
+        {
+            return View();
+        }
+
+        public ActionResult MobileIntegration()
         {
             return View();
         }

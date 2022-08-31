@@ -1,6 +1,7 @@
 # Change Log
 
 - editors: added the Drupal ONLYOFFICE connector module
+- editors: added the Mobile integration page
 - editors: added the WordPress plugin
 
 ## 2.8.1
