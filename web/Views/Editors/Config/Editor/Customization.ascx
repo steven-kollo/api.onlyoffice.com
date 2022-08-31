@@ -1042,7 +1042,7 @@
                 Defines the editor theme settings.
                 It can be set in two ways:
                 <ul>
-                    <li><b>theme id</b> - the user sets the theme parameter by its id (<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>),</li>
+                    <li><b>theme id</b> - the user sets the theme parameter by its id (<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>, <b>theme-contrast-dark</b>),</li>
                     <li>
                         <b>default theme</b> - the default dark or light theme value will be set (<b>default-dark</b>, <b>default-light</b>).
                         The default light theme is <b>theme-classic-light</b>.
