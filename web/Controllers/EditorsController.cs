@@ -69,6 +69,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "ConversionApi",
                 "DemoPreview",
                 "DocumentBuilderApi",
+                "Drupal",
                 "Example/Java",
                 "Example/JavaSpring",
                 "Example/Nodejs",
@@ -283,6 +284,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult DocumentBuilderApi()
+        {
+            return View();
+        }
+
+        public ActionResult Drupal()
         {
             return View();
         }

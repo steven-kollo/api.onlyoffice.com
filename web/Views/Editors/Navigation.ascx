@@ -52,6 +52,9 @@
                 <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("drupal") %>">Drupal integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("humhub") %>">HumHub integration</a>
             </li>
             <li>
