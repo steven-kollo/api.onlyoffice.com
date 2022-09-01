@@ -128,91 +128,47 @@ We advise you to use this code in your projects to generate signatures.</p>
     </ul>
     <div id="csharp-mvc" class="content active">
         <pre>
-static JwtManager()
+public static class JwtManager
 {
-    Secret = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
-    Enabled = !string.IsNullOrEmpty(Secret);
-    Serializer = new JavaScriptSerializer();
-}
+    private static readonly string Secret;
+    public static readonly bool Enabled;
 
-public static string Encode(IDictionary&lt;string, object&gt; payload)
-{
-    var header = new Dictionary&lt;string, object&gt;
-        {
-            { "alg", "HS256" },
-            { "typ", "JWT" }
-        };
-
-    var encHeader = Base64UrlEncode(Serializer.Serialize(header));
-    var encPayload = Base64UrlEncode(Serializer.Serialize(payload));
-    var hashSum = Base64UrlEncode(CalculateHash(encHeader, encPayload));
-
-    return string.Format("{0}.{1}.{2}", encHeader, encPayload, hashSum);
-}
-
-private static byte[] CalculateHash(string encHeader, string encPayload)
-{
-    using (var hasher = new HMACSHA256(Encoding.UTF8.GetBytes(Secret)))
+    static JwtManager()
     {
-        var bytes = Encoding.UTF8.GetBytes(string.Format("{0}.{1}", encHeader, encPayload));
-        return hasher.ComputeHash(bytes);
+        Secret = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
+        Enabled = !string.IsNullOrEmpty(Secret);
     }
-}
 
-private static string Base64UrlEncode(string str)
-{
-    return Base64UrlEncode(Encoding.UTF8.GetBytes(str));
-}
-
-private static string Base64UrlEncode(byte[] bytes)
-{
-    return Convert.ToBase64String(bytes)
-        .TrimEnd('=').Replace('+', '-').Replace('/', '_');
+    public static string Encode(IDictionary&lt;string, object&gt; payload)
+    {
+        var encoder = new JwtEncoder(new HMACSHA256Algorithm(),
+                                        new JsonNetSerializer(),
+                                        new JwtBase64UrlEncoder());
+        return encoder.Encode(payload, Secret);
+    }
 }
 </pre>
     </div>
     <div id="csharp" class="content">
         <pre>
-static JwtManager()
+public static class JwtManager
 {
-    Secret = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
-    Enabled = !string.IsNullOrEmpty(Secret);
-    Serializer = new JavaScriptSerializer();
-}
+    private static readonly string Secret;
+    public static readonly bool Enabled;
 
-public static string Encode(IDictionary&lt;string, object&gt; payload)
-{
-    var header = new Dictionary&lt;string, object&gt;
-        {
-            { "alg", "HS256" },
-            { "typ", "JWT" }
-        };
-
-    var encHeader = Base64UrlEncode(Serializer.Serialize(header));
-    var encPayload = Base64UrlEncode(Serializer.Serialize(payload));
-    var hashSum = Base64UrlEncode(CalculateHash(encHeader, encPayload));
-
-    return string.Format("{0}.{1}.{2}", encHeader, encPayload, hashSum);
-}
-
-private static byte[] CalculateHash(string encHeader, string encPayload)
-{
-    using (var hasher = new HMACSHA256(Encoding.UTF8.GetBytes(Secret)))
+    static JwtManager()
     {
-        var bytes = Encoding.UTF8.GetBytes(string.Format("{0}.{1}", encHeader, encPayload));
-        return hasher.ComputeHash(bytes);
+        Secret = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
+        Enabled = !string.IsNullOrEmpty(Secret);
     }
-}
 
-private static string Base64UrlEncode(string str)
-{
-    return Base64UrlEncode(Encoding.UTF8.GetBytes(str));
-}
- 
-private static string Base64UrlEncode(byte[] bytes)
-{
-    return Convert.ToBase64String(bytes)
-        .TrimEnd('=').Replace('+', '-').Replace('/', '_');
+    public static string Encode(IDictionary&lt;string, object&gt; payload)
+    {
+        var encoder = new JwtEncoder(new HMACSHA256Algorithm(),
+                                        new JsonNetSerializer(),
+                                        new JwtBase64UrlEncoder());
+        return encoder.Encode(payload, Secret);
+    }
 }
 </pre>
     </div>
@@ -277,23 +233,7 @@ documentService.getToken = function (data) {
     <div id="php" class="content">
         <pre>
 function jwtEncode($payload) {
-    $header = [
-        "alg" => "HS256",
-        "typ" => "JWT"
-    ];
-    $encHeader = base64UrlEncode(json_encode($header));
-    $encPayload = base64UrlEncode(json_encode($payload));
-    $hash = base64UrlEncode(calculateHash($encHeader, $encPayload));
-
-    return "$encHeader.$encPayload.$hash";
-}
-
-function calculateHash($encHeader, $encPayload) {
-    return hash_hmac("sha256", "$encHeader.$encPayload", $GLOBALS['DOC_SERV_JWT_SECRET'], true);
-}
-
-function base64UrlEncode($str) {
-    return str_replace("/", "_", str_replace("+", "-", trim(base64_encode($str), "=")));
+    return \Firebase\JWT\JWT::encode($payload, $GLOBALS["DOC_SERV_JWT_SECRET"]);
 }
 </pre>
     </div>
@@ -308,17 +248,10 @@ def encode(payload):
         <pre>
 @jwt_secret = Rails.configuration.jwtSecret
 
-def encode(payload)
-    header = { :alg => "HS256", :typ => "JWT" }
-    enc_header = Base64.urlsafe_encode64(header.to_json).remove("=")
-    enc_payload = Base64.urlsafe_encode64(payload.to_json).remove("=")
-    hash = Base64.urlsafe_encode64(calc_hash(enc_header, enc_payload)).remove("=")
-
-    return "#{enc_header}.#{enc_payload}.#{hash}"
-end
-
-def calc_hash(header, payload)
-    return OpenSSL::HMAC.digest("SHA256", @jwt_secret, "#{header}.#{payload}")
+class << self
+    def encode(payload)
+        return JWT.encode payload, @jwt_secret, 'HS256'
+    end
 end
 </pre>
     </div>
