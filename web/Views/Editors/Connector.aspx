@@ -77,7 +77,7 @@ connector.attachEvent("onChangeContentControl", function()
             <p><b id="callCommand" class="copy-link">callCommand</b> - the function called to send the data back to the editor.
                 It allows the connector to send structured data that can be inserted into the resulting document file
                 (formatted paragraphs, tables, text parts, and separate words, etc.).</p>
-            <note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor
+            <note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it into the document editor
                 (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation exists due to the co-editing feature in the online editors.</note>
             <div class="header-gray">Parameters</div>
             <table class="table">
