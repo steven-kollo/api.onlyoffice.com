@@ -179,7 +179,7 @@ connector.disconnect()
 
         <li>
             <p><b id="executeMethod" class="copy-link">executeMethod</b> - the function called to execute certain editor methods using the connector.
-                The full list of these methods is the same as for the plugins. It can be found <a href="<%= Url.Action("executemethod", "plugin") %>">here</a>.</p>
+                The full list of these methods is the same as for the plugins. It can be found <a href="<%= Url.Action("executemethod/", "plugin") %>">here</a>.</p>
             <div class="header-gray">Parameters</div>
             <table class="table">
                 <colgroup>
