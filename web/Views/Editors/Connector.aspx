@@ -14,7 +14,8 @@
         <span class="hdr">Connector</span>
     </h1>
 
-    <p class="dscr"><b>EditorConnector</b> is a class that allows working with the editor from the outside. To create the connector, use the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method of the <b>document editor</b> object:</p>
+    <p class="dscr"><b>Connector</b> is a class that allows working with the text documents, spreadsheets, presentations and fillable forms from the outside.
+        To create the connector, use the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method of the <b>document editor</b> object:</p>
     <pre>
 var connector = docEditor.createConnector()
 </pre>
@@ -132,6 +133,9 @@ connector.callCommand(function() {
 
         <li>
             <p><b id="connect" class="copy-link">connect</b> - the function called to connect the connector to the editor.</p>
+            <note>Please note that this method should only be called if you have disconnected the connector with the <a href="#disconnect">disconnect</a> method
+                and need to connect it to the editor again. When creating a connector, you do not need to use the <em>connect</em> method,
+                as it is called automatically along with the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method.</note>
             <div class="header-gray">Example</div>
             <pre>
 connector.connect()
