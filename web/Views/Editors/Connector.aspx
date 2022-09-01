@@ -14,7 +14,7 @@
         <span class="hdr">Connector</span>
     </h1>
 
-    <p class="dscr"><b>Connector</b> is a class that allows working with the text documents, spreadsheets, presentations and fillable forms from the outside.
+    <p class="dscr"><b>Connector</b> is a class that allows interacting with the text documents, spreadsheets, presentations and fillable forms from the outside.
         To create the connector, use the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method of the <b>document editor</b> object:</p>
     <pre>
 var connector = docEditor.createConnector()

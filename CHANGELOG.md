@@ -1,6 +1,6 @@
 # Change Log
 
-- editors: added the Connector class to work with the text documents, spreadsheets, presentations and fillable forms from the outside
+- editors: added the Connector class to interact with the text documents, spreadsheets, presentations and fillable forms from the outside
 - editors: added the phone field to the editorConfig.customization.customer parameter
 - editors: added the four letter language codes to the editorConfig.lang parameter
 - editors: added the connections_view and users_view parameters to the license response
