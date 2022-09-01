@@ -38,7 +38,7 @@
 
     <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
     <p>
-        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin).
+        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Alfresco and any end clients.
         If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>.
         ONLYOFFICE Docs must also be able to POST to Alfresco directly.
     </p>
