@@ -117,11 +117,13 @@ connector.attachEvent("onChangeContentControl", function()
             <p>This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope", "plugin") %>">Asc.scope</a> object.</p>
             <div class="header-gray">Example</div>
             <pre>
+Asc.scope.text = "Hello world!"; 
+
 connector.callCommand(function() {
 
     var oDocument = Api.GetDocument();
     var oParagraph = Api.CreateParagraph();
-    oParagraph.AddText("Hello world!");
+    oParagraph.AddText(Asc.scope.text);
     oDocument.InsertContent([oParagraph]);
 
 }, function() { console.log("callback command"); });
