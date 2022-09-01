@@ -25,7 +25,7 @@
         <tr class="tablerow">
             <td><em>sCommand</em></td>
             <td>String^</td>
-            <td>The command in the form of JavaScript code which will be used to create the document file.</td>
+            <td>The command in the form of JavaScript code which will be used to create the document file (in .Net, the escape character must be used when the command contains quotation symbols).</td>
         </tr>
         <tr class="tablerow">
             <td><em>oRetValue</em></td>
@@ -42,10 +42,10 @@
 string workDirectory = "C:/Program Files/ONLYOFFICE/DocumentBuilder";
 CDocBuilder.Initialize(workDirectory);
 CDocBuilder oBuilder = new CDocBuilder();
-oBuilder.ExecuteCommand(L"var oDocument = Api.GetDocument();");
+oBuilder.ExecuteCommand(L"oParagraph.AddText(\"Hello from .net!\");");
 CDocBuilder.Destroy();
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>
-var oDocument = Api.GetDocument();
+oParagraph.AddText("Hello from .net!");
 </pre>

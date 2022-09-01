@@ -42,10 +42,10 @@
 std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 CDocBuilder::Initialize(sWorkDirectory.c_str());
 CDocBuilder oBuilder;
-oBuilder.ExecuteCommand(L"var oDocument = Api.GetDocument();");
+oBuilder.ExecuteCommand(L"oParagraph.AddText(\"Hello, world!\");");
 CDocBuilder::Dispose();
 </pre>
 <h4 class="header-gray" >.docbuilder</h4>
 <pre>
-var oDocument = Api.GetDocument();
+oParagraph.AddText("Hello, world!");
 </pre>

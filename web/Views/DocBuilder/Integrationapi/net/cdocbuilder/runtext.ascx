@@ -23,7 +23,7 @@ Compared to <a href="<%= Url.Action("integrationapi/net/cdocbuilder/executecomma
         <tr class="tablerow">
             <td><em>sCommands</em></td>
             <td>String^</td>
-            <td>The commands which will be used to create the document file.
+            <td>The commands which will be used to create the document file (in .Net, the escape character must be used when the command contains quotation symbols).
             All the commands containing <em>builder.</em> are line separated, i.e. you cannot write them in one line, each command <b>must</b> start with its own line.</td>
         </tr>
     </tbody>
