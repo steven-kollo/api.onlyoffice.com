@@ -14,7 +14,7 @@
         <span class="hdr">Connector</span>
     </h1>
 
-    <p class="dscr"><b>Connector</b> is a class that allows interacting with the text documents, spreadsheets, presentations and fillable forms from the outside.
+    <p class="dscr"><b>Connector</b> is a class that allows interaction with text documents, spreadsheets, presentations, and fillable forms from the outside.
         To create the connector, use the <a href="<%= Url.Action("methods") %>#createConnector">createConnector</a> method of the <b>document editor</b> object:</p>
     <pre>
 var connector = docEditor.createConnector()
@@ -75,7 +75,7 @@ connector.attachEvent("onChangeContentControl", function()
 
         <li>
             <p><b id="callCommand" class="copy-link">callCommand</b> - the function called to send the data back to the editor.
-                It allows the connector to send structured data that can be inserted to the resulting document file
+                It allows the connector to send structured data that can be inserted into the resulting document file
                 (formatted paragraphs, tables, text parts and  separate words, etc.).</p>
             <note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor
                 (using the <em>Api.GetDocument().InsertContent(...))</em>. This limitation exists due to the co-editing feature in the online editors.</note>
@@ -96,8 +96,8 @@ connector.attachEvent("onChangeContentControl", function()
                 <tbody>
                     <tr class="tablerow">
                         <td>command</td>
-                        <td>Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file
-                            (formatted paragraphs, tables, text parts and separate words, etc.). Then the data is sent to the editors.
+                        <td>Defines the command written in JavaScript which purpose is to form structured data which can be inserted into the resulting document file
+                            (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors.
                             The command must be compatible with <a href="<%= Url.Action("basic", "docbuilder") %>">ONLYOFFICE Document Builder</a> syntax.</td>
                         <td>function</td>
                     </tr>
@@ -115,7 +115,7 @@ connector.attachEvent("onChangeContentControl", function()
                     </tr>
                 </tbody>
             </table>
-            <p>This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope", "plugin") %>">Asc.scope</a> object.</p>
+            <p>This method is executed in its context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use <a href="<%= Url.Action("scope", "plugin") %>">Asc.scope</a> object.</p>
             <div class="header-gray">Example</div>
             <pre>
 Asc.scope.text = "Hello world!"; 
