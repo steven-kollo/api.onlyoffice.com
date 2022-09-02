@@ -326,6 +326,8 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetLegendPos.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetMajorHorizontalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetMajorVerticalGridlines.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetMarkerFill.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetMarkerOutLine.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetMinorHorizontalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetMinorVerticalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetPlotAreaFill.docbuilder" />
@@ -643,7 +645,9 @@
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeColorScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeFontScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeFormatScheme.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\Api.CreateWordArt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\Api.FromJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.GetPresentation.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.Save.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiBullet.docbuilder" />
@@ -668,6 +672,8 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetLegendPos.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetMajorHorizontalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetMajorVerticalGridlines.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetMarkerFill.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetMarkerOutLine.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetMinorHorizontalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetMinorVerticalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetPlotAreaFill.docbuilder" />
@@ -734,6 +740,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.RemoveObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.SetBackground.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.SetName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.AddLayout.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.AddObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.Copy.docbuilder" />
@@ -750,6 +757,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.RemoveLayout.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.RemoveObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.SetTheme.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetApplicationId.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiOleObject.GetData.docbuilder" />
@@ -825,6 +833,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiPresentation.SetLanguage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiPresentation.SetSizes.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiPresentation.SlidesToJSON.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiPresentation.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiPresetColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiPresetColor.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiRGBColor.docbuilder" />
@@ -888,6 +897,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiSlide.RemoveAllObjects.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiSlide.RemoveObject.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiSlide.SetBackground.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiSlide.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiStroke.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiStroke.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiTable.AddColumn.docbuilder" />
@@ -946,10 +956,12 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.SetSchemeName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.SetFonts.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.SetSchemeName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.ChangeBgFillStyles.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.ChangeFillStyles.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.ChangeLineStyles.docbuilder" />
@@ -957,6 +969,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.SetSchemeName.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiUniColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiUniColor.GetClassType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\StyleType.docbuilder" />
@@ -1057,6 +1070,8 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetLegendPos.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetMajorHorizontalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetMajorVerticalGridlines.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetMarkerFill.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetMarkerOutLine.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetMinorHorizontalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetMinorVerticalGridlines.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetPlotAreaFill.docbuilder" />
@@ -1531,6 +1546,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.Delete.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiRun.GetFontNames.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.GetParentContentControl.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.GetParentTable.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiRun.GetParentTableCell.docbuilder" />
@@ -2568,22 +2584,8 @@
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
     <Content Include="App_Data\products.json" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetMarkerFill.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\ApiChart.SetMarkerOutLine.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\Api.CreateWordArt.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\Api.FromJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetMarkerFill.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetMarkerOutLine.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiLayout.ToJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiMaster.ToJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiPresentation.ToJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiSlide.ToJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeColorScheme.ToJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFontScheme.ToJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.ToJSON.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetMarkerFill.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiChart.SetMarkerOutLine.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\word\ApiRun.GetFontNames.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDrawing.GetHeight.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiDrawing.GetWidth.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
