@@ -920,7 +920,7 @@
     "GetPosInParent": {
       "memberof": "ApiTable",
       "name": "GetPosInParent",
-      "description": "<p>Returns the table position in its parent element.</p>",
+      "description": "<p>Returns the table position within its parent element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1547,6 +1547,90 @@
           "optional": false
         }
       ]
+    },
+    "SetTableTitle": {
+      "memberof": "ApiTable",
+      "name": "SetTableTitle",
+      "description": "<p>Sets the table title (caption).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiTablePr#SetTableTitle}",
+      "params": [
+        {
+          "type": "string",
+          "name": "sTitle",
+          "description": "<p>The table title to be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTableTitle": {
+      "memberof": "ApiTable",
+      "name": "GetTableTitle",
+      "description": "<p>Returns the table title (caption).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiTablePr#GetTableTitle}"
+    },
+    "SetTableDescription": {
+      "memberof": "ApiTable",
+      "name": "SetTableDescription",
+      "description": "<p>Sets the table description.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiTablePr#SetTableDescription}",
+      "params": [
+        {
+          "type": "string",
+          "name": "sDescr",
+          "description": "<p>The table description to be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTableDescription": {
+      "memberof": "ApiTable",
+      "name": "GetTableDescription",
+      "description": "<p>Returns the table description.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiTablePr#GetTableDescription}"
     }
   },
   "comment": "/**\n\t * Class representing a table.\n\t * @constructor\n\t * @extends {ApiTablePr}\n\t */",

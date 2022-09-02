@@ -436,11 +436,7 @@
       },
       "returns": [
         [
-          "null",
-          "ApiTextForm",
-          "ApiCheckBoxForm",
-          "ApiComboBoxForm",
-          "ApiPictureForm"
+          "ApiForm"
         ]
       ],
       "see": null,

@@ -227,6 +227,91 @@
           "optional": false
         }
       ]
+    },
+    "GetAllDrawingObjects": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllDrawingObjects",
+      "description": "<p>Returns a collection of drawing objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllShapes": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllShapes",
+      "description": "<p>Returns a collection of shape objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllImages": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllImages",
+      "description": "<p>Returns a collection of image objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiImage>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllCharts": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllCharts",
+      "description": "<p>Returns a collection of chart objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiChart>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllOleObjects": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns a collection of OLE objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\n\t * Class representing a container for paragraphs and tables.\n\t * @param Document\n\t * @constructor\n\t */",

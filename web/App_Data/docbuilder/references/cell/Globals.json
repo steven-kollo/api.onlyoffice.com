@@ -223,8 +223,8 @@
       "\"out\""
     ]
   },
-  "TextTransofrm": {
-    "name": "TextTransofrm",
+  "TextTransform": {
+    "name": "TextTransform",
     "description": "<p>Text transform type.</p>",
     "type": [
       "\"textArchDown\"",

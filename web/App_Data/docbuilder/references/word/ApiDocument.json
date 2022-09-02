@@ -346,7 +346,7 @@
     "GetAllContentControls": {
       "memberof": "ApiDocument",
       "name": "GetAllContentControls",
-      "description": "<p>Returns a list of all the content controls in the document.</p>",
+      "description": "<p>Returns a list of all the content controls from the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -364,7 +364,7 @@
     "GetTagsOfAllContentControls": {
       "memberof": "ApiDocument",
       "name": "GetTagsOfAllContentControls",
-      "description": "<p>Returns a list of all tags that are used for all content controls in the document</p>",
+      "description": "<p>Returns a list of all tags that are used for all content controls in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -381,7 +381,7 @@
     "GetTagsOfAllForms": {
       "memberof": "ApiDocument",
       "name": "GetTagsOfAllForms",
-      "description": "<p>Returns a list of all tags that are used for all special forms in the document</p>",
+      "description": "<p>Returns a list of all tags that are used for all forms in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -398,7 +398,7 @@
     "GetContentControlsByTag": {
       "memberof": "ApiDocument",
       "name": "GetContentControlsByTag",
-      "description": "<p>Returns a list of all the content controls in the document with specified tag name</p>",
+      "description": "<p>Returns a list of all content controls in the document with the specified tag name.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -416,6 +416,7 @@
         {
           "type": "string",
           "name": "sTag",
+          "description": "<p>Content control tag.</p>",
           "optional": false
         }
       ]
@@ -423,7 +424,7 @@
     "GetFormsByTag": {
       "memberof": "ApiDocument",
       "name": "GetFormsByTag",
-      "description": "<p>Returns a list of all the special forms in the document with specified tag name</p>",
+      "description": "<p>Returns a list of all forms in the document with the specified tag name.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -441,6 +442,7 @@
         {
           "type": "string",
           "name": "sTag",
+          "description": "<p>Form tag.</p>",
           "optional": false
         }
       ]
@@ -686,74 +688,6 @@
       "see": null,
       "inherits": null
     },
-    "GetAllDrawingObjects": {
-      "memberof": "ApiDocument",
-      "name": "GetAllDrawingObjects",
-      "description": "<p>Returns a collection of drawing objects in the document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "Array.<ApiDrawing>"
-        ]
-      ],
-      "see": null,
-      "inherits": null
-    },
-    "GetAllShapes": {
-      "memberof": "ApiDocument",
-      "name": "GetAllShapes",
-      "description": "<p>Returns a collection of shape objects in the document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "Array.<ApiShape>"
-        ]
-      ],
-      "see": null,
-      "inherits": null
-    },
-    "GetAllImages": {
-      "memberof": "ApiDocument",
-      "name": "GetAllImages",
-      "description": "<p>Returns a collection of image objects in the document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "Array.<ApiImage>"
-        ]
-      ],
-      "see": null,
-      "inherits": null
-    },
-    "GetAllCharts": {
-      "memberof": "ApiDocument",
-      "name": "GetAllCharts",
-      "description": "<p>Returns a collection of chart objects in the document.</p>",
-      "tags": {
-        "typeofeditors": [
-          "CDE"
-        ]
-      },
-      "returns": [
-        [
-          "Array.<ApiChart>"
-        ]
-      ],
-      "see": null,
-      "inherits": null
-    },
     "Search": {
       "memberof": "ApiDocument",
       "name": "Search",
@@ -981,10 +915,7 @@
       },
       "returns": [
         [
-          "Array.<ApiTextForm>",
-          "Array.<ApiPictureForm>",
-          "Array.<ApiComboBoxForm>",
-          "Array.<ApiCheckBoxForm>"
+          "Array.<ApiForm>"
         ]
       ],
       "see": null,
@@ -1182,7 +1113,7 @@
     "GetSelectedDrawings": {
       "memberof": "ApiDocument",
       "name": "GetSelectedDrawings",
-      "description": "<p>Returns the selected drawings.</p>",
+      "description": "<p>Returns all the selected drawings in the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1236,6 +1167,40 @@
           "defaultValue": false
         }
       ]
+    },
+    "AddFootnote": {
+      "memberof": "ApiDocument",
+      "name": "AddFootnote",
+      "description": "<p>Adds a footnote for the selected text (or the current position if the selection doesn't exist).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddEndnote": {
+      "memberof": "ApiDocument",
+      "name": "AddEndnote",
+      "description": "<p>Adds an endnote for the selected text (or the current position if the selection doesn't exist).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "GetElementsCount": {
       "memberof": "ApiDocument",
@@ -1401,6 +1366,91 @@
           "optional": false
         }
       ]
+    },
+    "GetAllDrawingObjects": {
+      "memberof": "ApiDocument",
+      "name": "GetAllDrawingObjects",
+      "description": "<p>Returns a collection of drawing objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiDocumentContent#GetAllDrawingObjects}"
+    },
+    "GetAllShapes": {
+      "memberof": "ApiDocument",
+      "name": "GetAllShapes",
+      "description": "<p>Returns a collection of shape objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiDocumentContent#GetAllShapes}"
+    },
+    "GetAllImages": {
+      "memberof": "ApiDocument",
+      "name": "GetAllImages",
+      "description": "<p>Returns a collection of image objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiImage>"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiDocumentContent#GetAllImages}"
+    },
+    "GetAllCharts": {
+      "memberof": "ApiDocument",
+      "name": "GetAllCharts",
+      "description": "<p>Returns a collection of chart objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiChart>"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiDocumentContent#GetAllCharts}"
+    },
+    "GetAllOleObjects": {
+      "memberof": "ApiDocument",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns a collection of OLE objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiDocumentContent#GetAllOleObjects}"
     }
   },
   "comment": "/**\n\t * Class representing a document.\n\t * @constructor\n\t * @extends {ApiDocumentContent}\n\t */",

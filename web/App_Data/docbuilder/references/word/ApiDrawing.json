@@ -727,7 +727,7 @@
     "SetDrawingPrFromDrawing": {
       "memberof": "ApiDrawing",
       "name": "SetDrawingPrFromDrawing",
-      "description": "<p>Sets the properties from another drawing to the current drawing.\nThe following properties will be copied: PosH, PosV, Distance, WrappingStyle, drawing name, title and description.</p>",
+      "description": "<p>Sets the properties from another drawing to the current drawing.\nThe following properties will be copied: horizontal and vertical alignment, distance between the edges of the current drawing object and any subsequent text, wrapping style, drawing name, title and description.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -744,7 +744,7 @@
         {
           "type": "ApiDrawing",
           "name": "oAnotherDrawing",
-          "description": "<p>Drawing whose properties will be set to the current drawing.</p>",
+          "description": "<p>The drawing which properties will be set to the current drawing.</p>",
           "optional": false
         }
       ]
