@@ -20,7 +20,7 @@
 
 <p>There are two ways to add plugins: through the plugin manager and through the plugin folder.</p>
 
-    <h2>Adding plugins through the plugin manager</h2>
+    <h2 id="plugin-manager" class="copy-link">Adding plugins through the plugin manager</h2>
 
     <p><b>Step 1.</b> Pack all the <a href="<%= Url.Action("structure") %>">plugin files</a> within the plugin folder into a <b>zip</b> archive and change its extension to <em>.plugin</em>
     (all the plugin files and subfolders must be at the archive root).</p>
@@ -37,7 +37,7 @@
     <img alt="Plugins tab" src="<%= Url.Content("~/content/img/plugins/plugins_tab.png") %>" />
 
 
-    <h2>Adding plugins through the plugin folder</h2>
+    <h2 id="plugin-folder" class="copy-link">Adding plugins through the plugin folder</h2>
     <p><b>Step 1.</b> Create a new folder in the <em>sdkjs-plugins</em> directory. The path to the folder depends on the operating system you use:</p>
     <ul style="list-style: none;">
         <li>For Linux - <em>/opt/onlyoffice/desktopeditors/editors/sdkjs-plugins/</em></li>

@@ -467,10 +467,6 @@
     <Content Include="Content\img\plugins\edge-extension.png" />
     <Content Include="Content\img\plugins\edge-removing-extension.png" />
     <Content Include="Content\img\plugins\extension-dist.png" />
-    <Content Include="Content\img\plugins\manifest.png" />
-    <Content Include="Content\img\plugins\mozilla-extension.png" />
-    <Content Include="Content\img\plugins\mozilla-extensions.png" />
-    <Content Include="Content\img\plugins\mozilla-removing-extension.png" />
     <Content Include="Content\img\plugins\opera-developer-mode.png" />
     <Content Include="Content\img\plugins\opera-disabling-extension.png" />
     <Content Include="Content\img\plugins\opera-extension-folder.png" />
@@ -495,6 +491,7 @@
     <Content Include="Content\img\plugins\write_data_to_cell.png" />
     <Content Include="Content\img\plugins\highlight_duplicates.png" />
     <Content Include="Content\img\plugins\plugins-structure.png" />
+    <Content Include="Content\img\plugins\new-folder.png" />
     <Content Include="Content\img\plugins\gifs\add-comment-in-cell.gif" />
     <Content Include="Content\img\plugins\gifs\add-custom-fields.gif" />
     <Content Include="Content\img\plugins\gifs\autocomplete.gif" />

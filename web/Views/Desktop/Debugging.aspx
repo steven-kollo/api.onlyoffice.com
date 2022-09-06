@@ -70,7 +70,8 @@
     </ol>
 
     <h2 id="debugging" class="copy-link">Working in debug mode</h2>
-    <p>To start working in dubug mode, right-click any editable field on the top toolbar (for example, font list combo) and click <b>Inspect Element</b>.</p>
+    <p>To start working in dubug mode, right-click any editable field on the top toolbar (for example, font list combo) and click <b>Inspect Element</b>,
+        or click anywhere in the document and press <b>F1</b>.</p>
 
     <p>Here is the result:</p>
     <p><img alt="Debug" src="<%= Url.Content("~/content/img/desktop/debugging.png") %>" /></p>

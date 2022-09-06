@@ -20,7 +20,7 @@
 
 <p>There are three ways to add plugins: through the <em>sdkjs-plugins</em> folder, through the <em>config.json</em> file or through the plugin manager.</p>
 
-<h2>Adding plugins through the sdkjs-plugins folder</h2>
+<h2 id="plugin-folder" class="copy-link">Adding plugins through the sdkjs-plugins folder</h2>
 
 <p>Put the folder with the plugin code to the <b>ONLYOFFICE Docs</b> folder. The path to the folder depends on the operating system you use:</p>
 <ul style="list-style: none;">
@@ -34,7 +34,7 @@
 docker run -itd -p 80:80 -v /absolutly_path_to_work_dir:/var/www/onlyoffice/documentserver/sdkjs-plugins/plugin onlyoffice/documentserver-ee:latest
 </pre>
 
-<h2>Adding plugins through the config.json file</h2>
+<h2 id="config" class="copy-link">Adding plugins through the config.json file</h2>
 
 <p>In <a href="<%= Url.Action("config/editor/plugins", "editors") %>">ONLYOFFICE Docs config</a>, add the relative path 
 to the <em>config.json</em> file of the created plugin to the <em>plugins.pluginsData</em> parameter:</p>
@@ -85,9 +85,9 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 </note>
 
 
-<h2>Adding plugins through the plugin manager</h2>
+<h2 id="plugin-manager" class="copy-link">Adding plugins through the plugin manager</h2>
 
-<p>Starting from version 7.2, you can download ready-to-use plugins from marketplace.</p>
+<p>Starting from version 7.2, you can download ready-to-use plugins from <b>ONLYOFFICE Plugin Marketplace</b>.</p>
 <note>The plugin marketplace is now available only for <b>ONLYOFFICE Docs on-premises</b> and local test examples.</note>
 
 <p>Follow the steps below to add the plugins to the editor using plugin manager:</p>
@@ -98,15 +98,6 @@ add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
 </ol>
 <img alt="Plugins manager" src="<%= Url.Content("~/content/img/plugins/plugin-manager.png") %>" />
 <p>The plugin will be added to the opened editors and all the editors you will open afterwords and displayed within the <b>Plugins</b> tab.</p>
-
-<p>You can submit your own plugin for publishing by following the instructions below:</p>
-<ol>
-    <li>Click the <b>Submit your own plugin</b> button in the upper right corner of the plugin manager window.
-    You will be redirected to the <b>Pull requests</b> section of the marketplace GitHub repository.</li>
-    <li>Create a pull request with your plugin.</li>
-    <li>The plugin will automatically appear in the marketplace when your pull request is accepted.</li>
-</ol>
-<p>You can discuss plugin development, request a feature, or report a bug by posting an issue in the <a href="https://github.com/ONLYOFFICE/onlyoffice.github.io/issues" target="_blank">marketplace repository</a>.</p>
 
 
 <h2 id="remove" class="copy-link">Removing plugins from ONLYOFFICE Docs on-premises</h2>
