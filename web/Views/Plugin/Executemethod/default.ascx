@@ -96,6 +96,10 @@
             <td>This method allows to change the specified comment.</td>
         </tr>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/changeoleobject") %>">ChangeOleObject</a></td>
+            <td>This method allows to change the OLE object with the <em>InternalId</em> specified in OLE object data.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/changeoleobjects") %>">ChangeOleObjects</a></td>
             <td>This method allows to change multiple OLE objects with the <em>InternalIds</em> specified in OLE object data.</td>
         </tr>

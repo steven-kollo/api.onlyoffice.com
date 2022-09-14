@@ -90,6 +90,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/addcontentcontrolpicture",
                 "executemethod/addoleobject",
                 "executemethod/changecomment",
+                "executemethod/changeoleobject",
                 "executemethod/changeoleobjects",
                 "executemethod/coauthoringchatsendmessage",
                 "executemethod/convertdocument",
