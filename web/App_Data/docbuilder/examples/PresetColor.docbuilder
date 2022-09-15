@@ -1,0 +1,2 @@
+// Create a scheme color using the 'lightYellow' color preset:
+oSchemeColor = Api.CreatePresetColor("lightYellow");

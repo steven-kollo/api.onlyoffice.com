@@ -173,7 +173,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -198,7 +198,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -547,6 +547,25 @@
           "optional": false
         }
       ]
+    },
+    "GetFontNames": {
+      "memberof": "ApiRun",
+      "name": "GetFontNames",
+      "description": "<p>Returns all font names from all elements inside the current run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<string>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     },
     "SetFontSize": {
       "memberof": "ApiRun",
@@ -903,10 +922,10 @@
       "see": null,
       "inherits": null
     },
-    "GetNext": {
+    "ToJSON": {
       "memberof": "ApiRun",
-      "name": "GetNext",
-      "description": "<p>Returns the next run if exists.</p>",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiRun object into the JSON object.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -914,30 +933,66 @@
       },
       "returns": [
         [
-          "ApiRun",
-          "null"
+          "JSON"
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     },
-    "GetPrevious": {
+    "SetTextFill": {
       "memberof": "ApiRun",
-      "name": "GetPrevious",
-      "description": "<p>Returns the previous run if exists.</p>",
+      "name": "SetTextFill",
+      "description": "<p>Sets the text fill to the current text run.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CSE",
+          "CPE",
+          "CSE"
         ]
       },
       "returns": [
         [
-          "ApiRun",
-          "null"
+          "ApiTextPr"
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": "Inherited From: {@link ApiTextPr#SetTextFill}",
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oApiFill",
+          "description": "<p>The color or pattern used to fill the text color.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetOutLine": {
+      "memberof": "ApiRun",
+      "name": "SetOutLine",
+      "description": "<p>Sets the text outline to the current text run.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiTextPr#SetOutLine}",
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the text outline.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\n\t * Class representing a small text block called 'run'.\n\t * @constructor\n\t * @extends {ApiTextPr}\n\t */",

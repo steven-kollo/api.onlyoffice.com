@@ -369,6 +369,24 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiSection",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiSection object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing a document section.\n\t * @constructor\n\t */",

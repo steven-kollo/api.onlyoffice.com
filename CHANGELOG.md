@@ -1,5 +1,7 @@
 # Change Log
 
+- docbuilder: added the C++ and .Net wrappers
+- docbuilder: v7.2
 - plugins: added the plugin marketplace
 - plugins: added the ChangeOleObject, GetAllForms, GetFileToDownload, GetFormsByTag, GetFormValue, GetImageDataFromSelection, GetInstalledPlugins, InstallPlugin, PutImageDataToSelection, RemovePlugin, SetFormValue, ShowButton and UpdatePlugin methods
 - plugins: changed the plugin localization scheme
