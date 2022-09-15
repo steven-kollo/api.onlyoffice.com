@@ -25,6 +25,7 @@
             <li><a href="<%= Url.Action("alfresco") %>">Alfresco</a></li>
             <li><a href="<%= Url.Action("chamilo") %>">Chamilo</a></li>
             <li><a href="<%= Url.Action("confluence") %>">Confluence</a></li>
+            <li><a href="<%= Url.Action("drupal") %>">Drupal</a></li>
             <li><a href="<%= Url.Action("humhub") %>">HumHub</a></li>
             <li><a href="<%= Url.Action("liferay") %>">Liferay</a></li>
             <li><a href="<%= Url.Action("mattermost") %>">Mattermost</a></li>
