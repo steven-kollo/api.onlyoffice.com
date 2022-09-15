@@ -263,7 +263,6 @@
     <Content Include="App_Data\docbuilder\examples\byte.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddDefName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddSheet.docbuilder" />
-    <Content Include="App_Data\docbuilder\examples\cell\Api.AddWordArt.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateBlipFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateBullet.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateColorByName.docbuilder" />
@@ -2716,6 +2715,11 @@
     <Content Include="App_Data\products.json" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDrawing.GetHeight.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiDrawing.GetWidth.docbuilder" />
+    <Content Include="App_Data\docbuilder\references\cell\ApiOleObject.json" />
+    <Content Include="App_Data\docbuilder\references\slide\ApiOleObject.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiComplexForm.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiOleObject.json" />
+    <Content Include="App_Data\docbuilder\references\word\ApiPresentation.json" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
