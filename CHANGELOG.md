@@ -4,7 +4,7 @@
 - editors: added the theme-contrast-dark theme id to the editorConfig.customization.uiTheme parameter
 - editors: added the phone field to the editorConfig.customization.customer parameter
 - editors: added the four letter language codes to the editorConfig.lang parameter
-- editors: added the connections_view and users_view parameters to the license response
+- editors: added the connections_view, users_view_count and users_view parameters to the license response
 - editors: added the information about co-editing modes
 - editors: added the live viewer mode to the text document, spreadsheet and presentation editors
 - editors: added the embedview action to the WOPI discovery
