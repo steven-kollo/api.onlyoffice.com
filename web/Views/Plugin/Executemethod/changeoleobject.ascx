@@ -2,17 +2,17 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("ChangeOleObjects", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("ChangeOleObject", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows changing multiple OLE objects with the <em>InternalIds</em> specified in OLE object data.</p>
+<p class="dscr">Defines the method that allows changing the OLE object with the <em>InternalId</em> specified in OLE object data.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
+window.Asc.plugin.executeMethod ("ChangeOleObject", [ObjectData]);
 </pre>
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -32,9 +32,9 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>arrObjectData</td>
+            <td>ObjectData</td>
             <td>
-                An array of OLE object data which contains the following parameters:
+                The <b>OLEObjectData</b> object which contains the following parameters:
                 <ul>
                     <li>
                         <b>Data</b> - OLE object data (internal format),
@@ -110,7 +110,7 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
                     </li>
                 </ul>
             </td>
-            <td>array of objects</td>
+            <td>object</td>
             <td></td>
         </tr>
     </tbody>
@@ -124,5 +124,5 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("ChangeOleObjects", [[{"Data": "{data}", "ImageData": "data:image/png;base64,image-in-the-base64-format", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "InternalId": "5_556", "ParaDrawingId": "1_713", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}]]);
+window.Asc.plugin.executeMethod("ChangeOleObject", [{"Data": "{data}", "ImageData": "data:image/png;base64,image-in-the-base64-format", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "InternalId": "5_556", "ParaDrawingId": "1_713", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}]);
 </pre>

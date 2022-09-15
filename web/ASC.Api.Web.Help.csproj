@@ -703,6 +703,7 @@
     <Content Include="Views\Plugin\Executemethod\removeoleobjects.ascx" />
     <Content Include="Views\Plugin\Executemethod\addoleobject.ascx" />
     <Content Include="Views\Plugin\Executemethod\editoleobject.ascx" />
+    <Content Include="Views\Plugin\Executemethod\changeoleobject.ascx" />
     <Content Include="Views\Plugin\Executemethod\changeoleobjects.ascx" />
     <Content Include="Views\Plugin\Executemethod\insertoleobject.ascx" />
     <Content Include="Views\Plugin\Executemethod\installplugin.ascx" />

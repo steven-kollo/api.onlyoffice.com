@@ -80,6 +80,9 @@
                                         <a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/changeoleobject") %>">ChangeOleObject</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/changeoleobjects") %>">ChangeOleObjects</a>
                                     </li>
                                     <li>

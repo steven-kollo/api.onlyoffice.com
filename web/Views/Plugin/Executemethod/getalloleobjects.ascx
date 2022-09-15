@@ -53,10 +53,10 @@ window.Asc.plugin.executeMethod ("GetAllOleObjects", [sPluginId]);
     "ApplicationId" : string,
     "InternalId" : string,
     "ParaDrawingId" : string,
-    "Width" : number,
-    "Height" : number,
-    "WidthPix" : number,
-    "HeightPix" : number
+    "Width" : integer,
+    "Height" : integer,
+    "WidthPix" : integer,
+    "HeightPix" : integer
 }
 </pre>
 <div class="header-gray">Parameters</div>
@@ -109,25 +109,25 @@ window.Asc.plugin.executeMethod ("GetAllOleObjects", [sPluginId]);
         <tr class="tablerow">
             <td>Width</td>
             <td>The OLE object width measured in millimeters.</td>
-            <td>number</td>
+            <td>integer</td>
             <td>70</td>
         </tr>
         <tr class="tablerow">
             <td>Height</td>
             <td>The OLE object height measured in millimeters.</td>
-            <td>number</td>
+            <td>integer</td>
             <td>70</td>
         </tr>
         <tr class="tablerow">
             <td>WidthPix</td>
             <td>The OLE object image width in pixels.</td>
-            <td>number</td>
+            <td>integer</td>
             <td>60 * 36000</td>
         </tr>
         <tr class="tablerow">
             <td>HeightPix</td>
             <td>The OLE object image height in pixels.</td>
-            <td>number</td>
+            <td>integer</td>
             <td>60 * 36000</td>
         </tr>
     </tbody>
