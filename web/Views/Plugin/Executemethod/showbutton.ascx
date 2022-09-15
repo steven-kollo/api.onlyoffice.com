@@ -2,17 +2,17 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod ("GetFileToDownload", [args], callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("ShowButton", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows returning the current file to download it in the specified format.</p>
+<p class="dscr">Defines the method that allows showing or hiding buttons in the header.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod ("GetFileToDownload", [format]);
+window.Asc.plugin.executeMethod ("ShowButton", [id, bShow]);
 </pre>
 <div class="header-gray">Parameters</div>
 <table class="table">
@@ -32,10 +32,16 @@ window.Asc.plugin.executeMethod ("GetFileToDownload", [format]);
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>format</td>
-            <td>A format in which you need to download a file. The default value is <em>""</em>.</td>
+            <td>id</td>
+            <td>The button ID.</td>
             <td>string</td>
-            <td>"pdf"</td>
+            <td>"1"</td>
+        </tr>
+        <tr class="tablerow">
+            <td>bShow</td>
+            <td>The flag specifies whether the button is shown (<b>true</b>) or hidden (<b>false</b>).</td>
+            <td>boolean</td>
+            <td>false</td>
         </tr>
     </tbody>
 </table>
@@ -43,10 +49,10 @@ window.Asc.plugin.executeMethod ("GetFileToDownload", [format]);
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns the URL in the <em>string</em> format to download a file in the specified format or an error.</p>
+<p>The method returns the <em>undefined</em> value.</p>
 
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod ("GetFileToDownload", ["pdf"]);
+window.Asc.plugin.executeMethod ("ShowButton", ["1", false]);
 </pre>

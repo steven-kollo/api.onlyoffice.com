@@ -60,6 +60,46 @@ window.Asc.plugin.executeMethod ("GetSelectedText", [numbering]);
                         <b>example</b>: true.
                         <br />
                     </li>
+                    <li>
+                        <b>Math</b> - defines if the resulting string will include mathematical expressions or not,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
+                        <br />
+                    </li>
+                    <li>
+                        <b>TableCellSeparator</b> - defines how the table cell separator will be specified in the resulting string,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: '\n';
+                        <br />
+                    </li>
+                    <li>
+                        <b>TableRowSeparator</b> - defines how the table row separator will be specified in the resulting string,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: '\n';
+                        <br />
+                    </li>
+                    <li>
+                        <b>ParaSeparator</b> - defines how the paragraph separator will be specified in the resulting string,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: '\n';
+                        <br />
+                    </li>
+                    <li>
+                        <b>TabSymbol</b> - defines how the tab will be specified in the resulting string,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: '\t'.
+                        <br />
+                    </li>
                 </ul>
             </td>
             <td>array of objects</td>
@@ -76,7 +116,29 @@ window.Asc.plugin.executeMethod ("GetSelectedText", [numbering]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("GetSelectedText", [{"NewLine": true, "NewLineParagraph": true, "Numbering": true}], function(sText) {
-    CorrectText(sText);
-})
+function CorrectText() {
+    switch (window.Asc.plugin.info.editorType) {
+        case 'word':
+        case 'slide': {
+            window.Asc.plugin.executeMethod("GetSelectedText", [{"Numbering": false, "Math": false, "TableCellSeparator": '\n', "ParaSeparator": '\n', "TabSymbol": String.fromCharCode(9)}], function(data) {
+                sText = data;
+                ExecTypograf(sText);
+            });
+            break;
+        }
+        case 'cell': {
+            window.Asc.plugin.executeMethod("GetSelectedText", [{"Numbering": false, "Math": false, "TableCellSeparator": '\n', "ParaSeparator": '\n', "TabSymbol": String.fromCharCode(9)}], function(data) {
+                if (data == ''){
+                    sText = sText.replace(/\t/g, '\n');
+                    ExecTypograf(sText);
+                }
+                else {
+                    sText = data;
+                    ExecTypograf(sText);
+                }
+            });
+            break;
+        }
+    }
+}
 </pre>
