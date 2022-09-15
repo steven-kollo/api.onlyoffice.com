@@ -154,10 +154,10 @@
                 + '{<br>'
                 + '&nbsp&nbsp "document":<br>'
                 + '&nbsp&nbsp {<br>'
-                + `&nbsp&nbsp&nbsp&nbsp "fileType": ${selectedOption},<br>`
-                + `&nbsp&nbsp&nbsp&nbsp "key": ${key},<br>`
-                + `&nbsp&nbsp&nbsp&nbsp "title": ${title}.${selectedOption},<br>`
-                + `&nbsp&nbsp&nbsp&nbsp "url": ${storage_demo_url}demo.${selectedOption},<br>`
+                + `&nbsp&nbsp&nbsp&nbsp "fileType": "${selectedOption}",<br>`
+                + `&nbsp&nbsp&nbsp&nbsp "key": "${key}",<br>`
+                + `&nbsp&nbsp&nbsp&nbsp "title": "${title}.${selectedOption}",<br>`
+                + `&nbsp&nbsp&nbsp&nbsp "url": "${storage_demo_url}demo.${selectedOption}",<br>`
                 + `&nbsp&nbsp&nbsp&nbsp "permissions":&nbsp{<br>`
             )
             if (permissions.copyBool == false) {
@@ -194,7 +194,7 @@
 
                 + `&nbsp&nbsp&nbsp&nbsp "user":&nbsp{<br>`
 
-                + `&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp "name": ${userName}<br>`
+                + `&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp "name": "${userName}"<br>`
 
                 + `&nbsp&nbsp&nbsp&nbsp },<br>`
                 + `&nbsp&nbsp&nbsp&nbsp "customization":&nbsp{<br>`
@@ -239,7 +239,7 @@
                 + `&nbsp&nbsp&nbsp&nbsp }<br>`
 
                 + '&nbsp&nbsp },<br>'
-                + `&nbsp&nbsp "documentType": ${documentType},<br>`
+                + `&nbsp&nbsp "documentType": "${documentType}",<br>`
                 + '&nbsp&nbsp "height": "1200px",<br>'
                 + '&nbsp&nbsp "width": "1000px",<br>'
             );
