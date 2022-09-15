@@ -47,18 +47,21 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr", [contentFormat]);
 <p>The method returns the <em>ContentControlProperties</em> object containing the content control properties in the following form (JSON):</p>
 <pre>
 {
-    "Id" : number,
+    "Id" : integer,
     "Tag" : string,
-    "Lock" : number,
+    "Lock" : integer,
+    "InternalId" : string,
     "Alias" : string,
-    "Appearance" : number,
+    "PlaceHolderText" : string,
+    "Appearance" : integer,
     "Color" : {
-        "R": number,
-        "G": number,
-        "B": number
+        "R": integer,
+        "G": integer,
+        "B": integer
     }
 }
 </pre>
+
 <div class="header-gray">Parameters</div>
 <table class="table">
     <colgroup>
@@ -78,21 +81,27 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr", [contentFormat]);
     <tbody>
         <tr class="tablerow">
             <td>Id</td>
-            <td>A unique content control identifier. It can be used to search for a certain content control and make reference to it in your code.</td>
-            <td>number</td>
-            <td>0</td>
+            <td>A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.</td>
+            <td>integer</td>
+            <td>2</td>
         </tr>
         <tr class="tablerow">
             <td>Tag</td>
-            <td>A tag assigned to the content control. The same tag can be assigned to several content controls so that you can make reference to them in your code.</td>
+            <td>A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code.</td>
             <td>string</td>
             <td>"{tag}"</td>
         </tr>
         <tr class="tablerow">
             <td>Lock</td>
-            <td>A value that defines if it is possible to delete and/or edit the content control or not.</td>
-            <td>number</td>
+            <td>A value which defines if it is possible to delete and/or edit the content control or not.</td>
+            <td>integer</td>
             <td>0</td>
+        </tr>
+        <tr class="tablerow">
+            <td>InternalId</td>
+            <td>A unique internal identifier of the content control.</td>
+            <td>string</td>
+            <td>"1_713"</td>
         </tr>
         <tr class="tablerow">
             <td>Alias</td>
@@ -101,9 +110,15 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr", [contentFormat]);
             <td>"&#8470;1"</td>
         </tr>
         <tr class="tablerow">
+            <td>PlaceHolderText</td>
+            <td>The content control placeholder text.</td>
+            <td>string</td>
+            <td>"placeholder text"</td>
+        </tr>
+        <tr class="tablerow">
             <td>Appearance</td>
             <td>Defines if the content control is shown as the bounding box (<b>1</b>) or not (<b>2</b>).</td>
-            <td>number</td>
+            <td>integer</td>
             <td>1</td>
         </tr>
         <tr class="tablerow">
@@ -114,7 +129,7 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr", [contentFormat]);
                     <li>
                         <b>R</b> - red color component value,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
                         <b>example</b>: 0;
                         <br />
@@ -122,7 +137,7 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr", [contentFormat]);
                     <li>
                         <b>G</b> - green color component value,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
                         <b>example</b>: 0;
                         <br />
@@ -130,7 +145,7 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr", [contentFormat]);
                     <li>
                         <b>B</b> - blue color component value,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
                         <b>example</b>: 255;
                         <br />
@@ -143,6 +158,7 @@ window.Asc.plugin.executeMethod ("GetCurrentContentControlPr", [contentFormat]);
     </tbody>
 </table>
 <div class="mobile-content"></div>
+
 <p>The <em>Lock</em> parameter can have the following values:</p>
 <table class="table">
        <thead>
