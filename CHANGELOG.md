@@ -1,5 +1,7 @@
 # Change Log
 
+- portals: api v12.1.0
+
 - portals: api v12.0.1
 - docbuilder: added the C++ and .Net wrappers
 - docbuilder: v7.2
