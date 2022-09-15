@@ -915,7 +915,8 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     },
     "GetPosInParent": {
       "memberof": "ApiTable",

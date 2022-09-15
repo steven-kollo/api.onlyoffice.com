@@ -622,9 +622,14 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing a container for the document content.\n\t * @constructor\n\t */",

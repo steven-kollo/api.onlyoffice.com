@@ -919,7 +919,8 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing the paragraph properties.\n\t * @constructor\n\t */",

@@ -883,13 +883,13 @@
       "\"aboveBelow\""
     ]
   },
-  "captionType": {
-    "name": "captionType",
-    "description": "<p>Available caption types.</p>",
+  "CaptionLabel": {
+    "name": "CaptionLabel",
+    "description": "<p>Available caption labels.</p>",
     "type": [
-      "\"equation\"",
-      "\"figure\"",
-      "\"table\""
+      "\"Equation\"",
+      "\"Figure\"",
+      "\"Table\""
     ]
   },
   "AxisPos": {

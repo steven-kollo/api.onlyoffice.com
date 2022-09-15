@@ -248,7 +248,8 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing a Paragraph hyperlink.\n\t * @constructor\n\t */",

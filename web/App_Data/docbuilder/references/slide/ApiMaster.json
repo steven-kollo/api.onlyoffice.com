@@ -428,7 +428,16 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bWriteTableStyles",
+          "description": "<p>Specifies whether or not to write used table styles</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
     }
   },
   "comment": "/**\n     * Class representing a slide master.\n     * @constructor\n     */",

@@ -1653,9 +1653,9 @@
       "inherits": null,
       "params": [
         {
-          "type": "captionType",
+          "type": "CaptionLabel | string",
           "name": "sCaption",
-          "description": "<p>Caption type (equation, figure, table).</p>",
+          "description": "<p>caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
           "optional": false
         },
         {
@@ -1701,7 +1701,8 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     },
     "GetPosInParent": {
       "memberof": "ApiParagraph",

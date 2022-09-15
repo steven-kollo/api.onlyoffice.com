@@ -514,9 +514,14 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     },
     "GetPlaceholderText": {
       "memberof": "ApiInlineLvlSdt",

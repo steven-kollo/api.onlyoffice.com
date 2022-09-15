@@ -389,7 +389,16 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "bool",
+          "name": "bWriteTableStyles",
+          "description": "<p>Specifies whether or not to write used table styles</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
     },
     "SlidesToJSON": {
       "memberof": "ApiPresentation",
@@ -440,6 +449,13 @@
           "type": "bool",
           "name": "bWriteAllMasLayouts",
           "description": "<p>Specifies if all child layouts from the slide master will be written to the JSON object or not.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bWriteTableStyles",
+          "description": "<p>Specifies whether or not to write used table styles</p>",
           "optional": true,
           "defaultValue": false
         }

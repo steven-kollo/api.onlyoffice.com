@@ -738,7 +738,8 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing a continuous region in a document. \n\t * Each Range object is determined by the position of the start and end characters.\n\t * @param oElement - The document element that may be Document, Table, Paragraph, Run or Hyperlink.\n\t * @param {Number} Start - The start element of Range in the current Element.\n\t * @param {Number} End - The end element of Range in the current Element.\n\t * @constructor\n\t */",

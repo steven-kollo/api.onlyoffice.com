@@ -199,9 +199,14 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     },
     "GetContent": {
       "memberof": "ApiDocumentContent",

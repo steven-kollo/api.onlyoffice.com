@@ -370,6 +370,13 @@
           "description": "<p>Specifies if the slide master will be written to the JSON object or not.</p>",
           "optional": true,
           "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bWriteTableStyles",
+          "description": "<p>Specifies whether or not to write used table styles</p>",
+          "optional": true,
+          "defaultValue": false
         }
       ]
     }

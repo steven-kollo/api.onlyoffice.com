@@ -628,7 +628,8 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     },
     "GetWidth": {
       "memberof": "ApiDrawing",

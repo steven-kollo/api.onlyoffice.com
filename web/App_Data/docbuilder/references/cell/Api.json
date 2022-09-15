@@ -413,6 +413,31 @@
         }
       ]
     },
+    "GetRangeByNumber": {
+      "memberof": "Api",
+      "name": "GetRangeByNumber",
+      "description": "<p>Returns the ApiRange object by the range reference.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sRange",
+          "description": "<p>The range of cells from the current sheet.</p>",
+          "optional": false
+        }
+      ]
+    },
     "GetMailMergeData": {
       "memberof": "Api",
       "name": "GetMailMergeData",

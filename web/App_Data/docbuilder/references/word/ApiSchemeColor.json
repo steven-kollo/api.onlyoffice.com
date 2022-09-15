@@ -28,7 +28,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
       "see": null,
       "inherits": null
     }

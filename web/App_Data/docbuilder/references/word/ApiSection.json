@@ -385,7 +385,8 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing a document section.\n\t * @constructor\n\t */",
