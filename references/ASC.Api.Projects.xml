@@ -960,7 +960,7 @@
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetEntityFiles(ASC.Projects.Core.Domain.EntityType,System.Int32)">
             <summary>
-            Returns a list of all the files within the entity (project, milestone, task) with the type and ID specified in the request.
+            Returns a list of all the files within the entity (message or task) with the type and ID specified in the request.
             </summary>
             <short>
             Get entity files
@@ -1722,7 +1722,17 @@
             <param name="tagName">Tag name</param>
             <returns>List of tags</returns>
         </member>
-        <member name="M:ASC.Api.Projects.ProjectApi.GetMilestones">
+        <member name="M:ASC.Api.Projects.ProjectApi.GetRecentMilestones">
+            <summary>
+            Returns a list of the recent milestones within all the portal projects.
+            </summary>
+            <short>
+            Get recent milestones
+            </short>
+            <category>Milestones</category>
+            <returns>List of milestones</returns>
+        </member>
+        <member name="M:ASC.Api.Projects.ProjectApi.GetUpcomingMilestones">
             <summary>
             Returns a list of all the upcoming milestones within all the portal projects.
             </summary>

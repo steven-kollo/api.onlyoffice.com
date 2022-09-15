@@ -19,20 +19,21 @@
             <param name="context"></param>
             <param name="fileStorageService"></param>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetRootFolders(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean,System.Boolean)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetRootFolders(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             Returns all the sections matching the parameters specified in the request.
             </summary>
             <short>Get sections</short>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
-            <param name="withsubfolders">Root folders with or without subfolders</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <param name="withoutTrash">Root folders with or without trash</param>
             <param name="withoutAdditionalFolder">Root folders with or without additional folders</param>
             <category>Folders</category>
             <returns>Sections</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetMyFolder(System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetMyFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "My documents" section.
             </summary>
@@ -40,9 +41,11 @@
             <category>Folders</category>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>My documents section contents</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetProjectsFolder(System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetProjectsFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "Projects" section.
             </summary>
@@ -50,9 +53,11 @@
             <category>Folders</category>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>Project section contents</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetCommonFolder(System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetCommonFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "Common" section.
             </summary>
@@ -60,9 +65,11 @@
             <category>Folders</category>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>Common section contents</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetShareFolder(System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetShareFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "Shared with Me" section.
             </summary>
@@ -70,9 +77,11 @@
             <category>Folders</category>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>Shared section contents</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetRecentFolder(System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetRecentFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files located in the "Recent" section.
             </summary>
@@ -80,9 +89,11 @@
             <category>Folders</category>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>Recent section contents</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetFavoritesFolder(System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetFavoritesFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files located in the "Favorites" section.
             </summary>
@@ -90,9 +101,11 @@
             <category>Folders</category>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>Favorite section contents</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetTemplatesFolder(System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetTemplatesFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files located in the "Templates" section.
             </summary>
@@ -100,9 +113,11 @@
             <category>Folders</category>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>Template section contents</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetTrashFolder(System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetTrashFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the "Trash" section.
             </summary>
@@ -110,9 +125,11 @@
             <category>Folders</category>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>Trash section contents</returns>
         </member>
-        <member name="M:ASC.Api.Documents.DocumentsApi.GetFolder(System.String,System.Guid,ASC.Files.Core.FilterType)">
+        <member name="M:ASC.Api.Documents.DocumentsApi.GetFolder(System.String,System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
             Returns the detailed list of files and folders located in the folder with the ID specified in the request.
             </summary>
@@ -123,6 +140,8 @@
             <param name="folderId">Folder ID</param>
             <param name="userIdOrGroupId" optional="true">User or group ID</param>
             <param name="filterType" optional="true">Filter type</param>
+            <param name="searchInContent">Search in content files</param>
+            <param name="withSubfolders">Root folders with or without subfolders</param>
             <returns>Folder contents</returns>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UploadFileToMy(System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">

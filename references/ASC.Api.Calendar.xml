@@ -161,7 +161,7 @@
             <category>Calendars and subscriptions</category>
             <returns>iCal link</returns>
         </member>
-        <member name="M:ASC.Api.Calendar.CalendarApi.GetCalendarCalDavUrl(System.String)">
+        <member name="M:ASC.Api.Calendar.CalendarApi.GetCalendarCalDavUrl(System.String,System.Uri)">
             <summary>
             Returns a link to the CalDav related to the calendar with the ID specified in the request.
             </summary>
@@ -169,6 +169,7 @@
             Get CalDav link
             </short>
             <param name="calendarId">Calendar ID</param>
+            <param name="uri" visible="false">Current URI</param>
             <category>Calendars and subscriptions</category>
             <returns>CalDav link</returns>
         </member>
