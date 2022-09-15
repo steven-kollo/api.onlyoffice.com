@@ -117,38 +117,13 @@ They are taken from <a href="<%= Url.Action("demopreview") %>">test samples</a> 
 We advise you to use this code in your projects to generate signatures.</p>
 <div class="container">
     <ul class="code">
-        <li class="code tab active copy-link" id="csharp-mvc">.Net (C# MVC)</li>
-        <li class="code tab copy-link" id="csharp">.Net (C#)</li>
+        <li class="code tab active copy-link" id="csharp">C#</li>
         <li class="code tab copy-link" id="java">Java</li>
-        <li class="code tab copy-link" id="java-spring">Java Spring</li>
         <li class="code tab copy-link" id="nodejs">Node.js</li>
         <li class="code tab copy-link" id="php">PHP</li>
         <li class="code tab copy-link" id="python">Python</li>
         <li class="code tab copy-link" id="ruby">Ruby</li>
     </ul>
-    <div id="csharp-mvc" class="content active">
-        <pre>
-public static class JwtManager
-{
-    private static readonly string Secret;
-    public static readonly bool Enabled;
-
-    static JwtManager()
-    {
-        Secret = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
-        Enabled = !string.IsNullOrEmpty(Secret);
-    }
-
-    public static string Encode(IDictionary&lt;string, object&gt; payload)
-    {
-        var encoder = new JwtEncoder(new HMACSHA256Algorithm(),
-                                        new JsonNetSerializer(),
-                                        new JwtBase64UrlEncoder());
-        return encoder.Encode(payload, Secret);
-    }
-}
-</pre>
-    </div>
     <div id="csharp" class="content">
         <pre>
 public static class JwtManager
@@ -178,7 +153,8 @@ public static String CreateToken(Map<String, Object> payloadClaims)
 {
     try
     {
-        Signer signer = HMACSigner.newSHA256Signer(GetTokenSecret());
+        String secret = ConfigManager.GetProperty("files.docservice.secret");
+        Signer signer = HMACSigner.newSHA256Signer(secret);
         JWT jwt = new JWT();
         for (String key : payloadClaims.keySet())
         {
@@ -188,30 +164,6 @@ public static String CreateToken(Map<String, Object> payloadClaims)
     }
     catch (Exception e)
     {
-        return "";
-    }
-}
-
-public static String GetTokenSecret()
-{
-    return ConfigManager.GetProperty("files.docservice.secret");
-}
-</pre>
-    </div>
-    <div id="java-spring" class="content">
-        <pre>
-@Value("${files.docservice.secret}")
-private String tokenSecret;
-    
-public String createToken(Map<String, Object> payloadClaims) {
-    try {
-        Signer signer = HMACSigner.newSHA256Signer(tokenSecret);
-        JWT jwt = new JWT();
-        for (String key : payloadClaims.keySet()) {
-            jwt.addClaim(key, payloadClaims.get(key));
-        }
-        return JWT.getEncoder().encode(jwt, signer);
-    } catch (Exception e) {
         return "";
     }
 }
