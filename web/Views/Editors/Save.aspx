@@ -69,7 +69,7 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing.
-        The default conversion start delay time is defined in <b>Document Server</b> configuration file, which can be found at the following path:
+        The default conversion start delay time is defined with the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> parameter in <b>Document Server</b> configuration file, which can be found at the following path:
     </p>
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
     <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
@@ -85,7 +85,7 @@ new DocsAPI.DocEditor("placeholder", {
     <div class="header-gray">Parameters</div>
     <table class="table">
         <colgroup>
-            <col style="width: 300px;" />
+            <col style="width: 310px;" />
             <col />
             <col style="width: 100px;" />
             <col style="width: 100px;" />
@@ -101,7 +101,7 @@ new DocsAPI.DocEditor("placeholder", {
         <tbody>
             <tr class="tablerow">
                 <td>services.CoAuthoring.server.savetimeoutdelay</td>
-                <td>Defines the conversion start delay time (in milliseconds) after the edited file is closed.</td>
+                <td>Defines the conversion start delay time (measured in milliseconds) after the edited file is closed.</td>
                 <td>integer</td>
                 <td>5000</td>
             </tr>
@@ -136,7 +136,7 @@ new DocsAPI.DocEditor("placeholder", {
             The <em>forcesavetype</em> parameter will have the <b>0</b> value when sending the request to the <b>callback handler</b>.</li>
         <li>Enable the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> mode setting it to <b>true</b> in the editor initialization configuration.
             In this case each time the user clicks the <b>Save</b> button, the forcesave will be done, and the <em>forcesavetype</em> parameter will have the <b>1</b> value when sending the request to the <b>callback handler</b>.</li>
-        <li>You can enable the repeating forcesave start in the <b>Document Server</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
+        <li>You can enable <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly" target="_blank">the repeating forcesave start</a> in the <b>Document Server</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
             <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
             <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
 
@@ -161,7 +161,7 @@ new DocsAPI.DocEditor("placeholder", {
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.enable</td>
                         <td>
-                            Specifies enabling the repeating force saving.
+                            Defines if the automatic forcesaving is enabled or not.
                             The default value is <b>false</b>.
                         </td>
                         <td>boolean</td>
@@ -169,7 +169,7 @@ new DocsAPI.DocEditor("placeholder", {
                     </tr>
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.interval</td>
-                        <td>Defines the time interval in minutes for initializing the force save.</td>
+                        <td>Defines the interval time in minutes for initiating the automatic forcesaving.</td>
                         <td>string</td>
                         <td>5m</td>
                     </tr>
@@ -192,12 +192,15 @@ new DocsAPI.DocEditor("placeholder", {
 </pre>
         The <em>forcesavetype</em> parameter will have the <b>2</b> value when sending the request to the <b>callback handler</b>.</li>
     </ul>
+    <note>Please note that you cannot see the document versions created with the force saving option in the document history.
+        The reason is that ONLYOFFICE Docs <a href="<%= Url.Action("history") %>#apply-changes">highlights the changes</a> made from the beginning of the current document session, not from the beginning of the document version.
+        And even if several document versions are created during one session, all changes from this session will be highlighted.</note>
 
 
     <h2 id="assemblyFormatAsOrigin" class="copy-link">Saving in original format</h2>
 
     <p>
-        Starting from version 7.0, the <em>assemblyFormatAsOrigin</em> server setting is enabled by default to save the assembled file in its original format.
+        Starting from version 7.0, the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin" target="_blank">assemblyFormatAsOrigin</a> server setting is enabled by default to save the assembled file in its original format.
         It is used to change the file format from OOXML to ODF or to save files with macros.
     </p>
 
@@ -221,7 +224,7 @@ new DocsAPI.DocEditor("placeholder", {
             <tr class="tablerow">
                 <td>services.CoAuthoring.server.assemblyFormatAsOrigin</td>
                 <td>
-                    Specifies if the assembled file is saved in its original format or not.
+                    Defines if the assembled file is saved in its original format or not.
                     The default value is <b>true</b>.
                 </td>
                 <td>boolean</td>

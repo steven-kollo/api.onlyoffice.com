@@ -25,7 +25,8 @@
         <li><a href="<%= Url.Action("alfresco") %>">ONLYOFFICE Alfresco module package</a></li>
         <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE integration app</a></li>
-        <li><a href="<%= Url.Action("HumHub") %>">HumHub ONLYOFFICE connector</a></li>
+        <li><a href="<%= Url.Action("drupal") %>">Drupal ONLYOFFICE connector module</a></li>
+        <li><a href="<%= Url.Action("humhub") %>">HumHub ONLYOFFICE connector</a></li>
         <li><a href="<%= Url.Action("jira") %>">Jira ONLYOFFICE integration app</a></li>
         <li><a href="<%= Url.Action("liferay") %>">Liferay ONLYOFFICE connector</a></li>
         <li><a href="<%= Url.Action("mattermost") %>">Mattermost ONLYOFFICE integration plugin</a></li>
@@ -37,6 +38,7 @@
         <li><a href="<%= Url.Action("redmine") %>">Redmine ONLYOFFICE integration plugin</a></li>
         <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE integration solution</a></li>
         <li><a href="<%= Url.Action("strapi") %>">Strapi ONLYOFFICE integration plugin</a></li>
+        <li><a href="<%= Url.Action("wordpress") %>">WordPress ONLYOFFICE integration plugin</a></li>
     </ul>
 
     <br />

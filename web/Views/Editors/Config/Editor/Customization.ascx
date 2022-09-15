@@ -773,8 +773,8 @@
                 </ul>
                 The default value is <b>warn</b>.
             </td>
-            <td>boolean</td>
-            <td>true</td>
+            <td>string</td>
+            <td>warn</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
@@ -1049,6 +1049,8 @@
                     </li>
                 </ul>
                 The first option has higher priority.
+                <p></p>
+                Apart from the available editor themes, the user can also customize their own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">color themes</a> for the application interface.
             </td>
             <td>string</td>
             <td>theme-dark</td>

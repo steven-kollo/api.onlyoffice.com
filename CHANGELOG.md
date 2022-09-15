@@ -9,6 +9,15 @@
 - editors: added the live viewer mode to the text document, spreadsheet and presentation editors
 - editors: added the embedview action to the WOPI discovery
 
+- editors: added the information about highlighting document changes in the forcefully saved document versions
+- editors: signature code examples
+- editors: added the Drupal ONLYOFFICE connector module
+- editors: added the Mobile integration page
+- editors: added the WordPress plugin
+
+## 2.8.1
+- docbuilder: fix run examples
+
 ## 2.8.0
 - editors: the services.CoAuthoring.token.inbox.inBody and services.CoAuthoring.token.outbox.inBody parameters for enabling token in body are deprecated
 - editors: added the X-LOOL-WOPI-IsModifiedByUser, X-LOOL-WOPI-IsAutosave and X-LOOL-WOPI-IsExitSave request headers to the PutFile WOPI operation

@@ -70,6 +70,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "ConversionApi",
                 "DemoPreview",
                 "DocumentBuilderApi",
+                "Drupal",
                 "Example/Java",
                 "Example/JavaSpring",
                 "Example/Nodejs",
@@ -100,6 +101,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Mattermost",
                 "Mentions",
                 "Methods",
+                "MobileIntegration",
                 "Moodle",
                 "Nextcloud",
                 "Nuxeo",
@@ -135,6 +137,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
+                "Wordpress"
             };
 
         [ValidateInput(false)]
@@ -292,6 +295,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Drupal()
+        {
+            return View();
+        }
+
         public ActionResult Editor()
         {
             return View();
@@ -338,6 +346,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Methods()
+        {
+            return View();
+        }
+
+        public ActionResult MobileIntegration()
         {
             return View();
         }
@@ -443,6 +456,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("WOPI", (object)catchall);
+        }
+
+        public ActionResult Wordpress()
+        {
+            return View();
         }
     }
 }
