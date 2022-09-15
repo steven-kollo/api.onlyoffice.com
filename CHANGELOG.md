@@ -2,7 +2,7 @@
 
 - plugins: added the onAddComment, onChangeCommentData and onRemoveComment events
 - plugins: added the AcceptReviewChanges, MoveToNextReviewChange and RejectReviewChanges methods
-
+- docbuilder: added the onWorksheetChange event to Spreadsheet API
 - docbuilder: events documentation
 - docbuilder: global member properties
 - editors: added the editorConfig.customization.integrationMode parameter
