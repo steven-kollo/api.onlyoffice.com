@@ -16,24 +16,25 @@
 
 <p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
 
-<nav class="content">
-    <ul class="columns-4" style="list-style: none;">
-        <li><a href="#button">button</a></li>
-        <li><a href="#init">init</a></li>
-        <li><a href="#inputHelper_onSelectItem">inputHelper_onSelectItem</a></li>
-        <li><a href="#onClick">onClick</a></li>
-        <li><a href="#onCommandCallback">onCommandCallback</a></li>
-        <li><a href="#onDocumentContentReady">onDocumentContentReady</a></li>
-        <li><a href="#onEnableMouseEvent">onEnableMouseEvent</a></li>
-        <li><a href="#onExternalMouseUp">onExternalMouseUp</a></li>
-        <li><a href="#onExternalPluginMessage">onExternalPluginMessage</a></li>
-        <li><a href="#onInputHelperClear">onInputHelperClear</a></li>
-        <li><a href="#onInputHelperInput">onInputHelperInput</a></li>
-        <li><a href="#onMethodReturn">onMethodReturn</a></li>
-        <li><a href="#onTargetPositionChanged">onTargetPositionChanged</a></li>
-        <li><a href="#onTranslate">onTranslate</a></li>
-    </ul>
-</nav>
+<ul class="columns-4" style="list-style: none;">
+    <li><a href="#button">button</a></li>
+    <li><a href="#init">init</a></li>
+    <li><a href="#inputHelper_onSelectItem">inputHelper_onSelectItem</a></li>
+    <li><a href="#onBlurContentControl">onBlurContentControl</a></li>
+    <li><a href="#onChangeContentControl">onChangeContentControl</a></li>
+    <li><a href="#onClick">onClick</a></li>
+    <li><a href="#onCommandCallback">onCommandCallback</a></li>
+    <li><a href="#onDocumentContentReady">onDocumentContentReady</a></li>
+    <li><a href="#onEnableMouseEvent">onEnableMouseEvent</a></li>
+    <li><a href="#onExternalMouseUp">onExternalMouseUp</a></li>
+    <li><a href="#onExternalPluginMessage">onExternalPluginMessage</a></li>
+    <li><a href="#onFocusContentControl">onFocusContentControl</a></li>
+    <li><a href="#onInputHelperClear">onInputHelperClear</a></li>
+    <li><a href="#onInputHelperInput">onInputHelperInput</a></li>
+    <li><a href="#onMethodReturn">onMethodReturn</a></li>
+    <li><a href="#onTargetPositionChanged">onTargetPositionChanged</a></li>
+    <li><a href="#onTranslate">onTranslate</a></li>
+</ul>
 
 <h2>Events and their description:</h2>
 <ul>
@@ -169,6 +170,246 @@ window.Asc.plugin.inputHelper_onSelectItem = function(item) {
     window.Asc.plugin.executeMethod("InputText", [item.text, window.Asc.plugin.currentText]);
     window.Asc.plugin.getInputHelper().unShow();
 };
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onBlurContentControl" class="copy-link">onBlurContentControl</b> - the function called to show which content control has been blurred.</p>
+        <div class="header-gray">Parameters</div>
+        <table class="table">
+            <colgroup>
+                <col style="width: 100px;" />
+                <col />
+                <col style="width: 100px;" />
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Parameter</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td>control</td>
+                    <td>
+                        Defines the content control that has been blurred:
+                        <ul>
+                            <li>
+                                <b>Tag</b> - a tag assigned to the content control. The same tag can be assigned to several content controls so that you can make reference to them in your code,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "{tag}";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Id</b> - a unique content control identifier. It can be used to search for a certain content control and make reference to it in your code,
+                                <br />
+                                <b>type</b>: number,
+                                <br />
+                                <b>example</b>: 0;
+                                <br />
+                            </li>
+                            <li>
+                                <b>Lock</b> - a value that defines if it is possible to delete and/or edit the content control or not,
+                                <br />
+                                <b>type</b>: number,
+                                <br />
+                                <b>example</b>: 0;
+                                <br />
+                            </li>
+                            <li>
+                                <b>InternalId</b> -  a unique internal identifier of the content control,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "5_665".
+                                <br />
+                            </li>
+                        </ul>
+                    </td>
+                    <td>object</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+        <p>The <em>Lock</em> parameter can have the following values:</p>
+        <table class="table">
+            <thead>
+                <tr class="tablerow">
+                    <td>Numeric value</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td><b>0</b></td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>1</b></td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>2</b></td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>3</b></td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+
+        <div class="header-gray">Example</div>
+        <pre>
+connector.attachEvent("onBlurContentControl", function(oPr)
+{
+    if (oPr && "BankBIC" === oPr["Tag"])
+    {
+        connector.executeMethod("GetFormValue", [oPr["InternalId"]], function(value)
+        {
+            if ("12345678" !== value)
+                return;
+
+            connector.executeMethod("GetFormsByTag", ["BankAccount"], function(forms)
+            {
+                for (let i = 0; i < forms.length; ++i)
+                {
+                    connector.executeMethod("SetFormValue", [forms[i]["InternalId"], "10101110100000000123"], null);
+                }
+            });
+
+            connector.executeMethod("GetFormsByTag", ["BankName"], function(forms)
+            {
+                for (let i = 0; i < forms.length; ++i)
+                {
+                    connector.executeMethod("SetFormValue", [forms[i]["InternalId"], "OnlyOffice BANK"], null);
+                }
+            });
+
+            connector.executeMethod("GetFormsByTag", ["BankPlace"], function(forms)
+            {
+                for (let i = 0; i < forms.length; ++i)
+                {
+                    connector.executeMethod("SetFormValue", [forms[i]["InternalId"], "Himalayas"], null);
+                }
+            });
+        });
+    }
+    console.log("event: onBlurContentControl");
+});
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onChangeContentControl" class="copy-link">onChangeContentControl</b> - the function called to show which content control has been changed.</p>
+        <div class="header-gray">Parameters</div>
+        <table class="table">
+            <colgroup>
+                <col style="width: 100px;" />
+                <col />
+                <col style="width: 100px;" />
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Parameter</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td>control</td>
+                    <td>
+                        Defines the content control that has been changed:
+                        <ul>
+                            <li>
+                                <b>Tag</b> - a tag assigned to the content control. The same tag can be assigned to several content controls so that you can make reference to them in your code,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "{tag}";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Id</b> - a unique content control identifier. It can be used to search for a certain content control and make reference to it in your code,
+                                <br />
+                                <b>type</b>: number,
+                                <br />
+                                <b>example</b>: 0;
+                                <br />
+                            </li>
+                            <li>
+                                <b>Lock</b> - a value that defines if it is possible to delete and/or edit the content control or not,
+                                <br />
+                                <b>type</b>: number,
+                                <br />
+                                <b>example</b>: 0;
+                                <br />
+                            </li>
+                            <li>
+                                <b>InternalId</b> -  a unique internal identifier of the content control,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "5_665".
+                                <br />
+                            </li>
+                        </ul>
+                    </td>
+                    <td>object</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+        <p>The <em>Lock</em> parameter can have the following values:</p>
+        <table class="table">
+            <thead>
+                <tr class="tablerow">
+                    <td>Numeric value</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td><b>0</b></td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>1</b></td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>2</b></td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>3</b></td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+
+        <div class="header-gray">Example</div>
+        <pre>
+connector.attachEvent("onChangeContentControl", function()
+{
+    console.log("event: onChangeContentControl");
+});
 </pre>
     </li>
 
@@ -358,6 +599,110 @@ window.Asc.plugin.onExternalPluginMessage = function(data) {
         }
     }
 };
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onFocusContentControl" class="copy-link">onFocusContentControl</b> - the function called to show which content control has been focused.</p>
+        <div class="header-gray">Parameters</div>
+        <table class="table">
+            <colgroup>
+                <col style="width: 100px;" />
+                <col />
+                <col style="width: 100px;" />
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Parameter</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td>control</td>
+                    <td>
+                        Defines the content control that has been focused:
+                        <ul>
+                            <li>
+                                <b>Tag</b> - a tag assigned to the content control. The same tag can be assigned to several content controls so that you can make reference to them in your code,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "{tag}";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Id</b> - a unique content control identifier. It can be used to search for a certain content control and make reference to it in your code,
+                                <br />
+                                <b>type</b>: number,
+                                <br />
+                                <b>example</b>: 0;
+                                <br />
+                            </li>
+                            <li>
+                                <b>Lock</b> - a value that defines if it is possible to delete and/or edit the content control or not,
+                                <br />
+                                <b>type</b>: number,
+                                <br />
+                                <b>example</b>: 0;
+                                <br />
+                            </li>
+                            <li>
+                                <b>InternalId</b> -  a unique internal identifier of the content control,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "5_665".
+                                <br />
+                            </li>
+                        </ul>
+                    </td>
+                    <td>object</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+        <p>The <em>Lock</em> parameter can have the following values:</p>
+        <table class="table">
+            <thead>
+                <tr class="tablerow">
+                    <td>Numeric value</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td><b>0</b></td>
+                    <td>No</td>
+                    <td>Yes</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>1</b></td>
+                    <td>No</td>
+                    <td>No</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>2</b></td>
+                    <td>Yes</td>
+                    <td>No</td>
+                </tr>
+                <tr class="tablerow">
+                    <td><b>3</b></td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+
+        <div class="header-gray">Example</div>
+        <pre>
+connector.attachEvent("onFocusContentControl", function()
+{
+    console.log("event: onFocusContentControl");
+});
 </pre>
     </li>
 
