@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: added the Connector class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside
 - editors: added the theme-contrast-dark theme id to the editorConfig.customization.uiTheme parameter
 - editors: added the phone field to the editorConfig.customization.customer parameter
 - editors: added the four letter language codes to the editorConfig.lang parameter
