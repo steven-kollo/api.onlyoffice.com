@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config",
                 "callCommand",
                 "callModule",
+                "changelog",
                 "createInputHelper",
                 "events",
                 "example",
@@ -224,6 +225,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult callModule()
+        {
+            return View();
+        }
+
+        public ActionResult Changelog()
         {
             return View();
         }
