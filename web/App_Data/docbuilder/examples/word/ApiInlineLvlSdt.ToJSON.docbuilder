@@ -6,7 +6,7 @@ oParagraph.AddInlineLvlSdt(oInlineLvlSdt);
 var oRun = Api.CreateRun();
 oRun.AddText("This is an inline text content control.");
 oInlineLvlSdt.AddElement(oRun, 0);
-var sJSON = oInlineLvlSdt.ToJSON();
+var sJSON = oInlineLvlSdt.ToJSON(true);
 oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiInlineLvlSdt object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();

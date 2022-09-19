@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 var oHyperlink = Api.CreateHyperlink("https://api.onlyoffice.com/", "ONLYOFFICE Document Builder", "ONLYOFFICE for developers");
 oParagraph.AddElement(oHyperlink);
-var sJSON = oHyperlink.ToJSON();
+var sJSON = oHyperlink.ToJSON(true);
 oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiHyperlink object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();

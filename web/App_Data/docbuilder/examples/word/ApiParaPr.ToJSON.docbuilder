@@ -8,7 +8,7 @@ oParagraph.SetStyle(oMyStyle);
 oParagraph.AddText("This is the first paragraph. ");
 oParagraph.AddText("The paragraph properties set a border at its left side.");
 oDocument.Push(oParagraph);
-var sJSON = oParaPr.ToJSON();
+var sJSON = oParaPr.ToJSON(true);
 oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiParaPr object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();

@@ -41,7 +41,7 @@ oRun.AddText("Number of paragraph elements after we added a text run: ");
 oRun.AddTabStop();
 oRun.AddText("" + oParagraph.GetElementsCount());
 oDocument.Push(oParagraph);
-var sJSON = oDocument.ToJSON(false, false, true, true);
+var sJSON = oDocument.ToJSON(false, false, true, true, true, true);
 oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiDocument object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();

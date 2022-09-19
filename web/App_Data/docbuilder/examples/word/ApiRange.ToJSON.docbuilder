@@ -4,7 +4,7 @@ var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("ONLYOFFICE Document Builder");
 var oRange = Api.CreateRange(oParagraph, 0, 9);
 oRange.SetBold(true);
-var sJSON = oRange.ToJSON();
+var sJSON = oRange.ToJSON(true, true);
 oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiRange object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();
