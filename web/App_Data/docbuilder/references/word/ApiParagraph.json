@@ -1655,7 +1655,7 @@
         {
           "type": "CaptionLabel | string",
           "name": "sCaption",
-          "description": "<p>caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
+          "description": "<p>The caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
           "optional": false
         },
         {

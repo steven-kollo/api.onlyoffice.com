@@ -251,6 +251,7 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createtextpr") %>">Api/CreateTextPr</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/getposinparent") %>">ApiBlockLvlSdt/GetPosInParent</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/replacebyelement") %>">ApiBlockLvlSdt/ReplaceByElement</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/replacecurrentimage") %>">ApiDocument/ReplaceCurrentImage</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getfontnames") %>">ApiParagraph/GetFontNames</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getposinparent") %>">ApiParagraph/GetPosInParent</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/replacebyelement") %>">ApiParagraph/ReplaceByElement</a> method to Text document API.</li>

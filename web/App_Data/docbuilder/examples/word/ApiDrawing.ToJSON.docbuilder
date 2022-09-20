@@ -7,7 +7,7 @@ var oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);
 var oStroke = Api.CreateStroke(0, Api.CreateNoFill());
 var oDrawing = Api.CreateShape("rect", 5930900, 395605, oFill, oStroke);
 oParagraph.AddDrawing(oDrawing);
-var sJSON = oDrawing.ToJSON();
+var sJSON = oDrawing.ToJSON(true, true);
 oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiDrawing object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();

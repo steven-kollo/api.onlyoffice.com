@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oParagraph = Api.CreateParagraph();
 oParagraph.AddText("This is a new paragraph");
 oDocument.Push(oParagraph);
-var sJSON = oParagraph.ToJSON();
+var sJSON = oParagraph.ToJSON(true, true);
 oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiParagraph object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();

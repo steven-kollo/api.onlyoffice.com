@@ -3,7 +3,7 @@ var oDocument = Api.GetDocument();
 var oBlockLvlSdt = Api.CreateBlockLvlSdt();
 oBlockLvlSdt.GetContent().GetElement(0).AddText("This is a block text content control.");
 oDocument.AddElement(0, oBlockLvlSdt);
-var sJSON = oBlockLvlSdt.ToJSON();
+var sJSON = oBlockLvlSdt.ToJSON(true, true);
 var oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiBlockLvlSdt object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();

@@ -1062,7 +1062,7 @@
         {
           "type": "CaptionLabel | string",
           "name": "sCaption",
-          "description": "<p>caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
+          "description": "<p>The caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
           "optional": false
         }
       ]
@@ -1129,6 +1129,39 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ReplaceCurrentImage": {
+      "memberof": "ApiDocument",
+      "name": "ReplaceCurrentImage",
+      "description": "<p>Replaces the current image with an image specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sImageUrl",
+          "description": "<p>The image source where the image to be inserted should be taken from (currently, only internet URL or Base64 encoded images are supported).</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "Width",
+          "description": "<p>The image width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "Height",
+          "description": "<p>The image height in English measure units.</p>",
+          "optional": false
+        }
+      ]
     },
     "ReplaceDrawing": {
       "memberof": "ApiDocument",

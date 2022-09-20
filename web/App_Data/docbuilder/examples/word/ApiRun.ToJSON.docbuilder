@@ -4,7 +4,7 @@ var oParagraph = oDocument.GetElement(0);
 var oRun = Api.CreateRun();
 oRun.AddText("This is a text run");
 oParagraph.AddElement(oRun);
-var sJSON = oRun.ToJSON();
+var sJSON = oRun.ToJSON(true);
 oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiRun object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();

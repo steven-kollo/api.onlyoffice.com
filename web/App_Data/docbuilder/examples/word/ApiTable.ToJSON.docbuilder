@@ -9,7 +9,7 @@ oTable.SetTableBorderRight("single", 32, 0, 0, 0, 255);
 oTable.SetTableBorderInsideV("single", 32, 0, 255, 0, 0);
 oTable.SetTableBorderInsideH("single", 32, 0, 255, 0, 0);
 oTable.SetWidth("percent", 100);
-var sJSON = oTable.ToJSON();
+var sJSON = oTable.ToJSON(true, true);
 var oParagraph = Api.CreateParagraph();
 oParagraph.AddText("The ApiTable object in the JSON format: ").SetBold(true);
 oParagraph.AddLineBreak();
