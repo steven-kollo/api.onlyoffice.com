@@ -2685,7 +2685,6 @@
     <Content Include="App_Data\docbuilder\references\slide\ApiOleObject.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiComplexForm.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiOleObject.json" />
-    <Content Include="App_Data\docbuilder\references\word\ApiPresentation.json" />
     <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\CaptionLabel.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiChart.SetCategoryName.docbuilder" />

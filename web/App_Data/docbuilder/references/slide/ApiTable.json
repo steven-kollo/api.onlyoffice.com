@@ -255,7 +255,7 @@
         {
           "type": "bool",
           "name": "bWriteTableStyles",
-          "description": "<p>Specifies whether or not to write used table styles</p>",
+          "description": "<p>Specifies whether to write used table styles to the JSON object (true) or not (false).</p>",
           "optional": true,
           "defaultValue": false
         }
