@@ -755,8 +755,8 @@
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
             <td>
-                Defines if document macros will be run.
-                The default value is <b>true</b>.
+                Defines if document macros will be automatically run when the editor opens.
+                The default value is <b>true</b>. The <b>false</b> value hides the <a href="#macrosMode">macros settings</a> from the user.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -764,12 +764,12 @@
         <tr>
             <td id="macrosMode" class="copy-link">macrosMode</td>
             <td>
-                Defines the macro run mode.
+                Defines the macros run mode when autostart is enabled.
                 Can take the following values:
                 <ul>
-                    <li><b>disable</b> - don't run at all;</li>
+                    <li><b>disable</b> - don't run macros at all;</li>
                     <li><b>enable</b> - run all macros automatically;</li>
-                    <li><b>warn</b> - warn about macros and ask permission to run.</li>
+                    <li><b>warn</b> - warn about macros and ask permission to run them.</li>
                 </ul>
                 The default value is <b>warn</b>.
             </td>
