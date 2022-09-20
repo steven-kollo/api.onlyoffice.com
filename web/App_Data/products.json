@@ -45,6 +45,10 @@
                "Item2":"methods"
             },
             {
+               "Item1":"Connector",
+               "Item2":"connector"
+            },
+            {
                "Item1":"Callback handler",
                "Item2":"callback"
             }
