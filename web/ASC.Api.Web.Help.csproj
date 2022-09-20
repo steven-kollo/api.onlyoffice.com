@@ -2461,6 +2461,7 @@
     <Content Include="Views\Plugin\Info.aspx" />
     <Content Include="Views\Plugin\callCommand.aspx" />
     <Content Include="Views\Plugin\callModule.aspx" />
+    <Content Include="Views\Plugin\Changelog.aspx" />
     <Content Include="Views\Plugin\loadModule.aspx" />
     <Content Include="Views\Plugin\createInputHelper.aspx" />
     <Content Include="Views\Plugin\getInputHelper.aspx" />

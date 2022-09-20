@@ -469,6 +469,9 @@
 <div class="treeheader">More information</div>
 <ul class="side-nav root">
     <li>
+        <a href="<%= Url.Action("changelog") %>">Changelog</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("faq") %>">FAQ</a>
     </li>
 </ul>
