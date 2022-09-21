@@ -60,8 +60,10 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apistroke/tojson") %>">ApiStroke/ToJSON</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apistyle/tojson") %>">ApiStyle/ToJSON</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/tojson") %>">ApiTable/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablecell/tojson") %>">ApiTableCell/ToJSON</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablecellpr/tojson") %>">ApiTableCellPr/ToJSON</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/tojson") %>">ApiTablePr/ToJSON</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablerow/tojson") %>">ApiTableRow/ToJSON</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablerowpr/tojson") %>">ApiTableRowPr/ToJSON</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablestylepr/tojson") %>">ApiTableStylePr/ToJSON</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/tojson") %>">ApiTextPr/ToJSON</a> method to Text document API.</li>
@@ -175,10 +177,6 @@
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getselecteddrawings") %>">ApiDocument/GetSelectedDrawings</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/replacedrawing") %>">ApiDocument/ReplaceDrawing</a> method to Text document API.</li>
-        <li>Removed the <em>ApiDocument/GetAllCharts</em> method from Text document API.</li>
-        <li>Removed the <em>ApiDocument/GetAllDrawingObjects</em> method from Text document API.</li>
-        <li>Removed the <em>ApiDocument/GetAllImages</em> method from Text document API.</li>
-        <li>Removed the <em>ApiDocument/GetAllShapes</em> method from Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getallcharts") %>">ApiDocumentContent/GetAllCharts</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getalldrawingobjects") %>">ApiDocumentContent/GetAllDrawingObjects</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getallimages") %>">ApiDocumentContent/GetAllImages</a> method to Text document API.</li>
@@ -206,6 +204,7 @@
     <ul>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject") %>">ApiOleObject</a> class to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createoleobject") %>">Api/CreateOleObject</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getalloleobjects") %>">ApiDocument/GetAllOleObjects</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getalloleobjects") %>">ApiDocumentContent/GetAllOleObjects</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject/getapplicationid") %>">ApiOleObject/GetApplicationId</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apioleobject/getclasstype") %>">ApiOleObject/GetClassType</a> method to Text document API.</li> 
@@ -239,10 +238,42 @@
 
     <p><b>Table methods</b></p>
     <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/getposinparent") %>">ApiTable/GetPosInParent</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/gettabledescription") %>">ApiTable/GetTableDescription</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/gettabletitle") %>">ApiTable/GetTableTitle</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/replacebyelement") %>">ApiTable/ReplaceByElement</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/settabledescription") %>">ApiTable/SetTableDescription</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/settabletitle") %>">ApiTable/SetTableTitle</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/gettabledescription") %>">ApiTablePr/GetTableDescription</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/gettabletitle") %>">ApiTablePr/GetTableTitle</a> method to Text document API.</li> 
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/gettabletitle") %>">ApiTablePr/GetTableTitle</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/settabledescription") %>">ApiTablePr/SetTableDescription</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apitablepr/settabletitle") %>">ApiTablePr/SetTableTitle</a> method to Text document API.</li>
+    </ul>
+    <br />
+
+    <p><b>Run methods</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/getfontnames") %>">ApiRun/GetFontNames</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/setoutline") %>">ApiRun/SetOutLine</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/settextfill") %>">ApiRun/SetTextFill</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirun/getfontnames") %>">ApiRun/GetFontNames</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirun/setoutline") %>">ApiRun/SetOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apirun/settextfill") %>">ApiRun/SetTextFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apirun/getfontnames") %>">ApiRun/GetFontNames</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apirun/setoutline") %>">ApiRun/SetOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apirun/settextfill") %>">ApiRun/SetTextFill</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
+    <p><b>Methods for setting text properties</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/setoutline") %>">ApiTextPr/SetOutLine</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitextpr/settextfill") %>">ApiTextPr/SetTextFill</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/setoutline") %>">ApiTextPr/SetOutLine</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/apitextpr/settextfill") %>">ApiTextPr/SetTextFill</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/sethighlight") %>">ApiTextPr/SetHighlight</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/setoutline") %>">ApiTextPr/SetOutLine</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apitextpr/settextfill") %>">ApiTextPr/SetTextFill</a> method to Presentation API.</li>
     </ul>
     <br />
 
@@ -251,20 +282,20 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/api/createtextpr") %>">Api/CreateTextPr</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/getposinparent") %>">ApiBlockLvlSdt/GetPosInParent</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiblocklvlsdt/replacebyelement") %>">ApiBlockLvlSdt/ReplaceByElement</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getcontent") %>">ApiDocument/GetContent</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/replacecurrentimage") %>">ApiDocument/ReplaceCurrentImage</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getfontnames") %>">ApiParagraph/GetFontNames</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getposinparent") %>">ApiParagraph/GetPosInParent</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/replacebyelement") %>">ApiParagraph/ReplaceByElement</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocumentcontent/getcontent") %>">ApiDocumentContent/GetContent</a> method to Text document API.</li>
     </ul>
     <p class="spoiler_heading spoiler_changelog">More</p>
     <ul class="spoiler_code">
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apirun/getfontnames") %>">ApiRun/GetFontNames</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/getposinparent") %>">ApiTable/GetPosInParent</a> method to Text document API.</li>
-        <li>Added the <a href="<%= Url.Action("textdocumentapi/apitable/replacebyelement") %>">ApiTable/ReplaceByElement</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getfontnames") %>">ApiParagraph/GetFontNames</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getposinparent") %>">ApiParagraph/GetPosInParent</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/replacebyelement") %>">ApiParagraph/ReplaceByElement</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallcharts") %>">ApiWorksheet/GetAllCharts</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getalldrawings") %>">ApiWorksheet/GetAllDrawings</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallimages") %>">ApiWorksheet/GetAllImages</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallshapes") %>">ApiWorksheet/GetAllShapes</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/apiparagraph/sethighlight") %>">ApiParagraph/SetHighlight</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getheight") %>">ApiPresentation/GetHeight</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getwidth") %>">ApiPresentation/GetWidth</a> method to Presentation API.</li>
     </ul>
