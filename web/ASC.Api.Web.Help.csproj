@@ -2695,7 +2695,6 @@
     <Content Include="App_Data\docbuilder\references\slide\ApiOleObject.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiComplexForm.json" />
     <Content Include="App_Data\docbuilder\references\word\ApiOleObject.json" />
-    <Content Include="App_Data\docbuilder\references\word\ApiPresentation.json" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRun.GetFontNames.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRun.SetOutLine.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiRun.SetTextFill.docbuilder" />
