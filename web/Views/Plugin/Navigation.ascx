@@ -380,6 +380,9 @@
         <a href="<%= Url.Action("writingmacros") %>">Writing macros</a>
     </li>
     <li>
+        <a href="<%= Url.Action("debugging") %>">Debugging</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("convertingvbamacros") %>">Converting macros</a>
     </li>
     <li>

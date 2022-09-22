@@ -414,6 +414,10 @@
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
     <Content Include="Content\img\plugins\assign-macro.png" />
+    <Content Include="Content\img\plugins\breakpoint.png" />
+    <Content Include="Content\img\plugins\console-log.png" />
+    <Content Include="Content\img\plugins\debugger.png" />
+    <Content Include="Content\img\plugins\debug-console.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\macros.png" />
     <Content Include="Content\img\plugins\currencies-usd-eur.png" />
@@ -870,6 +874,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\inserttext.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\currencyexchangerates.ascx" />
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
+    <Content Include="Views\Plugin\Macros\Debugging.aspx" />
     <Content Include="Views\Plugin\example\addcommentincell.ascx" />
     <Content Include="Views\Plugin\example\addcustomfields.ascx" />
     <Content Include="Views\Plugin\example\autocomplete.ascx" />
