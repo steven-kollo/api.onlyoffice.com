@@ -1,11 +1,9 @@
 # Change Log
 
-- editors: added the information about highlighting document changes in the forcefully saved document versions
-- editors: signature code examples
 - editors: added the Drupal ONLYOFFICE connector module
 - editors: added the Mobile integration page
 - editors: added the WordPress plugin
-
+- macros: added the Recalculate worksheet values macro sample
 ## 2.8.1
 - docbuilder: fix run examples
 

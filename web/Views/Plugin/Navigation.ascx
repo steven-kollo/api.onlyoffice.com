@@ -424,6 +424,9 @@
             <li>
                 <a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">Currency exchange rates</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/recalculatevalues") %>">Recalculate worksheet values</a>
+            </li>
         </ul>
     <li>
 </ul>

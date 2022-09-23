@@ -164,6 +164,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/setcolumnwidth",
                 "macros/macrosamples/unmergecellrange",
                 "macros/macrosamples/writedatatoworksheetcell",
+                "macros/macrosamples/recalculatevalues",
                 "Objects",
                 "Plugin",
                 "resizeWindow",

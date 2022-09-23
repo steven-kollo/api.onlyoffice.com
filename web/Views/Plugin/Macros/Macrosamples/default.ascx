@@ -87,6 +87,12 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
         <p>In this example we are returning information about the exchange rates for the last several days and fill in the table with the received values.</p></div>
         <p class="block_more"><a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">More</a></p>
     </li>
+    <li class="macro-example">
+        <div class="macro-info"><a href="<%= Url.Action("macrosamples/recalculatevalues") %>"><div class="example-img recalculate-values"></div></a>
+        <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/recalculatevalues") %>">Recalculate worksheet values</a></h2>
+        <p>This macro repeatedly recalculates worksheet cell values within one-second intervals.</p></div>
+        <p class="block_more"><a href="<%= Url.Action("macrosamples/recalculatevalues") %>">More</a></p>
+    </li>
 </ul>
 
 <h2>Support</h2>
