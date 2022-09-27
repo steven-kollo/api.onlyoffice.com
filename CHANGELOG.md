@@ -1,5 +1,6 @@
 # Change Log
 
+- macros: added the Debugging page
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation
 - editors: added the information about highlighting document changes in the forcefully saved document versions
 - editors: signature code examples

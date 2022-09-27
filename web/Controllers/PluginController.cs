@@ -149,6 +149,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Localization",
                 "macros/Macros",
                 "macros/Writing",
+                "macros/Debugging",
                 "macros/ConvertingVBA",
                 "macros/macrosamples",
                 "macros/macrosamples/addchart",
@@ -366,6 +367,10 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Macros/WritingMacros");
         }
 
+        public ActionResult Debugging()
+        {
+            return View("Macros/Debugging");
+        }
 
     }
 }
