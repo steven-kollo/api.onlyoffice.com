@@ -65,7 +65,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config/Editor/Plugins",
                 "Config/Events",
                 "Confluence",
-                "Connector",
                 "Conversion",
                 "ConversionApi",
                 "DemoPreview",
@@ -239,11 +238,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Confluence()
-        {
-            return View();
-        }
-
-        public ActionResult Connector()
         {
             return View();
         }

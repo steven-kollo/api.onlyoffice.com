@@ -2500,7 +2500,6 @@
     <Content Include="Views\Editors\Command\license.ascx" />
     <Content Include="Views\Editors\Command\meta.ascx" />
     <Content Include="Views\Editors\Command\version.ascx" />
-    <Content Include="Views\Editors\Connector.aspx" />
     <Content Include="Views\Editors\Coedit.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
     <Content Include="Views\Editors\Editor.aspx" />
