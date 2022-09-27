@@ -218,9 +218,11 @@ end
     var loc = window.location.hash;
     if (loc != "") {
         var id = loc.substring(1);;
-        $('.browser .tab').removeClass('active');
-        $('.browser .tab[id="'+id  +'"]').addClass('active');
-        $('.content').removeClass('active');
-        $('.content[id="'+id  +'"]').addClass('active');
+        if ($('.browser .tab[id="' + id + '"]').length) {
+            $('.browser .tab').removeClass('active');
+            $('.browser .tab[id="' + id + '"]').addClass('active');
+            $('.content').removeClass('active');
+            $('.content[id="' + id + '"]').addClass('active');
+        }
     }
 </script>
