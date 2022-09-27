@@ -104,10 +104,11 @@
                 <td>"Example File Name.docx"</td>
             </tr>
             <tr>
-                <td id="UserId" class="copy-link">UserId</td>
-                <td>A unique user identifier that is specified by the WOPI server.</td>
+                <td id="Version" class="copy-link">Version</td>
+                <td>The current version of the file based on the server file version schema. Every time the document is edited and saved, the version must be changed.
+                The version values must never repeat for a given file.</td>
                 <td>string</td>
-                <td>"uid-1"</td>
+                <td>"Khirz6zTPdfd7"</td>
             </tr>
         </tbody>
     </table>
@@ -302,6 +303,13 @@
                 <td>integer</td>
                 <td>20</td>
             </tr>
+            <tr>
+                <td id="LastModifiedTime" class="copy-link">LastModifiedTime</td>
+                <td>The last time when the file was modified. This time must always be a UTC time, and must be formatted in ISO 8601 round-trip format.
+                This property can be specified as an alternative to the <a href="#Version">Version</a> property.</td>
+                <td>string</td>
+                <td>"2009-06-15T13:45:30.0000000Z"</td>
+            </tr>
         </tbody>
     </table>
 
@@ -333,6 +341,12 @@
                 <td>A user name. If it is undefined, the WOPI client may be configured to use a placeholder string in some scenarios, or to show no name at all.</td>
                 <td>string</td>
                 <td>"John Smith"</td>
+            </tr>
+            <tr>
+                <td id="UserId" class="copy-link">UserId</td>
+                <td>A unique user identifier that is specified by the WOPI server.</td>
+                <td>string</td>
+                <td>"uid-1"</td>
             </tr>
         </tbody>
     </table>
