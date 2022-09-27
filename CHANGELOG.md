@@ -14,6 +14,7 @@
 - editors: added the Drupal ONLYOFFICE connector module
 - editors: added the Mobile integration page
 - editors: added the WordPress plugin
+- editors: test examples v1.3.0
 - plugins: added the onBlurContentControl, onChangeContentControl and onFocusContentControl events
 - plugins: added the ChangeOleObject, GetAllForms, GetFileToDownload, GetFormsByTag, GetFormValue, GetImageDataFromSelection, GetInstalledPlugins, InstallPlugin, PutImageDataToSelection, RemovePlugin, SetFormValue, ShowButton and UpdatePlugin methods
 - plugins: changed the plugin localization scheme
