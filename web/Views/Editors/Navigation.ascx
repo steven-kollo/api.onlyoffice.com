@@ -141,6 +141,9 @@
                 <a href="<%= Url.Action("comparing") %>">Comparing documents</a>
             </li>
             <li>
+                <a href="<%= Url.Action("viewing") %>">Viewing</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a>
             </li>
         </ul>

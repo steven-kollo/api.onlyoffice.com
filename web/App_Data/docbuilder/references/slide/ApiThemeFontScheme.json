@@ -11,7 +11,7 @@
       },
       "returns": [
         [
-          "\"fontScheme\""
+          "\"themeFontScheme\""
         ]
       ],
       "see": null,
@@ -28,7 +28,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -105,6 +105,23 @@
       "returns": [
         [
           "ApiThemeFontScheme"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiThemeFontScheme",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiThemeFontScheme object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
         ]
       ],
       "see": null,

@@ -107,7 +107,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -189,6 +189,134 @@
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiDocumentContent",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiDocumentContent object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
+    },
+    "GetContent": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetContent",
+      "description": "<p>Returns an array of document elements from the current ApiDocumentContent object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bGetCopies",
+          "description": "<p>Specifies if the copies of the document elements will be returned or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetAllDrawingObjects": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllDrawingObjects",
+      "description": "<p>Returns a collection of drawing objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllShapes": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllShapes",
+      "description": "<p>Returns a collection of shape objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllImages": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllImages",
+      "description": "<p>Returns a collection of image objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiImage>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllCharts": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllCharts",
+      "description": "<p>Returns a collection of chart objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiChart>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllOleObjects": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns a collection of OLE objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\n\t * Class representing a container for paragraphs and tables.\n\t * @param Document\n\t * @constructor\n\t */",

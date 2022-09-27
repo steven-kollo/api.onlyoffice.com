@@ -290,4 +290,32 @@ new DocsAPI.DocEditor("placeholder", {
             </p>
         </li>
     </ol>
+
+    <h2 id="modes" class="copy-link">Co-editing modes</h2>
+    <p>There are two modes to collaborate on documents in real time - <b>Fast</b> and <b>Strict</b>.</p>
+    <p>You can change the co-editing mode using the <a href="<%= Url.Action("config/editor") %>#coEditing">editorConfig.coEditing</a> parameter:</p>
+    <pre>
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "editorConfig": {
+        "coEditing": {
+            "mode": "fast",
+            "change": true
+        },
+        ...
+    },
+    ...
+});
+</pre>
+    <h3 id="fast" class="copy-link">Fast mode</h3>
+    <p>The <b>Fast</b> mode is used by default and defines the real-time co-editing. All changes are saved automatically and the possibility to redo the last undone operation is not available. This mode displays the user cursors and tooltips with their names when they are editing the text.</p>
+    <img alt="Fast mode" src="<%= Url.Content("~/content/img/editor/fast-mode.png") %>" />
+
+    <p></p>
+    <h3 id="strict" class="copy-link">Strict mode</h3>
+    <p>In the <b>Strict</b> mode, you need to use the <b>Save</b> button to sync the changes made by you and other users. Until you click this button, the changes made by others are hidden. When a document is being edited by several users simultaneously, the edited text is marked with dashed lines of different colors.</p>
+    <p>When the user saves the changes by clicking the <b>Save</b> button, the others will receive a note about updates.
+        To accept them and save your own changes to show them to other users, click the <img alt="Save updates" title="Save updates" src="<%= Url.Content("~/content/img/editor/save-updates.png") %>" /> button
+        in the left upper corner of the top toolbar. The updates will be highlighted.</p>
+    <img alt="Strict mode" src="<%= Url.Content("~/content/img/editor/strict-mode.png") %>" />
+
 </asp:Content>

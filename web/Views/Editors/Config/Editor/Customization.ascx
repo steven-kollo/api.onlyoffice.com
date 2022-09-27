@@ -261,6 +261,13 @@
                         <b>example</b>: "John Smith and Co.";
                     </li>
                     <li>
+                        <b>phone</b> - the phone of the company or person who gives access to the editors or the editor authors,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "123456789";
+                    </li>
+                    <li>
                         <b>www</b> - home website address of the above company or person,
                         <br />
                         <b>type</b>: string,
@@ -1035,7 +1042,7 @@
                 Defines the editor theme settings.
                 It can be set in two ways:
                 <ul>
-                    <li><b>theme id</b> - the user sets the theme parameter by its id (<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>),</li>
+                    <li><b>theme id</b> - the user sets the theme parameter by its id (<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>, <b>theme-contrast-dark</b>),</li>
                     <li>
                         <b>default theme</b> - the default dark or light theme value will be set (<b>default-dark</b>, <b>default-light</b>).
                         The default light theme is <b>theme-classic-light</b>.
@@ -1125,6 +1132,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
+                "phone": "123456789",
                 "www": "example.com"
             },
             "features": {

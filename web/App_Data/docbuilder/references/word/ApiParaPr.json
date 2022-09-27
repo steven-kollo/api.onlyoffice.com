@@ -903,6 +903,24 @@
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiParaPr",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiParaPr object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing the paragraph properties.\n\t * @constructor\n\t */",

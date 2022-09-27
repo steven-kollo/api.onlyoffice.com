@@ -250,7 +250,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -267,14 +267,14 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "keepContent",
           "description": "<p>Specifies if the content will be deleted or not.</p>",
           "optional": false
@@ -384,7 +384,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -409,7 +409,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -440,7 +440,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -509,7 +509,7 @@
           "optional": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "isMatchCase",
           "description": "<p>Case sensitive or not.</p>",
           "optional": false
@@ -570,6 +570,66 @@
           "optional": false
         }
       ]
+    },
+    "GetPosInParent": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "GetPosInParent",
+      "description": "<p>Returns the content control position within its parent element.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ReplaceByElement": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "ReplaceByElement",
+      "description": "<p>Replaces the current content control with a new element.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The element to replace the current content control with.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ToJSON": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiBlockLvlSdt object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing a container for the document content.\n\t * @constructor\n\t */",

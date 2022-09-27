@@ -41,7 +41,7 @@
       },
       "returns": [
         [
-          "number"
+          "\"comment\""
         ]
       ],
       "see": null,

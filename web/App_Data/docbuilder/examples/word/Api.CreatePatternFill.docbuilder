@@ -1,0 +1,9 @@
+builder.CreateFile("docx");
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+var oFill = Api.CreatePatternFill("dashDnDiag", Api.CreateRGBColor(255, 224, 204), Api.CreateRGBColor(255, 164, 101));
+var oStroke = Api.CreateStroke(0, Api.CreateNoFill());
+var oDrawing = Api.CreateShape("rect", 5930900, 395605, oFill, oStroke);
+oParagraph.AddDrawing(oDrawing);
+builder.SaveFile("docx", "CreatePatternFill.docx");
+builder.CloseFile();

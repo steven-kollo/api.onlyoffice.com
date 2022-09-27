@@ -121,6 +121,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Strapi",
                 "Troubleshooting",
                 "Try",
+                "Viewing",
                 "WOPI",
                 "WOPI/ApiVsWopi",
                 "WOPI/Discovery",
@@ -433,6 +434,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Try()
+        {
+            return View();
+        }
+
+        public ActionResult Viewing()
         {
             return View();
         }

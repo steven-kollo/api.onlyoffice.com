@@ -13,7 +13,7 @@
       },
       "returns": [
         [
-          "\"document\""
+          "\"paragraph\""
         ]
       ],
       "see": null,
@@ -305,7 +305,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -482,7 +482,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -752,6 +752,23 @@
         }
       ]
     },
+    "GetFontNames": {
+      "memberof": "ApiParagraph",
+      "name": "GetFontNames",
+      "description": "<p>Returns all font names from all elements inside the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<string>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetFontSize": {
       "memberof": "ApiParagraph",
       "name": "SetFontSize",
@@ -783,7 +800,8 @@
       "description": "<p>Specifies a highlighting color which is applied as a background to the contents of the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE, CPE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -1123,6 +1141,23 @@
       "see": null,
       "inherits": null
     },
+    "GetAllOleObjects": {
+      "memberof": "ApiParagraph",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns a collection of OLE objects in the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "GetParentContentControl": {
       "memberof": "ApiParagraph",
       "name": "GetParentContentControl",
@@ -1222,7 +1257,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -1293,7 +1328,7 @@
           "optional": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "beRNewPara",
           "description": "<p>Defines if this method returns a new paragraph (true) or the current paragraph (false).</p>",
           "optional": false
@@ -1311,7 +1346,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -1341,7 +1376,7 @@
           "optional": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "isMatchCase",
           "description": "<p>Case sensitive or not.</p>",
           "optional": false
@@ -1618,9 +1653,9 @@
       "inherits": null,
       "params": [
         {
-          "type": "captionType",
+          "type": "CaptionLabel | string",
           "name": "sCaption",
-          "description": "<p>Caption type (equation, figure, table).</p>",
+          "description": "<p>The caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
           "optional": false
         },
         {
@@ -1648,6 +1683,66 @@
           "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (used only with the &quot;pageNum&quot; sRefType).</p>",
           "optional": true,
           "defaultValue": false
+        }
+      ]
+    },
+    "ToJSON": {
+      "memberof": "ApiParagraph",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiParagraph object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
+    },
+    "GetPosInParent": {
+      "memberof": "ApiParagraph",
+      "name": "GetPosInParent",
+      "description": "<p>Returns the paragraph position within its parent element.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ReplaceByElement": {
+      "memberof": "ApiParagraph",
+      "name": "ReplaceByElement",
+      "description": "<p>Replaces the current paragraph with a new element.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The element to replace the current paragraph with.</p>",
+          "optional": false
         }
       ]
     },
