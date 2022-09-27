@@ -1,14 +1,7 @@
 # Change Log
 
-- macros: added the Debugging page
+## 2.9.0
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation
-- portals: api v12.0.1
-- docbuilder: added the C++ and .Net wrappers
-- docbuilder: v7.2
-- plugins: added the onBlurContentControl, onChangeContentControl and onFocusContentControl events
-- plugins: added the ChangeOleObject, GetAllForms, GetFileToDownload, GetFormsByTag, GetFormValue, GetImageDataFromSelection, GetInstalledPlugins, InstallPlugin, PutImageDataToSelection, RemovePlugin, SetFormValue, ShowButton and UpdatePlugin methods
-- plugins: changed the plugin localization scheme
-
 - editors: added the theme-contrast-dark theme id to the editorConfig.customization.uiTheme parameter
 - editors: added the phone field to the editorConfig.customization.customer parameter
 - editors: added the four letter language codes to the editorConfig.lang parameter
@@ -16,12 +9,18 @@
 - editors: added the information about co-editing modes
 - editors: added the live viewer mode to the text document, spreadsheet and presentation editors
 - editors: added the embedview action to the WOPI discovery
-
 - editors: added the information about highlighting document changes in the forcefully saved document versions
 - editors: signature code examples
 - editors: added the Drupal ONLYOFFICE connector module
 - editors: added the Mobile integration page
 - editors: added the WordPress plugin
+- plugins: added the onBlurContentControl, onChangeContentControl and onFocusContentControl events
+- plugins: added the ChangeOleObject, GetAllForms, GetFileToDownload, GetFormsByTag, GetFormValue, GetImageDataFromSelection, GetInstalledPlugins, InstallPlugin, PutImageDataToSelection, RemovePlugin, SetFormValue, ShowButton and UpdatePlugin methods
+- plugins: changed the plugin localization scheme
+- macros: added the Debugging page
+- docbuilder: added the C++ and .Net wrappers
+- docbuilder: v7.2
+- portals: api v12.0.1
 
 ## 2.8.1
 - docbuilder: fix run examples
