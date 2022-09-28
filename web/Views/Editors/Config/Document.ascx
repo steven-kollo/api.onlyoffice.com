@@ -30,6 +30,7 @@
             <td>
                 Defines the type of the file for the source viewed or edited document.
                 Must be lowercase.
+                The following file types are available: <em>.csv, .djvu, .doc, .docm, .docx, .docxf, .dot, .dotm, .dotx, .epub, .fb2, .fodp, .fods, .fodt, .htm, .html, .mht, .odp, .ods, .odt, .oform, .otp, .ots, .ott, .oxps, .pdf, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf, .txt, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml, .xps</em>.
             </td>
             <td>string</td>
             <td>"docx"</td>
@@ -37,7 +38,7 @@
         <tr class="tablerow">
             <td id="key" class="copy-link">key<span class="required">*</span></td>
             <td>
-                Defines the unique document identifier used for document recognition by the service.
+                Defines the unique document identifier used by the service to recognize the document.
                 In case the known key is sent the document will be taken from the cache.
                 Every time the document is edited and saved, the key must be generated anew.
                 The document url can be used as the <b>key</b> but without the special characters and the length is limited to 128 symbols.
@@ -56,12 +57,17 @@
         </tr>
         <tr class="tablerow">
             <td id="url" class="copy-link">url<span class="required">*</span></td>
-            <td>Defines the absolute URL where the source viewed or edited document is stored.</td>
+            <td>
+                Defines the absolute URL where the source viewed or edited document is stored.
+                Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                Otherwise, an error will occur.
+            </td>
             <td>string</td>
             <td>"https://example.com/url-to-example-document.docx"</td>
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 

@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiChart",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns the type of the ApiChart class.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -20,7 +20,7 @@
     "SetTitle": {
       "memberof": "ApiChart",
       "name": "SetTitle",
-      "description": "<p>Specify the chart title.</p>",
+      "description": "<p>Specifies the chart title.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -53,7 +53,7 @@
     "SetHorAxisTitle": {
       "memberof": "ApiChart",
       "name": "SetHorAxisTitle",
-      "description": "<p>Specify the chart horizontal axis title.</p>",
+      "description": "<p>Specifies the chart horizontal axis title.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -86,7 +86,7 @@
     "SetVerAxisTitle": {
       "memberof": "ApiChart",
       "name": "SetVerAxisTitle",
-      "description": "<p>Specify the chart vertical axis title.</p>",
+      "description": "<p>Specifies the chart vertical axis title.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -119,7 +119,7 @@
     "SetLegendPos": {
       "memberof": "ApiChart",
       "name": "SetLegendPos",
-      "description": "<p>Specify the chart legend position.</p>",
+      "description": "<p>Specifies the chart legend position.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -140,26 +140,33 @@
     "SetLegendFontSize": {
       "memberof": "ApiChart",
       "name": "SetLegendFontSize",
-      "description": "<p>Specifies a legend position</p>",
-      "tags": {
-        "number": "nFontSize"
-      },
-      "returns": [],
-      "see": null,
-      "inherits": null
-    },
-    "SetVerAxisOrientation": {
-      "memberof": "ApiChart",
-      "name": "SetVerAxisOrientation",
-      "description": "<p>Specifies a  vertical axis orientation</p>",
+      "description": "<p>Specifies the chart legend font size.</p>",
       "tags": {},
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "bool",
+          "type": "pt",
+          "name": "nFontSize",
+          "description": "<p>The text size value measured in points.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetVerAxisOrientation": {
+      "memberof": "ApiChart",
+      "name": "SetVerAxisOrientation",
+      "description": "<p>Specifies the vertical axis orientation.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
           "name": "bIsMinMax",
+          "description": "<p>The <code>true</code> value will set the normal data direction for the vertical axis\n(from minimum to maximum). The <code>false</code> value will set the inverted data direction for the vertical axis (from maximum to minimum).</p>",
           "optional": false
         }
       ]
@@ -167,15 +174,16 @@
     "SetHorAxisOrientation": {
       "memberof": "ApiChart",
       "name": "SetHorAxisOrientation",
-      "description": "<p>Specifies a  horizontal axis orientation</p>",
+      "description": "<p>Specifies the horizontal axis orientation.</p>",
       "tags": {},
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bIsMinMax",
+          "description": "<p>The <code>true</code> value will set the normal data direction for the horizontal axis\n(from minimum to maximum). The <code>false</code> value will set the inverted data direction for the horizontal axis (from maximum to minimum).</p>",
           "optional": false
         }
       ]
@@ -222,7 +230,7 @@
     "SetShowPointDataLabel": {
       "memberof": "ApiChart",
       "name": "SetShowPointDataLabel",
-      "description": "<p>Spicifies a show options for data labels</p>",
+      "description": "<p>Spicifies the show options for the chart data labels.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -231,31 +239,37 @@
         {
           "type": "number",
           "name": "nSeriesIndex",
+          "description": "<p>The series index from the array of the data used to build the chart from.</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "nPointIndex",
+          "description": "<p>The point index from this series.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "bShowSerName",
+          "description": "<p>Whether to show or hide the source table column names used for the data which the chart will be build from.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "bShowCatName",
+          "description": "<p>Whether to show or hide the source table row names used for the data which the chart will be build from.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "bShowVal",
+          "description": "<p>Whether to show or hide the chart data values.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "bShowPercent",
+          "description": "<p>Whether to show or hide the percent for the data values (works with stacked chart types).</p>",
           "optional": false
         }
       ]
@@ -263,7 +277,7 @@
     "SetVertAxisTickLabelPosition": {
       "memberof": "ApiChart",
       "name": "SetVertAxisTickLabelPosition",
-      "description": "<p>Spicifies tick labels position vertical axis</p>",
+      "description": "<p>Spicifies tick label position for the vertical axis.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -272,6 +286,7 @@
         {
           "type": "TickLabelPosition",
           "name": "sTickLabelPosition",
+          "description": "<p>The position type of the chart vertical tick labels.</p>",
           "optional": false
         }
       ]
@@ -279,7 +294,7 @@
     "SetHorAxisTickLabelPosition": {
       "memberof": "ApiChart",
       "name": "SetHorAxisTickLabelPosition",
-      "description": "<p>Spicifies tick labels position horizontal axis</p>",
+      "description": "<p>Spicifies tick label position for the horizontal axis.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -288,6 +303,7 @@
         {
           "type": "TickLabelPosition",
           "name": "sTickLabelPosition",
+          "description": "<p>The position type of the chart horizontal tick labels.</p>",
           "optional": false
         }
       ]
@@ -295,7 +311,7 @@
     "SetHorAxisMajorTickMark": {
       "memberof": "ApiChart",
       "name": "SetHorAxisMajorTickMark",
-      "description": "<p>Specifies major tick mark for horizontal axis</p>",
+      "description": "<p>Specifies the major tick mark for the horizontal axis.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -304,6 +320,7 @@
         {
           "type": "TickMark",
           "name": "sTickMark",
+          "description": "<p>The type of tick mark appearance.</p>",
           "optional": false
         }
       ]
@@ -311,7 +328,7 @@
     "SetHorAxisMinorTickMark": {
       "memberof": "ApiChart",
       "name": "SetHorAxisMinorTickMark",
-      "description": "<p>Specifies minor tick mark for horizontal axis</p>",
+      "description": "<p>Specifies the minor tick mark for the horizontal axis.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -320,6 +337,7 @@
         {
           "type": "TickMark",
           "name": "sTickMark",
+          "description": "<p>The type of tick mark appearance.</p>",
           "optional": false
         }
       ]
@@ -327,7 +345,7 @@
     "SetVertAxisMajorTickMark": {
       "memberof": "ApiChart",
       "name": "SetVertAxisMajorTickMark",
-      "description": "<p>Specifies major tick mark for vertical axis</p>",
+      "description": "<p>Specifies the major tick mark for the vertical axis.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -336,6 +354,7 @@
         {
           "type": "TickMark",
           "name": "sTickMark",
+          "description": "<p>The type of tick mark appearance.</p>",
           "optional": false
         }
       ]
@@ -343,7 +362,7 @@
     "SetVertAxisMinorTickMark": {
       "memberof": "ApiChart",
       "name": "SetVertAxisMinorTickMark",
-      "description": "<p>Specifies minor tick mark for vertical axis</p>",
+      "description": "<p>Specifies the minor tick mark for the vertical axis.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -352,6 +371,7 @@
         {
           "type": "TickMark",
           "name": "sTickMark",
+          "description": "<p>The type of tick mark appearance.</p>",
           "optional": false
         }
       ]
@@ -359,7 +379,7 @@
     "SetMajorVerticalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMajorVerticalGridlines",
-      "description": "<p>Specifies major vertical gridline's visual properties</p>",
+      "description": "<p>Specifies the visual properties for the major vertical gridlines.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -368,6 +388,7 @@
         {
           "type": "ApiStroke",
           "name": "oStroke",
+          "description": "<p>The stroke used to create the element shadow.</p>",
           "optional": false
         }
       ]
@@ -375,7 +396,7 @@
     "SetMinorVerticalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMinorVerticalGridlines",
-      "description": "<p>Specifies minor vertical gridline's visual properties</p>",
+      "description": "<p>Specifies the visual properties for the minor vertical gridlines.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -384,6 +405,7 @@
         {
           "type": "ApiStroke",
           "name": "oStroke",
+          "description": "<p>The stroke used to create the element shadow.</p>",
           "optional": false
         }
       ]
@@ -391,7 +413,7 @@
     "SetMajorHorizontalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMajorHorizontalGridlines",
-      "description": "<p>Specifies major horizontal gridline's visual properties</p>",
+      "description": "<p>Specifies the visual properties for the major horizontal gridlines.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -400,6 +422,7 @@
         {
           "type": "ApiStroke",
           "name": "oStroke",
+          "description": "<p>The stroke used to create the element shadow.</p>",
           "optional": false
         }
       ]
@@ -407,7 +430,7 @@
     "SetMinorHorizontalGridlines": {
       "memberof": "ApiChart",
       "name": "SetMinorHorizontalGridlines",
-      "description": "<p>Specifies minor vertical gridline's visual properties</p>",
+      "description": "<p>Specifies the visual properties for the minor horizontal gridlines.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -416,6 +439,7 @@
         {
           "type": "ApiStroke",
           "name": "oStroke",
+          "description": "<p>The stroke used to create the element shadow.</p>",
           "optional": false
         }
       ]
@@ -423,15 +447,16 @@
     "SetHorAxisLablesFontSize": {
       "memberof": "ApiChart",
       "name": "SetHorAxisLablesFontSize",
-      "description": "<p>Specifies font size for labels of horizontal axis</p>",
+      "description": "<p>Specifies font size for the labels of the horizontal axis.</p>",
       "tags": {},
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "number",
+          "type": "pt",
           "name": "nFontSize",
+          "description": "<p>The text size value measured in points.</p>",
           "optional": false
         }
       ]
@@ -439,21 +464,725 @@
     "SetVertAxisLablesFontSize": {
       "memberof": "ApiChart",
       "name": "SetVertAxisLablesFontSize",
-      "description": "<p>Specifies font size for labels of vertical axis</p>",
+      "description": "<p>Specifies font size for the labels of the vertical axis.</p>",
       "tags": {},
       "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "number",
+          "type": "pt",
           "name": "nFontSize",
+          "description": "<p>The text size value measured in points.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "RemoveSeria": {
+      "memberof": "ApiChart",
+      "name": "RemoveSeria",
+      "description": "<p>Removes the specified series from the current chart.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nSeria",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetSeriaValues": {
+      "memberof": "ApiChart",
+      "name": "SetSeriaValues",
+      "description": "<p>Sets values to the specified chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<number>",
+          "name": "aValues",
+          "description": "<p>The array of the data which will be set to the specified chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nSeria",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetXValues": {
+      "memberof": "ApiChart",
+      "name": "SetXValues",
+      "description": "<p>Sets the x-axis values to all chart series. It is used with the scatter charts only.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<string>",
+          "name": "aValues",
+          "description": "<p>The array of the data which will be set to the x-axis data points.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetSeriaName": {
+      "memberof": "ApiChart",
+      "name": "SetSeriaName",
+      "description": "<p>Sets a name to the specified chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>The name which will be set to the specified chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nSeria",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetCategoryName": {
+      "memberof": "ApiChart",
+      "name": "SetCategoryName",
+      "description": "<p>Sets a name to the specified chart category.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sName",
+          "description": "<p>The name which will be set to the specified chart category.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nCategory",
+          "description": "<p>The index of the chart category.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ApplyChartStyle": {
+      "memberof": "ApiChart",
+      "name": "ApplyChartStyle",
+      "description": "<p>Sets a style to the current chart by style ID.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
+    },
+    "SetPlotAreaFill": {
+      "memberof": "ApiChart",
+      "name": "SetPlotAreaFill",
+      "description": "<p>Sets the fill to the chart plot area.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The fill type used to fill the plot area.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetPlotAreaOutLine": {
+      "memberof": "ApiChart",
+      "name": "SetPlotAreaOutLine",
+      "description": "<p>Sets the outline to the chart plot area.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the plot area outline.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetSeriesFill": {
+      "memberof": "ApiChart",
+      "name": "SetSeriesFill",
+      "description": "<p>Sets the fill to the specified chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The fill type used to fill the series.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nSeries",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bAll",
+          "description": "<p>Specifies if the fill will be applied to all series.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "SetSeriesOutLine": {
+      "memberof": "ApiChart",
+      "name": "SetSeriesOutLine",
+      "description": "<p>Sets the outline to the specified chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the series outline.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nSeries",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bAll",
+          "description": "<p>Specifies if the outline will be applied to all series.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "SetDataPointFill": {
+      "memberof": "ApiChart",
+      "name": "SetDataPointFill",
+      "description": "<p>Sets the fill to the data point in the specified chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The fill type used to fill the data point.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nSeries",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nDataPoint",
+          "description": "<p>The index of the data point in the specified chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bAllSeries",
+          "description": "<p>Specifies if the fill will be applied to the specified data point in all series.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "SetDataPointOutLine": {
+      "memberof": "ApiChart",
+      "name": "SetDataPointOutLine",
+      "description": "<p>Sets the outline to the data point in the specified chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the data point outline.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nSeries",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nDataPoint",
+          "description": "<p>The index of the data point in the specified chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bAllSeries",
+          "description": "<p>Specifies if the outline will be applied to the specified data point in all series.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetMarkerFill": {
+      "memberof": "ApiChart",
+      "name": "SetMarkerFill",
+      "description": "<p>Sets the fill to the marker in the specified chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The fill type used to fill the marker.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nSeries",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nMarker",
+          "description": "<p>The index of the marker in the specified chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bAllMarkers",
+          "description": "<p>Specifies if the fill will be applied to all markers in the specified chart series.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "SetMarkerOutLine": {
+      "memberof": "ApiChart",
+      "name": "SetMarkerOutLine",
+      "description": "<p>Sets the outline to the marker in the specified chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the marker outline.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nSeries",
+          "description": "<p>The index of the chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nMarker",
+          "description": "<p>The index of the marker in the specified chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bAllMarkers",
+          "description": "<p>Specifies if the outline will be applied to all markers in the specified chart series.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "SetTitleFill": {
+      "memberof": "ApiChart",
+      "name": "SetTitleFill",
+      "description": "<p>Sets the fill to the chart title.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The fill type used to fill the title.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetTitleOutLine": {
+      "memberof": "ApiChart",
+      "name": "SetTitleOutLine",
+      "description": "<p>Sets the outline to the chart title.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the title outline.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetLegendFill": {
+      "memberof": "ApiChart",
+      "name": "SetLegendFill",
+      "description": "<p>Sets the fill to the chart legend.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The fill type used to fill the legend.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetLegendOutLine": {
+      "memberof": "ApiChart",
+      "name": "SetLegendOutLine",
+      "description": "<p>Sets the outline to the chart legend.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the legend outline.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetAxieNumFormat": {
+      "memberof": "ApiChart",
+      "name": "SetAxieNumFormat",
+      "description": "<p>Sets the specified numeric format to the axis values.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "NumFormat | String",
+          "name": "sFormat",
+          "description": "<p>Numeric format (can be custom format).</p>",
+          "optional": false
+        },
+        {
+          "type": "AxisPos",
+          "name": "sAxiePos",
+          "description": "<p>Axis position.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetSeriaNumFormat": {
+      "memberof": "ApiChart",
+      "name": "SetSeriaNumFormat",
+      "description": "<p>Sets the specified numeric format to the chart series.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "NumFormat | String",
+          "name": "sFormat",
+          "description": "<p>Numeric format (can be custom format).</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "nSeria",
+          "description": "<p>Series index.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetDataPointNumFormat": {
+      "memberof": "ApiChart",
+      "name": "SetDataPointNumFormat",
+      "description": "<p>Sets the specified numeric format to the chart data point.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "NumFormat | String",
+          "name": "sFormat",
+          "description": "<p>Numeric format (can be custom format).</p>",
+          "optional": false
+        },
+        {
+          "type": "Number",
+          "name": "nSeria",
+          "description": "<p>Series index.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "nDataPoint",
+          "description": "<p>The index of the data point in the specified chart series.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bAllSeries",
+          "description": "<p>Specifies if the numeric format will be applied to the specified data point in all series.</p>",
           "optional": false
         }
       ]
     }
   },
-  "comment": "/**\r\n     * Class representing a chart.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a chart.\n     * @constructor\n     */",
   "description": "<p>Class representing a chart.</p>",
   "scope": "global",
   "params": []

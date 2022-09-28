@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiShape",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiShape class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -21,7 +21,25 @@
     "GetDocContent": {
       "memberof": "ApiShape",
       "name": "GetDocContent",
-      "description": "<p>Get the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "description": "<p>Returns the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetContent": {
+      "memberof": "ApiShape",
+      "name": "GetContent",
+      "description": "<p>Returns the shape inner contents where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -39,7 +57,7 @@
     "SetVerticalTextAlign": {
       "memberof": "ApiShape",
       "name": "SetVerticalTextAlign",
-      "description": "<p>Set the vertical alignment for the shape content where a paragraph or text runs can be inserted.</p>",
+      "description": "<p>Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -61,8 +79,13 @@
     "SetPaddings": {
       "memberof": "ApiShape",
       "name": "SetPaddings",
-      "description": "<p>Set text paddings</p>",
-      "tags": {},
+      "description": "<p>Sets the text paddings to the current shape.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE"
+        ]
+      },
       "returns": [],
       "see": null,
       "inherits": null,
@@ -70,21 +93,25 @@
         {
           "type": "EMU",
           "name": "nLeft",
+          "description": "<p>Left padding.</p>",
           "optional": false
         },
         {
           "type": "EMU",
           "name": "nTop",
+          "description": "<p>Top padding.</p>",
           "optional": false
         },
         {
           "type": "EMU",
           "name": "nRight",
+          "description": "<p>Right padding.</p>",
           "optional": false
         },
         {
           "type": "EMU",
           "name": "nBottom",
+          "description": "<p>Bottom padding.</p>",
           "optional": false
         }
       ]
@@ -92,7 +119,7 @@
     "GetNextShape": {
       "memberof": "ApiShape",
       "name": "GetNextShape",
-      "description": "<p>Gets the next inline shape. Throws an error if this inline shape is the last.</p>",
+      "description": "<p>Returns the next inline shape if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -101,7 +128,7 @@
       "returns": [
         [
           "ApiShape",
-          "false"
+          "null"
         ]
       ],
       "see": null,
@@ -110,7 +137,7 @@
     "GetPrevShape": {
       "memberof": "ApiShape",
       "name": "GetPrevShape",
-      "description": "<p>Gets the previous inline shape. Throws an error if this inline shape is the first.</p>",
+      "description": "<p>Returns the previous inline shape if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -119,14 +146,14 @@
       "returns": [
         [
           "ApiShape",
-          "false"
+          "null"
         ]
       ],
       "see": null,
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a shape.\r\n\t * @constructor\r\n\t * */",
+  "comment": "/**\n\t * Class representing a shape.\n\t * @constructor\n\t * */",
   "description": "<p>Class representing a shape.</p>",
   "scope": "global",
   "params": []

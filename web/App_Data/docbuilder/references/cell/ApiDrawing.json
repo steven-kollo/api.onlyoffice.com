@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiDrawing",
       "name": "GetClassType",
-      "description": "<p>Get the type of the class based on this base class.</p>",
+      "description": "<p>Returns a type of the ApiDrawing class.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -20,7 +20,7 @@
     "SetSize": {
       "memberof": "ApiDrawing",
       "name": "SetSize",
-      "description": "<p>Set the size of the object (image, shape, chart) bounding box.</p>",
+      "description": "<p>Sets a size of the object (image, shape, chart) bounding box.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -47,7 +47,7 @@
     "SetPosition": {
       "memberof": "ApiDrawing",
       "name": "SetPosition",
-      "description": "<p>Change the position for the drawing object.\n<note>Please note, that the horizontal nColOffset and vertical nRowOffset offsets are calculated within the limits of\nthe specified nFromCol column and nFromRow row cell only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note></p>",
+      "description": "<p>Changes the position for the drawing object.\n<note>Please note that the horizontal and vertical offsets are calculated within the limits of\nthe specified column and row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note></p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -82,9 +82,103 @@
           "optional": false
         }
       ]
+    },
+    "GetWidth": {
+      "memberof": "ApiDrawing",
+      "name": "GetWidth",
+      "description": "<p>Returns the width of the current drawing.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "EMU"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetHeight": {
+      "memberof": "ApiDrawing",
+      "name": "GetHeight",
+      "description": "<p>Returns the height of the current drawing.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "EMU"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetLockValue": {
+      "memberof": "ApiDrawing",
+      "name": "GetLockValue",
+      "description": "<p>Returns the lock value for the specified lock type of the current drawing.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"noGrp\" | \"noUngrp\" | \"noSelect\" | \"noRot\" | \"noChangeAspect\" | \"noMove\" | \"noResize\" | \"noEditPoints\" | \"noAdjustHandles\" | \"noChangeArrowheads\" | \"noChangeShapeType\" | \"noDrilldown\" | \"noTextEdit\" | \"noCrop\" | \"txBox\"",
+          "name": "sType",
+          "description": "<p>Lock type in the string format.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetLockValue": {
+      "memberof": "ApiDrawing",
+      "name": "SetLockValue",
+      "description": "<p>Sets the lock value to the specified lock type of the current drawing.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "bool"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"noGrp\" | \"noUngrp\" | \"noSelect\" | \"noRot\" | \"noChangeAspect\" | \"noMove\" | \"noResize\" | \"noEditPoints\" | \"noAdjustHandles\" | \"noChangeArrowheads\" | \"noChangeShapeType\" | \"noDrilldown\" | \"noTextEdit\" | \"noCrop\" | \"txBox\"",
+          "name": "sType",
+          "description": "<p>Lock type in the string format.</p>",
+          "optional": false
+        },
+        {
+          "type": "bool",
+          "name": "bValue",
+          "description": "<p>Specifies if the specified lock is applied to the current drawing.</p>",
+          "optional": false
+        }
+      ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a graphical object.\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a graphical object.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a graphical object.</p>",
   "scope": "global",
   "params": []

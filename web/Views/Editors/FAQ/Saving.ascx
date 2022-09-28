@@ -12,7 +12,7 @@
         <p>Normally the final document version is compiled once all the users editing it close the document and the delay time (about 10 seconds) passes. But this behavior can be overriden. To do that the <b>forcesave</b> option is available.</p>
         <p>There are several ways to initiate forced saving:</p>
         <ul>
-            <li>Sending the request to the <a href="<%= Url.Action("command") %>">document command service</a>, using the <b>forcesave</b> value for the <em>c</em> parameter:
+            <li>Sending the request to the <a href="<%= Url.Action("command") %>">document command service</a>, using the <a href="<%= Url.Action("command/forcesave") %>">forcesave</a> value for the <em>c</em> parameter:
                 <pre>{
     "c": "forcesave",
     "key": "Khirz6zTPdfd7",
@@ -56,8 +56,9 @@
 <dl class="faq_block" id="saving_3">
     <dt>How to save the opened document to another document file type?</dt>
     <dd>
+        <p>If the document of a format different from the OOXML (.txt or .ods) is opened, the OOXML format will be saved by default.</p>
         <p>To save the opened document to a format different from the default Office Open XML one, the POST request must be sent to the <b>document conversion service</b>.</p>
-        <p>The details of how the conversion works and why it is needed can be found in the <a href="<%= Url.Action("conversion") %>">this section</a>. The POST request parameters and available responses to it can be found <a href="<%= Url.Action("conversionapi") %>">here</a>.</p>
+        <p>The details of how the conversion works and why it is needed can be found in <a href="<%= Url.Action("conversion") %>">this section</a>. The POST request parameters and available responses to it can be found <a href="<%= Url.Action("conversionapi") %>">here</a>.</p>
     </dd>
 </dl>
 <dl class="faq_block" id="saving_4">
@@ -83,7 +84,7 @@
     <dd>
         <p>Normally the document is not physically saved to the computer hard disk drive in the compiled form when it is being edited. Once the editing is done and all the users who work on the document close it, the file is converted to the Office Open XML format and saved to disk.</p>
         <p>After that the <b>document editing service</b> informs the <b>document storage service</b> that the file is ready and can be downloaded.</p>
-        <p>The time between the end of the editing and the conversion start is set in the <b>default.json</b> configuration file (5000 milliseconds or 5 seconds by default) and can be changed:</p>
+        <p>The time between the end of the editing and the conversion start is set in the <b>default.json</b> configuration file with the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> parameter (5000 milliseconds or 5 seconds by default) and can be changed:</p>
         <pre>{
     "services": {
         "CoAuthoring": {

@@ -15,17 +15,24 @@
         <span class="hdr">Basic concepts</span>
     </h1>
 
-    <p class="dscr">ONLYOFFICE Document Server API is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
+    <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
+
+    <p class="dscr">
+        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> is an open-source office suite that includes editors for text documents, spreadsheets, presentations and fillable forms. 
+        It provides the following features:
+    </p>
+    <ul>
+        <li>creating, editing and viewing text documents, spreadsheets, presentations and fillable forms;</li>
+        <li>collaborating on files with other teammates in real time.</li>
+    </ul>
+    <p>ONLYOFFICE Docs also supports the <b>WOPI protocol</b> that is used to integrate your application with an online office. 
+    Further information about WOPI can be found <a href="<%= Url.Action("wopi") %>">here</a>.</li>
+
+    <p><b>ONLYOFFICE Docs API</b> is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
 
     <p>The API JavaScript file can normally be found in the following editors folder:</p>
     <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>
     <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
-    <div class="note">
-        For <b>Document Server</b> versions prior to 4.0 the path to the API JavaScript file will look like this:
-        <br />
-        <b>https://documentserver/OfficeWeb/apps/api/documents/api.js</b>
-    </div>
-
     <p>The target HTML file where the editors are to be embedded need to have a placeholder <em>div</em> tag, where all the information about the editor parameters will be passed:</p>
 
     <pre>
@@ -49,7 +56,7 @@ config = {
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "callbackUrl": "https://example.com/url-to-callback.ashx"
     }
@@ -68,8 +75,11 @@ config = {
         See the <a href="<%= Url.Action("advanced") %>">Advanced parameters</a> section to find out what these parameters are and how you can change them.
     </p>
 
-    <h2>Support</h2>
-    <p>
-        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
-    </p>
+    <p>To prevent the substitution of important parameters, add an encrypted signature to the requests in the form of <a href="<%= Url.Action("signature/") %>">token</a>.</p>
+
+    <h2>Get help</h2>
+
+    <p>If you have any questions about ONLYOFFICE Docs, try to find them in the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
+    <p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/DocumentServer/issues" target="_blank">GitHub</a>.</p>
+    <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 </asp:Content>

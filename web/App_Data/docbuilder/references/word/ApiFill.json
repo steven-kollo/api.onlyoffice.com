@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiFill",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiFill class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -18,10 +18,27 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiFill",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiFill object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class represent a base class fill\r\n\t * @constructor\r\n\t * */",
-  "description": "<p>Class represent a base class fill</p>",
+  "comment": "/**\n\t * Class representing a base class for fill.\n\t * @constructor\n\t * */",
+  "description": "<p>Class representing a base class for fill.</p>",
   "scope": "global",
   "params": []
 }

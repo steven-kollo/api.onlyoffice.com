@@ -3,7 +3,7 @@
     "GetName": {
       "memberof": "ApiName",
       "name": "GetName",
-      "description": "<p>Returns a String value representing the name of the object.</p>",
+      "description": "<p>Returns a type of the ApiName class.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -20,7 +20,7 @@
     "SetName": {
       "memberof": "ApiName",
       "name": "SetName",
-      "description": "<p>Sets a String value representing the name of the object.</p>",
+      "description": "<p>Sets a string value representing the object name.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -28,7 +28,8 @@
       },
       "returns": [
         [
-          "Error"
+          "Error",
+          "true"
         ]
       ],
       "see": null,
@@ -36,8 +37,8 @@
       "params": [
         {
           "type": "string",
-          "name": "Name",
-          "description": "<p>// new name for range</p>",
+          "name": "sName",
+          "description": "<p>New name for the range.</p>",
           "optional": false
         }
       ]
@@ -58,7 +59,7 @@
     "SetRefersTo": {
       "memberof": "ApiName",
       "name": "SetRefersTo",
-      "description": "<p>Sets the formula that the name is defined to refer to.</p>",
+      "description": "<p>Sets a formula that the name is defined to refer to.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -70,8 +71,8 @@
       "params": [
         {
           "type": "string",
-          "name": "Ref",
-          "description": "<p>// new refers to defined name</p>",
+          "name": "sRef",
+          "description": "<p>The range reference which must contain the sheet name, followed by sign ! and a range of cells.\nExample: &quot;Sheet1!$A$1:$B$2&quot;.</p>",
           "optional": false
         }
       ]
@@ -79,7 +80,7 @@
     "GetRefersTo": {
       "memberof": "ApiName",
       "name": "GetRefersTo",
-      "description": "<p>Returns the formula that the name is defined to refer to.</p>",
+      "description": "<p>Returns a formula that the name is defined to refer to.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -92,10 +93,44 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "GetRefersToRange": {
+      "memberof": "ApiName",
+      "name": "GetRefersToRange",
+      "description": "<p>Returns the ApiRange object by its name.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a names\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a names</p>",
+  "comment": "/**\n\t * Class representing a name.\n\t * @constructor\n\t * @property {string} Name - Sets a name to the active sheet.\n\t * @property {string} RefersTo - Returns or sets a formula that the name is defined to refer to.\n\t * @property {ApiRange} RefersToRange - Returns the ApiRange object by reference.\n\t */",
+  "description": "<p>Class representing a name.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "string",
+      "name": "Name",
+      "description": "<p>Sets a name to the active sheet.</p>"
+    },
+    {
+      "type": "string",
+      "name": "RefersTo",
+      "description": "<p>Returns or sets a formula that the name is defined to refer to.</p>"
+    },
+    {
+      "type": "ApiRange",
+      "name": "RefersToRange",
+      "description": "<p>Returns the ApiRange object by reference.</p>"
+    }
+  ]
 }

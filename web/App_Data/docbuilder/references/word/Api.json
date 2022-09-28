@@ -3,7 +3,7 @@
     "GetDocument": {
       "memberof": "Api",
       "name": "GetDocument",
-      "description": "<p>Get the main document</p>",
+      "description": "<p>Returns the main document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "CreateParagraph": {
       "memberof": "Api",
       "name": "CreateParagraph",
-      "description": "<p>Create a new paragraph.</p>",
+      "description": "<p>Creates a new paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -38,25 +38,26 @@
     "CreateRange": {
       "memberof": "Api",
       "name": "CreateRange",
-      "description": "<p>Create a new paragraph.</p>",
+      "description": "<p>Creates an element range.\nIf you do not specify the start and end positions, the range will be taken from the entire element.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE"
+          "CDE"
         ]
       },
       "returns": [
         [
-          "ApiParagraph"
+          "ApiRange",
+          "null"
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": []
     },
     "CreateTable": {
       "memberof": "Api",
       "name": "CreateTable",
-      "description": "<p>Create a new table with a specified number of rows and columns.</p>",
+      "description": "<p>Creates a new table with a specified number of rows and columns.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -87,7 +88,7 @@
     "CreateRun": {
       "memberof": "Api",
       "name": "CreateRun",
-      "description": "<p>Create a new smaller text block to be inserted to the current paragraph or table.</p>",
+      "description": "<p>Creates a new smaller text block to be inserted to the current paragraph or table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -106,7 +107,7 @@
     "CreateHyperlink": {
       "memberof": "Api",
       "name": "CreateHyperlink",
-      "description": "<p>Create a new hyperlink text block to be inserted to the current paragraph or table.</p>",
+      "description": "<p>Creates a new hyperlink text block to be inserted to the current paragraph or table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -123,19 +124,19 @@
         {
           "type": "string",
           "name": "sLink",
-          "description": "<p>link to</p>",
+          "description": "<p>The hyperlink address.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sDisplay",
-          "description": "<p>display text</p>",
+          "description": "<p>The text to display the hyperlink.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sScreenTipText",
-          "description": "<p>ScreenTip text</p>",
+          "description": "<p>The screen tip text.</p>",
           "optional": false
         }
       ]
@@ -143,7 +144,7 @@
     "CreateImage": {
       "memberof": "Api",
       "name": "CreateImage",
-      "description": "<p>Create an image with the parameters specified.</p>",
+      "description": "<p>Creates an image with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -180,7 +181,7 @@
     "CreateShape": {
       "memberof": "Api",
       "name": "CreateShape",
-      "description": "<p>Create a shape with the parameters specified.</p>",
+      "description": "<p>Creates a shape with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -205,32 +206,36 @@
           "type": "EMU",
           "name": "nWidth",
           "description": "<p>The shape width in English measure units.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 914400
         },
         {
           "type": "EMU",
           "name": "nHeight",
           "description": "<p>The shape height in English measure units.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": 914400
         },
         {
           "type": "ApiFill",
           "name": "oFill",
           "description": "<p>The color or pattern used to fill the shape.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.CreateNoFill()"
         },
         {
           "type": "ApiStroke",
           "name": "oStroke",
           "description": "<p>The stroke used to create the element shadow.</p>",
-          "optional": false
+          "optional": true,
+          "defaultValue": "Api.CreateStroke(0, Api.CreateNoFill())"
         }
       ]
     },
     "CreateChart": {
       "memberof": "Api",
       "name": "CreateChart",
-      "description": "<p>Create a chart with the parameters specified.</p>",
+      "description": "<p>Creates a chart with the parameters specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -286,13 +291,68 @@
           "name": "nStyleIndex",
           "description": "<p>The chart color style index (can be 1 - 48, as described in OOXML specification).</p>",
           "optional": false
+        },
+        {
+          "type": "Array.<NumFormat> | Array.<String>",
+          "name": "aNumFormats",
+          "description": "<p>Numeric formats which will be applied to the series (can be custom formats).\nThe default numeric format is &quot;General&quot;.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CreateOleObject": {
+      "memberof": "Api",
+      "name": "CreateOleObject",
+      "description": "<p>Creates an OLE object with the parameters specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiOleObject"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sImageSrc",
+          "description": "<p>The image source where the image to be inserted should be taken from (currently, only internet URL or Base64 encoded images are supported).</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The OLE object width in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The OLE object height in English measure units.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sData",
+          "description": "<p>The OLE object string data.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sAppId",
+          "description": "<p>The application ID associated with the current OLE object.</p>",
+          "optional": false
         }
       ]
     },
     "CreateRGBColor": {
       "memberof": "Api",
       "name": "CreateRGBColor",
-      "description": "<p>Create an RGB color setting the appropriate values for the red, green and blue color components.</p>",
+      "description": "<p>Creates an RGB color setting the appropriate values for the red, green and blue color components.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -331,7 +391,7 @@
     "CreateSchemeColor": {
       "memberof": "Api",
       "name": "CreateSchemeColor",
-      "description": "<p>Create a complex color scheme selecting from one of the available schemes.</p>",
+      "description": "<p>Creates a complex color scheme selecting from one of the available schemes.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -358,7 +418,7 @@
     "CreatePresetColor": {
       "memberof": "Api",
       "name": "CreatePresetColor",
-      "description": "<p>Create a color selecting it from one of the available color presets.</p>",
+      "description": "<p>Creates a color selecting it from one of the available color presets.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -385,7 +445,7 @@
     "CreateSolidFill": {
       "memberof": "Api",
       "name": "CreateSolidFill",
-      "description": "<p>Create a solid fill which allows to fill the object using a selected solid color as the object background.</p>",
+      "description": "<p>Creates a solid fill to apply to the object using a selected solid color as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -412,7 +472,7 @@
     "CreateLinearGradientFill": {
       "memberof": "Api",
       "name": "CreateLinearGradientFill",
-      "description": "<p>Create a linear gradient fill which allows to fill the object using a selected linear gradient as the object background.</p>",
+      "description": "<p>Creates a linear gradient fill to apply to the object using the selected linear gradient as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -445,10 +505,11 @@
     "CreateRadialGradientFill": {
       "memberof": "Api",
       "name": "CreateRadialGradientFill",
-      "description": "<p>Create a radial gradient fill which allows to fill the object using a selected radial gradient as the object background.</p>",
+      "description": "<p>Creates a radial gradient fill to apply to the object using the selected radial gradient as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
+          "CSE",
           "CPE"
         ]
       },
@@ -471,7 +532,7 @@
     "CreatePatternFill": {
       "memberof": "Api",
       "name": "CreatePatternFill",
-      "description": "<p>Create a pattern fill which allows to fill the object using a selected pattern as the object background.</p>",
+      "description": "<p>Creates a pattern fill to apply to the object using the selected pattern as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -510,7 +571,7 @@
     "CreateBlipFill": {
       "memberof": "Api",
       "name": "CreateBlipFill",
-      "description": "<p>Create a blip fill which allows to fill the object using a selected image as the object background.</p>",
+      "description": "<p>Creates a blip fill to apply to the object using the selected image as the object background.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -543,7 +604,7 @@
     "CreateNoFill": {
       "memberof": "Api",
       "name": "CreateNoFill",
-      "description": "<p>Create no fill and remove the fill from the element.</p>",
+      "description": "<p>Creates no fill and removes the fill from the element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -562,7 +623,7 @@
     "CreateStroke": {
       "memberof": "Api",
       "name": "CreateStroke",
-      "description": "<p>Create a stroke adding shadows to the element.</p>",
+      "description": "<p>Creates a stroke adding shadows to the element.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -595,7 +656,7 @@
     "CreateGradientStop": {
       "memberof": "Api",
       "name": "CreateGradientStop",
-      "description": "<p>Create a gradient stop used for different types of gradients.</p>",
+      "description": "<p>Creates a gradient stop used for different types of gradients.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -628,7 +689,7 @@
     "CreateBullet": {
       "memberof": "Api",
       "name": "CreateBullet",
-      "description": "<p>Create a bullet for a paragraph with the character or symbol specified with the sBullet parameter.</p>",
+      "description": "<p>Creates a bullet for a paragraph with the character or symbol specified with the sSymbol parameter.</p>",
       "tags": {
         "typeofeditors": [
           "CSE",
@@ -654,7 +715,7 @@
     "CreateNumbering": {
       "memberof": "Api",
       "name": "CreateNumbering",
-      "description": "<p>Create a bullet for a paragraph with the character or symbol specified with the sType parameter.</p>",
+      "description": "<p>Creates a bullet for a paragraph with the numbering character or symbol specified with the sType parameter.</p>",
       "tags": {
         "typeofeditors": [
           "CSE",
@@ -686,8 +747,12 @@
     "CreateInlineLvlSdt": {
       "memberof": "Api",
       "name": "CreateInlineLvlSdt",
-      "description": "<p>Create a new inline container</p>",
-      "tags": {},
+      "description": "<p>Creates a new inline container.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiInlineLvlSdt"
@@ -699,8 +764,12 @@
     "CreateBlockLvlSdt": {
       "memberof": "Api",
       "name": "CreateBlockLvlSdt",
-      "description": "<p>Create a new block level container</p>",
-      "tags": {},
+      "description": "<p>Creates a new block level container.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiBlockLvlSdt"
@@ -733,7 +802,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -742,7 +811,7 @@
         {
           "type": "Array.<Array.<String>>",
           "name": "aList",
-          "description": "<p>mail merge data. The first element of the array is the array with names of the merge fields.\nThe rest of the array elements are arrays with values for the merge fields.</p>",
+          "description": "<p>Mail merge data. The first element of the array is the array with names of the merge fields.\nThe rest of the array elements are arrays with values for the merge fields.</p>",
           "optional": false
         }
       ]
@@ -750,7 +819,7 @@
     "GetMailMergeTemplateDocContent": {
       "memberof": "Api",
       "name": "GetMailMergeTemplateDocContent",
-      "description": "<p>Gets the mail merge template doc.</p>",
+      "description": "<p>Returns the mail merge template document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -767,7 +836,7 @@
     "GetMailMergeReceptionsCount": {
       "memberof": "Api",
       "name": "GetMailMergeReceptionsCount",
-      "description": "<p>Gets the mail merge template doc.</p>",
+      "description": "<p>Returns the mail merge receptions count.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -784,7 +853,7 @@
     "ReplaceDocumentContent": {
       "memberof": "Api",
       "name": "ReplaceDocumentContent",
-      "description": "<p>Replaces the content of the main document with the another document content.</p>",
+      "description": "<p>Replaces the main document content with another document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -797,6 +866,7 @@
         {
           "type": "ApiDocumentContent",
           "name": "oApiDocumentContent",
+          "description": "<p>The document content which the main document content will be replaced with.</p>",
           "optional": false
         }
       ]
@@ -804,7 +874,7 @@
     "MailMerge": {
       "memberof": "Api",
       "name": "MailMerge",
-      "description": "<p>Starts the mail merge process</p>",
+      "description": "<p>Starts the mail merge process.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -812,7 +882,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -821,17 +891,36 @@
         {
           "type": "number",
           "name": "nStartIndex",
-          "optional": false
+          "description": "<p>The start index of the document for mail merge process.</p>",
+          "optional": true,
+          "defaultValue": 0
         },
         {
           "type": "number",
           "name": "nEndIndex",
-          "optional": false
-        },
+          "description": "<p>The end index of the document for mail merge process.</p>",
+          "optional": true,
+          "defaultValue": "Api.GetMailMergeReceptionsCount() - 1"
+        }
+      ]
+    },
+    "FromJSON": {
+      "memberof": "Api",
+      "name": "FromJSON",
+      "description": "<p>Converts the specified JSON object into the Document Builder object of the corresponding type.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
         {
-          "type": "bool",
-          "name": "bAll",
-          "description": "<p>if true -&gt; be mail merge all recipients</p>",
+          "type": "JSON",
+          "name": "sMessage",
+          "description": "<p>The JSON object to convert.</p>",
           "optional": false
         }
       ]
@@ -839,76 +928,225 @@
     "AddComment": {
       "memberof": "Api",
       "name": "AddComment",
-      "description": "<p>Adds a comment to the desired element or array of elements.</p>",
-      "tags": {},
-      "returns": [],
+      "description": "<p>Adds a comment to the desired element or array of Runs.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "Array | ApiParagraph | ApiDocument",
+          "type": "Array.<ApiRun> | ApiParagraph | ApiDocument",
           "name": "oElement",
-          "description": "<p>may be Document, Paragraph or Run[]</p>",
+          "description": "<p>The element where a comment will be added. It may be Document, Paragraph or Run[].</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "Comment",
-          "description": "<p>comment</p>",
+          "description": "<p>The comment text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "Autor",
-          "description": "<p>autor's name (not obligatory)</p>",
+          "description": "<p>The author's name (not obligatory).</p>",
           "optional": false
         }
       ]
     },
-    "GetFirstRunInArray": {
+    "ReplaceTextSmart": {
       "memberof": "Api",
-      "name": "GetFirstRunInArray",
-      "description": "<p>Get the Run that is first in position</p>",
-      "tags": {},
+      "name": "ReplaceTextSmart",
+      "description": "<p>Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array",
+          "name": "arrString",
+          "description": "<p>An array of replacement strings.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sParaTab",
+          "description": "<p>A character which is used to specify the tab in the source text.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
+        },
+        {
+          "type": "string",
+          "name": "sParaNewLine",
+          "description": "<p>A character which is used to specify the line break character in the source text.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
+        }
+      ]
+    },
+    "ConvertDocument": {
+      "memberof": "Api",
+      "name": "ConvertDocument",
+      "description": "<p>Converts a document to Markdown or HTML text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
-          "ApiRun"
+          "string"
         ]
       ],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "Array",
-          "name": "Runs",
-          "description": "<p>Array of Runs</p>",
-          "optional": false
+          "type": "\"markdown\" | \"html\"",
+          "name": "sConvertType",
+          "description": "<p>Conversion type.</p>",
+          "optional": true,
+          "defaultValue": "\"markdown\""
+        },
+        {
+          "type": "boolean",
+          "name": "bHtmlHeadings",
+          "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "boolean",
+          "name": "bBase64img",
+          "description": "<p>Defines if the images will be created in the base64 format.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "boolean",
+          "name": "bDemoteHeadings",
+          "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "boolean",
+          "name": "bRenderHTMLTags",
+          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket\nin the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
+          "optional": true,
+          "defaultValue": false
         }
       ]
     },
-    "GetLastRunInArray": {
+    "CreateTextPr": {
       "memberof": "Api",
-      "name": "GetLastRunInArray",
-      "description": "<p>Get the Run that is last in position</p>",
-      "tags": {},
+      "name": "CreateTextPr",
+      "description": "<p>Creates the empty text properties.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
       "returns": [
         [
-          "ApiRun"
+          "ApiTextPr"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "CreateWordArt": {
+      "memberof": "Api",
+      "name": "CreateWordArt",
+      "description": "<p>Creates a Text Art object with the parameters specified.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDrawing"
         ]
       ],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "Array",
-          "name": "Runs",
-          "description": "<p>Array of Runs</p>",
-          "optional": false
+          "type": "ApiTextPr",
+          "name": "oTextPr",
+          "description": "<p>The text properties.</p>",
+          "optional": true,
+          "defaultValue": "Api.CreateTextPr()"
+        },
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The text for the Text Art object.</p>",
+          "optional": true,
+          "defaultValue": "\"Your text here\""
+        },
+        {
+          "type": "TextTransform",
+          "name": "sTransform",
+          "description": "<p>Text transform type.</p>",
+          "optional": true,
+          "defaultValue": "\"textNoShape\""
+        },
+        {
+          "type": "ApiFill",
+          "name": "oFill",
+          "description": "<p>The color or pattern used to fill the Text Art object.</p>",
+          "optional": true,
+          "defaultValue": "Api.CreateNoFill()"
+        },
+        {
+          "type": "ApiStroke",
+          "name": "oStroke",
+          "description": "<p>The stroke used to create the Text Art object shadow.</p>",
+          "optional": true,
+          "defaultValue": "Api.CreateStroke(0, Api.CreateNoFill())"
+        },
+        {
+          "type": "number",
+          "name": "nRotAngle",
+          "description": "<p>Rotation angle.</p>",
+          "optional": true,
+          "defaultValue": 0
+        },
+        {
+          "type": "EMU",
+          "name": "nWidth",
+          "description": "<p>The Text Art width measured in English measure units.</p>",
+          "optional": true,
+          "defaultValue": 1828800
+        },
+        {
+          "type": "EMU",
+          "name": "nHeight",
+          "description": "<p>The Text Art heigth measured in English measure units.</p>",
+          "optional": true,
+          "defaultValue": 1828800
         }
       ]
     }
   },
-  "comment": "/**\r\n\t * Base class\r\n\t * @global\r\n\t * @class\r\n\t * @name Api\r\n\t */",
+  "comment": "/**\n\t * Base class\n\t * @global\n\t * @class\n\t * @name Api\n\t */",
   "description": "<p>Base class</p>",
   "scope": "global"
 }

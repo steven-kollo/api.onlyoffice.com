@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiTableRowPr",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiTableRowPr class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "SetHeight": {
       "memberof": "ApiTableRowPr",
       "name": "SetHeight",
-      "description": "<p>Set the height of the current table row within the current table.</p>",
+      "description": "<p>Sets the height to the current table row within the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -33,7 +33,7 @@
         {
           "type": "\"auto\" | \"atLeast\"",
           "name": "sHRule",
-          "description": "<p>The rule to either apply or ignore the height value to the current table row. Use the <code>&quot;atLeast&quot;</code> value to enable the <code>SetHeight</code> method use.</p>",
+          "description": "<p>The rule to apply the height value to the current table row or ignore it. Use the <code>&quot;atLeast&quot;</code> value to enable the <code>SetHeight</code> method use.</p>",
           "optional": false
         },
         {
@@ -47,7 +47,7 @@
     "SetTableHeader": {
       "memberof": "ApiTableRowPr",
       "name": "SetTableHeader",
-      "description": "<p>Specify that the current table row will be repeated at the top of each new page\nwherever this table is displayed. This gives this table row the behavior of a 'header' row on\neach of these pages. This element can be applied to any number of rows at the top of the\ntable structure in order to generate multi-row table headers.</p>",
+      "description": "<p>Specifies that the current table row will be repeated at the top of each new page\nwherever this table is displayed. This gives this table row the behavior of a 'header' row on\neach of these pages. This element can be applied to any number of rows at the top of the\ntable structure in order to generate multi-row table headers.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -60,14 +60,31 @@
         {
           "type": "boolean",
           "name": "isHeader",
-          "description": "<p>The true value will enable the SetTableHeader method use.</p>",
+          "description": "<p>The true value means that the current table row will be repeated at the top of each new page.</p>",
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiTableRowPr",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiTableRowPr object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a table row properties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a table row properties.</p>",
+  "comment": "/**\n\t * Class representing the table row properties.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing the table row properties.</p>",
   "scope": "global",
   "params": []
 }

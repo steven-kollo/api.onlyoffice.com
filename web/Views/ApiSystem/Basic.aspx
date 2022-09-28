@@ -13,6 +13,9 @@
     <h1>
         <span class="hdr">Basic concepts</span>
     </h1>
+
+    <span class="pvl_product">ONLYOFFICE Hosted Solution</span><span class="pvl_version">v<%= Products.Get("apisystem").Version %></span>
+
     <p class="dscr">
         The ONLYOFFICE Hosted Solution is implemented as REST over HTTP using GET/POST.
         All the resources, like client creation, portal registration, etc, have their own URLs and are designed to be manipulated in isolation.
@@ -121,9 +124,9 @@
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
-    <h2>Support</h2>
-    <p>
-        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
-    </p>
+    <h2>Get help</h2>
+
+    <p>If you have any questions or feature requests about ONLYOFFICE Hosted Solution, please visit <a href="https://forum.onlyoffice.com/c/cloud/31" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 </asp:Content>

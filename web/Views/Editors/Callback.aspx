@@ -40,8 +40,13 @@
             <tr class="tablerow">
                 <td id="actions" class="copy-link">actions</td>
                 <td>
-                    Defines the object received if the new user connected to the document co-editing or disconnected from it.
-                    In the first case the <em>type</em> field value is <b>1</b>, in the other case - <b>0</b>. The <em>userid</em> field value is the identifier of the user who connected to or disconnected from the document co-editing.
+                    Defines the object received when the user takes an action with the document. The <em>type</em> field value can have the following values:
+                    <ul>
+                        <li><b>0</b> - the user disconnects from the document co-editing,</li>
+                        <li><b>1</b> - the new user connects to the document co-editing,</li>
+                        <li><b>2</b> - the user clicks the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave button</a>.</li>
+                    </ul> 
+                    The <em>userid</em> field value is the user identifier.
                 </td>
                 <td>array of object</td>
                 <td>optional</td>
@@ -66,14 +71,24 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="filetype" class="copy-link">filetype</td>
+                <td>
+                    Defines an extension of the document that is downloaded from the link specified with the <a href="#url">url</a> parameter.
+                    The file type is OOXML by default but if the <a href="<%= Url.Action("save") %>#assemblyFormatAsOrigin">assemblyFormatAsOrigin</a> server setting is enabled, the file will be saved in its original format.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="forcesavetype" class="copy-link">forcesavetype</td>
                 <td>
                     Defines the type of initiator when the <a href="<%= Url.Action("save") %>#forcesave">force saving</a> request is performed.
                     Can have the following values:
                     <ul>
-                        <li><b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command") %>">command service</a>,</li>
+                        <li><b>0</b> - the force saving request is performed to the <a href="<%= Url.Action("command/forcesave") %>">command service</a>,</li>
                         <li><b>1</b> - the force saving request is performed each time the saving is done (e.g. the <b>Save</b> button is clicked), which is only available when the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a> option is set to <em>true</em>.</li>
                         <li><b>2</b> - the force saving request is performed by timer with the settings from the server config.</li>
+                        <%--<li><b>3</b> - the force saving request is performed each time the form is submitted (e.g. the <a href="<%= Url.Action("config/editor/customization") %>#submitForm">Submit form</a> button is clicked).</li>--%>
                     </ul>
                     The type is present when the <em>status</em> value is equal to <b>6</b> or <b>7</b> only.
                 </td>
@@ -116,47 +131,91 @@
                 <td id="url" class="copy-link">url</td>
                 <td>
                     Defines the link to the edited document to be saved with the document storage service.
-                    The link is present when the <em>status</em> value is equal to <b>2</b> or <b>3</b> only.
+                    The link is present when the <em>status</em> value is equal to <b>2</b>, <b>3</b>, <b>6</b> or <b>7</b> only.
                 </td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td id="userdata" class="copy-link">userdata</td>
-                <td>Defines the custom information sent to the <a href="<%= Url.Action("command") %>#userdata">command service</a> in case it was present in the request.</td>
+                <td>Defines the custom information sent to the <a href="<%= Url.Action("command/forcesave") %>">command service</a> in case it was present in the request.</td>
                 <td>string</td>
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td id="users" class="copy-link">users</td>
-                <td>Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the <b>users</b> will return the identifier of the user who was the last to edit the document (for status <b>2</b> and status <b>6</b> replies).</td>
+                <td>Defines the list of the identifiers of the users who opened the document for editing; when the document has been changed the <b>users</b> will return the identifier of the user who was the last to edit the document (for <em>status</em> <b>2</b> and <em>status</em> <b>6</b> replies).</td>
                 <td>array of string</td>
                 <td>optional</td>
             </tr>
         </tbody>
     </table>
-    
+    <div class="mobile-content"></div>
+
     <p id="used-callbackUrl" class="copy-link">
         Since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected depending on the <em>status</em> of the request.
         Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
         Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.
     </p>
     <p>
-        <em>Status</em> <b>1</b> is received every user connection to or disconnection from document co-editing.
-        His <em>callbackUrl</em> is used.
+        Since version 7.0, <em>callbackUrl</em> is used from the last tab of the same user. Prior to version 7.0, <em>callbackUrl</em> from the first user tab was used.
     </p>
-    <p>
-        <em>Status</em> <b>2</b> (<b>3</b>) is received <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.
-        The <em>callbackUrl</em> from the user who made the last changes to the file is used.
-    </p>
-    <p>
-        <em>Status</em> <b>4</b> is received after the document is closed for editing with no changes by the last user.
-        His <em>callbackUrl</em> is used.
-    </p>
-    <p>
-        <em>Status</em> <b>6</b> (<b>7</b>) is received when the force saving request is performed.
-        The <em>callbackUrl</em> from the user who made the last changes to the file is used.
-    </p>
+
+    <div id="status-descr" class="copy-link header-gray">Possible document statuses and their description</div>
+
+    <table class="error-table">
+        <colgroup>
+            <col style="width: 105px;" />
+            <col />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Status</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td id="status1" class="copy-link"><em>Status</em> <b>1</b></td>
+                <td>
+                    <p>It is received every user connection to or disconnection from document co-editing. Their <em>callbackUrl</em> is used.</p>
+                    <p>Please note that the <em>status</em> <b>1</b> can be also received when the user is returned to the document with no changes after the Internet problems. This situation can be described as follows:</p>
+                    <ul>
+                        <li>When the user opens a document, the <em>status</em> <b>1</b> is sent.</li>
+                        <li>If the Internet connection is lost and the user has not made any changes to the document, the <em>status</em> <b>4</b> is sent. 
+                            An error is displayed on the screen and the document is opened in the viewer.</li>
+                        <li>Within 100 seconds, the Internet connection is restored, the user is reconnected to the document and the <em>status</em> <b>1</b> is sent again.</li>
+                        <li>Now the user can continue to edit the document. The <em>status</em> <b>2</b> or <b>4</b> will be received depending on whether the user made any changes to the document or not.</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr class="tablerow">
+                <td id="status2" class="copy-link"><em>Status</em> <b>2</b> (<b>3</b>)</td>
+                <td>
+                    <p>It is received <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> after the document is closed for editing with the identifier of the user who was the last to send the changes to the document editing service.
+                        The <em>callbackUrl</em> from the user who made the last changes to the file is used.</p>
+                </td>
+            </tr>
+            <tr class="tablerow">
+                <td id="status4" class="copy-link"><em>Status</em> <b>4</b></td>
+                <td>
+                    <p>It is received after the document is closed for editing with no changes by the last user. Their <em>callbackUrl</em> is used.</p>
+                </td>
+            </tr>
+            <tr class="tablerow">
+                <td id="status6" class="copy-link"><em>Status</em> <b>6</b> (<b>7</b>)</td>
+                <td>
+                    <p>It is received when the force saving request is performed.</p>
+                    <p>The <em>callbackUrl</em> depends on <em>forcesavetype</em> parameter:</p>
+                    <ul>
+                        <li>If <em>forcesavetype</em> parameter is set to <b>1</b>, the <em>callbackUrl</em> from the user who clicked the <b>Save</b> button is used.</li>
+                        <li>If <em>forcesavetype</em> parameter is set to <b>0</b> or <b>2</b>, the <em>callbackUrl</em> from the user who made the last changes to the file is used.</li>
+                    </ul>
+                    <p>Starting from version 5.5 to version 6.1, the <em>callbackUrl</em> from the user who made the last changes to the file is always used.</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <div id="status-1" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service when two users are co-editing the document</div>
     <pre>
@@ -177,6 +236,7 @@
         "changes": changes,
         "serverVersion": serverVersion
     },
+    "filetype": "docx",
     "key": "Khirz6zTPdfd7",
     "status": 2,
     "url": "https://documentserver/url-to-edited-document.docx",
@@ -192,7 +252,7 @@
 }
 </pre>
 
-    <div id="status-6" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command") %>">forcesave</a> command had been received</div>
+    <div id="status-6" class="header-gray copy-link">Sample of JSON object sent to the "callbackUrl" address by document editing service after the <a href="<%= Url.Action("command/forcesave") %>">forcesave</a> command had been received</div>
     <pre>
 {
     "changesurl": "https://documentserver/url-to-changes.zip",
@@ -201,6 +261,7 @@
         "changes": changes,
         "serverVersion": serverVersion
     },
+    "filetype": "docx",
     "key": "Khirz6zTPdfd7",
     "status": 6,
     "url": "https://documentserver/url-to-edited-document.docx",

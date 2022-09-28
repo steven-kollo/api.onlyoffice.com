@@ -43,6 +43,21 @@
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
+        <tr>
+            <td id="favorite" class="copy-link">favorite</td>
+            <td>
+                Defines the highlighting state of the <em>Favorite</em> icon.
+                When the user clicks the icon, the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event is called.
+                If the parameter is <em>undefined</em>, the <em>Favorite</em> icon is not displayed at the editor window header.
+            </td>
+            <td>boolean</td>
+            <td>true</td>
+        </tr>
+        <tr class="tablerow">
+            <td colspan="4">
+                <img width="832px" src="<%= Url.Content("~/content/img/editor/favorite.png") %>" alt="" />
+            </td>
+        </tr>
         <tr class="tablerow">
             <td id="folder" class="copy-link">folder</td>
             <td>Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).</td>
@@ -60,17 +75,24 @@
             <td>Displays the information about the settings which allow to share the document with other users:
                 <ul>
                     <li>
-                        <b>permissions</b> - the access rights for the user with the name above.
-                        Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>
+                        <b>isLink</b> - changes the user icon to the link icon,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: boolean,
                         <br />
-                        <b>example</b>: "Full Access"
+                        <b>example</b>: false;
                     </li>
                     <li>
-                        <b>user</b> - the name of the user the document will be shared with
+                        <b>permissions</b> - the access rights for the user with the name above.
+                        Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>,
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Full Access";
+                    </li>
+                    <li>
+                        <b>user</b> - the name of the user the document will be shared with,
+                        <br />
+                        <b>type</b>: string,
                         <br />
                         <b>example</b>: "John Smith".
                     </li>
@@ -97,12 +119,14 @@
         </tr>
     </tbody>
 </table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Example</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "info": {
+            "favorite": true,
             "folder": "Example Files",
             "owner": "John Smith",
             "sharingSettings": [
@@ -111,8 +135,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                     "user": "John Smith"
                 },
                 {
+                    "isLink": true,
                     "permissions": "Read Only",
-                    "user": "Kate Cage"
+                    "user": "External link"
                 },
                 ...
             ],

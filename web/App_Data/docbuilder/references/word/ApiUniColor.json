@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiUniColor",
       "name": "GetClassType",
-      "description": "<p>Get the type of the class based on this base class.</p>",
+      "description": "<p>Returns a type of the ApiUniColor class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -18,10 +18,27 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiUniColor",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiUniColor object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a base class for color types\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a base class for color types</p>",
+  "comment": "/**\n\t * Class representing a base class for color types.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing a base class for color types.</p>",
   "scope": "global",
   "params": []
 }

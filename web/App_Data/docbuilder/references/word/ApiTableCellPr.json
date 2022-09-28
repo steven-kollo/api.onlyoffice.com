@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiTableCellPr",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiTableCellPr class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "SetShd": {
       "memberof": "ApiTableCellPr",
       "name": "SetShd",
-      "description": "<p>Specify the shading applied to the contents of the table cell.</p>",
+      "description": "<p>Specifies the shading applied to the contents of the table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -57,7 +57,7 @@
         {
           "type": "boolean",
           "name": "isAuto",
-          "description": "<p>The true value will disable table cell contents shading.</p>",
+          "description": "<p>The true value disables the table cell contents shading.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -66,7 +66,7 @@
     "SetCellMarginBottom": {
       "memberof": "ApiTableCellPr",
       "name": "SetCellMarginBottom",
-      "description": "<p>Specify the amount of space which will be left between the bottom extent of the cell contents and the border\nof a specific table cell within a table.</p>",
+      "description": "<p>Specifies an amount of space which will be left between the bottom extent of the cell contents and the border\nof a specific table cell within a table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -87,7 +87,7 @@
     "SetCellMarginLeft": {
       "memberof": "ApiTableCellPr",
       "name": "SetCellMarginLeft",
-      "description": "<p>Specify the amount of space which will be left between the left extent of the cell contents and\nthe border of a specific table cell within a table.</p>",
+      "description": "<p>Specifies an amount of space which will be left between the left extent of the cell contents and\nthe border of a specific table cell within a table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -100,7 +100,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>The value for the amount of space to the left extent of the cell measured in twentieths\nof a point (1/1440 of an inch). If this value is <code>null&lt;c/ode&gt;, then default table cell left margin will be used, otherwise\nthe table cell left margin will be overridden with the specified value for the current cell.</p>",
+          "description": "<p>The value for the amount of space to the left extent of the cell measured in twentieths\nof a point (1/1440 of an inch). If this value is <code>null</code>, then default table cell left margin will be used, otherwise\nthe table cell left margin will be overridden with the specified value for the current cell.</p>",
           "optional": false
         }
       ]
@@ -108,7 +108,7 @@
     "SetCellMarginRight": {
       "memberof": "ApiTableCellPr",
       "name": "SetCellMarginRight",
-      "description": "<p>Specify the amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.</p>",
+      "description": "<p>Specifies an amount of space which will be left between the right extent of the cell contents and the border of a specific table cell within a table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -129,7 +129,7 @@
     "SetCellMarginTop": {
       "memberof": "ApiTableCellPr",
       "name": "SetCellMarginTop",
-      "description": "<p>Specify the amount of space which will be left between the upper extent of the cell contents\nand the border of a specific table cell within a table.</p>",
+      "description": "<p>Specifies an amount of space which will be left between the upper extent of the cell contents\nand the border of a specific table cell within a table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -150,7 +150,7 @@
     "SetCellBorderBottom": {
       "memberof": "ApiTableCellPr",
       "name": "SetCellBorderBottom",
-      "description": "<p>Set the border which will be displayed at the bottom of the current table cell.</p>",
+      "description": "<p>Sets the border which will be displayed at the bottom of the current table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -201,7 +201,7 @@
     "SetCellBorderLeft": {
       "memberof": "ApiTableCellPr",
       "name": "SetCellBorderLeft",
-      "description": "<p>Set the border which will be displayed to the left of the current table cell.</p>",
+      "description": "<p>Sets the border which will be displayed to the left of the current table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -252,7 +252,7 @@
     "SetCellBorderRight": {
       "memberof": "ApiTableCellPr",
       "name": "SetCellBorderRight",
-      "description": "<p>Set the border which will be displayed to the right of the current table cell.</p>",
+      "description": "<p>Sets the border which will be displayed to the right of the current table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -303,7 +303,7 @@
     "SetCellBorderTop": {
       "memberof": "ApiTableCellPr",
       "name": "SetCellBorderTop",
-      "description": "<p>Set the border which will be displayed at the top of the current table cell.</p>",
+      "description": "<p>Sets the border which will be displayed at the top of the current table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -354,7 +354,7 @@
     "SetWidth": {
       "memberof": "ApiTableCellPr",
       "name": "SetWidth",
-      "description": "<p>Set the preferred width for the current table cell.</p>",
+      "description": "<p>Sets the preferred width to the current table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -381,7 +381,7 @@
     "SetVerticalAlign": {
       "memberof": "ApiTableCellPr",
       "name": "SetVerticalAlign",
-      "description": "<p>Specify the vertical alignment for text contents within the current table cell.</p>",
+      "description": "<p>Specifies the vertical alignment for the text contents within the current table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -402,7 +402,7 @@
     "SetTextDirection": {
       "memberof": "ApiTableCellPr",
       "name": "SetTextDirection",
-      "description": "<p>Specify the direction of the text flow for this table cell.</p>",
+      "description": "<p>Specifies the direction of the text flow for this table cell.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -423,7 +423,7 @@
     "SetNoWrap": {
       "memberof": "ApiTableCellPr",
       "name": "SetNoWrap",
-      "description": "<p>Specify how this table cell is laid out when the parent table is displayed in a document. This setting\nonly affects the behavior of the cell when the {@link ApiTablePr#SetTableLayout} table layout for this table is set to use the <code>&quot;autofit&quot;</code> algorithm.</p>",
+      "description": "<p>Specifies how the current table cell is laid out when the parent table is displayed in a document. This setting\nonly affects the behavior of the cell when the {@link ApiTablePr#SetTableLayout} table layout for this table is set to use the <code>&quot;autofit&quot;</code> algorithm.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -436,14 +436,31 @@
         {
           "type": "boolean",
           "name": "isNoWrap",
-          "description": "<p>The true value will enable the <code>SetNoWrap</code> method use.</p>",
+          "description": "<p>The true value means that the current table cell will not be wrapped in the parent table.</p>",
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiTableCellPr",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiTableCellPr object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a table cell proprties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a table cell proprties.</p>",
+  "comment": "/**\n\t * Class representing the table cell properties.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing the table cell properties.</p>",
   "scope": "global",
   "params": []
 }

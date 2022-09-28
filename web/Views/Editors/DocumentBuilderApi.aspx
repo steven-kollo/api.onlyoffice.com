@@ -32,6 +32,7 @@
                 <td>Parameter</td>
                 <td>Description</td>
                 <td>Type</td>
+                <td>Presence</td>
             </tr>
         </thead>
         <tbody>
@@ -48,6 +49,7 @@
                     The default value is <b>false</b>.
                 </td>
                 <td>boolean</td>
+                <td>optional</td>
             </tr>
             <tr class="tablerow">
                 <td id="key" class="copy-link">key</td>
@@ -57,6 +59,7 @@
                     When the synchronous request is used (the <em>async</em> parameter is set to <b>false</b>), this parameter is not required.
                 </td>
                 <td>string</td>
+                <td>required</td>
             </tr>
             <tr class="tablerow">
                 <td id="token" class="copy-link">token</td>
@@ -68,9 +71,11 @@
                 <td id="url" class="copy-link">url</td>
                 <td>Defines the absolute URL to the .docbuilder file.</td>
                 <td>string</td>
+                <td>required</td>
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <p>
         The <em>.docbuilder</em> file contains the script used to generate the output document file (text document, spreadsheet or presentation), specifies the output file format and name.
@@ -167,7 +172,7 @@
 </pre>
 
     <div class="header-gray">Possible error codes and their description</div>
-    <table class="table">
+    <table class="error-table">
         <colgroup>
             <col style="width: 105px;" />
             <col />

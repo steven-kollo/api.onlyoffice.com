@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiRGBColor",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiRGBColor class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -18,10 +18,27 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiRGBColor",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiRGBColor object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing RGB color\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing RGB color</p>",
+  "comment": "/**\n\t * Class representing an RGB Color.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing an RGB Color.</p>",
   "scope": "global",
   "params": []
 }

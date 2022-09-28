@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiImage",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiImage class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -21,7 +21,7 @@
     "GetNextImage": {
       "memberof": "ApiImage",
       "name": "GetNextImage",
-      "description": "<p>Gets the next inline image. Throws an error if this inline image is the last.</p>",
+      "description": "<p>Returns the next inline image if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -30,7 +30,7 @@
       "returns": [
         [
           "ApiImage",
-          "false"
+          "null"
         ]
       ],
       "see": null,
@@ -39,7 +39,7 @@
     "GetPrevImage": {
       "memberof": "ApiImage",
       "name": "GetPrevImage",
-      "description": "<p>Gets the previous inline image. Throws an error if this inline image is the first.</p>",
+      "description": "<p>Returns the previous inline image if exists.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -48,15 +48,15 @@
       "returns": [
         [
           "ApiImage",
-          "false"
+          "null"
         ]
       ],
       "see": null,
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a image.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a image.</p>",
+  "comment": "/**\n\t * Class representing an image.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing an image.</p>",
   "scope": "global",
   "params": []
 }

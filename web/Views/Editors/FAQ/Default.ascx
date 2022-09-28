@@ -31,6 +31,7 @@
     <li><a href="<%= Url.Action("faq/sharing") %>#sharing_7">How to disable/enable the possibility to download the file?</a></li>
     <li><a href="<%= Url.Action("faq/sharing") %>#sharing_8">How to prevent a document from being printed?</a></li>
     <li><a href="<%= Url.Action("faq/sharing") %>#sharing_9">How to view and change sharing settings for a certain document?</a></li>
+    <li><a href="<%= Url.Action("faq/sharing") %>#sharing_10">How to restrict commenting?</a></li>
 </ul>
 
 <h5><a class="link_in_heading" href="<%= Url.Action("faq/embedding") %>">Embedding questions</a></h5>
@@ -81,6 +82,7 @@
 <ul class="faq_all_list">
     <li><a href="<%= Url.Action("faq/managingversions") %>#versions_1">Which methods can be used when working with the document history events?</a></li>
     <li><a href="<%= Url.Action("faq/managingversions") %>#versions_2">How to display a document with highlighted changes?</a></li>
+    <li><a href="<%= Url.Action("faq/managingversions") %>#versions_3">Why is a new version not shown in the document history after I forcefully save a document?</a></li>
 </ul>
 
 <h5><a class="link_in_heading" href="<%= Url.Action("faq/saving") %>">Saving questions</a></h5>
@@ -99,4 +101,22 @@
 <ul class="faq_all_list">
     <li><a href="<%= Url.Action("faq/renaming") %>#renaming_1">How to rename the created document?</a></li>
     <li><a href="<%= Url.Action("faq/renaming") %>#renaming_2">How to update the name of the document for all collaborative editors?</a></li>
+</ul>
+
+<h5><a class="link_in_heading" href="<%= Url.Action("faq/usingwopi") %>">Using WOPI</a></h5>
+<p class="dscr">The questions concerning using WOPI are in this section.</p>
+<ul class="faq_all_list">
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_1">How to enable WOPI?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_2">How can I configure the Document Server to accept WOPI requests only from the trusted integrator?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_3">Why do I need the discovery XML and how can I get it?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_4">How to customize the editor behavior via WOPI?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_5">How to create an online office session within the application?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_6">How to restrict public access to the data via WOPI?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_7">Where can I find possible WOPI error codes and their descriptions?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_8">Which WOPI REST API operations are supported by ONLYOFFICE Docs?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_9">How to restrict access to the use of ONLYOFFICE server via WOPI?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_10">How to get information about the file properties, access rights and editor settings via WOPI?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_11">What actions are supported via WOPI?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_12">Which access rights can I set to the document via WOPI?</a></li>
+    <li><a href="<%= Url.Action("faq/usingwopi") %>#wopi_13">What are the difference between ONLYOFFICE Docs API and WOPI?</a></li>
 </ul>

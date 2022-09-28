@@ -10,7 +10,7 @@
     <dt>Which methods can be used when working with the document history events?</dt>
     <dd>
         <p>The document history can be shown using the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> function (with the <em>events.onRequestHistory</em> event). Unless you use them, the <b>Version History</b> menu option (<b>Version History</b> button in the <b>Collaboration</b> tab) is not shown in the Document Server interface.</p>
-        <p>Once you call this function in the configuration file (together with the <em>refreshHistory</em> method), the menu option and button are shown and the program will display the existing document versions. The data which is shown in the document version history, can be taken from the <b>document editing service</b> <a href="<%= Url.Action("callback") %>#status-2">callback</a>.</p>
+        <p>Once you call this function in the configuration file (together with the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method), the menu option and button are shown and the program will display the existing document versions. The data which is shown in the document version history, can be taken from the <b>document editing service</b> <a href="<%= Url.Action("callback") %>#status-2">callback</a>.</p>
         <p>So the implementation of the document version history display should look like this:</p>
         <ol>
             <li>The callback handler receives the data in the response from the <b>document editing service</b> with <em>status</em> <b>2</b> (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
@@ -88,7 +88,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <dd>
         <p>The <b>document editing service</b> saves all the interim changes of the document into separate files and, once the version is compiled and <em>status</em> <b>2</b> is received, the link to the archive with all the changes between the versions is also sent to the callback handler.</p>
         <p>So, if you want to additionally show the difference between the versions, you will also have to use the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> function (with the <em>events.onRequestHistoryData</em> event) which must contain data also returned by the <b>document editing service</b> <a href="<%= Url.Action("callback") %>#changeshistory">callback</a>.</p>
-        <p>In addition to the actions described in the <a href="#versions_1" onclick="$('#versions_1').children('dd').slideDown();return false;">above question</a> you will need to:</p>
+        <p>In addition to the actions described in the <a href="#versions_1">above question</a> you will need to:</p>
         <ul>
             <li>Parse the <em>changesurl</em> parameter from the <b>document editing service</b> received response with <em>status</em> <b>2</b>:
                 <pre>{
@@ -128,5 +128,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 The object containing the valid links to the current document version (<em>url</em>) and to the previous document version (<em>previous.url</em>) as well as the IDs (<em>key</em> and <em>previous.key</em>) must be passed to the configuration file. <em>changesUrl</em> archive file must be also available and downloadable from the browser to be able to display the changes.
             </li>
         </ul>
+    </dd>
+</dl>
+<dl class="faq_block" id="versions_3">
+    <dt>Why is a new version not shown in the document history after I forcefully save a document?</dt>
+    <dd>
+        <p>ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version.
+        And even if several document versions are created during one session, all changes from this session will be highlighted.
+        Therefore, you cannot see the document versions created with the <a href="<%= Url.Action("save") %>#forcesave">force saving option</a> in the document history.</p>
     </dd>
 </dl>

@@ -2,15 +2,8 @@
 
 <%@ Import Namespace="System.Web.Optimization" %>
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en" class="no-js" <% if (string.Equals(ConfigurationManager.AppSettings["offline_cache"], bool.TrueString, StringComparison.OrdinalIgnoreCase))
-                                 { %>manifest="<%= Url.RouteUrl("Cache") %>"
-<% } %>>
-<!--<![endif]-->
+<html lang="en" class="no-js"
+    <% if (string.Equals(ConfigurationManager.AppSettings["offline_cache"], bool.TrueString, StringComparison.OrdinalIgnoreCase)){ %>manifest="<%= Url.RouteUrl("Cache") %>" <% } %>>
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="ONLYOFFICE Developer API" />
@@ -24,12 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:900,800,700,600,500,400,300&subset=latin,cyrillic-ext,cyrillic,latin-ext" rel="stylesheet" type="text/css" />
     <link rel="icon" href="<%= Url.Content("~/favicon.ico") %>" type="image/x-icon" />
     <% var canonicalUrl = Request.Url;
-       var canonicalHref = canonicalUrl.ToString();
+       var canonicalHref = canonicalUrl.OriginalString;
        if (!string.IsNullOrEmpty(canonicalUrl.Query))
        {
            canonicalHref = canonicalHref.Replace(canonicalUrl.Query, "");
        } %>
-    <link rel="canonical" href="<%= canonicalHref %>" />
+    <link rel="canonical" href="<%= HttpUtility.HtmlEncode(canonicalHref) %>" />
 
     <%= Styles.Render("~/content/styles") %>
 
@@ -37,46 +30,50 @@
 
     <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
 </head>
-<body>
-    <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
-        <tr class="layout-table-header">
-            <% Html.RenderPartial("TopNavigation");%>
-        </tr>
-        <tr>
-            <% if (!Html.IfController("Home"))
-               { %>
-            <td class="layout-table-side">
-                <div class="layout-side">
-                    <% Html.RenderPartial("SearchForm"); %>
-                    <% Html.RenderAction("Navigation"); %>
-                </div>
-            </td>
-            <% } %>
+<body class="<%= Html.IfController("Home") ? "main-body" : string.Empty %>">
+    <div class="site-overlay hidden"></div><div class="close-menu"></div>
+    <div class="layout-table-header main-page">
+        <% Html.RenderPartial("TopNavigation");%>
+    </div>
+    <div class="background-body <%= Html.IfController("Home") ? "mainBody" : string.Empty %>">
+        <table class="layout-table <%= Html.IfController("Home") ? "home" : string.Empty %>">
+            <tr>
+                <% if (!Html.IfController("Home"))
+                   { %>
+                <td class="layout-table-side">
+                    <div class="layout-side">
+                        <% Html.RenderPartial("SearchForm"); %>
+                        <% Html.RenderAction("Navigation"); %>
+                    </div>
+                </td>
+                <% } %>
 
-            <td class="layout-table-content" <%= Html.IfController("Home") ? "colspan=\"2\"" : ""  %> >
-                <div class="layout-content">
-                    <%--<% Html.RenderPartial("BreadCrumbs");%>--%>
-                    <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td class="layout-table-footer" colspan="2">
+                <td class="layout-table-content" <%= Html.IfController("Home") ? "colspan=\"2\"" : ""  %>>
+                    <div class="layout-content">
+                        <%--<% Html.RenderPartial("BreadCrumbs");%>--%>
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div class="layout-table-footer">
+            <div class="layout-footer">
                 <div class="bottommenu">
                     <ul>
                         <li><a target="_blank" href="https://www.onlyoffice.com/">Home site</a></li>
                         <li><a target="_blank" href="https://www.onlyoffice.com/integration-edition.aspx">For integrators</a></li>
                         <li><a target="_blank" href="https://www.onlyoffice.com/document-builder.aspx">Document Builder</a></li>
-                        <li><a target="_blank" href="http://dev.onlyoffice.org/">Server Forum</a></li>
-                        <li><a target="_blank" href="http://cloud.onlyoffice.org/">SaaS Forum</a></li>
+                        <li><a target="_blank" href="https://forum.onlyoffice.com/">Forum</a></li>
                         <li><a target="_blank" href="https://helpcenter.onlyoffice.com/">Help Center</a></li>
                         <li><a target="_blank" href="https://www.onlyoffice.com/legalterms.aspx">Legal notice</a></li>
                     </ul>
                 </div>
                 <div class="copyReserved">&copy; Ascensio System SIA <%= DateTime.Now.Year %>. All rights reserved</div>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
 
     <asp:ContentPlaceHolder ID="ScriptPlaceholder" runat="server"></asp:ContentPlaceHolder>
 

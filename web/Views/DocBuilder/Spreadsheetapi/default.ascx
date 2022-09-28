@@ -6,6 +6,7 @@
 
 <p class="dscr">A spreadsheet document has a more simple structure than that of a text document, most of the spreadsheet elements are nested within the <em>worksheet</em> element with all the other elements placed on it.</p>
 <p>The <em>cells</em> can be given various values, some of the cell text properties can also be changed.</p>
+<p>The <em>range</em> element can contain <em>areas</em> and <em>comments</em>.</p>
 <p>Some drawn objects - <em>images</em>, <em>shapes</em>, <em>charts</em> - can be placed directly to the <em>worksheet</em>.</p>
 <p>The text that does not pertain to the cell values, can be grouped to <em>paragraphs</em> and added to the <em>shapes</em>. For the sake of convenience (as it is always easier to work with smaller blocks than with larger ones) the text is usually divided into small text portions called <em>runs</em>. Each paragraph can consist either of only one text run or have dozens of them inside, depending on the paragraph complexity.</p>
 <p>Thus any spreadsheet document structure with <b>ONLYOFFICE Document Builder</b> API used to create it can be outlined like this:</p>
@@ -14,7 +15,7 @@
 <div class="document_structure">
         <p class="node_label"><b>ONLYOFFICE Document Builder API</b></p>
         <p class="node_description">Spreadsheet creation, global color and fill/stroke settings:<br />
-            <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a>, <a href="<%= Url.Action("spreadsheetapi/apifill") %>">ApiFill</a>, <a href="<%= Url.Action("spreadsheetapi/apibullet") %>">ApiBullet</a>, <a href="<%= Url.Action("spreadsheetapi/apistroke") %>">ApiStroke</a>, <a href="<%= Url.Action("spreadsheetapi/apigradientstop") %>">ApiGradientStop</a>, <a href="<%= Url.Action("spreadsheetapi/apiunicolor") %>">ApiUniColor</a>, <a href="<%= Url.Action("spreadsheetapi/apipresetcolor") %>">ApiPresetColor</a>, <a href="<%= Url.Action("spreadsheetapi/apirgbcolor") %>">ApiRGBColor</a>, <a href="<%= Url.Action("spreadsheetapi/apischemecolor") %>">ApiSchemeColor</a>
+            <a href="<%= Url.Action("spreadsheetapi/api") %>">Api</a>, <a href="<%= Url.Action("spreadsheetapi/apifill") %>">ApiFill</a>, <a href="<%= Url.Action("spreadsheetapi/apibullet") %>">ApiBullet</a>, <a href="<%= Url.Action("spreadsheetapi/apistroke") %>">ApiStroke</a>, <a href="<%= Url.Action("spreadsheetapi/apigradientstop") %>">ApiGradientStop</a>, <a href="<%= Url.Action("spreadsheetapi/apiunicolor") %>">ApiUniColor</a>, <a href="<%= Url.Action("spreadsheetapi/apipresetcolor") %>">ApiPresetColor</a>, <a href="<%= Url.Action("spreadsheetapi/apirgbcolor") %>">ApiRGBColor</a>, <a href="<%= Url.Action("spreadsheetapi/apischemecolor") %>">ApiSchemeColor</a>, <a href="<%= Url.Action("spreadsheetapi/apiname") %>">ApiName</a>
         </p>
         <div class="document_structure document_node">
             <p class="node_label">Worksheet</p>
@@ -30,6 +31,22 @@
                     <br />
                     <a href="<%= Url.Action("spreadsheetapi/apirange") %>">ApiRange</a>
                 </p>
+                <div class="document_structure section_node">
+                <p class="node_label">Areas</p>
+                <p class="node_description">
+                    Current areas properties:
+                    <br />
+                    <a href="<%= Url.Action("spreadsheetapi/apiareas") %>">ApiAreas</a>
+                </p>
+                </div>
+                <div class="document_structure section_node">
+                <p class="node_label">Comment</p>
+                <p class="node_description">
+                    Current comment properties:
+                    <br />
+                    <a href="<%= Url.Action("spreadsheetapi/apicomment") %>">ApiComment</a>
+                </p>
+                </div>
             </div>
             <div class="document_structure image_node">
                 <p class="node_label">Image</p>
@@ -78,7 +95,7 @@
 <div class="global-type-definitions">
 <span class="anchor-position" id="CreateSheet">&nbsp;</span>
     <h2>Creating a new spreadsheet</h2>
-    <p>A simplest example spreadsheet with a sheet named 'sheet 1' and the first column 140 pixels wide and A1 cell set to 'New cell' value can be built with the help of <b>ONLYOFFICE Document Builder</b> using the following code:</p>
+    <p>The simplest example spreadsheet with a sheet named 'sheet 1' and the first column 140 pixels wide and A1 cell set to 'New cell' value can be built with the help of <b>ONLYOFFICE Document Builder</b> using the following code:</p>
 <pre>builder.CreateFile("xlsx");                      // create a spreadsheet file in the .xlsx format with ONLYOFFICE Document Builder
 var oWorksheet = Api.GetActiveSheet();           // create a new 'oWorksheet' variable and get the created spreadsheet contents
 oWorksheet.SetName("sheet 1");                   // set the 'sheet 1' name for the current active sheet
@@ -89,7 +106,7 @@ builder.CloseFile();                             // close the spreadsheet file a
     </div>
     <h2 id="OpenSheet">Opening an existing spreadsheet</h2>
     <p>If you want to edit an already existing spreadsheet, you can open it using <b>ONLYOFFICE Document Builder</b>, get its elements and change them however you need. The only difference from a spreadsheet editor in this case will be that you will not need this spreadsheet editor. The spreadsheet is opened the following way:</p>
-<pre>builder.OpenFile("myspreadsheet.xlsx");          // open an existing 'myspreadsheet.xlsx' spreadsheet file with ONLYOFFICE Document Builder
+<pre>builder.OpenFile("https://example.com/myspreadsheet.xlsx");          // use a path to an existing 'myspreadsheet.xlsx' spreadsheet file to open it with ONLYOFFICE Document Builder
 var oWorksheet = Api.GetActiveSheet();           // create a new 'oWorksheet' variable and get the created spreadsheet contents
 oWorksheet.SetName("sheet 1 renamed");           // set the 'sheet 1 renamed' name for the current active sheet
 oWorksheet.SetColumnWidth(0, 20);                // set the width of the first column to 140 pixels

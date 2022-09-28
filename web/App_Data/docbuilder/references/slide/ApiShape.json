@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiShape",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns the type of the ApiShape class.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -20,7 +20,24 @@
     "GetDocContent": {
       "memberof": "ApiShape",
       "name": "GetDocContent",
-      "description": "<p>Get the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "description": "<p>Deprecated in 6.2.\nReturns the shape inner contents where a paragraph or text runs can be inserted.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiDocumentContent"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetContent": {
+      "memberof": "ApiShape",
+      "name": "GetContent",
+      "description": "<p>Returns the shape inner contents where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -37,7 +54,7 @@
     "SetVerticalTextAlign": {
       "memberof": "ApiShape",
       "name": "SetVerticalTextAlign",
-      "description": "<p>Set the vertical alignment for the shape content where a paragraph or text runs can be inserted.</p>",
+      "description": "<p>Sets the vertical alignment to the shape content where a paragraph or text runs can be inserted.</p>",
       "tags": {
         "typeofeditors": [
           "CPE"
@@ -56,7 +73,7 @@
       ]
     }
   },
-  "comment": "/**\r\n     * Class representing a shape.\r\n     * @constructor\r\n     */",
+  "comment": "/**\n     * Class representing a shape.\n     * @constructor\n     */",
   "description": "<p>Class representing a shape.</p>",
   "scope": "global",
   "params": []

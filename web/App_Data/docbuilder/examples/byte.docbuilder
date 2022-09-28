@@ -1,0 +1,4 @@
+// The resulting color is green, the bytes are measured in decimal numbers:
+oRGBColor = Api.CreateRGBColor(0, 255, 0);
+// The resulting color is green, the bytes are measured in hexadecimal numbers:
+oRGBColor = Api.CreateRGBColor(0, 0xff, 0);

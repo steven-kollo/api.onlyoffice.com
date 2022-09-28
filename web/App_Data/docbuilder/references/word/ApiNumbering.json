@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiNumbering",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiNumbering class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "GetLevel": {
       "memberof": "ApiNumbering",
       "name": "GetLevel",
-      "description": "<p>Get the specified level of the current numbering.</p>",
+      "description": "<p>Returns the specified level of the current numbering.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -41,10 +41,27 @@
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiNumbering",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiNumbering object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a numbering properties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a numbering properties.</p>",
+  "comment": "/**\n\t * Class representing the numbering properties.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing the numbering properties.</p>",
   "scope": "global",
   "params": []
 }

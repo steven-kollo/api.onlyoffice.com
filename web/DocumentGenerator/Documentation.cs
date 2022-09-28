@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -28,7 +28,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 using ASC.Api.Interfaces;
 using ASC.Common.DependencyInjection;
 using ASC.Common.Logging;
@@ -79,30 +78,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public static IEnumerable<MsDocEntryPoint> GetAll()
         {
             return _points;
-        }
-
-        public static Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>> Search(string query)
-        {
-            if (string.IsNullOrEmpty(query))
-            {
-                return new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>();
-            }
-
-            var terms = Regex.Split(query, @"\W+").Where(x => !String.IsNullOrEmpty(x));
-            var result = _points.ToDictionary(
-                x => x,
-                ep => ep.Methods.Where(m => terms.All(
-                    term => (m.Summary != null && 0 <= m.Summary.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
-                            (m.Category != null && 0 <= m.Category.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
-                            (m.ShortName != null && 0 <= m.ShortName.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
-                            (m.Notes != null && 0 <= m.Notes.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
-                            (m.Path != null && 0 <= m.Path.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
-                            (m.Remarks != null && 0 <= m.Remarks.IndexOf(term, StringComparison.OrdinalIgnoreCase)) ||
-                            (m.Returns != null && 0 <= m.Returns.IndexOf(term, StringComparison.OrdinalIgnoreCase)))
-                          )
-                        .ToDictionary(key => key, value => string.Empty)
-                );
-            return result;
         }
     }
 }

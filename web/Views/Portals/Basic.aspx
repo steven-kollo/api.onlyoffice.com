@@ -13,8 +13,9 @@
     <h1>
         <span class="hdr">Basic concepts</span>
     </h1>
-    <h2>Introduction
-    </h2>
+
+    <span class="pvl_product">ONLYOFFICE Community Server</span><span class="pvl_version">v<%= Products.Get("portals").Version %></span>
+
     <p>
         The ONLYOFFICE Community Server API is implemented as REST over HTTP using GET/POST/PUT/DELETE.
             All the resources, like posts or comments, have their own URLs and are designed to be manipulated in isolation.
@@ -64,9 +65,9 @@
         The following notation is used in the documentation:<br />
         <b>{text}</b>: states for the text that should be replaced by your own data (ID, search query, etc.)
     </p>
-    <h2>Support
-    </h2>
-    <p>
-        You can ask our developers at <a href="http://dev.onlyoffice.org/viewforum.php?f=9" target="_blank">dev.onlyoffice.org</a> (registration required).
-    </p>
+    <h2>Get help</h2>
+
+    <p>If you have any questions about ONLYOFFICE Community Server, try to find them in the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
+    <p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/CommunityServer/issues" target="_blank">GitHub</a>.</p>
+    <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/workspace/33" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
 </asp:Content>

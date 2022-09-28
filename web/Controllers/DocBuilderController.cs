@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -25,13 +25,11 @@
 
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
 using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
 using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
@@ -44,35 +42,136 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Basic",
-                "gettingstarted",
+                "changelog",
+                "classlist",
                 "csharpexample",
+                "formapi",
+                "gettingstarted",
+                "global",
                 "nodejsexample",
-                "phpexample",
-                "rubyexample",
+                "howitworks",
+                "howitworks/comparedocuments",
+                "howitworks/globalvariable",
                 "integratingdocumentbuilder",
                 "integrationapi",
-                "integrationapi/usingdocbuilderfile",
-                "integrationapi/cdocbuilder",
-                "integrationapi/cdocbuilder/closefile",
-                "integrationapi/cdocbuilder/createfile",
-                "integrationapi/cdocbuilder/dispose",
-                "integrationapi/cdocbuilder/executecommand",
-                "integrationapi/cdocbuilder/initialize",
-                "integrationapi/cdocbuilder/openfile",
-                "integrationapi/cdocbuilder/run",
-                "integrationapi/cdocbuilder/runtexta",
-                "integrationapi/cdocbuilder/runtextw",
-                "integrationapi/cdocbuilder/savefile",
-                "integrationapi/cdocbuilder/setproperty",
-                "integrationapi/cdocbuilder/setpropertyw",
-                "integrationapi/cdocbuilder/settmpfolder",
-                "integrationapi/globalvariable",
+                "integrationapi/c",
+                "integrationapi/c/cdocbuilder",
+                "integrationapi/c/cdocbuilder/closefile",
+                "integrationapi/c/cdocbuilder/createfile",
+                "integrationapi/c/cdocbuilder/dispose",
+                "integrationapi/c/cdocbuilder/executecommand",
+                "integrationapi/c/cdocbuilder/getcontext",
+                "integrationapi/c/cdocbuilder/getversion",
+                "integrationapi/c/cdocbuilder/initialize",
+                "integrationapi/c/cdocbuilder/issavewithdoctrenderermode",
+                "integrationapi/c/cdocbuilder/openfile",
+                "integrationapi/c/cdocbuilder/run",
+                "integrationapi/c/cdocbuilder/runtexta",
+                "integrationapi/c/cdocbuilder/runtextw",
+                "integrationapi/c/cdocbuilder/savefile",
+                "integrationapi/c/cdocbuilder/setproperty",
+                "integrationapi/c/cdocbuilder/setpropertyw",
+                "integrationapi/c/cdocbuilder/settmpfolder",
+                "integrationapi/c/cdocbuilder/writedata",
+                "integrationapi/c/cdocbuildervalue",
+                "integrationapi/c/cdocbuildervalue/isempty",
+                "integrationapi/c/cdocbuildervalue/clear",
+                "integrationapi/c/cdocbuildervalue/isnull",
+                "integrationapi/c/cdocbuildervalue/isundefined",
+                "integrationapi/c/cdocbuildervalue/isbool",
+                "integrationapi/c/cdocbuildervalue/isint",
+                "integrationapi/c/cdocbuildervalue/isdouble",
+                "integrationapi/c/cdocbuildervalue/isstring",
+                "integrationapi/c/cdocbuildervalue/isfunction",
+                "integrationapi/c/cdocbuildervalue/isobject",
+                "integrationapi/c/cdocbuildervalue/isarray",
+                "integrationapi/c/cdocbuildervalue/istypedarray",
+                "integrationapi/c/cdocbuildervalue/getlength",
+                "integrationapi/c/cdocbuildervalue/tobool",
+                "integrationapi/c/cdocbuildervalue/toint",
+                "integrationapi/c/cdocbuildervalue/todouble",
+                "integrationapi/c/cdocbuildervalue/tostring",
+                "integrationapi/c/cdocbuildervalue/getproperty",
+                "integrationapi/c/cdocbuildervalue/get",
+                "integrationapi/c/cdocbuildervalue/set",
+                "integrationapi/c/cdocbuildervalue/setproperty",
+                "integrationapi/c/cdocbuildervalue/createundefined",
+                "integrationapi/c/cdocbuildervalue/createnull",
+                "integrationapi/c/cdocbuildervalue/call",
+                "integrationapi/c/cdocbuildercontextscope",
+                "integrationapi/c/cdocbuildercontextscope/close",
+                "integrationapi/c/cdocbuildercontext",
+                "integrationapi/c/cdocbuildercontext/createundefined",
+                "integrationapi/c/cdocbuildercontext/createnull",
+                "integrationapi/c/cdocbuildercontext/createobject",
+                "integrationapi/c/cdocbuildercontext/createarray",
+                "integrationapi/c/cdocbuildercontext/createtypedarray",
+                "integrationapi/c/cdocbuildercontext/allocmemorytypedarray",
+                "integrationapi/c/cdocbuildercontext/freememorytypedarray",
+                "integrationapi/c/cdocbuildercontext/getglobal",
+                "integrationapi/c/cdocbuildercontext/createscope",
+                "integrationapi/c/cdocbuildercontext/iserror",
+                "integrationapi/net",
+                "integrationapi/net/cdocbuilder",
+                "integrationapi/net/cdocbuilder/closefile",
+                "integrationapi/net/cdocbuilder/createfile",
+                "integrationapi/net/cdocbuilder/destroy",
+                "integrationapi/net/cdocbuilder/executecommand",
+                "integrationapi/net/cdocbuilder/getcontext",
+                "integrationapi/net/cdocbuilder/getversion",
+                "integrationapi/net/cdocbuilder/initialize",
+                "integrationapi/net/cdocbuilder/issavewithdoctrenderermode",
+                "integrationapi/net/cdocbuilder/openfile",
+                "integrationapi/net/cdocbuilder/run",
+                "integrationapi/net/cdocbuilder/runtext",
+                "integrationapi/net/cdocbuilder/savefile",
+                "integrationapi/net/cdocbuilder/setproperty",
+                "integrationapi/net/cdocbuilder/settmpfolder",
+                "integrationapi/net/cdocbuilder/writedata",
+                "integrationapi/net/cdocbuildervalue",
+                "integrationapi/net/cdocbuildervalue/isempty",
+                "integrationapi/net/cdocbuildervalue/clear",
+                "integrationapi/net/cdocbuildervalue/isnull",
+                "integrationapi/net/cdocbuildervalue/isundefined",
+                "integrationapi/net/cdocbuildervalue/isbool",
+                "integrationapi/net/cdocbuildervalue/isint",
+                "integrationapi/net/cdocbuildervalue/isdouble",
+                "integrationapi/net/cdocbuildervalue/isstring",
+                "integrationapi/net/cdocbuildervalue/isfunction",
+                "integrationapi/net/cdocbuildervalue/isobject",
+                "integrationapi/net/cdocbuildervalue/isarray",
+                "integrationapi/net/cdocbuildervalue/istypedarray",
+                "integrationapi/net/cdocbuildervalue/getlength",
+                "integrationapi/net/cdocbuildervalue/tobool",
+                "integrationapi/net/cdocbuildervalue/toint",
+                "integrationapi/net/cdocbuildervalue/todouble",
+                "integrationapi/net/cdocbuildervalue/tostring",
+                "integrationapi/net/cdocbuildervalue/getproperty",
+                "integrationapi/net/cdocbuildervalue/get",
+                "integrationapi/net/cdocbuildervalue/set",
+                "integrationapi/net/cdocbuildervalue/setproperty",
+                "integrationapi/net/cdocbuildervalue/createundefined",
+                "integrationapi/net/cdocbuildervalue/createnull",
+                "integrationapi/net/cdocbuildervalue/call",
+                "integrationapi/net/cdocbuildercontextscope",
+                "integrationapi/net/cdocbuildercontextscope/close",
+                "integrationapi/net/cdocbuildercontext",
+                "integrationapi/net/cdocbuildercontext/createundefined",
+                "integrationapi/net/cdocbuildercontext/createnull",
+                "integrationapi/net/cdocbuildercontext/createobject",
+                "integrationapi/net/cdocbuildercontext/createarray",
+                "integrationapi/net/cdocbuildercontext/createtypedarray",
+                "integrationapi/net/cdocbuildercontext/getglobal",
+                "integrationapi/net/cdocbuildercontext/createscope",
+                "integrationapi/net/cdocbuildercontext/iserror",
                 "integrationapi/arguments",
-                "textdocumentapi",
-                "spreadsheetapi",
+                "integrationapi/usingdocbuilderfile",
+                "phpexample",
                 "presentationapi",
-                "global",
-                "classlist",
+                "rubyexample",
+                "spreadsheetapi",
+                "textdocumentapi",
+                "try",
             };
 
         #endregion
@@ -84,52 +183,15 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Search(string query)
         {
-            var result = new List<SearchResult>();
-
-            foreach (var action in _actionMap)
-            {
-                var actionString = action.ToLower();
-                var doc = new HtmlDocument();
-                try
-                {
-                    var html = this.RenderView(actionString, new ViewDataDictionary());
-                    doc.LoadHtml(html);
-                }
-                catch (Exception e)
-                {
-                    LogManager.GetLogger("ASC.Api").Error(e);
-                }
-                var content = doc.DocumentNode;
-                if (content.SelectSingleNode("html") != null)
-                {
-                    content = content.SelectSingleNode("//div[contains(@class, 'layout-content')]");
-                }
-
-                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
-                {
-                    var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
-                    var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
-                    var header = headerNode != null ? headerNode.InnerText : string.Empty;
-                    var descr = descrNode != null ? descrNode.InnerText : string.Empty;
-                    result.Add(new SearchResult
-                        {
-                            Module = "docbuilder",
-                            Name = actionString,
-                            Resource = Highliter.HighliteString(header, query).ToHtmlString(),
-                            Description = Highliter.HighliteString(descr, query).ToHtmlString(),
-                            Url = Url.Action(actionString, "docbuilder")
-                        });
-                }
-            }
-
-            result.AddRange(DocBuilderDocumentation.Search(query, Url));
-
-            ViewData["query"] = query ?? string.Empty;
-            ViewData["result"] = result;
-            return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
+            return View(GCustomSearch.Search(query, "docbuilder"));
         }
 
         public ActionResult Basic()
+        {
+            return View();
+        }
+
+        public ActionResult Changelog()
         {
             return View();
         }
@@ -177,6 +239,29 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Integrationapi", (object)catchall);
         }
 
+        public ActionResult Howitworks(string catchall)
+        {
+            if (!_actionMap.Contains("howitworks/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Howitworks", (object)catchall);
+        }
+
+        public ActionResult Try()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public string Try(string module, string section, string method)
+        {
+            var dbMethod = DocBuilderDocumentation.GetMethod(module, section, method);
+            if (dbMethod != null && dbMethod.Example != null)
+                return dbMethod.Example.Script;
+            return "";
+        }
+
         public ActionResult Textdocumentapi(string catchall)
         {
             if (string.IsNullOrEmpty(catchall)) return View("Textdocumentapi");
@@ -193,6 +278,12 @@ namespace ASC.Api.Web.Help.Controllers
         {
             if (string.IsNullOrEmpty(catchall)) return View("Presentationapi");
             return FindDoc("slide", catchall);
+        }
+
+        public ActionResult Formapi(string catchall)
+        {
+            if (string.IsNullOrEmpty(catchall)) return View("Formapi");
+            return FindDoc("form", catchall);
         }
 
         public ActionResult Global()

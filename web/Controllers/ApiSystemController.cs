@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -25,12 +25,8 @@
 
 
 using System;
-using System.Collections.Generic;
 using System.Web.Mvc;
-using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
-using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -41,19 +37,6 @@ namespace ASC.Api.Web.Help.Controllers
         {
             Portal,
             Tariff,
-        }
-
-        private enum ActionType
-        {
-            Authentication,
-            Basic,
-            PortalGet,
-            PortalRegister,
-            PortalRemove,
-            PortalStatus,
-            TariffGet,
-            TariffSet,
-            ValidatePortalName,
         }
 
         public ActionResult Index()
@@ -74,7 +57,7 @@ namespace ASC.Api.Web.Help.Controllers
         public ActionResult Section(string section, string category)
         {
             if (string.IsNullOrEmpty(section))
-                return View("sectionnotfound");
+                return Redirect(Url.Action("section", new { section = "apisystem" }));
 
             SectionType sectionType;
             return Enum.TryParse(section, true, out sectionType) ? View("section", (object) section) : View("sectionnotfound");
@@ -83,43 +66,7 @@ namespace ASC.Api.Web.Help.Controllers
         [ValidateInput(false)]
         public ActionResult Search(string query)
         {
-            var result = new List<SearchResult>();
-
-            foreach (var action in (ActionType[])Enum.GetValues(typeof (ActionType)))
-            {
-                var actionString = action.ToString().ToLower();
-                var doc = new HtmlDocument();
-                try
-                {
-                    var html = this.RenderView(actionString, new ViewDataDictionary());
-                    doc.LoadHtml(html);
-                }
-                catch (Exception e)
-                {
-                    LogManager.GetLogger("ASC.Api").Error(e);
-                }
-                var content = doc.DocumentNode.SelectSingleNode("//div[contains(@class,'layout-content')]");
-
-                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
-                {
-                    var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
-                    var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
-                    var header = headerNode != null ? headerNode.InnerText : string.Empty;
-                    var descr = descrNode != null ? descrNode.InnerText : string.Empty;
-                    result.Add(new SearchResult
-                        {
-                            Module = "apisystem",
-                            Name = actionString,
-                            Resource = Highliter.HighliteString(header, query).ToHtmlString(),
-                            Description = Highliter.HighliteString(descr, query).ToHtmlString(),
-                            Url = Url.Action(actionString, "apisystem")
-                        });
-                }
-            }
-
-            ViewData["query"] = query ?? string.Empty;
-            ViewData["result"] = result;
-            return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
+            return View(GCustomSearch.Search(query, "apisystem"));
         }
 
         public ActionResult Authentication()

@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiDocumentContent",
       "name": "GetClassType",
-      "description": "<p>Get the type of the current class.</p>",
+      "description": "<p>Returns a type of the ApiDocumentContent class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -22,7 +22,7 @@
     "GetElementsCount": {
       "memberof": "ApiDocumentContent",
       "name": "GetElementsCount",
-      "description": "<p>Get the number of elements in the current document.</p>",
+      "description": "<p>Returns a number of elements in the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -41,7 +41,7 @@
     "GetElement": {
       "memberof": "ApiDocumentContent",
       "name": "GetElement",
-      "description": "<p>Get the element by its position in the document.</p>",
+      "description": "<p>Returns an element by its position in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -55,12 +55,20 @@
         ]
       ],
       "see": null,
-      "inherits": null
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "nPos",
+          "description": "<p>The element position that will be taken from the document.</p>",
+          "optional": false
+        }
+      ]
     },
     "AddElement": {
       "memberof": "ApiDocumentContent",
       "name": "AddElement",
-      "description": "<p>Add a paragraph or a table or a blockLvl content control using its position in the document content.</p>",
+      "description": "<p>Adds a paragraph or a table or a blockLvl content control using its position in the document content.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -89,7 +97,7 @@
     "Push": {
       "memberof": "ApiDocumentContent",
       "name": "Push",
-      "description": "<p>Push a paragraph or a table to actually add it to the document.</p>",
+      "description": "<p>Pushes a paragraph or a table to actually add it to the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -97,14 +105,18 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "DocumentElement",
           "name": "oElement",
-          "description": "<p>The type of the element which will be pushed to the document.</p>",
+          "description": "<p>The element type which will be pushed to the document.</p>",
           "optional": false
         }
       ]
@@ -112,7 +124,7 @@
     "RemoveAllElements": {
       "memberof": "ApiDocumentContent",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
+      "description": "<p>Removes all the elements from the current document or from the current document element.\n<note>When all elements are removed, a new empty paragraph is automatically created. If you want to add\ncontent to this paragraph, use the {@link ApiDocumentContent#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -127,7 +139,7 @@
     "RemoveElement": {
       "memberof": "ApiDocumentContent",
       "name": "RemoveElement",
-      "description": "<p>Remove element using the position specified.</p>",
+      "description": "<p>Removes an element using the position specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -167,19 +179,147 @@
         {
           "type": "Number",
           "name": "Start",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>Start character in the current element.</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "End",
-          "description": "<p>end character in current element</p>",
+          "description": "<p>End character in the current element.</p>",
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiDocumentContent",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiDocumentContent object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
+    },
+    "GetContent": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetContent",
+      "description": "<p>Returns an array of document elements from the current ApiDocumentContent object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "bGetCopies",
+          "description": "<p>Specifies if the copies of the document elements will be returned or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetAllDrawingObjects": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllDrawingObjects",
+      "description": "<p>Returns a collection of drawing objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiDrawing>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllShapes": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllShapes",
+      "description": "<p>Returns a collection of shape objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiShape>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllImages": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllImages",
+      "description": "<p>Returns a collection of image objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiImage>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllCharts": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllCharts",
+      "description": "<p>Returns a collection of chart objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiChart>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetAllOleObjects": {
+      "memberof": "ApiDocumentContent",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns a collection of OLE objects from the document content.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a container for paragraphs and tables.\r\n\t * @param Document\r\n\t * @constructor\r\n\t */",
+  "comment": "/**\n\t * Class representing a container for paragraphs and tables.\n\t * @param Document\n\t * @constructor\n\t */",
   "description": "<p>Class representing a container for paragraphs and tables.</p>",
   "scope": "global",
   "params": []

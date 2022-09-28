@@ -22,7 +22,7 @@
 
     <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
 
-    <h2>Parameters and their description:</h2>
+    <h2 id="request" class="copy-link">Request parameters and their description</h2>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -90,6 +90,66 @@
                 <td>optional</td>
             </tr>
             <tr class="tablerow">
+                <td id="documentLayout" class="copy-link">documentLayout</td>
+                <td>Defines the document layout which specifies parameters for printing forms as <em>pdf</em> documents or images.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="drawPlaceHolders" class="copy-link">documentLayout.drawPlaceHolders</td>
+                <td>Defines if placeholders will be drawn or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="drawFormHighlight" class="copy-link">documentLayout.drawFormHighlight</td>
+                <td>Defines if forms will be highlighted or not.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="isPrint" class="copy-link">documentLayout.isPrint</td>
+                <td>Defines if the print mode is turned on or off. This parameter is used only for converting <em>docx/docxf</em> into <em>pdf</em>.
+                    If this parameter is equal to <b>true</b>, the <em>drawPlaceHolders</em> and <em>drawFormHighlight</em> flags are used as described above.
+                    If this parameter is <b>false</b>, the <em>drawFormHighlight</em> flag does not work and the <em>drawPlaceHolders</em> parameter allows saving the forms in the <em>pdf</em> format.
+                    The default value is <b>false</b>.</td>
+                <td>boolean</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="documentRenderer" class="copy-link">documentRenderer</td>
+                <td>Defines the document renderer when converting from <em>pdf</em>, <em>xps</em>, <em>oxps</em>.</td>
+                <td>object</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="textAssociation" class="copy-link">documentRenderer.textAssociation</td>
+                <td>
+                    Defines the rendering mode that can have the following values:
+                    <ul>
+                        <li>
+                            <b>blockChar</b> - all text is converted by single characters.
+                            Each character is in its own frame (like a textbox),
+                        </li>
+                        <li>
+                            <b>blockLine</b> - all text is converted by separate lines.
+                            Each text line is in its own frame. Lines can be combined within the same block,
+                        </li>
+                        <li>
+                            <b>plainLine</b> - all text is converted as a plain text.
+                            But each line is a separate paragraph,
+                        </li>
+                        <li>
+                            <b>plainParagraph</b> - all text is converted as a plain text.
+                            Lines are combined into paragraphs.
+                        </li>
+                    </ul>
+                    The default value is <b>plainLine</b>.
+                </td>
+                <td>string</td>
+                <td>optional</td>
+            </tr>
+            <tr class="tablerow">
                 <td id="filetype" class="copy-link">filetype<span class="required">*</span></td>
                 <td>Defines the type of the document file to be converted.</td>
                 <td>string</td>
@@ -103,7 +163,22 @@
             </tr>
             <tr class="tablerow">
                 <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
-                <td>Defines the resulting converted document type.</td>
+                <td>
+                    Defines the resulting converted document type.
+                    Starting from version 7.0, file formats can be specified instead of extensions.
+                    They are used when we do not know in advance what extension is required:
+                    <ul>
+                        <li>
+                            <b>ooxml</b> - defines that the file will be coverted into <em>docx</em>, <em>docm</em>, <em>xlsx</em>, <em>xlsm</em>, <em>pptx</em> or <em>pptm</em>.
+                            For example, when the <em>doc</em> file is converted into the OOXML format, the resulting file can be <em>docx</em> or <em>docm</em> if this file contains macros (the same for <em>xls</em> and <em>ppt</em>).
+                            It is also applied when converting XML files into OOXML formats (<em>docx</em>, <em>xlsx</em> or <em>pptx</em> depending on the content);
+                        </li>
+                        <li>
+                            <b>odf</b> - defines that the file will be coverted into <em>odt</em>, <em>ods</em> or <em>odp</em>.
+                            For example, it is used when converting XML files into ODF formats (<em>odt</em>, <em>ods</em> or <em>odp</em> depending on the content).
+                        </li>
+                    </ul>
+                </td>
                 <td>string</td>
                 <td>required</td>
             </tr>
@@ -325,27 +400,41 @@
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
-                <td>Defines the absolute URL to the document to be converted.</td>
+                <td>
+                    Defines the absolute URL to the document to be converted.
+                    Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                    Otherwise, an error will occur.
+                </td>
                 <td>string</td>
                 <td>required</td>
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
     <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
 
     <h2 id="text-matrix" class="copy-link">Text document file formats</h2>
     <table class="table-conversion-matrix-text">
         <tbody>
+            <tr class="scroll-arrow" style="margin-top:247px;"></tr>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="10">Output format</th>
+                <th colspan="18">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
+                <td>docm</td>
                 <td>docx</td>
+                <td>docxf</td>
+                <td>dotm</td>
+                <td>dotx</td>
+                <td>epub</td>
+                <td>fb2</td>
                 <td>gif</td>
+                <td>html</td>
                 <td>jpg</td>
                 <td>odt</td>
+                <td>ott</td>
                 <td>pdf</td>
                 <td>pdfa</td>
                 <td>png</td>
@@ -353,7 +442,36 @@
                 <td>txt</td>
             </tr>
             <tr>
+                <td>djvu</td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="no"></span></td>
+            </tr>
+            <tr>
                 <td>doc</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -368,6 +486,14 @@
             <tr>
                 <td>docm</td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -381,7 +507,36 @@
             <tr>
                 <td>docx</td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>docxf</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -403,9 +558,25 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>dotm</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -424,6 +595,14 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -432,6 +611,35 @@
             </tr>
             <tr>
                 <td>epub</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>fb2</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -455,11 +663,27 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>html</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -480,6 +704,14 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
             </tr>
             <tr>
@@ -488,7 +720,15 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -507,22 +747,67 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>oxps</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pdf</td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>rtf</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -545,20 +830,57 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
             </tr>
             <tr>
                 <td>xps</td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>xml</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
         </tbody>
     </table>
@@ -566,9 +888,10 @@
     <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
     <table class="table-conversion-matrix-spreadsheet">
         <tbody>
+            <tr class="scroll-arrow" style="margin-top:150px;"></tr>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="9">Output format</th>
+                <th colspan="13">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -576,15 +899,23 @@
                 <td>gif</td>
                 <td>jpg</td>
                 <td>ods</td>
+                <td>ots</td>
                 <td>pdf</td>
                 <td>pdfa</td>
                 <td>png</td>
+                <td>xlsm</td>
                 <td>xlsx</td>
+                <td>xltm</td>
+                <td>xltx</td>
             </tr>
             <tr>
                 <td>csv</td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -604,6 +935,10 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ods</td>
@@ -616,11 +951,19 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ots</td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -631,6 +974,26 @@
             </tr>
             <tr>
                 <td>xls</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+            </tr>
+            <tr>
+                <td>xlsb</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -652,6 +1015,10 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xlsx</td>
@@ -663,10 +1030,18 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xlt</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -688,6 +1063,10 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>xltx</td>
@@ -700,29 +1079,42 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
             </tr>
         </tbody>
     </table>
 
     <h2 id="presentation-matrix" class="copy-link">Presentation file formats</h2>
     <table class="table-conversion-matrix-presentation">
+        <tr class="scroll-arrow" style="margin-top:183px;"></tr>
         <tbody>
             <tr>
                 <th rowspan="2">Input format</th>
-                <th colspan="8">Output format</th>
+                <th colspan="12">Output format</th>
             </tr>
             <tr>
                 <td>bmp</td>
                 <td>gif</td>
                 <td>jpg</td>
                 <td>odp</td>
+                <td>otp</td>
                 <td>pdf</td>
                 <td>pdfa</td>
                 <td>png</td>
+                <td>potm</td>
+                <td>potx</td>
+                <td>pptm</td>
                 <td>pptx</td>
             </tr>
             <tr>
                 <td>fodp</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -742,10 +1134,18 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>otp</td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -756,6 +1156,10 @@
             </tr>
             <tr>
                 <td>pot</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -775,6 +1179,10 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>potx</td>
@@ -786,9 +1194,17 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pps</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -808,9 +1224,17 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>ppsx</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -830,6 +1254,10 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptm</td>
@@ -841,9 +1269,17 @@
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
             </tr>
             <tr>
                 <td>pptx</td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
@@ -956,18 +1392,69 @@
         See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </p>
 
-    <p id="response" class="copy-link">
+    <h2 id="response" class="copy-link">Response parameters and their description</h2>
+    <p>
         The request result is returned in XML format.
-        To receive a response in JSON format you need to specify in the HTTP request Header <em>accept</em> with the value <b>application/json</b> (available from version 4.3).
+        To receive a response in JSON format you need to specify the <em>Accept</em> header with the <b>application/json</b> value in the HTTP request (available from version 4.3).
         When forming the link to the resulting file, the same server name is used which was made the conversion request to.
     </p>
+    <table class="table">
+        <colgroup>
+            <col style="width: 100px;" />
+            <col />
+            <col style="width: 100px;" />
+            <col style="width: 150px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Parameter</td>
+                <td>Description</td>
+                <td>Type</td>
+                <td>Example</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td id="endConvert" class="copy-link">endConvert</td>
+                <td>Defines if the conversion is completed or not.</td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="error" class="copy-link">error</td>
+                <td>Defines an error occurred during the conversion. Possible error codes can be found <a href="#error-codes">here</a>.</td>
+                <td>integer</td>
+                <td>-3</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="fileType" class="copy-link">fileType</td>
+                <td>Defines an extension of the converted file.</td>
+                <td>string</td>
+                <td>"docm"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="fileUrl" class="copy-link">fileUrl</td>
+                <td>Defines the link to the converted document. This parameter will be received only when the <em>endConvert</em> parameter is set to <b>true</b>.</td>
+                <td>string</td>
+                <td>"https://documentserver/url-to-converted-document.pdf"</td>
+            </tr>
+            <tr class="tablerow">
+                <td id="percent" class="copy-link">percent</td>
+                <td>Defines the percentage of the file conversion. If the <em>endConvert</em> parameter is set to <b>true</b>, the <em>percent</em> is equal to <b>100</b>.</td>
+                <td>integer</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+
     <div class="header-gray">Sample of the response in XML format</div>
     <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;EndConvert&gt;True&lt;/EndConvert&gt;
-    &lt;FileUrl&gt;https://documentserver/ResourceService.ashx?filename=output.doc&lt;/FileUrl&gt;
+    &lt;FileType&gt;docm&lt;/FileType&gt;
+    &lt;FileUrl&gt;https://documentserver/url-to-converted-document.pdf&lt;/FileUrl&gt;
     &lt;Percent&gt;100&lt;/Percent&gt;
 &lt;/FileResult&gt;
 </pre>
@@ -976,7 +1463,8 @@
     <pre>
 {
     "endConvert": true,
-    "fileUrl": "https://documentserver/ResourceService.ashx?filename=output.doc",
+    "fileType": "docm",
+    "fileUrl": "https://documentserver/url-to-converted-document.pdf",
     "percent": 100
 }
 </pre>
@@ -986,6 +1474,7 @@
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;EndConvert&gt;False&lt;/EndConvert&gt;
+    &lt;FileType&gt;&lt;/FileType&gt;
     &lt;FileUrl&gt;&lt;/FileUrl&gt;
     &lt;Percent&gt;95&lt;/Percent&gt;
 &lt;/FileResult&gt;
@@ -1012,8 +1501,8 @@
 }
 </pre>
 
-    <div id="error" class="copy-link header-gray">Possible error codes and their description</div>
-    <table class="table">
+    <div id="error-codes" class="copy-link header-gray">Possible error codes and their description</div>
+    <table class="error-table">
         <colgroup>
             <col style="width: 105px;" />
             <col />

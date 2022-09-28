@@ -13,6 +13,7 @@
     <h1>
         <span class="hdr">Getting started</span>
     </h1>
+
     <h2>How it works?</h2>
     <p class="dscr">As any document is a composite object consisting of a tree of larger nodes (paragraphs and tables), where it is possible to insert smaller document elements (text runs, images, charts, shapes), <b>ONLYOFFICE Document Builder</b> allows to insert the content and format it to your liking quickly and easily.</p>
     <p><b>ONLYOFFICE Document Builder</b> is a C++ library used to create and edit Office Open XML format files (documents, spreadsheets and presentations) and save them to DOCX, XSLX, PPTX and PDF formats.</p>
@@ -20,9 +21,9 @@
     <ol>
         <li><p>Integrate this library into your own application. Use the buttons below to download these libraries:</p>
             <ul class="list-buttons">
-                <li><a class="button" href="http://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.tar.gz">Linux x64</a></li>
-                <li><a class="button" href="http://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.zip">Windows x64</a></li>
-                <li><a class="button" href="http://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x86.zip">Windows x86</a></li>
+                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.tar.gz">Linux x64</a></li>
+                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x64.zip">Windows x64</a></li>
+                <li><a class="button" href="https://download.onlyoffice.com/install/desktop/docbuilder/documentbuilder-x86.zip">Windows x86</a></li>
             </ul>
             <p>After you download and unpack the files, the library is ready for <a href="<%= Url.Action("integrationapi/cdocbuilder") %>">integration</a>.</p>
         </li>
@@ -68,13 +69,15 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
         <li><a href="#" class="button-popap-open" data-body="body10">change the text font family</a></li>
         <li><a href="#" class="button-popap-open" data-body="body11">change the text font size</a></li>
         <li><a href="#" class="button-popap-open" data-body="body12">make the text font italic</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body61">make the text font bold</a></li>
         <li><a href="#" class="button-popap-open" data-body="body13">make the text font strikeout</a></li>
         <li><a href="#" class="button-popap-open" data-body="body14">make the text font double strikeout</a></li>
-        <li><a href="#" class="button-popap-open" data-body="body15">make the text font underline</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body15">make the text font underlined</a></li>
         <li><a href="#" class="button-popap-open" data-body="body16">change the text font color</a></li>
         <li><a href="#" class="button-popap-open" data-body="body17">change the text font background color</a></li>
-        <li><a href="#" class="button-popap-open" data-body="body18">change the text font caps</a></li>
-        <li><a href="#" class="button-popap-open" data-body="body19">change the text font small caps</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body62">change the text font highlighting</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body18">make the text font capitalized</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body19">make the text font small capitalized</a></li>
         <li><a href="#" class="button-popap-open" data-body="body20">make the text font spacing</a></li>
     </ul>
     </div>
@@ -120,8 +123,8 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
     <div class="kb_index_page">
     <h5>Headers and footers</h5>
     <ul>
-        <li><a href="#" class="button-popap-open" data-body="body40">add and edit a page header</a></li>
-        <li><a href="#" class="button-popap-open" data-body="body41">add and edit a page footer</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body40">get and edit a page header</a></li>
+        <li><a href="#" class="button-popap-open" data-body="body41">get and edit a page footer</a></li>
     </ul>
     </div>
     <div class="kb_index_page">
@@ -146,6 +149,24 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
         <li><a href="#" class="button-popap-open" data-body="body48">set the page margins</a></li>
     </ul>
     </div>
+    <div class="kb_index_page">
+        <h5>Creating and editing forms</h5>
+        <ul>
+            <li><a href="#" class="button-popap-open" data-body="body49">create a form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body50">set the border color to the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body51">set the placeholder text to the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body52">set the text properties to the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body53">clear the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body54">get the tip text from the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body55">get the text from the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body56">make a form fixed size</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body57">set the picture position inside the form</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body58">set the radio group key to the checkbox</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body59">set the list values to the combo box</a></li>
+            <li><a href="#" class="button-popap-open" data-body="body60">select the specified value from the combo box list values</a></li>
+            
+        </ul>
+        </div>
     </div>
         
     <div id="containerDialog" class="popap-dialog">
@@ -291,6 +312,19 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                    </ul>
                 </div>
             </div>
+            <div id="body61" class="tags_content">
+                <h5>Learn how to <span class="tag_name">make the text font bold</span></h5>
+                <div>
+                   <ul>
+                       <li>Make font bold for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setbold") %>">ApiRun.SetBold</a></li>
+                       <li>Make font bold for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/setbold") %>">ApiRun.SetBold</a></li>
+                       <li>Make font bold for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/setbold") %>">ApiRun.SetBold</a></li>
+                       <li>Make font bold for whole text (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/setbold") %>">ApiTextPr.SetBold</a></li>
+                       <li>Make font bold for whole text (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apitextpr/setbold") %>">ApiTextPr.SetBold</a></li>
+                       <li>Make font bold for whole text (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apitextpr/setbold") %>">ApiTextPr.SetBold</a></li>
+                   </ul>
+                </div>
+            </div>
             <div id="body13" class="tags_content">
                 <h5>Learn how to <span class="tag_name">make the text font strikeout</span></h5>
                 <div>
@@ -318,15 +352,15 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                 </div>
             </div> 
             <div id="body15" class="tags_content">
-                <h5>Learn how to <span class="tag_name">make the text font underline</span></h5>
+                <h5>Learn how to <span class="tag_name">make the text font underlined</span></h5>
                 <div>
                    <ul>
-                       <li>Make font underline for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setunderline") %>">ApiRun.SetUnderline</a></li>
-                       <li>Make font underline for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/setunderline") %>">ApiRun.SetUnderline</a></li>
-                       <li>Make font underline for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/setunderline") %>">ApiRun.SetUnderline</a></li>
-                       <li>Make font underline for whole text (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/setunderline") %>">ApiTextPr.SetUnderline</a></li>
-                       <li>Make font underline for whole text (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apitextpr/setunderline") %>">ApiTextPr.SetUnderline</a></li>
-                       <li>Make font underline for whole text (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apitextpr/setunderline") %>">ApiTextPr.SetUnderline</a></li>
+                       <li>Make font underlined for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setunderline") %>">ApiRun.SetUnderline</a></li>
+                       <li>Make font underlined for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/setunderline") %>">ApiRun.SetUnderline</a></li>
+                       <li>Make font underlined for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/setunderline") %>">ApiRun.SetUnderline</a></li>
+                       <li>Make font underlined for whole text (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/setunderline") %>">ApiTextPr.SetUnderline</a></li>
+                       <li>Make font underlined for whole text (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apitextpr/setunderline") %>">ApiTextPr.SetUnderline</a></li>
+                       <li>Make font underlined for whole text (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apitextpr/setunderline") %>">ApiTextPr.SetUnderline</a></li>
                    </ul>
                 </div>
             </div>
@@ -352,29 +386,40 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                    </ul>
                 </div>
             </div> 
-            <div id="body18" class="tags_content">
-                <h5>Learn how to <span class="tag_name">change the text font caps</span></h5>
+            <div id="body62" class="tags_content">
+                <h5>Learn how to <span class="tag_name">change the text font highlighting</span></h5>
                 <div>
                    <ul>
-                       <li>Set font caps for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setcaps") %>">ApiRun.SetCaps</a></li>
-                       <li>Set font caps for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/setcaps") %>">ApiRun.SetCaps</a></li>
-                       <li>Set font caps for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/setcaps") %>">ApiRun.SetCaps</a></li>
-                       <li>Set font caps for whole text (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/setcaps") %>">ApiTextPr.SetCaps</a></li>
-                       <li>Set font caps for whole text (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apitextpr/setcaps") %>">ApiTextPr.SetCaps</a></li>
-                       <li>Set font caps for whole text (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apitextpr/setcaps") %>">ApiTextPr.SetCaps</a></li>
+                      <li>Set font highlighting for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/sethighlight") %>">ApiRun.SetHighlight</a></li>
+                      <li>Set font highlighting for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/sethighlight") %>">ApiRun.SetHighlight</a></li>
+                      <li>Set font highlighting for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/sethighlight") %>">ApiRun.SetHighlight</a></li>
+                      <li>Set font highlighting for whole text (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/sethighlight") %>">ApiTextPr.SetHighlight</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="body18" class="tags_content">
+                <h5>Learn how to <span class="tag_name">make the text font capitalized</span></h5>
+                <div>
+                   <ul>
+                       <li>Make font capitalized for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setcaps") %>">ApiRun.SetCaps</a></li>
+                       <li>Make font capitalized for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/setcaps") %>">ApiRun.SetCaps</a></li>
+                       <li>Make font capitalized for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/setcaps") %>">ApiRun.SetCaps</a></li>
+                       <li>Make font capitalized for whole text (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/setcaps") %>">ApiTextPr.SetCaps</a></li>
+                       <li>Make font capitalized for whole text (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apitextpr/setcaps") %>">ApiTextPr.SetCaps</a></li>
+                       <li>Make font capitalized for whole text (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apitextpr/setcaps") %>">ApiTextPr.SetCaps</a></li>
                    </ul>
                 </div>
             </div> 
             <div id="body19" class="tags_content">
-                <h5>Learn how to <span class="tag_name">change the text font small caps</span></h5>
+                <h5>Learn how to <span class="tag_name">make the text font small capitalized</span></h5>
                 <div>
                    <ul>
-                       <li>Set font small caps for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setsmallcaps") %>">ApiRun.SetSmallCaps</a></li>
-                       <li>Set font small caps for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/setsmallcaps") %>">ApiRun.SetSmallCaps</a></li>
-                       <li>Set font small caps for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/setsmallcaps") %>">ApiRun.SetSmallCaps</a></li>
-                       <li>Set font small caps for whole text (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/setsmallcaps") %>">ApiTextPr.SetSmallCaps</a></li>
-                       <li>Set font small caps for whole text (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apitextpr/setsmallcaps") %>">ApiTextPr.SetSmallCaps</a></li>
-                       <li>Set font small caps for whole text (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apitextpr/setsmallcaps") %>">ApiTextPr.SetSmallCaps</a></li>
+                       <li>Make font small capitalized for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setsmallcaps") %>">ApiRun.SetSmallCaps</a></li>
+                       <li>Make font small capitalized for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/setsmallcaps") %>">ApiRun.SetSmallCaps</a></li>
+                       <li>Make font small capitalized for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/setsmallcaps") %>">ApiRun.SetSmallCaps</a></li>
+                       <li>Make font small capitalized for whole text (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/setsmallcaps") %>">ApiTextPr.SetSmallCaps</a></li>
+                       <li>Make font small capitalized for whole text (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apitextpr/setsmallcaps") %>">ApiTextPr.SetSmallCaps</a></li>
+                       <li>Make font small capitalized for whole text (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apitextpr/setsmallcaps") %>">ApiTextPr.SetSmallCaps</a></li>
                    </ul>
                 </div>
             </div> 
@@ -563,7 +608,7 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                 </div>
             </div> 
             <div id="body40" class="tags_content">
-                <h5>Learn how to <span class="tag_name">add and edit a page header</span></h5>
+                <h5>Learn how to <span class="tag_name">get and edit a page header</span></h5>
                 <div>
                    <ul>
                        <li>Get page header &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apisection/getheader") %>">ApiSection.GetHeader</a></li>
@@ -573,7 +618,7 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                 </div>
             </div>
             <div id="body41" class="tags_content">
-                <h5>Learn how to <span class="tag_name">add and edit a page footer</span></h5>
+                <h5>Learn how to <span class="tag_name">get and edit a page footer</span></h5>
                 <div>
                    <ul>
                        <li>Get page footer &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apisection/getfooter") %>">ApiSection.GetFooter</a></li>
@@ -602,6 +647,8 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                        <li>Position text in shape vertically (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apishape/setverticaltextalign") %>">ApiShape.SetVerticalTextAlign</a></li>
                        <li>Position text in shape vertically (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apishape/setverticaltextalign") %>">ApiShape.SetVerticalTextAlign</a></li>
                        <li>Position text in shape vertically (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apishape/setverticaltextalign") %>">ApiShape.SetVerticalTextAlign</a></li>
+                       <li>Set the text paddings to the shape (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apishape/setpaddings") %>">ApiShape.SetPaddings</a></li>
+                       <li>Set the text paddings to the shape (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apishape/setpaddings") %>">ApiShape.SetPaddings</a></li>
                    </ul>
                 </div>
             </div>
@@ -632,7 +679,9 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                 <h5>Learn how to <span class="tag_name">set the text language</span></h5>
                 <div>
                    <ul>
-                       <li>Set language for part of text or single word &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setlanguage") %>">ApiRun.SetLanguage</a></li>
+                       <li>Set language for part of text or single word (text documents) &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apirun/setlanguage") %>">ApiRun.SetLanguage</a></li>
+                       <li>Set language for part of text or single word (spreadsheets) &mdash; <a target="blank" href="<%= Url.Action("spreadsheetapi/apirun/setlanguage") %>">ApiRun.SetLanguage</a></li>
+                       <li>Set language for part of text or single word (presentations) &mdash; <a target="blank" href="<%= Url.Action("presentationapi/apirun/setlanguage") %>">ApiRun.SetLanguage</a></li>
                        <li>Set language for whole text &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextpr/setlanguage") %>">ApiTextPr.SetLanguage</a></li>
                    </ul>
                 </div>
@@ -650,6 +699,124 @@ sudo apt-get install fonts-liberation ttf-mscorefonts-installer fonts-crosextra-
                 <div>
                    <ul>
                        <li>Set page margins &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apisection/setpagemargins") %>">ApiSection.SetPageMargins</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body49" class="tags_content">
+                <h5>Learn how to <span class="tag_name">create a form</span></h5>
+                <div>
+                   <ul>
+                       <li>Create a text form &mdash; <a target="blank" href="<%= Url.Action("formapi/api/createtextform") %>">Api.CreateTextForm</a></li>
+                       <li>Create a combo box form &mdash; <a target="blank" href="<%= Url.Action("formapi/api/createcomboboxform") %>">Api.CreateComboBoxForm</a></li>
+                       <li>Create a checkbox form &mdash; <a target="blank" href="<%= Url.Action("formapi/api/createcheckboxform") %>">Api.CreateCheckBoxForm</a></li>
+                       <li>Create a picture form &mdash; <a target="blank" href="<%= Url.Action("formapi/api/createpictureform") %>">Api.CreatePictureForm</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body50" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the border color to the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the border color to the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/setbordercolor") %>">ApiTextForm.SetBorderColor</a></li>
+                       <li>Set the border color to the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/setbordercolor") %>">ApiComboBoxForm.SetBorderColor</a></li>
+                       <li>Set the border color to the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/setbordercolor") %>">ApiCheckBoxForm.SetBorderColor</a></li>
+                       <li>Set the border color to the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/setbordercolor") %>">ApiPictureForm.SetBorderColor</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body51" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the placeholder text to the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the placeholder text to the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/setplaceholdertext") %>">ApiTextForm.SetPlaceholderText</a></li>
+                       <li>Set the placeholder text to the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/setplaceholdertext") %>">ApiComboBoxForm.SetPlaceholderText</a></li>
+                       <li>Set the placeholder text to the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/setplaceholdertext") %>">ApiCheckBoxForm.SetPlaceholderText</a></li>
+                       <li>Set the placeholder text to the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/setplaceholdertext") %>">ApiPictureForm.SetPlaceholderText</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body52" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the text properties to the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the text properties to the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/settextpr") %>">ApiTextForm.SetTextPr</a></li>
+                       <li>Set the text properties to the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/settextpr") %>">ApiComboBoxForm.SetTextPr</a></li>
+                       <li>Set the text properties to the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/settextpr") %>">ApiCheckBoxForm.SetTextPr</a></li>
+                       <li>Set the text properties to the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/settextpr") %>">ApiPictureForm.SetTextPr</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body53" class="tags_content">
+                <h5>Learn how to <span class="tag_name">clear the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Clear the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/clear") %>">ApiTextForm.Clear</a></li>
+                       <li>Clear the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/clear") %>">ApiComboBoxForm.Clear</a></li>
+                       <li>Clear the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/clear") %>">ApiCheckBoxForm.Clear</a></li>
+                       <li>Clear the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/clear") %>">ApiPictureForm.Clear</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body54" class="tags_content">
+                <h5>Learn how to <span class="tag_name">get the tip text from the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Get the tip text from the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/gettiptext") %>">ApiTextForm.GetTipText</a></li>
+                       <li>Get the tip text from the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/gettiptext") %>">ApiComboBoxForm.GetTipText</a></li>
+                       <li>Get the tip text from the checkbox form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/gettiptext") %>">ApiCheckBoxForm.GetTipText</a></li>
+                       <li>Get the tip text from the picture form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/gettiptext") %>">ApiPictureForm.GetTipText</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body55" class="tags_content">
+                <h5>Learn how to <span class="tag_name">get the text from the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Get the text from the text form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/gettext") %>">ApiTextForm.GetText</a></li>
+                       <li>Get the text from the combo box form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/gettext") %>">ApiComboBoxForm.GetText</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body56" class="tags_content">
+                <h5>Learn how to <span class="tag_name">make a form fixed size</span></h5>
+                <div>
+                   <ul>
+                       <li>Make a text form fixed size &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apitextform/tofixed") %>">ApiTextForm.ToFixed</a></li>
+                       <li>Make a combo box form fixed size &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/tofixed") %>">ApiComboBoxForm.ToFixed</a></li>
+                       <li>Make a checkbox form fixed size &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/tofixed") %>">ApiCheckBoxForm.ToFixed</a></li>
+                       <li>Make a picture form fixed size &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/tofixed") %>">ApiPictureForm.ToFixed</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body57" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the picture position inside the form</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the picture position inside the form &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apipictureform/setpictureposition") %>">ApiPictureForm.SetPicturePosition</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body58" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the radio group key to the checkbox</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the radio group key to the checkbox &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicheckboxform/setradiogroup") %>">ApiCheckBoxForm.SetRadioGroup</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body59" class="tags_content">
+                <h5>Learn how to <span class="tag_name">set the list values to the combo box</span></h5>
+                <div>
+                   <ul>
+                       <li>Set the list values to the combo box &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/setlistvalues") %>">ApiComboBoxForm.SetListValues</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div id="body60" class="tags_content">
+                <h5>Learn how to <span class="tag_name">select the specified value from the combo box list values</span></h5>
+                <div>
+                   <ul>
+                       <li>Select the specified value from the combo box list values &mdash; <a target="blank" href="<%= Url.Action("textdocumentapi/apicomboboxform/selectlistvalue") %>">ApiComboBoxForm.SelectListValue</a></li>
                    </ul>
                 </div>
             </div>

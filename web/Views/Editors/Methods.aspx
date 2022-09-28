@@ -21,6 +21,24 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
     <ul>
+        <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
+        <li><a href="#destroyEditor">destroyEditor</a> - destroy <em>docEditor</em> object.</li>
+        <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
+        <li><a href="#insertImage">insertImage</a> - insert an image into the file.</li>
+        <li><a href="#refreshHistory">refreshHistory</a> - show the document version history.</li>
+        <li><a href="#requestClose">requestClose</a> - request to close the editor.</li>
+        <li><a href="#setActionLink">setActionLink</a> - set the link to the document which contains a bookmark.</li>
+        <li><a href="#setFavorite">setFavorite</a> - change the <em>Favorite</em> icon state.</li>
+        <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
+        <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
+        <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
+        <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
+        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
+        <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
+    </ul>
+
+    <h2>Methods and their description:</h2>
+    <ul>
         <li>
             <p>
                 <b id="denyEditingRights" class="copy-link">denyEditingRights</b> - deny editing.
@@ -29,6 +47,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <pre>
 docEditor.denyEditingRights(message);
 </pre>
+            
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -53,6 +72,7 @@ docEditor.denyEditingRights(message);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
         <li>
             <p>
@@ -72,20 +92,65 @@ docEditor.destroyEditor();
                 <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.
             </p>
             <pre>
-docEditor.downloadAs();
+docEditor.downloadAs(format);
 </pre>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>format</td>
+                        <td>
+                            Defines the format in which a file will be downloaded.
+                            All the possible formats you can find in the <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion tables</a>.
+                            But you cannot download a file in the image formats such as <em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>.
+                            If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type.
+                        </td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
+            <note>
+                Please note that conversion from the <em>djvu</em>, <em>pdf</em>, <em>xps</em> formats are not available.
+                The original format will be downloaded.
+            </note>
         </li>
 
         <li>
             <p>
                 <b id="insertImage" class="copy-link">insertImage</b> - insert an image into the file.
+                Starting from version 7.0, this method allows a user to insert several images.
+                The <em>images</em> array is used to do it.
                 This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> events.
             </p>
             <pre>
 docEditor.insertImage({
     "c": "add",
-    "fileType": "png",
-    "url": "https://example.com/url-to-example-image.png"
+    "images": [
+        {
+            "fileType": "png",
+            "url": "https://example.com/url-to-example-image1.png"
+        },
+        {
+            "fileType": "png",
+            "url": "https://example.com/url-to-example-image2.png"
+        },
+        ...
+    ]
 });
 </pre>
             <p>
@@ -111,8 +176,8 @@ docEditor.insertImage({
                     <tr class="tablerow">
                         <td>c</td>
                         <td>
-                            Defines the type of image insertion from event.
-                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermak</em>, <em>slide</em>.
+                            Defines a type of image insertion from the event.
+                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermark</em>, <em>slide</em>.
                             The default value is "<em>add</em>".
                         </td>
                         <td>string</td>
@@ -121,8 +186,35 @@ docEditor.insertImage({
                     <tr class="tablerow">
                         <td>fileType</td>
                         <td>
-                            Defines the type of image for insert into the file.
+                            Defines a type of the image to be inserted into the file.
                             Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                            Deprecated since version 7.0, please use the <em>images.fileType</em> parameter instead.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images</td>
+                        <td>
+                            Defines an array of images to be inserted.
+                        </td>
+                        <td>array of objects</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images.fileType</td>
+                        <td>
+                            Defines a type of the image to be inserted into the file.
+                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                        </td>
+                        <td>string</td>
+                        <td>required</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>images.url</td>
+                        <td>
+                            Defines an absolute URL where the source image is stored.
+                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -135,12 +227,32 @@ docEditor.insertImage({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source image is stored.</td>
+                        <td>
+                            Defines an absolute URL where the source image is stored.
+                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                            Otherwise, an error will occur.
+                            Deprecated since version 7.0, please use the <em>images.url</em> parameter instead.
+                        </td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
+            <note>
+                <p>Prior to version 7.0, this method allowed to insert only one image and had the following parameters:</p>
+                <pre>
+docEditor.insertImage({
+    "c": "add",
+    "fileType": "png",
+    "url": "https://example.com/url-to-example-image.png"
+});
+</pre>
+                <p>
+                    Please note that this structure is deprecated and will not be supported by the next editors versions.
+                    Please use a new one.
+                </p>
+            </note>
         </li>
 
         <li>
@@ -175,17 +287,17 @@ docEditor.refreshHistory({
 });
 </pre>
             <p>
-                If after editing and saving the document the <em>histoy</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
+                If after editing and saving the document the <em>history</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
             </p>
             <pre>
 docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "changes": changes,
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
@@ -207,6 +319,8 @@ docEditor.refreshHistory({
     ],
 });
 </pre>
+            <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
             <p>Show the error message explaining why the version history can not be displayed.</p>
             <pre>
 docEditor.refreshHistory({
@@ -261,7 +375,7 @@ docEditor.refreshHistory({
                     </tr>
                     <tr class="tablerow">
                         <td>history.key</td>
-                        <td>Defines the unique document identifier used for document recognition by the service.</td>
+                        <td>Defines the unique document identifier used by the service to recognize the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
@@ -291,6 +405,19 @@ docEditor.refreshHistory({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
+        </li>
+
+        <li>
+            <p>
+                <b id="requestClose" class="copy-link">requestClose</b> - request to close the editor.
+                It is recommended to call this method before the <a href="#destroyEditor">destroyEditor</a> method to check if there is some unsaved data in the editor or not. 
+                If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. 
+                If the <em>Close</em> option will be chosen, then the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event will be called.
+            </p>
+            <pre>
+docEditor.requestClose();
+</pre>
         </li>
 
         <li>
@@ -321,12 +448,48 @@ docEditor.setActionLink(link);
                 <tbody>
                     <tr class="tablerow">
                         <td>link</td>
-                        <td>Defines the link which allows to scroll to the bookmark position in the document.</td>
+                        <td>Defines the link which allows scrolling to the bookmark position in the document.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
+        </li>
+
+        <li>
+            <p>
+                <b id="setFavorite" class="copy-link">setFavorite</b> - change the <em>Favorite</em> icon state. 
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event.
+            </p>
+            <pre>
+docEditor.setFavorite(favorite);
+</pre>
+            <table class="table">
+                <colgroup>
+                    <col style="width: 100px;" />
+                    <col />
+                    <col style="width: 100px;" />
+                    <col style="width: 150px;" />
+                </colgroup>
+                <thead>
+                    <tr class="tablerow">
+                        <td>Parameter</td>
+                        <td>Description</td>
+                        <td>Type</td>
+                        <td>Presence</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tablerow">
+                        <td>favorite</td>
+                        <td>Defines if the <em>Favorite</em> icon is highlighted (<b>true</b>) or not (<b>false</b>).</td>
+                        <td>boolean</td>
+                        <td>true</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -336,6 +499,7 @@ docEditor.setActionLink(link);
             </p>
             <pre>
 docEditor.setHistoryData({
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "url": "https://example.com/url-to-example-document.docx",
     "version": 2
@@ -352,8 +516,10 @@ docEditor.setHistoryData({
             <pre>
 docEditor.setHistoryData({
     "changesUrl": "https://example.com/url-to-changes.zip",
+    "fileType": "docx",
     "key": "Khirz6zTPdfd7",
     "previous": {
+        "fileType": "docx",
         "key": "af86C7e71Ca8",
         "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
     },
@@ -392,7 +558,7 @@ docEditor.setHistoryData({
                         <td>changesUrl</td>
                         <td>
                             Defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.
-                            The request for file is sent out directly from the browser.
+                            The request for file is signed with a token which is checked by the Document Server.
                         </td>
                         <td>string</td>
                         <td>optional</td>
@@ -400,6 +566,12 @@ docEditor.setHistoryData({
                     <tr class="tablerow">
                         <td>error</td>
                         <td>Defines the error message text.</td>
+                        <td>string</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>fileType</td>
+                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
@@ -413,6 +585,12 @@ docEditor.setHistoryData({
                         <td>previous</td>
                         <td>Defines the object of the previous version of the document if <em>changesUrl</em> address was returned after saving the document.</td>
                         <td>object</td>
+                        <td>optional</td>
+                    </tr>
+                    <tr class="tablerow">
+                        <td>previous.fileType</td>
+                        <td>Defines an extension of the document specified with the <em>previous.url</em> parameter.</td>
+                        <td>string</td>
                         <td>optional</td>
                     </tr>
                     <tr class="tablerow">
@@ -436,8 +614,10 @@ docEditor.setHistoryData({
                     <tr class="tablerow">
                         <td>url</td>
                         <td>
-                            Defines the url address of the current version of the document.
-                            Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document.
+                            Defines the url address of the current document version.
+                            Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document. 
+                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
+                            Otherwise, an error will occur.
                         </td>
                         <td>string</td>
                         <td>required</td>
@@ -450,6 +630,7 @@ docEditor.setHistoryData({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -500,16 +681,22 @@ docEditor.setMailMergeRecipients({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source data is stored.</td>
+                        <td>Defines the absolute URL where the source data is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
+                            Otherwise, an error will occur.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
-            <p><b id="setRevisedFile" class="copy-link">setRevisedFile</b> - select a document for comparing. This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.</p>
+            <p>
+                <b id="setRevisedFile" class="copy-link">setRevisedFile<span class="required">*</span></b> - select a document for comparing.
+                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.
+                <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+            </p>
             <pre>
 docEditor.setRevisedFile({
     "fileType": "docx",
@@ -550,17 +737,19 @@ docEditor.setRevisedFile({
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source document is stored.</td>
+                        <td>Defines the absolute URL where the source document is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
+                            Otherwise, an error will occur.</td>
                         <td>string</td>
                         <td>required</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
             <p>
-                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - Update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
+                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
                 This method can be called after the <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a> events.
             </p>
             <pre>
@@ -571,8 +760,9 @@ docEditor.setSharingSettings({
             "user": "John Smith"
         },
         {
+            "isLink": true,
             "permissions": "Read Only",
-            "user": "Kate Cage"
+            "user": "External link"
         }
     ]
 });
@@ -595,7 +785,7 @@ docEditor.setSharingSettings({
                 <tbody>
                     <tr class="tablerow">
                         <td>sharingSettings</td>
-                        <td>Defines the settings which allow to share the document with other users.</td>
+                        <td>Defines the settings which allow sharing the document with other users.</td>
                         <td>array of object</td>
                         <td>optional</td>
                     </tr>
@@ -607,12 +797,13 @@ docEditor.setSharingSettings({
                     </tr>
                     <tr class="tablerow">
                         <td>sharingSettings.user</td>
-                        <td>Defines the name of the user the document will be shared with.</td>
+                        <td>Defines the name of the user with whom the document will be shared.</td>
                         <td>string</td>
                         <td>optional</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
@@ -675,11 +866,12 @@ docEditor.setUsers({
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
         </li>
 
         <li>
             <p>
-                <b id="showMessage" class="copy-link">showMessage</b> - Display tooltip with the message.
+                <b id="showMessage" class="copy-link">showMessage</b> - display a tooltip with a message.
                 This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
             </p>
             <pre>
@@ -709,6 +901,10 @@ docEditor.showMessage(message);
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
+            <note>
+                Please note that displaying a tooltip with a message is not supported in the embedded platform <a href="<%= Url.Action("config") %>#type">type</a>.
+            </note>
         </li>
     </ul>
 

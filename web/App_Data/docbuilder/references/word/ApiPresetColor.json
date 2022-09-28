@@ -3,10 +3,11 @@
     "GetClassType": {
       "memberof": "ApiPresetColor",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiPresetColor class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
+          "CSE",
           "CPE"
         ]
       },
@@ -17,10 +18,27 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiPresetColor",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiPresetColor object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a Preset Color\r\n\t * @constructor\r\n\t * */",
-  "description": "<p>Class representing a Preset Color</p>",
+  "comment": "/**\n\t * Class representing a Preset Color.\n\t * @constructor\n\t * */",
+  "description": "<p>Class representing a Preset Color.</p>",
   "scope": "global",
   "params": []
 }

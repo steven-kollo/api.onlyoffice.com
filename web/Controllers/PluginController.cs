@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -25,13 +25,9 @@
 
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
-using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -41,43 +37,156 @@ namespace ASC.Api.Web.Help.Controllers
         private readonly string[] _actionMap = new[]
             {
                 "Basic",
-                "Button",
                 "Code",
                 "Config",
                 "callCommand",
+                "callModule",
+                "changelog",
+                "createInputHelper",
+                "events",
+                "example",
+                "example/addcommentincell",
+                "example/addcustomfields",
+                "example/autocomplete",
+                "example/cbr",
+                "example/chess",
+                "example/clippy",
+                "example/countwordsandcharacters",
+                "example/default",
+                "example/extendedcomments",
+                "example/getandpastehtml",
+                "example/helloworld",
+                "example/highlightcode",
+                "example/invoices",
+                "example/languagetool",
+                "example/loadcustomfields",
+                "example/customfields",
+                "example/movecursor",
+                "example/num2word",
+                "example/ocr",
+                "example/photoeditor",
+                "example/searchandchangetextbackgroundcolor",
+                "example/searchandreplace",
+                "example/searchandreplaceonstart",
+                "example/settings",
+                "example/speech",
+                "example/symboltable",
+                "example/telegram",
+                "example/templates",
+                "example/thesaurus",
+                "example/translator",
+                "example/typograf",
+                "example/workwithcontentcontrolscontent",
+                "example/workwithcontentcontrolsnavigation",
+                "example/workwithcontentcontrolstags",
+                "example/youtube",
+                "example/zotero",
                 "ExecuteCommand",
                 "executemethod",
-                "executemethod/insertandreplacecontentcontrols",
-                "executemethod/removecontentcontrols",
-                "executemethod/getallcontentcontrols",
+                "executemethod/addcomment",
                 "executemethod/addcontentcontrol",
-                "executemethod/removecontentcontrol",
+                "executemethod/addcontentcontrolcheckbox",
+                "executemethod/addcontentcontroldatepicker",
+                "executemethod/addcontentcontrollist",
+                "executemethod/addcontentcontrolpicture",
+                "executemethod/addoleobject",
+                "executemethod/changecomment",
+                "executemethod/changeoleobject",
+                "executemethod/changeoleobjects",
+                "executemethod/coauthoringchatsendmessage",
+                "executemethod/convertdocument",
+                "executemethod/editoleobject",
+                "executemethod/endaction",
+                "executemethod/getallcomments",
+                "executemethod/getallcontentcontrols",
+                "executemethod/getallforms",
+                "executemethod/getalloleobjects",
+                "executemethod/getcurrentcontentcontrolpr",
                 "executemethod/getcurrentcontentcontrol",
-                "Example",
+                "executemethod/getfields",
+                "executemethod/getfilehtml",
+                "executemethod/getfiletodownload",
+                "executemethod/getfontlist",
+                "executemethod/getformsbytag",
+                "executemethod/getformvalue",
+                "executemethod/getimagedatafromselection",
+                "executemethod/getinstalledplugins",
+                "executemethod/getmacros",
+                "executemethod/getselectedtext",
+                "executemethod/getselectiontype",
+                "executemethod/getversion",
+                "executemethod/inputtext",
+                "executemethod/insertandreplacecontentcontrols",
+                "executemethod/insertoleobject",
+                "executemethod/installplugin",
+                "executemethod/movecursortocontentcontrol",
+                "executemethod/movecursortoend",
+                "executemethod/movecursortostart",
+                "executemethod/movetocomment",
+                "executemethod/openfile",
+                "executemethod/onencryption",
+                "executemethod/pastehtml",
+                "executemethod/pastetext",
+                "executemethod/putimagedatatoselection",
+                "executemethod/removecomments",
+                "executemethod/removecontentcontrols",
+                "executemethod/removecontentcontrol",
+                "executemethod/removeoleobject",
+                "executemethod/removeoleobjects",
+                "executemethod/removeplugin",
+                "executemethod/removeselectedcontent",
+                "executemethod/replacetextsmart",
+                "executemethod/searchandreplace",
+                "executemethod/selectcontentcontrol",
+                "executemethod/selectoleobject",
+                "executemethod/setdisplaymodeinreview",
+                "executemethod/setformvalue",
+                "executemethod/setmacros",
+                "executemethod/setproperties",
+                "executemethod/showbutton",
+                "executemethod/showinputhelper",
+                "executemethod/startaction",
+                "executemethod/unshowinputhelper",
+                "executemethod/updateplugin",
+                "FAQ",
+                "getInputHelper",
+                "GettingStarted",
+                "Icons",
                 "IndexHtml",
                 "Info",
-                "Info/data",
-                "Info/editorType",
-                "Info/guid",
-                "Info/height",
-                "Info/imgSrc",
-                "Info/mmToPx",
-                "Info/objectId",
-                "Info/recalculate",
-                "Info/resize",
-                "Info/width",
-                "Init",
-                "Installation",
+                "inputHelper",
+                "installation",
+                "installation/cloud",
+                "installation/desktop",
+                "installation/onpremises",
+                "loadModule",
                 "Localization",
-                "OnExternalMouseUp",
-                "onmethodreturn",
-                "Plugin",
-                "scope",
-                "Structure",
                 "macros/Macros",
                 "macros/Writing",
+                "macros/Debugging",
                 "macros/ConvertingVBA",
-                "macros/Samples",
+                "macros/macrosamples",
+                "macros/macrosamples/addchart",
+                "macros/macrosamples/changecellbackgroundcolor",
+                "macros/macrosamples/changecellfontcolor",
+                "macros/macrosamples/currencyexchangerates",
+                "macros/macrosamples/formatrangeasatable",
+                "macros/macrosamples/highlightduplicates",
+                "macros/macrosamples/inserttext",
+                "macros/macrosamples/makecellfontbold",
+                "macros/macrosamples/mergecellrange",
+                "macros/macrosamples/nextblankrow",
+                "macros/macrosamples/setcolumnwidth",
+                "macros/macrosamples/unmergecellrange",
+                "macros/macrosamples/writedatatoworksheetcell",
+                "Objects",
+                "Plugin",
+                "resizeWindow",
+                "scope",
+                "Structure",
+                "Styles",
+                "Types",
+                "Variations",
             };
 
         public ActionResult Index()
@@ -93,55 +202,10 @@ namespace ASC.Api.Web.Help.Controllers
         [ValidateInput(false)]
         public ActionResult Search(string query)
         {
-            var result = new List<SearchResult>();
-
-            foreach (var action in _actionMap)
-            {
-                var actionString = action.ToLower();
-                var doc = new HtmlDocument();
-                try
-                {
-                    var html = this.RenderView(actionString, new ViewDataDictionary());
-                    doc.LoadHtml(html);
-                }
-                catch (Exception e)
-                {
-                    LogManager.GetLogger("ASC.Api").Error(e);
-                }
-                var content = doc.DocumentNode;
-                if (content.SelectSingleNode("html") != null)
-                {
-                    content = content.SelectSingleNode("//div[contains(@class,'layout-content')]");
-                }
-
-                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
-                {
-                    var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
-                    var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
-                    var header = headerNode != null ? headerNode.InnerText : string.Empty;
-                    var descr = descrNode != null ? descrNode.InnerText : string.Empty;
-                    result.Add(new SearchResult
-                        {
-                            Module = "plugin",
-                            Name = actionString,
-                            Resource = Highliter.HighliteString(header, query).ToHtmlString(),
-                            Description = Highliter.HighliteString(descr, query).ToHtmlString(),
-                            Url = Url.Action(actionString, "plugin")
-                        });
-                }
-            }
-
-            ViewData["query"] = query ?? string.Empty;
-            ViewData["result"] = result;
-            return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
+            return View(GCustomSearch.Search(query, "plugin"));
         }
 
         public ActionResult Basic()
-        {
-            return View();
-        }
-
-        public ActionResult Button()
         {
             return View();
         }
@@ -161,6 +225,35 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult callModule()
+        {
+            return View();
+        }
+
+        public ActionResult Changelog()
+        {
+            return View();
+        }
+
+        public ActionResult createInputHelper()
+        {
+            return View();
+        }
+
+        public ActionResult Events()
+        {
+            return View();
+        }
+
+        public ActionResult example(string catchall)
+        {
+            if (!_actionMap.Contains("example/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("example", (object)catchall);
+        }
+
         public ActionResult ExecuteCommand()
         {
             return View();
@@ -175,7 +268,32 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Executemethod", (object)catchall);
         }
 
-        public ActionResult Example()
+        public ActionResult getInputHelper()
+        {
+            return View();
+        }
+
+        public ActionResult loadModule()
+        {
+            return View();
+        }
+
+        public ActionResult resizeWindow()
+        {
+            return View();
+        }
+
+        public ActionResult GettingStarted()
+        {
+            return View();
+        }
+
+        public ActionResult FAQ()
+        {
+            return View();
+        }
+
+        public ActionResult Icons()
         {
             return View();
         }
@@ -185,23 +303,23 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Info(string catchall)
+        public ActionResult Info()
         {
-            if (!_actionMap.Contains("info/" + catchall, StringComparer.OrdinalIgnoreCase))
+            return View();
+        }
+
+        public ActionResult inputHelper()
+        {
+            return View();
+        }
+
+        public ActionResult Installation(string catchall)
+        {
+            if (!_actionMap.Contains("installation/" + catchall, StringComparer.OrdinalIgnoreCase))
             {
                 catchall = null;
             }
-            return View("Info", (object)catchall);
-        }
-
-        public ActionResult Init()
-        {
-            return View();
-        }
-
-        public ActionResult Installation()
-        {
-            return View();
+            return View("Installation", (object)catchall);
         }
 
         public ActionResult Localization()
@@ -209,12 +327,7 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult OnExternalMouseUp()
-        {
-            return View();
-        }
-
-        public ActionResult Onmethodreturn()
+        public ActionResult Objects()
         {
             return View();
         }
@@ -228,7 +341,23 @@ namespace ASC.Api.Web.Help.Controllers
         {
             return View();
         }
+
         public ActionResult Structure()
+        {
+            return View();
+        }
+
+        public ActionResult Styles()
+        {
+            return View();
+        }
+
+        public ActionResult Types()
+        {
+            return View();
+        }
+
+        public ActionResult Variations()
         {
             return View();
         }
@@ -243,9 +372,13 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Macros/ConvertingVBAMacros");
         }
 
-        public ActionResult MacroSamples()
+        public ActionResult Macrosamples(string catchall)
         {
-            return View("Macros/MacroSamples");
+            if (!_actionMap.Contains("Macros/Macrosamples/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Macros/Macrosamples", (object)catchall);
         }
 
         public ActionResult WritingMacros()
@@ -253,6 +386,10 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Macros/WritingMacros");
         }
 
+        public ActionResult Debugging()
+        {
+            return View("Macros/Debugging");
+        }
 
     }
 }

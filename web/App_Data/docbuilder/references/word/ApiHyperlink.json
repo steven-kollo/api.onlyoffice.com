@@ -1,5 +1,22 @@
 {
   "methods": {
+    "GetClassType": {
+      "memberof": "ApiHyperlink",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiHyperlink class.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "\"hyperlink\""
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetLink": {
       "memberof": "ApiHyperlink",
       "name": "SetLink",
@@ -11,7 +28,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -20,7 +37,7 @@
         {
           "type": "string",
           "name": "sLink",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>The hyperlink address.</p>",
           "optional": false
         }
       ]
@@ -28,7 +45,7 @@
     "SetDisplayedText": {
       "memberof": "ApiHyperlink",
       "name": "SetDisplayedText",
-      "description": "<p>Sets the display text of the hyperlink.</p>",
+      "description": "<p>Sets the hyperlink display text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -36,7 +53,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -45,7 +62,7 @@
         {
           "type": "string",
           "name": "sDisplay",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>The text to display the hyperlink.</p>",
           "optional": false
         }
       ]
@@ -61,7 +78,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -70,7 +87,7 @@
         {
           "type": "string",
           "name": "sScreenTipText",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>The screen tip text of the hyperlink.</p>",
           "optional": false
         }
       ]
@@ -78,7 +95,7 @@
     "GetLinkedText": {
       "memberof": "ApiHyperlink",
       "name": "GetLinkedText",
-      "description": "<p>Gets the link text of the hyperlink.</p>",
+      "description": "<p>Returns the hyperlink address.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -95,7 +112,7 @@
     "GetDisplayedText": {
       "memberof": "ApiHyperlink",
       "name": "GetDisplayedText",
-      "description": "<p>Gets the displayed text of the hyperlink.</p>",
+      "description": "<p>Returns the hyperlink display text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -112,7 +129,7 @@
     "GetScreenTipText": {
       "memberof": "ApiHyperlink",
       "name": "GetScreenTipText",
-      "description": "<p>Gets the ScreenTip text of the hyperlink.</p>",
+      "description": "<p>Returns the screen tip text of the hyperlink.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -129,12 +146,10 @@
     "GetElement": {
       "memberof": "ApiHyperlink",
       "name": "GetElement",
-      "description": "<p>Get the element of the hyperlink using the position specified.</p>",
+      "description": "<p>Returns the hyperlink element using the position specified.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [
@@ -156,12 +171,10 @@
     "GetElementsCount": {
       "memberof": "ApiHyperlink",
       "name": "GetElementsCount",
-      "description": "<p>Get the number of elements in the current hyperlink.</p>",
+      "description": "<p>Returns a number of elements in the current hyperlink.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE",
-          "CSE",
-          "CPE"
+          "CDE"
         ]
       },
       "returns": [
@@ -175,7 +188,7 @@
     "SetDefaultStyle": {
       "memberof": "ApiHyperlink",
       "name": "SetDefaultStyle",
-      "description": "<p>Sets default hyperlink style.</p>",
+      "description": "<p>Sets the default hyperlink style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -183,7 +196,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -192,7 +205,7 @@
     "GetRange": {
       "memberof": "ApiHyperlink",
       "name": "GetRange",
-      "description": "<p>Returns a Range object that represents the part of the document contained in the specified hyperlink.</p>",
+      "description": "<p>Returns a Range object that represents the document part contained in the specified hyperlink.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -209,20 +222,38 @@
         {
           "type": "Number",
           "name": "Start",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>Start character index in the current element.</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "End",
-          "description": "<p>end character in current element</p>",
+          "description": "<p>End character index in the current element.</p>",
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiHyperlink",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiHyperlink object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
     }
   },
-  "comment": "/**\r\n\t * Class representing a hyperlink of Paragraph\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a hyperlink of Paragraph</p>",
+  "comment": "/**\n\t * Class representing a Paragraph hyperlink.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing a Paragraph hyperlink.</p>",
   "scope": "global",
   "params": []
 }

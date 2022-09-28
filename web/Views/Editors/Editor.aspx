@@ -27,13 +27,52 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    }) %>
+            );
+        <% break; %>
+
+        <% case "docxfEditor": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docxf",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                                Title = "Example Form Template Title.docxf",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docxf"
+                            },
+                        DocumentType = "word",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -50,14 +89,22 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         Height = "100%",
                         Width = "100%"
                     }) %>
@@ -73,14 +120,22 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         Height = "100%",
                         Width = "100%"
                     }) %>
@@ -96,13 +151,21 @@
                             {
                                 FileType = "doc",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.doc",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.doc"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -119,13 +182,21 @@
                             {
                                 FileType = "xls",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xls",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xls"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -142,13 +213,21 @@
                             {
                                 FileType = "ppt",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.ppt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ppt"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -165,13 +244,21 @@
                             {
                                 FileType = "odt",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.odt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odt"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -188,13 +275,21 @@
                             {
                                 FileType = "ods",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.ods",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.ods"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -211,13 +306,21 @@
                             {
                                 FileType = "odp",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.odp",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.odp"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -234,13 +337,21 @@
                             {
                                 FileType = "txt",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.txt",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.txt"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -257,13 +368,21 @@
                             {
                                 FileType = "csv",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.csv",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.csv"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
-                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme)
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    }
                             },
                         Height = "100%",
                         Width = "100%"
@@ -280,12 +399,20 @@
                             {
                                 FileType = "pdf",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.pdf",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pdf"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -303,12 +430,20 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -326,12 +461,20 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -349,12 +492,20 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -372,13 +523,21 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -400,13 +559,21 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -428,13 +595,21 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -456,15 +631,20 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Autosave = false
                                     },
                                 User = new Config.EditorConfigConfiguration.UserConfig
@@ -488,15 +668,20 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Autosave = false
                                     },
                                 User = new Config.EditorConfigConfiguration.UserConfig
@@ -520,15 +705,20 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Request["key"],
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Autosave = false
                                     },
                                 User = new Config.EditorConfigConfiguration.UserConfig
@@ -552,15 +742,20 @@
                             {
                                 FileType = "docx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Document Title.docx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
                                             {
                                                 Address = "My City, 123a-45",
@@ -592,15 +787,20 @@
                             {
                                 FileType = "xlsx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Spreadsheet Title.xlsx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
                                             {
                                                 Address = "My City, 123a-45",
@@ -632,15 +832,20 @@
                             {
                                 FileType = "pptx",
                                 Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
                                 Title = "Example Presentation Title.pptx",
                                 Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
                                 Customization = new Config.EditorConfigConfiguration.CustomizationConfig
                                     {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            },
                                         Customer = new Config.EditorConfigConfiguration.CustomizationConfig.CustomerConfig
                                             {
                                                 Address = "My City, 123a-45",
@@ -680,15 +885,59 @@
                                         Review = true
                                     }
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
                         Width = "100%"
-                    }) %>
+                    })%>
+            );
+        <% break; %>
+
+        <% case "docxReviewGroups": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "review.docx",
+                                Permissions = new Config.DocumentConfig.PermissionsConfig
+                                    {
+                                        Edit = true,
+                                        Review = true,
+                                        ReviewGroups = new[] { "group-3", "" }
+                                    }
+                            },
+                        DocumentType = "word",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
+                                Mode = "edit"
+                            },
+                        Height = "100%",
+                        Width = "100%"
+                    })%>
             );
         <% break; %>
 
@@ -699,20 +948,27 @@
                     {
                         Document = new Config.DocumentConfig
                             {
-                                FileType = "docx",
+                                FileType = "oform",
                                 Key = "apiwh" + Guid.NewGuid(),
-                                Title = "Example Document Title.docx",
-                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo-form.docx",
+                                Title = "Example Form Title.oform",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.oform",
                                 Permissions = new Config.DocumentConfig.PermissionsConfig
                                     {
                                         Edit = false,
                                         FillForms = true
                                     }
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -738,10 +994,17 @@
                                         Edit = false
                                     }
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -767,10 +1030,17 @@
                                         Edit = false
                                     }
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -796,15 +1066,63 @@
                                         Edit = false
                                     }
                             },
-                        DocumentType = "presentation",
+                        DocumentType = "slide",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",
                         Width = "100%"
                     }) %>
+            );
+        <% break; %>
+
+        <% case "docxCommentGroups": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                {
+                    Document = new Config.DocumentConfig
+                    {
+                        FileType = "docx",
+                        Key = "apiwh" + Guid.NewGuid(),
+                        Title = "Example Document Title.docx",
+                        Url = ConfigurationManager.AppSettings["storage_demo_url"] + "comment.docx",
+                        Permissions = new Config.DocumentConfig.PermissionsConfig
+                        {
+                            Comment = true,
+                            CommentGroups = new Config.DocumentConfig.PermissionsConfig.CommentGroupsConfig
+                            {
+                                Edit = new[] { "group-2", "" },
+                                Remove = new [] { "group-2"}
+                            },
+                            Edit = false
+                        }
+                    },
+                    DocumentType = "word",
+                    EditorConfig = new Config.EditorConfigConfiguration
+                    {
+                        CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                        Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                        {
+                            Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                            {
+                                Request = false
+                            }
+                        },
+                        Mode = "edit"
+                    },
+                    Height = "100%",
+                    Width = "100%"
+                }) %>
             );
         <% break; %>
 
@@ -824,10 +1142,17 @@
                                         ModifyFilter = false
                                     }
                             },
-                        DocumentType = "spreadsheet",
+                        DocumentType = "cell",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -857,10 +1182,17 @@
                                         ModifyContentControl = false
                                     }
                             },
-                        DocumentType = "text",
+                        DocumentType = "word",
                         EditorConfig = new Config.EditorConfigConfiguration
                             {
                                 CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
                                 Mode = "edit"
                             },
                         Height = "100%",

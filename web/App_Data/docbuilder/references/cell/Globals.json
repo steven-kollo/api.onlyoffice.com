@@ -197,7 +197,7 @@
   },
   "TickLabelPosition": {
     "name": "TickLabelPosition",
-    "description": "<p>Possible values for the position of chart tick labels (either horizontal or vertical).</p>\n<ul>\n<li><strong>&quot;none&quot;</strong> - not display the selected tick labels.</li>\n<li><strong>&quot;nextTo&quot;</strong> - set the position of the selected tick labels next to the main label.</li>\n<li><strong>&quot;low&quot;</strong> - set the position of the selected tick labels in the part of the chart with lower values.</li>\n<li><strong>&quot;high&quot;</strong> - set the position of the selected tick labels in the part of the chart with higher values.</li>\n</ul>",
+    "description": "<p>Possible values for the position of chart tick labels (either horizontal or vertical).</p>\n<ul>\n<li><strong>&quot;none&quot;</strong> - does not display the selected tick labels.</li>\n<li><strong>&quot;nextTo&quot;</strong> - sets the position of the selected tick labels next to the main label.</li>\n<li><strong>&quot;low&quot;</strong> - sets the position of the selected tick labels in the part of the chart with lower values.</li>\n<li><strong>&quot;high&quot;</strong> - sets the position of the selected tick labels in the part of the chart with higher values.</li>\n</ul>",
     "type": [
       "\"none\"",
       "\"nextTo\"",
@@ -207,6 +207,7 @@
   },
   "PageOrientation": {
     "name": "PageOrientation",
+    "description": "<p>The page orientation type.</p>",
     "type": [
       "\"xlLandscape\"",
       "\"xlPortrait\""
@@ -214,11 +215,103 @@
   },
   "TickMark": {
     "name": "TickMark",
+    "description": "<p>The type of tick mark appearance.</p>",
     "type": [
       "\"cross\"",
       "\"in\"",
       "\"none\"",
       "\"out\""
+    ]
+  },
+  "TextTransform": {
+    "name": "TextTransform",
+    "description": "<p>Text transform type.</p>",
+    "type": [
+      "\"textArchDown\"",
+      "\"textArchDownPour\"",
+      "\"textArchUp\"",
+      "\"textArchUpPour\"",
+      "\"textButton\"",
+      "\"textButtonPour\"",
+      "\"textCanDown\"",
+      "\"textCanUp\"",
+      "\"textCascadeDown\"",
+      "\"textCascadeUp\"",
+      "\"textChevron\"",
+      "\"textChevronInverted\"",
+      "\"textCircle\"",
+      "\"textCirclePour\"",
+      "\"textCurveDown\"",
+      "\"textCurveUp\"",
+      "\"textDeflate\"",
+      "\"textDeflateBottom\"",
+      "\"textDeflateInflate\"",
+      "\"textDeflateInflateDeflate\"",
+      "\"textDeflateTop\"",
+      "\"textDoubleWave1\"",
+      "\"textFadeDown\"",
+      "\"textFadeLeft\"",
+      "\"textFadeRight\"",
+      "\"textFadeUp\"",
+      "\"textInflate\"",
+      "\"textInflateBottom\"",
+      "\"textInflateTop\"",
+      "\"textPlain\"",
+      "\"textRingInside\"",
+      "\"textRingOutside\"",
+      "\"textSlantDown\"",
+      "\"textSlantUp\"",
+      "\"textStop\"",
+      "\"textTriangle\"",
+      "\"textTriangleInverted\"",
+      "\"textWave1\"",
+      "\"textWave2\"",
+      "\"textWave4\"",
+      "\"textNoShape\""
+    ]
+  },
+  "AxisPos": {
+    "name": "AxisPos",
+    "description": "<p>Axis position in the chart.</p>",
+    "type": [
+      "\"top\"",
+      "\"bottom\"",
+      "\"right\"",
+      "\"left\""
+    ]
+  },
+  "NumFormat": {
+    "name": "NumFormat",
+    "description": "<p>Standard numeric format.</p>",
+    "type": [
+      "\"General\"",
+      "\"0\"",
+      "\"0.00\"",
+      "\"#,##0\"",
+      "\"#,##0.00\"",
+      "\"0%\"",
+      "\"0.00%\"",
+      "\"0.00E+00\"",
+      "\"# ?/?\"",
+      "\"# ??/??\"",
+      "\"m/d/yyyy\"",
+      "\"d-mmm-yy\"",
+      "\"d-mmm\"",
+      "\"mmm-yy\"",
+      "\"h:mm AM/PM\"",
+      "\"h:mm:ss AM/PM\"",
+      "\"h:mm\"",
+      "\"h:mm:ss\"",
+      "\"m/d/yyyy h:mm\"",
+      "\"#,##0_);(#,##0)\"",
+      "\"#,##0_);[Red](#,##0)\"",
+      "\"#,##0.00_);(#,##0.00)\"",
+      "\"#,##0.00_);[Red](#,##0.00)\"",
+      "\"mm:ss\"",
+      "\"[h]:mm:ss\"",
+      "\"mm:ss.0\"",
+      "\"##0.0E+0\"",
+      "\"@\""
     ]
   },
   "BordersIndex": {
@@ -253,6 +346,50 @@
       "\"MediumDashed\"",
       "\"Medium\"",
       "\"Thick\""
+    ]
+  },
+  "SortOrder": {
+    "name": "SortOrder",
+    "description": "<p>Specifies the sort order.</p>",
+    "type": [
+      "\"xlAscending\"",
+      "\"xlDescending\""
+    ]
+  },
+  "SortHeader": {
+    "name": "SortHeader",
+    "description": "<p>Specifies whether the first row of the sort range contains the header information.</p>",
+    "type": [
+      "\"xlNo\"",
+      "\"xlYes\""
+    ]
+  },
+  "SortOrientation": {
+    "name": "SortOrientation",
+    "description": "<p>Specifies if the sort should be by row or column.</p>",
+    "type": [
+      "\"xlSortColumns\"",
+      "\"xlSortRows\""
+    ]
+  },
+  "Angle": {
+    "name": "Angle",
+    "description": "<p>Specifies the range angle.</p>",
+    "type": [
+      "\"xlDownward\"",
+      "\"xlHorizontal\"",
+      "\"xlUpward\"",
+      "\"xlVertical\""
+    ]
+  },
+  "Direction": {
+    "name": "Direction",
+    "description": "<p>Specifies the direction of end in the specified range.</p>",
+    "type": [
+      "\"xlUp\"",
+      "\"xlDown\"",
+      "\"xlToRight\"",
+      "\"xlToLeft\""
     ]
   }
 }

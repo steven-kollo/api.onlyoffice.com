@@ -2,37 +2,104 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("executemethod/") %>"></a>
-    <span class="hdr">window.Asc.plugin.executeMethod("RemoveContentControl", callback)</span>
+    <span class="hdr">window.Asc.plugin.executeMethod ("RemoveContentControl", [args], callback)</span>
 </h1>
 
 <div class="header-gray">Description</div>
 
-<p class="dscr">Defines the method that allows removing the currently selected content control retaining all its contents.</p>
+<p class="dscr">Defines the method that allows removing the currently selected content control retaining all its contents. 
+The content control where the mouse cursor is currently positioned will be removed.</p>
 
 <div class="header-gray">Usage</div>
 <p>This method should be used in the following way:</p>
 <pre>
-window.Asc.plugin.executeMethod("RemoveContentControl");
+window.Asc.plugin.executeMethod ("RemoveContentControl", [InternalId]);
 </pre>
-<p>The content control where the mouse cursor is currently positioned will be removed.</p>
+
+<div class="header-gray">Parameters</div>
+<table class="table">
+    <colgroup>
+        <col style="width: 100px;" />
+        <col />
+        <col style="width: 100px;" />
+        <col style="width: 150px;" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>InternalId</td>
+            <td>A unique internal identifier of the content control.</td>
+            <td>string</td>
+            <td>"5_665"</td>
+        </tr>
+    </tbody>
+</table>
+<div class="mobile-content"></div>
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns the <em>undefined</em> value.</p>
+<p>The method returns an object which contains the following values:</p>
+<pre>
+{
+    "Parent" : object,
+    "Pos" : integer,
+    "Count" : integer
+}
+</pre>
+<div class="header-gray">Parameters</div>
+<table class="table">
+    <colgroup>
+        <col style="width: 100px;" />
+        <col />
+        <col style="width: 100px;" />
+        <col style="width: 150px;" />
+    </colgroup>
+    <thead>
+        <tr class="tablerow">
+            <td>Parameter</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Example</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tablerow">
+            <td>Parent</td>
+            <td>The content control parent.</td>
+            <td>object</td>
+            <td>oParagraph</td>
+        </tr>
+        <tr class="tablerow">
+            <td>Pos</td>
+            <td>The content control position within the parent object.</td>
+            <td>integer</td>
+            <td>0</td>
+        </tr>
+        <tr class="tablerow">
+            <td>Count</td>
+            <td>A number of elements in the parent object.</td>
+            <td>integer</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+<div class="mobile-content"></div>
 
-<%--<div class="header-gray">Example</div>
+<div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.button = function (id) {
-    var _info = window.Asc.plugin.info;
-    var _method = (_info.objectId === undefined) ? "asc_addOleObject" : "asc_editOleObject";
-    _info.width = _info.width ? _info.width : 70;
-    _info.height = _info.height ? _info.height : 70;
-    _info.widthPix = (_info.mmToPx * _info.width) >> 0;
-    _info.heightPix = (_info.mmToPx * _info.height) >> 0;
-    _info.imgSrc = window.g_board.getResult(_info.widthPix, _info.heightPix).image;
-    _info.data = window.g_board.getData();
-    var _code = "Api." + _method + "(" + JSON.stringify(_info) + ");";
-    this.executeCommand("close", _code);
-};
-</pre>--%>
+window.buttonIDChangeState_click = undefined;
+    if (null == returnValue) {
+        window.Asc.plugin.executeMethod("AddContentControl", [1, {"Id" : 7, "Lock" : 0, "Tag" : "{some text}"}]);
+    }
+    else {
+        window.Asc.plugin.executeMethod("RemoveContentControl", [returnValue]);
+    }
+</pre>

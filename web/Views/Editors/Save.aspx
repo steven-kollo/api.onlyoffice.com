@@ -13,7 +13,7 @@
     <h1>
         <span class="hdr">Saving file</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of saving the document in ONLYOFFICE Document Server.</p>
+    <p class="dscr">The reference figure and the steps below explain the process of saving a document in ONLYOFFICE Document Server.</p>
     <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/saving.jpg") %>" />
     <ol>
         <li>The user edits the document in the <b>document editor</b>.</li>
@@ -25,7 +25,7 @@
             <div class="note">
                 Please note that since version 5.5, <a href="<%= Url.Action("config/editor") %>#callbackUrl">callbackUrl</a> is selected based on <a href="<%= Url.Action("callback") %>#status">status</a> of the request.
                 Starting from version 4.4 to version 5.5, <em>callbackUrl</em> is used from the last user who joined the co-editing.
-                Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.                
+                Prior to version 4.4, when co-editing, <em>callbackUrl</em> is used from the user who first opened the file for editing.
             </div>
         </li>
         <li>The <b>document storage service</b> downloads the document file with all the saved changes from the <b>document editing service</b> and stores it.</li>
@@ -44,7 +44,7 @@ new DocsAPI.DocEditor("placeholder", {
         "title": "Example Document Title.docx",
         "url": "https://example.com/url-to-example-document.docx"
     },
-    "documentType": "text",
+    "documentType": "word",
     "editorConfig": {
         "callbackUrl": "https://example.com/url-to-callback.ashx"
     }
@@ -69,7 +69,7 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         The conversion start delay is necessary to allow to return to the file editing session without the file saving, e.g. when reloading the browser page with the file opened for editing.
-        The default conversion start delay time is defined in <b>Document Server</b> configuration file, which can be found at the following path:
+        The default conversion start delay time is defined with the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> parameter in <b>Document Server</b> configuration file, which can be found at the following path:
     </p>
     <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>.</div>
     <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>.</div>
@@ -83,10 +83,9 @@ new DocsAPI.DocEditor("placeholder", {
     </div>
 
     <div class="header-gray">Parameters</div>
-
     <table class="table">
         <colgroup>
-            <col style="width: 300px;" />
+            <col style="width: 310px;" />
             <col />
             <col style="width: 100px;" />
             <col style="width: 100px;" />
@@ -102,12 +101,13 @@ new DocsAPI.DocEditor("placeholder", {
         <tbody>
             <tr class="tablerow">
                 <td>services.CoAuthoring.server.savetimeoutdelay</td>
-                <td>Defines the conversion start delay time (in milliseconds) after the edited file is closed.</td>
+                <td>Defines the conversion start delay time (measured in milliseconds) after the edited file is closed.</td>
                 <td>integer</td>
                 <td>5000</td>
             </tr>
         </tbody>
     </table>
+    <div class="mobile-content"></div>
 
     <div class="header-gray">Sample local.json configuration</div>
     <pre>
@@ -132,11 +132,11 @@ new DocsAPI.DocEditor("placeholder", {
         The forcesave process can be initiated the following ways:
     </p>
     <ul>
-        <li>By the request to the <a href="<%= Url.Action("command") %>">document command service</a> with the <b>forcesave</b> value in the <em>c</em> parameter.
+        <li>By the request to the <a href="<%= Url.Action("command") %>">document command service</a> with the <a href="<%= Url.Action("command/forcesave") %>">forcesave</a> value in the <em>c</em> parameter.
             The <em>forcesavetype</em> parameter will have the <b>0</b> value when sending the request to the <b>callback handler</b>.</li>
         <li>Enable the <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> mode setting it to <b>true</b> in the editor initialization configuration.
             In this case each time the user clicks the <b>Save</b> button, the forcesave will be done, and the <em>forcesavetype</em> parameter will have the <b>1</b> value when sending the request to the <b>callback handler</b>.</li>
-        <li>You can enable the repeating forcesave start in the <b>Document Server</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
+        <li>You can enable <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly" target="_blank">the repeating forcesave start</a> in the <b>Document Server</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
             <div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
             <div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
 
@@ -161,7 +161,7 @@ new DocsAPI.DocEditor("placeholder", {
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.enable</td>
                         <td>
-                            Specifies enabling the repeating force saving.
+                            Defines if the automatic forcesaving is enabled or not.
                             The default value is <b>false</b>.
                         </td>
                         <td>boolean</td>
@@ -169,12 +169,13 @@ new DocsAPI.DocEditor("placeholder", {
                     </tr>
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.interval</td>
-                        <td>Defines the time interval in minutes for initializing the force save.</td>
+                        <td>Defines the interval time in minutes for initiating the automatic forcesaving.</td>
                         <td>string</td>
                         <td>5m</td>
                     </tr>
                 </tbody>
             </table>
+            <div class="mobile-content"></div>
 
             <div class="header-gray">Sample local.json configuration</div>
             <pre>
@@ -191,5 +192,62 @@ new DocsAPI.DocEditor("placeholder", {
 </pre>
         The <em>forcesavetype</em> parameter will have the <b>2</b> value when sending the request to the <b>callback handler</b>.</li>
     </ul>
+    <note>Please note that you cannot see the document versions created with the force saving option in the document history.
+        The reason is that ONLYOFFICE Docs <a href="<%= Url.Action("history") %>#apply-changes">highlights the changes</a> made from the beginning of the current document session, not from the beginning of the document version.
+        And even if several document versions are created during one session, all changes from this session will be highlighted.</note>
+
+
+    <h2 id="assemblyFormatAsOrigin" class="copy-link">Saving in original format</h2>
+
+    <p>
+        Starting from version 7.0, the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin" target="_blank">assemblyFormatAsOrigin</a> server setting is enabled by default to save the assembled file in its original format.
+        It is used to change the file format from OOXML to ODF or to save files with macros.
+    </p>
+
+    <div class="header-gray">Parameters</div>
+    <table class="table">
+        <colgroup>
+            <col style="width: 300px;" />
+            <col />
+            <col style="width: 100px;" />
+            <col style="width: 100px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Parameter</td>
+                <td>Description</td>
+                <td>Type</td>
+                <td>Example</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td>services.CoAuthoring.server.assemblyFormatAsOrigin</td>
+                <td>
+                    Defines if the assembled file is saved in its original format or not.
+                    The default value is <b>true</b>.
+                </td>
+                <td>boolean</td>
+                <td>true</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="header-gray">Sample local.json configuration</div>
+    <pre>
+{
+    "services": {
+        "CoAuthoring": {
+            "server": {
+                "assemblyFormatAsOrigin": true
+            }
+        }
+    }
+}
+</pre>
+    <note>
+        Remember that this setting can crash some integrators which open the documents without prior conversion (for example, in the <em>.doc</em> format which is unavailable for saving in ONLYOFFICE Docs).
+        Disable this setting if necessary.
+    </note>
 
 </asp:Content>

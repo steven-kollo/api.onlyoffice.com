@@ -18,7 +18,7 @@
 
     <h2 id="localizeConfigJSON">Translating config.json sections</h2>
 
-    <p>First you can translate the <a href="<%= Url.Action("config") %>">config.json</a> file. To do that, open it and find all the strings in English. Usually they are <em>name</em>, <em>variations.description</em> and <em>variations.buttons.text</em> nodes of the configuration object.</p>
+    <p>First you can translate the <a href="<%= Url.Action("config") %>">config.json</a> file. To do that, open it and find all the strings in English. Usually they are <a href="<%= Url.Action("config") %>#name">name</a>, <a href="<%= Url.Action("config") %>#description">variations.description</a> and <a href="<%= Url.Action("config") %>#buttons">variations.buttons.text</a> nodes of the configuration object.</p>
 
     <p>Add the new nodes with the key name plus <em>Locale</em>, equal to an object that will have the language locale as the key and the translation as the value. For example, for the <em>name</em> key the localization object will look like this:</p>
 
@@ -30,7 +30,7 @@
     "ru": "Подсветка кода"
 }</pre>
 
-    <p>The complete translations in the <a href="<%= Url.Action("config") %>">config.json</a> for the <a target="_blank" href="https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/code">code highlighting plugin</a> will look the following way:</p>
+    <p>The complete translations in the <a href="<%= Url.Action("config") %>">config.json</a> for the <a target="_blank" href="https://github.com/ONLYOFFICE/plugin-highlightcode/blob/master/scripts/code.js">highlighting plugin code</a> will look the following way:</p>
 
     <pre>{
     "name": "Highlight code",
@@ -86,6 +86,25 @@ pluginCode.js</pre>
     "Style": "Stil",
 }</pre>
 
+    <p>Starting from version 7.2, you can add the <em>langs.json</em> file to the translations folder. It contains the names of files with translations into a specific language in the array format:</p>
+
+    <pre>
+[
+    "cs-CZ",
+    "de-DE",
+    "es-ES",
+    "fr-FR",
+    "ru-RU"
+]
+</pre>
+
+    <p>
+        First, the <em>langs.json</em> file will be requested and a full match of the language and file name will be searched.
+        If no match is found, the first two characters before the <em>"-"</em> sign are checked.
+        If the <em>langs.json</em> file does not contain the required file name, the plugin will work in English.
+        If there is no <em>langs.json</em> file or there are problems when parsing it, then the translations will work according to the old translation scheme.
+    </p>
+
     <p>Once all the localization files are added, the plugin file structure will look like this:</p>
 
     <pre>..
@@ -93,6 +112,7 @@ pluginCode.js</pre>
     de-DE.json
     es-ES.json
     fr-FR.json
+    langs.json
     ru-RU.json
 config.json
 index.html
@@ -110,7 +130,7 @@ pluginCode.js</pre>
 
     <pre>&lt;button id="button_new"&gt;New&lt;/button&gt;</pre>
 
-    <p>After that add the <em>window.Asc.plugin.onTranslate</em> function to the <a href="<%= Url.Action("code") %>">pluginCode.js</a> file:</p>
+    <p>After that add the <a href="<%= Url.Action("events") %>#onTranslate">window.Asc.plugin.onTranslate</a> function to the <a href="<%= Url.Action("code") %>">pluginCode.js</a> file:</p>
 
     <pre>window.Asc.plugin.onTranslate = function()
     {

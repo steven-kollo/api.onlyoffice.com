@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiGradientStop",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiGradientStop class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -18,10 +18,27 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiGradientStop",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiGradientStop object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class represent gradient stop\r\n\t * @constructor\r\n\t * */",
-  "description": "<p>Class represent gradient stop</p>",
+  "comment": "/**\n\t * Class representing gradient stop.\n\t * @constructor\n\t * */",
+  "description": "<p>Class representing gradient stop.</p>",
   "scope": "global",
   "params": []
 }

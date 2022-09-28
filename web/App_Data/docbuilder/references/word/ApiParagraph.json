@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiParagraph",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiParagraph class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -13,7 +13,7 @@
       },
       "returns": [
         [
-          "\"document\""
+          "\"paragraph\""
         ]
       ],
       "see": null,
@@ -22,7 +22,7 @@
     "AddText": {
       "memberof": "ApiParagraph",
       "name": "AddText",
-      "description": "<p>Add some text to the element.</p>",
+      "description": "<p>Adds some text to the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -50,7 +50,7 @@
     "AddPageBreak": {
       "memberof": "ApiParagraph",
       "name": "AddPageBreak",
-      "description": "<p>Add page break and start the next element from the next page.</p>",
+      "description": "<p>Adds a page break and starts the next element from the next page.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -67,7 +67,7 @@
     "AddLineBreak": {
       "memberof": "ApiParagraph",
       "name": "AddLineBreak",
-      "description": "<p>Add line break to the current position and start the next element from a new line.</p>",
+      "description": "<p>Adds a line break to the current position and starts the next element from a new line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -86,7 +86,7 @@
     "AddColumnBreak": {
       "memberof": "ApiParagraph",
       "name": "AddColumnBreak",
-      "description": "<p>Add column break to the current position and start the next element from a new column.</p>",
+      "description": "<p>Adds a column break to the current position and starts the next element from a new column.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -103,7 +103,7 @@
     "AddPageNumber": {
       "memberof": "ApiParagraph",
       "name": "AddPageNumber",
-      "description": "<p>Insert the number of the current document page into the paragraph.\n<note>This method works for the paragraphs in the document header/footer only.</note></p>",
+      "description": "<p>Inserts a number of the current document page into the paragraph.\n<note>This method works for the paragraphs in the document header/footer only.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -120,7 +120,7 @@
     "AddPagesCount": {
       "memberof": "ApiParagraph",
       "name": "AddPagesCount",
-      "description": "<p>Insert the number of pages in the current document into the paragraph.\n<note>This method works for the paragraphs in the document header/footer only.</note></p>",
+      "description": "<p>Inserts a number of pages in the current document into the paragraph.\n<note>This method works for the paragraphs in the document header/footer only.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -137,7 +137,7 @@
     "GetParagraphMarkTextPr": {
       "memberof": "ApiParagraph",
       "name": "GetParagraphMarkTextPr",
-      "description": "<p>Get the text properties of the paragraph mark which is used to mark the paragraph end. The mark can also acquire\ncommon text properties like bold, italic, underline, etc.</p>",
+      "description": "<p>Returns the text properties of the paragraph mark which is used to mark the paragraph end. The mark can also acquire\ncommon text properties like bold, italic, underline, etc.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -154,7 +154,7 @@
     "GetParaPr": {
       "memberof": "ApiParagraph",
       "name": "GetParaPr",
-      "description": "<p>Get paragraph properties.</p>",
+      "description": "<p>Returns the paragraph properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -173,7 +173,7 @@
     "GetNumbering": {
       "memberof": "ApiParagraph",
       "name": "GetNumbering",
-      "description": "<p>Get a numbering definition and numbering level for the numbered list.</p>",
+      "description": "<p>Returns the numbering definition and numbering level for the numbered list.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -190,7 +190,7 @@
     "SetNumbering": {
       "memberof": "ApiParagraph",
       "name": "SetNumbering",
-      "description": "<p>Specify that the current paragraph references a numbering definition instance in the current document.</p>",
+      "description": "<p>Specifies that the current paragraph references the numbering definition instance in the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -211,7 +211,7 @@
     "GetElementsCount": {
       "memberof": "ApiParagraph",
       "name": "GetElementsCount",
-      "description": "<p>Get the number of elements in the current paragraph.</p>",
+      "description": "<p>Returns a number of elements in the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -230,7 +230,7 @@
     "GetElement": {
       "memberof": "ApiParagraph",
       "name": "GetElement",
-      "description": "<p>Get the element of the paragraph using the position specified.</p>",
+      "description": "<p>Returns a paragraph element using the position specified.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -257,7 +257,7 @@
     "RemoveElement": {
       "memberof": "ApiParagraph",
       "name": "RemoveElement",
-      "description": "<p>Remove the element using the position specified.\n<note>If the element you remove is the last paragraph element (i.e. all elements are removed from the paragraph),\na new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
+      "description": "<p>Removes an element using the position specified.\n<note>If the element you remove is the last paragraph element (i.e. all the elements are removed from the paragraph),\na new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -272,7 +272,7 @@
         {
           "type": "number",
           "name": "nPos",
-          "description": "<p>The position of the element which we want to remove in the paragraph.</p>",
+          "description": "<p>The element position which we want to remove from the paragraph.</p>",
           "optional": false
         }
       ]
@@ -280,7 +280,7 @@
     "RemoveAllElements": {
       "memberof": "ApiParagraph",
       "name": "RemoveAllElements",
-      "description": "<p>Remove all elements from the current paragraph.\n<note>When all elements are removed from the paragraph, a new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
+      "description": "<p>Removes all the elements from the current paragraph.\n<note>When all the elements are removed from the paragraph, a new empty run is automatically created. If you want to add\ncontent to this run, use the {@link ApiParagraph#GetElement} method.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -295,7 +295,7 @@
     "Delete": {
       "memberof": "ApiParagraph",
       "name": "Delete",
-      "description": "<p>Delete current paragraph.</p>",
+      "description": "<p>Deletes the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -303,14 +303,18 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
     "GetNext": {
       "memberof": "ApiParagraph",
       "name": "GetNext",
-      "description": "<p>Gets the next paragraph.</p>",
+      "description": "<p>Returns the next paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -318,14 +322,19 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiParagraph",
+          "null"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
     "GetPrevious": {
       "memberof": "ApiParagraph",
       "name": "GetPrevious",
-      "description": "<p>Gets the Previous paragraph.</p>",
+      "description": "<p>Returns the previous paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -333,14 +342,18 @@
           "CPE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "ApiParagraph"
+        ]
+      ],
       "see": null,
       "inherits": null
     },
     "Copy": {
       "memberof": "ApiParagraph",
       "name": "Copy",
-      "description": "<p>Create a copy of the paragraph. Ingonore comments, footnote references, complex fields</p>",
+      "description": "<p>Creates a paragraph copy. Ingnore comments, footnote references, complex fields.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -359,7 +372,7 @@
     "AddElement": {
       "memberof": "ApiParagraph",
       "name": "AddElement",
-      "description": "<p>Add an element to the current paragraph.</p>",
+      "description": "<p>Adds an element to the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -378,13 +391,13 @@
         {
           "type": "ParagraphContent",
           "name": "oElement",
-          "description": "<p>The document element which will be added at the current position. Returns false if the\ntype of oElement is not supported by a paragraph.</p>",
+          "description": "<p>The document element which will be added at the current position. Returns false if the\noElement type is not supported by a paragraph.</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "nPos",
-          "description": "<p>The number of the paragraph where the current element will be added. If this value is not\nspecified then the element will be added at the end of the current paragraph.</p>",
+          "description": "<p>The position where the current element will be added. If this value is not\nspecified, then the element will be added at the end of the current paragraph.</p>",
           "optional": true
         }
       ]
@@ -392,7 +405,7 @@
     "AddTabStop": {
       "memberof": "ApiParagraph",
       "name": "AddTabStop",
-      "description": "<p>Add a tab stop to the current paragraph.</p>",
+      "description": "<p>Adds a tab stop to the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -411,7 +424,7 @@
     "AddDrawing": {
       "memberof": "ApiParagraph",
       "name": "AddDrawing",
-      "description": "<p>Add an object (image, shape or chart) to the current paragraph.</p>",
+      "description": "<p>Adds a drawing object (image, shape or chart) to the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -436,8 +449,12 @@
     "AddInlineLvlSdt": {
       "memberof": "ApiParagraph",
       "name": "AddInlineLvlSdt",
-      "description": "<p>Add a inline container</p>",
-      "tags": {},
+      "description": "<p>Adds an inline container.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
       "returns": [
         [
           "ApiInlineLvlSdt"
@@ -449,7 +466,7 @@
         {
           "type": "ApiInlineLvlSdt",
           "name": "oSdt",
-          "description": "<p>if undefined or null, then new class ApiInlineLvlSdt will be created and added to paragraph.</p>",
+          "description": "<p>An inline container. If undefined or null, then new class ApiInlineLvlSdt will be created and added to the paragraph.</p>",
           "optional": false
         }
       ]
@@ -458,21 +475,29 @@
       "memberof": "ApiParagraph",
       "name": "AddComment",
       "description": "<p>Adds a comment to the paragraph.</p>",
-      "tags": {},
-      "returns": [],
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "string",
           "name": "Comment",
-          "description": "<p>comment</p>",
+          "description": "<p>The comment text.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "Autor",
-          "description": "<p>autor's name (not obligatory)</p>",
+          "description": "<p>The author's name (not obligatory).</p>",
           "optional": false
         }
       ]
@@ -480,7 +505,7 @@
     "AddHyperlink": {
       "memberof": "ApiParagraph",
       "name": "AddHyperlink",
-      "description": "<p>Add a hyperlink to a paragraph.</p>",
+      "description": "<p>Adds a hyperlink to a paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -498,13 +523,13 @@
         {
           "type": "string",
           "name": "sLink",
-          "description": "<p>link to be add.</p>",
+          "description": "<p>The link address.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sScreenTipText",
-          "description": "<p>ScreenTip text</p>",
+          "description": "<p>The screen tip text.</p>",
           "optional": false
         }
       ]
@@ -529,13 +554,13 @@
         {
           "type": "Number",
           "name": "Start",
-          "description": "<p>start character in current element</p>",
+          "description": "<p>Start character in the current element.</p>",
           "optional": false
         },
         {
           "type": "Number",
           "name": "End",
-          "description": "<p>end character in current element</p>",
+          "description": "<p>End character in the current element.</p>",
           "optional": false
         }
       ]
@@ -543,7 +568,7 @@
     "Push": {
       "memberof": "ApiParagraph",
       "name": "Push",
-      "description": "<p>Add an element to the current paragraph.</p>",
+      "description": "<p>Adds an element to the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -560,7 +585,7 @@
         {
           "type": "ParagraphContent",
           "name": "oElement",
-          "description": "<p>The document element which will be added at the current position. Returns false if the\ntype of oElement is not supported by a paragraph.</p>",
+          "description": "<p>The document element which will be added at the current position. Returns false if the\noElement type is not supported by a paragraph.</p>",
           "optional": false
         }
       ]
@@ -568,7 +593,7 @@
     "GetLastRunWithText": {
       "memberof": "ApiParagraph",
       "name": "GetLastRunWithText",
-      "description": "<p>Get last Run with text in the current paragraph</p>",
+      "description": "<p>Returns the last Run with text in the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -585,7 +610,7 @@
     "SetBold": {
       "memberof": "ApiParagraph",
       "name": "SetBold",
-      "description": "<p>Set the bold property to the text character.</p>",
+      "description": "<p>Sets the bold property to the text character.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -610,7 +635,7 @@
     "SetCaps": {
       "memberof": "ApiParagraph",
       "name": "SetCaps",
-      "description": "<p>Specify that any lowercase characters in this paragraph are formatted for display only as their capital letter character equivalents.</p>",
+      "description": "<p>Specifies that any lowercase characters in this paragraph are formatted for display only as their capital letter character equivalents.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -635,7 +660,7 @@
     "SetColor": {
       "memberof": "ApiParagraph",
       "name": "SetColor",
-      "description": "<p>Set the text color for the current paragraph in the RGB format.</p>",
+      "description": "<p>Sets the text color to the current paragraph in the RGB format.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -679,7 +704,7 @@
     "SetDoubleStrikeout": {
       "memberof": "ApiParagraph",
       "name": "SetDoubleStrikeout",
-      "description": "<p>Specify that the contents of this paragraph is displayed with two horizontal lines through each character displayed on the line.</p>",
+      "description": "<p>Specifies that the contents of this paragraph are displayed with two horizontal lines through each character displayed on the line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -704,7 +729,7 @@
     "SetFontFamily": {
       "memberof": "ApiParagraph",
       "name": "SetFontFamily",
-      "description": "<p>Set all 4 font slots with the specified font family.</p>",
+      "description": "<p>Sets all 4 font slots with the specified font family.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -727,10 +752,27 @@
         }
       ]
     },
+    "GetFontNames": {
+      "memberof": "ApiParagraph",
+      "name": "GetFontNames",
+      "description": "<p>Returns all font names from all elements inside the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<string>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
     "SetFontSize": {
       "memberof": "ApiParagraph",
       "name": "SetFontSize",
-      "description": "<p>Set the font size for the characters of the current paragraph.</p>",
+      "description": "<p>Sets the font size to the characters of the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -755,10 +797,11 @@
     "SetHighlight": {
       "memberof": "ApiParagraph",
       "name": "SetHighlight",
-      "description": "<p>Specify a highlighting color in the RGB format which is applied as a background for the contents of the current paragraph.</p>",
+      "description": "<p>Specifies a highlighting color which is applied as a background to the contents of the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
-          "CDE"
+          "CDE",
+          "CPE"
         ]
       },
       "returns": [
@@ -770,36 +813,17 @@
       "inherits": null,
       "params": [
         {
-          "type": "byte",
-          "name": "r",
-          "description": "<p>Red color component value.</p>",
+          "type": "highlightColor",
+          "name": "sColor",
+          "description": "<p>Available highlight color.</p>",
           "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "g",
-          "description": "<p>Green color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "byte",
-          "name": "b",
-          "description": "<p>Blue color component value.</p>",
-          "optional": false
-        },
-        {
-          "type": "boolean",
-          "name": "isNone",
-          "description": "<p>If this parameter is set to &quot;true&quot;, then r,g,b parameters will be ignored.</p>",
-          "optional": true,
-          "defaultValue": false
         }
       ]
     },
     "SetItalic": {
       "memberof": "ApiParagraph",
       "name": "SetItalic",
-      "description": "<p>Set the italic property to the text character.</p>",
+      "description": "<p>Sets the italic property to the text character.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -824,7 +848,7 @@
     "SetPosition": {
       "memberof": "ApiParagraph",
       "name": "SetPosition",
-      "description": "<p>Specify the amount by which text is raised or lowered for this paragraph in relation to the default\nbaseline of the surrounding non-positioned text.</p>",
+      "description": "<p>Specifies an amount by which text is raised or lowered for this paragraph in relation to the default\nbaseline of the surrounding non-positioned text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -849,7 +873,7 @@
     "SetShd": {
       "memberof": "ApiParagraph",
       "name": "SetShd",
-      "description": "<p>Specify the shading applied to the contents of the current paragraph.</p>",
+      "description": "<p>Specifies the shading applied to the contents of the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -892,7 +916,7 @@
     "SetSmallCaps": {
       "memberof": "ApiParagraph",
       "name": "SetSmallCaps",
-      "description": "<p>Specify that all small letter characters in this paragraph are formatted for display only as their capital\nletter character equivalents in a font size two points smaller than the actual font size specified for this text.</p>",
+      "description": "<p>Specifies that all the small letter characters in this paragraph are formatted for display only as their capital\nletter character equivalents which are two points smaller than the actual font size specified for this text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -909,7 +933,7 @@
         {
           "type": "boolean",
           "name": "isSmallCaps",
-          "description": "<p>Specifies that the contents of the current paragraph are displayed capitalized two points smaller.</p>",
+          "description": "<p>Specifies if the contents of the current paragraph are displayed capitalized two points smaller or not.</p>",
           "optional": false
         }
       ]
@@ -917,7 +941,7 @@
     "SetSpacing": {
       "memberof": "ApiParagraph",
       "name": "SetSpacing",
-      "description": "<p>Set text spacing measured in twentieths of a point.</p>",
+      "description": "<p>Sets the text spacing measured in twentieths of a point.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -942,7 +966,7 @@
     "SetStrikeout": {
       "memberof": "ApiParagraph",
       "name": "SetStrikeout",
-      "description": "<p>Specify that the contents of this paragraph are displayed with a single horizontal line through the center of the line.</p>",
+      "description": "<p>Specifies that the contents of this paragraph are displayed with a single horizontal line through the center of the line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -967,7 +991,7 @@
     "SetUnderline": {
       "memberof": "ApiParagraph",
       "name": "SetUnderline",
-      "description": "<p>Specify that the contents of this paragraph are displayed along with a line appearing directly below the character\n(less than all the spacing above and below the characters on the line).</p>",
+      "description": "<p>Specifies that the contents of this paragraph are displayed along with a line appearing directly below the character\n(less than all the spacing above and below the characters on the line).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -992,7 +1016,7 @@
     "SetVertAlign": {
       "memberof": "ApiParagraph",
       "name": "SetVertAlign",
-      "description": "<p>Specify the alignment which will be applied to the contents of this paragraph in relation to the default appearance of the paragraph text:</p>\n<ul>\n<li><b>&quot;baseline&quot;</b> - the characters in the current paragraph will be aligned by the default text baseline.</li>\n<li><b>&quot;subscript&quot;</b> - the characters in the current paragraph will be aligned below the default text baseline.</li>\n<li><b>&quot;superscript&quot;</b> - the characters in the current paragraph will be aligned above the default text baseline.</li>\n</ul>",
+      "description": "<p>Specifies the alignment which will be applied to the contents of this paragraph in relation to the default appearance of the paragraph text:</p>\n<ul>\n<li><b>&quot;baseline&quot;</b> - the characters in the current paragraph will be aligned by the default text baseline.</li>\n<li><b>&quot;subscript&quot;</b> - the characters in the current paragraph will be aligned below the default text baseline.</li>\n<li><b>&quot;superscript&quot;</b> - the characters in the current paragraph will be aligned above the default text baseline.</li>\n</ul>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1001,7 +1025,7 @@
       "returns": [
         [
           "ApiParagraph",
-          "false"
+          "null"
         ]
       ],
       "see": null,
@@ -1018,7 +1042,7 @@
     "Last": {
       "memberof": "ApiParagraph",
       "name": "Last",
-      "description": "<p>Get the last no empty element of the paragraph.</p>",
+      "description": "<p>Returns the last element of the paragraph which is not empty.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1035,7 +1059,7 @@
     "GetAllContentControls": {
       "memberof": "ApiParagraph",
       "name": "GetAllContentControls",
-      "description": "<p>Gets the collection of content control objects in the Paragraph.</p>",
+      "description": "<p>Returns a collection of content control objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1052,7 +1076,7 @@
     "GetAllDrawingObjects": {
       "memberof": "ApiParagraph",
       "name": "GetAllDrawingObjects",
-      "description": "<p>Gets the collection of drawing objects in the paragraph.</p>",
+      "description": "<p>Returns a collection of drawing objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1069,7 +1093,7 @@
     "GetAllShapes": {
       "memberof": "ApiParagraph",
       "name": "GetAllShapes",
-      "description": "<p>Gets the collection of shapes objects in the Paragraph.</p>",
+      "description": "<p>Returns a collection of shape objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1086,7 +1110,7 @@
     "GetAllImages": {
       "memberof": "ApiParagraph",
       "name": "GetAllImages",
-      "description": "<p>Gets the collection of image objects in the Paragraph.</p>",
+      "description": "<p>Returns a collection of image objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1103,7 +1127,7 @@
     "GetAllCharts": {
       "memberof": "ApiParagraph",
       "name": "GetAllCharts",
-      "description": "<p>Gets the collection of chart objects in the Paragraph.</p>",
+      "description": "<p>Returns a collection of chart objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1117,10 +1141,10 @@
       "see": null,
       "inherits": null
     },
-    "GetParentContentControl": {
+    "GetAllOleObjects": {
       "memberof": "ApiParagraph",
-      "name": "GetParentContentControl",
-      "description": "<p>Gets the content control that contains the paragraph.</p>",
+      "name": "GetAllOleObjects",
+      "description": "<p>Returns a collection of OLE objects in the paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1128,7 +1152,25 @@
       },
       "returns": [
         [
-          "ApiBlockLvlSdt"
+          "Array.<ApiOleObject>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetParentContentControl": {
+      "memberof": "ApiParagraph",
+      "name": "GetParentContentControl",
+      "description": "<p>Returns a content control that contains the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiBlockLvlSdt",
+          "null"
         ]
       ],
       "see": null,
@@ -1137,7 +1179,7 @@
     "GetParentTable": {
       "memberof": "ApiParagraph",
       "name": "GetParentTable",
-      "description": "<p>Gets the table that contains the paragraph.</p>",
+      "description": "<p>Returns a table that contains the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1145,7 +1187,8 @@
       },
       "returns": [
         [
-          "ApiTable"
+          "ApiTable",
+          "null"
         ]
       ],
       "see": null,
@@ -1154,7 +1197,7 @@
     "GetParentTableCell": {
       "memberof": "ApiParagraph",
       "name": "GetParentTableCell",
-      "description": "<p>Gets the table cell that contains the paragraph.</p>",
+      "description": "<p>Returns a table cell that contains the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1162,7 +1205,8 @@
       },
       "returns": [
         [
-          "ApiTableCell"
+          "ApiTableCell",
+          "null"
         ]
       ],
       "see": null,
@@ -1171,7 +1215,7 @@
     "GetText": {
       "memberof": "ApiParagraph",
       "name": "GetText",
-      "description": "<p>Gets text of the paragraph.</p>",
+      "description": "<p>Returns the paragraph text.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1188,7 +1232,7 @@
     "GetTextPr": {
       "memberof": "ApiParagraph",
       "name": "GetTextPr",
-      "description": "<p>Gets text properties of the paragraph.</p>",
+      "description": "<p>Returns the paragraph text properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1205,7 +1249,7 @@
     "SetTextPr": {
       "memberof": "ApiParagraph",
       "name": "SetTextPr",
-      "description": "<p>Sets text properties of the paragraph.</p>",
+      "description": "<p>Sets the paragraph text properties.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1213,7 +1257,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -1222,6 +1266,7 @@
         {
           "type": "ApiTextPr",
           "name": "oTextPr",
+          "description": "<p>The paragraph text properties.</p>",
           "optional": false
         }
       ]
@@ -1247,7 +1292,7 @@
         {
           "type": "number",
           "name": "nType",
-          "description": "<p>if nType === 1 -&gt; returns ApiBlockLvlSdt</p>",
+          "description": "<p>Defines if this method returns the ApiBlockLvlSdt (nType === 1) or ApiParagraph (any value except 1) object.</p>",
           "optional": false
         }
       ]
@@ -1263,7 +1308,8 @@
       },
       "returns": [
         [
-          "ApiParagraph"
+          "ApiParagraph",
+          "null"
         ]
       ],
       "see": null,
@@ -1272,19 +1318,19 @@
         {
           "type": "string | ApiParagraph",
           "name": "paragraph",
-          "description": "<p>text or paragraph</p>",
+          "description": "<p>Text or paragraph.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "sPosition",
-          "description": "<p>can be &quot;after&quot; or &quot;before&quot;</p>",
+          "description": "<p>The position where the text or paragraph will be inserted (&quot;before&quot; or &quot;after&quot; the paragraph specified).</p>",
           "optional": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "beRNewPara",
-          "description": "<p>if &quot;true&quot; - returns new paragraph, else returns this paragraph.</p>",
+          "description": "<p>Defines if this method returns a new paragraph (true) or the current paragraph (false).</p>",
           "optional": false
         }
       ]
@@ -1292,7 +1338,7 @@
     "Select": {
       "memberof": "ApiParagraph",
       "name": "Select",
-      "description": "<p>Select a paragraph.</p>",
+      "description": "<p>Selects the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1300,7 +1346,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -1309,7 +1355,7 @@
     "Search": {
       "memberof": "ApiParagraph",
       "name": "Search",
-      "description": "<p>Searches for the scope of a paragraph object. The search results are a collection of ApiRange objects.</p>",
+      "description": "<p>Searches for a scope of a paragraph object. The search results are a collection of ApiRange objects.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1317,7 +1363,7 @@
       },
       "returns": [
         [
-          "Array"
+          "Array.<ApiRange>"
         ]
       ],
       "see": null,
@@ -1326,12 +1372,376 @@
         {
           "type": "string",
           "name": "sText",
+          "description": "<p>Search string.</p>",
           "optional": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "isMatchCase",
-          "description": "<p>is case sensitive.</p>",
+          "description": "<p>Case sensitive or not.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "WrapInMailMergeField": {
+      "memberof": "ApiParagraph",
+      "name": "WrapInMailMergeField",
+      "description": "<p>Wraps the paragraph content in a mail merge field.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "AddNumberedCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddNumberedCrossRef",
+      "description": "<p>Adds a numbered cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "numberedRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a numbered reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The numbered paragraph to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;text&quot; and &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "string",
+          "name": "sSepWith",
+          "description": "<p>A number separator (used only with the &quot;fullCtxParaNum&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": "\"\""
+        }
+      ]
+    },
+    "AddHeadingCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddHeadingCrossRef",
+      "description": "<p>Adds a heading cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "headingRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a heading reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The heading paragraph to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;text&quot; and &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddBookmarkCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddBookmarkCrossRef",
+      "description": "<p>Adds a bookmark cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "bookmarkRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a bookmark reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sBookmarkName",
+          "description": "<p>The name of the bookmark to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;text&quot; and &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "string",
+          "name": "sSepWith",
+          "description": "<p>A number separator (used only with the &quot;fullCtxParaNum&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": "\"\""
+        }
+      ]
+    },
+    "AddFootnoteCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddFootnoteCrossRef",
+      "description": "<p>Adds a footnote cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "footnoteRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a footnote reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The first paragraph from a footnote to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddEndnoteCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddEndnoteCrossRef",
+      "description": "<p>Adds an endnote cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "endnoteRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of an endnote reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The first paragraph from an endnote to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (don't used with the &quot;aboveBelow&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddCaptionCrossRef": {
+      "memberof": "ApiParagraph",
+      "name": "AddCaptionCrossRef",
+      "description": "<p>Adds a caption cross-reference to the current paragraph.\nThe paragraph must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "CaptionLabel | string",
+          "name": "sCaption",
+          "description": "<p>The caption label (&quot;Equation&quot;, &quot;Figure&quot;, &quot;Table&quot; or another caption label).</p>",
+          "optional": false
+        },
+        {
+          "type": "captionRefTo",
+          "name": "sRefType",
+          "description": "<p>The text or numeric value of a caption reference you want to insert.</p>",
+          "optional": false
+        },
+        {
+          "type": "ApiParagraph",
+          "name": "oParaTo",
+          "description": "<p>The caption paragraph to be referred to (must be in the document).</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bLink",
+          "description": "<p>Specifies if the reference will be inserted as a hyperlink.</p>",
+          "optional": true,
+          "defaultValue": true
+        },
+        {
+          "type": "boolean",
+          "name": "bAboveBelow",
+          "description": "<p>Specifies if the above/below words indicating the position of the reference should be included (used only with the &quot;pageNum&quot; sRefType).</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "ToJSON": {
+      "memberof": "ApiParagraph",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiParagraph object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
+    },
+    "GetPosInParent": {
+      "memberof": "ApiParagraph",
+      "name": "GetPosInParent",
+      "description": "<p>Returns the paragraph position within its parent element.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ReplaceByElement": {
+      "memberof": "ApiParagraph",
+      "name": "ReplaceByElement",
+      "description": "<p>Replaces the current paragraph with a new element.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "DocumentElement",
+          "name": "oElement",
+          "description": "<p>The element to replace the current paragraph with.</p>",
           "optional": false
         }
       ]
@@ -1357,10 +1767,27 @@
         }
       ]
     },
+    "GetStyle": {
+      "memberof": "ApiParagraph",
+      "name": "GetStyle",
+      "description": "<p>Returns the paragraph style method.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiStyle"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetStyle}"
+    },
     "SetContextualSpacing": {
       "memberof": "ApiParagraph",
       "name": "SetContextualSpacing",
-      "description": "<p>Specify that any space before or after this paragraph set using the\n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and\nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
+      "description": "<p>Specifies that any space before or after this paragraph set using the\n{@link ApiParaPr#SetSpacingBefore} or {@link ApiParaPr#SetSpacingAfter} spacing element, should not be applied when the preceding and\nfollowing paragraphs are of the same paragraph style, affecting the top and bottom spacing respectively.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1381,7 +1808,7 @@
     "SetIndLeft": {
       "memberof": "ApiParagraph",
       "name": "SetIndLeft",
-      "description": "<p>Set the paragraph left side indentation.</p>",
+      "description": "<p>Sets the paragraph left side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1401,10 +1828,30 @@
         }
       ]
     },
+    "GetIndLeft": {
+      "memberof": "ApiParagraph",
+      "name": "GetIndLeft",
+      "description": "<p>Returns the paragraph left side indentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetIndLeft}"
+    },
     "SetIndRight": {
       "memberof": "ApiParagraph",
       "name": "SetIndRight",
-      "description": "<p>Set the paragraph right side indentation.</p>",
+      "description": "<p>Sets the paragraph right side indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1424,10 +1871,30 @@
         }
       ]
     },
+    "GetIndRight": {
+      "memberof": "ApiParagraph",
+      "name": "GetIndRight",
+      "description": "<p>Returns the paragraph right side indentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetIndRight}"
+    },
     "SetIndFirstLine": {
       "memberof": "ApiParagraph",
       "name": "SetIndFirstLine",
-      "description": "<p>Set the paragraph first line indentation.</p>",
+      "description": "<p>Sets the paragraph first line indentation.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1447,10 +1914,30 @@
         }
       ]
     },
+    "GetIndFirstLine": {
+      "memberof": "ApiParagraph",
+      "name": "GetIndFirstLine",
+      "description": "<p>Returns the paragraph first line indentation.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetIndFirstLine}"
+    },
     "SetJc": {
       "memberof": "ApiParagraph",
       "name": "SetJc",
-      "description": "<p>Set paragraph contents justification.</p>",
+      "description": "<p>Sets the paragraph contents justification.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1465,15 +1952,38 @@
         {
           "type": "\"left\" | \"right\" | \"both\" | \"center\"",
           "name": "sJc",
-          "description": "<p>The parameters will define the justification type that\nwill be applied to the paragraph contents.</p>",
+          "description": "<p>The justification type that\nwill be applied to the paragraph contents.</p>",
           "optional": false
         }
       ]
     },
+    "GetJc": {
+      "memberof": "ApiParagraph",
+      "name": "GetJc",
+      "description": "<p>Returns the paragraph contents justification.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"left\"",
+          "\"right\"",
+          "\"both\"",
+          "\"center\"",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetJc}"
+    },
     "SetKeepLines": {
       "memberof": "ApiParagraph",
       "name": "SetKeepLines",
-      "description": "<p>Specify that when rendering this document using a page view, all lines of this paragraph are maintained on a single page whenever possible.</p>",
+      "description": "<p>Specifies that when rendering the document using a page view, all lines of the current paragraph are maintained on a single page whenever possible.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1486,7 +1996,7 @@
         {
           "type": "boolean",
           "name": "isKeepLines",
-          "description": "<p>The true value will enable the option to keep lines of the paragraph on a single page.</p>",
+          "description": "<p>The true value enables the option to keep lines of the paragraph on a single page.</p>",
           "optional": false
         }
       ]
@@ -1494,7 +2004,7 @@
     "SetKeepNext": {
       "memberof": "ApiParagraph",
       "name": "SetKeepNext",
-      "description": "<p>Specify that when rendering this document using a paginated view, the contents of this paragraph are at least\npartly rendered on the same page as the following paragraph whenever possible.</p>",
+      "description": "<p>Specifies that when rendering the document using a paginated view, the contents of the current paragraph are at least\npartly rendered on the same page as the following paragraph whenever possible.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1507,7 +2017,7 @@
         {
           "type": "boolean",
           "name": "isKeepNext",
-          "description": "<p>The true value will enable the option to keep lines of the paragraph on the same\npage as the following paragraph.</p>",
+          "description": "<p>The true value enables the option to keep lines of the paragraph on the same\npage as the following paragraph.</p>",
           "optional": false
         }
       ]
@@ -1515,7 +2025,7 @@
     "SetPageBreakBefore": {
       "memberof": "ApiParagraph",
       "name": "SetPageBreakBefore",
-      "description": "<p>Specify that when rendering this document using a paginated view, the contents of this paragraph are rendered at\nthe beginning of a new page in the document.</p>",
+      "description": "<p>Specifies that when rendering the document using a paginated view, the contents of the current paragraph are rendered at\nthe beginning of a new page in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1528,7 +2038,7 @@
         {
           "type": "boolean",
           "name": "isPageBreakBefore",
-          "description": "<p>The true value will enable the option to render the contents of the paragraph\nat the beginning of the a new page in the document.</p>",
+          "description": "<p>The true value enables the option to render the contents of the paragraph\nat the beginning of a new page in the document.</p>",
           "optional": false
         }
       ]
@@ -1536,7 +2046,7 @@
     "SetSpacingLine": {
       "memberof": "ApiParagraph",
       "name": "SetSpacingLine",
-      "description": "<p>Set the paragraph line spacing. If the value of the sLineRule parameter is either\n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If\nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the\nnLine parameter will be interpreted as 240ths of a line.</p>",
+      "description": "<p>Sets the paragraph line spacing. If the value of the sLineRule parameter is either\n&quot;atLeast&quot; or &quot;exact&quot;, then the value of nLine will be interpreted as twentieths of a point. If\nthe value of the sLineRule parameter is &quot;auto&quot;, then the value of the\nnLine parameter will be interpreted as 240ths of a line.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1557,15 +2067,58 @@
         {
           "type": "\"auto\" | \"atLeast\" | \"exact\"",
           "name": "sLineRule",
-          "description": "<p>The rule that determines the measuring units of the nLine parameter.</p>",
+          "description": "<p>The rule that determines the measuring units of the line spacing.</p>",
           "optional": false
         }
       ]
     },
+    "GetSpacingLineValue": {
+      "memberof": "ApiParagraph",
+      "name": "GetSpacingLineValue",
+      "description": "<p>Returns the paragraph line spacing value.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips",
+          "line240",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetSpacingLineValue}"
+    },
+    "GetSpacingLineRule": {
+      "memberof": "ApiParagraph",
+      "name": "GetSpacingLineRule",
+      "description": "<p>Returns the paragraph line spacing rule.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "\"auto\"",
+          "\"atLeast\"",
+          "\"exact\"",
+          "undefined"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetSpacingLineRule}"
+    },
     "SetSpacingBefore": {
       "memberof": "ApiParagraph",
       "name": "SetSpacingBefore",
-      "description": "<p>Set the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then\nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then\nit will be interpreted as false.</p>",
+      "description": "<p>Sets the spacing before the current paragraph. If the value of the isBeforeAuto parameter is true, then\nany value of the nBefore is ignored. If isBeforeAuto parameter is not specified, then\nit will be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1586,16 +2139,35 @@
         {
           "type": "boolean",
           "name": "isBeforeAuto",
-          "description": "<p>The true value will disable the nBefore parameter.</p>",
+          "description": "<p>The true value disables the spacing before the current paragraph.</p>",
           "optional": true,
           "defaultValue": false
         }
       ]
     },
+    "GetSpacingBefore": {
+      "memberof": "ApiParagraph",
+      "name": "GetSpacingBefore",
+      "description": "<p>Returns the spacing before value of the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetSpacingBefore}"
+    },
     "SetSpacingAfter": {
       "memberof": "ApiParagraph",
       "name": "SetSpacingAfter",
-      "description": "<p>Set the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then\nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it\nwill be interpreted as false.</p>",
+      "description": "<p>Sets the spacing after the current paragraph. If the value of the isAfterAuto parameter is true, then\nany value of the nAfter is ignored. If isAfterAuto parameter is not specified, then it\nwill be interpreted as false.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1616,16 +2188,52 @@
         {
           "type": "boolean",
           "name": "isAfterAuto",
-          "description": "<p>The true value will disable the nAfter parameter.</p>",
+          "description": "<p>The true value disables the spacing after the current paragraph.</p>",
           "optional": true,
           "defaultValue": false
         }
       ]
     },
+    "GetSpacingAfter": {
+      "memberof": "ApiParagraph",
+      "name": "GetSpacingAfter",
+      "description": "<p>Returns the spacing after value of the current paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "twips"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetSpacingAfter}"
+    },
+    "GetShd": {
+      "memberof": "ApiParagraph",
+      "name": "GetShd",
+      "description": "<p>Returns the shading applied to the contents of the paragraph.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRGBColor"
+        ]
+      ],
+      "see": null,
+      "inherits": "Inherited From: {@link ApiParaPr#GetShd}"
+    },
     "SetBottomBorder": {
       "memberof": "ApiParagraph",
       "name": "SetBottomBorder",
-      "description": "<p>Specify the border which will be displayed below a set of paragraphs which have the same paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note></p>",
+      "description": "<p>Specifies the border which will be displayed below a set of paragraphs which have the same paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added\nto the whole block rather than to every paragraph in this block.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1676,7 +2284,7 @@
     "SetLeftBorder": {
       "memberof": "ApiParagraph",
       "name": "SetLeftBorder",
-      "description": "<p>Specify the border which will be displayed at the left side of the page around the specified paragraph.</p>",
+      "description": "<p>Specifies the border which will be displayed at the left side of the page around the specified paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1727,7 +2335,7 @@
     "SetRightBorder": {
       "memberof": "ApiParagraph",
       "name": "SetRightBorder",
-      "description": "<p>Specify the border which will be displayed at the right side of the page around the specified paragraph.</p>",
+      "description": "<p>Specifies the border which will be displayed at the right side of the page around the specified paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1778,7 +2386,7 @@
     "SetTopBorder": {
       "memberof": "ApiParagraph",
       "name": "SetTopBorder",
-      "description": "<p>Specify the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.</note></p>",
+      "description": "<p>Specifies the border which will be displayed above a set of paragraphs which have the same set of paragraph border settings.\n<note>The paragraphs of the same style going one by one are considered as a single block, so the border is added to the whole block rather than to every paragraph in this block.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1829,7 +2437,7 @@
     "SetBetweenBorder": {
       "memberof": "ApiParagraph",
       "name": "SetBetweenBorder",
-      "description": "<p>Specify the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings.</p>",
+      "description": "<p>Specifies the border which will be displayed between each paragraph in a set of paragraphs which have the same set of paragraph border settings.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1880,7 +2488,7 @@
     "SetWidowControl": {
       "memberof": "ApiParagraph",
       "name": "SetWidowControl",
-      "description": "<p>Specify whether a single line of this paragraph will be prevented from being displayed on a separate page from the remaining content at display time by moving the line onto the following page.</p>",
+      "description": "<p>Specifies whether a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1893,7 +2501,7 @@
         {
           "type": "boolean",
           "name": "isWidowControl",
-          "description": "<p>The true value will enable the SetWidowControl method use.</p>",
+          "description": "<p>The true value means that a single line of the current paragraph will be displayed on a separate page from the remaining content at display time by moving the line onto the following page.</p>",
           "optional": false
         }
       ]
@@ -1901,7 +2509,7 @@
     "SetTabs": {
       "memberof": "ApiParagraph",
       "name": "SetTabs",
-      "description": "<p>Specify a sequence of custom tab stops which will be used for any tab characters in the current paragraph.\n<b>Warning</b>: The lengths of aPos array and aVal array <b>MUST BE</b> equal to each other.</p>",
+      "description": "<p>Specifies a sequence of custom tab stops which will be used for any tab characters in the current paragraph.\n<b>Warning</b>: The lengths of aPos array and aVal array <b>MUST BE</b> equal to each other.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -1930,7 +2538,7 @@
     "SetNumPr": {
       "memberof": "ApiParagraph",
       "name": "SetNumPr",
-      "description": "<p>Specify that the current paragraph references a numbering definition instance in the current document.</p>",
+      "description": "<p>Specifies that the current paragraph references a numbering definition instance in the current document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -1949,7 +2557,7 @@
         {
           "type": "number",
           "name": "nLvl",
-          "description": "<p>Specifies a numbering level reference. If the current instance of the ApiParaPr class is direct\nformatting of a paragraph, then this parameter MUST BE specified. Otherwise if the current instance of the ApiParaPr class\nis the part of ApiStyle properties, this parameter will be ignored.</p>",
+          "description": "<p>Specifies a numbering level reference. If the current instance of the ApiParaPr class is direct\nformatting of a paragraph, then this parameter MUST BE specified. Otherwise, if the current instance of the ApiParaPr class\nis the part of ApiStyle properties, this parameter will be ignored.</p>",
           "optional": true,
           "defaultValue": 0
         }
@@ -1958,7 +2566,7 @@
     "SetBullet": {
       "memberof": "ApiParagraph",
       "name": "SetBullet",
-      "description": "<p>Set the bullet or numbering to the current paragraph.</p>",
+      "description": "<p>Sets the bullet or numbering to the current paragraph.</p>",
       "tags": {
         "typeofeditors": [
           "CSE",
@@ -1972,13 +2580,13 @@
         {
           "type": "ApiBullet",
           "name": "oBullet",
-          "description": "<p>The bullet object created using either the {@link Api#CreateBullet} or {@link Api#CreateNumbering} method.</p>",
+          "description": "<p>The bullet object created with the {@link Api#CreateBullet} or {@link Api#CreateNumbering} method.</p>",
           "optional": false
         }
       ]
     }
   },
-  "comment": "/**\r\n\t * Class representing a paragraph.\r\n\t * @constructor\r\n\t * @extends {ApiParaPr}\r\n\t */",
+  "comment": "/**\n\t * Class representing a paragraph.\n\t * @constructor\n\t * @extends {ApiParaPr}\n\t */",
   "description": "<p>Class representing a paragraph.</p>",
   "scope": "global",
   "params": []

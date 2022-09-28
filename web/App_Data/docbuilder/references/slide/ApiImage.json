@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiImage",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns the type of the ApiImage class.</p>",
       "tags": {},
       "returns": [
         [
@@ -14,8 +14,8 @@
       "inherits": null
     }
   },
-  "comment": "/**\r\n     * Class representing a image.\r\n     * @constructor\r\n     */",
-  "description": "<p>Class representing a image.</p>",
+  "comment": "/**\n     * Class representing an image.\n     * @constructor\n     */",
+  "description": "<p>Class representing an image.</p>",
   "scope": "global",
   "params": []
 }

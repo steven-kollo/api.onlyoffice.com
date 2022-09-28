@@ -8,16 +8,22 @@
         <a href="<%= Url.Action("basic") %>">Basic concepts</a>
     </li>
     <li>
+        <a href="<%= Url.Action("getdocs") %>">Get ONLYOFFICE Docs</a>
+    </li>
+    <li>
         <a href="<%= Url.Action("try") %>">Try now</a>
     </li>
     <li>
-        <a href="<%= Url.Action("demopreview") %>">Integration examples</a>
+        <a href="<%= Url.Action("demopreview") %>">Language-specific examples</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("example/csharp") %>">.Net (C#) example</a>
             </li>
             <li>
                 <a href="<%= Url.Action("example/java") %>">Java example</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("example/javaspring") %>">Java Spring example</a>
             </li>
             <li>
                 <a href="<%= Url.Action("example/nodejs") %>">Node.js example</a>
@@ -34,19 +40,34 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("plugins") %>">Integration connectors</a>
+        <a href="<%= Url.Action("plugins") %>">Ready-to-use connectors</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("chamilo") %>">Chamilo integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("drupal") %>">Drupal integration</a>
             </li>
             <li>
                 <a href="<%= Url.Action("humhub") %>">HumHub integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("jira") %>">Jira integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("liferay") %>">Liferay integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("mattermost") %>">Mattermost integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("moodle") %>">Moodle integration</a>
             </li>
             <li>
                 <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
@@ -61,7 +82,16 @@
                 <a href="<%= Url.Action("plone") %>">Plone integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("redmine") %>">Redmine integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("strapi") %>">Strapi integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wordpress") %>">WordPress integration</a>
             </li>
         </ul>
     </li>
@@ -78,22 +108,49 @@
                 <a href="<%= Url.Action("coedit") %>">Co-editing</a>
             </li>
             <li>
-                <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
-            </li>
-            <li>
                 <a href="<%= Url.Action("history") %>">Document history</a>
             </li>
             <li>
-                <a href="<%= Url.Action("rename") %>">Renaming file</a>
+                <a href="<%= Url.Action("actionlink") %>">Action link</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("mentions") %>">Mentions</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("rename") %>">Renaming files</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("review") %>">Reviewing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("inlineeditors") %>">Inline editors</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
             </li>
             <li>
                 <a href="<%= Url.Action("security") %>">Security</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("anonymoususers") %>">Anonymous users</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("commenting") %>">Commenting</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("comparing") %>">Comparing documents</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("viewing") %>">Viewing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a>
             </li>
         </ul>
     </li>
 </ul>
 
-<div class="treeheader">Documentation</div>
+<div class="treeheader">Usage API</div>
 <ul class="side-nav root">
     <li>
         <a href="<%= Url.Action("advanced") %>">Advanced parameters</a>
@@ -137,8 +194,80 @@
     <li>
         <a href="<%= Url.Action("callback") %>">Callback handler</a>
     </li>
+</ul>
+
+<div class="treeheader">Using WOPI</div>
+<ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("command") %>">Command service</a>
+        <a href="<%= Url.Action("wopi/") %>">Overview</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/hostpage") %>">Host page</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/proofkeys") %>">Proof keys</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/refreshlock") %>">RefreshLock</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("wopi/apivswopi") %>">API vs WOPI</a>
+    </li>
+</ul>
+
+<div class="treeheader">Additional API</div>
+<ul class="side-nav root">
+    <li>
+        <a href="<%= Url.Action("command/") %>">Command service</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("command/drop") %>">drop</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/forcesave") %>">forcesave</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/info") %>">info</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/license") %>">license</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/meta") %>">meta</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("command/version") %>">version</a>
+            </li>
+        </ul>
     </li>
     <li>
         <a href="<%= Url.Action("conversionapi") %>">Conversion API</a>
@@ -153,19 +282,20 @@
                 <a href="<%= Url.Action("signature/browser") %>">Browser</a>
             </li>
             <li>
-                <a href="<%= Url.Action("signature/request") %>">Request</a>
+                <a href="<%= Url.Action("signature/body") %>">Request</a>
                 <ul>
                     <li>
-                        <a href="<%= Url.Action("signature/request") %>">Token in header</a>
+                        <a href="<%= Url.Action("signature/body") %>">Token in body</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("signature/body") %>">Token in body</a>
+                        <a href="<%= Url.Action("signature/request") %>">Token in header</a>
                     </li>
                 </ul>
             </li>
         </ul>
     </li>
 </ul>
+
 <div class="treeheader">More information</div>
 <ul class="side-nav root">
     <li>
@@ -206,6 +336,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("faq/renaming") %>">Renaming</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("faq/usingwopi") %>">Using WOPI</a>
             </li>
         </ul>
     </li>

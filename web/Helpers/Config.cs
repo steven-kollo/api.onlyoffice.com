@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -23,8 +23,6 @@
  *
 */
 
-
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization;
@@ -32,6 +30,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using ASC.Web.Core.Files;
 using JWT;
+using JWT.Algorithms;
 
 namespace ASC.Api.Web.Help.Helpers
 {
@@ -42,8 +41,12 @@ namespace ASC.Api.Web.Help.Helpers
         {
             if (!string.IsNullOrEmpty(FileUtility.SignatureSecret))
             {
-                JsonWebToken.JsonSerializer = new DocumentService.JwtSerializer();
-                config.Token = JsonWebToken.Encode(config, FileUtility.SignatureSecret, JwtHashAlgorithm.HS256);
+                var serializer = new DocumentService.JwtSerializer();
+                var urlEncoder = new JwtBase64UrlEncoder();
+                var algorithm = new HMACSHA256Algorithm();
+                var encoder = new JwtEncoder(algorithm, serializer, urlEncoder);
+
+                config.Token = encoder.Encode(config, FileUtility.SignatureSecret);
             }
 
             using (var ms = new MemoryStream())
@@ -129,12 +132,11 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "permissions", Namespace = "")]
             public class PermissionsConfig
             {
-                [Obsolete("Since DS v5.5")]
-                [DataMember(Name = "changeHistory", EmitDefaultValue = false)]
-                public bool? ChangeHistory;
-
                 [DataMember(Name = "comment", EmitDefaultValue = false)]
                 public bool? Comment;
+
+                [DataMember(Name = "commentGroups", EmitDefaultValue = false)]
+                public CommentGroupsConfig CommentGroups;
 
                 [DataMember(Name = "download", EmitDefaultValue = false)]
                 public bool? Download;
@@ -154,12 +156,24 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "print", EmitDefaultValue = false)]
                 public bool? Print;
 
-                [Obsolete("Since DS v6.0")]
-                [DataMember(Name = "rename", EmitDefaultValue = false)]
-                public bool? Rename;
-
                 [DataMember(Name = "review", EmitDefaultValue = false)]
                 public bool? Review;
+
+                [DataMember(Name = "reviewGroups", EmitDefaultValue = false)]
+                public string[] ReviewGroups;
+
+                [DataContract(Name = "customization", Namespace = "")]
+                public class CommentGroupsConfig
+                {
+                    [DataMember(Name = "edit", EmitDefaultValue = false)]
+                    public string[] Edit;
+
+                    [DataMember(Name = "remove", EmitDefaultValue = false)]
+                    public string[] Remove;
+
+                    [DataMember(Name = "view", EmitDefaultValue = false)]
+                    public string[] View;
+                }
             }
         }
 
@@ -209,6 +223,9 @@ namespace ASC.Api.Web.Help.Helpers
             [DataContract(Name = "customization", Namespace = "")]
             public class CustomizationConfig
             {
+                [DataMember(Name = "anonymous", EmitDefaultValue = false)]
+                public AnonymousConfig Anonymous;
+
                 [DataMember(Name = "about", EmitDefaultValue = false)]
                 public bool? About;
 
@@ -218,8 +235,8 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "chat", EmitDefaultValue = false)]
                 public bool? Chat;
 
-                [DataMember(Name = "commentAuthorOnly", EmitDefaultValue = false)]
-                public bool? CommentAuthorOnly;
+                [DataMember(Name = "compactHeader", EmitDefaultValue = false)]
+                public bool? CompactHeader;
 
                 [DataMember(Name = "compactToolbar", EmitDefaultValue = false)]
                 public bool? CompactToolbar;
@@ -239,14 +256,31 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "hideRightMenu", EmitDefaultValue = false)]
                 public bool? HideRightMenu;
 
+                [DataMember(Name = "hideRulers", EmitDefaultValue = false)]
+                public bool? HideRulers;
+
                 [DataMember(Name = "logo", EmitDefaultValue = false)]
                 public LogoConfig Logo;
 
                 [DataMember(Name = "showReviewChanges", EmitDefaultValue = false)]
                 public bool? ShowReviewChanges;
 
+                [DataMember(Name = "toolbarHideFileName", EmitDefaultValue = false)]
+                public bool? ToolbarHideFileName;
+
+                [DataMember(Name = "toolbarNoTabs", EmitDefaultValue = false)]
+                public bool? ToolbarNoTabs;
+
                 [DataMember(Name = "zoom", EmitDefaultValue = false)]
                 public int Zoom;
+
+
+                [DataContract(Name = "anonymous", Namespace = "")]
+                public class AnonymousConfig
+                {
+                    [DataMember(Name = "request")]
+                    public bool Request;
+                }
 
 
                 [DataContract(Name = "customer", Namespace = "")]

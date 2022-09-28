@@ -3,7 +3,7 @@
     "GetClassType": {
       "memberof": "ApiTablePr",
       "name": "GetClassType",
-      "description": "<p>Get the type of this class.</p>",
+      "description": "<p>Returns a type of the ApiTablePr class.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -20,7 +20,7 @@
     "SetStyleColBandSize": {
       "memberof": "ApiTablePr",
       "name": "SetStyleColBandSize",
-      "description": "<p>Specify the number of columns which will comprise each table column band for this table style.</p>",
+      "description": "<p>Specifies a number of columns which will comprise each table column band for this table style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -41,7 +41,7 @@
     "SetStyleRowBandSize": {
       "memberof": "ApiTablePr",
       "name": "SetStyleRowBandSize",
-      "description": "<p>Specify the number of rows which will comprise each table row band for this table style.</p>",
+      "description": "<p>Specifies a number of rows which will comprise each table row band for this table style.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -62,7 +62,7 @@
     "SetJc": {
       "memberof": "ApiTablePr",
       "name": "SetJc",
-      "description": "<p>Specify the alignment of the current table with respect to the text margins in the current section.</p>",
+      "description": "<p>Specifies the alignment of the current table with respect to the text margins in the current section.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -83,7 +83,7 @@
     "SetShd": {
       "memberof": "ApiTablePr",
       "name": "SetShd",
-      "description": "<p>Specify the shading which is applied to the extents of the current table.</p>",
+      "description": "<p>Specifies the shading which is applied to the extents of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -120,7 +120,7 @@
         {
           "type": "boolean",
           "name": "isAuto",
-          "description": "<p>The true value will disable the SetShd method use.</p>",
+          "description": "<p>The true value disables the SetShd method use.</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -129,7 +129,7 @@
     "SetTableBorderTop": {
       "memberof": "ApiTablePr",
       "name": "SetTableBorderTop",
-      "description": "<p>Set the border which will be displayed at the top of the current table.</p>",
+      "description": "<p>Sets the border which will be displayed at the top of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -180,7 +180,7 @@
     "SetTableBorderBottom": {
       "memberof": "ApiTablePr",
       "name": "SetTableBorderBottom",
-      "description": "<p>Set the border which will be displayed at the bottom of the current table.</p>",
+      "description": "<p>Sets the border which will be displayed at the bottom of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -231,7 +231,7 @@
     "SetTableBorderLeft": {
       "memberof": "ApiTablePr",
       "name": "SetTableBorderLeft",
-      "description": "<p>Set the border which will be displayed on the left of the current table.</p>",
+      "description": "<p>Sets the border which will be displayed on the left of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -282,7 +282,7 @@
     "SetTableBorderRight": {
       "memberof": "ApiTablePr",
       "name": "SetTableBorderRight",
-      "description": "<p>Set the border which will be displayed on the right of the current table.</p>",
+      "description": "<p>Sets the border which will be displayed on the right of the current table.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -333,7 +333,7 @@
     "SetTableBorderInsideH": {
       "memberof": "ApiTablePr",
       "name": "SetTableBorderInsideH",
-      "description": "<p>Specify the border which will be displayed on all horizontal table cell borders which are not on an outmost edge\nof the parent table (all horizontal borders which are not the topmost or bottommost border).</p>",
+      "description": "<p>Specifies the border which will be displayed on all horizontal table cell borders which are not on the outmost edge\nof the parent table (all horizontal borders which are not the topmost or bottommost borders).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -384,7 +384,7 @@
     "SetTableBorderInsideV": {
       "memberof": "ApiTablePr",
       "name": "SetTableBorderInsideV",
-      "description": "<p>Specify the border which will be displayed on all vertical table cell borders which are not on an outmost edge\nof the parent table (all vertical borders which are not the leftmost or rightmost border).</p>",
+      "description": "<p>Specifies the border which will be displayed on all vertical table cell borders which are not on the outmost edge\nof the parent table (all vertical borders which are not the leftmost or rightmost borders).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -435,7 +435,7 @@
     "SetTableCellMarginBottom": {
       "memberof": "ApiTablePr",
       "name": "SetTableCellMarginBottom",
-      "description": "<p>Specify the amount of space which will be left between the bottom extent of the cell contents and the border\nof all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specifies an amount of space which will be left between the bottom extent of the cell contents and the border\nof all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -456,7 +456,7 @@
     "SetTableCellMarginLeft": {
       "memberof": "ApiTablePr",
       "name": "SetTableCellMarginLeft",
-      "description": "<p>Specify the amount of space which will be present between the left extent of the cell contents and the left\nborder of all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specifies an amount of space which will be left between the left extent of the cell contents and the left\nborder of all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -477,7 +477,7 @@
     "SetTableCellMarginRight": {
       "memberof": "ApiTablePr",
       "name": "SetTableCellMarginRight",
-      "description": "<p>Specify the amount of space which will be present between the right extent of the cell contents and the right\nborder of all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specifies an amount of space which will be left between the right extent of the cell contents and the right\nborder of all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -498,7 +498,7 @@
     "SetTableCellMarginTop": {
       "memberof": "ApiTablePr",
       "name": "SetTableCellMarginTop",
-      "description": "<p>Specify the amount of space which will be present between the top extent of the cell contents and the top border\nof all table cells within the parent table (or table row).</p>",
+      "description": "<p>Specifies an amount of space which will be left between the top extent of the cell contents and the top border\nof all table cells within the parent table (or table row).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -519,7 +519,7 @@
     "SetCellSpacing": {
       "memberof": "ApiTablePr",
       "name": "SetCellSpacing",
-      "description": "<p>Specify the default table cell spacing (the spacing between adjacent cells and the edges of the table).</p>",
+      "description": "<p>Specifies the default table cell spacing (the spacing between adjacent cells and the edges of the table).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -532,7 +532,7 @@
         {
           "type": "twips",
           "name": "nValue",
-          "description": "<p>Spacing value measured in twentieths of a point (1/1440 of an inch). <code>&quot;Null&quot;</code> means no spacing will be applied.</p>",
+          "description": "<p>Spacing value measured in twentieths of a point (1/1440 of an inch). <code>&quot;Null&quot;</code> means that no spacing will be applied.</p>",
           "optional": false
         }
       ]
@@ -540,7 +540,7 @@
     "SetTableInd": {
       "memberof": "ApiTablePr",
       "name": "SetTableInd",
-      "description": "<p>Specify the indentation which will be added before the leading edge of the current table in the document\n(the left edge in a left-to-right table, and the right edge in a right-to-left table).</p>",
+      "description": "<p>Specifies the indentation which will be added before the leading edge of the current table in the document\n(the left edge in the left-to-right table, and the right edge in the right-to-left table).</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -561,7 +561,7 @@
     "SetWidth": {
       "memberof": "ApiTablePr",
       "name": "SetWidth",
-      "description": "<p>Set the preferred width for this table.\n<note>Tables are created with the {@link ApiTable#SetWidth} method properties set by default, which always override the {@link ApiTablePr#SetWidth} method properties. That is why there is no use to try and apply {@link ApiTablePr#SetWidth}, we recommend that you use the  {@link ApiTablePr#SetWidth}  method instead.</note></p>",
+      "description": "<p>Sets the preferred width to the current table.\n<note>Tables are created with the {@link ApiTable#SetWidth} method properties set by default, which always override the {@link ApiTablePr#SetWidth} method properties. That is why there is no use to try and apply {@link ApiTablePr#SetWidth}. We recommend you to use the  {@link ApiTablePr#SetWidth} method instead.</note></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -588,7 +588,7 @@
     "SetTableLayout": {
       "memberof": "ApiTablePr",
       "name": "SetTableLayout",
-      "description": "<p>Specify the algorithm which will be used to lay out the contents of this table within the document.</p>",
+      "description": "<p>Specifies the algorithm which will be used to lay out the contents of the current table within the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -605,10 +605,111 @@
           "optional": false
         }
       ]
+    },
+    "SetTableTitle": {
+      "memberof": "ApiTablePr",
+      "name": "SetTableTitle",
+      "description": "<p>Sets the table title (caption).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sTitle",
+          "description": "<p>The table title to be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTableTitle": {
+      "memberof": "ApiTablePr",
+      "name": "GetTableTitle",
+      "description": "<p>Returns the table title (caption).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetTableDescription": {
+      "memberof": "ApiTablePr",
+      "name": "SetTableDescription",
+      "description": "<p>Sets the table description.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sDescr",
+          "description": "<p>The table description to be set.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetTableDescription": {
+      "memberof": "ApiTablePr",
+      "name": "GetTableDescription",
+      "description": "<p>Returns the table description.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiTablePr",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiTablePr object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a table properties.\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a table properties.</p>",
+  "comment": "/**\n\t * Class representing the table properties.\n\t * @constructor\n\t */",
+  "description": "<p>Class representing the table properties.</p>",
   "scope": "global",
   "params": []
 }

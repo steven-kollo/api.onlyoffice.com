@@ -50,8 +50,13 @@
     <p>The <b>document editing service</b> cannot open the previously edited and saved file for editing.</p>
     <p>Do not forget that every time the document is edited and saved, the <a href="<%= Url.Action("config/document") %>#key">document.key</a> must be generated anew.</p>
 
+    <h2 id="changesUrl" class="copy-link">The file version cannot be opened</h2>
+    <img width="832px" alt="The file version cannot be opened" src="<%= Url.Content("~/content/img/editor/changes-url.png") %>" />
+    <p>The <b>document editing service</b> cannot open the file version.</p>
+    <p>Check if the <em>changesUrl</em> link from the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method corresponds to the <em>previous.url</em> parameter.</p>
+
     <h2 id="coedit" class="copy-link">No collaborative editing</h2>
-    <img alt="No collaborative editing" src="<%= Url.Content("~/content/img/editor/e-coedit.png") %>" />
+    <img width="832px" alt="No collaborative editing" src="<%= Url.Content("~/content/img/editor/e-coedit.png") %>" />
     <p>No co-editing is available when the document is opened for editing by different users.</p>
     <p>The <b>document editing service</b> opens <b>two different</b> files for editing.</p>
     <p>

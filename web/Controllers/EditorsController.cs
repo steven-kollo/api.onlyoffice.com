@@ -1,6 +1,6 @@
 /*
  *
- * (c) Copyright Ascensio System Limited 2010-2017
+ * (c) Copyright Ascensio System Limited 2021
  *
  * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
  * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
@@ -25,14 +25,10 @@
 
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web.Mvc;
-using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
-using HtmlAgilityPack;
-using log4net;
 
 namespace ASC.Api.Web.Help.Controllers
 {
@@ -41,13 +37,24 @@ namespace ASC.Api.Web.Help.Controllers
     {
         private readonly string[] _actionMap = new[]
             {
+                "ActionLink",
                 "Advanced",
                 "Alfresco",
+                "AnonymousUsers",
                 "Basic",
                 "Callback",
+                "Chamilo",
                 "Changelog",
                 "Coedit",
                 "Command",
+                "Command/drop",
+                "Command/forcesave",
+                "Command/info",
+                "Command/license",
+                "Command/meta",
+                "Command/version",
+                "Commenting",
+                "Comparing",
                 "Config",
                 "Config/Document",
                 "Config/Document/Info",
@@ -62,7 +69,9 @@ namespace ASC.Api.Web.Help.Controllers
                 "ConversionApi",
                 "DemoPreview",
                 "DocumentBuilderApi",
+                "Drupal",
                 "Example/Java",
+                "Example/JavaSpring",
                 "Example/Nodejs",
                 "Example/Php",
                 "Example/Ruby",
@@ -80,73 +89,60 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Saving",
                 "FAQ/Security",
                 "FAQ/Sharing",
+                "FAQ/UsingWOPI",
+                "GetDocs",
                 "History",
                 "HowItWorks",
                 "HumHub",
+                "InlineEditors",
+                "Jira",
                 "Liferay",
+                "Mattermost",
+                "Mentions",
                 "Methods",
+                "MobileIntegration",
+                "Moodle",
                 "Nextcloud",
                 "Nuxeo",
                 "Open",
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "Redmine",
                 "Rename",
+                "Review",
                 "Save",
                 "Security",
                 "SharePoint",
                 "Signature",
-                "Signature/Browser",
                 "Signature/Body",
+                "Signature/Browser",
                 "Signature/Request",
+                "Strapi",
                 "Troubleshooting",
                 "Try",
+                "Viewing",
+                "WOPI",
+                "WOPI/ApiVsWopi",
+                "WOPI/Discovery",
+                "WOPI/HostPage",
+                "WOPI/PostMessage",
+                "WOPI/ProofKeys",
+                "WOPI/RestApi",
+                "WOPI/RestApi/CheckFileInfo",
+                "WOPI/RestApi/GetFile",
+                "WOPI/RestApi/Lock",
+                "WOPI/RestApi/PutFile",
+                "WOPI/RestApi/RefreshLock",
+                "WOPI/RestApi/RenameFile",
+                "WOPI/RestApi/Unlock",
+                "Wordpress"
             };
 
         [ValidateInput(false)]
         public ActionResult Search(string query)
         {
-            var result = new List<SearchResult>();
-
-            foreach (var action in _actionMap)
-            {
-                var actionString = action.ToLower();
-                var doc = new HtmlDocument();
-                try
-                {
-                    var html = this.RenderView(actionString, new ViewDataDictionary());
-                    doc.LoadHtml(html);
-                }
-                catch (Exception e)
-                {
-                    LogManager.GetLogger("ASC.Api").Error(e);
-                }
-                var content = doc.DocumentNode;
-                if (content.SelectSingleNode("html") != null)
-                {
-                    content = content.SelectSingleNode("//div[contains(@class, 'layout-content')]");
-                }
-
-                if (!string.IsNullOrEmpty(query) && content != null && content.InnerText.ToLowerInvariant().Contains(query.ToLowerInvariant()))
-                {
-                    var headerNode = doc.DocumentNode.SelectSingleNode("//span[@class='hdr']");
-                    var descrNode = doc.DocumentNode.SelectSingleNode("//p[@class='dscr']");
-                    var header = headerNode != null ? headerNode.InnerText : string.Empty;
-                    var descr = descrNode != null ? descrNode.InnerText : string.Empty;
-                    result.Add(new SearchResult
-                        {
-                            Module = "editors",
-                            Name = actionString,
-                            Resource = Highliter.HighliteString(header, query).ToHtmlString(),
-                            Description = Highliter.HighliteString(descr, query).ToHtmlString(),
-                            Url = Url.Action(actionString, "editors")
-                        });
-                }
-            }
-
-            ViewData["query"] = query ?? string.Empty;
-            ViewData["result"] = result;
-            return View(new Dictionary<MsDocEntryPoint, Dictionary<MsDocEntryPointMethod, string>>());
+            return View(GCustomSearch.Search(query, "editors"));
         }
 
 
@@ -162,12 +158,22 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
 
-        public ActionResult Alfresco()
+        public ActionResult ActionLink()
         {
             return View();
         }
 
         public ActionResult Advanced()
+        {
+            return View();
+        }
+
+        public ActionResult Alfresco()
+        {
+            return View();
+        }
+
+        public ActionResult AnonymousUsers()
         {
             return View();
         }
@@ -188,6 +194,11 @@ namespace ASC.Api.Web.Help.Controllers
             return Json(new { error = 0 });
         }
 
+        public ActionResult Chamilo()
+        {
+            return View();
+        }
+
         public ActionResult Changelog()
         {
             return View();
@@ -198,7 +209,21 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Command()
+        public ActionResult Command(string catchall)
+        {
+            if (!_actionMap.Contains("command/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("Command", (object)catchall);
+        }
+
+        public ActionResult Commenting()
+        {
+            return View();
+        }
+
+        public ActionResult Comparing()
         {
             return View();
         }
@@ -245,6 +270,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View("FAQ", (object)catchall);
         }
 
+        public ActionResult GetDocs()
+        {
+            return View();
+        }
+
         public ActionResult DemoPreview()
         {
             var directoryInfo = new DirectoryInfo(Request.MapPath("~/app_data/editor"));
@@ -255,6 +285,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult DocumentBuilderApi()
+        {
+            return View();
+        }
+
+        public ActionResult Drupal()
         {
             return View();
         }
@@ -279,12 +314,42 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult InlineEditors()
+        {
+            return View();
+        }
+
+        public ActionResult Jira()
+        {
+            return View();
+        }
+        
         public ActionResult Liferay()
         {
             return View();
         }
 
+        public ActionResult Mattermost()
+        {
+            return View();
+        }
+
+        public ActionResult Mentions()
+        {
+            return View();
+        }
+
         public ActionResult Methods()
+        {
+            return View();
+        }
+
+        public ActionResult MobileIntegration()
+        {
+            return View();
+        }
+
+        public ActionResult Moodle()
         {
             return View();
         }
@@ -319,7 +384,17 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Redmine()
+        {
+            return View();
+        }
+
         public ActionResult Rename()
+        {
+            return View();
+        }
+
+        public ActionResult Review()
         {
             return View();
         }
@@ -348,12 +423,36 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Signature", (object)catchall);
         }
 
+        public ActionResult Strapi()
+        {
+            return View();
+        }
+
         public ActionResult Troubleshooting()
         {
             return View();
         }
 
         public ActionResult Try()
+        {
+            return View();
+        }
+
+        public ActionResult Viewing()
+        {
+            return View();
+        }
+
+        public ActionResult WOPI(string catchall)
+        {
+            if (!_actionMap.Contains("wopi/" + catchall, StringComparer.OrdinalIgnoreCase))
+            {
+                catchall = null;
+            }
+            return View("WOPI", (object)catchall);
+        }
+
+        public ActionResult Wordpress()
         {
             return View();
         }

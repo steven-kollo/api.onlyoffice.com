@@ -28,7 +28,7 @@
     ...
 });</pre>
             </li>
-            <li>Reviewing only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.review</em> is set to <b>true</b>, the user will be able to open the document in review mode only. Theconfiguration in this case will look like this:
+            <li>Reviewing only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.review</em> is set to <b>true</b>, the user will be able to open the document in review mode only. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -120,7 +120,7 @@
     ...
 });</pre>
             </li>
-            <li>Comments are available for viewing only: if the <em>document.permission.edit</em> parameter is set to <b>true</b> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The configuration in this case will look like this:
+            <li>Comments are available for viewing only: if the <em>document.permission.edit</em> parameter is set to <b>true</b> and <em>document.permission.comment</em> is set to <b>false</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The configuration in this case will look like this:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -143,7 +143,7 @@
 <dl class="faq_block" id="sharing_3">
     <dt>How can the 'fillForms' parameter be used?</dt>
     <dd>
-        <p>Starting with version 5.2 Document Server provides functionality for filling special forms without the need to give editing permissions to the user. This can be used, for example, in case you have a document form of some kind and want to give the users the access to this form so that they could fill it, but could not edit other document fields (e.g. fill the names in a contract but not change the contract terms, or fill the variable fields in some other document but leave the other parts of the document intact).</p>
+        <p>Starting from version 5.2, Document Server provides functionality for filling special forms without the need to give editing permissions to the user. This can be used, for example, in case you have a document form of some kind and want to give the users the access to this form so that they could fill it, but could not edit other document fields (e.g. fill the names in a contract but not change the contract terms, or fill the variable fields in some other document but leave the other parts of the document intact).</p>
         <p>To enable this mode the <em>document.permissions.fillForms</em> parameter is used:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
@@ -151,7 +151,7 @@
             "edit": false,
             "review": false,
             "fillForms": true,
-            "comment": false // optional, the commenting is disabled anyway with the 'fillForms' parameter enabled and 'edit' and 'review' parameters disabled
+            "comment": false
         },
         ...
     },
@@ -161,6 +161,7 @@
     },
     ...
 });</pre>
+        <p>The <em>comment</em> field is optional because the commenting is disabled anyway with the <em>fillForms</em> parameter enabled and <em>edit</em> and <em>review</em> parameters disabled.</p>
         <p>With the configuration above the document will be opened with the form filling mode enabled and all the other modes disabled, giving the users who have access to it only the possibility to fill the fields in the special <a target="_blank" href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx">content controls</a>.</p>
         <p>It is then up to you to decide what is done next: either the changes to the editable fields will be saved to the same document or a new document will be created each time the original one is accessed and altered by a new user.</p>
         <p>The first scenario can be used if the access to the document will be given only once to a certain user with <em>fillForms</em> permissions, then it is saved with all the changes and no other user will have to fill it again.</p>
@@ -306,22 +307,16 @@
     <dd>
         <p>To open the document with both the <em>viewing</em> mode enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
         <p>You will need to set the <em>document.permission.edit</em>, <em>document.permission.review</em> and <em>document.permission.fillForms</em> parameters to <b>false</b>, so that the user will not be able to either edit, or review the document, or change form fields in it. If you additionally want to disable the commenting functionality for the document, set the <em>comment</em> parameter also to <b>false</b> (the existing comments will be available for viewing though).</p>
-        <div class="note">In case you disable all the editing permissions, we suggest that you also set the <em>editorConfig.customization.chat</em> to <b>false</b>, so that the users with the access to the document could not spam to the document embedded chat.</div>
+        <div class="note">In case you disable all the editing permissions, we suggest that you also set the <em>document.permissions.chat</em> to <b>false</b>, so that the users with the access to the document could not spam to the document embedded chat.</div>
         <p>The configuration in this case will look like this:</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
+            "chat": false,
             "edit": false,
             "review": false,
             "fillForms": false,
             "comment": false
-        },
-        ...
-    },
-    "editorConfig": {
-        "customization": {
-            "chat": false
-            ...
         },
         ...
     },
@@ -382,8 +377,9 @@
                     "user": "John Smith"
                 },
                 {
+                    "isLink": true,
                     "permissions": "Read Only",
-                    "user": "Kate Cage"
+                    "user": "External link"
                 },
                 ...
             ]
@@ -393,5 +389,24 @@
     ...
 });</pre>
         <p>Further information about the information for the document can be found <a href="<%= Url.Action("config/document/info") %>">at this page</a>.</p>
+    </dd>
+</dl>
+<dl class="faq_block" id="sharing_10">
+    <dt>How to restrict commenting?</dt>
+    <dd>
+        <p>The comments are enabled by default. If you want to restrict commenting and allow the authors to edit and/or delete only their comments, 
+        you will need to change the <em>document.permissions.editCommentsAuthorOnly</em> and/or <em>document.permissions.deleteCommentsAuthorOnly</em> parameters:</p>
+        <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "document": {
+        "permissions": {
+            "comment": true,
+            "editCommentsAuthorOnly": true,
+            "deleteCommentsAuthorOnly": true,
+        },
+        ...
+    },
+    ...
+});</pre>
+    <div class="note">Do not forget to set the <em>editorConfig.mode</em> to <b>edit</b>, otherwise any commenting functionality will be disabled.</div>
     </dd>
 </dl>

@@ -5,15 +5,46 @@
     <span class="hdr">Events</span>
 </h1>
 
-<div class="header-gray">Description</div>
 <p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
 
+<ul>
+    <li><a href="#onAppReady">onAppReady</a> - the application is loaded into the browser.</li>
+    <li><a href="#onCollaborativeChanges">onCollaborativeChanges</a> - the document is co-edited by the other user in the <em>strict</em> co-editing mode.</li>
+    <li><a href="#onDocumentReady">onDocumentReady</a> - the document is loaded into the document editor.</li>
+    <li><a href="#onDocumentStateChange">onDocumentStateChange</a> - the document is modified.</li>
+    <li><a href="#onDownloadAs">onDownloadAs</a> - the absolute URL to the edited file when the <em>downloadAs</em> method is being called.</li>
+    <li><a href="#onError">onError</a> - an error or some other specific event occurs.</li>
+    <li><a href="#onInfo">onInfo</a> - the application opened the file.</li>
+    <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <em>meta</em> command.</li>
+    <li><a href="#onMakeActionLink">onMakeActionLink</a> - the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</li>
+    <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - the document is opened for editing with the old <em>document.key</em> value, which was used to edit the previous document version and was successfully saved.</li>
+    <li><a href="#onPluginsReady">onPluginsReady</a> - all plugins are loaded and can be used.</li>
+    <li><a href="#onReady">onReady</a> - the application is loaded into the browser.</li>
+    <li><a href="#onRequestClose">onRequestClose</a> - the work with the editor must be ended and the editor must be closed.</li>
+    <li><a href="#onRequestCompareFile">onRequestCompareFile</a> - the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.</li>
+    <li><a href="#onRequestCreateNew">onRequestCreateNew</a> - the user is trying to create document by clicking the <em>Create New</em> button.</li>
+    <li><a href="#onRequestEditRights">onRequestEditRights</a> - the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.</li>
+    <li><a href="#onRequestHistory">onRequestHistory</a> - the user is trying to show the document version history by clicking the <em>Version History</em> button.</li>
+    <li><a href="#onRequestHistoryClose">onRequestHistoryClose</a> - the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.</li>
+    <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - the user is trying to click the specific document version in the document version history.</li>
+    <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - the user is trying to insert an image by clicking the <em>Image from Storage</em> button.</li>
+    <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
+    <li><a href="#onRequestRename">onRequestRename</a> - the user is trying to rename the file by clicking the <em>Rename...</em> button.</li>
+    <li><a href="#onRequestRestore">onRequestRestore</a> - the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</li>
+    <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
+    <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
+    <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> - the commenter can select other users for mention in the comments.</li>
+    <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
+</ul>
+
+<h2>Events and their description:</h2>
 <ul>
     <li>
         <p><b id="onAppReady" class="copy-link">onAppReady</b> - the function called when the application is loaded into the browser.</p>
         <div class="header-gray">Example</div>
         <pre>
-var onAppReady = function() {
+var onAppReady = function () {
     console.log("ONLYOFFICE Document Editor is ready");
 };
 
@@ -49,7 +80,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <p><b id="onDocumentReady" class="copy-link">onDocumentReady</b> - the function called when the document is loaded into the document editor.</p>
         <div class="header-gray">Example</div>
         <pre>
-var onDocumentReady = function() {
+var onDocumentReady = function () {
     console.log("Document is loaded");
 };
 
@@ -91,12 +122,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called.
-            The absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
+            The absolute URL to the document to be downloaded and its type are sent in the <em>data</em> parameter.
         </p>
         <div class="header-gray">Example</div>
         <pre>
 var onDownloadAs = function (event) {
-    console.log("ONLYOFFICE Document Editor create file: " + event.data);
+    var fileType = event.data.fileType;
+    var url = event.data.url;
+    console.log("ONLYOFFICE Document Editor create file: " + url);
 };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -154,13 +187,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command") %>#meta">meta</a> command.
+            <b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command.
             The name of the document is sent in the <em>data.title</em> parameter.
+            The <em>Favorite</em> icon highlighting state is sent in the <em>data.favorite</em> parameter.
+            When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
+            If the method is not declared, the <em>Favorite</em> icon will not be changed.
         </p>
         <div class="header-gray">Example</div>
         <pre>
 var onMetaChange = function (event) {
     var title = event.data.title;
+    var favorite = event.data.favorite;
     ...
 };
 
@@ -224,6 +261,26 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
+            <b id="onPluginsReady" class="copy-link">onPluginsReady</b> - the function called when all plugins are loaded and can be used.
+        </p>
+        <div class="header-gray">Example</div>
+        <pre>
+var onPluginsReady = function () {
+    ...
+};
+
+var docEditor = new DocsAPI.DocEditor("placeholder", {
+    "events": {
+        "onPluginsReady": onPluginsReady,
+        ...
+    },
+    ...
+});
+</pre>
+    </li>
+
+    <li>
+        <p>
             <b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser.
             Deprecated since version 5.0, please use <a href="#onAppReady">onAppReady</a> instead
         </p>
@@ -253,14 +310,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestCompareFile" class="copy-link">onRequestCompareFile</b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
+            <b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
             To select a document for comparing you must call the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.
             If the method is not declared the <em>Document from Storage</em> button will not be displayed.
+            <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
         </p>
         <img alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestCompareFile = function() {
+var onRequestCompareFile = function () {
     docEditor.setRevisedFile({
         "fileType": "docx",
         "url": "https://example.com/url-to-example-document.docx"
@@ -287,7 +345,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </p>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestCreateNew = function() {
+var onRequestCreateNew = function () {
     ...
 };
 
@@ -299,8 +357,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
     </li>
 
     <li>
@@ -339,15 +395,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestHistory = function() {
+var onRequestHistory = function () {
     docEditor.refreshHistory({
         "currentVersion": 2,
         "history": [
             {
-                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "changes": changes,
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
-                "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "serverVersion": serverVersion,
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage"
@@ -377,6 +433,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
+        <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
     </li>
 
     <li>
@@ -388,7 +446,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestHistoryClose = function() {
+var onRequestHistoryClose = function () {
     document.location.reload();
 };
 
@@ -412,12 +470,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestHistoryData = function(event) {
+var onRequestHistoryData = function (event) {
     var version = event.data;
     docEditor.setHistoryData({
-        "changesUrl": "https://example.com/url-to-changes.zip", //the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document
+        "changesUrl": "https://example.com/url-to-changes.zip",
+        "fileType": "docx",
         "key": "Khirz6zTPdfd7",
         "previous": {
+            "fileType": "docx",
             "key": "af86C7e71Ca8",
             "url": "https://example.com/url-to-the-previous-version-of-the-document.docx"
         },
@@ -434,8 +494,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <p>Where the <b>changesUrl</b> is the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
     </li>
 
     <li>
@@ -448,11 +511,20 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestInsertImage = function(event) {
+var onRequestInsertImage = function (event) {
     docEditor.insertImage({
         "c": event.data.c,
+        "images": [
+            {
         "fileType": "png",
-        "url": "https://example.com/url-to-example-image.png"
+                "url": "https://example.com/url-to-example-image1.png"
+            },
+            {
+                "fileType": "png",
+                "url": "https://example.com/url-to-example-image2.png"
+            },
+            ...
+        ]
     });
 };
 
@@ -471,13 +543,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     <li>
         <p>
             <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
-            To select recipient data you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
-            If the method is not declared the <em>Mail merge</em> button will not be displayed.
+            To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
+            If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.
         </p>
         <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestMailMergeRecipients = function() {
+var onRequestMailMergeRecipients = function () {
     docEditor.setMailMergeRecipients({
         "fileType": "xlsx",
         "url": "https://example.com/url-to-example-recipients.xlsx"
@@ -504,7 +576,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestRename = function(event) {
+var onRequestRename = function (event) {
     var title = event.data;
     ...
 };
@@ -525,6 +597,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again.
             The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
             Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">history object</a>.
+            The type of the document which is specified with this link is sent in the <em>data.fileType</em> parameter.
             If the method is not declared the <em>Restore</em> button will not be displayed.
         </p>
         <div class="note">
@@ -534,7 +607,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestRestore = function(event) {
+var onRequestRestore = function (event) {
+    var fileType = event.data.fileType;
     var url = event.data.url;
     var version = event.data.version;
     ...
@@ -542,10 +616,10 @@ var onRequestRestore = function(event) {
         "currentVersion": 2,
         "history": [
             {
-                "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "changes": changes,
                 "created": "2010-07-06 10:13 AM",
                 "key": "af86C7e71Ca8",
-                "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+                "serverVersion": serverVersion,
                 "user": {
                     "id": "F89d8069ba2b",
                     "name": "Kate Cage"
@@ -575,20 +649,25 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>
+            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        </p>
     </li>
 
     <li>
         <p>
             <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save Copy as...</em> button.
-            The title of the document and the absolute URL to the document to be downloaded is sent in the <em>data</em> parameter.
+            The title of the document, its type and the absolute URL to the document to be downloaded are sent in the <em>data</em> parameter.
             If the method is not declared the <em>Save Copy as...</em> button will not be displayed.
         </p>
         <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestSaveAs = function(event) {
+var onRequestSaveAs = function (event) {
+    var fileType = event.data.fileType;
     var title = event.data.title;
     var url = event.data.url;
     ...
@@ -612,12 +691,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
         </p>
         <div class="note">
-            In version 5.4 <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
-            Since version 5.5 there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
+            In version 5.4, <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
+            Starting from version 5.5, there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
         </div>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestSendNotify = function(event) {
+var onRequestSendNotify = function (event) {
     var ACTION_DATA = event.data.actionLink;
     var comment = event.data.message;
     var emails = event.data.emails;
@@ -643,7 +722,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestSharingSettings = function() {
+var onRequestSharingSettings = function () {
     docEditor.setSharingSettings({
         "sharingSettings": [
             {
@@ -651,8 +730,9 @@ var onRequestSharingSettings = function() {
                 "user": "John Smith"
             },
             {
+                "isLink": true,
                 "permissions": "Read Only",
-                "user": "Kate Cage"
+                "user": "External link"
             }
         ]
     });
@@ -677,7 +757,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
         <div class="header-gray">Example</div>
         <pre>
-var onRequestUsers = function() {
+var onRequestUsers = function () {
     docEditor.setUsers({
         "users": [
             {
@@ -705,7 +785,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onWarning" class="copy-link">onWarning</b> - the function called when an warning occurs.
+            <b id="onWarning" class="copy-link">onWarning</b> - the function called when a warning occurs.
             The warning message is sent in the <em>data</em> parameter.
         </p>
         <div class="header-gray">Example</div>

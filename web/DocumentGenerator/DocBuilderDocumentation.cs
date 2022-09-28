@@ -1,4 +1,30 @@
-﻿using System;
+﻿/*
+ *
+ * (c) Copyright Ascensio System Limited 2021
+ *
+ * This program is freeware. You can redistribute it and/or modify it under the terms of the GNU 
+ * General Public License (GPL) version 3 as published by the Free Software Foundation (https://www.gnu.org/copyleft/gpl.html). 
+ * In accordance with Section 7(a) of the GNU GPL its Section 15 shall be amended to the effect that 
+ * Ascensio System SIA expressly excludes the warranty of non-infringement of any third-party rights.
+ *
+ * THIS PROGRAM IS DISTRIBUTED WITHOUT ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR
+ * FITNESS FOR A PARTICULAR PURPOSE. For more details, see GNU GPL at https://www.gnu.org/copyleft/gpl.html
+ *
+ * You can contact Ascensio System SIA by email at sales@onlyoffice.com
+ *
+ * The interactive user interfaces in modified source and object code versions of ONLYOFFICE must display 
+ * Appropriate Legal Notices, as required under Section 5 of the GNU GPL version 3.
+ *
+ * Pursuant to Section 7 § 3(b) of the GNU GPL you must retain the original ONLYOFFICE logo which contains 
+ * relevant author attributions when distributing the software. If the display of the logo in its graphic 
+ * form is not reasonably feasible for technical reasons, you must include the words "Powered by ONLYOFFICE" 
+ * in every copy of the program you distribute. 
+ * Pursuant to Section 7 § 3(e) we decline to grant you any rights under trademark law for use of our trademarks.
+ *
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -18,7 +44,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             {
                 { "word", "textdocumentapi" },
                 { "cell", "spreadsheetapi" },
-                { "slide", "presentationapi" }
+                { "slide", "presentationapi" },
+                { "form", "formapi" }
             };
 
         private static readonly Dictionary<string, string> EditorsTypeMapping = new Dictionary<string, string>
@@ -331,62 +358,66 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static void LoadExamples()
         {
-            var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references", "examples.json");
-            var globalsExamplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references", "globalsExamples.json");
-            if (!File.Exists(examplesPath))
-            {
-                _logger.Info("Couldn't find any examples: " + examplesPath);
-            }
-            else
-            {
-                var examplesContent = File.ReadAllText(examplesPath);
-                try
-                {
-                    var examples = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, DBExample>>>(examplesContent);
-                    foreach (var module in examples)
-                    {
-                        var mod = GetModule(module.Key);
-                        if (mod == null) continue;
+            var docbuilderExt = ".docbuilder";
+            var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\examples");
 
-                        foreach (var ex in module.Value)
+            foreach (var moduleName in _entries.Keys)
+            {
+                var mod = GetModule(moduleName);
+                if (mod == null) continue;
+                
+                var path = Path.Combine(examplesPath, moduleName);
+                if (!Directory.Exists(path))
+                {
+                    _logger.Info("Couldn't find any examples: " + path);
+                }
+                else
+                {
+                    foreach (var examplePath in Directory.GetFiles(path))
+                    {
+                        if (Path.GetExtension(examplePath) != docbuilderExt) continue;
+
+                        var exampleName = Path.GetFileNameWithoutExtension(examplePath);
+                        if (exampleName.Contains("."))
                         {
-                            if (ex.Key.Contains("."))
+                            var split = exampleName.Split('.');
+                            if (mod.ContainsKey(split[0]))
                             {
-                                var split = ex.Key.Split('.');
-                                if (mod.ContainsKey(split[0]))
+                                var section = mod[split[0]];
+                                if (section.Methods.ContainsKey(split[1]))
                                 {
-                                    var section = mod[split[0]];
-                                    if (section.Methods.ContainsKey(split[1]))
+                                    var example = new DBExample
                                     {
-                                        section.Methods[split[1]].Example = ex.Value;
-                                    }
-                                    else
-                                    {
-                                        _logger.InfoFormat("Found example for {0} but the method is missing", ex.Key);
-                                    }
+                                        Script = File.ReadAllText(examplePath)
+                                    };
+                                    section.Methods[split[1]].Example = example;
                                 }
                                 else
                                 {
-                                    _logger.InfoFormat("Found example for {0} but the class is missing", ex.Key);
+                                    _logger.InfoFormat("Found example for {0}.{1} but the method is missing", moduleName, exampleName);
                                 }
                             }
                             else
                             {
-                                if (mod.ContainsKey(ex.Key))
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", moduleName, exampleName);
+                            }
+                        }
+                        else
+                        {
+                            if (mod.ContainsKey(exampleName))
+                            {
+                                var example = new DBExample
                                 {
-                                    mod[ex.Key].Example = ex.Value;
-                                }
-                                else
-                                {
-                                    _logger.InfoFormat("Found example for {0} but the class is missing", ex.Key);
-                                }
+                                    Script = File.ReadAllText(examplePath)
+                                };
+                                mod[exampleName].Example = example;
+                            }
+                            else
+                            {
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", moduleName, exampleName);
                             }
                         }
                     }
-                }
-                catch (Exception e)
-                {
-                    _logger.WarnFormat("Couldn't parse examples.json. Got an error: {0}", e.Message);
                 }
             }
 
@@ -398,10 +429,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     }
                     else
                     {
-                        if (ex.DemoUrl == null)
-                        {
-                            _logger.InfoFormat("Missing demo for {0}", path);
-                        }
                         if (ex.Script == null)
                         {
                             _logger.InfoFormat("Missing example for {0}", path);
@@ -422,27 +449,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
             }
 
-            if (!File.Exists(globalsExamplesPath))
+            foreach (var globalsExamplePath in Directory.GetFiles(examplesPath))
             {
-                _logger.Info("Couldn't find any globalsExamples: " + globalsExamplesPath);
-            }
-            else
-            {
-                var examplesContent = File.ReadAllText(globalsExamplesPath);
-                try
+                if (Path.GetExtension(globalsExamplePath) != docbuilderExt) continue;
+
+                var globalExampleName = Path.GetFileNameWithoutExtension(globalsExamplePath);
+
+                if (_globals.ContainsKey(globalExampleName))
                 {
-                    var examples = JsonConvert.DeserializeObject<Dictionary<string, string>>(examplesContent);
-                    foreach (var global in _globals)
-                    {
-                        if (examples.ContainsKey(global.Key.ToLowerInvariant()))
-                        {
-                            global.Value.Script = examples[global.Key.ToLowerInvariant()];
-                        }
-                    }
+                    _globals[globalExampleName].Script = File.ReadAllText(globalsExamplePath);
                 }
-                catch (Exception e)
+                else
                 {
-                    _logger.WarnFormat("Couldn't parse globalsExamples.json. Got an error: {0}", e.Message);
+                    _logger.InfoFormat("Found global example for {0} but the method is missing", globalExampleName);
                 }
             }
         }
@@ -498,6 +517,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [JsonProperty("methods")]
         public SortedDictionary<string, DBMethod> Methods { get; set; }
 
+        [JsonProperty("properties")]
+        public List<DBProperty> Properties { get; set; }
+
         [JsonProperty("comment")]
         public string Comment { get; set; }
 
@@ -543,6 +565,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public DBExample Example { get; set; }
     }
 
+    public class DBProperty : DBEntity
+    {
+        [JsonProperty("type")]
+        public string Type { get; set; }
+    }
+
     public class DBTags
     {
         [JsonProperty("typeofeditors")]
@@ -577,9 +605,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     {
         [JsonProperty("script")]
         public string Script { get; set; }
-
-        [JsonProperty("demo")]
-        public string DemoUrl { get; set; }
     }
 
     public class DBGlobal : DBEntity

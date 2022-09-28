@@ -3,7 +3,24 @@
     "GetText": {
       "memberof": "ApiComment",
       "name": "GetText",
-      "description": "<p>Returns the text of comment.</p>",
+      "description": "<p>Returns the comment text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "Delete": {
+      "memberof": "ApiComment",
+      "name": "Delete",
+      "description": "<p>Deletes the ApiComment object.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
@@ -13,22 +30,33 @@
       "see": null,
       "inherits": null
     },
-    "Delete": {
+    "GetClassType": {
       "memberof": "ApiComment",
-      "name": "Delete",
-      "description": "<p>Deletes the object.</p>",
+      "name": "GetClassType",
+      "description": "<p>Returns a type of the ApiComment class.</p>",
       "tags": {
         "typeofeditors": [
           "CSE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "\"comment\""
+        ]
+      ],
       "see": null,
       "inherits": null
     }
   },
-  "comment": "/**\r\n\t * Class representing a comments\r\n\t * @constructor\r\n\t */",
-  "description": "<p>Class representing a comments</p>",
+  "comment": "/**\n\t * Class representing a comment.\n\t * @constructor\n\t * @property {string} Text - Returns the text from the first cell in range.\n\t */",
+  "description": "<p>Class representing a comment.</p>",
   "scope": "global",
-  "params": []
+  "params": [],
+  "properties": [
+    {
+      "type": "string",
+      "name": "Text",
+      "description": "<p>Returns the text from the first cell in range.</p>"
+    }
+  ]
 }

@@ -13,8 +13,7 @@
     <h1>
         <span class="hdr">Document history</span>
     </h1>
-    <p class="dscr">You can view the document history using the <b>document editor</b>.</p>
-    <div class="note">The history is currently available for text document files only.</div>
+    <p class="dscr">You can view the history of text documents, spreadsheets or presentations using the <b>document editor</b>.</p>
 
     <p>
         The document history is stored with the document storage service.
@@ -108,7 +107,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         <li>Open the <em>Version History</em> option in the Document Editor menu.</li>
     </ol>
     
-    <h2 id="apply-changes" class="copy-link">Opening the document history with changes highliting</h2>
+    <h2 id="apply-changes" class="copy-link">Opening the document history with changes highlighting</h2>
     <p>
         If the document version was created with the <b>document editor</b>, then the document changes can be displayed when viewing the document history.
         The additional data must be saved to the <b>document storage service</b> when <a href="<%= Url.Action("save") %>">saving</a> the editing session beside the document versions themselves to achieve that.
@@ -124,10 +123,10 @@ docEditor.refreshHistory({
     "currentVersion": 2,
     "history": [
         {
-            "changes": changes, //the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "changes": changes,
             "created": "2010-07-06 10:13 AM",
             "key": "af86C7e71Ca8",
-            "serverVersion": serverVersion, //the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document
+            "serverVersion": serverVersion,
             "user": {
                 "id": "F89d8069ba2b",
                 "name": "Kate Cage"
@@ -149,6 +148,11 @@ docEditor.refreshHistory({
     ],
 });
 </pre>
+            <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <note>ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version.
+                And even if several document versions are created during one session, all changes from this session will be highlighted.
+                Therefore, you cannot see the document versions created with the <a href="<%= Url.Action("save") %>#forcesave">force saving option</a> in the document history.</note>
         </li>
         <li>
             <p>
@@ -173,7 +177,7 @@ docEditor.setHistoryData({
                 For its correct work the cross-origin HTTP requests must be allowed (CORS).
                 This can be achieved using the <em>Access-Control-Allow-Origin</em> header.
             </div>
-            <img alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
+            <img width="832px" alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
         </li>
     </ul>
 </asp:Content>
