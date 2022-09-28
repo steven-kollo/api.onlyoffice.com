@@ -109,6 +109,13 @@
             <exception cref="T:System.FormatException">if ipAddress is invalid</exception>
             <returns>true if exists and vice versa</returns>
         </member>
+        <member name="M:ASC.Common.Utils.StringUtils.NormalizeStringForMySql(System.String)">
+            <summary>
+            Removes control characters and other non-UTF-8 characters
+            </summary>
+            <param name="inString">The string to process</param>
+            <return>A string with no control characters or entities above 0x00FD</return>
+        </member>
         <member name="M:ASC.Common.Utils.HtmlUtil.SearchTextHighlight(System.String,System.String,System.Boolean)">
             <summary>
             The function highlight all words in htmlText by searchText.

@@ -13,6 +13,15 @@
             To modify move field declaration from designer file to code-behind file.
             </remarks>
         </member>
+        <member name="F:ASC.Web.People.Birthdays.upcomingEmptyContent">
+            <summary>
+            upcomingEmptyContent control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
         <member name="F:ASC.Web.People.Help.HelpHolder">
             <summary>
             HelpHolder control.
@@ -165,6 +174,15 @@
             To modify move field declaration from designer file to code-behind file.
             </remarks>
         </member>
+        <member name="F:ASC.Web.People.Profile._phConnectionsView">
+            <summary>
+            _phConnectionsView control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
         <member name="F:ASC.Web.People.ProfileAction._contentHolderForEditForm">
             <summary>
             _contentHolderForEditForm control.
@@ -173,6 +191,193 @@
             Auto-generated field.
             To modify move field declaration from designer file to code-behind file.
             </remarks>
+        </member>
+        <member name="F:ASC.Web.People.UserControls.ImportUsers.limitPanel">
+            <summary>
+            limitPanel control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.People.UserControls.ImportUsers.icon">
+            <summary>
+            icon control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.InviteUserHolder">
+            <summary>
+            InviteUserHolder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.HelpHolder">
+            <summary>
+            HelpHolder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.SupportHolder">
+            <summary>
+            SupportHolder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.UserForumHolder">
+            <summary>
+            UserForumHolder control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.VideoGuides">
+            <summary>
+            VideoGuides control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="F:ASC.Web.People.Warmup.form1">
+            <summary>
+            form1 control.
+            </summary>
+            <remarks>
+            Auto-generated field.
+            To modify move field declaration from designer file to code-behind file.
+            </remarks>
+        </member>
+        <member name="T:ASC.Web.People.Resources.BirthdayPatternResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdayPatternResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdayPatternResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdayPatternResource.pattern_BirthdayReminder">
+             <summary>
+               Looks up a localized string similar to h1.&quot;$BirthdayUserName&quot;:&quot;$BirthdayUserUrl&quot; has the Birthday $BirthdayDate
+            
+            The following &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal user has the birthday $BirthdayDate
+            $BirthdayUserName
+            
+            Visit the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal to view the event or send your birthday greetings.
+            
+            ^You receive this email because you are a registered user of the &quot;${__VirtualRootPath}&quot;:&quot;${__VirtualRootPath}&quot; portal. If you do not want to receive the notifications about the new events on the [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdayPatternResource.patterns">
+             <summary>
+               Looks up a localized string similar to &lt;patterns&gt;
+              &lt;formatter type=&quot;ASC.Notify.Patterns.NVelocityPatternFormatter, ASC.Common&quot; /&gt;
+            
+              &lt;!--Milestone Due Date Notification--&gt;
+              &lt;pattern id=&quot;BirthdayReminder&quot; sender=&quot;email.sender&quot;&gt;
+                &lt;subject resource=&quot;|subject_BirthdayReminder|ASC.Web.People.Resources.BirthdayPatternResource,ASC.Web.People&quot; /&gt;
+                &lt;body styler=&quot;ASC.Notify.Textile.TextileStyler,ASC.Notify.Textile&quot; resource=&quot;|pattern_BirthdayReminder|ASC.Web.People.Resources.BirthdayPatternResource,ASC.Web [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdayPatternResource.subject_BirthdayReminder">
+            <summary>
+              Looks up a localized string similar to $BirthdayUserName has the birthday $BirthdayDate.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdayPatternResource.subject_BirthdayReminder_tg">
+            <summary>
+              Looks up a localized string similar to [$BirthdayUserName]($BirthdayUserUrl) has the birthday $BirthdayDate.
+            </summary>
+        </member>
+        <member name="T:ASC.Web.People.Resources.BirthdaysResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdayCongratulateLinkTitle">
+            <summary>
+              Looks up a localized string similar to Send Your Greetings.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdayEmptyScreenCaption">
+            <summary>
+              Looks up a localized string similar to No birthdays for the nearest dates.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdayRemindLinkTitle">
+            <summary>
+              Looks up a localized string similar to Remind about the birthday.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdayRemindReadyLinkTitle">
+            <summary>
+              Looks up a localized string similar to Reminder enabled.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdaysEmptyModuleDescription">
+            <summary>
+              Looks up a localized string similar to Birthdays can be specified in the &apos;People&apos; module.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdaysModuleDescription">
+            <summary>
+              Looks up a localized string similar to Nearest birthdays of portal members.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdaysModuleTitle">
+            <summary>
+              Looks up a localized string similar to Birthdays.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdaysSubscribeAll">
+            <summary>
+              Looks up a localized string similar to All the birthdays.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdaysTodayTitle">
+            <summary>
+              Looks up a localized string similar to Today is the birthday.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.BirthdaysResource.BirthdaysUpcomingTitle">
+            <summary>
+              Looks up a localized string similar to Nearest dates.
+            </summary>
         </member>
         <member name="T:ASC.Web.People.Resources.PeopleJSResource">
             <summary>
@@ -205,54 +410,9 @@
               Looks up a localized string similar to An error occurred while uploading the image to the server.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.HelpContentAccessRights">
-            <summary>
-              Looks up a localized string similar to Open the portal Settings page if you need to restrict the access to the People module and give some users administrator privileges..
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.HelpContentAddMore">
-            <summary>
-              Looks up a localized string similar to Add several users at once using the contact information from Google, Yahoo, Windows Live, from a CSV file or an email client contact book..
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.HelpContentEditProfile">
-            <summary>
-              Looks up a localized string similar to Modify your personal information, change your email and password, select a portal language, manage your subscriptions..
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.HelpContentViewUser">
-            <summary>
-              Looks up a localized string similar to Click the user you wish to view the personal information: first name, last name, email, location etc..
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.HelpTitleAccessRights">
-            <summary>
-              Looks up a localized string similar to Manage Access Rights.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.HelpTitleAddMore">
-            <summary>
-              Looks up a localized string similar to Add More Users at Once.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.HelpTitleEditProfile">
-            <summary>
-              Looks up a localized string similar to Edit Your Profile.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.HelpTitleViewUser">
-            <summary>
-              Looks up a localized string similar to View User Profile.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleJSResource.LblActive">
             <summary>
               Looks up a localized string similar to Active.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleJSResource.LblByName">
-            <summary>
-              Looks up a localized string similar to Name.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleJSResource.LblByType">
@@ -307,12 +467,17 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleJSResource.TariffActiveUserLimit">
             <summary>
-              Looks up a localized string similar to Your current pricing plan allows you to add {0}{1} active users{2}..
+              Looks up a localized string similar to Your current pricing plan allows you to add {0}{1} more active users{2}..
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleJSResource.TariffActiveUserLimitExcludingGuests">
             <summary>
               Looks up a localized string similar to Your current pricing plan allows you to add {0}{1} active users{2} (guests are not taken into consideration)..
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.PeopleJSResource.TariffGuestLimit">
+            <summary>
+              Looks up a localized string similar to Your current pricing plan allows you to add {0}{1} guests{2}..
             </summary>
         </member>
         <member name="T:ASC.Web.People.Resources.PeopleResource">
@@ -351,14 +516,14 @@
               Looks up a localized string similar to Add {!group}.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.AddImage">
-            <summary>
-              Looks up a localized string similar to Add Image.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.AddMembers">
             <summary>
               Looks up a localized string similar to Add members.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.PeopleResource.Birthdays">
+            <summary>
+              Looks up a localized string similar to Birthdays.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.BlockedMessage">
@@ -369,6 +534,32 @@
         <member name="P:ASC.Web.People.Resources.PeopleResource.CancelButton">
             <summary>
               Looks up a localized string similar to Cancel.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.PeopleResource.CardDavCopyBtn">
+            <summary>
+              Looks up a localized string similar to Copy.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.PeopleResource.CardDavSettings">
+            <summary>
+              Looks up a localized string similar to CardDav Settings.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.PeopleResource.CardDavSettingsDescription">
+             <summary>
+               Looks up a localized string similar to Enable CardDAV to sync contacts from the People module. Copy the server address and enter it in a third-party application or device, use your valid portal login
+            and password..
+             </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.PeopleResource.CardDavSettingsHeader">
+            <summary>
+              Looks up a localized string similar to CardDav.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.People.Resources.PeopleResource.CardDavTryAgainBtn">
+            <summary>
+              Looks up a localized string similar to Try again.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ChangeStatus">
@@ -436,11 +627,6 @@
               Looks up a localized string similar to Users with the &apos;{!Guest}&apos; type will be moved to &apos;{!User}&apos; type.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.ChooseUser">
-            <summary>
-              Looks up a localized string similar to Choose {!user}.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ClearButton">
             <summary>
               Looks up a localized string similar to Reset filter.
@@ -449,11 +635,6 @@
         <member name="P:ASC.Web.People.Resources.PeopleResource.Confirmation">
             <summary>
               Looks up a localized string similar to Confirmation.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.CreateNewProfile">
-            <summary>
-              Looks up a localized string similar to Create New User.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.DeleteBtnHint">
@@ -468,7 +649,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.DeleteProfileAfterReassignment">
             <summary>
-              Looks up a localized string similar to Delete profile when reassignment will be finished.
+              Looks up a localized string similar to Delete profile when reassignment is finished.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.DeleteUserProfiles">
@@ -478,7 +659,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.DeleteUsersDataConfirmation">
             <summary>
-              Looks up a localized string similar to Personal documents of these users that are available to others will be deleted. To avoid this, you must start the data transfer process before deleting..
+              Looks up a localized string similar to Personal documents of these users which are available to others will be deleted. To avoid this, you must start the data transfer process before deleting..
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.DeleteUsersDescriptionText">
@@ -496,24 +677,14 @@
               Looks up a localized string similar to Deselect all.
             </summary>
         </member>
+        <member name="P:ASC.Web.People.Resources.PeopleResource.DisableImportAndCreateLink">
+            <summary>
+              Looks up a localized string similar to Maximum numbers of user and guest exceeded.
+            </summary>
+        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.DisableUserButton">
             <summary>
               Looks up a localized string similar to Disable.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.DisableUserHelp">
-            <summary>
-              Looks up a localized string similar to The {!user} will not be displayed in the list of active {!users}.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.EditButton">
-            <summary>
-              Looks up a localized string similar to Edit.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.EditImage">
-            <summary>
-              Looks up a localized string similar to Edit Image.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.Email">
@@ -521,14 +692,14 @@
               Looks up a localized string similar to Email.
             </summary>
         </member>
+        <member name="P:ASC.Web.People.Resources.PeopleResource.EnableCardDavLink">
+            <summary>
+              Looks up a localized string similar to Enable synchronizing contacts via CardDAV.
+            </summary>
+        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.EnableUserButton">
             <summary>
               Looks up a localized string similar to Enable.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.EnableUserHelp">
-            <summary>
-              Looks up a localized string similar to The {!user} will be displayed as active again.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ErrorEmptyName">
@@ -568,7 +739,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.FieldsOnPortal">
             <summary>
-              Looks up a localized string similar to Fields on the portal OnlyOffice.
+              Looks up a localized string similar to Fields on the ONLYOFFICE portal.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.FirstName">
@@ -576,19 +747,9 @@
               Looks up a localized string similar to First Name.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.Hide">
-            <summary>
-              Looks up a localized string similar to Hide.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.HideSelectedUserList">
             <summary>
               Looks up a localized string similar to Hide the selected users list.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.ImportClear">
-            <summary>
-              Looks up a localized string similar to Clear.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ImportColumn">
@@ -641,14 +802,9 @@
               Looks up a localized string similar to Google.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.ImportFromYahoo">
-            <summary>
-              Looks up a localized string similar to Yahoo.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ImportPeople">
             <summary>
-              Looks up a localized string similar to Import People.
+              Looks up a localized string similar to Import users.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ImportSeparatorColon">
@@ -688,17 +844,17 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ImportWizardSecondStep">
             <summary>
-              Looks up a localized string similar to Setting up compliance.
+              Looks up a localized string similar to Set up compliance.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ImportWizardThirdStep">
             <summary>
-              Looks up a localized string similar to Edit Contacts.
+              Looks up a localized string similar to Edit сontacts.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.InviteLink">
             <summary>
-              Looks up a localized string similar to Invitation Link.
+              Looks up a localized string similar to Invite users.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.LastName">
@@ -711,14 +867,9 @@
               Looks up a localized string similar to Active.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.LblByName">
+        <member name="P:ASC.Web.People.Resources.PeopleResource.LblActiveConnections">
             <summary>
-              Looks up a localized string similar to Name.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.LblByType">
-            <summary>
-              Looks up a localized string similar to Type.
+              Looks up a localized string similar to Active connections.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.LblCancelButton">
@@ -738,7 +889,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.LblCreateNew">
             <summary>
-              Looks up a localized string similar to Create New.
+              Looks up a localized string similar to Create.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.LblDeleteProfile">
@@ -751,34 +902,9 @@
               Looks up a localized string similar to Edit.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.LblImportAccounts">
-            <summary>
-              Looks up a localized string similar to Import accounts.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.LblMobilePhone">
-            <summary>
-              Looks up a localized string similar to Primary Mobile Phone.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.LblOKButton">
             <summary>
               Looks up a localized string similar to OK.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.LblOther">
-            <summary>
-              Looks up a localized string similar to Other.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.LblPassword">
-            <summary>
-              Looks up a localized string similar to Password.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.LblPending">
-            <summary>
-              Looks up a localized string similar to Pending.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.LblReassignData">
@@ -811,11 +937,6 @@
               Looks up a localized string similar to Send message.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.LblStatus">
-            <summary>
-              Looks up a localized string similar to Status.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.LblSubscriptions">
             <summary>
               Looks up a localized string similar to Subscriptions.
@@ -831,19 +952,9 @@
               Looks up a localized string similar to Tooltips.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.MainEmail">
-            <summary>
-              Looks up a localized string similar to Main Email.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.Members">
             <summary>
               Looks up a localized string similar to Members.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.NoSameValuesOptions">
-            <summary>
-              Looks up a localized string similar to Fields in the portal cannot have the same values!.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.NotFoundDescription">
@@ -923,7 +1034,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignErrorToastrMsg">
             <summary>
-              Looks up a localized string similar to Data transfer interrupted due to server error.
+              Looks up a localized string similar to Data transfer interrupted due to a server error.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignMailModule">
@@ -933,7 +1044,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignmentData">
             <summary>
-              Looks up a localized string similar to Reassignment of data.
+              Looks up a localized string similar to Data reassignment.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignProjectsModule">
@@ -953,7 +1064,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignsProgressUserInfo">
             <summary>
-              Looks up a localized string similar to The process of reassign data from user {0} to user {1} is started, it can take a considerable time..
+              Looks up a localized string similar to The process of reassignment data from user {0} to user {1} started, it can take a considerable time..
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignsReadMore">
@@ -973,12 +1084,12 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignStatusFinished">
             <summary>
-              Looks up a localized string similar to All data transfered.
+              Looks up a localized string similar to All data transferred.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignStatusNotStarted">
             <summary>
-              Looks up a localized string similar to Data was not transmitted.
+              Looks up a localized string similar to Data was not transferred.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignStatusQueued">
@@ -993,7 +1104,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignsToUser">
             <summary>
-              Looks up a localized string similar to Employee to whom the data will be transferred —.
+              Looks up a localized string similar to Employee to whom the data will be transferred -.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignsTransferedListHdr">
@@ -1003,7 +1114,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignsTransferedListItem1">
             <summary>
-              Looks up a localized string similar to General documents and personal documents that are available to other portal users;.
+              Looks up a localized string similar to General and personal documents available to other portal users;.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignsTransferedListItem2">
@@ -1013,17 +1124,17 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignsTransferedListItem3">
             <summary>
-              Looks up a localized string similar to Contacts, open tasks, unclosed opportunities and CRM cases;.
+              Looks up a localized string similar to Contacts, open tasks, not closed opportunities and CRM cases;.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ReassignTalkModule">
             <summary>
-              Looks up a localized string similar to Tak.
+              Looks up a localized string similar to Talk.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.RemovingAbortButton">
             <summary>
-              Looks up a localized string similar to Abort removing.
+              Looks up a localized string similar to Abort removal.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.RemovingAbortToastrMsg">
@@ -1038,7 +1149,7 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.RemovingErrorToastrMsg">
             <summary>
-              Looks up a localized string similar to Data deletion interrupted due to server error.
+              Looks up a localized string similar to Data deletion interrupted due to a server error.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.RemovingListHdr">
@@ -1068,12 +1179,12 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.RemovingProgressUserInfo">
             <summary>
-              Looks up a localized string similar to The process of deleting personal data from user {0} is started, it can take a considerable time..
+              Looks up a localized string similar to The process of deleting personal data for user {0} started, it can take a considerable time..
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.RemovingReadMore">
             <summary>
-              Looks up a localized string similar to More about deleting personal data.
+              Looks up a localized string similar to More about deleting the personal data.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.RemovingRestartButton">
@@ -1111,29 +1222,14 @@
               Looks up a localized string similar to The invitation to the portal will be sent once again to the selected users with the &apos;Pending&apos; status who are not disabled..
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.SaveButton">
-            <summary>
-              Looks up a localized string similar to Save.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.SelectAll">
             <summary>
               Looks up a localized string similar to Select all.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.SelectedCount">
-            <summary>
-              Looks up a localized string similar to {0} selected.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.Settings">
             <summary>
               Looks up a localized string similar to Settings.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.Show">
-            <summary>
-              Looks up a localized string similar to Show.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.ShowOnPage">
@@ -1146,34 +1242,14 @@
               Looks up a localized string similar to View the selected users list.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.SocialProfiles">
-            <summary>
-              Looks up a localized string similar to Social Profiles.
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.SuccessfullyDeleteUserInfoMessage">
             <summary>
               Looks up a localized string similar to User has been successfully deleted.
             </summary>
         </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.SuccessfullySentNotificationDeleteUserInfoMessage">
-            <summary>
-              Looks up a localized string similar to The instructions for your profile deletion have been sent to email address.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.TariffActiveUserLimit">
-            <summary>
-              Looks up a localized string similar to Your current pricing plan allows you to add {0}{1} active users{2}..
-            </summary>
-        </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.Title">
             <summary>
               Looks up a localized string similar to Title.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.People.Resources.PeopleResource.TitleThumbnailPhoto">
-            <summary>
-              Looks up a localized string similar to Change Thumbnails.
             </summary>
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.TotalCount">
@@ -1188,89 +1264,8 @@
         </member>
         <member name="P:ASC.Web.People.Resources.PeopleResource.WriteButton">
             <summary>
-              Looks up a localized string similar to Write Letter.
+              Looks up a localized string similar to Send email.
             </summary>
-        </member>
-        <member name="F:ASC.Web.People.UserControls.ImportUsers.limitPanel">
-            <summary>
-            limitPanel control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:ASC.Web.People.UserControls.ImportUsers.icon">
-            <summary>
-            icon control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:ASC.Web.People.UserControls.ImportUsers.Tariff">
-            <summary>
-            Tariff control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.InviteUserHolder">
-            <summary>
-            InviteUserHolder control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.HelpHolder">
-            <summary>
-            HelpHolder control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.SupportHolder">
-            <summary>
-            SupportHolder control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.UserForumHolder">
-            <summary>
-            UserForumHolder control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:ASC.Web.People.UserControls.SideNavigationPanel.VideoGuides">
-            <summary>
-            VideoGuides control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
-        </member>
-        <member name="F:ASC.Web.People.Warmup.form1">
-            <summary>
-            form1 control.
-            </summary>
-            <remarks>
-            Auto-generated field.
-            To modify move field declaration from designer file to code-behind file.
-            </remarks>
         </member>
     </members>
 </doc>

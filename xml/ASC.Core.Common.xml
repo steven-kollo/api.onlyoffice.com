@@ -31,34 +31,12 @@
         <member name="P:ASC.Core.Common.Contracts.BackupHistoryRecord.ExpiresOn">
             <example>2019-07-26T00:00:00</example>
         </member>
-        <member name="T:ASC.Core.Common.Notify.ReplyToTagProvider">
+        <member name="M:ASC.Core.Common.Notify.MentionProvider.GetMentionedUsers(System.String)">
             <summary>
-            Class that generates 'mail to' addresses to create new TeamLab entities from post client 
+            Returns array of users that were mentioned in comments
             </summary>
-        </member>
-        <member name="M:ASC.Core.Common.Notify.ReplyToTagProvider.Comment(System.String,System.String)">
-            <summary>
-            Creates 'replyto' tag that can be used to comment some TeamLab entity
-            </summary>
-            <param name="entity">Name of entity e.g. 'blog', 'project.task', etc.</param>
-            <param name="entityId">Uniq id of the entity</param>
-            <returns>New TeamLab tag</returns>
-        </member>
-        <member name="M:ASC.Core.Common.Notify.ReplyToTagProvider.Comment(System.String,System.String,System.String)">
-            <summary>
-            Creates 'replyto' tag that can be used to comment some TeamLab entity
-            </summary>
-            <param name="entity">Name of entity e.g. 'blog', 'project.task', etc.</param>
-            <param name="entityId">Uniq id of the entity</param>
-            <param name="parentId">Comment's parent comment id</param>
-            <returns>New TeamLab tag</returns>
-        </member>
-        <member name="M:ASC.Core.Common.Notify.ReplyToTagProvider.Message(System.Int32)">
-            <summary>
-            Creates 'replyto' tag that can be used to create TeamLab project message
-            </summary>
-            <param name="projectId">Id of the project to create message</param>
-            <returns>New TeamLab tag</returns>
+            <param name="content">Comment content</param>
+            <returns>Array of users</returns>
         </member>
         <member name="P:ASC.Core.Billing.Tariff.QuotaId">
             <example type="int">1</example>
@@ -202,10 +180,6 @@
         <member name="P:ASC.Core.Tenants.TenantQuota.Price">
             <example type="double">22.5</example>
             <order>70</order>
-        </member>
-        <member name="P:ASC.Core.Tenants.TenantQuota.Price2">
-            <example type="double">32.5</example>
-            <order>80</order>
         </member>
         <member name="P:ASC.Core.Tenants.TenantQuota.AvangateId">
             <example>AvangateId</example>

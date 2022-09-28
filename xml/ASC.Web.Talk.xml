@@ -136,24 +136,9 @@
               Looks up a localized string similar to Mailing.
             </summary>
         </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.MailRuAgent">
-            <summary>
-              Looks up a localized string similar to Mail.ru Agent.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.Messaging">
-            <summary>
-              Looks up a localized string similar to Messaging.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.MoreInformation">
             <summary>
               Looks up a localized string similar to More information about notification is avaliable {0}.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.Name">
-            <summary>
-              Looks up a localized string similar to Name:.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.NotificationSetup">
@@ -184,16 +169,6 @@
         <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.ProfilePage">
             <summary>
               Looks up a localized string similar to Profile page.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.Recommended">
-            <summary>
-              Looks up a localized string similar to Recommended Clients.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.ScreenshotsSectionTitle">
-            <summary>
-              Looks up a localized string similar to Screenshots.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.SendMessageHotButton">
@@ -229,11 +204,6 @@
         <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.VoicesOfEvents">
             <summary>
               Looks up a localized string similar to Voices of events.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkOverviewResource.YourStatusChanger">
-            <summary>
-              Looks up a localized string similar to Status Changer.
             </summary>
         </member>
         <member name="T:ASC.Web.Talk.Resources.TalkResource">
@@ -287,14 +257,9 @@
               Looks up a localized string similar to Delete.
             </summary>
         </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.BtnDeleteSentFiles">
-            <summary>
-              Looks up a localized string similar to Delete Sent Files.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.BtnKick">
             <summary>
-              Looks up a localized string similar to Remove.
+              Looks up a localized string similar to Delete.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.BtnRemove">
@@ -364,7 +329,7 @@
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.DeleteSentFilesInfo">
             <summary>
-              Looks up a localized string similar to The files you send via chat are stored in the &lt;b&gt;&lt;/b&gt; portal. You can delete these files to free up space. After the deletion, the files will no longer be accessible through the links in the history of all the participants in the conversation..
+              Looks up a localized string similar to The files you sent via chat occupy &lt;b&gt;&lt;/b&gt; of the portal disk space. If you choose to delete these files, it will free up space, but the files will no longer be accessible through the links in the history for all the conversation participants. Select what to delete:.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.DeleteSentFilesMonth">
@@ -375,11 +340,6 @@
         <member name="P:ASC.Web.Talk.Resources.TalkResource.DeleteSentFilesYear">
             <summary>
               Looks up a localized string similar to Files sent more than a year ago.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.FileSizePostfix">
-            <summary>
-              Looks up a localized string similar to bytes,KB,MB,GB.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.FullDateFormat">
@@ -447,21 +407,6 @@
               Looks up a localized string similar to Adobe Flash Player is not installed.
             </summary>
         </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HintNotifications">
-            <summary>
-              Looks up a localized string similar to Turn browser notifications on/off.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HintOfflineContacts">
-            <summary>
-              Looks up a localized string similar to Show/Hide offline contacts.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HintPossibleClientConflict">
-            <summary>
-              Looks up a localized string similar to Possible conflict.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.HintSearch">
             <summary>
               Looks up a localized string similar to Search.
@@ -492,11 +437,6 @@
               Looks up a localized string similar to Drag a contact here to add a recipient..
             </summary>
         </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HintSendMessage">
-            <summary>
-              Looks up a localized string similar to Send message.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.HintShowLeftTab">
             <summary>
               Looks up a localized string similar to Show tab on the left.
@@ -507,44 +447,14 @@
               Looks up a localized string similar to Show tab on the right.
             </summary>
         </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HintSounds">
-            <summary>
-              Looks up a localized string similar to Enable/Disable sounds.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.HintUnreadMessages">
             <summary>
               Looks up a localized string similar to read.
             </summary>
         </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HintUpdateHrefText">
-            <summary>
-              Looks up a localized string similar to you may download it here.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HistoryFilterAll">
-            <summary>
-              Looks up a localized string similar to all.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HistoryFilterLastDay">
-            <summary>
-              Looks up a localized string similar to last day.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HistoryFilterLastMonth">
-            <summary>
-              Looks up a localized string similar to last month.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.HistoryFilterLastWeek">
-            <summary>
-              Looks up a localized string similar to last week.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.IndexTitle">
             <summary>
-              Looks up a localized string similar to Search in messages content.
+              Looks up a localized string similar to Search in chat messages content.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.LabelConferenceSplash">
@@ -597,11 +507,6 @@
               Looks up a localized string similar to Send.
             </summary>
         </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.LabelStatus">
-            <summary>
-              Looks up a localized string similar to Status.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.LabelTemporaryRoom">
             <summary>
               Looks up a localized string similar to Temporary room (will be deleted when all users leave it).
@@ -627,24 +532,14 @@
               Looks up a localized string similar to Talk.
             </summary>
         </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.Ready">
-            <summary>
-              Looks up a localized string similar to Ready.
-            </summary>
-        </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.Search">
             <summary>
-              Looks up a localized string similar to Search.
+              Looks up a localized string similar to Find Contact.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.SearchOnHistory">
             <summary>
-              Looks up a localized string similar to Search on history messages.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.SelectUserBookmarkTitle">
-            <summary>
-              Looks up a localized string similar to Mass Message.
+              Looks up a localized string similar to Search in message history.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.SendFileMessage">
@@ -709,7 +604,7 @@
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.TitleKickOccupantDialog">
             <summary>
-              Looks up a localized string similar to Remove user from chat.
+              Looks up a localized string similar to Delete user from chat.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.TitleRecvInvite">
@@ -725,11 +620,6 @@
         <member name="P:ASC.Web.Talk.Resources.TalkResource.TotalUsers">
             <summary>
               Looks up a localized string similar to Total.
-            </summary>
-        </member>
-        <member name="P:ASC.Web.Talk.Resources.TalkResource.UpdateFlashPlayerUrl">
-            <summary>
-              Looks up a localized string similar to http://get.adobe.com/flashplayer/.
             </summary>
         </member>
         <member name="P:ASC.Web.Talk.Resources.TalkResource.ValidSymbols">

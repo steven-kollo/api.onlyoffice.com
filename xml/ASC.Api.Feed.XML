@@ -5,39 +5,50 @@
     </assembly>
     <members>
         <member name="T:ASC.Api.Feed.FeedApi">
-            <name>feed</name>
+            <summary>
+            Feed access.
+            </summary>
         </member>
         <member name="M:ASC.Api.Feed.FeedApi.Read">
             <summary>
-            
+            Opens feeds for reading.
             </summary>
-            <path>api/2.0/feed/read</path>
-            <requiresAuthorization>true</requiresAuthorization>
-            <httpMethod>PUT</httpMethod>
+            <short>
+            Read feeds
+            </short>
+             <path>api/2.0/feed/read</path>
+             <requiresAuthorization>true</requiresAuthorization>
+             <httpMethod>PUT</httpMethod>
         </member>
         <member name="M:ASC.Api.Feed.FeedApi.GetFeed(System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime)">
             <summary>
-            
+            Returns a list of feeds that are filtered by the parameters specified in the request.
             </summary>
-            <param method="url" name="product"></param>
-            <param method="url" name="from"></param>
-            <param method="url" name="to"></param>
-            <param method="url" name="author"></param>
-            <param method="url" name="onlyNew"></param>
-            <param method="url" name="timeReaded"></param>
-            <returns></returns>
-            <path>api/2.0/feed/filter</path>
-            <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
+            <short>
+            Get feeds
+            </short>
+             <param name="product">Product which feeds you want to read</param>
+             <param name="from">Time from which the feeds should be displayed</param>
+             <param name="to">Time until which the feeds should be displayed</param>
+             <param name="author">Author whose feeds you want to read</param>
+             <param name="onlyNew">Displays only fresh feeds</param>
+             <param name="timeReaded">Time when the feeds were read</param>
+             <returns>List of filtered feeds</returns>
+             <path>api/2.0/feed/filter</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Feed.FeedApi.GetFreshNewsCount">
             <summary>
-            
+            Returns a number of fresh feeds.
             </summary>
-            <returns></returns>
-            <path>api/2.0/feed/newfeedscount</path>
-            <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
+            <short>
+            Count fresh feeds
+            </short>
+            <returns>Number of fresh feeds</returns>
+             <path>api/2.0/feed/newfeedscount</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
         </member>
     </members>
 </doc>

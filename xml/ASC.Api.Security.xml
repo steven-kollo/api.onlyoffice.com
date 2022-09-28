@@ -4,5 +4,30 @@
         <name>ASC.Api.Security</name>
     </assembly>
     <members>
+        <member name="M:ASC.Api.Security.SecurityApi.GetLoginEventsByFilter(System.Guid,ASC.MessagingSystem.MessageAction,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
+            <summary>
+            Returns a list of login events by filter
+            </summary>
+            <param name="userId">User ID</param>
+            <param name="action">Action</param>
+            <param name="from">From date</param>
+            <param name="to">To date</param>
+            <returns>Events</returns>
+        </member>
+        <member name="M:ASC.Api.Security.SecurityApi.GetAuditEventsByFilter(System.Guid,ASC.AuditTrail.Types.ProductType,ASC.AuditTrail.Types.ModuleType,ASC.AuditTrail.Types.ActionType,ASC.MessagingSystem.MessageAction,ASC.AuditTrail.Types.EntryType,System.String,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
+            <summary>
+            Returns a list of audit events by filter
+            </summary>
+            <param name="userId">User id</param>
+            <param name="productType">Product</param>
+            <param name="moduleType">Module</param>
+            <param name="actionType">Action type</param>
+            <param name="action">Action</param>
+            <param name="entryType">Entry</param>
+            <param name="target">Target</param>
+            <param name="from">From date</param>
+            <param name="to">To date</param>
+            <returns>Actions</returns>
+        </member>
     </members>
 </doc>

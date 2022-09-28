@@ -1238,6 +1238,13 @@
             SMTP over SSL protocol.
             </summary>
         </member>
+        <member name="M:ASC.Mail.Extensions.DateTimeExtensions.CutToSecond(System.DateTime)">
+            <summary>
+            Cuts off precision beyond a second on a DateTime value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>A DateTime with a 0 millisecond component.</returns>
+        </member>
         <member name="T:ASC.Mail.Iterators.IMailboxIterator">
             <summary>
             The 'Iterator' interface
@@ -1256,72 +1263,6 @@
         <member name="T:ASC.Mail.Iterators.MailboxMessagesIterator">
             <summary>
             The 'ConcreteIterator' class
-            </summary>
-        </member>
-        <member name="T:ASC.Mail.Resources.MailCoreResource">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.FileNotFoundOrDamaged">
-            <summary>
-              Looks up a localized string similar to File &apos;{0}&apos; not found.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.FilesNotFound">
-            <summary>
-              Looks up a localized string similar to {0} files not found.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.IndexTitle">
-            <summary>
-              Looks up a localized string similar to Search in mail messages content.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.NoAttachmentsInMessage">
-            <summary>
-              Looks up a localized string similar to No attachments in message.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.OperationCreatingLink">
-            <summary>
-              Looks up a localized string similar to Creating link.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.OperationFinished">
-            <summary>
-              Looks up a localized string similar to Finished.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.OperationGetAttachments">
-            <summary>
-              Looks up a localized string similar to Get attachments.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.OperationPreparationArchive">
-            <summary>
-              Looks up a localized string similar to Preparation archive.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.OperationSetupTenantAndUser">
-            <summary>
-              Looks up a localized string similar to Setup tenant and user.
-            </summary>
-        </member>
-        <member name="P:ASC.Mail.Resources.MailCoreResource.OperationZippingAttachments">
-            <summary>
-              Looks up a localized string similar to Zipping attachments.
             </summary>
         </member>
         <member name="M:ASC.Mail.Utils.ApiHelper.#ctor(System.String,ASC.Common.Logging.ILog)">
@@ -1352,13 +1293,6 @@
             <param name="codepageName">codepage name</param>
             <returns>Created Encoding instance</returns>
             <exception cref="T:System.ArgumentException">Throws if codepage name is not supported</exception>
-        </member>
-        <member name="M:ASC.Mail.Utils.MailUtil.NormalizeStringForMySql(System.String)">
-            <summary>
-            Removes control characters and other non-UTF-8 characters
-            </summary>
-            <param name="inString">The string to process</param>
-            <return>A string with no control characters or entities above 0x00FD</return>
         </member>
         <member name="M:ASC.Mail.Utils.MailUtil.Quote(System.String,System.Boolean)">
             <summary>
@@ -1440,26 +1374,48 @@
             <param name="input">Domain string.</param>
             <returns>true - valid, false - invalid</returns>
         </member>
-        <member name="M:ASC.Mail.Utils.Parser.RemoveWhiteSpaces(System.String)">
-            <summary>
-            Removes the white spaces.
-            </summary>
-            <param name="input">The input.</param>
-            <returns></returns>
-        </member>
-        <member name="M:ASC.Mail.Utils.Parser.Clean(System.String)">
-            <summary>
-            Cleans the specified input.
-            </summary>
-            <param name="input">The input.</param>
-            <returns></returns>
-        </member>
         <member name="M:ASC.Mail.Utils.Parser.GetValidPassword(System.String)">
             <summary>
             Get valid password or throw exception.
             </summary>
             <param name="password">String contains valid password according to portal settings</param>
             <returns>trimmed password or exception</returns>
+        </member>
+        <member name="T:ASC.Mail.Resources.MailCoreResource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ASC.Mail.Resources.MailCoreResource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ASC.Mail.Resources.MailCoreResource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ASC.Mail.Resources.MailCoreResource.FileNotFoundOrDamaged">
+            <summary>
+              Looks up a localized string similar to File &apos;{0}&apos; not found.
+            </summary>
+        </member>
+        <member name="P:ASC.Mail.Resources.MailCoreResource.FilesNotFound">
+            <summary>
+              Looks up a localized string similar to {0} files not found.
+            </summary>
+        </member>
+        <member name="P:ASC.Mail.Resources.MailCoreResource.IndexTitle">
+            <summary>
+              Looks up a localized string similar to Search in mail messages content.
+            </summary>
+        </member>
+        <member name="P:ASC.Mail.Resources.MailCoreResource.NoAttachmentsInMessage">
+            <summary>
+              Looks up a localized string similar to No attachments in message.
+            </summary>
         </member>
     </members>
 </doc>

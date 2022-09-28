@@ -165,7 +165,7 @@
             <param name="newdomain"></param>
             <param name="newdir"></param>
         </member>
-        <member name="M:ASC.Data.Storage.IDataStore.Move(System.String,System.String,System.String,System.String)">
+        <member name="M:ASC.Data.Storage.IDataStore.Move(System.String,System.String,System.String,System.String,System.Boolean)">
             <summary>
              Moves file
             </summary>
