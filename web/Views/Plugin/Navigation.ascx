@@ -56,6 +56,9 @@
                                 <a href="<%= Url.Action("executemethod/") %>">executeMethod</a>
                                 <ul>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/acceptreviewchanges") %>">AcceptReviewChanges</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/addcomment") %>">AddComment</a>
                                     </li>
                                     <li>
@@ -176,6 +179,9 @@
                                         <a href="<%= Url.Action("executemethod/movetocomment") %>">MoveToComment</a>
                                     </li>
                                     <li>
+                                        <a href="<%= Url.Action("executemethod/movetonextreviewchange") %>">MoveToNextReviewChange</a>
+                                    </li>
+                                    <li>
                                         <a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a>
                                     </li>
                                     <li>
@@ -189,6 +195,9 @@
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/putimagedatatoselection") %>">PutImageDataToSelection</a>
+                                    </li>
+                                    <li>
+                                        <a href="<%= Url.Action("executemethod/rejectreviewchanges") %>">RejectReviewChanges</a>
                                     </li>
                                     <li>
                                         <a href="<%= Url.Action("executemethod/removecomments") %>">RemoveComments</a>

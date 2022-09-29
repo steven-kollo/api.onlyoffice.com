@@ -2402,6 +2402,7 @@
     <Content Include="Views\Plugin\Example\autocomplete.ascx" />
     <Content Include="Views\Plugin\example.aspx" />
     <Content Include="Views\Plugin\Executemethod.aspx" />
+    <Content Include="Views\Plugin\Executemethod\acceptreviewchanges.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrolcheckbox.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontroldatepicker.ascx" />
@@ -2414,6 +2415,7 @@
     <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\insertandreplacecontentcontrols.ascx" />
     <Content Include="Views\Plugin\Executemethod\putimagedatatoselection.ascx" />
+    <Content Include="Views\Plugin\Executemethod\rejectreviewchanges.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrols.ascx" />
     <Content Include="Views\Plugin\Executemethod\removeoleobject.ascx" />
@@ -2458,6 +2460,7 @@
     <Content Include="Views\Plugin\Executemethod\movecursortoend.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortostart.ascx" />
     <Content Include="Views\Plugin\Executemethod\movetocomment.ascx" />
+    <Content Include="Views\Plugin\Executemethod\movetonextreviewchange.ascx" />
     <Content Include="Views\Plugin\Executemethod\openfile.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\removeplugin.ascx" />
