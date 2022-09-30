@@ -29,7 +29,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
-using ASC.Common.Logging;
 using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.Helpers
@@ -75,7 +74,6 @@ namespace ASC.Api.Web.Help.Helpers
                 }
                 catch (Exception error)
                 {
-                    LogManager.GetLogger("ASC.Api").Error(error);
                     _allProducts = new List<Product>();
                 }
             }

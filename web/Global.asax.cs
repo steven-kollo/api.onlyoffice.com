@@ -31,7 +31,6 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
 using log4net;
 using log4net.Config;
@@ -104,10 +103,6 @@ namespace ASC.Api.Web.Help
                                 "~/scripts/menuselector.js",
                                 "~/scripts/scripts.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/plugin-example")
-                            .Include(
-                                "~/scripts/filter-plugin.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/faq")
                             .Include(
                                 "~/scripts/faq.js"));
@@ -127,10 +122,6 @@ namespace ASC.Api.Web.Help
                             .Include(
                                 "~/content/main-page.css"));
 
-            bundles.Add(new Bundle("~/content/plugins-and-macros", new CssMinify())
-                .Include(
-                    "~/content/plugins-macros.css"));
-
             bundles.Add(new Bundle("~/content/get-docs", new CssMinify())
                 .Include(
                     "~/content/get-docs.css"));
@@ -144,7 +135,6 @@ namespace ASC.Api.Web.Help
                 AreaRegistration.RegisterAllAreas();
                 RegisterRoutes(RouteTable.Routes);
                 RegisterBundles(BundleTable.Bundles);
-                ClassNamePluralizer.LoadAndWatch(HttpContext.Current.Server.MapPath("~/App_Data/portals/class_descriptions.xml"));
 
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             }
@@ -167,39 +157,6 @@ namespace ASC.Api.Web.Help
                         //Register cache
                         CacheManifest.AddServerFolder(new HttpContextWrapper(HttpContext.Current), "~/content/img", "*.*");
                         CacheManifest.AddCached(new Uri("/", UriKind.Relative));
-
-                        var enabledProducts = Products.EnabledProducts().Select(product => product.Id).ToList();
-                        if (enabledProducts.Contains("portals", StringComparer.InvariantCultureIgnoreCase))
-                        {
-                            CacheManifest.AddCached(new Uri("/portals/basic", UriKind.Relative));
-                            CacheManifest.AddCached(new Uri("/portals/auth", UriKind.Relative));
-                            CacheManifest.AddCached(new Uri("/portals/faq", UriKind.Relative));
-                            CacheManifest.AddCached(new Uri("/portals/filters", UriKind.Relative));
-                            CacheManifest.AddCached(new Uri("/portals/batch", UriKind.Relative));
-                            CacheManifest.AddOnline(new Uri("/portals/search", UriKind.Relative));
-                            CacheManifest.AddFallback(new Uri("/portals/search", UriKind.Relative), new Uri("/portals/notfound", UriKind.Relative));
-
-                            try
-                            {
-                                Documentation.Load();
-                            }
-                            catch (Exception error)
-                            {
-                                LogManager.GetLogger("ASC.Api").Error(error);
-                            }
-                        }
-
-                        if (enabledProducts.Contains("docbuilder", StringComparer.InvariantCultureIgnoreCase))
-                        {
-                            try
-                            {
-                                DocBuilderDocumentation.Load();
-                            }
-                            catch (Exception error)
-                            {
-                                LogManager.GetLogger("ASC.DocumentBuilder").Error(error);
-                            }
-                        }
                     }
                 }
             }

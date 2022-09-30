@@ -57,93 +57,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ASC.ActiveDirectory">
-      <HintPath>..\references\ASC.ActiveDirectory.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api">
-      <HintPath>..\references\ASC.Api.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Calendar">
-      <HintPath>..\references\ASC.Api.Calendar.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Community">
-      <HintPath>..\references\ASC.Api.Community.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.CRM">
-      <HintPath>..\references\ASC.Api.CRM.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Documents">
-      <HintPath>..\references\ASC.Api.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Employee">
-      <HintPath>..\references\ASC.Api.Employee.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Feed">
-      <HintPath>..\references\ASC.Api.Feed.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Mail">
-      <HintPath>..\references\ASC.Api.Mail.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.MailServer">
-      <HintPath>..\references\ASC.Api.MailServer.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Portal">
-      <HintPath>..\references\ASC.Api.Portal.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Projects">
-      <HintPath>..\references\ASC.Api.Projects.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api.Settings">
-      <HintPath>..\references\ASC.Api.Settings.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Common">
-      <HintPath>..\references\ASC.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Core.Common">
-      <HintPath>..\references\ASC.Core.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Data.Reassigns">
-      <HintPath>..\references\ASC.Data.Reassigns.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Data.Storage">
-      <HintPath>..\references\ASC.Data.Storage.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.ElasticSearch">
-      <HintPath>..\references\ASC.ElasticSearch.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.IPSecurity">
-      <HintPath>..\references\ASC.IPSecurity.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Mail">
-      <HintPath>..\references\ASC.Mail.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Specific">
-      <HintPath>..\references\ASC.Specific.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Thrdparty">
-      <HintPath>..\references\ASC.Thrdparty.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.VoipService">
-      <HintPath>..\references\ASC.VoipService.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Community">
-      <HintPath>..\references\ASC.Web.Community.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Core">
-      <HintPath>..\references\ASC.Web.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.CRM">
-      <HintPath>..\references\ASC.Web.CRM.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Files">
-      <HintPath>..\references\ASC.Web.Files.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Projects">
-      <HintPath>..\references\ASC.Web.Projects.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Studio">
-      <HintPath>..\references\ASC.Web.Studio.dll</HintPath>
-    </Reference>
     <Reference Include="Autofac">
       <HintPath>..\packages\Autofac.6.2.0\lib\netstandard2.0\Autofac.dll</HintPath>
     </Reference>
@@ -214,33 +127,18 @@
   <ItemGroup>
     <Compile Include="CacheManifest.cs" />
     <Compile Include="Controllers\CacheManifestController.cs" />
-    <Compile Include="Controllers\ApiSystemController.cs" />
-    <Compile Include="Controllers\DocBuilderController.cs" />
-    <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\EditorsController.cs" />
-    <Compile Include="Controllers\PortalsController.cs" />
-    <Compile Include="Controllers\DesktopController.cs" />
-    <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
-    <Compile Include="DocumentGenerator\Documentation.cs" />
-    <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\BreadCrumbsBuilder.cs" />
-    <Compile Include="Helpers\ClassNamePluralizer.cs" />
-    <Compile Include="Helpers\Config.cs" />
-    <Compile Include="Helpers\DocBuilderHelper.cs" />
     <Compile Include="Helpers\GCustomSearch.cs" />
+    <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\Products.cs" />
     <Compile Include="Helpers\SearchResult.cs" />
-    <Compile Include="Helpers\Html.cs" />
     <Compile Include="Helpers\HttpMethodOrderComarer.cs" />
     <Compile Include="Helpers\Highliter.cs" />
     <Compile Include="Helpers\RedirectAttribute.cs" />
-    <Compile Include="Helpers\Url.cs" />
-    <Compile Include="Models\SectionViewModel.cs" />
-    <Compile Include="Models\MethodViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -252,33 +150,6 @@
     <Content Include="Content\img\close.svg" />
     <Content Include="Content\img\csharp\server-components.png" />
     <Content Include="Content\img\not-found.svg" />
-    <Content Include="Content\img\desktop\adding_plugins.png" />
-    <Content Include="Content\img\desktop\connection_list.png" />
-    <Content Include="Content\img\desktop\debugging.png" />
-    <Content Include="Content\img\desktop\encryption-enabled.png" />
-    <Content Include="Content\img\desktop\extended_comments.png" />
-    <Content Include="Content\img\desktop\macos-terminal.png" />
-    <Content Include="Content\img\desktop\plugin_settings.png" />
-    <Content Include="Content\img\desktop\plugins_folder.png" />
-    <Content Include="Content\img\desktop\plugins_tab.png" />
-    <Content Include="Content\img\desktop\provider_button.png" />
-    <Content Include="Content\img\desktop\remove-plugin-button.png" />
-    <Content Include="Content\img\desktop\windows-shortcut.png" />
-    <Content Include="Content\img\desktop\windows-terminal.png" />
-    <Content Include="Content\img\docbuilder\compare-documents.png" />
-    <Content Include="Content\img\docbuilder\csharp\add.png" />
-    <Content Include="Content\img\docbuilder\csharp\browse.png" />
-    <Content Include="Content\img\docbuilder\csharp\net46.png" />
-    <Content Include="Content\img\docbuilder\csharp\platform.png" />
-    <Content Include="Content\img\docbuilder\csharp\sitename.png" />
-    <Content Include="Content\img\docbuilder\examples\coordinate_aspects.png" />
-    <Content Include="Content\img\docbuilder\examples\icon_DocumentEditors.png" />
-    <Content Include="Content\img\docbuilder\examples\step2_1.png" />
-    <Content Include="Content\img\docbuilder\download.png" />
-    <Content Include="Content\img\docbuilder\file_docx.png" />
-    <Content Include="Content\img\docbuilder\file_pdf.png" />
-    <Content Include="Content\img\docbuilder\file_xlsx.png" />
-    <Content Include="Content\img\docbuilder\php-add.png" />
     <Content Include="Content\img\Editor\accept_reject.png" />
     <Content Include="Content\img\Editor\changes-url.png" />
     <Content Include="Content\img\Editor\actionLink-create.png" />
@@ -371,19 +242,6 @@
     <Content Include="Content\img\java\war-file.jpg" />
     <Content Include="Content\img\Editor\opening.jpg" />
     <Content Include="Content\img\Editor\php-add.png" />
-    <Content Include="Content\img\macros\add-new-chart.svg" />
-    <Content Include="Content\img\macros\cell-background-color.svg" />
-    <Content Include="Content\img\macros\cell-font-bold.svg" />
-    <Content Include="Content\img\macros\change-cell.svg" />
-    <Content Include="Content\img\macros\column-width.svg" />
-    <Content Include="Content\img\macros\currency-exchange-rates.svg" />
-    <Content Include="Content\img\macros\format-range.svg" />
-    <Content Include="Content\img\macros\highlight-duplicates.svg" />
-    <Content Include="Content\img\macros\insert-text.svg" />
-    <Content Include="Content\img\macros\merge-and-unmerge.svg" />
-    <Content Include="Content\img\macros\next-blank-row.svg" />
-    <Content Include="Content\img\macros\unmerge-cell.svg" />
-    <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\orange-arrow.svg" />
     <Content Include="Content\img\php\browse.png" />
     <Content Include="Content\img\php\handler-add.png" />
@@ -391,144 +249,15 @@
     <Content Include="Content\img\php\manager.png" />
     <Content Include="Content\img\php\php-version-1.jpg" />
     <Content Include="Content\img\php\php-version-2.jpg" />
-    <Content Include="Content\img\plugins\assign-macro.png" />
-    <Content Include="Content\img\plugins\insert-text.png" />
-    <Content Include="Content\img\plugins\macros.png" />
-    <Content Include="Content\img\plugins\currencies-usd-eur.png" />
     <Content Include="Content\img\Editor\saving.jpg" />
     <Content Include="Content\img\csharp\browse.png" />
     <Content Include="Content\img\csharp\platform.png" />
     <Content Include="Content\img\csharp\sitename.png" />
-    <Content Include="Content\img\plugin\add-custom.svg" />
-    <Content Include="Content\img\plugin\arrow.svg" />
-    <Content Include="Content\img\plugin\autocomplect.svg" />
-    <Content Include="Content\img\plugin\cbr.svg" />
-    <Content Include="Content\img\plugin\chess.svg" />
-    <Content Include="Content\img\plugin\clippy.svg" />
-    <Content Include="Content\img\plugin\comment.svg" />
-    <Content Include="Content\img\plugin\content-controls.svg" />
-    <Content Include="Content\img\plugin\controls-navigation.svg" />
-    <Content Include="Content\img\plugin\controls-tags.svg" />
-    <Content Include="Content\img\plugin\counter.svg" />
-    <Content Include="Content\img\plugin\extended.svg" />
-    <Content Include="Content\img\plugin\google-translate.svg" />
-    <Content Include="Content\img\plugin\hello-world.svg" />
-    <Content Include="Content\img\plugin\highligt.svg" />
-    <Content Include="Content\img\plugin\html.svg" />
-    <Content Include="Content\img\plugin\invoices.svg" />
-    <Content Include="Content\img\plugin\language-tool.svg" />
-    <Content Include="Content\img\plugin\load-custom.svg" />
-    <Content Include="Content\img\plugin\move-cursor.svg" />
-    <Content Include="Content\img\plugin\num2word.svg" />
-    <Content Include="Content\img\plugin\ocr.svg" />
-    <Content Include="Content\img\plugin\photoeditor.svg" />
-    <Content Include="Content\img\plugin\replace-start.svg" />
-    <Content Include="Content\img\plugin\search-change.svg" />
-    <Content Include="Content\img\plugin\search-replace.svg" />
-    <Content Include="Content\img\plugin\settings.svg" />
-    <Content Include="Content\img\plugin\speech.svg" />
-    <Content Include="Content\img\plugin\symbol-table.svg" />
-    <Content Include="Content\img\plugin\telegram.svg" />
-    <Content Include="Content\img\plugin\templates.svg" />
-    <Content Include="Content\img\plugin\thesaurus.svg" />
-    <Content Include="Content\img\plugin\typograf.svg" />
-    <Content Include="Content\img\plugin\youtube.svg" />
-    <Content Include="Content\img\plugin\zotero.svg" />
     <Content Include="Content\img\sprite.svg" />
     <Content Include="Content\img\Video\install-plugins.png" />
     <Content Include="Content\img\Video\install-plugins-desktop.png" />
     <Content Include="Content\img\Video\nextcloud_integration.png" />
     <Content Include="Content\img\Video\owncloud_integration.png" />
-    <Content Include="Content\img\plugins\remove-plugin-button.png" />
-    <Content Include="Content\img\plugins\hello-world.gif" />
-    <Content Include="Content\img\plugins\about-variation.png" />
-    <Content Include="Content\img\plugins\controls.png" />
-    <Content Include="Content\img\plugins\button-1.png" />
-    <Content Include="Content\img\plugins\button-2.png" />
-    <Content Include="Content\img\plugins\button-3.png" />
-    <Content Include="Content\img\plugins\edit_button.png" />
-    <Content Include="Content\img\plugins\text_area.png" />
-    <Content Include="Content\img\plugins\text_field.png" />
-    <Content Include="Content\img\plugins\checkbox_example.png" />
-    <Content Include="Content\img\plugins\combobox_example.png" />
-    <Content Include="Content\img\plugins\loader_example.png" />
-    <Content Include="Content\img\plugins\macro_window.png" />
-    <Content Include="Content\img\plugins\plugin_settings.png" />
-    <Content Include="Content\img\plugins\adding_plugins.png" />
-    <Content Include="Content\img\plugins\plugins_tab.png" />
-    <Content Include="Content\img\plugins\plugins_folder.png" />
-    <Content Include="Content\img\plugins\extended_comments.png" />
-    <Content Include="Content\img\plugins\chrome-extension-folder.png" />
-    <Content Include="Content\img\plugins\chrome-extension.png" />
-    <Content Include="Content\img\plugins\chrome-developer-mode.png" />
-    <Content Include="Content\img\plugins\edge-developer-mode.png" />
-    <Content Include="Content\img\plugins\edge-extension-folder.png" />
-    <Content Include="Content\img\plugins\edge-extension.png" />
-    <Content Include="Content\img\plugins\edge-removing-extension.png" />
-    <Content Include="Content\img\plugins\extension-dist.png" />
-    <Content Include="Content\img\plugins\manifest.png" />
-    <Content Include="Content\img\plugins\mozilla-extension.png" />
-    <Content Include="Content\img\plugins\mozilla-extensions.png" />
-    <Content Include="Content\img\plugins\mozilla-removing-extension.png" />
-    <Content Include="Content\img\plugins\opera-developer-mode.png" />
-    <Content Include="Content\img\plugins\opera-disabling-extension.png" />
-    <Content Include="Content\img\plugins\opera-extension-folder.png" />
-    <Content Include="Content\img\plugins\opera-extension.png" />
-    <Content Include="Content\img\plugins\opera-extensions.png" />
-    <Content Include="Content\img\plugins\opera-removing-extension.png" />
-    <Content Include="Content\img\plugins\helloworld_icon.png" />
-    <Content Include="Content\img\plugins\chrome-removing-extension.png" />
-    <Content Include="Content\img\plugins\plugin_archive.png" />
-    <Content Include="Content\img\plugins\youtube_interface.png" />
-    <Content Include="Content\img\plugins\alternate-raws.png" />
-    <Content Include="Content\img\plugins\background_color.png" />
-    <Content Include="Content\img\plugins\add_chart.png" />
-    <Content Include="Content\img\plugins\column_width.png" />
-    <Content Include="Content\img\plugins\font_bold.png" />
-    <Content Include="Content\img\plugins\font_color.png" />
-    <Content Include="Content\img\plugins\merge_cells.png" />
-    <Content Include="Content\img\plugins\next_blank_row.png" />
-    <Content Include="Content\img\plugins\range_as_a_table.png" />
-    <Content Include="Content\img\plugins\unmerge_cells_after.png" />
-    <Content Include="Content\img\plugins\unmerge_cells_before.png" />
-    <Content Include="Content\img\plugins\write_data_to_cell.png" />
-    <Content Include="Content\img\plugins\highlight_duplicates.png" />
-    <Content Include="Content\img\plugins\plugins-structure.png" />
-    <Content Include="Content\img\plugins\gifs\add-comment-in-cell.gif" />
-    <Content Include="Content\img\plugins\gifs\add-custom-fields.gif" />
-    <Content Include="Content\img\plugins\gifs\autocomplete.gif" />
-    <Content Include="Content\img\plugins\gifs\cbr.gif" />
-    <Content Include="Content\img\plugins\gifs\chess.gif" />
-    <Content Include="Content\img\plugins\gifs\clippy.gif" />
-    <Content Include="Content\img\plugins\gifs\count-words-and-characters.gif" />
-    <Content Include="Content\img\plugins\gifs\extended-comments.gif" />
-    <Content Include="Content\img\plugins\gifs\get-and-paste-html.gif" />
-    <Content Include="Content\img\plugins\gifs\hello-world.gif" />
-    <Content Include="Content\img\plugins\gifs\highlight-code.gif" />
-    <Content Include="Content\img\plugins\gifs\invoices.gif" />
-    <Content Include="Content\img\plugins\gifs\language-tool.gif" />
-    <Content Include="Content\img\plugins\gifs\load-custom-fields.gif" />
-    <Content Include="Content\img\plugins\gifs\move-cursor.gif" />
-    <Content Include="Content\img\plugins\gifs\num2word.gif" />
-    <Content Include="Content\img\plugins\gifs\ocr.gif" />
-    <Content Include="Content\img\plugins\gifs\photo-editor.gif" />
-    <Content Include="Content\img\plugins\gifs\search-and-change-background-text.gif" />
-    <Content Include="Content\img\plugins\gifs\search-and-replace.gif" />
-    <Content Include="Content\img\plugins\gifs\search-and-replace-on-start.gif" />
-    <Content Include="Content\img\plugins\gifs\settings.gif" />
-    <Content Include="Content\img\plugins\gifs\speech.gif" />
-    <Content Include="Content\img\plugins\gifs\symbol-table.gif" />
-    <Content Include="Content\img\plugins\gifs\telegram.gif" />
-    <Content Include="Content\img\plugins\gifs\templates.gif" />
-    <Content Include="Content\img\plugins\gifs\thesaurus.gif" />
-    <Content Include="Content\img\plugins\gifs\translator.gif" />
-    <Content Include="Content\img\plugins\gifs\typograf.gif" />
-    <Content Include="Content\img\plugins\gifs\work-with-content-controls-content.gif" />
-    <Content Include="Content\img\plugins\gifs\work-with-content-controls-navigation.gif" />
-    <Content Include="Content\img\plugins\gifs\work-with-content-controls-tags.gif" />
-    <Content Include="Content\img\plugins\gifs\youtube.gif" />
-    <Content Include="Content\img\plugins\gifs\zotero.gif" />
-    <Content Include="Content\plugins-macros.css" />
     <Content Include="Content\get-docs.css" />
     <Content Include="externallistener\config.json" />
     <Content Include="externallistener\index.html" />
@@ -543,7 +272,6 @@
     <Content Include="Content\pushy.css" />
     <Content Include="Scripts\main-page.js" />
     <Content Include="Scripts\faq.js" />
-    <Content Include="Scripts\filter-plugin.js" />
     <Content Include="Scripts\menuselector.js" />
     <Content Include="Scripts\navigation-menu.js" />
     <Content Include="version.txt" />
@@ -555,82 +283,6 @@
     <Content Include="Scripts\jquery\jquery.blockUI.js" />
     <Content Include="Scripts\jquery\jquery.js" />
     <Content Include="Scripts\jquery\jquery.treeview.js" />
-    <Content Include="Views\ApiSystem\Authentication.aspx" />
-    <Content Include="Views\ApiSystem\Basic.aspx" />
-    <Content Include="Views\ApiSystem\TariffGet.aspx" />
-    <Content Include="Views\ApiSystem\TariffSet.aspx" />
-    <Content Include="Views\ApiSystem\PortalStatus.aspx" />
-    <Content Include="Views\ApiSystem\PortalRemove.aspx" />
-    <Content Include="Views\ApiSystem\PortalGet.aspx" />
-    <Content Include="Views\ApiSystem\PortalRegister.aspx" />
-    <Content Include="Views\ApiSystem\ValidatePortalName.aspx" />
-    <Content Include="Views\ApiSystem\Section.aspx" />
-    <Content Include="Views\ApiSystem\Navigation.ascx" />
-    <Content Include="Views\Desktop\AddingDMS.aspx" />
-    <Content Include="Views\Desktop\AddingDMS\Configuring.ascx" />
-    <Content Include="Views\Desktop\AddingDMS\Default.ascx" />
-    <Content Include="Views\Desktop\AddingDMS\Encryption.ascx" />
-    <Content Include="Views\Desktop\AddingDMS\Encryption\keygeneration.ascx" />
-    <Content Include="Views\Desktop\AddingDMS\Encryption\operations.ascx" />
-    <Content Include="Views\Desktop\AddingDMS\LoginLogout.ascx" />
-    <Content Include="Views\Desktop\AddingDMS\Notifications.ascx" />
-    <Content Include="Views\Desktop\AddingDMS\Opening.ascx" />
-    <Content Include="Views\Desktop\Basic.aspx" />
-    <Content Include="Views\Desktop\Changelog.aspx" />
-    <Content Include="Views\Desktop\Debugging.aspx" />
-    <Content Include="Views\Desktop\FAQ.aspx" />
-    <Content Include="Views\Desktop\FAQShared\ExpandCollapse.ascx" />
-    <Content Include="Views\Desktop\Howitworks.aspx" />
-    <Content Include="Views\Desktop\Howitworks\default.ascx" />
-    <Content Include="Views\Desktop\Howitworks\encryptingclouddocuments.ascx" />
-    <Content Include="Views\Desktop\Howitworks\encryptinglocaldocuments.ascx" />
-    <Content Include="Views\Desktop\Navigation.ascx" />
-    <Content Include="Views\Desktop\Plugins.aspx" />
-    <Content Include="Views\DocBuilder\Basic.aspx" />
-    <Content Include="Views\DocBuilder\Changelog.aspx" />
-    <Content Include="Views\DocBuilder\classlist.aspx" />
-    <Content Include="Views\DocBuilder\formapi.aspx" />
-    <Content Include="Views\DocBuilder\Formapi\default.ascx" />
-    <Content Include="Views\DocBuilder\Try.aspx" />
-    <Content Include="Views\DocBuilder\phpexample.aspx" />
-    <Content Include="Views\DocBuilder\nodejsexample.aspx" />
-    <Content Include="Views\DocBuilder\methodpartial.aspx" />
-    <Content Include="Views\DocBuilder\sectionpartial.aspx" />
-    <Content Include="Views\DocBuilder\csharpexample.aspx" />
-    <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
-    <Content Include="Views\DocBuilder\gettingstarted.aspx" />
-    <Content Include="Views\DocBuilder\global.aspx" />
-    <Content Include="Views\DocBuilder\howitworks.aspx" />
-    <Content Include="Views\DocBuilder\Howitworks\comparedocuments.ascx" />
-    <Content Include="Views\DocBuilder\Howitworks\default.ascx" />
-    <Content Include="Views\DocBuilder\Howitworks\globalvariable.ascx" />
-    <Content Include="Views\DocBuilder\integratingdocumentbuilder.aspx" />
-    <Content Include="Views\DocBuilder\integrationapi.aspx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\closefile.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\createfile.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\dispose.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\executecommand.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\initialize.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\openfile.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\run.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\runtexta.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\runtextw.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\savefile.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\setproperty.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\setpropertyw.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\cdocbuilder\settmpfolder.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\default.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
-    <Content Include="Views\DocBuilder\Integrationapi\arguments.ascx" />
-    <Content Include="Views\DocBuilder\Navigation.ascx" />
-    <Content Include="Views\DocBuilder\presentationapi.aspx" />
-    <Content Include="Views\DocBuilder\Presentationapi\default.ascx" />
-    <Content Include="Views\DocBuilder\rubyexample.aspx" />
-    <Content Include="Views\DocBuilder\spreadsheetapi.aspx" />
-    <Content Include="Views\DocBuilder\Spreadsheetapi\default.ascx" />
-    <Content Include="Views\DocBuilder\textdocumentapi.aspx" />
-    <Content Include="Views\DocBuilder\Textdocumentapi\default.ascx" />
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\FAQ\Renaming.ascx" />
     <Content Include="Views\Editors\Nuxeo.aspx" />
@@ -677,96 +329,6 @@
     <Content Include="Views\Editors\Strapi.aspx" />
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Views\Home\ProductBlock.ascx" />
-    <Content Include="Views\Plugin\Basic.aspx" />
-    <Content Include="Views\Plugin\Config.aspx" />
-    <Content Include="Views\Plugin\Code.aspx" />
-    <Content Include="Views\Plugin\Events.aspx" />
-    <Content Include="Views\Plugin\Example\default.ascx" />
-    <Content Include="Views\Plugin\Example\autocomplete.ascx" />
-    <Content Include="Views\Plugin\example.aspx" />
-    <Content Include="Views\Plugin\Executemethod.aspx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontrolcheckbox.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontroldatepicker.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontrollist.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcontentcontrolpicture.ascx" />
-    <Content Include="Views\Plugin\Executemethod\default.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getallcontentcontrols.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getalloleobjects.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\insertandreplacecontentcontrols.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removecontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removecontentcontrols.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removeoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removeoleobjects.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\editoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\changeoleobjects.ascx" />
-    <Content Include="Views\Plugin\Executemethod\insertoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getfontlist.ascx" />
-    <Content Include="Views\Plugin\Executemethod\inputtext.ascx" />
-    <Content Include="Views\Plugin\Executemethod\pastehtml.ascx" />
-    <Content Include="Views\Plugin\Executemethod\pastetext.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getmacros.ascx" />
-    <Content Include="Views\Plugin\Executemethod\setmacros.ascx" />
-    <Content Include="Views\Plugin\Executemethod\startaction.ascx" />
-    <Content Include="Views\Plugin\Executemethod\endaction.ascx" />
-    <Content Include="Views\Plugin\Executemethod\setproperties.ascx" />
-    <Content Include="Views\Plugin\Executemethod\showinputhelper.ascx" />
-    <Content Include="Views\Plugin\Executemethod\unshowinputhelper.ascx" />
-    <Content Include="Views\Plugin\Executemethod\onencryption.ascx" />
-    <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
-    <Content Include="Views\Plugin\Executemethod\changecomment.ascx" />
-    <Content Include="Views\Plugin\Executemethod\coauthoringchatsendmessage.ascx" />
-    <Content Include="Views\Plugin\Executemethod\convertdocument.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getallcomments.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getcurrentcontentcontrolpr.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getfields.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getfilehtml.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getselectedtext.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getselectiontype.ascx" />
-    <Content Include="Views\Plugin\Executemethod\getversion.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movecursortocontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movecursortoend.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movecursortostart.ascx" />
-    <Content Include="Views\Plugin\Executemethod\movetocomment.ascx" />
-    <Content Include="Views\Plugin\Executemethod\openfile.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removecomments.ascx" />
-    <Content Include="Views\Plugin\Executemethod\removeselectedcontent.ascx" />
-    <Content Include="Views\Plugin\Executemethod\replacetextsmart.ascx" />
-    <Content Include="Views\Plugin\Executemethod\searchandreplace.ascx" />
-    <Content Include="Views\Plugin\Executemethod\selectcontentcontrol.ascx" />
-    <Content Include="Views\Plugin\Executemethod\selectoleobject.ascx" />
-    <Content Include="Views\Plugin\Executemethod\setdisplaymodeinreview.ascx" />
-    <Content Include="Views\Plugin\Objects.aspx" />
-    <Content Include="Views\Plugin\inputHelper.aspx" />
-    <Content Include="Views\Plugin\Localization.aspx" />
-    <Content Include="Views\Plugin\Styles.aspx" />
-    <Content Include="Views\Plugin\Macros\Macros.aspx" />
-    <Content Include="Views\Plugin\Icons.aspx" />
-    <Content Include="Views\Plugin\Info.aspx" />
-    <Content Include="Views\Plugin\callCommand.aspx" />
-    <Content Include="Views\Plugin\callModule.aspx" />
-    <Content Include="Views\Plugin\loadModule.aspx" />
-    <Content Include="Views\Plugin\createInputHelper.aspx" />
-    <Content Include="Views\Plugin\getInputHelper.aspx" />
-    <Content Include="Views\Plugin\resizeWindow.aspx" />
-    <Content Include="Views\Plugin\ExecuteCommand.aspx" />
-    <Content Include="Views\Plugin\Plugin.aspx" />
-    <Content Include="Views\Plugin\scope.aspx" />
-    <Content Include="Views\Plugin\IndexHtml.aspx" />
-    <Content Include="Views\Plugin\Structure.aspx" />
-    <Content Include="Views\Plugin\Installation.aspx" />
-    <Content Include="Views\Plugin\Installation\Default.ascx" />
-    <Content Include="Views\Plugin\Installation\onpremises.ascx" />
-    <Content Include="Views\Plugin\Installation\desktop.ascx" />
-    <Content Include="Views\Plugin\Installation\cloud.ascx" />
-    <Content Include="Views\Plugin\GettingStarted.aspx" />
-    <Content Include="Views\Plugin\FAQ.aspx" />
-    <Content Include="Views\Plugin\FAQ\FAQShared\ExpandCollapse.ascx" />
-    <Content Include="Views\Plugin\Navigation.ascx" />
-    <Content Include="Views\Plugin\Types.aspx" />
-    <Content Include="Views\Plugin\Variations.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />
     <Content Include="Views\Editors\Config\Default.ascx" />
     <Content Include="Views\Editors\Conversion.aspx" />
@@ -828,63 +390,6 @@
     <Content Include="Views\Editors\Basic.aspx" />
     <Content Include="Views\Editors\HowItWorks.aspx" />
     <Content Include="Views\Editors\Navigation.ascx" />
-    <Content Include="Views\Plugin\Macros\ConvertingVBAMacros.aspx" />
-    <Content Include="Views\Plugin\Macros\MacroSamples.aspx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\default.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\addchart.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\changecellbackgroundcolor.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\changecellfontcolor.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\formatrangeasatable.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\highlightduplicates.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\makecellfontbold.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\mergecellrange.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\nextblankrow.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\setcolumnwidth.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\inserttext.ascx" />
-    <Content Include="Views\Plugin\Macros\Macrosamples\currencyexchangerates.ascx" />
-    <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
-    <Content Include="Views\Plugin\example\addcommentincell.ascx" />
-    <Content Include="Views\Plugin\example\addcustomfields.ascx" />
-    <Content Include="Views\Plugin\example\autocomplete.ascx" />
-    <Content Include="Views\Plugin\example\cbr.ascx" />
-    <Content Include="Views\Plugin\example\chess.ascx" />
-    <Content Include="Views\Plugin\example\clippy.ascx" />
-    <Content Include="Views\Plugin\example\countwordsandcharacters.ascx" />
-    <Content Include="Views\Plugin\example\extendedcomments.ascx" />
-    <Content Include="Views\Plugin\example\getandpastehtml.ascx" />
-    <Content Include="Views\Plugin\example\helloworld.ascx" />
-    <Content Include="Views\Plugin\example\highlightcode.ascx" />
-    <Content Include="Views\Plugin\example\invoices.ascx" />
-    <Content Include="Views\Plugin\example\languagetool.ascx" />
-    <Content Include="Views\Plugin\example\loadcustomfields.ascx" />
-    <Content Include="Views\Plugin\example\movecursor.ascx" />
-    <Content Include="Views\Plugin\example\num2word.ascx" />
-    <Content Include="Views\Plugin\example\ocr.ascx" />
-    <Content Include="Views\Plugin\example\photoeditor.ascx" />
-    <Content Include="Views\Plugin\example\searchandchangetextbackgroundcolor.ascx" />
-    <Content Include="Views\Plugin\example\searchandreplace.ascx" />
-    <Content Include="Views\Plugin\example\searchandreplaceonstart.ascx" />
-    <Content Include="Views\Plugin\example\settings.ascx" />
-    <Content Include="Views\Plugin\example\speech.ascx" />
-    <Content Include="Views\Plugin\example\symboltable.ascx" />
-    <Content Include="Views\Plugin\example\telegram.ascx" />
-    <Content Include="Views\Plugin\example\templates.ascx" />
-    <Content Include="Views\Plugin\example\thesaurus.ascx" />
-    <Content Include="Views\Plugin\example\translator.ascx" />
-    <Content Include="Views\Plugin\example\typograf.ascx" />
-    <Content Include="Views\Plugin\example\workwithcontentcontrolscontent.ascx" />
-    <Content Include="Views\Plugin\example\workwithcontentcontrolsnavigation.ascx" />
-    <Content Include="Views\Plugin\example\workwithcontentcontrolstags.ascx" />
-    <Content Include="Views\Plugin\example\youtube.ascx" />
-    <Content Include="Views\Plugin\example\zotero.ascx" />
-    <Content Include="Views\Portals\Basic.aspx" />
-    <Content Include="Views\Portals\Batch.aspx" />
-    <Content Include="Views\Portals\Faq.aspx" />
-    <Content Include="Views\Portals\FAQ\FAQShared\ExpandCollapse.ascx" />
-    <Content Include="Views\Portals\Filters.aspx" />
-    <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\TopNavigation.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1003,7 +508,6 @@
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <Content Include="Views\Shared\Search.aspx" />
     <Content Include="Views\Shared\SearchForm.ascx" />
-    <Content Include="Views\Portals\Auth.aspx" />
     <Content Include="web.autofac.config">
       <SubType>Designer</SubType>
     </Content>
@@ -1017,6 +521,9 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="Views\Shared\Analytic.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>

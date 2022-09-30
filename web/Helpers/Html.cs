@@ -29,38 +29,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
 using System.Web.Routing;
-using ASC.Api.Web.Help.DocumentGenerator;
 
 namespace ASC.Api.Web.Help.Helpers
 {
     public static class Html
     {
-        public static MvcHtmlString DocMethodLink(this HtmlHelper helper, MsDocEntryPoint section, MsDocEntryPointMethod method)
-        {
-            var type = method.HttpMethod;
-            var path = method.Path;
-            var controller = helper.ViewContext.RequestContext.RouteData.Values["controller"];
-            var context = helper.ViewContext.RequestContext;
-            
-            var spanMethod = new TagBuilder("span");
-            spanMethod.AddCssClass("http-" + type.ToLowerInvariant());
-            spanMethod.InnerHtml = HttpUtility.HtmlEncode(type);
-
-            var tagBuilder = new TagBuilder("a")
-            {
-                InnerHtml = spanMethod.ToString(TagRenderMode.Normal) + "&nbsp;" + HttpUtility.HtmlEncode(path)
-            };
-            tagBuilder.MergeAttribute("href", Url.GetDocUrl(section, method, controller, context));
-            return MvcHtmlString.Create(tagBuilder.ToString(TagRenderMode.Normal));
-        }
-
-        public static MvcHtmlString DocSectionLink(this HtmlHelper helper, MsDocEntryPoint section)
-        {
-            var controller = helper.ViewContext.RequestContext.RouteData.Values["controller"];
-            var routeValues = Url.GetRouteValues(section, null, controller);
-            return helper.RouteLink(section.Name, "Sections", routeValues, new { @class = "api-section" });
-        }
-
         public static MvcHtmlString MenuActionLink(this HtmlHelper helper, string linkText, string action, string controller, string selectedClass)
         {
             return MenuActionLink(helper, linkText, action, controller, selectedClass, null);
