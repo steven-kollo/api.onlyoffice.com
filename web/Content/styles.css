@@ -486,6 +486,10 @@ li b.copy-link[id]:hover:before {
     margin-left: -40px;
 }
 
+li.copy-link[id]:hover:before {
+    background: none;
+}
+
 .header-gray.copy-link[id]:hover:before {
     margin-left: -35px;
 }
@@ -2521,6 +2525,7 @@ article {
 
 .browser {
     margin-bottom: 10px;
+    margin-right: 10px;
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     padding: 0;
@@ -2529,7 +2534,9 @@ article {
 .browser .tab {
     text-align: center;
     float: left;
-    color: #CCC;
+    border: 1px solid #ECEEF1;
+    color: #f94a0c;
+    background-color: #ECEEF1;
     font-size: 14px;
     font-weight: 600;
     line-height: 50px;
@@ -2541,14 +2548,13 @@ article {
 }
 
 .browser .tab:hover {
-    color: #FF6F3D;
-    border-bottom: 1px solid #f94a0c;
+    background-color: #fff;
     cursor: pointer;
 }
 
 .browser .tab.active {
-    color: #f94a0c;
-    border-bottom: 1px solid #f94a0c;
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(85, 85, 85, 0.1);
 }
 
 .content {
@@ -2558,4 +2564,19 @@ article {
 .content.active {
     display: inline;
 }
-    
+
+.img-block-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 16px;
+    margin: 0;
+    margin-top: 32px;
+}
+
+.img-block-3 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 16px;
+    margin: 0;
+    margin-top: 32px;
+}

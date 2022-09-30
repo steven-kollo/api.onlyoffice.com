@@ -39,8 +39,7 @@
     <h2 id="install" class="copy-link">安装 Redmine ONLYOFFICE 集成插件</h2>
     <p>要开始使用带有 Redmine 的 ONLYOFFICE Docs，必须执行以下步骤：</p>
     <ol>
-        <li>如果您是 Redmine 的新手，请按照 <a href="https://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank">这些说明</a>进行安装。
-            ONLYOFFICE 集成插件的 Redmine 最低版本为 4.0.0。</li>
+        <li>如果您是 Redmine 的新手，请按照 <a href="https://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank">这些说明</a>进行安装。</li>
         <li>
             <p>下载Redmine ONLYOFFICE 集成插件。您可以克隆主分支或下载最新的压缩版本。
             在安装之前，请确保 Redmine 实例已停止。</p>

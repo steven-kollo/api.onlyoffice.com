@@ -25,7 +25,7 @@
 <h2 id="Windows" class="copy-link">对于 Windows</h2>
 <h2 id="win-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
 <p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> （打包为文档服务器）。</p>
-<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_csharp_example">适用于Windows</a>的文档服务器。</p>
+<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-windows.aspx?from=api_java_example">适用于Windows</a>的文档服务器。</p>
 
 <h2 id="win-2" class="copy-link"><span class="style_step">步骤 2.</span>下载用于编辑器集成的 Java 代码</h2>
 <p>从我们的站点下载 <a href="<%= Url.Action("demopreview") %>">Java 示例</a>。</p>
@@ -137,7 +137,7 @@ files.docservice.url.site=https://documentserver/</pre>
 <h2 id="Linux" class="copy-link">对于 Linux</h2>
 <h2 id="linux-1" class="copy-link"><span class="style_step">步骤 1.</span>安装 ONLYOFFICE 文档</h2>
 <p>下载并安装 <a href="<%= Url.Action("demopreview") %>">ONLYOFFICE Docs</a> （打包为文档服务器）。</p>
-<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_csharp_example">适用于Linux</a>的文档服务器。</p>
+<p>请参阅详细指南以了解如何安装 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-install-ubuntu.aspx?from=api_java_example">适用于Linux</a>的文档服务器。</p>
 
 <h2 id="linux-2" class="copy-link"><span class="style_step">步骤 2.</span>安装的先决条件及使用编辑器运行网站</h2>
 <ol>

@@ -57,6 +57,7 @@ Rails.configuration.urlSite="https://documentserver/"</pre>
             例如， <em>D:\\folder</em>。请注意，在 Windows 操作系统上，双反斜杠必须用作分隔符。</p>
     </li>
     <li>运行 <b>Rails</b> 应用程序：
+        <div class="commandline">rails server -u webrick</div>
         <div class="commandline">rails s -b 0.0.0.0 -p 80</div>
     </li>
     <li>使用下列地址在浏览器中查看结果：

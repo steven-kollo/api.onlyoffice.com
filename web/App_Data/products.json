@@ -3,7 +3,7 @@
       "id":"editors",
       "title":"Document Server",
       "description":"Bring document editing and co-authoring to your web app users. In this section you will learn how to set up, configure and integrate ONLYOFFICE Docs.",
-      "version":"7.1",
+      "version":"7.2",
       "links":{
          "Get Started":[
             {
@@ -43,6 +43,10 @@
             {
                "Item1":"Methods",
                "Item2":"methods"
+            },
+            {
+               "Item1":"Connector",
+               "Item2":"connector"
             },
             {
                "Item1":"Callback handler",

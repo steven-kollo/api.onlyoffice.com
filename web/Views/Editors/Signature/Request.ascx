@@ -16,7 +16,7 @@
 </ul>
 
 
-<h2>传入请求</h2>
+<h2 id="incoming" class="copy-link">传入请求</h2>
 
 <ul>
     <li>
@@ -121,7 +121,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFze
     </li>
 </ul>
 
-<h2>传出请求</h2>
+<h2 id="outgoing" class="copy-link">传出请求</h2>
 
 <ul>
     <li>

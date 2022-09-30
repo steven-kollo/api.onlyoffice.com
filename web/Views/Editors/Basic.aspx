@@ -33,12 +33,6 @@
     <p>API JavaScript 文件通常可以在以下编辑器文件夹中找到：</p>
     <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>
     <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称。</p>
-    <div class="note">
-        对于4.0 之前的 <b>文档服务器</b> 版本，API JavaScript 文件的路径如下所示：
-        <br />
-        <b>https://documentserver/OfficeWeb/apps/api/documents/api.js</b>
-    </div>
-
     <p>要嵌入编辑器的目标 HTML 文件需要有一个占位符 <em>div</em> 标记，这里将传递有关编辑器参数的所有信息：</p>
 
     <pre>

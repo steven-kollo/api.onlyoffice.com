@@ -21,7 +21,7 @@
     <ul>
         <li>目前，可以编辑以下文档格式：DOCX, XLSX, PPTX。</li>
         <li>以下格式可供查看：DOC, DOCX, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, OXPS, XLS, XLSX, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP。</li>
-        <li>该插件将在Office 文档的文档库中创建一个新的菜单选项： <b>在 ONLYOFFICE 中打开</b> / <b>在ONLYOFFICE 中编辑</b>。
+        <li>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for office documents.
             这允许多个用户实时协作并将这些更改保存回 Strapi。</li>
     </ul>
 
@@ -78,7 +78,7 @@ npm run develop
     <h2 id="configuration" class="copy-link">配置 Strapi ONLYOFFICE 集成插件</h2>
     <p>您可以通过 Strapi <b>面板 -> 设置 -> 全局设置 -> ONLYOFFICE</b>配置 ONLYOFFICE 应用程序。在设置页面，输入：</p>
     <ul>
-        <li><b>文档服务器地址</b>。安装的 ONLYOFFICE 文档服务器的 URL。</p></li>
+        <li><b>文档服务器地址</b>。安装的 ONLYOFFICE 文档服务器的 URL。</li>
         <li><b>文档服务器 JWT 密钥</b>。为了保护您的文档免遭未经授权的访问，请启用 JWT（可以在 <a href="<%= Url.Action("signature/") %>">此处</a>找到更多信息）。</li>
     </ul>
 

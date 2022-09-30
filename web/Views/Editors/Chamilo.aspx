@@ -17,8 +17,6 @@
 
     <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-chamilo" target="_blank">插件</a> 让用户能够 <a href="https://chamilo.org/en/" target="_blank">在Chamilo</a> 中使用 ONLYOFFICE Docs编辑办公文档。</p>
 
-    <p>该应用程序与 Chamilo v1.11.14 或更高版本兼容。</p>
-
     <h2 id="features" class="copy-link">特性</h2>
     <ul>
         <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX、PPSX、DOCXF、OFORM。</li>

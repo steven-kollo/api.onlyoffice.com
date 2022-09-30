@@ -16,6 +16,16 @@
     </h1>
 
     <p class="dscr">ONLYOFFICE 文档服务器 API 的更改列表。</p>
+    <h2 id="72" class="copy-link">Version 7.2</h2>
+    <ul>
+        <%--<li>Added the <a href="<%= Url.Action("connector") %>">Connector</a> class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.</li>--%>
+        <li>Added the <em>theme-contrast-dark</em> theme id to the <a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a> parameter.</li>
+        <li>Added the <em>phone</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#customer">editorConfig.customization.customer</a> parameter.</li>
+        <li>Added the <a href="<%= Url.Action("command/license") %>#license">connections_view</a>, <a href="<%= Url.Action("command/license") %>#license">users_view_count</a> and <a href="<%= Url.Action("command/license") %>#quota">users_view</a> parameters to the license response.</li>
+        <li>Added the <a href="<%= Url.Action("viewing") %>">live viewer</a> mode to the text document, spreadsheet and presentation editors.</li>
+        <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#embedview">embedview</a> action to the WOPI discovery.</li>
+    </ul>
+
     <h2 id="71" class="copy-link">7.1 版</h2>
     <ul>
         <li>用于启用 <a href="<%= Url.Action("signature/body") %>">正文中令牌</a> 的 <em>services.CoAuthoring.token.inbox.inBody</em> 和 <em>services.CoAuthoring.token.outbox.inBody</em> 参数已经弃用。</li>

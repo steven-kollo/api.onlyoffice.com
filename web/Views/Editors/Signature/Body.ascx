@@ -18,7 +18,7 @@
     从版本 7.1 开始，这些参数已被弃用。
     现在,传入请求使用正文中的令牌（如果存在）。
     否则，将采用标头令牌。
-    要指定接下来用于验证数据的内容，必须将 <em>services.CoAuthoring.server.tokenRequiredParams</em> 添加到 <em>local.json</em> 配置文件中。
+    要指定接下来用于验证数据的内容，必须将 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-tokenRequiredParams" target="_blank">services.CoAuthoring.server.tokenRequiredParams</a> 添加到 <em>local.json</em> 配置文件中。
     如果为 <b>true</b>，则仅使用令牌数据。否则，打开的请求部分与令牌数据合并。
 </p>
 <p>
@@ -53,7 +53,6 @@
             </td>
             <td>
                 指定在 <b>文档命令服务</b>、 <b>文档转换服务</b> 和 <b>文档生成器服务</b>的请求正文中启用令牌验证。
-                自 7.1 版起已弃用。</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -61,7 +60,6 @@
             <td>services.CoAuthoring.token.outbox.inBody</td>
             <td>
                 指定通过 <b>文档编辑服务</b> 到 <b>文档存储服务</b>为请求正文启用令牌生成。
-                自 7.1 版起已弃用。
             </td>
             <td>boolean</td>
             <td>false</td>

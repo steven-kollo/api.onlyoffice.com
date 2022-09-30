@@ -11,6 +11,8 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+    <% var connector = !string.IsNullOrEmpty(Page.Request["connector"]); %>
+
     <h1>
         <span class="hdr">方法</span>
     </h1>
@@ -21,6 +23,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
     <ul>
+        <% if (connector)
+           { %>
+        <li><a href="#createConnector">createConnector</a> - create the connector to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.</li>
+        <% } %>
         <li><a href="#denyEditingRights">denyEditingRights</a> - 拒绝编辑。</li>
         <li><a href="#destroyEditor">destroyEditor</a> - 销毁 <em>docEditor</em> 对象。</li>
         <li><a href="#downloadAs">downloadAs</a> - 下载编辑后的文件。</li>
@@ -39,6 +45,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 
     <h2>方法及其描述：</h2>
     <ul>
+        <% if (connector)
+           { %>
+        <li>
+            <p>
+                <b id="createConnector" class="copy-link">createConnector</b><span class="required">*</span> - create the <a href="<%= Url.Action("connector") %>">connector</a> to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+            </p>
+            <pre>
+docEditor.createConnector();
+</pre>
+        </li>
+        <% } %>
         <li>
             <p>
                 <b id="denyEditingRights" class="copy-link">denyEditingRights</b> - 拒绝编辑。
@@ -47,7 +64,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
             <pre>
 docEditor.denyEditingRights(message);
 </pre>
-            
+
             <table class="table">
                 <colgroup>
                     <col style="width: 100px;" />
@@ -907,5 +924,9 @@ docEditor.showMessage(message);
             </note>
         </li>
     </ul>
+    <% if (connector)
+       { %>
+    <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
+    <% } %>
 
 </asp:Content>

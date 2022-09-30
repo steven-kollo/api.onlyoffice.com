@@ -84,7 +84,7 @@
     <dd>
         <p>通常，文档在编辑时不会以编译的形式物理保存到计算机硬盘驱动器中。完成编辑并且处理该文档的所有用户都将其关闭后，该文件将转换为 Office Open XML 格式并保存到磁盘。</p>
         <p>之后， <b>文档编辑服务</b> 通知 <b>文档存储服务</b> 文件已准备好并且可以下载。</p>
-        <p>编辑结束和转换开始之间的时间在 <b>default.json</b> 配置文件中设置（默认为 5000 毫秒或 5 秒），并且可以更改：</p>
+        <p>The time between the end of the editing and the conversion start is set in the <b>default.json</b> configuration file with the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> parameter (5000 milliseconds or 5 seconds by default) and can be changed:</p>
         <pre>{
     "services": {
         "CoAuthoring": {

@@ -52,7 +52,9 @@
         "trial": false,
         "customization": false,
         "connections": 0,
+        "connections_view": 0,
         "users_count": 10,
+        "users_view_count": 10,
         "users_expire": 30
     },
     "server": {
@@ -64,6 +66,17 @@
     },
     "quota": {
         "users": [
+            {
+                "userid": "uid-0",
+                "expire": "2021-07-07T23:59:59.000Z"
+            },
+            {
+                "userid": "uid-1",
+                "expire": "2021-07-09T23:59:59.000Z"
+            },
+            ...
+        ],
+        "users_view": [
             {
                 "userid": "uid-0",
                 "expire": "2021-07-07T23:59:59.000Z"
@@ -96,13 +109,13 @@
     </thead>
     <tbody>
         <tr class="tablerow">
-            <td>error</td>
+            <td id="error" class="copy-link">error</td>
             <td>定义错误代码</td>
             <td>integer</td>
             <td>必需的</td>
         </tr>
         <tr class="tablerow">
-            <td>license</td>
+            <td id="license" class="copy-link">license</td>
             <td>定义文档许可证信息：
                 <ul>
                     <li>
@@ -134,11 +147,25 @@
                         <b>出现</b>: 可选的
                     </li>
                     <li>
+                        <b>connections_view</b> - the number of connections for the live viewer.
+                        <br />
+                        <b>type</b>: integer
+                        <br />
+                        <b>presence</b>: optional
+                    </li>
+                    <li>
                         <b>users_count</b> - 用户许可证的用户数。
                         <br />
                         <b>type</b>: integer
                         <br />
                         <b>出现</b>: 可选的
+                    </li>
+                    <li>
+                        <b>users_view_count</b> - the number of users for the live viewer.
+                        <br />
+                        <b>type</b>: integer
+                        <br />
+                        <b>presence</b>: optional
                     </li>
                     <li>
                         <b>users_expire</b> - 用户许可证过期的天数。
@@ -153,7 +180,7 @@
             <td>必需的</td>
         </tr>
         <tr class="tablerow">
-            <td>server</td>
+            <td id="server" class="copy-link">server</td>
             <td>定义服务器特征：
                 <ul>
                     <li>
@@ -197,7 +224,7 @@
             <td>必需的</td>
         </tr>
         <tr class="tablerow">
-            <td>quota</td>
+            <td id="quota" class="copy-link">quota</td>
             <td>定义用户配额值：
                 <ul>
                     <li>
@@ -206,6 +233,13 @@
                         <b>type</b>: object数组
                         <br />
                         <b>出现</b>: 必需的
+                    </li>
+                    <li>
+                        <b>users_view</b> - the user quota for the live viewer where <em>userid</em> - the id of the user who opened the editor, <em>expire</em> - date of viewing expiration for this user.
+                        <br />
+                        <b>type</b>: array of objects
+                        <br />
+                        <b>presence</b>: required
                     </li>
                 </ul>
             </td>

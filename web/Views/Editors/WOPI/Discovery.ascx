@@ -13,11 +13,43 @@
 
     <h2 id="actions" class="copy-link">WOPI 发现操作</h2>
 
-    <p>discovery XML的 <b>操作</b> 元素提供了关于在线办公的重要特征。该元素代表：</p>
+    <p>The <b>action</b> element of the discovery XML provides the important characteristics of the online office. This element represents:</p>
     <ul>
         <li>online office中可用的文档操作，</li>
         <li>支持的文件格式（扩展名）。</li>
     </ul>
+
+    <div class="header-gray">WOPI actions</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="view" class="copy-link">view</td>
+                <td>Renders a non-editable view of a document.</td>
+            </tr>
+            <tr>
+                <td id="edit" class="copy-link">edit</td>
+                <td>Allows users to edit a document.</td>
+            </tr>
+            <tr>
+                <td id="editnew" class="copy-link">editnew</td>
+                <td>Creates a new document using a blank file template appropriate to the file type and opens this file for editing in the online office.</td>
+            </tr>
+            <tr>
+                <td id="embedview" class="copy-link">embedview</td>
+                <td>Renders a non-editable view of a document that is optimized for embedding in a web page. This action is available starting from version 7.2.</td>
+            </tr>
+        </tbody>
+    </table>
 
     <div class="header-gray">属性</div>
     <table class="table">
@@ -92,6 +124,11 @@ ui=en-us&thm=1&"/&gt;
                 <td id="dchat" class="copy-link">dchat</td>
                 <td>指示 WOPI 服务器包含dchat值为 <em>"1"</em>，以加载一个不创建或加入聊天会话的文档视图。</td>
                 <td>1</td>
+            </tr>
+            <tr>
+                <td id="embed" class="copy-link">embed</td>
+                <td>Indicates that the output of the action will be embedded in a web page (<b>true</b>).</td>
+                <td>true</td>
             </tr>
         </tbody>
     </table>

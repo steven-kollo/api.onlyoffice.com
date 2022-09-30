@@ -34,6 +34,8 @@
         <li><a href="<%= Url.Action("anonymoususers") %>">为匿名用户设置名称</a></li>
         <li><a href="<%= Url.Action("commenting") %>">对文档发表评论</a></li>
         <li><a href="<%= Url.Action("comparing") %>">比较文件</a></li>
+        <li><a href="<%= Url.Action("viewing") %>">Viewing</a></li>
+        <li><a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a></li>
     </ul>
     
     <br />

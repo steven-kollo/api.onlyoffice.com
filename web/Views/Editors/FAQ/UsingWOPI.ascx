@@ -9,7 +9,7 @@
 <dl class="faq_block" id="wopi_1">
     <dt>如何启用WOPI？</dt>
     <dd>
-        <p>要启用 WOPI，请将Document Server 配置中的 <em>wopi.enable</em> 参数设置为 <b>true</b>。</p>
+        <p>要启用 WOPI，请将Document Server 配置中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> 参数设置为 <b>true</b>。</p>
         <div class="header-gray">参数</div>
         <table class="table">
             <colgroup>

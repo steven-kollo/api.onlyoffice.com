@@ -33,7 +33,7 @@
     
     <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        您将需要一个 ONLYOFFICE Docs (文档服务器) 实例，该实例可从 Confluence 和任何客户终端解析和连接（插件支持 3.0 版及更高版本）。
+        您将需要一个 ONLYOFFICE Docs (文档服务器) 实例，该实例可从 Confluence 和任何客户终端解析和连接。
         如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
         ONLYOFFICE Docs 还必须能够直接发布到 Confluence上。
     </p>

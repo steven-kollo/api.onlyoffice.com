@@ -43,9 +43,10 @@
 
     <p>在使用 ONLYOFFICE Docs API 文档之前，如有必要，建议进行以下设置：</p>
     <ul>
+        <li>configure <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx" target="_blank">ONLYOFFICE Docs server settings</a> in ONLYOFFICE Docs configuration file;</li>
         <li>将 ONLYOFFICE Docs 切换到 HTTPS 协议以使用 <a href="https://helpcenter.onlyoffice.com/installation/docs-community-https-linux.aspx" target="_blank">SSL</a>证书进行安全连接；</li>
         <li>为 ONLYOFFICE Docs添加额外的 <a href="https://helpcenter.onlyoffice.com/installation/docs-community-install-fonts-linux.aspx" target="_blank">字体</a> 以增强编辑器的功能；</li>
-        <li>下载应用程序界面的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">外部主题</a>。</li>
+        <li>add your own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">color themes</a> for the application interface.</li>
     </ul>
 
 </asp:Content>

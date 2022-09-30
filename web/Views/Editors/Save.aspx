@@ -69,7 +69,7 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         转换开始延迟对于允许在不保存文件的情况下返回文件编辑会话是必要的，例如在打开文件进行编辑的情况下重新加载浏览器页面时。
-        默认转换开始延迟时间在 <b>文档服务器</b> 配置文件中定义，可在以下路径中找到：
+        The default conversion start delay time is defined with the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> parameter in <b>Document Server</b> configuration file, which can be found at the following path:
     </p>
     <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>。</div>
     <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>。</div>
@@ -85,7 +85,7 @@ new DocsAPI.DocEditor("placeholder", {
     <div class="header-gray">参数</div>
     <table class="table">
         <colgroup>
-            <col style="width: 300px;" />
+            <col style="width: 310px;" />
             <col />
             <col style="width: 100px;" />
             <col style="width: 100px;" />
@@ -101,7 +101,7 @@ new DocsAPI.DocEditor("placeholder", {
         <tbody>
             <tr class="tablerow">
                 <td>services.CoAuthoring.server.savetimeoutdelay</td>
-                <td>定义编辑文件关闭后的转换开始延迟时间（以毫秒为单位）。</td>
+                <td>Defines the conversion start delay time (measured in milliseconds) after the edited file is closed.</td>
                 <td>integer</td>
                 <td>5000</td>
             </tr>
@@ -136,7 +136,7 @@ new DocsAPI.DocEditor("placeholder", {
             将请求发送到 <b>回调处理程序</b> 时， <em>forcesavetype</em> 参数的值为 <b>0</b>。</li>
         <li>启用 <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> 模式，在编辑器初始化配置中将其设置为 <b>true</b>。
             在这种情况下，每次用户点击 <b>保存</b> 按钮时，forcesave 都会完成，并且当将请求发送到 <b>回调处理程序</b> 时， <em>forcesavetype</em> 参数的值为 <b>1</b>。</li>
-        <li>您可以在 <b>文档服务器</b> 附加配置文件中启用重复强制保存启动，该文件可以在以下路径找到（如果您已经创建它）或存放到以下路径：
+        <li>You can enable <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly" target="_blank">the repeating forcesave start</a> in the <b>Document Server</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
             <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>。</div>
             <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>。</div>
 
@@ -161,7 +161,7 @@ new DocsAPI.DocEditor("placeholder", {
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.enable</td>
                         <td>
-                            指定启用重复强制保存。
+                            Defines if the automatic forcesaving is enabled or not.
                             默认值为 <b>false</b>。
                         </td>
                         <td>boolean</td>
@@ -169,7 +169,7 @@ new DocsAPI.DocEditor("placeholder", {
                     </tr>
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.interval</td>
-                        <td>定义初始化强制保存的时间间隔（以分钟为单位）。</td>
+                        <td>Defines the interval time in minutes for initiating the automatic forcesaving.</td>
                         <td>string</td>
                         <td>5m</td>
                     </tr>
@@ -192,12 +192,15 @@ new DocsAPI.DocEditor("placeholder", {
 </pre>
         将请求发送到 <b>回调处理程序</b> 时， <em>forcesavetype</em> 参数的值为 <b>2</b>。</li>
     </ul>
+    <note>Please note that you cannot see the document versions created with the force saving option in the document history.
+        The reason is that ONLYOFFICE Docs <a href="<%= Url.Action("history") %>#apply-changes">highlights the changes</a> made from the beginning of the current document session, not from the beginning of the document version.
+        And even if several document versions are created during one session, all changes from this session will be highlighted.</note>
 
 
     <h2 id="assemblyFormatAsOrigin" class="copy-link">以原始格式保存</h2>
 
     <p>
-        从版本 7.0 开始， <em>assemblyFormatAsOrigin</em> 服务器设置默认启用，以便将组装好的文件保存为其原始格式。
+        从版本 7.0 开始， <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-assemblyFormatAsOrigin" target="_blank">assemblyFormatAsOrigin</a> 服务器设置默认启用，以便将组装好的文件保存为其原始格式。
         它用于将文件格式从 OOXML 更改为 ODF 或使用宏保存文件。
     </p>
 

@@ -261,6 +261,13 @@
                         <b>示例</b>："John Smith and Co."；
                     </li>
                     <li>
+                        <b>phone</b> - the phone of the company or person who gives access to the editors or the editor authors,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "123456789";
+                    </li>
+                    <li>
                         <b>www</b> - 上述公司或个人的主页地址，
                         <br />
                         <b>类型</b>：string，
@@ -748,8 +755,8 @@
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
             <td>
-                定义是否将运行文档宏。
-                默认值为 <b>true</b>。
+                Defines if document macros will be automatically run when the editor opens.
+                默认值为 <b>true</b>。 The <b>false</b> value hides the <a href="#macrosMode">macros settings</a> from the user.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -757,17 +764,17 @@
         <tr>
             <td id="macrosMode" class="copy-link">macrosMode</td>
             <td>
-                定义宏运行模式。
+                Defines the macros run mode when autostart is enabled.
                 可以取以下值：
                 <ul>
-                    <li><b>disable</b> - 根本不运行；</li>
+                    <li><b>disable</b> - don't run macros at all;</li>
                     <li><b>enable</b> - 自动运行所有宏；</li>
-                    <li><b>warn</b> - 对宏发出警告并请求运行权限。</li>
+                    <li><b>warn</b> - warn about macros and ask permission to run them.</li>
                 </ul>
                 默认值为 <b>warn</b>。
             </td>
-            <td>boolean</td>
-            <td>true</td>
+            <td>string</td>
+            <td>warn</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
@@ -1035,13 +1042,15 @@
                 定义编辑器主题设置。
                 可以通过两种方式设置：
                 <ul>
-                    <li><b>theme id</b> - 用户通过其 id 设置主题参数（<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>），</li>
+                    <li><b>theme id</b> - 用户通过其 id 设置主题参数（<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>, <b>theme-contrast-dark</b>），</li>
                     <li>
                         <b>default theme</b> - 将设置默认的深色或浅色主题值（<b>default-dark</b>，<b>default-light</b>）。
                         默认的浅色主题是 <b>theme-classic-light</b>。
                     </li>
                 </ul>
                 第一个选项具有更高的优先级。
+                <p></p>
+                Apart from the available editor themes, the user can also customize their own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">color themes</a> for the application interface.
             </td>
             <td>string</td>
             <td>theme-dark</td>
@@ -1123,6 +1132,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
+                "phone": "123456789",
                 "www": "example.com"
             },
             "features": {

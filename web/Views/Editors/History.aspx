@@ -150,6 +150,9 @@ docEditor.refreshHistory({
 </pre>
             <p>其中 <b>changes</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 的 <em>更改</em>。</p>
             <p>其中 <b>serverVersion</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 中的 <em>serverVersion</em>。</p>
+            <note>ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version.
+                And even if several document versions are created during one session, all changes from this session will be highlighted.
+                Therefore, you cannot see the document versions created with the <a href="<%= Url.Action("save") %>#forcesave">force saving option</a> in the document history.</note>
         </li>
         <li>
             <p>

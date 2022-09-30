@@ -58,20 +58,21 @@
                 该对象具有以下参数：
                 <ul>
                     <li>
-                        <b>mode</b> - 共同编辑模式（<em>fast</em> 或 <em>strict</em>），
+                        <b>mode</b> - 共同编辑模式（<em>fast</em> 或 <em>strict</em>）。 The default value is <b>fast</b>,
                         <br />
                         <b>类型</b>：string，
                         <br />
                         <b>示例</b>："fast";
                     </li>
                     <li>
-                        <b>change</b> - 定义是否可以在编辑器界面中更改共同编辑模式，
+                        <b>change</b> - 定义是否可以在编辑器界面中更改共同编辑模式。 The default value is <b>fast</b>，
                         <br />
                         <b>类型</b>：boolean，
                         <br />
                         <b>示例</b>：true。
                     </li>
                 </ul>
+                <p>This parameter is used to apply the <a href="<%= Url.Action("coedit") %>#modes">co-editing</a> and <a href="<%= Url.Action("viewing") %>">viewing</a> modes.</p>
             </td>
             <td>object</td>
             <td></td>
@@ -101,7 +102,7 @@
                 <img src="<%= Url.Content("~/content/img/editor/create.png") %>" alt="" />
             </td>
         </tr>
-        <tr class="tablerow">
+        <tr>
             <td id="lang" class="copy-link">lang</td>
             <td>
                 定义编辑器界面语言（如果存在英语以外的其他语言）。
@@ -110,6 +111,13 @@
             </td>
             <td>string</td>
             <td>"en"</td>
+        </tr>
+        <tr class="tablerow tablerow-note">
+            <td colspan="4">
+                <div class="note">Please note that to translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan)
+                (these languages were added in version 7.2), you need to use the four letter language codes - <b>pt-PT</b> or <b>zh-TW</b>, respectively.
+                The two letter <b>pt</b> language code sets Portuguese (Brazil) and the <b>zh</b> code specifies Chinese (People's Republic of China).</div>
+            </td>
         </tr>
         <tr>
             <td id="location" class="copy-link">location</td>

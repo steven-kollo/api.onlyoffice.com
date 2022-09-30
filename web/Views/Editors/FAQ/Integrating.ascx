@@ -25,6 +25,7 @@
             <li><a href="<%= Url.Action("alfresco") %>">Alfresco</a></li>
             <li><a href="<%= Url.Action("chamilo") %>">Chamilo</a></li>
             <li><a href="<%= Url.Action("confluence") %>">Confluence</a></li>
+            <li><a href="<%= Url.Action("drupal") %>">Drupal</a></li>
             <li><a href="<%= Url.Action("humhub") %>">HumHub</a></li>
             <li><a href="<%= Url.Action("liferay") %>">Liferay</a></li>
             <li><a href="<%= Url.Action("mattermost") %>">Mattermost</a></li>
@@ -36,6 +37,7 @@
             <li><a href="<%= Url.Action("redmine") %>">Redmine</a></li>
             <li><a href="<%= Url.Action("sharepoint") %>">SharePoint</a></li>
             <li><a href="<%= Url.Action("strapi") %>">Strapi</a></li>
+            <li><a href="<%= Url.Action("wordpress") %>">WordPress</a></li>
         </ul>
         <p>大多数连接器可从相应的服务应用程序商店获得，并且易于安装。只需按照 <a href="<%= Url.Action("plugins") %>">连接器页面</a> 上的分步说明将文档服务器连接到您的服务。</p>
     </dd>

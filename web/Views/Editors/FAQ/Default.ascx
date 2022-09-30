@@ -82,6 +82,7 @@
 <ul class="faq_all_list">
     <li><a href="<%= Url.Action("faq/managingversions") %>#versions_1">处理文档历史事件时可以使用哪些方法？</a></li>
     <li><a href="<%= Url.Action("faq/managingversions") %>#versions_2">如何显示具有突出显示更改的文档？</a></li>
+    <li><a href="<%= Url.Action("faq/managingversions") %>#versions_3">Why is a new version not shown in the document history after I forcefully save a document?</a></li>
 </ul>
 
 <h5><a class="link_in_heading" href="<%= Url.Action("faq/saving") %>">保存问题</a></h5>
