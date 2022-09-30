@@ -1,23 +1,23 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-    <h1>
-        <a class="up" href="<%= Url.Action("wopi/restapi") %>"></a>
-        <span class="hdr">RefreshLock</span>
-    </h1>
+<h1>
+    <a class="up" href="<%= Url.Action("wopi/restapi") %>"></a>
+    <span class="hdr">刷新锁定</span>
+</h1>
 
     <div class="header-gray"><b>POST /wopi/files/<i>(file_id)</i></b></div>
-    <p class="dscr">Refreshes the lock on a file by resetting its automatic expiration timer to 30 minutes. 
-        This lock will expire automatically after 30 minutes unless it is changed by the <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a> or another <em>RefreshLock</em> operations.</p>
-    <p>This operation works as follows:</p>
+    <p class="dscr">通过将文件的自动到期计时器重置为 30 分钟来刷新文件的锁定。
+        此锁定将在 30 分钟后自动过期，除非它被 <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a> 或其他 <em>RefreshLock</em> 操作更改。</p>
+    <p>此操作的工作原理如下：</p>
     <ol>
-        <li>The WOPI host checks if a file is currently locked or not.</li>
-        <li>If the file is <b>unlocked</b>, or if the file is currently <b>locked</b> and the <b>X-WOPI-Lock</b> value does not match the lock currently on the file, 
-        the host must return <b>409 Conflict</b> (<em>"lock mismatch"</em>) and include the <b>X-WOPI-Lock</b> response header containing the value of the current lock on the file. 
-        In the case where the file is unlocked, the host must set <b>X-WOPI-Lock</b> to the empty string.</li>
-        <li>In the case where the file is locked by a third-party client, hosts should still always include the current lock ID in the <b>X-WOPI-Lock</b> response header.</li>
+        <li>WOPI 主机检查文件当前是否被锁定。</li>
+        <li>如果文件 <b>未被锁定</b>，或者文件当前 <b>被锁定</b> 并且 <b>X-WOPI-Lock</b> 值与文件当前锁不匹配，
+        则主机必须返回 <b>409 Conflict</b> (<em>"lock mismatch"</em>) 并包含 <b>X-WOPI-Lock</b> 响应标头，标头中包含文件当前锁的值。
+        在文件未被锁定的情况下，主机必须将 <b>X-WOPI-Lock</b> 设置为空字符串。</li>
+        <li>在文件被第三方客户端锁定的情况下，主机仍应始终在X-WOPI-Lock响应标头中包含当前锁ID。在文件被第三方客户端锁定的情况下，主机仍应始终在 <b>X-WOPI-Lock</b> 响应标头中包含当前锁 ID。</li>
     </ol>
 
-    <div class="header-gray">Parameters</div>
+    <div class="header-gray">参数</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -26,21 +26,21 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>file_id</td>
-                <td>The file ID that must be URL safe.</td>
+                <td>必须是 URL 安全的文件 ID。</td>
                 <td>string</td>
             </tr>
         </tbody>
     </table>
 
-    <div class="header-gray">Query parameters</div>
+    <div class="header-gray">查询参数</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -49,21 +49,21 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>access_token</td>
-                <td>An access token that the host will use to determine whether the request is authorized.</td>
+                <td>访问令牌主机将用它确定请求是否被授权。</td>
                 <td>string</td>
             </tr>
         </tbody>
     </table>
 
-    <div class="header-gray">Request headers</div>
+    <div class="header-gray">请求标头</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -73,29 +73,29 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Presence</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
+                <td>出现</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>X-WOPI-Override</td>
-                <td>The requested operation from the WOPI server (<em>REFRESH_LOCK</em>).</td>
+                <td>来自 WOPI 服务器的请求操作 (<em>REFRESH_LOCK</em>)。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
             <tr>
                 <td>X-WOPI-Lock</td>
-                <td>The lock ID that the host must use to identify the lock on the file.</td>
+                <td>锁ID主机必须用它来标识文件上的锁。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
         </tbody>
     </table>
 
-    <div class="header-gray">Response headers</div>
+    <div class="header-gray">响应标头</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -105,25 +105,25 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Presence</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
+                <td>出现</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>X-WOPI-Lock</td>
-                <td>The lock ID identifying the current lock on the file. This header must always be included when responding to the request with <b>409 Conflict</b>. 
-                It should not be included when responding to the request with <b>200 OK</b>.</td>
+                <td>锁ID标识文件上的当前锁。当使用 <b>409 Conflict</b>响应请求时，必须始终包含此标头。
+                    用 <b>200 OK</b>响应请求时不应包含它。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr>
                 <td>X-WOPI-LockFailureReason</td>
-                <td>The cause of the lock failure. This header may be included when responding to the request with <b>409 Conflict</b>. It must only be used for logging purposes.</td>
+                <td>锁定失败的原因。当使用 <b>409 Conflict</b>响应请求时，可能会包含此标头。它只能用于记录目的。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
         </tbody>
     </table>

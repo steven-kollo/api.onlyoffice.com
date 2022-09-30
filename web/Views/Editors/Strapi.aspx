@@ -1,4 +1,4 @@
-<%@ Page
+﻿<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,41 +6,41 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Strapi ONLYOFFICE integration plugin
+    Strapi ONLYOFFICE 集成插件
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Strapi ONLYOFFICE integration plugin</span>
+        <span class="hdr">Strapi ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-strapi" target="_blank">plugin</a> enables users to edit office documents from <a href="https://strapi.io/" target="_blank">Strapi</a> using ONLYOFFICE Docs.</p>
+    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-strapi" target="_blank">插件</a> 让用户能够从 <a href="https://strapi.io/" target="_blank">Strapi</a> 使用 ONLYOFFICE Docs编辑office文档。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX.</li>
-        <li>The following formats are available for viewing: DOC, DOCX, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, OXPS, XLS, XLSX, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP.</li>
-        <li>The plugin will create a new <b>Open in ONLYOFFICE</b> / <b>Edit in ONLYOFFICE</b> menu option within the document library for office documents. 
-            This allows multiple users to collaborate in real time and save back those changes to Strapi.</li>
+        <li>目前，可以编辑以下文档格式：DOCX, XLSX, PPTX。</li>
+        <li>以下格式可供查看：DOC, DOCX, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, OXPS, XLS, XLSX, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP。</li>
+        <li>该插件将在Office 文档的文档库中创建一个新的菜单选项： <b>在 ONLYOFFICE 中打开</b> / <b>在ONLYOFFICE 中编辑</b>。
+            这允许多个用户实时协作并将这些更改保存回 Strapi。</li>
     </ul>
 
 
-    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Strapi and any end clients. 
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>. 
-        ONLYOFFICE Docs must also be able to POST to Strapi directly.
+        您需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 Strapi 和任何客户终端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE Docs 还必须能够直接发布到 Strapi。
     </p>
-    <p>The easiest way to install an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
+    <p>安装 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
-    <h2 id="install" class="copy-link">Installing Strapi ONLYOFFICE integration plugin</h2>
-    <p>To start using ONLYOFFICE Docs with Strapi, follow these steps:</p>
+    <h2 id="install" class="copy-link">安装 Strapi ONLYOFFICE 集成插件</h2>
+    <p>要开始将 ONLYOFFICE Docs 与 Strapi 一起使用，请执行以下步骤：</p>
     <ol>
         <li>
-            <p>Change the Strapi middlewares file: <em>strapi/config/middlewares.js</em>.</p>
-            <p>To allow inserting a frame with the editor and loading <em>api.js</em>, replace the <em>strapi::security</em> line in this file with the following:</p>
+            <p>更改 Strapi 中间件文件： <em>strapi/config/middlewares.js</em>。</p>
+            <p>要允许使用编辑器插入框架并加载 <em>api.js</em>，请将此文件中的 <em>strapi::security</em> 行替换为以下内容：</p>
             <pre>
 {
     name: "strapi::security",
@@ -55,14 +55,14 @@
     },
 }
 </pre>
-            <p>If such a config already exists, you just need to add <em>directives</em>.</p>
+            <p>如果这样的配置已经存在，您只需要添加 <em>指令</em>。</p>
         </li>
         <li>
-            <p>Install the plugin in your Strapi project:</p>
+            <p>在您的 Strapi 项目中安装插件：</p>
             <span class="commandline">npm install onlyoffice-stapi --save</span>
         </li>
         <li>
-            <p>After successful installation you have to rebuild the admin UI so it'll include this plugin. To rebuild and restart Strapi run:</p>
+            <p>成功安装后，您必须重建管理 UI，以便包含此插件。要重建并重新启动 Strapi，请运行：</p>
             <span class="commandline"># using yarn
 yarn build
 yarn develop
@@ -75,26 +75,26 @@ npm run develop
     </ol>
 
 
-    <h2 id="configuration" class="copy-link">Configuring Strapi ONLYOFFICE integration plugin</h2>
-    <p>You can configure ONLYOFFICE app via Strapi <b>Dashboard -> Settings -> Global settings -> ONLYOFFICE</b>. On the settings page, enter:</p>
+    <h2 id="configuration" class="copy-link">配置 Strapi ONLYOFFICE 集成插件</h2>
+    <p>您可以通过 Strapi <b>面板 -> 设置 -> 全局设置 -> ONLYOFFICE</b>配置 ONLYOFFICE 应用程序。在设置页面，输入：</p>
     <ul>
-        <li><b>Document server address</b>. The URL of the installed ONLYOFFICE Document Server.</p></li>
-        <li><b>Document server JWT secret key</b>. To protect your documents from unauthorized access, enable JWT (further information can be found <a href="<%= Url.Action("signature/") %>">here</a>).</li>
+        <li><b>文档服务器地址</b>。安装的 ONLYOFFICE 文档服务器的 URL。</p></li>
+        <li><b>文档服务器 JWT 密钥</b>。为了保护您的文档免遭未经授权的访问，请启用 JWT（可以在 <a href="<%= Url.Action("signature/") %>">此处</a>找到更多信息）。</li>
     </ul>
 
 
-    <h2 id="usage" class="copy-link">Using Strapi ONLYOFFICE integration plugin</h2>
-    <p>Users are able to view, edit, and co-author documents added to the Strapi Media Library. Documents available for viewing/editing can be found and sorted on the ONLYOFFICE file page within Strapi. The editor opens by clicking on the file name.</p>
-    <p><b>Access rights</b></p>
+    <h2 id="usage" class="copy-link">使用 Strapi ONLYOFFICE 集成插件</h2>
+    <p>用户可以查看、编辑和共同创作添加到 Strapi 媒体库的文档。可供查看/编辑的文档可在Strapi的ONLYOFFICE文件页面上找到并被分类整理。通过单击文件名打开编辑器。</p>
+    <p><b>访问权限</b></p>
     <ul>
-        <li>Opening files for editing: roles with the <b>Update (crop, details, replace) + delete</b> permission setting.</li>
-        <li>Opening files for viewing: roles with the <b>Access the Media Library</b> permission setting.</li>
+        <li>打开文件进行编辑：具有 <b>更新（裁剪、详细信息、替换）+删除</b> 权限设置的角色。</li>
+        <li>打开文件进行查看：具有 <b>访问媒体库</b> 权限设置的角色。</li>
     </ul>
 
-    <h2 id="howitworks" class="copy-link">How it works</h2>
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
+    <p>ONLYOFFICE 集成遵循 <a href="<%= Url.Action("basic") %>">此处</a>API文档 。
 
-    <br />
-    <p>Download the Strapi ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-strapi" target="_blank">here</a>.</p>
+    </p><br />
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-strapi" target="_blank">此处</a>下载 Strapi ONLYOFFICE 集成插件。</p>
 
 </asp:Content>

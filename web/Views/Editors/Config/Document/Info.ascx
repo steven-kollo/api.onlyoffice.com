@@ -2,13 +2,13 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("config/document") %>"></a>
-    <span class="hdr">Document Info</span>
+    <span class="hdr">文档信息</span>
 </h1>
 
-<div class="header-gray">Description</div>
-<p class="dscr">The document info section allows to change additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings).</p>
+<div class="header-gray">描述</div>
+<p class="dscr">文档信息部分允许更改文档的其他参数（文档所有者、存储文档的文件夹、上传日期、共享设置）。</p>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -18,18 +18,18 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Example</td>
+            <td>名称</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>示例</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td id="author" class="copy-link">author</td>
             <td>
-                Defines the name of the document author/creator.
-                Deprecated since version 5.4, please use <a href="#owner">owner</a> instead.
+                定义文档作者/创建者的名称。
+                自 5.4 版起已弃用，请改用 <a href="#owner">owner</a>。
             </td>
             <td>string</td>
             <td>"John Smith"</td>
@@ -37,8 +37,8 @@
         <tr class="tablerow">
             <td id="created" class="copy-link">created</td>
             <td>
-                Defines the document creation date.
-                Deprecated since version 5.4, please use <a href="#uploaded">uploaded</a> instead.
+                定义文档创建日期。
+                自 5.4 版起已弃用，请改用 <a href="#uploaded">uploaded</a>。
             </td>
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
@@ -46,9 +46,9 @@
         <tr>
             <td id="favorite" class="copy-link">favorite</td>
             <td>
-                Defines the highlighting state of the <em>Favorite</em> icon.
-                When the user clicks the icon, the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event is called.
-                If the parameter is <em>undefined</em>, the <em>Favorite</em> icon is not displayed at the editor window header.
+                定义 <em>收藏</em> 图标的高亮状态。
+                当用户单击图标时，将调用 <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> 事件。
+                如果参数 <em>未定义</em>，则 <em>收藏</em> 图标不会显示在编辑器窗口标题处。
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -60,45 +60,45 @@
         </tr>
         <tr class="tablerow">
             <td id="folder" class="copy-link">folder</td>
-            <td>Defines the folder where the document is stored (can be empty in case the document is stored in the root folder).</td>
+            <td>定义存储文档的文件夹（如果文档存储在根文件夹中，则可以为空）。</td>
             <td>string</td>
             <td>"Example Files"</td>
         </tr>
         <tr class="tablerow">
             <td id="owner" class="copy-link">owner</td>
-            <td>Defines the name of the document owner/creator.</td>
+            <td>定义文档所有者/创建者的名称。</td>
             <td>string</td>
             <td>"John Smith"</td>
         </tr>
         <tr>
             <td id="sharingSettings" class="copy-link">sharingSettings</td>
-            <td>Displays the information about the settings which allow to share the document with other users:
+            <td>显示有关允许与其他用户共享文档的设置的信息：
                 <ul>
                     <li>
-                        <b>isLink</b> - changes the user icon to the link icon,
+                        <b>isLink</b> - 将用户图标更改为链接图标，
                         <br />
-                        <b>type</b>: boolean,
+                        <b>类型</b>：boolean，
                         <br />
-                        <b>example</b>: false;
+                        <b>示例</b>：false；
                     </li>
                     <li>
-                        <b>permissions</b> - the access rights for the user with the name above.
-                        Can be <b>Full Access</b>, <b>Read Only</b> or <b>Deny Access</b>,
+                        <b>permissions</b> - 具有上述名称的用户的访问权限。
+                        可以是 <b>完全访问</b>、 <b>只读</b> 或 <b>拒绝访问</b>,
                         <br />
-                        <b>type</b>: string,
+                        <b>类型</b>：string，
                         <br />
-                        <b>example</b>: "Full Access";
+                        <b>示例</b>：完全访问；
                     </li>
                     <li>
-                        <b>user</b> - the name of the user the document will be shared with,
+                        <b>user</b> - 文档将与之共享的用户的名称，
                         <br />
-                        <b>type</b>: string,
+                        <b>类型</b>：string，
                         <br />
-                        <b>example</b>: "John Smith".
+                        <b>示例</b>："John Smith"。
                     </li>
                 </ul>
             </td>
-            <td>array of object</td>
+            <td>object数组</td>
             <td></td>
         </tr>
         <tr class="tablerow">
@@ -108,7 +108,7 @@
         </tr>
         <tr class="tablerow">
             <td id="uploaded" class="copy-link">uploaded</td>
-            <td>Defines the document uploading date.</td>
+            <td>定义文档上传日期。</td>
             <td>string</td>
             <td>"2010-07-07 3:46 PM"</td>
         </tr>
@@ -121,7 +121,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {

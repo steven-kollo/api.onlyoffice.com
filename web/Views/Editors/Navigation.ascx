@@ -2,240 +2,240 @@
     Language="C#"
     Inherits="System.Web.Mvc.ViewUserControl" %>
 
-<div class="treeheader">Get Started</div>
+<div class="treeheader">开始使用</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("basic") %>">Basic concepts</a>
+        <a href="<%= Url.Action("basic") %>">基本概念</a>
     </li>
     <li>
-        <a href="<%= Url.Action("getdocs") %>">Get ONLYOFFICE Docs</a>
+        <a href="<%= Url.Action("getdocs") %>">获取 ONLYOFFICE 文档</a>
     </li>
     <li>
-        <a href="<%= Url.Action("try") %>">Try now</a>
+        <a href="<%= Url.Action("try") %>">现在试试</a>
     </li>
     <li>
-        <a href="<%= Url.Action("demopreview") %>">Language-specific examples</a>
+        <a href="<%= Url.Action("demopreview") %>">特定语言示例</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("example/csharp") %>">.Net (C#) example</a>
+                <a href="<%= Url.Action("example/csharp") %>">.Net (C#) 示例</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/java") %>">Java example</a>
+                <a href="<%= Url.Action("example/java") %>">Java 示例</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/javaspring") %>">Java Spring example</a>
+                <a href="<%= Url.Action("example/javaspring") %>">Java Spring 示例</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/nodejs") %>">Node.js example</a>
+                <a href="<%= Url.Action("example/nodejs") %>">Node.js 示例</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/php") %>">PHP example</a>
+                <a href="<%= Url.Action("example/php") %>">PHP 示例</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/python") %>">Python example</a>
+                <a href="<%= Url.Action("example/python") %>">Python 示例</a>
             </li>
             <li>
-                <a href="<%= Url.Action("example/ruby") %>">Ruby example</a>
+                <a href="<%= Url.Action("example/ruby") %>">Ruby示例</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("plugins") %>">Ready-to-use connectors</a>
+        <a href="<%= Url.Action("plugins") %>">即用型连接器</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("alfresco") %>">Alfresco integration</a>
+                <a href="<%= Url.Action("alfresco") %>">Alfresco整合</a>
             </li>
             <li>
-                <a href="<%= Url.Action("chamilo") %>">Chamilo integration</a>
+                <a href="<%= Url.Action("chamilo") %>">Chamilo整合</a>
             </li>
             <li>
-                <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
+                <a href="<%= Url.Action("confluence") %>">Confluence 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("humhub") %>">HumHub integration</a>
+                <a href="<%= Url.Action("humhub") %>">HumHub 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("jira") %>">Jira integration</a>
+                <a href="<%= Url.Action("jira") %>">Jira 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("liferay") %>">Liferay integration</a>
+                <a href="<%= Url.Action("liferay") %>">Liferay 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("mattermost") %>">Mattermost integration</a>
+                <a href="<%= Url.Action("mattermost") %>">Mattermost整合</a>
             </li>
             <li>
-                <a href="<%= Url.Action("moodle") %>">Moodle integration</a>
+                <a href="<%= Url.Action("moodle") %>">Moodle 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("nextcloud") %>">Nextcloud integration</a>
+                <a href="<%= Url.Action("nextcloud") %>">Nextcloud 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("nuxeo") %>">Nuxeo integration</a>
+                <a href="<%= Url.Action("nuxeo") %>">Nuxeo 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("owncloud") %>">ownCloud integration</a>
+                <a href="<%= Url.Action("owncloud") %>">own云集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("plone") %>">Plone integration</a>
+                <a href="<%= Url.Action("plone") %>">Plone集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("redmine") %>">Redmine integration</a>
+                <a href="<%= Url.Action("redmine") %>">Redmine 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("sharepoint") %>">SharePoint integration</a>
+                <a href="<%= Url.Action("sharepoint") %>">SharePoint 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("strapi") %>">Strapi integration</a>
+                <a href="<%= Url.Action("strapi") %>">Strapi 集成</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("howitworks") %>">How it works</a>
+        <a href="<%= Url.Action("howitworks") %>">它是如何运作的</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("open") %>">Opening file</a>
+                <a href="<%= Url.Action("open") %>">打开文件</a>
             </li>
             <li>
-                <a href="<%= Url.Action("save") %>">Saving file</a>
+                <a href="<%= Url.Action("save") %>">保存文件</a>
             </li>
             <li>
-                <a href="<%= Url.Action("coedit") %>">Co-editing</a>
+                <a href="<%= Url.Action("coedit") %>">共同编辑</a>
             </li>
             <li>
-                <a href="<%= Url.Action("history") %>">Document history</a>
+                <a href="<%= Url.Action("history") %>">文件历史</a>
             </li>
             <li>
-                <a href="<%= Url.Action("actionlink") %>">Action link</a>
+                <a href="<%= Url.Action("actionlink") %>">动作链接</a>
             </li>
             <li>
-                <a href="<%= Url.Action("mentions") %>">Mentions</a>
+                <a href="<%= Url.Action("mentions") %>">提及</a>
             </li>
             <li>
-                <a href="<%= Url.Action("rename") %>">Renaming files</a>
+                <a href="<%= Url.Action("rename") %>">重命名文件</a>
             </li>
             <li>
-                <a href="<%= Url.Action("review") %>">Reviewing</a>
+                <a href="<%= Url.Action("review") %>">审查</a>
             </li>
             <li>
-                <a href="<%= Url.Action("inlineeditors") %>">Inline editors</a>
+                <a href="<%= Url.Action("inlineeditors") %>">内联编辑器</a>
             </li>
             <li>
-                <a href="<%= Url.Action("conversion") %>">Converting and downloading file</a>
+                <a href="<%= Url.Action("conversion") %>">转换和下载文件</a>
             </li>
             <li>
-                <a href="<%= Url.Action("security") %>">Security</a>
+                <a href="<%= Url.Action("security") %>">安全</a>
             </li>
             <li>
-                <a href="<%= Url.Action("anonymoususers") %>">Anonymous users</a>
+                <a href="<%= Url.Action("anonymoususers") %>">匿名用户</a>
             </li>
             <li>
-                <a href="<%= Url.Action("commenting") %>">Commenting</a>
+                <a href="<%= Url.Action("commenting") %>">评论</a>
             </li>
             <li>
-                <a href="<%= Url.Action("comparing") %>">Comparing documents</a>
+                <a href="<%= Url.Action("comparing") %>">比较文件</a>
             </li>
         </ul>
     </li>
 </ul>
 
-<div class="treeheader">Usage API</div>
+<div class="treeheader">使用 API</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("advanced") %>">Advanced parameters</a>
+        <a href="<%= Url.Action("advanced") %>">高级参数</a>
     </li>
     <li>
-        <a href="<%= Url.Action("config/") %>">Config</a>
+        <a href="<%= Url.Action("config/") %>">配置</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("config/document") %>">Document</a>
+                <a href="<%= Url.Action("config/document") %>">文档</a>
                 <ul class="">
                     <li>
-                        <a href="<%= Url.Action("config/document/info") %>">Info</a>
+                        <a href="<%= Url.Action("config/document/info") %>">信息</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("config/document/permissions") %>">Permissions</a>
+                        <a href="<%= Url.Action("config/document/permissions") %>">权限</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="<%= Url.Action("config/editor") %>">Editor</a>
+                <a href="<%= Url.Action("config/editor") %>">编辑</a>
                 <ul>
                     <li>
-                        <a href="<%= Url.Action("config/editor/customization") %>">Customization</a>
+                        <a href="<%= Url.Action("config/editor/customization") %>">定制</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("config/editor/embedded") %>">Embedded</a>
+                        <a href="<%= Url.Action("config/editor/embedded") %>">嵌入式</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("config/editor/plugins") %>">Plugins</a>
+                        <a href="<%= Url.Action("config/editor/plugins") %>">插件</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="<%= Url.Action("config/events") %>">Events</a>
+                <a href="<%= Url.Action("config/events") %>">事件</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("methods") %>">Methods</a>
+        <a href="<%= Url.Action("methods") %>">方法</a>
     </li>
     <li>
-        <a href="<%= Url.Action("callback") %>">Callback handler</a>
+        <a href="<%= Url.Action("callback") %>">回调处理程序</a>
     </li>
 </ul>
 
-<div class="treeheader">Using WOPI</div>
+<div class="treeheader">使用WOPI</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("wopi/") %>">Overview</a>
+        <a href="<%= Url.Action("wopi/") %>">概述</a>
     </li>
     <li>
-        <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>
+        <a href="<%= Url.Action("wopi/discovery") %>">WOPI发现</a>
     </li>
     <li>
-        <a href="<%= Url.Action("wopi/hostpage") %>">Host page</a>
+        <a href="<%= Url.Action("wopi/hostpage") %>">主机页面</a>
     </li>
     <li>
-        <a href="<%= Url.Action("wopi/proofkeys") %>">Proof keys</a>
+        <a href="<%= Url.Action("wopi/proofkeys") %>">证明密钥</a>
     </li>
     <li>
         <a href="<%= Url.Action("wopi/restapi") %>">WOPI REST API</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">CheckFileInfo</a>
+                <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>">检查文件信息</a>
             </li>
             <li>
-                <a href="<%= Url.Action("wopi/restapi/getfile") %>">GetFile</a>
+                <a href="<%= Url.Action("wopi/restapi/getfile") %>">获取文件</a>
             </li>
             <li>
-                <a href="<%= Url.Action("wopi/restapi/lock") %>">Lock</a>
+                <a href="<%= Url.Action("wopi/restapi/lock") %>">锁</a>
             </li>
             <li>
-                <a href="<%= Url.Action("wopi/restapi/refreshlock") %>">RefreshLock</a>
+                <a href="<%= Url.Action("wopi/restapi/refreshlock") %>">刷新锁定</a>
             </li>
             <li>
-                <a href="<%= Url.Action("wopi/restapi/unlock") %>">Unlock</a>
+                <a href="<%= Url.Action("wopi/restapi/unlock") %>">开锁</a>
             </li>
             <li>
-                <a href="<%= Url.Action("wopi/restapi/putfile") %>">PutFile</a>
+                <a href="<%= Url.Action("wopi/restapi/putfile") %>">放置文件</a>
             </li>
             <li>
-                <a href="<%= Url.Action("wopi/restapi/renamefile") %>">RenameFile</a>
+                <a href="<%= Url.Action("wopi/restapi/renamefile") %>">重新命名文件</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>
+        <a href="<%= Url.Action("wopi/postmessage") %>">留言</a>
     </li>
     <li>
-        <a href="<%= Url.Action("wopi/apivswopi") %>">API vs WOPI</a>
+        <a href="<%= Url.Action("wopi/apivswopi") %>">API 与 WOPI</a>
     </li>
 </ul>
 
-<div class="treeheader">Additional API</div>
+<div class="treeheader">附加 API</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("command/") %>">Command service</a>
+        <a href="<%= Url.Action("command/") %>">命令服务</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("command/drop") %>">drop</a>
@@ -258,25 +258,25 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("conversionapi") %>">Conversion API</a>
+        <a href="<%= Url.Action("conversionapi") %>">转换 API</a>
     </li>
     <li>
-        <a href="<%= Url.Action("documentbuilderapi") %>">Document Builder API</a>
+        <a href="<%= Url.Action("documentbuilderapi") %>">文档生成器 API</a>
     </li>
     <li>
-        <a href="<%= Url.Action("signature/") %>">Signature</a>
+        <a href="<%= Url.Action("signature/") %>">签名</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("signature/browser") %>">Browser</a>
+                <a href="<%= Url.Action("signature/browser") %>">浏览器</a>
             </li>
             <li>
-                <a href="<%= Url.Action("signature/body") %>">Request</a>
+                <a href="<%= Url.Action("signature/body") %>">请求</a>
                 <ul>
                     <li>
-                        <a href="<%= Url.Action("signature/body") %>">Token in body</a>
+                        <a href="<%= Url.Action("signature/body") %>">正文中的令牌</a>
                     </li>
                     <li>
-                        <a href="<%= Url.Action("signature/request") %>">Token in header</a>
+                        <a href="<%= Url.Action("signature/request") %>">标头中的令牌</a>
                     </li>
                 </ul>
             </li>
@@ -284,53 +284,53 @@
     </li>
 </ul>
 
-<div class="treeheader">More information</div>
+<div class="treeheader">更多信息</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("changelog") %>">Changelog</a>
+        <a href="<%= Url.Action("changelog") %>">变更日志</a>
     </li>
     <li>
-        <a href="<%= Url.Action("faq") %>">FAQ</a>
+        <a href="<%= Url.Action("faq") %>">常问问题</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("faq/general") %>">General</a>
+                <a href="<%= Url.Action("faq/general") %>">一般的</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/security") %>">Security</a>
+                <a href="<%= Url.Action("faq/security") %>">安全</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/sharing") %>">Sharing</a>
+                <a href="<%= Url.Action("faq/sharing") %>">分享</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/embedding") %>">Embedding</a>
+                <a href="<%= Url.Action("faq/embedding") %>">嵌入</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/coediting") %>">Co-editing</a>
+                <a href="<%= Url.Action("faq/coediting") %>">共同编辑</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/customizing") %>">Customizing</a>
+                <a href="<%= Url.Action("faq/customizing") %>">定制</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/integrating") %>">Integrating</a>
+                <a href="<%= Url.Action("faq/integrating") %>">整合</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/editing") %>">Editing</a>
+                <a href="<%= Url.Action("faq/editing") %>">编辑</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/managingversions") %>">Managing versions</a>
+                <a href="<%= Url.Action("faq/managingversions") %>">管理版本</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/saving") %>">Saving</a>
+                <a href="<%= Url.Action("faq/saving") %>">保存</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/renaming") %>">Renaming</a>
+                <a href="<%= Url.Action("faq/renaming") %>">重命名</a>
             </li>
             <li>
-                <a href="<%= Url.Action("faq/usingwopi") %>">Using WOPI</a>
+                <a href="<%= Url.Action("faq/usingwopi") %>">使用WOPI</a>
             </li>
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("troubleshooting") %>">Troubleshooting</a>
+        <a href="<%= Url.Action("troubleshooting") %>">故障排除</a>
     </li>
 </ul>

@@ -6,214 +6,214 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Nextcloud ONLYOFFICE integration app
+    Nextcloud ONLYOFFICE 集成应用
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Nextcloud ONLYOFFICE integration app</span>
+        <span class="hdr">Nextcloud ONLYOFFICE 集成应用</span>
     </h1>
 
-    <div class="video-link" title="Show video">
-        <img src="<%= Url.Content("~/content/img/video/nextcloud_integration.png") %>" alt="Show video" />
+    <div class="video-link" title="播放视频">
+        <img src="<%= Url.Content("~/content/img/video/nextcloud_integration.png") %>" alt="播放视频" />
 
         <div class="popap-dialog">
             <div class="popap-container">
-                <div class="popap-header">How to integrate ONLYOFFICE Docs with Nextcloud</div>
+                <div class="popap-header">如何将ONLYOFFICE文档与Nextcloud集成</div>
                 <iframe src="https://www.youtube.com/embed/vN9v9sJ0HVw?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
-                <a class="button-close button">Close</a>
+                <a class="button-close button">关闭</a>
             </div>
-            <div class="button-close popap-close" title="Close">&times;</div>
+            <div class="button-close popap-close" title="关闭">&times;</div>
         </div>
     </div>
 
     <p>
-        This <a href="https://github.com/ONLYOFFICE/onlyoffice-nextcloud" target="_blank">app</a> enables users to edit office documents from <a href="https://nextcloud.com" target="_blank">Nextcloud</a> using ONLYOFFICE Docs.
+        此 <a href="https://github.com/ONLYOFFICE/onlyoffice-nextcloud" target="_blank">应用程序</a> 使用户可以从 <a href="https://nextcloud.com" target="_blank">Nextcloud</a> 中使用 ONLYOFFICE Docs 编辑办公文档。
     </p>
-    <p>The latest connector signed versions are available in the official store for <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</p>
+    <p>最新的连接器签名版本可在 <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>的官方商店中获得。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.</li>
-        <li>The following format is available for viewing only: PDF.</li>
+        <li>目前可以使用此应用程序打开和编辑以下文档格式：DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.</li>
+        <li>以下格式仅供查看：PDF。</li>
         <li>
-            The app will create an item in the <b>new (+)</b> menu to create <b>Document</b>, <b>Spreadsheet</b>, <b>Presentation</b>.
-            It will also create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents.
-            This allows multiple users to collaborate in real time and to save back those changes to Nextcloud. 
-            Co-editing is also available between several federated Nextcloud instances connected to one Document Server.
+            该应用程序将在 <b>新建 (+)</b> 菜单中创建一个菜单项，这个菜单项用来创建 <b>文档</b>、 <b>电子表格</b>或 <b>演示文稿</b>。
+            它还将在 Office 文档的文档库中创建一个新的 <b>在 ONLYOFFICE 中打开</b> 菜单选项。
+            这允许多个用户实时协作并将这些更改保存到 Nextcloud中。
+            在连接到一个文档服务器的多个联合 Nextcloud 实例之间也可以进行共同编辑。
         </li>
-        <li>The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.</li>
+        <li>以下格式可以转换为OOXML：DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX.</li>
     </ul>
 
-    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Nextcloud and any end clients.
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>.
-        ONLYOFFICE Docs must also be able to POST to Nextcloud directly.
+        您将需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 Nextcloud 和任何终端客户端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE Docs 还必须能够直接发布到 Nextcloud。
     </p>
     <p>
-        ONLYOFFICE Docs and Nextcloud can be installed either on different computers, or on the same machine.
-        In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Docs and Nextcloud work on port 80.
-        Or you can use Document Server behind a proxy, please refer to <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">this article</a> to learn how you can configure it.
+        ONLYOFFICE Docs 和 Nextcloud 可以安装在不同的计算机上，也可以安装在同一台机器上。
+        如果您选择后一种变体，您需要为 Document Server 设置自定义端口，因为默认情况下 ONLYOFFICE Docs 和 Nextcloud 都在端口 80 上工作。
+        或者您可以在代理后面使用 Document Server，请参阅 <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">本文</a> 了解如何配置它。
     </p>
-    <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
-    <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud">Docker installation</a> to get installed and configured Document Server and Nextcloud installation with a couple of commands.</p>
+    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>您还可以使用我们的 <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-nextcloud">Docker 安装</a>进行安装 ，通过几个命令来安装和配置 Document Server 和 Nextcloud。</p>
 
 
-    <h2 id="install" class="copy-link">Installing Nextcloud ONLYOFFICE integration app</h2>
+    <h2 id="install" class="copy-link">安装 Nextcloud ONLYOFFICE 集成应用</h2>
     <p>
-        The Nextcloud administrator can install the integration app from the in-built application market.
-        For that go to the user name and select <b>Apps</b>.
-        After that find <b>ONLYOFFICE</b> in the list of available applications and install it.
+        Nextcloud 管理员可以从内置应用程序市场安装集成应用程序。
+        安装 Jira ONLYOFFICE 集成应用为此，转到用户名并选择 <b>Apps</b>。
+        之后在可用应用程序列表中找到 <b>ONLYOFFICE</b> 并安装它。
     </p>
     <p>
-        If the server with the Nextcloud installed does not have the Internet access, or if you need it for some other reason, the administrator can install the application manually.
-        To start using ONLYOFFICE Docs with Nextcloud, the following steps must be performed:
+        如果安装了 Nextcloud 的服务器无法访问 Internet，或者您出于其他原因需要它，管理员可以手动安装该应用程序。
+        要开始将 ONLYOFFICE Docs 与 Nextcloud 一起使用，必须执行以下步骤：
     </p>
     <ol>
         <li>
-            Go to the Nextcloud server <em>apps/</em> directory (or some other directory <a href="https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
+            转到 Nextcloud 服务器 <em>apps/</em> 目录（或 <a href="https://docs.nextcloud.com/server/stable/admin_manual/apps_management.html#using-custom-app-directories" target="_blank">用于</a> 连接应用程序的其他目录）：
             <span class="commandline">cd apps/</span>
         </li>
         <li>
-            Get the Nextcloud ONLYOFFICE integration app.
-            There are several ways to do that:
+            获取 Nextcloud ONLYOFFICE 集成应用程序。
+            有几种方法可以做到这一点：
             <ol style="list-style-type: lower-alpha;">
-                <li>Download the latest signed version from the official store for <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>.</li>
-                <li>Download the latest signed version from the application <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-nextcloud/releases">release page</a> on GitHub.</li>
-                <li>Clone the application source code and compile it yourself:
+                <li>从 <a target="_blank" href="https://apps.nextcloud.com/apps/onlyoffice">Nextcloud</a>官方商店下载最新的签名版本。</li>
+                <li>从GitHub 上的应用程序 <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-nextcloud/releases">发布页面</a> 下载最新的签名版本。</li>
+                <li>克隆应用程序源代码并自己编译：
                     <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-nextcloud.git onlyoffice
 cd onlyoffice
 git submodule update --init --recursive</span>
                 </li>
             </ol>
         </li>
-        <li>Change the owner to update the application right from Nextcloud web interface:
+        <li>更改所有者以直接从 Nextcloud Web 界面更新应用程序：
             <span class="commandline">chown -R www-data:www-data onlyoffice</span>
         </li>
-        <li>In Nextcloud open the <em>~/settings/apps/disabled</em> page with <b>Not enabled</b> apps by administrator and click <b>Enable</b> for the <b>ONLYOFFICE</b> application.</li>
+        <li>在 Nextcloud 中打开 <em>~/settings/apps/disabled</em> 页面，其中包含管理员 <b>未启用</b> 的应用程序，然后单击 <b>ONLYOFFICE</b> 应用程序的 <b>启用</b> 。</li>
     </ol>
 
 
-    <h2 id="settings" class="copy-link">Configuring Nextcloud ONLYOFFICE integration app</h2>
+    <h2 id="settings" class="copy-link">配置 Nextcloud ONLYOFFICE 集成应用</h2>
     <p>
-        In Nextcloud open the <em>~/settings/admin/onlyoffice</em> page with administrative settings for <b>ONLYOFFICE</b> section.
-        Enter the following address to connect ONLYOFFICE Docs:
+        在 Nextcloud 中打开 <em>~/settings/admin/onlyoffice</em> 页面，其中包含 <b>ONLYOFFICE</b> 部分的管理设置。
+        输入以下地址连接ONLYOFFICE Docs：
     </p>
     <span class="commandline">https://&lt;documentserver&gt;/</span>
 
     <p>
-        where the <b>documentserver</b> is the name of the server with the <b>ONLYOFFICE Docs</b> installed.
-        The address must be accessible for the user browser and from the Nextcloud server.
-        The Nextcloud server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
+        其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。
+        用户浏览器和 Nextcloud 服务器必须可以访问该地址。
+        Nextcloud 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问才能正常工作。
     </p>
-    <img alt="Local" src="<%= Url.Content("~/content/img/editor/nextcloud-local.jpg") %>" />
+    <img alt="本地网络" src="<%= Url.Content("~/content/img/editor/nextcloud-local.jpg") %>" />
 
     <p id="internalUrl">
-        Sometimes your network configuration might not allow the requests between installed Nextcloud and ONLYOFFICE Docs using the public addresses.
-        The <b>Advanced server settings</b> allows to set the ONLYOFFICE Docs address for internal requests from Nextcloud server and the returning Nextcloud address for the internal requests from ONLYOFFICE Docs.
-        You need to enter them in the appropriate fields.
+        有时，您的网络配置可能不允许已安装的Nextcloud和使用公共地址的ONLYOFFICE文档之间的请求。
+        <b>高级服务器</b> 设置允许为来自 Nextcloud 服务器的内部请求设置 ONLYOFFICE Docs 地址，并为来自 ONLYOFFICE Docs 的内部请求设置返回的 Nextcloud 地址。
+        您需要在相应的字段中输入它们。
+
     </p>
-    <img alt="Public" src="<%= Url.Content("~/content/img/editor/nextcloud-public.jpg") %>" />
-
+    <img alt="公共网络" src="<%= Url.Content("~/content/img/editor/nextcloud-public.jpg") %>" />
     <p>
-        To restrict the access to ONLYOFFICE Docs and for security reasons and data integrity the encrypted signature is used.
-        Specify the <b>Secret key</b> in the Nextcloud administrative configuration.
-        In the ONLYOFFICE Docs <a href="<%= Url.Action("signature") %>">config file</a> specify the same secret key and enable the validation.
-    </p>
-
-    <p>Enable or disable the <b>Open file in the same tab</b> setting.</p>
-
-    <p>
-        The <b>Open in ONLYOFFICE</b> action will be added to the file context menu.
-        You can specify this action as default and it will be used when the file name is clicked for the selected file types.
+        为了限制对 ONLYOFFICE Docs 的访问，出于安全原因和数据完整性，使用了加密签名。
+        在 Nextcloud 管理配置中指定 <b>Secret key</b>。
+        在 ONLYOFFICE Docs <a href="<%= Url.Action("signature") %>">配置文件</a> 中指定相同的secret key并启用验证。
     </p>
 
-    <h2 id="connection" class="copy-link">Checking the connection</h2>
+    <p>启用或禁用 <b>在同一选项卡中打开文件</b> 设置。</p>
+
     <p>
-        You can check the connection to ONLYOFFICE Docs by using the following occ command:
+        在 <b>ONLYOFFICE 中打开</b> 操作将被添加到文件上下文菜单中。
+        您可以将此操作指定为默认操作，当单击所选文件类型的文件名时将使用该操作。
+    </p>
+
+    <h2 id="connection" class="copy-link">检查连接</h2>
+    <p>
+        您可以使用以下 occ 命令检查与 ONLYOFFICE Docs 的连接：
     </p>
     <span class="commandline">occ onlyoffice:documentserver --check</span>
     <p>
-        You will see a text either with information about the successful connection or the cause of the error.
+        您将看到一条文本，其中包含有关成功连接或错误原因的信息。
     </p>
 
 
-    <h2 id="howitworks" class="copy-link">How it works</h2>
+    <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
     <ol>
-        <li>When creating a new file, the user navigates to a document folder within Nextcloud and clicks the <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> item in the <b>new (+)</b> menu.</li>
+        <li>创建新文件时，用户导航到 Nextcloud 中的文档文件夹，然后单击 <b>新建 (+)</b>菜单中的 <b>文档</b> 、 <b>电子表格</b> 或 <b>演示文稿</b> 菜单项。</li>
         <li>
-            The browser invokes the <em>create</em> method in the <em>/lib/Controller/EditorController.php</em> controller.
-            This method adds a copy of a file from the <em>assets</em> folder to the folder the user is currently in.
+            浏览器调用 <em>/lib/Controller/EditorController.php</em> 控制器中的 <em>create</em> 方法。
+            此方法将 <em>assets</em> 文件夹中的文件副本添加到用户当前所在的文件夹中。
         </li>
-        <li>When opening an existing file, the user navigates to it within Nextcloud and selects the <b>Open in ONLYOFFICE</b> menu option.</li>
-        <li>A new browser tab is opened and the <em>index</em> method of the <em>/lib/Controller/EditorController.php</em> controller is invoked.</li>
+        <li>打开现有文件时，用户在 Nextcloud 中导航到该文件并选择 <b>在 ONLYOFFICE 中打开</b> 菜单选项。</li>
+        <li>打开一个新的浏览器选项卡并调用 <em>/lib/Controller/EditorController.php</em> 控制器的 <em>index</em> 方法。</li>
         <li>
-            <p>The app prepares a JSON object with the following properties:</p>
+            <p>该应用程序准备一个具有以下属性的 JSON 对象：</p>
             <ul>
-                <li><b>url</b> - the URL that ONLYOFFICE Docs uses to download the document;</li>
-                <li><b>callbackUrl</b> - the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>key</b> - the <em>UUID+Modified Timestamp</em> to instruct ONLYOFFICE Docs whether to download the document again or not;</li>
-                <li><b>title</b> - the document title (name);</li>
-                <li><b>id</b> - the user identification;</li>
-                <li><b>name</b> - the user name.</li>
+                <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL；</li>
+                <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>key</b> ： <em>UUID+Modified Timestamp</em> 指示 ONLYOFFICE Docs 是否再次下载文档；</li>
+                <li><b>title</b> - 文档标题（名称）；</li>
+                <li><b>id</b> - 用户标识；</li>
+                <li><b>name</b> - 用户名。</li>
             </ul>
         </li>
-        <li>Nextcloud takes this object and constructs a page from <em>templates/editor.php</em> template, filling in all of those values so that the client browser can load up the editor.</li>
-        <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
-        <li>Then ONLYOFFICE Docs downloads the document from Nextcloud and the user begins editing.</li>
-        <li>ONLYOFFICE Docs sends a POST request to the <em>callback</em> URL to inform Nextcloud that a user is editing the document.</li>
-        <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <em>callback</em> URL letting Nextcloud know that the clients have finished editing the document and closed it.</li>
-        <li>Nextcloud downloads a new version of the document, replacing the old one.</li>
+        <li>Nextcloud 获取这个对象并从 <em>templates/editor.php</em> 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
+        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送具有上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE Docs 从 Nextcloud 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE Docs 向 <em>回调</em> URL 发送 POST 请求，通知 Nextcloud 用户正在编辑文档。</li>
+        <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向 <em>回调</em> URL 发送一个 POST，让 Nextcloud 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>Nextcloud 下载文档的新版本，替换旧版本。</li>
     </ol>
 
-    <h2 id="issue" class="copy-link">Known issues</h2>
+    <h2 id="issue" class="copy-link">已知的问题</h2>
     <ul>
         <li>
-            <b>Connecting external storages</b>. Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
-            If the connection is made using the same authorization keys (the <em>Username and password</em> or <em>Global credentials</em> authentication type is selected), then the co-editing is available for the users.
-            If different authorization keys are used (<em>Log-in credentials, save in database</em> or <em>User entered, store in database</em> authentication options), the co-editing is not available.
-            When the <em>Log-in credentials, save in session</em> authentication type is used, the files cannot be opened in the editor.
+            <b>连接外部存储</b>。在某些情况下，使用 <b>外部存储</b> 应用程序添加存储会令共同编辑出现问题。
+            如果使用相同的授权密钥进行连接（选择了 <em>用户名和密码</em> 或 <em>全局凭据</em> 身份验证类型），则用户可以进行共同编辑。
+            如果使用不同的授权密钥（<em>登录凭据</em>，保存在数据库中或 <em>用户输入，存储在数据库</em> 身份验证选项中），则无法进行共同编辑。
+            当使用 <em>登录凭据，保存在会话</em> 身份验证类型时，无法在编辑器中打开文件。
         </li>
         <li>
-            <p><b>Validating certificate</b>. If you are using a self-signed certificate for your Document Server, Nextcloud will not validate such a certificate and will not allow connection to/from Document Server.
-            This issue can be solved in two ways:</p>
+            <p><b>验证证书</b>。如果您为 Document Server 使用自签名证书，Nextcloud 将不会验证此类证书，并且不允许与 Document Server 进行连接。
+                这个问题可以通过两种方式解决：</p>
             <ol>
-                <li>Check the <b>Disable certificate verification (insecure)</b> box on the ONLYOFFICE administration page, Server settings section, within your Nextcloud.</li>
-                <li>Change the Nextcloud config file manually. Locate the Nextcloud config file (<em>/nextcloud/config/config.php</em>) and open it. Insert the following section to it:</li>
+                <li>选中Nextcloud 中 ONLYOFFICE 管理页面的服务器设置部分的 <b>禁用证书验证（不安全）</b> 框。</li>
+                <li>手动更改 Nextcloud 配置文件。找到 Nextcloud 配置文件 (<em>/nextcloud/config/config.php</em>) 并打开它。在其中插入以下部分：</li>
             </ol>
         <pre>
 'onlyoffice' => array (
-    'verify_peer_off' => true
+'verify_peer_off' => true
 )
-</pre>
-            <p>This will disable the certificate verification and allow Nextcloud to establish connection with Document Server.</p>
-            <note>Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the Nextcloud config file.</note>
+        </pre>
+            <p>这将禁用证书验证并允许 Nextcloud 与 Document Server 建立连接。</p>
+            <note>请记住，这是一种临时的不安全解决方案，我们强烈建议您将证书替换为某个 CA 颁发的证书。完成此操作后，不要忘记取消选中相应的设置框或从 Nextcloud 配置文件中删除上述部分。</note>
         </li>
         <li>
-            <b>Federated Cloud Sharing</b>. If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing between the Nextcloud instances connected to different ONLYOFFICE servers will not be available.
-            The users from one and the same Document Server can edit the document in the co-editing mode, but the users from two (or more) different Document Servers will not be able to collaborate on the same document in real time.
+            <b>联合云共享</b>。如果使用 <b>联合云共享</b> 应用程序共享文档，则连接到不同 ONLYOFFICE 服务器的 Nextcloud 实例之间的共同编辑将不可用。
+            来自同一个 Document Server 的用户可以在共同编辑模式下编辑文档，但来自两个（或多个）不同 Document Server 的用户将无法实时协作处理同一个文档。
         </li>
         <li>
             <p>
-                <b>Converting files</b>. ONLYOFFICE Docs uses Office Open XML format as a basis when opening and editing files.
-                If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the Document Server proper work and faster performance.
-                After that you can edit the file, making any changes available for the base OOXML format and save the file to this base OOXML format.
+                <b>转换文件</b>。ONLYOFFICE Docs 在打开和编辑文件时使用 Office Open XML 格式作为基础。
+                如果文件格式与 OOXML 不同，它仍将转换为相应的 OOXML，以便 Document Server 正常工作和更快的性能。
+                之后，您可以编辑文件，对基本 OOXML 格式进行任何更改，并将文件保存为此基本 OOXML 格式。
             </p>
             <p>
-                In case the source Nextcloud file format was different from the base one, and you still want to save it to the original format, the file will be converted to this format from OOXML.
-                As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (<em>csv</em>, <em>txt</em>, etc.) do not support them or treat them differently than OOXML standard does.
-                That is why all the non-OOXML files by default are opened for viewing only, although there is an option to convert the file in the context menu.
-                If you realise the data/formatting loss risks after the conversion, but still want to open non-OOXML files for editing, you can check them in the list in the settings.
-                Editing for <em>csv</em> and <em>txt</em> files is available by default.
+                如果源 Nextcloud 文件格式与基本格式不同，并且您仍想将其保存为原始格式，则文件将从 OOXML 转换为这种格式。
+                由于格式根本不同，某些数据（例如图表、表格、自选图形或图像）和格式可能会丢失，原因很简单，某些格式（<em>csv</em>、 <em>txt</em>等）不支持它们或以不同于 OOXML 标准的方式对待它们。
+                这就是为什么默认打开所有非 OOXML 文件仅供查看的原因，尽管在上下文菜单中有转换文件的选项。
+                如果您意识到转换后的数据/格式丢失风险，但仍想打开非OOXML文件进行编辑，您可以在设置中的列表中进行检查。
+                默认情况下可以 编辑 <em>csv</em> 和 <em>txt</em> 文件。
             </p>
         </li>
     </ul>
 
 
     <br />
-    <p>Download the Nextcloud ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-nextcloud" target="_blank">here</a>.</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-nextcloud" target="_blank">此处</a>下载 Nextcloud ONLYOFFICE 集成应用程序。</p>
 
 </asp:Content>

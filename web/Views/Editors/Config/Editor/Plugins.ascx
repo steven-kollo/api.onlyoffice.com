@@ -2,13 +2,13 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("config/editor") %>"></a>
-    <span class="hdr">Plugins</span>
+    <span class="hdr">插件</span>
 </h1>
 
-<div class="header-gray">Description</div>
-<p class="dscr">The plugins section allows to connect the special add-ons to your Document Server installation which will help you add additional features to document editors.</p>
+<div class="header-gray">描述</div>
+<p class="dscr">插件部分允许将特殊附加组件连接到您的文档服务器安装，这将帮助您向文档编辑器添加附加功能。</p>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <div id="mobile-content"></div>
 <table class="table">
     <colgroup>
@@ -19,30 +19,30 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Example</td>
+            <td>名称</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>示例</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td id="autostart" class="copy-link">autostart</td>
-            <td>Defines the array of the identifiers (as entered in <a href="<%= Url.Action("config", "plugin") %>#guid">config.json</a>) for the plugins, which will automatically start when the editor opens, and the order the plugins will run one-by-one.</td>
-            <td>array of string</td>
+            <td>定义插件的标识符数组（在 <a href="<%= Url.Action("config", "plugin") %>#guid">config.json</a>中输入），它将在编辑器打开时自动启动，并且插件将依次运行。</td>
+            <td>string数组</td>
             <td></td>
         </tr>
         <tr class="tablerow">
             <td id="pluginsData" class="copy-link">pluginsData</td>
-            <td>Defines the array of absolute URLs to the plugin configuration files (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>).</td>
-            <td>array of string</td>
+            <td>定义插件配置文件 (<a href="<%= Url.Action("config", "plugin") %>">config.json</a>) 的绝对 URL 数组。</td>
+            <td>string数组</td>
             <td></td>
         </tr>
         <tr class="tablerow">
             <td id="url" class="copy-link">url</td>
             <td>
-                Defines the absolute URL to the directory where the plugins are stored.
-                Deprecated since version 4.3, please use the absolute URLs in <a href="#pluginsData">pluginsData</a> field.
+                定义存储插件的目录的绝对 URL。
+                自 4.3 版起已弃用，请在 <a href="#pluginsData">pluginsData</a> 字段中使用绝对 URL。
             </td>
             <td>string</td>
             <td>"https://example.com/plugins/"</td>
@@ -55,7 +55,7 @@
     </tbody>
 </table>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
@@ -77,12 +77,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 <p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the plugins are placed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 以及放置插件的服务器的名称。
+    有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
 </p>
 
 <p>
-    If you have any further questions, please contact us at
-    <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+    如果您有任何其他问题，
+    请通过 <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com与我们联系</a>。
 </p>
 

@@ -6,43 +6,43 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Methods
+    方法
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Methods</span>
+        <span class="hdr">方法</span>
     </h1>
 
-    <p class="dscr">After initializing <b>document editor</b> you will get the object that can be used to call the methods.</p>
+    <p class="dscr">初始化 <b>文档编辑器</b> 后，您将获得可用于调用方法的对象。</p>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
     <ul>
-        <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
-        <li><a href="#destroyEditor">destroyEditor</a> - destroy <em>docEditor</em> object.</li>
-        <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
-        <li><a href="#insertImage">insertImage</a> - insert an image into the file.</li>
-        <li><a href="#refreshHistory">refreshHistory</a> - show the document version history.</li>
-        <li><a href="#requestClose">requestClose</a> - request to close the editor.</li>
-        <li><a href="#setActionLink">setActionLink</a> - set the link to the document which contains a bookmark.</li>
-        <li><a href="#setFavorite">setFavorite</a> - change the <em>Favorite</em> icon state.</li>
-        <li><a href="#setHistoryData">setHistoryData</a> - send the link to the document for viewing the version history.</li>
-        <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - insert recipient data for mail merge into the file.</li>
-        <li><a href="#setRevisedFile">setRevisedFile</a> - select a document for comparing.</li>
-        <li><a href="#setSharingSettings">setSharingSettings</a> - update the <em>information</em> about the settings which allow to share the document with other users.</li>
-        <li><a href="#setUsers">setUsers</a> - set a list of users to mention in the comments.</li>
-        <li><a href="#showMessage">showMessage</a> - display tooltip with the message.</li>
+        <li><a href="#denyEditingRights">denyEditingRights</a> - 拒绝编辑。</li>
+        <li><a href="#destroyEditor">destroyEditor</a> - 销毁 <em>docEditor</em> 对象。</li>
+        <li><a href="#downloadAs">downloadAs</a> - 下载编辑后的文件。</li>
+        <li><a href="#insertImage">insertImage</a> - 将图像插入文件中。</li>
+        <li><a href="#refreshHistory">refreshHistory</a> - 显示文档版本历史。</li>
+        <li><a href="#requestClose">requestClose</a> - 请求关闭编辑器。</li>
+        <li><a href="#setActionLink">setActionLink</a> - 设置包含书签的文档的链接。</li>
+        <li><a href="#setFavorite">setFavorite</a> - 更改 <em>收藏</em> 图标状态。</li>
+        <li><a href="#setHistoryData">setHistoryData</a> - 发送文档链接以查看版本历史。</li>
+        <li><a href="#setMailMergeRecipients">setMailMergeRecipients</a> - 将邮件合并的收件人数据插入文件中。</li>
+        <li><a href="#setRevisedFile">setRevisedFile</a> - 选择一个文档进行比较。</li>
+        <li><a href="#setSharingSettings">setSharingSettings</a> - 更新有关允许与其他用户共享文档的设置的 <em>信息</em>。</li>
+        <li><a href="#setUsers">setUsers</a> - 设置要在评论中提及的用户列表。</li>
+        <li><a href="#showMessage">showMessage</a> - 显示带有消息的工具提示。</li>
     </ul>
 
-    <h2>Methods and their description:</h2>
+    <h2>方法及其描述：</h2>
     <ul>
         <li>
             <p>
-                <b id="denyEditingRights" class="copy-link">denyEditingRights</b> - deny editing.
-                This method can be called when you want to make the document editing unavailable.
+                <b id="denyEditingRights" class="copy-link">denyEditingRights</b> - 拒绝编辑。
+                当您想让文档编辑不可用时，可以调用此方法。
             </p>
             <pre>
 docEditor.denyEditingRights(message);
@@ -57,18 +57,18 @@ docEditor.denyEditingRights(message);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>message</td>
-                        <td>Defines the text messages for dialog.</td>
+                        <td>定义对话的文本消息。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                 </tbody>
             </table>
@@ -76,9 +76,9 @@ docEditor.denyEditingRights(message);
         </li>
         <li>
             <p>
-                <b id="destroyEditor" class="copy-link">destroyEditor</b> - destroy <em>docEditor</em> object.
-                This method can be called when you want to reinit document editor with another configurations.
-                Used since version 4.3.
+                <b id="destroyEditor" class="copy-link">destroyEditor</b> - 销毁 <em>docEditor</em> 对象。
+                当您想使用其他配置重新启动文档编辑器时，可以调用此方法。
+                从 4.3 版开始使用。
             </p>
             <pre>
 docEditor.destroyEditor();
@@ -87,9 +87,9 @@ docEditor.destroyEditor();
 
         <li>
             <p>
-                <b id="downloadAs" class="copy-link">downloadAs</b> - download the edited file.
-                This method can be called only when the existence of the <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a> events.
-                <b>Document editing service</b> asynchronously creates a document and triggers the <b>onDownloadAs</b> event with a link in parameter.
+                <b id="downloadAs" class="copy-link">downloadAs</b> - 下载编辑后的文件。
+                只有在存在 <a href="<%= Url.Action("config/events") %>#onDownloadAs">onDownloadAs</a> 事件 时才能调用该方法。
+                <b>文档编辑服务</b> 异步创建文档并使用参数中的链接触发 <b>onDownloadAs</b> 事件。
             </p>
             <pre>
 docEditor.downloadAs(format);
@@ -103,39 +103,39 @@ docEditor.downloadAs(format);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>format</td>
                         <td>
-                            Defines the format in which a file will be downloaded.
-                            All the possible formats you can find in the <a href="<%= Url.Action("conversionapi") %>#text-matrix">conversion tables</a>.
-                            But you cannot download a file in the image formats such as <em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>.
-                            If this parameter is undefined, the file will be downloaded in the OOXML format according to the file type.
+                            定义下载文件的格式。
+                            您可以在 <a href="<%= Url.Action("conversionapi") %>#text-matrix">转换表</a>中找到所有可能的格式。
+                            但是您不能下载 <em>bmp</em>、 <em>gif</em>、 <em>jpg</em>、 <em>png</em>等图像格式的文件。
+                            如果未定义该参数，则根据文件类型以OOXML格式下载文件。
                         </td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
             <note>
-                Please note that conversion from the <em>djvu</em>, <em>pdf</em>, <em>xps</em> formats are not available.
-                The original format will be downloaded.
+                请注意从 <em>djvu</em>、 <em>pdf</em>、 <em>xps</em> 格式的转换不可用。
+                将下载原始格式。
             </note>
         </li>
 
         <li>
             <p>
-                <b id="insertImage" class="copy-link">insertImage</b> - insert an image into the file.
-                Starting from version 7.0, this method allows a user to insert several images.
-                The <em>images</em> array is used to do it.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> events.
+                <b id="insertImage" class="copy-link">insertImage</b> - 将图像插入文件中。
+                从版本 7.0 开始，此方法允许用户插入多个图像。
+                <em>图像</em> 数组用于执行此操作。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestInsertImage">onRequestInsertImage</a> 事件之后调用。
             </p>
             <pre>
 docEditor.insertImage({
@@ -154,8 +154,8 @@ docEditor.insertImage({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>
@@ -166,81 +166,81 @@ docEditor.insertImage({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>c</td>
                         <td>
-                            Defines a type of image insertion from the event.
-                            Can be: <em>add</em>, <em>change</em>, <em>fill</em>, <em>watermark</em>, <em>slide</em>.
-                            The default value is "<em>add</em>".
+                            从事件中定义一种图像插入类型。
+                            可以是：<em>添加</em>、 <em>更改</em>、 <em>填充</em>、 <em>水印</em>、 <em>幻灯片</em>。
+                            默认值为"<em>添加</em>"。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>fileType</td>
                         <td>
-                            Defines a type of the image to be inserted into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
-                            Deprecated since version 7.0, please use the <em>images.fileType</em> parameter instead.
+                            定义要插入文件的图像类型。
+                            可以是：<em>Bmp、</em>、 <em>gif</em>、 <em>jpeg</em>、 <em>jpg</em>、 <em>png</em>。
+                            自 7.0 版起已弃用，请改用 <em>images.fileType</em> 参数。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>images</td>
                         <td>
-                            Defines an array of images to be inserted.
+                            定义要插入的图像数组。
                         </td>
-                        <td>array of objects</td>
-                        <td>required</td>
+                        <td>对象数组</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>images.fileType</td>
                         <td>
-                            Defines a type of the image to be inserted into the file.
-                            Can be: <em>bmp</em>, <em>gif</em>, <em>jpeg</em>, <em>jpg</em>, <em>png</em>.
+                            定义要插入文件的图像类型。
+                            可以是：<em>Bmp、</em>、 <em>gif</em>、 <em>jpeg</em>、 <em>jpg</em>、 <em>png</em>。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>images.url</td>
                         <td>
-                            Defines an absolute URL where the source image is stored.
-                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
+                            定义存储源图像的绝对 URL。
+                            使用本地链接时请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>token</td>
-                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#insertImage">token</a>.</td>
+                        <td>定义以 <a href="<%= Url.Action("signature/browser") %>#insertImage">令牌</a>形式添加到参数的加密签名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
                         <td>
-                            Defines an absolute URL where the source image is stored.
-                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
-                            Otherwise, an error will occur.
-                            Deprecated since version 7.0, please use the <em>images.url</em> parameter instead.
+                            定义存储源图像的绝对 URL。
+                            使用本地链接时请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。
+                            否则会出现错误。
+                            自 7.0 版起已弃用，请改用 <em>images.url</em> 参数。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
             <note>
-                <p>Prior to version 7.0, this method allowed to insert only one image and had the following parameters:</p>
+                <p>在 7.0 版本之前，此方法只允许插入一张图片，并具有以下参数：</p>
                 <pre>
 docEditor.insertImage({
     "c": "add",
@@ -249,16 +249,16 @@ docEditor.insertImage({
 });
 </pre>
                 <p>
-                    Please note that this structure is deprecated and will not be supported by the next editors versions.
-                    Please use a new one.
+                    请注意，此结构已弃用，下一个编辑器版本将不支持此结构。
+                    请使用新的。
                 </p>
             </note>
         </li>
 
         <li>
             <p>
-                <b id="refreshHistory" class="copy-link">refreshHistory</b> - show the document version history.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> events.
+                <b id="refreshHistory" class="copy-link">refreshHistory</b> - 显示文档版本历史。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> 事件之后调用。
             </p>
             <pre>
 docEditor.refreshHistory({
@@ -287,7 +287,7 @@ docEditor.refreshHistory({
 });
 </pre>
             <p>
-                If after editing and saving the document the <em>history</em> with object changes and serverVersion is returned, send the object changes in the <em>changes</em> and serverVersion in the <em>serverVersion</em> parameter.
+                如果在编辑和保存文档后返回带有对象更改和 serverVersion的 <em>历史记录</em> ，则在serverVersion参数 中发送 <em>更改</em> 和 <em>serverVersion</em> 中的对象更改。
             </p>
             <pre>
 docEditor.refreshHistory({
@@ -319,9 +319,9 @@ docEditor.refreshHistory({
     ],
 });
 </pre>
-            <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
-            <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
-            <p>Show the error message explaining why the version history can not be displayed.</p>
+            <p>其中 <b>changes</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 的 <em>更改</em> 。</p>
+            <p>其中 <b>serverVersion</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 中的 <em>serverVersion</em>。</p>
+            <p>显示错误消息，解释为什么无法显示版本历史记录。</p>
             <pre>
 docEditor.refreshHistory({
     "error": "Exception",
@@ -336,72 +336,72 @@ docEditor.refreshHistory({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>currentVersion</td>
-                        <td>Defines the current document version number.</td>
+                        <td>定义当前文档版本号。</td>
                         <td>integer</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>error</td>
-                        <td>Defines the error message text.</td>
+                        <td>定义错误消息文本。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history</td>
-                        <td>Defines the array with the document versions.</td>
+                        <td>使用文档版本定义数组。</td>
                         <td>array</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.changes</td>
-                        <td>Defines the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</td>
-                        <td>object</td>
-                        <td>optional</td>
+                        <td>定义保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a>的 <em>更改</em>。</td>
+                        <td>对象</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.created</td>
-                        <td>Defines the document version creation date.</td>
+                        <td>定义文档版本创建日期。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.key</td>
-                        <td>Defines the unique document identifier used by the service to recognize the document.</td>
+                        <td>定义服务用来识别文档的唯一文档标识符。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user</td>
-                        <td>Defines the user who is the author of the document version.</td>
-                        <td>object</td>
-                        <td>optional</td>
+                        <td>定义作为文档版本作者的用户。</td>
+                        <td>对象</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user.id</td>
-                        <td>Defines the identifier of the user who is the author of the document version.</td>
+                        <td>定义作为文档版本作者的用户的标识符。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.user.name</td>
-                        <td>Defines the name of the user who is the author of the document version.</td>
+                        <td>定义作为文档版本作者的用户的名称。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>history.version</td>
-                        <td>Defines the document version number.</td>
+                        <td>定义文档版本号。</td>
                         <td>integer</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -410,10 +410,10 @@ docEditor.refreshHistory({
 
         <li>
             <p>
-                <b id="requestClose" class="copy-link">requestClose</b> - request to close the editor.
-                It is recommended to call this method before the <a href="#destroyEditor">destroyEditor</a> method to check if there is some unsaved data in the editor or not. 
-                If the unsaved data exists, then the dialog box will be displayed to ask the user whether they want to continue editing or close the editor losing all the unsaved data. 
-                If the <em>Close</em> option will be chosen, then the <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> event will be called.
+                <b id="requestClose" class="copy-link">requestClose</b> - 请求关闭编辑器。
+                建议在 <a href="#destroyEditor">destroyEditor</a> 方法之前调用该方法来检查编辑器中是否有一些未保存的数据。
+                如果存在未保存的数据，则会显示对话框询问用户是否要继续编辑或关闭编辑器，丢失所有未保存的数据。
+                如果选择 <em>关闭</em> 选项，则将调用 <a href="<%= Url.Action("config/events") %>#onRequestClose">onRequestClose</a> 事件。
             </p>
             <pre>
 docEditor.requestClose();
@@ -422,10 +422,10 @@ docEditor.requestClose();
 
         <li>
             <p>
-                <b id="setActionLink" class="copy-link">setActionLink</b> - set the link to the document which contains a bookmark.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event.
-                The software integrator must process the <em>ACTION_DATA</em> received from the <b>document editing service</b> to set the link.
-                The link is created by the software integrators who use ONLYOFFICE Document Server in their <b>document manager</b>.
+                <b id="setActionLink" class="copy-link">setActionLink</b> - 设置包含书签的文档的链接。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> 事件之后调用。
+                软件集成商必须处理从 <b>文档编辑服务</b> 接收到的 <em>ACTION_DATA</em> 以设置链接。
+                该链接由软件集成商创建，他们在 <b>文档管理器</b>中使用 ONLYOFFICE 文档服务器
             </p>
             <pre>
 docEditor.setActionLink(link);
@@ -439,18 +439,18 @@ docEditor.setActionLink(link);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>link</td>
-                        <td>Defines the link which allows scrolling to the bookmark position in the document.</td>
+                        <td>定义允许滚动到文档中书签位置的链接。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -459,8 +459,8 @@ docEditor.setActionLink(link);
 
         <li>
             <p>
-                <b id="setFavorite" class="copy-link">setFavorite</b> - change the <em>Favorite</em> icon state. 
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a> event.
+                <b id="setFavorite" class="copy-link">setFavorite</b> - 更改 <em>收藏</em> 图标状态。
+                此方法必须在<a href="<%= Url.Action("config/events") %>#onMetaChange">onMetaChange</a>事件之后调用。
             </p>
             <pre>
 docEditor.setFavorite(favorite);
@@ -474,16 +474,16 @@ docEditor.setFavorite(favorite);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>favorite</td>
-                        <td>Defines if the <em>Favorite</em> icon is highlighted (<b>true</b>) or not (<b>false</b>).</td>
+                        <td>定义 <em>收藏夹</em> 图标是否突出显示 (<b>true</b>) 或不突出显示 (<b>false</b>)。</td>
                         <td>boolean</td>
                         <td>true</td>
                     </tr>
@@ -494,8 +494,8 @@ docEditor.setFavorite(favorite);
 
         <li>
             <p>
-                <b id="setHistoryData" class="copy-link">setHistoryData</b> - send the link to the document for viewing the version history.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> events.
+                <b id="setHistoryData" class="copy-link">setHistoryData</b> - 发送文档链接以查看版本历史。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> 事件之后调用。
             </p>
             <pre>
 docEditor.setHistoryData({
@@ -506,12 +506,12 @@ docEditor.setHistoryData({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
             <p>
-                If after editing and saving the document the <em>changesurl</em> link to the file with changes data is returned, download the file by this link and send the file URL in the <em>changesUrl</em> parameter.
-                The absolute URL address of the document previous version must be sent in the <em>previous.url</em> parameter.
+                如果在编辑和保存文档后，返回到包含更改数据的文件的 <em>changesurl</em> 链接，请通过此链接下载文件，并在 <em>changesurl</em> 参数中发送文件URL。
+                文档上一版本的绝对 URL 地址必须在 <em>previous.url</em> 参数中发送。
             </p>
             <pre>
 docEditor.setHistoryData({
@@ -528,11 +528,11 @@ docEditor.setHistoryData({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
-            <p>Send the error message explaining why the document version can not be displayed.</p>
-            <pre>
+            <p>发送错误消息，说明文档版本无法显示的原因。</p>
+            <pre>d
 docEditor.setHistoryData({
     "error": "Exception",
     "version": 2
@@ -547,86 +547,86 @@ docEditor.setHistoryData({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>changesUrl</td>
                         <td>
-                            Defines the url address of the file with the document changes data, which can be downloaded by the <em>changesurl</em> link from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.
-                            The request for file is signed with a token which is checked by the Document Server.
+                            定义带有文档更改数据的文件的url地址，可以通过 <em>changesurl</em> 链接从保存文档后返回的 <a href="<%= Url.Action("callback") %>#changesurl">JSON对象</a> 中下载。
+                            文件请求使用由文档服务器检查的令牌进行签名。
                         </td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>error</td>
-                        <td>Defines the error message text.</td>
+                        <td>定义错误消息文本。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines an extension of the document specified with the <em>url</em> parameter.</td>
+                        <td>定义使用 <em>url</em> 参数指定的文档的扩展名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>key</td>
-                        <td>Defines the document identifier used to unambiguously identify the document file.</td>
+                        <td>定义文档标识符，用于明确标识文档文件。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>previous</td>
-                        <td>Defines the object of the previous version of the document if <em>changesUrl</em> address was returned after saving the document.</td>
-                        <td>object</td>
-                        <td>optional</td>
+                        <td>如果在保存文档后返回 <em>changesUrl</em> 地址，则定义上一版本文档的对象。</td>
+                        <td>对象</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>previous.fileType</td>
-                        <td>Defines an extension of the document specified with the <em>previous.url</em> parameter.</td>
+                        <td>定义使用 <em>previous.url</em> 参数指定的文档的扩展。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>previous.key</td>
-                        <td>Defines the document identifier of the previous version of the document.</td>
+                        <td>定义文档先前版本的文档标识符。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>previous.url</td>
-                        <td>Defines the url address of the previous version of the document.</td>
+                        <td>定义上一版本文档的 url 地址。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>token</td>
-                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setHistoryData">token</a>.</td>
+                        <td>定义以 <a href="<%= Url.Action("signature/browser") %>#setHistoryData">令牌</a>形式添加到参数的加密签名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
                         <td>
-                            Defines the url address of the current document version.
-                            Can be downloaded by the <em>url</em> link from <a href="<%= Url.Action("callback") %>#url">the JSON object</a> returned after saving the document. 
-                            Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
-                            Otherwise, an error will occur.
+                            定义当前文档版本的 url 地址。
+                            可以从保存文档后返回的 <a href="<%= Url.Action("callback") %>#url">JSON</a> 对象中的 <em>url</em> 链接下载。
+                            使用本地链接时请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。
+                            否则会出现错误。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>version</td>
-                        <td>Defines the document version number.</td>
+                        <td>定义文档版本号。</td>
                         <td>integer</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -635,8 +635,8 @@ docEditor.setHistoryData({
 
         <li>
             <p>
-                <b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - insert recipient data for mail merge into the file.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> events.
+                <b id="setMailMergeRecipients" class="copy-link">setMailMergeRecipients</b> - 将邮件合并的收件人数据插入文件中。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> 事件之后调用。
             </p>
             <pre>
 docEditor.setMailMergeRecipients({
@@ -645,8 +645,8 @@ docEditor.setMailMergeRecipients({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>
@@ -657,34 +657,34 @@ docEditor.setMailMergeRecipients({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>fileType</td>
                         <td>
-                            Defines the type of spreadsheet for mail merge in the file.
-                            Can be: xlsx.
+                            定义文件中邮件合并的电子表格类型。
+                            可以是：xlsx。
                         </td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>token</td>
-                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setMailMergeRecipients">token</a>.</td>
+                        <td>定义以 <a href="<%= Url.Action("signature/browser") %>#setMailMergeRecipients">令牌</a>形式添加到参数的加密签名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source data is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
-                            Otherwise, an error will occur.</td>
+                        <td>定义存储源数据的绝对 URL。
+                            使用本地链接时请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。否则会出现错误。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -693,9 +693,9 @@ docEditor.setMailMergeRecipients({
 
         <li>
             <p>
-                <b id="setRevisedFile" class="copy-link">setRevisedFile<span class="required">*</span></b> - select a document for comparing.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> events.
-                <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+                <b id="setRevisedFile" class="copy-link">setRevisedFile<span class="required">*</span></b> - 选择一个文档进行比较。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestCompareFile">onRequestCompareFile</a> 事件之后调用。
+                <span class="required-descr"><span class="required">*</span><em> - 仅适用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版</em></span>
             </p>
             <pre>
 docEditor.setRevisedFile({
@@ -704,8 +704,8 @@ docEditor.setRevisedFile({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>
@@ -716,31 +716,31 @@ docEditor.setRevisedFile({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>fileType</td>
-                        <td>Defines the type of document for comparing.</td>
+                        <td>定义要比较的文档类型。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>token</td>
-                        <td>Defines the encrypted signature added to the parameter in the form of a <a href="<%= Url.Action("signature/browser") %>#setRevisedFile">token</a>.</td>
+                        <td>定义以 <a href="<%= Url.Action("signature/browser") %>#setRevisedFile">令牌</a>形式添加到参数的加密签名。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>url</td>
-                        <td>Defines the absolute URL where the source document is stored. Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links. 
-                            Otherwise, an error will occur.</td>
+                        <td>定义存储源文档的绝对 URL。
+                            使用本地链接时请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。否则会出现错误。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -749,8 +749,8 @@ docEditor.setRevisedFile({
 
         <li>
             <p>
-                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
-                This method can be called after the <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a> events.
+                <b id="setSharingSettings" class="copy-link">setSharingSettings</b> - 更新有关允许与其他用户共享文档的设置的 <a href="<%= Url.Action("config/document/info") %>#sharingSettings">信息</a>。
+                该方法可以在 <a href="<%= Url.Action("config/events") %>#onRequestSharingSettings">onRequestSharingSettings</a> 事件之后调用。
             </p>
             <pre>
 docEditor.setSharingSettings({
@@ -776,30 +776,30 @@ docEditor.setSharingSettings({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>sharingSettings</td>
-                        <td>Defines the settings which allow sharing the document with other users.</td>
-                        <td>array of object</td>
-                        <td>optional</td>
+                        <td>定义允许与其他用户共享文档的设置。</td>
+                        <td>对象数组</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>sharingSettings.permissions</td>
-                        <td>Defines the access rights for the user with the name above.</td>
+                        <td>定义具有上述名称的用户的访问权限。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>sharingSettings.user</td>
-                        <td>Defines the name of the user with whom the document will be shared.</td>
+                        <td>定义将与之共享文档的用户的名称。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                 </tbody>
             </table>
@@ -808,8 +808,8 @@ docEditor.setSharingSettings({
 
         <li>
             <p>
-                <b id="setUsers" class="copy-link">setUsers</b> - set a list of users to mention in the comments.
-                This method must be called after the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> events.
+                <b id="setUsers" class="copy-link">setUsers</b> - 设置要在评论中提及的用户列表。
+                此方法必须在 <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件之后调用。
             </p>
             <pre>
 docEditor.setUsers({
@@ -827,8 +827,8 @@ docEditor.setUsers({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>
@@ -839,30 +839,30 @@ docEditor.setUsers({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>users</td>
-                        <td>Defines the list of the users.</td>
-                        <td>array of strings</td>
-                        <td>optional</td>
+                        <td>定义用户列表。</td>
+                        <td>字符串数组</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>Defines the email address of the user.</td>
+                        <td>定义用户的电子邮件地址。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>
-                        <td>Defines the full name of the user.</td>
+                        <td>定义用户的全名。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -871,8 +871,8 @@ docEditor.setUsers({
 
         <li>
             <p>
-                <b id="showMessage" class="copy-link">showMessage</b> - display a tooltip with a message.
-                This method can be called only after the <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> events.
+                <b id="showMessage" class="copy-link">showMessage</b> - 显示带有消息的工具提示。
+                该方法只能在 <a href="<%= Url.Action("config/events") %>#onAppReady">onAppReady</a> 事件之后调用。
             </p>
             <pre>
 docEditor.showMessage(message);
@@ -886,24 +886,24 @@ docEditor.showMessage(message);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>message</td>
-                        <td>Defines the message text.</td>
+                        <td>定义消息文本。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
             <div class="mobile-content"></div>
             <note>
-                Please note that displaying a tooltip with a message is not supported in the embedded platform <a href="<%= Url.Action("config") %>#type">type</a>.
+                请注意，嵌入式平台 <a href="<%= Url.Action("config") %>#type">类型</a>不支持显示带有消息的工具提示。
             </note>
         </li>
     </ul>

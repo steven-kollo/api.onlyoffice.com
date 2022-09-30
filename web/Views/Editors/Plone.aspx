@@ -6,42 +6,42 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Plone ONLYOFFICE integration plugin
+    Plone ONLYOFFICE 集成插件
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Plone ONLYOFFICE integration plugin</span>
+        <span class="hdr">Plone ONLYOFFICE 集成插件</span>
     </h1>
 
-    <p>This <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-plone">plugin</a> allows users to edit office documents within <a target="_blank" href="https://plone.org/">Plone</a> using ONLYOFFICE Docs.</p>
+    <p>该 <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-plone">插件</a> 使用户能够从 <a target="_blank" href="https://plone.org/">Plone</a> 中用 ONLYOFFICE Docs编辑office文档。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
 
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
-        <li>The following formats are available for viewing only: PDF, ODT, ODS, ODP, DOC, XLS, PPT.</li>
-        <li>The plugin will create a new <b>ONLYOFFICE Edit</b> menu option within the document library for Office documents. 
-            This allows multiple users to collaborate in real time and to save back those changes to Plone.</li>
+        <li>目前，可以编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
+        <li>以下格式仅供查看：PDF, ODT, ODS, ODP, DOC, XLS, PPT.</li>
+        <li>该插件将在 Office 文档的文档库中创建一个新的菜单选项 <b>ONLYOFFICE 编辑</b>。
+            这允许多个用户实时协作并将这些更改保存到Plone中。</li>
     </ul>
 
-    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
 
     <p>
-        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Plone and any end-clients. 
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>. 
-        ONLYOFFICE Docs must also be able to POST to Plone directly.
+        您将需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 Plone 和任何客户终端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE Docs 还必须能够直接发布到 Plone。
     </p>
 
-    <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
+    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
-    <h2 id="install" class="copy-link">Installing Plone ONLYOFFICE integration plugin</h2>
+    <h2 id="install" class="copy-link">安装 Plone ONLYOFFICE 集成插件</h2>
 
-    <p>To start using ONLYOFFICE Docs with Plone, the following steps must be performed:</p>
+    <p>要开始使用带有 Plone 的 ONLYOFFICE Docs，必须执行以下步骤：</p>
     <ol>
-        <li>Install plugin by adding it to your <em>buildout.cfg</em>:
+        <li>通过将插件添加到您的 <em>buildout.cfg</em>来安装插件：
             <span class="commandline">
 [buildout]
 
@@ -54,43 +54,43 @@ eggs =
 
         <li>Run <em>bin/buildout</em>.</li>
 
-        <li>Go to <b>Site Setup -> Add-ons</b> and press the <b>Install</b> button to enable plugin.</li>
+        <li>转到 <b>站点设置 -> 附加组件</b>，然后按 <b>安装</b> 按钮启用插件。</li>
     </ol>
 
-    <p>You could also install plugin via Docker:</p>
+    <p>你也可以通过 Docker 安装插件：</p>
     <span class="commandline">
 docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.connector" plone
     </span>
 
-    <p>Both options will automatically install plugin from <a target="_blank" href="https://pypi.org/project/onlyoffice.connector/">PyPi</a>.</p>
+    <p>这两个选项都会自动从 <a target="_blank" href="https://pypi.org/project/onlyoffice.connector/">PyPi</a>安装插件。</p>
 
-    <h2 id="configuration" class="copy-link">Configuring Plone ONLYOFFICE integration plugin</h2>
+    <h2 id="configuration" class="copy-link">配置 Plone ONLYOFFICE 集成插件</h2>
 
     <p>
-        To configure plugin go to <b>Site Setup</b>.
-        Scroll down to <b>Add-ons Configuration</b> section and press the <b>ONLYOFFICE Configuration</b> button.
+        要配置插件，请转到 <b>站点设置</b>。
+        向下滚动到 <b>附加组件配置</b> 部分，然后按 <b>ONLYOFFICE 配置</b> 按钮。
     </p>
 
-    <h2 id="developing" class="copy-link">Developing Plone ONLYOFFICE plugin</h2>
+    <h2 id="developing" class="copy-link">开发 Plone ONLYOFFICE 插件</h2>
 
     <ol>
-        <li>Clone repository and change directory:
+        <li>克隆存储库并更改目录：
 
             <span class="commandline">
 git clone --branch deploy git@github.com:ONLYOFFICE/onlyoffice-plone.git
 cd onlyoffice-plone
             </span>
         </li>
-        <li>Create a <em>virtualenv</em> in the package.</li>
-        <li>Install requirements with pip.</li>
-        <li>Run <em>buildout</em>:
+        <li>在包中创建一个 <em>virtualenv</em>。</li>
+        <li>使用 pip 安装所需文件。</li>
+        <li>运行 <em>buildout</em>：
             <span class="commandline">
 virtualenv .
 ./bin/pip install -r requirements.txt
 ./bin/buildout
             </span>
         </li>
-        <li>Start Plone in foreground:
+        <li>在前台启动 Plone：
             <span class="commandline">
 ./bin/instance fg
             </span>
@@ -98,12 +98,12 @@ virtualenv .
     </ol>
 
     <p>
-        If you have a working Plone instance, you can install plugin by adding the project files to the <em>scr</em> directory:
+        如果你有一个工作的 Plone 实例，你可以通过将项目文件添加到 <em>scr</em> 目录来安装插件：
     </p>
     <ol>
-        <li>In the <em>scr</em> directory create the <em>onlyoffice.connector</em> directory.</li>
-        <li>Put your project files received by Git into the <em>onlyoffice.connector</em> directory.</li>
-        <li>Edit the <em>buildout.cfg</em> file:
+        <li>在 <em>scr</em> 目录中创建 <em>onlyoffice.connector</em> 目录。</li>
+        <li>将 Git 收到的项目文件放入 <em>onlyoffice.connector</em> 目录。</li>
+        <li>编辑 <em>buildout.cfg</em> 文件：
             <span class="commandline">
 [buildout]
 
@@ -115,23 +115,23 @@ develop =
     src/onlyoffice.connector
             </span>
         </li>
-        <li>Rerun buildout for the changes to take effect:
+        <li>重新运行 buildout 以使更改生效：
             <span class="commandline">
 .bin/buildout
             </span>
         </li>
-        <li>Then start or restart your Plone instance.</li>
+        <li>然后启动或重新启动您的 Plone 实例。</li>
     </ol>
     <note>
-        Plone is based on <b>Zope server</b> and will not run as <em>root</em> user.
-        If you intend to run it as <em>root</em> user, you must supply <a target="_blank" href="https://zope.readthedocs.io/en/2.12/SETUID.html">effective-user directive</a>. In order to do so, add <em>effective-user &lt;username&gt;</em> line to <em>./parts/instance/etc/zope.conf</em>.
+        Plone 基于 <b>Zope 服务器</b>，不会以 <em>root</em> 用户身份运行。
+        如果您打算以 <em>root</em> 用户身份运行它，则必须提供 <a target="_blank" href="https://zope.readthedocs.io/en/2.12/SETUID.html">有效用户指令</a>。为此，请将 <em>effective-user &lt;username&gt;</em> 行添加到 <em>./parts/instance/etc/zope.conf</em>。
     </note>
 
-    <h2 id="upgrade" class="copy-link">Upgrade Plone ONLYOFFICE integration plugin</h2>
+    <h2 id="upgrade" class="copy-link">升级 Plone ONLYOFFICE 集成插件</h2>
 
     <ol>
-        <li>If you specified a concrete plugin version in your <em>buildout.cfg</em> file (so-called <em>pinning</em>, and a recommended practice), like <em>onlyoffice.connector = 1.0.0</em>, update this reference to point to the newer version. 
-            If the plugin version is not specified, then the latest version will be automatically loaded:
+        <li>如果您在 <em>buildout.cfg</em> 文件中指定了具体的插件版本（所谓的pinning，及推荐的做法），例如 <em>onlyoffice.connector = 1.0.0</em>，请更新此引用以指向较新的版本。
+            如果未指定插件版本，则将自动加载最新版本：
             <span class="commandline">
 [versions]
 
@@ -140,34 +140,34 @@ develop =
 onlyoffice.connector = 1.0.1
             </span>
         </li>
-        <li>Run <em>bin/buildout</em>. Wait until a new version is downloaded and installed.</li>
-        <li>Restart Plone. Your site may look weird, or even be inaccessible until you have performed the next step.</li>
-        <li>Navigate to the <b>Add-on</b> screen (add <em>/prefs_install_products_form</em> to your site URL) and in the <b>Upgrades</b> list select <b>onlyoffice.connector</b> and click <b>Upgrade onlyoffice.connector</b>.</li>
+        <li>运行 <em>bin/buildout</em>。等到下载并安装新版本。</li>
+        <li>重新启动克隆。在您执行下一步之前，您的网站可能看起来很奇怪，甚至无法访问。</li>
+        <li>导航到 <b>附加组件</b> 屏幕（将 <em>/prefs_install_products_form</em> 添加到您的站点 URL）并在 <b>升级</b> 列表中选择 <b>onlyoffice.connector</b> 并单击 <b>升级 onlyoffice.connector</b>。</li>
     </ol>
 
 
-    <h2 id="how-it-works" class="copy-link">How it works</h2>
+    <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
     <ol>
-        <li>User navigates to a document within Plone and selects the <b>ONLYOFFICE Edit</b> action.</li>
+        <li>用户导航到 Plone 中的文档并选择 <b>ONLYOFFICE 编辑</b> 操作。</li>
         <li>
-            <p>Plone prepares a JSON object for the Document Server with the following properties:</p>
+            <p>Plone 为文档服务器准备一个 JSON 对象，具有以下属性：</p>
             <ul>
-                <li><b>url</b>: the URL that ONLYOFFICE Docs uses to download the document;</li>
-                <li><b>callbackUrl</b>: the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>key</b>: the <em>UUID+Modified Timestamp</em> to instruct ONLYOFFICE Docs whether to download the document again or not;</li>
-                <li><b>title</b>: the document title (name).</li>
+                <li><b>url</b>: ONLYOFFICE Docs 用于下载文档的 URL；</li>
+                <li><b>callbackUrl</b>: ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>key</b>: <em>UUID+Modified Timestamp</em> 指示ONLYOFFICE Docs是否重新下载文档；</li>
+                <li><b>Title:</b>: 文档标题（名称）。</li>
             </ul>
         </li>
-        <li>Plone constructs a page from the <em>.pt</em> template, filling in all of those values so that the client browser can load up the editor.</li>
-        <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
-        <li>Then ONLYOFFICE Docs downloads the document from Plone and the user begins editing.</li>
-        <li>ONLYOFFICE Docs sends a POST request to the <em>callback</em> URL to inform Plone that a user is editing the document.</li>
-        <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <em>callback</em> URL letting Plone know that the clients have finished editing the document and closed it.</li>
-        <li>Plone downloads a new version of the document, replacing the old one.</li>
+        <li>Plone 从 <em>.pt</em> 模板构造一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
+        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送包含上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE Docs 从 Plone 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE Docs 向 <em>回调</em> URL 发送 POST 请求，通知 Plone 用户正在编辑文档。</li>
+        <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向 <em>回调</em> URL 发送一个 POST，让 Plone 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>Plone 下载文档的新版本，替换旧版本。</li>
     </ol>
 
     <br />
-    <p>Download the Plone ONLYOFFICE integration plugin <a href="https://github.com/ONLYOFFICE/onlyoffice-plone" target="_blank">here</a>.</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-plone" target="_blank">此处</a>下载 Plone ONLYOFFICE 集成插件。</p>
 
 </asp:Content>

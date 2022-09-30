@@ -6,23 +6,23 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Conversion API
+    转换 API
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Conversion API</span>
+        <span class="hdr">转换 API</span>
     </h1>
 
     <p class="dscr">
-        For the interaction with the <b>document conversion service</b> the POST requests are used.
-        The request parameters are entered in JSON format in the request body.
-        The requests are sent to the <span class="fakelink">https://documentserver/ConvertService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        对于与 <b>文档转换服务</b> 的交互，使用 POST 请求。
+        请求参数在请求正文中以 JSON。
+        格式输入请求被发送到 <span class="fakelink">https://documentserver/ConvertService.ashx</span>, 其中 <b>documentserver</b> 是安装了ONLYOFFICE 文档服务器的服务器的名称
     </p>
 
-    <div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
+    <div class="note">在 <b>ONLYOFFICE 文档服务器</b>4.2之前的版本中，使用了GET请求,请求参数在 <em>QueryString</em> 中。</div>
 
-    <h2 id="request" class="copy-link">Request parameters and their description</h2>
+    <h2 id="request" class="copy-link">请求参数及其说明：</h2>
     <table class="table">
         <colgroup>
             <col style="width: 100px;" />
@@ -32,394 +32,394 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Parameter</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Presence</td>
+                <td>参数</td>
+                <td>描述</td>
+                <td>类型</td>
+                <td>出现</td>
             </tr>
         </thead>
         <tbody>
             <tr class="tablerow">
                 <td id="async" class="copy-link">async</td>
                 <td>
-                    Defines the conversion request type: asynchronous or not.<br />
-                    Supported values:
+                    定义转换请求类型：异步与否。<br />
+                    支持的值：
                     <ul>
                         <li><b>true</b></li>
                         <li><b>false</b></li>
                     </ul>
-                    When the asynchronous request type is used, the response is formed instantly.
-                    In this case to get the result it is necessary to send requests without parameter change until the conversion is finished.
-                    The default value is <b>false</b>.
+                    使用异步请求类型时，响应立即形成。
+                    在这种情况下，要获得结果，必须在转换完成之前发送不更改参数的请求。
+                    默认值为 <b>false</b>。
                 </td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="codePage" class="copy-link">codePage</td>
                 <td>
-                    Defines the file encoding when converting from <em>csv</em> or <em>txt</em> format.<br />
-                    Main supported values:
+                    定义从 <em>csv</em> 或 <em>txt</em> 格式转换时的文件编码。<br />
+                    主要支持的值：
                     <ul>
-                        <li><b>932</b> - Japanese (Shift-JIS),</li>
-                        <li><b>950</b> - Chinese Traditional (Big5),</li>
-                        <li><b>1250</b> - Central European (Windows),</li>
-                        <li><b>1251</b> - Cyrillic (Windows),</li>
-                        <li><b>65001</b> - Unicode (UTF-8).</li>
+                        <li><b>932</b> - 日语（Shift-JIS），</li>
+                        <li><b>950</b> - 繁体中文 (Big5),</li>
+                        <li><b>1250</b> - 中欧（Windows），</li>
+                        <li><b>1251</b> - 西里尔字母 (Windows),</li>
+                        <li><b>65001</b> - Unicode (UTF-8)。</li>
                     </ul>
-                    You can find all the supported values <a target="_blank" href="https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js">in this file</a>.
+                    您可以在 <a target="_blank" href="https://github.com/ONLYOFFICE/server/blob/master/Common/sources/commondefines.js">此文件</a>中找到所有支持的值。
                 </td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="delimiter" class="copy-link">delimiter</td>
                 <td>
-                    Defines the delimiter characters for separating values when converting from <em>csv</em> format.<br />
-                    Supported values:
+                    定义从 <em>csv</em> 格式转换时用于分隔值的定界符。<br />
+                    支持的值：
                     <ul>
-                        <li><b>0</b> - no delimiter,</li>
-                        <li><b>1</b> - tab,</li>
-                        <li><b>2</b> - semicolon,</li>
-                        <li><b>3</b> - colon,</li>
-                        <li><b>4</b> - comma,</li>
-                        <li><b>5</b> - space.</li>
+                        <li><b>0</b> - 没有定界符，</li>
+                        <li><b>1</b> - 制表符，</li>
+                        <li><b>2</b> - 分号，</li>
+                        <li><b>3</b> - 冒号，</li>
+                        <li><b>4</b> - 逗号，</li>
+                        <li><b>5</b> - 空格。</li>
                     </ul>
                 </td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="documentLayout" class="copy-link">documentLayout</td>
-                <td>Defines the document layout which specifies parameters for printing forms as <em>pdf</em> documents or images.</td>
-                <td>object</td>
-                <td>optional</td>
+                <td>定义文档布局，该布局指定参数，用于说明将表单打印为 <em>pdf</em> 文档还是图像。</td>
+                <td>对象</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="drawPlaceHolders" class="copy-link">documentLayout.drawPlaceHolders</td>
-                <td>Defines if placeholders will be drawn or not.</td>
+                <td>定义是否将绘制占位符。</td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="drawFormHighlight" class="copy-link">documentLayout.drawFormHighlight</td>
-                <td>Defines if forms will be highlighted or not.</td>
+                <td>定义表单是否突出显示。</td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="isPrint" class="copy-link">documentLayout.isPrint</td>
-                <td>Defines if the print mode is turned on or off. This parameter is used only for converting <em>docx/docxf</em> into <em>pdf</em>.
-                    If this parameter is equal to <b>true</b>, the <em>drawPlaceHolders</em> and <em>drawFormHighlight</em> flags are used as described above.
-                    If this parameter is <b>false</b>, the <em>drawFormHighlight</em> flag does not work and the <em>drawPlaceHolders</em> parameter allows saving the forms in the <em>pdf</em> format.
-                    The default value is <b>false</b>.</td>
+                <td>定义打印模式是打开还是关闭。此参数仅用于将 <em>docx/docxf</em> 转换为 <em>pdf</em>。
+                    如果此参数等于 <b>true</b>，则使用 <em>drawPlaceHolders</em> 和 <em>drawFormHighlight</em> 标志，如上所述。
+                    如果此参数为 <b>false</b>，则 <em>drawFormHighlight</em> 标志不起作用，并且 <em>drawPlaceHolders</em> 参数允许将表单保存为 <em>pdf</em> 格式。
+                    默认值为 <b>false</b>。</td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="documentRenderer" class="copy-link">documentRenderer</td>
-                <td>Defines the document renderer when converting from <em>pdf</em>, <em>xps</em>, <em>oxps</em>.</td>
-                <td>object</td>
-                <td>optional</td>
+                <td>定义从 <em>pdf</em>, <em>xps</em>, <em>oxps</em>转换时的文档渲染器。</td>
+                <td>对象</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="textAssociation" class="copy-link">documentRenderer.textAssociation</td>
                 <td>
-                    Defines the rendering mode that can have the following values:
+                    定义可以具有以下值的渲染模式：
                     <ul>
                         <li>
-                            <b>blockChar</b> - all text is converted by single characters.
-                            Each character is in its own frame (like a textbox),
+                            <b>blockChar</b> - 所有文本都由单个字符转换。
+                            每个字符都在自己的框中（如文本框），
                         </li>
                         <li>
-                            <b>blockLine</b> - all text is converted by separate lines.
-                            Each text line is in its own frame. Lines can be combined within the same block,
+                            <b>blockLine</b> - 所有文本都由单独的行转换。
+                            每个文本行都在自己的框中。行可以在同一个块内组合，
                         </li>
                         <li>
-                            <b>plainLine</b> - all text is converted as a plain text.
-                            But each line is a separate paragraph,
+                            <b>plainLine</b> - 所有文本都转换为纯文本。
+                            但每一行都是一个单独的段落，
                         </li>
                         <li>
-                            <b>plainParagraph</b> - all text is converted as a plain text.
-                            Lines are combined into paragraphs.
+                            <b>plainParagraph</b> - 所有文本都转换为纯文本。
+                            行被组合成段落。
                         </li>
                     </ul>
-                    The default value is <b>plainLine</b>.
+                    默认值为 <b>plainLine</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="filetype" class="copy-link">filetype<span class="required">*</span></td>
-                <td>Defines the type of the document file to be converted.</td>
+                <td>定义要转换的文档文件的类型。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
             <tr class="tablerow">
                 <td id="key" class="copy-link">key</td>
-                <td>Defines the document identifier used to unambiguously identify the document file.</td>
+                <td>定义文档标识符,用于明确标识文档文件。</td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
             <tr class="tablerow">
                 <td id="outputtype" class="copy-link">outputtype<span class="required">*</span></td>
                 <td>
-                    Defines the resulting converted document type.
-                    Starting from version 7.0, file formats can be specified instead of extensions.
-                    They are used when we do not know in advance what extension is required:
+                    定义生成的转换文档类型。
+                    从 7.0 版开始，可以指定文件格式而不是扩展名。
+                    当我们事先不知道需要什么扩展时使用它们：
                     <ul>
                         <li>
-                            <b>ooxml</b> - defines that the file will be coverted into <em>docx</em>, <em>docm</em>, <em>xlsx</em>, <em>xlsm</em>, <em>pptx</em> or <em>pptm</em>.
-                            For example, when the <em>doc</em> file is converted into the OOXML format, the resulting file can be <em>docx</em> or <em>docm</em> if this file contains macros (the same for <em>xls</em> and <em>ppt</em>).
-                            It is also applied when converting XML files into OOXML formats (<em>docx</em>, <em>xlsx</em> or <em>pptx</em> depending on the content);
+                            <b>ooxml</b> - 定义文件将被转换为 <em>docx</em>, <em>docm</em>, <em>xlsx</em>, <em>xlsm</em>, <em>pptx</em> 或 <em>pptm</em>。
+                            例如，将 <em>doc</em> 文件转换为 OOXML 格式时，如果该文件包含宏，则生成的文件可以是 <em>docx</em> 或 <em>docm</em>（<em>xls</em> 和 <em>ppt</em> 也一样）。
+                            它也适用于将 XML 文件转换为 OOXML 格式（<em>docx</em>, <em>xlsx</em> 或 <em>pptx</em> ，具体取决于内容）；
                         </li>
                         <li>
-                            <b>odf</b> - defines that the file will be coverted into <em>odt</em>, <em>ods</em> or <em>odp</em>.
-                            For example, it is used when converting XML files into ODF formats (<em>odt</em>, <em>ods</em> or <em>odp</em> depending on the content).
+                            <b>odf</b> - 定义文件将被转换为 <em>odt</em>, <em>ods</em> 或 <em>odp</em>。
+                            例如，它用于将 XML 文件转换为 ODF 格式（<em>odt</em>, <em>ods</em> 或 <em>odp</em>，具体取决于内容）。
                         </li>
                     </ul>
                 </td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
             <tr class="tablerow">
                 <td id="password" class="copy-link">password</td>
-                <td>Defines the password for the document file if it is protected with a password.</td>
+                <td>如果文档文件受密码保护，则定义其密码。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="region" class="copy-link">region</td>
                 <td>
-                    Defines the default display format for currency and date and time when converting from <em>Spreadsheet format</em> to <em>pdf</em>.
-                    Is set using the four letter (<b>en-US</b>, <b>fr-FR</b>, etc.) language codes.
-                    The default value is <b>en-US</b>.
+                    定义从 <em>电子表格</em> 格式转换为 <em>pdf</em>时货币、日期和时间的默认显示格式。
+                    使用四个字母（<b>en-US</b>、 <b>fr-FR</b>等）语言代码设置。
+                    默认值为 <b>en-US</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="spreadsheetLayout" class="copy-link">spreadsheetLayout</td>
-                <td>Defines settings for converting the spreadsheet to pdf.</td>
-                <td>object</td>
-                <td>optional</td>
+                <td>定义将电子表格转换为 pdf 的设置。</td>
+                <td>对象</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="fitToHeight" class="copy-link">spreadsheetLayout.fitToHeight</td>
                 <td>
-                    Sets the height of the converted area, measured in the number of pages.
-                    The default value is <b>0</b>.
+                    设置转换区域的高度，以页数为单位。默认值为0。
+                    默认值为 <b>0</b>。
                 </td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="fitToWidth" class="copy-link">spreadsheetLayout.fitToWidth</td>
                 <td>
-                    Sets the width of the converted area, measured in the number of pages.
-                    The default value is <b>0</b>.
+                    设置转换区域的宽度，以页数为单位。
+                    默认值为0。默认值为 <b>0</b>。
                 </td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="gridLines" class="copy-link">spreadsheetLayout.gridLines</td>
                 <td>
-                    Allows to include grid lines to the output PDF file or not.
-                    The default value is <b>false</b>.
+                    允许在输出 PDF 文件中包含或不包含网格线。
+                    默认值为 <b>false</b>。
                 </td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="headings" class="copy-link">spreadsheetLayout.headings</td>
                 <td>
-                    Allows to include the headings to the output PDF file or not.
-                    The default value is <b>false</b>.
+                    允许在输出 PDF 文件中包含或不包含标题。
+                    默认值为 <b>false</b>。
                 </td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="ignorePrintArea" class="copy-link">spreadsheetLayout.ignorePrintArea</td>
                 <td>
-                    Determines whether to ignore the print area chosen for the spreadsheet file or not.
-                    The default value is <b>true</b>.
+                    确定是否忽略为电子表格文件选择的打印区域。
+                    默认值为 <b>true</b>。
                 </td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="margins" class="copy-link">spreadsheetLayout.margins</td>
-                <td>Sets the margins of the output PDF file.</td>
-                <td>object</td>
-                <td>optional</td>
+                <td>设置输出 PDF 文件的边距。</td>
+                <td>对象</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="margins-bottom" class="copy-link">spreadsheetLayout.margins.bottom</td>
                 <td>
-                    Sets the bottom margin of the output PDF file.
-                    The default value is <b>19.1mm</b>.
+                    设置输出 PDF 文件的下边距。默认值为19.1mm。
+                    默认值为 <b>19.1mm</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="margins-left" class="copy-link">spreadsheetLayout.margins.left</td>
                 <td>
-                    Sets the left margin of the output PDF file.
-                    The default value is <b>17.8mm</b>.
+                    设置输出 PDF 文件的左边距。
+                    默认值为 <b>17.8mm</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
-                <td id="margins-right" class="copy-link">spreadsheetLayout.margins.right</td>
-                <td>
-                    Sets the right margin of the output PDF file.
-                    The default value is <b>17.8mm</b>.
+                <td id="margins-right" class="copy-link">spreadsheetLayout.margins.right
+                </td>
+                <td>设置输出 PDF 文件的右边距。
+                    默认值为 <b>17.8mm</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="margins-top" class="copy-link">spreadsheetLayout.margins.top</td>
                 <td>
-                    Sets the top margin of the output PDF file.
-                    The default value is <b>19.1mm</b>.
+                    设置输出 PDF 文件的上边距。
+                    默认值为 <b>19.1mm</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="orientation" class="copy-link">spreadsheetLayout.orientation</td>
                 <td>
-                    Sets the orientation of the output PDF file. 
-                    May be <b>landscape</b>, <b>portrait</b>. The default value is <b>portrait</b>.
+                    设置输出 PDF 文件的方向。
+                    可以是 <b>横向打印格式</b>，也可以是 <b>纵向打印格式</b>。默认值为 <b>纵向打印格式</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="pageSize" class="copy-link">spreadsheetLayout.pageSize</td>
-                <td>Sets the page size of the output PDF file.</td>
-                <td>object</td>
-                <td>optional</td>
+                <td>设置输出 PDF 文件的页面大小。</td>
+                <td>对象</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="pageSize-height" class="copy-link">spreadsheetLayout.pageSize.height</td>
                 <td>
-                    Sets the page height of the output PDF file.
-                    The default value is <b>297mm</b>.
+                    设置输出 PDF 文件的页面高度。
+                    默认值为 <b>297mm</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="pageSize-width" class="copy-link">spreadsheetLayout.pageSize.width</td>
                 <td>
-                    Sets the page width of the output PDF file.
-                    The default value is <b>210mm</b>.
+                    设置输出 PDF 文件的页面宽度。
+                    默认值为 <b>210mm</b>。
                 </td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="scale" class="copy-link">spreadsheetLayout.scale</td>
                 <td>
-                    Allows to set the scale of the output PDF file.
-                    The default value is <b>100</b>.
+                    允许设置输出 PDF 文件的缩放比例。
+                    默认值为 <b>100</b>。
                 </td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="thumbnail" class="copy-link">thumbnail</td>
-                <td>Defines the settings for the thumbnail when specifying the image formats (<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>) as <b>outputtype</b>.</td>
-                <td>object</td>
-                <td>optional</td>
+                <td>在将图像格式（<em>bmp</em>, <em>gif</em>, <em>jpg</em>, <em>png</em>）指定为 <b>outputtype</b>时，定义缩略图的设置。</td>
+                <td>对象</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="thumbnail-aspect" class="copy-link">thumbnail.aspect</td>
                 <td>
-                    Defines the mode to fit the image to the height and width specifyed.
-                    Supported values:
+                    定义使图像适合指定的高度和宽度的模式。
+                    支持的值：
                     <ul>
-                        <li><b>0</b> - stretch file to fit height and width,</li>
-                        <li><b>1</b> - keep the aspect for the image,</li>
+                        <li><b>0</b> - 拉伸文件以适应高度和宽度，</li>
+                        <li><b>1</b> - 保持图像的外观，</li>
                         <li>
-                            <b>2</b> - in this case, the width and height settings are not used.
-                            Instead of that, metric sizes of the page are converted into pixels with 96dpi.
-                            E.g., the A4 (210x297mm) page will turn out to be a picture with the 794x1123pix dimensions.
+                            <b>2</b> - 在这种情况下，不使用宽度和高度设置。
+                            取而代之的是，页面的米制尺寸被转换为 96dpi 的像素。
+                            例如，A4 (210x297mm) 页面将变成尺寸为 794x1123pix 的图片。
                         </li>
                     </ul>
-                    The default value is <b>2</b>.
+                    默认值为 <b>2</b>。
                 </td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="thumbnail-first" class="copy-link">thumbnail.first</td>
                 <td>
-                    Defines if the thumbnails should be generated for the first page only or for all the document pages.
-                    If false, the zip archive containing thumbnails for all the pages will be created.
-                    The default value is <b>true</b>,
+                    定义是否应仅为首页或所有文档页面生成缩略图。
+                    如果为 false，将创建包含所有页面缩略图的zip存档。
+                    默认值为 <b>false</b>。
                 </td>
                 <td>boolean</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="thumbnail-height" class="copy-link">thumbnail.height</td>
                 <td>
-                    Defines the thumbnail height in pixels.
-                    The default value is <b>100</b>.
+                    以像素为单位定义缩略图高度。
+                    默认值为 <b>100</b>。
                 </td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="thumbnail-width" class="copy-link">thumbnail.width</td>
                 <td>
-                    Defines the thumbnail width in pixels.
-                    The default value is <b>100</b>.
+                    以像素为单位定义缩略图宽度。
+                    默认值为 <b>100</b>。
                 </td>
                 <td>integer</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="title" class="copy-link">title</td>
-                <td>Defines the converted file name.</td>
+                <td>定义转换后的文件名。</td>
                 <td>string</td>
-                <td>optional</td>
+                <td>可选的</td>
             </tr>
             <tr class="tablerow">
                 <td id="token" class="copy-link">token</td>
-                <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#conversion">token</a>.</td>
+                <td>以 <a href="<%= Url.Action("signature/body") %>#conversion">令牌</a>的形式定义添加到 <b>文档服务器</b> 配置的加密签名。</td>
                 <td>string</td>
-                <td>required by configuration</td>
+                <td>配置要求</td>
             </tr>
             <tr class="tablerow">
                 <td id="url" class="copy-link">url</td>
                 <td>
-                    Defines the absolute URL to the document to be converted.
-                    Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
-                    Otherwise, an error will occur.
+                    定义要转换的文档的绝对 URL。
+                    使用本地链接时请务必添加 <a href="<%= Url.Action("security") %>">token</a>。
+                    否则会出现错误。
                 </td>
                 <td>string</td>
-                <td>required</td>
+                <td>必需的</td>
             </tr>
         </tbody>
     </table>
     <div class="mobile-content"></div>
-    <span class="required-descr"><span class="required">*</span><em> - in the tables below you can see possibility of conversion your documents into the most known file formats, where the <b>Input format</b> column corresponds to the values of the <b>filetype</b> parameter and the  <b>Output format</b> columns correspond to the values of the <b>outputtype</b> parameter.</em></span>
+    <span class="required-descr"><span class="required">*</span><em> - 在下表中，您可以看到将文档转换为最知名的文件格式的可能性，其中 <b>输入格式</b> 列对应于 <b>filetype</b> 参数的值， <b>输出格式</b> 列对应于 <b>outputtype</b> 参数的值。</em></span>
 
-    <h2 id="text-matrix" class="copy-link">Text document file formats</h2>
+    <h2 id="text-matrix" class="copy-link">文本文档文件格式</h2>
     <table class="table-conversion-matrix-text">
         <tbody>
             <tr class="scroll-arrow" style="margin-top:247px;"></tr>
             <tr>
-                <th rowspan="2">Input format</th>
-                <th colspan="18">Output format</th>
+                <th rowspan="2">输入格式</th>
+                <th colspan="18">输出格式</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -885,13 +885,13 @@
         </tbody>
     </table>
 
-    <h2 id="spreadsheet-matrix" class="copy-link">Spreadsheet file formats</h2>
+    <h2 id="spreadsheet-matrix" class="copy-link">电子表格文件格式</h2>
     <table class="table-conversion-matrix-spreadsheet">
         <tbody>
             <tr class="scroll-arrow" style="margin-top:150px;"></tr>
             <tr>
-                <th rowspan="2">Input format</th>
-                <th colspan="13">Output format</th>
+                <th rowspan="2">输入格式</th>
+                <th colspan="13">输出格式</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -1087,13 +1087,13 @@
         </tbody>
     </table>
 
-    <h2 id="presentation-matrix" class="copy-link">Presentation file formats</h2>
+    <h2 id="presentation-matrix" class="copy-link">演示文稿格式</h2>
     <table class="table-conversion-matrix-presentation">
         <tr class="scroll-arrow" style="margin-top:183px;"></tr>
         <tbody>
             <tr>
-                <th rowspan="2">Input format</th>
-                <th colspan="12">Output format</th>
+                <th rowspan="2">输入格式</th>
+                <th colspan="12">输出格式</th>
             </tr>
             <tr>
                 <td>bmp</td>
@@ -1292,7 +1292,7 @@
         </tbody>
     </table>
 
-    <div id="sample-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
+    <div id="sample-conversion" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于将文件从 <em>docx</em> 格式转换为 <em>pdf</em> 格式</div>
     <pre>
 {
     "async": false,
@@ -1304,11 +1304,11 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </p>
 
-    <div id="sample-password-conversion" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the password-protected file from <em>docx</em> format to <em>pdf</em> format</div>
+    <div id="sample-password-conversion" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于将受密码保护的文件从 <em>docx</em> 格式转换为 <em>pdf</em> 格式</div>
     <pre>
 {
     "async": false,
@@ -1321,11 +1321,11 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </p>
 
-    <div id="sample-thumbnail" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to generate <em>png</em> thumbnail of file in <em>docx</em> format</div>
+    <div id="sample-thumbnail" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于生成 <em>docx</em> 格式的文件的 <em>png</em> 缩略图</div>
     <pre>
 {
     "filetype": "docx",
@@ -1342,14 +1342,14 @@
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </p>
 
-    <div id="sample-spreadsheet-to-pdf" class="header-gray copy-link">Sample of JSON object sent to <b>document conversion service</b> used to convert the <em>spreadsheet</em> file to <em>pdf</em> format</div>
+    <div id="sample-spreadsheet-to-pdf" class="header-gray copy-link">发送到 <b>文档转换服务</b> 的 JSON 对象示例，用于将 <em>电子表格</em> 文件转换为 <em>pdf</em> 格式</div>
     <pre>
 {
-    "filetype": "xlsx",
+    "filetype": "docx",
     "key": "Khirz6zTPdfd7",
     "outputtype": "pdf",
     "region": "en-US",
@@ -1362,11 +1362,11 @@
         "headings": false,
         "gridLines": false,
         "pageSize": {
-            "width": "210mm",
-            "height": "297mm"
+        "width": "210mm",
+        "height": "297mm"
         },
         "margins": {
-            "left": "17.8mm",
+        "left": "17.8mm",
             "right": "17.8mm",
             "top": "19.1mm",
             "bottom": "19.1mm"
@@ -1375,28 +1375,28 @@
     "title": "Example Document Title.docx",
     "url": "https://example.com/url-to-example-spreadsheet.xlsx"
 }
-</pre>
+    </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </p>
 
-    <div id="sample-conversion-token" class="header-gray copy-link">Sample of JSON object contains the JSON Web Token sent to <b>document conversion service</b> used to convert the file from <em>docx</em> format to <em>pdf</em> format</div>
+    <div id="sample-conversion-token" class="header-gray copy-link">JSON 对象示例包含发送到 <b>文档转换服务</b> 的 JSON Web Token，用于将文件从 <em>docx</em> 格式转换为 <em>pdf</em> 格式</div>
     <pre>
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaWxldHlwZSI6ImRvY3giLCJrZXkiOiJLaGlyejZ6VFBkZmQ3Iiwib3V0cHV0dHlwZSI6InBkZiIsInRpdGxlIjoiRXhhbXBsZSBEb2N1bWVudCBUaXRsZS5kb2N4IiwidXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3VybC10by1leGFtcGxlLWRvY3VtZW50LmRvY3gifQ.U-YAfuuy7clWjn-xOncfJ-sxVG5DlcYn0AOzJYkoR0M"
 }
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </p>
 
-    <h2 id="response" class="copy-link">Response parameters and their description</h2>
+    <h2 id="response" class="copy-link">响应参数及其说明：</h2>
     <p>
-        The request result is returned in XML format.
-        To receive a response in JSON format you need to specify the <em>Accept</em> header with the <b>application/json</b> value in the HTTP request (available from version 4.3).
-        When forming the link to the resulting file, the same server name is used which was made the conversion request to.
+        请求结果以 XML 格式返回。
+        要接收 JSON 格式的响应，您需要在 HTTP 请求中使用 <b>application/json</b> 值指定 <em>Accept</em> 标头（从 4.3 版开始提供）。
+        在形成结果文件的链接时，使用与转换请求相同的服务器名称。
     </p>
     <table class="table">
         <colgroup>
@@ -1407,48 +1407,48 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Parameter</td>
-                <td>Description</td>
-                <td>Type</td>
-                <td>Example</td>
+                <td>参数</td>
+                <td>描述</td>
+                <td>类型</td>
+                <td>示例</td>
             </tr>
         </thead>
         <tbody>
             <tr class="tablerow">
                 <td id="endConvert" class="copy-link">endConvert</td>
-                <td>Defines if the conversion is completed or not.</td>
+                <td>定义转换是否完成。</td>
                 <td>boolean</td>
                 <td>true</td>
             </tr>
             <tr class="tablerow">
                 <td id="error" class="copy-link">error</td>
-                <td>Defines an error occurred during the conversion. Possible error codes can be found <a href="#error-codes">here</a>.</td>
+                <td>定义转换期间发生的错误。可以在 <a href="#error-codes">此处</a>找到可能的错误代码。</td>
                 <td>integer</td>
                 <td>-3</td>
             </tr>
             <tr class="tablerow">
                 <td id="fileType" class="copy-link">fileType</td>
-                <td>Defines an extension of the converted file.</td>
+                <td>定义转换文件的扩展名。</td>
                 <td>string</td>
                 <td>"docm"</td>
             </tr>
             <tr class="tablerow">
                 <td id="fileUrl" class="copy-link">fileUrl</td>
-                <td>Defines the link to the converted document. This parameter will be received only when the <em>endConvert</em> parameter is set to <b>true</b>.</td>
+                <td>定义到已转换文档的链接。仅当 <em>endConvert</em> 参数设置为 <b>true</b>时才会接收到此参数。</td>
                 <td>string</td>
                 <td>"https://documentserver/url-to-converted-document.pdf"</td>
             </tr>
             <tr class="tablerow">
                 <td id="percent" class="copy-link">percent</td>
-                <td>Defines the percentage of the file conversion. If the <em>endConvert</em> parameter is set to <b>true</b>, the <em>percent</em> is equal to <b>100</b>.</td>
+                <td>定义文件转换的百分比。如果 <em>endConvert</em> 参数设置为 <b>true</b>，则 <em>percent</em> 等于 <b>100</b>。</td>
                 <td>integer</td>
                 <td>100</td>
             </tr>
         </tbody>
     </table>
 
-    <div class="header-gray">Sample of the response in XML format</div>
-    <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
+    <div class="header-gray">XML 格式的响应示例</div>
+    <p>在形成结果文件的链接时，使用与转换请求相同的服务器名称。</p>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
@@ -1458,8 +1458,8 @@
     &lt;Percent&gt;100&lt;/Percent&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Sample of the response in JSON format</div>
-    <p>When forming the link to the resulting file, the same server name is used which was made the conversion request to.</p>
+    <div class="header-gray">JSON 格式的响应示例</div>
+    <p>在形成到结果文件的链接时，使用与转换请求相同的服务器名称。</p>
     <pre>
 {
     "endConvert": true,
@@ -1469,17 +1469,17 @@
 }
 </pre>
 
-    <div class="header-gray">Sample of the intermediate response to the asynchronous request (with the parameter <em>async=true</em>) in XML format</div>
+    <div class="header-gray">XML 格式的异步请求（带有参数 <em>async=true</em>）的中间响应示例</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;FileResult&gt;
+    &lt;FileResult&gt;
     &lt;EndConvert&gt;False&lt;/EndConvert&gt;
     &lt;FileType&gt;&lt;/FileType&gt;
     &lt;FileUrl&gt;&lt;/FileUrl&gt;
     &lt;Percent&gt;95&lt;/Percent&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Sample of the intermediate response to the asynchronous request (with the parameter <em>async=true</em>) in JSON format</div>
+    <div class="header-gray">JSON 格式的异步请求（带参数 <em>async=true</em>）的中间响应示例</div>
     <pre>
 {
     "endConvert": false,
@@ -1487,21 +1487,21 @@
 }
 </pre>
 
-    <div class="header-gray">Sample of the response when an error occurred in XML format</div>
+    <div class="header-gray">XML 格式发生错误时的响应示例</div>
     <pre>
 &lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;FileResult&gt;
     &lt;Error&gt;-3&lt;/Error&gt;
 &lt;/FileResult&gt;
 </pre>
-    <div class="header-gray">Sample of the response when an error occurred in JSON format</div>
+    <div class="header-gray">JSON 格式发生错误时的响应示例</div>
     <pre>
 {
     "error": -3
 }
 </pre>
 
-    <div id="error-codes" class="copy-link header-gray">Possible error codes and their description</div>
+    <div id="error-codes" class="copy-link header-gray">可能的错误代码及其描述</div>
     <table class="error-table">
         <colgroup>
             <col style="width: 105px;" />
@@ -1509,42 +1509,42 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Error code</td>
-                <td>Description</td>
+                <td>错误代码</td>
+                <td>描述</td>
             </tr>
         </thead>
         <tbody>
             <tr class="tablerow">
                 <td>-1</td>
-                <td>Unknown error.</td>
+                <td>未知错误。</td>
             </tr>
             <tr class="tablerow">
                 <td>-2</td>
-                <td>Conversion timeout error.</td>
+                <td>转换超时错误。</td>
             </tr>
             <tr class="tablerow">
                 <td>-3</td>
-                <td>Conversion error.</td>
+                <td>转换错误。</td>
             </tr>
             <tr class="tablerow">
                 <td>-4</td>
-                <td>Error while downloading the document file to be converted.</td>
+                <td>下载要转换的文档文件时出错。</td>
             </tr>
             <tr class="tablerow">
                 <td>-5</td>
-                <td>Incorrect password.</td>
+                <td>密码错误。</td>
             </tr>
             <tr class="tablerow">
                 <td>-6</td>
-                <td>Error while accessing the conversion result database.</td>
+                <td>访问转换结果数据库时出错。</td>
             </tr>
             <tr class="tablerow">
                 <td>-7</td>
-                <td>Input error.</td>
+                <td>输入错误。</td>
             </tr>
             <tr class="tablerow">
                 <td>-8</td>
-                <td>Invalid token.</td>
+                <td>令牌无效。</td>
             </tr>
             <%--<tr class="tablerow">
                 <td>-21</td>

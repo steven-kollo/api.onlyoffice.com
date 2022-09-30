@@ -2,47 +2,47 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("config/") %>"></a>
-    <span class="hdr">Events</span>
+    <span class="hdr">事件</span>
 </h1>
 
-<p class="dscr">The events section allows to change all the functions pertaining to the events.</p>
+<p class="dscr">事件部分允许更改与事件有关的所有功能。</p>
 
 <ul>
-    <li><a href="#onAppReady">onAppReady</a> - the application is loaded into the browser.</li>
-    <li><a href="#onCollaborativeChanges">onCollaborativeChanges</a> - the document is co-edited by the other user in the <em>strict</em> co-editing mode.</li>
-    <li><a href="#onDocumentReady">onDocumentReady</a> - the document is loaded into the document editor.</li>
-    <li><a href="#onDocumentStateChange">onDocumentStateChange</a> - the document is modified.</li>
-    <li><a href="#onDownloadAs">onDownloadAs</a> - the absolute URL to the edited file when the <em>downloadAs</em> method is being called.</li>
-    <li><a href="#onError">onError</a> - an error or some other specific event occurs.</li>
-    <li><a href="#onInfo">onInfo</a> - the application opened the file.</li>
-    <li><a href="#onMetaChange">onMetaChange</a> - the meta information of the document is changed via the <em>meta</em> command.</li>
-    <li><a href="#onMakeActionLink">onMakeActionLink</a> - the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</li>
-    <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - the document is opened for editing with the old <em>document.key</em> value, which was used to edit the previous document version and was successfully saved.</li>
-    <li><a href="#onPluginsReady">onPluginsReady</a> - all plugins are loaded and can be used.</li>
-    <li><a href="#onReady">onReady</a> - the application is loaded into the browser.</li>
-    <li><a href="#onRequestClose">onRequestClose</a> - the work with the editor must be ended and the editor must be closed.</li>
-    <li><a href="#onRequestCompareFile">onRequestCompareFile</a> - the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.</li>
-    <li><a href="#onRequestCreateNew">onRequestCreateNew</a> - the user is trying to create document by clicking the <em>Create New</em> button.</li>
-    <li><a href="#onRequestEditRights">onRequestEditRights</a> - the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.</li>
-    <li><a href="#onRequestHistory">onRequestHistory</a> - the user is trying to show the document version history by clicking the <em>Version History</em> button.</li>
-    <li><a href="#onRequestHistoryClose">onRequestHistoryClose</a> - the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.</li>
-    <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - the user is trying to click the specific document version in the document version history.</li>
-    <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - the user is trying to insert an image by clicking the <em>Image from Storage</em> button.</li>
-    <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - the user is trying to select recipients data by clicking the <em>Mail merge</em> button.</li>
-    <li><a href="#onRequestRename">onRequestRename</a> - the user is trying to rename the file by clicking the <em>Rename...</em> button.</li>
-    <li><a href="#onRequestRestore">onRequestRestore</a> - the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.</li>
-    <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - the user is trying to save file by clicking <em>Save Copy as...</em> button.</li>
-    <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - the user is mentioned in a comment.</li>
-    <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - the user is trying to manage document access rights by clicking <em>Change access rights</em> button.</li>
-    <li><a href="#onRequestUsers">onRequestUsers</a> - the commenter can select other users for mention in the comments.</li>
-    <li><a href="#onWarning">onWarning</a> - a warning occurs.</li>
+    <li><a href="#onAppReady">onAppReady</a> - 应用程序被加载到浏览器中。</li>
+    <li><a href="#onCollaborativeChanges">onCollaborativeChanges</a> - 文档由其他用户以 <em>严格</em> 共同编辑模式共同编辑。</li>
+    <li><a href="#onDocumentReady">onDocumentReady</a> - 文档被加载到文档编辑器中。</li>
+    <li><a href="#onDocumentStateChange">onDocumentStateChange</a> - 文档被修改。</li>
+    <li><a href="#onDownloadAs">onDownloadAs</a> - 调用 <em>downloadAs</em> 方法时编辑文件的绝对 URL 。</li>
+    <li><a href="#onError">onError</a> - 发生错误或其他特定事件。</li>
+    <li><a href="#onInfo">onInfo</a> - 应用程序打开了文件。</li>
+    <li><a href="#onMetaChange">onMetaChange</a> - 通过meta命令更改文档的 <em>元</em> 信息。</li>
+    <li><a href="#onMakeActionLink">onMakeActionLink</a> - 用户试图获取打开包含书签的文档的链接，滚动到书签位置。</li>
+    <li><a href="#onOutdatedVersion">onOutdatedVersion</a> - 使用旧的 <em>document.key</em> 值打开文档进行编辑，该值用于编辑以前的文档版本并成功保存。</li>
+    <li><a href="#onPluginsReady">onPluginsReady</a> - 所有插件都已加载并可以使用。</li>
+    <li><a href="#onReady">onReady</a> - 应用程序被加载到浏览器中。</li>
+    <li><a href="#onRequestClose">onRequestClose</a> - 必须结束与编辑器的工作并且必须关闭编辑器。</li>
+    <li><a href="#onRequestCompareFile">onRequestCompareFile</a> - 用户试图通过单击 <em>存储中的文档</em> 按钮来选择要比较的文档。</li>
+    <li><a href="#onRequestCreateNew">onRequestCreateNew</a> - 用户试图通过单击 <em>新建</em> 按钮来创建文档。</li>
+    <li><a href="#onRequestEditRights">onRequestEditRights</a> - 用户试图通过单击 <em>编辑文档</em> 按钮将文档从查看模式切换到编辑模式。</li>
+    <li><a href="#onRequestHistory">onRequestHistory</a> - 用户试图通过单击 <em>版本历史</em> 按钮来显示文档版本历史。</li>
+    <li><a href="#onRequestHistoryClose">onRequestHistoryClose</a> - 用户试图通过单击 <em>关闭历史记录</em> 按钮从查看文档版本历史记录返回到文档。</li>
+    <li><a href="#onRequestHistoryData">onRequestHistoryData</a> - 用户正在尝试单击文档版本历史记录中的特定文档版本。</li>
+    <li><a href="#onRequestInsertImage">onRequestInsertImage</a> - 用户尝试通过单击 <em>存储中的图像</em> 按钮来插入图像。</li>
+    <li><a href="#onRequestMailMergeRecipients">onRequestMailMergeRecipients</a> - 用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据。</li>
+    <li><a href="#onRequestRename">onRequestRename</a> - 用户试图通过单击 <em>重命名...</em> 按钮来重命名文件。</li>
+    <li><a href="#onRequestRestore">onRequestRestore</a> - 用户正在尝试通过单击版本历史记录中的 <em>恢复</em> 按钮来恢复文件版本。</li>
+    <li><a href="#onRequestSaveAs">onRequestSaveAs</a> - 用户试图通过单击 <em>另存为...</em> 按钮来保存文件。</li>
+    <li><a href="#onRequestSendNotify">onRequestSendNotify</a> - 用户在评论中被提及。</li>
+    <li><a href="#onRequestSharingSettings">onRequestSharingSettings</a> - 用户尝试通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限。</li>
+    <li><a href="#onRequestUsers">onRequestUsers</a> - 评论者可以选择其他用户在评论中提及。</li>
+    <li><a href="#onWarning">onWarning</a> - 出现警告。</li>
 </ul>
 
-<h2>Events and their description:</h2>
+<h2>事件及其描述：</h2>
 <ul>
     <li>
-        <p><b id="onAppReady" class="copy-link">onAppReady</b> - the function called when the application is loaded into the browser.</p>
-        <div class="header-gray">Example</div>
+        <p><b id="onAppReady" class="copy-link">onAppReady</b> - 当应用程序加载到浏览器时调用的函数。</p>
+        <div class="header-gray">示例</div>
         <pre>
 var onAppReady = function () {
     console.log("ONLYOFFICE Document Editor is ready");
@@ -59,8 +59,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onCollaborativeChanges" class="copy-link">onCollaborativeChanges</b> - the function called when the document is co-edited by the other user in the <em>strict</em> co-editing mode.</p>
-        <div class="header-gray">Example</div>
+        <p><b id="onCollaborativeChanges" class="copy-link">onCollaborativeChanges</b> - 当文档被其他用户在 <em>严格</em> 的共同编辑模式下共同编辑时调用的函数。</p>
+        <div class="header-gray">示例</div>
         <pre>
 var onCollaborativeChanges = function () {
     console.log("The document changed by collaborative user");
@@ -77,8 +77,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </li>
 
     <li>
-        <p><b id="onDocumentReady" class="copy-link">onDocumentReady</b> - the function called when the document is loaded into the document editor.</p>
-        <div class="header-gray">Example</div>
+        <p><b id="onDocumentReady" class="copy-link">onDocumentReady</b> - 当文档加载到文档编辑器时调用的函数。</p>
+        <div class="header-gray">示例</div>
         <pre>
 var onDocumentReady = function () {
     console.log("Document is loaded");
@@ -96,10 +96,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onDocumentStateChange" class="copy-link">onDocumentStateChange</b> - the function called when the document is modified.
-            It is called with the parameter: <em>{"data": true}</em> when the current user is editing the document and with the parameter: <em>{"data" : false}</em> when the current user's changes are sent to the <b>document editing service</b>.
+            <b id="onDocumentStateChange" class="copy-link">onDocumentStateChange</b> - 修改文档时调用的函数。
+            使用以下参数调用它：<em>{"data": true}</em> --适用于当前用户正在编辑文档时。使用以下参数调用它：<em>{"data": false}</em> --适用于当前用户的更改发送到 <b>文档编辑服务</b>时。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onDocumentStateChange = function (event) {
     if (event.data) {
@@ -121,10 +121,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onDownloadAs" class="copy-link">onDownloadAs</b> - the function called with the absolute URL to the edited file when the <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> method is being called.
-            The absolute URL to the document to be downloaded and its type are sent in the <em>data</em> parameter.
+            <b id="onDownloadAs" class="copy-link">onDownloadAs</b> - 调用 <a href="<%= Url.Action("methods") %>#downloadAs">downloadAs</a> 方法时使用已编辑文件的绝对 URL 调用的函数。
+            要下载的文档的绝对 URL 及其类型在 <em>data</em> 参数中发送。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onDownloadAs = function (event) {
     var fileType = event.data.fileType;
@@ -144,10 +144,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onError" class="copy-link">onError</b> - the function called when an error or some other specific event occurs.
-            The error message is sent in the <em>data</em> parameter.
+            <b id="onError" class="copy-link">onError</b> - 发生错误或其他特定事件时调用的函数。
+            错误消息在 <em>data</em> 参数中发送。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onError = function (event) {
     console.log("ONLYOFFICE Document Editor reports an error: code " + event.data.errorCode + ", description " + event.data.errorDescription);
@@ -165,11 +165,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onInfo" class="copy-link">onInfo</b> - the function called when the application opened the file.
-            The mode is sent in the <em>data.mode</em> parameter.
-            Can be <b>view</b> or <b>edit</b>.
+            <b id="onInfo" class="copy-link">onInfo</b> - 应用程序打开文件时调用的函数。
+            模式在 <em>data.mode</em> 参数中发送。
+            可以 <b>查看</b> 或 <b>编辑</b>。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onInfo = function (event) {
     console.log("ONLYOFFICE Document Editor is opened in mode " + event.data.mode);
@@ -187,13 +187,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onMetaChange" class="copy-link">onMetaChange</b> - the function called when the meta information of the document is changed via the <a href="<%= Url.Action("command/meta") %>">meta</a> command.
-            The name of the document is sent in the <em>data.title</em> parameter.
-            The <em>Favorite</em> icon highlighting state is sent in the <em>data.favorite</em> parameter.
-            When the user clicks the <em>Favorite</em> icon, the <a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a> method is called to update the <a href="<%= Url.Action("config/document/info") %>#favorite">information</a> about the <em>Favorite</em> icon highlighting state.
-            If the method is not declared, the <em>Favorite</em> icon will not be changed.
+            <b id="onMetaChange" class="copy-link">onMetaChange</b> - 通过 <a href="<%= Url.Action("command/meta") %>">meta</a> 命令更改文档的元信息时调用的函数。
+            文档的名称在 <em>data.title</em> 参数中发送。
+            <em>收藏</em> 图标高亮状态在 <em>data.favorite</em> 参数中发送。
+            当用户点击 <em>收藏</em> 图标时， 调用<a href="<%= Url.Action("methods") %>#setFavorite">setFavorite</a>方法更新 <em>收藏</em> 图标高亮状态<a href="<%= Url.Action("config/document/info") %>#favorite">信息</a>。
+            如果未声明该方法，则<em>收藏</em> 图标不会更改。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onMetaChange = function (event) {
     var title = event.data.title;
@@ -213,13 +213,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - the function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.
-            To set the bookmark link you must call the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method.
-            The bookmark data is received in the <em>data</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
-            If the method is not declared the <em>Get Link</em> button will not be displayed.
+            <b id="onMakeActionLink" class="copy-link">onMakeActionLink</b> - 当用户试图获取打开包含书签的文档的链接时调用的函数，滚动到书签位置。
+            要设置书签链接，您必须调用 <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> 方法。
+            书签数据在 <em>data</em> 参数中接收，然后必须在配置中用作 <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> 参数的值。
+            如果未声明该方法，则不会显示 <em>获取链接</em> 按钮。
         </p>
         <img alt="onMakeActionLink" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onMakeActionLink = function (event){
     var ACTION_DATA = event.data;
@@ -240,10 +240,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onOutdatedVersion" class="copy-link">onOutdatedVersion</b> - the function called after the <a href="<%= Url.Action("troubleshooting") %>#key">error</a> is shown, when the document is opened for editing with the old <a href="<%= Url.Action("config/document") %>#key">document.key</a> value, which was used to edit the previous document version and was successfully saved.
-            When this event is called the editor must be reinitialized with a new <em>document.key</em>.
+            <b id="onOutdatedVersion" class="copy-link">onOutdatedVersion</b> -显示 <a href="<%= Url.Action("troubleshooting") %>#key">错误</a> 后调用的函数，当使用旧的 <a href="<%= Url.Action("config/document") %>#key">document.key</a> 值打开文档进行编辑时，该值用于编辑以前的文档版本并成功保存。
+            调用此事件时，必须使用新的 <em>document.key</em>重新初始化编辑器。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onOutdatedVersion = function () {
     location.reload(true);
@@ -261,9 +261,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onPluginsReady" class="copy-link">onPluginsReady</b> - the function called when all plugins are loaded and can be used.
+            <b id="onPluginsReady" class="copy-link">onPluginsReady</b> - 当所有插件都加载并可以使用时调用的函数。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onPluginsReady = function () {
     ...
@@ -281,14 +281,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onReady" class="copy-link">onReady</b> - the function called when the application is loaded into the browser.
-            Deprecated since version 5.0, please use <a href="#onAppReady">onAppReady</a> instead
+            <b id="onReady" class="copy-link">onReady</b> - 当应用程序加载到浏览器中时调用的函数。
+            自 5.0 版起已弃用，请改用 <a href="#onAppReady">onAppReady</a>
         </p>
     </li>
 
     <li>
-        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - the function called when the work with the editor must be ended and the editor must be closed.</p>
-        <div class="header-gray">Example</div>
+        <p><b id="onRequestClose" class="copy-link">onRequestClose</b> - 当编辑器的工作必须结束并且编辑器必须关闭时调用的函数。</p>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestClose = function () {
     if (window.opener) {
@@ -310,13 +310,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - the function called when the user is trying to select document for comparing by clicking the <em>Document from Storage</em> button.
-            To select a document for comparing you must call the <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> method.
-            If the method is not declared the <em>Document from Storage</em> button will not be displayed.
-            <span class="required-descr"><span class="required">*</span><em> - available only for ONLYOFFICE Enterprise Edition and ONLYOFFICE Developer Edition</em></span>
+            <b id="onRequestCompareFile" class="copy-link">onRequestCompareFile<span class="required">*</span></b> - 当用户通过单击 <em>存储中的文档</em> 按钮尝试选择要比较的文档时调用的函数。
+            要选择一个文档进行比较，您必须调用 <a href="<%= Url.Action("methods") %>#setRevisedFile">setRevisedFile</a> 方法。
+            如果未声明该方法，则不会显示 <em>存储中的文档</em> 按钮。
+            <span class="required-descr"><span class="required">*</span><em> - 仅适用于 ONLYOFFICE 企业版和 ONLYOFFICE 开发者版</em></span>
         </p>
         <img alt="onRequestCompareFile" src="<%= Url.Content("~/content/img/editor/onRequestCompareFile.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestCompareFile = function () {
     docEditor.setRevisedFile({
@@ -333,17 +333,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </li>
 
     <li>
         <p>
-            <b id="onRequestCreateNew" class="copy-link">onRequestCreateNew</b> - the function called when the user is trying to create document by clicking the <em>Create New</em> button.
-            This method is used instead of the <a href="<%= Url.Action("config/editor") %>#createUrl">createUrl</a> field.
-            If the method is not declared and the <em>createUrl</em> is not specified the <em>Create New</em> button will not be displayed.
+            <b id="onRequestCreateNew" class="copy-link">onRequestCreateNew</b> - 当用户试图通过单击 <em>新建</em> 按钮来创建文档时调用的函数。
+            此方法用于代替 <a href="<%= Url.Action("config/editor") %>#createUrl">createUrl</a> 字段。
+            如果未声明该方法且未指定 <em>createUrl</em>，则不会显示 <em>新建</em> 按钮。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestCreateNew = function () {
     ...
@@ -361,15 +361,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - the function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <em>Edit Document</em> button.
-            When the function is called, the editor must be initialized again, in editing mode.
-            If the method is not declared the <em>Edit</em> button will not be displayed.
+            <b id="onRequestEditRights" class="copy-link">onRequestEditRights</b> - 当用户试图通过单击 <em>编辑文档</em> 按钮将文档从查看模式切换到编辑模式时调用的函数。
+            调用该函数时，编辑器必须再次初始化，处于编辑模式。
+            如果未声明该方法，则不会显示 <em>编辑</em> 按钮。
         </p>
         <div class="note">
-            <b>onRequestEditRights</b> parameter is obligatory when the <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>mode</em> parameter is set to <b>view</b> and the <em>permission</em> to <em>edit</em> the document (<a href="<%= Url.Action("config/document/permissions") %>#edit">document permissions</a>) is set to <b>true</b> so that the user could switch to the editing mode.
+            当 <a href="<%= Url.Action("config/editor") %>#mode">editorConfig</a> <em>模式</em> 参数设置为<b>view</b> 并且 <em>编辑</em> 文档的 <em>权限</em> （<a href="<%= Url.Action("config/document/permissions") %>#edit">文档权限</a>）设置为 <b>true</b> 时， <b>onRequestEditRights</b> 参数是强制性的，以便用户可以切换到编辑模式。
         </div>
         <img alt="onRequestEditRights" src="<%= Url.Content("~/content/img/editor/onRequestEditRights.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestEditRights = function () {
     console.log("ONLYOFFICE Document Editor requests editing rights");
@@ -388,12 +388,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestHistory" class="copy-link">onRequestHistory</b> - the function called when the user is trying to show the document version history by clicking the <em>Version History</em> button.
-            To show the document version history you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
-            If the method and the <a href="#onRequestHistoryData">onRequestHistoryData</a> method is not declared the <em>Version History</em> button will not be displayed.
+            <b id="onRequestHistory" class="copy-link">onRequestHistory</b> - 当用户试图通过单击 <em>版本历史</em> 按钮来显示文档版本历史时调用的函数。
+            要显示文档版本历史记录，您必须调用 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法。
+            如果未声明该方法和 <a href="#onRequestHistoryData">onRequestHistoryData</a> 方法，则不会显示 <em>版本历史</em> 按钮。
         </p>
         <img alt="onRequestHistory" src="<%= Url.Content("~/content/img/editor/onRequestHistory.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestHistory = function () {
     docEditor.refreshHistory({
@@ -433,18 +433,18 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
-        <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>其中 <b>changes</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 的 <em>更改</em>。</p>
+        <p>其中 <b>serverVersion</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 中的 <em>serverVersion</em> 。</p>
     </li>
 
     <li>
         <p>
-            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - the function called when the user is trying to go back to the document from viewing the document version history  by clicking the <em>Close History</em> button.
-            When the function is called, the editor must be initialized again, in editing mode.
-            If the method is not declared the <em>Close History</em> button will not be displayed.
+            <b id="onRequestHistoryClose" class="copy-link">onRequestHistoryClose</b> - 当用户试图通过单击 <em>关闭历史记录</em> 按钮查看文档版本历史记录返回文档时调用的函数。
+            调用该函数时，编辑器必须再次初始化，处于编辑模式。
+            如果未声明该方法，则不会显示 <em>关闭历史记录</em> 按钮。
         </p>
         <img alt="onRequestHistoryClose" src="<%= Url.Content("~/content/img/editor/onRequestHistoryClose.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestHistoryClose = function () {
     document.location.reload();
@@ -462,13 +462,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - the function called when the user is trying to click the specific document version in the document version history.
-            To show the changes corresponding to the specific document version you must call the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
-            The document version number is sent in the <em>data</em> parameter.
-            If the method and the <a href="#onRequestHistory">onRequestHistory</a> method is not declared the <em>Version History</em> button will not be displayed.
+            <b id="onRequestHistoryData" class="copy-link">onRequestHistoryData</b> - 当用户试图点击文档版本历史中的特定文档版本时调用的函数。
+            要显示与特定文档版本相对应的更改，您必须调用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法。
+            文档版本号在 <em>data</em> 参数中发送。
+            如果未声明该方法和 <a href="#onRequestHistory">onRequestHistory</a> 方法，则不会显示 <em>版本历史</em> 按钮。
         </p>
         <img alt="onRequestHistoryData" src="<%= Url.Content("~/content/img/editor/onRequestHistoryData.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestHistoryData = function (event) {
     var version = event.data;
@@ -494,22 +494,22 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        <p>Where the <b>changesUrl</b> is the <em>changesUrl</em> from <a href="<%= Url.Action("callback") %>#changesurl">the JSON object</a> returned after saving the document.</p>
+        <p>其中 <b>changesUrl</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#changesurl">JSON 对象</a> 中的 <em>changesUrl</em>。</p>
         <p>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
         </p>
     </li>
 
     <li>
         <p>
-            <b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - the function called when the user is trying to insert an image by clicking the <em>Image from Storage</em> button.
-            The type of image insertion is specified in parameter <em>data.c</em>.
-            To insert an image into the file you must call the <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> method with the specified command.
-            If the method is not declared the <em>Image from Storage</em> button will not be displayed.
+            <b id="onRequestInsertImage" class="copy-link">onRequestInsertImage</b> - 当用户尝试通过单击 <em>存储中的图像</em> 按钮插入图像时调用的函数。
+            图像插入的类型在参数 <em>data.c</em>中指定。
+            要将图像插入文件，您必须使用指定的命令调用 <a href="<%= Url.Action("methods") %>#insertImage">insertImage</a> 方法。
+            如果未声明该方法，则不会显示 <em>Image from Storage</em> 按钮。
         </p>
         <img alt="onRequestInsertImage" src="<%= Url.Content("~/content/img/editor/onRequestInsertImage.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestInsertImage = function (event) {
     docEditor.insertImage({
@@ -536,18 +536,18 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </li>
 
     <li>
         <p>
-            <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - the function called when the user is trying to select recipients data by clicking the <em>Mail merge</em> button.
-            To select recipient data, you must call the <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> method.
-            If the method is not declared, the <em>Mail merge</em> button will become faded and unclickable.
+            <b id="onRequestMailMergeRecipients" class="copy-link">onRequestMailMergeRecipients</b> - 当用户试图通过单击 <em>邮件合并</em> 按钮来选择收件人数据时调用的函数。
+            要选择收件人数据，您必须调用 <a href="<%= Url.Action("methods") %>#setMailMergeRecipients">setMailMergeRecipients</a> 方法。
+            如果未声明该方法， <em>邮件合并</em> 按钮将变淡且不可点击。
         </p>
         <img alt="onRequestMailMergeRecipients" src="<%= Url.Content("~/content/img/editor/onRequestMailMergeRecipients.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestMailMergeRecipients = function () {
     docEditor.setMailMergeRecipients({
@@ -564,17 +564,17 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </li>
 
     <li>
         <p>
-            <b id="onRequestRename" class="copy-link">onRequestRename</b> - the function called when the user is trying to rename the file by clicking the <em>Rename...</em> button.
+            <b id="onRequestRename" class="copy-link">onRequestRename</b> - 当用户试图通过单击 <em>重命名...</em> 按钮重命名文件时调用的函数。
         </p>
-        <div class="note">Until version 6.0 the <em>Rename...</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> is set to <b>true</b>.</div>
+        <div class="note">在 6.0 版之前， <em>重命名...</em> 按钮仅在 <a href="<%= Url.Action("config/document/permissions") %>#rename">document.permissions.rename</a> 设置为 <b>true</b>时可用。</div>
         <img alt="onRequestRename" src="<%= Url.Content("~/content/img/editor/onRequestRename.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestRename = function (event) {
     var title = event.data;
@@ -593,19 +593,19 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestRestore" class="copy-link">onRequestRestore</b> - the function called when the user is trying to restore the file version by clicking the <em>Restore</em> button in the version history.
-            When the function is called, you must call the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method to initialize version history again.
-            The document version number is sent in the <em>data.version</em> parameter if it is called for the document version from the history.
-            Additionally, the document link is sent in the <em>data.url</em> parameter if it is called for the document changes from the <a href="<%= Url.Action("callback") %>#history">history object</a>.
-            The type of the document which is specified with this link is sent in the <em>data.fileType</em> parameter.
-            If the method is not declared the <em>Restore</em> button will not be displayed.
+            <b id="onRequestRestore" class="copy-link">onRequestRestore</b> - 当用户试图通过单击版本历史记录中的 <em>恢复</em> 按钮来恢复文件版本时调用的函数。
+            调用该函数时，必须再次调用 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法来初始化版本历史。
+            如果从历史记录中调用文档版本，则在 <em>data.version</em> 参数中发送文档版本号。
+            此外，如果从 <a href="<%= Url.Action("callback") %>#history">历史对象</a>中调用文档更改，则会在 <em>data.url</em> 参数中发送文档链接。
+            使用此链接指定的文档类型在 <em>data.fileType</em> 中发送范围。
+            如果未声明该方法，则不会显示 <em>恢复</em> 按钮。
         </p>
         <div class="note">
-            The <em>Restore</em> button is displayed for the previous document versions only and hidden for the current one.
-            Until version 5.5 the <em>Restore</em> button is only available if the <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> is set to <b>true</b>.
+            <em>恢复</em> 按钮仅对以前的文档版本显示，对当前版本隐藏。
+            在 5.5 版之前，仅当 <a href="<%= Url.Action("config/document/permissions") %>#changeHistory">document.permissions.changeHistory</a> 设置为 <b>true</b>时， <em>恢复</em> 按钮才可用。
         </div>
         <img alt="onRequestRestore" src="<%= Url.Content("~/content/img/editor/onRequestRestore.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestRestore = function (event) {
     var fileType = event.data.fileType;
@@ -649,22 +649,22 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-        <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
-        <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+        <p>其中 <b>changes</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 的 <em>更改</em>。</p>
+        <p>其中 <b>serverVersion</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 中的 <em>serverVersion</em>。</p>
         <p>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-            See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+            其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+            有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
         </p>
     </li>
 
     <li>
         <p>
-            <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - the function called when the user is trying to save file by clicking <em>Save Copy as...</em> button.
-            The title of the document, its type and the absolute URL to the document to be downloaded are sent in the <em>data</em> parameter.
-            If the method is not declared the <em>Save Copy as...</em> button will not be displayed.
+            <b id="onRequestSaveAs" class="copy-link">onRequestSaveAs</b> - 当用户试图通过单击 <em>另存为...</em> 按钮来保存文件时调用的函数。
+            文档的标题、其类型和要下载的文档的绝对 URL 在 <em>data</em> 参数中发送。
+            如果未声明该方法，将不会显示 <em>另存为...</em> 按钮。
         </p>
         <img alt="onRequestSaveAs" src="<%= Url.Content("~/content/img/editor/onRequestSaveAs.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestSaveAs = function (event) {
     var fileType = event.data.fileType;
@@ -685,16 +685,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - the function called when the user is mentioned in a comment.
-            The list of users to be mentioned should be completed by <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
-            The message and the list of emails is sent in the <em>data</em> parameter.
-            The comment data is received in the <em>data.actionLink</em> parameter and must be then used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
+            <b id="onRequestSendNotify" class="copy-link">onRequestSendNotify</b> - 当评论中提到用户时调用的函数。
+            要提及的用户列表应通过 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法完成。
+            消息和电子邮件列表在 <em>data</em> 参数中发送。
+            注释数据在 <em>data.actionLink</em> 参数中接收，然后必须在配置中用作 <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> 参数的值。
         </p>
         <div class="note">
-            In version 5.4, <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
-            Starting from version 5.5, there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
+            在 5.4 版本中，只有在设置了 <a href="#onRequestUsers">onRequestUsers</a> 事件时才能使用 <b>onRequestSendNotify</b> 事件。
+            从 5.5 版开始， <b>onRequestSendNotify</b> 和 <b>onRequestUsers</b> 之间没有这种依赖关系两者都可以独立设置。
         </div>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestSendNotify = function (event) {
     var ACTION_DATA = event.data.actionLink;
@@ -715,12 +715,12 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - the function called when the user is trying to manage document access rights by clicking <em>Change access rights</em> button.
-            When the access rights is changed, you must call the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method to update the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">information</a> about the settings which allow to share the document with other users.
-            If the method is not declared the <em>Change access rights</em> button will not be displayed.
+            <b id="onRequestSharingSettings" class="copy-link">onRequestSharingSettings</b> - 当用户试图通过单击 <em>更改访问权限</em> 按钮来管理文档访问权限时调用的函数。
+            当访问权限发生变化时，您必须调用 <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> 方法来更新有关允许与其他用户共享文档的设置的 <a href="<%= Url.Action("config/document/info") %>#sharingSettings">信息</a>。
+            如果未声明该方法，则不会显示 <em>更改访问权限</em> 按钮。
         </p>
         <img alt="onRequestSharingSettings" src="<%= Url.Content("~/content/img/editor/onRequestSharingSettings.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestSharingSettings = function () {
     docEditor.setSharingSettings({
@@ -751,11 +751,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onRequestUsers" class="copy-link">onRequestUsers</b> - the function called when the commenter can select other users for mention in the comments.
-            To set the users list you must call the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method.
+            <b id="onRequestUsers" class="copy-link">onRequestUsers</b> - 当评论者可以选择其他用户在评论中提及时调用的函数。
+            要设置用户列表，您必须调用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法。
         </p>
         <img alt="onRequestUsers" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>"/>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onRequestUsers = function () {
     docEditor.setUsers({
@@ -785,10 +785,10 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 
     <li>
         <p>
-            <b id="onWarning" class="copy-link">onWarning</b> - the function called when a warning occurs.
-            The warning message is sent in the <em>data</em> parameter.
+            <b id="onWarning" class="copy-link">onWarning</b> - 发生警告时调用的函数。
+            警告消息在 <em>data</em> 参数中发送。
         </p>
-        <div class="header-gray">Example</div>
+        <div class="header-gray">示例</div>
         <pre>
 var onWarning = function (event) {
     console.log("ONLYOFFICE Document Editor reports a warning: code " + event.data.warningCode + ", description " + event.data.warningDescription);

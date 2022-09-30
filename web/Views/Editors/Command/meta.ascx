@@ -1,15 +1,15 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
     <a class="up" href="<%= Url.Action("command/") %>"></a>
     <span class="hdr">meta</span>
 </h1>
 
-<div class="header-gray">Description</div>
+<div class="header-gray">描述</div>
 
-<p class="dscr">Updates the meta information of the document for all collaborative editors.</p>
+<p class="dscr">为所有协作编辑器更新文档的元信息。</p>
 
-<div class="header-gray">Request example</div>
+<div class="header-gray">请求示例</div>
 <pre>
 {
     "c": "meta",
@@ -19,7 +19,7 @@
     }
 }
 </pre>
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -29,46 +29,46 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Parameter</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Presence</td>
+            <td>参数</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>出现</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>c</td>
-            <td>Defines the command type.</td>
-            <td>string</td>
-            <td>required</td>
+            <td>定义命令类型。</td>
+            <td>字符串</td>
+            <td>必需的</td>
         </tr>
         <tr class="tablerow">
             <td>key</td>
-            <td>Defines the document identifier used to unambiguously identify the document file.</td>
+            <td>定义文档标识符，用于明确标识文档文件。</td>
             <td>string</td>
-            <td>required</td>
+            <td>必需的</td>
         </tr>
         <tr class="tablerow">
             <td>meta</td>
-            <td>Defines the new meta information of the document:
+            <td>定义文档的新元信息：
                 <ul>
                     <li>
-                        <b>title</b> - the new document name.
+                        <b>title</b> - 新文档名称。
                         <br />
-                        <b>type</b>: string
+                        <b>type</b>：string
                         <br />
-                        <b>presence</b>: required
+                        <b>出现</b>：必需的
                     </li>
                 </ul>
             </td>
-            <td>object</td>
-            <td>required</td>
+            <td>对象</td>
+            <td>必需的</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Response example</div>
+<div class="header-gray">响应示例</div>
 
 <pre>
 {
@@ -77,7 +77,7 @@
 }
 </pre>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -87,24 +87,24 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Parameter</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Presence</td>
+            <td>参数</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>出现</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>error</td>
-            <td>Defines an error code.</td>
+            <td>定义错误代码</td>
             <td>integer</td>
-            <td>required</td>
+            <td>必需的</td>
         </tr>
         <tr class="tablerow">
             <td>key</td>
-            <td>Defines the document identifier used to unambiguously identify the document file.</td>
+            <td>定义文档标识符，用于明确标识文档文件。</td>
             <td>string</td>
-            <td>required</td>
+            <td>必需的</td>
         </tr>
     </tbody>
 </table>

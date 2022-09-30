@@ -1,22 +1,22 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
     <a class="up" href="<%= Url.Action("command/") %>"></a>
     <span class="hdr">version</span>
 </h1>
 
-<div class="header-gray">Description</div>
+<div class="header-gray">描述</div>
 
-<p class="dscr">Requests the current version number of Document Server.</p>
+<p class="dscr">请求文档服务器的当前版本号。</p>
 
-<div class="header-gray">Request example</div>
+<div class="header-gray">请求示例</div>
 <pre>
 {
-    "c": "version"
+"c": "version"
 }
 </pre>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -26,23 +26,23 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Presence</td>
+            <td>名称</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>出现</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>c</td>
-            <td>Defines the command type.</td>
+            <td>定义命令类型。</td>
             <td>string</td>
-            <td>required</td>
+            <td>必需的</td>
         </tr>
     </tbody>
 </table>
 
-<div class="header-gray">Response example</div>
+<div class="header-gray">响应示例</div>
 
 <pre>
 {
@@ -51,7 +51,7 @@
 }
 </pre>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -61,24 +61,24 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Parameter</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Presence</td>
+            <td>参数</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>出现</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>error</td>
-            <td>Defines an error code.</td>
+            <td>定义错误代码</td>
             <td>integer</td>
-            <td>required</td>
+            <td>必需的</td>
         </tr>
         <tr class="tablerow">
             <td>version</td>
-            <td>Defines the document version.</td>
+            <td>定义文档版本。</td>
             <td>string</td>
-            <td>required</td>
+            <td>必需的</td>
         </tr>
     </tbody>
 </table>

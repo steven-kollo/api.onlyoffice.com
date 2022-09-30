@@ -6,85 +6,85 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Liferay ONLYOFFICE connector
+    Liferay ONLYOFFICE 连接器
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Liferay ONLYOFFICE connector</span>
+        <span class="hdr">Liferay ONLYOFFICE 连接器</span>
     </h1>
 
-    <p>This <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.liferay.com/" target="_blank">Liferay</a> using ONLYOFFICE Docs.</p>
+    <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">插件</a> 使用户可以从 <a href="https://www.liferay.com/" target="_blank">Liferay</a> 中使用 ONLYOFFICE Docs编辑办公文档。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
-        <li>The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT.</li>
-        <li>The plugin will create a new <b>ONLYOFFICE Edit/View</b> menu option within the <b>Documents and Media</b> section for Office documents. 
-            This allows multiple users to collaborate in real time and to save back those changes to Liferay.</li>
+        <li>目前可以使用此插件打开和编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
+        <li>以下格式仅供查看：ODT, ODS, ODP, DOC, XLS, PPT.</li>
+        <li>该插件将在 Office 文档的 <b>文档和媒体</b> 部分中创建一个新的 <b>ONLYOFFICE 编辑/查看</b> 菜单选项。
+            这允许多个用户实时协作并将这些更改保存到 Liferay。</li>
     </ul>
 
-    <h2 id="installing-doc-serv" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="installing-doc-serv" class="copy-link">安装 ONLYOFFICE 文档</h2>
 
     <p>
-        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Liferay and any end clients.
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>.
-        ONLYOFFICE Docs must also be able to POST to Liferay directly.
+        您将需要一个可从 Liferay 和任何终端客户端解析和连接的 ONLYOFFICE Docs（文档服务器）实例。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE Docs 还必须能够直接发布到 Liferay。
     </p>
 
-    <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
+    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
-    <h2 id="installing-plugin" class="copy-link">Installing Liferay ONLYOFFICE connector</h2>
-
-    <p>
-        Either install it from <a href="https://web.liferay.com/marketplace/-/mp/application/171169174">Liferay Marketplace</a> 
-        or if you are building the connector by yourself simply put compiled <b>.jar</b> file from <em>build\libs</em> folder to <em>/opt/liferay/deploy</em>. 
-        Liferay will install it automatically.
-    </p>
-
-
-    <h2 id="configuring" class="copy-link">Configuring Liferay ONLYOFFICE connector</h2>
+    <h2 id="installing-plugin" class="copy-link">安装 Liferay ONLYOFFICE 连接器</h2>
 
     <p>
-        In order to configure connector you must navigate to <b>System Settings</b> (<b>Control Panel -> Configuration -> System Settings</b>).
-        In <b>Platform</b> section click the <b>Connectors</b> category and select <b>ONLYOFFICE</b>.
+        从 <a href="https://web.liferay.com/marketplace/-/mp/application/171169174">Liferay Marketplace</a>
+        安装它， 或者如果您自己构建连接器，只需将编译的 <b>.jar</b> 文件从 <em>build\libs</em> 文件夹放入 <em>/opt/liferay/deploy</em>。
+        Liferay 会自动安装它。
     </p>
 
 
-    <h2 id="compiling" class="copy-link">Compiling Liferay ONLYOFFICE connector</h2>
+    <h2 id="configuring" class="copy-link">配置 Liferay ONLYOFFICE 连接器</h2>
 
     <p>
-        Simply run <i>gradle build</i>.
-        Output <b>.jar</b> will be placed inside the <i>build/libs</i> directory.
+        为了配置连接器，您必须导航到 <b>系统设置</b> （<b>控制面板 -> 配置 -> 系统设置</b>）。
+        在 <b>平台</b> 部分单击 <b>连接器</b> 类别并选择 <b>ONLYOFFICE</b>。
     </p>
 
 
-    <h2 id="how-it-works" class="copy-link">How it works</h2>
+    <h2 id="compiling" class="copy-link">编译 Liferay ONLYOFFICE 连接器</h2>
+
+    <p>
+        只需运行 <i>gradle build</i>。
+        输出 <b>.jar</b> 将放置在 <i>build/libs</i> 目录中。
+    </p>
+
+
+    <h2 id="how-it-works" class="copy-link">这个怎么运作</h2>
 
     <ol>
-        <li>User navigates to the <b>Documents and Media</b> section within Liferay and selects the <b>Edit in ONLYOFFICE</b> action.</li>
+        <li>用户导航到 Liferay 中的 <b>文档和媒体</b> 部分并选择 <b>在 ONLYOFFICE 中编辑</b> 操作。</li>
         <li>
-            <p>Liferay prepares a JSON object for the Document Server with the following properties:</p>
+            <p>Liferay 为文档服务器准备了一个 JSON 对象，具有以下属性：</p>
             <ul>
-                <li><b>url</b>: the URL that ONLYOFFICE Docs uses to download the document,</li>
-                <li><b>callbackUrl</b>: the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>key</b>: the <em>fileVersionId</em> to instruct ONLYOFFICE Docs whether to download the document again or not;</li>
-                <li><b>title</b>: the document title (name).</li>
+                <li><b>url</b>: ONLYOFFICE Docs 用于下载文档的 URL，</li>
+                <li><b>callbackUrl</b>: ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>key</b>: <em>fileVersionId</em> 指示ONLYOFFICE Docs是否重新下载文档；</li>
+                <li><b>title</b>：文档标题（名称）。</li>
             </ul>
         </li>
-        <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
-        <li>Then ONLYOFFICE Docs downloads the document from Liferay and the user begins editing.</li>
-        <li>ONLYOFFICE Docs sends a POST request to the <i>callback</i> URL to inform Liferay that a user is editing the document.</li>
-        <li>Liferay locks the document, but still allows other users with write access to collaborate in real time with ONLYOFFICE Docs by leaving the Action present.</li>
-        <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <i>callback</i> URL letting Liferay know that the clients have finished editing the document and closed it.</li>
-        <li>Liferay downloads a new version of the document, replacing the old one.</li>
+        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送具有上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE Docs 从 Liferay 下载文档，用户开始编辑。然后 ONLYOFFICE Docs 从 HumHub 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE Docs 向 <i>callbackUrl</i> 发送 POST 请求，通知 HumHub 用户正在编辑文档。</li>
+        <li>ONLYOFFICE Docs 向回调URL 发送 POST 请求，以通知 Liferay 用户正在编辑文档。</li>
+        <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向回调URL 发送一个 POST，让 Liferay 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>Liferay 下载文档的新版本，替换旧版本。</li>
     </ol>
 
 
     <br />
-    <p>Download the Liferay ONLYOFFICE connector <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">here</a>.</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-liferay" target="_blank">此处</a>下载 Liferay ONLYOFFICE 连接器。</p>
 
 </asp:Content>

@@ -1,29 +1,29 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Signature</span>
+    <span class="hdr">签名</span>
 </h1>
-<p class="dscr">ONLYOFFICE Document Server <a href="<%= Url.Action("security") %>">uses</a> <b>tokens</b> generated using the JSON Web Tokens standard.</p>
+<p class="dscr">ONLYOFFICE 文档服务器 <a href="<%= Url.Action("security") %>">使用</a> 按JSON Web <b>令牌</b> 标准生成的令牌。</p>
 
-<div class="note">This feature is used in <b>Document Server</b> starting with version 4.2</div>
+<div class="note">从 4.2 版开始在 <b>文档服务器</b> 中使用此功能</div>
 
-<p>For the validation setup it is necessary to edit the configuration file which can be found (or created) at the following path:</p>
-<div>For Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>.</div>
-<div>For Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>.</div>
+<p>对于验证设置，有必要编辑配置文件，该文件可以在以下路径中找到（或创建）：</p>
+<div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>。</div>
+<div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>。</div>
 
 <div class="note">
-    The default values are available in the <em>default.json</em> configuration file, which is available in the folders above (for Linux and Windows).
-    Please do not edit the contents of the <em>default.json</em> file directly.
-    The default values will be restored each time you restart Docker container or upgrade <b>Document Server</b> to a new version and all your changes will be lost.
+    默认值在 <em>default.json</em> 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。
+    请不要直接编辑 <em>default.json</em> 文件的内容。
+    每次重新启动 Docker 容器或将 <b>Document Server</b> 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
 </div>
 
-<p>Restart the services for the config changes to take effect:</p>
+<p>重新启动服务以使配置更改生效：</p>
 
 <pre>
-supervisorctl restart all
+    supervisorctl restart all
 </pre>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col style="width: 300px;" />
@@ -33,40 +33,40 @@ supervisorctl restart all
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Parameter</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Example</td>
+            <td>参数</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>示例</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
-            <td>Defines the <em>secret key</em> to generate the token in the <a href="<%= Url.Action("signature/browser") %>">browser</a> for the <b>document editor</b> opening and calling the methods and the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
+            <td>定义用于在 <a href="<%= Url.Action("signature/browser") %>">浏览器</a> 中生成令牌的 <em>密钥</em>，以便 <b>文档编辑器</b> 打开并调用方法及 <a href="<%= Url.Action("signature/request") %>">请求</a> <b>文档命令服务</b>、 <b>文档转换服务</b> 及 <b>文档生成器服务</b>。</td>
             <td>string</td>
             <td>secret</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.outbox.string</td>
-            <td>Defines the <em>secret key</em> to generate the token in the <a href="<%= Url.Action("signature/request") %>">requests</a> by <b>document editing service</b> to "callbackUrl" address.</td>
+            <td>定义 <em>密钥</em>，以在 <b>文档编辑服务</b> 对"callbackUrl"地址的 <a href="<%= Url.Action("signature/request") %>">请求</a> 中生成令牌。</td>
             <td>string</td>
             <td>secret</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.browser</td>
-            <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/browser") %>">config</a> for the <b>document editor</b> opening and calling the methods.</td>
+            <td>指定在 <a href="<%= Url.Action("signature/browser") %>">配置</a> 中为 <b>文档编辑器</b> 打开和调用方法启用令牌验证。</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.inbox</td>
-            <td>Specifies the enabling the token validation in the <a href="<%= Url.Action("signature/request") %>">requests</a> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
+            <td>指定在对 <b>文档命令服务</b>、<b>文档转换服务</b>和<b>文档生成器服务</b>的 <a href="<%= Url.Action("signature/request") %>">请求</a> 中启用令牌验证。</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.outbox</td>
-            <td>Specifies the enabling the token generation for the <a href="<%= Url.Action("signature/request") %>">requests</a> by <b>document editing service</b> to <b>document storage service</b>.</td>
+            <td>指定为 <b>文档编辑服务</b> 向 <b>文档存储服务</b>的 <a href="<%= Url.Action("signature/request") %>">请求</a>启用令牌生成。</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -75,7 +75,7 @@ supervisorctl restart all
 <div class="mobile-content"></div>
 
 
-<div class="header-gray">Sample local.json configuration</div>
+<div class="header-gray">示例 local.json 配置</div>
 <pre>
 {
     "services": {

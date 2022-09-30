@@ -6,45 +6,45 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Converting and Downloading File
+    转换和下载文件
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Converting and downloading file</span>
+        <span class="hdr">转换和下载文件</span>
     </h1>
     <p class="dscr">
-        Document conversion service is a part of ONLYOFFICE Document Server.
-        It lets the user convert files from one format into another to open them later in <b>document editors</b> or for their export.
+        文档转换服务是 ONLYOFFICE 文档服务器的一部分。
+        它允许用户将文件从一种格式转换为另一种格式，以便稍后在 <b>文档编辑器</b> 中打开它们或进行导出。
     </p>
-    <p>There are two main situations when document conversion is necessary.</p>
-    <h2>Interim conversion needed for document editing</h2>
-    <p>For the <b>document editors</b> correct work with the document files it is recommended to convert them  prior to editing into Office Open XML formats:</p>
+    <p>需要进行文档转换的主要有两种情况。</p>
+    <h2>文档编辑所需的临时转换</h2>
+    <p>为了 <b>文档编辑器</b> 正确使用文档文件，建议在编辑之前将它们转换为 Office Open XML 格式：</p>
     <ul>
-        <li><em>docx</em> for text documents,</li>
-        <li><em>xlsx</em> for spreadsheets,</li>
-        <li><em>pptx</em> for presentations.</li>
+        <li><em>docx</em> 用于文本文档，</li>
+        <li><em>xlsx</em> 用于电子表格的，</li>
+        <li><em>pptx</em> 用于演示文稿。</li>
     </ul>
-    <p>The reference figure and the steps below explain the process of document conversion.</p>
-    <img alt="Interim conversion needed for document editing" src="<%= Url.Content("~/content/img/editor/conversion.jpg") %>" />
+    <p>参考图和下面的步骤解释了文档转换的过程。</p>
+    <img alt="文档编辑所需的临时转换" src="<%= Url.Content("~/content/img/editor/conversion.jpg") %>" />
     <ol>
-        <li>The users selects a file on the computer hard disk drive that is to be uploaded to the <b>document manager</b>.</li>
-        <li>The <b>document manager</b> uploads the selected file to the <b>document storage service</b>.</li>
-        <li>The <b>document storage service</b> sends the uploaded file to ONLYOFFICE Document Server <b>document conversion service</b> for conversion into the Office Open XML format using the <a href="<%= Url.Action("conversionapi") %>">conversion API</a>.</li>
-        <li>The <b>document conversion service</b> converts the selected file to the Office Open XML format.</li>
-        <li>The <b>document storage service</b> downloads the converted document file.</li>
+        <li>用户在计算机硬盘驱动器上选择要上传到 <b>文档管理器</b>的文件。</li>
+        <li><b>文档管理器</b> 将所选文件上传到 <b>文档存储服务</b>。</li>
+        <li><b>文档存储服务</b> 将上传的文件发送到 ONLYOFFICE Document Server <b>文档转换服务</b>，以便使用 <a href="<%= Url.Action("conversionapi") %>">conversion API</a>将它转换为 Office Open XML 格式。</li>
+        <li><b>文档转换服务</b> 将所选文件转换为 Office Open XML 格式。</li>
+        <li><b>文档存储服务</b> 下载转换后的文档文件。</li>
     </ol>
-    <h2>Document export</h2>
-    <p>When the user needs to download the file in some format different from the Office Open XML format, ONLYOFFICE Document Server converts the document file saved at the <b>document storage service</b> into the appropriate format prior to its export.</p>
-    <p>The reference figure and the steps below explain the process of document export.</p>
-    <img alt="Document export" src="<%= Url.Content("~/content/img/editor/export.jpg") %>" />
+    <h2>文件导出</h2>
+    <p>当用户需要下载与Office Open XML格式不同的文件时，ONLYOFFICE 文档服务器会将保存在 <b>文档存储服务</b> 中的文档文件转换为适当的格式，然后再导出。</p>
+    <p>参考图和下面的步骤解释了文档导出的过程。</p>
+    <img alt="文档导出" src="<%= Url.Content("~/content/img/editor/export.jpg") %>" />
     <ol>
-        <li>The user selects the file in the <b>document manager</b> and the format the file must be downloaded in.</li>
-        <li>The <b>document manager</b> transforms this user action into a request to the <b>document storage service</b>.</li>
-        <li>The <b>document storage service</b> sends the uploaded file to ONLYOFFICE Document Server <b>document conversion service</b> for conversion into the appropriate format using the <a href="<%= Url.Action("conversionapi") %>">conversion API</a>.</li>
-        <li>The <b>document conversion service</b> converts the selected file to the appropriate format.</li>
-        <li>When the conversion is finished the <b>document storage service</b> downloads the converted file.</li>
-        <li>The <b>document storage service</b> notifies the <b>document manager</b> that the conversion is successfully performed.</li>
-        <li>The <b>document manager</b> downloads the converted file.</li>
+        <li>用户在 <b>文档管理器</b> 中选择文件，以及下载文件必须采用的格式。</li>
+        <li><b>文档管理器</b> 将此用户操作转换为对 <b>文档存储服务</b>的请求。</li>
+        <li><b>文档存储服务</b> 将上传的文件发送到 ONLYOFFICE 文档服务器 <b>文档转换服务</b>，以便使用 <a href="<%= Url.Action("conversionapi") %>">conversion API</a>将它转换为适当的格式。</li>
+        <li><b>文档转换服务</b> 将所选文件转换为适当的格式。</li>
+        <li>转换完成后， <b>文档存储服务</b> 会下载转换后的文件。</li>
+        <li><b>文档存储服务</b> 通知 <b>文档管理器</b> 转换成功。</li>
+        <li><b>文档管理器</b> 下载转换后的文件。</li>
     </ol>
 </asp:Content>

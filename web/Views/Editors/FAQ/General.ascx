@@ -1,55 +1,55 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
-        General questions</span>
+    <span class="hdr">文档服务器常见问题解答： <br />
+        一般问题</span>
 </h1>
 
 <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="general_1">
-    <dt>I am new to Document Server API. Where should I start?</dt>
+    <dt>我是文档服务器 API 的新手。我应该从哪里开始？</dt>
     <dd>
-        <p>If you do not know where to start with Document Server API, we suggest that you first read the <a href="<%= Url.Action("basic") %>">Basic concepts</a> and <a href="<%= Url.Action("howitworks") %>">How it works</a> sections to have better understanding of how Document Server API is built. Once you are familiar with the main concepts, you can visit the <a href="<%= Url.Action("try") %>">Try now</a> section to see the live examples of the main Document Server features in action.</p>
-        <p>If you are interested in a specific programming language example, see the <a href="<%= Url.Action("demopreview") %>">Language-specific examples</a> which are available in several programming languages and explain how to install Document Server, where to get the example source files and how to install them and connect Document Server.</p>
-        <p>The users who use some document management systems (Nextcloud, ownCloud, SharePoint etc.) and simply want to know how to connect Document Server to these systems should visit the <a href="<%= Url.Action("plugins") %>">Ready-to-use connectors</a> section where all the main plugins working with Document Server are explained.</p>
-        <p>The detailed description of every API method is available in the larger <b>Documentation</b> module. All the methods are described in the appropriate sections, the list of them is available in the <a href="<%= Url.Action("advanced") %>">Advanced parameters</a>.</p>
+        <p>如果您不知道从哪里开始使用文档服务器API，我们建议您先阅读 <a href="<%= Url.Action("basic") %>">基本概念</a> 和 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分，以便更好地了解文档服务器API的构建方式。熟悉主要概念后，您可以访问 <a href="<%= Url.Action("try") %>">立即尝试</a> 部分，查看实际使用的文档服务器主要功能示例。</p>
+        <p>如果您对特定的编程语言示例感兴趣，请参阅 <a href="<%= Url.Action("demopreview") %>">特定于语言的示例</a>，它们是以多种编程语言编写，解释了如何安装文档服务器、从何处获取示例源文件以及如何安装它们和连接文档服务器。</p>
+        <p>对于使用某些文档管理系统（Nextcloud、ownCloud、SharePoint 等）、并且只是想知道如何将文档服务器连接到这些系统的用户，应该访问 <a href="<%= Url.Action("plugins") %>">即用型连接器</a> 部分，在那里所有与文档服务器一起使用的主要插件都有解释。</p>
+        <p>每个API方法的详细描述可在更大的 <b>文档</b> 模块中找到。所有方法都在相应的部分中描述，它们的列表在 <a href="<%= Url.Action("advanced") %>">高级参数</a>部分中可以找到。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="general_2">
-    <dt>How to find out the current version number of Document Server?</dt>
+    <dt>如何查看文档服务器的当前版本号？</dt>
     <dd>
-        <p>The current Document Server version number can be found at the <b>About</b> page of the Document, Presentation or Spreadsheet Editor, right below the logo and the editor name.</p>
-        <p>You can use the API to send a POST request to the <b><b>document command service</b></b>. Use the <em>c</em> parameter for that with the <a href="<%= Url.Action("command/version") %>">version</a> value, which is sent as a JSON object in the request body:</p>
+        <p>当前的文档服务器版本号可在文档编辑器、演示文稿编辑器或电子表格编辑器的 <b>关于</b> 页面上找到，位于徽标和编辑器名称的正下方。</p>
+        <p>您可以使用 API 向 <b><b>文档命令服务</b></b>发送 POST 请求。将 <em>c</em> 参数的值设为 <a href="<%= Url.Action("command/version") %>">"version"</a> ，在请求正文中作为 JSON 对象发送：</p>
         <pre>{
     "c": "version"
 }
 </pre>
-        <p>The request result of version is returned in JSON form, like this:</p>
+        <p>版本的请求结果以 JSON 形式返回，如下所示：</p>
         <pre>{
     "error": 0,
     "version": "4.3.1.4"
 }</pre>
-        <p>More detailed information about the interaction with the <b>document command service</b> and the use of various commands to do that is available <a href="<%= Url.Action("command") %>">at this page</a>.</p>
+        <p>有关与 <b>文档命令服务</b> 交互以及使用各种命令执行此操作的更多详细信息，请访问 <a href="<%= Url.Action("command") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="general_3">
-    <dt>I want to change some Document Server parameters from the default.json configuration file. How can I do that so that my changes were not lost after update?</dt>
+    <dt>我想从 default.json 配置文件中更改一些文档服务器参数。我该怎么做才能使我的更改在更新后不会丢失？</dt>
     <dd>
-        <p>All the main settings for Document Sever are stored in the <em>default.json</em> configuration file which is available in the <em>/etc/onlyoffice/documentserver/</em> folder (for Linux) or <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\</em> (for Windows). There is also the platform-specific <em>production.json</em> file in the same folder, in which the settings relevant for Linux or Windows are stored.</p>
-        <p>Document server uses the <a target="_blank" href="https://www.npmjs.com/package/config">Node.js config module</a> to organize and structure configuration files, so the hierarchy of these files looks like this:</p>
+        <p>文档服务器的所有主要设置都存储在 <em>default.json</em> 配置文件中，该文件位于 <em>/etc/onlyoffice/documentserver</em> /文件夹（适用于 Linux）或 <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\</em> （适用于 Windows）中。在同一文件夹中还有特定于平台的 <em>production.json</em> 文件，其中存储了与 Linux 或 Windows 相关的设置。</p>
+        <p>文档服务器使用 <a target="_blank" href="https://www.npmjs.com/package/config">Node.js 配置模块</a> 来组织和构造配置文件，因此这些文件的层次结构如下所示：</p>
         <pre>default.json
 production.json
 local.json</pre>
-        <p>Where all the main settings are stored in the <em>default.json</em> file, with some of them added or overriden by ones from <em>production.json</em> file and any user/developer settings overriden by the ones from <em>local.json</em> configuration file.</p>
-        <div class="note">If you change the parameters in either <em>default.json</em> or <em>production.json</em> file, all the changes will be lost after Document Server update or Docker container restart (in case you have Document server installed using Docker).</div>
-        <p>So we strongly recommend that you <b>do not</b> alter the parameters in either <em>default.json</em> or <em>production.json</em> files and use <em>local.json</em> configuration file instead. This file must be created in the same folder with the <em>default.json</em> file and the <b>whole object structure</b> for the necessary parameter <b>must be retained</b>.</p>
-        <p>The examples of <em>local.json</em> use can be found in the following sections:</p>
+        <p>所有主要设置都存储在 <em>default.json</em> 文件中，其中一些设置被 <em>production.json</em> 文件中的设置添加或覆盖，任何用户/开发人员设置被 <em>local.json</em> 配置文件中的设置覆盖。</p>
+        <div class="note">如果您更改 <em>default.json</em> 或 <em>production.json</em> 文件中的参数，所有更改将在 Document Server 更新或 Docker 容器重启后丢失（如果您使用 Docker 安装了 Document server）。</div>
+        <p>因此，我们强烈建议您 <b>不要</b> 更改 <em>default.json</em> 或 <em>production.json</em> 文件中的参数，而是使用 <em>local.json</em> 配置文件。此文件必须与 <em>default.json</em> 文件在同一文件夹中创建，并且 <b>必须保留</b> 必要参数的 <b>整个对象结构</b>。</p>
+        <p><em>local.json</em> 的使用示例可以在以下部分中找到：</p>
         <ul>
-            <li><a href="<%= Url.Action("save") %>#savedelay">Save delay</a></li>
-            <li><a href="<%= Url.Action("save") %>#forcesave">Force saving</a></li>
-            <li><a href="<%= Url.Action("signature/body") %>">Request with token in body</a></li>
-            <li><a href="<%= Url.Action("wopi/") %>#enable">Enabling WOPI</a></li>
-            <li><a href="<%= Url.Action("wopi/") %>#ip-filter">IP filter</a></li>
+            <li><a href="<%= Url.Action("save") %>#savedelay">保存延迟</a></li>
+            <li><a href="<%= Url.Action("save") %>#forcesave">强制保存</a></li>
+            <li><a href="<%= Url.Action("signature/body") %>">请求正文中的令牌</a></li>
+            <li><a href="<%= Url.Action("wopi/") %>#enable">启用 WOPI</a></li>
+            <li><a href="<%= Url.Action("wopi/") %>#ip-filter">IP过滤器</a></li>
         </ul>
     </dd>
 </dl>

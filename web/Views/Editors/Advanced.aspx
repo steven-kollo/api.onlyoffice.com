@@ -6,50 +6,50 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Advanced parameters
+    高级参数
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Advanced parameters</span>
+        <span class="hdr">高级参数</span>
     </h1>
 
-    <p class="dscr">The parameters, which can be changed for ONLYOFFICE Document Server, can be subdivided into the following main sections:</p>
+    <p class="dscr">ONLYOFFICE 文档服务器可以更改的参数可以细分为以下主要部分：</p>
 
-    <a href="<%= Url.Action("config/") %>"><b>config</b></a> - allows to change the platform type used, document display size (width and height) and type of the document opened;
+    <a href="<%= Url.Action("config/") %>"><b>config</b></a> - 允许更改使用的平台类型、文档显示大小（宽度和高度）和打开文档的类型；
     <ul>
         <li>
-            <a href="<%= Url.Action("config/document") %>"><b>document</b></a> - contains all the parameters pertaining to the document (title, url, file type, etc.);
+            <a href="<%= Url.Action("config/document") %>"><b>document</b></a> - 包含与文档有关的所有参数（标题、网址、文件类型等）；
             <ul>
                 <li>
-                    <a href="<%= Url.Action("config/document/info") %>"><b>info</b></a> - contains additional parameters for the document (document owner, folder where the document is stored, uploading date, sharing settings);
+                    <a href="<%= Url.Action("config/document/info") %>"><b>info</b></a> - 包含文档的附加参数（文档所有者、存储文档的文件夹、上传日期、共享设置）；
                 </li>
                 <li>
-                    <a href="<%= Url.Action("config/document/permissions") %>"><b>permissions</b></a> - defines whether the document can be edited and downloaded or not;
+                    <a href="<%= Url.Action("config/document/permissions") %>"><b>permissions</b></a> - 定义是否可以编辑和下载文档；
                 </li>
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("config/editor") %>"><b>editorConfig</b></a> - defines parameters pertaining to the editor interface: opening mode (viewer or editor), interface language, additional buttons, etc.);
+            <a href="<%= Url.Action("config/editor") %>"><b>editorConfig</b></a> - 定义与编辑器界面有关的参数：打开模式（查看器或编辑器）、界面语言、附加按钮等）；
             <ul>
                 <li>
-                    <a href="<%= Url.Action("config/editor/customization") %>"><b>customization</b></a> - allows to customize the editor interface so that it looked like your other products (if there are any) and change the presence or absence of the additional buttons, links, change logos and editor owner details;
+                    <a href="<%= Url.Action("config/editor/customization") %>"><b>customization</b></a> - 允许自定义编辑器界面，使其看起来像您的其他产品（如果有），并更改附加按钮、链接、更改徽标和编辑器所有者详细信息的显示或不显示；
                 </li>
                 <li>
-                    <a href="<%= Url.Action("config/editor/embedded") %>"><b>embedded</b></a> - is used for the embedded document type only and allows to change the behavior of the buttons used to control the embedded mode;
+                    <a href="<%= Url.Action("config/editor/embedded") %>"><b>embedded</b></a> - 仅用于嵌入式文档类型，并允许更改用于控制嵌入式模式的按钮的行为；
                 </li>
                 <li>
-                    <a href="<%= Url.Action("config/editor/plugins") %>"><b>plugins</b></a> - is used to connect the necessary <a href="<%= Url.Action("basic", "plugin") %>">plugins</a> to your Document Server, so that they become visible to all document editor users;
+                    <a href="<%= Url.Action("config/editor/plugins") %>"><b>plugins</b></a> - 用于将必要的 <a href="<%= Url.Action("basic", "plugin") %>">插件</a> 连接到您的文档服务器，以便所有文档编辑器用户都可以看到它们；
                 </li>
             </ul>
         </li>
         <li>
-            <a href="<%= Url.Action("config/events") %>"><b>events</b></a> - is the list of special events called when some action is applied to the document (when it is loaded, modified, etc.).
+            <a href="<%= Url.Action("config/events") %>"><b>events</b></a> - 是在对文档进行某些操作时调用的特殊事件列表，这些操作包括加载、修改等。
         </li>
     </ul>
 
-    <p>The complete <em>config</em> with all the additional parameters looks the following way:</p>
+    <p>包含所有附加参数的完整 <em>config</em> 如下所示：</p>
 
     <pre>
 <a href="<%= Url.Action("config/") %>">config</a> = {
@@ -133,15 +133,15 @@
                     "change": true
                 }
             },
-            "<a href="<%= Url.Action("config/editor/customization") %>#feedback">feedback</a>": {
+        "<a href="<%= Url.Action("config/editor/customization") %>#feedback">feedback</a>": {
                 "url": "https://example.com",
                 "visible": true
             },
-            "<a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a>": false,
-            "<a href="<%= Url.Action("config/editor/customization") %>#goback">goback</a>": {
+        "<a href="<%= Url.Action("config/editor/customization") %>#forcesave">forcesave</a>": false,
+        "<a href="<%= Url.Action("config/editor/customization") %>#goback">goback</a>": {
                 "blank": true,
-                "requestClose": false,
-                "text": "Open file location",
+                "requestClose":
+                false, "text": "Open file location",
                 "url": "https://example.com"
             },
             "<a href="<%= Url.Action("config/editor/customization") %>#help">help</a>": true,
@@ -159,17 +159,17 @@
             "<a href="<%= Url.Action("config/editor/customization") %>#plugins">plugins</a>": true,
             "<a href="<%= Url.Action("config/editor/customization") %>#review">review</a>": {
                 "hideReviewDisplay": false,
-                "showReviewChanges": false,
+        "showReviewChanges": false,
                 "reviewDisplay": "original",
                 "trackChanges": true,
                 "hoverMode": false
-            },<%--
+                },<%--
             "<a href="<%= Url.Action("config/editor/customization") %>#submitForm">submitForm</a>": true,--%>
-            "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
-            "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
-            "<a href="<%= Url.Action("config/editor/customization") %>#uiTheme">uiTheme</a>": "theme-dark",
-            "<a href="<%= Url.Action("config/editor/customization") %>#unit">unit</a>": "cm",
-            "<a href="<%= Url.Action("config/editor/customization") %>#zoom">zoom</a>": 100
+        "<a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">toolbarHideFileName</a>": false,
+        "<a href="<%= Url.Action("config/editor/customization") %>#toolbarNoTabs">toolbarNoTabs</a>": false,
+        "<a href="<%= Url.Action("config/editor/customization") %>#uiTheme">uiTheme</a>": "theme-dark",
+        "<a href="<%= Url.Action("config/editor/customization") %>#unit">unit</a>": "cm",
+        "<a href="<%= Url.Action("config/editor/customization") %>#zoom">zoom</a>": 100
         },
         "<a href="<%= Url.Action("config/editor/embedded") %>">embedded</a>": {
             "<a href="<%= Url.Action("config/editor/embedded") %>#embedUrl">embedUrl</a>": "https://example.com/embedded?doc=exampledocument1.docx",
@@ -185,13 +185,13 @@
              "<a href="<%= Url.Action("config/editor/plugins") %>#autostart">autostart</a>": [
                  "asc.{0616AE85-5DBE-4B6B-A0A9-455C4F1503AD}",
                  "asc.{FFE1F462-1EA2-4391-990D-4CC84940B754}",
-                 ...
-             ],
+        ...
+        ],
              "<a href="<%= Url.Action("config/editor/plugins") %>#pluginsData">pluginsData</a>": [
                  "https://example.com/plugin1/config.json",
                  "https://example.com/plugin2/config.json",
-                 ...
-             ]
+                 
+             ...]
         },
         "<a href="<%= Url.Action("config/editor") %>#recent">recent</a>": [
             {
@@ -259,9 +259,9 @@
     "<a href="<%= Url.Action("config/") %>#type">type</a>": "desktop",
     "<a href="<%= Url.Action("config/") %>#width">width</a>": "100%"
 };
-</pre>
+    </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </p>
 </asp:Content>

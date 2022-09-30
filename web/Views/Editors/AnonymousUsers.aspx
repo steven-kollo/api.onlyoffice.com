@@ -1,4 +1,4 @@
-<%@ Page
+﻿<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,36 +6,36 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Anonymous users
+    匿名用户
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Anonymous users</span>
+        <span class="hdr">匿名用户</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of setting a name to an anonymous user in ONLYOFFICE Document Server.</p>
-    <img alt="Anonymous" src="<%= Url.Content("~/content/img/editor/anonymous-user.png") %>" />
+    <p class="dscr">参考图和以下步骤说明了在 ONLYOFFICE 文档服务器中为匿名用户设置名称的过程。</p>
+    <img alt="匿名" src="<%= Url.Content("~/content/img/editor/anonymous-user.png") %>" />
     <ol>
-        <li>The anonymous user uses the <b>document manager</b> to open a document for viewing or editing.</li>
-        <li>The <b>document storage service</b> sends the initialization config to the <b>document editor</b> using the <a href="<%= Url.Action("basic") %>">JavaScript API</a> but the user name is not specified there.</li>
-        <li>The <b>document editor</b> requests the user name.</li>
-        <li>The <b>document editor</b> sends the received name to the <b>document editing service</b>.</li>
-        <li>The <b>document editing service</b> sends the user name to the <b>document editors</b> of all the users in the co-editing mode.</li>
+        <li>匿名用户使用 <b>文档管理器</b> 打开文档进行查看或编辑。</li>
+        <li><b>文档存储服务</b> 使用 <a href="<%= Url.Action("basic") %>">JavaScript API</a> 将初始化配置发送到 <b>文档编辑器</b>，但未在那里指定用户名。</li>
+        <li><b>文档编辑器</b> 请求用户名。</li>
+        <li><b>文档编辑器</b> 将接收到的名称发送到 <b>文档编辑服务</b>。</li>
+        <li><b>文档编辑服务</b> 将用户名发送给共同编辑模式下所有用户的 <b>文档编辑器</b>。</li>
     </ol>
 
-    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
     <ol>
-        <li>Create an <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
-        <li>If the anonymous user&#8217;s name is specified, it is displayed on the top toolbar.</li>
+        <li>创建一个 <em>html</em> 文件来 <a href="<%= Url.Action("open") %>#apply">打开文档</a>。</li>
+        <li>如果指定了匿名用户的名称，它将显示在顶部工具栏上。</li>
         <li>
-            <p>If the user name is not specified, it will be requested. The request can be turned off with 
-            the <em>"request"=false</em> value of the <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> parameter.</p>
-            <img width="832px" alt="Name request" src="<%= Url.Content("~/content/img/editor/name-request.png") %>" />
+            <p>如果未指定用户名，将被请求用户名。可以使用
+            <a href="<%= Url.Action("config/editor/customization") %>#anonymous">editorConfig.customization.anonymous</a> 参数的 <em>"request"=false</em> 值关闭请求。</p>
+            <img width="832px" alt="名称请求" src="<%= Url.Content("~/content/img/editor/name-request.png") %>" />
         </li>
         <li>
-            <p>After the anonymous user&#8217;s name is set, the postfix is added to it via the <em>label</em> field of 
-                the <em>editorConfig.customization.anonymous</em> parameter to distinguish guests during the coediting session. By default this postfix is <em>"Guest"</em>.</p>
-            <img alt="Label" src="<%= Url.Content("~/content/img/editor/label.png") %>" />
+            <p>设置匿名用户名后，通过
+                <em>editorConfig.customization.anonymous</em> 参数的 <em>label</em> 字段添加后缀，以在共同编辑会话期间区分来宾用户。默认情况下，这个后缀是 <em>"Guest"</em>。</p>
+            <img alt="标签" src="<%= Url.Content("~/content/img/editor/label.png") %>" />
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
@@ -52,9 +52,9 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
         </li>
-        <li>As soon as you set the name for the first time, it will be stored in the browser local storage. To use it next time, just press the <b>F5</b> button.</li>
-        <li>To change this name, click it on the top toolbar and enter a new one in the opened window.</li>
-        <li>All the co-authors will see the new name.</li>
+        <li>一旦您第一次设置名称，它将存储在浏览器本地存储中。下次要使用它，只需按 <b>F5</b> 键。</li>
+        <li>要更改此名称，请在顶部工具栏上单击它并在打开的窗口中输入一个新名称。</li>
+        <li>所有共同作者都会看到新名称。</li>
     </ol>
 
 </asp:Content>

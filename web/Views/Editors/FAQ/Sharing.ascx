@@ -1,18 +1,18 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
-        Sharing questions</span>
+    <span class="hdr">文档服务器常见问题解答： <br />
+        共享问题</span>
 </h1>
 
 <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="sharing_1">
-    <dt>How to open a document with "track changes" mode enabled?</dt>
+    <dt>如何打开启用了"跟踪更改"模式的文档？</dt>
     <dd>
-        <p>To open the document with the <em>track changes</em> mode enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
-        <p>There are three main variants how the document can be opened with the <em>track changes</em> mode enabled:</p>
+        <p>要在启用 <em>跟踪更改</em> 模式的情况下打开文档，请使用 <em>document.permissions</em> 参数（请参阅 <a href="<%= Url.Action("advanced") %>">此处</a>文档服务器配置对象的完整结构）。</p>
+        <p>在启用 <em>跟踪更改</em> 模式的情况下，可以通过三种主要变体打开文档：</p>
         <ol>
-            <li>Both reviewing and editing enabled: if both the <em>document.permission.edit</em> and <em>document.permission.review</em> parameters are set to <b>true</b>, the user will be able to edit the document, accept/reject the changes made and switch to the review mode him-/herself. The configuration in this case will look like this:
+            <li>启用审阅和编辑：如果 <em>document.permission.edit</em> 和document.permission.review参数都设置为 <b>true</b>，用户自己将能够编辑文档，接受/拒绝所做的更改并切换到审阅模式。这种情况下的配置将如下所示：
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -28,7 +28,7 @@
     ...
 });</pre>
             </li>
-            <li>Reviewing only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.review</em> is set to <b>true</b>, the user will be able to open the document in review mode only. The configuration in this case will look like this:
+            <li>仅启用审阅：如果 <em>document.permission.edit</em> 参数设置为 <b>false</b> 并且 <em>document.permission.review</em> 设置为 <b>true</b>，用户将只能在审阅模式下打开文档。这种情况下的配置将如下所示：
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -44,7 +44,7 @@
     ...
 });</pre>
             </li>
-            <li>Reviewing and commenting enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b>, <em>document.permission.review</em> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to open the document in review mode with possibility to comment it, but will not be able to edit it. The configuration in this case will look like this:
+            <li>启用审阅和评论：如果 <em>document.permission.edit</em> 参数设置为 <b>false</b>， <em>document.permission.review</em> 和 <em>document.permission.comment</em> 都设置为 <b>true</b>，用户将能够以审阅模式打开文档，并有可能评论它，但将无法编辑它。这种情况下的配置将如下所示：
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -62,16 +62,16 @@
 });</pre>
             </li>
         </ol>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
+        <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_2">
-    <dt>How to open a document with "commenting" mode enabled?</dt>
+    <dt>如何打开文档并启用"评论"模式？</dt>
     <dd>
-        <p>To open the document with the <em>commenting</em> mode enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
-        <p>There are the following main variants how the document can be opened with the <em>commenting</em> mode enabled:</p>
+        <p>要在启用 <em>评论</em> 模式的情况下打开文档，需要使用 <em>document.permissions</em> 参数（请参阅 <a href="<%= Url.Action("advanced") %>">此处</a>了解文档服务器配置对象的完整结构）。</p>
+        <p>在启用 <em>评论</em> 模式的情况下，如何打开文档有以下主要变体：</p>
         <ol>
-            <li>Both commenting and editing enabled: if both the <em>document.permission.edit</em> and <em>document.permission.comment</em> parameters are set to <b>true</b>, the user will be able to edit the document and comment. The configuration in this case will look like this:
+            <li>启用评论和编辑：如果 <em>document.permission.edit</em> 和 <em>document.permission.comment</em> 参数都设置为 <b>true</b>，用户将能够编辑文档和评论。这种情况下的配置将如下所示：
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -87,7 +87,7 @@
     ...
 });</pre>
             </li>
-            <li>Commenting only enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b> and <em>document.permission.comment</em> is set to <b>true</b>, the document will be available for commenting only. The configuration in this case will look like this:
+            <li>仅启用评论：如果 <em>document.permission.edit</em> 参数设置为 <b>false</b> 并且document.permission.comment设置为 <b>true</b>，则文档将仅可用于评论。这种情况下的配置将如下所示：
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -103,7 +103,7 @@
     ...
 });</pre>
             </li>
-            <li>Reviewing and commenting enabled: if the <em>document.permission.edit</em> parameter is set to <b>false</b>, <em>document.permission.review</em> and <em>document.permission.comment</em> are both set to <b>true</b>, the user will be able to open the document in review mode with possibility to comment it, but will not be able to edit it. The configuration in this case will look like this:
+            <li>启用审阅和评论：如果 <em>document.permission.edit</em> 参数设置为 <b>false</b>， <em>document.permission.review</em> 和 <em>document.permission.comment</em> 都设置为 <b>true</b>，用户将能够以审阅模式打开文档，并有可能评论它，但将无法编辑它。这种情况下的配置将如下所示：
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -120,7 +120,7 @@
     ...
 });</pre>
             </li>
-            <li>Comments are available for viewing only: if the <em>document.permission.edit</em> parameter is set to <b>true</b> and <em>document.permission.comment</em> is set to <b>false</b>, the user will be able to edit only, the corresponding commenting functionality will be available for viewing only, the adding and editing of comments will be unavailable. The configuration in this case will look like this:
+            <li>评论只能查看：如果 <em>document.permission.edit</em> 参数设置为 <b>true</b> 并且 <em>document.permission.comment</em> 设置为 <b>false</b>，用户将只能编辑，相应的评论功能将仅供查看，评论的添加和编辑将不可用。这种情况下的配置将如下所示：
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -137,14 +137,14 @@
 });</pre>
             </li>
         </ol>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
+        <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_3">
-    <dt>How can the 'fillForms' parameter be used?</dt>
+    <dt>如何使用'fillForms'参数？</dt>
     <dd>
-        <p>Starting from version 5.2, Document Server provides functionality for filling special forms without the need to give editing permissions to the user. This can be used, for example, in case you have a document form of some kind and want to give the users the access to this form so that they could fill it, but could not edit other document fields (e.g. fill the names in a contract but not change the contract terms, or fill the variable fields in some other document but leave the other parts of the document intact).</p>
-        <p>To enable this mode the <em>document.permissions.fillForms</em> parameter is used:</p>
+        <p>从版本 5.2 开始，Document Server 提供了填写特殊表单的功能，而无需授予用户编辑权限。这可以用在某些情形中，比如，如果您有某种文档表单，并希望用户可以访问此表单，以便他们填写文档某些字段，但无法编辑其他文档字段（例如，将名称填写在合同中但不更改合同条款，或填写其他文档中的变量字段但保持文档的其他部分不变）。</p>
+        <p>要启用此模式，请使用 <em>document.permissions.fillForms</em> 参数：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -161,19 +161,19 @@
     },
     ...
 });</pre>
-        <p>The <em>comment</em> field is optional because the commenting is disabled anyway with the <em>fillForms</em> parameter enabled and <em>edit</em> and <em>review</em> parameters disabled.</p>
-        <p>With the configuration above the document will be opened with the form filling mode enabled and all the other modes disabled, giving the users who have access to it only the possibility to fill the fields in the special <a target="_blank" href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx">content controls</a>.</p>
-        <p>It is then up to you to decide what is done next: either the changes to the editable fields will be saved to the same document or a new document will be created each time the original one is accessed and altered by a new user.</p>
-        <p>The first scenario can be used if the access to the document will be given only once to a certain user with <em>fillForms</em> permissions, then it is saved with all the changes and no other user will have to fill it again.</p>
-        <p>The second scenario is more commonly used, when you have a document template with some fields not filled and want to give access to it to more users (put it to your website, for example, so that the users filled it right there without the need to download it each time, fill and upload it back again). In this case it will be more reasonable to have this document as a template for future changes and, once the users with the <em>fillForms</em> access edit the fields, save it under another name.</p>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
+        <p><em>comment</em> 字段是可选的，因为只要启用了 <em>fillForms</em> 参数并禁用了 <em>edit</em> 和 <em>review</em> 参数，注释都被禁用了。</p>
+        <p>通过上面的配置，文档将在启用表单填写模式并禁用所有其他模式的情况下打开，从而使有权访问它的用户只能填写特殊 <a target="_blank" href="https://helpcenter.onlyoffice.com/ONLYOFFICE-Editors/ONLYOFFICE-Document-Editor/UsageInstructions/InsertContentControls.aspx">内容控件</a>中的字段。</p>
+        <p>然后由您决定下一步做什么：对可编辑字段的更改将保存到同一个文档中，或者每次新用户访问和更改原始文档时都将创建一个新文档。</p>
+        <p>如果仅授予具有 <em>fillForms</em> 权限的某个用户对文档有一次访问权限，则可以使用第一种情况，然后将其与所有更改一起保存，并且其他用户无需再次填写它。</p>
+        <p>第二种情况更常用，当您有一个文档模板，其中一些字段未填写，并希望将其访问权限授予更多用户（例如，将其放到您的网站上，以便用户无需每次下载就可以填写并再次上传）。在这种情况下，更合理的做法是将此文档作为模板，方便将来更改，并且在具有 <em>fillForms</em> 访问权限的用户编辑字段后，将其保存在另一个文件名下。</p>
+        <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_4">
-    <dt>How to enable both the editing and commenting mode for a document?</dt>
+    <dt>如何同时启用文档的编辑和评论模式？</dt>
     <dd>
-        <p>To open the document with both the <em>editing</em> and the <em>commenting</em> modes enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
-        <p>You will need to set both the <em>document.permission.edit</em> and <em>document.permission.comment</em> parameters to <b>true</b>, so that the user will be able to edit the document and comment. The configuration in this case will look like this:</p>
+        <p>要在启用 <em>编辑</em> 和 <em>评论</em> 模式的情况下打开文档，请使用 <em>document.permissions</em> 参数（请参阅 <a href="<%= Url.Action("advanced") %>">此处</a>了解文档服务器配置对象的完整结构）。</p>
+        <p>您需要将 <em>document.permission.edit</em> 和document.permission.comment <em>document.permission.comment</em> 参数都设置为 <b>true</b>，以便用户能够编辑文档和评论。这种情况下的配置将如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -188,27 +188,27 @@
     },
     ...
 });</pre>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
+        <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_5">
-    <dt>Do the permission parameters influence each other?</dt>
+    <dt>权限参数是否相互影响？</dt>
     <dd>
-        <p>Most permission parameters are independent and are only enabled when their value is set to <b>true</b> and disabled when the value is set to <b>false</b>. There are, though, several combinations, when the permission will be either enabled or disabled notwithstanding the corresponding parameter value:</p>
+        <p>大多数权限参数都是独立的，仅在其值设置为 <b>true</b> 时启用，在值设置为 <b>false</b>时禁用。尽管有相应的参数值，当权限启用或禁用时，仍有几种组合：</p>
         <ul>
-            <li>Form filling permission is enabled (even if the <em>fillForm</em> parameter is set to <b>false</b>) when either the <em>edit</em> or <em>review</em> parameter is set to <b>true</b>.</li>
-            <li>Form filling permission is disabled (even if the <em>fillForm</em> parameter is set to <b>true</b>) when both the <em>edit</em> and <em>review</em> parameters are set to <b>false</b> and the <em>comment</em> is set to <b>true</b>.</li>
-            <li>Commenting permission is disabled (even if the <em>comment</em> parameter is set to <b>true</b>) when both the <em>edit</em> and <em>review</em> parameters are set to <b>false</b> and the <em>fillForms</em> is set to <b>true</b>.</li>
+            <li>当 <em>edit</em> 或 <em>review</em> 参数设置为 <b>true</b>时，会启用表单填写权限（即使 <em>fillForm</em> 参数设置为 <b>false</b>)）。</li>
+            <li>当 <em>edit</em> 和 <em>review</em> 参数都设置为 <b>false</b>并且注释设置为true时，表单填写权限被禁用（即使 <em>fillForm</em> 参数设置为 <b>true</b> <em></em>）。</li>
+            <li>当 <em>edit</em> 和 <em>review</em> 参数都被设置为 <b>false</b>而且 <em>fillForms</em> 被设置为 <b>true</b>时。 评论权限被禁用 (即使 <em>comment</em> 参数设置为 <b>true</b>)。</li>
         </ul>
-        <p>You should bear this in mind when you set the necessary permissions and combine different permissions for the same document.</p>
-        <p>See the interactive table below to find out how different parameters and parameter combinations influence each other and the resulting document permissions:</p>
+        <p>当您设置必要的权限并为同一个文档组合不同的权限时，您应该牢记这一点。</p>
+        <p>请参阅下面的交互表，了解不同参数和参数组合如何相互影响以及由此产生的文档权限：</p>
         <div class="table_wrapper">
-            <h5>Parameters</h5>
+            <h5>参数</h5>
             <table id="parameters" class="parameters_permissions">
                 <thead>
                     <tr>
-                        <th>Parameter</th>
-                        <th colspan="2" style="text-align: center;">Value</th>
+                        <th>参数</th>
+                        <th colspan="2" style="text-align: center;">值</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -251,64 +251,64 @@
             </table>
         </div>
         <div class="table_wrapper">
-            <h5>Resulting permissions</h5>
+            <h5>产生的权限</h5>
             <table id="result" class="parameters_permissions">
                 <thead>
                     <tr>
-                        <th>Document action</th>
-                        <th>Permission</th>
-                        <th>Note</th>
+                        <th>文档操作</th>
+                        <th>权限</th>
+                        <th>注释</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr id="viewing">
-                        <td class="resultAction"><p>Viewing</p></td>
-                        <td class="resultPermission allowed"><p>allowed</p></td>
+                        <td class="resultAction"><p>查看</p></td>
+                        <td class="resultPermission allowed"><p>允许</p></td>
                         <td class="resultNote"></td>
                     </tr>
                     <tr id="editing">
-                        <td class="resultAction"><p>Editing</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
+                        <td class="resultAction"><p>编辑</p></td>
+                        <td class="resultPermission notallowed"><p>不允许</p></td>
                         <td class="resultNote"></td>
                     </tr>
                     <tr id="reviewing">
-                        <td class="resultAction"><p>Reviewing</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
+                        <td class="resultAction"><p>审查</p></td>
+                        <td class="resultPermission notallowed"><p>不允许</p></td>
                         <td class="resultNote"></td>
                     </tr>
                     <tr id="formFilling">
-                        <td class="resultAction"><p>Form filling</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
+                        <td class="resultAction"><p>表格填写</p></td>
+                        <td class="resultPermission notallowed"><p>不允许</p></td>
                         <td class="resultNote"></td>
                     </tr>
                     <tr id="commenting">
-                        <td class="resultAction"><p>Commenting</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
+                        <td class="resultAction"><p>评论</p></td>
+                        <td class="resultPermission notallowed"><p>不允许</p></td>
                         <td class="resultNote"></td>
                     </tr>
                     <tr id="downloading">
-                        <td class="resultAction"><p>Downloading</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
+                        <td class="resultAction"><p>下载</p></td>
+                        <td class="resultPermission notallowed"><p>不允许</p></td>
                         <td class="resultNote"></td>
                     </tr>
                     <tr id="printing">
-                        <td class="resultAction"><p>Printing</p></td>
-                        <td class="resultPermission notallowed"><p>not allowed</p></td>
+                        <td class="resultAction"><p>打印</p></td>
+                        <td class="resultPermission notallowed"><p>不允许</p></td>
                         <td class="resultNote"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
+        <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_6">
-    <dt>How to open the document in a viewer without the option to edit it?</dt>
+    <dt>如何在没有编辑选项的情况下在查看器中打开文档？</dt>
     <dd>
-        <p>To open the document with both the <em>viewing</em> mode enabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
-        <p>You will need to set the <em>document.permission.edit</em>, <em>document.permission.review</em> and <em>document.permission.fillForms</em> parameters to <b>false</b>, so that the user will not be able to either edit, or review the document, or change form fields in it. If you additionally want to disable the commenting functionality for the document, set the <em>comment</em> parameter also to <b>false</b> (the existing comments will be available for viewing though).</p>
-        <div class="note">In case you disable all the editing permissions, we suggest that you also set the <em>document.permissions.chat</em> to <b>false</b>, so that the users with the access to the document could not spam to the document embedded chat.</div>
-        <p>The configuration in this case will look like this:</p>
+        <p>要在启用两种 <em>查看</em> 模式的情况下打开文档，请使用 <em>document.permissions</em> 参数（请参阅 <a href="<%= Url.Action("advanced") %>">此处</a>了解文档服务器配置对象的完整结构）。</p>
+        <p>您需要将 <em>document.permission.edit</em>、 <em>document.permission.review</em> 和 <em>document.permission.fillForms</em> 参数设置为 <b>false</b>，这样用户将无法编辑、查看文档或更改其中的表单字段。如果您还想禁用文档的评论功能，请将 <em>comment</em> 参数也设置为 <b>false</b> （但现有评论将可供查看）。</p>
+        <div class="note">如果您禁用所有的编辑权限，我们建议您也将 <em>document.permissions.chat</em> 设置为 <b>false</b>，这样有权访问该文档的用户就不会向文档嵌入聊天发送垃圾邮件。</div>
+        <p>这种情况下的配置将如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -322,14 +322,14 @@
     },
     ...
 });</pre>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
+        <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_7">
-    <dt>How to disable/enable the possibility to download the file?</dt>
+    <dt>如何禁用/启用下载文件的可能性？</dt>
     <dd>
-        <p>To open the document with the <em>downloading</em> option disabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
-        <p>You will need to set the <em>document.permission.download</em> to <b>false</b>, so that the <b>Download as...</b> option were removed from the document <b>File</b> menu (in case the <em>document.permission.edit</em> parameter is set to <b>true</b>) or from the top toolbar (in case the <em>document.permission.edit</em> is set to <b>false</b> and the file is available for viewing only) and the user could not download the document from the editor. The <em>permission</em> configuration in this case will look like this:</p>
+        <p>要在禁用 <em>下载</em> 选项的情况下打开文档，请使用 <em>document.permissions</em> 参数（请参阅 <a href="<%= Url.Action("advanced") %>">此处</a>了解文档服务器配置对象的完整结构）。</p>
+        <p>您需要将 <em>document.permission.download</em> 设置为 <b>false</b>，以便从文档 <b>文件</b> 菜单（如果 <em>document.permission.edit</em> 参数设置为 <b>true</b> ）或顶部工具栏中删除 <b>下载为...</b> 选项（如果 <em>document.permission.edit</em> 设置为 <b>false</b> 并且该文件仅供查看），并且用户无法从编辑器下载该文档。这种情况下的 <em>权限</em> 配置将如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -339,14 +339,14 @@
     },
     ...
 });</pre>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
+        <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_8">
-    <dt>How to prevent a document from being printed?</dt>
+    <dt>如何防止文档被打印？</dt>
     <dd>
-        <p>To open the document with the <em>printing</em> option disabled, the <em>document.permissions</em> parameter is used (see the complete structure of Document Server configuration object <a href="<%= Url.Action("advanced") %>">here</a>).</p>
-        <p>You will need to set the <em>document.permission.print</em> to <b>false</b>, so that the <b>Print</b> option were removed from the document <b>File</b> menu (in case the <em>document.permission.edit</em> parameter is set to <b>true</b>) or from the top toolbar (in case the <em>document.permission.edit</em> is set to <b>false</b> and the file is available for viewing only) and the user could not print out the document from the editor. The <em>permission</em> configuration in this case will look like this:</p>
+        <p>要在禁用 <em>打印</em> 选项的情况下打开文档，请使用 <em>document.permissions</em> 参数（请参阅 <a href="<%= Url.Action("advanced") %>">此处</a>了解文档服务器配置对象的完整结构）。</p>
+        <p>您需要将 <em>document.permission.print</em> 设置为 <b>false</b>，以便从文档 <b>文件</b> 菜单（如果 <em>document.permission.edit</em> 参数设置为 <b>true</b>）或顶部工具栏（如果 <em>document.permission.edit</em> 设置为 <b>false</b> 并且该文件仅供查看）移除 <b>打印</b> 选项,并且用户无法从编辑器中打印出该文档。这种情况下的 <em>权限</em> 配置将如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -356,18 +356,18 @@
     },
     ...
 });</pre>
-        <p>Further information about the permissions can be found <a href="<%= Url.Action("config/document/permissions") %>">at this page</a>.</p>
+        <p>有关权限的更多信息，请参见 <a href="<%= Url.Action("config/document/permissions") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_9">
-    <dt>How to view and change sharing settings for a certain document?</dt>
+    <dt>如何查看和更改某个文档的共享设置？</dt>
     <dd>
-        <p>The sharing settings are stored at the <b>document storage service</b> and must be defined by the software integrators themselves. Document Server can display these settings using the <em>document.info.sharingSettings</em> parameter the information from which will be displayed in the document <b>File</b> -> <b>Access rights...</b> window.</p>
-        <p>This parameter is an array of objects representing a list of user names (<em>document.info.sharingSettings.user</em>) with their access rights for the current document (<em>document.info.sharingSettings.permissions</em>).</p>
-        <p>The <em>document.info.sharingSettings.user</em> is a string parameter, which can display any user name passed from the <b>document storage service</b> to the Document Server.</p>
-        <p>The <em>document.info.sharingSettings.permissions</em> is also a string parameter, which displays the name of the access rights corresponding to the set of rules defining the user access to the current document.</p>
-        <div class="note">Please note, that initially there are not any predefined set of rules for the document access. In case you use <b>ONLYOFFICE Community Server</b>, there are several access right rules defined (<b>Full Access</b>, <b>Read Only</b>, <b>Deny Access</b>) which will be used and displayed. If you set up your own <b>document storage service</b>, you will have to define your own set of rules and their names (e.g. <b>Read-only access</b> with <em>document.permission.edit</em>, <em>document.permission.review</em>, <em>document.permission.fillForms</em> parameters set to <b>false</b>; or <b>Download only</b> with all the <em>document.permission</em> parameters set to <b>false</b> and only <em>document.permission.download</em> parameter set to <b>true</b>, etc.) and send them to the <b>document editing service</b> so that the user could access the document and these settings were displayed in the document <b>Access rights...</b> window.</div>
-        <p>The <em>sharingSettings</em> configuration might look the following way:</p>
+        <p>共享设置存储在 <b>文档存储服务</b> 中，并且必须由软件集成商自己定义。文档服务器可以使用 <em>document.info.sharingSettings</em> 参数显示这些设置，其中的信息将显示在文档 <b>文件</b> -> <b>存取权限...</b> 窗口中。</p>
+        <p>此参数是一个对象数组，表示用户名列表 (<em>document.info.sharingSettings.user</em>) 及其对当前文档 (<em>document.info.sharingSettings.permissions</em>) 的访问权限。</p>
+        <p><em>document.info.sharingSettings.user</em> 是一个字符串参数，它可以显示从 <b>文档存储服务</b> 传递到文档服务器的任何用户名。</p>
+        <p><em>document.info.sharingSettings.permissions</em> 也是一个字符串参数，它显示了与定义用户对当前文档的访问权限的规则集对应的访问权限的名称。</p>
+        <div class="note">请注意，最初没有任何预定义的文档访问规则集。如果您使用 <b>ONLYOFFICE 社区服务器</b>，将使用和显示几个访问权限规则（<b>完全访问</b>、 <b>只读</b>、 <b>拒绝访问</b>）。如果您设置自己的 <b>文档存储服务</b>，您将必须定义自己的一组规则及其名称（例如， <b>只读访问</b>：将参数 <em>document.permission.edit</em>、 <em>document.permission.review</em>、 <em>document.permission.fillForms</em> 设置为 <b>false</b>; 或 <b>只下载</b> ：将所有 <em>document.permission</em> 参数设置为 <b>false</b> 并且仅 <em>document.permission.download</em> 参数设置为 <b>true</b>等），并将它们发送到 <b>文档编辑服务</b>，以便用户可以访问文档，并且这些设置显示在文档 <b>访问权限中...</b> 窗口中。</div>
+        <p><em>sharingSettings</em> 配置可能如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "info": {
@@ -388,14 +388,14 @@
     },
     ...
 });</pre>
-        <p>Further information about the information for the document can be found <a href="<%= Url.Action("config/document/info") %>">at this page</a>.</p>
+        <p>有关文档信息的更多信息，请参见 <a href="<%= Url.Action("config/document/info") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="sharing_10">
-    <dt>How to restrict commenting?</dt>
+    <dt>如何限制评论？</dt>
     <dd>
-        <p>The comments are enabled by default. If you want to restrict commenting and allow the authors to edit and/or delete only their comments, 
-        you will need to change the <em>document.permissions.editCommentsAuthorOnly</em> and/or <em>document.permissions.deleteCommentsAuthorOnly</em> parameters:</p>
+        <p>默认情况下评论是被启用的。如果您想限制评论并只允许作者编辑和/或删除他们的评论，
+        您需要更改 <em>document.permissions.editCommentsAuthorOnly</em> 和/或 <em>document.permissions.deleteCommentsAuthorOnly</em> 参数：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -407,6 +407,6 @@
     },
     ...
 });</pre>
-    <div class="note">Do not forget to set the <em>editorConfig.mode</em> to <b>edit</b>, otherwise any commenting functionality will be disabled.</div>
+    <div class="note">不要忘记将 <em>editorConfig.mode</em> 设置为 <b>edit</b>，否则任何评论功能都将被禁用。</div>
     </dd>
 </dl>

@@ -1,13 +1,13 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Config</span>
+    <span class="hdr">配置</span>
 </h1>
 
-<div class="header-gray">Description</div>
-<p class="dscr">The config base section allows to change the platform type used, document display size (width and height) and type of the document opened.</p>
+<div class="header-gray">描述</div>
+<p class="dscr">config base 部分允许更改使用的平台类型、文档显示大小（宽度和高度）和打开文档的类型。</p>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -17,20 +17,20 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Example</td>
+            <td>名称</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>示例</td>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td id="documentType" class="copy-link">documentType</td>
-            <td>Defines the document type to be opened:
+            <td>定义要打开的文档类型：
                 <ul>
-                    <li><b>word</b> - text document (<em>.doc, .docm, .docx, .docxf, .dot, .dotm, .dotx, .epub, .fodt, .fb2, .htm, .html, .mht, .odt, .oform, .ott, .oxps, .pdf, .rtf, .txt, .djvu, .xml, .xps</em>),</li>
-                    <li><b>cell</b> - spreadsheet (<em>.csv, .fods, .ods, .ots, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx</em>),</li>
-                    <li><b>slide</b> - presentation (<em>.fodp, .odp, .otp, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx</em>).</li>
+                    <li><b>word</b> - 文本文档 （<em>.doc、.docm、.docx、.docxf、.dot、.dotm、.dotx、.epub、.fodt、.fb2、.htm、.html、.mht、.odt、.oform、 .ott、.oxps、.pdf、.rtf、.txt、.djvu、.xml、.xps</em>），</li>
+                    <li><b>cell</b> - 电子表格 (<em>.csv、.fods、.ods、.ots、.xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx</em>），</li>
+                    <li><b>slide</b> - 演示文稿（<em>.fodp、.odp、.otp、.pot、.potm、.potx、.pps、.ppsm、.ppsx、.ppt、.pptm、.pptx</em>）。</li>
                 </ul>
             </td>
             <td>string</td>
@@ -39,39 +39,39 @@
         <tr class="tablerow tablerow-note">
             <td colspan="4">
                 <div class="note">
-                    <b>text</b>, <b>spreadsheet</b> and <b>presentation</b> values are deprecated since version 6.1.
-                    Please use new values instead.
+                    自 6.1 版起，<b>text</b>, <b>spreadsheet</b>, <b>presentation</b> 这几个值已被弃用。
+                    请改用新值。
                 </div>
             </td>
         </tr>
         <tr class="tablerow">
             <td id="height" class="copy-link">height</td>
-            <td>Defines the document height (<b>100%</b> by default) in the browser window.</td>
+            <td>定义浏览器窗口中的文档高度（默认为<b>100%</b> ）。</td>
             <td>string</td>
             <td>"100%"</td>
         </tr>
         <tr class="tablerow">
             <td id="token" class="copy-link">token</td>
-            <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/browser") %>#config">token</a>.</td>
+            <td>以 <a href="<%= Url.Action("signature/browser") %>#config">令牌</a>的形式定义添加到 <b>文档服务器</b> 配置的加密签名。</td>
             <td>string</td>
             <td>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.t-IDcSemACt8x4iTMCda8Yhe3iZaWbvV5XKSTbuAn0M"</td>
         </tr>
         <tr class="tablerow">
             <td id="type" class="copy-link">type</td>
             <td>
-                Defines the platform type used to access the document.
-                Can be:
-                <em>optimized to access the document from a desktop or laptop computer</em> - <b>desktop</b>,
-                <em>optimized to access the document from a tablet or a smartphone</em> - <b>mobile</b>,
-                <em>specifically formed to be easily embedded into a web page</em> - <b>embedded</b>.
-                The default value is <b>"desktop"</b>.
+                定义用于访问文档的平台类型。
+                可以是：
+                <em>为从台式机或笔记本电脑访问文档而优化</em> - <b>Desktop</b>，
+                <em>为从平板电脑或智能手机访问文档而优化</em> - <b>mobile</b>，
+                <em>为易于嵌入网页而特别设计</em> - <b>embedded</b>。
+                默认值为 <b>"desktop"</b>。
             </td>
             <td>string</td>
             <td>"desktop"</td>
         </tr>
         <tr class="tablerow">
             <td id="width" class="copy-link">width</td>
-            <td>Defines the document width (<b>100%</b> by default) in the browser window.</td>
+            <td>定义浏览器窗口中的文档宽度（默认为<b>100%</b>）。</td>
             <td>string</td>
             <td>"100%"</td>
         </tr>
@@ -79,7 +79,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "documentType": "word",

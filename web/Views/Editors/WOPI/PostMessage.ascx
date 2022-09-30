@@ -1,19 +1,19 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-    <h1>
-        <span class="hdr">PostMessage</span>
-    </h1>
+<h1>
+    <span class="hdr">PostMessage</span>
+</h1>
 
     <p class="dscr">
-        <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage" target="_blank">PostMessage</a> is the  <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web Messaging</a> protocol which allows exchanging messages in the browser between the iframe storage and ONLYOFFICE Docs. 
-        It allows the online office frame to communicate with its parent host page.
+        <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/scenarios/postmessage" target="_blank">PostMessage</a> 是 <a href="https://html.spec.whatwg.org/multipage/web-messaging.html#posting-messages" target="_blank">HTML5 Web 消息传递</a> 协议，它允许在 iframe 存储和 ONLYOFFICE Docs 之间在浏览器中交换消息。
+        它允许online office框架与其父主机页面进行通信。
     </p>
 
     <pre>
 otherWindow.postMessage (msg, targetOrigin)
 </pre>
 
-    <div class="header-gray">Parameters</div>
+    <div class="header-gray">参数</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -22,54 +22,54 @@ otherWindow.postMessage (msg, targetOrigin)
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td id="msg" class="copy-link">msg</td>
-                <td>The message data:
+                <td>消息数据：
                     <ul>
                         <li>
-                            <b>MessageId</b> - the message name,
+                            <b>MessageId</b> - 消息名称，
                             <br />
-                            <b>type</b>: string,
+                            <b>类型</b>：string，
                             <br />
-                            <b>example</b>: "App_LoadingStatus";
+                            <b>例如</b>："App_LoadingStatus"；
                         </li>
                         <li>
-                            <b>SendTime</b> - the time the message was sent, expressed as milliseconds since midnight 1 January 1970 UTC,
+                            <b>SendTime</b> - 消息发送的时间，以 UTC 1970 年 1 月 1 日午夜以来的毫秒数表示，
                             <br />
-                            <b>type</b>: integer,
+                            <b>类型</b>：integer，
                             <br />
-                            <b>example</b>: 1329014075000;
+                            <b>例如</b>：1329014075000；
                         </li>
                         <li>
-                            <b>Values</b> - the message properties,
+                            <b>Values</b> - 消息属性，
                             <br />
-                            <b>type</b>: JSON object.
+                            <b>类型</b>：JSON 对象。
                         </li>
                     </ul>
                 </td>
-                <td>string or JSON object</td>
+                <td>string 或 JSON 对象</td>
             </tr>
             <tr>
                 <td id="targetOrigin" class="copy-link">targetOrigin</td>
                 <td>
-                    The <em>otherWindow</em> origin that must be for the event to be dispatched. 
-                    It will be set to the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#PostMessageOrigin">PostMessageOrigin</a> property provided in <em>CheckFileInfo</em>.
+                    <em>otherWindow</em> 原点必须是要调度的事件。
+                    它将被设置为 <em>CheckFileInfo</em>中提供的 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#PostMessageOrigin">PostMessageOrigin</a> 属性。
                     <br />
-                    *<em>otherWindow</em> is a reference to another window that <em>msg</em> will be posted to.
+                    *<em>otherWindow</em> 是对 <em>msg</em> 将被发布到的另一个窗口的引用。
                 </td>
                 <td>string</td>
             </tr>
         </tbody>
     </table>
 
-    <p>Here you can find the messages that are available for ONLYOFFICE Docs to send to the host page. The process of receiving messages by the online office will be available later.</p>
-    <div class="header-gray">Available messages</div>
+    <p>在这里，您可以找到可供 ONLYOFFICE Docs 发送到主机页面的消息。Online office接收消息的过程将在稍后提供。</p>
+    <div class="header-gray">可用消息</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -78,52 +78,52 @@ otherWindow.postMessage (msg, targetOrigin)
         <thead>
             <tr class="tablerow">
                 <td>MessageId</td>
-                <td>Description</td>
+                <td>描述</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td id="App_LoadingStatus" class="copy-link">App_LoadingStatus</td>
-                <td>This message is posted after the online office application frame was loaded. 
-                    Until the host receives this message, it must assume that the online office frame cannot react to any incoming messages except <em>Host_PostmessageReady</em>.</td>
+                <td>此消息是在加载online office应用程序框架后被发布的。
+                    在主机收到此消息之前，它必须假定online office 框架无法对除 <em>Host_PostmessageReady</em>之外的任何传入消息做出反应。</td>
             </tr>
             <tr>
                 <td id="Edit_Notification" class="copy-link">Edit_Notification</td>
-                <td>This message is posted when the user first makes an edit to a document, and every five minutes thereafter, if the user has made edits over the last five minutes. 
-                    Hosts can use this message to gauge whether users are interacting with the online office. In co-authoring sessions, hosts cannot use the WOPI calls for this purpose.</td>
+                <td>此消息在用户首次对文档进行编辑时被发布，此后每五分钟被发布一次(如果用户在过去五分钟内进行了编辑)。
+                    主机可以使用此消息来衡量用户是否正在与online office进行交互。在共同创作会话中，主机不能为此目的使用 WOPI 调用。</td>
             </tr>
             <tr>
                 <td id="File_Rename" class="copy-link">File_Rename</td>
-                <td>This message is posted when the user renames the current file in the online office. The host can use this message to optionally update the UI, such as the page title.</td>
+                <td>当用户重命名online office中的当前文件时，会发布此消息。主机可以使用此消息选择性地更新 UI，例如页面标题。</td>
             </tr>
             <tr>
                 <td id="UI_Close" class="copy-link">UI_Close</td>
-                <td>This message is posted when the online office application is closing, either due to an error or a user action.
-                    To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#ClosePostMessage">ClosePostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
-                    Otherwise, the online office will not send this message.</td>
+                <td>由于错误或用户操作，online office 应用程序关闭时会发布此消息。
+                    要发送此消息，来自主机的 <em>CheckFileInfo</em> 响应中的 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#ClosePostMessage">ClosePostMessage</a> 属性必须设置为<b>true</b>。
+                    否则，online office 将不会发送此消息。</td>
             </tr>
             <tr>
                 <td id="UI_Edit" class="copy-link">UI_Edit</td>
-                <td>This message is posted when the user activates the <em>Edit</em> UI in the online office. This UI is only visible when using the view action.
-                To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#EditModePostMessage">EditModePostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
-                Otherwise, the online office will not send this message and will redirect the inner iframe to the edit action URL instead.</td>
+                <td>当用户激活online office中的 <em>编辑</em> UI 时，会发送此消息。此 UI 仅在使用视图操作时可见。
+                    要发送此消息，来自主机的 <em>CheckFileInfo</em> 响应中的 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#EditModePostMessage">EditModePostMessage</a> 属性必须设置为 <b>true</b>。
+                    否则，online office将不会发送此消息，而是会将内部 iframe 重定向到编辑操作 URL。</td>
             </tr>
             <tr>
                 <td id="UI_FileVersions" class="copy-link">UI_FileVersions</td>
-                <td>This message is posted when the user activates the <em>Previous Versions</em> UI in the online office. The host should use this message to trigger any custom file version history UI.
-                To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileVersionPostMessage">FileVersionPostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
-                Otherwise, the online office will not send this message.</td>
+                <td>当用户在online office中激活 <em>以前的版本</em> UI 时，会发布此消息。主机应使用此消息来触发任何自定义文件版本历史 UI。
+                    要发送此消息，来自主机的 <em>CheckFileInfo</em> 响应中的 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileVersionPostMessage">FileVersionPostMessage</a> 属性必须设置为 <b>true</b>。
+                    否则，online office将不会发送此消息。</td>
             </tr>
             <tr>
                 <td id="UI_Sharing" class="copy-link">UI_Sharing</td>
-                <td>This message is posted when the user activates the <em>Share</em> UI in the online office. The host should use this message to trigger any custom sharing UI.
-                To send this message, the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingPostMessage">FileSharingPostMessage</a> property in the <em>CheckFileInfo</em> response from the host must be set to <b>true</b>.
-                Otherwise, the online office will not send this message.</td>
+                <td>当用户激活online office中的 <em>共享</em> UI 时，会发布此消息。主机应使用此消息来触发任何自定义共享 UI。
+                    要发送此消息，来自主机的 <em>CheckFileInfo</em> 响应中的 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingPostMessage">FileSharingPostMessage</a> 属性必须设置为 <b>true</b>。
+                    否则，online office将不会发送此消息。</td>
             </tr>
         </tbody>
     </table>
 
-    <div class="header-gray">Collabora specific</div>
+    <div class="header-gray">Collabora特性</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -132,18 +132,18 @@ otherWindow.postMessage (msg, targetOrigin)
         <thead>
             <tr class="tablerow">
                 <td>MessageId</td>
-                <td>Description</td>
+                <td>描述</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td id="UI_InsertGraphic" class="copy-link">UI_InsertGraphic</td>
-                <td>This message is posted to present a user interface element (like a dialog) allowing the user to pick an image from the integration.
-                The integration is supposed to provide a temporary URL that may be downloaded once, and return it back via the <a href="https://sdk.collaboraonline.com/docs/postmessage_api.html#id1" target="_blank">Action_InsertGraphic</a> message with values set to the temporary URL.</td>
+                <td>发布此消息以呈现用户界面元素（如对话框），允许用户从集成应用中选择图像。
+                    集成应用应该提供一个可以下载一次的临时 URL，并通过 <a href="https://sdk.collaboraonline.com/docs/postmessage_api.html#id1" target="_blank">Action_InsertGraphic</a> 消息将其返回，并将值设置为临时 URL。</td>
             </tr>
         </tbody>
     </table>
 
-    <note>Please note that the PostMessage messages have the higher priority than the <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#CloseUrl">CloseUrl</a>,
-    <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#HostEditUrl">HostEditUrl</a>, <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingUrl">FileSharingUrl</a>,
-    <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileVersionUrl">FileVersionUrl</a> properties provided in <em>CheckFileInfo</em>.</note>
+    <note>请注意，PostMessage 消息的优先级高于 <em>CheckFileInfo</em>中提供的 <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#CloseUrl">CloseUrl</a>、
+    <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#HostEditUrl">HostEditUrl</a>、<a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileSharingUrl">FileSharingUrl</a>、
+    <a href="<%= Url.Action("wopi/restapi/checkfileinfo") %>#FileVersionUrl">FileVersionUrl</a> 属性。</note>

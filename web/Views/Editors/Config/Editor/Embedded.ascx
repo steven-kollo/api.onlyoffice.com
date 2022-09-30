@@ -2,16 +2,16 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("config/editor") %>"></a>
-    <span class="hdr">Embedded</span>
+    <span class="hdr">嵌入式</span>
 </h1>
 
-<div class="header-gray">Description</div>
+<div class="header-gray">描述</div>
 <p class="dscr">
-    The embedded section is for the <b>embedded</b> document type only (see the <a href="<%= Url.Action("config/") %>#type">config</a> section to find out how to define the <b>embedded</b> document type).
-    It allows to change the settings which define the behavior of the buttons in the embedded mode.
+    嵌入部分仅适用于 <b>嵌入</b> 文档类型（请参阅 <a href="<%= Url.Action("config/") %>#type">配置</a> 部分以了解如何定义 <b>嵌入</b> 文档类型）。
+    它允许更改定义嵌入模式中按钮行为的设置。
 </p>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -21,40 +21,40 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Example</td>
+            <td>名称</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>示例</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td id="embedUrl" class="copy-link">embedUrl</td>
-            <td>Defines the absolute URL to the document serving as a source file for the document embedded into the web page.</td>
+            <td>定义文档的绝对 URL，作为嵌入网页的文档的源文件。</td>
             <td>string</td>
             <td>"https://example.com/embedded?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="fullscreenUrl" class="copy-link">fullscreenUrl</td>
-            <td>Defines the absolute URL to the document which will open in full screen mode.</td>
+            <td>定义将以全屏模式打开的文档的绝对 URL。</td>
             <td>string</td>
             <td>"https://example.com/embedded?doc=exampledocument1.docx#fullscreen"</td>
         </tr>
         <tr class="tablerow">
             <td id="saveUrl" class="copy-link">saveUrl</td>
-            <td>Defines the absolute URL that will allow the document to be saved onto the user personal computer.</td>
+            <td>定义允许将文档保存到用户个人计算机上的绝对 URL。</td>
             <td>string</td>
             <td>"https://example.com/download?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="shareUrl" class="copy-link">shareUrl</td>
-            <td>Defines the absolute URL that will allow other users to share this document.</td>
+            <td>定义允许其他用户共享此文档的绝对 URL。</td>
             <td>string</td>
             <td>"https://example.com/view?doc=exampledocument1.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="toolbarDocked" class="copy-link">toolbarDocked</td>
-            <td>Defines the place for the embedded viewer toolbar, can be either <b>top</b> or <b>bottom</b>.</td>
+            <td>定义嵌入式查看器工具栏的位置，可以是 <b>top</b> 或 <b>bottom</b>。</td>
             <td>string</td>
             <td>"top"</td>
         </tr>
@@ -67,7 +67,7 @@
 </table>
 <div class="mobile-content"></div>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
@@ -84,6 +84,6 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 <p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+    有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
 </p>

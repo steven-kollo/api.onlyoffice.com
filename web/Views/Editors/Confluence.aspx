@@ -6,108 +6,108 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Confluence ONLYOFFICE integration app
+    Confluence ONLYOFFICE 集成应用
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Confluence ONLYOFFICE integration app</span>
+        <span class="hdr">Confluence ONLYOFFICE 集成应用</span>
     </h1>
 
-    <p class="dscr">
-        This <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.atlassian.com/software/confluence/" target="_blank">Confluence</a> using ONLYOFFICE Docs.
+    <p class="dscr">该
+        <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">插件</a> 让用户能够从 <a href="https://www.atlassian.com/zh/software/confluence" target="_blank">Confluence</a> 中用 ONLYOFFICE Docs编辑办公文档。
     </p>
 
-    <p>The connector is available in the official <a href="https://marketplace.atlassian.com/1218214" target="_blank">Atlassian Marketplace</a>.</p>
+    <p>该连接器可在官方 <a href="https://marketplace.atlassian.com/1218214" target="_blank">Atlassian Marketplace</a>中获得。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>Currently, the following document formats can be edited or viewed: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
+        <li>目前，可以编辑或查看以下格式的文档：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
         <li>
-            The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents. 
-            This allows multiple users to collaborate in real time and to save back those changes to Confluence.
+            该插件将在 Office 文档的文档库中创建一个新的菜单选项- <b>在ONLYOFFICE 中编辑</b>。
+            这允许多个用户实时协作并将这些更改保存到 Confluence中。
         </li>
-        <li>Currently, the following document formats can be converted into OOXML: ODT, DOC, ODP, PPT, ODS, XLS.</li>
+        <li>目前，可以将以下文档格式转换为OOXML：ODT、DOC、ODP、PPT、ODS、XLS。</li>
     </ul>
     
-    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Confluence and any end clients (version 3.0 and later are supported for use with the plugin).
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>.
-        ONLYOFFICE Docs must also be able to POST to Confluence directly.
+        您将需要一个 ONLYOFFICE Docs (文档服务器) 实例，该实例可从 Confluence 和任何客户终端解析和连接（插件支持 3.0 版及更高版本）。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE Docs 还必须能够直接发布到 Confluence上。
     </p>
-    <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
+    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
-    <h2 id="get-connector" class="copy-link">Installing Confluence ONLYOFFICE integration app</h2>
-    <p>Upload the compiled <em>target/onlyoffice-confluence-plugin.jar</em> to Confluence on the <b>Manage add-ons</b> page.</p>
-    <p>The latest compiled package files are available <a href="https://github.com/onlyoffice/onlyoffice-confluence/releases" target="_blank">here</a> 
-        and on <a href="https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence?tab=overview&hosting=datacenter" target="_blank">Atlassian Marketplace</a>.</p>
-    <p>You could also install the app from Confluence administration panel:</p>
+    <h2 id="get-connector" class="copy-link">安装 Confluence ONLYOFFICE 集成应用</h2>
+    <p>将编译好的 <em>target/onlyoffice-confluence-plugin.jar</em> 上传到 Confluence 的 <b>Manage add-ons</b> 页面。</p>
+    <p>最新的编译包文件可在 <a href="https://github.com/onlyoffice/onlyoffice-confluence/releases" target="_blank">此处</a>
+        和 <a href="https://marketplace.atlassian.com/apps/1218214/onlyoffice-connector-for-confluence?tab=overview&hosting=datacenter" target="_blank">Atlassian Marketplace</a>上获得。</p>
+    <p>您还可以从 Confluence 管理面板安装该应用程序：</p>
     <ol>
-        <li>Log into your Confluence instance as an administrator.</li>
-        <li>Navigate to <b>Manage add-ons</b> page.</li>
-        <li>Click <b>Find new apps</b> or <b>Find new add-ons</b> on the left panel.</li>
+        <li>以管理员身份登录您的 Confluence 实例。</li>
+        <li>导航到 <b>Manage add-ons</b> 页面。</li>
+        <li>单击左侧面板上的 <b>Find new apps</b> 或 <b>Find new add-ons</b>。</li>
         <li>
-            Locate <b>ONLYOFFICE Connector for Confluence</b> using search.
-            Results will include the add-on versions compatible with your Confluence instance.
+            使用搜索找到 <b>ONLYOFFICE Connector for Confluence</b> 。
+            结果将包括与您的 Confluence 实例兼容的附加组件版本。
         </li>
-        <li>Click <b>Install</b> to download and install the app.</li>
-        <li>Now you can click <b>Close</b> in the <b>Installed and ready to go</b> dialog.</li>
+        <li>单击 <b>Install</b> 以下载并安装该应用程序。</li>
+        <li>现在您可以在 <b>Installed and ready to go</b> 对话框中单击 <b>Close</b>。</li>
     </ol>
 
-    <h2 id="configure" class="copy-link">Configuring Confluence ONLYOFFICE integration app</h2>
-    <p>Find the uploaded <b>Confluence ONLYOFFICE integration app</b> on the <b>Manage add-ons</b> page.
-        Click <b>Configure</b> and enter the name of the server with the ONLYOFFICE Docs installed:</p>
+    <h2 id="configure" class="copy-link">安装 Confluence ONLYOFFICE 集成应用</h2>
+    <p>在 <b>Manage add-ons</b> 页面上找到上传的 <b>Confluence ONLYOFFICE integration app</b>。
+        单击 <b>Configure</b> 并输入安装了 ONLYOFFICE Docs 的服务器的名称：</p>
     <span class="commandline">https://documentserver/</span>
     <p>
-        where the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.
-        The address must be accessible from the user browser and from the Confluence server.
-        The Confluence server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
+        其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。
+        该地址必须可从用户浏览器和 Confluence 服务器访问。
+        为了正常工作，Confluence 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问。
     </p>
 
-    <h2 id="compile" class="copy-link">Compiling Confluence ONLYOFFICE integration app</h2>
-    <p>If you plan to compile the Confluence ONLYOFFICE integration app yourself (e.g. edit the source code and compile it afterwards), follow these steps:</p>
+    <h2 id="compile" class="copy-link">编译 Confluence ONLYOFFICE 集成应用</h2>
+    <p>如果您打算自己编译 Confluence ONLYOFFICE 集成应用程序（例如编辑源代码并在之后编译它），请按照以下步骤操作：</p>
     <ol>
         <li>
             <p>
-                The stable Java version is necessary for the successful build. 
-                If you do not have it installed, use the following commands to install <b>Open JDK 8</b>:
+                成功构建需要稳定的 Java 版本。
+                如果您没有安装它，请使用以下命令安装 <b>Open JDK 8</b>：
             </p>
-            <span class="commandline">sudo apt-get update
-sudo apt-get install openjdk-8-jdk</span>
+            <span class="commandline">
+sudo apt-get update sudo apt-get install openjdk-8-jdk</span>
         </li>
-        <li>Install <b>Atlassian Plugin SDK</b>. Installation process is described <a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" target="_blank">here</a>.</li>
-        <li>Get a submodule:
+        <li>安装 <b>Atlassian Plugin SDK</b>。<a href="https://developer.atlassian.com/docs/getting-started/set-up-the-atlassian-plugin-sdk-and-build-a-project" target="_blank">此处</a>描述了安装过程。</li>
+        <li>获取子模块：
             <span class="commandline">git submodule update --init --recursive</span>
         </li>
-        <li>Compile package:
+        <li>编译包：
             <span class="commandline">atlas-package</span>
         </li>
     </ol>
 
-    <h2 id="howitworks" class="copy-link">How it works</h2>
+    <h2 id="howitworks" class="copy-link">这是如何运作的</h2>
     <ol>
-        <li>User navigates to a Confluence attachments and selects the <b>Edit in ONLYOFFICE</b> action.</li>
-        <li>Confluence makes a request to OnlyOfficeEditorServlet (URL of the form: <em>/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id</em>).</li>
-        <li>Confluence sends a document to ONLYOFFICE Document storage service and receive a temporary link.</li>
+        <li>用户导航到 Confluence 附件并选择 <b>Edit in ONLYOFFICE</b> 操作。</li>
+        <li>Confluence 向 OnlyOfficeEditorServlet 发出请求（表单的 URL：<em>/plugins/servlet/onlyoffice/doceditor?attachmentId=$attachment.id</em>).</li>
+        <li>Confluence 将文档发送到 ONLYOFFICE 文档存储服务并接收临时链接。</li>
         <li>
-            <p>Confluence prepares a JSON object with the following properties:</p>
+            <p>Confluence 准备一个具有以下属性的 JSON 对象：</p>
             <ul>
-                <li><b>url</b> - the temporary link that ONLYOFFICE Docs uses to download the document;</li>
-                <li><b>callbackUrl</b> - the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>key</b> - the UUID to instruct ONLYOFFICE Docs whether to download the document again or not;</li>
-                <li><b>title</b> - the document title (name).</li>
+                <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的临时链接；</li>
+                <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>key</b> - 指示 ONLYOFFICE Docs 是否再次下载文档的 UUID；</li>
+                <li><b>title</b> - 文档标题（名称）。</li>
             </ul>
-        <li>Confluence takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.</li>
-        <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
-        <li>Then ONLYOFFICE Docs downloads the document from Confluence and the user begins editing.</li>
-        <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <em>callback</em> URL letting Confluence know that the clients have finished editing the document and closed it.</li>
-        <li>Confluence downloads a new version of the document, replacing the old one.</li>
+        <li>Confluence 使用这个对象并从 freemarker 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
+        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送包含上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE Docs 从 Confluence 下载文档，用户开始编辑。</li>
+        <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 会向 <em>回调</em> URL 发送一个 POST，让 Confluence 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>Confluence 下载文档的新版本，替换旧版本。</li>
     </ol>
 
     <br />
-    <p>Download the Confluence ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">here</a>.</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-confluence" target="_blank">此处</a>下载 Confluence ONLYOFFICE 集成应用程序。</p>
 
 </asp:Content>

@@ -1,4 +1,4 @@
-<%@ Page
+﻿<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,31 +6,31 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Inline editors
+    内联编辑器
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Inline editors</span>
+        <span class="hdr">内联编辑器</span>
     </h1>
-    <p class="dscr">The steps below explain the process of connecting several editors to the same html page in ONLYOFFICE Document Server.</p>
-    <div class="note">Simultaneous work with several editors is available starting from version 5.5.</div>
-    <img alt="Inline editors" src="<%= Url.Content("~/content/img/editor/inlineEditors.png") %>" />
+    <p class="dscr">下面的步骤解释了在 ONLYOFFICE 文档服务器中将多个编辑器连接到同一个 html 页面的过程。</p>
+    <div class="note">从 5.5 版开始，可以与多个编辑器同时工作。</div>
+    <img alt="内联编辑器" src="<%= Url.Content("~/content/img/editor/inlineEditors.png") %>" />
     <ol>
-        <li>Create an empty <em>html</em> file.</li>
+        <li>创建一个空的 <em>html</em> 文件。</li>
         <li>
             <p>
-                Specify your ONLYOFFICE Document Server link with the JavaScript API that will be used for your website:
+                使用将用于您的网站的 JavaScript API 指定您的 ONLYOFFICE 文档服务器链接：
             </p>
             <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;https://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre>
             <p>
-                Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+                其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称。
             </p>
         </li>
         <li>
             <p>
-                Add the <em>div</em> element as shown below.
-                In order to connect several editors to the same <em>html</em> page, each of them can be initialized separately:
+                添加 <em>div</em> 元素，如下所示。
+                为了将多个编辑器连接到同一个 <em>html</em> 页面，可以分别初始化它们中的每一个：
             </p>
             <pre>
 &lt;div id="placeholder1"&gt;&lt;/div&gt;
@@ -41,8 +41,8 @@
         </li>
         <li>
             <p>
-                Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
-                Each editor has its own initialization script:
+                为<em>div</em> 元素添加 <b>文档编辑器</b> 初始化脚本以及要打开的文档的配置。
+                每个编辑器都有自己的初始化脚本：
             </p>
             <pre>
 var documentEditor = new DocsAPI.DocEditor("placeholder1", {
@@ -77,12 +77,12 @@ var presentationEditor = new DocsAPI.DocEditor("placeholder3", {
 ...
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
             </p>
         </li>
         <li>
             <p>
-                In order to finish editing, the <a href="<%= Url.Action("methods") %>#destroyEditor">destroyEditor</a> method must be called to close the required editor:
+                为了完成编辑，必须调用 <a href="<%= Url.Action("methods") %>#destroyEditor">destroyEditor</a> 方法来关闭所需的编辑器：
             </p>
             <pre>
 documentEditor.destroyEditor();
@@ -93,7 +93,7 @@ presentationEditor.destroyEditor();
         </li>
         <li>
             <p>
-                Open your <em>html</em> file in the browser.
+                在浏览器中打开您的 <em>html</em> 文件。
             </p>
         </li>
     </ol>

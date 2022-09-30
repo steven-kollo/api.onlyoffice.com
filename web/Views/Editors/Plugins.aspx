@@ -6,43 +6,43 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Ready-to-use connectors
+    即用型连接器
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Ready-to-use connectors</span>
+        <span class="hdr">即用型连接器</span>
     </h1>
 
     <p class="dscr">
-        ONLYOFFICE Docs can be integrated into some of the existing document management systems using plugins.
-        These plugins will add the document editing features into the document management system you use quickly and easily without having to write your own code.
+        ONLYOFFICE Docs 可以使用插件集成到一些现有的文档管理系统中。
+        这些插件将文档编辑功能快速轻松地添加到您使用的文档管理系统中，而无需编写自己的代码。
     </p>
 
-    <p>Currently, the following plugins are available:</p>
+    <p>目前，可以使用以下插件：</p>
     <ul>
-        <li><a href="<%= Url.Action("alfresco") %>">ONLYOFFICE Alfresco module package</a></li>
-        <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE integration plugin</a></li>
-        <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE integration app</a></li>
-        <li><a href="<%= Url.Action("HumHub") %>">HumHub ONLYOFFICE connector</a></li>
-        <li><a href="<%= Url.Action("jira") %>">Jira ONLYOFFICE integration app</a></li>
-        <li><a href="<%= Url.Action("liferay") %>">Liferay ONLYOFFICE connector</a></li>
-        <li><a href="<%= Url.Action("mattermost") %>">Mattermost ONLYOFFICE integration plugin</a></li>
-        <li><a href="<%= Url.Action("moodle") %>">Moodle ONLYOFFICE integration plugin</a></li>
-        <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE integration app</a></li>
-        <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo ONLYOFFICE integration plugin</a></li>
-        <li><a href="<%= Url.Action("owncloud") %>">ownCloud ONLYOFFICE integration app</a></li>
-        <li><a href="<%= Url.Action("plone") %>">Plone ONLYOFFICE integration plugin</a></li>
-        <li><a href="<%= Url.Action("redmine") %>">Redmine ONLYOFFICE integration plugin</a></li>
-        <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE integration solution</a></li>
-        <li><a href="<%= Url.Action("strapi") %>">Strapi ONLYOFFICE integration plugin</a></li>
+        <li><a href="<%= Url.Action("alfresco") %>">ONLYOFFICE Alfresco 模块包</a></li>
+        <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE 集成插件</a></li>
+        <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE 集成应用</a></li>
+        <li><a href="<%= Url.Action("HumHub") %>">HumHub ONLYOFFICE 连接器</a></li>
+        <li><a href="<%= Url.Action("jira") %>">Jira ONLYOFFICE 集成应用</a></li>
+        <li><a href="<%= Url.Action("liferay") %>">Liferay ONLYOFFICE 连接器</a></li>
+        <li><a href="<%= Url.Action("mattermost") %>">Mattermost ONLYOFFICE 集成插件</a></li>
+        <li><a href="<%= Url.Action("moodle") %>">Moodle ONLYOFFICE 集成插件</a></li>
+        <li><a href="<%= Url.Action("nextcloud") %>">Nextcloud ONLYOFFICE 集成应用</a></li>
+        <li><a href="<%= Url.Action("nuxeo") %>">Nuxeo ONLYOFFICE 集成插件</a></li>
+        <li><a href="<%= Url.Action("owncloud") %>">ownCloud ONLYOFFICE 集成应用</a></li>
+        <li><a href="<%= Url.Action("plone") %>">Plone ONLYOFFICE 集成插件</a></li>
+        <li><a href="<%= Url.Action("redmine") %>">Redmine ONLYOFFICE 集成插件</a></li>
+        <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE 集成解决方案</a></li>
+        <li><a href="<%= Url.Action("strapi") %>">Strapi ONLYOFFICE 集成插件</a></li>
     </ul>
 
     <br />
     <p>
-        If you have any further questions, please contact us at
-        <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
+        如果您有任何其他问题，请通过
+        <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com与我们联系</a>。
     </p>
 
 </asp:Content>

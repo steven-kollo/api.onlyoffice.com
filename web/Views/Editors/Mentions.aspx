@@ -1,4 +1,4 @@
-<%@ Page
+﻿<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,32 +6,32 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Mentions
+    提及
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Mentions</span>
+        <span class="hdr">提及</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of mentioning users in comments in ONLYOFFICE Document Server.</p>
-    <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/mentions-create.png") %>" />
+    <p class="dscr">参考图和下面的步骤解释了在 ONLYOFFICE 文档服务器中在评论中提及用户的过程。</p>
+    <img alt="提及" src="<%= Url.Content("~/content/img/editor/mentions-create.png") %>" />
     <ol>
-        <li>The user sends a request to get a list of users to mention by typing <b>+</b> sign in the comment field in the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> informs the <b>document manager</b> about the request.</li>
-        <li>The <b>document manager</b> sends the list of users to the <b>document editor</b> where this list will be displayed under the comment field.</li>
-        <li>The user types a comment in the comment field in the <b>document editor</b> and the comment is added to the document.</li>
-        <li>The <b>document editor</b> sends the message, the list of emails and the link action in the document to the <b>document manager</b>.</li>
+        <li>用户通过在 <b>文档编辑器</b> 的评论字段中键入 <b>+</b>符号来发送请求以获取要提及的用户列表。</li>
+        <li><b>文档编辑器</b> 将请求通知 <b>文档管理器</b>。</li>
+        <li><b>文档管理器</b> 将用户列表发送到 <b>文档编辑器</b> ，该列表将显示在评论字段下。</li>
+        <li>用户在 <b>文档编辑器</b> 的注释字段中键入注释，注释被添加到文档中。</li>
+        <li><b>文档编辑器</b> 将文档中的消息、电子邮件列表和链接操作发送给 <b>文档管理器</b>。</li>
     </ol>
 
-    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
     <ol>
-        <li>Create an empty <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
+        <li>创建一个空的 <em>html</em> 文件以 <a href="<%= Url.Action("open") %>#apply">打开文档</a>。</li>
         <li>
             <p>
-                Specify the event handler for the hint about mentioning users in the comments to be displayed in the configuration script for Document Editor initialization.
-                When the user types the <b>+</b> sign, the <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> event is called and the commenter can select other users for mentioning in the comments.
+                为有关在注释中提及用户的提示指定事件处理程序，该注释将显示在文档编辑器初始化的配置脚本中。
+                当用户输入 <b>+</b> 号时， <a href="<%= Url.Action("config/events") %>#onRequestUsers">onRequestUsers</a> 事件被调用，评论者可以选择其他用户在评论中提及。
             </p>
-            <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>" />
+            <img alt="提及" src="<%= Url.Content("~/content/img/editor/onRequestUsers.png") %>" />
             <pre>
 var onRequestUsers = function() {
     ...
@@ -48,7 +48,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In order to set the users list under the comment field, the <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> method must be called:
+                为了在评论字段下设置用户列表，必须调用 <a href="<%= Url.Action("methods") %>#setUsers">setUsers</a> 方法：
             </p>
             <pre>
 docEditor.setUsers({
@@ -66,8 +66,8 @@ docEditor.setUsers({
 });
 </pre>
             <p>
-                Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-                See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+                其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+                有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
             </p>
             <table class="table">
                 <colgroup>
@@ -78,30 +78,30 @@ docEditor.setUsers({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>users</td>
-                        <td>Defines the list of the users.</td>
-                        <td>array of strings</td>
-                        <td>optional</td>
+                        <td>定义用户列表。</td>
+                        <td>字符串数组</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.email</td>
-                        <td>Defines the email address of the user.</td>
+                        <td>定义用户的电子邮件地址。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>users.name</td>
-                        <td>Defines the full name of the user.</td>
+                        <td>定义用户的全名。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -109,23 +109,23 @@ docEditor.setUsers({
         </li>
     </ol>
 
-    <h2 id="apply-changes" class="copy-link">Opening the comment</h2>
-    <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/actionLink-open.png") %>" />
+    <h2 id="apply-changes" class="copy-link">打开评论</h2>
+    <img alt="提及" src="<%= Url.Content("~/content/img/editor/actionLink-open.png") %>" />
     <ol>
-        <li>The user follows the link in the <b>document manager</b>.</li>
-        <li>The <b>document manager</b> sends the initialization <em>editorConfig</em> to the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> scrolls the document to the comment.</li>
+        <li>用户点击 <b>文档管理器</b>中的链接。</li>
+        <li><b>文档管理器</b> 将初始化 <em>editorConfig</em> 发送到 <b>文档编辑器</b>。</li>
+        <li><b>文档编辑器</b> 将文档滚动到注释。</li>
     </ol>
     <p>
-        Specify the event handler for the comment message and the list of emails to be sent in the configuration script for Document Editor initialization.
-        When the user adds the comment, the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is called.
-        The message and the list of emails are sent in the <em>data</em> parameter.
-        The comment data is received in the <em>data.actionLink</em> parameter.
-        As in the case of adding an <a href="<%= Url.Action("actionlink") %>#apply">action link</a> to a bookmark, an <em>actionLink</em> object must be used in the configuration as the value for the <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> parameter.
+        为注释消息指定事件处理程序，并在文档编辑器初始化的配置脚本中指定要发送的电子邮件列表。
+        当用户添加评论时，会调用 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件。
+        消息和电子邮件列表在 <em>data</em> 参数中发送。
+        评论数据在 <em>data.actionLink</em> 参数中接收。
+        与将 <a href="<%= Url.Action("actionlink") %>#apply">操作链接</a> 添加到书签的情况一样，必须在配置中使用 <em>actionLink</em> 对象作为 <a href="<%= Url.Action("config/editor") %>#actionLink">editorConfig.actionLink</a> 参数的值。
     </p>
     <div class="note">
-        In version 5.4, <b>onRequestSendNotify</b> event can only be used if <a href="#onRequestUsers">onRequestUsers</a> event is set.
-        Starting from version 5.5, there is no such dependency between <b>onRequestSendNotify</b> and <b>onRequestUsers</b> - both can be set independently.
+        在 5.4 版本中，只有在设置了 <b>onRequestUsers</b> 事件时才能使用 <a href="#onRequestUsers">onRequestSendNotify</a> 事件。
+        从 5.5 版开始， <b>onRequestSendNotify</b> 和 <b>onRequestUsers</b> 之间没有这种依赖关系 - 两者都可以独立设置。
     </div>
     <pre>
 var onRequestSendNotify = function(event) {
@@ -144,14 +144,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 
-    <h2 id="apply-changes" class="copy-link">Sharing settings</h2>
-    <p>
-        When the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is called, the software integrators provide access to the file, send notifications to the mentioned users with the action link which allows scrolling to the comment position in the document.
+    <h2 id="apply-changes" class="copy-link">共享设置</h2>
+    <p>当
+        <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件被调用时，软件集成商提供对文件的访问，通过允许滚动到文档中评论位置的操作链接向提到的用户发送通知。
     </p>
     <p>
-        In the case when the <a href="<%= Url.Action("config/document/info") %>#sharingSettings">document.info.sharingSettings</a> field is used in the document initialization but the list of the users from the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is different, the <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> method must be called.
+        如果文档初始化时使用了 <a href="<%= Url.Action("config/document/info") %>#sharingSettings">document.info.sharingSettings</a> 字段，但 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件中的用户列表不同，则必须调用 <a href="<%= Url.Action("methods") %>#setSharingSettings">setSharingSettings</a> 方法。
     </p>
-    <img width="832px" alt="Mentions" src="<%= Url.Content("~/content/img/editor/sharing_settings.png") %>" />
+    <img width="832px" alt="提及" src="<%= Url.Content("~/content/img/editor/sharing_settings.png") %>" />
     <pre>
 docEditor.setSharingSettings({
     "sharingSettings": [
@@ -176,39 +176,39 @@ docEditor.setSharingSettings({
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>sharingSettings</td>
-                        <td>Defines the settings which allow sharing the document with other users.</td>
-                        <td>array of object</td>
-                        <td>optional</td>
+                        <td>定义允许与其他用户共享文档的设置。</td>
+                        <td>对象数组</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>sharingSettings.permissions</td>
-                        <td>Defines the access rights for the user with the name above.</td>
+                        <td>定义具有上述名称的用户的访问权限。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                     <tr class="tablerow">
                         <td>sharingSettings.user</td>
-                        <td>Defines the name of the user with whom the document will be shared.</td>
+                        <td>定义将与之共享文档的用户的名称。</td>
                         <td>string</td>
-                        <td>optional</td>
+                        <td>可选的</td>
                     </tr>
                 </tbody>
             </table>
     <div class="mobile-content"></div>
     <p>
-        In the case when the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event does not provide access to the file, the <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a> parameter in the customization section of the editor configuration must be set to <b>false</b>.
+        在 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件不提供对文件的访问的情况下，编辑器配置的自定义部分中的 <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">mentionShare</a> 参数必须设置为 <b>false</b>。
     </p>
     <div class="note">
-        Please note that it will only be available for the comments if the <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> event is set.
+        请注意，如果设置了 <a href="<%= Url.Action("config/events") %>#onRequestSendNotify">onRequestSendNotify</a> 事件 ，它将仅可用于评论。
     </div>
-    <img alt="Mentions" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" />
+    <img alt="提及" src="<%= Url.Content("~/content/img/editor/mentionShare.png") %>" />
 </asp:Content>

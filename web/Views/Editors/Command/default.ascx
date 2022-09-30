@@ -1,20 +1,20 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Command service</span>
+    <span class="hdr">命令服务</span>
 </h1>
 
 <p class="dscr">
-    For the interaction with the <b>document command service</b> the POST requests are used.
-    The request parameters are entered in JSON format in the request body.
-    The requests are sent to the <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span> address where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+    对于与 <b>文档命令服务</b> 的交互，使用POST请求。
+    请求参数在请求正文中以 JSON
+    格式输入请求被发送到 <span class="fakelink">https://documentserver/coauthoring/CommandService.ashx</span>, 其中 <b>documentserver</b> 是安装了ONLYOFFICE 文档服务器的服务器的名称
 </p>
 
-<div class="note">In <b>ONLYOFFICE Document Server</b> prior to version 4.2 the GET request with the parameters in the <em>QueryString</em> were used.</div>
+<div class="note">在版本4.2之前的 <b>ONLYOFFICE 文档服务器</b> 中，使用了带有 <em>QueryString</em> 中参数的GET请求。</div>
 
-<p>See the available command types below to find more about them.</p>
+<p>请参阅下面可用的命令类型以了解更多信息。</p>
 
-<div class="header-gray">Command types</div>
+<div class="header-gray">命令类型</div>
 
 <table class="table">
     <colgroup>
@@ -24,40 +24,40 @@
         </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Command</td>
-            <td>Description</td>
+            <td>命令</td>
+            <td>描述</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/drop") %>">drop</a></td>
-            <td>This command allows to disconnect the specified users from the document editing service.</td>
+            <td>此命令允许断开指定用户与文档编辑服务的连接。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/forcesave") %>">forcesave</a></td>
-            <td>This command allows to forcibly save the document being edited without closing it.</td>
+            <td>此命令允许强制保存正在编辑的文档，而无需关闭它。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/info") %>">info</a></td>
-            <td>This command allows to request a document status and the list of the identifiers of the users who opened the document for editing.</td>
+            <td>此命令允许请求一个文档的状态以及打开编辑过该文档的用户标识符列表。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/license") %>">license</a></td>
-            <td>This command allows to request the license from Document Server with information about the server and user quota.</td>
+            <td>此命令允许从Document Server请求许可证，并提供有关服务器和用户配额的信息。</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("command/meta") %>">meta</a></td>
-            <td>This command allows to update the meta information of the document for all collaborative editors.</td>
+            <td>此命令允许为所有协作编辑器更新文档的元信息。</td>
         </tr>
         <tr class="tablerow">
-            <td><a href="<%= Url.Action("command/version") %>">version</a></td>
-            <td>This command allows to request the current version number of Document Server.</td>
+            <td><a href="<%= Url.Action("command/version") %>">vesion</a></td>
+            <td>此命令允许请求文档服务器的当前版本号。</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
 
-<p>The JSON Web Token should be sent in the JSON object format to <b>document command service</b>. It is used to receive the status of the document with the key specified.</p>
+<p>JSON Web令牌应以JSON对象格式发送到 <b>文档命令服务</b>它用于接收具有指定键的文档的状态。</p>
 
 <pre>
 {
@@ -65,7 +65,7 @@
 }
 </pre>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col style="width: 100px;" />
@@ -75,26 +75,26 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Presence</td>
+            <td>名称</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>出现</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>token</td>
-            <td>Defines the encrypted signature added to the <b>Document Server</b> config in the form of a <a href="<%= Url.Action("signature/body") %>#command">token</a>.</td>
+            <td>定义以 <a href="<%= Url.Action("signature/body") %>#command">令牌</a>形式添加到 <b>文档服务器</b> 配置的加密签名</td>
             <td>string</td>
-            <td>required by configuration</td>
+            <td>配置所需</td>
         </tr>
     </tbody>
 </table>
 <div class="mobile-content"></div>
 
-<p>The <b>document editing service</b> informs the <b>document storage service</b> about the result caused by command and sends the response with all the necessary data via the <a href="<%= Url.Action("callback") %>">callback handler</a>.</p>
+<p><b>文档编辑服务</b> 将命令产生的结果通知 <b>文档存储服务</b> ，并通过 <a href="<%= Url.Action("callback") %>">回调处理程序</a>发送包含所有必要数据的响应。</p>
 
-<div class="header-gray">Possible error codes and their description</div>
+<div class="header-gray">可能的错误代码及其描述</div>
 <table class="error-table">
     <colgroup>
         <col style="width: 105px;" />
@@ -102,38 +102,38 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Error code</td>
-            <td>Description</td>
+            <td>错误代码</td>
+            <td>描述</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td>0</td>
-            <td>No errors.</td>
+            <td>没有错误。</td>
         </tr>
         <tr class="tablerow">
             <td>1</td>
-            <td>Document key is missing or no document with such key could be found.</td>
+            <td>文档密钥缺失或找不到具有该密钥的文档。</td>
         </tr>
         <tr class="tablerow">
             <td>2</td>
-            <td>Callback url not correct.</td>
+            <td>回调url不正确。</td>
         </tr>
         <tr class="tablerow">
             <td>3</td>
-            <td>Internal server error.</td>
+            <td>内部服务器错误。</td>
         </tr>
         <tr class="tablerow">
             <td>4</td>
-            <td>No changes were applied to the document before the <b>forcesave</b> command was received.</td>
+            <td>在收到 <b>forcesave</b> 命令之前，未对文档应用任何更改。</td>
         </tr>
         <tr class="tablerow">
             <td>5</td>
-            <td>Command not correct.</td>
+            <td>命令不正确。</td>
         </tr>
         <tr class="tablerow">
             <td>6</td>
-            <td>Invalid token.</td>
+            <td>令牌无效。</td>
         </tr>
         <%--<tr class="tablerow">
             <td>7</td>

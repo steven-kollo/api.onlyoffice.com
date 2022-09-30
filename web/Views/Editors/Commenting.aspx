@@ -1,4 +1,4 @@
-<%@ Page
+﻿<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,31 +6,31 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Commenting
+    评论
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Commenting</span>
+        <span class="hdr">评论</span>
     </h1>
 
     <p class="dscr">
-        The <b>Comment option</b> allows you to leave comments on the specific words, phrases, sentences and other document parts, edit and remove these comments. 
-        All the comments will be saved and shown to other document users.
+        <b>评论选项</b> 允许您对特定的单词、短语、句子和其他文档部分发表评论，编辑和删除这些评论。
+        所有评论将被保存并显示给其他文档用户。
     </p>
     <img src="<%= Url.Content("~/content/img/editor/comment.png") %>" alt="" />
 
-    <h2 id="access-rights" class="copy-link">Comment access rights</h2>
+    <h2 id="access-rights" class="copy-link">评论访问权限</h2>
     <p>
-        In order to enable the comment option, the <a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a> parameter in the permissions section of the document initialization must be set to <b>true</b>.
-        The document <b>side bar</b> will contain the <b>Comment</b> menu option.
+        为了启用评论选项，文档初始化的权限部分中的 <a href="<%= Url.Action("config/document/permissions") %>#comment">comment</a> 参数必须设置为 <b>true</b>。
+        <b>文档侧栏</b> 将包含 <b>评论</b> 菜单选项。
     </p>
     <p>
-        In case the <em>edit</em> parameter is set to <b>true</b> and the <em>comment</em> parameter is also set to <b>true</b>, the user will be able to edit the document and comment.
+        如果 <em>edit</em> 参数设置为 <b>true</b> 并且 <em>comment</em> 参数也设置为 <b>true</b>，用户将能够编辑文档和评论。
     </p>
-    <img alt="Commenting" width="832px" src="<%= Url.Content("~/content/img/editor/commenting.png") %>" />
+    <img alt="评论" width="832px" src="<%= Url.Content("~/content/img/editor/commenting.png") %>" />
     <p>
-        In case the <em>edit</em> parameter is set to <b>false</b> and the <em>comment</em> parameter is set to <b>true</b>, the document will be available for commenting only.
+        如果 <em>edit</em> 参数设置为 <b>false</b> 并且 <em>comment</em> 参数设置为 <b>true</b>，则文档将仅可用于评论。
     </p>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -45,15 +45,15 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-    <div class="note">Please note that the document commenting will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.</div>
+    <div class="note">请注意，仅当 <a href="<%= Url.Action("config/editor") %>#mode">mode</a> 参数设置为 <b>edit</b>时，文档评论才可用于文档编辑器。</div>
 
     
-    <h2 id="author-rights" class="copy-link">Differentiation of commenting rights by authors</h2>
+    <h2 id="author-rights" class="copy-link">作者评论权的区分</h2>
     <ol>
         <li>
             <p>
-                If you want to allow editing comments only by their authors, set the <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">editCommentAuthorOnly</a> 
-                parameter in the permissions section of the editor initialization to <b>true</b>.
+                如果您希望仅允许其作者编辑评论，请将编辑器初始化的权限部分中的 <a href="<%= Url.Action("config/document/permissions") %>#editCommentAuthorOnly">editCommentAuthorOnly</a>
+                参数设置为 <b>true</b>。
             </p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -70,8 +70,8 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                If you want to allow deleting comments only by their authors, set the <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">deleteCommentAuthorOnly</a> 
-                parameter in the permissions section of the editor initialization to <b>true</b>.
+                如果您希望仅允许其作者删除评论，请将编辑器初始化的权限部分中的 <a href="<%= Url.Action("config/document/permissions") %>#deleteCommentAuthorOnly">deleteCommentAuthorOnly</a>
+                参数设置为 <b>true</b>。
             </p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -89,11 +89,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     </ol>
 
 
-    <h2 id="group-rights" class="copy-link">Differentiation of commenting rights by groups</h2>
+    <h2 id="group-rights" class="copy-link">按组区分评论权</h2>
     <ol>
         <li>
             <p>
-                Specify the group (or several groups separated with commas) the user belongs to by adding the field <em>group</em> to the <a href="<%= Url.Action("config/editor") %>#user">user</a> parameter in the editorConfig section.
+                通过在editorConfig部分的 <a href="<%= Url.Action("config/editor") %>#user">user</a> 参数中添加字段 <em>group</em> 来指定用户所属的组（或用逗号分隔的多个组）。
             </p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -121,11 +121,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                Specify the access rights using the <a href="<%= Url.Action("config/document/permissions") %>#commentGroups">commentGroups</a> parameter in the permissions section of the editor initialization.
+                使用编辑器初始化的权限部分中的 <a href="<%= Url.Action("config/document/permissions") %>#commentGroups">commentGroups</a> 参数指定访问权限。
             </p>
             <div class="note">
-                If the <b>commentGroups</b> parameter is specified in the editor config, the access rights to viewing, editing and/or removing all comments are disabled.
-                Otherwise, if the current user does not belong to any of the groups, he or she can edit, remove and/or view comments of all groups.
+                如果在编辑器配置中指定了 <b>commentGroups</b> 参数，则查看、编辑和/或删除所有评论的访问权限将被禁用。
+                否则，如果当前用户不属于任何组，他或她可以编辑、删除和/或查看所有组的评论。
             </div>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -144,21 +144,21 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <ul>
-                <li><em>"edit": ["Group2", ""]</em> means that the user can edit comments made by users from <em>Group2</em> and users who do not belong to any of the groups (for example, the document that is commented in third-party editors).</li>
-                <li><em>"remove": [""]</em> means that the user can remove comments made by someone who belongs to none of these groups (for example, the document that is commented in third-party editors).</li>
-                <li><em>"view": ""</em> means that the user can view comments made by any user.</li>
+                <li><em>"edit": ["Group2", ""]</em> 表示用户可以编辑来自 <em>Group2</em> 的用户和不属于任何组的用户发表的评论（例如，在第三方编辑器中评论的文档）。</li>
+                <li><em>"remove": [""]</em> 表示用户可以删除不属于这些组的人的评论（例如，在第三方编辑器中评论的文档）。</li>
+                <li><em>"view": ""</em> 表示用户可以查看任何用户发表的评论。</li>
             </ul>
         </li>
     </ol>
 
 
-    <h2 id="threaded-comments" class="copy-link">Threaded comments in spreadsheets</h2>
+    <h2 id="threaded-comments" class="copy-link">电子表格中的线程评论</h2>
     <p>
-        To display ONLYOFFICE spreadsheet comments in other editors correctly, all the comments are saved in two formats - original and threaded:
+        为了在其他编辑器中正确显示 ONLYOFFICE 电子表格评论，所有评论都以两种格式保存 - 原始和线程：
     </p>
     <ol>
         <li>
-            <p>The <b>original comment format</b> looks as follows:</p>
+            <p><b>原始评论格式</b> 如下：</p>
             <pre>
 ${author1}:
 comment
@@ -170,14 +170,14 @@ reply2
             <img width="832px" src="<%= Url.Content("~/content/img/editor/comments-threaded.png") %>" alt="" />
         </li>
         <li>
-            To convert the original comments format into the <b>threaded comments</b>, the <em>"${author}:\n"</em> string is deleted if the comment starts with it.
+            要将原始评论格式转换为 <b>线程评论</b>，如果评论以它开头，则删除 <em>"${author}:\n"</em> 字符串。
         </li>
     </ol>
 
-    <p>The file in the editors opens as follows:</p>
+    <p>编辑器中的文件打开如下：</p>
     <ul>
-        <li>If there are threaded comments in the file, they are used when opening.</li>
-        <li>If there are comments in the original ONLYOFFICE format only, they are converted into threaded comments.</li>
+        <li>如果文件中有线程评论，则在打开时使用它们。</li>
+        <li>如果只有原始 ONLYOFFICE 格式的评论，它们将被转换为线程评论。</li>
     </ul>
 
 </asp:Content>

@@ -6,38 +6,38 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Document History
+    文件历史
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Document history</span>
+        <span class="hdr">文件历史</span>
     </h1>
-    <p class="dscr">You can view the history of text documents, spreadsheets or presentations using the <b>document editor</b>.</p>
+    <p class="dscr">您可以使用 <b>文档编辑器</b>查看文本文档、电子表格或演示文稿的历史记录。</p>
 
     <p>
-        The document history is stored with the document storage service.
-        The <b>document editor</b> displays the document history as a version list at the left-side panel.
-        When you select a document version from the list it will be displayed for preview.
+        文档历史记录与文档存储服务一起存储。
+        <b>文档编辑器</b> 将文档历史记录显示在左侧面板的版本列表中。
+        当您从列表中选择文档版本时，文档将被显示出来以供预览。
     </p>
     <ol>
-        <li>The user clicks the <em>Version History</em> button while editing the document within the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> requests the list of the document versions from the <b>document storage service</b>.</li>
-        <li>The <b>document storage service</b> sends the list of the document versions with the version number to be displayed.</li>
-        <li>The <b>document editor</b> requests the information about the selected document version from the <b>document storage service</b>.</li>
-        <li>The <b>document storage service</b> sends the link to the selected version of the document.</li>
-        <li>The <b>document editor</b> displays the selected document version.</li>
-        <li>When the user clicks another version in the document version list, the <b>document editor</b> requests the information about the version to be displayed anew.</li>
+        <li>用户在 <b>文档编辑器</b>中编辑文档时单击 <em>版本历史</em> 按钮。</li>
+        <li><b>文档编辑器</b> 从 <b>文档存储服务</b>请求文档版本列表。</li>
+        <li><b>文档存储服务</b> 发送待显示的版本号的文档版本列表。</li>
+        <li><b>文档编辑器</b> 从 <b>文档存储服务</b>请求有关所选文档版本的信息。</li>
+        <li><b>文档存储服务</b> 将链接发送到所选文档版本。</li>
+        <li><b>文档编辑器</b> 显示选定的文档版本。</li>
+        <li>当用户单击文档版本列表中的另一个版本时， <b>文档编辑器</b> 请求重新显示有关该版本的信息。</li>
     </ol>
 
-    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
     <ol>
-        <li>Create an <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
+        <li>创建一个 <em>html</em> 文件来 <a href="<%= Url.Action("open") %>#apply">打开文档</a>。</li>
         <li>
             <p>
-                Specify the event handler for opening the <a href="<%= Url.Action("config/events") %>#onRequestHistory">version history</a> list in the configuration script for Document Editor initialization.
-                When the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> event is called, the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method must be executed.
-                This method contains document history for each document version, if the history parameter has been present for each version.
+                指定事件处理程序，用于打开在文档编辑器初始化的配置脚本中的 <a href="<%= Url.Action("config/events") %>#onRequestHistory">版本历史</a> 列表。
+                调用 <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> 事件时，必须执行 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法。
+                如果每个版本都存在历史参数，则此方法包含每个文档版本的文档历史记录。
             </p>
             <pre>
 var onRequestHistory = function() {
@@ -75,13 +75,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-            <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/history_open.png") %>" />
+            <img alt="打开文件" src="<%= Url.Content("~/content/img/editor/history_open.png") %>" />
         </li>
         <li>
             <p>
-                In the configuration script for Document Editor initialization specify the event handler which will select the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">version from history</a>.
-                When the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> event is called, the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method must be executed.
-                This method contains the absolute URL to the file of the corresponding version.
+                在文档编辑器初始化的配置脚本中，指定用来 <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">从版本历史中选择版本</a>的事件处理程序。
+                调用 <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> 事件时，必须执行 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法。
+                此方法包含对应版本文件的绝对 URL。
             </p>
             <pre>
 var onRequestHistoryData = function(event) {
@@ -101,22 +101,22 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-            <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
+            <img alt="打开文件" src="<%= Url.Content("~/content/img/editor/history.png") %>" />
         </li>
-        <li>Open your <em>html</em> file in the browser.</li>
-        <li>Open the <em>Version History</em> option in the Document Editor menu.</li>
+        <li>在浏览器中打开您的 <em>html</em> 文件。</li>
+        <li>在文档编辑器菜单中打开 <em>版本历史</em> 选项。</li>
     </ol>
     
-    <h2 id="apply-changes" class="copy-link">Opening the document history with changes highliting</h2>
+    <h2 id="apply-changes" class="copy-link">打开带有更改突出显示的文档历史记录</h2>
     <p>
-        If the document version was created with the <b>document editor</b>, then the document changes can be displayed when viewing the document history.
-        The additional data must be saved to the <b>document storage service</b> when <a href="<%= Url.Action("save") %>">saving</a> the editing session beside the document versions themselves to achieve that.
-        After editing in <b>document editor</b> the information about the changes during the editing session is sent together with the changed document:</p>
+        如果文档版本是使用 <b>文档编辑器</b>创建的，则在查看文档历史记录时可以显示文档更改。
+        将编辑会话 <a href="<%= Url.Action("save") %>">保存</a> 在文档版本旁边时，必须将附加数据保存到 <b>文档存储服务</b> 来实现此目的。
+        在 <b>文档编辑器</b> 中编辑后，有关编辑会话期间更改的信息将与更改的文档一起发送：</p>
     <ul>
         <li>
             <p>
-                <a href="<%= Url.Action("callback") %>#history">history</a> - this information allows to display the time and the author for each document version when you view the document history in the side panel.
-                Must be sent as a property changes of the object sent as the argument to the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method.
+                <a href="<%= Url.Action("callback") %>#history">History</a> - 当您在侧面板中查看文档历史时，此信息允许显示每个文档版本的时间和作者。
+                必须作为对象的属性更改作为参数发送给 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法。
             </p>
             <pre>
 docEditor.refreshHistory({
@@ -148,14 +148,14 @@ docEditor.refreshHistory({
     ],
 });
 </pre>
-            <p>Where the <b>changes</b> is the <em>changes</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
-            <p>Where the <b>serverVersion</b> is the <em>serverVersion</em> from <a href="<%= Url.Action("callback") %>#history">the history object</a> returned after saving the document.</p>
+            <p>其中 <b>changes</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 的 <em>更改</em>。</p>
+            <p>其中 <b>serverVersion</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 中的 <em>serverVersion</em>。</p>
         </li>
         <li>
             <p>
-                <a href="<%= Url.Action("callback") %>#changesurl">changesurl</a> - the absolute URL to the file with the document editing data used to show the changes corresponding to the specific document version.
-                The file must be saved and its address must be sent as changesUrl parameter using the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method.
-                The link to the previous document version (<em>previous.url</em>) must be added into the object.
+                <a href="<%= Url.Action("callback") %>#changesurl">changesurl</a> - 带有文档编辑数据的文件的绝对 URL，用于显示与特定文档版本相对应的更改。
+                必须保存文件，并且必须使用 <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> 方法将其地址作为 changesUrl 参数发送。
+                必须将指向先前文档版本 (<em>previous.url</em>) 的链接添加到对象中。
             </p>
             <pre>
 docEditor.setHistoryData({
@@ -170,9 +170,9 @@ docEditor.setHistoryData({
 });
 </pre>
             <div id="changesurl-cors" class="note">
-                The <em>changesurl</em> request is made in the browser from the added iframe with the <b>documentserver</b> domain, where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
-                For its correct work the cross-origin HTTP requests must be allowed (CORS).
-                This can be achieved using the <em>Access-Control-Allow-Origin</em> header.
+                <em>changesurl</em> 请求是在浏览器中从添加的带有 <b>documentserver</b> 域的 iframe 发出的，其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称。
+                为了正确工作，必须允许跨域 HTTP 请求 (CORS)。
+                这可以使用 <em>Access-Control-Allow-Origin</em> 标头来实现。
             </div>
             <img width="832px" alt="changesurl" src="<%= Url.Content("~/content/img/editor/changesurl.png") %>" />
         </li>

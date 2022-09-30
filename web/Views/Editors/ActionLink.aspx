@@ -1,4 +1,4 @@
-<%@ Page
+﻿<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,37 +6,37 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Action link
+    动作链接
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Action link</span>
+        <span class="hdr">动作链接</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of working with links in ONLYOFFICE Document Server.</p>
-    <img alt="Action link" src="<%= Url.Content("~/content/img/editor/actionLink-create.png") %>" />
+    <p class="dscr">参考图和下面的步骤解释了在 ONLYOFFICE 文档服务器中使用链接的过程。</p>
+    <img alt="动作链接" src="<%= Url.Content("~/content/img/editor/actionLink-create.png") %>" />
     <ol>
-        <li>The user sends a request to get a link to the document which contains a bookmark in the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> sends the request to the <b>document manager</b> where the software integrators create the link.</li>
-        <li>The <b>document manager</b> sends the link back to the <b>document editor</b> where the link is displayed.</li>
+        <li>用户发送请求，以获取一个文档链接，该文档包含 <b>文档编辑器</b>中的一个书签。</li>
+        <li><b>文档编辑器</b> 将请求发送给 <b>文档管理器</b> （软件集成商在文档管理器中创建链接）。</li>
+        <li><b>文档管理器</b> 将链接发送回 <b>文档编辑器</b>，文档编辑器显示链接。</li>
     </ol>
 
-    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
     <ol>
-        <li>Create an <em>html</em> file to <a href="<%= Url.Action("open") %>#apply">Open the document</a>.</li>
+        <li>创建一个 <em>html</em> 文件来 <a href="<%= Url.Action("open") %>#apply">打开文档</a>。</li>
         <li>
             <p>
-                Specify the event handler for the <em>Get link</em> button to be displayed in the bookmark editing menu in the configuration script for Document Editor initialization.
-                When the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event is called, the user request is sent to the software integrators which create the link in the document storage service.
+                指定 <em>获取链接</em> 按钮的事件处理程序，该按钮将在文档编辑器初始化的配置脚本中的书签编辑菜单中显示。
+                当调用 <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> 事件时，用户请求被发送软件集成商，该软件集成商在文档存储服务中创建链接。
             </p>
-            <img alt="Action link" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>" />
+            <img alt="动作链接" src="<%= Url.Content("~/content/img/editor/onMakeActionLink.png") %>" />
             <pre>
 var onMakeActionLink = function (event){
     var ACTION_DATA = event.data;
     ...
     var link = GENERATE_LINK(ACTION_DATA);
     docEditor.setActionLink(link);
-};
+    };
 
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "events": {
@@ -49,7 +49,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                In order to give the user the link to the document which contains a bookmark, the software integrators send the link to the <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> method:
+                为了向用户提供包含书签的文档的链接，软件集成商将链接发送到 <a href="<%= Url.Action("methods") %>#setActionLink">setActionLink</a> 方法：
             </p>
             <pre>
 docEditor.setActionLink(link);
@@ -63,18 +63,18 @@ docEditor.setActionLink(link);
                 </colgroup>
                 <thead>
                     <tr class="tablerow">
-                        <td>Parameter</td>
-                        <td>Description</td>
-                        <td>Type</td>
-                        <td>Presence</td>
+                        <td>参数</td>
+                        <td>描述</td>
+                        <td>类型</td>
+                        <td>出现</td>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="tablerow">
                         <td>link</td>
-                        <td>Defines the link which allows scrolling to the bookmark position in the document.</td>
+                        <td>定义允许滚动到文档中书签位置的链接。</td>
                         <td>string</td>
-                        <td>required</td>
+                        <td>必需的</td>
                     </tr>
                 </tbody>
             </table>
@@ -82,16 +82,16 @@ docEditor.setActionLink(link);
         </li>
     </ol>
 
-    <h2 id="apply" class="copy-link">Opening the bookmark</h2>
-    <img alt="Action link" src="<%= Url.Content("~/content/img/editor/actionLink-open.png") %>" />
+    <h2 id="apply" class="copy-link">打开书签</h2>
+    <img alt="动作链接" src="<%= Url.Content("~/content/img/editor/actionLink-open.png") %>" />
     <ol>
-        <li>The user follows the link in the <b>document manager</b>.</li>
-        <li>The <b>document manager</b> sends the initialization <em>editorConfig</em> to the <b>document editor</b>.</li>
-        <li>The <b>document editor</b> scrolls the document to the bookmark.</li>
+        <li>用户点击 <b>文档管理器</b>中的链接。</li>
+        <li><b>文档管理器将</b> 将 <em>editorConfig</em> 初始化值发送到 <b>文档编辑器</b>。</li>
+        <li><b>文档编辑器</b> 将文档滚动到书签。</li>
     </ol>
     <p>
-        When the user follows the link, the <b>document editor</b> sends the initialization <em>editorConfig</em> to the <b>document editing service</b>.
-        The ACTION_DATA received from the <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> event is specified in the <a href="<%= Url.Action("config/editor") %>#actionLink">data.actionLink</a> parameter of the <em>editorConfig</em>:
+        当用户点击链接时， <b>文档编辑器</b> 将 <em>editorConfig</em> 初始化值发送到 <b>文档编辑服务</b>。
+        在 <em>editorConfig</em>的 <a href="<%= Url.Action("config/editor") %>#actionLink">data.actionLink</a> 参数中指定从 <a href="<%= Url.Action("config/events") %>#onMakeActionLink">onMakeActionLink</a> 事件接收到的 ACTION_DATA：
     </p>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -102,5 +102,5 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-    <div class="note">The link is generated in the same way when <a href="<%= Url.Action("mentions") %>#apply">mentioning</a> users in the comments.</div>
+    <div class="note">在评论中 <a href="<%= Url.Action("mentions") %>#apply">提及</a> 用户时，链接的生成方式相同。</div>
 </asp:Content>

@@ -6,135 +6,135 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ONLYOFFICE Alfresco module package
+    ONLYOFFICE Alfresco 模块包
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">ONLYOFFICE Alfresco module package</span>
+        <span class="hdr">ONLYOFFICE Alfresco 模块包</span>
     </h1>
 
-    <p class="dscr">This <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share using ONLYOFFICE Docs.</p>
+    <p class="dscr">该 <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">插件</a> 让用户能够从 <a href="https://www.alfresco.com/" target="_blank">Alfresco</a> Share 中用 ONLYOFFICE Docs编辑办公文档。</p>
 
-    <p>The plugin is available in the official <a href="https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco" target="_blank">Alfresco Add-ons directory</a>.</p>
+    <p>该插件在官方 <a href="https://community.alfresco.com/docs/DOC-7918-onlyoffice-connector-for-alfresco" target="_blank">Alfresco Add-ons directory</a>中可用。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
+        <li>目前可以使用此插件打开和编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
         <li>
-            <p>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for Office documents.</p>
-            <img alt="Edit in OnlyOffice" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
-            <p>This allows multiple users to collaborate in real time and to save back those changes to Alfresco.</p>
+            <p>该插件将在 Office 文档的文档库中创建一个新的菜单选项- <b>在ONLYOFFICE 中编辑</b>。</p>
+            <img alt="在ONLYOFFICE 中编辑" src="<%= Url.Content("~/content/img/editor/alfresco.png") %>"/>
+            <p>这允许多个用户实时协作并将这些更改保存到 Alfresco中。</p>
         </li>
-        <li>To convert ODT, ODP, ODS, DOC, XLS, PPT files into their OOXML counterparts, select the <b>Convert using ONLYOFFICE</b> option. Resulting files will be placed in the same folder. 
-            You can also configure rules for a folder, that will automatically convert files on upload or on change. Details you can find <a href="https://docs.alfresco.com/content-services/latest/using/content/rules/" target="_blank">here</a>.</li>
+        <li>要将 ODT、ODP、ODS、DOC、XLS、PPT 文件转换为其 OOXML 对应文件，请选择 <b>用 ONLYOFFICE 转换</b> 选项。生成的文件将放置在同一文件夹中。
+            您还可以为文件夹配置规则，这将在上传或更改时自动转换文件。您可以在 <a href="https://docs.alfresco.com/content-services/latest/using/content/rules/" target="_blank">此处</a>找到详细信息。</li>
         <li>
-            To create a new document, choose the context menu <b>Create new...</b> option within document library.
-            <img alt="Create new..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
+            要创建新文档，请在文档库中选择上下文菜单 <b>新建...</b> 选项。
+            <img alt="新建..." src="<%= Url.Content("~/content/img/editor/alfresco-create.png") %>"/>
         </li>
     </ul>
 
 
-    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Alfresco and any end clients (version 3.0 and later are supported for use with the plugin).
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>.
-        ONLYOFFICE Docs must also be able to POST to Alfresco directly.
-    </p>
-    <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
+        您将需要一个 ONLYOFFICE Docs (文档服务器) 实例，该实例可从 Alfresco 和任何客户终端解析和连接（插件支持 3.0 版及更高版本）。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE Docs 还必须能够直接发布到 Alfresco上。</p>
+    <p>
+        启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
-    <h2 id="install" class="copy-link">Installing ONLYOFFICE Alfresco module package</h2>
+    <h2 id="install" class="copy-link">安装ONLYOFFICE Alfresco 模块包</h2>
 
-    <p>To start using ONLYOFFICE Docs with Alfresco, the following steps must be performed for Ubuntu 14.04:</p>
+    <p>要开始在 Alfresco 中使用 ONLYOFFICE Docs，必须在 Ubuntu 14.04 中执行以下步骤的操作：</p>
     <ol>
-        <li>Upload the compiled <b>*.jar</b> packages to directories accordingly for your Alfresco installation:
+        <li>将已编译的 <b>*.jar</b> 包上传到相应的目录以供您安装 Alfresco：
             <ul>
-                <li>from <em>onlyoffice-alfresco/repo/target/</em> to <em>/webapps/alfresco/WEB-INF/lib/</em> for Alfresco repository,</li>
-                <li>from <em>onlyoffice-alfresco/share/target/</em> to <em>/webapps/share/WEB-INF/lib/</em> for Share.</li>
+                <li>对于Alfresco 存储库： 从 <em>onlyoffice-alfresco/repo/target/</em> 到 <em>/webapps/alfresco/WEB-INF/lib/</em>，</li>
+                <li>对于Alfresco Share： 从 <em>onlyoffice-alfresco/share/target/</em> 到 <em>/webapps/share/WEB-INF/lib/</em>。</li>
             </ul>
-            <div class="note">You can download the already compiled package files <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">here</a> and place them to the respective directories.</div>
+            <div class="note">您可以在 <a target="_blank" href="https://github.com/onlyoffice/onlyoffice-alfresco/releases">这里</a> 下载已经编译好的包文件并将它们放置到各自的目录中。</div>
         </li>
-        <li>Make sure that Document Server will be able to POST to Alfresco.
-            <p>You may need to change these lines in <b>alfresco-global.properties</b> or you can set it using <a href="#configuration">configuration page</a>:</p>
+        <li>确保文档服务器能够 POST 到 Alfresco 中。
+            <p>您可能需要在 <b>alfresco-global.properties</b> 中更改这些行，或者您可以使用 <a href="#configuration">配置页面</a>进行设置：</p>
             <span class="commandline">alfresco.host=&lt;hostname&gt;
 alfresco.port=443
 alfresco.protocol=https
 
 share.host=&lt;hostname&gt;
+
 share.port=443
 share.protocol=https</span>
-            <div class="note">Probably located here <em>/usr/local/tomcat/shared/classes/alfresco-global.properties</em></div>
+            <div class="note">大概位于这里 <em>/usr/local/tomcat/shared/classes/alfresco-global.properties</em></div>
         </li>
-        <li>Restart Alfresco:
-            <span class="commandline">sudo ./alfresco.sh stop
+        <li>重启 Alfresco: <span class="commandline">sudo ./alfresco.sh stop
 sudo ./alfresco.sh start</span>
         </li>
     </ol>
-    <p>The module can be checked in administrator tools at <em>/share/page/console/admin-console/module-package</em> in Alfresco.</p>
+    <p>可以在 <em>/share/page/console/admin-console/module-package</em> 的管理员工具中检查该模块。</p>
 
-    <h2 id="configuration" class="copy-link">Configuring ONLYOFFICE Alfresco module package</h2>
-    <p>Module configuration can be found inside <b>Alfresco Administration Console</b> or by simply navigating to <em>http://&lt;alfrescohost&gt;/alfresco/s/onlyoffice/onlyoffice-config</em>.</p>
+    <h2 id="configuration" class="copy-link">配置 ONLYOFFICE Alfresco 模块包</h2>
+    <p>模块配置可以在 <b>Alfresco 管理控制台</b> 中找到，或者只需导航到 <em>http://&lt;alfrescohost&gt;/alfresco/s/onlyoffice/onlyoffice-config</em>即可。</p>
     <div class="note">
-        You can also add <em>onlyoffice.url</em> to <b>alfresco-global.properties</b>.
-        Configuration made via settings page will override <b>alfresco-global.properties</b>.
+        您还可以将 <em>onlyoffice.url</em> 添加到 <b>alfresco-global.properties</b>。
+        通过设置页面进行的配置将覆盖 <b>alfresco-global.properties</b>。
     </div>
-    <p>JWT can be configured via <a href="#configuration">configuration page</a> or by adding <em>onlyoffice.jwtsecret</em> to <b>alfresco-global.properties</b>.</p>
-    <p>The JWT configuration on the Document Server side can be found <a href="/editors/signature/">here</a>.</p>
+    <p>JWT 可以通过 <a href="#configuration">配置页面</a> 或添加 <em>onlyoffice.jwtsecret</em> 到 <b>alfresco-global.properties</b>进行配置。</p>
+    <p>文档服务器端的 JWT 配置可以在 <a href="/editors/signature/">这里</a>找到。</p>
 
-    <h2 id="compile" class="copy-link">Compiling ONLYOFFICE Alfresco module package</h2>
+    <h2 id="compile" class="copy-link">编译 ONLYOFFICE Alfresco 模块包</h2>
 
-    <p>If you plan to compile the ONLYOFFICE Alfresco module package yourself (e.g. edit the source code and compile it afterwards), follow these steps:</p>
+    <p>如果您打算自己编译 ONLYOFFICE Alfresco 模块包（例如编辑源代码并在之后编译），请按照以下步骤操作：</p>
     <ol>
         <li>
-            The latest stable <b>Oracle Java</b> version is necessary for the successful build.
-            If you do not have it installed, use the following commands to install Oracle Java 8:
+            成功构建需要最新的稳定 <b>Oracle Java</b> 版本。
+            如果您没有安装它，请使用以下命令安装 Oracle Java 8：
             <span class="commandline">sudo apt-get update
 sudo apt-get install openjdk-8-jdk</span>
         </li>
-        <li>Install the latest <b>Maven</b>. Installation process is described <a href="https://maven.apache.org/install.html">here</a>.
+        <li>安装最新的 <b>Maven</b>。<a href="https://maven.apache.org/install.html">此处</a>描述了安装过程。
         </li>
-        <li>Download the ONLYOFFICE Alfresco module package source code:
+        <li>下载ONLYOFFICE Alfresco模块包源代码：
             <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-alfresco.git</span>
         </li>
-        <li>Get a submodule:
+        <li>获取子模块：
             <span class="commandline">git submodule update --init --recursive</span>
         </li>
-        <li>Compile packages in the <em>repo</em> and <em>share</em> directories:
+        <li>在 <em>repo</em> 和 <em>share</em> 目录中编译包：
             <span class="commandline">cd onlyoffice-alfresco/
 mvn clean install</span>
         </li>
     </ol>
-    <p>Another way to build ONLYOFFICE Alfresco module package is using <b>docker-compose</b> file.</p>
-    <p>Use this command from project directory:</p>
+    <p>另一种构建 ONLYOFFICE Alfresco 模块包的方法是使用 <b>docker-compose</b> 文件。</p>
+    <p>在项目目录中使用此命令：</p>
     <span class="commandline">docker-compose up</span>
 
-    <h2 id="howitworks" class="copy-link">How it works</h2>
+    <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
     <ol>
-        <li>User navigates to a document within Alfresco Share and selects the <b>Edit in ONLYOFFICE</b> menu option.</li>
-        <li>Alfresco Share makes a request to the repo end (URL of the form: <em>/parashift/onlyoffice/prepare?nodeRef={nodeRef}</em>).</li>
+        <li>用户导航到 Alfresco Share 中的文档并选择 <b>在ONLYOFFICE中编辑</b> 菜单选项。</li>
+        <li>Alfresco Share 向 repo 端发出请求（表单URL为：<em>/parashift/onlyoffice/prepare?nodeRef={nodeRef}</em>).</li>
         <li>
-            <p>Alfresco Repo end prepares a JSON object for the Share with the following properties:</p>
+            <p>Alfresco Repo 端为具有以下属性的 Share 准备一个 JSON 对象：</p>
             <ul>
-                <li><b>url</b> - the URL that ONLYOFFICE Docs uses to download the document (includes the <em>alf_ticket</em> of the current user);</li>
-                <li><b>callbackUrl</b> - the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>onlyofficeUrl</b> - the URL that the client needs to respond to ONLYOFFICE Docs (provided by the <em>onlyoffice.url</em> property);</li>
-                <li><b>key</b> - the <em>UUID+Modified Timestamp</em> to instruct ONLYOFFICE Docs whether to download the document again or not;</li>
-                <li><b>title</b> - the document title (name).</li>
+                <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL（包括当前用户的 <em>alf_ticket</em> ）；</li>
+                <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>onlyofficeUrl</b> - 客户端需要响应 ONLYOFFICE Docs 的 URL（由 <em>onlyoffice.url</em> 属性提供）；</li>
+                <li><b>key</b> ： <em>UUID+Modified Timestamp</em> 指示 ONLYOFFICE Docs 是否再次下载文档；</li>
+                <li><b>title</b> - 文档标题（名称）。</li>
             </ul>
         </li>
-        <li>Alfresco Share takes this object and constructs a page from a freemarker template, filling in all of those values so that the client browser can load up the editor.</li>
-        <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
-        <li>Then ONLYOFFICE Docs downloads the document from Alfresco and the user begins editing.</li>
-        <li>ONLYOFFICE Docs sends a POST request to the <em>callback</em> URL to inform Alfresco that a user is editing the document.</li>
-        <li>Alfresco locks the document, but still allows other users with write access to collaborate in real time with ONLYOFFICE Docs by leaving the Action present.</li>
-        <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <em>callback</em> URL letting Alfresco know that the clients have finished editing the document and closed it.</li>
-        <li>Alfresco downloads a new version of the document, replacing the old one.</li>
+        <li>Alfresco Share 使用这个对象并从 freemarker 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
+        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送包含上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE Docs 从 Alfresco 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE Docs 向 <em>回调</em> URL 发送 POST 请求，以通知 Alfresco 用户正在编辑文档。</li>
+        <li>Alfresco 会锁定文档，但仍允许其他具有写入权限的用户通过保留 Action 与 ONLYOFFICE Docs 进行实时协作。</li>
+        <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向 <em>回调</em> URL 发送一个 POST，让 Alfresco 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>Alfresco 下载文档的新版本，替换旧版本。</li>
     </ol>
 
     <br />
-    <p>Download the ONLYOFFICE Alfresco module package <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">here</a>.</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-alfresco" target="_blank">此处</a>下载 ONLYOFFICE Alfresco 模块包。</p>
 
 </asp:Content>

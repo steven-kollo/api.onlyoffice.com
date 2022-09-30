@@ -2,13 +2,13 @@
 
 <h1>
     <a class="up" href="<%= Url.Action("config/") %>"></a>
-    <span class="hdr">Document</span>
+    <span class="hdr">文档</span>
 </h1>
 
-<div class="header-gray">Description</div>
-<p class="dscr">The document section allows to change all the parameters pertaining to the document (title, url, file type, etc.).</p>
+<div class="header-gray">描述</div>
+<p class="dscr">文档部分允许更改与文档有关的所有参数（标题、url、文件类型等）。</p>
 
-<div class="header-gray">Parameters</div>
+<div class="header-gray">参数</div>
 <table class="table">
     <colgroup>
         <col class="table-name" />
@@ -18,19 +18,19 @@
     </colgroup>
     <thead>
         <tr class="tablerow">
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Example</td>
+            <td>名称</td>
+            <td>描述</td>
+            <td>类型</td>
+            <td>示例</td>
         </tr>
     </thead>
     <tbody>
         <tr class="tablerow">
             <td id="fileType" class="copy-link">fileType<span class="required">*</span></td>
             <td>
-                Defines the type of the file for the source viewed or edited document.
-                Must be lowercase.
-                The following file types are available: <em>.csv, .djvu, .doc, .docm, .docx, .docxf, .dot, .dotm, .dotx, .epub, .fb2, .fodp, .fods, .fodt, .htm, .html, .mht, .odp, .ods, .odt, .oform, .otp, .ots, .ott, .oxps, .pdf, .pot, .potm, .potx, .pps, .ppsm, .ppsx, .ppt, .pptm, .pptx, .rtf, .txt, .xls, .xlsb, .xlsm, .xlsx, .xlt, .xltm, .xltx, .xml, .xps</em>.
+                定义查看或编辑的源文档的文件类型。
+                必须是小写。
+                以下文件类型可用：<em>.csv、.djvu、.doc、.docm、.docx、.docxf、.dot、.dotm、.dotx、.epub、.fb2、.fodp、.fods、.fodt、. htm、.html、.mht、.odp、.ods、.odt、.oform、.otp、.ots、.ott、.oxps、.pdf、.pot、.potm、.potx、.pps、.ppsm、 .ppsx、.ppt、.pptm、.pptx、.rtf、.txt、.xls、.xlsb、.xlsm、.xlsx、.xlt、.xltm、.xltx、.xml、.xps</em>。
             </td>
             <td>string</td>
             <td>"docx"</td>
@@ -38,10 +38,10 @@
         <tr class="tablerow">
             <td id="key" class="copy-link">key<span class="required">*</span></td>
             <td>
-                Defines the unique document identifier used by the service to recognize the document.
-                In case the known key is sent the document will be taken from the cache.
-                Every time the document is edited and saved, the key must be generated anew.
-                The document url can be used as the <b>key</b> but without the special characters and the length is limited to 128 symbols.
+                定义服务用来识别文档的唯一文档标识符。
+                如果发送了已知key，则将从缓存中获取文档。
+                每次编辑和保存文档时，都必须重新生成key。
+                文档 url 可以用作 <b>key</b>，但不能使用特殊字符，长度限制为 128 个符号。
             </td>
             <td>string</td>
             <td>"Khirz6zTPdfd7"</td>
@@ -49,18 +49,17 @@
         <tr class="tablerow">
             <td id="title" class="copy-link">title<span class="required">*</span></td>
             <td>
-                Defines the desired file name for the viewed or edited document which will also be used as file name when the document is downloaded.
-                The length is limited to 128 symbols.
+                为查看或编辑的文档定义所需的文件名，该文件名也将在下载文档时用作文件名。
+                长度限制为 128 个符号。
             </td>
             <td>string</td>
             <td>"Example Document Title.docx"</td>
         </tr>
         <tr class="tablerow">
             <td id="url" class="copy-link">url<span class="required">*</span></td>
-            <td>
-                Defines the absolute URL where the source viewed or edited document is stored.
-                Be sure to add a <a href="<%= Url.Action("security") %>">token</a> when using local links.
-                Otherwise, an error will occur.
+            <td>定义存储查看或编辑的源文档的绝对 URL。
+                使用本地链接时请务必添加 <a href="<%= Url.Action("security") %>">令牌</a>。
+                否则会出现错误。
             </td>
             <td>string</td>
             <td>"https://example.com/url-to-example-document.docx"</td>
@@ -69,9 +68,9 @@
 </table>
 <div class="mobile-content"></div>
 
-<span class="required-descr"><span class="required">*</span><em> - required field</em></span>
+<span class="required-descr"><span class="required">*</span><em> - 必填字段</em></span>
 
-<div class="header-gray">Example</div>
+<div class="header-gray">示例</div>
 <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
@@ -84,11 +83,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
 <p>
-    Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-    See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+    其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+    有关文档服务器服务客户端-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
 </p>
 
 <div class="note">
-    The key characters can be used: <b>0-9</b>, <b>a-z</b>, <b>A-Z</b>, <b>-._=</b>.
-    The maximal key length is <b>20</b> characters.
+    可以使用的关键字符：<b>0-9</b>、 <b>az</b>、 <b>AZ</b>、 <b>-._=</b>。
+    最大密钥长度为 <b>20</b> 个字符。
 </div>

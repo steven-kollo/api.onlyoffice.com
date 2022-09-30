@@ -1,23 +1,23 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
-    <h1>
-        <span class="hdr">Host page</span>
-    </h1>
+<h1>
+    <span class="hdr">主机页面</span>
+</h1>
 
-    <p class="dscr">In order to create an online office session within your application, a host must create an HTML page that will host an iframe element within it pointing 
-    to a particular <a href="<%= Url.Action("wopi/discovery") %>#actions">WOPI action URL</a>.</p>
+    <p class="dscr">为了在您的应用程序中创建一个online office会话，主机必须创建一个 HTML 页面，该页面将在其中嵌入一个指向特定
+    <a href="<%= Url.Action("wopi/discovery") %>#actions">WOPI 操作 URL</a>的 iframe 元素。</p>
 
-    <p>The host page must contain the following elements:</p>
+    <p>主机页面必须包含以下元素：</p>
     <ul>
-        <li>A <em>form</em> element via which the host must <em>POST</em> the <a href="#access_token">access_token</a> and <a href="#access_token_ttl">access_token_ttl</a> parameters to the online office iframe for security purposes.</li>
-        <li>JavaScript code for interacting with the online office iframe using <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>.</li>
-        <li>Specific CSS styles for the body element and online office to avoid visual bags. In addition, the host page should set an appropriate favicon 
-        for the page using the favicon URL provided in <a href="<%= Url.Action("wopi/discovery") %>">WOPI discovery</a>.</li>
-        <li>A <em>viewport</em> meta tag to avoid visual and functional problems in mobile browsers.</li>
+        <li>出于安全目的，主机必须通过一个 <em>form</em> 元素将 <a href="#access_token">access_token</a> 和 <a href="#access_token_ttl">access_token_ttl</a> 参数 <em>POST</em> 到online office iframe。</li>
+        <li>使用 <a href="<%= Url.Action("wopi/postmessage") %>">PostMessage</a>与online office iframe 交互的 JavaScript 代码。</li>
+        <li>Body元素和online office的特定 CSS 样式，以避免视觉包。此外，
+        主机页面应使用 <a href="<%= Url.Action("wopi/discovery") %>">WOPI 发现</a>中提供的网站图标 URL 为页面设置适当的网站图标。</li>
+        <li>用于避免移动端浏览器的视觉和功能问题的 <em>viewport</em> 元标签。</li>
     </ul>
 
-    <div class="header-gray">Host page code</div>
-    <pre>
+    <div class="header-gray">主机页面代码</div>
+<pre>
 &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html&gt;
 
@@ -82,8 +82,8 @@
 &lt;/html&gt;
 </pre>
 
-    <note>Please note that the <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em> strings will be rendered with the appropriate parameters.</note>
-    <div class="header-gray">Parameters</div>
+    <note>请注意， <em>"&lt;%= actionUrl %&gt;"</em>, <em>"&lt;%= token %&gt;"</em>, <em>"&lt;%= tokenTtl %&gt;"</em> 字符串将使用适当的参数呈现。</note>
+    <div class="header-gray">参数</div>
         <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -92,23 +92,23 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
-                <td>Type</td>
+                <td>名称</td>
+                <td>描述</td>
+                <td>类型</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td id="access_token" class="copy-link">access_token</td>
-                <td>An access token that the host will use to determine the identity and permissions of the issuer of a WOPI request.</td>
+                <td>主机将用于确定 WOPI 请求发出者的身份和权限的访问令牌。</td>
                 <td>string</td>
             </tr>
             <tr>
                 <td id="access_token_ttl" class="copy-link">access_token_ttl</td>
-                <td>The time when an access token expires, represented as the number of milliseconds since January 1, 1970 UTC.
-                It is recommended to set this parameter to 10 hours.</td>
+                <td>访问令牌过期的时间，表示为自 1970 年 1 月 1 日 UTC 以来的毫秒数。
+                    建议将此参数设置为 10 小时。</td>
                 <td>integer</td>
             </tr>
         </tbody>
     </table>
-    <p>Further information about building a host page can be found <a href="https://docs.microsoft.com/en-us/microsoft-365/cloud-storage-partner-program/online/hostpage" target="_blank">here</a>.</p>
+    <p>可以在 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/hostpage" target="_blank">这里</a>找到有关构建主机页面的更多信息。</p>

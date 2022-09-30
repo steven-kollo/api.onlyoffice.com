@@ -1,19 +1,19 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
-        Managing versions questions</span>
+    <span class="hdr">文档服务器常见问题解答： <br />
+        管理版本问题</span>
 </h1>
 
 <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="versions_1">
-    <dt>Which methods can be used when working with the document history events?</dt>
+    <dt>处理文档历史事件时可以使用哪些方法？</dt>
     <dd>
-        <p>The document history can be shown using the <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> function (with the <em>events.onRequestHistory</em> event). Unless you use them, the <b>Version History</b> menu option (<b>Version History</b> button in the <b>Collaboration</b> tab) is not shown in the Document Server interface.</p>
-        <p>Once you call this function in the configuration file (together with the <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> method), the menu option and button are shown and the program will display the existing document versions. The data which is shown in the document version history, can be taken from the <b>document editing service</b> <a href="<%= Url.Action("callback") %>#status-2">callback</a>.</p>
-        <p>So the implementation of the document version history display should look like this:</p>
+        <p>可以使用 <a href="<%= Url.Action("config/events") %>#onRequestHistory">onRequestHistory</a> 函数显示文档历史记录（使用 <em>events.onRequestHistory</em> 事件）。除非您使用它们，否则 <b>版本历史</b> 菜单选项（<b>协作</b> 选项卡中的 <b>版本历史</b> 按钮）不会显示在文档服务器界面中。</p>
+        <p>一旦在配置文件中调用此函数（连同 <a href="<%= Url.Action("methods") %>#refreshHistory">refreshHistory</a> 方法），就会显示菜单选项和按钮，并且程序将显示现有文档版本。文档版本历史中显示的数据可以从 <b>文档编辑服务</b> <a href="<%= Url.Action("callback") %>#status-2">回调</a>中获取。</p>
+        <p>所以文档版本历史显示的实现应该是这样的：</p>
         <ol>
-            <li>The callback handler receives the data in the response from the <b>document editing service</b> with <em>status</em> <b>2</b> (which means that the all the users of the document closed it and the current version has been compiled). This response will look something like this:
+            <li>回调处理程序从 <b>文档编辑服务</b> 接收到 <em>status</em> 为 <b>2</b> 的响应中的数据（这意味着文档的所有用户都关闭了它并且当前版本已经编译）。此响应将如下所示：
                 <pre>{
     "key": "2745492410",
     "status": 2,
@@ -25,8 +25,8 @@
     }
 }</pre>
             </li>
-            <li>The callback handler parses the received data and passes it to the configuration file (it does not need to parse the <em>history.serverVersion</em> and <em>history.changes</em> data which can be used by the <em>onRequestHistory</em> function as is).</li>
-            <li>The configuration file must have the following sections present: <em>events.onRequestHistory</em> and the <em>onRequestHistory</em> function itself:
+            <li>回调处理程序解析接收到的数据并将其传递给配置文件（它不需要解析可供<em>onRequestHistory</em>函数使用的 <em>history.serverVersion</em> 和 <em>history.changes</em> 数据）。</li>
+            <li>配置文件必须包含以下部分： <em>events.onRequestHistory</em> 和 <em>onRequestHistory</em> 函数本身：
                 <pre>var onRequestHistory = function() {
     docEditor.refreshHistory({
         "currentVersion": 2,
@@ -65,32 +65,32 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     },
     ...
 });</pre>
-                Where 
+                其中
                 <ul>
-                    <li><em>currentVersion</em> is the number of the latest version which will be displayed in the editor interface as the current one;</li>
-                    <li><em>history</em> is the array of objects, each representing a document saved single version:
+                    <li><em>currentVersion</em> 是最新版本号，将作为当前版本显示在编辑器界面中；</li>
+                    <li><em>history</em> 是对象数组，每个对象代表一个文档保存的单个版本：
                         <ul>
-                            <li><em>history.changes</em> and <em>history.serverVersion</em> is the data received from the <b>document editing service</b>;</li>
-                            <li><em>history.user.id</em> is the ID of the user who was the last to save changes to the document for the specified version;</li>
-                            <li><em>history.created</em> is the time of the document specified version compilation (corresponds to when <em>status</em> <b>2</b> was received);</li>
-                            <li><em>history.version</em> is the number of the specified version as will be displayed in the version history section of the document editor interface.</li>
+                            <li><em>history.changes</em> 和 <em>history.serverVersion</em> 是从 <b>文档编辑服务</b>接收到的数据；</li>
+                            <li><em>history.user.id</em> 是最后一个为指定版本保存文档更改的用户的id；</li>
+                            <li><em>history.created</em> 是文档指定版本编译的时间（对应收到 <em>status</em> 为 <b>2</b> 的时间）；</li>
+                            <li><em>history.version</em> 是指定版本的编号，将显示在文档编辑器界面的版本历史记录部分。</li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li>The document is opened with all the above parameters specified. Switch to the <b>File</b> > <b>Version History</b> menu option (or <b>Collaboration</b> > <b>Version History</b>) and there the version data will be displayed.</li>
+            <li>使用指定的所有上述参数打开文档。切换到 <b>文件</b> > <b>版本历史</b> 菜单选项（或 <b>协作</b> > <b>版本历史</b>），将显示版本数据。</li>
         </ol>
-        <div class="note">The <em>history.changes</em> objects are displayed as smaller changes (revisions) within the versions.</div>
+        <div class="note"><em>history.changes</em> 对象在版本中显示为较小的更改（修订）。</div>
     </dd>
 </dl>
 <dl class="faq_block" id="versions_2">
-    <dt>How to display a document with highlighted changes?</dt>
+    <dt>如何显示具有突出显示更改的文档？</dt>
     <dd>
-        <p>The <b>document editing service</b> saves all the interim changes of the document into separate files and, once the version is compiled and <em>status</em> <b>2</b> is received, the link to the archive with all the changes between the versions is also sent to the callback handler.</p>
-        <p>So, if you want to additionally show the difference between the versions, you will also have to use the <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> function (with the <em>events.onRequestHistoryData</em> event) which must contain data also returned by the <b>document editing service</b> <a href="<%= Url.Action("callback") %>#changeshistory">callback</a>.</p>
-        <p>In addition to the actions described in the <a href="#versions_1">above question</a> you will need to:</p>
+        <p><b>文档编辑服务</b> 将文档的所有临时更改保存到单独的文件中，一旦编译版本并收到 <em>status</em> 为 <b>2</b>，带有版本之间所有更改的存档链接也将发送到回调处理程序。</p>
+        <p>因此，如果您想额外显示版本之间的差异，您还必须使用 <a href="<%= Url.Action("config/events") %>#onRequestHistoryData">onRequestHistoryData</a> 函数（用 <em>events.onRequestHistoryData</em> 事件），该函数必须包含 <b>文档编辑服务</b> <a href="<%= Url.Action("callback") %>#changeshistory">回调</a>返回的数据。</p>
+        <p>除了 <a href="#versions_1">上述问题</a> 中描述的操作外，您还需要：</p>
         <ul>
-            <li>Parse the <em>changesurl</em> parameter from the <b>document editing service</b> received response with <em>status</em> <b>2</b>:
+            <li>解析来自 <b>文档编辑服务</b> 收到的 <em>status</em> 为 <b>2</b>的响应的 <em>changesurl</em> 参数：
                 <pre>{
     "changesurl": "https://documentserver/url-to-changes.zip",
     "key": "2745492410",
@@ -103,7 +103,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     }
 }</pre>
             </li>
-            <li>Add the <em>onRequestHistoryData</em> function to the configuration file together with the <em>setHistoryData</em> method and <em>events.onRequestHistoryData</em> event:
+            <li>将 <em>onRequestHistoryData</em> 函数连同 <em>setHistoryData</em> 方法和 <em>events.onRequestHistoryData</em> 事件一起添加到配置文件中：
                 <pre>var onRequestHistoryData = function(event) {
     var version = event.data;
     docEditor.setHistoryData({
@@ -125,7 +125,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     },
     ...
 });</pre>
-                The object containing the valid links to the current document version (<em>url</em>) and to the previous document version (<em>previous.url</em>) as well as the IDs (<em>key</em> and <em>previous.key</em>) must be passed to the configuration file. <em>changesUrl</em> archive file must be also available and downloadable from the browser to be able to display the changes.
+                包含指向当前文档版本 (<em>url</em>) 和先前文档版本 (<em>previous.url</em>) 的有效链接以及 ID（<em>key</em> 和 <em>previous.key</em>）的对象必须传递给配置文件。 <em>changesUrl</em> 存档文件也必须可用并可从浏览器下载，才能显示更改。
             </li>
         </ul>
     </dd>

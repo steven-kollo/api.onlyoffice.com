@@ -6,53 +6,53 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Basic concepts
+    基本概念
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Basic concepts</span>
+        <span class="hdr">基本概念</span>
     </h1>
 
-    <span class="pvl_product">ONLYOFFICE Document Server</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
+    <span class="pvl_product">ONLYOFFICE 文件服务器</span><span class="pvl_version">v<%= Products.Get("editors").Version %></span>
 
     <p class="dscr">
-        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> is an open-source office suite that includes editors for text documents, spreadsheets, presentations and fillable forms. 
-        It provides the following features:
+        <a href="<%= Url.Action("getdocs") %>">ONLYOFFICE Docs</a> 是一个开源办公套件，包括文本文档、电子表格、演示文稿和可填写表单的编辑器。
+        它提供以下功能：
     </p>
     <ul>
-        <li>creating, editing and viewing text documents, spreadsheets, presentations and fillable forms;</li>
-        <li>collaborating on files with other teammates in real time.</li>
+        <li>创建、编辑和查看文本文档、电子表格、演示文稿和可填写表单；</li>
+        <li>与其他队友实时协作处理文件。</li>
     </ul>
-    <p>ONLYOFFICE Docs also supports the <b>WOPI protocol</b> that is used to integrate your application with an online office. 
-    Further information about WOPI can be found <a href="<%= Url.Action("wopi") %>">here</a>.</li>
+    <p>ONLYOFFICE Docs 还支持用于将您的应用程序与online office集成的 <b>WOPI 协议</b>。
+    有关 WOPI 的更多信息，请参见 <a href="<%= Url.Action("wopi") %>">此处</a>。</li>
 
-    <p><b>ONLYOFFICE Docs API</b> is used to let the developers integrate the ONLYOFFICE Document/Spreadsheet/Presentation Editors into their own web sites and setup and manage the editors.</p>
+    <p><b>ONLYOFFICE Docs API</b> 用于让开发人员将 ONLYOFFICE 文档/电子表格/演示文稿编辑器集成到他们自己的网站中，并设置和管理编辑器。</p>
 
-    <p>The API JavaScript file can normally be found in the following editors folder:</p>
+    <p>API JavaScript 文件通常可以在以下编辑器文件夹中找到：</p>
     <p><b>https://documentserver/web-apps/apps/api/documents/api.js</b></p>
-    <p>Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.</p>
+    <p>其中 <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称。</p>
     <div class="note">
-        For <b>Document Server</b> versions prior to 4.0 the path to the API JavaScript file will look like this:
+        对于4.0 之前的 <b>文档服务器</b> 版本，API JavaScript 文件的路径如下所示：
         <br />
         <b>https://documentserver/OfficeWeb/apps/api/documents/api.js</b>
     </div>
 
-    <p>The target HTML file where the editors are to be embedded need to have a placeholder <em>div</em> tag, where all the information about the editor parameters will be passed:</p>
+    <p>要嵌入编辑器的目标 HTML 文件需要有一个占位符 <em>div</em> 标记，这里将传递有关编辑器参数的所有信息：</p>
 
     <pre>
 &lt;div id=&quot;placeholder&quot;&gt;&lt;/div&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;
 </pre>
 
-    <p>The page code containing the changeable parameters looks the following way:</p>
+    <p>包含可变参数的页面代码如下所示：</p>
 
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
-    <p>Where <em>config</em> is an object:</p>
+    <p>其中 <em>config</em> 是一个对象：</p>
 
     <pre>
 config = {
@@ -69,23 +69,23 @@ config = {
 };
 </pre>
     <p>
-        Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
-        See the <a href="<%= Url.Action("howitworks") %>">How it works</a> section to find out more on Document Server service client-server interactions.
+        其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
+        有关文档服务器服务客户机-服务器交互的更多信息，请参阅 <a href="<%= Url.Action("howitworks") %>">它是如何工作的</a> 部分。
     </p>
 
-    <p>From now the <i>docEditor</i> object can be used to call the <b>document editor</b> <a href="<%= Url.Action("methods") %>">Methods</a>.</p>
+    <p>从现在开始， <i>docEditor</i> 对象可用来调用 <b>文档编辑器</b> <a href="<%= Url.Action("methods") %>">方法</a>。</p>
 
     <p>
-        The example above includes all the parameters necessary for Document Server correct startup.
-        There are additional non-obligatory parameters though which can be changed to achieve different goals with your document (change access rights for the document, display different information about the document, etc.).
-        See the <a href="<%= Url.Action("advanced") %>">Advanced parameters</a> section to find out what these parameters are and how you can change them.
+        上面的示例包含了文档服务器正确启动所需的所有参数。
+        不过，还有其他非强制性参数，可以更改这些参数以实现对文档的不同操作目标（更改文档的访问权限，显示有关文档的不同信息等）。
+        请参阅 <a href="<%= Url.Action("advanced") %>">高级参数</a> 部分以了解这些参数是什么以及如何更改它们。
     </p>
 
-    <p>To prevent the substitution of important parameters, add an encrypted signature to the requests in the form of <a href="<%= Url.Action("signature/") %>">token</a>.</p>
+    <p>为防止重要参数被替换，请以 <a href="<%= Url.Action("signature/") %>">token</a>的形式在请求中添加加密签名。</p>
 
-    <h2>Get help</h2>
+    <h2>获得帮助</h2>
 
-    <p>If you have any questions about ONLYOFFICE Docs, try to find them in the <a href="<%= Url.Action("faq") %>">FAQ</a> section first.</p>
-    <p>You can request a feature or report a bug by posting an issue on <a href="https://github.com/ONLYOFFICE/DocumentServer/issues" target="_blank">GitHub</a>.</p>
-    <p>You can also ask our developers on <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE forum</a> (registration required).</p>
+    <p>如果您对 ONLYOFFICE Docs 有任何疑问，请先尝试在 <a href="<%= Url.Action("faq") %>">常问问题</a> 部分找到它们。</p>
+    <p>您可以通过在 <a href="https://github.com/ONLYOFFICE/DocumentServer/issues" target="_blank">GitHub</a>上发布问题来申请特性或报告错误。</p>
+    <p>您也可以在 <a href="https://forum.onlyoffice.com/c/document-api/39" target="_blank">ONLYOFFICE 论坛</a> 上询问我们的开发人员（需要注册）。</p>
 </asp:Content>

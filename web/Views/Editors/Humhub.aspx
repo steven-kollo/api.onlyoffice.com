@@ -6,81 +6,81 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    HumHub ONLYOFFICE connector
+    HumHub ONLYOFFICE 连接器
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">HumHub ONLYOFFICE connector</span>
+        <span class="hdr">HumHub ONLYOFFICE 连接器</span>
     </h1>
 
-    <p>This <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">plugin</a> enables users to edit office documents from <a href="https://www.humhub.com/" target="_blank">HumHub</a> using ONLYOFFICE Docs.</p>
-    <p>The plugin is available in the official <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a>.</p>
+    <p>该 <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">插件</a> 使用户可以从 <a href="https://www.humhub.com/" target="_blank">HumHub</a> 中使用 ONLYOFFICE Docs编辑办公文档。</p>
+    <p>该插件可以在官方 <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a>中获得。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this plugin: DOCX, XLSX, PPTX, DOCXF, OFORM.</li>
-        <li>The following formats are available for viewing only: ODT, ODS, ODP, DOC, XLS, PPT, TXT, PDF.</li>
-        <li>The plugin will create a new <b>Edit/View</b> menu option for Office documents. 
-            This allows multiple users to collaborate in real time and to save back those changes to HumHub.</li>
-        <li>The following formats can be converted into OOXML: ODT, ODS, ODP, DOC, XLS, PPT, TXT, CSV.</li>
+        <li>目前可以使用此插件打开和编辑以下文档格式：DOCX、XLSX、PPTX、DOCXF、OFORM。</li>
+        <li>以下格式仅供查看：ODT、ODS、ODP、DOC、XLS、PPT、TXT、PDF。</li>
+        <li>该插件将为 Office 文档创建一个新的 <b>编辑/查看</b> 菜单选项。
+            这允许多个用户实时协作并将这些更改保存回 HumHub。</li>
+        <li>以下格式可以转换为OOXML：ODT、ODS、ODP、DOC、XLS、PPT、TXT、CSV。</li>
     </ul>
 
-    <h2 id="installing-doc-serv" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="installing-doc-serv" class="copy-link">安装 ONLYOFFICE 文档
+</h2>
 
     <p>
-        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from HumHub and any end clients.
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>. ONLYOFFICE Docs must also be able to POST to HumHub directly.
-    </p>
+        您将需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 HumHub 和任何终端客户端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。ONLYOFFICE Docs 还必须能够直接发布到 HumHub。</p>
 
-    <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
-
-
-    <h2 id="installing-plugin" class="copy-link">Installing HumHub ONLYOFFICE connector</h2>
-
-    <p>
-        Either install it from <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a> or simply clone the repository inside one of the folder specified by <em>moduleAutoloadPaths</em> parameter.
-        Please see <a href="https://docs.humhub.org/docs/develop/environment#module-loader-path" target="_blank">HumHub Documentation</a> for more information.
-    </p>
+    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
-    <h2 id="configuring" class="copy-link">Configuring HumHub ONLYOFFICE connector</h2>
+    <h2 id="installing-plugin" class="copy-link">安装 HumHub ONLYOFFICE 连接器</h2>
 
     <p>
-        In order to configure plugin you must navigate to <b>Administation -> Modules</b>.
-        Find ONLYOFFICE plugin and click <b>Configure</b>.
+        从 <a href="https://www.humhub.com/en/marketplace/onlyoffice/" target="_blank">HumHub Marketplace</a> 安装它，或者简单地将存储库克隆到 <em>moduleAutoloadPaths</em> 参数指定的文件夹之一中。
+        请参阅 <a href="https://docs.humhub.org/docs/develop/environment#module-loader-path" target="_blank">HumHub 文档</a> 了解更多信息。
     </p>
 
 
-    <h2 id="how-it-works" class="copy-link">How it works</h2>
+    <h2 id="configuring" class="copy-link">配置 HumHub ONLYOFFICE 连接器</h2>
+
+    <p>
+        为了配置插件，您必须导航到 <b>Administation -> Modules</b>。
+        找到 ONLYOFFICE 插件并点击 <b>配置</b>。
+    </p>
+
+
+    <h2 id="how-it-works" class="copy-link">它是如何运作的</h2>
 
     <ol>
-        <li>When creating a new file, the user will be provided with <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> options in the <b>Create document</b> menu.</li>
-        <li>The browser invokes the <em>index</em> method in the <em>/controllers/CreateController.php</em> controller.</li>
-        <li>Or, when opening an existing file, the user will be provided with <b>View document</b> or <b>Edit document</b> depending on an extension.</li>
-        <li>A popup is opened and the <em>index</em> method of the <em>/controllers/OpenController.php</em> controller is invoked.</li>
+        <li>创建新文件时，将在 <b>创建文档 </b>菜单中为用户提供 <b>文档</b>、 <b>电子表格</b> 或 <b>演示文稿</b> 选项。</li>
+        <li>浏览器调用 <em>/controllers/CreateController.php</em> 控制器中的 <em>index</em> 方法。</li>
+        <li>或者，当打开现有文件时，将根据扩展名向用户提供 <b>查看文档</b> 或 <b>编辑文档</b>。</li>
+        <li>打开一个弹出窗口并调用 <em>/controllers/OpenController.php</em> 控制器的 <em>index</em> 方法。</li>
         <li>
-            <p>The app prepares a JSON object with the following properties:</p>
+            <p>该应用程序准备一个具有以下属性的 JSON 对象：</p>
             <ul>
-                <li><b>url</b> - the URL that ONLYOFFICE Docs uses to download the document;</li>
-                <li><b>callbackUrl</b> - the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>key</b> - the random MD5 hash to instruct ONLYOFFICE Docs whether to download the document again or not;</li>
-                <li><b>title</b> - the document title (name);</li>
-                <li><b>id</b> - the user identification;</li>
-                <li><b>name</b> - the user name.</li>
+                <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL；</li>
+                <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>key</b> - 用于指示 ONLYOFFICE Docs 是否再次下载文档的随机 MD5 哈希值；</li>
+                <li><b>title</b> - 文档标题（名称）；</li>
+                <li><b>id</b> - 用户标识；</li>
+                <li><b>name</b> - 用户名。</li>
             </ul>
         </li>
-        <li>HumHub takes this object and constructs a page from <em>views/open/index.php</em> template, filling in all of those values so that the client browser can load up the editor.</li>
-        <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
-        <li>Then ONLYOFFICE Docs downloads the document from HumHub and the user begins editing.</li>
-        <li>ONLYOFFICE Docs sends a POST request to the <em>callbackUrl</em> to inform HumHub that a user is editing the document.</li>
-        <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <em>callbackUrl</em> letting HumHub know that the clients have finished editing the document and closed it.</li>
-        <li>HumHub downloads a new version of the document, replacing the old one.</li>
+        <li>HumHub 接受这个对象并从 <em>views/open/index.php</em> 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
+        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送具有上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE Docs 从 HumHub 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE Docs 向 <em>callbackUrl</em> 发送 POST 请求，通知 HumHub 用户正在编辑文档。</li>
+        <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向 <em>callbackUrl</em> 发送一个 POST，让 HumHub 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>HumHub 下载文档的新版本，替换旧版本。</li>
     </ol>
 
     <br />
-    <p>Download the HumHub ONLYOFFICE connector <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">here</a>.</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-humhub" target="_blank">此处</a>下载 HumHub ONLYOFFICE 连接器。</p>
 
 </asp:Content>

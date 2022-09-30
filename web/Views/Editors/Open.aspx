@@ -6,44 +6,44 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Opening File
+    打开文件
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Opening file</span>
+        <span class="hdr">打开文件</span>
     </h1>
-    <p class="dscr">The reference figure and the steps below explain the process of opening a document in ONLYOFFICE Document Server.</p>
-    <img alt="Opening File" src="<%= Url.Content("~/content/img/editor/opening.jpg") %>" />
+    <p class="dscr">参考图和以下步骤说明了在 ONLYOFFICE 文档服务器中打开文档的过程。
+    </p><img alt="打开文件" src="<%= Url.Content("~/content/img/editor/opening.jpg") %>" />
     <ol>
-        <li>The user uses the <b>document manager</b> (found in his/her browser) to open the document for viewing or editing.
-            <div class="note">The browser <b>document manager</b> receives the list of all documents available to the user from the <b>document storage service</b>.</div>
+        <li>用户使用 <b>文档管理器</b> （在他/她的浏览器中找到）打开文档进行查看或编辑。
+            <div class="note">浏览器 <b>文档管理器</b> 从 <b>文档存储服务</b>接收用户可用的所有文档的列表。</div>
         </li>
-        <li>The document identifier and the link to it at the <b>document storage service</b> are sent using the <a href="<%= Url.Action("basic") %>">JavaScript API</a> to the <b>document editor</b>.</li>
+        <li><b>文档存储服务</b> 中的文档标识符和指向它的链接使用 <a href="<%= Url.Action("basic") %>">JavaScript API</a> 发送到 <b>文档编辑器</b>。
+        </li>
+        <li><b>文档编辑器</b> 向 <b>文档编辑服务</b> 形成请求以打开文档。
+            <b>文档编辑器</b> 使用从 <b>文档管理器</b> 接收到的文档标识符及其链接（在步骤 2）。
+        </li>
         <li>
-            The <b>document editor</b> forms a request to the <b>document editing service</b> for document opening.
-            The <b>document editor</b> uses the document identifier and its link received from the <b>document manager</b> (at step 2).
+            <b>文档编辑服务</b> 使用提供 的ID 和链接从 <b>文档存储服务</b> 下载文档文件。
+            在此步骤中，还将文件 <a href="<%= Url.Action("conversion") %>">转换</a> 为 Office Open XML 格式，以使 <b>文档编辑器</b> 具有更好的性能和格式兼容性。
         </li>
-        <li>
-            The <b>document editing service</b> downloads the document file from the <b>document storage service</b> using the ID and link provided.
-            At this step the <a href="<%= Url.Action("conversion") %>">conversion</a> of the file into Office Open XML format is also performed for the <b>document editor</b> better performance and formats compatibility.
-        </li>
-        <li>When ready the <b>document editing service</b> transfers the document file to the browser-based <b>document editor</b>.</li>
-        <li>The <b>document editor</b> displays the document file and/or (in case the appropriate rights are provided) allows its editing.</li>
+        <li>准备就绪后， <b>文档编辑服务</b> 将文档文件传输到基于浏览器的 <b>文档编辑器</b>。</li>
+        <li><b>文档编辑器</b> 显示文档文件和/或（在提供适当权限的情况下）允许对其进行编辑。</li>
     </ol>
-    <p>After the editing is finished, the <a href="<%= Url.Action("save") %>">document saving</a> process takes place.</p>
+    <p>编辑完成后，将进行 <a href="<%= Url.Action("save") %>">文档保存</a> 过程。</p>
 
-    <h2 id="apply" class="copy-link">How this can be done in practice</h2>
+    <h2 id="apply" class="copy-link">如何在实践中做到这一点</h2>
     <ol>
-        <li>Create an empty <em>html</em> file.</li>
-        <li>Add the <em>div</em> element as shown below.
+        <li>创建一个空的 <em>html</em> 文件。</li>
+        <li>添加 <em>div</em> 元素，如下所示。
             <pre>&lt;div id=&quot;placeholder&quot;&gt;&lt;/div&gt;</pre>
         </li>
-        <li>Specify your ONLYOFFICE Document Server link with the JavaScript API that will be used for your website.
-            <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;https://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre>
-            Where the <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed.
+        <li>使用将用于您的网站的 JavaScript API 指定您的 ONLYOFFICE 文档服务器链接。
+            <pre>&lt;script type=&quot;text/javascript&quot; src=&quot;https://documentserver/web-apps/apps/api/documents/api.js&quot;&gt;&lt;/script&gt;</pre> 其中
+            <b>documentserver</b> 是安装了 ONLYOFFICE 文档服务器的服务器的名称。
         </li>
-        <li>Add the script initializing the <b>Document Editor</b> for the <em>div</em> element with the configuration for the document you want to open.
+        <li>添加脚本，使用要打开的文档的配置为 <em>div</em> 元素初始化 <b>文档编辑器</b>。
             <pre>
 new DocsAPI.DocEditor("placeholder", {
     "document": {
@@ -55,8 +55,8 @@ new DocsAPI.DocEditor("placeholder", {
     "documentType": "word"
 });
 </pre>
-            Where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.
+            其中 <b>example.com</b> 是安装了 <b>文档管理器</b> 和 <b>文档存储服务</b> 的服务器的名称。
         </li>
-        <li>Open your <em>html</em> file in the browser.</li>
+        <li>在浏览器中打开您的 <em>html</em> 文件。</li>
     </ol>
 </asp:Content>

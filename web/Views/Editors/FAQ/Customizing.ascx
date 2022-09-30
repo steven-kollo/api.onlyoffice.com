@@ -1,37 +1,37 @@
-<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
+﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl" %>
 
 <h1>
-    <span class="hdr">Document Server FAQ: <br />
-        Customizing questions</span>
+    <span class="hdr">文档服务器常见问题解答： <br />
+        定制问题</span>
 </h1>
 
 <% Html.RenderPartial("FAQ/FAQShared/ExpandCollapse");%>
 <dl class="faq_block" id="customizing_1">
-    <dt>How to whitelabel ONLYOFFICE Document Server?</dt>
+    <dt>如何对 ONLYOFFICE 文档服务器进行白标？</dt>
     <dd>
-        <p>The below options can be edited for whitelabeling your version of Document Server, changing the information which will be displayed at the <b>About</b> page and visible to all editor users.</p>
-        <div class="note">Please note that changing these options is only available to the <a target="_blank" href="https://www.onlyoffice.com/developer-edition-prices.aspx">ONLYOFFICE Developer Edition</a> users.</div>
+        <p>可以编辑以下选项来为您的文档服务器版本添加白标签，更改显示在 <b>关于</b> 页面上并对所有编辑器用户可见的信息。</p>
+        <div class="note">请注意，更改这些选项仅适用于 <a target="_blank" href="https://www.onlyoffice.com/zh/developer-edition-prices.aspx">ONLYOFFICE 开发者版</a> 用户。</div>
         <ul>
-            <li><em>editorConfig.customization.customer</em> options:
+            <li><em>editorConfig.customization.customer</em> 选项：
                 <ul>
-                    <li><em>editorConfig.customization.customer.address</em> is used to specify the postal address of the company or person;</li>
-                    <li><em>editorConfig.customization.customer.info</em> is used to give some additional information about the company or person;</li>
-                    <li><em>editorConfig.customization.customer.logo</em> is used to specify the path to the image logo;</li>
-                    <li><em>editorConfig.customization.customer.logoDark</em> is used to specify the path to the image logo for the dark theme;</li>
-                    <li><em>editorConfig.customization.customer.mail</em> is used to specify the email address of the company or person;</li>
-                    <li><em>editorConfig.customization.customer.name</em> is used to specify the name of the company or person who gives access to the editors or the editor authors;</li>
-                    <li><em>editorConfig.customization.customer.www</em> is used to specify the home website address of the company or person.</li>
+                    <li><em>editorConfig.customization.customer.address</em> 用于指定公司或个人的邮政地址；</li>
+                    <li><em>editorConfig.customization.customer.info</em> 用于提供有关公司或个人的一些附加信息；</li>
+                    <li><em>editorConfig.customization.customer.logo</em> 用于指定logo图片的路径；</li>
+                    <li><em>editorConfig.customization.customer.logoDark</em> 用于指定深色主题的logo图片路径；</li>
+                    <li><em>editorConfig.customization.customer.mail</em> 用于指定公司或个人的电子邮件地址；</li>
+                    <li><em>editorConfig.customization.customer.name</em> 用于指定授予编辑或编辑作者访问权限的公司或个人的名称；</li>
+                    <li><em>editorConfig.customization.customer.www</em> 用于指定公司或个人的主页地址。</li>
                 </ul>
             </li>
-            <li><em>editorConfig.customization.logo</em> options:
+            <li><em>editorConfig.customization.logo</em> 选项：
                 <ul>
-                    <li><em>editorConfig.customization.logo.image</em> is used to specify the path to the image file used to show in the common work mode (i.e. in view and edit modes for all editors) or in the embedded mode;</li>
-                    <li><em>editorConfig.customization.logo.imageDark</em> is used to specify the path to the image file used for the dark theme;</li>
-                    <li><em>editorConfig.customization.logo.url</em> is used to specify the absolute URL which will be used when someone clicks the logo image (you can leave as an empty string or null to make the logo not clickable).</li>
+                    <li><em>editorConfig.customization.logo.image</em> 用于指定图像文件的路径，该图像在普通工作模式（即所有编辑器的查看和编辑模式）或嵌入模式下显示；</li>
+                    <li><em>editorConfig.customization.logo.imageDark</em> 用于指定用于深色主题的图像文件的路径；</li>
+                    <li><em>editorConfig.customization.logo.url</em> 用于指定当有人单击徽标图像时将使用的绝对 URL（您可以保留为空字符串或 null 以使徽标不可点击）。</li>
                 </ul>
             </li>
         </ul>
-        <p>With all the above fields filled, the <em>customization</em> configuration will look like this:</p>
+        <p>填写所有上述字段后， <em>定制</em> 配置将如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {
@@ -47,7 +47,7 @@
             "logo": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://www.onlyoffice.com"
+                "url": "https://www.onlyoffice.com/zh/"
             },
             ...
         },
@@ -55,13 +55,13 @@
     },
     ...
 });</pre>
-        <p>Further information about the customization can be found <a href="<%= Url.Action("config/editor/customization") %>">at this page</a>.</p>
+        <p>有关定制的更多信息，请参见 <a href="<%= Url.Action("config/editor/customization") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_2">
-    <dt>How to change the default language of the Document Server interface?</dt>
+    <dt>如何更改文档服务器界面的默认语言？</dt>
     <dd>
-        <p>If the interface language is present in the <a target="_blank" href="https://helpcenter.onlyoffice.com/server/document/available-languages.aspx">list of available Document Server languages</a>, you can simply use the <em>editorConfig.lang</em> property in the configuration file to set it to the necessary locale, like this:</p>
+        <p>如果界面语言出现在 <a target="_blank" href="https://helpcenter.onlyoffice.com/server/document/available-languages.aspx">可用的文档服务器语言列表</a>中，您可以简单地使用配置文件中的 <em>editorConfig.lang</em> 属性将其设置为必要的语言环境，如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "lang": "de",
@@ -69,14 +69,14 @@
     },
     ...
 });</pre>
-        <p>If the language is not available and you want to translate it or have already translated it to your own language, please see <a target="_blank" href="https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx">this article</a> to find out how to install it to your Document Server.</p>
-        <p>Further information about the language settings can be found <a href="<%= Url.Action("config/editor") %>">at this page</a>.</p>
+        <p>如果该语言不可用并且您想要将其翻译或已经将其翻译成您自己的语言，请参阅 <a target="_blank" href="https://helpcenter.onlyoffice.com/server/docker/document/add-interface-language.aspx">此文</a> 以了解如何将其安装到您的文档服务器。</p>
+        <p>有关语言设置的更多信息，请参见 <a href="<%= Url.Action("config/editor") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_3">
-    <dt>How to enable or disable the chat and/or the comments panel in the editors?</dt>
+    <dt>如何启用或禁用编辑器中的聊天和/或评论面板？</dt>
     <dd>
-        <p>The chat and comments are enabled by default. To disable them use the <em>document.permissions.comment</em> and <em>document.permissions.chat</em> parameters with the values set to <b>false</b> in the configuration file respectively:</p>
+        <p>默认情况下聊天和评论是被启用的。要禁用它们，请使用 <em>document.permissions.comment</em> 和 <em>document.permissions.chat</em> 参数，并在配置文件中将它们的值分别设置为 <b>false</b> ：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "permissions": {
@@ -88,14 +88,14 @@
     },
     ...
 });</pre>
-        <p>This will disable both the <b>Chat</b> and <b>Comments</b> buttons and their functionality.</p>
-        <p>Further information about the customization can be found <a href="<%= Url.Action("config/editor/customization") %>">at this page</a>.</p>
+        <p>这将禁用 <b>聊天</b> 和 <b>评论</b> 按钮及其功能。</p>
+        <p>有关定制的更多信息，请参见 <a href="<%= Url.Action("config/editor/customization") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_4">
-    <dt>How to customize the editors interface, e.g. adjust the top toolbar view?</dt>
+    <dt>如何自定义编辑器界面，例如调整顶部工具栏视图？</dt>
     <dd>
-        <p>You can either display the full top toolbar or its compact version. To control this the <em>editorConfig.customization.compactToolbar</em> parameter is used. With the default <b>false</b> value the top toolbar will have its usual view. If you want to display its compact variant, the configuration will have to look like this:</p>
+        <p>您可以显示完整的顶部工具栏或其紧凑版本。为了控制这一点，使用 <em>editorConfig.customization.compactToolbar</em> 参数。使用默认的 <b>false</b> 值，顶部工具栏将具有其通常的视图。如果要显示其紧凑型变体，则配置必须如下所示：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
         "customization": {
@@ -106,13 +106,13 @@
     },
     ...
 });</pre>
-        <p>Further information about the customization can be found <a href="<%= Url.Action("config/editor/customization") %>">at this page</a>.</p>
+        <p>有关定制的更多信息，请参见 <a href="<%= Url.Action("config/editor/customization") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_5">
-    <dt>How to view and change the document additional parameters, e.g. its owner or uploading date?</dt>
+    <dt>如何查看和更改文档的附加参数，例如其所有者或上传日期？</dt>
     <dd>
-        <p>The document owner and uploading date is affected by the <em>document.info.owner</em> and <em>document.info.uploaded</em> parameter respectively. You can pass these settings from some database of yours to the document configuration file the following way:</p>
+        <p>文档所有者和上传日期分别受 <em>document.info.owner</em> 和 <em>document.info.uploaded</em> 参数影响。您可以通过以下方式将这些设置从您的某个数据库传递到文档配置文件：</p>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "document": {
         "info": {
@@ -123,49 +123,49 @@
     },
     ...
 });</pre>
-        <p>This values will be displayed in the <b>File</b> > <b>Document Info...</b> menu option.</p>
-        <p>Further information about these settings can be found <a href="<%= Url.Action("config/document/info") %>">at this page</a>.</p>
+        <p>该值将显示在 <b>文件</b> > <b>文档信息...</b> 菜单选项中。</p>
+        <p>有关这些设置的更多信息，请参见 <a href="<%= Url.Action("config/document/info") %>">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_6">
-    <dt>How to optimize the appearance of editors for a desktop computer, or for a mobile device, or for embedding into a web page?</dt>
+    <dt>如何优化桌面计算机、移动设备或嵌入网页的编辑器的外观？</dt>
     <dd>
-        <p>There are three main appearances of the editors, optimized for different use:</p>
+        <p>编辑器有三种主要外观，针对不同用途进行了优化：</p>
         <ul>
             <li>
-                <b>desktop</b>, which is optimized for the display in desktop computer browsers:
+                <b>desktop</b>，针对桌面计算机浏览器中的显示进行了优化:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "type": "desktop",
     ...
 });</pre>
             </li>
             <li>
-                <b>mobile</b>, which is optimized for the display in mobile device browsers:
+                <b>mobile</b>，针对移动设备浏览器中的显示进行了优化:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "type": "mobile",
     ...
 });</pre>
             </li>
             <li>
-                <b>embedded</b>, which is optimized for the embedding the documents into a website page:
+                <b>embedded</b>，针对将文档嵌入到网页进行了优化:
                 <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "type": "embedded",
     ...
 });</pre>
             </li>
         </ul>
-        <p>You can use any appearance for mobile devices or to embed the document to your webpage, but it is more logical to use the specific display type.</p>
-        <p>Further information about the display type can be found <a href="<%= Url.Action("config") %>#type">at this page</a>.</p>
+        <p>您可以为移动设备使用任何外观或将文档嵌入到您的网页中，但使用特定的显示类型更符合逻辑。</p>
+        <p>有关显示类型的更多信息，请参见 <a href="<%= Url.Action("config") %>#type">此页面</a>。</p>
     </dd>
 </dl>
 <dl class="faq_block" id="customizing_7">
-    <dt>How to connect plugins to Document Server so that they become visible for all editor users?</dt>
+    <dt>如何将插件连接到文档服务器以便所有编辑器用户都可以看到它们？</dt>
     <dd>
-        <p>To enable plugins for all Document Server users, you need the following:</p>
+        <p>要为所有文档服务器用户启用插件，您需要参考以下内容：</p>
         <ul>
-            <li>Get the plugins (this can be done using our plugin repository on <a target="_blank" href="https://github.com/ONLYOFFICE/sdkjs-plugins">GitHub</a> or you can write your own plugin).</li>
-            <li>Put the plugins to the folder accessible by Document Editor.</li>
-            <li>Change the configuration file the following way:</li>
+            <li>获取插件（这可以使用我们在 <a target="_blank" href="https://github.com/ONLYOFFICE/sdkjs-plugins">GitHub</a> 上的插件存储库来完成，或者您可以编写自己的插件）。</li>
+            <li>将插件放到文档编辑器可访问的文件夹中。</li>
+            <li>通过以下方式更改配置文件：</li>
         </ul>
         <pre>var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
@@ -185,7 +185,7 @@
     },
     ...
 });</pre>
-        <p>Where <em>editorConfig.plugins.autostart</em> is the array of the GUIDs for the plugins that you want to start automatically when Document Server is started (as defined in the plugin <a href="<%= Url.Action("config", "plugin") %>#guid">config.json</a> file), and <em>editorConfig.plugins.pluginsData</em> is the array of the <b>config.json</b> configuration files for all the plugins that you want to be available to Document Server users.</p>
-        <p>Further information about enabling the plugins for Document Server can be found <a href="<%= Url.Action("config/editor/plugins") %>">at this page</a>.</p>
+        <p>其中 <em>editorConfig.plugins.autostart</em> 是您希望在 文档服务器启动时自动启动的插件的 GUID 数组（在插件 <a href="<%= Url.Action("config", "plugin") %>#guid">config.json</a> 文件中定义）， <em>editorConfig.plugins.pluginsData</em> 是您希望文档服务器用户可以使用的所有插件的 <b>config.json</b> 配置文件数组。</p>
+        <p>有关启用 Document Server 插件的更多信息，请参见 <a href="<%= Url.Action("config/editor/plugins") %>">此页面</a>。</p>
     </dd>
 </dl>

@@ -6,140 +6,140 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ownCloud ONLYOFFICE integration app
+    ownCloud ONLYOFFICE 集成应用
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">ownCloud ONLYOFFICE integration app</span>
+        <span class="hdr">ownCloud ONLYOFFICE 集成应用</span>
     </h1>
 
-    <div class="video-link" title="Show video">
-        <img src="<%= Url.Content("~/content/img/video/owncloud_integration.png") %>" alt="Show video" />
+    <div class="video-link" title="播放视频">
+        <img src="<%= Url.Content("~/content/img/video/owncloud_integration.png") %>" alt="播放视频" /><div class="popap-dialog">
 
-        <div class="popap-dialog">
             <div class="popap-container">
-                <div class="popap-header">How to integrate ONLYOFFICE Docs with ownCloud</div>
+                <div class="popap-header">如何将ONLYOFFICE文档与ownCloud集成</div>
                 <iframe src="https://www.youtube.com/embed/IAjhUxBWKkQ?wmode=transparent" class="video-frame" frameborder="0" allowfullscreen></iframe>
-                <a class="button-close button">Close</a>
+                <a class="button-close button">关闭</a>
             </div>
-            <div class="button-close popap-close" title="Close">&times;</div>
+            <div class="button-close popap-close" title="关闭">&times;</div>
         </div>
     </div>
 
     <p>
-        This <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">app</a> enables users to edit office documents from <a href="https://owncloud.com" target="_blank">ownCloud</a> using ONLYOFFICE Docs.
+        此 <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">应用程序</a> 使用户可以从 <a href="https://owncloud.com" target="_blank">ownCloud</a> 中使用 ONLYOFFICE Docs 编辑office文档。
     </p>
-    <p>The latest connector signed versions are available in the official store for <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>.</p>
+    <p>
+        最新的连接器签名版本可在 <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>的官方商店中获得。</p>
     
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>Currently the following document formats can be opened and edited with this app: DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM.</li>
-        <li>The following formats are available for viewing only: PDF, DJVU, XPS.</li>
+        <li>目前可以使用此应用程序打开和编辑以下文档格式：DOCX, XLSX, PPTX, CSV, TXT, DOCXF, OFORM。</li>
+        <li>以下格式仅供查看：PDF, DJVU, XPS。</li>
         <li>
-            The app will create an item in the <b>new (+)</b> menu to create <b>Document</b>, <b>Spreadsheet</b>, <b>Presentation</b>.
-            It will also create a new <b>Open in ONLYOFFICE</b> menu option within the document library for Office documents.
-            This allows multiple users to collaborate in real time and to save back those changes to ownCloud. 
-            Co-editing is also available between several federated ownCloud instances connected to one Document Server.
+            该应用程序将在 <b>新建 (+)</b> 菜单中创建一个菜单项，这个菜单项用来创建 <b>文档</b>、 <b>电子表格</b>或 <b>演示文稿</b>。
+            它还将在 Office 文档的文档库中创建一个新的 <b>在 ONLYOFFICE 中打开</b> 菜单选项。
+            这允许多个用户实时协作并将这些更改保存到ownCloud中。
+            在连接到一个文档服务器的多个联合 ownCloud 实例之间也可以进行共同编辑。
         </li>
-        <li>Sharing files is possible with different permission types - viewing/editing, commenting, reviewing, filling forms. It's also possible to restrict downloading (in all editors) and modifying filters (in spreadshhets). Sharing via public link is also available.</li>
-        <li>The following formats can be converted into OOXML: DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX. 
-            ODT, ODS, and ODP are also available for instant conversion. After you enable the corresponding option in the admin settings, ODF-formatted documents are immediately converted in the editor and opened after you click on it.
+        <li>可以使用不同的权限类型共享文件 - 查看/编辑、评论、审查、填写表单。也可以限制下载（在所有编辑器中）和修改过滤器（在电子表格中）。也可以通过公共链接分享。</li>
+        <li>以下格式可以转换为OOXML：DOC, DOCM, DOT, DOTX, EPUB, HTM, HTML, ODP, ODT, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM, RTF, XLS, XLSM, XLT, XLTM, XLTX。
+            ODT、ODS 和 ODP 也可用于即时转换。在管理设置中启用相应选项后，ODF 格式的文档会立即在编辑器中转换并在您单击后打开。
         </li>
-        <li>It is possible to work with documents, spreadsheets, and presentations within <b>ownCloud Web</b>.</li>
+        <li>可以在 <b>ownCloud Web</b>中处理文档、电子表格和演示文稿。</li>
     </ul>
 
-    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        You will need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from ownCloud and any end clients.
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>.
-        ONLYOFFICE Docs must also be able to POST to ownCloud directly.
+        您将需要一个 ONLYOFFICE Docs（文档服务器）实例，该实例可从 ownCloud 和任何终端客户端解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">
+        ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE Docs 还必须能够直接发布到 ownCloud。
     </p>
     <p>
-        ONLYOFFICE Docs and ownCloud can be installed either on different computers, or on the same machine.
-        In case you select the latter variant, you will need to set up a custom port for Document Server as by default both ONLYOFFICE Docs and ownCloud work on port 80.
-        Or you can use Document Server behind a proxy, please refer to <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">this article</a> to learn how you can configure it.
-    </p>
-    <p>The easiest way to start an instance of ONLYOFFICE Docs is to use <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>.</p>
-    <p>You can also use our <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud">Docker installation</a> to get installed and configured Document Server and ownCloud installation with a couple of commands.</p>
+        ONLYOFFICE Docs 和 ownCloud 可以安装在不同的计算机上，也可以安装在同一台机器上。
+        如果您选择后一种变体，您需要为文档服务器设置一个自定义端口，因为默认情况下 ONLYOFFICE Docs 和 ownCloud 都在端口 80 上工作。
+        或者您可以在代理后面使用文档服务器，请参阅 <a href="https://helpcenter.onlyoffice.com/server/document/document-server-proxy.aspx">此文</a> 了解如何配置它。</p>
+    <p>启动 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/ONLYOFFICE/Docker-DocumentServer" target="_blank">Docker</a>。</p>
+    <p>您还可以使用我们的 <a target="_blank" href="https://github.com/ONLYOFFICE/docker-onlyoffice-owncloud">Docker 安装</a> 通过几个命令来安装和配置文档服务器和 ownCloud 安装。</p>
 
 
-    <h2 id="install" class="copy-link">Installing ownCloud ONLYOFFICE integration app</h2>
+    <h2 id="install" class="copy-link">安装 ownCloud ONLYOFFICE 集成应用</h2>
     <p>
-        The ownCloud administrator can install the integration app from the in-built application market.
-        For that click the upper-left hamburger menu and select <b>Market</b>.
-        After that find <b>ONLYOFFICE</b> in the list of available applications and install it.
+        ownCloud 管理员可以从内置应用程序市场安装集成应用程序。
+        为此，单击左上角的汉堡菜单并选择 <b>商城</b>。
+        之后在可用应用程序列表中找到 <b>ONLYOFFICE</b> 并安装它。
     </p>
     <p>
-        If the server with the ownCloud installed does not have the Internet access, or if you need it for some other reason, the administrator can install the application manually.
-        To start using ONLYOFFICE Docs with ownCloud, the following steps must be performed:
+        如果安装了ownCloud的服务器不能上网，或者因为其他原因需要，管理员可以手动安装应用程序。
+        要开始将 ONLYOFFICE Docs 与 ownCloud 一起使用，必须执行以下步骤：
     </p>
     <ol>
-        <li>Go to the ownCloud server <em>apps/</em> directory (or some other directory <a href="https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">used</a> to connect applications):
+        <li>转到 ownCloud 服务器的 <em>apps/</em> 目录（或其他一些 <a href="https://doc.owncloud.org/server/admin_manual/installation/apps_management_installation.html#using-custom-app-directories" target="_blank">用于</a> 连接应用程序的目录）：
             <span class="commandline">cd apps/</span>
         </li>
-        <li>Get the ownCloud ONLYOFFICE integration app.
-            There are several ways to do that:
+        <li>获取 ownCloud ONLYOFFICE 集成应用程序。
+            有几种方法可以做到这一点：
             <ol style="list-style-type: lower-alpha;">
-                <li>Download the latest signed version from the official store for <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>.</li>
-                <li>Download the latest signed version from the application <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases">release page</a> on GitHub.</li>
-                <li>Clone the application source code and compile it yourself:
+                <li>从 <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">ownCloud</a>官方商店下载最新的签名版本。</li>
+                <li>从GitHub 上的应用程序 <a target="_blank" href="https://github.com/ONLYOFFICE/onlyoffice-owncloud/releases">发布页面</a> 下载最新的签名版本。</li>
+                <li>克隆应用程序源代码并自己编译：
                     <span class="commandline">git clone https://github.com/ONLYOFFICE/onlyoffice-owncloud.git onlyoffice
 cd onlyoffice
 git submodule update --init --recursive</span>
                 </li>
             </ol>
-            <div class="note">ownCloud does not work with unsigned applications giving an alert, so you will need to use either the option <b>a</b> or <b>b</b> to get the application.</div>
+            <div class="note">ownCloud 不适用于发出警报的未签名应用程序，因此您需要使用选项 <b>a</b> 或 <b>b</b> 来获取应用程序。</div>
         </li>
-        <li>Change the owner to update the application right from ownCloud web interface:
+        <li>更改所有者以从 ownCloud Web 界面更新应用程序：
             <span class="commandline">chown -R www-data:www-data onlyoffice</span>
         </li>
-        <li>In ownCloud open the <em>~/settings/admin?sectionid=apps&category=disabled</em> page with <b>Not enabled</b> apps by administrator and click <b>Enable</b> for the <b>ONLYOFFICE</b> application.</li>
+        <li>在 ownCloud 中打开 <em>~/settings/admin?sectionid=apps&category=disabled</em> 页面，其中管理员 <b>未启用</b> 应用程序，然后单击 <b>ONLYOFFICE</b> 应用程序的<b>启用</b>。</li>
     </ol>
 
 
-    <h2 id="settings" class="copy-link">Configuring ownCloud ONLYOFFICE integration app</h2>
+    <h2 id="settings" class="copy-link">配置 ownCloud ONLYOFFICE 集成应用</h2>
     <p>
-        In ownCloud open the <em>~/settings/admin?sectionid=additional#onlyoffice</em> page with administrative settings for <b>ONLYOFFICE</b> section.
-        Enter the following address to connect ONLYOFFICE Docs:
+        在 ownCloud 中打开 <em>~/settings/admin?sectionid=additional#onlyoffice</em> 页面，其中包含 <b>ONLYOFFICE</b> 部分的管理设置。
+        输入以下地址连接ONLYOFFICE Docs：
     </p>
     <span class="commandline">https://&lt;documentserver&gt;/</span>
 
     <p>
-        where the <b>documentserver</b> is the name of the server with the <b>ONLYOFFICE Docs</b> installed.
-        The address must be accessible for the user browser and from the ownCloud server.
-        The ownCloud server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
+        其中 <b>documentserver</b> 是安装了 <b>ONLYOFFICE Docs</b> 的服务器的名称。
+        用户浏览器和 ownCloud 服务器必须可以访问该地址。
+        ownCloud 服务器地址也必须可以从 <b>ONLYOFFICE Docs</b> 访问才能正常工作。
     </p>
-    <img alt="Local" src="<%= Url.Content("~/content/img/editor/owncloud-local.jpg") %>" />
+    <img alt="本地网络" src="<%= Url.Content("~/content/img/editor/owncloud-local.jpg") %>" />
 
     <p id="internalUrl">
-        Sometimes your network configuration might not allow the requests between installed ownCloud and ONLYOFFICE Docs using the public addresses.
-        The <b>Advanced server settings</b> allows to set the ONLYOFFICE Docs address for internal requests from ownCloud server and the returning ownCloud address for the internal requests from ONLYOFFICE Docs.
-        You need to enter them in the appropriate fields.
+        有时您的网络配置可能不允许使用公共地址在已安装的 ownCloud 和 ONLYOFFICE Docs 之间进行请求。
+        <b>高级服务器设置</b> 允许为来自ownCloud服务器的内部请求设置ONLYOFFICE Docs地址，为来自ONLYOFFICE Docs的内部请求设置返回的ownCloud地址。
+        您需要在相应的字段中输入它们。
     </p>
-    <img alt="Public" src="<%= Url.Content("~/content/img/editor/owncloud-public.jpg") %>" />
+    <img alt="公共网络" src="<%= Url.Content("~/content/img/editor/owncloud-public.jpg") %>" />
 
     <p>
-        To restrict the access to ONLYOFFICE Docs and for security reasons and data integrity the encrypted signature is used.
-        Specify the <b>Secret key</b> in the ownCloud administrative configuration.
-        In the ONLYOFFICE Docs <a href="<%= Url.Action("signature") %>">config file</a> specify the same secret key and enable the validation.
+        为了限制对 ONLYOFFICE Docs 的访问，出于安全原因和数据完整性，使用了加密签名。
+        在 ownCloud 管理配置中指定 <b>Secret key</b>。
+        在 ONLYOFFICE Docs <a href="<%= Url.Action("signature") %>">配置文件</a> 中指定相同的secret key并启用验证。
     </p>
 
-    <p>Enable or disable the <b>Open file in the same tab</b> setting.</p>
+    <p>启用或禁用 <b>在同一选项卡中打开文件</b> 设置。</p>
 
     <p>
-        The <b>Open in ONLYOFFICE</b> action will be added to the file context menu.
-        You can specify this action as default and it will be used when the file name is clicked for the selected file types.
+        在 <b>ONLYOFFICE 中打开</b> 操作将被添加到文件上下文菜单中。
+        您可以将此操作指定为默认操作，当单击所选文件类型的文件名时将使用该操作。
     </p>
 
-    <h2 id="ownCloud-web" class="copy-link">Enabling editing for ownCloud Web</h2>
-    <p>To enable work within <b>ownCloud Web</b>, register the connector in the ownCloud Web <em>config.json</em>:</p>
+    <h2 id="ownCloud-web" class="copy-link">为 ownCloud Web 启用编辑</h2>
+    <p>要在 <b>ownCloud Web</b>中启用工作，请在 ownCloud Web <em>config.json</em>中注册连接器：</p>
     <ul>
-        <li>If you installed ownCloud Web from the <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">official marketplace</a>, the path is <em>&lt;owncloud-root-catalog&gt;/config/config.json</em>.</li>
-        <li>If you compiled it from source code yourself using <a href="#install">this instruction</a>, the path is <em>&lt;owncloud-web-root-catalog&gt;/config/config.json</em>.</li>
+        <li>如果您从 <a target="_blank" href="https://marketplace.owncloud.com/apps/onlyoffice">官方商城安装 ownCloud Web</a>，则路径为 <em>&lt;owncloud-root-catalog&gt;/config/config.json</em>。</li>
+        <li>如果您使用 <a href="#install">这条指令</a>自己从源代码编译它，则路径为 <em>&lt;owncloud-web-root-catalog&gt;/config/config.json</em>。</li>
     </ul>
-    <p>To register the connector, use these lines:</p>
+    <p>要注册连接器，请使用以下行：</p>
     <pre>
 "external_apps": [
     {
@@ -149,92 +149,92 @@ git submodule update --init --recursive</span>
 ]
 </pre>
     
-    <h2 id="howitworks" class="copy-link">How it works</h2>
+    <h2 id="howitworks" class="copy-link">它是如何运作的</h2>
     <ol>
-        <li>When creating a new file, the user navigates to a document folder within ownCloud and clicks the <b>Document</b>, <b>Spreadsheet</b> or <b>Presentation</b> item in the <b>new (+)</b> menu.</li>
+        <li>创建新文件时，用户导航到 ownCloud 中的文档文件夹，然后单击 <b>新建 (+)</b>菜单中的 <b>文档</b> 、 <b>电子表格</b> 或 <b>演示文稿</b> 菜单项。</li>
         <li>
-            The browser invokes the <em>create</em> method in the <em>/lib/Controller/EditorController.php</em> controller.
-            This method adds a copy of a file from the <em>assets</em> folder to the folder the user is currently in.
+            浏览器调用 <em>/lib/Controller/EditorController.php</em> 控制器中的 <em>create</em> 方法。
+            此方法将 <em>assets</em> 文件夹中的文件副本添加到用户当前所在的文件夹中。</li>
+        <li>打开现有文件时，用户在 ownCloud 中导航到该文件并选择 <b>在 ONLYOFFICE 中打开</b> 菜单选项。
         </li>
-        <li>When opening an existing file, the user navigates to it within ownCloud and selects the <b>Open in ONLYOFFICE</b> menu option.</li>
-        <li>A new browser tab is opened and the <em>index</em> method of the <em>/lib/Controller/EditorController.php</em> controller is invoked.</li>
+        <li>打开一个新的浏览器选项卡并调用 <em>/lib/Controller/EditorController.php</em> 控制器的 <em>index</em> 方法。</li>
         <li>
-            <p>The app prepares a JSON object with the following properties:</p>
+            <p>该应用程序准备一个具有以下属性的 JSON 对象：</p>
             <ul>
-                <li><b>url</b> - the URL that ONLYOFFICE Docs uses to download the document;</li>
-                <li><b>callbackUrl</b> - the URL that ONLYOFFICE Docs informs about status of the document editing;</li>
-                <li><b>key</b> - the <em>UUID+Modified Timestamp</em> to instruct ONLYOFFICE Docs whether to download the document again or not;</li>
-                <li><b>title</b> - the document title (name);</li>
-                <li><b>id</b> - the user identification;</li>
-                <li><b>name</b> - the user name.</li>
+                <li><b>url</b> - ONLYOFFICE Docs 用于下载文档的 URL；</li>
+                <li><b>callbackUrl</b> - ONLYOFFICE Docs 通知文档编辑状态的 URL；</li>
+                <li><b>key</b> ： <em>UUID+Modified Timestamp</em> 指示 ONLYOFFICE Docs 是否再次下载文档；</li>
+                <li><b>title</b> - 文档标题（名称）；</li>
+                <li><b>id</b> - 用户标识；</li>
+                <li><b>name</b> - 用户名。</li>
             </ul>
         </li>
-        <li>ownCloud takes this object and constructs a page from <em>templates/editor.php</em> template, filling in all of those values so that the client browser can load up the editor.</li>
-        <li>The client browser makes a request to the JavaScript library from ONLYOFFICE Docs and sends ONLYOFFICE Docs the DocEditor configuration with the above properties.</li>
-        <li>Then ONLYOFFICE Docs downloads the document from ownCloud and the user begins editing.</li>
-        <li>ONLYOFFICE Docs sends a POST request to the <em>callback</em> URL to inform ownCloud that a user is editing the document.</li>
-        <li>When all users and client browsers are done with editing, they close the editing window.</li>
-        <li>After <a href="<%= Url.Action("save") %>#savedelay">10 seconds</a> of inactivity, ONLYOFFICE Docs sends a POST to the <em>callback</em> URL letting ownCloud know that the clients have finished editing the document and closed it.</li>
-        <li>ownCloud downloads a new version of the document, replacing the old one.</li>
+        <li>ownCloud获取这个对象并从 <em>templates/editor.php</em> 模板构建一个页面，填充所有这些值，以便客户端浏览器可以加载编辑器。</li>
+        <li>客户端浏览器从 ONLYOFFICE Docs 向 JavaScript 库发出请求，并向 ONLYOFFICE Docs 发送包含上述属性的 DocEditor 配置。</li>
+        <li>然后 ONLYOFFICE Docs 从 ownCloud 下载文档，用户开始编辑。</li>
+        <li>ONLYOFFICE Docs 向 <em>回调</em> URL 发送 POST 请求，目的是通知 ownCloud ：用户正在编辑文档。</li>
+        <li>当所有用户和客户端浏览器都完成编辑后，他们会关闭编辑窗口。</li>
+        <li>在 <a href="<%= Url.Action("save") %>#savedelay">10 秒</a> 不活动后，ONLYOFFICE Docs 向 <em>回调</em> URL 发送一个 POST，让 ownCloud 知道客户端已完成对文档的编辑并关闭它。</li>
+        <li>ownCloud 下载文档的新版本，替换旧版本。</li>
     </ol>
 
 
-    <h2 id="issue" class="copy-link">Known issues</h2>
+    <h2 id="issue" class="copy-link">已知的问题</h2>
     <ul>
         <li>
-            <b>Connecting external storages</b>. Adding the storage using the <b>External storages</b> app has issues with the co-editing in some cases.
-            If the connection is made using the same authorization keys (the <em>Username and password</em> or <em>Global credentials</em> authentication type is selected), then the co-editing is available for the users.
-            If different authorization keys are used (<em>Log-in credentials, save in database</em> or <em>User entered, store in database</em> authentication options), the co-editing is not available.
-            When the <em>Log-in credentials, save in session</em> authentication type is used, the files cannot be opened in the editor.
+            <b>连接外部存储</b>。在某些情况下，使用 <b>外部存储</b> 应用程序添加存储会令共同编辑出现问题。
+            如果使用相同的授权密钥进行连接（选择了 <em>用户名和密码</em> 或 <em>全局凭据</em> 身份验证类型），则用户可以进行共同编辑。
+            如果使用不同的授权密钥（保存在数据库中的<em>登录凭据</em> 或存储在数据库身份验证选项中的 <em>用户输入</em> ），则无法进行共同编辑。
+            当使用 <em>登录凭据，保存在会话</em> 身份验证类型时，无法在编辑器中打开文件。
         </li>
         <li>
-            <b>Encrypting file storage</b>. ownCloud provides an option to encrypt the file storage.
-            But if the encryption with the <em>per-user encryption keys</em> (used by default in ownCloud <b>Default encryption module</b> app) is enabled, ONLYOFFICE Docs cannot open the encrypted files for editing and save them after the editing.
-            The ONLYOFFICE section of the administrative settings page will display a notification about it.
-            However, if you set the encryption with the <em>master key</em>, ONLYOFFICE application will work as intended.
-            The instruction on enabling <em>master key</em> based encryption is available in the official documentation on <a href="https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line" target="_blank">ownCloud</a> websites.
+            <b>加密文件存储</b>。ownCloud 提供了加密文件存储的选项。
+            但是如果启用了使用 <em>每用户加密密钥</em> （默认在ownCloud <b>默认加密模块</b> 应用程序中使用）来加密，ONLYOFFICE Docs将无法打开加密文件进行编辑并在编辑后保存它们。
+            管理设置页面的 ONLYOFFICE 部分将显示有关它的通知。
+            但是，如果您使用 <em>主密钥</em>设置加密，ONLYOFFICE 应用程序将按预期工作。
+            关于启用基于 <em>主密钥</em> 加密的说明可以在 <a href="https://doc.owncloud.org/server/admin_manual/configuration/files/encryption/encryption_configuration.html#enabling-master-key-based-encryption-from-the-command-line" target="_blank">ownCloud</a> 网站的官方文档中找到。
             <div class="note note-important">
-                <div class="note-important-label">Please note</div>
-                ownCloud recommends using <em>master encryption key</em> only on fresh installations with no existing data, or on systems where encryption has not already been enabled, as your files previously encrypted with the use of <em>per-user encryption keys</em> <b>might be lost forever</b> after you enable <em>master key</em> based encryption on them.
+                <div class="note-important-label">请注意</div>
+                ownCloud 建议仅在没有数据的全新安装或尚未启用加密的系统上使用 <em>主加密密钥</em>，因为您之前使用 <em>每用户加密密钥</em> 加密的文件可能会在对它们启用基于 <em>主密钥</em> 进行加密后 <b>永远丢失</b>。
             </div>
         </li>
         <li>
-            <p><b>Validating certificate</b>. If you are using a self-signed certificate for your Document Server, ownCloud will not validate such a certificate and will not allow connection to/from Document Server.
-            This issue can be solved in two ways:</p>
+            <p><b>验证证书</b>。如果您为您的文档服务器使用自签名证书，ownCloud 将不会验证此类证书，并且不允许与文档服务器进行连接。
+            这个问题可以通过两种方式解决：</p>
             <ol>
-                <li>Check the <b>Disable certificate verification (insecure)</b> box on the ONLYOFFICE administration page, Server settings section, within your ownCloud.</li>
-                <li>Change the ownCloud config file manually. Locate the ownCloud config file (<em>/owncloud/config/config.php</em>) and open it. Insert the following section to it:</li>
+                <li>选中ownCloud 中 ONLYOFFICE 管理页面的服务器设置部分的 <b>禁用证书验证（不安全）</b> 框。</li>
+                <li>手动更改 ownCloud 配置文件。找到 ownCloud 配置文件 (<em>/owncloud/config/config.php</em>) 并打开它。在其中插入以下部分：</li>
             </ol>
-        <pre>
+            <pre>
 'onlyoffice' => array (
     'verify_peer_off' => true
 )
 </pre>
-            <p>This will disable the certificate verification and allow ownCloud to establish connection with Document Server.</p>
-            <note>Please remember that this is a temporary insecure solution and we strongly recommend that you replace the certificate with the one issued by some CA. Once you do that, do not forget to uncheck the corresponding setting box or remove the above section from the ownCloud config file.</note>
+            <p>这将禁用证书验证并允许 ownCloud 与文档服务器建立连接。</p>
+            <note>请记住，这是一种临时的不安全解决方案，我们强烈建议您将证书替换为某个 CA 颁发的证书。完成此操作后，不要忘记取消选中相应的设置框或从 ownCloud 配置文件中删除上述部分。</note>
         </li>
         <li>
-            <b>Federated Cloud Sharing</b>. If the document is shared using the <b>Federated Cloud Sharing</b> app, the co-editing between the ownCloud instances connected to different ONLYOFFICE servers will not be available.
-            The users from one and the same Document Server can edit the document in the co-editing mode, but the users from two (or more) different Document Servers will not be able to collaborate on the same document in real time.
+            <b>联合云共享</b>。如果使用 <b>联合云共享</b> 应用程序共享文档，则连接到不同 ONLYOFFICE 服务器的 ownCloud 实例之间的共同编辑将不可用。
+            来自同一个文档服务器的用户可以在共同编辑模式下编辑文档，但来自两个（或多个）不同文档服务器的用户将无法实时协作处理同一个文档。
         </li>
         <li>
             <p>
-                <b>Converting files</b>. ONLYOFFICE Docs uses Office Open XML format as a basis when opening and editing files.
-                If the file format is different from OOXML, it will still be converted to the corresponding OOXML for the Document Server proper work and faster performance.
-                After that you can edit the file, making any changes available for the base OOXML format and save the file to this base OOXML format.
+                <b>转换文件</b>。ONLYOFFICE Docs 在打开和编辑文件时使用 Office Open XML 格式作为基础。
+                如果文件格式与 OOXML 不同，它仍将转换为相应的 OOXML，以便文档服务器正常工作和性能更快。
+                之后，您可以编辑文件，对基本 OOXML 格式进行任何更改，并将文件保存为这个基本 OOXML 格式。
             </p>
             <p>
-                In case the source ownCloud file format was different from the base one, and you still want to save it to the original format, the file will be converted to this format from OOXML.
-                As the formats are fundamentally different, some data (such as charts, tables, autoshapes or images) and formatting can be lost due to the simple reason that some formats (<em>csv</em>, <em>txt</em>, etc.) do not support them or treat them differently than OOXML standard does.
-                That is why all the non-OOXML files by default are opened for viewing only, although there is an option to convert the file in the context menu.
-                If you realise the data/formatting loss risks after the conversion, but still want to open non-OOXML files for editing, you can check them in the list in the settings.
-                Editing for <em>csv</em> and <em>txt</em> files is available by default.
+                如果源 ownCloud 文件格式与基本格式不同，并且您仍想将其保存为原始格式，则文件将从 OOXML 转换为这种格式。
+                由于格式根本不同，某些数据（例如图表、表格、自选图形或图像）和格式可能会丢失，原因很简单，某些格式（<em>csv</em>、 <em>txt</em>等）不支持它们或以不同于 OOXML 标准的方式对待它们。
+                这就是为什么默认打开所有非 OOXML 文件仅供查看的原因，尽管在上下文菜单中有转换文件的选项。
+                如果您意识到转换后的数据/格式丢失风险，但仍想打开非OOXML文件进行编辑，您可以在设置中的列表中进行检查。
+                默认情况下可以 编辑 <em>csv</em> 和 <em>txt</em> 文件。
             </p>
         </li>
     </ul>
 
 
     <br />
-    <p>Download the ownCloud ONLYOFFICE integration app <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">here</a>.</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-owncloud" target="_blank">此处</a>下载 ownCloud ONLYOFFICE 集成应用程序。</p>
 
 </asp:Content>

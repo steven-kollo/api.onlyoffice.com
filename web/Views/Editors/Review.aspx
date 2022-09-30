@@ -1,4 +1,4 @@
-<%@ Page
+﻿<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -6,31 +6,31 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Reviewing
+    审阅
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Reviewing</span>
+        <span class="hdr">审阅</span>
     </h1>
 
     <p class="dscr">
-        The <b>Review option</b> allows you to review a document, change sentences, phrases and other page elements, correct spelling, etc. without actually editing it.
-        All the changes will be recorded and shown to the user who created the document.
+        <b>审阅选项</b> 允许您在不真正编辑文档的情况下查看文档、更改句子、短语和其他页面元素、更正拼写等。
+        所有更改都将被记录并显示给创建文档的用户。
     </p>
     <img src="<%= Url.Content("~/content/img/editor/review.png") %>" alt="" />
 
-    <h2 id="access-rights" class="copy-link">Review access rights</h2>
+    <h2 id="access-rights" class="copy-link">审阅访问权限</h2>
     <p>
-        In order to enable the review option, the <a href="<%= Url.Action("config/document/permissions") %>#review">review</a> parameter in the permissions section of the document initialization must be set to <b>true</b>.
-        The document <b>status bar</b> will contain the <b>Review</b> menu option.
+        为了启用审阅选项，文档初始化的权限部分中的 <a href="<%= Url.Action("config/document/permissions") %>#review">review</a> 参数必须设置为 <b>true</b>。
+        文档 <b>状态栏</b> 将包含 <b>审阅</b> 菜单选项。
     </p>
     <p>
-        In case the <em>edit</em> parameter is set to <b>true</b> and the <em>review</em> parameter is also set to <b>true</b>, the user will be able to edit the document, accept or reject the changes and switch to the review mode him/herself.
+        如果 <em>edit</em> 参数设置为 <b>true</b> 并且 <em>review</em> 参数也设置为 <b>true</b>，用户将能够编辑文档，接受或拒绝更改并切换到他/她自己的审阅模式。
     </p>
-    <img alt="Reviewing" src="<%= Url.Content("~/content/img/editor/accept_reject.png") %>" />
+    <img alt="审阅" src="<%= Url.Content("~/content/img/editor/accept_reject.png") %>" />
     <p>
-        In case the <em>edit</em> parameter is set to <b>false</b> and the <em>review</em> parameter is set to <b>true</b>, the document will be available for reviewing only.
+        如果 <em>edit</em> 参数设置为 <b>false</b> 并且 <em>review</em> 参数设置为 <b>true</b>，则文档将仅可用于审阅。
     </p>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -44,13 +44,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-    <div class="note">Please note that the document review will only be available for the document editor if the <a href="<%= Url.Action("config/editor") %>#mode">mode</a> parameter is set to <b>edit</b>.</div>
+    <div class="note">请注意，仅当 <a href="<%= Url.Action("config/editor") %>#mode">mode</a> 参数设置为 <b>edit</b>时，文档编辑器才能使用文档审阅。</div>
 
-    <h2 id="group-rights" class="copy-link">Differentiation of reviewing rights by groups</h2>
+    <h2 id="group-rights" class="copy-link">按组区分审阅权</h2>
     <ol>
         <li>
             <p>
-                Specify the group (or several groups separated with commas) the user belongs to by adding the field <em>group</em> to the <a href="<%= Url.Action("config/editor") %>#user">user</a> parameter in the editorConfig section.
+                通过在editorConfig部分的 <a href="<%= Url.Action("config/editor") %>#user">user</a> 参数中添加字段 <em>group</em> 来指定用户所属的组（或用逗号分隔的多个组）。
             </p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -78,11 +78,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
         </li>
         <li>
             <p>
-                Specify the access rights using the <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a> parameter in the permissions section of the editor initialization.
+                使用编辑器初始化的权限部分中的 <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a> 参数指定访问权限。
             </p>
             <div class="note">
-                If the <b>reviewGroups</b> parameter is specified in the editor config, the access rights to reviewing all changes are disabled.
-                Otherwise, if the current user does not belong to any of the groups, he or she can review documents of all groups.
+                如果在编辑器配置中指定了 <b>reviewGroups</b> 参数，则禁用查看所有更改的访问权限。
+                否则，如果当前用户不属于任何组，他或她可以查看所有组的文档。
             </div>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -97,11 +97,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                <em>["Group1", "Group2"]</em> means that user can review changes made by users from <em>Group1</em> and <em>Group2</em>.
+                <em>["Group1", "Group2"]</em> 表示用户可以查看来自 <em>Group1</em> 和 <em>Group2</em>的用户所做的更改。
             </p>
             <p>
-                The <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a> parameter can take the value of an empty group.
-                This means that the user can review changes made by users who do not belong to any of the groups (for example, the document that is reviewed in third-party editors).
+                <a href="<%= Url.Action("config/document/permissions") %>#reviewGroups">reviewGroups</a> 参数可以采用空组的值。
+                这意味着用户可以查看不属于任何组的用户所做的更改（例如，在第三方编辑器中查看的文档）。
             </p>
             <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
@@ -116,7 +116,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
 });
 </pre>
             <p>
-                <em>["Group2", ""]</em> means that user can review changes made by users from <em>Group2</em> and users who do not belong to any of the groups.
+                <em>["Group2", ""]</em> 表示用户可以查看 <em>Group2</em> 中的用户和不属于任何组的用户所做的更改。
             </p>
         </li>
     </ol>
