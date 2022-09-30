@@ -33,6 +33,10 @@ namespace ASC.Api.Web.Help.Controllers
     {
         public ActionResult Index()
         {
+            var products = Products.EnabledProducts();
+            if (products.Count == 1)
+                return RedirectToAction("basic", products[0].Id);
+
             return View();
         }
 
