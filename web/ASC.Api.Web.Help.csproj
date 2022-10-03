@@ -425,6 +425,7 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.COM.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
