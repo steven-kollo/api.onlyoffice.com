@@ -24,7 +24,7 @@
 - macros: added the Debugging page
 - docbuilder: added the C++ and .Net wrappers
 - docbuilder: v7.2
-- portals: api v12.0.1
+- portals: api v12.1.0
 
 ## 2.8.1
 - docbuilder: fix run examples

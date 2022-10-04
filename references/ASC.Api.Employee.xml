@@ -324,6 +324,16 @@
             <param name="height">Thumbnail height</param>
             <returns>Thumbnail</returns>
         </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.ChangeUserEmail(System.Guid,System.String)">
+            <summary>
+            Sets a new email to the user with the ID specified in the request.
+            </summary>
+            <short>Change a user email</short>
+            <category>Email</category>
+            <param name="userid">User ID</param>
+            <param name="email">New email</param>
+            <returns>Detailed user information</returns>
+        </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.SendUserPassword(System.String)">
             <summary>
             Reminds a password to the user using the email specified in the request.
@@ -336,15 +346,24 @@
             <returns>Email with the password</returns>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Employee.EmployeeApi.ChangeUserPassword(System.Guid,System.String,System.String)">
+        <member name="M:ASC.Api.Employee.EmployeeApi.ChangeUserPassword(System.Guid,System.String)">
             <summary>
-            Sets a new password and email to the user with the ID specified in the request.
+            Sets a new password to the user with the ID specified in the request.
             </summary>
             <short>Change a user password</short>
             <category>Password</category>
             <param name="userid">User ID</param>
             <param name="password">New password</param>
-            <param name="email">New email</param>
+            <returns>Detailed user information</returns>
+        </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.UpdateEmployeeActivationStatus(System.Guid,ASC.Core.Users.EmployeeActivationStatus)">
+            <summary>
+            Sets the required activation status to the user with the ID specified in the request.
+            </summary>
+            <short>Set an activation status</short>
+            <category>Activation status</category>
+            <param name="userid">User ID</param>
+            <param name="activationstatus">Required activation status</param>
             <returns>Detailed user information</returns>
             <visible>false</visible>
         </member>
