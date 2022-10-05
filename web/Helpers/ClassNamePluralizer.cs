@@ -31,7 +31,6 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
 using System.Web.Caching;
-using ASC.Api.Collections;
 
 namespace ASC.Api.Web.Help.Helpers
 {
@@ -81,7 +80,7 @@ namespace ASC.Api.Web.Help.Helpers
         internal const string SystemIEnumerable = "System.Collections.Generic.IEnumerable{";
 
         [DataMember(Name = "Names")]
-        public ItemDictionary<string, TypeDescription> Names = new ItemDictionary<string, TypeDescription>();
+        public Dictionary<string, TypeDescription> Names = new Dictionary<string, TypeDescription>();
 
         public TypeDescriptor()
         {
