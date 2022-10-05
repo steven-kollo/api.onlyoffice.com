@@ -106,7 +106,7 @@
         }
 
         <% var defaultMethod = DocBuilderDocumentation.GetMethod(documentType, "api", "save"); %>
-        $("#builderScript").val("<%= Regex.Replace(defaultMethod.Example.Script.Replace("\"", "\\\""), "\\n", "") %>".replaceAll(";", ";\n"));
+        $("#builderScript").val("<%= Regex.Replace(defaultMethod.Example.Script.Replace("\"", "\\\""), @"\r\n|\n", "") %>".replaceAll(";", ";\n"));
 
         var postScript = function () {
             var removeMethod = {
@@ -114,7 +114,7 @@
                 xlsx: "Api.AddSheet(\"Sheet 1\");sheets = Api.GetSheets(); for (shInd = 0; shInd < sheets.length - 1; shInd++){ sheets[shInd].Delete(); }",
                 pptx: "var oPresentation = Api.GetPresentation(); var nSlidesCount = oPresentation.GetSlidesCount(); for(var nSlideIdx = nSlidesCount - 1; nSlideIdx > -1; --nSlideIdx) { oPresentation.GetSlideByIndex(nSlideIdx).Delete(); } oPresentation.AddSlide(Api.CreateSlide());"
             };
-            var script = removeMethod["<%= ext %>"] + $("#builderScript").val().replaceAll("\\", "").replaceAll("builder.CreateFile", "").replaceAll("\n", "");
+            var script = removeMethod["<%= ext %>"] + $("#builderScript").val().replaceAll("\\", "").replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
 
             document.getElementsByName("frameEditor")[0].contentWindow.postMessage(JSON.stringify({
                 guid : "asc.{A8705DEE-7544-4C33-B3D5-168406D92F72}",
