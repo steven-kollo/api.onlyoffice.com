@@ -43,7 +43,7 @@ namespace ASC.Api.Web.Help.Helpers
     [DataContract(Name = "EditorConfiguration", Namespace = "")]
     public class Config
     {
-        private static string GetSignatureSecret()
+        public static string GetSignatureSecret()
         {
             var result = WebConfigurationManager.AppSettings["files.docservice.secret"] ?? "";
 
