@@ -40,13 +40,9 @@ using System.Xml.Linq;
 using System.Xml.Schema;
 using System.Xml.Serialization;
 
-using ASC.Api.Enums;
-using ASC.Api.Impl;
-using ASC.Api.Interfaces;
-using ASC.Api.Utils;
+using ASC.Api.Web.Help.Extensions;
 using ASC.Api.Web.Help.Helpers;
 using Autofac;
-using Autofac.Core;
 using log4net;
 using Newtonsoft.Json;
 
@@ -322,14 +318,23 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
         private readonly string[] _responseFormats = (ConfigurationManager.AppSettings["enabled_response_formats"] ?? "").Split('|');
 
+        private static ILog _logger;
+
         public MsDocDocumentGenerator(IContainer container)
         {
             Container = container;
+            GetLogger();
         }
 
         public MsDocDocumentGenerator()
         {
+            GetLogger();
+        }
 
+        private void GetLogger()
+        {
+            _logger = LogManager.GetLogger("ASC.MsDocDocumentGenerator");
+            _logger.Debug("Generate community documentations");
         }
 
         #region IApiDocumentGenerator Members
@@ -353,42 +358,56 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             };
             for (int i = 0; i < memberdesc.Count; i++)
             {
-                var methodParams = memberdesc[i].Elements("param").ToList();
-                var pointMethod = new MsDocEntryPointMethod
+                try
                 {
-                    Path = memberdesc[i].Element("path").ValueOrNull(),
-                    HttpMethod = memberdesc[i].Element("httpMethod").ValueOrNull(),
-                    Authentification = memberdesc[i].Element("requiresAuthorization").ValueOrNull() == "true",
-                    FunctionName = GetFunctionName(memberdesc[i].Attribute("name").ValueOrNull()),
-                    Summary = memberdesc[i].Element("summary").ValueOrNull(),
-                    Visible = !string.Equals(memberdesc[i].Element("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
-                    Remarks = memberdesc[i].Element("remarks").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
-                    Returns = memberdesc[i].Element("returns").ValueOrNull(),
-                    Example = memberdesc[i].Element("example").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
-                    Response = GetResponse(memberdesc[i].Element("returns"), memberdesc[i].Element("collection").ValueOrNull()),
-                    Category = memberdesc[i].Element("category").ValueOrNull(),
-                    Notes = memberdesc[i].Element("notes").ValueOrNull(),
-                    ShortName = memberdesc[i].Element("short").ValueOrNull(),
-                    Params = new List<MsDocEntryPointMethodParams>()
-                };
-                for (int j = 0; j < methodParams.Count; j++)
-                {
-                    var param = new MsDocEntryPointMethodParams
+                    var methodParams = memberdesc[i].Elements("param").ToList();
+                    var pointMethod = new MsDocEntryPointMethod
                     {
-                        Description = methodParams[j].ValueOrNull(),
-                        Name = methodParams[j].Attribute("name").ValueOrNull(),
-                        Remarks = methodParams[j].Attribute("remark").ValueOrNull(),
-                        IsOptional = string.Equals(methodParams[j].Attribute("optional").ValueOrNull(), bool.TrueString, StringComparison.OrdinalIgnoreCase),
-                        Visible = !string.Equals(methodParams[j].Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
-                        Type = GetType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()),
-                        Method = methodParams[j].Attribute("method") != null ? methodParams[j].Attribute("method").ValueOrNull() : "body",
-                        File = methodParams[j].Attribute("file").ValueOrNull()
+                        Path = memberdesc[i].Element("path").ValueOrNull(),
+                        HttpMethod = memberdesc[i].Element("httpMethod").ValueOrNull(),
+                        Authentification = memberdesc[i].Element("requiresAuthorization").ValueOrNull() == "true",
+                        FunctionName = GetFunctionName(memberdesc[i].Attribute("name").ValueOrNull()),
+                        Summary = memberdesc[i].Element("summary").ValueOrNull(),
+                        Visible = !string.Equals(memberdesc[i].Element("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
+                        Remarks = memberdesc[i].Element("remarks").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
+                        Returns = memberdesc[i].Element("returns").ValueOrNull(),
+                        Example = memberdesc[i].Element("example").ValueOrNull().Replace(Environment.NewLine, @"<br />"),
+                        Response = GetResponse(memberdesc[i].Element("returns"), memberdesc[i].Element("collection").ValueOrNull()),
+                        Category = memberdesc[i].Element("category").ValueOrNull(),
+                        Notes = memberdesc[i].Element("notes").ValueOrNull(),
+                        ShortName = memberdesc[i].Element("short").ValueOrNull(),
+                        Params = new List<MsDocEntryPointMethodParams>()
                     };
-                    pointMethod.Params.Add(param);
+                    for (int j = 0; j < methodParams.Count; j++)
+                    {
+                        try
+                        {
+                            var param = new MsDocEntryPointMethodParams
+                            {
+                                Description = methodParams[j].ValueOrNull(),
+                                Name = methodParams[j].Attribute("name").ValueOrNull(),
+                                Remarks = methodParams[j].Attribute("remark").ValueOrNull(),
+                                IsOptional = string.Equals(methodParams[j].Attribute("optional").ValueOrNull(), bool.TrueString, StringComparison.OrdinalIgnoreCase),
+                                Visible = !string.Equals(methodParams[j].Attribute("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
+                                Type = GetType(pointMethod.Params.Count, memberdesc[i].Attribute("name").ValueOrNull()),
+                                Method = methodParams[j].Attribute("method") != null ? methodParams[j].Attribute("method").ValueOrNull() : "body",
+                                File = methodParams[j].Attribute("file").ValueOrNull()
+                            };
+                            pointMethod.Params.Add(param);
+                        }
+                        catch (Exception ex)
+                        {
+                            _logger.Error($"Couldn't parse parameters for method: {pointMethod.Path}\n{memberdesc[i].Attribute("name").Value}", ex);
+                        }
+                    }
+                    if (pointMethod.Visible)
+                    {
+                        root.Methods.Add(pointMethod);
+                    }
                 }
-                if (pointMethod.Visible)
+                catch (Exception ex)
                 {
-                    root.Methods.Add(pointMethod);
+                    _logger.Error($"Couldn't parse method: {memberdesc[i].Attribute("name").Value}", ex);
                 }
             }
             foreach(var point in Points)
