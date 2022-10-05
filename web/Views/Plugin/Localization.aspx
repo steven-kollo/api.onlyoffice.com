@@ -86,6 +86,25 @@ pluginCode.js</pre>
     "Style": "Stil",
 }</pre>
 
+    <p>Starting from version 7.2, you can add the <em>langs.json</em> file to the translations folder. It contains the names of files with translations into a specific language in the array format:</p>
+
+    <pre>
+[
+    "cs-CZ",
+    "de-DE",
+    "es-ES",
+    "fr-FR",
+    "ru-RU"
+]
+</pre>
+
+    <p>
+        First, the <em>langs.json</em> file will be requested and a full match of the language and file name will be searched.
+        If no match is found, the first two characters before the <em>"-"</em> sign are checked.
+        If the <em>langs.json</em> file does not contain the required file name, the plugin will work in English.
+        If there is no <em>langs.json</em> file or there are problems when parsing it, then the translations will work according to the old translation scheme.
+    </p>
+
     <p>Once all the localization files are added, the plugin file structure will look like this:</p>
 
     <pre>..
@@ -93,6 +112,7 @@ pluginCode.js</pre>
     de-DE.json
     es-ES.json
     fr-FR.json
+    langs.json
     ru-RU.json
 config.json
 index.html

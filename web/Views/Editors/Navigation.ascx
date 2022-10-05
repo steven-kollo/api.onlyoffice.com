@@ -2,6 +2,8 @@
     Language="C#"
     Inherits="System.Web.Mvc.ViewUserControl" %>
 
+<% var connector = !string.IsNullOrEmpty(Page.Request["connector"]); %>
+
 <div class="treeheader">Get Started</div>
 <ul class="side-nav root">
     <li>
@@ -52,6 +54,9 @@
                 <a href="<%= Url.Action("confluence") %>">Confluence integration</a>
             </li>
             <li>
+                <a href="<%= Url.Action("drupal") %>">Drupal integration</a>
+            </li>
+            <li>
                 <a href="<%= Url.Action("humhub") %>">HumHub integration</a>
             </li>
             <li>
@@ -86,6 +91,9 @@
             </li>
             <li>
                 <a href="<%= Url.Action("strapi") %>">Strapi integration</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("wordpress") %>">WordPress integration</a>
             </li>
         </ul>
     </li>
@@ -134,6 +142,12 @@
             <li>
                 <a href="<%= Url.Action("comparing") %>">Comparing documents</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("viewing") %>">Viewing</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a>
+            </li>
         </ul>
     </li>
 </ul>
@@ -179,6 +193,12 @@
     <li>
         <a href="<%= Url.Action("methods") %>">Methods</a>
     </li>
+    <% if (connector)
+       { %>
+    <li>
+        <a href="<%= Url.Action("connector") %>?connector=true">Connector</a>
+    </li>
+    <% } %>
     <li>
         <a href="<%= Url.Action("callback") %>">Callback handler</a>
     </li>

@@ -16,7 +16,7 @@
 </ul>
 
 
-<h2>Incoming request</h2>
+<h2 id="incoming" class="copy-link">Incoming request</h2>
 
 <ul>
     <li>
@@ -121,7 +121,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImFze
     </li>
 </ul>
 
-<h2>Outgoing requests</h2>
+<h2 id="outgoing" class="copy-link">Outgoing requests</h2>
 
 <ul>
     <li>

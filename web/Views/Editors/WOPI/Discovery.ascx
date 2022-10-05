@@ -13,11 +13,43 @@
 
     <h2 id="actions" class="copy-link">WOPI discovery actions</h2>
 
-    <p>The <b>action</b> element of the discovery XML provides the important characteristics about the online office. This element represents:</p>
+    <p>The <b>action</b> element of the discovery XML provides the important characteristics of the online office. This element represents:</p>
     <ul>
         <li>available document operations in the online office,</li>
         <li>supported file formats (extensions).</li>
     </ul>
+
+    <div class="header-gray">WOPI actions</div>
+    <table class="table">
+        <colgroup>
+            <col class="table-name" />
+            <col />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="view" class="copy-link">view</td>
+                <td>Renders a non-editable view of a document.</td>
+            </tr>
+            <tr>
+                <td id="edit" class="copy-link">edit</td>
+                <td>Allows users to edit a document.</td>
+            </tr>
+            <tr>
+                <td id="editnew" class="copy-link">editnew</td>
+                <td>Creates a new document using a blank file template appropriate to the file type and opens this file for editing in the online office.</td>
+            </tr>
+            <tr>
+                <td id="embedview" class="copy-link">embedview</td>
+                <td>Renders a non-editable view of a document that is optimized for embedding in a web page. This action is available starting from version 7.2.</td>
+            </tr>
+        </tbody>
+    </table>
 
     <div class="header-gray">Attributes</div>
     <table class="table">
@@ -51,7 +83,7 @@ ui=en-us&thm=1&"/&gt;
 </pre>
 
     <p><b>Discovery query parameters</b> are the parameters that can be exposed by file storage in the <em>urlsrc</em> attribute to customize the editor behavior. 
-        For example, change a language, theme or chat.</p>
+        For example, change a language, theme, or chat.</p>
 
 
     <h2 id="wopi-standart" class="copy-link">WOPI standard</h2>
@@ -92,6 +124,11 @@ ui=en-us&thm=1&"/&gt;
                 <td id="dchat" class="copy-link">dchat</td>
                 <td>Indicates that the WOPI server includes the value <em>"1"</em> to load a view of the document that does not create or join a chat session.</td>
                 <td>1</td>
+            </tr>
+            <tr>
+                <td id="embed" class="copy-link">embed</td>
+                <td>Indicates that the output of the action will be embedded in a web page (<b>true</b>).</td>
+                <td>true</td>
             </tr>
         </tbody>
     </table>

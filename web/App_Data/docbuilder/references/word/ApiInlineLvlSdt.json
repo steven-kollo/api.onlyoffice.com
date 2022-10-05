@@ -247,7 +247,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -264,7 +264,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -295,7 +295,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -320,7 +320,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
@@ -345,14 +345,14 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "keepContent",
           "description": "<p>Specifies if the content will be deleted or not.</p>",
           "optional": false
@@ -395,7 +395,7 @@
       },
       "returns": [
         [
-          "ApiBlockLvlSdt",
+          "ApiParagraph",
           "null"
         ]
       ],
@@ -414,6 +414,7 @@
       "returns": [
         [
           "ApiBlockLvlSdt",
+          "ApiInlineLvlSdt",
           "null"
         ]
       ],
@@ -503,6 +504,24 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "ToJSON": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiInlineLvlSdt object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
     },
     "GetPlaceholderText": {
       "memberof": "ApiInlineLvlSdt",

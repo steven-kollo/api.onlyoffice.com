@@ -261,6 +261,13 @@
                         <b>example</b>: "John Smith and Co.";
                     </li>
                     <li>
+                        <b>phone</b> - the phone of the company or person who gives access to the editors or the editor authors,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "123456789";
+                    </li>
+                    <li>
                         <b>www</b> - home website address of the above company or person,
                         <br />
                         <b>type</b>: string,
@@ -748,8 +755,8 @@
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
             <td>
-                Defines if document macros will be run.
-                The default value is <b>true</b>.
+                Defines if document macros will be automatically run when the editor opens.
+                The default value is <b>true</b>. The <b>false</b> value hides the <a href="#macrosMode">macros settings</a> from the user.
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -757,17 +764,17 @@
         <tr>
             <td id="macrosMode" class="copy-link">macrosMode</td>
             <td>
-                Defines the macro run mode.
+                Defines the macros run mode when autostart is enabled.
                 Can take the following values:
                 <ul>
-                    <li><b>disable</b> - don't run at all;</li>
+                    <li><b>disable</b> - don't run macros at all;</li>
                     <li><b>enable</b> - run all macros automatically;</li>
-                    <li><b>warn</b> - warn about macros and ask permission to run.</li>
+                    <li><b>warn</b> - warn about macros and ask permission to run them.</li>
                 </ul>
                 The default value is <b>warn</b>.
             </td>
-            <td>boolean</td>
-            <td>true</td>
+            <td>string</td>
+            <td>warn</td>
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
@@ -1035,13 +1042,15 @@
                 Defines the editor theme settings.
                 It can be set in two ways:
                 <ul>
-                    <li><b>theme id</b> - the user sets the theme parameter by its id (<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>),</li>
+                    <li><b>theme id</b> - the user sets the theme parameter by its id (<b>theme-light</b>, <b>theme-classic-light</b>, <b>theme-dark</b>, <b>theme-contrast-dark</b>),</li>
                     <li>
                         <b>default theme</b> - the default dark or light theme value will be set (<b>default-dark</b>, <b>default-light</b>).
                         The default light theme is <b>theme-classic-light</b>.
                     </li>
                 </ul>
                 The first option has higher priority.
+                <p></p>
+                Apart from the available editor themes, the user can also customize their own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">color themes</a> for the application interface.
             </td>
             <td>string</td>
             <td>theme-dark</td>
@@ -1123,6 +1132,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "logoDark": "https://example.com/dark-logo-big.png",
                 "mail": "john@example.com",
                 "name": "John Smith and Co.",
+                "phone": "123456789",
                 "www": "example.com"
             },
             "features": {

@@ -71,9 +71,9 @@ window.Asc.plugin.executeMethod ("AddContentControlList", [type, List, commonPr]
                     <li>
                         <b>Id</b> - a unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
-                        <b>example</b>: 0;
+                        <b>example</b>: 2;
                         <br />
                     </li>
                     <li>
@@ -85,12 +85,50 @@ window.Asc.plugin.executeMethod ("AddContentControlList", [type, List, commonPr]
                         <br />
                     </li>
                     <li>
-                        <b>Lock</b> - a value that defines if it is possible to delete and/or edit the content control or not,
+                        <b>Lock</b> - a value which defines if it is possible to delete and/or edit the content control or not,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
-                        <b>example</b>: 0.
+                        <b>example</b>: 0;
                         <br />
+                    </li>
+                    <li>
+                        <b>InternalId</b> - a unique internal identifier of the content control,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "1_713";
+                        <br />
+                    </li>
+                    <li>
+                        <b>Alias</b> - the alias attribute,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "&#8470;1";
+                        <br />
+                    </li>
+                    <li>
+                        <b>PlaceHolderText</b> - the content control placeholder text,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "placeholder text";
+                        <br />
+                    </li>
+                    <li>
+                        <b>Appearance</b> - defines if the content control is shown as the bounding box (<b>1</b>) or not (<b>2</b>),
+                        <br />
+                        <b>type</b>: integer,
+                        <br />
+                        <b>example</b>: 1;
+                        <br />
+                    </li>
+                    <li>
+                        <b>Color</b> - the color for the current content control in the RGB format (<b>R</b> - red color component value, <b>G</b> - green color component value,
+                        <b>B</b> - blue color component value). For example: {"R": 0, "G": 0, "B": 255},
+                        <br />
+                        <b>type</b>: object.
                     </li>
                 </ul>
             </td>

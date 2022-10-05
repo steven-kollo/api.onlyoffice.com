@@ -1,0 +1,2 @@
+// Create a blip fill with an image which is tiled all over the created shape:
+oFill = Api.CreateBlipFill("https://example.com/myimage.png", "tile");

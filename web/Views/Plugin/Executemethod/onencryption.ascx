@@ -34,7 +34,7 @@ window.Asc.plugin.executeMethod ("OnEncryption", [obj]);
         <tr class="tablerow">
             <td>obj</td>
             <td>
-                A JSON object which can have the following values:
+                The encryption properties. This object can have the following values:
                 <ul>
                     <li>
                         <b>type</b> - the type of encrypting operation (<em>generatePassword</em> - generates a password for the document, 

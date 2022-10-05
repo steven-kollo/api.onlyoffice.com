@@ -49,8 +49,8 @@ window.Asc.plugin.executeMethod ("RemoveContentControl", [InternalId]);
 <pre>
 {
     "Parent" : object,
-    "Pos" : number,
-    "Count" : number
+    "Pos" : integer,
+    "Count" : integer
 }
 </pre>
 <div class="header-gray">Parameters</div>
@@ -79,13 +79,13 @@ window.Asc.plugin.executeMethod ("RemoveContentControl", [InternalId]);
         <tr class="tablerow">
             <td>Pos</td>
             <td>The content control position within the parent object.</td>
-            <td>number</td>
+            <td>integer</td>
             <td>0</td>
         </tr>
         <tr class="tablerow">
             <td>Count</td>
             <td>A number of elements in the parent object.</td>
-            <td>number</td>
+            <td>integer</td>
             <td>1</td>
         </tr>
     </tbody>

@@ -33,11 +33,9 @@ window.Asc.plugin.executeMethod ("RemoveContentControls", [arrDocuments]);
     <tbody>
         <tr class="tablerow">
             <td>arrDocuments</td>
-            <td>
-                An array of content control internal IDs (<em>[{"InternalId": "5_556"}]</em>).
-            </td>
+            <td>An array of content control objects with their internal IDs.</td>
             <td>array of objects</td>
-            <td></td>
+            <td>[{"InternalId": "5_556"}]</td>
         </tr>
     </tbody>
 </table>

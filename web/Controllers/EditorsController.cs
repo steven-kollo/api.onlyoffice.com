@@ -65,10 +65,12 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config/Editor/Plugins",
                 "Config/Events",
                 "Confluence",
+                "Connector",
                 "Conversion",
                 "ConversionApi",
                 "DemoPreview",
                 "DocumentBuilderApi",
+                "Drupal",
                 "Example/Java",
                 "Example/JavaSpring",
                 "Example/Nodejs",
@@ -99,6 +101,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Mattermost",
                 "Mentions",
                 "Methods",
+                "MobileIntegration",
                 "Moodle",
                 "Nextcloud",
                 "Nuxeo",
@@ -119,6 +122,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Strapi",
                 "Troubleshooting",
                 "Try",
+                "Viewing",
                 "WOPI",
                 "WOPI/ApiVsWopi",
                 "WOPI/Discovery",
@@ -133,6 +137,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "WOPI/RestApi/RefreshLock",
                 "WOPI/RestApi/RenameFile",
                 "WOPI/RestApi/Unlock",
+                "Wordpress"
             };
 
         [ValidateInput(false)]
@@ -238,6 +243,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Connector()
+        {
+            return View();
+        }
+
         public ActionResult Conversion()
         {
             return View();
@@ -281,6 +291,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult DocumentBuilderApi()
+        {
+            return View();
+        }
+
+        public ActionResult Drupal()
         {
             return View();
         }
@@ -331,6 +346,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Methods()
+        {
+            return View();
+        }
+
+        public ActionResult MobileIntegration()
         {
             return View();
         }
@@ -424,6 +444,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Viewing()
+        {
+            return View();
+        }
+
         public ActionResult WOPI(string catchall)
         {
             if (!_actionMap.Contains("wopi/" + catchall, StringComparer.OrdinalIgnoreCase))
@@ -431,6 +456,11 @@ namespace ASC.Api.Web.Help.Controllers
                 catchall = null;
             }
             return View("WOPI", (object)catchall);
+        }
+
+        public ActionResult Wordpress()
+        {
+            return View();
         }
     }
 }

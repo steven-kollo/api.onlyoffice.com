@@ -9,7 +9,7 @@
 <dl class="faq_block" id="wopi_1">
     <dt>How to enable WOPI?</dt>
     <dd>
-        <p>To enable WOPI, set the <em>wopi.enable</em> parameter in the Document Server config to <b>true</b>.</p>
+        <p>To enable WOPI, set the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#wopi-enable" target="_blank">wopi.enable</a> parameter in the Document Server config to <b>true</b>.</p>
         <div class="header-gray">Parameters</div>
         <table class="table">
             <colgroup>

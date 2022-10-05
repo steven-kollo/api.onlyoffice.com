@@ -440,6 +440,23 @@
           "optional": false
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiTableCellPr",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiTableCellPr object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null
     }
   },
   "comment": "/**\n\t * Class representing the table cell properties.\n\t * @constructor\n\t */",

@@ -18,7 +18,7 @@
     Starting from version 7.1, these parameters are deprecated.
     Now the incoming requests use the token in body if it exists.
     Otherwise, the header token is taken.
-    To specify what is used next to validate the data, <em>services.CoAuthoring.server.tokenRequiredParams</em> must be added to the <em>local.json</em> configuration file. If it is <b>true</b>, only the token data is used.
+    To specify what is used next to validate the data, <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-tokenRequiredParams" target="_blank">services.CoAuthoring.server.tokenRequiredParams</a> must be added to the <em>local.json</em> configuration file. If it is <b>true</b>, only the token data is used.
     Otherwise, the opened request part is merged with the token data.
 </p>
 <p>
@@ -52,7 +52,6 @@
             <td>services.CoAuthoring.token.inbox.inBody</td>
             <td>
                 Specifies the enabling the token validation in the request body to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.
-                Deprecated since version 7.1.
             </td>
             <td>boolean</td>
             <td>false</td>
@@ -61,7 +60,6 @@
             <td>services.CoAuthoring.token.outbox.inBody</td>
             <td>
                 Specifies the enabling the token generation for the request body by <b>document editing service</b> to <b>document storage service</b>.
-                Deprecated since version 7.1.
             </td>
             <td>boolean</td>
             <td>false</td>

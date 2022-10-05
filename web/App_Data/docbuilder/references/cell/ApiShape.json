@@ -62,7 +62,7 @@
       },
       "returns": [
         [
-          "bool"
+          "boolean"
         ]
       ],
       "see": null,
