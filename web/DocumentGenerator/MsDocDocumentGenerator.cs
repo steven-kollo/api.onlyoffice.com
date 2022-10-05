@@ -783,59 +783,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return Regex.Replace(Regex.Replace(tmp[tmp.Length - 1], "[a-z][A-Z]+", match => (match.Value[0] + " " + match.Value.Substring(1, match.Value.Length - 2) + (" " + match.Value[match.Value.Length - 1]).ToLowerInvariant())), @"\s+", " ");
         }
 
-        private readonly HashSet<Type> _alreadyRegisteredTypes = new HashSet<Type>();
-
-        private IEnumerable<MsDocFunctionResponse> GetSamples(IApiMethodCall apiMethod, IContainer container, MethodInfo sample, bool collection, Type returnType)
-        {
-            try
-            {
-                using (var lifetimeScope = container.BeginLifetimeScope())
-                {
-                    var routeContext = new RequestContext(new HttpContextWrapper(HttpContext.Current), new RouteData());
-                    var apiContext = lifetimeScope.Resolve<ApiContext>(new NamedParameter("requestContext", routeContext));
-                    var response = lifetimeScope.Resolve<IApiStandartResponce>();
-                    response.Status = ApiStatus.Ok;
-
-                    apiContext.RegisterType(returnType);
-
-                    var sampleResponse = sample.Invoke(null, new object[0]);
-                    if (collection)
-                    {
-                        //wrap in array
-                        sampleResponse = new List<object> { sampleResponse };
-                    }
-                    response.Response = sampleResponse;
-
-                    var serializers = container.Resolve<IEnumerable<IApiSerializer>>().Where(x => x.CanSerializeType(apiMethod.MethodCall.ReturnType));
-                    return serializers.Select(apiResponder => new MsDocFunctionResponse
-                        {
-                            Outputs = CreateResponse(apiResponder, response, apiContext)
-                        });
-                }
-            }
-            catch (Exception err)
-            {
-                LogManager.GetLogger("ASC.Api").Error(err);
-                return Enumerable.Empty<MsDocFunctionResponse>();
-            }
-        }
-
-        private Dictionary<string, string> CreateResponse(IApiSerializer apiResponder, IApiStandartResponce response, ApiContext apiContext)
-        {
-            var examples = new Dictionary<string, string>();
-            foreach (var extension in apiResponder.GetSupportedExtensions().Where(extension => _responseFormats.Contains(extension)))
-            {
-                //Create request context
-                using (var writer = new StringWriter())
-                {
-                    var contentType = apiResponder.RespondTo(response, writer, "dummy" + extension, string.Empty, true, false);
-                    writer.Flush();
-                    examples[contentType.MediaType] = writer.GetStringBuilder().ToString();
-                }
-            }
-            return examples;
-        }
-
         #endregion
 
         private static string GuesMethod(string textAttr, string routingUrl, string httpmethod)
