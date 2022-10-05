@@ -837,6 +837,11 @@
               Looks up a localized string similar to Documents. All signers completed $DocumentTitle.
             </summary>
         </member>
+        <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_DocuSignComplete_push">
+            <summary>
+              Looks up a localized string similar to All signers completed $DocumentTitle.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_DocuSignComplete_tg">
             <summary>
               Looks up a localized string similar to Documents. All signers completed [$DocumentTitle]($DocumentURL).
@@ -847,9 +852,19 @@
               Looks up a localized string similar to Documents. Sign status changed.
             </summary>
         </member>
+        <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_DocuSignStatus_push">
+            <summary>
+              Looks up a localized string similar to Sign status changed.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_EditorMentions">
             <summary>
               Looks up a localized string similar to Documents. Mentioned in document.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_EditorMentions_push">
+            <summary>
+              Looks up a localized string similar to Mentioned in document.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_EditorMentions_tg">
@@ -862,9 +877,19 @@
               Looks up a localized string similar to Documents. Mailing is complete..
             </summary>
         </member>
+        <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_MailMergeEnd_push">
+            <summary>
+              Looks up a localized string similar to Mailing is complete..
+            </summary>
+        </member>
         <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_ShareDocument">
             <summary>
               Looks up a localized string similar to Documents. Access granted to document: $DocumentTitle.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_ShareDocument_push">
+            <summary>
+              Looks up a localized string similar to Access granted to document: $DocumentTitle.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_ShareDocument_tg">
@@ -877,6 +902,11 @@
               Looks up a localized string similar to Documents. Access granted to the encrypted document: $DocumentTitle.
             </summary>
         </member>
+        <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_ShareEncryptedDocument_push">
+            <summary>
+              Looks up a localized string similar to Access granted to the encrypted document: $DocumentTitle.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_ShareEncryptedDocument_tg">
             <summary>
               Looks up a localized string similar to Documents. Access granted to the encrypted document: [$DocumentTitle]($DocumentURL).
@@ -885,6 +915,11 @@
         <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_ShareFolder">
             <summary>
               Looks up a localized string similar to Documents. Access granted to folder: $DocumentTitle.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_ShareFolder_push">
+            <summary>
+              Looks up a localized string similar to Access granted to folder: $DocumentTitle.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Services.NotifyService.FilesPatternResource.subject_ShareFolder_tg">
@@ -4464,7 +4499,12 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.SettingForcesave">
             <summary>
-              Looks up a localized string similar to Keep intermediate versions when editing.
+              Looks up a localized string similar to Save revisions when the document version is changed.
+            </summary>
+        </member>
+        <member name="P:ASC.Web.Files.Resources.FilesUCResource.SettingForcesaveHelper">
+            <summary>
+              Looks up a localized string similar to Save revisions to track intermediate versions of the documents.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.SettingRecent">
@@ -4479,7 +4519,7 @@
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.SettingStoreForcesave">
             <summary>
-              Looks up a localized string similar to Keep all saved intermediate versions.
+              Looks up a localized string similar to Always save revisions when the version is changed.
             </summary>
         </member>
         <member name="P:ASC.Web.Files.Resources.FilesUCResource.SettingTemplates">

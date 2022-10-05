@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Api.Migration</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Api.Migration.MigrationApi">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigrationApi.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.#ctor(ASC.Api.Impl.ApiContext)">
+            <summary>
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.GetTmpFolder">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.List">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.UploadAndInit(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="migratorName"></param>
+            <param name="path"></param>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.Status">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.Cancel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.Migrate(ASC.Migration.Core.Models.Api.MigrationApiInfo)">
+            <summary>
+            
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.Logs">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.Finish(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="isSendWelcomeEmail"></param>
+        </member>
+        <member name="T:ASC.Api.Migration.MigrationStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigrationStatus.Progress">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigrationStatus.ProgressStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigrationStatus.ParseResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigrationStatus.MigrationEnded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ASC.Api.Migration.OngoingMigration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.OngoingMigration.CancelTokenSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.OngoingMigration.Migration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.OngoingMigration.ParseTask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.OngoingMigration.MigrationTask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.OngoingMigration.MigrationEnded">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
