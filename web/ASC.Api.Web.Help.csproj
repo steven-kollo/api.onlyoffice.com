@@ -96,78 +96,6 @@
     <PackageReference Include="WebGrease">
       <Version>1.6.0</Version>
     </PackageReference>
-    <Reference Include="ASC.ActiveDirectory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.ActiveDirectory.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Api.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Core.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Data.Reassigns, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Data.Reassigns.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Data.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Data.Storage.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.ElasticSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.ElasticSearch.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.IPSecurity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.IPSecurity.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Mail, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Mail.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Thrdparty, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Thrdparty.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.VoipService, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.VoipService.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Community, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Community.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.CRM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.CRM.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Files, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Files.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Projects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Projects.dll</HintPath>
-    </Reference>
-    <Reference Include="ASC.Web.Studio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\ASC.Web.Studio.dll</HintPath>
-    </Reference>
-    <Reference Include="HtmlAgilityPack, Version=1.6.0.1, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\references\HtmlAgilityPack.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Configuration" />
@@ -186,6 +114,7 @@
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
     <Compile Include="DocumentGenerator\Documentation.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
+    <Compile Include="Extensions\XmlExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
