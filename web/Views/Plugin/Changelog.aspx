@@ -19,6 +19,9 @@
 
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <ul>
+        <li>Added the <a href="<%= Url.Action("events") %>#onAddComment">onAddComment</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("events") %>#onChangeCommentData">onChangeCommentData</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("events") %>#onRemoveComment">onRemoveComment</a> event.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/acceptreviewchanges") %>">AcceptReviewChanges</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/movetonextreviewchange") %>">MoveToNextReviewChange</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Added the <a href="<%= Url.Action("executemethod/rejectreviewchanges") %>">RejectReviewChanges</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>

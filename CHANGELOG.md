@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: added the onAddComment, onChangeCommentData and onRemoveComment events
 - plugins: added the AcceptReviewChanges, MoveToNextReviewChange and RejectReviewChanges methods
 
 ## 2.9.0
