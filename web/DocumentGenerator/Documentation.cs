@@ -24,14 +24,13 @@
 */
 
 
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using ASC.Api.Interfaces;
-using ASC.Common.DependencyInjection;
-using ASC.Common.Logging;
-using Autofac;
+
+using log4net;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
 {

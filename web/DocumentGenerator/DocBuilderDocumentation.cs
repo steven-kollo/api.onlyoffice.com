@@ -33,7 +33,7 @@ using System.Web;
 using System.Web.Hosting;
 using System.Web.Mvc;
 using ASC.Api.Web.Help.Helpers;
-using ASC.Common.Logging;
+using log4net;
 using Newtonsoft.Json;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
