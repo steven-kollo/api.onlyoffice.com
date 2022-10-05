@@ -34,6 +34,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
+using System.Web.Hosting;
 using System.Web.Routing;
 using System.Xml;
 using System.Xml.Linq;
@@ -512,7 +513,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private Dictionary<string, object> GetResponse(string type, string file)
         {
-            var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
+            var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers = members.Where(mem => IsMember(mem, type)).ToList();
             var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();
@@ -594,7 +595,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 {
                     var name = member.Element("type").Attribute("name").ValueOrNull() == "" ? defaultName : member.Element("type").Attribute("name").ValueOrNull();
                     var split = member.Element("type").ValueOrNull().Split(',');
-                    var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + split[1].Trim() + ".xml");
+                    var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", split[1].Trim() + ".xml");
                     var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
                     var newMembers = members.Where(mem => IsMember(mem, split[0])).ToList();
                     var inherited = members.Where(mem => IsInherited(mem, split[0])).SingleOrDefault();
@@ -664,7 +665,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private List<XElement> GetInherited(string type, string file, List<XElement> needMembers)
         {
-            var xml = Path.Combine(AppDomain.CurrentDomain.RelativeSearchPath, "../../xml/" + file + ".xml");
+            var xml = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references", file + ".xml");
             var members = XDocument.Load(xml).Root.ThrowIfNull(new ArgumentException("Bad documentation file " + xml)).Element("members").Elements("member");
             var needMembers1 = members.Where(mem => IsMember(mem, type)).ToList();
             var inherited = members.Where(mem => IsInherited(mem, type)).SingleOrDefault();

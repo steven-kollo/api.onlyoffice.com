@@ -29,7 +29,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
+using System.Web.Hosting;
 using log4net;
 
 namespace ASC.Api.Web.Help.DocumentGenerator
@@ -47,7 +47,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static List<MsDocEntryPoint> GenerateDocs()
         {
-            var lookupDir = Path.Combine( AppDomain.CurrentDomain.RelativeSearchPath, "../../xml");
+            var lookupDir = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\portals\references");
             var generator = new MsDocDocumentGenerator();
             foreach (var file in Directory.GetFiles(lookupDir))
             {
