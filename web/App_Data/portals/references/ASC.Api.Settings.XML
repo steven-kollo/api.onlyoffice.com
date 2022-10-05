@@ -734,6 +734,42 @@
             <returns>FireBase user</returns>
             <visible>false</visible>
         </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.DocRegisterPusnNotificationDevice(System.String)">
+            <summary>
+            Saves a documents firebase device token specified in the request.
+            </summary>
+            <short>Saves a firebase device token</short>
+            <param name="firebaseDeviceToken">firebase device token</param>
+            <returns>FireBase user</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.ProjRegisterPusnNotificationDevice(System.String)">
+            <summary>
+            Saves a projects firebase device token specified in the request.
+            </summary>
+            <short>Saves a firebase device token</short>
+            <param name="firebaseDeviceToken">firebase device token</param>
+            <returns>FireBase user</returns>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SubscribeDocumentsPushNotification(System.String,System.Boolean)">
+            <summary>
+            Subscribe to documents push notification.
+            </summary>
+            <short> Subscribe to push notification </short>
+            <param name="firebaseDeviceToken">firebase device token</param>
+            <param name="isSubscribed">is subscribed</param>
+            <returns>FireBase user</returns>
+            <visible>false</visible>
+        </member>
+        <member name="M:ASC.Api.Settings.SettingsApi.SubscribeProjectsPushNotification(System.String,System.Boolean)">
+            <summary>
+            Subscribe to projects push notification.
+            </summary>
+            <short> Subscribe to push notification </short>
+            <param name="firebaseDeviceToken">firebase device token</param>
+            <param name="isSubscribed">is subscribed</param>
+            <returns>FireBase user</returns>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramLink">
             <summary>
             Returns a link that will connect Telegram Bot to your account.

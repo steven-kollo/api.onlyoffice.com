@@ -455,6 +455,16 @@
             <param name="email">New email</param>
             <returns>Detailed user information</returns>
         </member>
+        <member name="M:ASC.Api.Employee.EmployeeApi.ChangeUserEmail(System.Guid,System.String)">
+            <summary>
+            Sets a new email to the user with the ID specified in the request.
+            </summary>
+            <short>Change a user email</short>
+            <category>Email</category>
+            <param name="userid">User ID</param>
+            <param name="email">New email</param>
+            <returns>Detailed user information</returns>
+        </member>
         <member name="M:ASC.Api.Employee.EmployeeApi.SendUserPassword(System.String)">
             <summary>
             Reminds a password to the user using the email specified in the request.

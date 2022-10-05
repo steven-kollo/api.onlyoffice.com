@@ -589,7 +589,7 @@ li.copy-link[id]:hover:before {
 /*search form*/
 .search-box {
     display: block;
-    height: 24px;
+    height: 48px;
     margin-bottom: 18px;
     white-space: nowrap;
     width: 100%;
