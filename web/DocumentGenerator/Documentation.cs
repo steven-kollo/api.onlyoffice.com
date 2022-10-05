@@ -38,9 +38,12 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     {
         private static List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
 
+        private static ILog _logger;
+
         public static void Load()
         {
-            LogManager.GetLogger("ASC.Api").Debug("Generate documentations");
+            _logger = LogManager.GetLogger("ASC.MsDocDocumentGenerator");
+            _logger.Debug("Generate documentations");
             //Load documentation
             _points = GenerateDocs();
         }
@@ -62,7 +65,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     {
                         generator.GenerateRequestExample(method);
                     }
-                    catch { }
+                    catch(Exception e) {
+                        _logger.Error("Error", e);
+                    }
                 }
             }
 
