@@ -145,6 +145,7 @@
                                         },
                                     HideRightMenu = true,
                                     HideRulers = true,
+                                    IntegrationMode = "embed",
                                     ToolbarHideFileName = true,
                                     ToolbarNoTabs = true
                                 }
