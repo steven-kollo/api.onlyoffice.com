@@ -526,24 +526,21 @@
       ]
     }
   },
-  "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t * @property {Array} Sheets - Returns the Sheets collection that represents all the sheets in the active workbook.\n\t * @property {ApiWorksheet} ActiveSheet - Returns an object that represents the active sheet.\n\t * @property {ApiRange} Selection - Returns an object that represents the selected range.\n\t */",
-  "description": "<p>Base class.</p>",
-  "scope": "global",
-  "properties": [
+  "comment": "/**\n\t * Returns a class formatted according to the instructions contained in the format expression.\n\t * @memberof Api\n\t * @param {string} expression - Any valid expression.\n\t * @param {string} [format] - A valid named or user-defined format expression.\n\t * @returns {string}\n\t */",
+  "description": "<p>Returns a class formatted according to the instructions contained in the format expression.</p>",
+  "scope": "instance",
+  "params": [
     {
-      "type": "Array",
-      "name": "Sheets",
-      "description": "<p>Returns the Sheets collection that represents all the sheets in the active workbook.</p>"
+      "type": "string",
+      "name": "expression",
+      "description": "<p>Any valid expression.</p>",
+      "optional": false
     },
     {
-      "type": "ApiWorksheet",
-      "name": "ActiveSheet",
-      "description": "<p>Returns an object that represents the active sheet.</p>"
-    },
-    {
-      "type": "ApiRange",
-      "name": "Selection",
-      "description": "<p>Returns an object that represents the selected range.</p>"
+      "type": "string",
+      "name": "format",
+      "description": "<p>A valid named or user-defined format expression.</p>",
+      "optional": true
     }
   ]
 }

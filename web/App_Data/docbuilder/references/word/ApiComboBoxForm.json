@@ -495,7 +495,7 @@
     "SetTextPr": {
       "memberof": "ApiComboBoxForm",
       "name": "SetTextPr",
-      "description": "<p>Sets the text properties to the current form.\n*This method is used only for text and combo box forms.</p>",
+      "description": "<p>Sets the text properties to the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -520,7 +520,7 @@
     "GetTextPr": {
       "memberof": "ApiComboBoxForm",
       "name": "GetTextPr",
-      "description": "<p>Returns the text properties from the current form.\n*This method is used only for text and combo box forms.</p>",
+      "description": "<p>Returns the text properties from the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
