@@ -2277,9 +2277,6 @@
     <Content Include="Content\plugins-macros.css" />
     <Content Include="Content\pushy.css" />
     <Content Include="Content\styles.css" />
-    <Content Include="externallistener\config.json" />
-    <Content Include="externallistener\index.html" />
-    <Content Include="externallistener\scripts\code.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="robots.txt" />
