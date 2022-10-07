@@ -2754,6 +2754,9 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\docbuilder\examples\cell\Api.CreateTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetImage.docbuilder" />
     <None Include="web.autofac.config">
       <SubType>Designer</SubType>
     </None>

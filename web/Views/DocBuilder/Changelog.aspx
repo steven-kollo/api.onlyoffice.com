@@ -291,10 +291,12 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getfontnames") %>">ApiParagraph/GetFontNames</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/getposinparent") %>">ApiParagraph/GetPosInParent</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apiparagraph/replacebyelement") %>">ApiParagraph/ReplaceByElement</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/createtextpr") %>">Api/CreateTextPr</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallcharts") %>">ApiWorksheet/GetAllCharts</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getalldrawings") %>">ApiWorksheet/GetAllDrawings</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallimages") %>">ApiWorksheet/GetAllImages</a> method to Spreadsheet API.</li>
         <li>Added the <a href="<%= Url.Action("spreadsheetapi/apiworksheet/getallshapes") %>">ApiWorksheet/GetAllShapes</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/api/createtextpr") %>">Api/CreateTextPr</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apiparagraph/sethighlight") %>">ApiParagraph/SetHighlight</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getheight") %>">ApiPresentation/GetHeight</a> method to Presentation API.</li>
         <li>Added the <a href="<%= Url.Action("presentationapi/apipresentation/getwidth") %>">ApiPresentation/GetWidth</a> method to Presentation API.</li>
