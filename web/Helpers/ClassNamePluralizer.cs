@@ -31,6 +31,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Web;
 using System.Web.Caching;
+using System.Xml.Linq;
+using System.Xml.Serialization;
 
 namespace ASC.Api.Web.Help.Helpers
 {
@@ -55,6 +57,8 @@ namespace ASC.Api.Web.Help.Helpers
         public bool IsOptional { get; set; }
 
         public bool IsCollection { get; set; }
+
+        public TypeDescription() { }
 
         public TypeDescription(string description, string example)
         {
@@ -124,8 +128,29 @@ namespace ASC.Api.Web.Help.Helpers
 
         public static void LoadClassNames(Stream data)
         {
-            var serializer = new DataContractSerializer(typeof(TypeDescriptor));
-            _descriptor = serializer.ReadObject(data) as TypeDescriptor;
+            var xdoc = XDocument.Load(data);
+            var descriptor = new TypeDescriptor()
+            {
+                Names = new Dictionary<string, TypeDescription>()
+            };
+
+            var serializer = new XmlSerializer(typeof(TypeDescription));
+            foreach (XElement node in xdoc.Root.Element("Names").Nodes())
+            {
+                var key = node.Element("key").Value;
+                var value = node.Element("value");
+                var description = new TypeDescription()
+                {
+                    Description = value.Element(nameof(TypeDescription.Description))?.Value,
+                    Example = value.Element(nameof(TypeDescription.Example))?.Value,
+                    ExampleJson = value.Element(nameof(TypeDescription.ExampleJson))?.Value,
+                    Note = value.Element(nameof(TypeDescription.Note))?.Value
+                };
+
+                descriptor.Names.Add(key, description);
+            }
+
+            _descriptor = descriptor;
         }
 
         public static bool IsOptional(string typeName)
