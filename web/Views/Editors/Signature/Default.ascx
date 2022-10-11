@@ -7,12 +7,12 @@
 
 <div class="note">从 4.2 版开始在 <b>文档服务器</b> 中使用此功能</div>
 
-<p>For the validation setup it is necessary to edit the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey" target="_blank">secret key</a> and <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token" target="_blank">token</a> parameters in the configuration file which can be found (or created) at the following path:</p>
+<p>对于验证设置，需要编辑位于配置文件中的 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#SecretKey" target="_blank">secret key</a> 和 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#Token" target="_blank">token</a> 参数，配置文件可在以下路径找到(或创建)：</p>
 <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>。</div>
 <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>。</div>
 
 <div class="note">
-    默认值在 <em>default.json</em> 配置文件中可用，该文件位于上述文件夹中（适用于 Linux 和 Windows）。
+    默认值在 <em>default.json</em> 配置文件中可用，该文件位于上述文件夹中(适用于 Linux 和 Windows)。
     请不要直接编辑 <em>default.json</em> 文件的内容。
     每次重新启动 Docker 容器或将 <b>Document Server</b> 升级到新版本时都会恢复默认值，并且所有更改都将丢失。
 </div>
@@ -42,37 +42,37 @@
     <tbody>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.browser.string</td>
-            <td>Defines the <em>secret key</em> to generate a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> to ONLYOFFICE Docs.</td>
+            <td>定义 <em>密钥</em> ，用以在客户端生成到ONLYOFFICE文档的 <a href="<%= Url.Action("signature/browser") %>">浏览器请求</a> 令牌。</td>
             <td>string</td>
             <td>secret</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.inbox.string</td>
-            <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> with the commands from the <b>document storage service</b> to the <b>document command service</b>, <b>document conversion service</b> and <b>document builder service</b>.</td>
+              <td>定义<em>密钥</em>，用以在<a href="<%=Url.Action("signature/request") %>#incoming">传入HTTP请求</a>中使用<b>从文档存储服务</b>到<b>文档命令服务</b>、<b>文档转换服务</b>和<b>文档生成服务</b>的命令生成令牌。</td>
             <td>string</td>
             <td>secret</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.secret.outbox.string</td>
-            <td>Defines the <em>secret key</em> to generate a token in the <a href="<%= Url.Action("signature/request") %>#outgoing">outgoing HTTP requests</a> to the <em>callbackUrl</em> address by <b>document editing service</b>.</td>
+            <td>定义<em>密钥</em>，用以通过<b>文档编辑服务的</b>在<a href="<%=Url.Action("signature/request") %>#outgoing">传出HTTP请求</a>到<em>回调Url</em>地址中生成令牌。</td>
             <td>string</td>
             <td>secret</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.browser</td>
-            <td>Defines if a token in the client-side <a href="<%= Url.Action("signature/browser") %>">browser requests</a> is enabled or not.</td>
+            <td>定义是否启用客户端<a href="<%=Url.Action("signature/browser") %>">浏览器请求</a>中的令牌。</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.inbox</td>
-            <td>Defines if a token in the <a href="<%= Url.Action("signature/request") %>#incoming">incoming HTTP requests</a> is enabled or not.</td>
+            <td>定义是否启用<a href="<%= Url.Action("signature/request") %>#incoming">传入HTTP请求</a>中的令牌。</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
         <tr class="tablerow">
             <td>services.CoAuthoring.token.enable.request.outbox</td>
-            <td>Defines if a token in the <a href="<%= Url.Action("signature/request") %>#outgoing">outgoing HTTP requests</a> is enabled or not.</td>
+            <td>定义<a href="<%= Url.Action("signature/request") %>#outgoing">传出HTTP请求</a>中的令牌是否已启用。</td>
             <td>boolean</td>
             <td>false</td>
         </tr>
@@ -111,10 +111,10 @@
 }
 </pre>
 
-<h2 id="code-samples" class="copy-link">Code samples for signature generation</h2>
-<p>Below you can find examples of signature generation for init config and requests.
-They are taken from <a href="<%= Url.Action("demopreview") %>">test samples</a> in different programming languages.
-We advise you to use this code in your projects to generate signatures.</p>
+<h2 id="code-samples" class="copy-link">用于生成签名的代码示例</h2>
+<p>下面是为初始化设置和请求生成签名的示例。
+它们取自不同编程语言的<a href="<%= Url.Action("demopreview") %>">测试范例。</a>。
+我们建议您在项目中使用此代码来生成签名。</p>
 <div class="container">
     <ul class="browser">
         <li class="browser tab active copy-link" id="csharp">C#</li>

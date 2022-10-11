@@ -20,7 +20,7 @@
 
     <p>有关 WOPI 协议的更多信息，请阅读 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/" target="_blank">WOPI 文档</a>。</p>
 
-    <p>All the necessary <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI" target="_blank">WOPI settings</a> you can find and change in the configuration file which can be found (or created) at the following path:</p>
+    <p>您可以在配置文件中查找和更改所有必要的<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#WOPI" target="_blank">WOPI设置</a>，该文件可以在以下路径中找到（或创建）：</p>
     <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>。</div>
     <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>。</div>
 
@@ -73,7 +73,7 @@
         此类集成商的 IP 地址必须包含在 <a href="https://docs.microsoft.com/zh-cn/microsoft-365/cloud-storage-partner-program/online/build-test-ship/settings#wopi-domain-allow-list" target="_blank">WOPI 域允许列表</a>中。
         同时，必须拒绝所有其他集成商的访问。</p>
     <note>默认情况下，所有 IP 地址都被认为是可信的。</note>
-    <p>Follow the steps below to configure the Document Server <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter" target="_blank">IP filter</a>:</p>
+    <p>按照以下步骤配置文档服务器<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#IPFilter" target="_blank">IP筛选器</a>：</p>
     <ol>
         <li>
             <p>使用任何可用的文本编辑器打开 <em>/etc/onlyoffice/documentserver/local.json</em> 文件：</p>

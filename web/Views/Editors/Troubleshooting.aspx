@@ -53,7 +53,7 @@
     <h2 id="changesUrl" class="copy-link">文件版本打不开</h2>
     <img width="832px" alt="文件版本打不开" src="<%= Url.Content("~/content/img/editor/changes-url.png") %>" />
     <p><b>文档编辑服务</b> 无法打开文件版本。</p>
-    <p>Check if the <em>changesUrl</em> link from the <a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a> method corresponds to the <em>previous.url</em> parameter.</p>
+    <p>检查<a href="<%= Url.Action("methods") %>#setHistoryData">setHistoryData</a>方法中的<em>changesUrl</em>链接是否与<em>previous.url</em>参数对应。</p>
 
     <h2 id="coedit" class="copy-link">没有协作编辑</h2>
     <img width="832px" alt="没有协作编辑" src="<%= Url.Content("~/content/img/editor/e-coedit.png") %>" />

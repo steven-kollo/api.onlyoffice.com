@@ -150,10 +150,10 @@ docEditor.refreshHistory({
 </pre>
             <p>其中 <b>changes</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 的 <em>更改</em>。</p>
             <p>其中 <b>serverVersion</b> 是保存文档后返回的 <a href="<%= Url.Action("callback") %>#history">历史对象</a> 中的 <em>serverVersion</em>。</p>
-            <note>ONLYOFFICE Docs highlights the changes made from the beginning of the current document session, not from the beginning of the document version.
-                And even if several document versions are created during one session, all changes from this session will be highlighted.
-                Therefore, you cannot see the document versions created with the <a href="<%= Url.Action("save") %>#forcesave">force saving option</a> in the document history.</note>
-        </li>
+            <note>ONLYOFFICE文档强调从当前文档会话开始时所做的更改，而不是从文档版本开始时所作的更改。
+                即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。
+                因此，您无法在文档历史记录中看到使用<a href="<%= Url.Action("save") %>#forcesave">强制保存选项</a>创建的文档版本。</note>
+            </li>
         <li>
             <p>
                 <a href="<%= Url.Action("callback") %>#changesurl">changesurl</a> - 带有文档编辑数据的文件的绝对 URL，用于显示与特定文档版本相对应的更改。

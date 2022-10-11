@@ -54,7 +54,7 @@
                 <a href="<%= Url.Action("confluence") %>">Confluence 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("drupal") %>">Drupal integration</a>
+                <a href="<%= Url.Action("drupal") %>">Drupal 集成</a>
             </li>
             <li>
                 <a href="<%= Url.Action("humhub") %>">HumHub 集成</a>
@@ -93,7 +93,7 @@
                 <a href="<%= Url.Action("strapi") %>">Strapi 集成</a>
             </li>
             <li>
-                <a href="<%= Url.Action("wordpress") %>">WordPress integration</a>
+                <a href="<%= Url.Action("wordpress") %>">WordPress 集成</a>
             </li>
         </ul>
     </li>
@@ -143,10 +143,10 @@
                 <a href="<%= Url.Action("comparing") %>">比较文件</a>
             </li>
             <li>
-                <a href="<%= Url.Action("viewing") %>">Viewing</a>
+                <a href="<%= Url.Action("viewing") %>">查看</a>
             </li>
             <li>
-                <a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a>
+                <a href="<%= Url.Action("mobileintegration") %>">移动设备整合</a>
             </li>
         </ul>
     </li>
@@ -196,7 +196,7 @@
     <% if (connector)
        { %>
     <li>
-        <a href="<%= Url.Action("connector") %>?connector=true">Connector</a>
+        <a href="<%= Url.Action("connector") %>?connector=true">连接器</a>
     </li>
     <% } %>
     <li>

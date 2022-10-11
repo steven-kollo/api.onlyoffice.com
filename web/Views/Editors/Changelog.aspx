@@ -16,14 +16,14 @@
     </h1>
 
     <p class="dscr">ONLYOFFICE 文档服务器 API 的更改列表。</p>
-    <h2 id="72" class="copy-link">Version 7.2</h2>
+    <h2 id="72" class="copy-link">7.2 版</h2>
     <ul>
-        <%--<li>Added the <a href="<%= Url.Action("connector") %>">Connector</a> class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.</li>--%>
-        <li>Added the <em>theme-contrast-dark</em> theme id to the <a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a> parameter.</li>
-        <li>Added the <em>phone</em> field to the <a href="<%= Url.Action("config/editor/customization") %>#customer">editorConfig.customization.customer</a> parameter.</li>
-        <li>Added the <a href="<%= Url.Action("command/license") %>#license">connections_view</a>, <a href="<%= Url.Action("command/license") %>#license">users_view_count</a> and <a href="<%= Url.Action("command/license") %>#quota">users_view</a> parameters to the license response.</li>
-        <li>Added the <a href="<%= Url.Action("viewing") %>">live viewer</a> mode to the text document, spreadsheet and presentation editors.</li>
-        <li>Added the <a href="<%= Url.Action("wopi/discovery") %>#embedview">embedview</a> action to the WOPI discovery.</li>
+        <%--<li>添加了<a href="<%=Url.Action("connector") %>">连接器</a> 类，以与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。</li>--%>
+        <li>将<em>theme-contrast-dark</em>主题id添加到<a href="<%= Url.Action("config/editor/customization") %>#uiTheme">editorConfig.customization.uiTheme</a>参数中。</li>
+        <li>将<em>phone</em>字段添加到<a href="<%= Url.Action("config/editor/customization") %>#customer">editorConfig.customization.customer</a>参数中。</li>
+        <li>向许可证响应添加<a href="<%= Url.Action("command/license") %>#license">connections_view</a>、<a href="<%= Url.Action("command/license") %>#license">users_view_count</a>和<a href="<%= Url.Action("command/license") %>#quota">users_view</a>。</li>
+        <li>在文本文档、电子表格和演示文稿编辑器中添加了<a href="<%= Url.Action("viewing") %>">实时查看器</a>模式。</li>
+        <li>将<a href="<%= Url.Action("wopi/discovery") %>#embedview">embedview</a>操作添加到wopi发现中。</li>
     </ul>
 
     <h2 id="71" class="copy-link">7.1 版</h2>
@@ -103,7 +103,7 @@
         <li>添加了一个新的 <a href="<%= Url.Action("callback") %>#actions">actions.type</a> 字段值（<em>actions.type = 2</em>）。</li>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#trackChanges">editorConfig.customization.trackChanges</a> 字段。</li>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#toolbarHideFileName">editorConfig.customization.toolbarHideFileName</a> 字段。</li>
-        <li>根据 <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a>选择 <em>status</em> <b>6</b> 的 <em>callbackUrl</em> 。</li>
+        <li>根据 <a href="<%= Url.Action("callback") %>#used-callbackUrl">forcesavetype</a>选择 <em>status</em> <b>6</b> 的 <em>callbackUrl</em>。</li>
         <li>增加了打开 <a href="<%= Url.Action("config/") %>#documentType">fb2</a> 格式的功能。</li>
     </ul>
 
@@ -139,10 +139,10 @@
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#unit">editorConfig.customization.unit</a> 字段。</li>
         <li>添加了 <a href="<%= Url.Action("conversionapi") %>#region">region</a> 字段。</li>
         <li>添加了 <a href="<%= Url.Action("conversionapi") %>#spreadsheetLayout">spreadsheetLayout</a> 字段。</li>
-        <li>添加了转换的 <a href="<%= Url.Action("conversionapi") %>#error-codes">输入错误</a> 。</li>
+        <li>添加了转换的 <a href="<%= Url.Action("conversionapi") %>#error-codes">输入错误</a>。</li>
         <li><a href="<%= Url.Action("config/events") %>#onRequestSendNotify">events.onRequestSendNotify</a> 事件和 <a href="<%= Url.Action("config/events") %>#onRequestUsers">events.onRequestUsers</a> 事件可以独立设置。</li>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#mentionShare">editorConfig.customization.mentionShare</a> 字段。</li>
-        <li>根据 <a href="<%= Url.Action("callback") %>#used-callbackUrl">status</a>选择 <em>callbackUrl</em> 。</li>
+        <li>根据 <a href="<%= Url.Action("callback") %>#used-callbackUrl">status</a>选择 <em>callbackUrl</em>。</li>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#compatibleFeatures">editorConfig.customization.compatibleFeatures</a> 字段。</li>
     </ul>
 
@@ -185,7 +185,7 @@
         <li>添加了 <a href="<%= Url.Action("config/document/permissions") %>#fillForms">document.permissions.fillForms</a> 字段。</li>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#help">editorConfig.customization.help</a> 字段。</li>
         <li>添加了使 <a href="<%= Url.Action("config/editor/customization") %>#logo">editorConfig.customization.logo</a> 不可点击的可能性。</li>
-        <li>为转换的 <a href="<%= Url.Action("conversionapi") %>#thumbnail-aspect">aspect</a> 字段添加值 <em>2</em> 。</li>
+        <li>为转换的 <a href="<%= Url.Action("conversionapi") %>#thumbnail-aspect">aspect</a> 字段添加值 <em>2</em>。</li>
     </ul>
 
     <h2 id="51" class="copy-link">5.1 版</h2>
@@ -231,7 +231,7 @@
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> 字段。</li>
         <li>添加了 <a href="<%= Url.Action("config/editor/customization") %>#showReviewChanges">editorConfig.customization.showReviewChanges</a> 字段。</li>
         <li>强制保存文件时，在回调处理程序请求中添加了 <a href="<%= Url.Action("callback") %>#forcesavetype">forcesavetype</a> 字段。</li>
-        <li>为文档转换服务的添加了 <a href="<%= Url.Action("conversionapi") %>#response">JSON 格式响应</a> 。</li>
+        <li>为文档转换服务的添加了 <a href="<%= Url.Action("conversionapi") %>#response">JSON 格式响应</a>。</li>
     </ul>
 
     <h2 id="42" class="copy-link">4.2 版</h2>

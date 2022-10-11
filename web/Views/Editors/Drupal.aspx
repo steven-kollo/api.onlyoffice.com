@@ -6,111 +6,111 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Drupal ONLYOFFICE connector module
+    Drupal ONLYOFFICE连接器模块
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Drupal ONLYOFFICE connector module</span>
+        <span class="hdr">Drupal ONLYOFFICE连接器模块</span>
     </h1>
 
-    <p class="dscr">The ONLYOFFICE <a href="https://github.com/ONLYOFFICE/onlyoffice-drupal" target="_blank">module</a> enables users to edit files in the Media module from <a href="https://www.drupal.org/" target="_blank">Drupal</a> using ONLYOFFICE Docs.</p>
+    <p class="dscr">ONLYOFFICE <a href="https://github.com/ONLYOFFICE/onlyoffice-drupal" target="_blank">模块</a> 允许用户用ONLYOfficeDocs编辑 <a href="https://www.drupal.org/" target="_blank">Drupal</a> 媒体模块中的文件。</p>
 
-    <h2 id="features" class="copy-link">Features</h2>
+    <h2 id="features" class="copy-link">特性</h2>
     <ul>
-        <li>Currently, the following document formats can be edited: DOCX, XLSX, PPTX.</li>
-        <li>The following formats are available for viewing: DJVU, DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, PPTX, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSM, XLSX, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.</li>
-        <li>The module also allows to preview files on public pages.</li>
-        <li>The module will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for office documents.
-            This allows multiple users to collaborate in real time and save back those changes to Drupal.</li>
+        <li>目前，可以编辑以下文档格式：DOCX, XLSX, PPTX。</li>
+        <li>以下格式可供查看：DJVU, DOC, DOCM, DOCX, DOT, DOTM, DOTX, EPUB, FB2, FODT, HTML, MHT, ODT, OTT, OXPS, PDF, PPTX, RTF, TXT, XPS, XML, CSV, FODS, ODS, OTS, XLS, XLSM, XLSX, XLT, XLTM, XLTX, FODP, ODP, OTP, POT, POTM, POTX, PPS, PPSM, PPSX, PPT, PPTM.</li>
+        <li>该模块还允许在公共页面上预览文件。</li>
+        <li>该模块将在office文档的文档库中创建一个新的 <b>在ONLYOFFICE中编辑</b> 菜单选项。
+            这允许多个用户实时协作，并将这些更改保存回Drupal。</li>
     </ul>
 
 
-    <h2 id="install-doc" class="copy-link">Installing ONLYOFFICE Docs</h2>
+    <h2 id="install-doc" class="copy-link">安装 ONLYOFFICE 文档</h2>
     <p>
-        You need an instance of ONLYOFFICE Docs (Document Server) that is resolvable and connectable both from Drupal and any end clients. 
-        If that is not the case, use the official <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs documentation page</a>. 
-        ONLYOFFICE Docs must also be able to POST to Drupal directly.
+        您需要一个ONLYOFFICE Docs（Document Server）实例，该实例可以从Drupal和任何终端客户机进行解析和连接。
+        如果不是这种情况，请使用官方 <a href="https://helpcenter.onlyoffice.com/server/linux/document/linux-installation.aspx" target="_blank">ONLYOFFICE Docs 文档页面</a>。
+        ONLYOFFICE文档还必须能够直接发布到Drupal。
     </p>
-    <p>The easiest way to install an instance of ONLYOFFICE Docs is to use <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>.</p>
+    <p>安装 ONLYOFFICE Docs 实例的最简单方法是使用 <a href="https://github.com/onlyoffice/Docker-DocumentServer" target="_blank">Docker</a>。</p>
 
 
-    <h2 id="install" class="copy-link">Installing Drupal ONLYOFFICE connector module</h2>
-    <p>To start using ONLYOFFICE Docs with Drupal, follow these steps:</p>
-    <p><b>Step 1: Add the module</b></p>
-    <p>There are two options to add the Drupal module.</p>
-    <p><b>Option 1</b>. Add a module using <a href="https://www.drupal.org/docs/extending-drupal/installing-modules#s-add-a-module-using-drupals-user-interface-easy" target="_blank">Drupal's User Interface</a>.</p>
+    <h2 id="install" class="copy-link">安装Drupal ONLYOFFICE连接器模块</h2>
+    <p>要开始在Drupal中使用ONLYOFFICE文档，请执行以下步骤：</p>
+    <p><b>第1步：添加模块</b></p>
+    <p>添加Drupal模块有两个选项。</p>
+    <p><b>选项1</b>：使用 <a href="https://www.drupal.org/docs/extending-drupal/installing-modules#s-add-a-module-using-drupals-user-interface-easy" target="_blank">Drupal的用户界面</a>添加模块。</p>
     <ol>
-        <li>On the <b>Admin</b> toolbar project page on <a href="https://www.drupal.org/download" target="_blank">drupal.org</a>, scroll to the <b>Downloads</b> section at the bottom of the page.</li>
-        <li>Copy the address of the <em>tar.gz</em> link. Depending on your device and browser, you might do this by right clicking and selecting <b>Copy link address</b>.</li>
-        <li>In the <b>Manage</b> administrative menu, navigate to <b>Extend</b> (admin/modules). The <b>Extend</b> page appears.</li>
-        <li>Click <b>Install new module</b>. The <b>Install new module</b> page appears.</li>
-        <li>In the field <b>Install from a URL</b>, paste the copied download link.</li>
-        <li>Click <b>Install</b> to upload and unpack the new module on the server. The files are being downloaded to the modules directory.</li>
+        <li>在 <a href="https://www.drupal.org/download" target="_blank">drupal.org</a>的 <b>管理</b> 工具栏项目页面上，滚动到页面底部的 <b>下载</b> 部分。</li>
+        <li>复制 <em>tar.gz</em> 链接的地址。根据您的设备和浏览器，您可以通过右键单击并选择 <b>复制链接地址</b>来完成此操作。</li>
+        <li>在 <b>管理</b> 管理菜单中，导航至 <b>扩展</b> （管理/模块）。此时会出现 <b>扩展</b> 页面。</li>
+        <li>单击 <b>安装新模块</b>。出现 <b>安装新模块</b> 页面。</li>
+        <li>在 <b>从URL安装</b>字段中，粘贴复制的下载链接。</li>
+        <li>单击 <b>安装</b>,在服务器上上传和解压缩新模块。正在将文件下载到模块目录。</li>
     </ol>
 
-    <p><b>Option 2</b>. Add a module with <a href="https://www.drupal.org/docs/extending-drupal/installing-modules#s-add-a-module-with-composer" target="_blank">Composer</a>.</p>
-    <p>Enter the following command at the root of your site:</p>
+    <p><b>选项2</b>：使用 <a href="https://www.drupal.org/docs/extending-drupal/installing-modules#s-add-a-module-with-composer" target="_blank">Composer</a>添加模块。</p>
+    <p>在站点的根目录下输入以下命令：</p>
     <pre>
 composer require drupal/onlyoffice
 </pre>
 
-    <p><b>Step 2: Enable the module</b></p>
-    <p>There are two options to enable the Drupal module.</p>
-    <p><b>Option 1</b>. Using <a href="https://www.drupal.org/docs/extending-drupal/installing-modules#s-add-a-module-using-drupals-user-interface-easy" target="_blank">Drupal's User Interface</a>.</p>
+    <p><b>第2步：启用模块</b></p>
+    <p>有两个选项可以启用Drupal模块。</p>
+    <p><b>选项1</b>。使用 <a href="https://www.drupal.org/docs/extending-drupal/installing-modules#s-add-a-module-using-drupals-user-interface-easy" target="_blank">Drupal的用户界面</a>。</p>
     <ol>
-        <li>Navigate to the <b>Extend</b> page (admin/modules) via the <b>Manage</b> administrative menu.</li>
-        <li>Locate the ONLYOFFICE Connector module and check the box.</li>
-        <li>Click <b>Install</b> to enable.</li>
+        <li>通过 <b>管理</b> 管理菜单导航到 <b>扩展</b> 页面（管理/模块）。</li>
+        <li>找到ONLYOFFICE连接器模块并选中该框。</li>
+        <li>单击 <b>安装</b> 以启用。</li>
     </ol>
 
-    <p><b>Option 2</b>. Using the command line.</p>
+    <p><b>选项2</b>：使用命令行。</p>
     <ol>
         <li>
-            <p>Run the following <b>Drush</b> command, giving the project name as a parameter:</p>
+            <p>运行以下 <b>Drush</b> 命令，将项目名称作为参数：</p>
             <pre>
 drush pm:enable onlyoffice
 </pre>
         </li>
-        <li>Follow the instructions on the screen.</li>
+        <li>按照屏幕上的说明进行操作。</li>
     </ol>
 
-    <h2 id="configuration" class="copy-link">Configuring Drupal ONLYOFFICE connector module</h2>
-    <p>In Drupal, open  <em>~/config/system/onlyoffice-settings</em> page with administrative settings for <b>ONLYOFFICE</b> section.
-        Enter the address to connect ONLYOFFICE Document Server:</p>
+    <h2 id="configuration" class="copy-link">配置Drupal ONLYOFFICE连接器模块</h2>
+    <p>在Drupal中，打开 <em>~/config/system/onlyoffice-settings</em> 页面，其中包含 <b>onlyoffice</b> 部分的管理设置。
+        输入连接ONLYOFFICE文档服务器的地址：</p>
     <pre>
 https://&lt;documentserver&gt;/
 </pre>
-    <p>where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed. The address must be accessible for the user browser and from the Drupal server.
-        The Drupal server address must also be accessible from ONLYOFFICE Document Server for correct work.</p>
-    <p>To restrict access to ONLYOFFICE Document Server and for security reasons and data integrity the encrypted signature is used.
-        Specify the <b>Secret key</b> in the Drupal administrative configuration. In the ONLYOFFICE Document Server <a href="<%= Url.Action("signature") %>">config file</a> specify the same secret key and enable the validation.</p>
+    <p>其中 <b>documentserver</b> 是安装了ONLYOFFICE 文档服务器的服务器的名称。必须可以从用户浏览器和Drupal服务器访问该地址。
+        为了正确运行，Drupal服务器地址还必须可以从ONLYOFFICE 文档服务器访问。</p>
+    <p>为了限制对ONLYOFFICE文档服务器的访问，并出于安全原因和数据完整性，使用加密签名。
+        在Drupal管理配置中指定 <b>密钥</b>。在ONLYOFFICE 文档服务器 <a href="<%= Url.Action("signature") %>">配置文件</a> 中，指定相同的密钥并启用验证。</p>
 
-    <h2 id="usage" class="copy-link">Using Drupal ONLYOFFICE connector module</h2>
-    <p><b>Edit files already uploaded to Drupal</b></p>
-    <p>All office files added to Media can be opened for editing. In the last table column, call the drop-down list and select the <b>Edit in ONLYOFFICE</b> action.
-        The editor opens in the same tab. Users with Administrator rights are able to co-edit files using ONLYOFFICE Docs. All changes are saved in the same file.</p>
+    <h2 id="usage" class="copy-link">使用Drupal ONLYOFFICE连接器模块</h2>
+    <p><b>编辑已上传到Drupal的文件</b></p>
+    <p>可以打开添加到媒体中的所有office文件进行编辑。在最后一个表列中，调用下拉列表并选择 <b>在ONLYOFFICE中编辑</b> 操作。
+        编辑器将在同一选项卡中打开。具有管理员权限的用户可以使用ONLYOFFICE文档共同编辑文件。所有更改都保存在同一文件中。</p>
 
-    <p><b>Create new posts</b></p>
-    <p>When creating a post, you can add the new ONLYOFFICE element:</p>
+    <p><b>创建新帖子</b></p>
+    <p>创建帖子时，可以添加新的ONLYOFFICE元素：</p>
     <ol>
-        <li>Go to <b>Structure -> Content types -> Manage fields</b>. On the opened page, click <b>Add field</b>. Add a new field: <b>File</b> or <b>Media</b>. Set the label and save.</li>
-        <li>For the added <b>File</b> field, specify the file extensions. Go to <b>Structure -> Content types -> Manage fields</b>.
-            In the <b>Allowed file extensions</b> field, specify the file formats that will be shown in the editors (docx, xlsx, pptx).</li>
-        <li>For the added <b>Media</b> field, click the <b>Document</b> checkbox.</li>
-        <li>Go to <b>Structure -> Media types -> Document -> Manage display</b>.</li>
-        <li>For the <b>Document</b> field, specify the <em>ONLYOFFICE Preview</em> format. By clicking on the gear symbol, you can specify the dimensions of the embedded editor window.</li>
+        <li>转到 <b>结构->内容类型->管理字段</b>。在打开的页面上，单击 <b>添加字段</b>。添加新字段：<b>文件</b> 或 <b>媒体</b>。设置标签并保存。</li>
+        <li>对于添加的 <b>文件</b> 字段，指定文件扩展名。转到 <b>结构->内容类型->管理字段</b>。
+            在 <b>允许的文件扩展名</b> 字段中，指定将在编辑器中显示的文件格式（docx、xlsx、pptx）。</li>
+        <li>对于添加的 <b>媒体</b> 字段，单击 <b>文档</b> 复选框。</li>
+        <li>转到 <b>结构->媒体类型->文档->管理显示</b>。</li>
+        <li>对于 <b>文档</b> 字段，指定 <em>ONLYOFFICE预览</em> 格式。通过单击齿轮符号，可以指定嵌入式编辑器窗口的尺寸。</li>
     </ol>
-    <p>When you are done with the pre-settings, you can create posts on the <b>Content</b> tab. Click on the <b>Add Content</b> button and select the created content.</p>
-    <p>Specify title and select a file (if the content contains <b>File</b> fields).</p>
-    <p>For <b>Media</b> section, specify the name of the previously uploaded file.</p>
-    <p>Your site visitors will also be able to view the created page (<b>People -> Permissions -> View published content</b>).</p>
+    <p>完成预设后，可以在 <b>内容</b> 选项卡上创建帖子。单击 <b>添加内容</b> 按钮并选择创建的内容。</p>
+    <p>指定标题并选择文件（如果内容包含 <b>文件</b> 字段）。</p>
+    <p>对于 <b>媒体</b> 部分，指定以前上传的文件的名称。</p>
+    <p>您的网站访问者还可以查看创建的页面（<b>人员->权限->查看发布的内容</b>）。</p>
 
-    <h2 id="howitworks" class="copy-link">How it works</h2>
-    <p>The ONLYOFFICE integration follows the API documented <a href="<%= Url.Action("basic") %>">here</a>.</p>
+    <h2 id="howitworks" class="copy-link">它是如何工作的</h2>
+    <p>ONLYOFFICE集成遵循 <a href="<%= Url.Action("basic") %>">此处</a>API文档。</p>
 
     <br />
-    <p>Download the Drupal ONLYOFFICE connector module <a href="https://github.com/ONLYOFFICE/onlyoffice-drupal" target="_blank">here</a>.</p>
+    <p>在 <a href="https://github.com/ONLYOFFICE/onlyoffice-drupal" target="_blank">此处</a>下载Drupal ONLYOFFICE连接器模块。</p>
 
 </asp:Content>

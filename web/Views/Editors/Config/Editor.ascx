@@ -47,7 +47,7 @@
         </tr>
         <tr class="tablerow">
             <td id="callbackUrl" class="copy-link">callbackUrl<span class="required">*</span></td>
-            <td>指定 <b>文档存储服务</b> 的绝对 URL （必须由在自己的服务器上使用 ONLYOFFICE 文档服务器的软件集成商 <a href="<%= Url.Action("callback") %>">实现</a> ）。</td>
+            <td>指定 <b>文档存储服务</b> 的绝对 URL （必须由在自己的服务器上使用 ONLYOFFICE 文档服务器的软件集成商 <a href="<%= Url.Action("callback") %>">实现</a>）。</td>
             <td>string</td>
             <td>"https://example.com/url-to-callback.ashx"</td>
         </tr>
@@ -58,22 +58,22 @@
                 该对象具有以下参数：
                 <ul>
                     <li>
-                        <b>mode</b> - 共同编辑模式（<em>fast</em> 或 <em>strict</em>）。 The default value is <b>fast</b>,
+                        <b>mode</b> - 共同编辑模式（<em>fast</em> 或 <em>strict</em>）。 默认值为<b>fast</b>,
                         <br />
                         <b>类型</b>：string，
                         <br />
                         <b>示例</b>："fast";
                     </li>
                     <li>
-                        <b>change</b> - 定义是否可以在编辑器界面中更改共同编辑模式。 The default value is <b>fast</b>，
+                        <b>change</b> - 定义是否可以在编辑器界面中更改共同编辑模式。 默认值为 <b>false</b>，
                         <br />
                         <b>类型</b>：boolean，
                         <br />
                         <b>示例</b>：true。
                     </li>
                 </ul>
-                <p>This parameter is used to apply the <a href="<%= Url.Action("coedit") %>#modes">co-editing</a> and <a href="<%= Url.Action("viewing") %>">viewing</a> modes.</p>
-            </td>
+                <p>此参数用于应用<a href="<%= Url.Action("coedit") %>#modes">共同编辑</a>和<a href="<%= Url.Action("viewing") %>">查看</a>模式</p>
+             </td>
             <td>object</td>
             <td></td>
         </tr>
@@ -114,9 +114,9 @@
         </tr>
         <tr class="tablerow tablerow-note">
             <td colspan="4">
-                <div class="note">Please note that to translate the editor interface into Portuguese (Portugal) or Chinese (Traditional, Taiwan)
-                (these languages were added in version 7.2), you need to use the four letter language codes - <b>pt-PT</b> or <b>zh-TW</b>, respectively.
-                The two letter <b>pt</b> language code sets Portuguese (Brazil) and the <b>zh</b> code specifies Chinese (People's Republic of China).</div>
+                <div class="note">请注意，要将编辑器界面翻译为葡萄牙语（葡萄牙）或中文（繁体，台湾）
+                （这些语言是在7.2版中添加的），您需要分别使用四个字母的语言代码-<b>pt-PT</b>或<b>zh-TW</b>。
+                两个字母<b>pt</b>语言代码设置葡萄牙语（巴西），<b>zh</b>代码指定汉语（中华人民共和国）。</div>
             </td>
         </tr>
         <tr>

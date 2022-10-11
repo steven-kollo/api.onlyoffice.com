@@ -25,7 +25,7 @@
         <li><a href="<%= Url.Action("alfresco") %>">ONLYOFFICE Alfresco 模块包</a></li>
         <li><a href="<%= Url.Action("chamilo") %>">Chamilo ONLYOFFICE 集成插件</a></li>
         <li><a href="<%= Url.Action("confluence") %>">Confluence ONLYOFFICE 集成应用</a></li>
-        <li><a href="<%= Url.Action("drupal") %>">Drupal ONLYOFFICE connector module</a></li>
+        <li><a href="<%= Url.Action("drupal") %>">Drupal ONLYOFFICE 连接器模块</a></li>
         <li><a href="<%= Url.Action("humhub") %>">HumHub ONLYOFFICE 连接器</a></li>
         <li><a href="<%= Url.Action("jira") %>">Jira ONLYOFFICE 集成应用</a></li>
         <li><a href="<%= Url.Action("liferay") %>">Liferay ONLYOFFICE 连接器</a></li>
@@ -38,7 +38,7 @@
         <li><a href="<%= Url.Action("redmine") %>">Redmine ONLYOFFICE 集成插件</a></li>
         <li><a href="<%= Url.Action("sharepoint") %>">SharePoint ONLYOFFICE 集成解决方案</a></li>
         <li><a href="<%= Url.Action("strapi") %>">Strapi ONLYOFFICE 集成插件</a></li>
-        <li><a href="<%= Url.Action("wordpress") %>">WordPress ONLYOFFICE integration plugin</a></li>
+        <li><a href="<%= Url.Action("wordpress") %>">WordPress ONLYOFFICE 集成插件</a></li>
     </ul>
 
     <br />

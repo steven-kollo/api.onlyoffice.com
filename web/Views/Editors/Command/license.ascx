@@ -147,11 +147,11 @@
                         <b>出现</b>: 可选的
                     </li>
                     <li>
-                        <b>connections_view</b> - the number of connections for the live viewer.
+                        <b>connections_view</b> - 实时查看器的连接数。
                         <br />
                         <b>type</b>: integer
                         <br />
-                        <b>presence</b>: optional
+                        <b>出现</b>: 可选的
                     </li>
                     <li>
                         <b>users_count</b> - 用户许可证的用户数。
@@ -161,11 +161,11 @@
                         <b>出现</b>: 可选的
                     </li>
                     <li>
-                        <b>users_view_count</b> - the number of users for the live viewer.
+                        <b>users_view_count</b> - 实时查看器的用户数。
                         <br />
                         <b>type</b>: integer
                         <br />
-                        <b>presence</b>: optional
+                         <b>出现</b>: 可选的
                     </li>
                     <li>
                         <b>users_expire</b> - 用户许可证过期的天数。
@@ -235,11 +235,11 @@
                         <b>出现</b>: 必需的
                     </li>
                     <li>
-                        <b>users_view</b> - the user quota for the live viewer where <em>userid</em> - the id of the user who opened the editor, <em>expire</em> - date of viewing expiration for this user.
+                        <b>users_view</b>-实时查看器的用户配额，其中<em>userid</em> - 打开编辑器的用户的id，<em>expire</em> - 此用户的查看过期日期。
                         <br />
-                        <b>type</b>: array of objects
+                        <b>type</b>: object数组
                         <br />
-                        <b>presence</b>: required
+                         <b>出现</b>: 必需的
                     </li>
                 </ul>
             </td>

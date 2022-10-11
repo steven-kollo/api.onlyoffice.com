@@ -105,8 +105,8 @@
             </tr>
             <tr>
                 <td id="Version" class="copy-link">Version</td>
-                <td>The current version of the file based on the server file version schema. Every time the document is edited and saved, the version must be changed.
-                The version values must never repeat for a given file.</td>
+                <td>基于服务器文件版本架构的文件的当前版本。每次编辑和保存文档时，都必须更改版本。
+                给定文件的版本号不得重复。</td>
                 <td>string</td>
                 <td>"Khirz6zTPdfd7"</td>
             </tr>
@@ -305,8 +305,8 @@
             </tr>
             <tr>
                 <td id="LastModifiedTime" class="copy-link">LastModifiedTime</td>
-                <td>The last time when the file was modified. This time must always be a UTC time, and must be formatted in ISO 8601 round-trip format.
-                This property can be specified as an alternative to the <a href="#Version">Version</a> property.</td>
+                <td>上次修改文件的时间。此时间必须始终为UTC时间，并且必须以ISO 8601往返格式格式化。
+                此属性可以指定为<a href="#Version">Version</a>属性的替代项。</td>
                 <td>string</td>
                 <td>"2009-06-15T13:45:30.0000000Z"</td>
             </tr>

@@ -261,11 +261,11 @@
                         <b>示例</b>："John Smith and Co."；
                     </li>
                     <li>
-                        <b>phone</b> - the phone of the company or person who gives access to the editors or the editor authors,
-                        <br />
-                        <b>type</b>: string,
-                        <br />
-                        <b>example</b>: "123456789";
+                        <b>phone</b>-允许访问编辑或编辑作者的公司或个人的电话，
+                        <br/>
+                        <b>类型</b>：string，
+                        <br/>
+                        <b>示例</b>："123456789"；
                     </li>
                     <li>
                         <b>www</b> - 上述公司或个人的主页地址，
@@ -755,8 +755,8 @@
         <tr class="tablerow">
             <td id="macros" class="copy-link">macros</td>
             <td>
-                Defines if document macros will be automatically run when the editor opens.
-                默认值为 <b>true</b>。 The <b>false</b> value hides the <a href="#macrosMode">macros settings</a> from the user.
+              定义当编辑器打开时是否自动运行文档宏。
+              默认值为 <b>true</b>。<b>false</b>值对用户隐藏<a href="#macrosMode">宏设置</a>。
             </td>
             <td>boolean</td>
             <td>true</td>
@@ -764,12 +764,12 @@
         <tr>
             <td id="macrosMode" class="copy-link">macrosMode</td>
             <td>
-                Defines the macros run mode when autostart is enabled.
+                定义启用自动开始时的宏运行模式。
                 可以取以下值：
                 <ul>
-                    <li><b>disable</b> - don't run macros at all;</li>
+                    <li><b>disable</b> - 不自动运行所有宏；</li>
                     <li><b>enable</b> - 自动运行所有宏；</li>
-                    <li><b>warn</b> - warn about macros and ask permission to run them.</li>
+                    <li><b>warn</b> - 对运行宏发出警告并请求运行它们的权限。</li>
                 </ul>
                 默认值为 <b>warn</b>。
             </td>
@@ -1050,7 +1050,7 @@
                 </ul>
                 第一个选项具有更高的优先级。
                 <p></p>
-                Apart from the available editor themes, the user can also customize their own <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">color themes</a> for the application interface.
+                除了可用的编辑器主题外，用户还可以为应用程序界面自定义自己的<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-change-theme.aspx" target="_blank">颜色主题</a>。
             </td>
             <td>string</td>
             <td>theme-dark</td>
@@ -1199,7 +1199,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             <% } %>"logo": {
                 "image": "https://example.com/logo.png",
                 "imageDark": "https://example.com/dark-logo.png",
-                "url": "https://www.onlyoffice.com"
+                "url": "https://www.onlyoffice.com/zh/"
             },
             "macros": true,
             "macrosMode": "warn",

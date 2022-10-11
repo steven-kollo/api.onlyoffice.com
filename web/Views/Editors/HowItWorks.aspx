@@ -34,8 +34,8 @@
         <li><a href="<%= Url.Action("anonymoususers") %>">为匿名用户设置名称</a></li>
         <li><a href="<%= Url.Action("commenting") %>">对文档发表评论</a></li>
         <li><a href="<%= Url.Action("comparing") %>">比较文件</a></li>
-        <li><a href="<%= Url.Action("viewing") %>">Viewing</a></li>
-        <li><a href="<%= Url.Action("mobileintegration") %>">Mobile integration</a></li>
+        <li><a href="<%= Url.Action("viewing") %>">查看</a></li>
+        <li><a href="<%= Url.Action("mobileintegration") %>">移动设备整合</a></li>
     </ul>
     
     <br />
@@ -66,7 +66,7 @@
             <b>文档命令服务</b> - 服务器服务，它允许使用 <b>文档编辑服务</b>执行附加命令。
         </li>
         <li>
-            <b>文档转换服务</b> - 服务器服务，它允许将文档文件转换为适当的 Office Open XML 格式（文本文档为<em>docx</em> ，电子表格为 <em>xlsx</em> ，演示文稿为 <em>pptx</em> ），以供编辑或下载的。
+            <b>文档转换服务</b> - 服务器服务，它允许将文档文件转换为适当的 Office Open XML 格式（文本文档为<em>docx</em>，电子表格为 <em>xlsx</em>，演示文稿为 <em>pptx</em>），以供编辑或下载的。
         </li>
         <li>
             <b>文档生成器服务</b> - 服务器服务，它允许轻松构建文档而无需实际运行文档处理编辑器。

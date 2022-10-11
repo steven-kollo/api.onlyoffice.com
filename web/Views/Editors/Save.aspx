@@ -69,7 +69,7 @@ new DocsAPI.DocEditor("placeholder", {
     </p>
     <p>
         转换开始延迟对于允许在不保存文件的情况下返回文件编辑会话是必要的，例如在打开文件进行编辑的情况下重新加载浏览器页面时。
-        The default conversion start delay time is defined with the <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> parameter in <b>Document Server</b> configuration file, which can be found at the following path:
+        默认转换开始延迟时间由 <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#services-CoAuthoring-server-savetimeoutdelay" target="_blank">services.CoAuthoring.server.savetimeoutdelay</a> 参数在 <b>文档服务器</b> 配置文件中定义, 配置文件可以在以下路径中找到:
     </p>
     <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>default.json</b></em>。</div>
     <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>default.json</b></em>。</div>
@@ -101,7 +101,7 @@ new DocsAPI.DocEditor("placeholder", {
         <tbody>
             <tr class="tablerow">
                 <td>services.CoAuthoring.server.savetimeoutdelay</td>
-                <td>Defines the conversion start delay time (measured in milliseconds) after the edited file is closed.</td>
+                <td>定义关闭编辑的文件后的转换开始延迟时间（以毫秒为单位）。</td>
                 <td>integer</td>
                 <td>5000</td>
             </tr>
@@ -136,7 +136,7 @@ new DocsAPI.DocEditor("placeholder", {
             将请求发送到 <b>回调处理程序</b> 时， <em>forcesavetype</em> 参数的值为 <b>0</b>。</li>
         <li>启用 <a href="<%= Url.Action("config/editor/customization") %>#forcesave">editorConfig.customization.forcesave</a> 模式，在编辑器初始化配置中将其设置为 <b>true</b>。
             在这种情况下，每次用户点击 <b>保存</b> 按钮时，forcesave 都会完成，并且当将请求发送到 <b>回调处理程序</b> 时， <em>forcesavetype</em> 参数的值为 <b>1</b>。</li>
-        <li>You can enable <a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly" target="_blank">the repeating forcesave start</a> in the <b>Document Server</b> additional configuration file, which can be either found at (in case you have already created it) or placed to the following path:
+        <li>您可以在<b>文档服务器</b>附加配置文件中启用<a href="https://helpcenter.onlyoffice.com/installation/docs-developer-configuring.aspx#AutoAssembly" target="_blank">重复的forcesave start</a>，该文件可以在以下路径中找到或被放置（如果您已经创建了它）：
             <div>对于 Linux - <em>/etc/onlyoffice/documentserver/<b>local.json</b></em>。</div>
             <div>对于 Windows - <em>%ProgramFiles%\ONLYOFFICE\DocumentServer\config\<b>local.json</b></em>。</div>
 
@@ -161,7 +161,7 @@ new DocsAPI.DocEditor("placeholder", {
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.enable</td>
                         <td>
-                            Defines if the automatic forcesaving is enabled or not.
+                            定义是否启用自动强制保存。
                             默认值为 <b>false</b>。
                         </td>
                         <td>boolean</td>
@@ -169,7 +169,7 @@ new DocsAPI.DocEditor("placeholder", {
                     </tr>
                     <tr class="tablerow">
                         <td>services.CoAuthoring.autoAssembly.interval</td>
-                        <td>Defines the interval time in minutes for initiating the automatic forcesaving.</td>
+                        <td>定义启动自动强制保存的间隔时间（分钟）。</td>
                         <td>string</td>
                         <td>5m</td>
                     </tr>
@@ -192,10 +192,9 @@ new DocsAPI.DocEditor("placeholder", {
 </pre>
         将请求发送到 <b>回调处理程序</b> 时， <em>forcesavetype</em> 参数的值为 <b>2</b>。</li>
     </ul>
-    <note>Please note that you cannot see the document versions created with the force saving option in the document history.
-        The reason is that ONLYOFFICE Docs <a href="<%= Url.Action("history") %>#apply-changes">highlights the changes</a> made from the beginning of the current document session, not from the beginning of the document version.
-        And even if several document versions are created during one session, all changes from this session will be highlighted.</note>
-
+     <note>请注意，您无法在文档历史记录中看到使用强制保存选项创建的文档版本。
+    原因是ONLYOFFICE文档<a href="<%= Url.Action("history") %>#apply-changes">突出显</a>示了从当前文档会话开始而不是从文档版本开始时所做的更改。
+    即使在一个会话中创建了多个文档版本，此会话中的所有更改也将突出显示。</note>
 
     <h2 id="assemblyFormatAsOrigin" class="copy-link">以原始格式保存</h2>
 

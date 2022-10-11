@@ -13,13 +13,13 @@
 
     <h2 id="actions" class="copy-link">WOPI 发现操作</h2>
 
-    <p>The <b>action</b> element of the discovery XML provides the important characteristics of the online office. This element represents:</p>
-    <ul>
+    <p>发现XML的<b>action</b>元素提供了在线办公室的重要特征。此元素表示：</p>
+     <ul>
         <li>online office中可用的文档操作，</li>
         <li>支持的文件格式（扩展名）。</li>
     </ul>
 
-    <div class="header-gray">WOPI actions</div>
+    <div class="header-gray">WOPI 操作</div>
     <table class="table">
         <colgroup>
             <col class="table-name" />
@@ -27,26 +27,26 @@
         </colgroup>
         <thead>
             <tr class="tablerow">
-                <td>Name</td>
-                <td>Description</td>
+                <td>名称</td>
+                <td>描述</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td id="view" class="copy-link">view</td>
-                <td>Renders a non-editable view of a document.</td>
+                <td>呈现文档的不可编辑视图。</td>
             </tr>
             <tr>
                 <td id="edit" class="copy-link">edit</td>
-                <td>Allows users to edit a document.</td>
+                <td>允许用户编辑文档。</td>
             </tr>
             <tr>
                 <td id="editnew" class="copy-link">editnew</td>
-                <td>Creates a new document using a blank file template appropriate to the file type and opens this file for editing in the online office.</td>
+                <td>使用适合文件类型的空白文件模板创建新文档，并在online office中打开此文档进行编辑。</td>
             </tr>
             <tr>
                 <td id="embedview" class="copy-link">embedview</td>
-                <td>Renders a non-editable view of a document that is optimized for embedding in a web page. This action is available starting from version 7.2.</td>
+                <td>呈现为嵌入网页而优化的文档的不可编辑视图。此操作从7.2版开始可用。</td>
             </tr>
         </tbody>
     </table>
@@ -127,7 +127,7 @@ ui=en-us&thm=1&"/&gt;
             </tr>
             <tr>
                 <td id="embed" class="copy-link">embed</td>
-                <td>Indicates that the output of the action will be embedded in a web page (<b>true</b>).</td>
+                <td>表明操作的输出将嵌入网页 (<b>true</b>).</td>
                 <td>true</td>
             </tr>
         </tbody>

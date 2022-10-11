@@ -21,7 +21,7 @@
     <ul>
         <li>目前，可以编辑以下文档格式：DOCX, XLSX, PPTX。</li>
         <li>以下格式可供查看：DOC, DOCX, DOCM, DOT, DOTX, DOTM, ODT, FODT, OTT, RTF, TXT, HTML, HTM, MHT, XML, PDF, DJVU, FB2, EPUB, XPS, OXPS, XLS, XLSX, XLSM, XLT, XLTX, XLTM, ODS, FODS, OTS, CSV, PPS, PPSX, PPSM, PPT, PPTX, PPTM, POT, POTX, POTM, ODP, FODP, OTP。</li>
-        <li>The plugin will create a new <b>Edit in ONLYOFFICE</b> menu option within the document library for office documents.
+        <li>该插件将在office文档的文档库中创建一个新的<b>在ONLYOFFICE中编辑</b>菜单选项。
             这允许多个用户实时协作并将这些更改保存回 Strapi。</li>
     </ul>
 

@@ -25,7 +25,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
     <ul>
         <% if (connector)
            { %>
-        <li><a href="#createConnector">createConnector</a> - create the connector to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.</li>
+        <li><a href="#createConnector">createConnector</a> - 创建连接器以与外部的文本文档、电子表格、演示文稿和可填充表单交互。</li>
         <% } %>
         <li><a href="#denyEditingRights">denyEditingRights</a> - 拒绝编辑。</li>
         <li><a href="#destroyEditor">destroyEditor</a> - 销毁 <em>docEditor</em> 对象。</li>
@@ -49,7 +49,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
            { %>
         <li>
             <p>
-                <b id="createConnector" class="copy-link">createConnector</b><span class="required">*</span> - create the <a href="<%= Url.Action("connector") %>">connector</a> to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+                <b id="createConnector" class="copy-link">createConnector</b><span class="required">*</span> - 创建 <a href="<%= Url.Action("connector") %>">连接器</a>与外部的文本文档、电子表格、演示文稿和可填写表单进行交互。
             </p>
             <pre>
 docEditor.createConnector();
@@ -926,7 +926,7 @@ docEditor.showMessage(message);
     </ul>
     <% if (connector)
        { %>
-    <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
+    <span class="required-descr"><span class="required">*</span><em> - 仅对ONLYOFFICE 开发者版本可编辑。</em></span>
     <% } %>
 
 </asp:Content>

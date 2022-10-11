@@ -291,9 +291,9 @@ new DocsAPI.DocEditor("placeholder", {
         </li>
     </ol>
 
-    <h2 id="modes" class="copy-link">Co-editing modes</h2>
-    <p>There are two modes to collaborate on documents in real time - <b>Fast</b> and <b>Strict</b>.</p>
-    <p>You can change the co-editing mode using the <a href="<%= Url.Action("config/editor") %>#coEditing">editorConfig.coEditing</a> parameter:</p>
+    <h2 id="modes" class="copy-link">协同编辑模式</h2>
+    <p>有两种模式可以实时协作文档 — <b>自动</b>和<b>手动</b></p>
+    <p>您可以使用<a href="<%= Url.Action("config/editor") %>#coEditing">editorConfig.coEditing参数更改协同编辑模式</a>：</p>
     <pre>
 var docEditor = new DocsAPI.DocEditor("placeholder", {
     "editorConfig": {
@@ -306,16 +306,16 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
     ...
 });
 </pre>
-    <h3 id="fast" class="copy-link">Fast mode</h3>
-    <p>The <b>Fast</b> mode is used by default and defines the real-time co-editing. All changes are saved automatically and the possibility to redo the last undone operation is not available. This mode displays the user cursors and tooltips with their names when they are editing the text.</p>
-    <img alt="Fast mode" src="<%= Url.Content("~/content/img/editor/fast-mode.png") %>" />
+    <h3 id="fast"class="copy-link">自动模式</h3>
+    <p>默认情况下使用<b>自动</b>模式，并定义实时协同编辑。所有更改都会自动保存，无法重做上次撤消的操作。此模式在用户编辑文本时显示用户光标和工具提示及其名称</p>
+    <img alt="自动模式" src="<%= Url.Content("~/content/img/editor/fast-mode.png") %>" />
 
     <p></p>
-    <h3 id="strict" class="copy-link">Strict mode</h3>
-    <p>In the <b>Strict</b> mode, you need to use the <b>Save</b> button to sync the changes made by you and other users. Until you click this button, the changes made by others are hidden. When a document is being edited by several users simultaneously, the edited text is marked with dashed lines of different colors.</p>
-    <p>When the user saves the changes by clicking the <b>Save</b> button, the others will receive a note about updates.
-        To accept them and save your own changes to show them to other users, click the <img alt="Save updates" title="Save updates" src="<%= Url.Content("~/content/img/editor/save-updates.png") %>" /> button
-        in the left upper corner of the top toolbar. The updates will be highlighted.</p>
-    <img alt="Strict mode" src="<%= Url.Content("~/content/img/editor/strict-mode.png") %>" />
+    <h3 id="strict"class="copy-link">手动模式</h3>
+    <p>在<b>手动</b>模式下，您需要使用<b>保存</b>按钮来同步您和其他用户所做的更改。在您单击此按钮之前，其他人所做的更改将被隐藏。当多个用户同时编辑一个文档时，编辑的文本用不同颜色的虚线标记。</p>
+    <p>当用户通过单击<b>保存</b>按钮保存更改时，其他用户将收到有关更新的注释。
+        要接受它们并保存您自己的更改以显示给其他用户，请单击<img alt="保存更新" title="保存更新" src="<%= Url.Content("~/content/img/editor/save-updates.png") %>" />。按钮
+        位于顶部工具栏的左上角。更新将突出显示。</p>
+    <img alt="手动模式" src="<%= Url.Content("~/content/img/editor/strict-mode.png") %>" />
 
 </asp:Content>
