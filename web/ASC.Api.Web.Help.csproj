@@ -2122,6 +2122,7 @@
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
+    <Content Include="Content\img\macros\import-csv.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\main-page\community_server.svg" />
     <Content Include="Content\img\main-page\desktop.svg" />
@@ -2205,6 +2206,7 @@
     <Content Include="Content\img\plugins\hello-world.gif" />
     <Content Include="Content\img\plugins\helloworld_icon.png" />
     <Content Include="Content\img\plugins\highlight_duplicates.png" />
+    <Content Include="Content\img\plugins\import-csv-macro.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
@@ -2277,9 +2279,6 @@
     <Content Include="Content\plugins-macros.css" />
     <Content Include="Content\pushy.css" />
     <Content Include="Content\styles.css" />
-    <Content Include="externallistener\config.json" />
-    <Content Include="externallistener\index.html" />
-    <Content Include="externallistener\scripts\code.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="robots.txt" />
@@ -2724,6 +2723,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\setcolumnwidth.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
+     <Content Include="Views\Plugin\Macros\Macrosamples\importcsv.ascx" />
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
     <Content Include="Views\Plugin\Objects.aspx" />

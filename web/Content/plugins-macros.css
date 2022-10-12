@@ -97,6 +97,12 @@
     background-repeat: no-repeat;
 }
 
+.import-csv{
+    background-image: url("img/macros/import-csv.svg");
+    background-repeat: no-repeat;
+}
+
+
 .example-plug-img {
     height: 120px;
     margin: auto;

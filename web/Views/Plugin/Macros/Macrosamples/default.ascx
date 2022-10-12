@@ -87,6 +87,12 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
         <p>In this example we are returning information about the exchange rates for the last several days and fill in the table with the received values.</p></div>
         <p class="block_more"><a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">More</a></p>
     </li>
+    <li class="macro-example">
+        <div class="macro-info"><a href="<%= Url.Action("macrosamples/importcsv") %>"><div class="example-img import-csv"></div></a>
+        <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/importcsv") %>">Import CSV/TXT data</a></h2>
+        <p>In this example we are importing data from remote CSV/TXT files into the spreadsheet.</p></div>
+        <p class="block_more"><a href="<%= Url.Action("macrosamples/importcsv") %>">More</a></p>
+    </li>
 </ul>
 
 <h2>Support</h2>
