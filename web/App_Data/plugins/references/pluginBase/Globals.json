@@ -1,0 +1,64 @@
+{
+  "localeTranslate": {
+    "name": "localeTranslate",
+    "description": "<p>Translations for the text field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the button label translation for each language.\nExample: { &quot;en&quot; : &quot;name&quot;, &quot;ru&quot; : &quot;имя&quot; }</p>",
+    "type": [
+      "Object.<string, string>"
+    ]
+  },
+  "editorType": {
+    "name": "editorType",
+    "description": "<p>The editors which the plugin is available for:</p>\n<ul>\n<li><strong>&quot;word&quot;</strong> - text document editor,</li>\n<li><strong>&quot;cell&quot;</strong> - spreadsheet editor,</li>\n<li><strong>&quot;slide&quot;</strong> - presentation editor.</li>\n</ul>",
+    "type": [
+      "\"word\"",
+      "\"cell\"",
+      "\"slide\""
+    ]
+  },
+  "initDataType": {
+    "name": "initDataType",
+    "description": "<p>The data type selected in the editor and sent to the plugin:</p>\n<ul>\n<li><strong>&quot;text&quot;</strong> - the text data,</li>\n<li><strong>&quot;html&quot;</strong> - HTML formatted code,</li>\n<li><strong>&quot;ole&quot;</strong> - OLE object data,</li>\n<li><strong>&quot;desktop&quot;</strong> - the desktop editor data,</li>\n<li><strong>&quot;destop-external&quot;</strong> - the main page data of the desktop app (system messages),</li>\n<li><strong>&quot;none&quot;</strong> - no data will be send to the plugin from the editor.</li>\n</ul>",
+    "type": [
+      "\"text\"",
+      "\"html\"",
+      "\"ole\"",
+      "\"desktop\"",
+      "\"destop-external\"",
+      "\"none\""
+    ]
+  },
+  "variationButton": {
+    "name": "variationButton",
+    "description": "<p>The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. isVisual == true &amp;&amp; isInsideMode == false).</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "ContentControl": {
+    "name": "ContentControl",
+    "description": "<p>Content control object.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "variation": {
+    "name": "variation",
+    "description": "<p>Plugin variations can be created for the following purposes:</p>\n<ul>\n<li>to perform the main plugin actions,</li>\n<li>to contain plugin settings,</li>\n<li>to display an About window, etc.\nFor example, the Translation plugin: the plugin itself does not need a visual window for translation as it can be done just pressing a single button, but its settings (the translation direction) and an 'About' window must be visual. So we will need to have at least two plugin variations (translation itself and settings), or three, in case we want to add an 'About' window with the information about the plugin and its authors or the software used for the plugin creation.</li>\n</ul>",
+    "type": [
+      "Object"
+    ]
+  },
+  "Config": {
+    "name": "Config",
+    "type": [
+      "Object"
+    ]
+  },
+  "InputHelperItem": {
+    "name": "InputHelperItem",
+    "description": "<p>Defines the input helper item.</p>",
+    "type": [
+      "Object"
+    ]
+  }
+}

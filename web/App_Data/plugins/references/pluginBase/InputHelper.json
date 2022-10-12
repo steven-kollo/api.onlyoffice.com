@@ -1,0 +1,95 @@
+{
+  "methods": {
+    "createWindow": {
+      "memberof": "InputHelper",
+      "name": "createWindow",
+      "description": "<p>The function called to create an input helper window.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "getItems": {
+      "memberof": "InputHelper",
+      "name": "getItems",
+      "description": "<p>The function called to return an array of the InputHelperItem objects that contain all the items from the input helper.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "Array.<InputHelperItem>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "setItems": {
+      "memberof": "InputHelper",
+      "name": "setItems",
+      "description": "<p>The function called to set the items to the input helper.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array.<InputHelperItem>",
+          "description": "<p>Defines an array of the InputHelperItem objects which contain all the items for the input helper.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "show": {
+      "memberof": "InputHelper",
+      "name": "show",
+      "description": "<p>The function called to show an input helper.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "width",
+          "description": "<p>The input helper window width measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "height",
+          "description": "<p>The input helper window height measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isCaptureKeyboard",
+          "description": "<p>Defines if the keyboard is caught (true) or not (false).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "unShow": {
+      "memberof": "InputHelper",
+      "name": "unShow",
+      "description": "<p>The function called to hide an input helper.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "getScrollSizes": {
+      "memberof": "InputHelper",
+      "name": "getScrollSizes",
+      "description": "<p>The function called to get the sizes of the input helper scrolled window. Returns an object with width and height parameters.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "number"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\n     * @global\n     * @class\n     * @name InputHelper\n     * @hideconstructor\n     */",
+  "scope": "global"
+}

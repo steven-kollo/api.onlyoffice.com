@@ -1,0 +1,220 @@
+{
+  "methods": {
+    "executeCommand": {
+      "memberof": "Plugin",
+      "name": "executeCommand",
+      "description": "<p>Defines the method used to send the data back to the editor.\nThis method is deprecated, please use the callCommand method which runs the code from the data string parameter.\nNow this method is mainly used to work with the OLE objects or close the plugin without any other commands.\nIt is also retained for using with text so that the previous versions of the plugin remain compatible.\nThe callback is the result that the command returns. It is an optional parameter. In case it is missing, the window.Asc.plugin.onCommandCallback function will be used to return the result of the command execution.\nThe second parameter is the JavaScript code for working with ONLYOFFICE Document Builder API\nthat allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.).\nONLYOFFICE Document Builder commands can be only used to create content and insert it to the document editor\n(using the Api.GetDocument().InsertContent(...)). This limitation exists due to the co-editing feature in the online editors.\nIf it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "type",
+          "description": "<p>Defines the type of the command. The &quot;close&quot; is used to close the plugin window after executing the function in the data parameter.\nThe &quot;command&quot; is used to execute the command and leave the window open waiting for the next command.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "data",
+          "description": "<p>Defines the command written in JavaScript code which purpose is to form the structured data which can be inserted to the resulting document file\n(formatted paragraphs, tables, text parts and separate words, etc.). Then the data is sent to the editors.\nThe command must be compatible with ONLYOFFICE Document Builder syntax.</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "callback",
+          "description": "<p>The result that the method returns.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "executeMethod": {
+      "memberof": "Plugin",
+      "name": "executeMethod",
+      "description": "<p>Defines the method used to execute certain editor methods using the plugin.\nThe callback is the result that the method returns. It is an optional parameter. In case it is missing, the window.Asc.plugin.onMethodReturn function will be used to return the result of the method execution.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "name",
+          "description": "<p>The name of the specific method that must be executed.</p>",
+          "optional": false
+        },
+        {
+          "type": "Array",
+          "name": "params",
+          "description": "<p>The arguments that the method in use has (if it has any).</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "callback",
+          "description": "<p>The result that the method returns.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "resizeWindow": {
+      "memberof": "Plugin",
+      "name": "resizeWindow",
+      "description": "<p>Defines the method used to change the window size updating the minimum/maximum sizes.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "width",
+          "description": "<p>The window width.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "height",
+          "description": "<p>The window height.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "minW",
+          "description": "<p>The window minimum width.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "minH",
+          "description": "<p>The window minimum height.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "maxW",
+          "description": "<p>The window maximum width.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "maxH",
+          "description": "<p>The window maximum height.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "callCommand": {
+      "memberof": "Plugin",
+      "name": "callCommand",
+      "description": "<p>Defines the method used to send the data back to the editor.\nIt replaces the executeCommand method when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors using ONLYOFFICE Document Builder API.\nIt allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.).\nThe callback is the result that the command returns. It is an optional parameter. In case it is missing, the window.Asc.plugin.onCommandCallback function will be used to return the result of the command execution.\nONLYOFFICE Document Builder commands can be only used to create content and insert it to the document editor (using the Api.GetDocument().InsertContent(...)).\nThis limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.\nThis method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use Asc.scope object.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "function",
+          "name": "func",
+          "description": "<p>Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file\n(formatted paragraphs, tables, text parts and separate words, etc.). Then the data is sent to the editors.\nThe command must be compatible with ONLYOFFICE Document Builder syntax.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isClose",
+          "description": "<p>Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action.\nThe true value is used to close the plugin window after executing the function in the func parameter.\nThe false value is used to execute the command and leave the window open waiting for the next command.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isCalc",
+          "description": "<p>Defines whether the document will be recalculated or not.\nThe true value is used to recalculate the document after executing the function in the func parameter.\nThe false value will not recalculate the document (use it only when your edits surely will not require document recalculation).</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "callback",
+          "description": "<p>The result that the method returns.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "callModule": {
+      "memberof": "Plugin",
+      "name": "callModule",
+      "description": "<p>Defines the method used to execute a remotely located script following a link.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "url",
+          "description": "<p>The resource code url.</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "callback",
+          "description": "<p>The result that the method returns.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isClose",
+          "description": "<p>Defines whether the plugin window must be closed after the code is executed or left open waiting for another action.\nThe true value is used to close the plugin window after executing a remotely located script.\nThe false value is used to execute the code and leave the window open waiting for the next action.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "loadModule": {
+      "memberof": "Plugin",
+      "name": "loadModule",
+      "description": "<p>Defines the method used to load a remotely located text resource.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "url",
+          "description": "<p>The resource code url.</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "callback",
+          "description": "<p>The result that the method returns.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "createInputHelper": {
+      "memberof": "Plugin",
+      "name": "createInputHelper",
+      "description": "<p>Defines the method used to create an input helper - a window that appears and disappears when you type text. Its location is tied to the cursor.</p>",
+      "tags": {},
+      "returns": [],
+      "see": null,
+      "inherits": null
+    },
+    "getInputHelper": {
+      "memberof": "Plugin",
+      "name": "getInputHelper",
+      "description": "<p>Defines the method used to get the InputHelper object.</p>",
+      "tags": {},
+      "returns": [
+        [
+          "InputHelper"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    }
+  },
+  "comment": "/**\n     * @global\n     * @class\n     * @name Plugin\n     * @hideconstructor\n     */",
+  "scope": "global"
+}

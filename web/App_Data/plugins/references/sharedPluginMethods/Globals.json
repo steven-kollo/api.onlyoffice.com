@@ -1,0 +1,85 @@
+{
+  "Config": {
+    "name": "Config",
+    "description": "<p>Plugin config.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "EditorType": {
+    "name": "EditorType",
+    "description": "<p>The editors which the plugin is available for (&quot;word&quot; - text document editor, &quot;cell&quot; - spreadsheet editor, &quot;slide&quot; - presentation editor).</p>",
+    "type": [
+      "\"word\"",
+      "\"slide\"",
+      "\"cell\""
+    ]
+  },
+  "InitDataType": {
+    "name": "InitDataType",
+    "description": "<p>The data type selected in the editor and sent to the plugin: &quot;text&quot; - the text data, &quot;html&quot; - HTML formatted code, &quot;ole&quot; - OLE object data, &quot;desktop&quot; - the desktop editor data, &quot;destop-external&quot; - the main page data of the desktop app (system messages), &quot;none&quot; - no data will be send to the plugin from the editor.</p>",
+    "type": [
+      "\"none\"",
+      "\"text\"",
+      "\"ole\"",
+      "\"html\"",
+      "\"desktop\""
+    ]
+  },
+  "EventType": {
+    "name": "EventType",
+    "description": "<p>Plugin event.</p>",
+    "type": [
+      "\"onDocumentContentReady\"",
+      "\"onTargetPositionChanged\"",
+      "\"onClick\"",
+      "\"onInputHelperClear\"",
+      "\"onInputHelperInput\""
+    ]
+  },
+  "Variation": {
+    "name": "Variation",
+    "description": "<p>Plugin variations, or subplugins, that are created inside the origin plugin.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "Button": {
+    "name": "Button",
+    "description": "<p>The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. isVisual == true &amp;&amp; isInsideMode == false).</p>",
+    "type": [
+      "object"
+    ]
+  },
+  "FontInfo": {
+    "name": "FontInfo",
+    "description": "<p>An object containing the font information.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "Macros": {
+    "name": "Macros",
+    "description": "<p>An object containing the macros data.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "SelectionType": {
+    "name": "SelectionType",
+    "description": "<p>The current selection type.</p>",
+    "type": [
+      "\"none\"",
+      "\"text\"",
+      "\"drawing\"",
+      "\"slide\""
+    ]
+  },
+  "ImageData": {
+    "name": "ImageData",
+    "description": "<p>An object containing the font information.</p>",
+    "type": [
+      "Object"
+    ]
+  }
+}

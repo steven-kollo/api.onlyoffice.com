@@ -1,0 +1,843 @@
+{
+  "methods": {
+    "GetVersion": {
+      "memberof": "Api",
+      "name": "GetVersion",
+      "description": "<p>Returns the editor version.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "AddOleObject": {
+      "memberof": "Api",
+      "name": "AddOleObject",
+      "description": "<p>Adds an OLE object to the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Object",
+          "name": "data",
+          "description": "<p>The OLE object properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.width",
+          "description": "<p>The object width measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.height",
+          "description": "<p>The object height measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "data.data",
+          "description": "<p>OLE object data (internal format).</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "data.guid",
+          "description": "<p>An OLE object program identifier which must be of the asc.{UUID} type.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "data.imgSrc",
+          "description": "<p>A link to the image (its visual representation) stored in the OLE object and used by the plugin.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.widthPix",
+          "description": "<p>The image width in pixels.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.heightPix",
+          "description": "<p>The image height in pixels.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "EditOleObject": {
+      "memberof": "Api",
+      "name": "EditOleObject",
+      "description": "<p>Edits an OLE object in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Object",
+          "name": "data",
+          "description": "<p>The OLE object properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.width",
+          "description": "<p>The object width measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.height",
+          "description": "<p>The object height measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "data.data",
+          "description": "<p>OLE object data (internal format).</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "data.objectId",
+          "description": "<p>An OLE object identifier.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "data.imgSrc",
+          "description": "<p>A link to the image (its visual representation) stored in the OLE object and used by the plugin.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.widthPix",
+          "description": "<p>The image width in pixels.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.heightPix",
+          "description": "<p>The image height in pixels.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetFontList": {
+      "memberof": "Api",
+      "name": "GetFontList",
+      "description": "<p>Returns the fonts list.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<FontInfo>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "InputText": {
+      "memberof": "Api",
+      "name": "InputText",
+      "description": "<p>Inserts text into the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "text",
+          "description": "<p>A string value that specifies the text to be inserted into the document.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "textReplace",
+          "description": "<p>A string value that specifies the text to be replaced with a new text.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "PasteHtml": {
+      "memberof": "Api",
+      "name": "PasteHtml",
+      "description": "<p>Pastes text in the HTML format into the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "htmlText",
+          "description": "<p>A string value that specifies the text in the HTML format to be pasted into the document.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "PasteText": {
+      "memberof": "Api",
+      "name": "PasteText",
+      "description": "<p>Pastes text into the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "text",
+          "description": "<p>A string value that specifies the text to be pasted into the document.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetMacros": {
+      "memberof": "Api",
+      "name": "GetMacros",
+      "description": "<p>Returns the document macros.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Macros"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "SetMacros": {
+      "memberof": "Api",
+      "name": "SetMacros",
+      "description": "<p>Sets macros to the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Macros",
+          "name": "data",
+          "description": "<p>An object containing the macros data.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "StartAction": {
+      "memberof": "Api",
+      "name": "StartAction",
+      "description": "<p>Specifies the start action for long operations.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "type",
+          "description": "<p>A value which defines an action type which can take 0 if this is an Information action or 1 if this is a BlockInteraction action.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "description",
+          "description": "<p>A string value that specifies the description text for the start action of the operation.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "EndAction": {
+      "memberof": "Api",
+      "name": "EndAction",
+      "description": "<p>Specifies the end action for long operations.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "type",
+          "description": "<p>A value which defines an action type which can take 0 if this is an Information action or 1 if this is a BlockInteraction action.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "description",
+          "description": "<p>A string value that specifies the description text for the operation end action.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "OnEncryption": {
+      "memberof": "Api",
+      "name": "OnEncryption",
+      "description": "<p>Encrypts the document (for crypto plugins).</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "object",
+          "name": "obj",
+          "description": "<p>The encryption properties. This object can have the following values:</p>\n<ul>\n<li><strong>type</strong> - the type of encrypting operation (&quot;generatePassword&quot; - generates a password for the document, &quot;getPasswordByFile&quot; - sends the password when opening the document, &quot;setPasswordByFile&quot; - sets a password to the document, &quot;encryptData&quot; - encrypts changes when co-editing, &quot;decryptData&quot; - decrypts changes when co-editing),</li>\n<li><strong>password</strong> - a string value specifying the password to access the document,</li>\n<li><strong>data</strong> - encrypted/decrypted changes,</li>\n<li><strong>check</strong> - checks if the encryption/decryption operation is successful or not (used only for &quot;encryptData&quot;/&quot;decryptData&quot; types),</li>\n<li><strong>docinfo</strong> - an unencrypted part of the encrypted file,</li>\n<li><strong>hash</strong> - a string value specifying a file hash (sha256 by default),</li>\n<li><strong>error</strong> - a string value specifying an error that occurs (the &quot;&quot; value means that the operation is successful).</li>\n</ul>",
+          "optional": false
+        }
+      ]
+    },
+    "SetProperties": {
+      "memberof": "Api",
+      "name": "SetProperties",
+      "description": "<p>Sets the properties to the document.\nSee {@link https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/examples/settings examples}</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "object",
+          "name": "obj",
+          "description": "<p>Document properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "obj.copyoutenabled",
+          "description": "<p>Disables copying from the editor if it is set to true.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "obj.hideContentControlTrack",
+          "description": "<p>Disables tracking the content control if it is set to true.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.watermark_on_draw",
+          "description": "<p>A string value for watermark in JSON format.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "ShowInputHelper": {
+      "memberof": "Api",
+      "name": "ShowInputHelper",
+      "description": "<p>Shows the input helper.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "guid",
+          "description": "<p>A string value which specifies a plugin identifier which must be of the asc.{UUID} type.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "w",
+          "description": "<p>A number which specifies the window width measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "h",
+          "description": "<p>A number which specifies the window height measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "isKeyboardTake",
+          "description": "<p>Defines if the keyboard is caught (true) or not (false).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "UnShowInputHelper": {
+      "memberof": "Api",
+      "name": "UnShowInputHelper",
+      "description": "<p>Unshows the input helper.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "guid",
+          "description": "<p>A string value which specifies a plugin identifier which must be of the asc.{UUID} type.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "isclear",
+          "description": "<p>Defines if the input context will be cleared (true) or not (false).</p>",
+          "optional": false
+        }
+      ]
+    },
+    "CoAuthoringChatSendMessage": {
+      "memberof": "Api",
+      "name": "CoAuthoringChatSendMessage",
+      "description": "<p>Sends a message to the co-authoring chat.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>Message text.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetSelectionType": {
+      "memberof": "Api",
+      "name": "GetSelectionType",
+      "description": "<p>Returns the type of the current selection.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "SelectionType"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "ConvertDocument": {
+      "memberof": "Api",
+      "name": "ConvertDocument",
+      "description": "<p>Converts a document to Markdown or HTML text.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "\"markdown\" | \"html\"",
+          "name": "sConvertType",
+          "description": "<p>Conversion type (&quot;markdown&quot; or &quot;html&quot;).</p>",
+          "optional": true,
+          "defaultValue": "\"markdown\""
+        },
+        {
+          "type": "bool",
+          "name": "bHtmlHeadings",
+          "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bBase64img",
+          "description": "<p>Defines if the images will be created in the base64 format.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bDemoteHeadings",
+          "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "bool",
+          "name": "bRenderHTMLTags",
+          "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket in the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "GetSelectedText": {
+      "memberof": "Api",
+      "name": "GetSelectedText",
+      "description": "<p>Returns the selected text from the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CPE",
+          "CSE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "prop",
+          "name": "numbering",
+          "description": "<p>The resulting string display properties:</p>\n<ul>\n<li><strong>NewLine</strong> - defines if the resulting string will include line boundaries or not,</li>\n<li><strong>NewLineParagraph</strong> - defines if the resulting string will include paragraph line boundaries or not,</li>\n<li><strong>Numbering</strong> - defines if the resulting string will include numbering or not.</li>\n</ul>",
+          "optional": false
+        }
+      ]
+    },
+    "ReplaceTextSmart": {
+      "memberof": "Api",
+      "name": "ReplaceTextSmart",
+      "description": "<p>Replaces each paragraph (or text in cell) in the select with the corresponding text from an array of strings.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Array",
+          "name": "arrString",
+          "description": "<p>An array of replacement strings.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sParaTab",
+          "description": "<p>A character which is used to specify the tab in the source text.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
+        },
+        {
+          "type": "string",
+          "name": "sParaNewLine",
+          "description": "<p>A character which is used to specify the line break character in the source text.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
+        }
+      ]
+    },
+    "GetFileToDownload": {
+      "memberof": "Api",
+      "name": "GetFileToDownload",
+      "description": "<p>Returns the current file to download in the specified format.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "string"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "format",
+          "description": "<p>The format in which you need to download the file.</p>",
+          "optional": true,
+          "defaultValue": "\" \""
+        }
+      ]
+    },
+    "GetImageDataFromSelection": {
+      "memberof": "Api",
+      "name": "GetImageDataFromSelection",
+      "description": "<p>Returns an image data obtained from first of selected drawings.\nIf there are no selected drawings it returns white rect.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "ImageData"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "PutImageDataToSelection": {
+      "memberof": "Api",
+      "name": "PutImageDataToSelection",
+      "description": "<p>Replaces the first selected drawing\nIf there are no selected drawings it inserts the image to the current position.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "ImageData",
+          "name": "oImageData",
+          "description": "<p>image encoded in base64 format.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "GetInstalledPlugins": {
+      "memberof": "Api",
+      "name": "GetInstalledPlugins",
+      "description": "<p>Returns all installed plugins.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<object>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "RemovePlugin": {
+      "memberof": "Api",
+      "name": "RemovePlugin",
+      "description": "<p>Remove plugin with such guid.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "object"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "guid",
+          "description": "<p>The guid of plugins for removing.</p>",
+          "optional": true
+        }
+      ]
+    },
+    "pluginMethod_InstallPlugin": {
+      "memberof": "Api",
+      "name": "pluginMethod_InstallPlugin",
+      "description": "<p>Install plugin with by url to config.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "object"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "url",
+          "description": "<p>The url to plugin config for installing.</p>",
+          "optional": true
+        }
+      ]
+    },
+    "pluginMethod_UpdatePlugin": {
+      "memberof": "Api",
+      "name": "pluginMethod_UpdatePlugin",
+      "description": "<p>Update plugin with by url to config.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [
+        [
+          "object"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "url",
+          "description": "<p>The url to plugin config for updating.</p>",
+          "optional": true
+        }
+      ]
+    },
+    "ShowButton": {
+      "memberof": "Api",
+      "name": "ShowButton",
+      "description": "<p>Show or hide buttons in header.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE",
+          "CSE",
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "id",
+          "description": "<p>The id of the button.</p>",
+          "optional": true
+        },
+        {
+          "type": "boolean",
+          "name": "bShow",
+          "description": "<p>The flag show or hide the button.</p>",
+          "optional": true
+        }
+      ]
+    }
+  },
+  "comment": "/**\n     * Base class\n     * @global\n     * @class\n     * @name Api\n     */",
+  "description": "<p>Base class</p>",
+  "scope": "global"
+}

@@ -1,0 +1,44 @@
+{
+  "ContentControl": {
+    "name": "ContentControl",
+    "description": "<p>Content control object.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "ContentControlLock": {
+    "name": "ContentControlLock",
+    "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not.</p>\n<p><strong>0</strong> - only deleting\n<strong>1</strong> - disable deleting or editing\n<strong>2</strong> - only editing\n<strong>3</strong> - full access</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "ContentControlType": {
+    "name": "ContentControlType",
+    "description": "<p>A numeric value that specifies the content control type.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "ContentControlPropertiesAndContent": {
+    "name": "ContentControlPropertiesAndContent",
+    "description": "<p>The content control properties and contents.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "ContentControlProperties": {
+    "name": "ContentControlProperties",
+    "description": "<p>The content control properties.</p>",
+    "type": [
+      "Object"
+    ]
+  },
+  "OLEObjectData": {
+    "name": "OLEObjectData",
+    "description": "<p>The OLE object data.</p>",
+    "type": [
+      "Object"
+    ]
+  }
+}
