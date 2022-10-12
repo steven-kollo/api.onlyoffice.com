@@ -1,4 +1,5 @@
-﻿<%@ Control
+﻿<%@ Import Namespace="ASC.Api.Web.Help.DocumentGenerator" %>
+<%@ Control
     Language="C#"
     Inherits="System.Web.Mvc.ViewUserControl" %>
 
@@ -40,227 +41,20 @@
                     <li>
                         <a href="<%= Url.Action("plugin") %>">Methods</a>
                         <ul>
-                            <li>
-                                <a href="<%= Url.Action("callcommand") %>">callCommand</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("callmodule") %>">callModule</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("createinputhelper") %>">createInputHelper</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("executecommand") %>">executeCommand</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("executemethod/") %>">executeMethod</a>
-                                <ul>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/addcomment") %>">AddComment</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/addcontentcontrol") %>">AddContentControl</a>
-                                    </li>
-                                    <li>
-                                        <a title="AddContentControlCheckBox" href="<%= Url.Action("executemethod/addcontentcontrolcheckbox") %>">AddContentControlCheckBox</a>
-                                    </li>
-                                    <li>
-                                        <a title="AddContentControlDatePicker" href="<%= Url.Action("executemethod/addcontentcontroldatepicker") %>">AddContentControlDatePicker</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/addcontentcontrollist") %>">AddContentControlList</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/addcontentcontrolpicture") %>">AddContentControlPicture</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/addoleobject") %>">AddOleObject</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/changeoleobject") %>">ChangeOleObject</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/changeoleobjects") %>">ChangeOleObjects</a>
-                                    </li>
-                                    <li>
-                                        <a title="CoAuthoringChatSendMessage" href="<%= Url.Action("executemethod/coauthoringchatsendmessage") %>">CoAuthoringChatSendMessage</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/convertdocument") %>">ConvertDocument</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/editoleobject") %>">EditOleObject</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/endaction") %>">EndAction</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getallcomments") %>">GetAllComments</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getallcontentcontrols") %>">GetAllContentControls</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getallforms") %>">GetAllForms</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getalloleobjects") %>">GetAllOleObjects</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">GetCurrentContentControl</a>
-                                    </li>
-                                    <li>
-                                        <a title="GetCurrentContentControlPr" href="<%= Url.Action("executemethod/getcurrentcontentcontrolpr") %>">GetCurrentContentControlPr</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getfields") %>">GetFields</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getfilehtml") %>">GetFileHTML</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getfiletodownload") %>">GetFileToDownload</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getfontlist") %>">GetFontList</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getformsbytag") %>">GetFormsByTag</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getformvalue") %>">GetFormValue</a>
-                                    </li>
-                                    <li>
-                                        <a title="GetImageDataFromSelection" href="<%= Url.Action("executemethod/getimagedatafromselection") %>">GetImageDataFromSelection</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getinstalledplugins") %>">GetInstalledPlugins</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getmacros") %>">GetMacros</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getselectedtext") %>">GetSelectedText</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getselectiontype") %>">GetSelectionType</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/getversion") %>">GetVersion</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/inputtext") %>">InputText</a>
-                                    </li>
-                                    <li>
-                                        <a title="InsertAndReplaceContentControls" href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">InsertAndReplaceContentControls</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/insertoleobject") %>">InsertOleObject</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/installplugin") %>">InstallPlugin</a>
-                                    </li>
-                                    <li>
-                                        <a title="MoveCursorToContentControl" href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">MoveCursorToContentControl</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/movecursortoend") %>">MoveCursorToEnd</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/movecursortostart") %>">MoveCursorToStart</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/movetocomment") %>">MoveToComment</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/openfile") %>">OpenFile</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/pastehtml") %>">PasteHtml</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/pastetext") %>">PasteText</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/putimagedatatoselection") %>">PutImageDataToSelection</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/removecomments") %>">RemoveComments</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/removecontentcontrol") %>">RemoveContentControl</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/removecontentcontrols") %>">RemoveContentControls</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/removeoleobject") %>">RemoveOleObject</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/removeoleobjects") %>">RemoveOleObjects</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/removeplugin") %>">RemovePlugin</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/removeselectedcontent") %>">RemoveSelectedContent</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/replacetextsmart") %>">ReplaceTextSmart</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/searchandreplace") %>">SearchAndReplace</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">SelectContentControl</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/selectoleobject") %>">SelectOleObject</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/setdisplaymodeinreview") %>">SetDisplayModeInReview</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/setformvalue") %>">SetFormValue</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/setmacros") %>">SetMacros</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/setproperties") %>">SetProperties</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/showbutton") %>">ShowButton</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/showinputhelper") %>">ShowInputHelper</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/startaction") %>">StartAction</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/unshowinputhelper") %>">UnShowInputHelper</a>
-                                    </li>
-                                    <li>
-                                        <a href="<%= Url.Action("executemethod/updateplugin") %>">UpdatePlugin</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("getinputhelper") %>">getInputHelper</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("loadmodule") %>">loadModule</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("resizewindow") %>">resizeWindow</a>
-                            </li>
+                            <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["plugin"].Methods) { %>
+                                <li>
+                                    <a href="<%= Url.Action(string.Format("{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
+                                    <% if (method.Key.ToLower() == "executemethod") { %>
+                                        <ul>
+                                            <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("sharedPluginMethods")["api"].Methods) { %>
+                                                <li>
+                                                    <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
+                                                </li>
+                                            <% } %>
+                                        </ul>
+                                    <% } %>
+                                </li>
+                            <% } %>
                         </ul>
                     </li>
                     <li>
@@ -277,6 +71,13 @@
                             </li>
                             <li>
                                 <a href="<%= Url.Action("inputhelper") %>">InputHelper object</a>
+                                <ul>
+                                    <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["inputHelper"].Methods) { %>
+                                        <li>
+                                            <a href="<%= Url.Action(string.Format("inputHelper/{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
+                                        </li>
+                                    <% } %>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -467,7 +268,10 @@
                 <a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">Currency exchange rates</a>
             </li>
         </ul>
+    </li>
     <li>
+        <a href="<%= Url.Action("global") %>">Global</a>
+    </li>
 </ul>
 <div class="treeheader">More information</div>
 <ul class="side-nav root">

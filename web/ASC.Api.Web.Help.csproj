@@ -2694,6 +2694,7 @@
     <Content Include="Views\Plugin\FAQ\FAQShared\ExpandCollapse.ascx" />
     <Content Include="Views\Plugin\getInputHelper.aspx" />
     <Content Include="Views\Plugin\GettingStarted.aspx" />
+    <Content Include="Views\Plugin\global.aspx" />
     <Content Include="Views\Plugin\Icons.aspx" />
     <Content Include="Views\Plugin\IndexHtml.aspx" />
     <Content Include="Views\Plugin\Info.aspx" />
@@ -2724,11 +2725,13 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
+    <Content Include="Views\Plugin\methodpartial.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
     <Content Include="Views\Plugin\Objects.aspx" />
     <Content Include="Views\Plugin\Plugin.aspx" />
     <Content Include="Views\Plugin\resizeWindow.aspx" />
     <Content Include="Views\Plugin\scope.aspx" />
+    <Content Include="Views\Plugin\sectionpartial.aspx" />
     <Content Include="Views\Plugin\Structure.aspx" />
     <Content Include="Views\Plugin\Styles.aspx" />
     <Content Include="Views\Plugin\Types.aspx" />

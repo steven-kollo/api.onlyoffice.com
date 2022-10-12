@@ -27,6 +27,7 @@
 using System;
 using System.Linq;
 using System.Web.Mvc;
+using ASC.Api.Web.Help.DocumentGenerator;
 using ASC.Api.Web.Help.Helpers;
 
 namespace ASC.Api.Web.Help.Controllers
@@ -222,12 +223,12 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult callCommand()
         {
-            return View();
+            return RenderBaseSectionOrMethod("plugin", "callCommand");
         }
 
         public ActionResult callModule()
         {
-            return View();
+            return RenderBaseSectionOrMethod("plugin", "callModule");
         }
 
         public ActionResult Changelog()
@@ -237,7 +238,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult createInputHelper()
         {
-            return View();
+            return RenderBaseSectionOrMethod("plugin", "createInputHelper");
         }
 
         public ActionResult Events()
@@ -256,31 +257,41 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult ExecuteCommand()
         {
-            return View();
+            return RenderBaseSectionOrMethod("plugin", "ExecuteCommand");
         }
 
         public ActionResult Executemethod(string catchall)
         {
-            if (!_actionMap.Contains("executemethod/" + catchall, StringComparer.OrdinalIgnoreCase))
+            if (string.IsNullOrEmpty(catchall))
             {
-                catchall = null;
+                return RenderBaseSectionOrMethod("plugin", "Executemethod");
             }
-            return View("Executemethod", (object)catchall);
+            else
+            {
+                var method = DocPluginsDocumentation.Instance.GetMethod("sharedPluginMethods", "api", catchall);
+                if (method == null) return View("methodnotfound");
+                return View("methodpartial", method);
+            }
         }
 
         public ActionResult getInputHelper()
         {
-            return View();
+            return RenderBaseSectionOrMethod("plugin", "getInputHelper");
+        }
+
+        public ActionResult Global()
+        {
+            return View(DocPluginsDocumentation.Instance.GetGlobals());
         }
 
         public ActionResult loadModule()
         {
-            return View();
+            return RenderBaseSectionOrMethod("plugin", "loadModule");
         }
 
         public ActionResult resizeWindow()
         {
-            return View();
+            return RenderBaseSectionOrMethod("plugin", "resizeWindow");
         }
 
         public ActionResult GettingStarted()
@@ -308,9 +319,9 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult inputHelper()
+        public ActionResult inputHelper(string catchall)
         {
-            return View();
+            return RenderBaseSectionOrMethod("inputHelper", catchall);
         }
 
         public ActionResult Installation(string catchall)
@@ -332,9 +343,9 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
-        public ActionResult Plugin()
+        public ActionResult Plugin(string catchall)
         {
-            return View();
+            return RenderBaseSectionOrMethod("plugin", catchall);
         }
 
         public ActionResult scope()
@@ -391,5 +402,20 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Macros/Debugging");
         }
 
+        private ActionResult RenderBaseSectionOrMethod(string sectionName, string methodName)
+        {
+            if (string.IsNullOrEmpty(methodName))
+            {
+                var section = DocPluginsDocumentation.Instance.GetSection("pluginBase", sectionName);
+                if (section == null) return View("sectionnotfound");
+                return View("sectionpartial", section);
+            }
+            else
+            {
+                var method = DocPluginsDocumentation.Instance.GetMethod("pluginBase", sectionName, methodName);
+                if (method == null) return View("methodnotfound");
+                return View("methodpartial", method);
+            }
+        }
     }
 }
