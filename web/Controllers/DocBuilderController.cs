@@ -256,7 +256,7 @@ namespace ASC.Api.Web.Help.Controllers
         [HttpPost]
         public string Try(string module, string section, string method)
         {
-            var dbMethod = DocBuilderDocumentation.GetMethod(module, section, method);
+            var dbMethod = DocBuilderDocumentation.Instance.GetMethod(module, section, method);
             if (dbMethod != null && dbMethod.Example != null)
                 return dbMethod.Example.Script;
             return "";
@@ -288,7 +288,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Global()
         {
-            return View(DocBuilderDocumentation.GetGlobals());
+            return View(DocBuilderDocumentation.Instance.GetGlobals());
         }
 
         public ActionResult Classlist()
@@ -360,13 +360,13 @@ namespace ASC.Api.Web.Help.Controllers
 
             if (string.IsNullOrEmpty(method))
             {
-                var sec = DocBuilderDocumentation.GetSection(module, section);
+                var sec = DocBuilderDocumentation.Instance.GetSection(module, section);
                 if (sec == null) return View("sectionnotfound");
                 return View("sectionpartial", sec);
             }
             else
             {
-                var met = DocBuilderDocumentation.GetMethod(module, section, method);
+                var met = DocBuilderDocumentation.Instance.GetMethod(module, section, method);
                 if (met == null) return View("methodnotfound");
                 return View("methodpartial", met);
             }

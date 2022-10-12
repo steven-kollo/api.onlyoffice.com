@@ -231,8 +231,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
+    <Compile Include="DocumentGenerator\DocPluginsDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
     <Compile Include="DocumentGenerator\Documentation.cs" />
+    <Compile Include="DocumentGenerator\JsDocDocumentation.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

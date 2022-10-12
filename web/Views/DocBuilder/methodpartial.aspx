@@ -22,7 +22,7 @@
         <%= method.Name %>(<%= method.Params != null ? string.Join(", ", method.Params.Select(p => p.Optional ? string.Format("[{0}]", p.Name) : p.Name)) : "" %>)
         <% if (method.Returns != null && method.Returns.Any())
            { %>
-            &rarr; { <%= DocBuilderDocumentation.ReturnTypeToHtml(method) %> }
+            &rarr; { <%= DocBuilderDocumentation.Instance.ReturnTypeToHtml(method) %> }
         <% } %>
     </h4>
 
@@ -62,7 +62,7 @@
                     <tr class="tablerow">
                         <td><em><%= p.Name %></em></td>
                         <td>
-                            <em><%= DocBuilderDocumentation.ParamTypeToHtml(p) %></em>
+                            <em><%= DocBuilderDocumentation.Instance.ParamTypeToHtml(p) %></em>
                         </td>
                         <% if (hasOptional) { %>
                             <td><%= p.DefaultValue == null ? (p.Optional ? "null" : "") : p.DefaultValue %></td>
@@ -86,7 +86,7 @@
     <dl class="param-type">
         <dt>Type</dt>
         <dd>
-            <%= DocBuilderDocumentation.ReturnTypeToHtml(method) %>
+            <%= DocBuilderDocumentation.Instance.ReturnTypeToHtml(method) %>
         </dd>
     </dl>
     <% } else { %>
