@@ -41,7 +41,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -72,7 +73,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -102,7 +104,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         DocumentType = "cell",
                         Height = "100%",
@@ -133,7 +136,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         DocumentType = "slide",
                         Height = "100%",
@@ -165,7 +169,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -196,7 +201,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -227,7 +233,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -258,7 +265,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -289,7 +297,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -320,7 +329,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -351,7 +361,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -382,7 +393,8 @@
                                             {
                                                 Request = false
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -413,6 +425,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -444,6 +457,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -475,6 +489,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -506,6 +521,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "view"
                             },
                         Height = "100%",
@@ -538,6 +554,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -574,6 +591,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -610,6 +628,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -647,6 +666,7 @@
                                             },
                                         Autosave = false
                                     },
+                                Lang = "zh",
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -684,6 +704,7 @@
                                             },
                                         Autosave = false
                                     },
+                                Lang = "zh",
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -721,6 +742,7 @@
                                             },
                                         Autosave = false
                                     },
+                                Lang = "zh",
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -770,7 +792,8 @@
                                                 Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
                                                 Url = "https://example.com"
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -815,7 +838,8 @@
                                                 Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
                                                 Url = "https://example.com"
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -860,7 +884,8 @@
                                                 Image = new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/content/img/editor/rebranding/logo.png"), Query = ""}.ToString(),
                                                 Url = "https://example.com"
                                             }
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "100%",
                         Width = "100%"
@@ -896,6 +921,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -933,6 +959,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -969,6 +996,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -1005,6 +1033,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -1041,6 +1070,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -1077,6 +1107,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "edit"
                             },
                         Height = "100%",
@@ -1118,6 +1149,7 @@
                                 Request = false
                             }
                         },
+                        Lang = "zh",
                         Mode = "edit"
                     },
                     Height = "100%",
@@ -1153,6 +1185,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 User = new Config.EditorConfigConfiguration.UserConfig
                                     {
                                         Id = Guid.NewGuid().ToString(),
@@ -1193,6 +1226,7 @@
                                                 Request = false
                                             }
                                     },
+                                Lang = "zh",
                                 Mode = "edit"
                             },
                         Height = "100%",

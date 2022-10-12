@@ -161,7 +161,8 @@
                                         HideRulers = true,
                                         ToolbarHideFileName = true,
                                         ToolbarNoTabs = true
-                                    }
+                                    },
+                                Lang = "zh"
                             },
                         Height = "550px",
                         Width = "100%"
