@@ -12,19 +12,19 @@
 
 <pre>(function() 
 {
-          function LoadFile() {
+    function LoadFile() {
         $.ajax({
             url: 'your url',
             dataType: 'text',
         }).done(successFunction);
     }
     function successFunction(data) {
-    var arrAllRows = data.split(/\r?\n|\r/);
-    var oWorksheet = Api.GetActiveSheet();
+        var arrAllRows = data.split(/\r?\n|\r/);
+        var oWorksheet = Api.GetActiveSheet();
 
-    //reference point
-    var i = 1;
-    var j = 1;
+        //reference point
+        var i = 1;
+        var j = 1;
 
         for (var singleRow = 0; singleRow < arrAllRows.length; singleRow++) {
             var rowCells = arrAllRows[singleRow].split(',');
@@ -38,7 +38,7 @@
     }
     LoadFile();
     let reload = setInterval(function(){
-      Api.asc_calculate(Asc.c_oAscCalculateType.All);
+        Api.asc_calculate(Asc.c_oAscCalculateType.All);
     });
 })();</pre>
 
