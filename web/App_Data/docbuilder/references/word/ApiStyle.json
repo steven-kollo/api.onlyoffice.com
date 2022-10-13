@@ -203,6 +203,24 @@
           "defaultValue": "\"wholeTable\""
         }
       ]
+    },
+    "ToJSON": {
+      "memberof": "ApiStyle",
+      "name": "ToJSON",
+      "description": "<p>Converts the ApiStyle object into the JSON object.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "JSON"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": []
     }
   },
   "comment": "/**\n\t * Class representing a style.\n\t * @constructor\n\t */",

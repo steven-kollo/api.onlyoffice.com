@@ -358,62 +358,66 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static void LoadExamples()
         {
-            var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references", "examples.json");
-            var globalsExamplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\references", "globalsExamples.json");
-            if (!File.Exists(examplesPath))
-            {
-                _logger.Info("Couldn't find any examples: " + examplesPath);
-            }
-            else
-            {
-                var examplesContent = File.ReadAllText(examplesPath);
-                try
-                {
-                    var examples = JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, DBExample>>>(examplesContent);
-                    foreach (var module in examples)
-                    {
-                        var mod = GetModule(module.Key);
-                        if (mod == null) continue;
+            var docbuilderExt = ".docbuilder";
+            var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, @"App_Data\docbuilder\examples");
 
-                        foreach (var ex in module.Value)
+            foreach (var moduleName in _entries.Keys)
+            {
+                var mod = GetModule(moduleName);
+                if (mod == null) continue;
+                
+                var path = Path.Combine(examplesPath, moduleName);
+                if (!Directory.Exists(path))
+                {
+                    _logger.Info("Couldn't find any examples: " + path);
+                }
+                else
+                {
+                    foreach (var examplePath in Directory.GetFiles(path))
+                    {
+                        if (Path.GetExtension(examplePath) != docbuilderExt) continue;
+
+                        var exampleName = Path.GetFileNameWithoutExtension(examplePath);
+                        if (exampleName.Contains("."))
                         {
-                            if (ex.Key.Contains("."))
+                            var split = exampleName.Split('.');
+                            if (mod.ContainsKey(split[0]))
                             {
-                                var split = ex.Key.Split('.');
-                                if (mod.ContainsKey(split[0]))
+                                var section = mod[split[0]];
+                                if (section.Methods.ContainsKey(split[1]))
                                 {
-                                    var section = mod[split[0]];
-                                    if (section.Methods.ContainsKey(split[1]))
+                                    var example = new DBExample
                                     {
-                                        section.Methods[split[1]].Example = ex.Value;
-                                    }
-                                    else
-                                    {
-                                        _logger.InfoFormat("Found example for {0}.{1} but the method is missing", module.Key, ex.Key);
-                                    }
+                                        Script = File.ReadAllText(examplePath)
+                                    };
+                                    section.Methods[split[1]].Example = example;
                                 }
                                 else
                                 {
-                                    _logger.InfoFormat("Found example for {0}.{1} but the class is missing", module.Key, ex.Key);
+                                    _logger.InfoFormat("Found example for {0}.{1} but the method is missing", moduleName, exampleName);
                                 }
                             }
                             else
                             {
-                                if (mod.ContainsKey(ex.Key))
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", moduleName, exampleName);
+                            }
+                        }
+                        else
+                        {
+                            if (mod.ContainsKey(exampleName))
+                            {
+                                var example = new DBExample
                                 {
-                                    mod[ex.Key].Example = ex.Value;
-                                }
-                                else
-                                {
-                                    _logger.InfoFormat("Found example for {0}.{1} but the class is missing", module.Key, ex.Key);
-                                }
+                                    Script = File.ReadAllText(examplePath)
+                                };
+                                mod[exampleName].Example = example;
+                            }
+                            else
+                            {
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", moduleName, exampleName);
                             }
                         }
                     }
-                }
-                catch (Exception e)
-                {
-                    _logger.WarnFormat("Couldn't parse examples.json. Got an error: {0}", e.Message);
                 }
             }
 
@@ -445,27 +449,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 }
             }
 
-            if (!File.Exists(globalsExamplesPath))
+            foreach (var globalsExamplePath in Directory.GetFiles(examplesPath))
             {
-                _logger.Info("Couldn't find any globalsExamples: " + globalsExamplesPath);
-            }
-            else
-            {
-                var examplesContent = File.ReadAllText(globalsExamplesPath);
-                try
+                if (Path.GetExtension(globalsExamplePath) != docbuilderExt) continue;
+
+                var globalExampleName = Path.GetFileNameWithoutExtension(globalsExamplePath);
+
+                if (_globals.ContainsKey(globalExampleName))
                 {
-                    var examples = JsonConvert.DeserializeObject<Dictionary<string, string>>(examplesContent);
-                    foreach (var global in _globals)
-                    {
-                        if (examples.ContainsKey(global.Key.ToLowerInvariant()))
-                        {
-                            global.Value.Script = examples[global.Key.ToLowerInvariant()];
-                        }
-                    }
+                    _globals[globalExampleName].Script = File.ReadAllText(globalsExamplePath);
                 }
-                catch (Exception e)
+                else
                 {
-                    _logger.WarnFormat("Couldn't parse globalsExamples.json. Got an error: {0}", e.Message);
+                    _logger.InfoFormat("Found global example for {0} but the method is missing", globalExampleName);
                 }
             }
         }

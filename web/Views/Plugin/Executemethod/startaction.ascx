@@ -41,7 +41,7 @@ window.Asc.plugin.executeMethod ("StartAction", [type, description]);
             <td>description</td>
             <td>A string value that specifies the description text for the start action of the operation.</td>
             <td>string</td>
-            <td>"Save to localstorage..."</td>
+            <td>"Save to local storage..."</td>
         </tr>
     </tbody>
 </table>
@@ -54,5 +54,5 @@ window.Asc.plugin.executeMethod ("StartAction", [type, description]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("StartAction", [1, "Save to localstorage..."]);
+window.Asc.plugin.executeMethod("StartAction", [1, "Save to local storage..."]);
 </pre>

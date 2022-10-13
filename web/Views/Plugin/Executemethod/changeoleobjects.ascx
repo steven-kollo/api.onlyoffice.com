@@ -49,7 +49,7 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
                         <br />
                         <b>type</b>: string,
                         <br />
-                        <b>example</b>: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6";
+                        <b>example</b>: "data:image/png;base64,image-in-the-base64-format";
                         <br />
                     </li>
                     <li>
@@ -79,7 +79,7 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
                     <li>
                         <b>Width</b> - the OLE object width measured in millimeters,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
                         <b>example</b>: 70;
                         <br />
@@ -87,7 +87,7 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
                     <li>
                         <b>Height</b> - the OLE object height measured in millimeters,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
                         <b>example</b>: 70;
                         <br />
@@ -95,7 +95,7 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
                     <li>
                         <b>WidthPix</b> - the OLE object image width in pixels,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
                         <b>example</b>: 60 * 36000;
                         <br />
@@ -103,7 +103,7 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
                     <li>
                         <b>HeightPix</b> - the OLE object image height in pixels,
                         <br />
-                        <b>type</b>: number,
+                        <b>type</b>: integer,
                         <br />
                         <b>example</b>: 60 * 36000.
                         <br />
@@ -124,5 +124,5 @@ window.Asc.plugin.executeMethod ("ChangeOleObjects", [arrObjectData]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod("ChangeOleObjects", [[{"Data": "{data}", "ImageData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "InternalId": "5_556", "ParaDrawingId": "1_713", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}]]);
+window.Asc.plugin.executeMethod("ChangeOleObjects", [[{"Data": "{data}", "ImageData": "data:image/png;base64,image-in-the-base64-format", "ApplicationId": "asc.{38E022EA-AD92-45FC-B22B-49DF39746DB4}", "InternalId": "5_556", "ParaDrawingId": "1_713", "Width": 70, "Height": 70, "WidthPix": 60 * 36000, "HeightPix": 60 * 36000}]]);
 </pre>

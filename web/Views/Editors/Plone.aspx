@@ -48,7 +48,7 @@
 ...
 
 eggs =
-    onlyoffice.connector
+    onlyoffice.plone
             </span>
         </li>
 
@@ -59,10 +59,10 @@ eggs =
 
     <p>You could also install plugin via Docker:</p>
     <span class="commandline">
-docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.connector" plone
+docker run --rm -p 8080:8080 -e ADDONS="onlyoffice.plone" plone
     </span>
 
-    <p>Both options will automatically install plugin from <a target="_blank" href="https://pypi.org/project/onlyoffice.connector/">PyPi</a>.</p>
+    <p>Both options will automatically install plugin from <a target="_blank" href="https://pypi.org/project/onlyoffice.plone/">PyPi</a>.</p>
 
     <h2 id="configuration" class="copy-link">Configuring Plone ONLYOFFICE integration plugin</h2>
 
@@ -101,8 +101,8 @@ virtualenv .
         If you have a working Plone instance, you can install plugin by adding the project files to the <em>scr</em> directory:
     </p>
     <ol>
-        <li>In the <em>scr</em> directory create the <em>onlyoffice.connector</em> directory.</li>
-        <li>Put your project files received by Git into the <em>onlyoffice.connector</em> directory.</li>
+        <li>In the <em>scr</em> directory create the <em>onlyoffice.plone</em> directory.</li>
+        <li>Put your project files received by Git into the <em>onlyoffice.plone</em> directory.</li>
         <li>Edit the <em>buildout.cfg</em> file:
             <span class="commandline">
 [buildout]
@@ -110,9 +110,9 @@ virtualenv .
 ...
 
 eggs =
-    onlyoffice.connector
+    onlyoffice.plone
 develop = 
-    src/onlyoffice.connector
+    src/onlyoffice.plone
             </span>
         </li>
         <li>Rerun buildout for the changes to take effect:
@@ -130,19 +130,19 @@ develop =
     <h2 id="upgrade" class="copy-link">Upgrade Plone ONLYOFFICE integration plugin</h2>
 
     <ol>
-        <li>If you specified a concrete plugin version in your <em>buildout.cfg</em> file (so-called <em>pinning</em>, and a recommended practice), like <em>onlyoffice.connector = 1.0.0</em>, update this reference to point to the newer version. 
+        <li>If you specified a concrete plugin version in your <em>buildout.cfg</em> file (so-called <em>pinning</em>, and a recommended practice), like <em>onlyoffice.plone = 1.0.0</em>, update this reference to point to the newer version. 
             If the plugin version is not specified, then the latest version will be automatically loaded:
             <span class="commandline">
 [versions]
 
 ...
 
-onlyoffice.connector = 1.0.1
+onlyoffice.plone = 1.0.1
             </span>
         </li>
         <li>Run <em>bin/buildout</em>. Wait until a new version is downloaded and installed.</li>
         <li>Restart Plone. Your site may look weird, or even be inaccessible until you have performed the next step.</li>
-        <li>Navigate to the <b>Add-on</b> screen (add <em>/prefs_install_products_form</em> to your site URL) and in the <b>Upgrades</b> list select <b>onlyoffice.connector</b> and click <b>Upgrade onlyoffice.connector</b>.</li>
+        <li>Navigate to the <b>Add-on</b> screen (add <em>/prefs_install_products_form</em> to your site URL) and in the <b>Upgrades</b> list select <b>onlyoffice.plone</b> and click <b>Upgrade onlyoffice.plone</b>.</li>
     </ol>
 
 

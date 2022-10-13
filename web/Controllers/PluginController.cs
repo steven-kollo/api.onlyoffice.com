@@ -41,6 +41,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config",
                 "callCommand",
                 "callModule",
+                "changelog",
                 "createInputHelper",
                 "events",
                 "example",
@@ -90,6 +91,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/addcontentcontrolpicture",
                 "executemethod/addoleobject",
                 "executemethod/changecomment",
+                "executemethod/changeoleobject",
                 "executemethod/changeoleobjects",
                 "executemethod/coauthoringchatsendmessage",
                 "executemethod/convertdocument",
@@ -97,12 +99,18 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/endaction",
                 "executemethod/getallcomments",
                 "executemethod/getallcontentcontrols",
+                "executemethod/getallforms",
                 "executemethod/getalloleobjects",
                 "executemethod/getcurrentcontentcontrolpr",
                 "executemethod/getcurrentcontentcontrol",
                 "executemethod/getfields",
                 "executemethod/getfilehtml",
+                "executemethod/getfiletodownload",
                 "executemethod/getfontlist",
+                "executemethod/getformsbytag",
+                "executemethod/getformvalue",
+                "executemethod/getimagedatafromselection",
+                "executemethod/getinstalledplugins",
                 "executemethod/getmacros",
                 "executemethod/getselectedtext",
                 "executemethod/getselectiontype",
@@ -110,6 +118,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/inputtext",
                 "executemethod/insertandreplacecontentcontrols",
                 "executemethod/insertoleobject",
+                "executemethod/installplugin",
                 "executemethod/movecursortocontentcontrol",
                 "executemethod/movecursortoend",
                 "executemethod/movecursortostart",
@@ -118,22 +127,27 @@ namespace ASC.Api.Web.Help.Controllers
                 "executemethod/onencryption",
                 "executemethod/pastehtml",
                 "executemethod/pastetext",
+                "executemethod/putimagedatatoselection",
                 "executemethod/removecomments",
                 "executemethod/removecontentcontrols",
                 "executemethod/removecontentcontrol",
                 "executemethod/removeoleobject",
                 "executemethod/removeoleobjects",
+                "executemethod/removeplugin",
                 "executemethod/removeselectedcontent",
                 "executemethod/replacetextsmart",
                 "executemethod/searchandreplace",
                 "executemethod/selectcontentcontrol",
                 "executemethod/selectoleobject",
                 "executemethod/setdisplaymodeinreview",
+                "executemethod/setformvalue",
                 "executemethod/setmacros",
                 "executemethod/setproperties",
+                "executemethod/showbutton",
                 "executemethod/showinputhelper",
                 "executemethod/startaction",
                 "executemethod/unshowinputhelper",
+                "executemethod/updateplugin",
                 "FAQ",
                 "getInputHelper",
                 "GettingStarted",
@@ -149,6 +163,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Localization",
                 "macros/Macros",
                 "macros/Writing",
+                "macros/Debugging",
                 "macros/ConvertingVBA",
                 "macros/macrosamples",
                 "macros/macrosamples/addchart",
@@ -212,6 +227,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult callModule()
+        {
+            return View();
+        }
+
+        public ActionResult Changelog()
         {
             return View();
         }
@@ -367,6 +387,10 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Macros/WritingMacros");
         }
 
+        public ActionResult Debugging()
+        {
+            return View("Macros/Debugging");
+        }
 
     }
 }

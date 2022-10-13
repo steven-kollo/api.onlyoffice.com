@@ -34,7 +34,7 @@ window.Asc.plugin.executeMethod ("RemoveOleObjects", [arrObjects]);
     <tbody>
         <tr class="tablerow">
             <td>arrObjects</td>
-            <td>An array of the identifiers which are used to work with OLE objects added to the document.</td>
+            <td>An array of the OLE object data with the identifiers which are used to work with OLE objects added to the document.</td>
             <td>array of objects</td>
             <td>[{"InternalId": "5_556"}]</td>
         </tr>

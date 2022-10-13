@@ -1,0 +1,2 @@
+// Set the text font size to 11 points:
+oTextPr.SetFontSize(22);

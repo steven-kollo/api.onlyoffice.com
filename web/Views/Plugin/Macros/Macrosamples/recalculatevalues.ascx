@@ -13,10 +13,10 @@
 {
     let timerId = setInterval(function(){
         Api.asc_calculate(Asc.c_oAscCalculateType.All);
-      var oWorksheet = Api.GetActiveSheet();
-      oWorksheet.GetRange("F2").SetValue("Average")
-      oWorksheet.GetRange("G2").SetValue("=AVERAGE(B2:B80)");
-      }, 1000);
+        var oWorksheet = Api.GetActiveSheet();
+        oWorksheet.GetRange("F2").SetValue("Average");
+        oWorksheet.GetRange("G2").SetValue("=AVERAGE(B2:B80)");
+    }, 1000);
 })();</pre>
 
 <p>Methods used:

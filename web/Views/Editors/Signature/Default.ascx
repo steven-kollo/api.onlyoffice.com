@@ -116,15 +116,15 @@ supervisorctl restart all
 They are taken from <a href="<%= Url.Action("demopreview") %>">test samples</a> in different programming languages.
 We advise you to use this code in your projects to generate signatures.</p>
 <div class="container">
-    <ul class="code">
-        <li class="code tab active copy-link" id="csharp">C#</li>
-        <li class="code tab copy-link" id="java">Java</li>
-        <li class="code tab copy-link" id="nodejs">Node.js</li>
-        <li class="code tab copy-link" id="php">PHP</li>
-        <li class="code tab copy-link" id="python">Python</li>
-        <li class="code tab copy-link" id="ruby">Ruby</li>
+    <ul class="browser">
+        <li class="browser tab active copy-link" id="csharp">C#</li>
+        <li class="browser tab copy-link" id="java">Java</li>
+        <li class="browser tab copy-link" id="nodejs">Node.js</li>
+        <li class="browser tab copy-link" id="php">PHP</li>
+        <li class="browser tab copy-link" id="python">Python</li>
+        <li class="browser tab copy-link" id="ruby">Ruby</li>
     </ul>
-    <div id="csharp" class="content">
+    <div id="csharp" class="content active">
         <pre>
 public static class JwtManager
 {
@@ -210,7 +210,7 @@ end
 </div>
 
 <script type="text/javascript">
-    $('ul.code').on('click', 'li:not(.code tab active)', function() {
+    $('ul.browser').on('click', 'li:not(.browser tab active)', function() {
         $(this)
         .addClass('active').siblings().removeClass('active')
         .closest('div.container').find('div.content').removeClass('active').eq($(this).index()).addClass('active');
@@ -218,9 +218,11 @@ end
     var loc = window.location.hash;
     if (loc != "") {
         var id = loc.substring(1);;
-        $('.code .tab').removeClass('active');
-        $('.code .tab[id="'+id  +'"]').addClass('active');
-        $('.content').removeClass('active');
-        $('.content[id="'+id  +'"]').addClass('active');
+        if ($('.browser .tab[id="' + id + '"]').length) {
+            $('.browser .tab').removeClass('active');
+            $('.browser .tab[id="' + id + '"]').addClass('active');
+            $('.content').removeClass('active');
+            $('.content[id="' + id + '"]').addClass('active');
+        }
     }
 </script>

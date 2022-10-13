@@ -65,6 +65,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Config/Editor/Plugins",
                 "Config/Events",
                 "Confluence",
+                "Connector",
                 "Conversion",
                 "ConversionApi",
                 "DemoPreview",
@@ -121,6 +122,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Strapi",
                 "Troubleshooting",
                 "Try",
+                "Viewing",
                 "WOPI",
                 "WOPI/ApiVsWopi",
                 "WOPI/Discovery",
@@ -237,6 +239,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Confluence()
+        {
+            return View();
+        }
+
+        public ActionResult Connector()
         {
             return View();
         }
@@ -433,6 +440,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Try()
+        {
+            return View();
+        }
+
+        public ActionResult Viewing()
         {
             return View();
         }
