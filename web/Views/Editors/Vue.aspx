@@ -6,92 +6,80 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    ONLYOFFICE Docs Angular component
+    ONLYOFFICE Docs Vue component
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">ONLYOFFICE Docs Angular component</span>
+        <span class="hdr">ONLYOFFICE Docs Vue component</span>
     </h1>
 
-    <p>This <a href="https://github.com/ONLYOFFICE/document-editor-angular-workspace" target="_blank">component</a> enables users to build ONLYOFFICE Docs user interface
-        using <a href="https://angularjs.org/" target="_blank">Angular</a>.</p>
+    <p>This <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">component</a> enables users to build ONLYOFFICE Docs user interface
+        using <a href="https://vuejs.org/" target="_blank">Vue</a>.</p>
 
 
-    <h2 id="install" class="copy-link">Installing ONLYOFFICE Docs Angular component</h2>
-    <p>Install ONLYOFFICE Docs Angular component from <b>npm</b> in your project. Run:</p>
+    <h2 id="install" class="copy-link">Installing ONLYOFFICE Docs Vue component</h2>
+    <p>Install ONLYOFFICE Docs Vue component from <b>npm</b> in your project. Run:</p>
     <pre>
-npm install --save @onlyoffice/document-editor-angular
+npm install --save @onlyoffice/document-editor-vue
 </pre>
     <p>or</p>
     <pre>
-yarn add @onlyoffice/document-editor-angular
+yarn add @onlyoffice/document-editor-vue
 </pre>
 
 
-    <h2 id="use" class="copy-link">Using ONLYOFFICE Docs Angular component</h2>
-    <p>Follow the steps below to start using the component:</p>
-    <ol>
-        <li>
-            <p>Import the <b>DocumentEditorModule</b>:</p>
-            <pre>
-import { NgModule } from '@angular/core';
-import { DocumentEditorModule } from "@onlyoffice/document-editor-angular";
+    <h2 id="use" class="copy-link">Using ONLYOFFICE Docs Vue component</h2>
+    <p>Find below the component usage example:</p>
+    <pre>
+&lt;template&gt;
+    &lt;DocumentEditor 
+        id="docEditor" 
+        documentServerUrl="http://documentserver/"
+        :config="config"
+        :events_onDocumentReady="onDocumentReady"
+    /&gt; 
+&lt;/template&gt;
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    DocumentEditorAngularModule
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
-</pre>
-        </li>
-        <li>
-            <p>Define options in your consuming component:</p>
-            <pre>
-@Component({...})
-export class ExampleComponent {
-  config: IConfig = {
-    document: {
-      "fileType": "docx",
-      "key": "Khirz6zTPdfd7",
-      "title": "Example Document Title.docx",
-      "url": "https://example.com/url-to-example-document.docx"
+&lt;script lang="ts"&gt;
+import { defineComponent } from 'vue';
+import { DocumentEditor } from "@onlyoffice/document-editor-vue";
+
+export default defineComponent({
+    name: 'ExampleComponent',
+    components: {
+        DocumentEditor
     },
-    documentType: "word",
-    editorConfig: {
-      "callbackUrl": "https://example.com/url-to-callback.ashx"
+    data() {
+        return {
+            config: {
+                document: {
+                    fileType: "docx",
+                    key: "Khirz6zTPdfd7",
+                    title: "Example Document Title.docx",
+                    url: "https://example.com/url-to-example-document.docx"
+                },
+                documentType: "word",
+                editorConfig: {
+                    callbackUrl: "https://example.com/url-to-callback.ashx"
+                }
+            }
+        }
     },
-  }
-
-  onDocumentReady = (event) => {
-    console.log("Document is loaded");
-  };
-}
+    methods: {
+        onDocumentReady() {
+            console.log("Document is loaded");
+        }
+    },
+});
+&lt;/script&gt;
 </pre>
-            <p>where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed.</p>
-        </li>
-        <li>
-            <p>In template, use the <b>document-editor</b> component with your options:</p>
-            <pre>
-&lt;document-editor 
-  id="docxForComments" 
-  documentServerUrl="http://documentserver/"
-  [config]="config"
-  [events_onDocumentReady]="onDocumentReady"
-&gt;&lt;/document-editor&gt;
-</pre>
-            <p>where the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
-        </li>
-    </ol>
+    <p>where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed
+        and the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
 
 
-    <h2 id="api" class="copy-link">ONLYOFFICE Docs Angular component API</h2>
+    <h2 id="api" class="copy-link">ONLYOFFICE Docs Vue component API</h2>
     <div class="header-gray">Properties</div>
     <table class="table">
         <colgroup>
@@ -284,12 +272,37 @@ export class ExampleComponent {
     <span class="required-descr"><span class="required">*</span><em> - required field</em></span>
 
 
-    <h2 id="development" class="copy-link">Developing ONLYOFFICE Docs Angular component</h2>
+    <h2 id="storybook" class="copy-link">Installing Storybook</h2>
+    <p>Install <a href="https://storybook.js.org/" target="_blank">Storybook</a> to develop UI components in isolation:</p>
+    <ol>
+        <li>
+            <p>Change the address of the document server in the <em>config/default.json</em> file:</p>
+            <pre>
+"documentServerUrl": "http://documentserver/"
+</pre>
+            <p>where the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
+        </li>
+        <li>
+            <p>Build Storybook with the following command:</p>
+            <pre>
+npm run build-storybook
+</pre>
+        </li>
+        <li>
+            <p>Start Storybook:</p>
+            <pre>
+npm run storybook
+</pre>
+        </li>
+    </ol>
+
+
+    <h2 id="development" class="copy-link">Developing ONLYOFFICE Docs Vue component</h2>
     <ol>
         <li>
             <p>Clone project from the GitHub repository:</p>
             <pre>
-git clone https://github.com/ONLYOFFICE/document-editor-angular-workspace.git
+git clone https://github.com/ONLYOFFICE/document-editor-vue
 </pre>
         </li>
         <li>
@@ -299,35 +312,29 @@ npm install
 </pre>
         </li>
         <li>
+            <p>Test the component:</p>
+            <pre>
+npm run test
+</pre>
+        </li>
+        <li>
             <p>Build the project:</p>
             <pre>
-cd ./projects
-
-ng build @onlyoffice/document-editor-angular
+npm run build
 </pre>
         </li>
         <li>
             <p>Create the package:</p>
             <pre>
-cd ./dist/onlyoffice/document-editor-angular
-
 npm pack
-</pre>
-        </li>
-        <li>
-            <p>Test the component:</p>
-            <pre>
-cd ./projects
-
-ng test @onlyoffice/document-editor-angular
 </pre>
         </li>
     </ol>
 
 
     <h2 id="feedback" class="copy-link">Feedback and support</h2>
-    <p>In case you have any issues, questions, or suggestions for the ONLYOFFICE Docs Angular component,
-        please refer to the <a href="https://github.com/ONLYOFFICE/document-editor-angular-workspace/issues" target="_blank">Issues</a> section.</p>
+    <p>In case you have any issues, questions, or suggestions for the ONLYOFFICE Docs Vue component,
+        please refer to the <a href="https://github.com/ONLYOFFICE/document-editor-vue/issues" target="_blank">Issues</a> section.</p>
 
 
 </asp:Content>

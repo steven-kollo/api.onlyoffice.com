@@ -24,6 +24,7 @@
     <ul>
         <li><a href="<%= Url.Action("react") %>">React</a></li>
         <li><a href="<%= Url.Action("angular") %>">Angular</a></li>
+        <li><a href="<%= Url.Action("vue") %>">Vue</a></li>
     </ul>
 
     <br />

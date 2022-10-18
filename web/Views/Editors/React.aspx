@@ -9,12 +9,7 @@
     ONLYOFFICE Docs React component
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="HeadContent" runat="server">
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-</asp:Content>
-
-<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
         <span class="hdr">ONLYOFFICE Docs React component</span>

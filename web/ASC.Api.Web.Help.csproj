@@ -2561,6 +2561,7 @@
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
+    <Content Include="Views\Editors\Vue.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
     <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />

@@ -126,6 +126,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Troubleshooting",
                 "Try",
                 "Viewing",
+                "Vue",
                 "WOPI",
                 "WOPI/ApiVsWopi",
                 "WOPI/Discovery",
@@ -463,6 +464,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Viewing()
+        {
+            return View();
+        }
+
+        public ActionResult Vue()
         {
             return View();
         }
