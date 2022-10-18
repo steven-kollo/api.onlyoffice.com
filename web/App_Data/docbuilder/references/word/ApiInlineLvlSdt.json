@@ -583,6 +583,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a container for the paragraph elements.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a container for the paragraph elements.</p>",
   "scope": "global",

@@ -540,6 +540,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#Copy}"
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a document checkbox form.\n\t * @constructor\n\t * @property {boolean} radio - Specifies if the current checkbox is a radio button. In this case, the key parameter is considered as an identifier for the group of radio buttons.\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document checkbox form.</p>",
   "scope": "global",

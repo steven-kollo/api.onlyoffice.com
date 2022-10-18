@@ -932,6 +932,7 @@
       "inherits": "Inherited From: {@link ApiTableCellPr#ToJSON}"
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a table cell.\n\t * @constructor\n\t * @extends {ApiTableCellPr}\n\t */",
   "description": "<p>Class representing a table cell.</p>",
   "scope": "global",

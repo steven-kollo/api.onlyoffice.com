@@ -678,8 +678,57 @@
           "optional": false
         }
       ]
+    },
+    "attachEvent": {
+      "memberof": "Api",
+      "name": "attachEvent",
+      "description": "<p>Subscribes to the specified event and calls the callback function when the event fires.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "eventName",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "callback",
+          "description": "<p>Function to be called when the event fires.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "detachEvent": {
+      "memberof": "Api",
+      "name": "detachEvent",
+      "description": "<p>Unsubscribes from the specified event.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CPE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "eventName",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        }
+      ]
     }
   },
+  "events": {},
   "comment": "/**\n     * @global\n     * @class\n     * @name Api\n     */",
   "scope": "global"
 }

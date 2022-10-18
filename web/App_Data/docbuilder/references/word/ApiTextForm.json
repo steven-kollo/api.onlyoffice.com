@@ -662,6 +662,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#Copy}"
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a document text form.\n\t * @constructor\n\t * @property {boolean} comb - Specifies if the text form should be a comb of characters with the same cell width. The maximum number of characters must be set to a positive value.\n\t * @property {number} maxCharacters - The maximum number of characters in the text form.\n\t * @property {number} cellWidth - The cell width for each character measured in millimeters. If this parameter is not specified or equal to 0 or less, then the width will be set automatically.\n\t * @property {boolean} multiLine - Specifies if the current fixed size text form is multiline or not.\n\t * @property {boolean} autoFit - Specifies if the text form content should be autofit, i.e. whether the font size adjusts to the size of the fixed size form.\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document text form.</p>",
   "scope": "global",
