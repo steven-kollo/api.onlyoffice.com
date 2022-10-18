@@ -6,17 +6,18 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Ready-to-use connectors
+    Frontend frameworks
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <h1>
-        <span class="hdr">Ready-to-use frameworks</span>
+        <span class="hdr">Frontend frameworks</span>
     </h1>
 
     <p class="dscr">
-        ONLYOFFICE Docs can be integrated ...
+        ONLYOFFICE Docs can be integrated with some of the existing frontend frameworks using components. These components provide ready-to-use code modules,
+        standardized frontend technologies, and reusable interface blocks making the process of building user interfaces faster and easier.
     </p>
 
     <p>Currently, the following frameworks are available:</p>

@@ -42,7 +42,7 @@
         </ul>
     </li>
     <li>
-        <a href="<%= Url.Action("frameworks") %>">Frontend Frameworks</a>
+        <a href="<%= Url.Action("frameworks") %>">Frontend frameworks</a>
         <ul>
             <li>
                 <a href="<%= Url.Action("react") %>">React</a>
