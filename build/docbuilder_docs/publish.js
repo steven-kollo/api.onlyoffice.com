@@ -13,6 +13,11 @@ exports.publish = function(taffyData) {
                 add_method(doclet, main_data);
             } else if (doclet.kind === "typedef") {
                 add_typedef(doclet, main_data);
+            } else if (doclet.kind === "event") {
+                add_event(doclet, main_data);
+            } else if (doclet.kind === "member") { // hack for attach & detach event
+                create_class_if_not_exist(doclet, main_data);
+                add_method(doclet, main_data);
             }
         }
         doclet.attribs = '';
@@ -29,6 +34,7 @@ function create_class_if_not_exist(doclet, main_data) {
 
     let type = {
         "methods": {},
+        "events": {},
         "comment": doclet.comment,
         "description": doclet.description,
         "scope": doclet.scope
@@ -52,7 +58,7 @@ function add_method(doclet, main_data) {
     if (!doclet.memberof || doclet.name.includes("private")) return;
 
     method.memberof = doclet.memberof;
-    method.name = doclet.name;
+    method.name = doclet.name.replace(/"/g, "");
     method.description = doclet.description;
     method.tags = get_tags(doclet.tags);
     method.returns = get_returns(doclet.returns);
@@ -75,6 +81,23 @@ function add_typedef(doclet, main_data) {
         description: doclet.description,
         type: doclet.type.names
     };
+}
+
+function add_event(doclet, main_data) {
+    let event = {};
+    if (!doclet.memberof || doclet.name.includes("private")) return;
+
+    event.memberof = doclet.memberof;
+    event.name = doclet.name;
+    event.description = doclet.description;
+    event.tags = get_tags(doclet.tags);
+    event.see = doclet.see ? doclet.see[0] : null;
+
+    if (doclet.properties) {
+        event.properties = get_props(doclet.properties);
+    }
+
+    main_data[doclet.memberof].events[event.name] = event;
 }
 
 function get_props(data) {

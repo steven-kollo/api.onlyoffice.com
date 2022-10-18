@@ -2454,6 +2454,7 @@
     <Content Include="Views\DocBuilder\Integrationapi\net\cdocbuilder\settmpfolder.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\net\cdocbuilder\writedata.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
+    <Content Include="Views\DocBuilder\eventpartial.aspx" />
     <Content Include="Views\DocBuilder\methodpartial.aspx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
     <Content Include="Views\DocBuilder\nodejsexample.aspx" />
@@ -2744,6 +2745,7 @@
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
     <Content Include="Views\Shared\Method.aspx" />
+    <Content Include="Views\Shared\EventNotFound.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />
     <Content Include="Views\Shared\Search.aspx" />
     <Content Include="Views\Shared\SearchForm.ascx" />
