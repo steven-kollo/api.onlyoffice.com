@@ -23,6 +23,7 @@
     <p>Currently, the following frameworks are available:</p>
     <ul>
         <li><a href="<%= Url.Action("react") %>">React</a></li>
+        <li><a href="<%= Url.Action("angular") %>">Angular</a></li>
     </ul>
 
     <br />

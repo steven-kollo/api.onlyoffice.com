@@ -2467,6 +2467,7 @@
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
+    <Content Include="Views\Editors\Angular.aspx" />
     <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Basic.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />

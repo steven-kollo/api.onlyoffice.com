@@ -40,6 +40,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "ActionLink",
                 "Advanced",
                 "Alfresco",
+                "Angular",
                 "AnonymousUsers",
                 "Basic",
                 "Callback",
@@ -172,6 +173,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Alfresco()
+        {
+            return View();
+        }
+
+        public ActionResult Angular()
         {
             return View();
         }
