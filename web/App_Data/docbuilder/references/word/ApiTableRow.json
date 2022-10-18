@@ -380,6 +380,7 @@
       "inherits": "Inherited From: {@link ApiTableRowPr#ToJSON}"
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a table row.\n\t * @constructor\n\t * @extends {ApiTableRowPr}\n\t */",
   "description": "<p>Class representing a table row.</p>",
   "scope": "global",

@@ -165,6 +165,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n     * Class representing a theme format scheme.\n     * @constructor\n     */",
   "description": "<p>Class representing a theme format scheme.</p>",
   "scope": "global",

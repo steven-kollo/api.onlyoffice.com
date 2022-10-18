@@ -443,6 +443,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#Copy}"
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a complex form.\n\t * @param oSdt\n\t * @constructor\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a complex form.</p>",
   "scope": "global",
