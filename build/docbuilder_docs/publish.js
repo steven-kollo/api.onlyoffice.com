@@ -81,6 +81,10 @@ function add_typedef(doclet, main_data) {
         description: doclet.description,
         type: doclet.type.names
     };
+
+    if (doclet.properties) {
+        main_data.Globals[doclet.name].properties = get_props(doclet.properties);
+    }
 }
 
 function add_event(doclet, main_data) {
