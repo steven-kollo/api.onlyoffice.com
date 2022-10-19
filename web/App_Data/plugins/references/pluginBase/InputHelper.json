@@ -90,6 +90,6 @@
       "inherits": null
     }
   },
-  "comment": "/**\n     * @global\n     * @class\n     * @name InputHelper\n     * @hideconstructor\n     */",
+  "comment": "/**\n\t * @global\n\t * @class\n\t * @name InputHelper\n\t * @hideconstructor\n\t */",
   "scope": "global"
 }

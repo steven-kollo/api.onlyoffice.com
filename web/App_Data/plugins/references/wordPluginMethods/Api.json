@@ -662,7 +662,7 @@
           "optional": false
         },
         {
-          "type": "Array.<object>",
+          "type": "Array.<String, String>",
           "name": "List",
           "description": "<p>A list of the content control elements that consists of two items: &quot;Display&quot; - an item that will be displayed to the user in the content control list, &quot;Value&quot; - a value of each item from the content control list.</p>",
           "optional": true,
@@ -890,9 +890,75 @@
           "optional": false
         }
       ]
+    },
+    "AcceptReviewChanges": {
+      "memberof": "Api",
+      "name": "AcceptReviewChanges",
+      "description": "<p>Accept review changes</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isAll",
+          "description": "<p>Accept all changes or only in the current selection</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "RejectReviewChanges": {
+      "memberof": "Api",
+      "name": "RejectReviewChanges",
+      "description": "<p>Reject review changes in the current selection</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isAll",
+          "description": "<p>Accept all changes or only in the current selection</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "MoveToNextReviewChange": {
+      "memberof": "Api",
+      "name": "MoveToNextReviewChange",
+      "description": "<p>Move to next review change</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isForward",
+          "description": "<p>Move forward or backward</p>",
+          "optional": true,
+          "defaultValue": true
+        }
+      ]
     }
   },
-  "comment": "/**\n\t * Base class.\n\t * @global\n\t * @class\n\t * @name Api\n\t */",
+  "comment": "/**\n     * Base class.\n     * @global\n     * @class\n     * @name Api\n     */",
   "description": "<p>Base class.</p>",
   "scope": "global"
 }

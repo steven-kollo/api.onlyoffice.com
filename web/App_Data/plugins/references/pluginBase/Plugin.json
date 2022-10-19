@@ -215,6 +215,6 @@
       "inherits": null
     }
   },
-  "comment": "/**\n     * @global\n     * @class\n     * @name Plugin\n     * @hideconstructor\n     */",
+  "comment": "/**\n\t * @global\n\t * @class\n\t * @name Plugin\n\t * @hideconstructor\n\t */",
   "scope": "global"
 }

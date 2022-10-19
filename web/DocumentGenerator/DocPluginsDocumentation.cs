@@ -58,36 +58,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             Load("plugins");
         }
 
+        public DBMethod GetMethod(string methodName)
+        {
+            var method = GetMethod("sharedPluginMethods", "api", methodName);
+            if (method == null)
+            {
+                method = GetMethod("wordPluginMethods", "api", methodName);
+            }
+            return method;
+        }
+
         protected override void CheckSharedMethods()
         {
-            var sharedSection = _entries["sharedPluginMethods"]["api"];
 
-            foreach (var method in _entries["wordPluginMethods"]["api"].Methods.Values)
-            {
-                if (!sharedSection.Methods.ContainsKey(method.Name))
-                {
-                    sharedSection.Methods.Add(method.Name, new DBMethod
-                    {
-                        Description = method.Description,
-                        Inherits = method.Inherits,
-                        MemberOf = method.MemberOf,
-                        Name = method.Name,
-                        Params = method.Params != null ? method.Params.Select(p => new DBParam
-                        {
-                            DefaultValue = p.DefaultValue,
-                            Description = p.Description,
-                            Module = sharedSection.Module,
-                            Name = p.Name,
-                            Optional = p.Optional,
-                            Type = p.Type
-                        }).ToList() : null,
-                        Returns = method.Returns,
-                        See = method.See,
-                        Tags = method.Tags,
-                        Module = sharedSection.Module
-                    });
-                }
-            }
         }
 
         protected override void LoadExamples()

@@ -14,76 +14,94 @@
     <li>
         <a href="<%= Url.Action("types") %>">Plugin types</a>
     </li>
+    <li>
+        <a href="<%= Url.Action("structure") %>">Plugin structure</a>
+    </li>
 </ul>
 
 <div class="treeheader">Plugins</div>
 <ul class="side-nav root">
     <li>
-        <a href="<%= Url.Action("structure") %>">Plugin structure</a>
+        <a href="<%= Url.Action("config") %>">Configuring plugin</a>
         <ul>
             <li>
-                <a href="<%= Url.Action("config") %>">config.json</a>
+                <a href="<%= Url.Action("variations") %>">Plugin variations</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("icons") %>">Plugin icons</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="<%= Url.Action("indexhtml") %>">Creating plugin entry point</a>
+    </li>
+    <li>
+        <a href="<%= Url.Action("code") %>">Coding plugin</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("plugin") %>">Methods</a>
                 <ul>
-                    <li>
-                        <a href="<%= Url.Action("variations") %>">Plugin variations</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("icons") %>">Plugin icons</a>
-                    </li>
+                    <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["plugin"].Methods) { %>
+                        <li>
+                            <a href="<%= Url.Action(string.Format("{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
+                            <% if (method.Key.ToLower() == "executemethod") { %>
+                            <ul>
+                                <li>
+                                    <a href="#">Common Api</a>
+                                    <ul>
+                                        <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("sharedPluginMethods")["api"].Methods) { %>
+                                            <li>
+                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Text Document Api</a>
+                                    <ul>
+                                        <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("wordPluginMethods")["api"].Methods) { %>
+                                            <li>
+                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <% } %>
+                        </li>
+                    <% } %>
                 </ul>
             </li>
             <li>
-                <a href="<%= Url.Action("indexhtml") %>">index.html</a>
+                <a href="<%= Url.Action("events") %>">Events</a>
             </li>
             <li>
-                <a href="<%= Url.Action("code") %>">Plugin code</a>
+                <a href="<%= Url.Action("objects") %>">Auxiliary objects</a>
                 <ul>
                     <li>
-                        <a href="<%= Url.Action("plugin") %>">Methods</a>
+                        <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("info") %>">info object</a>
+                    </li>
+                    <li>
+                        <a href="<%= Url.Action("inputhelper") %>">InputHelper object</a>
                         <ul>
-                            <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["plugin"].Methods) { %>
+                            <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["inputHelper"].Methods) { %>
                                 <li>
-                                    <a href="<%= Url.Action(string.Format("{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
-                                    <% if (method.Key.ToLower() == "executemethod") { %>
-                                        <ul>
-                                            <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("sharedPluginMethods")["api"].Methods) { %>
-                                                <li>
-                                                    <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
-                                                </li>
-                                            <% } %>
-                                        </ul>
-                                    <% } %>
+                                    <a href="<%= Url.Action(string.Format("inputHelper/{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
                                 </li>
                             <% } %>
                         </ul>
                     </li>
-                    <li>
-                        <a href="<%= Url.Action("events") %>">Events</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("objects") %>">Auxiliary objects</a>
-                        <ul>
-                            <li>
-                                <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("info") %>">info object</a>
-                            </li>
-                            <li>
-                                <a href="<%= Url.Action("inputhelper") %>">InputHelper object</a>
-                                <ul>
-                                    <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["inputHelper"].Methods) { %>
-                                        <li>
-                                            <a href="<%= Url.Action(string.Format("inputHelper/{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
-                                        </li>
-                                    <% } %>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
                 </ul>
             </li>
+            <li>
+                <a href="<%= Url.Action("global") %>">Global</a>
+            </li>
         </ul>
+    </li>
+
     <li>
         <a href="<%= Url.Action("installation/") %>">Adding plugins</a>
         <ul>
@@ -268,9 +286,6 @@
                 <a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">Currency exchange rates</a>
             </li>
         </ul>
-    </li>
-    <li>
-        <a href="<%= Url.Action("global") %>">Global</a>
     </li>
 </ul>
 <div class="treeheader">More information</div>

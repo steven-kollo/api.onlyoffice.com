@@ -193,7 +193,7 @@ namespace ASC.Api.Web.Help.Controllers
             }
             else
             {
-                var method = DocPluginsDocumentation.Instance.GetMethod("sharedPluginMethods", "api", catchall);
+                var method = DocPluginsDocumentation.Instance.GetMethod(catchall);
                 if (method == null) return View("methodnotfound");
                 return View("methodpartial", method);
             }
