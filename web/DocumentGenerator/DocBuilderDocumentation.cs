@@ -640,6 +640,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [JsonProperty("type")]
         public List<string> Types { get; set; }
 
+        [JsonProperty("properties")]
+        public List<DBProperty> Properties { get; set; }
+
         [JsonProperty("script")]
         public string Script { get; set; }
     }
