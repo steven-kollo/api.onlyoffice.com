@@ -107,7 +107,6 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/setcolumnwidth",
                 "macros/macrosamples/unmergecellrange",
                 "macros/macrosamples/writedatatoworksheetcell",
-                "Objects",
                 "scope",
                 "Structure",
                 "Styles",
@@ -259,11 +258,6 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Localization()
-        {
-            return View();
-        }
-
-        public ActionResult Objects()
         {
             return View();
         }

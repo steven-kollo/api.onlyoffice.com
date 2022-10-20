@@ -2653,7 +2653,6 @@
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
     <Content Include="Views\Plugin\methodpartial.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
-    <Content Include="Views\Plugin\Objects.aspx" />
     <Content Include="Views\Plugin\scope.aspx" />
     <Content Include="Views\Plugin\sectionpartial.aspx" />
     <Content Include="Views\Plugin\Structure.aspx" />

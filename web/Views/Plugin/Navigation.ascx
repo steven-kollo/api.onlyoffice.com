@@ -76,24 +76,19 @@
                 <a href="<%= Url.Action("events") %>">Events</a>
             </li>
             <li>
-                <a href="<%= Url.Action("objects") %>">Auxiliary objects</a>
+                <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("info") %>">info object</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("inputhelper") %>">InputHelper</a>
                 <ul>
-                    <li>
-                        <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("info") %>">info object</a>
-                    </li>
-                    <li>
-                        <a href="<%= Url.Action("inputhelper") %>">InputHelper object</a>
-                        <ul>
-                            <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["inputHelper"].Methods) { %>
-                                <li>
-                                    <a href="<%= Url.Action(string.Format("inputHelper/{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
-                                </li>
-                            <% } %>
-                        </ul>
-                    </li>
+                    <% foreach (var method in DocPluginsDocumentation.Instance.GetModule("pluginBase")["inputHelper"].Methods) { %>
+                        <li>
+                            <a href="<%= Url.Action(string.Format("inputHelper/{0}", method.Key.ToLower())) %>"> <%= method.Key %></a>
+                        </li>
+                    <% } %>
                 </ul>
             </li>
             <li>
