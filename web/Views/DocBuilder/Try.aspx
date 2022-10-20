@@ -116,19 +116,23 @@
             };
             var script = removeMethod["<%= ext %>"] + $("#builderScript").val().replaceAll("\\", "").replaceAll("builder.CreateFile", "").replaceAll("builder.SaveFile", "").replaceAll("builder.CloseFile()", "").replaceAll("\n", "");
 
-            connector.callCommand(
-                "function () {" +
-                script +
-                "}"
-            );
+            document.getElementsByName("frameEditor")[0].contentWindow.postMessage(JSON.stringify({
+                guid : "asc.{A8705DEE-7544-4C33-B3D5-168406D92F72}",
+                type : "onExternalPluginMessage",
+                data : {
+                    type: "executeCommand",
+                    text: script
+                }
+            }), "<%= ConfigurationManager.AppSettings["editor_url"] ?? "*" %>");
         };
 
-        var onDocumentReady = function () {
-            window.connector = docEditor.createConnector();
-            postScript();
-        };
+        window.addEventListener("message", function (message) {
+            if (message && message.data == "externallistenerReady") {
+                postScript();
+                $("#startButton").click(postScript);
+            }
+        }, false);
 
-        $("#startButton").click(postScript);
         $("#clearButton").click(function () {
             $("#builderScript").val("");
         });
@@ -163,15 +167,18 @@
                                 HideRulers = true,
                                 ToolbarHideFileName = true,
                                 ToolbarNoTabs = true
+                            },
+                        Plugins = new Config.EditorConfigConfiguration.PluginsConfig
+                            {
+                                PluginsData = new List<string>
+                                    {
+                                        new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/externallistener/config.json"), Query = ""}.ToString()
+                                    }
                             }
                     },
                 Height = "550px",
                 Width = "100%"
             }) %>;
-
-        config.events = {
-            onDocumentReady: onDocumentReady,
-        };
 
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
     </script>
