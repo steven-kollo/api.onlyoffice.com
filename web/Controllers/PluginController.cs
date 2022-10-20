@@ -147,12 +147,12 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult callCommand()
         {
-            return RenderBaseSectionOrMethod("plugin", "callCommand");
+            return RenderBaseMethod("callCommand");
         }
 
         public ActionResult callModule()
         {
-            return RenderBaseSectionOrMethod("plugin", "callModule");
+            return RenderBaseMethod("callModule");
         }
 
         public ActionResult Changelog()
@@ -162,7 +162,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult createInputHelper()
         {
-            return RenderBaseSectionOrMethod("plugin", "createInputHelper");
+            return RenderBaseMethod("createInputHelper");
         }
 
         public ActionResult Events()
@@ -181,26 +181,34 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult ExecuteCommand()
         {
-            return RenderBaseSectionOrMethod("plugin", "ExecuteCommand");
+            return RenderBaseMethod("ExecuteCommand");
         }
 
         public ActionResult Executemethod(string catchall)
         {
             if (string.IsNullOrEmpty(catchall))
             {
-                return RenderBaseSectionOrMethod("plugin", "Executemethod");
+                return RenderBaseMethod("Executemethod");
             }
             else
             {
-                var method = DocPluginsDocumentation.Instance.GetMethod(catchall);
-                if (method == null) return View("methodnotfound");
-                return View("methodpartial", method);
+                return FindMethod(catchall);
             }
+        }
+
+        public ActionResult CommonMethods(string catchall)
+        {
+            return RenderSectionOrMethod("sharedPluginMethods", "api", catchall);
+        }
+
+        public ActionResult TextMethods(string catchall)
+        {
+            return RenderSectionOrMethod("wordPluginMethods", "api", catchall);
         }
 
         public ActionResult getInputHelper()
         {
-            return RenderBaseSectionOrMethod("plugin", "getInputHelper");
+            return RenderBaseMethod("getInputHelper");
         }
 
         public ActionResult Global()
@@ -210,12 +218,12 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult loadModule()
         {
-            return RenderBaseSectionOrMethod("plugin", "loadModule");
+            return RenderBaseMethod("loadModule");
         }
 
         public ActionResult resizeWindow()
         {
-            return RenderBaseSectionOrMethod("plugin", "resizeWindow");
+            return RenderBaseMethod("resizeWindow");
         }
 
         public ActionResult GettingStarted()
@@ -245,7 +253,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult inputHelper(string catchall)
         {
-            return RenderBaseSectionOrMethod("inputHelper", catchall);
+            return RenderSectionOrMethod("pluginBase", "inputHelper", catchall);
         }
 
         public ActionResult Installation(string catchall)
@@ -264,7 +272,7 @@ namespace ASC.Api.Web.Help.Controllers
 
         public ActionResult Plugin(string catchall)
         {
-            return RenderBaseSectionOrMethod("plugin", catchall);
+            return RenderBaseMethod(catchall);
         }
 
         public ActionResult scope()
@@ -321,19 +329,49 @@ namespace ASC.Api.Web.Help.Controllers
             return View("Macros/Debugging");
         }
 
-        private ActionResult RenderBaseSectionOrMethod(string sectionName, string methodName)
+        private ActionResult RenderBaseMethod(string methodName)
+        {
+            return RenderSectionOrMethod("pluginBase", "plugin", methodName);
+        }
+
+        private ActionResult RenderSectionOrMethod(string module, string sectionName, string methodName = null)
         {
             if (string.IsNullOrEmpty(methodName))
             {
-                var section = DocPluginsDocumentation.Instance.GetSection("pluginBase", sectionName);
+                var section = DocPluginsDocumentation.Instance.GetSection(module, sectionName);
                 if (section == null) return View("sectionnotfound");
                 return View("sectionpartial", section);
             }
             else
             {
-                var method = DocPluginsDocumentation.Instance.GetMethod("pluginBase", sectionName, methodName);
+                var method = DocPluginsDocumentation.Instance.GetMethod(module, sectionName, methodName);
                 if (method == null) return View("methodnotfound");
                 return View("methodpartial", method);
+            }
+        }
+
+        private ActionResult FindMethod(string path)
+        {
+            var split = path.Split('/');
+            var module = DocPluginsDocumentation.Instance.GetModuleFromPath(split[0]);
+            var method = split.Length > 1 ? split[1] : null;
+
+            if (string.IsNullOrEmpty(module))
+            {
+                return View("sectionnotfound");
+            }
+
+            if (string.IsNullOrEmpty(method))
+            {
+                var sec = DocPluginsDocumentation.Instance.GetSection(module, "api");
+                if (sec == null) return View("sectionnotfound");
+                return View("sectionpartial", sec);
+            }
+            else
+            {
+                var met = DocPluginsDocumentation.Instance.GetMethod(module, "api", method);
+                if (met == null) return View("methodnotfound");
+                return View("methodpartial", met);
             }
         }
     }

@@ -47,21 +47,21 @@
                             <% if (method.Key.ToLower() == "executemethod") { %>
                             <ul>
                                 <li>
-                                    <a href="#">Common Api</a>
+                                    <a href="<%= Url.Action("executemethod/common") %>">Common Api</a>
                                     <ul>
                                         <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("sharedPluginMethods")["api"].Methods) { %>
                                             <li>
-                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
+                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/common/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
                                             </li>
                                         <% } %>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="#">Text Document Api</a>
+                                    <a href="<%= Url.Action("executemethod/text") %>">Text Document Api</a>
                                     <ul>
                                         <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("wordPluginMethods")["api"].Methods) { %>
                                             <li>
-                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
+                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/text/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
                                             </li>
                                         <% } %>
                                     </ul>

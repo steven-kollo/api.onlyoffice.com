@@ -47,25 +47,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private DocPluginsDocumentation() { }
 
+        private Dictionary<string, string> reversePathMapping;
+
         public void Load()
         {
             PathMapping = new Dictionary<string, string>
             {
                 { "pluginBase", "pluginBase" },
-                { "sharedPluginMethods", "sharedPluginMethods" },
-                { "wordPluginMethods", "wordPluginMethods" },
+                { "sharedPluginMethods", "common" },
+                { "wordPluginMethods", "text" },
             };
-            Load("plugins");
-        }
 
-        public DBMethod GetMethod(string methodName)
-        {
-            var method = GetMethod("sharedPluginMethods", "api", methodName);
-            if (method == null)
-            {
-                method = GetMethod("wordPluginMethods", "api", methodName);
-            }
-            return method;
+            reversePathMapping = PathMapping.ToDictionary(kv => kv.Value, kv => kv.Key);
+            Load("plugins");
         }
 
         protected override void CheckSharedMethods()
@@ -75,12 +69,17 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         protected override void LoadExamples()
         {
-            
+
         }
 
         public override List<SearchResult> Search(string query, UrlHelper url)
         {
             return new List<SearchResult>();
+        }
+
+        public string GetModuleFromPath(string path)
+        {
+            return reversePathMapping.ContainsKey(path) ? reversePathMapping[path] : null;
         }
 
         public override string SearchType(string type, string priorityModule = "pluginBase")
