@@ -1634,6 +1634,7 @@
       "inherits": "Inherited From: {@link ApiTablePr#GetTableDescription}"
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a table.\n\t * @constructor\n\t * @extends {ApiTablePr}\n\t */",
   "description": "<p>Class representing a table.</p>",
   "scope": "global",

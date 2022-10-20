@@ -86,6 +86,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         m.Value.Module = moduleName;
                         if (m.Value.Params != null) m.Value.Params.ToList().ForEach(p => p.Module = moduleName);
                     });
+                    if (entry.Events != null) entry.Events.ToList().ForEach(e => e.Value.Module = moduleName);
                     if (entry.Params != null) entry.Params.ToList().ForEach(p => p.Module = moduleName);
 
                     moduleTree.Add(entry.Name, entry);
@@ -144,6 +145,14 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             if (sec == null) return null;
 
             return sec.Methods.ContainsKey(name) ? sec.Methods[name] : null;
+        }
+
+        public DBEvent GetEvent(string module, string section, string name)
+        {
+            var sec = GetSection(module, section);
+            if (sec == null) return null;
+
+            return sec.Events.ContainsKey(name) ? sec.Events[name] : null;
         }
 
         public SortedDictionary<string, DBGlobal> GetGlobals()
@@ -246,6 +255,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [JsonProperty("params")]
         public List<DBParam> Params { get; set; }
 
+        [JsonProperty("events")]
+        public SortedDictionary<string, DBEvent> Events { get; set; }
+
         [JsonIgnore]
         public DBExample Example { get; set; }
 
@@ -255,6 +267,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public DBEntry()
         {
             Methods = new SortedDictionary<string, DBMethod>(StringComparer.OrdinalIgnoreCase);
+            Events = new SortedDictionary<string, DBEvent>(StringComparer.OrdinalIgnoreCase);
         }
     }
 
@@ -280,6 +293,21 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [JsonIgnore]
         public DBExample Example { get; set; }
+    }
+
+    public class DBEvent : DBEntity
+    {
+        [JsonProperty("memberof")]
+        public string MemberOf { get; set; }
+
+        [JsonProperty("tags")]
+        public DBTags Tags { get; set; }
+
+        [JsonProperty("see")]
+        public string See { get; set; }
+
+        [JsonProperty("properties")]
+        public List<DBProperty> Properties { get; set; }
     }
 
     public class DBProperty : DBEntity
@@ -328,6 +356,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
     {
         [JsonProperty("type")]
         public List<string> Types { get; set; }
+
+        [JsonProperty("properties")]
+        public List<DBProperty> Properties { get; set; }
 
         [JsonProperty("script")]
         public string Script { get; set; }

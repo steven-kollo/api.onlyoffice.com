@@ -751,6 +751,7 @@
       ]
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a graphical object.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a graphical object.</p>",
   "scope": "global",

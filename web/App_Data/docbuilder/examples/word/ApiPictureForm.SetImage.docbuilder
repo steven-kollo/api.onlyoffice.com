@@ -4,10 +4,5 @@ var oPictureForm = Api.CreatePictureForm({"tip": "Upload your photo", "required"
 oPictureForm.SetImage("https://api.onlyoffice.com/content/img/editor/opening.jpg");
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddElement(oPictureForm);
-oPictureForm.SetFormKey("Personal information");
-var sKey = oPictureForm.GetFormKey();
-oParagraph = Api.CreateParagraph();
-oParagraph.AddText("Form key: " + sKey);
-oDocument.Push(oParagraph);
-builder.SaveFile("docx", "SetFormKey.docx");
+builder.SaveFile("docx", "SetImage.docx");
 builder.CloseFile();

@@ -29,6 +29,27 @@
                     <%= DocPluginsDocumentation.Instance.TypesToHtml(type.Value.Types, type.Value.Module) %>
                 </li>
             </ul>
+                <% if (type.Value.Properties != null && type.Value.Properties.Any()) { %>
+                    <h5>Properties:</h5>
+                    <table class="table table-classlist">
+                        <thead>
+                            <tr class="tablerow">
+                                <td class="table-classlist-name">Name</td>
+                                <td>Type</td>
+                                <td>Description</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% foreach(var p in type.Value.Properties) { %>
+                                <tr class="tablerow">
+                                    <td><em><%= p.Name %></em></td>
+                                    <td><%= p.Type %></td>
+                                    <td><%= p.Description %></td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </table>
+                <% } %>
             </div>
 
             <% if (!string.IsNullOrEmpty(type.Value.Script)) { %>

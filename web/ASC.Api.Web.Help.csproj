@@ -2453,6 +2453,7 @@
     <Content Include="Views\DocBuilder\Integrationapi\net\cdocbuilder\settmpfolder.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\net\cdocbuilder\writedata.ascx" />
     <Content Include="Views\DocBuilder\Integrationapi\usingdocbuilderfile.ascx" />
+    <Content Include="Views\DocBuilder\eventpartial.aspx" />
     <Content Include="Views\DocBuilder\methodpartial.aspx" />
     <Content Include="Views\DocBuilder\Navigation.ascx" />
     <Content Include="Views\DocBuilder\nodejsexample.aspx" />
@@ -2669,6 +2670,7 @@
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
     <Content Include="Views\Shared\Method.aspx" />
+    <Content Include="Views\Shared\EventNotFound.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />
     <Content Include="Views\Shared\Search.aspx" />
     <Content Include="Views\Shared\SearchForm.ascx" />
@@ -2679,6 +2681,9 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\docbuilder\examples\cell\Api.CreateTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTextPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetImage.docbuilder" />
     <None Include="web.autofac.config">
       <SubType>Designer</SubType>
     </None>

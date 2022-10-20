@@ -603,6 +603,7 @@
       "params": []
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing the text properties.\n\t * @constructor\n\t */",
   "description": "<p>Class representing the text properties.</p>",
   "scope": "global",

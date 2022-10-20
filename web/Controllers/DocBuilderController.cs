@@ -366,9 +366,18 @@ namespace ASC.Api.Web.Help.Controllers
             }
             else
             {
-                var met = DocBuilderDocumentation.Instance.GetMethod(module, section, method);
-                if (met == null) return View("methodnotfound");
-                return View("methodpartial", met);
+                if (method.StartsWith("event-"))
+                {
+                    var ev = DocBuilderDocumentation.Instance.GetEvent(module, section, method.Substring("event-".Length));
+                    if (ev == null) return View("eventnotfound");
+                    return View("eventpartial", ev);
+                }
+                else
+                {
+                    var met = DocBuilderDocumentation.Instance.GetMethod(module, section, method);
+                    if (met == null) return View("methodnotfound");
+                    return View("methodpartial", met);
+                }
             }
         }
     }

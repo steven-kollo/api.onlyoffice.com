@@ -37,6 +37,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a Preset Color.\n\t * @constructor\n\t * */",
   "description": "<p>Class representing a Preset Color.</p>",
   "scope": "global",

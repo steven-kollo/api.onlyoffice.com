@@ -632,6 +632,7 @@
       "params": []
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a container for the document content.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a container for the document content.</p>",
   "scope": "global",
