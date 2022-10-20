@@ -1,5 +1,7 @@
 # Change Log
 
+
+- macros: added the Import CSV/text data macro
 - editors: JWT is enabled by default
 
 ## 2.9.0

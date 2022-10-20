@@ -466,6 +466,9 @@
             <li>
                 <a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">Currency exchange rates</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/importcsv") %>">Import CSV/TXT data</a>
+            </li>
         </ul>
     <li>
 </ul>
