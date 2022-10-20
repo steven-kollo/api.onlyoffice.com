@@ -1,7 +1,9 @@
 # Change Log
 
-## 2.9.0
+
 - macros: added the Import CSV/text data macro
+
+## 2.9.0
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation
 - editors: added the Connector class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside
 - editors: added the theme-contrast-dark theme id to the editorConfig.customization.uiTheme parameter

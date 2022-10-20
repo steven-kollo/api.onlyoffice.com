@@ -2118,11 +2118,11 @@
     <Content Include="Content\img\macros\currency-exchange-rates.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
+    <Content Include="Content\img\macros\import-csv.svg" />
     <Content Include="Content\img\macros\insert-text.svg" />
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
-    <Content Include="Content\img\macros\import-csv.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\main-page\community_server.svg" />
     <Content Include="Content\img\main-page\desktop.svg" />
@@ -2719,6 +2719,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\default.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\formatrangeasatable.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\highlightduplicates.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\importcsv.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\inserttext.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\makecellfontbold.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\mergecellrange.ascx" />
@@ -2726,7 +2727,6 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\setcolumnwidth.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
-     <Content Include="Views\Plugin\Macros\Macrosamples\importcsv.ascx" />
     <Content Include="Views\Plugin\Macros\WritingMacros.aspx" />
     <Content Include="Views\Plugin\Navigation.ascx" />
     <Content Include="Views\Plugin\Objects.aspx" />
