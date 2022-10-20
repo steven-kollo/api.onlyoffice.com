@@ -837,6 +837,7 @@
       ]
     }
   },
+  "events": {},
   "comment": "/**\n     * Base class\n     * @global\n     * @class\n     * @name Api\n     */",
   "description": "<p>Base class</p>",
   "scope": "global"

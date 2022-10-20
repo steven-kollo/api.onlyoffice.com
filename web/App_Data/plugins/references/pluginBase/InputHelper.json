@@ -90,6 +90,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing an input helper - a window that appears and disappears when you type text. Its location is tied to the cursor.\n\t * @global\n\t * @class\n\t * @name InputHelper\n\t * @hideconstructor\n\t */",
   "description": "<p>Class representing an input helper - a window that appears and disappears when you type text. Its location is tied to the cursor.</p>",
   "scope": "global"

@@ -215,6 +215,96 @@
       "inherits": null
     }
   },
+  "events": {
+    "init": {
+      "memberof": "Plugin",
+      "name": "init",
+      "description": "<p>The function called when the plugin is launched. It defines the data sent to the plugin describing what actions are to be performed and how they must be performed.</p>",
+      "tags": {},
+      "see": null
+    },
+    "button": {
+      "memberof": "Plugin",
+      "name": "button",
+      "description": "<p>The function called when any of the plugin buttons is clicked. It defines the buttons used with the plugin and the plugin behavior when they are clicked.</p>",
+      "tags": {},
+      "see": null
+    },
+    "event_onTargetPositionChanged": {
+      "memberof": "Plugin",
+      "name": "event_onTargetPositionChanged",
+      "description": "<p>The function called when the target position in the editor is changed.</p>",
+      "tags": {},
+      "see": null
+    },
+    "event_onDocumentContentReady": {
+      "memberof": "Plugin",
+      "name": "event_onDocumentContentReady",
+      "description": "<p>The function called when the document is completely loaded.</p>",
+      "tags": {},
+      "see": null
+    },
+    "event_onClick": {
+      "memberof": "Plugin",
+      "name": "event_onClick",
+      "description": "<p>The function called when the user clicks on the element.</p>",
+      "tags": {},
+      "see": null
+    },
+    "event_inputHelper_onSelectItem": {
+      "memberof": "Plugin",
+      "name": "event_inputHelper_onSelectItem",
+      "description": "<p>The function called when the user is trying to select an item from the input helper.</p>",
+      "tags": {},
+      "see": null
+    },
+    "event_onInputHelperClear": {
+      "memberof": "Plugin",
+      "name": "event_onInputHelperClear",
+      "description": "<p>The function called when the user is trying to clear the text and the input helper disappears.</p>",
+      "tags": {},
+      "see": null
+    },
+    "event_onInputHelperInput": {
+      "memberof": "Plugin",
+      "name": "event_onInputHelperInput",
+      "description": "<p>The function called when the user is trying to input the text and the input helper appears.</p>",
+      "tags": {},
+      "see": null
+    },
+    "onTranslate": {
+      "memberof": "Plugin",
+      "name": "onTranslate",
+      "description": "<p>The function called right after the plugin startup or later in case the plugin language is changed.</p>",
+      "tags": {},
+      "see": null
+    },
+    "onEnableMouseEvent": {
+      "memberof": "Plugin",
+      "name": "onEnableMouseEvent",
+      "description": "<p>The function called to turn the mouse or touchpad events on/off.</p>",
+      "tags": {},
+      "see": null
+    },
+    "onExternalMouseUp": {
+      "memberof": "Plugin",
+      "name": "onExternalMouseUp",
+      "description": "<p>The function called when the mouse button is released outside the plugin iframe.</p>",
+      "tags": {},
+      "see": null
+    },
+    "onExternalPluginMessage": {
+      "memberof": "Plugin",
+      "name": "onExternalPluginMessage",
+      "description": "<p>The function called to show which content control has been changed.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "see": null
+    }
+  },
   "comment": "/**\n\t * @global\n\t * @class\n\t * @name Plugin\n\t * @hideconstructor\n\t */",
   "scope": "global"
 }

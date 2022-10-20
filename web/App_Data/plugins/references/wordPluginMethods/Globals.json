@@ -4,6 +4,28 @@
     "description": "<p>Content control object.</p>",
     "type": [
       "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "Tag",
+        "description": "<p>A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.</p>"
+      },
+      {
+        "type": "string",
+        "name": "Id",
+        "description": "<p>A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.</p>"
+      },
+      {
+        "type": "ContentControlLock",
+        "name": "Lock",
+        "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access.</p>"
+      },
+      {
+        "type": "string",
+        "name": "InternalId",
+        "description": "<p>A unique internal identifier of the content control. It is used for all operations with content controls.</p>"
+      }
     ]
   },
   "ContentControlLock": {
@@ -11,6 +33,12 @@
     "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not.</p>\n<p><strong>0</strong> - only deleting\n<strong>1</strong> - disable deleting or editing\n<strong>2</strong> - only editing\n<strong>3</strong> - full access</p>",
     "type": [
       "Object"
+    ],
+    "properties": [
+      {
+        "type": "0 | 1 | 2 | 3",
+        "name": "Lock"
+      }
     ]
   },
   "ContentControlType": {
@@ -18,6 +46,13 @@
     "description": "<p>A numeric value that specifies the content control type.</p>",
     "type": [
       "Object"
+    ],
+    "properties": [
+      {
+        "type": "1 | 2 | 3 | 4",
+        "name": "type",
+        "description": "<p><strong>1</strong> - block content control, <strong>2</strong> - inline content control, <strong>3</strong> - row content control, <strong>4</strong> - cell content control</p>"
+      }
     ]
   },
   "ContentControlPropertiesAndContent": {
@@ -25,6 +60,23 @@
     "description": "<p>The content control properties and contents.</p>",
     "type": [
       "Object"
+    ],
+    "properties": [
+      {
+        "type": "ContentControlProperties",
+        "name": "ContentControlProperties",
+        "description": "<p>The content control properties (ID, Tag, Lock, Alias, Appearance, Color).</p>"
+      },
+      {
+        "type": "string",
+        "name": "Script",
+        "description": "<p>A script that will be executed to generate the data within the content control.</p>"
+      },
+      {
+        "type": "string",
+        "name": "Url",
+        "description": "<p>A link to the shared file.</p>"
+      }
     ]
   },
   "ContentControlProperties": {
@@ -32,6 +84,53 @@
     "description": "<p>The content control properties.</p>",
     "type": [
       "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "Id",
+        "description": "<p>A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.</p>"
+      },
+      {
+        "type": "string",
+        "name": "Tag",
+        "description": "<p>A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.</p>"
+      },
+      {
+        "type": "ContentControlLock",
+        "name": "Lock",
+        "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access.</p>"
+      },
+      {
+        "type": "string",
+        "name": "Alias",
+        "description": "<p>The alias attribute.</p>"
+      },
+      {
+        "type": "string",
+        "name": "Appearance",
+        "description": "<p>Defines if the content control is shown as the bounding box (1) or not (2).</p>"
+      },
+      {
+        "type": "object",
+        "name": "Color",
+        "description": "<p>The color for the current content control in the RGB format.</p>"
+      },
+      {
+        "type": "number",
+        "name": "Color.R",
+        "description": "<p>Red color component value.</p>"
+      },
+      {
+        "type": "number",
+        "name": "Color.G",
+        "description": "<p>Green color component value.</p>"
+      },
+      {
+        "type": "number",
+        "name": "Color.B",
+        "description": "<p>Blue color component value.</p>"
+      }
     ]
   },
   "OLEObjectData": {
@@ -39,6 +138,53 @@
     "description": "<p>The OLE object data.</p>",
     "type": [
       "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "Data",
+        "description": "<p>OLE object data (internal format).</p>"
+      },
+      {
+        "type": "string",
+        "name": "ImageData",
+        "description": "<p>An image in the base64 format stored in the OLE object and used by the plugin.</p>"
+      },
+      {
+        "type": "string",
+        "name": "ApplicationId",
+        "description": "<p>An identifier of the plugin which can edit the current OLE object and must be of the asc.{UUID} type.</p>"
+      },
+      {
+        "type": "string",
+        "name": "InternalId",
+        "description": "<p>The OLE object identifier which is used to work with OLE object added to the document.</p>"
+      },
+      {
+        "type": "string",
+        "name": "ParaDrawingId",
+        "description": "<p>An identifier of the drawing object containing the current OLE object.</p>"
+      },
+      {
+        "type": "number",
+        "name": "Width",
+        "description": "<p>The OLE object width measured in millimeters.</p>"
+      },
+      {
+        "type": "number",
+        "name": "Height",
+        "description": "<p>The OLE object height measured in millimeters.</p>"
+      },
+      {
+        "type": "number",
+        "name": "WidthPix",
+        "description": "<p>The OLE object image width in pixels.</p>"
+      },
+      {
+        "type": "number",
+        "name": "HeightPix",
+        "description": "<p>The OLE object image height in pixels.</p>"
+      }
     ]
   }
 }
