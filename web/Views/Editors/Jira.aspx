@@ -61,10 +61,12 @@
         The address must be accessible for the user browser and from the Jira server.
         The Jira server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
     </p>
-    <p>Enter the <b>Secret key</b> to enable JWT protection of your documents from unauthorized access (further information can be found <a href="<%= Url.Action("signature/") %>">here</a>).</p>
-    <p>Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Document Server using the public addresses. 
-        The <b>Advanced server settings</b> section allows you to set the ONLYOFFICE Document Server address for internal requests from Jira 
-        and the returning Jira address for internal requests from ONLYOFFICE Document Server.</p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Jira administration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+
+    <p>Sometimes your network configuration might not allow the requests between Jira and ONLYOFFICE Docs using the public addresses. 
+        The <b>Advanced server settings</b> section allows you to set the ONLYOFFICE Docs address for internal requests from Jira 
+        and the returning Jira address for internal requests from ONLYOFFICE Docs.</p>
 
 
     <h2 id="compiling" class="copy-link">Compiling Jira ONLYOFFICE integration app</h2>

@@ -81,7 +81,8 @@ https://&lt;documentserver&gt;:&lt;port&gt;/
 </pre>
             <p>where <b>documentserver</b> is the name of the server and <b>port</b> is the port number with <b>ONLYOFFICE Docs</b> installed.</p>
         </li>
-        <li><b>Secret key</b>: Enable JWT to protect your documents from unauthorized access (further information can be found <a href="<%= Url.Action("signature/") %>">here</a>).</li>
+        <li><b>Secret key</b>: Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+            Specify your own secret key on the Redmine configuration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
     </ul>
     <p>You can also configure the <b>Editor customization settings</b>:</p>
     <ul>

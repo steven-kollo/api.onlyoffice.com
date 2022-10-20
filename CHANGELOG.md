@@ -2,6 +2,7 @@
 
 
 - macros: added the Import CSV/text data macro
+- editors: JWT is enabled by default
 
 ## 2.9.0
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation
