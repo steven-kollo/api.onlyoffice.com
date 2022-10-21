@@ -3,6 +3,7 @@
 
 - macros: added the Import CSV/text data macro
 - editors: JWT is enabled by default
+- macros: added the Recalculate worksheet values macro sample
 
 ## 2.9.0
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation
@@ -19,7 +20,6 @@
 - editors: added the Drupal ONLYOFFICE connector module
 - editors: added the Mobile integration page
 - editors: added the WordPress plugin
-- macros: added the Recalculate worksheet values macro sample
 - editors: test examples v1.3.0
 - plugins: added the onBlurContentControl, onChangeContentControl and onFocusContentControl events
 - plugins: added the ChangeOleObject, GetAllForms, GetFileToDownload, GetFormsByTag, GetFormValue, GetImageDataFromSelection, GetInstalledPlugins, InstallPlugin, PutImageDataToSelection, RemovePlugin, SetFormValue, ShowButton and UpdatePlugin methods
