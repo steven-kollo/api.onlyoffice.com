@@ -97,6 +97,11 @@
     background-repeat: no-repeat;
 }
 
+.import-csv{
+    background-image: url("img/macros/import-csv.svg");
+    background-repeat: no-repeat;
+}
+
 .recalculate-values {
     background-image: url("img/macros/recalculate-values.svg");
     background-repeat: no-repeat;

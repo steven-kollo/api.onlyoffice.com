@@ -117,11 +117,8 @@ git submodule update --init --recursive</span>
     </p>
     <img alt="Public" src="<%= Url.Content("~/content/img/editor/nextcloud-public.jpg") %>" />
 
-    <p>
-        To restrict the access to ONLYOFFICE Docs and for security reasons and data integrity the encrypted signature is used.
-        Specify the <b>Secret key</b> in the Nextcloud administrative configuration.
-        In the ONLYOFFICE Docs <a href="<%= Url.Action("signature") %>">config file</a> specify the same secret key and enable the validation.
-    </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> in the Nextcloud administrative configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
     <p>Enable or disable the <b>Open file in the same tab</b> setting.</p>
 
