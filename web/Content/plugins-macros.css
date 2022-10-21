@@ -102,6 +102,11 @@
     background-repeat: no-repeat;
 }
 
+.recalculate-values {
+    background-image: url("img/macros/recalculate-values.svg");
+    background-repeat: no-repeat;
+}
+
 .example-plug-img {
     height: 120px;
     margin: auto;
