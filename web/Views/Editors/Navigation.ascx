@@ -42,6 +42,20 @@
         </ul>
     </li>
     <li>
+        <a href="<%= Url.Action("frameworks") %>">Frontend frameworks</a>
+        <ul>
+            <li>
+                <a href="<%= Url.Action("angular") %>">Angular</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("react") %>">React</a>
+            </li>
+            <li>
+                <a href="<%= Url.Action("vue") %>">Vue</a>
+            </li>
+        </ul>
+    </li>
+    <li>
         <a href="<%= Url.Action("plugins") %>">Ready-to-use connectors</a>
         <ul>
             <li>

@@ -2471,6 +2471,7 @@
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
+    <Content Include="Views\Editors\Angular.aspx" />
     <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Basic.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />
@@ -2528,6 +2529,7 @@
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\Sharing.ascx" />
     <Content Include="Views\Editors\FAQ\UsingWOPI.ascx" />
+    <Content Include="Views\Editors\Frameworks.aspx" />
     <Content Include="Views\Editors\GetDocs.aspx" />
     <Content Include="Views\Editors\History.aspx" />
     <Content Include="Views\Editors\HowItWorks.aspx" />
@@ -2547,6 +2549,7 @@
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\React.aspx" />
     <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
     <Content Include="Views\Editors\Review.aspx" />
@@ -2562,6 +2565,7 @@
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
+    <Content Include="Views\Editors\Vue.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
     <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
