@@ -51,6 +51,8 @@
         In order to configure connector you must navigate to <b>System Settings</b> (<b>Control Panel -> Configuration -> System Settings</b>).
         In <b>Platform</b> section click the <b>Connectors</b> category and select <b>ONLYOFFICE</b>.
     </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Liferay <b>System Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
 
     <h2 id="compiling" class="copy-link">Compiling Liferay ONLYOFFICE connector</h2>
