@@ -16,8 +16,8 @@
     </h1>
 
     <p class="dscr">
-        ONLYOFFICE Docs can be integrated with some of the existing frontend frameworks using components. These components provide ready-to-use code modules,
-        standardized frontend technologies, and reusable interface blocks making the process of building user interfaces faster and easier.
+        ONLYOFFICE Docs can be integrated with some of the existing frontend frameworks using components.
+        These components provide ready-to-use code modules, standardized frontend technologies, and reusable interface blocks making the process of building user interfaces faster and easier.
     </p>
 
     <p>Currently, the following frameworks are available:</p>
@@ -28,9 +28,6 @@
     </ul>
 
     <br />
-    <p>
-        If you have any further questions, please contact us at
-        <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.
-    </p>
+    <p>If you have any further questions, please contact us at <a href="mailto:integration@onlyoffice.com" onclick="if(window.ga){window.ga('send','event','mailto');}return true;">integration@onlyoffice.com</a>.</p>
 
 </asp:Content>

@@ -15,8 +15,7 @@
         <span class="hdr">ONLYOFFICE Docs Vue component</span>
     </h1>
 
-    <p>This <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">component</a> enables users to build ONLYOFFICE Docs user interface
-        using <a href="https://vuejs.org/" target="_blank">Vue</a>.</p>
+    <p>This <a href="https://github.com/ONLYOFFICE/document-editor-vue" target="_blank">component</a> enables users to build ONLYOFFICE Docs user interface using <a href="https://vuejs.org/" target="_blank">Vue</a>.</p>
 
 
     <h2 id="install" class="copy-link">Installing ONLYOFFICE Docs Vue component</h2>
@@ -75,8 +74,7 @@ export default defineComponent({
 });
 &lt;/script&gt;
 </pre>
-    <p>where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed
-        and the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
+    <p>where the <b>example.com</b> is the name of the server where <b>document manager</b> and <b>document storage service</b> are installed and the <b>documentserver</b> is the name of the server with <b>ONLYOFFICE Docs</b> installed.</p>
 
 
     <h2 id="api" class="copy-link">ONLYOFFICE Docs Vue component API</h2>
@@ -97,169 +95,169 @@ export default defineComponent({
             </tr>
         </thead>
         <tbody>
-            <tr>
+            <tr class="tablerow">
                 <td id="id" class="copy-link">id<span class="required">*</span></td>
                 <td>string</td>
                 <td>null</td>
                 <td>Component unique identifier.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="documentServerUrl" class="copy-link">documentServerUrl<span class="required">*</span></td>
                 <td>string</td>
                 <td>null</td>
                 <td>Address of ONLYOFFICE Document Server.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="config" class="copy-link">config<span class="required">*</span></td>
                 <td>object</td>
                 <td>null</td>
                 <td>Generic <a href="<%= Url.Action("config") %>">configuration object</a> for opening a file with token.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="document_fileType" class="copy-link">document_fileType</td>
                 <td>string</td>
                 <td>null</td>
                 <td>The type of the file.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="document_title" class="copy-link">document_title</td>
                 <td>string</td>
                 <td>null</td>
                 <td>The file name.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="documentType" class="copy-link">documentType</td>
                 <td>string</td>
                 <td>null</td>
                 <td>The document type.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="height" class="copy-link">height</td>
                 <td>string</td>
                 <td>null</td>
                 <td>Defines the document height in the browser window.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="type" class="copy-link">type</td>
                 <td>string</td>
                 <td>null</td>
                 <td>Defines the platform type used to access the document (desktop, mobile or embedded).</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="width" class="copy-link">width</td>
                 <td>string</td>
                 <td>null</td>
                 <td>Defines the document width in the browser window.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onAppReady" class="copy-link">events_onAppReady</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the application is loaded into the browser.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onDocumentStateChange" class="copy-link">events_onDocumentStateChange</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the document is modified.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onMetaChange" class="copy-link">events_onMetaChange</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the meta information of the document is changed via the meta command.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onDocumentReady" class="copy-link">events_onDocumentReady</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the document is loaded into the document editor.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onInfo" class="copy-link">events_onInfo</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the application opened the file.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onWarning" class="copy-link">events_onWarning</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when a warning occurs.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onError" class="copy-link">events_onError</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when an error or some other specific event occurs.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestSharingSettings" class="copy-link">events_onRequestSharingSettings</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to manage document access rights by clicking <b>Change access rights</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestRename" class="copy-link">events_onRequestRename</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to rename the file by clicking the <b>Rename...</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onMakeActionLink" class="copy-link">events_onMakeActionLink</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to get link for opening the document which contains a bookmark, scrolling to the bookmark position.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestInsertImage" class="copy-link">events_onRequestInsertImage</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to insert an image by clicking the <b>Image from Storage</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestSaveAs" class="copy-link">events_onRequestSaveAs</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to save file by clicking <b>Save Copy as...</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestMailMergeRecipients" class="copy-link">events_onRequestMailMergeRecipients</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to select recipients data by clicking the <b>Mail merge</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestCompareFile" class="copy-link">events_onRequestCompareFile</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to select document for comparing by clicking the <b>Document from Storage</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestEditRights" class="copy-link">events_onRequestEditRights</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to switch the document from the viewing into the editing mode by clicking the <b>Edit Document</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestHistory" class="copy-link">events_onRequestHistory</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to show the document version history by clicking the <b>Version History</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestHistoryClose" class="copy-link">events_onRequestHistoryClose</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to go back to the document from viewing the document version history by clicking the <b>Close History</b> button.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestHistoryData" class="copy-link">events_onRequestHistoryData</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
                 <td>The function called when the user is trying to click the specific document version in the document version history.</td>
             </tr>
-            <tr>
+            <tr class="tablerow">
                 <td id="events_onRequestRestore" class="copy-link">events_onRequestRestore</td>
                 <td>(event: object) => void</td>
                 <td>null</td>
@@ -333,8 +331,7 @@ npm pack
 
 
     <h2 id="feedback" class="copy-link">Feedback and support</h2>
-    <p>In case you have any issues, questions, or suggestions for the ONLYOFFICE Docs Vue component,
-        please refer to the <a href="https://github.com/ONLYOFFICE/document-editor-vue/issues" target="_blank">Issues</a> section.</p>
+    <p>In case you have any issues, questions, or suggestions for the ONLYOFFICE Docs Vue component, please refer to the <a href="https://github.com/ONLYOFFICE/document-editor-vue/issues" target="_blank">Issues</a> section.</p>
 
 
 </asp:Content>
