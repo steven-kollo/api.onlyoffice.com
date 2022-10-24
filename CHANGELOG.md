@@ -1,6 +1,7 @@
 # Change Log
 
 
+- editors: added the editorConfig.customization.integrationMode parameter
 - editors: added the integration with frontent frameworks
 - macros: added the Import CSV/text data macro
 - editors: JWT is enabled by default
