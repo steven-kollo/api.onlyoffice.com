@@ -1,6 +1,8 @@
 # Change Log
 
 - plugins: parsing documentation from source code
+- plugins: added the onAddComment, onChangeCommentData and onRemoveComment events
+- plugins: added the AcceptReviewChanges, MoveToNextReviewChange and RejectReviewChanges methods
 - docbuilder: events documentation
 - docbuilder: global member properties
 - editors: added the editorConfig.customization.integrationMode parameter
