@@ -1,5 +1,13 @@
 # Change Log
 
+- docbuilder: events documentation
+- docbuilder: global member properties
+- editors: added the editorConfig.customization.integrationMode parameter
+- editors: added the integration with frontent frameworks
+- macros: added the Import CSV/text data macro
+- editors: JWT is enabled by default
+- macros: added the Recalculate worksheet values macro sample
+
 ## 2.9.0
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation
 - editors: added the Connector class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside

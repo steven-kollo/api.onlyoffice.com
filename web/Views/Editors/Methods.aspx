@@ -11,8 +11,6 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <% var connector = !string.IsNullOrEmpty(Page.Request["connector"]); %>
-
     <h1>
         <span class="hdr">Methods</span>
     </h1>
@@ -23,10 +21,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 </pre>
 
     <ul>
-        <% if (connector)
-           { %>
         <li><a href="#createConnector">createConnector</a> - create the connector to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.</li>
-        <% } %>
         <li><a href="#denyEditingRights">denyEditingRights</a> - deny editing.</li>
         <li><a href="#destroyEditor">destroyEditor</a> - destroy <em>docEditor</em> object.</li>
         <li><a href="#downloadAs">downloadAs</a> - download the edited file.</li>
@@ -45,17 +40,14 @@ var docEditor = new DocsAPI.DocEditor("placeholder", config);
 
     <h2>Methods and their description:</h2>
     <ul>
-        <% if (connector)
-           { %>
         <li>
             <p>
-                <b id="createConnector" class="copy-link">createConnector</b><span class="required">*</span> - create the <a href="<%= Url.Action("connector") %>?connector=true">connector</a> to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
+                <b id="createConnector" class="copy-link">createConnector</b><span class="required">*</span> - create the <a href="<%= Url.Action("connector") %>">connector</a> to interact with text documents, spreadsheets, presentations, and fillable forms from the outside.
             </p>
             <pre>
 docEditor.createConnector();
 </pre>
         </li>
-        <% } %>
         <li>
             <p>
                 <b id="denyEditingRights" class="copy-link">denyEditingRights</b> - deny editing.
@@ -924,9 +916,6 @@ docEditor.showMessage(message);
             </note>
         </li>
     </ul>
-    <% if (connector)
-       { %>
     <span class="required-descr"><span class="required">*</span><em> - available for editing only for ONLYOFFICE Developer Edition</em></span>
-    <% } %>
 
 </asp:Content>

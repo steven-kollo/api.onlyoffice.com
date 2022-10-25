@@ -32,6 +32,7 @@
     <li><a href="#hideNotes">hideNotes</a></li>
     <li><a href="#hideRightMenu">hideRightMenu</a></li>
     <li><a href="#hideRulers">hideRulers</a></li>
+    <li><a href="#integrationMode">integrationMode</a></li>
     <% if (license)
        { %>
     <li><a href="#layout">layout</a></li>
@@ -468,6 +469,15 @@
             <td colspan="4">
                 <img width="832px" src="<%= Url.Content("~/content/img/editor/hideRulers.png") %>" alt="" />
             </td>
+        </tr>
+        <tr class="tablerow">
+            <td id="integrationMode" class="copy-link">integrationMode</td>
+            <td>
+                Defines the mode of embedding editors into the web page.
+                The <b>embed</b> value disables scrolling to the editor frame when it is loaded as the focus is not captured.
+            </td>
+            <td>string</td>
+            <td>embed</td>
         </tr>
         <% if (license)
            { %>
@@ -1157,6 +1167,7 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
             "hideNotes": false,
             "hideRightMenu": false,
             "hideRulers": false,
+            "integrationMode": "embed",
             <% if (license)
                { %>"layout": {
                 "header": {
