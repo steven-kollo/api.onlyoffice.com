@@ -231,8 +231,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PluginController.cs" />
     <Compile Include="Controllers\PortalsController.cs" />
-    <Compile Include="DocumentGenerator\DocPluginsDocumentation.cs" />
     <Compile Include="DocumentGenerator\DocBuilderDocumentation.cs" />
+    <Compile Include="DocumentGenerator\DocPluginsDocumentation.cs" />
     <Compile Include="DocumentGenerator\Documentation.cs" />
     <Compile Include="DocumentGenerator\JsDocDocumentation.cs" />
     <Compile Include="DocumentGenerator\MsDocDocumentGenerator.cs" />
@@ -1966,6 +1966,13 @@
     <Content Include="App_Data\editor\PHP Example.zip" />
     <Content Include="App_Data\editor\Python Example.zip" />
     <Content Include="App_Data\editor\Ruby Example.zip" />
+    <Content Include="App_Data\plugins\references\pluginBase\Globals.json" />
+    <Content Include="App_Data\plugins\references\pluginBase\InputHelper.json" />
+    <Content Include="App_Data\plugins\references\pluginBase\Plugin.json" />
+    <Content Include="App_Data\plugins\references\sharedPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\sharedPluginMethods\Globals.json" />
+    <Content Include="App_Data\plugins\references\wordPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\wordPluginMethods\Globals.json" />
     <Content Include="App_Data\portals\class_descriptions.xml" />
     <Content Include="App_Data\products.json" />
     <Content Include="Content\get-docs.css" />
