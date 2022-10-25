@@ -424,6 +424,13 @@
                                 <a title=<%= method.Key %> href="<%= Url.Action(string.Format("textdocumentapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
                             </li>
                         <% } %>
+                        <% if (entry.Value.Events != null && entry.Value.Events.Any()) { %>
+                            <% foreach (var ev in entry.Value.Events) { %>
+                                <li>
+                                    <a title=<%= ev.Key %> href="<%= Url.Action(string.Format("textdocumentapi/{0}/event-{1}", entry.Key.ToLower(), ev.Key.ToLower())) %>"><%= ev.Key %></a>
+                                </li>
+                            <% } %>
+                        <% } %>
                     </ul>
                 </li>
             <% } %>
@@ -439,6 +446,13 @@
                             <li>
                                 <a title=<%= method.Key %> href="<%= Url.Action(string.Format("spreadsheetapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
                             </li>
+                        <% } %>
+                        <% if (entry.Value.Events != null && entry.Value.Events.Any()) { %>
+                            <% foreach (var ev in entry.Value.Events) { %>
+                                <li>
+                                    <a title=<%= ev.Key %> href="<%= Url.Action(string.Format("spreadsheetapi/{0}/event-{1}", entry.Key.ToLower(), ev.Key.ToLower())) %>"><%= ev.Key %></a>
+                                </li>
+                            <% } %>
                         <% } %>
                     </ul>
                 </li>
@@ -456,6 +470,13 @@
                             <li>
                                 <a title=<%= method.Key %> href="<%= Url.Action(string.Format("presentationapi/{0}/{1}", entry.Key.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a>
                             </li>
+                        <% } %>
+                        <% if (entry.Value.Events != null && entry.Value.Events.Any()) { %>
+                            <% foreach (var ev in entry.Value.Events) { %>
+                                <li>
+                                    <a title=<%= ev.Key %> href="<%= Url.Action(string.Format("presentationapi/{0}/event-{1}", entry.Key.ToLower(), ev.Key.ToLower())) %>"><%= ev.Key %></a>
+                                </li>
+                            <% } %>
                         <% } %>
                     </ul>
                 </li>

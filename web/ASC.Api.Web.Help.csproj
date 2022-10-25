@@ -285,6 +285,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateSchemeColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateSolidFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateStroke.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.CreateTextPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Format.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetActiveSheet.docbuilder" />
@@ -650,6 +651,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateSolidFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateStroke.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTable.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTextPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeColorScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeFontScheme.docbuilder" />
@@ -1520,6 +1522,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetBackgroundColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetBorderColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetFormKey.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetImage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetLockAspectRatio.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetPicturePosition.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetRequired.docbuilder" />
@@ -2332,6 +2335,7 @@
     <Content Include="Views\DocBuilder\classlist.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
+    <Content Include="Views\DocBuilder\eventpartial.aspx" />
     <Content Include="Views\DocBuilder\formapi.aspx" />
     <Content Include="Views\DocBuilder\Formapi\default.ascx" />
     <Content Include="Views\DocBuilder\gettingstarted.aspx" />
@@ -2750,6 +2754,7 @@
     <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
+    <Content Include="Views\Shared\EventNotFound.aspx" />
     <Content Include="Views\Shared\Method.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />
     <Content Include="Views\Shared\Search.aspx" />

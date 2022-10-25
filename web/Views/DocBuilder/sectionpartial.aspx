@@ -85,6 +85,26 @@
         </tbody>
     </table>
 
+    <% if (section.Events != null && section.Events.Any()) { %>
+    <h2>Events</h2>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% foreach(var ev in section.Events) { %>
+                <tr class="tablerow">
+                    <td><a href="<%= Url.Action(string.Format("{0}/{1}/event-{2}", section.Path, section.Name.ToLower(), ev.Key.ToLower())) %>"><%= ev.Key %></a></td>
+                    <td><%= ev.Value.Description %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <% } %>
+
     <% if (section.Example != null) { %>
         <% if (!string.IsNullOrEmpty(section.Example.Script)) { %>
                 <h2>Example</h2>

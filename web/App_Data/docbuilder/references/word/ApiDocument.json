@@ -1486,6 +1486,7 @@
       "inherits": "Inherited From: {@link ApiDocumentContent#GetAllOleObjects}"
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a document.\n\t * @constructor\n\t * @extends {ApiDocumentContent}\n\t */",
   "description": "<p>Class representing a document.</p>",
   "scope": "global",

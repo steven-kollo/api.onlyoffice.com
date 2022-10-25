@@ -1,6 +1,7 @@
 # Change Log
 
-
+- docbuilder: events documentation
+- docbuilder: global member properties
 - editors: added the editorConfig.customization.integrationMode parameter
 - editors: added the integration with frontent frameworks
 - macros: added the Import CSV/text data macro

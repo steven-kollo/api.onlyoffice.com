@@ -1,6 +1,7 @@
 builder.CreateFile("docx");
 var oDocument = Api.GetDocument();
 var oPictureForm = Api.CreatePictureForm({"key": "Personal information", "tip": "Upload your photo", "placeholder": "Photo", "scaleFlag": "tooBig", "lockAspectRatio": true, "respectBorders": false, "shiftX": 50, "shiftY": 50});
+oPictureForm.SetImage("https://api.onlyoffice.com/content/img/editor/opening.jpg");
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddElement(oPictureForm);
 oPictureForm.SetRequired(true);
