@@ -55,7 +55,8 @@ git clone https://github.com/ONLYOFFICE/onlyoffice-wordpress
     <p>Configure the plugin via the WordPress interface. Go to <b>WordPress administrative dashboard -> ONLYOFFICE -> Settings</b> and specify the following parameters:</p>
     <ul>
         <li><b>Document Editing Service address</b>. The URL of the installed ONLYOFFICE Document Server.</li>
-        <li><b>Document server JWT secret key</b>. Enables JWT to protect your documents from unauthorized access (further information can be found <a href="<%= Url.Action("signature/") %>">here</a>).</li>
+        <li><b>Document server JWT secret key</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+            Specify your own secret key in the WordPress administrative configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
     </ul>
 
 
