@@ -209,7 +209,7 @@ namespace ASC.Api.Web.Help
                             }
                             catch (Exception error)
                             {
-                                LogManager.GetLogger("ASC.DocumentBuilder").Error(error);
+                                LogManager.GetLogger("ASC.Plugins").Error(error);
                             }
                         }
                     }

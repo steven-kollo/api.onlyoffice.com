@@ -29,7 +29,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         protected void Load(string pathPiece)
         {
-            _logger = LogManager.GetLogger("ASC.DocumentBuilder");
             _logger.Debug("Generate docbuilder documentations");
 
             var tree = new Dictionary<string, SortedDictionary<string, DBEntry>>(StringComparer.OrdinalIgnoreCase);

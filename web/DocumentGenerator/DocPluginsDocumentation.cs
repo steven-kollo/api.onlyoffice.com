@@ -25,6 +25,7 @@
 
 
 using ASC.Api.Web.Help.Helpers;
+using log4net;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -59,6 +60,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             };
 
             reversePathMapping = PathMapping.ToDictionary(kv => kv.Value, kv => kv.Key);
+
+            _logger = LogManager.GetLogger("ASC.Plugins");
             Load("plugins");
         }
 

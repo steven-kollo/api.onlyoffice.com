@@ -25,6 +25,7 @@
 
 
 using ASC.Api.Web.Help.Helpers;
+using log4net;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -60,6 +61,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 { "slide", "presentationapi" },
                 { "form", "formapi" }
             };
+
+            _logger = LogManager.GetLogger("ASC.DocumentBuilder");
             Load("docbuilder");
         }
 
