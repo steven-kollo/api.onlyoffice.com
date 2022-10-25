@@ -57,6 +57,8 @@
         The address must be accessible from the user browser and from the Chamilo server.
         The Chamilo server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
     </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Chamilo <b>Settings</b> page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
 
     <h2 id="howitworks" class="copy-link">How it works</h2>

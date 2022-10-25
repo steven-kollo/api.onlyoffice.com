@@ -85,6 +85,26 @@
         </tbody>
     </table>
 
+    <% if (section.Events != null && section.Events.Any()) { %>
+    <h2>Events</h2>
+    <table class="table table-classlist">
+        <thead>
+            <tr class="tablerow">
+                <td class="table-classlist-name">Name</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% foreach(var ev in section.Events) { %>
+                <tr class="tablerow">
+                    <td><a href="<%= Url.Action(string.Format("{0}/{1}/event-{2}", section.Path, section.Name.ToLower(), ev.Key.ToLower())) %>"><%= ev.Key %></a></td>
+                    <td><%= ev.Value.Description %></td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+    <% } %>
+
     <% if (section.Example != null) { %>
         <% if (!string.IsNullOrEmpty(section.Example.Script)) { %>
                 <h2>Example</h2>
@@ -145,33 +165,28 @@
                                         },
                                     HideRightMenu = true,
                                     HideRulers = true,
+                                    IntegrationMode = "embed",
                                     ToolbarHideFileName = true,
                                     ToolbarNoTabs = true
-                                },
-                            Plugins = new Config.EditorConfigConfiguration.PluginsConfig()
-                                {
-                                    PluginsData = new List<string>
-                                        {
-                                            new UriBuilder(Request.Url.AbsoluteUri) {Path = Url.Content("~/externallistener/config.json"), Query = ""}.ToString()
-                                        }
                                 }
                         },
                     Height = "550px",
                     Width = "100%"
                 }) %>;
 
-        window.addEventListener("message", function (message) {
-            if (message && message.data == "externallistenerReady") {
-                document.getElementsByName("frameEditor")[0].contentWindow.postMessage(JSON.stringify({
-                    guid : "asc.{A8705DEE-7544-4C33-B3D5-168406D92F72}",
-                    type : "onExternalPluginMessage",
-                    data : {
-                        type: "executeCommand",
-                        text: "<%= Regex.Replace(section.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>"
-                    }
-                }), "<%= ConfigurationManager.AppSettings["editor_url"] ?? "*" %>");
-            }
-        }, false);
+        var onDocumentReady = function () {
+            window.connector = docEditor.createConnector();
+
+            connector.callCommand(
+                "function () {" +
+                "<%= Regex.Replace(section.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), @"\r\n|\n", "") %>" +
+                "}"
+            );
+        };
+
+        config.events = {
+            onDocumentReady: onDocumentReady,
+        };
 
         window.docEditor = new DocsAPI.DocEditor("placeholder", config);
     </script>

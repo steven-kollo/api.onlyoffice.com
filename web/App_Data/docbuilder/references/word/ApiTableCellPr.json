@@ -459,6 +459,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing the table cell properties.\n\t * @constructor\n\t */",
   "description": "<p>Class representing the table cell properties.</p>",
   "scope": "global",

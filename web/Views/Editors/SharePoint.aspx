@@ -81,6 +81,12 @@
         Go to each subsite settings and enter the Document Server address to the proper field.
     </div>
 
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> in the SharePoint administrative settings. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
+
+    <p>If JWT protection is enabled, it is necessary to specify a custom header name 
+        since the SharePoint security policy blocks external <b>Authorization</b> headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. 
+        Further information about signature can be found <a href="<%= Url.Action("signature/") %>">here</a>.</p>
 
     <h2>Compiling ONLYOFFICE SharePoint integration solution</h2>
     <p>There are two ways to compile ONLYOFFICE SharePoint integration solution:</p>

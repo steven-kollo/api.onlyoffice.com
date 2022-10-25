@@ -285,6 +285,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateSchemeColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateSolidFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateStroke.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.CreateTextPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Format.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetActiveSheet.docbuilder" />
@@ -650,6 +651,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateSolidFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateStroke.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTable.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTextPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeColorScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeFontScheme.docbuilder" />
@@ -1520,6 +1522,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetBackgroundColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetBorderColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetFormKey.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetImage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetLockAspectRatio.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetPicturePosition.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetRequired.docbuilder" />
@@ -2118,9 +2121,11 @@
     <Content Include="Content\img\macros\currency-exchange-rates.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
+    <Content Include="Content\img\macros\import-csv.svg" />
     <Content Include="Content\img\macros\insert-text.svg" />
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
+    <Content Include="Content\img\macros\recalculate-values.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
     <Content Include="Content\img\main-page\community_server.svg" />
@@ -2205,6 +2210,7 @@
     <Content Include="Content\img\plugins\hello-world.gif" />
     <Content Include="Content\img\plugins\helloworld_icon.png" />
     <Content Include="Content\img\plugins\highlight_duplicates.png" />
+    <Content Include="Content\img\plugins\import-csv-macro.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
@@ -2225,6 +2231,7 @@
     <Content Include="Content\img\plugins\plugin_archive.png" />
     <Content Include="Content\img\plugins\plugin_settings.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
+    <Content Include="Content\img\plugins\recalculate-cell-values.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
     <Content Include="Content\img\plugins\text_area.png" />
     <Content Include="Content\img\plugins\text_field.png" />
@@ -2277,9 +2284,6 @@
     <Content Include="Content\plugins-macros.css" />
     <Content Include="Content\pushy.css" />
     <Content Include="Content\styles.css" />
-    <Content Include="externallistener\config.json" />
-    <Content Include="externallistener\index.html" />
-    <Content Include="externallistener\scripts\code.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="robots.txt" />
@@ -2331,6 +2335,7 @@
     <Content Include="Views\DocBuilder\classlist.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
+    <Content Include="Views\DocBuilder\eventpartial.aspx" />
     <Content Include="Views\DocBuilder\formapi.aspx" />
     <Content Include="Views\DocBuilder\Formapi\default.ascx" />
     <Content Include="Views\DocBuilder\gettingstarted.aspx" />
@@ -2470,6 +2475,7 @@
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
+    <Content Include="Views\Editors\Angular.aspx" />
     <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Basic.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />
@@ -2527,6 +2533,7 @@
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\Sharing.ascx" />
     <Content Include="Views\Editors\FAQ\UsingWOPI.ascx" />
+    <Content Include="Views\Editors\Frameworks.aspx" />
     <Content Include="Views\Editors\GetDocs.aspx" />
     <Content Include="Views\Editors\History.aspx" />
     <Content Include="Views\Editors\HowItWorks.aspx" />
@@ -2546,6 +2553,7 @@
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\React.aspx" />
     <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
     <Content Include="Views\Editors\Review.aspx" />
@@ -2561,6 +2569,7 @@
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
+    <Content Include="Views\Editors\Vue.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
     <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
@@ -2720,10 +2729,12 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\default.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\formatrangeasatable.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\highlightduplicates.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\importcsv.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\inserttext.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\makecellfontbold.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\mergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\nextblankrow.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\recalculatevalues.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\setcolumnwidth.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\writedatatoworksheetcell.ascx" />
@@ -2746,6 +2757,7 @@
     <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
+    <Content Include="Views\Shared\EventNotFound.aspx" />
     <Content Include="Views\Shared\Method.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />
     <Content Include="Views\Shared\Search.aspx" />

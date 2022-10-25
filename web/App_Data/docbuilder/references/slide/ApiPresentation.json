@@ -462,6 +462,7 @@
       ]
     }
   },
+  "events": {},
   "comment": "/**\n     * Class representing a presentation.\n     * @constructor\n     */",
   "description": "<p>Class representing a presentation.</p>",
   "scope": "global",

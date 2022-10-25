@@ -5,11 +5,10 @@ oParagraph.AddText("This is a page with a page size set in the current document 
 var oSection = oDocument.GetFinalSection();
 oSection.SetPageMargins(720, 720, 720, 720);
 oSection.SetPageSize(7200, 4320);
-var sJSON = oSection.ToJSON(true, true);
-oParagraph = Api.CreateParagraph();
-oParagraph.AddText("The ApiSection object in the JSON format: ").SetBold(true);
+let json = oSection.ToJSON(false, true);
+var oSectionFromJSON = Api.FromJSON(json);
+var sType = oSectionFromJSON.GetClassType();
 oParagraph.AddLineBreak();
-oParagraph.AddText(sJSON);
-oDocument.Push(oParagraph);
+oParagraph.AddText("Class type = " + sType);
 builder.SaveFile("docx", "ToJSON.docx");
 builder.CloseFile();

@@ -440,6 +440,7 @@
       ]
     }
   },
+  "events": {},
   "comment": "/**\n     * Class representing a slide master.\n     * @constructor\n     */",
   "description": "<p>Class representing a slide master.</p>",
   "scope": "global",

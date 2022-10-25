@@ -51,6 +51,8 @@
         In order to configure plugin you must navigate to <b>Administation -> Modules</b>.
         Find ONLYOFFICE plugin and click <b>Configure</b>.
     </p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>JWT Secret</b> on the HumHub configuration page. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
 
     <h2 id="how-it-works" class="copy-link">How it works</h2>
