@@ -17,62 +17,87 @@ window.Asc.plugin.executeMethod ("GetAllComments");
 
 <div class="header-gray">Returns</div>
 
-<p>The method returns an <em>array</em> of comment objects containing the comment properties in the following form:</p>
+<p>The method returns an <em>array</em> of comment objects containing the comment data in the following form:</p>
 <pre>
 {
-    "UserName": "John Smith",
-    "Text": "comment",
-    "Time": "1662737941471",
-    "Solved": true,
-    "Replies": [{"UserName": "Mark Potato", "Text": "reply 1", "Time": "1662740895892", "Solved": false}]
+    "Id": "1_631",
+    "Data": {
+        "UserName": "John Smith",
+        "Text": "comment",
+        "Time": "1662737941471",
+        "Solved": true,
+        "Replies": [{"UserName": "Mark Potato", "Text": "reply 1", "Time": "1662740895892", "Solved": false}]
+    }
 }
 </pre>
 <div class="header-gray">Parameters</div>
-<table class="table">
-    <colgroup>
-        <col style="width: 100px;" />
-        <col />
-        <col style="width: 100px;" />
-        <col style="width: 150px;" />
-    </colgroup>
-    <thead>
-        <tr class="tablerow">
-            <td>Parameter</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Example</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr class="tablerow">
-            <td>UserName</td>
-            <td>The comment author.</td>
-            <td>string</td>
-            <td>"John Smith"</td>
-        </tr>
-        <tr class="tablerow">
-            <td>Text</td>
-            <td>The comment text.</td>
-            <td>string</td>
-            <td>"comment"</td>
-        </tr>
-        <tr class="tablerow">
-            <td>Time</td>
-            <td>The time when the comment was posted (in milliseconds).</td>
-            <td>string</td>
-            <td>"1662737941471"</td>
-        </tr>
-        <tr class="tablerow">
-            <td>Solved</td>
-            <td>Specifies if the comment is resolved (<b>true</b>) or not (<b>false</b>).</td>
-            <td>boolean</td>
-            <td>true</td>
-        </tr>
-        <tr class="tablerow">
-            <td>Replies</td>
-            <td>An array containing the comment replies represented as the <em>oCommentData</em> objects.</td>
-            <td>array of objects.</td>
-        </tr>
-    </tbody>
-</table>
+    <table class="table">
+        <colgroup>
+            <col style="width: 100px;" />
+            <col />
+            <col style="width: 100px;" />
+        </colgroup>
+        <thead>
+            <tr class="tablerow">
+                <td>Parameter</td>
+                <td>Description</td>
+                <td>Type</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tablerow">
+                <td>Id</td>
+                <td>The comment ID.</td>
+                <td>string</td>
+                <td>"1_631"</td>
+            </tr>
+            <tr class="tablerow">
+                <td>Data</td>
+                <td>
+                    An object which contains the comment data:
+                    <ul>
+                        <li>
+                            <b>UserName</b> - the comment author,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "John Smith";
+                            <br />
+                        </li>
+                        <li>
+                            <b>Text</b> - the comment text,
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "comment";
+                            <br />
+                        </li>
+                        <li>
+                            <b>Time</b> - the time when the comment was posted (in milliseconds),
+                            <br />
+                            <b>type</b>: string,
+                            <br />
+                            <b>example</b>: "1662737941471";
+                            <br />
+                        </li>
+                        <li>
+                            <b>Solved</b> - specifies if the comment is resolved (<b>true</b>) or not (<b>false</b>),
+                            <br />
+                            <b>type</b>: boolean,
+                            <br />
+                            <b>example</b>: true;
+                            <br />
+                        </li>
+                        <li>
+                            <b>Replies</b> - an array containing the comment replies represented as the <em>oCommentData</em> objects,
+                            <br />
+                            <b>type</b>: array of objects.
+                        </li>
+                    </ul>
+                </td>
+                <td>object</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 <div class="mobile-content"></div>

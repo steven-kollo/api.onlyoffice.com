@@ -2634,6 +2634,7 @@
     <Content Include="Views\Plugin\Example\zotero.ascx" />
     <Content Include="Views\Plugin\ExecuteCommand.aspx" />
     <Content Include="Views\Plugin\Executemethod.aspx" />
+    <Content Include="Views\Plugin\Executemethod\acceptreviewchanges.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrolcheckbox.ascx" />
@@ -2675,11 +2676,13 @@
     <Content Include="Views\Plugin\Executemethod\movecursortoend.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortostart.ascx" />
     <Content Include="Views\Plugin\Executemethod\movetocomment.ascx" />
+    <Content Include="Views\Plugin\Executemethod\movetonextreviewchange.ascx" />
     <Content Include="Views\Plugin\Executemethod\onencryption.ascx" />
     <Content Include="Views\Plugin\Executemethod\openfile.ascx" />
     <Content Include="Views\Plugin\Executemethod\pastehtml.ascx" />
     <Content Include="Views\Plugin\Executemethod\pastetext.ascx" />
     <Content Include="Views\Plugin\Executemethod\putimagedatatoselection.ascx" />
+    <Content Include="Views\Plugin\Executemethod\rejectreviewchanges.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrols.ascx" />
