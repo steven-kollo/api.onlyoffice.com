@@ -2673,6 +2673,7 @@
     <Content Include="Views\Plugin\Executemethod\pastehtml.ascx" />
     <Content Include="Views\Plugin\Executemethod\pastetext.ascx" />
     <Content Include="Views\Plugin\Executemethod\putimagedatatoselection.ascx" />
+    <Content Include="Views\Plugin\Executemethod\rejectreviewchanges.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrols.ascx" />
