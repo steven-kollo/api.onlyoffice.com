@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: parsing documentation from source code
 - docbuilder: events documentation
 - docbuilder: global member properties
 - editors: added the editorConfig.customization.integrationMode parameter
