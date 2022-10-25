@@ -2769,6 +2769,9 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\docbuilder\examples\cell\Api.detachEvent.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.attachEvent.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.onWorksheetChange.docbuilder" />
     <None Include="web.autofac.config">
       <SubType>Designer</SubType>
     </None>

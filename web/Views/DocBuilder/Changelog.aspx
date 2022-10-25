@@ -1,4 +1,4 @@
-﻿<%@ Page
+<%@ Page
     Title=""
     Language="C#"
     MasterPageFile="~/Views/Shared/Site.Master"
@@ -17,6 +17,18 @@
 
     <p class="dscr">The list of changes for ONLYOFFICE Document Builder API.</p>
     <h2 id="72" class="copy-link">Version 7.2</h2>
+    <p><b>Events</b></p>
+    <ul>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/attachEvent") %>">Api/attachEvent</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("textdocumentapi/api/detachEvent") %>">Api/detachEvent</a> method to Text document API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/attachEvent") %>">Api/attachEvent</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/detachEvent") %>">Api/detachEvent</a> method to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/onworksheetchange") %>">Api/onWorksheetChange</a> event to Spreadsheet API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/api/attachEvent") %>">Api/attachEvent</a> method to Presentation API.</li>
+        <li>Added the <a href="<%= Url.Action("presentationapi/api/detachEvent") %>">Api/detachEvent</a> method to Presentation API.</li>
+    </ul>
+    <br />
+
     <p><b>Integration API</b></p>
     <ul>
         <li>Updated the <a href="<%= Url.Action("integrationapi/c") %>">C++</a> wrapper for ONLYOFFICE Document Builder.</li>
@@ -31,12 +43,6 @@
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/gettagsofallforms") %>">ApiDocument/GetTagsOfAllForms</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getcontentcontrolsbytag") %>">ApiDocument/GetContentControlsByTag</a> method to Text document API.</li>
         <li>Added the <a href="<%= Url.Action("textdocumentapi/apidocument/getformsbytag") %>">ApiDocument/GetFormsByTag</a> method to Text document API.</li>
-    </ul>
-    <br />
-
-    <p><b>Events</b></p>
-    <ul>
-        <li>Added the <a href="<%= Url.Action("spreadsheetapi/api/event-onworksheetchange") %>">onWorksheetChange</a> event to Spreadsheet API.</li>
     </ul>
     <br />
 
