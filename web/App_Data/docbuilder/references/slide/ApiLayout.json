@@ -381,6 +381,7 @@
       ]
     }
   },
+  "events": {},
   "comment": "/**\n     * Class representing a slide layout.\n     * @constructor\n     */",
   "description": "<p>Class representing a slide layout.</p>",
   "scope": "global",

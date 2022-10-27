@@ -1,5 +1,18 @@
 # Change Log
 
+## 2.10.0
+- editors: added the editorConfig.customization.integrationMode parameter
+- editors: added the integration with frontent frameworks
+- editors: JWT is enabled by default
+- plugins: added the onAddComment, onChangeCommentData and onRemoveComment events
+- plugins: added the AcceptReviewChanges, MoveToNextReviewChange and RejectReviewChanges methods
+- macros: added the Import CSV/text data macro
+- macros: added the Recalculate worksheet values macro sample
+- docbuilder: added global examples
+- docbuilder: added the onWorksheetChange event to Spreadsheet API
+- docbuilder: events documentation
+- docbuilder: global member properties
+
 ## 2.9.0
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation
 - editors: added the Connector class to interact with text documents, spreadsheets, presentations, and fillable forms from the outside

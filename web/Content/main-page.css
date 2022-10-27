@@ -27,7 +27,7 @@
 /* HEAD */
 
 .icon-program-block {
-    margin: 70px auto 110px auto;
+    margin: 46px auto 110px auto;
     justify-content: space-between;
     display: flex;
     max-width: 1120px;
@@ -250,7 +250,7 @@
         max-width: 580px;
         display: block;
         line-height: 100px;
-        margin: 70px auto auto auto;
+        margin-bottom: auto;
     }
 
     .body-block {

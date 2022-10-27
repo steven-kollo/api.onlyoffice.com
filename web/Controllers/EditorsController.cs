@@ -40,6 +40,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "ActionLink",
                 "Advanced",
                 "Alfresco",
+                "Angular",
                 "AnonymousUsers",
                 "Basic",
                 "Callback",
@@ -91,6 +92,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "FAQ/Security",
                 "FAQ/Sharing",
                 "FAQ/UsingWOPI",
+                "Frameworks",
                 "GetDocs",
                 "History",
                 "HowItWorks",
@@ -109,6 +111,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "OwnCloud",
                 "Plone",
                 "Plugins",
+                "React",
                 "Redmine",
                 "Rename",
                 "Review",
@@ -123,6 +126,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "Troubleshooting",
                 "Try",
                 "Viewing",
+                "Vue",
                 "WOPI",
                 "WOPI/ApiVsWopi",
                 "WOPI/Discovery",
@@ -170,6 +174,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Alfresco()
+        {
+            return View();
+        }
+
+        public ActionResult Angular()
         {
             return View();
         }
@@ -305,6 +314,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult Frameworks()
+        {
+            return View();
+        }
+
         public ActionResult History()
         {
             return View();
@@ -390,6 +404,11 @@ namespace ASC.Api.Web.Help.Controllers
             return View();
         }
 
+        public ActionResult React()
+        {
+            return View();
+        }
+
         public ActionResult Redmine()
         {
             return View();
@@ -445,6 +464,11 @@ namespace ASC.Api.Web.Help.Controllers
         }
 
         public ActionResult Viewing()
+        {
+            return View();
+        }
+
+        public ActionResult Vue()
         {
             return View();
         }

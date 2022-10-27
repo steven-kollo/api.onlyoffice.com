@@ -1,2 +1,2 @@
 // Create a scheme color with the 'accent2' identifier:
-oSchemeColor = Api.CreateSchemeColor("accent2");
+var oSchemeColor = Api.CreateSchemeColor("accent2");

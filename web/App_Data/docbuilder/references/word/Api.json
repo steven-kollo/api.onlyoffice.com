@@ -962,6 +962,54 @@
         }
       ]
     },
+    "attachEvent": {
+      "memberof": "Api",
+      "name": "attachEvent",
+      "description": "<p>Subscribes to the specified event and calls the callback function when the event fires.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "eventName",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        },
+        {
+          "type": "function",
+          "name": "callback",
+          "description": "<p>Function to be called when the event fires.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "detachEvent": {
+      "memberof": "Api",
+      "name": "detachEvent",
+      "description": "<p>Unsubscribes from the specified event.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "eventName",
+          "description": "<p>The event name.</p>",
+          "optional": false
+        }
+      ]
+    },
     "ReplaceTextSmart": {
       "memberof": "Api",
       "name": "ReplaceTextSmart",
@@ -1059,7 +1107,9 @@
       "description": "<p>Creates the empty text properties.</p>",
       "tags": {
         "typeofeditors": [
-          "CSE"
+          "CDE",
+          "CSE",
+          "CPE"
         ]
       },
       "returns": [
@@ -1146,6 +1196,7 @@
       ]
     }
   },
+  "events": {},
   "comment": "/**\n\t * Base class\n\t * @global\n\t * @class\n\t * @name Api\n\t */",
   "description": "<p>Base class</p>",
   "scope": "global"

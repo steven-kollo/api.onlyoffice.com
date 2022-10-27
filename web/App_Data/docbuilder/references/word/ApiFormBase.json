@@ -386,7 +386,7 @@
     "SetTextPr": {
       "memberof": "ApiFormBase",
       "name": "SetTextPr",
-      "description": "<p>Sets the text properties to the current form.\n*This method is used only for text and combo box forms.</p>",
+      "description": "<p>Sets the text properties to the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -411,7 +411,7 @@
     "GetTextPr": {
       "memberof": "ApiFormBase",
       "name": "GetTextPr",
-      "description": "<p>Returns the text properties from the current form.\n*This method is used only for text and combo box forms.</p>",
+      "description": "<p>Returns the text properties from the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -443,6 +443,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a document form base.\n\t * @constructor\n\t * @property {string} key - Form key.\n\t * @property {string} tip - Form tip text.\n\t * @property {boolean} required - Specifies if the form is required or not.\n\t * @property {string} placeholder - Form placeholder text.\n\t */",
   "description": "<p>Class representing a document form base.</p>",
   "scope": "global",

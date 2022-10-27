@@ -252,6 +252,7 @@
       "params": []
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a Paragraph hyperlink.\n\t * @constructor\n\t */",
   "description": "<p>Class representing a Paragraph hyperlink.</p>",
   "scope": "global",

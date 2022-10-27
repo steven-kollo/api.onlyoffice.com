@@ -2586,6 +2586,7 @@
       ]
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a paragraph.\n\t * @constructor\n\t * @extends {ApiParaPr}\n\t */",
   "description": "<p>Class representing a paragraph.</p>",
   "scope": "global",

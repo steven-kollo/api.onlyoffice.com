@@ -9,7 +9,7 @@ oTable.GetCell(0, 0).GetContent().GetElement(0).AddText("Cell 1");
 oTable.GetCell(0, 1).GetContent().GetElement(0).AddText("Cell 2");
 oTable.GetCell(0, 2).GetContent().GetElement(0).AddText("Cell 3");
 oDocument.Push(oTable);
-var oTextPr = oDocument.GetDefaultTextPr();
+var oTextPr = Api.CreateTextPr();
 oTextPr.SetFontSize(30);
 oTextPr.SetBold(true);
 oTable.SetTextPr(oTextPr);
