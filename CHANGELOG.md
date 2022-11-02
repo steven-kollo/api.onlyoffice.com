@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: conversion djvu to pdf
+
 ## 2.10.0
 - editors: added the editorConfig.customization.integrationMode parameter
 - editors: added the integration with frontent frameworks

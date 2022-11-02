@@ -41,6 +41,7 @@
         <li>Added the <a href="<%= Url.Action("conversionapi") %>#documentRenderer">documentRenderer</a> parameter to the conversion request.</li>
         <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">pdf/xps/oxps</a> formats to <em>docx</em>.</li>
         <li>Added the <a href="<%= Url.Action("config/document/permissions") %>#userInfoGroups">document.permissions.userInfoGroups</a> parameter.</li>
+        <li>Added conversion from <a href="<%= Url.Action("conversionapi") %>#text-matrix">djvu</a> format to <em>pdf</em>.</li>
     </ul>
 
     <h2 id="70" class="copy-link">Version 7.0</h2>
