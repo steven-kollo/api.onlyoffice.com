@@ -87,6 +87,12 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
         <p>In this example we are returning information about the exchange rates for the last several days and fill in the table with the received values.</p></div>
         <p class="block_more"><a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">More</a></p>
     </li>
+      <li class="macro-example">
+        <div class="macro-info"><a href="<%= Url.Action("macrosamples/unhideallrows") %>"><div class="example-img unhide_all_rows"></div></a>
+        <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/unhideallrows") %>">Unhide all rows and columns</a></h2>
+        <p>In this example we are unhiding all the rows and columns in a worksheet.</p></div>
+        <p class="block_more"><a href="<%= Url.Action("macrosamples/unhideallrows") %>">More</a></p>
+    </li>
 </ul>
 
 <h2>Support</h2>

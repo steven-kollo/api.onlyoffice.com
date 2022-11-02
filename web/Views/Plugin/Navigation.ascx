@@ -466,6 +466,9 @@
             <li>
                 <a href="<%= Url.Action("macrosamples/currencyexchangerates") %>">Currency exchange rates</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/unhideallrows") %>">Unhide all rows and columns</a>
+            </li>
         </ul>
     <li>
 </ul>
