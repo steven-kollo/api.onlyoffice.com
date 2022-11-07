@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: changed the Alfresco installation instruction (moving from a Simple Module to AMP)
+
 ## 3.0.3
 - docbuilder: fix class links for integration api
 
