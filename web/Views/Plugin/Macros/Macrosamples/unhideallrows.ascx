@@ -11,13 +11,15 @@
 
 <pre>(function()
 {
-  var activeSheet = Api.ActiveSheet;
-  var indexRowMax = 1048576;
-  var n = 1;
+    var activeSheet = Api.ActiveSheet;
+    var indexRowMax = 1048576;
+    var n = 1;
     for (let i = 0; i < indexRowMax; i++) {
         activeSheet.GetRows(n).SetHidden(false);
         n++;
     }
+    var newRange = activeSheet.GetRange("A1");
+    newRange.SetValue("All the rows and columns are unhidden now");
 })();</pre>
 
 <p>Methods used:
@@ -30,4 +32,4 @@
 
 <div class="header-gray">Result</div>
 </br >
-<img alt="Next blank row" src="<%= Url.Content("~/content/img/plugins/unhide_all_rows.png") %>" />
+<img alt="Unhide all rows" src="<%= Url.Content("~/content/img/plugins/unhide_all_rows.png") %>" />
