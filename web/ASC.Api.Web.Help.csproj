@@ -259,12 +259,17 @@
     <Content Include="App_Data\docbuilder\.Net %28C# MVC%29 Example.zip" />
     <Content Include="App_Data\docbuilder\.Net %28C#%29 Example.zip" />
     <Content Include="App_Data\docbuilder\examples\ApiForm.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\Angle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\AxisPos.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\BlipFillType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\bookmarkRefTo.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\BordersIndex.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\BorderType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\BulletType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\byte.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\CaptionLabel.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\captionRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\captionType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddDefName.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.AddSheet.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateBlipFill.docbuilder" />
@@ -285,6 +290,7 @@
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateSchemeColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateSolidFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.CreateStroke.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.CreateTextPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.Format.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\Api.GetActiveSheet.docbuilder" />
@@ -602,19 +608,37 @@
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetTopMargin.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\cell\ApiWorksheet.SetVisible.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ChartType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CheckBoxFormPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\CheckBoxFormPrBase.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ComboBoxFormPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ComboBoxFormPrBase.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\Direction.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\DocumentElement.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\EMU.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\endnoteRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\footnoteRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\FormPrBase.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\FormType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateCheckBoxForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateComboBoxForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreatePictureForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.CreateTextForm.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\form\Api.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\HdrFtrType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\headingRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\highlightColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\hps.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\line240.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\LineStyle.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\mm.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\numberedRefTo.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\NumFormat.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\PageOrientation.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ParagraphContent.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\PatternType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\percentage.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\PictureFormPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\PictureFormPrBase.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\PositiveFixedAngle.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\PositivePercentage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\PresetColor.docbuilder" />
@@ -622,7 +646,9 @@
     <Content Include="App_Data\docbuilder\examples\pt_8.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\RelFromH.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\RelFromV.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\ScaleFlag.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\SchemeColorId.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\SdtLock.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ShapeType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\ShdType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateBlipFill.docbuilder" />
@@ -650,6 +676,7 @@
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateSolidFill.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateStroke.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTable.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTextPr.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateTheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeColorScheme.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\Api.CreateThemeFontScheme.docbuilder" />
@@ -992,11 +1019,18 @@
     <Content Include="App_Data\docbuilder\examples\slide\ApiThemeFormatScheme.ToJSON.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiUniColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\slide\ApiUniColor.GetClassType.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\SortHeader.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\SortOrder.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\SortOrientation.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\StyleType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TabJc.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TableStyleOverrideType.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TableWidth.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TextFormPr.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TextFormPrBase.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TextTransform.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\TickLabelPosition.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\TickMark.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\twips.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\VerticalTextAlign.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\Api.AddComment.docbuilder" />
@@ -1520,6 +1554,7 @@
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetBackgroundColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetBorderColor.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetFormKey.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetImage.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetLockAspectRatio.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetPicturePosition.docbuilder" />
     <Content Include="App_Data\docbuilder\examples\word\ApiPictureForm.SetRequired.docbuilder" />
@@ -2118,9 +2153,11 @@
     <Content Include="Content\img\macros\currency-exchange-rates.svg" />
     <Content Include="Content\img\macros\format-range.svg" />
     <Content Include="Content\img\macros\highlight-duplicates.svg" />
+    <Content Include="Content\img\macros\import-csv.svg" />
     <Content Include="Content\img\macros\insert-text.svg" />
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
+    <Content Include="Content\img\macros\recalculate-values.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
      <Content Include="Content\img\macros\unhide-all-rows-and-columns.svg" />
@@ -2206,6 +2243,7 @@
     <Content Include="Content\img\plugins\hello-world.gif" />
     <Content Include="Content\img\plugins\helloworld_icon.png" />
     <Content Include="Content\img\plugins\highlight_duplicates.png" />
+    <Content Include="Content\img\plugins\import-csv-macro.png" />
     <Content Include="Content\img\plugins\insert-text.png" />
     <Content Include="Content\img\plugins\loader_example.png" />
     <Content Include="Content\img\plugins\macros.png" />
@@ -2226,6 +2264,7 @@
     <Content Include="Content\img\plugins\plugin_archive.png" />
     <Content Include="Content\img\plugins\plugin_settings.png" />
     <Content Include="Content\img\plugins\range_as_a_table.png" />
+    <Content Include="Content\img\plugins\recalculate-cell-values.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
     <Content Include="Content\img\plugins\text_area.png" />
     <Content Include="Content\img\plugins\text_field.png" />
@@ -2330,6 +2369,7 @@
     <Content Include="Views\DocBuilder\classlist.aspx" />
     <Content Include="Views\DocBuilder\csharpexample.aspx" />
     <Content Include="Views\DocBuilder\DocBuilderShared\DocBuilderAction.ascx" />
+    <Content Include="Views\DocBuilder\eventpartial.aspx" />
     <Content Include="Views\DocBuilder\formapi.aspx" />
     <Content Include="Views\DocBuilder\Formapi\default.ascx" />
     <Content Include="Views\DocBuilder\gettingstarted.aspx" />
@@ -2469,6 +2509,7 @@
     <Content Include="Views\Editors\ActionLink.aspx" />
     <Content Include="Views\Editors\Advanced.aspx" />
     <Content Include="Views\Editors\Alfresco.aspx" />
+    <Content Include="Views\Editors\Angular.aspx" />
     <Content Include="Views\Editors\AnonymousUsers.aspx" />
     <Content Include="Views\Editors\Basic.aspx" />
     <Content Include="Views\Editors\Callback.aspx" />
@@ -2526,6 +2567,7 @@
     <Content Include="Views\Editors\FAQ\Security.ascx" />
     <Content Include="Views\Editors\FAQ\Sharing.ascx" />
     <Content Include="Views\Editors\FAQ\UsingWOPI.ascx" />
+    <Content Include="Views\Editors\Frameworks.aspx" />
     <Content Include="Views\Editors\GetDocs.aspx" />
     <Content Include="Views\Editors\History.aspx" />
     <Content Include="Views\Editors\HowItWorks.aspx" />
@@ -2545,6 +2587,7 @@
     <Content Include="Views\Editors\OwnCloud.aspx" />
     <Content Include="Views\Editors\Plone.aspx" />
     <Content Include="Views\Editors\Plugins.aspx" />
+    <Content Include="Views\Editors\React.aspx" />
     <Content Include="Views\Editors\Redmine.aspx" />
     <Content Include="Views\Editors\Rename.aspx" />
     <Content Include="Views\Editors\Review.aspx" />
@@ -2560,6 +2603,7 @@
     <Content Include="Views\Editors\Troubleshooting.aspx" />
     <Content Include="Views\Editors\Try.aspx" />
     <Content Include="Views\Editors\Viewing.aspx" />
+    <Content Include="Views\Editors\Vue.aspx" />
     <Content Include="Views\Editors\Wopi.aspx" />
     <Content Include="Views\Editors\WOPI\ApiVsWopi.ascx" />
     <Content Include="Views\Editors\WOPI\Default.ascx" />
@@ -2624,6 +2668,7 @@
     <Content Include="Views\Plugin\Example\zotero.ascx" />
     <Content Include="Views\Plugin\ExecuteCommand.aspx" />
     <Content Include="Views\Plugin\Executemethod.aspx" />
+    <Content Include="Views\Plugin\Executemethod\acceptreviewchanges.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcomment.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\addcontentcontrolcheckbox.ascx" />
@@ -2665,11 +2710,13 @@
     <Content Include="Views\Plugin\Executemethod\movecursortoend.ascx" />
     <Content Include="Views\Plugin\Executemethod\movecursortostart.ascx" />
     <Content Include="Views\Plugin\Executemethod\movetocomment.ascx" />
+    <Content Include="Views\Plugin\Executemethod\movetonextreviewchange.ascx" />
     <Content Include="Views\Plugin\Executemethod\onencryption.ascx" />
     <Content Include="Views\Plugin\Executemethod\openfile.ascx" />
     <Content Include="Views\Plugin\Executemethod\pastehtml.ascx" />
     <Content Include="Views\Plugin\Executemethod\pastetext.ascx" />
     <Content Include="Views\Plugin\Executemethod\putimagedatatoselection.ascx" />
+    <Content Include="Views\Plugin\Executemethod\rejectreviewchanges.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecomments.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrol.ascx" />
     <Content Include="Views\Plugin\Executemethod\removecontentcontrols.ascx" />
@@ -2716,10 +2763,12 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\default.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\formatrangeasatable.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\highlightduplicates.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\importcsv.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\inserttext.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\makecellfontbold.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\mergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\nextblankrow.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\recalculatevalues.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\setcolumnwidth.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unhideallrows.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
@@ -2743,6 +2792,7 @@
     <Content Include="Views\Portals\Navigation.ascx" />
     <Content Include="Views\Shared\Analytic.ascx" />
     <Content Include="Views\Shared\BreadCrumbs.ascx" />
+    <Content Include="Views\Shared\EventNotFound.aspx" />
     <Content Include="Views\Shared\Method.aspx" />
     <Content Include="Views\Shared\MethodNotFound.aspx" />
     <Content Include="Views\Shared\Search.aspx" />
@@ -2754,9 +2804,12 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="web.autofac.config">
+    <Content Include="App_Data\docbuilder\examples\cell\Api.detachEvent.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.attachEvent.docbuilder" />
+    <Content Include="App_Data\docbuilder\examples\cell\Api.onWorksheetChange.docbuilder" />
+    <Content Include="web.autofac.config">
       <SubType>Designer</SubType>
-    </None>
+    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

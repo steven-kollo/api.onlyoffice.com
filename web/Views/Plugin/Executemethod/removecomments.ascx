@@ -48,5 +48,5 @@ window.Asc.plugin.executeMethod ("RemoveComments", [arrIds]);
 <div class="header-gray">Example</div>
 
 <pre>
-window.Asc.plugin.executeMethod ("RemoveComments", [["ID1", "ID2"]]);
+window.Asc.plugin.executeMethod ("RemoveComments", [["1_631", "1_632"]]);
 </pre>

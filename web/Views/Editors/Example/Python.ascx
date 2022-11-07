@@ -44,7 +44,7 @@
     <li>Install the dependencies:
         <div class="commandline">pip install Django==3.1.3
 pip install requests==2.25.0
-pip install pyjwt==1.7.1
+pip install pyjwt==2.6.0
 pip install python-magic</div>
     </li>
     <li>Edit the <em>config.py</em> configuration file.

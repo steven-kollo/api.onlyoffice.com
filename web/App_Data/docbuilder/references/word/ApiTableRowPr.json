@@ -83,6 +83,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing the table row properties.\n\t * @constructor\n\t */",
   "description": "<p>Class representing the table row properties.</p>",
   "scope": "global",

@@ -84,8 +84,8 @@ https://&lt;documentserver&gt;/
 </pre>
     <p>where <b>documentserver</b> is the name of the server with the ONLYOFFICE Document Server installed. The address must be accessible for the user browser and from the Drupal server.
         The Drupal server address must also be accessible from ONLYOFFICE Document Server for correct work.</p>
-    <p>To restrict access to ONLYOFFICE Document Server and for security reasons and data integrity the encrypted signature is used.
-        Specify the <b>Secret key</b> in the Drupal administrative configuration. In the ONLYOFFICE Document Server <a href="<%= Url.Action("signature") %>">config file</a> specify the same secret key and enable the validation.</p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> in the Drupal administrative configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
     <h2 id="usage" class="copy-link">Using Drupal ONLYOFFICE connector module</h2>
     <p><b>Edit files already uploaded to Drupal</b></p>

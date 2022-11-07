@@ -66,7 +66,8 @@
                 The Mattermost server address must also be accessible from <b>ONLYOFFICE Docs</b> for correct work.
             </p>
         </li>
-        <li><b>Secret key</b>. To protect your documents from unauthorized access, enable JWT.</li>
+        <li><b>Secret key</b>. Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+            Specify your own secret key in the Mattermost plugin configuration. In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</li>
         <li><b>JWT Header</b>. If JWT protection is enabled, it is necessary to specify a custom header name 
             since the Mattermost security policy blocks external <b>Authorization</b> headers. This header should be specified in the ONLYOFFICE Docs signature settings as well. 
             Further information about signature can be found <a href="<%= Url.Action("signature/") %>">here</a>.</li>

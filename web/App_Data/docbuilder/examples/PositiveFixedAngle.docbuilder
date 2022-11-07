@@ -1,2 +1,2 @@
 // The resulting gradient direction angle is 90 degrees:
-oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);
+var oFill = Api.CreateLinearGradientFill([oGs1, oGs2], 5400000);

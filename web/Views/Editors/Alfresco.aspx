@@ -80,8 +80,9 @@ sudo ./alfresco.sh start</span>
         You can also add <em>onlyoffice.url</em> to <b>alfresco-global.properties</b>.
         Configuration made via settings page will override <b>alfresco-global.properties</b>.
     </div>
-    <p>JWT can be configured via <a href="#configuration">configuration page</a> or by adding <em>onlyoffice.jwtsecret</em> to <b>alfresco-global.properties</b>.</p>
-    <p>The JWT configuration on the Document Server side can be found <a href="/editors/signature/">here</a>.</p>
+    <p>Starting from version 7.2, JWT is enabled by default and the secret key is generated automatically to restrict the access to ONLYOFFICE Docs and for security reasons and data integrity.
+        Specify your own <b>Secret key</b> on the Alfresco configuration page or by adding <em>onlyoffice.jwtsecret</em> to <b>alfresco-global.properties</b>.
+        In the ONLYOFFICE Docs <a href="/editors/signature/">config file</a>, specify the same secret key and enable the validation.</p>
 
     <h2 id="compile" class="copy-link">Compiling ONLYOFFICE Alfresco module package</h2>
 
