@@ -2158,9 +2158,9 @@
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
     <Content Include="Content\img\macros\recalculate-values.svg" />
+    <Content Include="Content\img\macros\unhide-all-rows-and-columns.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
-    <Content Include="Content\img\macros\unhide-all-rows-and-columns.svg" />
     <Content Include="Content\img\main-page\community_server.svg" />
     <Content Include="Content\img\main-page\desktop.svg" />
     <Content Include="Content\img\main-page\document_builder.svg" />
