@@ -1,5 +1,6 @@
 # Change Log
 
+- editors: changed the Alfresco installation instruction (moving from a Simple Module to AMP)
 - docbuilder: changed the color scheme of the builder examples
 - macros: added the Insert unique id macro sample
 - editors: conversion to ppsm, ppsx
