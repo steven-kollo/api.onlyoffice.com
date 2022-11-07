@@ -99,6 +99,12 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
         <p>This macro repeatedly recalculates worksheet cell values within one-second intervals.</p></div>
         <p class="block_more"><a href="<%= Url.Action("macrosamples/recalculatevalues") %>">More</a></p>
     </li>
+    <li class="macro-example">
+        <div class="macro-info"><a href="<%= Url.Action("macrosamples/unhideallrows") %>"><div class="example-img unhide_all_rows"></div></a>
+        <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/unhideallrows") %>">Unhide all rows and columns</a></h2>
+        <p>In this example we are unhiding all the rows and columns in a worksheet.</p></div>
+        <p class="block_more"><a href="<%= Url.Action("macrosamples/unhideallrows") %>">More</a></p>
+    </li>
 </ul>
 
 <h2>Support</h2>

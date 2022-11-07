@@ -1,5 +1,6 @@
 # Change Log
 
+- macros: added the Unhide all rows and columns macro
 - editors: conversion djvu to pdf
 
 ## 2.10.0
