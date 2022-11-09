@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: changed the structure of the Plugins and Macros section
 - plugins: parsing documentation from source code
 - plugins: added the onAddComment, onChangeCommentData and onRemoveComment events
 - plugins: added the AcceptReviewChanges, MoveToNextReviewChange and RejectReviewChanges methods

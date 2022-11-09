@@ -6,12 +6,12 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Plugin code
+    Coding plugin
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Plugin code</span>
+        <span class="hdr">Coding plugin</span>
     </h1>
 
     <p class="dscr">The main plugin code is placed to a <em>.js</em> file which describes what and how must be done by the plugin. This file is placed to the plugin root folder together with the <a href="<%= Url.Action("config") %>">config.json</a> and <a href="<%= Url.Action("indexhtml") %>">index.html</a> files.</p>
