@@ -6,12 +6,12 @@
     ContentType="text/html" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-    Connector
+    Automation API
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h1>
-        <span class="hdr">Connector</span>
+        <span class="hdr">Automation API</span>
     </h1>
 
     <p class="dscr"><b>Connector</b> is a class that allows interaction with text documents, spreadsheets, presentations, and fillable forms from the outside.
