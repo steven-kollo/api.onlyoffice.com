@@ -71,11 +71,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         }
 
-        protected override void LoadExamples()
-        {
-
-        }
-
         public override List<SearchResult> Search(string query, UrlHelper url)
         {
             return new List<SearchResult>();

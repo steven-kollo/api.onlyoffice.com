@@ -54,12 +54,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             _entries = tree;
             CheckSharedMethods();
-            LoadExamples();
+            LoadExamples(pathPiece);
             ParseLinks();
         }
 
         protected abstract void CheckSharedMethods();
-        protected abstract void LoadExamples();
         public abstract List<SearchResult> Search(string query, UrlHelper url);
         public abstract string SearchType(string type, string priorityModule);
 
@@ -191,6 +190,94 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return new HtmlString(string.Join(" | ", returnsHtml));
         }
 
+        private void LoadExamples(string pathPiece)
+        {
+            var docbuilderExt = ".docbuilder";
+            var examplesPath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\{pathPiece}\examples");
+
+            foreach (var moduleName in _entries.Keys)
+            {
+                var mod = GetModule(moduleName);
+                if (mod == null) continue;
+
+                var path = Path.Combine(examplesPath, moduleName);
+                if (!Directory.Exists(path))
+                {
+                    _logger.Info("Couldn't find any examples: " + path);
+                }
+                else
+                {
+                    foreach (var examplePath in Directory.GetFiles(path))
+                    {
+                        if (Path.GetExtension(examplePath) != docbuilderExt) continue;
+
+                        var exampleName = Path.GetFileNameWithoutExtension(examplePath);
+                        if (exampleName.Contains("."))
+                        {
+                            var split = exampleName.Split('.');
+                            if (mod.ContainsKey(split[0]))
+                            {
+                                var section = mod[split[0]];
+                                var example = new DBExample
+                                {
+                                    Script = File.ReadAllText(examplePath)
+                                };
+                                if (section.Methods.ContainsKey(split[1]))
+                                {
+                                    section.Methods[split[1]].Example = example;
+                                }
+                                else if(section.Events.ContainsKey(split[1]))
+                                {
+                                    section.Events[split[1]].Example = example;
+                                }
+                                else
+                                {
+                                    _logger.InfoFormat("Found example for {0}.{1} but the method is missing", moduleName, exampleName);
+                                }
+                            }
+                            else
+                            {
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", moduleName, exampleName);
+                            }
+                        }
+                        else
+                        {
+                            if (mod.ContainsKey(exampleName))
+                            {
+                                var example = new DBExample
+                                {
+                                    Script = File.ReadAllText(examplePath)
+                                };
+                                mod[exampleName].Example = example;
+                            }
+                            else
+                            {
+                                _logger.InfoFormat("Found example for {0}.{1} but the class is missing", moduleName, exampleName);
+                            }
+                        }
+                    }
+                }
+            }
+
+            foreach (var globalsExamplePath in Directory.GetFiles(examplesPath))
+            {
+                if (Path.GetExtension(globalsExamplePath) != docbuilderExt) continue;
+
+                var globalExampleName = Path.GetFileNameWithoutExtension(globalsExamplePath);
+
+                if (_globals.ContainsKey(globalExampleName))
+                {
+                    _globals[globalExampleName].Script = File.ReadAllText(globalsExamplePath);
+                }
+                else
+                {
+                    _logger.InfoFormat("Found global example for {0} but the method is missing", globalExampleName);
+                }
+            }
+
+            LogMissingExamples();
+        }
+
         private void ParseLinks()
         {
             var regex = new Regex("{@link (.*?)#(.*?)}", RegexOptions.Multiline);
@@ -233,6 +320,52 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     if (m.See != null) m.See = regex.Replace(m.See, replacer(m.Module));
                     if (m.Inherits != null) m.Inherits = regex.Replace(m.Inherits, replacer(m.Module));
                 }
+            }
+        }
+
+        private void LogMissingExamples()
+        {
+            foreach (var mod in _entries)
+            {
+                foreach (var section in mod.Value.Values)
+                {
+                    LogMissingExample(section.Example, string.Format("section {0}.{1}", mod.Key, section.Name));
+
+                    foreach (var method in section.Methods.Values)
+                    {
+                        LogMissingExample(method.Example, string.Format("method {0}.{1}.{2}", mod.Key, section.Name, method.Name));
+                    }
+
+                    foreach (var evt in section.Events.Values)
+                    {
+                        LogMissingExample(evt.Example, string.Format("event {0}.{1}.{2}", mod.Key, section.Name, evt.Name));
+                    }
+                }
+            }
+
+            foreach (var global in _globals.Values)
+            {
+                LogMissingExample(global.Script, string.Format("global {0}.{1}", global.Module, global.Name));
+            }
+        }
+
+        private void LogMissingExample(DBExample example, string path)
+        {
+            if (example == null)
+            {
+                _logger.InfoFormat("Missing example and demo for {0}", path);
+            }
+            else
+            {
+                LogMissingExample(example.Script, path);
+            }
+        }
+
+        private void LogMissingExample(string script, string path)
+        {
+            if (string.IsNullOrEmpty(script))
+            {
+                _logger.InfoFormat("Missing example for {0}", path);
             }
         }
     }
@@ -307,6 +440,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         [JsonProperty("properties")]
         public List<DBProperty> Properties { get; set; }
+
+        [JsonIgnore]
+        public DBExample Example { get; set; }
     }
 
     public class DBProperty : DBEntity

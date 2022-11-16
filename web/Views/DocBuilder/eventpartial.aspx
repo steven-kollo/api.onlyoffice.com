@@ -57,4 +57,12 @@
     </div>
     <% } %>
 
+    <% if (ev.Example != null) { %>
+        <% if (!string.IsNullOrEmpty(ev.Example.Script)) { %>
+            <h2>Example</h2>
+            <div class="button copy-code">Copy code</div>
+<pre><%= ev.Example.Script %></pre>
+        <% } %>
+    <% } %>
+
 </asp:Content>
