@@ -167,9 +167,18 @@ namespace ASC.Api.Web.Help.Controllers
             return RenderBaseMethod("createInputHelper");
         }
 
-        public ActionResult Events()
+        public ActionResult Events(string catchall)
         {
-            return View();
+            if (string.IsNullOrEmpty(catchall))
+            {
+                return View(DocPluginsDocumentation.Instance.GetSection("pluginBase", "plugin"));
+            }
+            else
+            {
+                var evt = DocPluginsDocumentation.Instance.GetEvent("pluginBase", "plugin", catchall);
+                if (evt == null) return View("methodnotfound");
+                return View("eventpartial", evt);
+            }
         }
 
         public ActionResult example(string catchall)

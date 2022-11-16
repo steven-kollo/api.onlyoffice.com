@@ -84,6 +84,13 @@
             </li>
             <li>
                 <a href="<%= Url.Action("events") %>">Events</a>
+                <ul>
+                    <% foreach (var ev in DocPluginsDocumentation.Instance.GetModule("pluginBase")["plugin"].Events) { %>
+                        <li>
+                            <a title=<%= ev.Key %> href="<%= Url.Action(string.Format("events/{0}", ev.Key.ToLower())) %>"><%= ev.Key %></a>
+                        </li>
+                    <% } %>
+                </ul>
             </li>
             <li>
                 <a href="<%= Url.Action("scope") %>">Asc.scope object</a>
