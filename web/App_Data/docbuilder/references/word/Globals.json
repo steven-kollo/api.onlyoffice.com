@@ -883,15 +883,6 @@
       "\"aboveBelow\""
     ]
   },
-  "CaptionLabel": {
-    "name": "CaptionLabel",
-    "description": "<p>Available caption labels.</p>",
-    "type": [
-      "\"Equation\"",
-      "\"Figure\"",
-      "\"Table\""
-    ]
-  },
   "AxisPos": {
     "name": "AxisPos",
     "description": "<p>Axis position in the chart.</p>",
@@ -945,6 +936,191 @@
       "ApiCheckBoxForm",
       "ApiPictureForm",
       "ApiComplexForm"
+    ]
+  },
+  "CaptionNumberingFormat": {
+    "name": "CaptionNumberingFormat",
+    "description": "<p>Possible values for the caption numbering format.</p>\n<ul>\n<li><strong>&quot;ALPHABETIC&quot;</strong> - upper letter.</li>\n<li><strong>&quot;alphabetic&quot;</strong> - lower letter.</li>\n<li><strong>&quot;Roman&quot;</strong>      - upper Roman.</li>\n<li><strong>&quot;roman&quot;</strong>      - lower Roman.</li>\n<li><strong>&quot;Arabic&quot;</strong>     - arabic.</li>\n</ul>",
+    "type": [
+      "\"ALPHABETIC\"",
+      "\"alphabetic\"",
+      "\"Roman\"",
+      "\"roman\"",
+      "\"Arabic\""
+    ]
+  },
+  "CaptionSep": {
+    "name": "CaptionSep",
+    "description": "<p>Possible values for the caption separator.</p>\n<ul>\n<li><strong>&quot;hyphen&quot;</strong>   - &quot;-&quot;.</li>\n<li><strong>&quot;period&quot;</strong>   - &quot;.&quot;.</li>\n<li><strong>&quot;colon&quot;</strong>    - &quot;:&quot;.</li>\n<li><strong>&quot;longDash&quot;</strong> - &quot;—&quot;.</li>\n<li><strong>&quot;dash&quot;</strong>     - &quot;-&quot;.</li>\n</ul>",
+    "type": [
+      "\"hyphen\"",
+      "\"period\"",
+      "\"colon\"",
+      "\"longDash\"",
+      "\"dash\""
+    ]
+  },
+  "CaptionLabel": {
+    "name": "CaptionLabel",
+    "description": "<p>Possible values for the caption label.</p>",
+    "type": [
+      "\"Table\"",
+      "\"Equation\"",
+      "\"Figure\""
+    ]
+  },
+  "TocPr": {
+    "name": "TocPr",
+    "description": "<p>Table of contents properties.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "boolean",
+        "name": "ShowPageNums",
+        "description": "<p>whether to show page numbers.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "RightAlgn",
+        "description": "<p>whether to right align page numbers.</p>"
+      },
+      {
+        "type": "TocLeader",
+        "name": "LeaderType",
+        "description": "<p>leader type.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "FormatAsLinks",
+        "description": "<p>whether format table of contents as links..</p>"
+      },
+      {
+        "type": "TocBuildFromPr",
+        "name": "BuildFrom",
+        "description": "<p>build table of contents from (outline levels or specified styles).</p>"
+      },
+      {
+        "type": "TocStyle",
+        "name": "TocStyle",
+        "description": "<p>table of contents style type.</p>"
+      }
+    ]
+  },
+  "TofPr": {
+    "name": "TofPr",
+    "description": "<p>Table of figures properties.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "boolean",
+        "name": "ShowPageNums",
+        "description": "<p>whether to show page numbers.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "RightAlgn",
+        "description": "<p>whether to right align page numbers.</p>"
+      },
+      {
+        "type": "TocLeader",
+        "name": "LeaderType",
+        "description": "<p>leader type.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "FormatAsLinks",
+        "description": "<p>whether format table of contents as links.</p>"
+      },
+      {
+        "type": "CaptionLabel | string",
+        "name": "BuildFrom",
+        "description": "<p>build table of figures by specified caption label or used paragraph style name (ex. &quot;Heading 1&quot;).</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "LabelNumber",
+        "description": "<p>whether to include label and number.</p>"
+      },
+      {
+        "type": "TofStyle",
+        "name": "TofStyle",
+        "description": "<p>table of figures style type.</p>"
+      }
+    ]
+  },
+  "TocBuildFromPr": {
+    "name": "TocBuildFromPr",
+    "description": "<p>Table of contents build from propertie.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "number",
+        "name": "OutlineLvls",
+        "description": "<p>maximum levels in table of figures</p>"
+      },
+      {
+        "type": "Array.<TocStyleLvl>",
+        "name": "StylesLvls",
+        "description": "<p>levels for styles (ex. [{Name: &quot;Heading 1&quot;, Lvl: 2}, {Name: &quot;Heading 2&quot;, Lvl: 3}]).\nNote: if StylesLvls.length &gt; 0 then OutlineLvls propertie will be ignore.</p>"
+      }
+    ]
+  },
+  "TocStyleLvl": {
+    "name": "TocStyleLvl",
+    "description": "<p>Table of contents style lvl.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "Name",
+        "description": "<p>name of style. (ex. &quot;Heading 1&quot;)</p>"
+      },
+      {
+        "type": "number",
+        "name": "Lvl",
+        "description": "<p>level which will be apply for style in TOC</p>"
+      }
+    ]
+  },
+  "TocLeader": {
+    "name": "TocLeader",
+    "description": "<p><strong>&quot;dot&quot;</strong>       - &quot;.......&quot;\n<strong>&quot;dash&quot;</strong>      - &quot;-------&quot;\n<strong>&quot;underline&quot;</strong> - &quot;_______&quot;\nPossible values for the table of contents leader.</p>",
+    "type": [
+      "\"dot\"",
+      "\"dash\"",
+      "\"underline\"",
+      "\"none\""
+    ]
+  },
+  "TocStyle": {
+    "name": "TocStyle",
+    "description": "<p>Possible values for the style of table of contents.</p>",
+    "type": [
+      "\"simple\"",
+      "\"online\"",
+      "\"standard\"",
+      "\"modern\"",
+      "\"classic\""
+    ]
+  },
+  "TofStyle": {
+    "name": "TofStyle",
+    "description": "<p>Possible values for the style of table of contents.</p>",
+    "type": [
+      "\"simple\"",
+      "\"online\"",
+      "\"classic\"",
+      "\"distinctive\"",
+      "\"centered\"",
+      "\"formal\""
     ]
   },
   "PositivePercentage": {

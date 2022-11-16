@@ -8,7 +8,7 @@
   },
   "editorType": {
     "name": "editorType",
-    "description": "<p>The editors which the plugin is available for:</p>\n<ul>\n<li><strong>&quot;word&quot;</strong> - text document editor,</li>\n<li><strong>&quot;cell&quot;</strong> - spreadsheet editor,</li>\n<li><strong>&quot;slide&quot;</strong> - presentation editor.</li>\n</ul>",
+    "description": "<p>The editors which the plugin is available for:</p>\n<ul>\n<li><b>word</b> - text document editor,</li>\n<li><b>cell</b> - spreadsheet editor,</li>\n<li><b>slide</b> - presentation editor.</li>\n</ul>",
     "type": [
       "\"word\"",
       "\"cell\"",
@@ -17,7 +17,7 @@
   },
   "initDataType": {
     "name": "initDataType",
-    "description": "<p>The data type selected in the editor and sent to the plugin:</p>\n<ul>\n<li><strong>&quot;text&quot;</strong> - the text data,</li>\n<li><strong>&quot;html&quot;</strong> - HTML formatted code,</li>\n<li><strong>&quot;ole&quot;</strong> - OLE object data,</li>\n<li><strong>&quot;desktop&quot;</strong> - the desktop editor data,</li>\n<li><strong>&quot;destop-external&quot;</strong> - the main page data of the desktop app (system messages),</li>\n<li><strong>&quot;none&quot;</strong> - no data will be send to the plugin from the editor.</li>\n</ul>",
+    "description": "<p>The data type selected in the editor and sent to the plugin:</p>\n<ul>\n<li><b>text</b> - the text data,</li>\n<li><b>html</b> - HTML formatted code,</li>\n<li><b>ole</b> - OLE object data,</li>\n<li><b>desktop</b> - the desktop editor data,</li>\n<li><b>destop-external</b> - the main page data of the desktop app (system messages),</li>\n<li><b>none</b> - no data will be send to the plugin from the editor.</li>\n</ul>",
     "type": [
       "\"text\"",
       "\"html\"",
@@ -27,9 +27,9 @@
       "\"none\""
     ]
   },
-  "variationButton": {
-    "name": "variationButton",
-    "description": "<p>The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. isVisual == true &amp;&amp; isInsideMode == false).</p>",
+  "Button": {
+    "name": "Button",
+    "description": "<p>The skinnable plugin button used in the plugin interface (used for visual plugins with their own window only, i.e. isVisual == true and isInsideMode == false).</p>",
     "type": [
       "Object"
     ],
@@ -43,6 +43,11 @@
         "type": "boolean",
         "name": "primary",
         "description": "<p>Defines if the button is primary or not. The primary flag affects the button skin only.</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "isViewer",
+        "description": "<p>Defines if the button is shown in the viewer mode only or not.</p>"
       },
       {
         "type": "localeTranslate",
@@ -61,17 +66,17 @@
       {
         "type": "string",
         "name": "Tag",
-        "description": "<p>A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.</p>"
+        "description": "<p>A tag assigned to the content control. The same tag can be assigned to several content controls so that you can make reference to them in your code.</p>"
       },
       {
         "type": "string",
         "name": "Id",
-        "description": "<p>A unique identifier of the content control. It can be used to search for a certain content control and make reference to it in the code.</p>"
+        "description": "<p>A unique content control identifier. It can be used to search for a certain content control and make reference to it in your code.</p>"
       },
       {
         "type": "ContentControlLock",
         "name": "Lock",
-        "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access.</p>"
+        "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not.</p>"
       },
       {
         "type": "string",
@@ -80,135 +85,66 @@
       }
     ]
   },
-  "variation": {
-    "name": "variation",
-    "description": "<p>Plugin variations can be created for the following purposes:</p>\n<ul>\n<li>to perform the main plugin actions,</li>\n<li>to contain plugin settings,</li>\n<li>to display an About window, etc.\nFor example, the Translation plugin: the plugin itself does not need a visual window for translation as it can be done just pressing a single button, but its settings (the translation direction) and an 'About' window must be visual. So we will need to have at least two plugin variations (translation itself and settings), or three, in case we want to add an 'About' window with the information about the plugin and its authors or the software used for the plugin creation.</li>\n</ul>",
+  "ContentControlLock": {
+    "name": "ContentControlLock",
+    "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not:</p>\n<ul>\n\t<li><b>0</b> - only deleting</li>\n <li><b>1</b> - disable deleting or editing</li>\n <li><b>2</b> - only editing</li>\n <li><b>3</b> - full access</li>\n</ul>",
+    "type": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ]
+  },
+  "comment": {
+    "name": "comment",
+    "description": "<p>Comment object.</p>",
     "type": [
       "Object"
     ],
     "properties": [
       {
         "type": "string",
-        "name": "description",
-        "description": "<p>The description, i.e. what describes your plugin the best way.</p>"
+        "name": "Id",
+        "description": "<p>The comment ID.</p>"
       },
       {
-        "type": "localeTranslate",
-        "name": "descriptionLocale",
-        "description": "<p>Translations for the description field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin description translation for each language.</p>"
-      },
-      {
-        "type": "string",
-        "name": "url",
-        "description": "<p>Plugin entry point, i.e. an HTML file which connects the plugin.js file (the base file needed for work with plugins) and launches the plugin code.</p>"
-      },
-      {
-        "type": "boolean",
-        "name": "isViewer",
-        "description": "<p>Specifies if the plugin is working when the document is available in the viewer mode only or not.</p>"
-      },
-      {
-        "type": "Array.<editorType>",
-        "name": "EditorsSupport",
-        "description": "<p>The editors which the plugin is available for (&quot;word&quot; - text document editor, &quot;cell&quot; - spreadsheet editor, &quot;slide&quot; - presentation editor).</p>"
-      },
-      {
-        "type": "boolean",
-        "name": "isVisual",
-        "description": "<p>Specifies if the plugin is visual (will open a window for some action, or introduce some additions to the editor panel interface) or non-visual (will provide a button (or buttons) which is going to apply some transformations or manipulations to the document).</p>"
-      },
-      {
-        "type": "boolean",
-        "name": "isModal",
-        "description": "<p>Specifies if the opened plugin window is modal (used for visual plugins only, and if isInsideMode is not true).</p>"
-      },
-      {
-        "type": "boolean",
-        "name": "isInsideMode",
-        "description": "<p>Specifies if the plugin must be displayed inside the editor panel instead of its own window.</p>"
-      },
-      {
-        "type": "boolean",
-        "name": "isSystem",
-        "description": "<p>Specifies if the plugin is not displayed in the editor interface and is started in the background with the server (or desktop editors start) not interfering with the other plugins, so that they can work simultaneously.</p>"
-      },
-      {
-        "type": "boolean",
-        "name": "isDisplayedInViewer",
-        "description": "<p>Specifies if the plugin will be displayed in the viewer mode as well as in the editor mode (isDisplayedInViewer == true) or in the editor mode only (isDisplayedInViewer == false).</p>"
-      },
-      {
-        "type": "boolean",
-        "name": "initOnSelectionChanged",
-        "description": "<p>Specifies if the plugin watches the text selection events in the editor window.</p>"
-      },
-      {
-        "type": "boolean",
-        "name": "isUpdateOleOnResize",
-        "description": "<p>Specifies if an OLE object must be redrawn when resized in the editor using the vector object draw type or not (used for OLE objects only, i.e. initDataType == &quot;ole&quot;).</p>"
-      },
-      {
-        "type": "initDataType",
-        "name": "initDataType",
-        "description": "<p>The data type selected in the editor and sent to the plugin: &quot;text&quot; - the text data, &quot;html&quot; - HTML formatted code, &quot;ole&quot; - OLE object data, &quot;desktop&quot; - the desktop editor data, &quot;destop-external&quot; - the main page data of the desktop app (system messages), &quot;none&quot; - no data will be send to the plugin from the editor.</p>"
-      },
-      {
-        "type": "string",
-        "name": "initData",
-        "description": "<p>Is usually equal to &quot;&quot; - this is the data which is sent from the editor to the plugin at the plugin start (e.g. if initDataType == &quot;text&quot;, the plugin will receive the selected text when run). It may also be equal to encryption in the encryption plugins.</p>"
-      },
-      {
-        "type": "Array.<number>",
-        "name": "size",
-        "description": "<p>Plugin window size.</p>"
-      },
-      {
-        "type": "Array.<variationButton>",
-        "name": "buttons",
-        "description": "<p>The list of skinnable plugin buttons used in the plugin interface (used for visual plugins with their own window only, i.e. isVisual == true &amp;&amp; isInsideMode == false).</p>"
-      },
-      {
-        "type": "Array.<string>",
-        "name": "events",
-        "description": "<p>Plugin events.</p>"
+        "type": "CommentData",
+        "name": "Data",
+        "description": "<p>An object which contains the comment data.</p>"
       }
     ]
   },
-  "Config": {
-    "name": "Config",
+  "CommentData": {
+    "name": "CommentData",
+    "description": "<p>The comment data.</p>",
     "type": [
       "Object"
     ],
     "properties": [
       {
         "type": "string",
-        "name": "basePath",
-        "description": "<p>Path to the plugin. All the other paths are calculated relative to this path. In case the plugin is installed on the server, an additional parameter (path to the plugins) is added there. If baseUrl == &quot;&quot;, the path to all plugins will be used.</p>"
+        "name": "UserName",
+        "description": "<p>The comment author.</p>"
       },
       {
         "type": "string",
-        "name": "guid",
-        "description": "<p>Plugin identifier. It must be of the asc.{UUID} type.</p>"
+        "name": "Text",
+        "description": "<p>The comment text.</p>"
       },
       {
         "type": "string",
-        "name": "minVersion",
-        "description": "<p>The minimum supported editors version.</p>"
+        "name": "Time",
+        "description": "<p>The time when the comment was posted (in milliseconds).</p>"
       },
       {
-        "type": "string",
-        "name": "name",
-        "description": "<p>Plugin name which will be visible at the plugin toolbar.</p>"
+        "type": "boolean",
+        "name": "Solved",
+        "description": "<p>Specifies if the comment is resolved (<b>true</b>) or not (<b>false</b>).</p>"
       },
       {
-        "type": "localeTranslate",
-        "name": "nameLocale",
-        "description": "<p>Translations for the name field. The object keys are the two letter language codes (ru, de, it, etc.) and the values are the plugin name translation for each language.</p>"
-      },
-      {
-        "type": "Array.<variation>",
-        "name": "variations",
-        "description": "<p>Plugin variations, or subplugins, that are created inside the origin plugin.</p>"
+        "type": "Array.<CommentData>",
+        "name": "Replies",
+        "description": "<p>An array containing the comment replies represented as the <em>CommentData</em> object.</p>"
       }
     ]
   },

@@ -3,7 +3,7 @@
     "createWindow": {
       "memberof": "InputHelper",
       "name": "createWindow",
-      "description": "<p>The function called to create an input helper window.</p>",
+      "description": "<p>Creates an input helper window.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -12,7 +12,7 @@
     "getItems": {
       "memberof": "InputHelper",
       "name": "getItems",
-      "description": "<p>The function called to return an array of the InputHelperItem objects that contain all the items from the input helper.</p>",
+      "description": "<p>Returns an array of the {@link global#InputHelperItem InputHelperItem} objects that contain all the items from the input helper.</p>",
       "tags": {},
       "returns": [
         [
@@ -25,7 +25,7 @@
     "setItems": {
       "memberof": "InputHelper",
       "name": "setItems",
-      "description": "<p>The function called to set the items to the input helper.</p>",
+      "description": "<p>Sets the items to the input helper.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -33,7 +33,7 @@
       "params": [
         {
           "type": "Array.<InputHelperItem>",
-          "description": "<p>Defines an array of the InputHelperItem objects which contain all the items for the input helper.</p>",
+          "description": "<p>Defines an array of the {@link global#InputHelperItem InputHelperItem} objects which contain all the items for the input helper.</p>",
           "optional": false
         }
       ]
@@ -41,7 +41,7 @@
     "show": {
       "memberof": "InputHelper",
       "name": "show",
-      "description": "<p>The function called to show an input helper.</p>",
+      "description": "<p>Shows an input helper.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -62,7 +62,7 @@
         {
           "type": "boolean",
           "name": "isCaptureKeyboard",
-          "description": "<p>Defines if the keyboard is caught (true) or not (false).</p>",
+          "description": "<p>Defines if the keyboard is caught (<b>true</b>) or not (<b>false</b>).</p>",
           "optional": false
         }
       ]
@@ -70,7 +70,7 @@
     "unShow": {
       "memberof": "InputHelper",
       "name": "unShow",
-      "description": "<p>The function called to hide an input helper.</p>",
+      "description": "<p>Hides an input helper.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -79,7 +79,7 @@
     "getScrollSizes": {
       "memberof": "InputHelper",
       "name": "getScrollSizes",
-      "description": "<p>The function called to get the sizes of the input helper scrolled window. Returns an object with width and height parameters.</p>",
+      "description": "<p>Returns the sizes of the input helper scrolled window. Returns an object with width and height parameters.</p>",
       "tags": {},
       "returns": [
         [

@@ -613,6 +613,80 @@
         }
       ]
     },
+    "AddComment": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "AddComment",
+      "description": "<p>Adds a comment to the content control.\nNote: must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiComment"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The comment text. Required.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sAutor",
+          "description": "<p>The author's name. Optional.</p>",
+          "optional": false
+        }
+      ]
+    },
+    "SetBackgroundColor": {
+      "memberof": "ApiBlockLvlSdt",
+      "name": "SetBackgroundColor",
+      "description": "<p>Sets the background color to the current sdt.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that background color will not be set.</p>",
+          "optional": false
+        }
+      ]
+    },
     "ToJSON": {
       "memberof": "ApiBlockLvlSdt",
       "name": "ToJSON",

@@ -581,6 +581,37 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "AddComment": {
+      "memberof": "ApiInlineLvlSdt",
+      "name": "AddComment",
+      "description": "<p>Adds a comment to the content control.\nNote: must be in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiComment"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sText",
+          "description": "<p>The comment text. Required.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "sAutor",
+          "description": "<p>The author's name. Optional.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "events": {},

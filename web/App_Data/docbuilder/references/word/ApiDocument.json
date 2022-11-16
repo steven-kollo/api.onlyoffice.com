@@ -587,7 +587,7 @@
       },
       "returns": [
         [
-          "boolean"
+          "ApiComment"
         ]
       ],
       "see": null,
@@ -595,14 +595,14 @@
       "params": [
         {
           "type": "string",
-          "name": "Comment",
-          "description": "<p>The comment text.</p>",
+          "name": "sText",
+          "description": "<p>The comment text. Required.</p>",
           "optional": false
         },
         {
           "type": "string",
-          "name": "Autor",
-          "description": "<p>The author's name (not obligatory).</p>",
+          "name": "sAutor",
+          "description": "<p>The author's name. Optional.</p>",
           "optional": false
         }
       ]
@@ -974,6 +974,47 @@
         }
       ]
     },
+    "GetAllComments": {
+      "memberof": "ApiDocument",
+      "name": "GetAllComments",
+      "description": "<p>Returns all comments of document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "Array.<ApiComment>"
+        ]
+      ],
+      "see": null,
+      "inherits": null
+    },
+    "GetCommentById": {
+      "memberof": "ApiDocument",
+      "name": "GetCommentById",
+      "description": "<p>Returns a comment by id.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiComment"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sId",
+          "optional": false
+        }
+      ]
+    },
     "GetAllNumberedParagraphs": {
       "memberof": "ApiDocument",
       "name": "GetAllNumberedParagraphs",
@@ -1234,6 +1275,101 @@
       ],
       "see": null,
       "inherits": null
+    },
+    "SetControlsHighlight": {
+      "memberof": "ApiDocument",
+      "name": "SetControlsHighlight",
+      "description": "<p>Sets the highlight to the content controls in the document.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "byte",
+          "name": "r",
+          "description": "<p>Red color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "g",
+          "description": "<p>Green color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "byte",
+          "name": "b",
+          "description": "<p>Blue color component value.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "bNone",
+          "description": "<p>Defines that highlight will not be set.</p>",
+          "optional": true,
+          "defaultValue": false
+        }
+      ]
+    },
+    "AddTableOfContents": {
+      "memberof": "ApiDocument",
+      "name": "AddTableOfContents",
+      "description": "<p>Adds a table of content.\nNote: replaces existing table of contents.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TocPr",
+          "name": "oTocPr",
+          "description": "<p>table of contents properties.</p>",
+          "optional": true,
+          "defaultValue": "{}"
+        }
+      ]
+    },
+    "AddTableOfFigures": {
+      "memberof": "ApiDocument",
+      "name": "AddTableOfFigures",
+      "description": "<p>Adds a table of figures.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "TofPr",
+          "name": "oTofPr",
+          "description": "<p>table of figures properties.\nNote: oTofPr will be fill by default properties if undefined.</p>",
+          "optional": true,
+          "defaultValue": "{}"
+        },
+        {
+          "type": "boolean",
+          "name": "bReplace",
+          "description": "<p>replaces current selected table of figures instead of adding.</p>",
+          "optional": true,
+          "defaultValue": true
+        }
+      ]
     },
     "GetElementsCount": {
       "memberof": "ApiDocument",

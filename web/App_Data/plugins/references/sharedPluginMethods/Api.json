@@ -22,7 +22,7 @@
     "AddOleObject": {
       "memberof": "Api",
       "name": "AddOleObject",
-      "description": "<p>Adds an OLE object to the document.</p>",
+      "description": "<p>Adds an OLE object to the current document position.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -41,27 +41,9 @@
           "optional": false
         },
         {
-          "type": "number",
-          "name": "data.width",
-          "description": "<p>The object width measured in millimeters.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.height",
-          "description": "<p>The object height measured in millimeters.</p>",
-          "optional": false
-        },
-        {
           "type": "string",
           "name": "data.data",
           "description": "<p>OLE object data (internal format).</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data.guid",
-          "description": "<p>An OLE object program identifier which must be of the asc.{UUID} type.</p>",
           "optional": false
         },
         {
@@ -71,15 +53,33 @@
           "optional": false
         },
         {
+          "type": "string",
+          "name": "data.guid",
+          "description": "<p>An identifier of the plugin which can edit the current OLE object and must be of the <em>asc.{UUID}</em> type.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.width",
+          "description": "<p>The OLE object width measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.height",
+          "description": "<p>The OLE object height measured in millimeters.</p>",
+          "optional": false
+        },
+        {
           "type": "number",
           "name": "data.widthPix",
-          "description": "<p>The image width in pixels.</p>",
+          "description": "<p>The OLE object image width in pixels.</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "data.heightPix",
-          "description": "<p>The image height in pixels.</p>",
+          "description": "<p>The OLE object image height in pixels.</p>",
           "optional": false
         }
       ]
@@ -106,27 +106,9 @@
           "optional": false
         },
         {
-          "type": "number",
-          "name": "data.width",
-          "description": "<p>The object width measured in millimeters.</p>",
-          "optional": false
-        },
-        {
-          "type": "number",
-          "name": "data.height",
-          "description": "<p>The object height measured in millimeters.</p>",
-          "optional": false
-        },
-        {
           "type": "string",
           "name": "data.data",
           "description": "<p>OLE object data (internal format).</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "data.objectId",
-          "description": "<p>An OLE object identifier.</p>",
           "optional": false
         },
         {
@@ -136,15 +118,33 @@
           "optional": false
         },
         {
+          "type": "string",
+          "name": "data.objectId",
+          "description": "<p>The OLE object identifier.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.width",
+          "description": "<p>The OLE object width measured in millimeters.</p>",
+          "optional": false
+        },
+        {
+          "type": "number",
+          "name": "data.height",
+          "description": "<p>The OLE object height measured in millimeters.</p>",
+          "optional": false
+        },
+        {
           "type": "number",
           "name": "data.widthPix",
-          "description": "<p>The image width in pixels.</p>",
+          "description": "<p>The OLE object image width in pixels.</p>",
           "optional": false
         },
         {
           "type": "number",
           "name": "data.heightPix",
-          "description": "<p>The image height in pixels.</p>",
+          "description": "<p>The OLE object image height in pixels.</p>",
           "optional": false
         }
       ]
@@ -215,7 +215,7 @@
         {
           "type": "string",
           "name": "htmlText",
-          "description": "<p>A string value that specifies the text in the HTML format to be pasted into the document.</p>",
+          "description": "<p>A string value that specifies the text in the <em>HTML</em> format to be pasted into the document.</p>",
           "optional": false
         }
       ]
@@ -280,7 +280,7 @@
         {
           "type": "Macros",
           "name": "data",
-          "description": "<p>An object containing the macros data.</p>",
+          "description": "<p>The <em>Macros</em> object containing the data about all the macros from the document.</p>",
           "optional": false
         }
       ]
@@ -303,7 +303,7 @@
         {
           "type": "number",
           "name": "type",
-          "description": "<p>A value which defines an action type which can take 0 if this is an Information action or 1 if this is a BlockInteraction action.</p>",
+          "description": "<p>A value which defines an action type which can take <b>0</b> if this is an <em>Information</em> action or <b>1</b> if this is a <em>BlockInteraction</em> action.</p>",
           "optional": false
         },
         {
@@ -332,7 +332,7 @@
         {
           "type": "number",
           "name": "type",
-          "description": "<p>A value which defines an action type which can take 0 if this is an Information action or 1 if this is a BlockInteraction action.</p>",
+          "description": "<p>A value which defines an action type which can take <b>0</b> if this is the <em>Information</em> action or <b>1</b> if this is the <em>BlockInteraction</em> action.</p>",
           "optional": false
         },
         {
@@ -346,7 +346,7 @@
     "OnEncryption": {
       "memberof": "Api",
       "name": "OnEncryption",
-      "description": "<p>Encrypts the document (for crypto plugins).</p>",
+      "description": "<p>Encrypts the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -361,7 +361,49 @@
         {
           "type": "object",
           "name": "obj",
-          "description": "<p>The encryption properties. This object can have the following values:</p>\n<ul>\n<li><strong>type</strong> - the type of encrypting operation (&quot;generatePassword&quot; - generates a password for the document, &quot;getPasswordByFile&quot; - sends the password when opening the document, &quot;setPasswordByFile&quot; - sets a password to the document, &quot;encryptData&quot; - encrypts changes when co-editing, &quot;decryptData&quot; - decrypts changes when co-editing),</li>\n<li><strong>password</strong> - a string value specifying the password to access the document,</li>\n<li><strong>data</strong> - encrypted/decrypted changes,</li>\n<li><strong>check</strong> - checks if the encryption/decryption operation is successful or not (used only for &quot;encryptData&quot;/&quot;decryptData&quot; types),</li>\n<li><strong>docinfo</strong> - an unencrypted part of the encrypted file,</li>\n<li><strong>hash</strong> - a string value specifying a file hash (sha256 by default),</li>\n<li><strong>error</strong> - a string value specifying an error that occurs (the &quot;&quot; value means that the operation is successful).</li>\n</ul>",
+          "description": "<p>The encryption properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.type",
+          "description": "<p>The type of encrypting operation:</p>\n<ul>\n<li><b>generatePassword</b> - generates a password for the document,</li>\n<li><b>getPasswordByFile</b> - sends the password when opening the document,</li>\n<li><b>setPasswordByFile</b> - sets a password to the document,</li>\n<li><b>encryptData</b> - encrypts changes when co-editing,</li>\n<li><b>decryptData</b> - decrypts changes when co-editing.</li>\n</ul>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.password",
+          "description": "<p>A string value specifying the password to access the document.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.data",
+          "description": "<p>Encrypted/decrypted changes.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "obj.check",
+          "description": "<p>Checks if the encryption/decryption operation is successful or not (used only for <em>encryptData</em>/<em>decryptData</em> types).</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.docinfo",
+          "description": "<p>An unencrypted part of the encrypted file.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.hash",
+          "description": "<p>A string value specifying a file hash (<em>sha256</em> by default).</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.error",
+          "description": "<p>A string value specifying an error that occurs (the &quot;&quot; value means that the operation is successful).</p>",
           "optional": false
         }
       ]
@@ -369,7 +411,7 @@
     "SetProperties": {
       "memberof": "Api",
       "name": "SetProperties",
-      "description": "<p>Sets the properties to the document.\nSee {@link https://github.com/ONLYOFFICE/sdkjs-plugins/tree/master/examples/settings examples}</p>",
+      "description": "<p>Sets the properties to the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -384,25 +426,37 @@
         {
           "type": "object",
           "name": "obj",
-          "description": "<p>Document properties.</p>",
+          "description": "<p>The document properties.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "obj.copyoutenabled",
-          "description": "<p>Disables copying from the editor if it is set to true.</p>",
+          "description": "<p>Disables copying from the editor if it is set to <b>false</b>.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "obj.hideContentControlTrack",
-          "description": "<p>Disables tracking the content control if it is set to true.</p>",
+          "description": "<p>Disables tracking the content control if it is set to <b>true</b>.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "obj.watermark_on_draw",
-          "description": "<p>A string value for watermark in JSON format.</p>",
+          "description": "<p>A string value for {@link global#watermark_on_draw watermark properties} in JSON format.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "obj.disableAutostartMacros",
+          "description": "<p>Sets a flag that specifies that macros are started automatically when the editor opens.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "obj.fillForms",
+          "description": "<p>Sets rules in JSON format for filling document {@link global#fillForms forms} by tags.</p>",
           "optional": false
         }
       ]
@@ -425,7 +479,7 @@
         {
           "type": "string",
           "name": "guid",
-          "description": "<p>A string value which specifies a plugin identifier which must be of the asc.{UUID} type.</p>",
+          "description": "<p>A string value which specifies a plugin identifier which must be of the <em>asc.{UUID}</em> type.</p>",
           "optional": false
         },
         {
@@ -443,7 +497,7 @@
         {
           "type": "boolean",
           "name": "isKeyboardTake",
-          "description": "<p>Defines if the keyboard is caught (true) or not (false).</p>",
+          "description": "<p>Defines if the keyboard is caught (<b>true</b>) or not (<b>false</b>).</p>",
           "optional": false
         }
       ]
@@ -466,13 +520,13 @@
         {
           "type": "string",
           "name": "guid",
-          "description": "<p>A string value which specifies a plugin identifier which must be of the asc.{UUID} type.</p>",
+          "description": "<p>A string value which specifies a plugin identifier which must be of the <em>asc.{UUID}</em> type.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "isclear",
-          "description": "<p>Defines if the input context will be cleared (true) or not (false).</p>",
+          "description": "<p>Defines if the input context will be cleared (<b>true</b>) or not (<b>false</b>).</p>",
           "optional": false
         }
       ]
@@ -528,7 +582,11 @@
           "CDE"
         ]
       },
-      "returns": [],
+      "returns": [
+        [
+          "string"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -540,28 +598,28 @@
           "defaultValue": "\"markdown\""
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bHtmlHeadings",
           "description": "<p>Defines if the HTML headings and IDs will be generated when the Markdown renderer of your target platform does not handle Markdown-style IDs.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bBase64img",
           "description": "<p>Defines if the images will be created in the base64 format.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bDemoteHeadings",
           "description": "<p>Defines if all heading levels in your document will be demoted to conform with the following standard: single H1 as title, H2 as top-level heading in the text body.</p>",
           "optional": true,
           "defaultValue": false
         },
         {
-          "type": "bool",
+          "type": "boolean",
           "name": "bRenderHTMLTags",
           "description": "<p>Defines if HTML tags will be preserved in your Markdown. If you just want to use an occasional HTML tag, you can avoid using the opening angle bracket in the following way: &lt;tag&gt;text&lt;/tag&gt;. By default, the opening angle brackets will be replaced with the special characters.</p>",
           "optional": true,
@@ -589,9 +647,57 @@
       "inherits": null,
       "params": [
         {
-          "type": "prop",
+          "type": "object",
           "name": "numbering",
-          "description": "<p>The resulting string display properties:</p>\n<ul>\n<li><strong>NewLine</strong> - defines if the resulting string will include line boundaries or not,</li>\n<li><strong>NewLineParagraph</strong> - defines if the resulting string will include paragraph line boundaries or not,</li>\n<li><strong>Numbering</strong> - defines if the resulting string will include numbering or not.</li>\n</ul>",
+          "description": "<p>The resulting string display properties.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "numbering.NewLine",
+          "description": "<p>Defines if the resulting string will include line boundaries or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "numbering.NewLineParagraph",
+          "description": "<p>Defines if the resulting string will include paragraph line boundaries or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "numbering.Numbering",
+          "description": "<p>Defines if the resulting string will include numbering or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "boolean",
+          "name": "numbering.Math",
+          "description": "<p>Defines if the resulting string will include mathematical expressions or not.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "numbering.TableCellSeparator",
+          "description": "<p>Defines how the table cell separator will be specified in the resulting string.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "numbering.TableRowSeparator",
+          "description": "<p>Defines how the table row separator will be specified in the resulting string.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "numbering.ParaSeparator",
+          "description": "<p>Defines how the paragraph separator will be specified in the resulting string.</p>",
+          "optional": false
+        },
+        {
+          "type": "string",
+          "name": "numbering.TabSymbol",
+          "description": "<p>Defines how the tab will be specified in the resulting string.</p>",
           "optional": false
         }
       ]
@@ -659,7 +765,7 @@
         {
           "type": "string",
           "name": "format",
-          "description": "<p>The format in which you need to download the file.</p>",
+          "description": "<p>A format in which you need to download a file.</p>",
           "optional": true,
           "defaultValue": "\" \""
         }
@@ -668,7 +774,7 @@
     "GetImageDataFromSelection": {
       "memberof": "Api",
       "name": "GetImageDataFromSelection",
-      "description": "<p>Returns an image data obtained from first of selected drawings.\nIf there are no selected drawings it returns white rect.</p>",
+      "description": "<p>Returns the image data from the first of the selected drawings. If there are no drawings selected, the method returns a white rectangle.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -687,7 +793,7 @@
     "PutImageDataToSelection": {
       "memberof": "Api",
       "name": "PutImageDataToSelection",
-      "description": "<p>Replaces the first selected drawing\nIf there are no selected drawings it inserts the image to the current position.</p>",
+      "description": "<p>Replaces the first selected drawing with the image specified in the parameters.\nIf there are no drawings selected, the method inserts the image at the current position.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -702,7 +808,7 @@
         {
           "type": "ImageData",
           "name": "oImageData",
-          "description": "<p>image encoded in base64 format.</p>",
+          "description": "<p>The information about the base64 encoded <em>png</em> image.</p>",
           "optional": false
         }
       ]
@@ -710,7 +816,7 @@
     "GetInstalledPlugins": {
       "memberof": "Api",
       "name": "GetInstalledPlugins",
-      "description": "<p>Returns all installed plugins.</p>",
+      "description": "<p>Returns all the installed plugins.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -720,7 +826,7 @@
       },
       "returns": [
         [
-          "Array.<object>"
+          "Array.<Plugin>"
         ]
       ],
       "see": null,
@@ -729,7 +835,7 @@
     "RemovePlugin": {
       "memberof": "Api",
       "name": "RemovePlugin",
-      "description": "<p>Remove plugin with such guid.</p>",
+      "description": "<p>Removes a plugin with the specified GUID.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -748,15 +854,15 @@
         {
           "type": "string",
           "name": "guid",
-          "description": "<p>The guid of plugins for removing.</p>",
+          "description": "<p>The plugin identifier. It must be of the <em>asc.{UUID}</em> type.</p>",
           "optional": true
         }
       ]
     },
-    "pluginMethod_InstallPlugin": {
+    "InstallPlugin": {
       "memberof": "Api",
-      "name": "pluginMethod_InstallPlugin",
-      "description": "<p>Install plugin with by url to config.</p>",
+      "name": "InstallPlugin",
+      "description": "<p>Installs a plugin by the URL to the plugin config.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -775,15 +881,15 @@
         {
           "type": "string",
           "name": "url",
-          "description": "<p>The url to plugin config for installing.</p>",
+          "description": "<p>The URL to the plugin config for installing.</p>",
           "optional": true
         }
       ]
     },
-    "pluginMethod_UpdatePlugin": {
+    "UpdatePlugin": {
       "memberof": "Api",
-      "name": "pluginMethod_UpdatePlugin",
-      "description": "<p>Update plugin with by url to config.</p>",
+      "name": "UpdatePlugin",
+      "description": "<p>Updates a plugin by the URL to the plugin config.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -802,7 +908,7 @@
         {
           "type": "string",
           "name": "url",
-          "description": "<p>The url to plugin config for updating.</p>",
+          "description": "<p>The URL to the plugin config for updating.</p>",
           "optional": true
         }
       ]
@@ -810,7 +916,7 @@
     "ShowButton": {
       "memberof": "Api",
       "name": "ShowButton",
-      "description": "<p>Show or hide buttons in header.</p>",
+      "description": "<p>Shows or hides buttons in the header.</p>",
       "tags": {
         "typeofeditors": [
           "CDE",
@@ -825,13 +931,13 @@
         {
           "type": "string",
           "name": "id",
-          "description": "<p>The id of the button.</p>",
+          "description": "<p>The button ID.</p>",
           "optional": true
         },
         {
           "type": "boolean",
           "name": "bShow",
-          "description": "<p>The flag show or hide the button.</p>",
+          "description": "<p>The flag specifies whether the button is shown (<b>true</b>) or hidden (<b>false</b>).</p>",
           "optional": true
         }
       ]

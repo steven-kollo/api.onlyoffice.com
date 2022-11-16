@@ -30,29 +30,22 @@
   },
   "ContentControlLock": {
     "name": "ContentControlLock",
-    "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not.</p>\n<p><strong>0</strong> - only deleting\n<strong>1</strong> - disable deleting or editing\n<strong>2</strong> - only editing\n<strong>3</strong> - full access</p>",
+    "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not:</p>\n<ul>\n\t<li><b>0</b> - only deleting</li>\n <li><b>1</b> - disable deleting or editing</li>\n <li><b>2</b> - only editing</li>\n <li><b>3</b> - full access</li>\n</ul>",
     "type": [
-      "Object"
-    ],
-    "properties": [
-      {
-        "type": "0 | 1 | 2 | 3",
-        "name": "Lock"
-      }
+      "0",
+      "1",
+      "2",
+      "3"
     ]
   },
   "ContentControlType": {
     "name": "ContentControlType",
-    "description": "<p>A numeric value that specifies the content control type.</p>",
+    "description": "<p>A numeric value that specifies the content control type:</p>\n<ul>\n\t<li><b>1</b> - block content control</li>\n <li><b>2</b> - inline content control</li>\n <li><b>3</b> - row content control</li>\n <li><b>4</b> - cell content control</li>\n</ul>",
     "type": [
-      "Object"
-    ],
-    "properties": [
-      {
-        "type": "1 | 2 | 3 | 4",
-        "name": "type",
-        "description": "<p><strong>1</strong> - block content control, <strong>2</strong> - inline content control, <strong>3</strong> - row content control, <strong>4</strong> - cell content control</p>"
-      }
+      "1",
+      "2",
+      "3",
+      "4"
     ]
   },
   "ContentControlPropertiesAndContent": {
@@ -65,17 +58,17 @@
       {
         "type": "ContentControlProperties",
         "name": "ContentControlProperties",
-        "description": "<p>The content control properties (ID, Tag, Lock, Alias, Appearance, Color).</p>"
+        "description": "<p>The content control properties.</p>"
       },
       {
         "type": "string",
         "name": "Script",
-        "description": "<p>A script that will be executed to generate the data within the content control.</p>"
+        "description": "<p>A script that will be executed to generate the data within the content control (can be replaced with the <em>Url</em> parameter).</p>"
       },
       {
         "type": "string",
         "name": "Url",
-        "description": "<p>A link to the shared file.</p>"
+        "description": "<p>A link to the shared file (can be replaced with the <em>Script</em> parameter).</p>"
       }
     ]
   },
@@ -94,12 +87,17 @@
       {
         "type": "string",
         "name": "Tag",
-        "description": "<p>A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in your code.</p>"
+        "description": "<p>A tag assigned to the content control. The same tag can be assigned to several content controls so that it is possible to make reference to them in the code.</p>"
       },
       {
         "type": "ContentControlLock",
         "name": "Lock",
-        "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not: 0 - only deleting, 1 - no deleting or editing, 2 - only editing, 3 - full access.</p>"
+        "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not.</p>"
+      },
+      {
+        "type": "string",
+        "name": "InternalId",
+        "description": "<p>A unique internal identifier of the content control.</p>"
       },
       {
         "type": "string",
@@ -108,8 +106,13 @@
       },
       {
         "type": "string",
+        "name": "PlaceHolderText",
+        "description": "<p>The content control placeholder text.</p>"
+      },
+      {
+        "type": "number",
         "name": "Appearance",
-        "description": "<p>Defines if the content control is shown as the bounding box (1) or not (2).</p>"
+        "description": "<p>Defines if the content control is shown as the bounding box (<b>1</b>) or not (<b>2</b>).</p>"
       },
       {
         "type": "object",
@@ -133,6 +136,126 @@
       }
     ]
   },
+  "ContentControlParentPr": {
+    "name": "ContentControlParentPr",
+    "description": "<p>The content control parent properties.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "object",
+        "name": "Parent",
+        "description": "<p>The content control parent. For example, oParagraph.</p>"
+      },
+      {
+        "type": "number",
+        "name": "Pos",
+        "description": "<p>The content control position within the parent object.</p>"
+      },
+      {
+        "type": "number",
+        "name": "Count",
+        "description": "<p>A number of elements in the parent object.</p>"
+      }
+    ]
+  },
+  "comment": {
+    "name": "comment",
+    "description": "<p>Comment object.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "Id",
+        "description": "<p>The comment ID.</p>"
+      },
+      {
+        "type": "CommentData",
+        "name": "Data",
+        "description": "<p>An object which contains the comment data.</p>"
+      }
+    ]
+  },
+  "CommentData": {
+    "name": "CommentData",
+    "description": "<p>The comment data.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "UserName",
+        "description": "<p>The comment author.</p>"
+      },
+      {
+        "type": "string",
+        "name": "Text",
+        "description": "<p>The comment text.</p>"
+      },
+      {
+        "type": "string",
+        "name": "Time",
+        "description": "<p>The time when the comment was posted (in milliseconds).</p>"
+      },
+      {
+        "type": "boolean",
+        "name": "Solved",
+        "description": "<p>Specifies if the comment is resolved (<b>true</b>) or not (<b>false</b>).</p>"
+      },
+      {
+        "type": "Array.<CommentData>",
+        "name": "Replies",
+        "description": "<p>An array containing the comment replies represented as the <em>CommentData</em> object.</p>"
+      }
+    ]
+  },
+  "ContentControlCkeckBoxProperties": {
+    "name": "ContentControlCkeckBoxProperties",
+    "description": "<p>The content control checkbox properties.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "boolean",
+        "name": "Checked",
+        "description": "<p>Defines if the content control checkbox is checked or not.</p>"
+      },
+      {
+        "type": "number",
+        "name": "CheckedSymbol",
+        "description": "<p>A symbol in the HTML code format that is used when the checkbox is checked.</p>"
+      },
+      {
+        "type": "number",
+        "name": "UncheckedSymbol",
+        "description": "<p>A symbol in the HTML code format that is used when the checkbox is not checked.</p>"
+      }
+    ]
+  },
+  "ContentControlDatePickerProperties": {
+    "name": "ContentControlDatePickerProperties",
+    "description": "<p>The content control datepicker properties.</p>",
+    "type": [
+      "Object"
+    ],
+    "properties": [
+      {
+        "type": "string",
+        "name": "DateFormat",
+        "description": "<p>A format in which the date will be displayed.\nFor example: <em>&quot;MM/DD/YYYY&quot;, &quot;dddd,\\ mmmm\\ dd,\\ yyyy&quot;, &quot;DD\\ MMMM\\ YYYY&quot;, &quot;MMMM\\ DD,\\ YYYY&quot;, &quot;DD-MMM-YY&quot;, &quot;MMMM\\ YY&quot;, &quot;MMM-YY&quot;, &quot;MM/DD/YYYY\\ hh:mm\\ AM/PM&quot;, &quot;MM/DD/YYYY\\ hh:mm:ss\\ AM/PM&quot;, &quot;hh:mm&quot;, &quot;hh:mm:ss&quot;, &quot;hh:mm\\ AM/PM&quot;, &quot;hh:mm:ss:\\ AM/PM&quot;</em>.</p>"
+      },
+      {
+        "type": "object",
+        "name": "Date",
+        "description": "<p>The current date and time.</p>"
+      }
+    ]
+  },
   "OLEObjectData": {
     "name": "OLEObjectData",
     "description": "<p>The OLE object data.</p>",
@@ -153,7 +276,7 @@
       {
         "type": "string",
         "name": "ApplicationId",
-        "description": "<p>An identifier of the plugin which can edit the current OLE object and must be of the asc.{UUID} type.</p>"
+        "description": "<p>An identifier of the plugin which can edit the current OLE object and must be of the <em>asc.{UUID}</em> type.</p>"
       },
       {
         "type": "string",

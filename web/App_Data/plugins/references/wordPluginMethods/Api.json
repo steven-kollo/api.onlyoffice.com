@@ -9,11 +9,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -51,7 +47,7 @@
     "InsertAndReplaceContentControls": {
       "memberof": "Api",
       "name": "InsertAndReplaceContentControls",
-      "description": "<p>Inserts the content control containing data. The data is specified by the js code for Document Builder, or by a link to the shared document.</p>",
+      "description": "<p>Inserts the content control containing data. The data is specified by the JS code for {@link https://api.onlyoffice.com/docbuilder/basic Document Builder}, or by a link to the shared document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -82,11 +78,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -126,7 +118,7 @@
       },
       "returns": [
         [
-          "Object"
+          "ContentControlParentPr"
         ]
       ],
       "see": null,
@@ -191,11 +183,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -216,11 +204,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -233,7 +217,7 @@
         {
           "type": "boolean",
           "name": "isBegin",
-          "description": "<p>Defines if the cursor position changes in the content control. By default, the cursor will be placed to the content control begin (false).</p>",
+          "description": "<p>Defines if the cursor position changes in the content control. By default, a cursor will be placed to the content control begin (<b>false</b>).</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -248,11 +232,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null
     },
@@ -275,39 +255,9 @@
       "inherits": null,
       "params": [
         {
-          "type": "object",
+          "type": "CommentData",
           "name": "oCommentData",
-          "description": "<p>An object which contains the comment data</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "oCommentData.UserName",
-          "description": "<p>the comment author</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "oCommentData.Text",
-          "description": "<p>the comment text</p>",
-          "optional": false
-        },
-        {
-          "type": "string",
-          "name": "oCommentData.Time",
-          "description": "<p>the comment time</p>",
-          "optional": false
-        },
-        {
-          "type": "boolean",
-          "name": "oCommentData.Solved",
-          "description": "<p>is the comment resolved</p>",
-          "optional": false
-        },
-        {
-          "type": "undefined | array",
-          "name": "oCommentData.Replies",
-          "description": "<p>an array of replies, they are in the same format as oCommentData</p>",
+          "description": "<p>An object which contains the comment data.</p>",
           "optional": false
         }
       ]
@@ -315,24 +265,20 @@
     "MoveCursorToStart": {
       "memberof": "Api",
       "name": "MoveCursorToStart",
-      "description": "<p>Moves a cursor to the start position.</p>",
+      "description": "<p>Moves a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape).\nThis method is similar to pressing the <b>Ctrl + Home</b> keyboard shortcut.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "boolean",
           "name": "isMoveToMainContent",
-          "description": "<p>Defines if a cursor moves to the document start (true) or to the current element start (false).</p>",
+          "description": "<p>This flag ignores the current position and always moves a cursor to the beginning of the document body.</p>",
           "optional": false
         }
       ]
@@ -340,24 +286,20 @@
     "MoveCursorToEnd": {
       "memberof": "Api",
       "name": "MoveCursorToEnd",
-      "description": "<p>Moves a cursor to the end position.</p>",
+      "description": "<p>Moves a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape).\nThis method is similar to pressing the <b>Ctrl + End</b> keyboard shortcut.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "boolean",
           "name": "isMoveToMainContent",
-          "description": "<p>Defines if a cursor moves to the document end (true) or to the current element end (false).</p>",
+          "description": "<p>This flag ignores the current position and always moves a cursor to the end of the document body.</p>",
           "optional": false
         }
       ]
@@ -371,11 +313,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -434,7 +372,7 @@
       },
       "returns": [
         [
-          "Array.<object>"
+          "Array.<comment>"
         ]
       ],
       "see": null,
@@ -449,11 +387,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -474,11 +408,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -489,9 +419,9 @@
           "optional": false
         },
         {
-          "type": "object",
+          "type": "CommentData",
           "name": "oCommentData",
-          "description": "<p>An object which contains the new comment data: &quot;comment&quot; - the comment text, &quot;author&quot; - the comment author.</p>",
+          "description": "<p>An object which contains the new comment data.</p>",
           "optional": false
         }
       ]
@@ -505,11 +435,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -530,18 +456,14 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
-          "type": "\"final\" | \"original\" | \"edit\" | \"simple\"",
+          "type": "string",
           "name": "sMode",
-          "description": "<p>The display mode: &quot;edit&quot; - all changes are displayed, &quot;simple&quot; - all changes are displayed but the balloons are turned off, &quot;final&quot; - all accepted changes are displayed, &quot;original&quot; - all rejected changes are displayed.</p>",
+          "description": "<p>The display mode:</p>\n<ul>\n<li><b>edit</b> - all changes are displayed,</li>\n<li><b>simple</b> - all changes are displayed but the balloons are turned off,</li>\n<li><b>final</b> - all accepted changes are displayed,</li>\n<li><b>original</b> - all rejected changes are displayed.</li>\n</ul>",
           "optional": true,
           "defaultValue": "\"edit\""
         }
@@ -567,7 +489,7 @@
         {
           "type": "ContentControlType",
           "name": "type",
-          "description": "<p>A numeric value that specifies the content control type. It can have one of the following values: 1 (block), 2 (inline), 3 (row) or 4 (cell).</p>",
+          "description": "<p>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block), <b>2</b> (inline), <b>3</b> (row), or <b>4</b> (cell).</p>",
           "optional": false
         },
         {
@@ -588,18 +510,14 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "ContentControlCkeckBoxProperties",
           "name": "checkBoxPr",
-          "description": "<p>The content control checkbox properties: &quot;Checked&quot; - defines if the content control checkbox is checked or not, &quot;CheckedSymbol&quot; - a symbol in the HTML code format that is used when the checkbox is checked, &quot;UncheckedSymbol&quot; - a symbol in the HTML code format that is used when the checkbox is not checked.</p>",
+          "description": "<p>The content control checkbox properties.</p>",
           "optional": true,
           "defaultValue": "{}"
         },
@@ -621,11 +539,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -647,24 +561,20 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "ContentControlType",
           "name": "type",
-          "description": "<p>A numeric value that specifies the content control type. It can have one of the following values: 1 (comboBox) or 0 (drop-down list).</p>",
+          "description": "<p>A numeric value that specifies the content control type. It can have one of the following values: <b>1</b> (block), <b>2</b> (inline), <b>3</b> (row), or <b>4</b> (cell).</p>",
           "optional": false
         },
         {
           "type": "Array.<String, String>",
           "name": "List",
-          "description": "<p>A list of the content control elements that consists of two items: &quot;Display&quot; - an item that will be displayed to the user in the content control list, &quot;Value&quot; - a value of each item from the content control list.</p>",
+          "description": "<p>A list of the content control elements that consists of two items: <b>Display</b> - an item that will be displayed to the user in the content control list, <b>Value</b> - a value of each item from the content control list.</p>",
           "optional": true,
           "defaultValue": "[{Display, Value}]"
         },
@@ -686,18 +596,14 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "ContentControlDatePickerProperties",
           "name": "datePickerPr",
-          "description": "<p>The content control datepicker properties: &quot;DateFormat&quot; - a format in which the date will be displayed, &quot;Date&quot; - the current date and time.</p>",
+          "description": "<p>The content control datepicker properties.</p>",
           "optional": true,
           "defaultValue": "{}"
         },
@@ -713,7 +619,7 @@
     "GetAllOleObjects": {
       "memberof": "Api",
       "name": "GetAllOleObjects",
-      "description": "<p>Returns all OLE object data for objects which can be opened by the specified plugin.\nIf sPluginId is not defined, this method returns all OLE objects contained in the currrent document.</p>",
+      "description": "<p>Returns all OLE object data for objects which can be opened by the specified plugin.\nIf <em>sPluginId</em> is not defined, this method returns all OLE objects contained in the currrent document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -730,7 +636,7 @@
         {
           "type": "string",
           "name": "sPluginId",
-          "description": "<p>Plugin identifier. It must be of the asc.{UUID} type.</p>",
+          "description": "<p>Plugin identifier. It must be of the <em>asc.{UUID}</em> type.</p>",
           "optional": false
         }
       ]
@@ -744,11 +650,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -769,11 +671,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -794,11 +692,7 @@
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -813,30 +707,26 @@
     "InsertOleObject": {
       "memberof": "Api",
       "name": "InsertOleObject",
-      "description": "<p>Adds the OLE object to the current document position.</p>",
+      "description": "<p>Inserts the OLE object at the current document position.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "OLEObjectData",
           "name": "NewObject",
-          "description": "<p>The new OLE object data.</p>",
+          "description": "<p>The OLEObjectData object.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "bSelect",
-          "description": "<p>Defines if the OLE object will be selected after inserting into the document (true) or not (false).</p>",
+          "description": "<p>Defines if the OLE object will be selected after inserting into the document (<b>true</b>) or not (<b>false</b>).</p>",
           "optional": false
         }
       ]
@@ -844,24 +734,20 @@
     "ChangeOleObject": {
       "memberof": "Api",
       "name": "ChangeOleObject",
-      "description": "<p>Changes the OLE object with the InternalId specified in OLE object data.</p>",
+      "description": "<p>Changes the OLE object with the <em>InternalId</em> specified in OLE object data.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
         {
           "type": "OLEObjectData",
           "name": "ObjectData",
-          "description": "<p>OLE object data.</p>",
+          "description": "<p>The OLEObjectData object.</p>",
           "optional": false
         }
       ]
@@ -869,17 +755,13 @@
     "ChangeOleObjects": {
       "memberof": "Api",
       "name": "ChangeOleObjects",
-      "description": "<p>Changes multiple OLE objects with the InternalIds specified in OLE object data.</p>",
+      "description": "<p>Changes multiple OLE objects with the <em>InternalIds</em> specified in OLE object data.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
         ]
       },
-      "returns": [
-        [
-          "undefined"
-        ]
-      ],
+      "returns": [],
       "see": null,
       "inherits": null,
       "params": [
@@ -894,7 +776,7 @@
     "AcceptReviewChanges": {
       "memberof": "Api",
       "name": "AcceptReviewChanges",
-      "description": "<p>Accept review changes</p>",
+      "description": "<p>Accepts review changes.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -907,7 +789,7 @@
         {
           "type": "boolean",
           "name": "isAll",
-          "description": "<p>Accept all changes or only in the current selection</p>",
+          "description": "<p>Specifies if all changes will be accepted (<b>true</b>) or only changes from the current selection (<b>false</b>).</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -916,7 +798,7 @@
     "RejectReviewChanges": {
       "memberof": "Api",
       "name": "RejectReviewChanges",
-      "description": "<p>Reject review changes in the current selection</p>",
+      "description": "<p>Rejects review changes.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -929,7 +811,7 @@
         {
           "type": "boolean",
           "name": "isAll",
-          "description": "<p>Accept all changes or only in the current selection</p>",
+          "description": "<p>Specifies if all changes will be rejected (<b>true</b>) or only changes from the current selection (<b>false</b>).</p>",
           "optional": true,
           "defaultValue": false
         }
@@ -938,7 +820,7 @@
     "MoveToNextReviewChange": {
       "memberof": "Api",
       "name": "MoveToNextReviewChange",
-      "description": "<p>Move to next review change</p>",
+      "description": "<p>Navigates through the review changes.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -951,7 +833,7 @@
         {
           "type": "boolean",
           "name": "isForward",
-          "description": "<p>Move forward or backward</p>",
+          "description": "<p>Specifies whether to navigate to the next (<b>true</b>) or previous (<b>false</b>) review change.</p>",
           "optional": true,
           "defaultValue": true
         }

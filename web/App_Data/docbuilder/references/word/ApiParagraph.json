@@ -474,7 +474,7 @@
     "AddComment": {
       "memberof": "ApiParagraph",
       "name": "AddComment",
-      "description": "<p>Adds a comment to the paragraph.</p>",
+      "description": "<p>Adds a comment to the paragraph.\nNote: must be in the document.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -482,7 +482,7 @@
       },
       "returns": [
         [
-          "boolean"
+          "ApiComment"
         ]
       ],
       "see": null,
@@ -490,14 +490,14 @@
       "params": [
         {
           "type": "string",
-          "name": "Comment",
-          "description": "<p>The comment text.</p>",
+          "name": "sText",
+          "description": "<p>The comment text. Required.</p>",
           "optional": false
         },
         {
           "type": "string",
-          "name": "Autor",
-          "description": "<p>The author's name (not obligatory).</p>",
+          "name": "sAutor",
+          "description": "<p>The author's name. Optional.</p>",
           "optional": false
         }
       ]
@@ -737,8 +737,7 @@
       },
       "returns": [
         [
-          "ApiParagraph",
-          "false"
+          "ApiParagraph"
         ]
       ],
       "see": null,
@@ -1743,6 +1742,72 @@
           "name": "oElement",
           "description": "<p>The element to replace the current paragraph with.</p>",
           "optional": false
+        }
+      ]
+    },
+    "AddCaption": {
+      "memberof": "ApiParagraph",
+      "name": "AddCaption",
+      "description": "<p>Adds caption paragraph after (or before) current paragraph.\nNote:</p>\n<ol>\n<li>Current paragraph must be in document (not in footer/header).</li>\n<li>If current paragraph placed in shape, then adds caption like a shape after (or before) parent shape.</li>\n</ol>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "sAdditional",
+          "description": "<p>the additional text.</p>",
+          "optional": false
+        },
+        {
+          "type": "CaptionLabel | String",
+          "name": "sLabel",
+          "description": "<p>caption label.</p>",
+          "optional": true,
+          "defaultValue": "\"Table\""
+        },
+        {
+          "type": "boolean",
+          "name": "bExludeLabel",
+          "description": "<p>wheter exclude label from caption.</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "CaptionNumberingFormat",
+          "name": "sNumberingFormat",
+          "description": "<p>the possible caption numbering format.</p>",
+          "optional": true,
+          "defaultValue": "\"Arabic\""
+        },
+        {
+          "type": "boolean",
+          "name": "bBefore",
+          "description": "<p>whether insert caption before current paragraph (after/before shape, if placed in shape).</p>",
+          "optional": true,
+          "defaultValue": false
+        },
+        {
+          "type": "Number",
+          "name": "nHeadingLvl",
+          "description": "<p>heading level (use if need to include chapter number).\nNote: if need &quot;Heading 1&quot; then nHeadingLvl === 0 and etc.</p>",
+          "optional": true
+        },
+        {
+          "type": "CaptionSep",
+          "name": "sCaptionSep",
+          "description": "<p>separator (use if need to include chapter number).</p>",
+          "optional": true,
+          "defaultValue": "\"hyphen\""
         }
       ]
     },

@@ -3,7 +3,7 @@
     "executeCommand": {
       "memberof": "Plugin",
       "name": "executeCommand",
-      "description": "<p>Defines the method used to send the data back to the editor.\nThis method is deprecated, please use the callCommand method which runs the code from the data string parameter.\nNow this method is mainly used to work with the OLE objects or close the plugin without any other commands.\nIt is also retained for using with text so that the previous versions of the plugin remain compatible.\nThe callback is the result that the command returns. It is an optional parameter. In case it is missing, the window.Asc.plugin.onCommandCallback function will be used to return the result of the command execution.\nThe second parameter is the JavaScript code for working with ONLYOFFICE Document Builder API\nthat allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.).\nONLYOFFICE Document Builder commands can be only used to create content and insert it to the document editor\n(using the Api.GetDocument().InsertContent(...)). This limitation exists due to the co-editing feature in the online editors.\nIf it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</p>",
+      "description": "<p>Defines the method used to send the data back to the editor.</p>\n<note>This method is deprecated, please use the {@link Plugin#callCommand} method which runs the code from the <em>data</em> string parameter.</note>\n<p>Now this method is mainly used to work with the OLE objects or close the plugin without any other commands.\nIt is also retained for using with text so that the previous versions of the plugin remain compatible.</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link events#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.</p>\n<p>The second parameter is the JavaScript code for working with <b>ONLYOFFICE Document Builder</b> {@link https:\\\\/\\\\/api.onlyoffice.com/docbuilder/basic API} \nthat allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).</p>\n<note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor\n(using the <em>Api.GetDocument().InsertContent(...)</em>). This limitation exists due to the co-editing feature in the online editors.\nIf it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</note>\n<p>When creating/editing OLE objects, two extensions are used to work with them:</p>\n<ul>\n\t<li><em>Api.asc_addOleObject (window.Asc.plugin.info)</em> - used to create an OLE object in the document;</li>\n <li><em>Api.asc_editOleObject (window.Asc.plugin.info)</em> - used to edit the created OLE object.</li>\n</ul>\n<p>When creating/editing the objects, their properties can be passed to the {@link info window.Asc.plugin.info} object that defines how the object should look.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -12,13 +12,13 @@
         {
           "type": "string",
           "name": "type",
-          "description": "<p>Defines the type of the command. The &quot;close&quot; is used to close the plugin window after executing the function in the data parameter.\nThe &quot;command&quot; is used to execute the command and leave the window open waiting for the next command.</p>",
+          "description": "<p>Defines the type of the command. The <em>close</em> is used to close the plugin window after executing the function in the <em>data</em> parameter.\nThe <em>command</em> is used to execute the command and leave the window open waiting for the next command.</p>",
           "optional": false
         },
         {
           "type": "string",
           "name": "data",
-          "description": "<p>Defines the command written in JavaScript code which purpose is to form the structured data which can be inserted to the resulting document file\n(formatted paragraphs, tables, text parts and separate words, etc.). Then the data is sent to the editors.\nThe command must be compatible with ONLYOFFICE Document Builder syntax.</p>",
+          "description": "<p>Defines the command written in JavaScript code which purpose is to form the structured data which can be inserted to the resulting document file\n(formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors.\nThe command must be compatible with {@link https://api.onlyoffice.com/docbuilder/basic ONLYOFFICE Document Builder} syntax.</p>",
           "optional": false
         },
         {
@@ -32,9 +32,13 @@
     "executeMethod": {
       "memberof": "Plugin",
       "name": "executeMethod",
-      "description": "<p>Defines the method used to execute certain editor methods using the plugin.\nThe callback is the result that the method returns. It is an optional parameter. In case it is missing, the window.Asc.plugin.onMethodReturn function will be used to return the result of the method execution.</p>",
+      "description": "<p>Defines the method used to execute certain editor methods using the plugin.</p>\n<p>The callback is the result that the method returns. It is an optional parameter. In case it is missing, the {@link events#onMethodReturn window.Asc.plugin.onMethodReturn} function will be used to return the result of the method execution.</p>",
       "tags": {},
-      "returns": [],
+      "returns": [
+        [
+          "boolean"
+        ]
+      ],
       "see": null,
       "inherits": null,
       "params": [
@@ -61,7 +65,7 @@
     "resizeWindow": {
       "memberof": "Plugin",
       "name": "resizeWindow",
-      "description": "<p>Defines the method used to change the window size updating the minimum/maximum sizes.</p>",
+      "description": "<p>Defines the method used to change the window size updating the minimum/maximum sizes.</p>\n<note>This method is used for visual modal plugins only.</note>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -108,7 +112,7 @@
     "callCommand": {
       "memberof": "Plugin",
       "name": "callCommand",
-      "description": "<p>Defines the method used to send the data back to the editor.\nIt replaces the executeCommand method when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors using ONLYOFFICE Document Builder API.\nIt allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts and separate words, etc.).\nThe callback is the result that the command returns. It is an optional parameter. In case it is missing, the window.Asc.plugin.onCommandCallback function will be used to return the result of the command execution.\nONLYOFFICE Document Builder commands can be only used to create content and insert it to the document editor (using the Api.GetDocument().InsertContent(...)).\nThis limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.\nThis method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use Asc.scope object.</p>",
+      "description": "<p>Defines the method used to send the data back to the editor.\nIt replaces the {@link Plugin#executeCommand} method when working with texts in order to simplify the syntax of the script that is necessary to pass to the editors using <b>ONLYOFFICE Document Builder</b> {@link https:\\\\/\\\\/api.onlyoffice.com/docbuilder/basic API}.\nIt allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).</p>\n<p>The <em>callback</em> is the result that the command returns. It is an optional parameter. In case it is missing, the {@link events#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.</p>\n<note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the <em>Api.GetDocument().InsertContent(...)</em>).\nThis limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</note>\n<p>This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use {@link scope Asc.scope} object.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -117,19 +121,19 @@
         {
           "type": "function",
           "name": "func",
-          "description": "<p>Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file\n(formatted paragraphs, tables, text parts and separate words, etc.). Then the data is sent to the editors.\nThe command must be compatible with ONLYOFFICE Document Builder syntax.</p>",
+          "description": "<p>Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file\n(formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors.\nThe command must be compatible with {@link https://api.onlyoffice.com/docbuilder/basic ONLYOFFICE Document Builder} syntax.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isClose",
-          "description": "<p>Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action.\nThe true value is used to close the plugin window after executing the function in the func parameter.\nThe false value is used to execute the command and leave the window open waiting for the next command.</p>",
+          "description": "<p>Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action.\nThe <em>true</em> value is used to close the plugin window after executing the function in the <em>func</em> parameter.\nThe <em>false</em> value is used to execute the command and leave the window open waiting for the next command.</p>",
           "optional": false
         },
         {
           "type": "boolean",
           "name": "isCalc",
-          "description": "<p>Defines whether the document will be recalculated or not.\nThe true value is used to recalculate the document after executing the function in the func parameter.\nThe false value will not recalculate the document (use it only when your edits surely will not require document recalculation).</p>",
+          "description": "<p>Defines whether the document will be recalculated or not.\nThe <em>true</em> value is used to recalculate the document after executing the function in the <em>func</em> parameter.\nThe <em>false</em> value will not recalculate the document (use it only when your edits surely will not require document recalculation).</p>",
           "optional": false
         },
         {
@@ -152,7 +156,7 @@
         {
           "type": "string",
           "name": "url",
-          "description": "<p>The resource code url.</p>",
+          "description": "<p>The resource code URL.</p>",
           "optional": false
         },
         {
@@ -164,7 +168,7 @@
         {
           "type": "boolean",
           "name": "isClose",
-          "description": "<p>Defines whether the plugin window must be closed after the code is executed or left open waiting for another action.\nThe true value is used to close the plugin window after executing a remotely located script.\nThe false value is used to execute the code and leave the window open waiting for the next action.</p>",
+          "description": "<p>Defines whether the plugin window must be closed after the code is executed or left open waiting for another action.\nThe <em>true</em> value is used to close the plugin window after executing a remotely located script.\nThe <em>false</em> value is used to execute the code and leave the window open waiting for the next action.</p>",
           "optional": false
         }
       ]
@@ -181,7 +185,7 @@
         {
           "type": "string",
           "name": "url",
-          "description": "<p>The resource code url.</p>",
+          "description": "<p>The resource code URL.</p>",
           "optional": false
         },
         {
@@ -195,7 +199,7 @@
     "createInputHelper": {
       "memberof": "Plugin",
       "name": "createInputHelper",
-      "description": "<p>Defines the method used to create an input helper - a window that appears and disappears when you type text. Its location is tied to the cursor.</p>",
+      "description": "<p>Defines the method used to create an {@link inputhelper input helper} - a window that appears and disappears when you type text. Its location is tied to the cursor.</p>",
       "tags": {},
       "returns": [],
       "see": null,
@@ -204,7 +208,7 @@
     "getInputHelper": {
       "memberof": "Plugin",
       "name": "getInputHelper",
-      "description": "<p>Defines the method used to get the InputHelper object.</p>",
+      "description": "<p>Defines the method used to get the {@link inputhelper InputHelper object}.</p>",
       "tags": {},
       "returns": [
         [
@@ -230,44 +234,44 @@
       "tags": {},
       "see": null
     },
-    "event_onTargetPositionChanged": {
+    "onTargetPositionChanged": {
       "memberof": "Plugin",
-      "name": "event_onTargetPositionChanged",
+      "name": "onTargetPositionChanged",
       "description": "<p>The function called when the target position in the editor is changed.</p>",
       "tags": {},
       "see": null
     },
-    "event_onDocumentContentReady": {
+    "onDocumentContentReady": {
       "memberof": "Plugin",
-      "name": "event_onDocumentContentReady",
+      "name": "onDocumentContentReady",
       "description": "<p>The function called when the document is completely loaded.</p>",
       "tags": {},
       "see": null
     },
-    "event_onClick": {
+    "onClick": {
       "memberof": "Plugin",
-      "name": "event_onClick",
+      "name": "onClick",
       "description": "<p>The function called when the user clicks on the element.</p>",
       "tags": {},
       "see": null
     },
-    "event_inputHelper_onSelectItem": {
+    "inputHelper_onSelectItem": {
       "memberof": "Plugin",
-      "name": "event_inputHelper_onSelectItem",
+      "name": "inputHelper_onSelectItem",
       "description": "<p>The function called when the user is trying to select an item from the input helper.</p>",
       "tags": {},
       "see": null
     },
-    "event_onInputHelperClear": {
+    "onInputHelperClear": {
       "memberof": "Plugin",
-      "name": "event_onInputHelperClear",
+      "name": "onInputHelperClear",
       "description": "<p>The function called when the user is trying to clear the text and the input helper disappears.</p>",
       "tags": {},
       "see": null
     },
-    "event_onInputHelperInput": {
+    "onInputHelperInput": {
       "memberof": "Plugin",
-      "name": "event_onInputHelperInput",
+      "name": "onInputHelperInput",
       "description": "<p>The function called when the user is trying to input the text and the input helper appears.</p>",
       "tags": {},
       "see": null
@@ -296,7 +300,91 @@
     "onExternalPluginMessage": {
       "memberof": "Plugin",
       "name": "onExternalPluginMessage",
+      "description": "<p>The function called to show the editor integrator message.</p>",
+      "tags": {},
+      "see": null
+    },
+    "onFocusContentControl": {
+      "memberof": "Plugin",
+      "name": "onFocusContentControl",
+      "description": "<p>The function called to show which content control has been focused.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "see": null
+    },
+    "onBlurContentControl": {
+      "memberof": "Plugin",
+      "name": "onBlurContentControl",
+      "description": "<p>The function called to show which content control has been blurred.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "see": null
+    },
+    "onChangeContentControl": {
+      "memberof": "Plugin",
+      "name": "onChangeContentControl",
       "description": "<p>The function called to show which content control has been changed.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "see": null
+    },
+    "onCommandCallback": {
+      "memberof": "Plugin",
+      "name": "onCommandCallback",
+      "description": "<p>The function called to return the result of the previously executed command. It can be used to return data after executing the {@link Plugin#executeCommand} method.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "see": null
+    },
+    "onMethodReturn": {
+      "memberof": "Plugin",
+      "name": "onMethodReturn",
+      "description": "<p>The function called to return the result of the previously executed method. It can be used to return data after executing the {@link Plugin#executeMethod} method.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "see": null
+    },
+    "onAddComment": {
+      "memberof": "Plugin",
+      "name": "onAddComment",
+      "description": "<p>The function called when a comment is added to the document with the {@link Plugin#executeMethod#AddComment AddComment} method.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "see": null
+    },
+    "onChangeCommentData": {
+      "memberof": "Plugin",
+      "name": "onChangeCommentData",
+      "description": "<p>The function called when the specified comment is changed with the {@link Plugin#executeMethod#ChangeComment ChangeComment} method.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "see": null
+    },
+    "onRemoveComment": {
+      "memberof": "Plugin",
+      "name": "onRemoveComment",
+      "description": "<p>The function called when the specified comment is removed with the {@link Plugin#executeMethod#RemoveComments RemoveComments} method.</p>",
       "tags": {
         "typeofeditors": [
           "CDE"
