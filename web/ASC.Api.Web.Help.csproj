@@ -2827,6 +2827,8 @@
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectContentControl.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SelectOleObject.docbuilder" />
     <Content Include="App_Data\plugins\examples\wordPluginMethods\Api.SetDisplayModeInReview.docbuilder" />
+    <Content Include="App_Data\plugins\references\formPluginMethods\Api.json" />
+    <Content Include="App_Data\plugins\references\formPluginMethods\Globals.json" />
     <None Include="web.autofac.config">
       <SubType>Designer</SubType>
     </None>
