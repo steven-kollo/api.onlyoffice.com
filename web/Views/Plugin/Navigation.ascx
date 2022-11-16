@@ -66,6 +66,16 @@
                                         <% } %>
                                     </ul>
                                 </li>
+                                <li>
+                                    <a href="<%= Url.Action("executemethod/form") %>">Form Api</a>
+                                    <ul>
+                                        <% foreach (var executeMethod in DocPluginsDocumentation.Instance.GetModule("formPluginMethods")["api"].Methods) { %>
+                                            <li>
+                                                <a title=<%= executeMethod.Key %> href="<%= Url.Action(string.Format("executemethod/form/{0}", executeMethod.Key.ToLower())) %>"><%= executeMethod.Key %></a>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                </li>
                             </ul>
                             <% } %>
                         </li>

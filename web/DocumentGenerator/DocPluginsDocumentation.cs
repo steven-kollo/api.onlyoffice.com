@@ -57,6 +57,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 { "pluginBase", "pluginBase" },
                 { "sharedPluginMethods", "common" },
                 { "wordPluginMethods", "text" },
+                { "formPluginMethods", "form" },
             };
 
             reversePathMapping = PathMapping.ToDictionary(kv => kv.Value, kv => kv.Key);

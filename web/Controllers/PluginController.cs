@@ -208,6 +208,11 @@ namespace ASC.Api.Web.Help.Controllers
             return RenderSectionOrMethod("wordPluginMethods", "api", catchall);
         }
 
+        public ActionResult FormMethods(string catchall)
+        {
+            return RenderSectionOrMethod("formPluginMethods", "api", catchall);
+        }
+
         public ActionResult getInputHelper()
         {
             return RenderBaseMethod("getInputHelper");
