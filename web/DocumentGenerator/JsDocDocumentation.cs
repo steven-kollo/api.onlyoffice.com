@@ -55,19 +55,13 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             _entries = tree;
             CheckSharedMethods();
             LoadExamples(pathPiece);
+            FillPaths();
             ParseLinks();
         }
 
-        protected abstract void CheckSharedMethods();
         public abstract List<SearchResult> Search(string query, UrlHelper url);
-        public abstract string SearchType(string type, string priorityModule);
-
-        protected string TrimArray(string type)
-        {
-            if (!type.StartsWith("array.<")) return type;
-            type = type.Substring("array.<".Length, type.Length - "array.<>".Length);
-            return TrimArray(type);
-        }
+        protected abstract void CheckSharedMethods();
+        protected abstract void FillPaths();
 
         private SortedDictionary<string, DBEntry> ParseFiles(string directory, string moduleName)
         {
@@ -93,12 +87,14 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     });
                     if (entry.Events != null)
                     {
-                        entry.Events.ToList().ForEach(e => {
+                        entry.Events.ToList().ForEach(e =>
+                        {
                             e.Value.Module = moduleName;
                             if (e.Value.Params != null) e.Value.Params.ToList().ForEach(p => p.Module = moduleName);
                         });
                     }
                     if (entry.Params != null) entry.Params.ToList().ForEach(p => p.Module = moduleName);
+                    if (entry.Properties != null) entry.Properties.ToList().ForEach(p => p.Module = moduleName);
 
                     moduleTree.Add(entry.Name, entry);
                 }
@@ -110,7 +106,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             return moduleTree;
         }
-
 
         private void ParseGlobals(string path, string moduleName)
         {
@@ -127,6 +122,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     foreach (var kv in content)
                     {
                         kv.Value.Module = moduleName;
+                        if (kv.Value.Properties != null) kv.Value.Properties.ToList().ForEach(p => p.Module = moduleName);
                         if (!_globals.ContainsKey(kv.Key)) _globals.Add(kv.Key, kv.Value);
                     }
                 }
@@ -140,6 +136,11 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public SortedDictionary<string, DBEntry> GetModule(string name)
         {
             return _entries.ContainsKey(name) ? _entries[name] : null;
+        }
+
+        public Dictionary<string, SortedDictionary<string, DBEntry>> GetModules()
+        {
+            return _entries;
         }
 
         public DBEntry GetSection(string module, string name)
@@ -178,9 +179,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         public HtmlString ParamTypeToHtml(DBParam param)
         {
-            var link = SearchType(param.Type, param.Module);
-            var encoded = HttpUtility.HtmlEncode(param.Type);
-            return new HtmlString(link == null ? encoded : string.Format("<a href=\"{0}\">{1}</a>", link, encoded));
+            return new HtmlString(ParamTypeToLinkTag(param.Type, param.Module));
         }
 
         public HtmlString TypesToHtml(IEnumerable<string> types, string priority)
@@ -195,12 +194,17 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     continue;
                 }
 
-                var link = SearchType(type, priority);
-                var encoded = HttpUtility.HtmlEncode(type);
-                returnsHtml.Add(link == null ? encoded : string.Format("<a href=\"{0}\">{1}</a>", link, encoded));
+                returnsHtml.Add(ParamTypeToLinkTag(type, priority));
             }
 
             return new HtmlString(string.Join(" | ", returnsHtml));
+        }
+
+        private string ParamTypeToLinkTag(string type, string module)
+        {
+            var found = FindType(type, module);
+            var encoded = HttpUtility.HtmlEncode(type);
+            return found == null || string.IsNullOrWhiteSpace(found.Path) ? encoded : string.Format("<a href=\"{0}\">{1}</a>", found.Path, encoded);
         }
 
         private void LoadExamples(string pathPiece)
@@ -239,7 +243,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                                 {
                                     section.Methods[split[1]].Example = example;
                                 }
-                                else if(section.Events.ContainsKey(split[1]))
+                                else if (section.Events.ContainsKey(split[1]))
                                 {
                                     section.Events[split[1]].Example = example;
                                 }
@@ -293,7 +297,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private void ParseLinks()
         {
-            var regex = new Regex("{@link (.*?)#(.*?)}", RegexOptions.Multiline);
+            var regex = new Regex("{@link (.+?)}", RegexOptions.Multiline);
 
             var entities = new List<DBEntity>();
             foreach (var mod in _entries)
@@ -303,35 +307,100 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 foreach (var section in mod.Value)
                 {
                     if (section.Value.Params != null) entities.AddRange(section.Value.Params);
-                    entities.AddRange(section.Value.Methods.Values);
+                    if (section.Value.Properties != null) entities.AddRange(section.Value.Properties);
 
+                    entities.AddRange(section.Value.Methods.Values);
                     foreach (var method in section.Value.Methods)
                     {
                         if (method.Value.Params != null) entities.AddRange(method.Value.Params);
                     }
+
+                    if (section.Value.Events != null)
+                    {
+                        entities.AddRange(section.Value.Events.Values);
+
+                        foreach (var evt in section.Value.Events)
+                        {
+                            if (evt.Value.Params != null) entities.AddRange(evt.Value.Params);
+                        }
+                    }
                 }
             }
-            entities.AddRange(_globals.Values);
+
+            foreach (var global in _globals.Values)
+            {
+                entities.Add(global);
+                if (global.Properties != null) entities.AddRange(global.Properties);
+            }
 
             foreach (var entity in entities)
             {
                 if (string.IsNullOrEmpty(entity.Description)) continue;
 
-                Func<string, MatchEvaluator> replacer = priority => {
-                    return m =>
+                Func<string, MatchEvaluator> replacer = module =>
+                {
+                    return match =>
                     {
-                        var link = SearchType(m.Groups[1].Value, priority);
-                        var text = string.Format("{0}.{1}", m.Groups[1].Value, m.Groups[2].Value);
-                        return string.IsNullOrEmpty(link) ? text : string.Format(" <a href=\"{0}/{1}\">{2}</a> ", link, m.Groups[2].Value, text);
+                        var text = match.Groups[1].Value;
+                        var linkText = match.Groups[1].Value;
+                        if (text.IndexOf(' ') > 0)
+                        {
+                            linkText = text.Substring(0, text.IndexOf(' '));
+                            text = text.Substring(text.IndexOf(' ') + 1);
+                        }
+
+                        string resultLink = null;
+                        if (linkText.StartsWith("/") || linkText.StartsWith("http://") || linkText.StartsWith("https://"))
+                        {
+                            resultLink = linkText;
+                        }
+                        else if (linkText.Contains('#'))
+                        {
+                            var split = linkText.Split('#');
+                            if (split[0] == "global")
+                            {
+                                if (_globals.TryGetValue(split[1], out var global))
+                                {
+                                    resultLink = global.Path;
+                                }
+                            }
+                            else
+                            {
+                                var type = GetSection(module, split[0]);
+                                if (type != null)
+                                {
+                                    var methodOrEvent = type.Methods.Values.Cast<DBPagedEntity>().Concat(type.Events.Values).FirstOrDefault(e => e.Name.ToLower() == split[1].ToLower());
+                                    if (methodOrEvent != null)
+                                    {
+                                        resultLink = methodOrEvent.Path;
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            var type = FindType(linkText.ToLower(), module);
+                            if (type != null)
+                            {
+                                resultLink = type.Path;
+                            }
+                        }
+
+                        if (string.IsNullOrWhiteSpace(resultLink))
+                        {
+                            _logger.InfoFormat("unknown link {0}", match.Value);
+                            return text;
+                        }
+
+                        return string.Format("<a href=\"{0}\">{1}</a>", resultLink, text);
                     };
                 };
 
                 entity.Description = regex.Replace(entity.Description, replacer(entity.Module));
-                if (entity is DBMethod)
+                if (entity is DBMethod method)
                 {
-                    var m = (DBMethod)entity;
-                    if (m.See != null) m.See = regex.Replace(m.See, replacer(m.Module));
-                    if (m.Inherits != null) m.Inherits = regex.Replace(m.Inherits, replacer(m.Module));
+                    if (method.See != null) method.See = regex.Replace(method.See, replacer(method.Module));
+                    if (method.Inherits != null) method.Inherits = regex.Replace(method.Inherits, replacer(method.Module));
                 }
             }
         }
@@ -381,9 +450,35 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                 _logger.InfoFormat("Missing example for {0}", path);
             }
         }
+
+        private DBPagedEntity FindType(string name, string priorityModule)
+        {
+            if (name.StartsWith("\"")) return null;
+            name = TrimArray(name.ToLowerInvariant());
+
+            var module = GetModule(priorityModule);
+            if (module == null) return null;
+            if (module.ContainsKey(name)) return module[name];
+
+            foreach (var nonPriorityModule in _entries.Where(kv => kv.Key != priorityModule).Select(kv => kv.Value))
+            {
+                if (nonPriorityModule.ContainsKey(name)) return nonPriorityModule[name];
+            }
+
+            if (_globals.ContainsKey(name)) return _globals[name];
+
+            return null;
+        }
+
+        private string TrimArray(string type)
+        {
+            if (!type.StartsWith("array.<")) return type;
+            type = type.Substring("array.<".Length, type.Length - "array.<>".Length);
+            return TrimArray(type);
+        }
     }
 
-    public class DBEntry : DBEntity
+    public class DBEntry : DBPagedEntity
     {
         [JsonProperty("methods")]
         public SortedDictionary<string, DBMethod> Methods { get; set; }
@@ -406,9 +501,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [JsonIgnore]
         public DBExample Example { get; set; }
 
-        [JsonIgnore]
-        public string Path { get; set; }
-
         public DBEntry()
         {
             Methods = new SortedDictionary<string, DBMethod>(StringComparer.OrdinalIgnoreCase);
@@ -416,7 +508,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         }
     }
 
-    public class DBMethod : DBEntity
+    public class DBMethod : DBPagedEntity
     {
         [JsonProperty("memberof")]
         public string MemberOf { get; set; }
@@ -440,7 +532,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public DBExample Example { get; set; }
     }
 
-    public class DBEvent : DBEntity
+    public class DBEvent : DBPagedEntity
     {
         [JsonProperty("memberof")]
         public string MemberOf { get; set; }
@@ -494,13 +586,19 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public string Module { get; set; }
     }
 
+    public abstract class DBPagedEntity : DBEntity
+    {
+        [JsonIgnore]
+        public string Path { get; set; }
+    }
+
     public class DBExample
     {
         [JsonProperty("script")]
         public string Script { get; set; }
     }
 
-    public class DBGlobal : DBEntity
+    public class DBGlobal : DBPagedEntity
     {
         [JsonProperty("type")]
         public List<string> Types { get; set; }

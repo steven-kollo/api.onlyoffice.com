@@ -193,40 +193,37 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return result;
         }
 
-        public override string SearchType(string type, string priorityModule = "word")
+        protected override void FillPaths()
         {
-            if (type.StartsWith("\"")) return null;
+            var basePath = "/docbuilder";
 
-            type = type.ToLowerInvariant();
-            var module = GetModule(priorityModule);
-            if (module == null) return null;
-
-            type = TrimArray(type);
-
-            if (module.ContainsKey(type))
+            foreach (var kv in _entries)
             {
-                return string.Format("/docbuilder/{0}/{1}", module[type].Path, module[type].Name);
-            }
+                var modulePath = PathMapping[kv.Key];
 
-            var sections = _entries.Where(kv => kv.Key != priorityModule).SelectMany(m => m.Value.Values);
-
-            foreach (var section in sections)
-            {
-                if (section.Name.ToLowerInvariant() == type)
+                foreach (var section in kv.Value.Values)
                 {
-                    return string.Format("/docbuilder/{0}/{1}", section.Path, section.Name);
+                    section.Path = $"{basePath}/{modulePath}/{section.Name.ToLower()}";
+
+                    foreach (var method in section.Methods.Values)
+                    {
+                        method.Path = $"{section.Path}/{method.Name.ToLower()}";
+                    }
+
+                    if (section.Events != null)
+                    {
+                        foreach (var evt in section.Events.Values)
+                        {
+                            evt.Path = $"{section.Path}/event-{evt.Name.ToLower()}";
+                        }
+                    }
                 }
             }
 
-            foreach (var global in _globals)
+            foreach(var global in _globals.Values)
             {
-                if (global.Key.ToLowerInvariant() == type)
-                {
-                    return string.Format("/docbuilder/global#{0}", global.Key);
-                }
+                global.Path = $"{basePath}/global#{global.Name}";
             }
-
-            return null;
         }
     }
 }

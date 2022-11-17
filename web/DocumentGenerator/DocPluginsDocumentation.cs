@@ -37,7 +37,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         private static DocPluginsDocumentation _instance;
         public static DocPluginsDocumentation Instance
         {
-            get {
+            get
+            {
                 if (_instance == null)
                 {
                     _instance = new DocPluginsDocumentation();
@@ -62,7 +63,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             reversePathMapping = PathMapping.ToDictionary(kv => kv.Value, kv => kv.Key);
 
-            _logger = LogManager.GetLogger("ASC.Plugins");
+            _logger = LogManager.GetLogger("ASC.DocumentBuilder");
             Load("plugins");
         }
 
@@ -81,40 +82,50 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             return reversePathMapping.ContainsKey(path) ? reversePathMapping[path] : null;
         }
 
-        public override string SearchType(string type, string priorityModule = "pluginBase")
+        protected override void FillPaths()
         {
-            if (type.StartsWith("\"")) return null;
+            var basePath = "/plugin";
 
-            type = type.ToLowerInvariant();
-            var module = GetModule(priorityModule);
-            if (module == null) return null;
-
-            type = TrimArray(type);
-
-            if (module.ContainsKey(type))
+            foreach (var kv in _entries)
             {
-                return string.Format("/plugin/{0}", module[type].Name);
-            }
-
-            var sections = _entries.Where(kv => kv.Key != priorityModule).SelectMany(m => m.Value.Values);
-
-            foreach (var section in sections)
-            {
-                if (section.Name.ToLowerInvariant() == type)
+                if (kv.Key == "pluginBase")
                 {
-                    return string.Format("/plugin/{0}/{1}", section.Path, section.Name);
+                    var inputHelper = kv.Value["inputHelper"];
+                    inputHelper.Path = $"{basePath}/inputhelper";
+
+                    foreach (var method in inputHelper.Methods.Values)
+                    {
+                        method.Path = $"{inputHelper.Path}/{method.Name.ToLower()}";
+                    }
+
+                    var plugin = kv.Value["Plugin"];
+                    plugin.Path = basePath;
+
+                    foreach (var method in plugin.Methods.Values)
+                    {
+                        method.Path = $"{plugin.Path}/{method.Name.ToLower()}";
+                    }
+
+                    foreach (var evt in plugin.Events.Values)
+                    {
+                        evt.Path = $"{plugin.Path}/events/{evt.Name.ToLower()}";
+                    }
+                }
+                else
+                {
+                    var api = kv.Value["api"];
+                    api.Path = $"/executemethod/{PathMapping[kv.Key]}";
+                    foreach (var method in api.Methods.Values)
+                    {
+                        method.Path = $"{api.Path}/{method.Name.ToLower()}";
+                    }
                 }
             }
 
-            foreach (var global in _globals)
+            foreach (var global in _globals.Values)
             {
-                if (global.Key.ToLowerInvariant() == type)
-                {
-                    return string.Format("/plugin/global#{0}", global.Key);
-                }
+                global.Path = $"{basePath}/global#{global.Name}";
             }
-
-            return null;
         }
     }
 }
