@@ -201,6 +201,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var module = GetModule(priorityModule);
             if (module == null) return null;
 
+            type = TrimArray(type);
+
             if (module.ContainsKey(type))
             {
                 return string.Format("/docbuilder/{0}/{1}", module[type].Path, module[type].Name);

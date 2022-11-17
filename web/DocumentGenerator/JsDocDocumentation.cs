@@ -62,6 +62,13 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         public abstract List<SearchResult> Search(string query, UrlHelper url);
         public abstract string SearchType(string type, string priorityModule);
 
+        protected string TrimArray(string type)
+        {
+            if (!type.StartsWith("array.<")) return type;
+            type = type.Substring("array.<".Length, type.Length - "array.<>".Length);
+            return TrimArray(type);
+        }
+
         private SortedDictionary<string, DBEntry> ParseFiles(string directory, string moduleName)
         {
             var moduleTree = new SortedDictionary<string, DBEntry>(StringComparer.OrdinalIgnoreCase);

@@ -89,6 +89,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             var module = GetModule(priorityModule);
             if (module == null) return null;
 
+            type = TrimArray(type);
+
             if (module.ContainsKey(type))
             {
                 return string.Format("/plugin/{0}", module[type].Name);
