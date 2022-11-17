@@ -225,14 +225,30 @@
       "name": "init",
       "description": "<p>The function called when the plugin is launched. It defines the data sent to the plugin describing what actions are to be performed and how they must be performed.</p>",
       "tags": {},
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "string",
+          "name": "text",
+          "description": "<p>Defines the data parameter that depends on the {@link Config#initDataType initDataType} setting specified in the <em>config.json</em> file.</p>",
+          "optional": false
+        }
+      ]
     },
     "button": {
       "memberof": "Plugin",
       "name": "button",
       "description": "<p>The function called when any of the plugin buttons is clicked. It defines the buttons used with the plugin and the plugin behavior when they are clicked.</p>",
       "tags": {},
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "number",
+          "name": "buttonIndex",
+          "description": "<p>Defines the button index in the {@link Config#buttons buttons} array of the <em>config.json</em> file. If <em>id == -1</em>, then the plugin considers that the <b>Close</b> window cross button has been clicked or its operation has been somehow interrupted.</p>",
+          "optional": false
+        }
+      ]
     },
     "onTargetPositionChanged": {
       "memberof": "Plugin",
@@ -253,14 +269,30 @@
       "name": "onClick",
       "description": "<p>The function called when the user clicks on the element.</p>",
       "tags": {},
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isSelectionUse",
+          "description": "<p>Defines if the selection is used or not.</p>",
+          "optional": false
+        }
+      ]
     },
     "inputHelper_onSelectItem": {
       "memberof": "Plugin",
       "name": "inputHelper_onSelectItem",
       "description": "<p>The function called when the user is trying to select an item from the input helper.</p>",
       "tags": {},
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "object",
+          "name": "item",
+          "description": "<p>Defines the selected item:</p>\n<ul>\n\t<li>\n\t\t<p><b>text</b> - the item text,</p>\n\t\t<p><b>type</b>: string,</p>\n\t\t<p><b>example</b>: \"name\";</p>\n</li>\n<li>\n\t\t<p><b>id</b> - the item index,</p>\n\t\t<p><b>type</b>: string,</p>\n\t\t<p><b>example</b>: \"1\".</p>\n</li>\n</ul>",
+          "optional": false
+        }
+      ]
     },
     "onInputHelperClear": {
       "memberof": "Plugin",
@@ -274,7 +306,15 @@
       "name": "onInputHelperInput",
       "description": "<p>The function called when the user is trying to input the text and the input helper appears.</p>",
       "tags": {},
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "object",
+          "name": "data",
+          "description": "<p>Defines the text which the user inputs:</p>\n<ul>\n\t<li>\n\t\t<p><b>add</b> - defines if the text is added to the current text (<b>true</b>) or this is the beginning of the text (<b>false</b>),</p>\n\t\t<p><b>type</b>: boolean,</p>\n\t\t<p><b>example</b>: true;</p>\n</li>\n<li>\n\t\t<p><b>text</b> - the text which the user inputs,</p>\n\t\t<p><b>type</b>: string,</p>\n\t\t<p><b>example</b>: \"text\".</p>\n</li>\n</ul>",
+          "optional": false
+        }
+      ]
     },
     "onTranslate": {
       "memberof": "Plugin",
@@ -288,7 +328,15 @@
       "name": "onEnableMouseEvent",
       "description": "<p>The function called to turn the mouse or touchpad events on/off.</p>",
       "tags": {},
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "boolean",
+          "name": "isEnabled",
+          "description": "<p>Defines if the mouse or touchpad is enabled (<b>true</b>) or not (<b>false</b>).</p>",
+          "optional": false
+        }
+      ]
     },
     "onExternalMouseUp": {
       "memberof": "Plugin",
@@ -302,7 +350,15 @@
       "name": "onExternalPluginMessage",
       "description": "<p>The function called to show the editor integrator message.</p>",
       "tags": {},
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "Object",
+          "name": "data",
+          "description": "<p>Defines the editor integrator message:</p>\n<ul>\n\t<li>\n\t\t<p><b>type</b> - the message type,</p>\n\t\t<p><b>type</b>: string,</p>\n\t\t<p><b>example</b>: \"close\";</p>\n</li>\n<li>\n\t\t<p><b>text</b> - the message text,</p>\n\t\t<p><b>type</b>: string,</p>\n\t\t<p><b>example</b>: \"text\".</p>\n</li>\n</ul>",
+          "optional": false
+        }
+      ]
     },
     "onFocusContentControl": {
       "memberof": "Plugin",
@@ -313,7 +369,15 @@
           "CDE"
         ]
       },
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "ContentControl",
+          "name": "control",
+          "description": "<p>Defines the content control that has been focused.</p>",
+          "optional": false
+        }
+      ]
     },
     "onBlurContentControl": {
       "memberof": "Plugin",
@@ -324,7 +388,15 @@
           "CDE"
         ]
       },
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "ContentControl",
+          "name": "control",
+          "description": "<p>Defines the content control that has been blurred.</p>",
+          "optional": false
+        }
+      ]
     },
     "onChangeContentControl": {
       "memberof": "Plugin",
@@ -335,7 +407,15 @@
           "CDE"
         ]
       },
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "ContentControl",
+          "name": "control",
+          "description": "<p>Defines the content control that has been changed.</p>",
+          "optional": false
+        }
+      ]
     },
     "onCommandCallback": {
       "memberof": "Plugin",
@@ -357,7 +437,8 @@
           "CDE"
         ]
       },
-      "see": null
+      "see": null,
+      "params": []
     },
     "onAddComment": {
       "memberof": "Plugin",
@@ -368,7 +449,15 @@
           "CDE"
         ]
       },
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "comment",
+          "name": "comment",
+          "description": "<p>Defines the comment object containing the comment data.</p>",
+          "optional": false
+        }
+      ]
     },
     "onChangeCommentData": {
       "memberof": "Plugin",
@@ -379,7 +468,15 @@
           "CDE"
         ]
       },
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "comment",
+          "name": "comment",
+          "description": "<p>Defines the comment object containing the comment data.</p>",
+          "optional": false
+        }
+      ]
     },
     "onRemoveComment": {
       "memberof": "Plugin",
@@ -390,7 +487,15 @@
           "CDE"
         ]
       },
-      "see": null
+      "see": null,
+      "params": [
+        {
+          "type": "comment",
+          "name": "comment",
+          "description": "<p>Defines the comment object containing the comment data.</p>",
+          "optional": false
+        }
+      ]
     }
   },
   "comment": "/**\n\t * @global\n\t * @class\n\t * @name Plugin\n\t * @hideconstructor\n\t */",

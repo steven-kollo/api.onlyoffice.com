@@ -84,7 +84,13 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         m.Value.Module = moduleName;
                         if (m.Value.Params != null) m.Value.Params.ToList().ForEach(p => p.Module = moduleName);
                     });
-                    if (entry.Events != null) entry.Events.ToList().ForEach(e => e.Value.Module = moduleName);
+                    if (entry.Events != null)
+                    {
+                        entry.Events.ToList().ForEach(e => {
+                            e.Value.Module = moduleName;
+                            if (e.Value.Params != null) e.Value.Params.ToList().ForEach(p => p.Module = moduleName);
+                        });
+                    }
                     if (entry.Params != null) entry.Params.ToList().ForEach(p => p.Module = moduleName);
 
                     moduleTree.Add(entry.Name, entry);
@@ -438,8 +444,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         [JsonProperty("see")]
         public string See { get; set; }
 
-        [JsonProperty("properties")]
-        public List<DBProperty> Properties { get; set; }
+        [JsonProperty("params")]
+        public List<DBParam> Params { get; set; }
 
         [JsonIgnore]
         public DBExample Example { get; set; }

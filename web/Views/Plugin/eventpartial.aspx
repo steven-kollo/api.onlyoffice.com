@@ -32,9 +32,10 @@
         <%= ev.Description %>
     </span>
 
-    <h2>Properties:</h2>
-    <% if (ev.Properties != null && ev.Properties.Any()) { %>
-    <div id="eventProps">
+    <h2>Parameters:</h2>
+    <% if (ev.Params != null && ev.Params.Any()) { %>
+    <div id="eventParams">
+    <% var hasOptional = ev.Params.Any(m => m.Optional); %>
         <table class="table">
             <thead>
                 <tr class="tablerow">
@@ -44,16 +45,22 @@
                 </tr>
             </thead>
             <tbody>
-                <% foreach(var p in ev.Properties) { %>
+                <% foreach(var p in ev.Params) { %>
                     <tr class="tablerow">
                         <td><em><%= p.Name %></em></td>
-                        <td><%= p.Type %></td>
+                        <td>
+                            <em><%= DocPluginsDocumentation.Instance.ParamTypeToHtml(p) %></em>
+                        </td>
                         <td><%= p.Description %></td>
                     </tr>
                 <% } %>
             </tbody>
         </table>
         <div class="mobile-content"></div>
+    </div>
+    <% } else { %>
+    <div id="eventParams">
+        <p>This event doesn't have any parameters.</p>
     </div>
     <% } %>
 
