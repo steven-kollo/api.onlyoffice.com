@@ -19,30 +19,30 @@
 
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <ul>
-        <li>Added the <a href="<%= Url.Action("events") %>#onAddComment">onAddComment</a> event.</li>
-        <li>Added the <a href="<%= Url.Action("events") %>#onChangeCommentData">onChangeCommentData</a> event.</li>
-        <li>Added the <a href="<%= Url.Action("events") %>#onRemoveComment">onRemoveComment</a> event.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/acceptreviewchanges") %>">AcceptReviewChanges</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/movetonextreviewchange") %>">MoveToNextReviewChange</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/rejectreviewchanges") %>">RejectReviewChanges</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("events/onAddComment") %>">onAddComment</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("events/onChangeCommentData") %>">onChangeCommentData</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("events/onRemoveComment") %>">onRemoveComment</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/acceptreviewchanges") %>">AcceptReviewChanges</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/movetonextreviewchange") %>">MoveToNextReviewChange</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/rejectreviewchanges") %>">RejectReviewChanges</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
         <li>Changed the plugin <a href="<%= Url.Action("localization") %>">localization</a> scheme.</li>
         <li>Added the <a href="<%= Url.Action("installation/onpremises") %>#plugin-manager">ONLYOFFICE Plugin Marketplace</a>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/changeoleobject") %>">ChangeOleObject</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/getallforms") %>">GetAllForms</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/getfiletodownload") %>">GetFileToDownload</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/getformsbytag") %>">GetFormsByTag</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/getformvalue") %>">GetFormValue</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/getimagedatafromselection") %>">GetImageDataFromSelection</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/getinstalledplugins") %>">GetInstalledPlugins</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/installplugin") %>">InstallPlugin</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/putimagedatatoselection") %>">PutImageDataToSelection</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/removeplugin") %>">RemovePlugin</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/setformvalue") %>">SetFormValue</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/showbutton") %>">ShowButton</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("executemethod/updateplugin") %>">UpdatePlugin</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
-        <li>Added the <a href="<%= Url.Action("events") %>#onBlurContentControl">onBlurContentControl</a> event.</li>
-        <li>Added the <a href="<%= Url.Action("events") %>#onChangeContentControl">onChangeContentControl</a> event.</li>
-        <li>Added the <a href="<%= Url.Action("events") %>#onFocusContentControl">onFocusContentControl</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/text/changeoleobject") %>">ChangeOleObject</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/form/getallforms") %>">GetAllForms</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/getfiletodownload") %>">GetFileToDownload</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/form/getformsbytag") %>">GetFormsByTag</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/form/getformvalue") %>">GetFormValue</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/getimagedatafromselection") %>">GetImageDataFromSelection</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/getinstalledplugins") %>">GetInstalledPlugins</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/installplugin") %>">InstallPlugin</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/putimagedatatoselection") %>">PutImageDataToSelection</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/removeplugin") %>">RemovePlugin</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/form/setformvalue") %>">SetFormValue</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/showbutton") %>">ShowButton</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("executemethod/common/updateplugin") %>">UpdatePlugin</a> method to <em>window.Asc.plugin.executeMethod</em>.</li>
+        <li>Added the <a href="<%= Url.Action("events/onBlurContentControl") %>">onBlurContentControl</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("events/onChangeContentControl") %>">onChangeContentControl</a> event.</li>
+        <li>Added the <a href="<%= Url.Action("events/onFocusContentControl") %>">onFocusContentControl</a> event.</li>
     </ul>
 
 </asp:Content>

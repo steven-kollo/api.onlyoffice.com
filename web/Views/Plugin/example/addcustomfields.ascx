@@ -110,12 +110,12 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <div class="header-gray">Methods and events</div>
 
 <ul>
-    <li><a href="<%= Url.Action("events") %>#button">button</a></li>
-    <li><a href="<%= Url.Action("events") %>#init">init</a></li>
-    <li><a href="<%= Url.Action("events") %>#onMethodReturn">onMethodReturn</a></li>
+    <li><a href="<%= Url.Action("events/button") %>">button</a></li>
+    <li><a href="<%= Url.Action("events/init") %>">init</a></li>
+    <li><a href="<%= Url.Action("events/onMethodReturn") %>">onMethodReturn</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
-    <li><a href="<%= Url.Action("executemethod/addcontentcontrol") %>">executeMethod ("AddContentControl")</a></li>
-    <li><a href="<%= Url.Action("executemethod/insertandreplacecontentcontrols") %>">executeMethod ("InsertAndReplaceContentControls")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/addcontentcontrol") %>">executeMethod ("AddContentControl")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/insertandreplacecontentcontrols") %>">executeMethod ("InsertAndReplaceContentControls")</a></li>
 </ul>
 
 

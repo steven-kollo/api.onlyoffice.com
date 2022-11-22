@@ -1,1 +1,7 @@
-window.Asc.plugin.executeMethod("OnEncryption", [{"type": "getPasswordByFile", "hash": "sha256", "docinfo": "{docinfo}"}]);
+window.Asc.plugin.executeMethod("OnEncryption", [
+    {
+        "type": "getPasswordByFile",
+        "hash": "sha256",
+        "docinfo": "{docinfo}"
+    }
+]);

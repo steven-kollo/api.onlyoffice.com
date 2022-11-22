@@ -123,16 +123,16 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <div class="header-gray">Methods and events</div>
 
 <ul class="columns-2">
-    <li><a href="<%= Url.Action("events") %>#button">button</a></li>
-    <li><a href="<%= Url.Action("events") %>#init">init</a></li>
-    <li><a href="<%= Url.Action("events") %>#onMethodReturn">onMethodReturn</a></li>
-    <li><a href="<%= Url.Action("events") %>#onTargetPositionChanged">onTargetPositionChanged</a></li>
+    <li><a href="<%= Url.Action("events/button") %>">button</a></li>
+    <li><a href="<%= Url.Action("events/init") %>#">init</a></li>
+    <li><a href="<%= Url.Action("events/onMethodReturn") %>">onMethodReturn</a></li>
+    <li><a href="<%= Url.Action("events/onTargetPositionChanged") %>">onTargetPositionChanged</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
-    <li><a href="<%= Url.Action("executemethod/getallcontentcontrols") %>">executeMethod ("GetAllContentControls")</a></li>
-    <li><a href="<%= Url.Action("executemethod/getcurrentcontentcontrol") %>">executeMethod ("GetCurrentContentControl")</a></li>
-    <li><a href="<%= Url.Action("executemethod/movecursortocontentcontrol") %>">executeMethod ("MoveCursorToContentControl")</a></li>
-    <li><a href="<%= Url.Action("executemethod/pastetext") %>">executeMethod ("PasteText")</a></li>
-    <li><a href="<%= Url.Action("executemethod/selectcontentcontrol") %>">executeMethod ("SelectContentControl")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/getallcontentcontrols") %>">executeMethod ("GetAllContentControls")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/getcurrentcontentcontrol") %>">executeMethod ("GetCurrentContentControl")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/movecursortocontentcontrol") %>">executeMethod ("MoveCursorToContentControl")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/pastetext") %>">executeMethod ("PasteText")</a></li>
+    <li><a href="<%= Url.Action("executemethod/text/selectcontentcontrol") %>">executeMethod ("SelectContentControl")</a></li>
 </ul>
 
 

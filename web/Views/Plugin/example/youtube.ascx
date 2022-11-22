@@ -106,12 +106,12 @@
 <div class="header-gray">Methods and events</div>
 
 <ul class="columns-2">
-    <li><a href="<%= Url.Action("events") %>#button">button</a></li>
-    <li><a href="<%= Url.Action("events") %>#init">init</a></li>
-    <li><a href="<%= Url.Action("events") %>#onTranslate">onTranslate</a></li>
+    <li><a href="<%= Url.Action("events/button") %>">button</a></li>
+    <li><a href="<%= Url.Action("events/init") %>">init</a></li>
+    <li><a href="<%= Url.Action("events/onTranslate") %>">onTranslate</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
-    <li><a href="<%= Url.Action("executemethod/addoleobject") %>">executeMethod ("AddOleObject")</a></li>
-    <li><a href="<%= Url.Action("executemethod/editoleobject") %>">executeMethod ("EditOleObject")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/addoleobject") %>">executeMethod ("AddOleObject")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/editoleobject") %>">executeMethod ("EditOleObject")</a></li>
     <li><a href="<%= Url.Action("resizewindow") %>">resizeWindow</a></li>
     <li><a href="<%= Url.Action("info") %>#data">info.data</a></li>
     <li><a href="<%= Url.Action("info") %>#guid">info.guid</a></li>

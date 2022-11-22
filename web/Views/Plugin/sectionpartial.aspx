@@ -80,10 +80,10 @@
                 <tr class="tablerow">
                     <% if (section.Name.ToLower() == "plugin") { %>
                         <td><a href="<%= Url.Action(method.Key.ToLower()) %>"><%= method.Key %></a></td>
-                    <% } else if (section.Path.ToLower() == "pluginbase") { %>
+                    <% } else if (section.Name.ToLower() == "inputhelper") { %>
                         <td><a href="<%= Url.Action(string.Format("{0}/{1}", section.Name.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a></td>
                     <% } else { %>
-                        <td><a href="<%= Url.Action(string.Format("executemethod/{0}/{1}", section.Path.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a></td>
+                        <td><a href="<%= Url.Action(string.Format("{0}/{1}", section.Path.ToLower(), method.Key.ToLower())) %>"><%= method.Key %></a></td>
                     <% } %>
                     <td><%= method.Value.Description %></td>
                 </tr>

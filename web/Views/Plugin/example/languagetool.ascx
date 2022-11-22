@@ -155,15 +155,15 @@ or <a href="<%= Url.Action("installation/cloud") %>">cloud</a> installation inst
 <div class="header-gray">Methods and events</div>
 
 <ul class="columns-2">
-    <li><a href="<%= Url.Action("events") %>#button">button</a></li>
-    <li><a href="<%= Url.Action("events") %>#init">init</a></li>
-    <li><a href="<%= Url.Action("events") %>#onExternalMouseUp">onExternalMouseUp</a></li>
-    <li><a href="<%= Url.Action("events") %>#onTranslate">onTranslate</a></li>
+    <li><a href="<%= Url.Action("events/button") %>">button</a></li>
+    <li><a href="<%= Url.Action("events/init") %>">init</a></li>
+    <li><a href="<%= Url.Action("events/onExternalMouseUp") %>">onExternalMouseUp</a></li>
+    <li><a href="<%= Url.Action("events/onTranslate") %>">onTranslate</a></li>
     <li><a href="<%= Url.Action("callcommand") %>">callCommand</a></li>
     <li><a href="<%= Url.Action("executecommand") %>">executeCommand</a></li>
-    <li><a href="<%= Url.Action("executemethod/getselectiontype") %>">executeMethod ("GetSelectionType")</a></li>
-    <li><a href="<%= Url.Action("executemethod/getversion") %>">executeMethod ("GetVersion")</a></li>
-    <li><a href="<%= Url.Action("executemethod/pastetext") %>">executeMethod ("PasteText")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/getselectiontype") %>">executeMethod ("GetSelectionType")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/getversion") %>">executeMethod ("GetVersion")</a></li>
+    <li><a href="<%= Url.Action("executemethod/common/pastetext") %>">executeMethod ("PasteText")</a></li>
     <li><a href="<%= Url.Action("scope") %>">Asc.scope object</a></li>
     <li><a href="<%= Url.Action("info") %>#recalculate">info.recalculate</a></li>
 </ul>
