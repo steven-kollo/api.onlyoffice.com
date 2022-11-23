@@ -157,6 +157,15 @@
                 <td><a title="Open PPTX file for editing on mobile" href="<%= Url.Action("editor") %>?method=pptxEditorMobile" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxEditorMobileCode">&lt;/&gt;</a>
                 </td>
             </tr>
+            <tr>
+                <th>View on mobile</th>
+                <td><a title="Open DOCX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=docxViewerMobile" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxViewerMobileCode">&lt;/&gt;</a>
+                </td>
+                <td><a title="Open XLSX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=xlsxViewerMobile" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxViewerMobileCode">&lt;/&gt;</a>
+                </td>
+                <td><a title="Open PPTX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=pptxViewerMobile" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxViewerMobileCode">&lt;/&gt;</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -1880,6 +1889,120 @@
                 "documentType": "slide",
                 "editorConfig": {
                     "callbackUrl": "https://example.com/url-to-callback.ashx",
+                },
+                "height": "100%",
+                "type": "mobile",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxViewerMobileCode">
+                <div class="popap-header">Open DOCX file for viewing on mobile</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "EFF21C3C",
+                    "title": "Example Document Title.docx",
+                    "url": "https://example.com/url-to-example-document.docx"
+                },
+                "documentType": "word",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
+                    "mode": "view"
+                },
+                "height": "100%",
+                "type": "mobile",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="xlsxViewerMobileCode">
+                <div class="popap-header">Open XLSX file for viewing on mobile</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "ECDAF251",
+                    "title": "Example Spreadsheet Title.docx",
+                    "url": "https://example.com/url-to-example-document.xlsx"
+                },
+                "documentType": "cell",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
+                    "mode": "view"
+                },
+                "height": "100%",
+                "type": "mobile",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pptxViewerMobileCode">
+                <div class="popap-header">Open PPTX file for viewing on mobile</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "pptx",
+                    "key": "7F789833",
+                    "title": "Example Presentation Title.docx",
+                    "url": "https://example.com/url-to-example-document.pptx"
+                },
+                "documentType": "slide",
+                "editorConfig": {
+                    "callbackUrl": "https://example.com/url-to-callback.ashx",
+                    "mode": "view"
                 },
                 "height": "100%",
                 "type": "mobile",

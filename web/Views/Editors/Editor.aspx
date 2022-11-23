@@ -1297,6 +1297,105 @@
             );
         <% break; %>
 
+        <% case "docxViewerMobile": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "docx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                                Title = "Example Document Title.docx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.docx"
+                            },
+                        DocumentType = "word",
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
+                                Mode = "view"
+                            },
+                        Height = "100%",
+                        TypeString = "mobile",
+                        Width = "100%"
+                    }) %>
+            );
+        <% break; %>
+
+        <% case "xlsxViewerMobile": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "xlsx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                                Title = "Example Spreadsheet Title.xlsx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.xlsx"
+                            },
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
+                                Mode = "view"
+                            },
+                        DocumentType = "cell",
+                        Height = "100%",
+                        TypeString = "mobile",
+                        Width = "100%"
+                    }) %>
+        );
+        <% break; %>
+
+        <% case "pptxViewerMobile": %>
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            <%= Config.Serialize(
+                new Config
+                    {
+                        Document = new Config.DocumentConfig
+                            {
+                                FileType = "pptx",
+                                Key = "apiwh" + Guid.NewGuid(),
+                                Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                                Title = "Example Presentation Title.pptx",
+                                Url = ConfigurationManager.AppSettings["storage_demo_url"] + "demo.pptx"
+                            },
+                        EditorConfig = new Config.EditorConfigConfiguration
+                            {
+                                CallbackUrl = Url.Action("callback", null, null, Request.Url.Scheme),
+                                Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                    {
+                                        Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                            {
+                                                Request = false
+                                            }
+                                    },
+                                Mode = "view"
+                            },
+                        DocumentType = "slide",
+                        Height = "100%",
+                        TypeString = "mobile",
+                        Width = "100%"
+                    }) %>
+            );
+        <% break; %>
+
         <% } %>
     </script>
 </body>
