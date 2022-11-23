@@ -166,6 +166,15 @@
                 <td><a title="Open PPTX file for viewing on mobile" href="<%= Url.Action("editor") %>?method=pptxViewerMobile" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxViewerMobileCode">&lt;/&gt;</a>
                 </td>
             </tr>
+            <tr>
+                <th>Embedded view</th>
+                <td><a title="Open DOCX file for embedded viewing" href="<%= Url.Action("editor") %>?method=docxEmbed" class="button button-upper doc" target="blank">DOCX</a><a title="View source code" class="button-popap-try" data-code="docxEmbedCode">&lt;/&gt;</a>
+                </td>
+                <td><a title="Open XLSX file for embedded viewing" href="<%= Url.Action("editor") %>?method=xlsxEmbed" class="button button-upper spread" target="blank">XLSX</a><a title="View source code" class="button-popap-try" data-code="xlsxEmbedCode">&lt;/&gt;</a>
+                </td>
+                <td><a title="Open PPTX file for embedded viewing" href="<%= Url.Action("editor") %>?method=pptxEmbed" class="button button-upper present" target="blank">PPTX</a><a title="View source code" class="button-popap-try" data-code="pptxEmbedCode">&lt;/&gt;</a>
+                </td>
+            </tr>
         </tbody>
     </table>
 
@@ -2006,6 +2015,108 @@
                 },
                 "height": "100%",
                 "type": "mobile",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="docxEmbedCode">
+                <div class="popap-header">Open DOCX file for embedded viewing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "docx",
+                    "key": "B949CB79",
+                    "title": "Example Document Title.docx",
+                    "url": "https://example.com/url-to-example-document.docx"
+                },
+                "documentType": "word",
+                "height": "100%",
+                "type": "embedded",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="xlsxEmbedCode">
+                <div class="popap-header">Open XLSX file for embedded viewing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "xlsx",
+                    "key": "9CB47328",
+                    "title": "Example Spreadsheet Title.docx",
+                    "url": "https://example.com/url-to-example-document.xlsx"
+                },
+                "documentType": "cell",
+                "height": "100%",
+                "type": "embedded",
+                "width": "100%"
+            });
+
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+
+            <div id="pptxEmbedCode">
+                <div class="popap-header">Open PPTX file for embedded viewing</div>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html style="height: 100%;"&gt;
+&lt;head&gt;
+    &lt;title&gt;ONLYOFFICE Api Documentation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="height: 100%; margin: 0;"&gt;
+    &lt;div id="placeholder" style="height: 100%"&gt;&lt;/div&gt;
+    &lt;script type="text/javascript" src="https://documentserver/web-apps/apps/api/documents/api.js"&gt;&lt;/script&gt;
+
+    &lt;script type="text/javascript"&gt;
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder",
+            {
+                "document": {
+                    "fileType": "pptx",
+                    "key": "1CA69995",
+                    "title": "Example Presentation Title.docx",
+                    "url": "https://example.com/url-to-example-document.pptx"
+                },
+                "documentType": "slide",
+                "height": "100%",
+                "type": "embedded",
                 "width": "100%"
             });
 
