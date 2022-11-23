@@ -2024,7 +2024,7 @@
     <Content Include="App_Data\plugins\examples\Macros.docbuilder" />
     <Content Include="App_Data\plugins\examples\OLEObjectData.docbuilder" />
     <Content Include="App_Data\plugins\examples\Plugin.docbuilder" />
-    <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.createInputHelper.docbuilder" />
+    <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.createWindow.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.getItems.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.getScrollSizes.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.setItems.docbuilder" />
@@ -2080,7 +2080,7 @@
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.PutImageDataToSelection.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.RemovePlugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ReplaceTextSmart.docbuilder" />
-    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.SetMacros.docbuider" />
+    <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.SetMacros.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.SetProperties.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ShowButton.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.ShowInputHelper.docbuilder" />
