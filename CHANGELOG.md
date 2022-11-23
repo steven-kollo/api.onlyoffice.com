@@ -2,15 +2,23 @@
 
 - plugins: changed the structure of the Plugins and Macros section
 - plugins: parsing documentation from source code
-- plugins: added the onAddComment, onChangeCommentData and onRemoveComment events
-- plugins: added the AcceptReviewChanges, MoveToNextReviewChange and RejectReviewChanges methods
-- docbuilder: events documentation
-- docbuilder: global member properties
+- editors: mobile edit, mobile view and embedded view buttons on try page
+- editors: test examples v1.4.0
+- macros: added the Unhide all rows and columns macro
+- editors: conversion djvu to pdf
+
+## 2.10.0
 - editors: added the editorConfig.customization.integrationMode parameter
 - editors: added the integration with frontent frameworks
-- macros: added the Import CSV/text data macro
 - editors: JWT is enabled by default
+- plugins: added the onAddComment, onChangeCommentData and onRemoveComment events
+- plugins: added the AcceptReviewChanges, MoveToNextReviewChange and RejectReviewChanges methods
+- macros: added the Import CSV/text data macro
 - macros: added the Recalculate worksheet values macro sample
+- docbuilder: added global examples
+- docbuilder: added the onWorksheetChange event to Spreadsheet API
+- docbuilder: events documentation
+- docbuilder: global member properties
 
 ## 2.9.0
 - editors: added the Version and LastModifiedTime properties to the CheckFileInfo WOPI operation

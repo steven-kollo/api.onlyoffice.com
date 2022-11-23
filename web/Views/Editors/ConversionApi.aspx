@@ -456,8 +456,8 @@
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
-                <td><span class="no"></span></td>
+                <td><span class="yes"></span></td>
+                <td><span class="yes"></span></td>
                 <td><span class="yes"></span></td>
                 <td><span class="no"></span></td>
                 <td><span class="no"></span></td>
