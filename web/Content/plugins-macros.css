@@ -107,6 +107,11 @@
     background-repeat: no-repeat;
 }
 
+.replace-shapes-with-charts {
+    background-image: url("img/macros/replace-shapes-with-charts.svg");
+    background-repeat: no-repeat;
+}
+
 .example-plug-img {
     height: 120px;
     margin: auto;

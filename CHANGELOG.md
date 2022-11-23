@@ -1,5 +1,5 @@
 # Change Log
-
+- macros: added the Remove shapes from slides macro
 - editors: conversion djvu to pdf
 
 ## 2.10.0
