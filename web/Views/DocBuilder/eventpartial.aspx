@@ -69,6 +69,86 @@
             <h2>Example</h2>
             <div class="button copy-code">Copy code</div>
 <pre><%= ev.Example.Script %></pre>
+
+    <h2>Resulting document</h2>
+
+    <script id="scriptApi" type="text/javascript" src="<%= ConfigurationManager.AppSettings["editor_url"] ?? "" %>/web-apps/apps/api/documents/api.js"></script>
+
+    <div id="editorSpace">
+        <div id="placeholder"></div>
+    </div>
+
+    <script type="text/javascript">
+        <%
+            var ext = "docx";
+            switch (ev.Module)
+            {
+                case "cell":
+                    ext = "xlsx";
+                    break;
+                case "slide":
+                    ext = "pptx";
+                    break;
+            }
+
+            var documentType = ev.Module;
+            if (documentType == "form") documentType = "word";
+        %>
+
+        var config = <%= Config.Serialize(
+            new Config
+                {
+                    Document = new Config.DocumentConfig
+                        {
+                            FileType = ext,
+                            Key = "apiwh" + Guid.NewGuid(),
+                            Permissions = new Config.DocumentConfig.PermissionsConfig(),
+                            Title = "Example Title." + ext,
+                            Url = ConfigurationManager.AppSettings["storage_demo_url"] + "new." + ext
+                        },
+                    DocumentType = documentType,
+                    EditorConfig = new Config.EditorConfigConfiguration
+                        {
+                            CallbackUrl = Url.Action("callback", "editors", null, Request.Url.Scheme),
+                            Customization = new Config.EditorConfigConfiguration.CustomizationConfig
+                                {
+                                    Anonymous = new Config.EditorConfigConfiguration.CustomizationConfig.AnonymousConfig
+                                        {
+                                            Request = false
+                                        },
+                                    CompactHeader = true,
+                                    CompactToolbar = true,
+                                    Feedback = new Config.EditorConfigConfiguration.CustomizationConfig.FeedbackConfig
+                                        {
+                                            Visible = true
+                                        },
+                                    HideRightMenu = true,
+                                    HideRulers = true,
+                                    IntegrationMode = "embed",
+                                    ToolbarHideFileName = true,
+                                    ToolbarNoTabs = true
+                                }
+                        },
+                    Height = "550px",
+                    Width = "100%"
+                }) %>;
+
+        var onDocumentReady = function () {
+            window.connector = docEditor.createConnector();
+
+            connector.callCommand(
+                "function () {" +
+                "<%= Regex.Replace(ev.Example.Script.Replace("\"", "\\\"").Replace("builder.CreateFile", "").Replace("builder.SaveFile", "").Replace("builder.CloseFile()", ""), "\\r*\\n", "") %>" +
+                "}"
+            );
+        };
+
+        config.events = {
+            onDocumentReady: onDocumentReady,
+        };
+
+        window.docEditor = new DocsAPI.DocEditor("placeholder", config);
+    </script>
         <% } %>
     <% } %>
 
