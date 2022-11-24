@@ -2002,7 +2002,7 @@
     <Content Include="App_Data\plugins\examples\comment.docbuilder" />
     <Content Include="App_Data\plugins\examples\CommentData.docbuilder" />
     <Content Include="App_Data\plugins\examples\ContentControl.docbuilder" />
-    <Content Include="App_Data\plugins\examples\ContentControlCkeckBoxProperties.docbuilder" />
+    <Content Include="App_Data\plugins\examples\ContentControlCheckBoxProperties.docbuilder" />
     <Content Include="App_Data\plugins\examples\ContentControlDatePickerProperties.docbuilder" />
     <Content Include="App_Data\plugins\examples\ContentControlLock.docbuilder" />
     <Content Include="App_Data\plugins\examples\ContentControlParentPr.docbuilder" />
