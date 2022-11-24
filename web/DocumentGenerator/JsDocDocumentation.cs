@@ -29,8 +29,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         protected void Load(string pathPiece)
         {
-            _logger.Debug("Generate docbuilder documentations");
-
             var tree = new Dictionary<string, SortedDictionary<string, DBEntry>>(StringComparer.OrdinalIgnoreCase);
 
             var path = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, $@"App_Data\{pathPiece}\references");

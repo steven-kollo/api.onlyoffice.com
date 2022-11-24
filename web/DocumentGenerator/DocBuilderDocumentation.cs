@@ -63,6 +63,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             };
 
             _logger = LogManager.GetLogger("ASC.DocumentBuilder");
+            _logger.Debug("Generate docbuilder documentations");
             Load("docbuilder");
         }
 

@@ -63,7 +63,8 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
             reversePathMapping = PathMapping.ToDictionary(kv => kv.Value, kv => kv.Key);
 
-            _logger = LogManager.GetLogger("ASC.DocumentBuilder");
+            _logger = LogManager.GetLogger("ASC.Plugins");
+            _logger.Debug("Generate plugins documentations");
             Load("plugins");
         }
 
