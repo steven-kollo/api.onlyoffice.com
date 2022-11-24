@@ -30,7 +30,7 @@
   },
   "ContentControlLock": {
     "name": "ContentControlLock",
-    "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not:</p>\n<ul>\n\t<li><b>0</b> - only deleting</li>\n <li><b>1</b> - disable deleting or editing</li>\n <li><b>2</b> - only editing</li>\n <li><b>3</b> - full access</li>\n</ul>",
+    "description": "<p>A value that defines if it is possible to delete and/or edit the content control or not:</p>\n<ul>\n<li><strong>0</strong> - only deleting</li>\n<li><strong>1</strong> - disable deleting or editing</li>\n<li><strong>2</strong> - only editing</li>\n<li><strong>3</strong> - full access</li>\n</ul>",
     "type": [
       "0",
       "1",
