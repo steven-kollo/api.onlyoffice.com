@@ -19,7 +19,8 @@ const files = {
         "pluginBase.js": "common/plugins/plugin_base_api.js"
     },
     "sdkjs-forms/master": {
-        "form.js": "apiBuilder.js"
+        "form.js": "apiBuilder.js",
+        "formPluginMethods.js": "apiPlugins.js"
     }
 };
 
