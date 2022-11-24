@@ -1,5 +1,6 @@
 # Change Log
 
+- macros: added the Remove shapes from slides macro
 - editors: mobile edit, mobile view and embedded view buttons on try page
 - editors: test examples v1.4.0
 - macros: added the Unhide all rows and columns macro

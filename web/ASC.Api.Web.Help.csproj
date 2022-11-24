@@ -2158,6 +2158,7 @@
     <Content Include="Content\img\macros\merge-and-unmerge.svg" />
     <Content Include="Content\img\macros\next-blank-row.svg" />
     <Content Include="Content\img\macros\recalculate-values.svg" />
+    <Content Include="Content\img\macros\replace-shapes-with-charts.svg" />
     <Content Include="Content\img\macros\unhide-all-rows-and-columns.svg" />
     <Content Include="Content\img\macros\unmerge-cell.svg" />
     <Content Include="Content\img\macros\worksheet.svg" />
@@ -2266,6 +2267,7 @@
     <Content Include="Content\img\plugins\range_as_a_table.png" />
     <Content Include="Content\img\plugins\recalculate-cell-values.png" />
     <Content Include="Content\img\plugins\remove-plugin-button.png" />
+    <Content Include="Content\img\plugins\remove-shapes.png" />
     <Content Include="Content\img\plugins\text_area.png" />
     <Content Include="Content\img\plugins\text_field.png" />
     <Content Include="Content\img\plugins\unhide_all_rows.png" />
@@ -2769,6 +2771,7 @@
     <Content Include="Views\Plugin\Macros\Macrosamples\mergecellrange.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\nextblankrow.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\recalculatevalues.ascx" />
+    <Content Include="Views\Plugin\Macros\Macrosamples\removeshapes.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\setcolumnwidth.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unhideallrows.ascx" />
     <Content Include="Views\Plugin\Macros\Macrosamples\unmergecellrange.ascx" />
