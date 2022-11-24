@@ -771,6 +771,39 @@
           "optional": false
         }
       ]
+    },
+    "GetRange": {
+      "memberof": "ApiRange",
+      "name": "GetRange",
+      "description": "<p>Returns a Range object that represents the document part contained in the specified range.</p>",
+      "tags": {
+        "typeofeditors": [
+          "CDE"
+        ]
+      },
+      "returns": [
+        [
+          "ApiRange"
+        ]
+      ],
+      "see": null,
+      "inherits": null,
+      "params": [
+        {
+          "type": "Number",
+          "name": "Start",
+          "description": "<p>Start character index in the current range.</p>",
+          "optional": true,
+          "defaultValue": 0
+        },
+        {
+          "type": "Number",
+          "name": "End",
+          "description": "<p>End character index in the current range. (if &lt;= 0 then range to end).</p>",
+          "optional": true,
+          "defaultValue": -1
+        }
+      ]
     }
   },
   "events": {},
