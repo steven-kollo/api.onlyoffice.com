@@ -106,6 +106,7 @@ namespace ASC.Api.Web.Help.Controllers
                 "macros/macrosamples/mergecellrange",
                 "macros/macrosamples/nextblankrow",
                 "macros/macrosamples/recalculatevalues",
+                "macros/macrosamples/removeshapes",
                 "macros/macrosamples/setcolumnwidth",
                 "macros/macrosamples/unhideallrows",
                 "macros/macrosamples/unmergecellrange",
