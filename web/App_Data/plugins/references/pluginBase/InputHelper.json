@@ -33,6 +33,7 @@
       "params": [
         {
           "type": "Array.<InputHelperItem>",
+          "name": "items",
           "description": "<p>Defines an array of the {@link global#InputHelperItem InputHelperItem} objects which contain all the items for the input helper.</p>",
           "optional": false
         }
@@ -62,7 +63,7 @@
         {
           "type": "boolean",
           "name": "isCaptureKeyboard",
-          "description": "<p>Defines if the keyboard is caught (<b>true</b>) or not (<b>false</b>).</p>",
+          "description": "<p>Defines if the keyboard is caught (<strong>true</strong>) or not (<strong>false</strong>).</p>",
           "optional": false
         }
       ]
