@@ -100,7 +100,7 @@ Microsoft Visual Basic for Applications code so that you could see the differenc
         <p class="block_more"><a href="<%= Url.Action("macrosamples/recalculatevalues") %>">More</a></p>
     </li>
       <li class="macro-example">
-        <div class="macro-info"><a href="<%= Url.Action("macrosamples/removeshapes") %>"><div class="example-img recalculate-values"></div></a>
+        <div class="macro-info"><a href="<%= Url.Action("macrosamples/removeshapes") %>"><div class="example-img replace-shapes-with-charts"></div></a>
         <h2 class="name-example-macros"><a href="<%= Url.Action("macrosamples/removeshapes") %>">Remove shapes from slides</a></h2>
         <p>In this example we are removing shapes from the presentation.</p></div>
         <p class="block_more"><a href="<%= Url.Action("macrosamples/removeshapes") %>">More</a></p>

@@ -12,7 +12,7 @@
 <pre>(function()
 {
   var oPresentation = Api.GetPresentation();
-     for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
       var oSlide = oPresentation.GetSlideByIndex(i);
       var aShape  = oSlide.GetAllShapes();
       aShape[0].Delete();
@@ -21,8 +21,8 @@
 
 <p>Methods used:
 <a href="<%= Url.Action("presentationapi/api/getpresentation", "docbuilder") %>">GetPresentation</a>,
-<a href="<%= Url.Action("presentationapi/apislide/getslideindex", "docbuilder") %>">GetSlideByIndex</a>,
-<a href="<%= Url.Action("presentationapi/apimaster/getallshapes", "docbuilder") %>">GetAllShapes</a>,
+<a href="<%= Url.Action("presentationapi/apipresentation/getslidebyindex", "docbuilder") %>">GetSlideByIndex</a>,
+<a href="<%= Url.Action("presentationapi/apislide/getallshapes", "docbuilder") %>">GetAllShapes</a>
 </p>
 
 <div class="header-gray">Result</div>
