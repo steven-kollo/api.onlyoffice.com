@@ -1,5 +1,6 @@
 # Change Log
 
+- plugins: v7.3
 - plugins: changed the structure of the Plugins and Macros section
 - plugins: parsing documentation from source code
 
