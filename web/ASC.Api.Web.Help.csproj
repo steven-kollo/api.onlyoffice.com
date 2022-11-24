@@ -2023,7 +2023,6 @@
     <Content Include="App_Data\plugins\examples\localeTranslate.docbuilder" />
     <Content Include="App_Data\plugins\examples\Macros.docbuilder" />
     <Content Include="App_Data\plugins\examples\OLEObjectData.docbuilder" />
-    <Content Include="App_Data\plugins\examples\Plugin.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.createWindow.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.getItems.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\InputHelper.getScrollSizes.docbuilder" />
@@ -2879,6 +2878,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\plugins\examples\PluginData.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
