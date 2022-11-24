@@ -37,8 +37,8 @@
 using namespace NSDoctRenderer;
 int main(int argc, char *argv[])
 {
-	std::wstring sProcessDirectory = NSUtils::GetProcessDirectory();
-	std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
+    std::wstring sProcessDirectory = NSUtils::GetProcessDirectory();
+    std::wstring sWorkDirectory = NSUtils::GetBuilderDirectory();
 
     CDocBuilder::Initialize(sWorkDirectory.c_str());
 

@@ -481,6 +481,9 @@
             <li>
                 <a href="<%= Url.Action("macrosamples/recalculatevalues") %>">Recalculate worksheet values</a>
             </li>
+            <li>
+                <a href="<%= Url.Action("macrosamples/unhideallrows") %>">Unhide all rows and columns</a>
+            </li>
              <li>
                 <a href="<%= Url.Action("macrosamples/removeshapes") %>">Remove shapes from slides</a>
             </li>
