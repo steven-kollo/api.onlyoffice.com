@@ -2057,6 +2057,7 @@
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onTargetPositionChanged.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.onTranslate.docbuilder" />
     <Content Include="App_Data\plugins\examples\pluginBase\Plugin.resizeWindow.docbuilder" />
+    <Content Include="App_Data\plugins\examples\PluginData.docbuilder" />
     <Content Include="App_Data\plugins\examples\SelectionType.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.AddOleObject.docbuilder" />
     <Content Include="App_Data\plugins\examples\sharedPluginMethods\Api.CoAuthoringChatSendMessage.docbuilder" />
@@ -2878,7 +2879,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\plugins\examples\PluginData.docbuilder" />
     <None Include="Properties\PublishProfiles\api.onlyoffice.com.pubxml" />
     <None Include="Properties\PublishProfiles\api.teamlab.info.pubxml" />
     <None Include="Web.COM.config">
