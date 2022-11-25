@@ -217,11 +217,11 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortoend") %>">MoveCursorToEnd</a></td>
-            <td>This method allows to move a cursor to the end position.</td>
+            <td>This method allows to move a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape).</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortostart") %>">MoveCursorToStart</a></td>
-            <td>This method allows to move a cursor to the start position.</td>
+            <td>This method allows to move a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape).</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movetocomment") %>">MoveToComment</a></td>

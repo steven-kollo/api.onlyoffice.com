@@ -1,5 +1,12 @@
 # Change Log
 
+## 2.11.0
+- editors: mobile edit, mobile view and embedded view buttons on try page
+- editors: test examples v1.4.0
+- editors: conversion djvu to pdf
+- macros: added the Remove shapes from slides macro
+- macros: added the Unhide all rows and columns macro
+
 ## 2.10.0
 - editors: added the editorConfig.customization.integrationMode parameter
 - editors: added the integration with frontent frameworks

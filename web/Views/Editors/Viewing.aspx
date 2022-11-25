@@ -25,9 +25,13 @@
                 To do this, open the <b>File</b> tab, click <b>Advanced Settings...</b> and check/uncheck the <b>Show changes from other users</b> checkbox.
                 This mode is enabled by default:</p>
             <pre>
-"coEditing": {
-    "mode": "fast",
-    "change": true
+{
+    "editorConfig": {
+        "coEditing": {
+            "mode": "fast",
+            "change": true
+        }
+    }
 }
 </pre>
             <img alt="Setting" src="<%= Url.Content("~/content/img/editor/show-changes-from-other-users.png") %>" />
@@ -39,28 +43,40 @@
         <li>
             <p>If the <em>mode</em> field is <em>fast</em> and the <em>change</em> field is <em>false</em>, then the live viewer is opened by default, and you cannot switch the mode to the common viewer:</p>
             <pre>
-"coEditing": {
-    "mode": "fast",
-    "change": false
-}        
+{
+    "editorConfig": {
+        "coEditing": {
+            "mode": "fast",
+            "change": false
+        }
+    }
+}      
 </pre>
         </li>
         <li>
             <p>If the <em>mode</em> field is <em>strict</em> and the <em>change</em> field is <em>true</em>, then the common viewer is opened by default,
                 but you can switch the mode to the live viewer in the <b>Advanced Settings...</b>:</p>
             <pre>
-"coEditing": {
-    "mode": "strict",
-    "change": true
+{
+    "editorConfig": {
+        "coEditing": {
+            "mode": "strict",
+            "change": true
+        }
+    }
 }
 </pre>
         </li>
         <li>
             <p>If the <em>mode</em> field is <em>strict</em> and the <em>change</em> field is <em>false</em>, then the common viewer is opened by default, and you cannot switch the mode to the live viewer:</p>
             <pre>
-"coEditing": {
-    "mode": "strict",
-    "change": false
+{
+    "editorConfig": {
+        "coEditing": {
+            "mode": "strict",
+            "change": false
+        }
+    }
 }
 </pre>
             <img alt="Viewer" src="<%= Url.Content("~/content/img/editor/viewer.png") %>" />

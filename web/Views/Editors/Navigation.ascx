@@ -206,7 +206,7 @@
         <a href="<%= Url.Action("methods") %>">Methods</a>
     </li>
     <li>
-        <a href="<%= Url.Action("connector") %>">Connector</a>
+        <a href="<%= Url.Action("connector") %>">Automation API</a>
     </li>
     <li>
         <a href="<%= Url.Action("callback") %>">Callback handler</a>
