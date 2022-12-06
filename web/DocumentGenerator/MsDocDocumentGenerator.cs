@@ -317,7 +317,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
 
         private static readonly Regex RouteRegex = new Regex(@"\{([^\}]+)\}", RegexOptions.Compiled);
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
-        private readonly string[] _responseFormats = (ConfigurationManager.AppSettings["enabled_response_formats"] ?? "").Split('|');
 
         private static ILog _logger;
 
