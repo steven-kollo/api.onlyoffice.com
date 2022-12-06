@@ -232,7 +232,6 @@
             <path>api/2.0/mailserver/notification/address/remove</path>
             <httpMethod>DELETE</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
-            <param name="address"></param>
         </member>
         <member name="M:ASC.Api.MailServer.MailServerApi.GetMailServer">
             <summary>

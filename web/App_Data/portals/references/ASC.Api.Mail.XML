@@ -143,7 +143,20 @@
             <category>Mail service</category>
             <visible>false</visible>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String,System.String)" -->
+        <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Connects the mail server and saves its partitional information.
+            </summary>
+            <param type="System.String, System" name="mailHost">Mail server host</param>
+            <param type="System.String, System" name="mysqlHost">MySQL host</param>
+            <param type="System.String, System" name="mysqlDatabase">MySQL database</param>
+            <param type="System.String, System" name="mysqlUser">MySQL user</param>
+            <param type="System.String, System" name="mysqlPassword">MySQL password</param>
+            <returns>Operation result</returns>
+            <short>Connect the mail server and save its partitional information</short> 
+            <category>Mail service</category>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Mail.MailApi.GetCommonSettings">
             <summary>
             Returns the mail common settings.

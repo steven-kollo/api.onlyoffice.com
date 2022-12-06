@@ -264,11 +264,10 @@
             <param type="System.String, System" name="parentcommentid">Parent comment ID</param>
             <param type="System.String, System" name="entityid">Entity ID where a comment will be added</param>
             <param type="System.String, System" name="content">Comment text</param>
-            <returns>Comment information</returns>
+            <returns type="ASC.Web.Studio.UserControls.Common.Comments.CommentInfo, ASC.Web.Studio">Comment information</returns>
             <category>Blogs</category>
             <path>api/2.0/community/blog/comment</path>
             <httpMethod>POST</httpMethod>
-            <returns type="ASC.Web.Studio.UserControls.Common.Comments.CommentInfo, ASC.Web.Studio"></returns>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateBlogComment(System.String,System.String)">
             <summary>
@@ -642,7 +641,23 @@
             <category>Events</category>
              <requiresAuthorization>true</requiresAuthorization>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ASC.Api.Community.CommunityApi.UpdateEvent(System.Int32,System.String,System.String,ASC.Web.Community.News.Code.FeedType)" -->
+        <member name="M:ASC.Api.Community.CommunityApi.UpdateEvent(System.Int32,System.String,System.String,ASC.Web.Community.News.Code.FeedType)">
+            <summary>
+            Updates the selected event changing the event title, content or/and event type specified in the request.
+            </summary>
+            <short>
+            Update an event
+            </short>
+             <param type="System.Int32, System" method="url" name="feedid">Feed ID</param>
+             <param type="System.String, System" name="title">New event title</param>
+             <param type="System.String, System" name="content">New event content</param>
+             <param type="ASC.Web.Community.News.Code.FeedType, ASC.Web.Community.News.Code" name="type">New event type</param>
+            <returns type="ASC.Api.Events.EventWrapperFull, ASC.Api.Community">List of events</returns>
+            <category>Events</category>
+            <path>api/2.0/community/event/{feedid}</path>
+            <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+        </member>
         <member name="M:ASC.Api.Community.CommunityApi.DeleteEvent(System.Int32)">
             <summary>
             Deletes an event with the ID specified in the request.

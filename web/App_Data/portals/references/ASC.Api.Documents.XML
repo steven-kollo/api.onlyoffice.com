@@ -608,7 +608,21 @@
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ASC.Api.Documents.DocumentsApi.DeleteFile(System.String,System.Boolean,System.Boolean)" -->
+        <member name="M:ASC.Api.Documents.DocumentsApi.DeleteFile(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Deletes a file with the ID specified in the request.
+            </summary>
+            <short>Delete a file</short>
+            <category>Files</category>
+            <param type="System.String, System" method="url" name="fileId">File ID</param>
+            <param type="System.Boolean, System" name="deleteAfter">Specifies whether to delete a file after the editing session is finished or not</param>
+            <param type="System.Boolean, System" name="immediately">Specifies whether to move a file to the "Trash" folder or delete it immediately</param>
+            <returns type="ASC.Api.Documents.FileOperationWraper, ASC.Api.Documents">List of file operations</returns>
+            <path>api/2.0/files/file/{fileId}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
+        </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.StartConversion(System.String)">
             <summary>
             Starts a conversion operation of a file with the ID specified in the request.

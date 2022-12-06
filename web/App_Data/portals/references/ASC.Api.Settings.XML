@@ -559,7 +559,18 @@
              <returns>White label logos</returns>
             <visible>false</visible>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText(System.Boolean)" -->
+        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText(System.Boolean)">
+             <summary>
+             Returns the white label logo text.
+             </summary>
+             <short>
+             Get the white label logo text
+             </short>
+             <category>Rebranding</category>
+             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+             <returns>Logo text</returns>
+            <visible>false</visible>
+        </member>
         <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelOptions(System.Boolean)">
              <summary>
              Restores the white label options.
