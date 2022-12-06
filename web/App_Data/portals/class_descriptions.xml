@@ -278,7 +278,7 @@
       <value>
 	  <Description>Single, AllFollowing, AllSeries</Description>
 		<Example>Single</Example>
-		<ExampleJson>Single</ExampleJson>
+		<ExampleJson>"Single"</ExampleJson>
       </value>
     </entry>
 	<entry>
