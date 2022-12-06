@@ -26,16 +26,13 @@
 
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Hosting;
-using System.Web.Routing;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Schema;
@@ -43,7 +40,6 @@ using System.Xml.Serialization;
 
 using ASC.Api.Web.Help.Extensions;
 using ASC.Api.Web.Help.Helpers;
-using Autofac;
 using log4net;
 using Newtonsoft.Json;
 
@@ -315,16 +311,9 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         internal const string SystemIEnumerable = "System.Collections.Generic.IEnumerable{";
         internal const string SystemList = "System.Collections.Generic.List{";
 
-        private static readonly Regex RouteRegex = new Regex(@"\{([^\}]+)\}", RegexOptions.Compiled);
         private readonly List<MsDocEntryPoint> _points = new List<MsDocEntryPoint>();
 
         private static ILog _logger;
-
-        public MsDocDocumentGenerator(IContainer container)
-        {
-            Container = container;
-            GetLogger();
-        }
 
         public MsDocDocumentGenerator()
         {
@@ -338,8 +327,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         }
 
         #region IApiDocumentGenerator Members
-
-        public IContainer Container { get; set; }
 
         public List<MsDocEntryPoint> Points
         {
@@ -803,32 +790,6 @@ namespace ASC.Api.Web.Help.DocumentGenerator
         }
 
         #endregion
-
-        private static string GuesMethod(string textAttr, string routingUrl, string httpmethod)
-        {
-            if ("get".Equals(httpmethod, StringComparison.OrdinalIgnoreCase))
-                return "url";
-            var matches = RouteRegex.Matches(routingUrl);
-            textAttr = textAttr.ToLowerInvariant();
-            return
-                matches.Cast<Match>().Where(x => x.Success && x.Groups[1].Success).Select(
-                    x => x.Groups[1].Value.ToLowerInvariant()).Any(
-                        routeConstr => routeConstr == textAttr || routeConstr.StartsWith(textAttr + ":"))
-                    ? "url"
-                    : "body";
-        }
-
-        public static string GetMethodString(MethodBase methodCall)
-        {
-            var str = string.Format("M:{0}.{1}", methodCall.DeclaringType.FullName, methodCall.Name);
-            var callParam = methodCall.GetParameters();
-            if (callParam.Length > 0)
-            {
-                str += string.Format("({0})",
-                                     string.Join(",", callParam.Select(x => MakeParamName(x.ParameterType)).ToArray()));
-            }
-            return str;
-        }
 
         private static string MakeParamName(Type parameterType)
         {
