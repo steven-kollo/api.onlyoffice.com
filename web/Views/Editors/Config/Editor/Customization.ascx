@@ -26,6 +26,10 @@
     <li><a href="#customer">customer</a></li>
     <li><a href="#features">features</a></li>
     <li><a href="#feedback">feedback</a></li>
+    <% if (license)
+       { %>
+    <li><a href="#font">font</a></li>
+    <% } %>
     <li><a href="#forcesave">forcesave</a></li>
     <li><a href="#goback">goback</a></li>
     <li><a href="#help">help</a></li>
@@ -349,6 +353,26 @@
             <td>boolean or object</td>
             <td>true</td>
         </tr>
+        <% if (license)
+           { %>
+        <tr class="tablerow">
+            <td id="font" class="copy-link">font<span class="required">**</span></td>
+            <td>
+                Defines the font for the interface elements (buttons, tabs, etc.):
+                <ul>
+                    <li>
+                        <b>name</b> - the font name,
+                        <br />
+                        <b>type</b>: string,
+                        <br />
+                        <b>example</b>: "Arial".
+                    </li>
+                </ul>
+            </td>
+            <td>object</td>
+            <td></td>
+        </tr>
+        <% } %>
         <tr>
             <td id="forcesave" class="copy-link">forcesave</td>
             <td>
@@ -1156,7 +1180,11 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                 "url": "https://example.com",
                 "visible": true
             },
-            "forcesave": false,
+            <% if (license)
+               { %>"font": {
+                "name": "Arial"
+            },
+            <% } %>"forcesave": false,
             "goback": {
                 "blank": true,
                 "requestClose": false,

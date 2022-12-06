@@ -1,5 +1,7 @@
 # Change Log
 
+- editors: added the editorConfig.customization.font parameter
+
 ## 2.11.0
 - editors: mobile edit, mobile view and embedded view buttons on try page
 - editors: test examples v1.4.0
