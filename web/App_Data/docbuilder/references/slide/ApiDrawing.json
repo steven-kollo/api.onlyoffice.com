@@ -322,6 +322,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n     * Class representing a graphical object.\n     * @constructor\n     */",
   "description": "<p>Class representing a graphical object.</p>",
   "scope": "global",

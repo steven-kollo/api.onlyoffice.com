@@ -112,6 +112,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing an OLE object.\n\t * @constructor\n\t */",
   "description": "<p>Class representing an OLE object.</p>",
   "scope": "global",

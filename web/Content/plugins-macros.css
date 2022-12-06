@@ -97,6 +97,26 @@
     background-repeat: no-repeat;
 }
 
+.import-csv{
+    background-image: url("img/macros/import-csv.svg");
+    background-repeat: no-repeat;
+}
+
+.recalculate-values {
+    background-image: url("img/macros/recalculate-values.svg");
+    background-repeat: no-repeat;
+}
+
+.replace-shapes-with-charts {
+    background-image: url("img/macros/replace-shapes-with-charts.svg");
+    background-repeat: no-repeat;
+}
+
+.unhide_all_rows {
+    background-image: url("img/macros/unhide-all-rows-and-columns.svg");
+    background-repeat: no-repeat;
+}
+
 .example-plug-img {
     height: 120px;
     margin: auto;

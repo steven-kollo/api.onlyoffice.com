@@ -64,6 +64,10 @@
     </thead>
     <tbody>
         <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/acceptreviewchanges") %>">AcceptReviewChanges</a></td>
+            <td>This method allows to accept review changes.</td>
+        </tr>
+        <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/addcomment") %>">AddComment</a></td>
             <td>This method allows to add a comment to the document.</td>
         </tr>
@@ -213,15 +217,19 @@
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortoend") %>">MoveCursorToEnd</a></td>
-            <td>This method allows to move a cursor to the end position.</td>
+            <td>This method allows to move a cursor to the end of the current editing area (document body, footer/header, footnote, or autoshape).</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movecursortostart") %>">MoveCursorToStart</a></td>
-            <td>This method allows to move a cursor to the start position.</td>
+            <td>This method allows to move a cursor to the beginning of the current editing area (document body, footer/header, footnote, or autoshape).</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/movetocomment") %>">MoveToComment</a></td>
             <td>This method allows to move a cursor to the specified comment.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/movetonextreviewchange") %>">MoveToNextReviewChange</a></td>
+            <td>This method allows to navigate through the review changes.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/onencryption") %>">OnEncryption</a></td>
@@ -242,6 +250,10 @@
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/putimagedatatoselection") %>">PutImageDataToSelection</a></td>
             <td>This method allows to replace the first selected drawing with the image specified in the parameters.</td>
+        </tr>
+        <tr class="tablerow">
+            <td><a href="<%= Url.Action("executemethod/rejectreviewchanges") %>">RejectReviewChanges</a></td>
+            <td>This method allows to reject review changes.</td>
         </tr>
         <tr class="tablerow">
             <td><a href="<%= Url.Action("executemethod/removecomments") %>">RemoveComments</a></td>

@@ -20,7 +20,9 @@
     <li><a href="#button">button</a></li>
     <li><a href="#init">init</a></li>
     <li><a href="#inputHelper_onSelectItem">inputHelper_onSelectItem</a></li>
+    <li><a href="#onAddComment">onAddComment</a></li>
     <li><a href="#onBlurContentControl">onBlurContentControl</a></li>
+    <li><a href="#onChangeCommentData">onChangeCommentData</a></li>
     <li><a href="#onChangeContentControl">onChangeContentControl</a></li>
     <li><a href="#onClick">onClick</a></li>
     <li><a href="#onCommandCallback">onCommandCallback</a></li>
@@ -32,6 +34,7 @@
     <li><a href="#onInputHelperClear">onInputHelperClear</a></li>
     <li><a href="#onInputHelperInput">onInputHelperInput</a></li>
     <li><a href="#onMethodReturn">onMethodReturn</a></li>
+    <li><a href="#onRemoveComment">onRemoveComment</a></li>
     <li><a href="#onTargetPositionChanged">onTargetPositionChanged</a></li>
     <li><a href="#onTranslate">onTranslate</a></li>
 </ul>
@@ -174,6 +177,103 @@ window.Asc.plugin.inputHelper_onSelectItem = function(item) {
     </li>
 
     <li>
+        <p><b id="onAddComment" class="copy-link">onAddComment</b> - the function called when a comment is added to the document with the <a href="<%= Url.Action("executemethod/addcomment") %>">AddComment</a> method.</p>
+        <p>The method takes the <em>comment</em> object containing the comment data in the following form:</p>
+        <pre>
+{
+    "Id": "1_631",
+    "Data": {
+        "UserName": "John Smith",
+        "Text": "comment",
+        "Time": "1662737941471",
+        "Solved": true,
+        "Replies": [{"UserName": "Mark Potato", "Text": "reply 1", "Time": "1662740895892", "Solved": false}]
+    }
+}
+</pre>
+        <div class="header-gray">Parameters</div>
+        <table class="table">
+            <colgroup>
+                <col style="width: 100px;" />
+                <col />
+                <col style="width: 100px;" />
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Parameter</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td>Id</td>
+                    <td>The comment ID.</td>
+                    <td>string</td>
+                    <td>"1_631"</td>
+                </tr>
+                <tr class="tablerow">
+                    <td>Data</td>
+                    <td>
+                        An object which contains the comment data:
+                        <ul>
+                            <li>
+                                <b>UserName</b> - the comment author,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "John Smith";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Text</b> - the comment text,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "comment";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Time</b> - the time when the comment was posted (in milliseconds),
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "1662737941471";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Solved</b> - specifies if the comment is resolved (<b>true</b>) or not (<b>false</b>),
+                                <br />
+                                <b>type</b>: boolean,
+                                <br />
+                                <b>example</b>: true;
+                                <br />
+                            </li>
+                            <li>
+                                <b>Replies</b> - an array containing the comment replies represented as the <em>oCommentData</em> objects,
+                                <br />
+                                <b>type</b>: array of objects.
+                            </li>
+                        </ul>
+                    </td>
+                    <td>object</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+
+        <div class="header-gray">Example</div>
+        <pre>
+window.Asc.plugin.event_onAddComment = function(comment)
+{
+    Comments.push(comment);
+    $('#scrollable-container-id').append(makeComment(comment.Id, comment));
+};
+</pre>
+    </li>
+
+    <li>
         <p><b id="onBlurContentControl" class="copy-link">onBlurContentControl</b> - the function called to show which content control has been blurred.</p>
         <div class="header-gray">Parameters</div>
         <table class="table">
@@ -306,6 +406,102 @@ connector.attachEvent("onBlurContentControl", function(oPr)
     }
     console.log("event: onBlurContentControl");
 });
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onChangeCommentData" class="copy-link">onChangeCommentData</b> - the function called when the specified comment is changed with the <a href="<%= Url.Action("executemethod/changecomment") %>">ChangeComment</a> method.</p>
+        <p>The method takes the <em>comment</em> object containing the comment data in the following form:</p>
+        <pre>
+{
+    "Id": "1_631",
+    "Data": {
+        "UserName": "John Smith",
+        "Text": "comment",
+        "Time": "1662737941471",
+        "Solved": true,
+        "Replies": [{"UserName": "Mark Potato", "Text": "reply 1", "Time": "1662740895892", "Solved": false}]
+    }
+}
+</pre>
+        <div class="header-gray">Parameters</div>
+        <table class="table">
+            <colgroup>
+                <col style="width: 100px;" />
+                <col />
+                <col style="width: 100px;" />
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Parameter</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td>Id</td>
+                    <td>The comment ID.</td>
+                    <td>string</td>
+                    <td>"1_631"</td>
+                </tr>
+                <tr class="tablerow">
+                    <td>Data</td>
+                    <td>
+                        An object which contains the updated comment data:
+                        <ul>
+                            <li>
+                                <b>UserName</b> - the comment author,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "John Smith";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Text</b> - the comment text,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "comment";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Time</b> - the time when the comment was posted (in milliseconds),
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "1662737941471";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Solved</b> - specifies if the comment is resolved (<b>true</b>) or not (<b>false</b>),
+                                <br />
+                                <b>type</b>: boolean,
+                                <br />
+                                <b>example</b>: true;
+                                <br />
+                            </li>
+                            <li>
+                                <b>Replies</b> - an array containing the comment replies represented as the <em>oCommentData</em> objects,
+                                <br />
+                                <b>type</b>: array of objects.
+                            </li>
+                        </ul>
+                    </td>
+                    <td>object</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+
+        <div class="header-gray">Example</div>
+        <pre>
+window.Asc.plugin.event_onChangeCommentData = function(comment)
+{
+    changeComment(comment);
+};
 </pre>
     </li>
 
@@ -811,6 +1007,102 @@ window.Asc.plugin.onMethodReturn = function(returnValue) {
     } else if ("GetAllContentControls") {
         window.Asc.plugin.executeCommand("close", console.log(JSON.stringify(returnValue)));
     } 
+};
+</pre>
+    </li>
+
+    <li>
+        <p><b id="onRemoveComment" class="copy-link">onRemoveComment</b> - the function called when the specified comment is removed with the <a href="<%= Url.Action("executemethod/removecomments") %>">RemoveComments</a> method.</p>
+        <p>The method takes the <em>comment</em> object containing the comment data in the following form:</p>
+        <pre>
+{
+    "Id": "1_631",
+    "Data": {
+        "UserName": "John Smith",
+        "Text": "comment",
+        "Time": "1662737941471",
+        "Solved": true,
+        "Replies": [{"UserName": "Mark Potato", "Text": "reply 1", "Time": "1662740895892", "Solved": false}]
+    }
+}
+</pre>
+        <div class="header-gray">Parameters</div>
+        <table class="table">
+            <colgroup>
+                <col style="width: 100px;" />
+                <col />
+                <col style="width: 100px;" />
+            </colgroup>
+            <thead>
+                <tr class="tablerow">
+                    <td>Parameter</td>
+                    <td>Description</td>
+                    <td>Type</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tablerow">
+                    <td>Id</td>
+                    <td>The comment ID.</td>
+                    <td>string</td>
+                    <td>"1_631"</td>
+                </tr>
+                <tr class="tablerow">
+                    <td>Data</td>
+                    <td>
+                        An object which contains the comment data:
+                        <ul>
+                            <li>
+                                <b>UserName</b> - the comment author,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "John Smith";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Text</b> - the comment text,
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "comment";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Time</b> - the time when the comment was posted (in milliseconds),
+                                <br />
+                                <b>type</b>: string,
+                                <br />
+                                <b>example</b>: "1662737941471";
+                                <br />
+                            </li>
+                            <li>
+                                <b>Solved</b> - specifies if the comment is resolved (<b>true</b>) or not (<b>false</b>),
+                                <br />
+                                <b>type</b>: boolean,
+                                <br />
+                                <b>example</b>: true;
+                                <br />
+                            </li>
+                            <li>
+                                <b>Replies</b> - an array containing the comment replies represented as the <em>oCommentData</em> objects,
+                                <br />
+                                <b>type</b>: array of objects.
+                            </li>
+                        </ul>
+                    </td>
+                    <td>object</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mobile-content"></div>
+
+        <div class="header-gray">Example</div>
+        <pre>
+window.Asc.plugin.event_onRemoveComment = function(comment)
+{
+    removeComments([comment.Id]);
 };
 </pre>
     </li>

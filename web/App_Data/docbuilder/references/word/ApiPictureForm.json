@@ -604,7 +604,7 @@
     "SetTextPr": {
       "memberof": "ApiPictureForm",
       "name": "SetTextPr",
-      "description": "<p>Sets the text properties to the current form.\n*This method is used only for text and combo box forms.</p>",
+      "description": "<p>Sets the text properties to the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -629,7 +629,7 @@
     "GetTextPr": {
       "memberof": "ApiPictureForm",
       "name": "GetTextPr",
-      "description": "<p>Returns the text properties from the current form.\n*This method is used only for text and combo box forms.</p>",
+      "description": "<p>Returns the text properties from the current form.\n<em>This method is used only for text and combo box forms.</em></p>",
       "tags": {
         "typeofeditors": [
           "CDE"
@@ -661,6 +661,7 @@
       "inherits": "Inherited From: {@link ApiFormBase#Copy}"
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing a document picture form.\n\t * @constructor\n\t * @property {ScaleFlag} scaleFlag - The condition to scale an image in the picture form: \"always\", \"never\", \"tooBig\" or \"tooSmall\".\n\t * @property {boolean} lockAspectRatio - Specifies if the aspect ratio of the picture form is locked or not.\n\t * @property {boolean} respectBorders - Specifies if the form border width is respected or not when scaling the image.\n\t * @property {percentage} shiftX - Horizontal picture position inside the picture form measured in percent:\n\t * * <b>0</b> - the picture is placed on the left;\n\t * * <b>50</b> - the picture is placed in the center;\n\t * * <b>100</b> - the picture is placed on the right.\n\t * @property {percentage} shiftY - Vertical picture position inside the picture form measured in percent:\n\t * * <b>0</b> - the picture is placed on top;\n\t * * <b>50</b> - the picture is placed in the center;\n\t * * <b>100</b> - the picture is placed on the bottom.\n\t * @extends {ApiFormBase}\n\t */",
   "description": "<p>Class representing a document picture form.</p>",
   "scope": "global",

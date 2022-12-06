@@ -60,6 +60,7 @@
       "inherits": null
     }
   },
+  "events": {},
   "comment": "/**\n\t * Class representing the numbering properties.\n\t * @constructor\n\t */",
   "description": "<p>Class representing the numbering properties.</p>",
   "scope": "global",

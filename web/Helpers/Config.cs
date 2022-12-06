@@ -316,6 +316,9 @@ namespace ASC.Api.Web.Help.Helpers
                 [DataMember(Name = "hideRulers", EmitDefaultValue = false)]
                 public bool? HideRulers;
 
+                [DataMember(Name = "integrationMode", EmitDefaultValue = false)]
+                public string IntegrationMode;
+
                 [DataMember(Name = "logo", EmitDefaultValue = false)]
                 public LogoConfig Logo;
 
