@@ -66,7 +66,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                         generator.GenerateRequestExample(method);
                     }
                     catch(Exception e) {
-                        _logger.Error("Error", e);
+                        _logger.Error("Error " + method, e);
                     }
                 }
             }
