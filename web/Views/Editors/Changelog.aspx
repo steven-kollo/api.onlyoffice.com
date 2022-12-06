@@ -16,6 +16,9 @@
     </h1>
 
     <p class="dscr">The list of changes of ONLYOFFICE Document Server API.</p>
+    <h2 id="73" class="copy-link">Version 7.3</h2>
+    <ul></ul>
+
     <h2 id="72" class="copy-link">Version 7.2</h2>
     <ul>
         <li>Added the <a href="<%= Url.Action("config/editor/customization") %>#integrationMode">editorConfig.customization.integrationMode</a> parameter.</li>
