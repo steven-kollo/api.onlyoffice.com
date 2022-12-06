@@ -6,7 +6,7 @@
     <members>
         <member name="T:ASC.Api.Settings.SettingsApi">
             <summary>
-             Portal settings.
+             Portal settings API.
             </summary>
             <name>settings</name>
         </member>
@@ -51,7 +51,7 @@
             Save the SMTP settings
             </short>
             <category>SMTP</category>
-            <param file="ASC.Api.Settings" name="smtpSettings">SMTP settings</param>
+            <param type="ASC.Api.Settings.Smtp.SmtpSettingsWrapper, ASC.Api.Settings.Smtp" file="ASC.Api.Settings" name="smtpSettings">SMTP settings</param>
             <returns type="ASC.Api.Settings.Smtp.SmtpSettingsWrapper, ASC.Api.Settings">SMTP settings</returns>
             <path>api/2.0/settings/smtp</path>
             <requiresAuthorization>true</requiresAuthorization>
@@ -124,13 +124,13 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSsoSettingsV2Constants">
             <summary>
-            Returns the constants of the SSO settings.
+            Returns the SSO settings constants.
             </summary>
             <short>
-            Get the constants of the SSO settings
+            Get the SSO settings constants
             </short>
             <category>SSO</category>
-            <returns>Constants of the SSO settings</returns>
+            <returns>The SSO settings Constants</returns>
             <path>api/2.0/settings/ssov2/constants</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -143,7 +143,7 @@
             Save the SSO settings
             </short>
             <category>SSO</category>
-            <param type="ASC.Web.Studio.UserControls.Management.SingleSignOnSettings.SsoSettingsV2, ASC.Web.Studio" name="serializeSettings">Serialized SSO settings</param>
+            <param type="System.String, System" name="serializeSettings">Serialized SSO settings</param>
             <returns>SSO settings</returns>
             <path>api/2.0/settings/ssov2</path>
             <httpMethod>POST</httpMethod>
@@ -177,7 +177,7 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetLdapCronSettings">
             <summary>
-            Returns the LDAP autosynchronous cron expression of the current portal if it exists.
+            Returns the LDAP autosynchronous cron expression for the current portal if it exists.
             </summary>
             <short>
             Get the LDAP cron expression
@@ -190,23 +190,23 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetLdapCronSettings(System.String)">
             <summary>
-            Sets the LDAP autosynchronous cron expression of the current portal.
+            Sets the LDAP autosynchronous cron expression to the current portal.
             </summary>
             <short>
             Set the LDAP cron expression
             </short>
             <category>LDAP</category>
             <path>api/2.0/settings/ldap/cron</path>
-            <param name="cron">Cron expression</param>
+            <param type="System.String, System" name="cron">Cron expression</param>
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SyncLdap">
             <summary>
-            Starts synchronizing users and groups by LDAP.
+            Synchronizes the portal data with the new information from the LDAP server.
             </summary>
             <short>
-            Synchronize by LDAP
+            Synchronize with LDAP server
             </short>
             <category>LDAP</category>
             <path>api/2.0/settings/ldap/sync</path>
@@ -235,24 +235,23 @@
             Save the LDAP settings
             </short>
             <category>LDAP</category>
-            <param name="settings">LDAP settings in the serialized string format</param>
-            <param name="acceptCertificate">Specifies if the errors of checking certificates are allowed (true) or not (false)</param>
-            <returns>Operation status</returns>
+            <param type="System.String, System" name="settings">LDAP settings in the serialized string format</param>
+            <param type="System.Boolean, System" name="acceptCertificate">Specifies if a certificate will be accepted (true) or not (false)</param>
+            <returns type="ASC.ActiveDirectory.ComplexOperations.LdapOperationStatus, ASC.ActiveDirectory">Operation status</returns>
             <path>api/2.0/settings/ldap</path>
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
-            <returns type="ASC.ActiveDirectory.ComplexOperations.LdapOperationStatus, ASC.ActiveDirectory"></returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TestLdapSave(System.String,System.Boolean)">
             <summary>
-            Starts the process of collecting preliminary changes on the portal during the saving process according to the LDAP settings.
+            Starts the process of saving LDAP settings and collecting preliminary changes on the portal according to them.
             </summary>
             <short>
             Test the LDAP saving process
             </short>
             <category>LDAP</category>
-            <param name="settings">LDAP settings in the serialized string format</param>
-            <param name="acceptCertificate">Specifies if the errors of checking certificates are allowed (true) or not (false)</param>
+            <param type="System.String, System" name="settings">LDAP settings in the serialized string format</param>
+            <param type="System.Boolean, System" name="acceptCertificate">Specifies if a certificate will be accepted (true) or not (false)</param>
             <path>api/2.0/settings/ldap/save/test</path>
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -286,10 +285,10 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSettings">
             <summary>
-             Returns a list of all the available portal settings with the current values for each parameter.
+            Returns a list of all the available portal settings with the current values for each parameter.
             </summary>
             <short>
-             Get the portal settings
+            Get the portal settings
             </short>
             <category>Common settings</category>
             <returns type="ASC.Api.Settings.SettingsWrapper, ASC.Api.Settings">Settings</returns>
@@ -299,10 +298,10 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetQuotaUsed">
             <summary>
-             Returns the space usage quota for the portal with the space usage of each module.
+            Returns the space usage quota for the portal with the specified space usage for each module.
             </summary>
             <short>
-             Get the space usage
+            Get the space usage
             </short>
             <category>Quota</category>
             <returns type="ASC.Web.Studio.Core.Quota.QuotaWrapper, ASC.Web.Studio">Space usage and limits for upload</returns>
@@ -312,10 +311,10 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.RecalculateQuota">
             <summary>
-             Starts the process of recalculating quota.
+            Starts the process of recalculating quota.
             </summary>
             <short>
-             Recalculates quota 
+            Recalculate quota 
             </short>
             <category>Quota</category>
             <path>api/2.0/settings/recalculatequota</path>
@@ -324,13 +323,13 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CheckRecalculateQuota">
             <summary>
-             Checks the process of recalculating quota.
+            Checks the process of recalculating quota.
             </summary>
             <short>
-             Check quota recalculating
+            Check quota recalculation
             </short>
             <category>Quota</category>
-            <returns>Boolean value: True - quota recalculating process is enabled, False - quota recalculating process is disabled</returns>
+            <returns>Boolean value: true - quota recalculation process is enabled, false - quota recalculation process is disabled</returns>
             <path>api/2.0/settings/checkrecalculatequota</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -342,7 +341,7 @@
             <short>Get the current build version</short>
             <category>Versions</category>
             <visible>false</visible>
-            <returns>Current onlyoffice, editor, mailserver versions</returns>
+            <returns>Current ONLYOFFICE, editor, mailserver versions</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetVersions">
             <summary>
@@ -357,25 +356,25 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetVersion(System.Int32)">
             <summary>
-            Sets the current portal version to the one with the ID specified in the request.
+            Sets a version with the ID specified in the request to the current tenant.
             </summary>
             <short>
             Change the portal version
             </short>
             <category>Versions</category>
-            <param name="versionId">Version ID</param>
+            <param type="System.Int32, System" name="versionId">Version ID</param>
             <visible>false</visible>
             <returns>List of availibe portal versions including the current version</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWebItemSecurityInfo(System.Collections.Generic.IEnumerable{System.String})">
             <summary>
-            Returns the security settings for the product, module or add-ons specified in the request.
+            Returns the security settings for the modules specified in the request.
             </summary>
             <short>
             Get the security settings
             </short>
             <category>Security</category>
-            <param method="url" name="ids">List of module IDs</param>
+            <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" method="url" name="ids">List of module IDs</param>
             <returns type="ASC.Api.Settings.SecurityWrapper, ASC.Api.Settings">Security settings</returns>
             <path>api/2.0/settings/security</path>
             <httpMethod>GET</httpMethod>
@@ -384,14 +383,14 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWebItemSecurityInfo(System.Guid)">
             <summary>
-               Returns the availability of the module with the ID specified in the request.
+            Returns the availability of the module with the ID specified in the request.
             </summary>
             <short>
             Get the module availability
             </short>
             <category>Security</category>
-            <param method="url" name="id">Module ID</param>
-            <returns>Boolean value: True - module is enabled, False - module is disabled</returns>
+            <param type="System.Guid, System" method="url" name="id">Module ID</param>
+            <returns>Boolean value: true - module is enabled, false - module is disabled</returns>
             <path>api/2.0/settings/security/{id}</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -422,37 +421,35 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetWebItemSecurity(System.String,System.Boolean,System.Collections.Generic.IEnumerable{System.Guid})">
             <summary>
-            Sets the security settings to the product, module or add-ons.
+            Sets the security settings to the module with the ID specified in the request.
             </summary>
             <short>
-            Set the security settings
+            Set the module security settings
             </short>
             <category>Security</category>
-            <param name="id">Module ID</param>
-            <param name="enabled">Specifies if the module is enabled or not</param>
-            <param name="subjects">List of user/group IDs</param>
-            <returns>Security settings</returns>
+            <param type="System.String, System" name="id">Module ID</param>
+            <param type="System.Boolean, System" name="enabled">Specifies if the selected module is enabled or not</param>
+            <param type="System.Collections.Generic.IEnumerable{System.Guid}, System.Collections.Generic" name="subjects">List of user/group IDs</param>
             <path>api/2.0/settings/security</path>
             <httpMethod>PUT</httpMethod>
             <collection>list</collection>
             <requiresAuthorization>true</requiresAuthorization>
-            <returns type="ASC.Api.Settings.SecurityWrapper, ASC.Api.Settings"></returns>
+            <returns type="ASC.Api.Settings.SecurityWrapper, ASC.Api.Settings">Security settings</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SetAccessToWebItems(System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String,System.Boolean}})">
             <summary>
-            Sets access to the products, modules or add-ons specified in the request.
+            Sets the security settings to the modules with the IDs specified in the request.
             </summary>
             <short>
-            Set access to web items
+            Set the security settings to modules
             </short>
             <category>Security</category>
-            <param name="items">Modules, products or add-ons with security information</param>
-            <returns>Security settings</returns>
+            <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.Boolean}}" name="items">Modules with security information</param>
             <path>api/2.0/settings/security/access</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
-            <returns type="ASC.Api.Settings.SecurityWrapper, ASC.Api.Settings"></returns>
+            <returns type="ASC.Api.Settings.SecurityWrapper, ASC.Api.Settings">Security settings</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetProductAdministrators(System.Guid)">
             <summary>
@@ -462,7 +459,7 @@
             Get the product administrators
             </short>
             <category>Security</category>
-            <param method="url" name="productid">Product ID</param>
+            <param type="System.Guid, System" method="url" name="productid">Product ID</param>
             <returns type="ASC.Api.Employee.EmployeeWraper, ASC.Api.Employee">List of product administrators</returns>
             <path>api/2.0/settings/security/administrator/{productid}</path>
             <httpMethod>GET</httpMethod>
@@ -477,9 +474,9 @@
             Check the product administrator
             </short>
             <category>Security</category>
-            <param method="url" name="productid">Product ID</param>
-            <param method="url" name="userid">User ID</param>
-            <returns>Object with user security information</returns>
+            <param type="System.Guid, System" method="url" name="productid">Product ID</param>
+            <param type="System.Guid, System" method="url" name="userid">User ID</param>
+            <returns>Object with the user security information</returns>
             <path>api/2.0/settings/security/administrator</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -492,10 +489,10 @@
             Set the product administrator
             </short>
             <category>Security</category>
-            <param name="productid">Product ID</param>
-            <param name="userid">User ID</param>
-            <param name="administrator">Specifies if the user will be added to the product as an administrator or deleted from it</param>
-            <returns>Object with user security information</returns>
+            <param type="System.Guid, System" name="productid">Product ID</param>
+            <param type="System.Guid, System" name="userid">User ID</param>
+            <param type="System.Boolean, System" name="administrator">Specifies if a user will be a product administrator or not</param>
+            <returns>Object with the user security information</returns>
             <path>api/2.0/settings/security/administrator</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -521,9 +518,9 @@
              Save the white label settings
              </short>
              <category>Rebranding</category>
-             <param name="logoText">Logo text</param>
-             <param name="logo">Tenant IDs with their logos</param>
-             <param name="isDefault">Specifies if the default settings will be saved or not</param>
+             <param type="System.String, System" name="logoText">Logo text</param>
+             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32, System.String}}" name="logo">Tenant IDs with their logos</param>
+             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettingsFromFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean)">
@@ -534,8 +531,8 @@
              Save the white label settings from files
              </short>
              <category>Rebranding</category>
-             <param name="attachments">Files with white label settings</param>
-             <param name="isDefault">Specifies if the default settings will be saved or not</param>
+             <param type="System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase}, System.Collections.Generic" name="attachments">Files with the white label settings</param>
+             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelSizes">
@@ -557,23 +554,12 @@
              Get the white label logos
              </short>
              <category>Rebranding</category>
-             <param name="retina">Specifies if the logos will be for the retina screens or not</param>
-             <param name="isDefault">Specifies if the default settings will be saved or not</param>
+             <param type="System.Boolean, System" name="retina">Specifies if the logos will be for the retina screens or not</param>
+             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
              <returns>White label logos</returns>
             <visible>false</visible>
         </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText(System.Boolean)">
-             <summary>
-             Returns the white label logo text.
-             </summary>
-             <short>
-             Get the white label logo text
-             </short>
-             <category>Rebranding</category>
-             <param name="isDefault">Specifies if the default settings will be saved or not</param>
-             <returns>Logo text</returns>
-            <visible>false</visible>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText(System.Boolean)" -->
         <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelOptions(System.Boolean)">
              <summary>
              Restores the white label options.
@@ -582,7 +568,7 @@
              Restore the white label options
              </short>
              <category>Rebranding</category>
-             <param name="isDefault">Specifies if the default settings will be saved or not</param>
+             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetIpRestrictions">
@@ -603,7 +589,7 @@
             </summary>
             <short>Save the IP restrictions</short>
             <category>IP restrictions</category>
-            <param name="ips">New IP restrictions</param>
+            <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" name="ips">New IP restrictions</param>
             <returns>New IP restrictions</returns>
             <path>api/2.0/settings/iprestrictions</path>
             <httpMethod>PUT</httpMethod>
@@ -613,9 +599,9 @@
             <summary>
             Updates the IP restriction settings with a parameter specified in the request.
             </summary>
-            <short>Update the IP restriction settings</short>
+            <short>Update the IP restrictions</short>
             <category>IP restrictions</category>
-            <param name="enable">Enables IP restrictions</param>
+            <param type="System.Boolean, System" name="enable">Specifies whether to enable IP restrictions or not</param>
             <returns type="ASC.Web.Studio.Core.IPRestrictionsSettings, ASC.Web.Studio">Updated IP restriction settings</returns>
             <path>api/2.0/settings/iprestrictions/settings</path>
             <httpMethod>PUT</httpMethod>
@@ -627,7 +613,7 @@
             </summary>
             <short>Update the tip settings</short>
             <category>Tips</category>
-            <param name="show">Shows tips for the user</param>
+            <param type="System.Boolean, System" name="show">Specifies whether to show tips for the user or not</param>
             <returns type="ASC.Web.Studio.Core.TipsSettings, ASC.Web.Studio">Updated tip settings</returns>
             <path>api/2.0/settings/tips</path>
             <requiresAuthorization>true</requiresAuthorization>
@@ -659,7 +645,7 @@
              </summary>
              <short>Update the TFA settings</short>
              <category>TFA settings</category>
-             <param name="type">TFA type: sms, app or none</param>
+             <param type="System.String, System" name="type">TFA type: sms, app, or none</param>
              <returns>True if an operation is successful</returns>
             <path>api/2.0/settings/tfaapp</path>
             <httpMethod>PUT</httpMethod>
@@ -678,7 +664,7 @@
             <summary>
             Requests the new backup codes for the two-factor authentication application.
             </summary>
-            <short>Request the new TFA codes</short>
+            <short>Request the TFA codes</short>
             <category>TFA settings</category>
             <returns>New backup codes</returns>
             <path>api/2.0/settings/tfaappnewcodes</path>
@@ -691,88 +677,55 @@
             </summary>
             <short>Unlink the TFA application</short>
             <category>TFA settings</category>
-            <param name="id">User ID</param>
+            <param type="System.Guid, System" name="id">User ID</param>
             <returns>Login URL</returns>
-            <param name="id"></param>
             <path>api/2.0/settings/tfaappnewapp</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DocRegisterPusnNotificationDevice(System.String)">
             <summary>
-            Saves a documents firebase device token specified in the request.
+            Saves the Firebase device token specified in the request for the Documents application.
             </summary>
-            <short>Saves a firebase device token</short>
-            <param name="firebaseDeviceToken">firebase device token</param>
+            <short>Saves the Documents Firebase device token</short>
+            <category>Firebase</category>
+            <param name="firebaseDeviceToken">Firebase device token</param>
             <returns>FireBase user</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.ProjRegisterPusnNotificationDevice(System.String)">
             <summary>
-            Saves a projects firebase device token specified in the request.
+            Saves the Firebase device token specified in the request for the Projects application.
             </summary>
-            <short>Saves a firebase device token</short>
-            <param name="firebaseDeviceToken">firebase device token</param>
-            <returns>FireBase user</returns>
+            <short>Saves the Projects Firebase device token</short>
+            <category>Firebase</category>
+            <param type="System.String, System" name="firebaseDeviceToken">Firebase device token</param>
+            <returns>Firebase user</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SubscribeDocumentsPushNotification(System.String,System.Boolean)">
             <summary>
-            Subscribe to documents push notification.
+            Subscribes to the Documents push notification.
             </summary>
-            <short> Subscribe to push notification </short>
-            <param name="firebaseDeviceToken">firebase device token</param>
-            <param name="isSubscribed">is subscribed</param>
-            <returns>FireBase user</returns>
+            <short>Subscribe to Documents push notification</short>
+            <category>Firebase</category>
+            <param type="System.String, System" name="firebaseDeviceToken">Firebase device token</param>
+            <param type="System.Boolean, System" name="isSubscribed">Specifies whether the current user is subscribed to the Documents push notification or not</param>
+            <returns>Firebase user</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SubscribeProjectsPushNotification(System.String,System.Boolean)">
             <summary>
-            Subscribe to projects push notification.
+            Subscribes to the Projects push notification.
             </summary>
-            <short> Subscribe to push notification </short>
-            <param name="firebaseDeviceToken">firebase device token</param>
-            <param name="isSubscribed">is subscribed</param>
-            <returns>FireBase user</returns>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.DocRegisterPusnNotificationDevice(System.String)">
-            <summary>
-            Saves a documents firebase device token specified in the request.
-            </summary>
-            <short>Saves a firebase device token</short>
-            <param name="firebaseDeviceToken">firebase device token</param>
-            <returns>FireBase user</returns>
-        </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.ProjRegisterPusnNotificationDevice(System.String)">
-            <summary>
-            Saves a projects firebase device token specified in the request.
-            </summary>
-            <short>Saves a firebase device token</short>
-            <param name="firebaseDeviceToken">firebase device token</param>
-            <returns>FireBase user</returns>
-        </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.SubscribeDocumentsPushNotification(System.String,System.Boolean)">
-            <summary>
-            Subscribe to documents push notification.
-            </summary>
-            <short> Subscribe to push notification </short>
-            <param name="firebaseDeviceToken">firebase device token</param>
-            <param name="isSubscribed">is subscribed</param>
-            <returns>FireBase user</returns>
-            <visible>false</visible>
-        </member>
-        <member name="M:ASC.Api.Settings.SettingsApi.SubscribeProjectsPushNotification(System.String,System.Boolean)">
-            <summary>
-            Subscribe to projects push notification.
-            </summary>
-            <short> Subscribe to push notification </short>
-            <param name="firebaseDeviceToken">firebase device token</param>
-            <param name="isSubscribed">is subscribed</param>
-            <returns>FireBase user</returns>
+            <short>Subscribe to Projects push notification</short>
+            <category>Firebase</category>
+            <param type="System.String, System" name="firebaseDeviceToken">Firebase device token</param>
+            <param type="System.Boolean, System" name="isSubscribed">Specifies whether the current user is subscribed to the Projects push notification or not</param>
+            <returns>Firebase user</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramLink">
             <summary>
-            Returns a link that will connect Telegram Bot to your account.
+            Returns a link that will connect the Telegram Bot to your account.
             </summary>
             <short>Get the Telegram link</short>
             <category>Telegram</category>
@@ -781,7 +734,7 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramIsConnected">
             <summary>
-            Checks if the current user is connected to Telegram Bot or not.
+            Checks if the current user is connected to the Telegram Bot or not.
             </summary>
             <short>Check the Telegram connection</short>
             <category>Telegram</category>
@@ -792,9 +745,9 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramDisconnect">
             <summary>
-            Unlinks Telegram Bot from your account.
+            Unlinks the Telegram Bot from your account.
             </summary>
-            <short>Unlink Telegram Bot</short>
+            <short>Unlink Telegram</short>
             <category>Telegram</category>
             <path>api/2.0/settings/telegramdisconnect</path>
             <httpMethod>DELETE</httpMethod>
@@ -809,18 +762,18 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CloseAdminHelper">
             <summary>
-             Close the admin helper notification.
-             </summary>
-             <short>Close the admin helper notification</short>
-             <category>Common settings</category>
+            Closes the admin helper notification.
+            </summary>
+            <short>Close the admin helper notification</short>
+            <category>Common settings</category>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveColorTheme(System.String)">
              <summary>
-             Saves a portal color theme specified in the request.
+             Saves the portal color theme specified in the request.
              </summary>
-             <short>Save a color theme</short>
+             <short>Save color theme</short>
              <category>Common settings</category>
-             <param name="theme">Portal theme</param>
+             <param type="System.String, System" name="theme">Portal theme</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TimaAndLanguage(System.String,System.String)">
@@ -829,9 +782,9 @@
              </summary>
              <short>Set time zone and language</short>
              <category>Common settings</category>
-             <param name="lng">Language</param>
-             <param name="timeZoneID">Time zone ID</param>
-             <returns>Operation result</returns>
+             <param type="System.String, System" name="lng">Language</param>
+             <param type="System.String, System" name="timeZoneID">Time zone ID</param>
+             <returns>Message about the operation result</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveDefaultPageSettings(System.String)">
@@ -840,8 +793,8 @@
              </summary>
              <short>Set the default product page</short>
              <category>Common settings</category>
-             <param name="defaultProductID">Default product ID</param>
-             <returns>Operation result</returns>
+             <param type="System.String, System" name="defaultProductID">Default product ID</param>
+             <returns>Message about the operation result</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.RefreshLicense">
@@ -850,7 +803,7 @@
             </summary>
             <short>Refresh the license</short>
             <category>Common settings</category>
-            <returns>Boolean value: True - an operation is successful, False - an operation is unsuccessful</returns>
+            <returns>Boolean value: true - an operation is successful, false - an operation is unsuccessful</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItems">
@@ -882,7 +835,7 @@
             </summary>
             <short>Get a custom navigation item by ID</short>
             <category>Custom navigation</category>
-            <param method="url" name="id">Item ID</param>
+            <param type="System.Guid, System" method="url" name="id">Item ID</param>
             <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/get/{id}</path>
             <httpMethod>GET</httpMethod>
@@ -894,7 +847,7 @@
             </summary>
             <short>Add a custom navigation item</short>
             <category>Custom navigation</category>
-            <param file="ASC.Web.Studio" name="item">Item parameters</param>
+            <param type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio.Core." file="ASC.Web.Studio" name="item">Item parameters</param>
             <returns type="ASC.Web.Studio.Core.CustomNavigationItem, ASC.Web.Studio">Custom navigation item</returns>
             <path>api/2.0/settings/customnavigation/create</path>
             <httpMethod>POST</httpMethod>
@@ -902,11 +855,11 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteCustomNavigationItem(System.Guid)">
             <summary>
-            Deletes a custom navigation item by the ID specified in the request.
+            Deletes a custom navigation item with the ID specified in the request.
             </summary>
             <short>Delete a custom navigation item</short>
             <category>Custom navigation</category>
-            <param method="url" name="id">Item ID</param>
+            <param type="System.Guid, System" method="url" name="id">Item ID</param>
             <path>api/2.0/settings/customnavigation/delete/{id}</path>
             <httpMethod>DELETE</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -917,7 +870,7 @@
             </summary>
             <short>Update the email activation settings</short>
             <category>Common settings</category>
-            <param name="show">Shows the email activation panel for the user</param>
+            <param type="System.Boolean, System" name="show">Specifies whether to show the email activation panel to the user or not</param>
             <returns type="ASC.Web.Studio.Core.EmailActivationSettings, ASC.Web.Studio">Updated email activation settings</returns>
             <path>api/2.0/settings/emailactivation</path>
             <httpMethod>PUT</httpMethod>
@@ -934,12 +887,12 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSpaceUsageStatistics(System.Guid)">
             <summary>
-            Returns the space usage statistics of the web item with the ID specified in the request.
+            Returns the space usage statistics of the module with the ID specified in the request.
             </summary>
             <category>Statistics</category>
             <short>Get the space usage statistics</short>
-            <param method="url" name="id">>Web item ID</param>
-            <returns type="ASC.Api.Settings.UsageSpaceStatItemWrapper, ASC.Api.Settings">Space usage statistics of the web item</returns>
+            <param method="url" name="id">Module ID</param>
+            <returns type="ASC.Api.Settings.UsageSpaceStatItemWrapper, ASC.Api.Settings">Module space usage statistics</returns>
             <path>api/2.0/settings/statistics/spaceusage/{id}</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -951,8 +904,8 @@
             </summary>
             <category>Statistics</category>
             <short>Get the visit statistics</short>
-            <param method="url" name="fromDate">Start period date</param>
-            <param method="url" name="toDate">End period date</param>
+            <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="fromDate">Start period date</param>
+            <param type="ASC.Specific.ApiDateTime, ASC.Specific" method="url" name="toDate">End period date</param>
             <returns type="ASC.Api.Settings.ChartPointWrapper, ASC.Api.Settings">List of point charts</returns>
             <path>api/2.0/settings/statistics/visit</path>
             <httpMethod>GET</httpMethod>
@@ -988,8 +941,8 @@
             </summary>
             <category>Storage</category>
             <short>Update a storage</short>
-            <param name="module">Storage name</param>
-            <param name="props">New storage properties</param>
+            <param type="System.String, System" name="module">Storage name</param>
+            <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.String}}" name="props">New storage properties</param>
             <returns type="ASC.Data.Storage.Configuration.StorageSettings, ASC.Data.Storage">Updated storage</returns>
             <path>api/2.0/settings/storage</path>
             <httpMethod>PUT</httpMethod>
@@ -1024,8 +977,8 @@
             <category>Storage</category>
             <short>Update the CDN storage</short>
             <returns type="ASC.Data.Storage.Configuration.CdnStorageSettings, ASC.Data.Storage">Updated CDN storage</returns>
-            <param name="module">CDN storage name</param>
-            <param name="props">New CDN storage properties</param>
+            <param type="System.String, System" name="module">CDN storage name</param>
+            <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.String}}" name="props">New CDN storage properties</param>
             <path>api/2.0/settings/storage/cdn</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
@@ -1054,26 +1007,22 @@
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSocketSettings">
             <summary>
-            
-            </summary>
-            <returns></returns>
-            <path>api/2.0/settings/socket</path>
-            <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
-            <summary>
             Returns the socket settings.
             </summary>
             <category>Common settings</category>
             <short>Get the socket settings</short>
+            <path>api/2.0/settings/socket</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <returns>Socket settings</returns>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetTenantControlPanelSettings">
              <summary>
-             Returns the tenant control panel settings.
+             Returns the tenant Control Panel settings.
              </summary>
              <category>Common settings</category>
-             <short>Get the tenant control panel settings</short>
-             <returns>Tenant control panel settings</returns>
+             <short>Get the tenant Control Panel settings</short>
+             <returns>Tenant Control Panel settings</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveCompanyWhiteLabelSettings(ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings)">
@@ -1082,7 +1031,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Save the white label settings</short>
-             <param name="settings">White label settings</param>
+             <param type="ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">White label settings</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetCompanyWhiteLabelSettings">
@@ -1109,7 +1058,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Save the additional white label settings</short>
-             <param name="settings">Additional white label settings</param>
+             <param type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Additional white label settings</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetAdditionalWhiteLabelSettings">
@@ -1127,7 +1076,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Delete the additional white label settings</short>
-             <returns>Default white label settings</returns>
+             <returns>Default additional white label settings</returns>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveMailWhiteLabelSettings(ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings)">
@@ -1136,7 +1085,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Save the mail white label settings</short>
-             <param name="settings">Mail white label settings</param>
+             <param type="ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Mail white label settings</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateMailWhiteLabelSettings(System.Boolean)">
@@ -1145,7 +1094,7 @@
              </summary>
              <category>Rebranding</category>
              <short>Update the mail white label settings</short>
-             <param name="footerEnabled">Specified if the footer will be enabled or not</param>
+             <param type="System.Boolean, System" name="footerEnabled">Specifies if a footer will be enabled or not</param>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetMailWhiteLabelSettings">
@@ -1190,7 +1139,7 @@
             </summary>
             <short>Start the storage encryption process</short>
             <category>Encryption</category>
-            <param name="notifyUsers">Specifies if the users will be notified about the encryption process or not</param>
+            <param type="System.Boolean, System" name="notifyUsers">Specifies if the users will be notified about the encryption process or not</param>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.Settings.UsageSpaceStatItemWrapper.Name">
