@@ -55,6 +55,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
             foreach (var file in Directory.GetFiles(lookupDir))
             {
                 generator.GenerateDocForEntryPoint(file);
+                _logger.Debug("Generated " + file);
             }
 
             foreach (var method in generator.Points.SelectMany(x => x.Methods))
@@ -64,6 +65,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     try
                     {
                         generator.GenerateRequestExample(method);
+                        _logger.Debug("Generated example " + method.Path);
                     }
                     catch(Exception e) {
                         _logger.Error("Error " + method, e);
