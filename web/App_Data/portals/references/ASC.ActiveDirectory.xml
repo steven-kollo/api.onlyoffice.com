@@ -19,6 +19,7 @@
             Get property object
             </summary>
             <param name="propertyName">property name</param>
+            <param name="getBytes"></param>
             <returns>value object</returns>
         </member>
         <member name="M:ASC.ActiveDirectory.Base.Data.LdapObject.GetValues(System.String)">
@@ -584,8 +585,8 @@
             Escapes the LDAP search filter to prevent LDAP injection attacks.
             </summary>
             <param name="searchFilter">The search filter.</param>
-            <see cref="!:https://blogs.oracle.com/shankar/entry/what_is_ldap_injection" />
-            <see cref="!:http://msdn.microsoft.com/en-us/library/aa746475.aspx" />
+            <see href="https://blogs.oracle.com/shankar/entry/what_is_ldap_injection" />
+            <see href="http://msdn.microsoft.com/en-us/library/aa746475.aspx" />
             <returns>The escaped search filter.</returns>
         </member>
         <member name="M:ASC.ActiveDirectory.Base.Expressions.Expression.Negative">
@@ -713,6 +714,7 @@
             Get property object
             </summary>
             <param name="propertyName">property name</param>
+            <param name="getBytes"></param>
             <returns>value object</returns>
         </member>
         <member name="M:ASC.ActiveDirectory.Novell.Data.NovellLdapObject.GetValues(System.String)">

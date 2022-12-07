@@ -66,9 +66,17 @@
         <member name="P:ASC.Thrdparty.Twitter.TwitterUserInfo.UserID">
             <example type="dobule">1,1</example>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:ASC.Thrdparty.Twitter.TwitterUserInfo.ScreenName" -->
-        <!-- Badly formed XML comment ignored for member "P:ASC.Thrdparty.Twitter.TwitterUserInfo.UserName" -->
-        <!-- Badly formed XML comment ignored for member "P:ASC.Thrdparty.Twitter.TwitterUserInfo.SmallImageUrl" -->
-        <!-- Badly formed XML comment ignored for member "P:ASC.Thrdparty.Twitter.TwitterUserInfo.Description" -->
+        <member name="P:ASC.Thrdparty.Twitter.TwitterUserInfo.ScreenName">
+            <example>Screen name</example>
+        </member>
+        <member name="P:ASC.Thrdparty.Twitter.TwitterUserInfo.UserName">
+            <example>User Name</example>
+        </member>
+        <member name="P:ASC.Thrdparty.Twitter.TwitterUserInfo.SmallImageUrl">
+            <example>url to img</example>
+        </member>
+        <member name="P:ASC.Thrdparty.Twitter.TwitterUserInfo.Description">
+            <example>Description</example>
+        </member>
     </members>
 </doc>

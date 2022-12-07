@@ -4885,7 +4885,9 @@
         <member name="P:ASC.Files.Core.Folder.NewForMe">
             <example name="isnew" type="int">3</example>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:ASC.Files.Core.Folder.FolderUrl" -->
+        <member name="P:ASC.Files.Core.Folder.FolderUrl">
+            <example name="folder_url">folder url</example>
+        </member>
         <member name="T:ASC.Files.Core.IFileDao">
             <summary>
                Interface encapsulates access toFolderId files
@@ -5104,7 +5106,18 @@
             <param name="fileIds"></param>
             <param name="newOwnerId"></param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ASC.Files.Core.IFileDao.GetFiles(System.Collections.Generic.IEnumerable{System.Object},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean)" -->
+        <member name="M:ASC.Files.Core.IFileDao.GetFiles(System.Collections.Generic.IEnumerable{System.Object},ASC.Files.Core.FilterType,System.Boolean,System.Guid,System.String,System.Boolean)">
+            <summary>
+            Search files in SharedWithMe &amp; Projects
+            </summary>
+            <param name="parentIds"></param>
+            <param name="filterType"></param>
+            <param name="subjectGroup"></param>
+            <param name="subjectID"></param>
+            <param name="searchText"></param>
+            <param name="searchInContent"></param>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Files.Core.IFileDao.Search(System.String,System.Boolean)">
             <summary>
             Search the list of files containing text
@@ -5339,7 +5352,14 @@
             <param name="createIfNotExists"></param>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ASC.Files.Core.IFolderDao.GetFolderIDFavorites(System.Boolean)" -->
+        <member name="M:ASC.Files.Core.IFolderDao.GetFolderIDFavorites(System.Boolean)">
+            <summary>
+            Returns id folder "Favorites"
+            Only in TMFolderDao
+            </summary>
+            <param name="createIfNotExists"></param>
+            <returns></returns>
+        </member>
         <member name="M:ASC.Files.Core.IFolderDao.GetFolderIDTemplates(System.Boolean)">
             <summary>
             Returns id folder "Templates"
@@ -5354,6 +5374,7 @@
             Only in TMFolderDao
             </summary>
             <param name="createIfNotExists"></param>
+            <param name="userId"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Files.Core.IFolderDao.GetFolderIDTrash(System.Boolean,System.Nullable{System.Guid})">

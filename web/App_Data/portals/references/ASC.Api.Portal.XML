@@ -411,7 +411,7 @@
             <param type="System.String, System" name="backupId">Backup ID</param>
             <param type="ASC.Core.Common.Contracts.BackupStorageType, ASC.Core.Common.Contracts" name="storageType">Storage type ("Documents", "ThridpartyDocuments", "CustomCloud", "Local", "DataStore", or "ThirdPartyConsumer")</param>
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.String, System.String}}, System.Collections.Generic" name="storageParams">Storage parameters</param>
-            <param type="System.Boolean, System" ame="notify">Specifies whether to notify the users about the backup or not</param>
+            <param type="System.Boolean, System" name="notify">Specifies whether to notify the users about the backup or not</param>
             <category>Backup</category>
             <returns type="ASC.Core.Common.Contracts.BackupProgress, ASC.Core.Common">Restoring progress</returns>
             <path>api/2.0/portal/startrestore</path>

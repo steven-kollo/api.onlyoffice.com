@@ -790,8 +790,12 @@
         <member name="P:ASC.Mail.Data.Contracts.MailContactData.Type">
             <example name="type" type="int">1234</example>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:ASC.Mail.Data.Contracts.MailContactData.SmallFotoUrl" -->
-        <!-- Badly formed XML comment ignored for member "P:ASC.Mail.Data.Contracts.MailContactData.MediumFotoUrl" -->
+        <member name="P:ASC.Mail.Data.Contracts.MailContactData.SmallFotoUrl">
+            <example name="smallFotoUrl">smallFotoUrl</example>
+        </member>
+        <member name="P:ASC.Mail.Data.Contracts.MailContactData.MediumFotoUrl">
+            <example name="mediumFotoUrl">mediumFotoUrl</example>
+        </member>
         <member name="P:ASC.Mail.Data.Contracts.MailCrmStatus.MessageId">
             <example type="int" name="messageId">12354</example>
         </member>
@@ -1270,6 +1274,7 @@
             Constructor of class ApiHelper
             </summary>
             <param name="scheme">Uri.UriSchemeHttps or Uri.UriSchemeHttp</param>
+            <param name="log"></param>
             <exception cref="T:ASC.Mail.Exceptions.ApiHelperException">Exception happens when scheme is invalid.</exception>>
         </member>
         <member name="M:ASC.Mail.Utils.EncodingTools.#cctor">

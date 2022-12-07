@@ -15768,7 +15768,9 @@
         <member name="P:ASC.Web.Studio.UserControls.Common.Comments.CommentInfo.UserAvatarPath">
             <example name="userAvatarPath">\/skins\/default\/images\/default_user_photo_size_82-82.png</example>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:ASC.Web.Studio.UserControls.Common.Comments.CommentInfo.CommentBody" -->
+        <member name="P:ASC.Web.Studio.UserControls.Common.Comments.CommentInfo.CommentBody">
+            <example name="commentBody"><p>das</p>\u000a</example>
+        </member>
         <member name="P:ASC.Web.Studio.UserControls.Common.Comments.CommentInfo.Inactive">
             <example name="inactive">false</example>
         </member>

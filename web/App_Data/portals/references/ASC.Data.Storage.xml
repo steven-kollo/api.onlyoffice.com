@@ -79,9 +79,18 @@
             </summary>
             <param name="domain"></param>
             <param name="path"></param>
+            <param name="offset"></param>
             <returns></returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:ASC.Data.Storage.IDataStore.Save(System.String,System.String,System.IO.Stream)" -->
+        <member name="M:ASC.Data.Storage.IDataStore.Save(System.String,System.String,System.IO.Stream)">
+            <summary>
+             Saves the contents of the stream in the repository.
+            </summary>
+             <param Name="domain"> </param>
+             <param Name="path"> </param>
+             <param Name="stream"> flow. Is read from the current position! Desirable to set to 0 when the transmission MemoryStream instance </param>
+             <returns></returns>
+        </member>
         <member name="M:ASC.Data.Storage.IDataStore.Save(System.String,System.String,System.IO.Stream,ASC.Data.Storage.Configuration.ACL)">
             <summary>
             Saves the contents of the stream in the repository.
@@ -145,7 +154,7 @@
              Deletes files
             </summary>
             <param name="domain"></param>
-            <param name="listPaths"></param>
+            <param name="paths"></param>
         </member>
         <member name="M:ASC.Data.Storage.IDataStore.DeleteFiles(System.String,System.String,System.DateTime,System.DateTime)">
             <summary>
@@ -173,6 +182,7 @@
             <param name="srcpath"></param>
             <param name="newdomain"></param>
             <param name="newpath"></param>
+            <param name="quotaCheckFileSize"></param>
             <returns></returns>
         </member>
         <member name="M:ASC.Data.Storage.IDataStore.SaveTemp(System.String,System.String@,System.IO.Stream)">

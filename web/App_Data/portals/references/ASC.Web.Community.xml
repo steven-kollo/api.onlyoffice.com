@@ -4639,6 +4639,8 @@
             <param name="aText">the input text</param>
             <param name="h">This extern initialized hashtable is used for storing all ever used textlines.</param>
             <param name="trimSpace">ignore leading and trailing space characters</param>
+            <param name="ignoreSpace"></param>
+            <param name="ignoreCase"></param>
             <returns>a array of integers.</returns>
         </member>
         <member name="M:ASC.Web.UserControls.Wiki.DiffHelper.SMS(ASC.Web.UserControls.Wiki.DiffData,System.Int32,System.Int32,ASC.Web.UserControls.Wiki.DiffData,System.Int32,System.Int32)">
@@ -4694,7 +4696,7 @@
             <summary>
             Initialize the Diff-Data buffer.
             </summary>
-            <param name="data">reference to the buffer</param>
+            <param name="initData">reference to the buffer</param>
         </member>
         <member name="M:ASC.Web.UserControls.Wiki.WikiEngine.RemoveComment(System.Guid)">
             <summary>

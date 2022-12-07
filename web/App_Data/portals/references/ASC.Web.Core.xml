@@ -38,6 +38,7 @@
             <param name="password">Password</param>
             <param name="region">Four letter language codes</param>
             <param name="thumbnail">Thumbnail settings</param>
+            <param name="spreadsheetLayout"></param>
             <param name="isAsync">Perform conversions asynchronously</param>
             <param name="signatureSecret">Secret key to generate the token</param>
             <param name="convertedDocumentUri">Uri to the converted document</param>
@@ -60,7 +61,6 @@
             <param name="users">users id for drop</param>
             <param name="meta">file meta data for update</param>
             <param name="signatureSecret">Secret key to generate the token</param>
-            <param name="version">server version</param>
             <returns>Response</returns>
         </member>
         <member name="M:ASC.Web.Core.Files.DocumentService.GetResponseUri(System.String,System.String@)">
