@@ -512,6 +512,17 @@
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>leftMenu.mode</b> - defines the initial value of the left panel visibility - displayed or hidden.
+                        It is used for the <b>Left panel</b> menu option on the <b>View</b> tab.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>leftMenu.navigation</b> - defines if the <b>Navigation</b> button is displayed or hidden. The default value is <b>true</b>.
@@ -530,7 +541,17 @@
                         <b>example</b>: true;
                     </li>
                     <li>
-                        <b>rightMenu</b> - defines if the right menu is displayed or hidden. The default value is <b>true</b>,
+                        <b>rightMenu</b> - defines the right menu settings. If this parameter is a boolean value, then it specifies whether the right menu will be displayed or hidden.
+                        The default value is <b>true</b>,
+                        <br />
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
+                    </li>
+                    <li>
+                        <b>rightMenu.mode</b> - defines the initial value of the right panel visibility - displayed or hidden.
+                        It is used for the <b>Right panel</b> menu option on the <b>View</b> tab.
+                        The default value is <b>true</b>,
                         <br />
                         <b>type</b>: boolean,
                         <br />
@@ -542,6 +563,8 @@
                         The default value is <b>true</b>,
                         <br />
                         <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>statusBar.actionStatus</b> - defines if an action status is displayed or hidden. The default value is <b>true</b>,
@@ -571,7 +594,9 @@
                         If this parameter is a boolean value, then it specifies whether the toolbar will be displayed or hidden.
                         The default value is <b>true</b>,
                         <br />
-                        <b>type</b>: object or boolean;
+                        <b>type</b>: object or boolean,
+                        <br />
+                        <b>example</b>: true;
                     </li>
                     <li>
                         <b>toolbar.collaboration</b> - defines if the <b>Collaboration</b> tab is displayed or hidden.
@@ -1175,10 +1200,13 @@ var docEditor = new DocsAPI.DocEditor("placeholder", {
                     "users": true
                 },
                 "leftMenu": {
+                    "mode": true,
                     "navigation": true,
                     "spellcheck": true
                 },
-                "rightMenu": true,
+                "rightMenu": {
+                    "mode": true
+                },
                 "statusBar": {
                     "actionStatus": true,
                     "docLang": true,
