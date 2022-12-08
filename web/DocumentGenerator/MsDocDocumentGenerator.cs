@@ -397,6 +397,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     _logger.Error($"Couldn't parse method: {memberdesc[i].Attribute("name").Value}", ex);
                 }
             }
+            if (!root.Methods.Any()) return;
             foreach(var point in Points)
             {
                 if (point.Name == root.Name)
