@@ -67,6 +67,7 @@
 - portals: api v12.0
 
 ## 2.7.0
+- editors: added the conversion limitation for the spreadsheets
 - editors: test examples v1.2.0
 - editors: added the Strapi plugin
 - editors: added the information for Nextcloud and ownCloud about validating certificates
