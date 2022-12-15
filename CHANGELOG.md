@@ -67,6 +67,7 @@
 - portals: api v12.0
 
 ## 2.7.0
+- editors: added the information about hiding changes when the server version is updated
 - editors: test examples v1.2.0
 - editors: added the Strapi plugin
 - editors: added the information for Nextcloud and ownCloud about validating certificates
