@@ -268,6 +268,7 @@
             <category>Blogs</category>
             <path>api/2.0/community/blog/comment</path>
             <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.UpdateBlogComment(System.String,System.String)">
             <summary>
@@ -886,6 +887,9 @@
             <returns>Number of forums</returns>
             <visible>false</visible>
             <category>Forums</category>
+            <requiresAuthorization>true</requiresAuthorization>
+             <path>api/2.0/community/forum/count</path>
+             <httpMethod>GET</httpMethod>
         </member>
         <member name="M:ASC.Api.Community.CommunityApi.GetThreadTopics(System.Int32)">
             <summary>
@@ -1093,9 +1097,6 @@
             <param type="System.String, System" name="title">Category title</param>
             <param type="System.String, System" name="content">Category content</param>
             <returns>Preview information</returns>
-            <summary>
-            
-            </summary>
             <path>api/2.0/community/preview</path>
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>

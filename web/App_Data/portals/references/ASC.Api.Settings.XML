@@ -18,6 +18,9 @@
             Get a link to the CardDav address book
             </short>
             <category>CardDav address book</category>
+            <path>api/2.0/settings/carddavurl</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteCardDavAddressBook">
@@ -28,6 +31,9 @@
             Delete a CardDav address book
             </short>
             <category>CardDav address book</category>
+            <path>api/2.0/settings/deletebook</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSmtpSettings">
@@ -340,6 +346,8 @@
             </summary>
             <short>Get the current build version</short>
             <category>Versions</category>
+            <path>api/2.0/settings/version/build</path>
+            <httpMethod>GET</httpMethod>
             <visible>false</visible>
             <returns>Current ONLYOFFICE, editor, mailserver versions</returns>
         </member>
@@ -351,6 +359,9 @@
             Get the portal versions
             </short>
             <category>Versions</category>
+            <path>api/2.0/settings/version</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
             <returns>List of availibe portal versions including the current version</returns>
         </member>
@@ -363,6 +374,9 @@
             </short>
             <category>Versions</category>
             <param type="System.Int32, System" name="versionId">Version ID</param>
+            <path>api/2.0/settings/version</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
             <returns>List of availibe portal versions including the current version</returns>
         </member>
@@ -404,6 +418,9 @@
             </short>
             <category>Security</category>
             <returns>List of enabled modules</returns>
+            <path>api/2.0/settings/security/modules</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetPasswordSettings">
@@ -511,75 +528,93 @@
             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettings(System.String,System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32,System.String}},System.Boolean)">
-             <summary>
-             Saves the white label settings specified in the request.
-             </summary>
-             <short>
-             Save the white label settings
-             </short>
-             <category>Rebranding</category>
-             <param type="System.String, System" name="logoText">Logo text</param>
-             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32, System.String}}" name="logo">Tenant IDs with their logos</param>
-             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <summary>
+            Saves the white label settings specified in the request.
+            </summary>
+            <short>
+            Save the white label settings
+            </short>
+            <category>Rebranding</category>
+            <param type="System.String, System" name="logoText">Logo text</param>
+            <param type="System.Collections.Generic.IEnumerable{ASC.Api.Collections.ItemKeyValuePair{System.Int32, System.String}}" name="logo">Tenant IDs with their logos</param>
+            <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <path>api/2.0/settings/whitelabel/save</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveWhiteLabelSettingsFromFiles(System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean)">
-             <summary>
-             Saves the white label settings from files specified in the request.
-             </summary>
-             <short>
-             Save the white label settings from files
-             </short>
-             <category>Rebranding</category>
-             <param type="System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase}, System.Collections.Generic" name="attachments">Files with the white label settings</param>
-             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <summary>
+            Saves the white label settings from files specified in the request.
+            </summary>
+            <short>
+            Save the white label settings from files
+            </short>
+            <category>Rebranding</category>
+            <param type="System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase}, System.Collections.Generic" name="attachments">Files with the white label settings</param>
+            <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <path>api/2.0/settings/whitelabel/savefromfiles</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelSizes">
-             <summary>
-             Returns the white label sizes.
-             </summary>
-             <short>
-             Get the white label sizes
-             </short>
-             <category>Rebranding</category>
-             <returns>White label sizes</returns>
+            <summary>
+            Returns the white label sizes.
+            </summary>
+            <short>
+            Get the white label sizes
+            </short>
+            <category>Rebranding</category>
+            <returns>White label sizes</returns>
+            <path>api/2.0/settings/whitelabel/sizes</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogos(System.Boolean,System.Boolean)">
-             <summary>
-             Returns the white label logos.
-             </summary>
-             <short>
-             Get the white label logos
-             </short>
-             <category>Rebranding</category>
-             <param type="System.Boolean, System" name="retina">Specifies if the logos will be for the retina screens or not</param>
-             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
-             <returns>White label logos</returns>
+            <summary>
+            Returns the white label logos.
+            </summary>
+            <short>
+            Get the white label logos
+            </short>
+            <category>Rebranding</category>
+            <param type="System.Boolean, System" name="retina">Specifies if the logos will be for the retina screens or not</param>
+            <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <returns>White label logos</returns>
+            <path>api/2.0/settings/whitelabel/logos</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetWhiteLabelLogoText(System.Boolean)">
-             <summary>
-             Returns the white label logo text.
-             </summary>
-             <short>
-             Get the white label logo text
-             </short>
-             <category>Rebranding</category>
-             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
-             <returns>Logo text</returns>
+            <summary>
+            Returns the white label logo text.
+            </summary>
+            <short>
+            Get the white label logo text
+            </short>
+            <category>Rebranding</category>
+            <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <returns>Logo text</returns>
+            <path>api/2.0/settings/whitelabel/logotext</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.RestoreWhiteLabelOptions(System.Boolean)">
-             <summary>
-             Restores the white label options.
-             </summary>
-             <short>
-             Restore the white label options
-             </short>
-             <category>Rebranding</category>
-             <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <summary>
+            Restores the white label options.
+            </summary>
+            <short>
+            Restore the white label options
+            </short>
+            <category>Rebranding</category>
+            <param type="System.Boolean, System" name="isDefault">Specifies if the default settings will be saved or not</param>
+            <path>api/2.0/settings/whitelabel/restore</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetIpRestrictions">
@@ -605,6 +640,7 @@
             <path>api/2.0/settings/iprestrictions</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateIpRestrictionsSettings(System.Boolean)">
             <summary>
@@ -648,6 +684,9 @@
             <short>Complete the Wizard settings</short>
             <category>Wizard</category>
             <returns>Wizard settings</returns>
+            <path>api/2.0/settings/wizard/complete</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TfaSettings(System.String)">
@@ -663,12 +702,16 @@
             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TfaAppGetCodes">
-             <summary>
-             Returns the two-factor authentication application codes.
-             </summary>
-             <short>Get the TFA codes</short>
-             <category>TFA settings</category>
-             <returns>List of TFA application codes</returns>
+            <summary>
+            Returns the two-factor authentication application codes.
+            </summary>
+            <short>Get the TFA codes</short>
+            <category>TFA settings</category>
+            <returns>List of TFA application codes</returns>
+            <path>api/2.0/settings/tfaappcodes</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TfaAppRequestNewCodes">
@@ -681,6 +724,7 @@
             <path>api/2.0/settings/tfaappnewcodes</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TfaAppNewApp(System.Guid)">
             <summary>
@@ -702,6 +746,9 @@
             <category>Firebase</category>
             <param name="firebaseDeviceToken">Firebase device token</param>
             <returns>FireBase user</returns>
+            <path>api/2.0/settings/push/docregisterdevice</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.ProjRegisterPusnNotificationDevice(System.String)">
             <summary>
@@ -711,6 +758,9 @@
             <category>Firebase</category>
             <param type="System.String, System" name="firebaseDeviceToken">Firebase device token</param>
             <returns>Firebase user</returns>
+            <path>api/2.0/settings/push/projregisterdevice</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SubscribeDocumentsPushNotification(System.String,System.Boolean)">
             <summary>
@@ -721,6 +771,9 @@
             <param type="System.String, System" name="firebaseDeviceToken">Firebase device token</param>
             <param type="System.Boolean, System" name="isSubscribed">Specifies whether the current user is subscribed to the Documents push notification or not</param>
             <returns>Firebase user</returns>
+            <path>api/2.0/settings/push/docsubscribe</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SubscribeProjectsPushNotification(System.String,System.Boolean)">
@@ -732,6 +785,9 @@
             <param type="System.String, System" name="firebaseDeviceToken">Firebase device token</param>
             <param type="System.Boolean, System" name="isSubscribed">Specifies whether the current user is subscribed to the Projects push notification or not</param>
             <returns>Firebase user</returns>
+            <path>api/2.0/settings/push/projsubscribe</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramLink">
@@ -741,6 +797,9 @@
             <short>Get the Telegram link</short>
             <category>Telegram</category>
             <returns>Telegram link</returns>
+            <path>api/2.0/settings/telegramlink</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TelegramIsConnected">
@@ -770,6 +829,9 @@
             </summary>
             <short>Close the welcome pop-up notification</short>
             <category>Common settings</category>
+            <path>api/2.0/settings/welcome/close</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.CloseAdminHelper">
             <summary>
@@ -777,25 +839,34 @@
             </summary>
             <short>Close the admin helper notification</short>
             <category>Common settings</category>
+            <path>api/2.0/settings/closeadminhelper</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveColorTheme(System.String)">
-             <summary>
-             Saves the portal color theme specified in the request.
-             </summary>
-             <short>Save color theme</short>
-             <category>Common settings</category>
-             <param type="System.String, System" name="theme">Portal theme</param>
+            <summary>
+            Saves the portal color theme specified in the request.
+            </summary>
+            <short>Save color theme</short>
+            <category>Common settings</category>
+            <param type="System.String, System" name="theme">Portal theme</param>
+            <path>api/2.0/settings/colortheme</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.TimaAndLanguage(System.String,System.String)">
-             <summary>
-             Sets the portal time zone and language specified in the request.
-             </summary>
-             <short>Set time zone and language</short>
-             <category>Common settings</category>
-             <param type="System.String, System" name="lng">Language</param>
-             <param type="System.String, System" name="timeZoneID">Time zone ID</param>
-             <returns>Message about the operation result</returns>
+            <summary>
+            Sets the portal time zone and language specified in the request.
+            </summary>
+            <short>Set time zone and language</short>
+            <category>Common settings</category>
+            <param type="System.String, System" name="lng">Language</param>
+            <param type="System.String, System" name="timeZoneID">Time zone ID</param>
+            <returns>Message about the operation result</returns>
+            <path>api/2.0/settings/timeandlanguage</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveDefaultPageSettings(System.String)">
@@ -806,6 +877,9 @@
              <category>Common settings</category>
              <param type="System.String, System" name="defaultProductID">Default product ID</param>
              <returns>Message about the operation result</returns>
+             <path>api/2.0/settings/defaultpage</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.RefreshLicense">
@@ -815,6 +889,9 @@
             <short>Refresh the license</short>
             <category>Common settings</category>
             <returns>Boolean value: true - an operation is successful, false - an operation is unsuccessful</returns>
+            <path>api/2.0/settings/license/refresh</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetCustomNavigationItems">
@@ -894,6 +971,10 @@
              <short>Get the licensor data</short>
              <category>Common settings</category>
              <returns>List of company white label settings</returns>
+             <path>api/2.0/settings/companywhitelabel</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetSpaceUsageStatistics(System.Guid)">
@@ -1034,6 +1115,9 @@
              <category>Common settings</category>
              <short>Get the tenant Control Panel settings</short>
              <returns>Tenant Control Panel settings</returns>
+             <path>api/2.0/settings/controlpanel</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveCompanyWhiteLabelSettings(ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings)">
@@ -1043,6 +1127,9 @@
              <category>Rebranding</category>
              <short>Save the white label settings</short>
              <param type="ASC.Web.Core.WhiteLabel.CompanyWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">White label settings</param>
+             <path>api/2.0/settings/rebranding/company</path>
+             <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetCompanyWhiteLabelSettings">
@@ -1052,6 +1139,9 @@
              <category>Rebranding</category>
              <short>Get the white label settings</short>
              <returns>Company white label settings</returns>
+             <path>api/2.0/settings/rebranding/company</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteCompanyWhiteLabelSettings">
@@ -1061,15 +1151,21 @@
              <category>Rebranding</category>
              <short>Delete the white label settings</short>
              <returns>Default company white label settings</returns>
+             <path>api/2.0/settings/rebranding/company</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveAdditionalWhiteLabelSettings(ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings)">
-             <summary>
-             Saves the additional white label settings specified in the request.
-             </summary>
-             <category>Rebranding</category>
-             <short>Save the additional white label settings</short>
-             <param type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Additional white label settings</param>
+            <summary>
+            Saves the additional white label settings specified in the request.
+            </summary>
+            <category>Rebranding</category>
+            <short>Save the additional white label settings</short>
+            <param type="ASC.Web.Core.WhiteLabel.AdditionalWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Additional white label settings</param>
+            <path>api/2.0/settings/rebranding/additional</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetAdditionalWhiteLabelSettings">
@@ -1079,6 +1175,9 @@
              <category>Rebranding</category>
              <short>Get the additional white label settings</short>
              <returns>Additional white label settings</returns>
+             <path>api/2.0/settings/rebranding/additional</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteAdditionalWhiteLabelSettings">
@@ -1088,6 +1187,9 @@
              <category>Rebranding</category>
              <short>Delete the additional white label settings</short>
              <returns>Default additional white label settings</returns>
+             <path>api/2.0/settings/rebranding/additional</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.SaveMailWhiteLabelSettings(ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings)">
@@ -1097,6 +1199,9 @@
              <category>Rebranding</category>
              <short>Save the mail white label settings</short>
              <param type="ASC.Web.Core.WhiteLabel.MailWhiteLabelSettings, ASC.Web.Core.WhiteLabel" name="settings">Mail white label settings</param>
+             <path>api/2.0/settings/rebranding/mail</path>
+             <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.UpdateMailWhiteLabelSettings(System.Boolean)">
@@ -1106,6 +1211,9 @@
              <category>Rebranding</category>
              <short>Update the mail white label settings</short>
              <param type="System.Boolean, System" name="footerEnabled">Specifies if a footer will be enabled or not</param>
+             <path>api/2.0/settings/rebranding/mail</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetMailWhiteLabelSettings">
@@ -1115,6 +1223,9 @@
              <category>Rebranding</category>
              <short>Get the mail white label settings</short>
              <returns>Mail white label settings</returns>
+             <path>api/2.0/settings/rebranding/mail</path>
+             <httpMethod>GET</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.DeleteMailWhiteLabelSettings">
@@ -1124,6 +1235,9 @@
              <category>Rebranding</category>
              <short>Delete the mail white label settings</short>
              <returns>Default mail white label settings</returns>
+             <path>api/2.0/settings/rebranding/mail</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetStorageEncryptionSettings">
@@ -1133,6 +1247,9 @@
             <short>Get the storage encryption settings</short>
             <category>Encryption</category>
             <returns>Storage encryption settings</returns>
+            <path>api/2.0/settings/encryption/settings</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.GetStorageEncryptionProgress">
@@ -1142,6 +1259,9 @@
             <short>Get the storage encryption progress</short>
             <category>Encryption</category>
             <returns>Storage encryption progress</returns>
+            <path>api/2.0/settings/encryption/progress</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Settings.SettingsApi.StartStorageEncryption(System.Boolean)">
@@ -1151,6 +1271,9 @@
             <short>Start the storage encryption process</short>
             <category>Encryption</category>
             <param type="System.Boolean, System" name="notifyUsers">Specifies if the users will be notified about the encryption process or not</param>
+            <path>api/2.0/settings/encryption/start</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.Settings.UsageSpaceStatItemWrapper.Name">

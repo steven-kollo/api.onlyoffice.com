@@ -39,6 +39,10 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="endDate">Period end date</param>
             <category>Events</category>
             <returns>List of dates</returns>
+            <httpMethod>GET</httpMethod>
+            <path>api/2.0/calendar/eventdays/{startDate}/{endDate}</path>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.LoadCalendars(ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
@@ -79,6 +83,9 @@
             </short>
             <param type="System.Collections.Generic.IEnumerable{ASC.Api.Calendar.CalendarApi.SubscriptionState}, System.Collections.Generic" name="states">New subscription states</param>
             <category>Calendars and subscriptions</category>
+            <path>api/2.0/calendar/subscriptions/manage</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.GetCalendarById(System.String)">
@@ -212,6 +219,8 @@
             <param type="System.String, System" name="change">New calendar storage</param>
             <param type="System.String, System" name="key">Email key</param>
             <category>Calendars and subscriptions</category>
+            <path>api/2.0/calendar/change_to_storage</path>
+            <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.CaldavDeleteEvent(System.String,System.String)">
@@ -224,6 +233,8 @@
             <param type="System.String, System" name="eventInfo">Event information that will be deleted</param>
             <param type="System.String, System" name="key">Email key</param>
             <category>Events</category>
+            <path>api/2.0/calendar/caldav_delete_event</path>
+            <httpMethod>GET</httpMethod>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.GetCalendariCalStream(System.String,System.String)">
@@ -250,7 +261,7 @@
             <category>Events</category>
             <returns>The number of imported events</returns>
             <requiresAuthorization>true</requiresAuthorization>
-            <httpMethod>GET</httpMethod>
+            <httpMethod>POST</httpMethod>
             <path>api/2.0/calendar/import</path>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.ImportEvents(System.Int32,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase})">
@@ -280,6 +291,9 @@
             <visible>false</visible> 
             <category>Events</category>
             <returns>The number of imported events</returns>
+            <requiresAuthorization>true</requiresAuthorization>
+            <path>api/2.0/calendar/importFromAggregator</path>
+            <httpMethod>POST</httpMethod>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.ImportEvents(System.Int32,System.String)">
             <summary>
@@ -488,6 +502,9 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="endDate">End date to determine the offset</param>
             <category>Calendars and subscriptions</category>
             <returns>The UTC offset in minutes</returns>
+            <requiresAuthorization>true</requiresAuthorization>
+            <path>api/2.0/calendar/utcoffset</path>
+            <httpMethod>POST</httpMethod>
         </member>
         <member name="M:ASC.Api.Calendar.CalendarApi.UpdateCaldavEvent(System.String,System.String,System.Int32,System.Collections.Generic.List{System.String})">
             <summary>

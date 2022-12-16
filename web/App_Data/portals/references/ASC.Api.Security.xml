@@ -90,7 +90,6 @@
             <returns>Audit trail types</returns>
             <path>api/2.0/security/audit/types</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.GetMappers(System.Nullable{ASC.AuditTrail.Types.ProductType},System.Nullable{ASC.AuditTrail.Types.ModuleType})">
             <summary>
@@ -105,7 +104,6 @@
             <returns>Audit trail mappers</returns>
             <path>api/2.0/security/audit/mappers</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Security.SecurityApi.CreateLoginHistoryReport">
             <summary>

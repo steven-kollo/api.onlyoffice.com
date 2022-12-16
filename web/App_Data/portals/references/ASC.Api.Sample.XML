@@ -25,7 +25,6 @@
             <returns>Newly created module</returns>
             <path>api/2.0/sample/create</path>
             <httpMethod>POST</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Sample.SampleApi.Read(System.Int32)">
             <summary>
@@ -38,7 +37,6 @@
             <returns>Module</returns>
             <path>api/2.0/sample/read/{id}</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Sample.SampleApi.Read">
             <summary>
@@ -51,7 +49,7 @@
             <collection>list</collection>
             <path>api/2.0/sample/read</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Sample.SampleApi.Update(System.Int32,System.String)">
             <summary>
@@ -64,7 +62,6 @@
             <param type="System.String, System" name="value">New module name</param>
             <path>api/2.0/sample/update</path>
             <httpMethod>PUT</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Sample.SampleApi.Delete(System.Int32)">
             <summary>
@@ -76,7 +73,6 @@
             <param type="System.Int32, System" name="id">Module ID</param>
             <path>api/2.0/sample/delete/{id}</path>
             <httpMethod>DELETE</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
         </member>
     </members>
 </doc>

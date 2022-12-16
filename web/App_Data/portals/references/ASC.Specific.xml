@@ -76,24 +76,28 @@
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.RegisterUserOnPersonal(System.String,System.String,System.Boolean,System.String)">
             <summary>
-            Requests an invitation by email on personal.onlyoffice.com.
+            Requests an email invitation from personal.onlyoffice.com.
             </summary>
             <short>Register a user on the Personal portal</short>
             <param type="System.String, System" name="email">Email address</param>
             <param type="System.String, System" name="lang">Culture</param>
             <param type="System.Boolean, System" name="spam">User consent to subscribe to the ONLYOFFICE newsletter</param>
             <param type="System.String, System" name="recaptchaResponse">ReCAPTCHA token</param>
+            <httpMethod>POST</httpMethod>
+            <path>api/2.0/authentication/register</path>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Specific.AuthorizationApi.AuthenticationEntryPoint.AuthenticateMe(System.String,System.String,System.String)">
             <summary>
-            Checks username and password when logging in.
+            Checks the username and password when logging in.
             </summary>
             <short>Log in</short>
-            <param type="System.String, System" name="userName">User name or email</param>
+            <param type="System.String, System" name="userName">Username or email</param>
             <param type="System.String, System" name="password">Password</param>
             <param type="System.String, System" name="key">Email key</param>
             <exception cref="T:System.Security.Authentication.AuthenticationException">Thrown when not authenticated.</exception>
+            <httpMethod>POST</httpMethod>
+            <path>api/2.0/authentication/login</path>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Specific.AuthorizationApi.AuthenticationTokenData.Token">
@@ -187,7 +191,6 @@
             <returns>Warmup progress</returns>
             <path>api/2.0/warmup/progress</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Specific.WarmupApi.WarmUpEntryPoint.Restart">
@@ -200,7 +203,6 @@
             <returns>The "Ok" message if the operation is successful</returns>
             <path>api/2.0/warmup/restart</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>false</requiresAuthorization>
             <visible>false</visible>
         </member>
     </members>

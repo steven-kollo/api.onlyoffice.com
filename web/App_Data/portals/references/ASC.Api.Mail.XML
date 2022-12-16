@@ -73,7 +73,7 @@
             <short>Check filter results</short> 
             <category>Filters</category>
             <path>api/2.0/mail/filters/check</path>
-            <httpMethod>GET</httpMethod>
+            <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
             <exception cref="T:System.ArgumentException">An exception occurs when the parameters are invalid. The text description contains the parameter name and the text description.</exception>
@@ -98,6 +98,9 @@
             <returns>Mail server information</returns>
             <short>Get the mail server information</short> 
             <category>Mail service</category>
+            <path>api/2.0/mail/mailservice/get</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.ConnectMailServer(System.String,System.String,System.String,System.String,System.String)">
@@ -112,6 +115,9 @@
             <returns>Mail server information</returns>
             <short>Connect the mail server</short> 
             <category>Mail service</category>
+            <path>api/2.0/mail/mailservice/connect</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.SaveMailServerInfo(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
@@ -128,6 +134,9 @@
             <returns>Operation result</returns>
             <short>Save the mail server information</short> 
             <category>Mail service</category>
+            <path>api/2.0/mail/mailservice/save</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.ConnectAndSaveMailServerInfo(System.String,System.String,System.String,System.String)">
@@ -141,6 +150,9 @@
             <returns>Operation result</returns>
             <short>Connect the mail server and save its information</short> 
             <category>Mail service</category>
+            <path>api/2.0/mail/mailservice/connectandsave</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.ConnectAndSavePartitionalMailServerInfo(System.String,System.String,System.String,System.String,System.String)">
@@ -155,6 +167,9 @@
             <returns>Operation result</returns>
             <short>Connect the mail server and save its partitional information</short> 
             <category>Mail service</category>
+            <path>api/2.0/mail/mailservice/connectandsavepartitional</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetCommonSettings">
@@ -471,6 +486,9 @@
             <param type="System.String, System" name="body">Message body as the HTML string</param>
             <returns>Message ID</returns>
             <category>Tests</category>
+            <path>api/2.0/mail/messages/sample/create</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.AppendAttachmentsToSampleMessage(System.Nullable{System.Int32},System.String,System.IO.Stream,System.String)">
@@ -484,6 +502,9 @@
             <param type="System.String, System" name="contentType">File content type</param>
             <returns>Message attachment</returns>
             <category>Tests</category>
+            <path>api/2.0/mail/messages/sample/attachments/append</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.LoadSampleMessage(System.Nullable{System.Int32},System.Nullable{System.UInt32},System.Nullable{System.Int32},System.Boolean,System.IO.Stream)">
@@ -498,6 +519,9 @@
             <param type="System.IO.Stream, System.IO" name="emlStream">EML stream</param>
             <returns>Message ID</returns>
             <category>Tests</category>
+            <path>api/2.0/mail/messages/sample/eml/load</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetAccounts(System.String)">
@@ -751,6 +775,7 @@
             <path>api/2.0/mail/emails/search</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <exception cref="T:System.ArgumentException">Exception happens when the parameters are invalid. Text description contains parameter name and text description.</exception>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetContacts(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Int32,System.String)">
@@ -768,6 +793,7 @@
             <path>api/2.0/mail/contacts</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetContactsByContactInfo(ASC.Mail.Enums.ContactInfoType,System.String,System.Nullable{System.Boolean})">
             <summary>
@@ -810,6 +836,7 @@
             <path>api/2.0/mail/contacts/remove</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.UpdateContact(System.Int32,System.String,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String})">
             <summary>
@@ -929,6 +956,7 @@
             <path>api/2.0/mail/conversations/move</path>
             <requiresAuthorization>true</requiresAuthorization>
             <httpMethod>PUT</httpMethod>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.RestoreConversations(System.Collections.Generic.List{System.Int32},System.Boolean)">
             <summary>
@@ -942,6 +970,7 @@
             <path>api/2.0/mail/conversations/restore</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.RemoveConversations(System.Collections.Generic.List{System.Int32})">
             <summary>
@@ -954,6 +983,7 @@
             <path>api/2.0/mail/conversations/remove</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.MarkConversations(System.Collections.Generic.List{System.Int32},System.String)">
             <summary>
@@ -967,6 +997,7 @@
             <path>api/2.0/mail/conversations/mark</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.SetConversationsTag(System.Int32,System.Collections.Generic.List{System.Int32})">
              <summary>
@@ -1085,6 +1116,9 @@
             <returns>Operation status</returns>
             <short>Recalculate folders</short> 
             <category>Folders</category>
+            <path>api/2.0/mail/folders/recalculate</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetUserFolders(System.Collections.Generic.List{System.UInt32},System.Nullable{System.UInt32})">
@@ -1165,6 +1199,7 @@
             <path>api/2.0/mail/display_images/addresses</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.AddDisplayImagesAddress(System.String)">
              <summary>
@@ -1303,6 +1338,7 @@
             <path>api/2.0/mail/messages/mark</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.RestoreMessages(System.Collections.Generic.List{System.Int32})">
             <summary>
@@ -1315,6 +1351,7 @@
             <path>api/2.0/mail/messages/restore</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.MoveMessages(System.Collections.Generic.List{System.Int32},System.Int32,System.Nullable{System.UInt32})">
             <summary>
@@ -1329,6 +1366,7 @@
             <path>api/2.0/mail/messages/move</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.SendMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},ASC.Files.Core.Security.FileShare,System.String,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
@@ -1369,6 +1407,9 @@
             <returns>Boolean value: true if a message was sent successfully</returns>
             <short>Send a message quickly</short> 
             <category>Messages</category>
+            <path>api/2.0/mail/messages/simpleSend</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.SaveMessageOld(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},System.String)">
             <summary>
@@ -1389,6 +1430,9 @@
             <returns>Saved message</returns>
             <short>Save a message</short> 
             <category>Messages</category>
+            <path>api/2.0/mail/messages/save</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.SaveMessage(System.Int32,System.String,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String,System.Boolean,System.String,System.Collections.Generic.List{System.Int32},System.String,System.Collections.Generic.List{ASC.Mail.Data.Contracts.MailAttachmentData},System.String)">
@@ -1448,6 +1492,7 @@
             <path>api/2.0/mail/messages/remove</path>
             <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Mail.MailApi.GetMessageTemplate">
             <summary>

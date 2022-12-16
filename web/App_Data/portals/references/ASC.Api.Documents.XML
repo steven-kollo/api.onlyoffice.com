@@ -35,6 +35,10 @@
             <param type="System.Boolean, System" name="withoutAdditionalFolder">Specifies whether to return sections with or without additional folders</param>
             <category>Folders</category>
             <returns>Contents of the sections</returns>
+            <path>api/2.0/files/@root</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetMyFolder(System.Guid,ASC.Files.Core.FilterType,System.Boolean,System.Boolean)">
             <summary>
@@ -368,7 +372,6 @@
             <returns type="ASC.Web.Files.Services.DocumentService.Configuration, ASC.Web.Files">Configuration</returns>
             <path>api/2.0/files/file/{fileId}/openedit</path>
             <httpMethod>GET</httpMethod>
-            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateUploadSession(System.String,System.String,System.Int64,System.String,System.Boolean)">
             <summary>
@@ -416,6 +419,9 @@
             <param type="System.Object, System" name="fileId">File ID</param>
             <param type="System.Int64, System" name="fileSize">File size in bytes</param>
             <returns>Upload session</returns>
+            <path>api/2.0/files/file/{fileId}/edit_session</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateTextFileInMy(System.String,System.String)">
@@ -427,6 +433,9 @@
             <param type="System.String, System" name="title">File title</param>
             <param type="System.String, System" name="content">File contents</param>
             <returns>File contents</returns>
+            <path>api/2.0/files/@my/text</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateTextFileInCommon(System.String,System.String)">
@@ -438,6 +447,9 @@
             <param type="System.String, System" name="title">File title</param>
             <param type="System.String, System" name="content">File contents</param>
             <returns>File contents</returns>
+            <path>api/2.0/files/@common/text</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateTextFile(System.String,System.String,System.String)">
@@ -450,6 +462,9 @@
             <param type="System.String, System" name="title">File title</param>
             <param type="System.String, System" name="content">File contents</param>
             <returns>File contents</returns>
+            <path>api/2.0/files/{folderId}/text</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateHtmlFile(System.String,System.String,System.String)">
@@ -462,6 +477,9 @@
             <param type="System.String, System" name="title">File title</param>
             <param type="System.String, System" name="content">File contents</param>
             <returns>File contents</returns>
+            <path>api/2.0/files/{folderId}/html</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateHtmlFileInMy(System.String,System.String)">
@@ -473,6 +491,9 @@
             <param type="System.String, System" name="title">File title</param>
             <param type="System.String, System" name="content">File contents</param>
             <returns>File contents</returns>
+            <path>api/2.0/files/@my/html</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateHtmlFileInCommon(System.String,System.String)">
@@ -484,6 +505,9 @@
             <param type="System.String, System" name="title">File title</param>
             <param type="System.String, System" name="content">File contents</param>
             <returns>File contents</returns>
+            <path>api/2.0/files/@common/html</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateFolder(System.String,System.String)">
@@ -585,14 +609,17 @@
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CopyFileAs(System.String,System.String,System.String)">
             <summary>
-            Copies (and converts, if possible) an existing file to the specified folder.
+            Copies (and converts if possible) an existing file to the specified folder.
             </summary>
             <short>Copy a file</short>
             <category>Files</category>
             <param type="System.String, System" method="url" name="fileId">File ID</param>
             <param type="System.String, System" name="destFolderId">Destination folder ID</param>
             <param type="System.String, System" name="destTitle">Destination file title</param>
-            <returns></returns>
+            <returns>Copied file</returns>
+            <path>api/2.0/files/file/{fileId}/copyas</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UpdateFile(System.String,System.String,System.Int32)">
             <summary>
@@ -658,6 +685,9 @@
             <category>Files</category>
             <param type="System.String, System" name="fileId">File ID</param>
             <returns>File download link</returns>
+            <path>api/2.0/files/file/{fileId}/presigneduri</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.DeleteFolder(System.String,System.Boolean,System.Boolean)">
             <summary>
@@ -930,6 +960,9 @@
             <param type="System.String, System" name="fileId">File ID</param>
             <category>Files</category>
             <returns>File properties</returns>
+            <path>api/2.0/files/{fileId}/properties</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.SetProperties(System.String,ASC.Files.Core.EntryProperties)">
             <summary>
@@ -940,6 +973,9 @@
             <param type="ASC.Files.Core.EntryProperties, ASC.Files.Core" name="fileProperties">File properties</param>
             <category>Files</category>
             <returns>File properties</returns>
+            <path>api/2.0/files/{fileId}/properties</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.SetProperties(System.String[],System.Boolean,ASC.Files.Core.EntryProperties)">
             <summary>
@@ -951,6 +987,10 @@
             <param type="ASC.Files.Core.EntryProperties, ASC.Files.Core" name="fileProperties">File properties</param>
             <category>Files</category>
             <returns>List of file properties</returns>
+            <path>api/2.0/files/batch/properties</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.Capabilities">
             <summary>
@@ -963,6 +1003,7 @@
             <path>api/2.0/files/thirdparty/capabilities</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.SaveThirdParty(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
             <summary>
@@ -1106,6 +1147,9 @@
             <category>Settings</category>
             <visible>false</visible>
             <returns>Bool value: true if the parameter is enabled</returns>
+            <path>api/2.0/files/hideconfirmconvert</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.UpdateIfExist(System.Boolean)">
             <summary>
@@ -1164,6 +1208,9 @@
             <param type="ASC.Files.Core.DateToAutoCleanUp, ASC.Files.Core" name="gap">A time interval when the auto-clearing will be performed (one week, two weeks, one month, two months, three months)</param>
             <category>Settings</category>
             <returns>The auto-clearing setting properties</returns>
+            <path>api/2.0/files/settings/autocleanup</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetSettingsAutomaticallyCleanUp">
             <summary>
@@ -1172,6 +1219,9 @@
             <short>Get the auto-clearing setting properties</short>
             <category>Settings</category>
             <returns>The auto-clearing setting properties</returns>
+            <path>api/2.0/files/settings/autocleanup</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.ChangeDafaultAccessRights(System.Collections.Generic.List{ASC.Files.Core.Security.FileShare})">
             <summary>
@@ -1181,6 +1231,10 @@
             <param type="System.Collections.Generic.List{ASC.Files.Core.Security.FileShare}, System.Collections.Generic" name="value">Default access rights</param>
             <category>Settings</category>
             <returns>Default access rights</returns>
+            <path>api/2.0/files/settings/dafaultaccessrights</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.ChangeDownloadZip(System.Boolean)">
             <summary>
@@ -1190,6 +1244,9 @@
             <param type="System.Boolean, System" name="set">Turns the parameter on or off</param>
             <category>Settings</category>
             <returns>Archive</returns>
+            <path>api/2.0/files/settings/downloadtargz</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CheckDocServiceUrl(System.String,System.String,System.String)">
             <summary>
@@ -1227,6 +1284,10 @@
             <param type="System.Collections.Generic.IEnumerable{System.String}, System.Collections.Generic" name="fileIds">List of file IDs</param>
             <visible>false</visible>
             <returns>List of file IDs</returns>
+            <path>api/2.0/files/thumbnails</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetWordpressInfo">
             <summary>
@@ -1235,6 +1296,9 @@
             <short>Get the WordPress information</short>
             <category>WordPress</category>
             <returns>WordPress information</returns>
+            <path>api/2.0/files/wordpress-info</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.DeleteWordpressInfo">
@@ -1244,6 +1308,9 @@
             <short>Delete the WordPress information</short>
             <category>WordPress</category>
             <returns>Object with the bool value: true if the operation is successful</returns>
+            <path>api/2.0/files/wordpress-delete</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.WordpressSave(System.String)">
@@ -1254,6 +1321,9 @@
             <param type="System.String, System" name="code">Authorization code</param>
             <category>WordPress</category>
             <returns>User WordPress information</returns>
+            <path>api/2.0/files/wordpress-save</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.CreateWordpressPost(System.String,System.String,System.String,System.Int32)">
@@ -1267,6 +1337,9 @@
             <param type="System.Int32, System" name="status">Operation status</param>
             <category>WordPress</category>
             <returns>WordPress post</returns>
+            <path>api/2.0/files/wordpress</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetEasybibCitationList(System.Int32,System.String)">
@@ -1278,6 +1351,9 @@
             <param type="System.String, System" name="data">Citation data</param>
             <category>EasyBib</category>
             <returns>EasyBib citation list</returns>
+            <path>api/2.0/files/easybib-citation-list</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.GetEasybibStyles">
@@ -1287,6 +1363,9 @@
             <short>Get the EasyBib styles</short>
             <category>EasyBib</category>
             <returns>List of EasyBib styles</returns>
+            <path>api/2.0/files/easybib-styles</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Documents.DocumentsApi.EasyBibCitationBook(System.String)">
@@ -1297,6 +1376,9 @@
             <param type="System.String, System" name="citationData">Citation data</param>
             <category>EasyBib</category>
             <returns>EasyBib citation</returns>
+            <path>api/2.0/files/easybib-citation</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="T:ASC.Api.Documents.DocumentsApi.ConversationResult">

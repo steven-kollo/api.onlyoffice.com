@@ -636,6 +636,9 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="creationDate">Invoice creation date</param>
             <short>Set the invoice creation date</short>
             <category>Invoices</category>
+            <path>api/2.0/crm/invoice/{invoiceid}/creationdate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetInvoiceLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -810,13 +813,12 @@
              <short>Get a case by ID</short> 
              <category>Cases</category>
              <param type="System.Int32, System" method="url" name="caseid">Case ID</param>
-             <returns>Case</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/crm/case/{caseid}</path>
             <httpMethod>GET</httpMethod>
              <requiresAuthorization>true</requiresAuthorization>
-             <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM"></returns>
+             <returns type="ASC.Api.CRM.Wrappers.CasesWrapper, ASC.Api.CRM">Case</returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetCases(System.Int32,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})">
             <summary>
@@ -945,6 +947,10 @@
             <returns>
             List of cases
             </returns>
+            <path>api/2.0/crm/case/byprefix</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactInfoCategory(ASC.CRM.Core.ContactInfoType)">
@@ -1061,6 +1067,10 @@
              <returns>
              Contact information
              </returns>
+             <path>api/2.0/crm/contact/{contactid}/batch</path>
+             <httpMethod>POST</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
              <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateContactInfo(System.Int32,System.Int32,System.Nullable{ASC.CRM.Core.ContactInfoType},System.String,System.Nullable{System.Boolean},System.String)">
@@ -1117,6 +1127,10 @@
              <returns>
              Updated contact information
              </returns>
+             <path>api/2.0/crm/contact/{contactid}/batch</path>
+             <httpMethod>PUT</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
              <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactInfo(System.Int32,ASC.CRM.Core.ContactInfoType)">
@@ -1297,6 +1311,10 @@
             <returns>
             List of contacts
             </returns>
+            <path>api/2.0/crm/contact/simple/byEmail</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetSimpleContacts(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},ASC.CRM.Core.ContactListViewType,System.Nullable{System.Guid},System.Nullable{System.Boolean},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
@@ -1316,6 +1334,10 @@
             <returns>
             List of contacts with tasks
             </returns>
+            <path>api/2.0/crm/contact/simple/filter</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactsForMail(System.Collections.Generic.IEnumerable{System.Int32})">
@@ -1330,6 +1352,10 @@
             <returns>
             List of contacts with their emails
             </returns>
+            <path>api/2.0/crm/contact/mail</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteBatchContacts(System.Collections.Generic.IEnumerable{System.String},System.Nullable{System.Int32},System.Nullable{System.Int32},ASC.CRM.Core.ContactListViewType,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime)">
@@ -1750,6 +1776,10 @@
             <returns>
             List of contacts
             </returns>
+            <path>api/2.0/crm/contact/byprefix</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetContactsByContactInfo(System.Nullable{ASC.CRM.Core.ContactInfoType},System.String,System.Nullable{System.Int32},System.Nullable{System.Boolean})">
@@ -1794,7 +1824,7 @@
             <returns type="ASC.Thrdparty.Twitter.TwitterUserInfo, ASC.Thrdparty">List of twitter profiles</returns>
             <path>api/2.0/crm/contact/twitterprofile</path>
             <httpMethod>GET</httpMethod>
-            <collection>List</collection>
+            <collection>list</collection>
             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteContactAvatar(System.Int32,System.String,System.Boolean)">
@@ -1833,7 +1863,7 @@
             <category>Contacts</category>
             <returns type="ASC.Web.CRM.Classes.SocialMedia.SocialMediaImageDescription, ASC.Web.CRM">List of social media images</returns>
             <path>api/2.0/crm/contact/socialmediaavatar</path>
-            <httpMethod>GET</httpMethod>
+            <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
@@ -1865,6 +1895,9 @@
             <short>Send a mail</short>
             <category>Contacts</category>
             <returns>Mail</returns>
+            <path>api/2.0/crm/contact/mailsmtp/send</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetMailSMTPToContactsPreview(System.String,System.Int32)">
@@ -1876,6 +1909,9 @@
             <short>Get a mail preview</short>
             <category>Contacts</category>
             <returns>Mail preview</returns>
+            <path>api/2.0/crm/contact/mailsmtp/preview</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetMailSMTPToContactsStatus">
@@ -1885,6 +1921,9 @@
             <short>Get a mail status</short>
             <category>Contacts</category>
             <returns>Mail status</returns>
+            <path>api/2.0/crm/contact/mailsmtp/status</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CancelMailSMTPToContacts">
@@ -1894,6 +1933,9 @@
             <short>Cancel mail sending</short>
             <category>Contacts</category>
             <returns>Mail status</returns>
+            <path>api/2.0/crm/contact/mailsmtp/cancel</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetContactCreationDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -1904,6 +1946,9 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="creationDate">Contact creation date</param>
             <short>Set the contact creation date</short>
             <category>Contacts</category>
+            <path>api/2.0/crm/contact/{contactid}/creationdate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetContactLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -1913,6 +1958,9 @@
             <param type="System.Int32, System" name="contactId">Contact ID</param>
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="lastModifedDate">Contact last modified date</param>
             <short>Set the contact last modified date</short>
+            <path>api/2.0/crm/contact/{contactid}/lastmodifeddate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="P:ASC.Api.CRM.CRMApi.Name">
@@ -2432,6 +2480,10 @@
             <returns>
             List of opportunities
             </returns>
+            <path>api/2.0/crm/opportunity/byprefix</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetDeals(System.Int32)">
@@ -2457,6 +2509,9 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="creationDate">Opportunity creation date</param>
             <short>Set the opportunity creation date</short> 
             <category>Opportunities</category>
+            <path>api/2.0/crm/opportunity/{opportunityid}/creationdate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetDealLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -2467,6 +2522,9 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" optional="true" name="lastModifedDate">Opportunity last modified date</param>
             <short>Set the opportunity last modified date</short> 
             <category>Opportunities</category>
+            <path>api/2.0/crm/opportunity/{opportunityid}/lastmodifeddate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateDealMilestone(System.String,System.String,System.String,System.Int32,ASC.CRM.Core.DealMilestoneStatus)">
@@ -2728,14 +2786,13 @@
              <category>Tasks</category>
              <param type="System.Int32, System" method="url" name="categoryid">Task category ID</param>
              <param type="System.Int32, System" name="newcategoryid">Task category ID to replace the deleted category in the tasks with the current task category</param>
-             <returns>Task category</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/task/category/{categoryid}</path>
             <httpMethod>DELETE</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
-            <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM"></returns>
+            <returns type="ASC.Api.CRM.Wrappers.TaskCategoryWrapper, ASC.Api.CRM">Task category</returns>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateContactStatus(System.String,System.String,System.String,System.Int32)">
              <summary>
@@ -3632,6 +3689,10 @@
             <short>Create a task group</short> 
             <category>Tasks</category>
             <returns>Tasks</returns>
+            <path>api/2.0/crm/contact/task/group</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTask(System.Int32,System.String,System.String,ASC.Specific.ApiDateTime,System.Guid,System.Int32,System.Int32,System.String,System.Int32,System.Boolean,System.Int32)">
@@ -3664,6 +3725,9 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="creationDate">Task creation date</param>
             <short>Set the task creation date</short> 
             <category>Tasks</category>
+            <path>api/2.0/crm/task/{taskid}/creationdate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.SetTaskLastModifedDate(System.Int32,ASC.Specific.ApiDateTime)">
@@ -3674,6 +3738,9 @@
             <param type="ASC.Specific.ApiDateTime, ASC.Specific" name="lastModifedDate">Task last modified date</param>
             <short>Set the task last modified date</short> 
             <category>Tasks</category>
+            <path>api/2.0/crm/task/{taskid}/lastmodifeddate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskTemplateContainer(System.String,System.String)">
@@ -3688,6 +3755,9 @@
             Task template container
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
+            <path>api/2.0/crm/{entityType}/tasktemplatecontainer</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateContainers(System.String)">
@@ -3700,6 +3770,10 @@
             <returns>
             List of task template containers
             </returns>
+            <path>api/2.0/crm/{entityType}/tasktemplatecontainer</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTaskTemplateContainer(System.Int32)">
@@ -3714,6 +3788,9 @@
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/tasktemplatecontainer/{containerid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskTemplateContainer(System.Int32,System.String)">
@@ -3729,6 +3806,9 @@
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/tasktemplatecontainer/{containerid}</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateContainerByID(System.Int32)">
@@ -3743,6 +3823,9 @@
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/tasktemplatecontainer/{containerid}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplates(System.Int32)">
@@ -3757,6 +3840,10 @@
             </returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/tasktemplatecontainer/{containerid}/tasktemplate</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CreateTaskTemplate(System.Int32,System.String,System.String,System.Guid,System.Int32,System.Boolean,System.Int64,System.Boolean)">
@@ -3776,6 +3863,9 @@
             <returns>Task template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/tasktemplatecontainer/{containerid}/tasktemplate</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.UpdateTaskTemplate(System.Int32,System.Int32,System.String,System.String,System.Guid,System.Int32,System.Boolean,System.Int64,System.Boolean)">
@@ -3796,6 +3886,9 @@
             <returns>Task template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/tasktemplatecontainer/{containerid}/tasktemplate</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteTaskTemplate(System.Int32)">
@@ -3808,6 +3901,9 @@
             <returns>Task template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/tasktemplatecontainer/tasktemplate/{id}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetTaskTemplateByID(System.Int32)">
@@ -3820,6 +3916,9 @@
             <returns>Task template</returns>
             <exception cref="T:System.ArgumentException"></exception>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/crm/tasktemplatecontainer/tasktemplate/{id}</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAvaliableCurrency">
@@ -4020,6 +4119,9 @@
             <param type="System.String, System" name="jsonSettings">JSON settings in the string format</param>
             <short>Start import from csv file</short>
             <category>Import</category>
+            <path>api/2.0/crm/{entityType}/import/start</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetImportFromCSVStatus(System.String)">
@@ -4030,6 +4132,9 @@
             <short>Get import status</short>
             <category>Import</category>
             <returns>Import status</returns>
+            <path>api/2.0/crm/{entityType}/import/status</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetImportFromCSVSampleRow(System.String,System.Int32,System.String)">
@@ -4042,6 +4147,9 @@
             <short>Get a sample row</short>
             <category>Import</category>
             <returns>Sample row</returns>
+            <path>api/2.0/crm/import/samplerow</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.ProcessUploadFake(System.String,System.String)">
@@ -4053,6 +4161,9 @@
             <short>Process fake upload</short>
             <category>Import</category>
             <returns>Uploaded file</returns>
+            <path>api/2.0/crm/import/uploadfake</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetExportStatus">
@@ -4062,6 +4173,9 @@
             <short>Get export status</short>
             <category>Export</category>
             <returns>Export status</returns>
+            <path>api/2.0/crm/export/status</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CancelExport">
@@ -4071,6 +4185,9 @@
             <short>Cancel export to csv file</short>
             <category>Export</category>
             <returns>Export status</returns>
+            <path>api/2.0/crm/export/cancel</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.StartExport">
@@ -4080,6 +4197,9 @@
             <short>Start export to csv file</short>
             <category>Export</category>
             <returns>Export data operation</returns>
+            <path>api/2.0/crm/export/start</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetPartialExportStatus">
@@ -4089,6 +4209,9 @@
             <short>Get status of partial export</short>
             <category>Export</category>
             <returns>Partial export status</returns>
+            <path>api/2.0/crm/export/partial/status</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.CancelPartialExport">
@@ -4098,6 +4221,9 @@
             <short>Cancel partial export to csv file</short>
             <category>Export</category>
             <returns>Partial export status</returns>
+            <path>api/2.0/crm/export/partial/cancel</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.StartPartialExport(System.String,System.String)">
@@ -4109,6 +4235,9 @@
             <short>Start partial export to csv file</short>
             <category>Export</category>
             <returns>Export data operation</returns>
+            <path>api/2.0/crm/export/partial/{entityType}/start</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.GetAvailablePhoneNumbers(ASC.VoipService.Twilio.PhoneNumberType,System.String)">
@@ -4176,7 +4305,7 @@
             <returns type="ASC.VoipService.VoipPhone, ASC.VoipService">Phone number</returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/numbers/link</path>
-            <httpMethod>GET</httpMethod>
+            <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.DeleteNumber(System.String)">
@@ -4360,6 +4489,7 @@
             <returns type="ASC.VoipService.Agent, ASC.VoipService">Updated operator</returns>
             <exception cref="T:System.Security.SecurityException"></exception>
             <path>api/2.0/crm/voip/opers/{operatorId}</path>
+            <httpMethod>PUT</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.CRM.CRMApi.MakeCall(System.String,System.String)">

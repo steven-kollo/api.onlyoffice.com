@@ -571,7 +571,7 @@
              <param type="ASC.Web.Projects.CustomTaskStatus, ASC.Web.Projects" file="ASC.Web.Projects" name="newStatus">New task status</param>
              <returns type="ASC.Web.Projects.CustomTaskStatus, ASC.Web.Projects">Updated task status</returns>
              <path>api/2.0/project/status</path>
-             <httpMethod>POST</httpMethod>
+             <httpMethod>PUT</httpMethod>
              <requiresAuthorization>true</requiresAuthorization>
             <category>Tasks</category>
         </member>
@@ -807,6 +807,9 @@
             <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="files">File IDs</param>
             <returns>Message</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/message/{messageid}/filesmany</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectRecentMessages">
@@ -901,6 +904,7 @@
             <path>api/2.0/project/message/{messageid}/subscribes</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <returns type="ASC.Api.Employee.EmployeeWraperFull, ASC.Api.Employee"></returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetPreview(System.String)">
@@ -1337,6 +1341,7 @@
             <path>api/2.0/project</path>
             <httpMethod>DELETE</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.FollowToProject(System.Int32)">
             <summary>
@@ -1511,7 +1516,7 @@
             <param type="System.Collections.Generic.List{System.Int32}, System.Collections.Generic" name="ids">List of project IDs</param>
             <returns type="ASC.Api.Projects.Wrappers.ParticipantWrapper, ASC.Api.Projects">List of team members</returns>
             <path>api/2.0/project/team</path>
-            <httpMethod>GET</httpMethod>
+            <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
             <collection>list</collection>
         </member>
@@ -1720,6 +1725,10 @@
             <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="files">List of file IDs</param>
             <returns>Uploaded files</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/{entityID}/entityfiles</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.Int32)">
@@ -1735,6 +1744,9 @@
             <param type="System.Int32, System" name="fileid">File ID</param>
             <returns>Detached file</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/{entityID}/entityfiles</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DetachFileFromEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
@@ -1750,6 +1762,10 @@
             <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="files">List of file IDs</param>
             <returns>Detached files</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/{entityID}/entityfilesmany</path>
+             <httpMethod>DELETE</httpMethod>
+             <requiresAuthorization>true</requiresAuthorization>
+             <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UploadFilesToEntity(ASC.Projects.Core.Domain.EntityType,System.Int32,System.String,System.IO.Stream,System.Net.Mime.ContentType,System.Net.Mime.ContentDisposition,System.Collections.Generic.IEnumerable{System.Web.HttpPostedFileBase},System.Boolean,System.Boolean)">
@@ -1771,6 +1787,9 @@
             <param type="System.Boolean, System" name="storeOriginalFileFlag" visible="false">Specifies whether to upload files in the original formats as well or not</param>
             <returns>Uploaded files</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/{entityID}/entityfiles/upload</path>
+            <httpMethod>POST</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectsByContactID(System.Int32)">
@@ -1829,6 +1848,7 @@
             <path>api/2.0/project/template</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTemplate(System.Int32)">
             <summary>
@@ -1903,6 +1923,9 @@
             </short>
             <category>Projects</category>
             <returns>Basic information about the security rights</returns>
+            <path>api/2.0/project/securityinfo</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetProjectMaxLastModified">
@@ -1914,6 +1937,9 @@
             </short>
             <category>Projects</category>
             <returns>Last modified project</returns>
+            <path>api/2.0/project/maxlastmodified</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTaskOrder(System.Int32)">
@@ -1926,6 +1952,9 @@
             <category>Tasks</category>
             <param type="System.Int32, System" name="id">Project ID</param>
             <returns>Task order</returns>
+            <path>api/2.0/project/{id}/order</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.SetTaskOrder(System.Int32,System.String)">
@@ -1938,6 +1967,9 @@
             <category>Tasks</category>
             <param type="System.Int32, System" name="id">Project ID</param>
             <param type="System.String, System" name="order">Task order</param>
+            <path>api/2.0/project/{id}/order</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetMyTasks">
@@ -1994,6 +2026,10 @@
             <category>Tasks</category>
             <param type="System.Collections.Generic.IEnumerable{System.Int32}, System.Collections.Generic" name="taskid">Task IDs</param>
             <returns>List of tasks</returns>
+            <path>api/2.0/project/task</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTaskByFilter(System.Int32,System.Boolean,System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Int32,System.Nullable{ASC.Projects.Core.Domain.TaskStatus},System.Nullable{System.Int32},System.Boolean,System.Guid,System.Nullable{System.Guid},System.Guid,ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Int32)">
@@ -2050,6 +2086,10 @@
             <visible>false</visible>
             <returns>List of tasks</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/task/filter/simple</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetTaskFiles(System.Int32)">
             <summary>
@@ -2111,6 +2151,9 @@
             <param type="System.Collections.Generic.List{System.Int32}, System.Collections.Generic" name="files">File IDs</param>
             <returns>Task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/task/{taskid}/filesmany</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
             <visible>false</visible>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateTask(System.Int32,ASC.Projects.Core.Domain.TaskStatus,System.Int32)">
@@ -2245,6 +2288,9 @@
             <param type="System.Int32, System" method="url" name="taskid">Task ID</param>
             <returns>Deleted task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/task/{taskid}</path>
+            <httpMethod>DELETE</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.DeleteTasks(System.Int32[])">
             <summary>
@@ -2351,12 +2397,11 @@
             <param type="System.Int32, System" method="url" name="parentTaskId">Parent task ID</param>
             <param type="System.Int32, System" name="dependenceTaskId">Dependent task ID</param>
             <param type="ASC.Projects.Core.Domain.TaskLinkType, ASC.Projects.Core.Domain" name="linkType">Link type</param>
-            <returns>Dependent task</returns>
+            <returns type="ASC.Api.Projects.Wrappers.TaskWrapper, ASC.Api.Projects">Dependent task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/project/task/{parentTaskId}/link</path>
             <httpMethod>POST</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
-            <returns type="ASC.Api.Projects.Wrappers.TaskWrapper, ASC.Api.Projects"></returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.RemoveLink(System.Int32,System.Int32)">
             <summary>
@@ -2368,12 +2413,11 @@
             <category>Tasks</category>
             <param type="System.Int32, System" name="dependenceTaskId">Dependent task ID</param>
             <param type="System.Int32, System" name="parentTaskId">Parent task ID</param>
-            <returns>Dependent task</returns>
+            <returns type="ASC.Api.Projects.Wrappers.TaskWrapper, ASC.Api.Projects">Dependent task</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/project/task/{taskid}/link</path>
             <httpMethod>DELETE</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
-            <returns type="ASC.Api.Projects.Wrappers.TaskWrapper, ASC.Api.Projects"></returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.AddSubtask(System.Int32,System.Guid,System.String)">
             <summary>
@@ -2420,6 +2464,9 @@
             <param type="System.Int32, System" name="subtaskid">Subtask ID</param>
             <returns>Updated subtask</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
+            <path>api/2.0/project/task/{taskid}/{subtaskid}/move</path>
+            <httpMethod>PUT</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateSubtask(System.Int32,System.Int32,System.Guid,System.String)">
             <summary>
@@ -2449,12 +2496,11 @@
             <category>Tasks</category>
             <param type="System.Int32, System" method="url" name="taskid">Task ID</param>
             <param type="System.Int32, System" method="url" name="subtaskid">Subtask ID</param>
-            <returns>Subtask</returns>
+            <returns type="ASC.Api.Projects.Wrappers.SubtaskWrapper, ASC.Api.Projects">Subtask</returns>
             <exception cref="T:ASC.Api.Exceptions.ItemNotFoundException"></exception>
             <path>api/2.0/project/task/{taskid}/{subtaskid}</path>
             <httpMethod>DELETE</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
-            <returns type="ASC.Api.Projects.Wrappers.SubtaskWrapper, ASC.Api.Projects"></returns>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.UpdateSubtask(System.Int32,System.Int32,ASC.Projects.Core.Domain.TaskStatus)">
             <summary>
@@ -2599,6 +2645,7 @@
             <path>api/2.0/project/tag/search</path>
             <httpMethod>GET</httpMethod>
             <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetRecentMilestones">
             <summary>
@@ -2623,6 +2670,10 @@
             </short>
             <category>Milestones</category>
             <returns>List of milestones</returns>
+            <path>api/2.0/project/milestone/upcoming</path>
+            <httpMethod>GET</httpMethod>
+            <requiresAuthorization>true</requiresAuthorization>
+            <collection>list</collection>
         </member>
         <member name="M:ASC.Api.Projects.ProjectApi.GetMilestonesByFilter(System.Int32,System.Int32,System.Nullable{ASC.Projects.Core.Domain.MilestoneStatus},ASC.Specific.ApiDateTime,ASC.Specific.ApiDateTime,System.Nullable{System.Guid},System.Int32,System.Boolean,System.Guid)">
             <summary>
