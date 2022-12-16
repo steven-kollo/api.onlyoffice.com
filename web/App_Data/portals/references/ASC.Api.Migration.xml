@@ -43,6 +43,20 @@
             <path>api/2.0/migration/list</path>
             <httpMethod>GET</httpMethod>
         </member>
+        <member name="M:ASC.Api.Migration.MigrationApi.MigratorsInfo(System.String[])">
+            <summary>
+            Returns the information about the migrators with the names specified in the request.
+            </summary>
+            <short>
+            Get migrator information
+            </short>
+            <param type="System.String[], System" name="migratorsName">List of migrator names</param>
+            <returns>List of migrator information</returns>
+            <collection>list</collection>
+            <path>api/2.0/migration/migratorsInfo</path>
+            <httpMethod>POST</httpMethod>
+            <collection>list</collection>
+        </member>
         <member name="M:ASC.Api.Migration.MigrationApi.UploadAndInit(System.String,System.String)">
             <summary>
             Uploads a backup of a migrator specified in the request and initializes the import.
@@ -134,7 +148,42 @@
             
             </summary>
         </member>
+        <member name="P:ASC.Api.Migration.MigrationStatus.MigratorName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigrationStatus.ParsingEnded">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ASC.Api.Migration.MigratorInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigratorInfo.MigratorName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigratorInfo.NumberOfSteps">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.MigratorInfo.ArchivesIsMultiple">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:ASC.Api.Migration.OngoingMigration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ASC.Api.Migration.OngoingMigration.IsCancel">
             <summary>
             
             </summary>

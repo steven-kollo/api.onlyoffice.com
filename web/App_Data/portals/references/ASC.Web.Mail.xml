@@ -3969,6 +3969,11 @@
               Looks up a localized string similar to no subject.
             </summary>
         </member>
+        <member name="P:ASC.Web.Mail.Resources.MailResource.NTLMPasswordAuthentication">
+            <summary>
+              Looks up a localized string similar to NTLM Password.
+            </summary>
+        </member>
         <member name="P:ASC.Web.Mail.Resources.MailResource.OAuthLabel">
             <summary>
               Looks up a localized string similar to or link with:.

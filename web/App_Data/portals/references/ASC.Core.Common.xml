@@ -122,6 +122,9 @@
         <member name="P:ASC.Core.Users.UserInfo.Tenant">
             <example type="int">1</example>
         </member>
+        <member name="P:ASC.Core.Users.UserInfo.Lead">
+            <example>072A8452-ADF3-40AA-B359-22DA7B8923E2</example>
+        </member>
         <member name="P:ASC.Core.Users.UserInfo.IsActive">
             <example>false</example>
         </member>

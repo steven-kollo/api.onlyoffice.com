@@ -1167,6 +1167,11 @@
             The OAuth 2.0 mechanism. [draft-ietf-oauth-v2-31]
             </summary>
         </member>
+        <member name="F:ASC.Mail.Enums.SaslMechanism.Ntlm">
+            <summary>
+            The NTLM mechanism. [RFC4559]
+            </summary>
+        </member>
         <member name="T:ASC.Mail.Enums.WellKnownPorts">
             <summary>
             This class provides well known TCP/UDP service ports.
