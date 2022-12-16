@@ -352,7 +352,7 @@ namespace ASC.Api.Web.Help.DocumentGenerator
                     {
                         Path = memberdesc[i].Element("path").ValueOrNull(),
                         HttpMethod = memberdesc[i].Element("httpMethod").ValueOrNull(),
-                        Authentification = memberdesc[i].Element("requiresAuthorization").ValueOrNull() == "true",
+                        Authentification = string.IsNullOrWhiteSpace(memberdesc[i].Element("requiresAuthorization").ValueOrNull()) || memberdesc[i].Element("requiresAuthorization").ValueOrNull().Equals(bool.TrueString, StringComparison.OrdinalIgnoreCase),
                         FunctionName = GetFunctionName(memberdesc[i].Attribute("name").ValueOrNull()),
                         Summary = memberdesc[i].Element("summary").ValueOrNull(),
                         Visible = !string.Equals(memberdesc[i].Element("visible").ValueOrNull(), bool.FalseString, StringComparison.OrdinalIgnoreCase),
